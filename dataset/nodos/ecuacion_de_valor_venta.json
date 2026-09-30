@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ecuación de Valor en la Venta Consultiva",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño provoca rechazo inmediato. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
+  "resumen_teorico": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño hace poco probable la compra. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
   "pasos_accionables": [
     "Antes de mencionar precio o solución, evalúa qué tan grande percibe el cliente su problema actual.",
     "Si el problema percibido es pequeño en relación al costo de tu solución, invierte más tiempo en preguntas de implicación antes de hablar de precio.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Justifica el Costo de tu Solución",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-ecuacion_de_valor_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño provoca rechazo inmediato. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
+      "texto_nuevo": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño hace poco probable la compra. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "1068",
+        "frase": "the problem is small and the cost high, then there's unlikely to be a purchase"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con problema pequeño y costo alto la compra es poco probable, no que haya rechazo inmediato.; Mismo defecto: el libro habla de compra poco probable, el nodo lo endurece a rechazo inmediato.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

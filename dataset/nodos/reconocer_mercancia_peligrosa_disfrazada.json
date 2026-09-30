@@ -4,12 +4,12 @@
   "dominio": "entrega",
   "titulo_concepto": "Reconocer productos que en realidad son mercancía peligrosa",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque pueden generar reacciones químicas o eléctricas riesgosas durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancía peligrosa tiene un numero y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto antes de escalar volumen es un paso que no se puede saltar.",
+  "resumen_teorico": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
   "pasos_accionables": [
-    "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles o químicos.",
-    "Busca la clasificación oficial de ese tipo de producto (número y nombre de envío).",
+    "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos o encendedores.",
+    "Busca en la normativa de IATA y OACI la clasificación oficial de ese tipo de producto (número UN, nombre de envío, clase de peligro y, si aplica, riesgo secundario y grupo de embalaje).",
     "Pregunta a tu courier si acepta ese producto y bajo qué condiciones de empaque.",
-    "Capacítate tú mismo antes de despachar el primer envío de este tipo.",
+    "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
     "Guarda la documentación exigida junto con cada envío de mercancía peligrosa."
   ],
   "entregable_esperado": "Una lista de tus productos marcados como mercancía peligrosa o no, con su clasificación oficial.",
@@ -209,6 +209,73 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque pueden generar reacciones químicas o eléctricas riesgosas durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancía peligrosa tiene un numero y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto antes de escalar volumen es un paso que no se puede saltar.",
+      "texto_nuevo": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1513, 1727",
+        "frase": "Under some circumstances these everyday items can harm people, property, and the environment."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide identificar y preparar bien cada envío, no solo al escalar.; La causa química o eléctrica el libro la da solo para las baterías; para el conjunto dice que pueden dañar personas, bienes o el ambiente.; Misma causa atribuida a todo el conjunto.; Misma condición perdida: cada envío, desde el primero.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca la clasificación oficial de ese tipo de producto (número y nombre de envío).",
+      "texto_nuevo": "Busca en la normativa de IATA y OACI la clasificación oficial de ese tipo de producto (número UN, nombre de envío, clase de peligro y, si aplica, riesgo secundario y grupo de embalaje).",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1745",
+        "frase": "Proper Shipping Name, hazard class and, if applicable, subsidiary risk and Packing Group"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La identificación del libro incluye clase de peligro y, si aplica, riesgo secundario y grupo de embalaje, según IATA y OACI.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacítate tú mismo antes de despachar el primer envío de este tipo.",
+      "texto_nuevo": "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1753",
+        "frase": "requires people to be trained and certified to handle and prepare dangerous goods shipments"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige estar capacitado y certificado; se pierde la certificación.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles o químicos.",
+      "texto_nuevo": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos o encendedores.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1757-1787",
+        "frase": "Parts (containing gasoline, jet fuel or kerosene)"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye gases, combustibles, pirotecnia, fósforos y encendedores.; Mismo defecto: faltan gases y combustibles.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

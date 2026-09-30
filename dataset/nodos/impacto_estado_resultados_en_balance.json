@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cómo el Estado de Resultados Impacta el Balance General",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
+  "resumen_teorico": "Un cambio en el estado de resultados casi siempre repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas), salvo que se reparta en dividendos, mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
   "pasos_accionables": [
     "Analizar cada decisión operativa (compras, ventas, nuevas contrataciones) por su efecto simultáneo en balance y estado de resultados.",
     "Antes de aprobar compras grandes de inventario, evaluar impacto en cuentas por pagar y flujo de caja.",
@@ -39,6 +39,22 @@
         "motivo": "El impacto del estado de resultados en el balance es contable y no conduce al efecto latigo."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "final-e1-151-impacto_estado_resultados_en_balance-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
+      "texto_nuevo": "Un cambio en el estado de resultados casi siempre repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas), salvo que se reparta en dividendos, mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1579, 1662",
+        "frase": "a change in one statement nearly always has an impact on the other statements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice 'nearly always'; el nodo lo vuelve absoluto.; Misma excepción perdida.; Mismo endurecimiento.; Se cae la excepción de los dividendos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

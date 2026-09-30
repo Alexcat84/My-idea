@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Para implementar Six Sigma necesitas roles claros: tu liderazgo fija metas y da soporte; un Champion (patrocinador) impulsa los proyectos y quita obstáculos; un Master Black Belt (consultor experto) forma a los Black Belts; un Black Belt (experto de tiempo completo) lidera proyectos con retorno esperado de 250,000 dólares o más; un Green Belt (colaborador con ocho días de formación) lidera proyectos menores; y el dueño del proceso aporta el conocimiento técnico. Cada rol necesita su propia capacitación y ninguno basta solo para lograr el éxito.",
   "pasos_accionables": [
-    "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt y dueño del proceso",
+    "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
     "Capacita a tu liderazgo para que entienda y respalde la metodología Six Sigma",
     "Designa Champions que patrocinen proyectos alineados a tus metas",
     "Certifica a tus Black Belts y Green Belts con entrenamiento formal, proyectos reales y evaluación",
@@ -44,6 +44,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-152-roles_six_sigma-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt y dueño del proceso",
+      "texto_nuevo": "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13960-13974",
+        "frase": "The key roles to drive Six Sigma are"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el equipo de proyecto y los expertos en la materia, uno de los siete roles clave del libro.; Misma omisión en la enumeración de roles.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

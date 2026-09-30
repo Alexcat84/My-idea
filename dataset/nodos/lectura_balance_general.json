@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Lectura y análisis del balance general",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque las líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
+  "resumen_teorico": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque es menos intuitivo: no basta saber qué significa cada categoría, tienes que entender cómo encajan. Además, sus líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
   "pasos_accionables": [
     "Consigue el balance general de tu empresa en una fecha específica (fin de mes, trimestre o año fiscal)",
     "Identifica tus activos corrientes y no corrientes (efectivo, cuentas por cobrar, inventario, propiedad)",
@@ -51,5 +51,23 @@
   ],
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-151-lectura_balance_general-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque las líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
+      "texto_nuevo": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque es menos intuitivo: no basta saber qué significa cada categoría, tienes que entender cómo encajan. Además, sus líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1046-1050",
+        "frase": "You not only have to know what the various categories refer to"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la dificultad a que el balance es menos intuitivo y exige entender cómo encajan sus categorías; la variación de líneas por negocio la da en otro sitio, no como causa.; Mismo defecto: el porqué de la dificultad no es que las líneas cambien según el negocio.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

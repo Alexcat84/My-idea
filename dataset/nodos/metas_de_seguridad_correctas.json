@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+  "resumen_teorico": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
   "pasos_accionables": [
     "Reemplazar metas de reducción de accidentes por metas de mejora de procesos manejables (diseño, entrenamiento, mantenimiento, procedimientos)",
     "Identificar qué procesos de tu negocio han estado implicados históricamente en accidentes previos",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-metas_de_seguridad_correctas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+      "texto_nuevo": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2596",
+        "frase": "planning, budgeting, communication, goal conflicts, and the like"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de procesos manejables incluye los conflictos de metas, que el nodo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

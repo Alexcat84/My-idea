@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Colocar y usar etiquetas de manejo correctamente",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rápido. La regla común es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+  "resumen_teorico": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
   "pasos_accionables": [
     "Pega la etiqueta de envío en la cara más grande y plana de la caja.",
     "Deja la etiqueta completamente visible, sin cinta ni papeles encima.",
@@ -131,6 +131,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-151-colocar_etiquetas_de_manejo_correctamente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rápido. La regla común es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "texto_nuevo": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "201-203",
+        "frase": "properly placing the shipping label increases your chance for the preferred orientation"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que colocar bien la etiqueta aumenta la probabilidad de la orientación preferida y evita problemas de escaneo, no que lo decida.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

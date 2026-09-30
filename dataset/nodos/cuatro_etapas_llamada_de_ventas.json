@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las cuatro etapas de la llamada de ventas",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (el cierre). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
+  "resumen_teorico": "Casi toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (en ventas pequeñas suele ser la compra; en ventas grandes puede ser un paso intermedio hacia ella). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
   "pasos_accionables": [
     "Revisa cada llamada de venta que hagas mirando estas cuatro etapas",
     "Si estás ante una venta grande, prepárate más a fondo para la etapa de Investigación",
@@ -34,5 +34,23 @@
   "etiqueta_arbol": "Domina las Etapas de Venta",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-cuatro_etapas_llamada_de_ventas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (el cierre). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
+      "texto_nuevo": "Casi toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (en ventas pequeñas suele ser la compra; en ventas grandes puede ser un paso intermedio hacia ella). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "157-169",
+        "frase": "almost every sales call you can think of"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice casi toda llamada; el nodo lo vuelve universal.; En ventas grandes el compromiso puede ser un avance intermedio y no el pedido; 'el cierre' pierde ese límite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

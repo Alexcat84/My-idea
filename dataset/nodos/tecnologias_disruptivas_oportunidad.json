@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Explotar Tecnologías Disruptivas en la Búsqueda de Ideas",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que no son adoptadas rápidamente por el mercado mainstream. Sin embargo, representan una amenaza u oportunidad futura significativa, ya que la tecnología dominante eventualmente supera las necesidades reales del usuario promedio, abriendo espacio para que la disrupción gane terreno (ej. cámaras digitales vs. cámaras de 35mm).",
+  "resumen_teorico": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que el mercado mainstream no suele adoptarlas rápido. Aun así, pueden representar una amenaza u oportunidad futura: la tecnología dominante suele mejorar hasta exceder las necesidades de muchos usuarios, y la disruptiva aporta una nueva dimensión de desempeño que unos pocos valoran tanto que toleran su peor rendimiento (ej. cámaras digitales vs. cámaras de 35mm). Son difíciles de predecir y poco frecuentes.",
   "pasos_accionables": [
     "Mapear el desempeño de la tecnología dominante actual a lo largo del tiempo (innovación sostenida)",
-    "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo",
+    "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo, partiendo de las necesidades de tus clientes y no de la tecnología, y buscando a los pocos usuarios que más se beneficiarían de ellas",
     "Evaluar si la tecnología dominante ya excede las necesidades reales de los usuarios",
-    "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva"
+    "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva, teniendo en cuenta que las disrupciones son difíciles de predecir y ocurren con poca frecuencia"
   ],
   "entregable_esperado": "Un análisis comparativo de curvas de rendimiento (tecnología dominante vs disruptiva) con una recomendación estratégica de inversión o vigilancia.",
   "nodos_previos": [
@@ -29,5 +29,57 @@
   "etiqueta_arbol": "Aprovecha las Tecnologías Disruptivas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-tecnologias_disruptivas_oportunidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que no son adoptadas rápidamente por el mercado mainstream. Sin embargo, representan una amenaza u oportunidad futura significativa, ya que la tecnología dominante eventualmente supera las necesidades reales del usuario promedio, abriendo espacio para que la disrupción gane terreno (ej. cámaras digitales vs. cámaras de 35mm).",
+      "texto_nuevo": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que el mercado mainstream no suele adoptarlas rápido. Aun así, pueden representar una amenaza u oportunidad futura: la tecnología dominante suele mejorar hasta exceder las necesidades de muchos usuarios, y la disruptiva aporta una nueva dimensión de desempeño que unos pocos valoran tanto que toleran su peor rendimiento (ej. cámaras digitales vs. cámaras de 35mm). Son difíciles de predecir y poco frecuentes.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5223-5231",
+        "frase": "dominant technology improves so much over time that it exceeds the needs of many users"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que suele pasar y con muchos usuarios; el nodo lo vuelve un hecho seguro.; Mismo defecto que la marca 0.; Se cae la cautela del libro: las disrupciones son difíciles de predecir y poco frecuentes, y el nodo las da como amenaza significativa.; Se pierde la nueva dimensión de desempeño que unos pocos usuarios valoran tanto que toleran el peor rendimiento, clave del mecanismo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-153-tecnologias_disruptivas_oportunidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo",
+      "texto_nuevo": "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo, partiendo de las necesidades de tus clientes y no de la tecnología, y buscando a los pocos usuarios que más se beneficiarían de ellas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5259-5261",
+        "frase": "don't start with the technology; start with customer needs"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide partir de las necesidades del cliente y no de la tecnología, y buscar a los pocos usuarios que más se benefician.; Mismo defecto que la marca 0.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-153-tecnologias_disruptivas_oportunidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva",
+      "texto_nuevo": "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva, teniendo en cuenta que las disrupciones son difíciles de predecir y ocurren con poca frecuencia",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5269",
+        "frase": "disruptions are difficult to predict, and they occur infrequently"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que las disrupciones son difíciles de predecir y ocurren con poca frecuencia, lo que modera la apuesta temprana.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

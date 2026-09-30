@@ -1,0 +1,1295 @@
+[
+ {
+  "id": "final-e1-151-lectura_balance_general-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "lectura_balance_general",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque las líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
+  "texto_nuevo": "El balance general es el estado financiero que los inversionistas y banqueros con experiencia revisan primero, mientras que tú, si estás empezando, probablemente lo ignoras. Te muestra lo que tu empresa posee (activos), lo que debe (pasivos) y la diferencia entre ambos (capital o patrimonio) en una fecha específica. Es más difícil de leer que el estado de resultados porque es menos intuitivo: no basta saber qué significa cada categoría, tienes que entender cómo encajan. Además, sus líneas cambian según tu tipo de negocio, por ejemplo inventario si fabricas algo, o goodwill si compraste otra empresa. La regla que nunca falla: Activos = Pasivos + Capital. Si entiendes esta relación entre categorías y cómo conecta con tus otros estados financieros, puedes ver la salud completa de tu negocio, no solo si vendes o ganas, sino qué tan sólido estás parado.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "1046-1050",
+   "frase": "You not only have to know what the various categories refer to"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye la dificultad a que el balance es menos intuitivo y exige entender cómo encajan sus categorías; la variación de líneas por negocio la da en otro sitio, no como causa.; Mismo defecto: el porqué de la dificultad no es que las líneas cambien según el negocio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-margen_bruto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "margen_bruto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender, ya que una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
+  "texto_nuevo": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender. Su tendencia importa igual: una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "2497-2499",
+   "frase": "Trend lines in gross margin are equally important because they indicate potential problems."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la tendencia como un punto aparte e igual de importante, no como la razón por la que Erickson lo valora.; Mismo defecto: el 'ya que' inventa el porqué de la valoración de Erickson.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-gestion_relacion_bancaria-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_relacion_bancaria",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Los bancos requieren pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
+  "texto_nuevo": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Además de tus estados financieros, los bancos probablemente querrán ver pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3439-3443",
+   "frase": "In addition, he or she will probably want to see the following"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el banquero probablemente querrá ver esos documentos, no que los exija.; Mismo endurecimiento de 'probably' a requisito.; Se cae que, antes que nada, el banquero querrá ver todos los estados financieros.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-gestion_relacion_bancaria-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_relacion_bancaria",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Paquete financiero completo (forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+  "texto_nuevo": "Paquete financiero completo (estados financieros + forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3439",
+   "frase": "your banker will naturally want to see all the financial statements"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paquete que el banquero querrá ver incluye todos los estados financieros; el entregable los omite.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-impacto_estado_resultados_en_balance-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "impacto_estado_resultados_en_balance",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Todo cambio en el estado de resultados repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas) mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
+  "texto_nuevo": "Un cambio en el estado de resultados casi siempre repercute en el balance: las ventas generan efectivo o cuentas por cobrar, los gastos reducen efectivo o aumentan pasivos acumulados, y la utilidad neta incrementa el patrimonio (vía utilidades retenidas), salvo que se reparta en dividendos, mientras una pérdida lo reduce. Decisiones operativas aparentemente simples (comprar inventario, atender nuevos clientes, adquirir equipo) tienen efectos complejos y a veces contradictorios sobre activos, pasivos y liquidez que deben analizarse integralmente.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "1579, 1662",
+   "frase": "a change in one statement nearly always has an impact on the other statements"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice 'nearly always'; el nodo lo vuelve absoluto.; Misma excepción perdida.; Mismo endurecimiento.; Se cae la excepción de los dividendos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-lectura_estado_resultados-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "lectura_estado_resultados",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), y el nivel de detalle varía según el tipo de negocio (manufactura vs. servicios).",
+  "texto_nuevo": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), algunas partidas cambian según el tipo de negocio (manufactura vs. servicios) y cada empresa decide cuánto detalle muestra.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "4092",
+   "frase": "Companies have discretion about the level of detail they provide."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que cada empresa decide cuánto detalle da; lo que cambia entre manufactura y servicios son algunas partidas, no el nivel de detalle.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-metodo_payback-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "metodo_payback",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el método más simple para evaluar una inversión de capital: mide el tiempo requerido para que el flujo de efectivo generado recupere la inversión inicial. Es útil como una verificación rápida inicial pero no considera el valor del dinero en el tiempo ni el retorno más allá del punto de equilibrio.",
+  "texto_nuevo": "Es probablemente el método más simple para evaluar una inversión de capital: mide el tiempo requerido para que el flujo de efectivo generado recupere la inversión inicial. Es útil como una verificación rápida inicial pero no considera el valor del dinero en el tiempo ni el retorno más allá del punto de equilibrio.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3049",
+   "frase": "The payback method is probably the simplest way to evaluate the future cash flow"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'probably the simplest'; el nodo quita la cautela.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-metodo_valor_presente_neto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "metodo_valor_presente_neto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es el método más robusto y preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR) y el método de payback, que ignoran el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera el costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+  "texto_nuevo": "Es el método más robusto y suele ser el preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR), que ignora el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera tu hurdle rate, y suma valor siempre que esa tasa sea igual o mayor que tu costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3104, 3116, 3133",
+   "frase": "it should be accepted, because the return is greater than the company’s hurdle rate"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el retorno supera la hurdle rate y que eso suma valor si esa tasa es igual o mayor que el costo de capital; se cae la condición.; El libro dice que suele ser la primera opción de los profesionales; el nodo quita el 'suele'.; El libro reprocha la escala solo a la IRR; al payback le critica otras cosas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-metodos_de_valuacion-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "metodos_de_valuacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Consultar con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas",
+  "texto_nuevo": "Sugerencia de My Idea: consulta con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "261-273",
+   "frase": "your financial intelligence should include an understanding of how those numbers are calculated"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no recomienda consultar a un experto en valuación; queda como sugerencia de la casa.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-151-gestion_relacion_bancaria-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_relacion_bancaria",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Preparar un pronóstico de flujo de caja a 12 meses.",
+  "texto_nuevo": "Preparar un pronóstico de flujo de caja, a veces de hasta 12 meses.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3441",
+   "frase": "A forecast of cash flow, sometimes for as much as twelve months."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el pronóstico a veces llega a doce meses; el nodo fija el plazo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-151-lectura_estado_resultados-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "lectura_estado_resultados",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verificar si las cifras están en miles, millones, o valores absolutos",
+  "texto_nuevo": "Verificar el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "471-486",
+   "frase": "you want to look at the actuals as well as the pro formas"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye revisar el periodo y si el estado es real o pro forma, con cautela ante el pro forma.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-151-calcular_peso_dimensional_antes_cotizar-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "calcular_peso_dimensional_antes_cotizar",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando un courier cotiza tu envio, no siempre cobra por el peso real de la bascula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un numero fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese calculo puede darte un peso mayor al real, y el courier siempre te cobra por el mas alto de los dos. El divisor cambia entre couriers y entre países, y también puede cambiar de un ano a otro, así que no sirve memorizar un numero: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este calculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas mas ajustadas al tamaño real de tu producto.",
+  "texto_nuevo": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo que cada courier define, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Como el divisor lo define cada courier, no sirve memorizar un número: hay que preguntarlo directamente a quien te va a transportar el paquete. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "79-87",
+   "frase": "Divide by 139 for U.S., Puerto Rico, and international shipments."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da un único divisor para EE.UU., Puerto Rico e internacional y nada de cambios anuales.; Mismo hecho añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque pueden generar reacciones químicas o eléctricas riesgosas durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envio o, peor, que provoque un incidente en transito. Cada tipo de mercancía peligrosa tiene un numero y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto antes de escalar volumen es un paso que no se puede saltar.",
+  "texto_nuevo": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "1513, 1727",
+   "frase": "Under some circumstances these everyday items can harm people, property, and the environment."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro pide identificar y preparar bien cada envío, no solo al escalar.; La causa química o eléctrica el libro la da solo para las baterías; para el conjunto dice que pueden dañar personas, bienes o el ambiente.; Misma causa atribuida a todo el conjunto.; Misma condición perdida: cada envío, desde el primero.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Busca la clasificación oficial de ese tipo de producto (número y nombre de envío).",
+  "texto_nuevo": "Busca en la normativa de IATA y OACI la clasificación oficial de ese tipo de producto (número UN, nombre de envío, clase de peligro y, si aplica, riesgo secundario y grupo de embalaje).",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "1745",
+   "frase": "Proper Shipping Name, hazard class and, if applicable, subsidiary risk and Packing Group"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La identificación del libro incluye clase de peligro y, si aplica, riesgo secundario y grupo de embalaje, según IATA y OACI.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Capacítate tú mismo antes de despachar el primer envío de este tipo.",
+  "texto_nuevo": "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "1753",
+   "frase": "requires people to be trained and certified to handle and prepare dangerous goods shipments"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige estar capacitado y certificado; se pierde la certificación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-151-empacar_flores_plantas_sin_agua-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La técnica central es simple: nunca cargar agua en el envio. Vacía floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en transito. Cuando envíes varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+  "texto_nuevo": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja y protegerlas de temperaturas extremas. El agua puede filtrarse y dañar el producto o causar problemas de seguridad, así que la técnica central es simple: nunca cargar agua en el envío. Vacía floreros o macetas antes de cerrar la caja, mete la maceta en una bolsa cerrada alrededor del tallo o, si la planta no tiene un solo tallo principal, cubre la tierra con papel sujeto a la maceta, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en tránsito. Cuando envíes varias piezas u orquídeas, sepáralas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas en arreglos florales y plantas en maceta; los esquejes necesitan un empaque propio.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "527-569",
+   "frase": "shipping with water is prohibited because it may leak during shipment and cause product damage"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el agua puede filtrarse y causar daño al producto o problemas de seguridad; el nodo lo vuelve certeza y añade otros paquetes.; El libro dice que el empaque varía según el contenido y da a plantines y esquejes un método propio.; El papel es la alternativa para plantas sin un solo tallo principal y va sujeto a la maceta, no al tallo.; Misma condición del papel perdida.; Misma generalización a esquejes.; Mismo endurecimiento y efecto añadido.; Mismo requisito de temperatura perdido.; Se cae el requisito general de proteger de temperaturas extremas en el envío y tras la entrega.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-empacar_flores_plantas_sin_agua-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "empacar_flores_plantas_sin_agua",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
+  "texto_nuevo": "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo; si la planta no tiene un solo tallo principal, pon papel entre las hojas y sobre la tierra y sujétalo a la maceta.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "569",
+   "frase": "If the plant does not have a single main stem, you can place paper"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la alternativa del libro para plantas sin un solo tallo principal.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-151-evitar_materiales_blandos_contenedor_final-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No todo lo que envuelve un producto sirve como contenedor final de envio. Bolsas plásticas, sobres de papel y cajas de cartón delgado no soportan la manipulación, la humedad ni los cambios de presión de un trayecto de courier, y por eso los transportistas los rechazan como empaque exterior, sin importar cuan bien este acolchado el contenido por dentro. Esto aplica sobre todo a envíos regulados, como muestras clinicas o mercancías que necesitan trato especial, donde la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente. La lección practica es simple: lo blando puede ir adentro como protección, pero lo que toca el exterior del envio y da la forma final tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+  "texto_nuevo": "No todo lo que envuelve un producto sirve como contenedor final de envío. En envíos regulados, como muestras clínicas o mercancías que necesitan trato especial, las bolsas plásticas, los sobres de papel y las cajas de cartón delgado no se aceptan como empaque exterior, sin importar cuán bien esté acolchado el contenido por dentro: la norma exige un contenedor rígido de cartón corrugado, madera, metal o plástico resistente, capaz de soportar la vibración y los cambios de temperatura, humedad y presión del trayecto. En envíos comunes, una caja de cartón delgado, como la de un regalo o de zapatos, va dentro de una caja exterior de cartón corrugado. La lección práctica es simple: lo blando puede ir adentro como protección, pero cuando la norma lo exige, lo que toca el exterior del envío tiene que ser rígido, o el paquete se puede quedar sin recoger.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "95, 949",
+   "frase": "Chipboard or paperboard boxes, paper envelopes, and plastic bags are unacceptable outer packaging."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El rechazo de bolsas, sobres y cartón delgado como exterior el libro lo fija para envíos clínicos y regulados, no para todo envío.; Misma generalización.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-evitar_materiales_blandos_contenedor_final-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "evitar_materiales_blandos_contenedor_final",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior.",
+  "texto_nuevo": "En envíos regulados, como muestras clínicas, descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior; en envíos comunes, mete el cartón delgado dentro de una caja de cartón corrugado.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "95",
+   "frase": "such as gift or shoe boxes, must be packed into a corrugated outer box"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es una condición perdida (en envíos regulados), no un añadido.; Se cae la condición: la prohibición es para envíos regulados; en envíos comunes el cartón delgado va dentro de una caja corrugada.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-151-probar_empaque_antes_de_escalar_envios-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos días, sin costo. Esto te evita descubrir una falla de diseno después de haber comprado cien cajas iguales o de haber perdido mercancía en transito. La prueba también sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por daños y rechazos en bodega. Pregunta a tu proveedor de envíos si ofrece este servicio y en que consiste antes de escalar volumen.",
+  "texto_nuevo": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Tu courier puede tener un laboratorio de empaque donde enviar una muestra armada exactamente como la mandarías al cliente y recibir un resultado en unos cinco a siete días hábiles, sin costo, si tienes una cuenta activa con él. Esto te evita descubrir una falla de diseño después de haber comprado cien cajas iguales o de haber perdido mercancía en tránsito. La prueba también ayuda a predecir cómo se comportará tu empaque, y para algunos productos, como flores y plantas, el courier la exige antes de aceptar el envío. Pregunta a tu proveedor de envíos si ofrece este servicio y en qué consiste antes de escalar volumen.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "501, 637, 879",
+   "frase": "complimentary package testing, evaluation, and design services that can help you avoid product damage"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no promete menos reclamos ni rechazos en bodega; habla de predecir el desempeño y evitar daños.; El libro solo describe el laboratorio de un courier, no de varios.; Misma condición de la cuenta activa perdida.; Misma exigencia para flores y plantas perdida.; Mismo efecto añadido.; Para flores y plantas el libro hace la prueba obligatoria antes de enviar.; Se pierden la cuenta activa exigida y el plazo de cinco a siete días hábiles.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-probar_empaque_antes_de_escalar_envios-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "probar_empaque_antes_de_escalar_envios",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Envía la muestra marcada como paquete de prueba según sus instrucciones.",
+  "texto_nuevo": "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena y firmada y dentro de una caja exterior resistente, según sus instrucciones.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "883-893",
+   "frase": "Complete and sign your application"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento exige enviar la solicitud llena y firmada con la muestra, dentro de una caja exterior resistente.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-151-elegir_sobre_o_caja_tamano-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "elegir_sobre_o_caja_tamano",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "texto_nuevo": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "99",
+   "frase": "Place small packages inside a larger outer box."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro manda poner los paquetes pequeños dentro de una caja exterior más grande; el nodo lo llama desperdicio.; El libro solo fija qué hacer por debajo del tamaño mínimo.; El riesgo de forzar un sobre no está en el libro.; Los dos porqués son añadidos; el primero además choca con el libro, corregido como contrario.; Misma regla añadida por encima del mínimo.; Mismo consejo invertido.; Mismo riesgo añadido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-sellar_cajas_metodo_cinta_en_h-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+  "texto_nuevo": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "149",
+   "frase": "This will help prevent accidental opening."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el método ayuda a prevenir la apertura accidental, no que la evite.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-sellar_cajas_metodo_cinta_en_h-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "sellar_cajas_metodo_cinta_en_h",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+  "texto_nuevo": "Sugerencia de My Idea: añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "181-185",
+   "frase": "Apply tape evenly across flaps and seams to both the top and bottom"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pide más tiras por peso; queda como sugerencia de la casa.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-151-colocar_etiquetas_de_manejo_correctamente-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "colocar_etiquetas_de_manejo_correctamente",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Donde y como pegas la etiqueta principal decide si el paquete llega derecho y se procesa rápido. La regla común es ponerla plana, sobre la cara mas grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envio anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envio aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+  "texto_nuevo": "Dónde y cómo pegas la etiqueta principal influye en que el paquete viaje en la posición preferida y se escanee sin problemas. La regla común es ponerla plana, sobre la cara más grande de la caja, sin que ninguna cinta o papel la tape, porque eso atrasa el escaneo automático en la bodega del courier. Si reutilizas una caja, primero quita o tapa toda etiqueta o marca de un envío anterior para no confundir al operador. Marcas como las flechas o 'este lado arriba' no garantizan que el courier respete la orientación durante el viaje, aunque pegar bien la etiqueta de envío aumenta la probabilidad de que el paquete viaje en la posición preferida. Por eso el empaque interno debe proteger el contenido sin depender de que la flecha se obedezca.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "201-203",
+   "frase": "properly placing the shipping label increases your chance for the preferred orientation"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que colocar bien la etiqueta aumenta la probabilidad de la orientación preferida y evita problemas de escaneo, no que lo decida.; Mismo endurecimiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-151-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "reconocer_mercancia_peligrosa_disfrazada",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles o químicos.",
+  "texto_nuevo": "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos o encendedores.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "1757-1787",
+   "frase": "Parts (containing gasoline, jet fuel or kerosene)"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye gases, combustibles, pirotecnia, fósforos y encendedores.; Mismo defecto: faltan gases y combustibles.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-151-acolchado_segun_forma-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "acolchado_segun_forma",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto.",
+  "texto_nuevo": "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
+  "cita": {
+   "libro": "Guia de empaque para envios (FedEx)",
+   "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+   "lineas": "1287",
+   "frase": "We recommend placing the parts in a box in addition to the minimum requirements shown."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la cinta como mínimo y recomienda además meter la pieza en una caja.; Mismo defecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-152-rol_del_equipo_de_trabajo_en_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rol_del_equipo_de_trabajo_en_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los equipos de calidad son estructuras que combinan el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) de una organización, denominados sistemas sociotécnicos (STS). Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
+  "texto_nuevo": "Toda organización tiene un sistema técnico (equipos, procedimientos) y uno social (personas, roles); su interacción se llama sistema sociotécnico (STS), y en las nuevas formas de organizar el trabajo que nacen de ahí los equipos de calidad tienen un papel importante. Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9688-9690",
+   "frase": "Team concepts play an important role in these new approaches."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro llama STS a la interacción de los dos sistemas de toda organización; los equipos juegan un papel en ese enfoque, no son el STS.; Mismo defecto: identifica los equipos de calidad con los sistemas sociotécnicos, cosa que el libro no dice.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-rol_green_belt_six_sigma-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rol_green_belt_six_sigma",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Espera que cada proyecto que líderes genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
+  "texto_nuevo": "Con unos 8 días de capacitación en métodos y herramientas de Six Sigma, puedes colaborar en proyectos liderados por alguien con más experiencia (Black Belt) o liderar tú mismo proyectos de menor alcance. Si eliges bien cada proyecto que lideres, espera que genere un retorno importante: pregunta cuál es el rango esperado en tu mercado.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "14097",
+   "frase": "If properly selected, these initial projects will produce significant bottom-line savings"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona los ahorros importantes a que los proyectos estén bien seleccionados.; Misma condición perdida: 'if properly selected'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-satisfaccion_vs_insatisfaccion_kano-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "satisfaccion_vs_insatisfaccion_kano",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de nuevas características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
+  "texto_nuevo": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3197",
+   "frase": "It is only the presence of features that creates satisfaction."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la satisfacción la crea la presencia de características, sin exigir que sean nuevas.; Mismo añadido: 'nuevas' no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-rol_director_calidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rol_director_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Quien lleva la calidad en tu negocio cumple dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estratégicas sobre calidad. Una tendencia clave es que las tareas de calidad que antes se concentraban en una sola persona o área pasen a repartirse entre quienes ejecutan el trabajo en cada área, y que estas personas reciban la formación necesaria para asumirlas.",
+  "texto_nuevo": "Es probable que quien lleva la calidad en tu negocio cumpla dos papeles: organizar el trabajo diario de calidad y ayudarte a ti a tomar las decisiones estratégicas sobre calidad. Una tendencia clave es que las tareas de calidad antes concentradas en una sola persona o área pasen a repartirse entre quienes ejecutan el trabajo en cada área, y que esas personas se formen para asumirlas. Aun así, siempre hará falta evaluar de forma independiente la calidad de lo que entregas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9579",
+   "frase": "The quality director of the future is likely to have two primary roles"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que es probable que el director de calidad del futuro tenga esos dos papeles; el nodo lo da por hecho.; El libro limita la transferencia: siempre hará falta una evaluación independiente de la calidad del producto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-roles_six_sigma-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "roles_six_sigma",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt y dueño del proceso",
+  "texto_nuevo": "Define y comunica la estructura de roles: Liderazgo, Champion, Master Black Belt, Black Belt, Green Belt, equipo de proyecto con expertos en la materia y dueño del proceso",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13960-13974",
+   "frase": "The key roles to drive Six Sigma are"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el equipo de proyecto y los expertos en la materia, uno de los siete roles clave del libro.; Misma omisión en la enumeración de roles.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-152-rol_de_mandos_medios_y_supervisores-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rol_de_mandos_medios_y_supervisores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeño equipo o la que lleva la calidad en su propia área. Liderar un equipo que cruza distintas áreas exige habilidades distintas a la autoridad jerárquica tradicional, como la tolerancia a la ambigüedad y la flexibilidad para adaptarse sobre la marcha.",
+  "texto_nuevo": "Quien ejecuta la calidad en el día a día no siempre es quien decide la estrategia: es la persona que detecta un problema de calidad, la que lidera un pequeño equipo, la que lleva la calidad en su propia área o la que se reúne con sus clientes y proveedores para conocer sus necesidades. Liderar un equipo que cruza distintas áreas exige habilidades distintas a la autoridad jerárquica tradicional, como la tolerancia a la ambigüedad y la flexibilidad para adaptarse sobre la marcha.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9656",
+   "frase": "Identifying customers and suppliers and meeting with them to discover and address their needs."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo papel omitido de la lista del libro.; Se cae el papel que el libro asigna a mandos medios y supervisores de identificar a clientes y proveedores y reunirse con ellos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-roles_equipo_proyecto_six_sigma-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "roles_equipo_proyecto_six_sigma",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+  "texto_nuevo": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, normalmente no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "14133",
+   "frase": "They are typically not core team members"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que normalmente no son miembros centrales; el nodo lo vuelve absoluto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-rol_facilitador_equipos_mejora-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "rol_facilitador_equipos_mejora",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El facilitador es un agente externo al equipo de proyecto que ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
+  "texto_nuevo": "El facilitador, que no tiene que ser miembro del equipo de proyecto, ayuda a mejorar las relaciones humanas, asiste en asuntos fuera del alcance del equipo, apoya a los miembros manteniendo el foco en la meta, cuestiona afirmaciones sin sustento y reporta el progreso a los consejos de calidad. Requiere entrenamiento especializado en construcción de equipos, resolución de conflictos y conocimiento de las herramientas de breakthrough.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7069",
+   "frase": "does not have to be a member of the team"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el facilitador no tiene que ser miembro del equipo, no que siempre sea externo a él.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-principios_gestion_error-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "principios_gestion_error",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar no reduce la falibilidad futura, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la severidad de sus consecuencias.",
+  "texto_nuevo": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar no reduce la falibilidad futura, los errores son en gran parte no intencionales y por eso difíciles de controlar desde la dirección, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la severidad de sus consecuencias.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "3819-3821",
+   "frase": "Errors are largely unintentional."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Anuncia ocho principios y omite el quinto: los errores son en gran parte no intencionales y difíciles de controlar por la dirección.; Mismo principio omitido de la lista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-principios_gestion_error-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "principios_gestion_error",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Abordar las violaciones mediante cambio cultural, normas y actitudes, no solo mediante sanción",
+  "texto_nuevo": "Abordar las violaciones mediante cambio cultural, normas y actitudes, y mejorando la credibilidad, aplicabilidad, disponibilidad y precisión de los procedimientos, no solo mediante sanción",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "3829",
+   "frase": "improving the credibility, applicability, availability and accuracy of the procedures"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da una segunda vía para las violaciones: mejorar credibilidad, aplicabilidad, disponibilidad y precisión de los procedimientos.; Misma segunda vía perdida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-152-organizaciones_alta_confiabilidad_hro-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "organizaciones_alta_confiabilidad_hro",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseñar mecanismos de transición de autoridad jerárquica a autoridad técnica en emergencias",
+  "texto_nuevo": "Diseñar mecanismos de transición de autoridad jerárquica a autoridad técnica en los períodos de alta demanda operativa, sabiendo que esa transición depende de una cultura jerárquica fuerte y disciplinada previa y de invertir en tus supervisores de primera línea",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "5208",
+   "frase": "the success of this transformation depends on the prior establishment of a strong"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el éxito de la descentralización a una cultura jerárquica fuerte y disciplinada previa y a invertir en supervisores de primera línea.; El libro sitúa el cambio de autoridad en los picos de operación intensa, no solo en emergencias.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-152-modelos_gestion_seguridad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "modelos_gestion_seguridad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden y deben coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+  "texto_nuevo": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "5503",
+   "frase": "there is no reason why these various models"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no hay razón para que no coexistan; 'deben' lo vuelve obligación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-modelo_accidente_organizacional-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "modelo_accidente_organizacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada'. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+  "texto_nuevo": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada', que no son condición necesaria: a veces las defensas fallan solo por condiciones latentes. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "291",
+   "frase": "they are not a necessary condition"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los actos inseguros no son condición necesaria: a veces las defensas fallan solo por condiciones latentes.; Misma excepción perdida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-medidas_reactivas_proactivas-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "medidas_reactivas_proactivas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Diseñar entre 8 y 16 chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados",
+  "texto_nuevo": "Diseñar chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados (suelen ser entre 8 y 16, según el tipo de sistema), para identificar los dos o tres procesos que más urgen atención",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "2658",
+   "frase": "ranges typically from around eight to 16 and will vary"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da el rango de 8 a 16 como típico y variable según el sistema; el paso lo fija.; Mismo endurecimiento de la cifra.; Se pierde el propósito de los chequeos: hallar los dos o tres procesos que más urgen atención.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-152-metas_de_seguridad_correctas-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "metas_de_seguridad_correctas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+  "texto_nuevo": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que se sabe están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "2596",
+   "frase": "planning, budgeting, communication, goal conflicts, and the like"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de procesos manejables incluye los conflictos de metas, que el nodo omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-prevalencia_omisiones-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "prevalencia_omisiones",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, cerca del final, oculto, con varios elementos iguales)",
+  "texto_nuevo": "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, después de lograr el objetivo principal, cerca del final, oculto, con varios elementos que instalar, que no se pide en tareas parecidas, con cambios recientes, que repite acciones previas, que depende de una acción previa o que no siempre se requiere)",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "2250",
+   "frase": "establishing the number of omission-provoking features that each discrete step possesses"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento cuenta los rasgos que provocan omisión y la lista del paso deja fuera seis de los diez del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-152-incentivos_internos_alineados_a_retencion-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "incentivos_internos_alineados_a_retencion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La gente hace aquello por lo que se le paga, y en la mayoría de los negocios se paga por cerrar cuentas nuevas y por atender rápido. Las dos cosas suenan bien y las dos empujan en contra de la relación: la primera deja al cliente recién firmado sin dueño, y la segunda premia despachar la llamada antes que resolver el problema. Corregirlo pide auditar los esquemas que ya tienes y preguntarles a que premian de verdad, poner métricas y bonos ligados a retención, satisfacción y valor vitalicio del cliente, quitar los incentivos que premian la rapidez por encima de la calidad de la relación, y sentar a quien responde por la experiencia del cliente donde se toman las decisiones ejecutivas, que es la única forma de que esa voz no dependa de la buena voluntad ajena.",
+  "texto_nuevo": "La gente hace aquello por lo que se le paga: en la mayoría de los negocios se premia cerrar cuentas nuevas, y en muchos, además, se paga por atender rápido. Las dos cosas suenan bien y las dos empujan en contra de la relación: la primera deja al cliente recién firmado sin dueño, y la segunda premia despachar la llamada antes que resolver el problema. Corregirlo pide auditar los esquemas que ya tienes y preguntarles qué premian de verdad, poner métricas y bonos ligados a retención, satisfacción y valor vitalicio del cliente, quitar los incentivos que premian la rapidez por encima de la calidad de la relación, y sentar a quien responde por la experiencia del cliente donde se toman las decisiones ejecutivas, porque sin ese asiento su voz no se escucha.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "767-769",
+   "frase": "In many companies, these customer-facing employees are actually incentivized to spend less time"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye los bonos por atender rápido a 'muchas' empresas, no a la mayoría.; El libro solo dice que sin asiento en la mesa ejecutiva esa voz no se escucha; 'la única forma' es añadido.; Mismo añadido sobre la única forma.; Mismo endurecimiento de la frecuencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-incentivos_internos_alineados_a_retencion-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "incentivos_internos_alineados_a_retencion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Crear métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de ventas.",
+  "texto_nuevo": "Crear, con tu equipo involucrado desde el inicio, métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de ventas.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "6008",
+   "frase": "the employees must be part of the planning from the outset"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los cambios de compensación impuestos desde arriba se reciben con desgana; el equipo debe participar desde el inicio.; Misma condición perdida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-152-investigar_datos_cliente-pasos_accionables-7",
+  "fecha": "2026-09-28",
+  "node_id": "investigar_datos_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
+  "texto_nuevo": "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar y define quién se encarga de mantener los datos al día",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "5533",
+   "frase": "(b) who is in charge of maintaining it"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aclarar dónde se guardan los datos y quién se encarga de mantenerlos; se pierde lo segundo.; Misma segunda condición perdida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 7
+ },
+ {
+  "id": "final-e1-152-garantia_devolucion_dinero-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "garantia_devolucion_dinero",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una garantía de devolución de dinero elimina dos elementos centrales de la disonancia cognitiva postcompra: el miedo a perder el dinero invertido y el miedo al compromiso a largo plazo. Empresas como Casper, Zappos, CarMax y Lands' End han usado políticas de devolución generosas (desde 100 noches hasta garantía de por vida) como herramienta estratégica de confianza, generando lealtad en lugar de abuso del sistema.",
+  "texto_nuevo": "Una garantía de devolución de dinero elimina dos elementos centrales de la disonancia cognitiva postcompra: el miedo a perder el dinero invertido y el miedo al compromiso a largo plazo. Empresas como Casper, Zappos, CarMax y Lands' End han usado políticas de devolución generosas (desde 5 días hasta garantía de por vida) como herramienta estratégica de confianza; en Lands' End, la lealtad de sus clientes mantiene las devoluciones dentro del estándar de su industria.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "2818",
+   "frase": "Our customers are incredibly loyal"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que estas políticas generen lealtad; solo cuenta que en Lands' End la lealtad de sus clientes evita el abuso.; El plazo más corto de los casos es la garantía de 5 días de CarMax, no las 100 noches.; Mismo efecto generalizado desde el caso de Lands' End.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-incentivos_no_monetarios_advocacy-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "incentivos_no_monetarios_advocacy",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identifica el incentivo de mayor valor percibido para tu cliente que sea de bajo costo marginal para ti",
+  "texto_nuevo": "Identifica el incentivo de mayor valor percibido para tu cliente, algo que le costaría conseguir por su cuenta, que sea de bajo costo marginal para ti",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "5273",
+   "frase": "something they (a) want and (b) would have a hard time obtaining"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el criterio del libro: algo que el cliente quiera y que le costaría conseguir por su cuenta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-152-gratificacion_inmediata_producto-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "gratificacion_inmediata_producto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cualquier fricción entre la recepción del producto y su uso real (como necesitar cargar baterías, configurar cuentas o esperar activaciones) reduce el entusiasmo del cliente y puede convertirse en el estándar esperado por el mercado si no se corrige. El caso del iPod de Apple, enviado precargado por decisión de Steve Jobs, ilustra cómo eliminar una barrera aparentemente menor puede convertirse en una ventaja competitiva duradera y redefinir un estándar de industria.",
+  "texto_nuevo": "Cualquier fricción entre la recepción del producto y su uso real (como necesitar cargar baterías, configurar cuentas o esperar activaciones) reduce el entusiasmo del cliente y puede convertirse en el estándar esperado por el mercado si no se corrige. El caso del iPod de Apple, enviado precargado por decisión de Steve Jobs, ilustra cómo eliminar una barrera aparentemente menor puede ser revolucionario en su momento y redefinir un estándar de industria que luego todos siguen.",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "3116",
+   "frase": "At the launch of the iPod, however, this was revolutionary."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la carga previa fue revolucionaria en su lanzamiento y que hoy todos la hacen; no habla de ventaja duradera.; Mismo añadido de ventaja duradera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-152-fase_assess_ciclo_cliente-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "fase_assess_ciclo_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa si tú, o quien vende por ti, está registrando bien lo que el cliente necesita",
+  "texto_nuevo": "Evalúa si tú, o quien vende por ti, está registrando bien lo que el cliente necesita y se lo pasa a quien lo va a atender después de la venta",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "2035",
+   "frase": "share customer desires and needs with the individual(s) responsible for maintaining"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro evalúa también si lo registrado se comparte con quien mantiene la relación tras la venta.; Misma segunda comprobación perdida.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-152-gestion_testimonios-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "gestion_testimonios",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conversa con tu cliente sobre el impacto específico y tangible que logró gracias a tu producto o servicio",
+  "texto_nuevo": "Cuando tu cliente ya haya logrado el resultado que buscaba, conversa con él sobre el impacto específico y tangible que logró gracias a tu producto o servicio",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "5085",
+   "frase": "couldn't ask for a written review or testimonial until customers had accomplished"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide el testimonio solo cuando el cliente ya logró el resultado que buscaba.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-152-incentivos_no_monetarios_advocacy-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "incentivos_no_monetarios_advocacy",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunicar el incentivo de forma clara vinculada a una acción simple de referencia",
+  "texto_nuevo": "Comunicar el incentivo de forma clara vinculada a una acción simple de referencia, cuando el cliente ya comprobó que tu servicio le funciona",
+  "cita": {
+   "libro": "Never Lose a Customer Again - Joey Coleman",
+   "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+   "lineas": "5024",
+   "frase": "the referral doesn't happen until the customer has successfully experienced"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro subraya que la oferta de referidos llega cuando el servicio ya demostró que le funciona al cliente.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-153-ecuacion_de_valor_venta-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ecuacion_de_valor_venta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño provoca rechazo inmediato. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
+  "texto_nuevo": "Concepto que explica que una solución se percibe como razonable solo cuando la gravedad/costo del problema percibido por el cliente supera al costo de la solución ofrecida. En ventas grandes, ofrecer una solución cara para un problema que el cliente percibe como pequeño hace poco probable la compra. El trabajo del vendedor consultivo es, mediante Preguntas de Implicación, aumentar el lado del 'problema' en la ecuación antes de presentar precio o solución.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "1068",
+   "frase": "the problem is small and the cost high, then there's unlikely to be a purchase"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que con problema pequeño y costo alto la compra es poco probable, no que haya rechazo inmediato.; Mismo defecto: el libro habla de compra poco probable, el nodo lo endurece a rechazo inmediato.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-construccion_de_valor_percibido-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "construccion_de_valor_percibido",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido —no solo transmitir conocimiento del producto— es la habilidad de venta más importante en las ventas grandes. Vendedores que dominan ventas pequeñas suelen fracasar en ventas grandes precisamente porque confían en su conocimiento de producto en lugar de elevar la percepción de valor del cliente frente al problema.",
+  "texto_nuevo": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido, no solo transmitir conocimiento del producto, es probablemente la habilidad de venta más importante en las ventas grandes. Los vendedores que no logran pasar de ventas pequeñas a ventas grandes son los que tienen dificultad para elevar la percepción de valor del cliente frente al problema, y apoyarse en el conocimiento de producto no suple esa falta.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "112-116",
+   "frase": "building of perceived value is probably the single most important selling skill in larger sales"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que probablemente es la habilidad más importante; el nodo quita la cautela.; El libro solo dice que quienes no pasaron a ventas grandes tenían dificultad para construir valor; la frecuencia y la causa del conocimiento de producto salen de una anécdota.; Mismo defecto que la marca 0: se pierde el 'probablemente' del libro.; Mismo defecto que la marca 1: frecuencia y causa generalizadas desde un solo caso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-cuatro_etapas_llamada_de_ventas-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cuatro_etapas_llamada_de_ventas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (el cierre). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
+  "texto_nuevo": "Casi toda llamada de ventas, sin importar su tamaño, atraviesa cuatro etapas: Preliminares (la apertura y las primeras impresiones), Investigación (indagar necesidades con preguntas), Demostración de Capacidad (mostrar que tienes una solución valiosa) y Obtención de Compromiso (en ventas pequeñas suele ser la compra; en ventas grandes puede ser un paso intermedio hacia ella). El peso de cada etapa cambia según el tamaño de la venta: en ventas grandes, la Investigación es la etapa más crítica, mientras que los Preliminares pesan menos de lo que se suele creer.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "157-169",
+   "frase": "almost every sales call you can think of"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice casi toda llamada; el nodo lo vuelve universal.; En ventas grandes el compromiso puede ser un avance intermedio y no el pedido; 'el cierre' pierde ese límite.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-diagnostico_sintoma_vs_causa_ventas-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "diagnostico_sintoma_vs_causa_ventas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tú o alguien que vende contigo tiene bajo desempeño, por ejemplo demasiadas objeciones, distingue el síntoma que ves (las objeciones) de la causa real (el orden equivocado entre las preguntas que haces y las soluciones que ofreces). Antes de corregir algo, mira datos reales de tus conversaciones de venta para encontrar la causa, y evita quedarte en soluciones superficiales que no cambian el resultado de fondo.",
+  "texto_nuevo": "Cuando tú o alguien que vende contigo tiene bajo desempeño, por ejemplo demasiadas objeciones, distingue el síntoma que ves (las objeciones) de la causa real (el orden equivocado entre las preguntas que haces y las soluciones que ofreces). Hay objeciones reales: tu producto no cubre la necesidad o un competidor es superior. Antes de corregir algo, mira datos reales de tus conversaciones de venta para encontrar la causa, y evita quedarte en soluciones superficiales que no cambian el resultado.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "2371-2373",
+   "frase": "objections that arise because the customer has needs your product can't meet"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que siempre habrá objeciones reales que ninguna prevención evita; el nodo presenta el orden como la causa sin ese límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-cierre_segun_complejidad_venta-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cierre_segun_complejidad_venta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+  "texto_nuevo": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas, aunque las llamadas sin ningún cierre tuvieron mucho menos éxito que las de un solo cierre. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "672",
+   "frase": "calls with no closing whatsoever are unlikely to be effective"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la otra mitad del dato: las llamadas sin ningún cierre tuvieron mucho menos éxito que las de un cierre, lo que cambia el 'sin abusar'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-deteccion_efecto_hawthorne-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "deteccion_efecto_hawthorne",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dividir al grupo entrenado en subgrupos según el grado de adopción real de las nuevas conductas (alto vs bajo)",
+  "texto_nuevo": "Dividir al grupo entrenado, que recibió la misma cantidad de entrenamiento y atención, en subgrupos según el grado de adopción real de las nuevas conductas (alto vs bajo)",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "3246-3250",
+   "frase": "Each of these people had exactly the same number of hours of training"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El método exige que todos hayan recibido la misma cantidad de entrenamiento y atención; sin esa condición la comparación no aísla el efecto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-153-apertura_llamada_venta_grande-pasos_accionables-0",
+  "fecha": "2026-09-28",
+  "node_id": "apertura_llamada_venta_grande",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior, nunca más del 20% del tiempo total de la llamada",
+  "texto_nuevo": "No gastes demasiado tiempo abriendo con temas personales o triviales cuando vendes algo grande o le hablas a alguien senior; no hay una medida exacta, pero dedicar de forma constante más del 20% del tiempo de la llamada a la apertura es motivo de preocupación",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "2587",
+   "frase": "I'd be worried by anyone who consistently spent more than 20 percent"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no hay medida exacta y que preocupa quien pasa del 20% de forma constante; el nodo lo vuelve un tope absoluto.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-153-ecuacion_de_valor_cliente-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "ecuacion_de_valor_cliente",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El cliente evalúa internamente una balanza entre el costo/esfuerzo de una solución y el valor percibido de resolver su problema. Si el problema no se ha desarrollado lo suficiente en la mente del cliente (a través de preguntas), cualquier solución —por buena que sea— parecerá desproporcionadamente cara o complicada, generando objeciones. El trabajo del vendedor es inclinar esta balanza aumentando la percepción de valor del problema antes de introducir el costo de la solución.",
+  "texto_nuevo": "El cliente evalúa internamente una balanza entre el costo/esfuerzo de una solución y el valor percibido de resolver su problema. Si el problema no se ha desarrollado lo suficiente en la mente del cliente (a través de preguntas), una solución costosa, por buena que sea, puede parecer desproporcionadamente cara o complicada, y lo más probable es que genere objeciones. El trabajo del vendedor es inclinar esta balanza aumentando la percepción de valor del problema antes de introducir el costo de la solución.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "2242-2252",
+   "frase": "objections are a more likely response than any other buyer behavior"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la objeción es la respuesta más probable, no siempre, y que depende de que la solución sea costosa.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-cierre_satisfaccion_postventa-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "cierre_satisfaccion_postventa",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un estudio con 145 clientes reveló que quienes fueron atendidos por vendedores entrenados en técnicas de cierre reportaron menor satisfacción con su compra y menor probabilidad de volver a comprar en la misma tienda. La explicación psicológica es que las personas se sienten menos satisfechas con decisiones que perciben como forzadas o presionadas, en comparación con decisiones tomadas con libre voluntad. Esto es crítico en ventas grandes donde la relación post-venta determina la recompra y la referencia.",
+  "texto_nuevo": "Un estudio con 145 clientes de una cadena minorista reveló que quienes fueron atendidos por vendedores entrenados en técnicas de cierre reportaron menor satisfacción con su compra y menor probabilidad de volver a comprar en la misma tienda. La interpretación más probable es que las personas se sienten menos satisfechas con decisiones que perciben como forzadas o presionadas que con las tomadas con libre voluntad. El estudio tiene limitaciones y no se hizo en ventas grandes, pero invita a ser aún más cauto con el cierre en ellas, donde la satisfacción posventa puede pesar en ventas futuras.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "593-609",
+   "frase": "even more reason to be cautious about the use of closing techniques in larger sales"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El estudio fue en una cadena minorista, con debilidades de método, y nunca se estudió en ventas grandes; el nodo lo presenta sin esos límites.; El libro dice que la satisfacción posventa puede ser un factor importante y pide más cautela; 'determina' y la referencia no están.; El libro la da como la interpretación más probable, no como explicación establecida.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-cierre_segun_complejidad_venta-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "cierre_segun_complejidad_venta",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
+  "texto_nuevo": "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN), sin dejar de obtener algún compromiso del cliente, porque la venta no se cierra sola",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "685-695",
+   "frase": "doing nothing isn't effective either. The sale doesn't close itself."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no cerrar nada tampoco funciona: la venta no se cierra sola y hay que obtener algún compromiso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-153-tecnologias_disruptivas_oportunidad-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "tecnologias_disruptivas_oportunidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que no son adoptadas rápidamente por el mercado mainstream. Sin embargo, representan una amenaza u oportunidad futura significativa, ya que la tecnología dominante eventualmente supera las necesidades reales del usuario promedio, abriendo espacio para que la disrupción gane terreno (ej. cámaras digitales vs. cámaras de 35mm).",
+  "texto_nuevo": "Las tecnologías disruptivas suelen ofrecer inicialmente un rendimiento inferior a las tecnologías dominantes, por lo que el mercado mainstream no suele adoptarlas rápido. Aun así, pueden representar una amenaza u oportunidad futura: la tecnología dominante suele mejorar hasta exceder las necesidades de muchos usuarios, y la disruptiva aporta una nueva dimensión de desempeño que unos pocos valoran tanto que toleran su peor rendimiento (ej. cámaras digitales vs. cámaras de 35mm). Son difíciles de predecir y poco frecuentes.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5223-5231",
+   "frase": "dominant technology improves so much over time that it exceeds the needs of many users"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que suele pasar y con muchos usuarios; el nodo lo vuelve un hecho seguro.; Mismo defecto que la marca 0.; Se cae la cautela del libro: las disrupciones son difíciles de predecir y poco frecuentes, y el nodo las da como amenaza significativa.; Se pierde la nueva dimensión de desempeño que unos pocos usuarios valoran tanto que toleran el peor rendimiento, clave del mecanismo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-tecnologias_disruptivas_oportunidad-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "tecnologias_disruptivas_oportunidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo",
+  "texto_nuevo": "Identificar tecnologías emergentes con rendimiento inicial inferior pero con potencial disruptivo, partiendo de las necesidades de tus clientes y no de la tecnología, y buscando a los pocos usuarios que más se beneficiarían de ellas",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5259-5261",
+   "frase": "don't start with the technology; start with customer needs"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide partir de las necesidades del cliente y no de la tecnología, y buscar a los pocos usuarios que más se benefician.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-153-stage_gate_td_tecnologia-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "stage_gate_td_tecnologia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+  "texto_nuevo": "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes y alternativas competidoras) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3695",
+   "frase": "include a technical literature search, a patent and IP search, assessment of competitive alternatives"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento pierde la etapa de alcance (literatura técnica, patentes, alternativas competidoras) que va antes de la evaluación técnica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-153-stage_gate_td_tecnologia-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "stage_gate_td_tecnologia",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Planificar la transferencia de la tecnología a la unidad de negocio, incluyendo transferencia de personal clave",
+  "texto_nuevo": "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3715",
+   "frase": "Ensure that the business-unit gatekeepers are at the TD gates"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la gente de la unidad de negocio esté desde temprano en las gates para comprometerse antes de la transferencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-153-vision_periferica-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "vision_periferica",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Escuchar a clientes periféricos, no-competidores y pensadores creativos internos",
+  "texto_nuevo": "Escuchar a clientes periféricos, competidores no directos y pensadores creativos internos",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8102",
+   "frase": "What are peripheral customers and nondirect competitors saying (adjacent markets, former customers)?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de competidores no directos (mercados adyacentes, excliente); 'no-competidores' pierde el calificativo y cambia a quién escuchar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-153-vision_periferica-entregable_esperado",
+  "fecha": "2026-09-28",
+  "node_id": "vision_periferica",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto",
+  "texto_nuevo": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto y las oportunidades de nuevos productos que sugieren",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8112",
+   "frase": "do your answers suggest new opportunities for your business?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El ejercicio cierra preguntando qué nuevas oportunidades sugieren las respuestas; el entregable se queda en amenazas.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+ },
+ {
+  "id": "final-e1-153-voice_of_customer_estrategico-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "voice_of_customer_estrategico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Preguntar qué problemas enfrentan y qué los mantiene despiertos por la noche",
+  "texto_nuevo": "Preguntar qué necesidad satisfacen y qué beneficios buscan, si imaginan una mejor manera de lograrlo, qué problemas enfrentan y qué los mantiene despiertos por la noche",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8065-8067",
+   "frase": "What need are they satisfying? What problem are the solving? What benefits are they seeking?"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen del procedimiento las preguntas por la necesidad y los beneficios buscados y por una mejor manera de lograrlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-153-strat_map_arenas_estrategicas-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "strat_map_arenas_estrategicas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Identifica arenas potenciales explorando nuevos clientes, nuevas aplicaciones y nuevas tecnologías",
+  "texto_nuevo": "Identifica arenas potenciales alejándote de tu home base hacia nuevos clientes, nuevas aplicaciones y nuevas tecnologías, relacionados o adyacentes a lo que ya haces",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "8295",
+   "frase": "moving away from home-base along each axis to other (but related) customer groups"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide alejarse del home base hacia clientes, aplicaciones y tecnologías relacionados, a áreas nuevas pero adyacentes.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-153-technology_platform_evaluation-pasos_accionables-2",
+  "fecha": "2026-09-28",
+  "node_id": "technology_platform_evaluation",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste estratégico, ventaja competitiva, potencial de mercado",
+  "texto_nuevo": "Aplica una tabla de evaluación específica centrada en criterios estratégicos y cualitativos, no financieros, que son ajuste e importancia estratégica, apalancamiento estratégico, probabilidad de éxito técnico y comercial, y recompensa potencial",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6404",
+   "frase": "include strategic fit and importance, strategic leverage, likelihoods of commercial and technical success, and reward"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La lista del libro es ajuste e importancia estratégica, apalancamiento, probabilidades de éxito y recompensa; ventaja competitiva y potencial de mercado no están.; Mismo defecto que la marca 0.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-153-technology_platform_evaluation-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "technology_platform_evaluation",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Considerar métodos financieros más sofisticados para riesgo: opciones reales, Monte Carlo, Valor Comercial Esperado",
+  "texto_nuevo": "Como complemento, considerar métodos financieros más sofisticados para riesgo (opciones reales, Monte Carlo, Valor Comercial Esperado), sabiendo que en plataformas tecnológicas los métodos financieros funcionan mal y la decisión se apoya en la tabla estratégica",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6406",
+   "frase": "Financial methods really don't work well for technology-platform and advanced-technology projects."
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro sí propone estos métodos para proyectos innovadores e inciertos, pero para plataformas tecnológicas dice que los métodos financieros funcionan mal; se pierde ese límite.; Mismo defecto que la marca 0: no es contrario porque el libro los propone para proyectos inciertos, pero falta el límite en plataformas tecnológicas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-153-tecnologias_disruptivas_oportunidad-pasos_accionables-3",
+  "fecha": "2026-09-28",
+  "node_id": "tecnologias_disruptivas_oportunidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva",
+  "texto_nuevo": "Analizar el riesgo/oportunidad de invertir tempranamente en la tecnología disruptiva, teniendo en cuenta que las disrupciones son difíciles de predecir y ocurren con poca frecuencia",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5269",
+   "frase": "disruptions are difficult to predict, and they occur infrequently"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que las disrupciones son difíciles de predecir y ocurren con poca frecuencia, lo que modera la apuesta temprana.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-153-voz_del_cliente_voc-pasos_accionables-1",
+  "fecha": "2026-09-28",
+  "node_id": "voz_del_cliente_voc",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos.",
+  "texto_nuevo": "Observa directamente a tu cliente en el lugar donde usa tu producto o servicio, por ejemplo acompañándolo durante su trabajo real, como ir con la policía en sus controles nocturnos, sabiendo que no todos los productos y mercados se prestan igual (en una fábrica es viable; en la cocina de alguien, más difícil).",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5006",
+   "frase": "the method does not suit all product types and markets"
+  },
+  "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la observación en el terreno no sirve igual para todos los productos y mercados.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4",
+  "indice": 1
+ }
+]

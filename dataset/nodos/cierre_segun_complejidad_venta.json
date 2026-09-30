@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Efectividad del Cierre según la Complejidad de la Venta",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+  "resumen_teorico": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas, aunque las llamadas sin ningún cierre tuvieron mucho menos éxito que las de un solo cierre. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
   "pasos_accionables": [
     "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y también por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
     "Si es venta pequeña y transaccional: las técnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequeñas las llamadas con más de dos cierres fueron las menos exitosas",
-    "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
+    "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN), sin dejar de obtener algún compromiso del cliente, porque la venta no se cierra sola",
     "Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito",
     "Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan",
     "Medir tiempo de transacción y tasa de éxito antes/después de cambiar el enfoque",
@@ -211,6 +211,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "final-e1-153-cierre_segun_complejidad_venta-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "texto_nuevo": "La efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas, aunque las llamadas sin ningún cierre tuvieron mucho menos éxito que las de un solo cierre. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "672",
+        "frase": "calls with no closing whatsoever are unlikely to be effective"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la otra mitad del dato: las llamadas sin ningún cierre tuvieron mucho menos éxito que las de un cierre, lo que cambia el 'sin abusar'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-153-cierre_segun_complejidad_venta-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
+      "texto_nuevo": "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN), sin dejar de obtener algún compromiso del cliente, porque la venta no se cierra sola",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "685-695",
+        "frase": "doing nothing isn't effective either. The sale doesn't close itself."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que no cerrar nada tampoco funciona: la venta no se cierra sola y hay que obtener algún compromiso.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

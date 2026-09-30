@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Tres Modelos de Gestión de la Seguridad: Persona, Ingeniería y Organizacional",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden y deben coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+  "resumen_teorico": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
   "pasos_accionables": [
     "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. LTIF para el modelo de persona)",
     "Identificar las brechas: ¿se están ignorando los riesgos organizacionales por enfocarse solo en lesiones individuales?",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Elige tu Enfoque de Seguridad",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-modelos_gestion_seguridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden y deben coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+      "texto_nuevo": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos y auditorías de comportamiento. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano como consecuencia (no causa) de condiciones latentes en el sistema, vinculado a la gestión de calidad total. Los tres modelos pueden coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5503",
+        "frase": "there is no reason why these various models"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que no hay razón para que no coexistan; 'deben' lo vuelve obligación.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

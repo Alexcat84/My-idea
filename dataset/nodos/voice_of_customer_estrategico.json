@@ -7,7 +7,7 @@
   "resumen_teorico": "Consiste en entender profundamente las necesidades, problemas y comportamientos de los clientes y usuarios, 'caminando en sus zapatos', para identificar oportunidades estratégicas de innovación. Va más allá de preguntar qué quieren; busca entender el porqué detrás de sus deseos y observar su comportamiento real (ej. el caso de Aero-Flow observando usuarios aspirar el piso en China).",
   "pasos_accionables": [
     "Observar a los clientes usando productos similares en su contexto real (no solo encuestas)",
-    "Preguntar qué problemas enfrentan y qué los mantiene despiertos por la noche",
+    "Preguntar qué necesidad satisfacen y qué beneficios buscan, si imaginan una mejor manera de lograrlo, qué problemas enfrentan y qué los mantiene despiertos por la noche",
     "Indagar el 'porqué' detrás de cualquier característica o producto que soliciten",
     "Buscar necesidades futuras y planes de los clientes, no solo las actuales",
     "Documentar los 'ahas' o descubrimientos inesperados durante la observación"
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Camina en los Zapatos del Cliente",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-voice_of_customer_estrategico-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preguntar qué problemas enfrentan y qué los mantiene despiertos por la noche",
+      "texto_nuevo": "Preguntar qué necesidad satisfacen y qué beneficios buscan, si imaginan una mejor manera de lograrlo, qué problemas enfrentan y qué los mantiene despiertos por la noche",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8065-8067",
+        "frase": "What need are they satisfying? What problem are the solving? What benefits are they seeking?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se caen del procedimiento las preguntas por la necesidad y los beneficios buscados y por una mejor manera de lograrlo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

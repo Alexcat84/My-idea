@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Equipos de Calidad y Sistemas Sociotécnicos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los equipos de calidad son estructuras que combinan el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) de una organización, denominados sistemas sociotécnicos (STS). Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
+  "resumen_teorico": "Toda organización tiene un sistema técnico (equipos, procedimientos) y uno social (personas, roles); su interacción se llama sistema sociotécnico (STS), y en las nuevas formas de organizar el trabajo que nacen de ahí los equipos de calidad tienen un papel importante. Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
   "pasos_accionables": [
     "Clasificar los tipos de equipos necesarios según el objetivo (proyecto, operación, autodirigido)",
     "Definir membresía voluntaria o asignada según el contexto",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Forma tus Equipos de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-rol_del_equipo_de_trabajo_en_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los equipos de calidad son estructuras que combinan el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) de una organización, denominados sistemas sociotécnicos (STS). Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
+      "texto_nuevo": "Toda organización tiene un sistema técnico (equipos, procedimientos) y uno social (personas, roles); su interacción se llama sistema sociotécnico (STS), y en las nuevas formas de organizar el trabajo que nacen de ahí los equipos de calidad tienen un papel importante. Existen distintos tipos de equipos: proyectos de calidad, equipos de fuerza laboral y equipos autodirigidos, cada uno con objetivos y niveles de autonomía diferentes.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "9688-9690",
+        "frase": "Team concepts play an important role in these new approaches."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro llama STS a la interacción de los dos sistemas de toda organización; los equipos juegan un papel en ese enfoque, no son el STS.; Mismo defecto: identifica los equipos de calidad con los sistemas sociotécnicos, cosa que el libro no dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

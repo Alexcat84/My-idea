@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Construcción de valor percibido en ventas grandes",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido —no solo transmitir conocimiento del producto— es la habilidad de venta más importante en las ventas grandes. Vendedores que dominan ventas pequeñas suelen fracasar en ventas grandes precisamente porque confían en su conocimiento de producto en lugar de elevar la percepción de valor del cliente frente al problema.",
+  "resumen_teorico": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido, no solo transmitir conocimiento del producto, es probablemente la habilidad de venta más importante en las ventas grandes. Los vendedores que no logran pasar de ventas pequeñas a ventas grandes son los que tienen dificultad para elevar la percepción de valor del cliente frente al problema, y apoyarse en el conocimiento de producto no suple esa falta.",
   "pasos_accionables": [
     "Identificar el problema real que el cliente percibe antes de hablar de características del producto",
     "Cuantificar el costo del problema actual del cliente para justificar la inversión",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Construye el Valor Percibido",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-construccion_de_valor_percibido-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido —no solo transmitir conocimiento del producto— es la habilidad de venta más importante en las ventas grandes. Vendedores que dominan ventas pequeñas suelen fracasar en ventas grandes precisamente porque confían en su conocimiento de producto en lugar de elevar la percepción de valor del cliente frente al problema.",
+      "texto_nuevo": "A medida que crece el tamaño de la venta, el cliente se vuelve más consciente del valor y requiere una justificación más sólida para la decisión. Construir el valor percibido, no solo transmitir conocimiento del producto, es probablemente la habilidad de venta más importante en las ventas grandes. Los vendedores que no logran pasar de ventas pequeñas a ventas grandes son los que tienen dificultad para elevar la percepción de valor del cliente frente al problema, y apoyarse en el conocimiento de producto no suple esa falta.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "112-116",
+        "frase": "building of perceived value is probably the single most important selling skill in larger sales"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que probablemente es la habilidad más importante; el nodo quita la cautela.; El libro solo dice que quienes no pasaron a ventas grandes tenían dificultad para construir valor; la frecuencia y la causa del conocimiento de producto salen de una anécdota.; Mismo defecto que la marca 0: se pierde el 'probablemente' del libro.; Mismo defecto que la marca 1: frecuencia y causa generalizadas desde un solo caso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

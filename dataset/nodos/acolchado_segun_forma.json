@@ -9,7 +9,7 @@
     "Identifica si tu pieza es plana, cilíndrica o de forma irregular antes de elegir el material de relleno.",
     "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o cartón corrugado.",
     "En piezas cilíndricas o tubulares, empácalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
-    "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto.",
+    "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
     "En piezas pesadas, asegura con flejes o una base firme antes de cerrar el empaque."
   ],
   "entregable_esperado": "Un método de acolchado específico según la forma de cada producto que envías.",
@@ -155,6 +155,23 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-151-acolchado_segun_forma-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto.",
+      "texto_nuevo": "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1287",
+        "frase": "We recommend placing the parts in a box in addition to the minimum requirements shown."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone la cinta como mínimo y recomienda además meter la pieza en una caja.; Mismo defecto.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

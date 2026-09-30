@@ -9,10 +9,10 @@
     "Preguntar quién en la industria detecta señales de alerta temprana y qué está haciendo",
     "Identificar puntos ciegos históricos de la empresa",
     "Buscar analogías relevantes de otras industrias",
-    "Escuchar a clientes periféricos, no-competidores y pensadores creativos internos",
+    "Escuchar a clientes periféricos, competidores no directos y pensadores creativos internos",
     "Plantear escenarios de futuro 'impensables' que podrían afectar al negocio"
   ],
-  "entregable_esperado": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto",
+  "entregable_esperado": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto y las oportunidades de nuevos productos que sugieren",
   "nodos_previos": [
     "wallas_intimacion_fringe_consciousness"
   ],
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Detecta Señales Débiles a Tiempo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-vision_periferica-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escuchar a clientes periféricos, no-competidores y pensadores creativos internos",
+      "texto_nuevo": "Escuchar a clientes periféricos, competidores no directos y pensadores creativos internos",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8102",
+        "frase": "What are peripheral customers and nondirect competitors saying (adjacent markets, former customers)?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de competidores no directos (mercados adyacentes, excliente); 'no-competidores' pierde el calificativo y cambia a quién escuchar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-153-vision_periferica-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto",
+      "texto_nuevo": "Lista de señales débiles, amenazas emergentes y escenarios futuros documentados con su posible impacto y las oportunidades de nuevos productos que sugieren",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8112",
+        "frase": "do your answers suggest new opportunities for your business?"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El ejercicio cierra preguntando qué nuevas oportunidades sugieren las respuestas; el entregable se queda en amenazas.; Mismo defecto que la marca 0.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

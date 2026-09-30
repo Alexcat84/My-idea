@@ -4,13 +4,13 @@
   "dominio": "entrega",
   "titulo_concepto": "Sellar cajas con el método de cinta en H",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+  "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
   "pasos_accionables": [
     "Compra cinta de embalar sensible a la presión de al menos cinco centímetros de ancho.",
     "Aplica una tira sobre la costura central de la tapa y repite en el fondo de la caja.",
     "Aplica una tira sobre cada costura lateral, arriba y abajo, completando el patrón en H.",
     "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
-    "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
+    "Sugerencia de My Idea: añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
   ],
   "entregable_esperado": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
   "nodos_previos": [
@@ -60,6 +60,39 @@
       },
       "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el resumen repetia el CONTRARIO de fidelidad-t1-03 (solo cinta sensible a la presion; papel engomado descartado). Se corrige con la misma cita para que el nodo no lo siga diciendo en otro campo; el resto del resumen no cambia.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-013"
+    },
+    {
+      "id": "final-e1-151-sellar_cajas_metodo_cinta_en_h-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, evita que se abra en tránsito.",
+      "texto_nuevo": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Esto refuerza justo los puntos donde la caja tiende a abrirse por presión o vibración. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "149",
+        "frase": "This will help prevent accidental opening."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el método ayuda a prevenir la apertura accidental, no que la evite.; Mismo endurecimiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-sellar_cajas_metodo_cinta_en_h-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+      "texto_nuevo": "Sugerencia de My Idea: añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "181-185",
+        "frase": "Apply tape evenly across flaps and seams to both the top and bottom"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pide más tiras por peso; queda como sugerencia de la casa.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

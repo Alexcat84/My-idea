@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada'. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+  "resumen_teorico": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada', que no son condición necesaria: a veces las defensas fallan solo por condiciones latentes. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
   "pasos_accionables": [
     "Identificar el resultado adverso (outcome) y las defensas que fallaron",
     "Determinar qué fallas activas y condiciones latentes permitieron el fallo de cada defensa",
@@ -46,6 +46,22 @@
         "evidencia": "F08-005: Sirve para investigar accidentes y diseñar un protocolo de investigacion en una organizacion en marcha, no para probar nada con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-152-modelo_accidente_organizacional-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada'. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+      "texto_nuevo": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada', que no son condición necesaria: a veces las defensas fallan solo por condiciones latentes. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "291",
+        "frase": "they are not a necessary condition"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los actos inseguros no son condición necesaria: a veces las defensas fallan solo por condiciones latentes.; Misma excepción perdida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

@@ -13,7 +13,7 @@
     "Usa encuestas breves solo cuando no consigas la información de otra forma",
     "Aplica la técnica de contar tú algo primero para animar a que te cuenten, cuando necesites preguntar directamente",
     "Practica la escucha enfocada para captar datos que surjan espontáneamente en las conversaciones",
-    "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
+    "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar y define quién se encarga de mantener los datos al día",
     "Define entre 5 y 10 datos prioritarios que empieces a registrar desde ahora",
     "Revisa y completa la información que ya conoces pero no has registrado",
     "Investiga perfiles públicos en redes sociales para obtener datos personales y emocionales",
@@ -53,5 +53,24 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-investigar_datos_cliente-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar",
+      "texto_nuevo": "Elige una herramienta para organizar tus contactos (CRM) que realmente vayas a usar y define quién se encarga de mantener los datos al día",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "5533",
+        "frase": "(b) who is in charge of maintaining it"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aclarar dónde se guardan los datos y quién se encarga de mantenerlos; se pierde lo segundo.; Misma segunda condición perdida.",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

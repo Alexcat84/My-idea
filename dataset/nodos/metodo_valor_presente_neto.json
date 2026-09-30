@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Método del Valor Presente Neto (NPV)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Es el método más robusto y preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR) y el método de payback, que ignoran el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera el costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+  "resumen_teorico": "Es el método más robusto y suele ser el preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR), que ignora el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera tu hurdle rate, y suma valor siempre que esa tasa sea igual o mayor que tu costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
   "pasos_accionables": [
     "Proyectar los flujos de efectivo futuros esperados de la inversión",
     "Definir la tasa de descuento (hurdle rate) de la empresa",
@@ -70,6 +70,22 @@
         "motivo": "El VPN evalua inversiones de capital; no prepara el analisis de varianza presupuesto contra real, que se apoya en el estado de resultados y en porcentajes de cambio."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-151-metodo_valor_presente_neto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es el método más robusto y preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR) y el método de payback, que ignoran el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera el costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+      "texto_nuevo": "Es el método más robusto y suele ser el preferido por los profesionales financieros para evaluar inversiones de capital, porque calcula el valor en dólares actuales que un proyecto añade a la empresa, considerando tanto la magnitud del retorno como su duración en el tiempo -a diferencia de la Tasa Interna de Retorno (IRR), que ignora el tamaño y la escala de la inversión-. Se calcula descontando los flujos de efectivo futuros esperados a valor presente usando la tasa de retorno requerida (hurdle rate) de la empresa, y restando el desembolso inicial. Si el resultado (el NPV) es mayor que cero, la inversión debe aceptarse porque su retorno supera tu hurdle rate, y suma valor siempre que esa tasa sea igual o mayor que tu costo de capital; es el criterio recomendado cuando NPV, IRR y payback entran en conflicto.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3104, 3116, 3133",
+        "frase": "it should be accepted, because the return is greater than the company’s hurdle rate"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el retorno supera la hurdle rate y que eso suma valor si esa tasa es igual o mayor que el costo de capital; se cae la condición.; El libro dice que suele ser la primera opción de los profesionales; el nodo quita el 'suele'.; El libro reprocha la escala solo a la IRR; al payback le critica otras cosas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

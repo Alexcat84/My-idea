@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Lectura y Análisis del Estado de Resultados",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), y el nivel de detalle varía según el tipo de negocio (manufactura vs. servicios).",
+  "resumen_teorico": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), algunas partidas cambian según el tipo de negocio (manufactura vs. servicios) y cada empresa decide cuánto detalle muestra.",
   "pasos_accionables": [
     "Identificar las líneas principales: ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta",
     "Comparar el layout del estado financiero para entender cómo está organizado",
     "Reconocer que diferentes empresas usan distintos términos para el mismo concepto financiero",
-    "Verificar si las cifras están en miles, millones, o valores absolutos"
+    "Verificar el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)"
   ],
   "entregable_esperado": "Capacidad de identificar y ubicar las líneas clave en cualquier estado de resultados de una empresa real",
   "nodos_previos": [
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Identifica las Líneas Clave del Reporte",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-151-lectura_estado_resultados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), y el nivel de detalle varía según el tipo de negocio (manufactura vs. servicios).",
+      "texto_nuevo": "El estado de resultados (income statement) muestra ingresos, costos y utilidades de una empresa durante un periodo. Aprender a leerlo implica identificar líneas clave como ingresos, costo de ventas, utilidad bruta, gastos operativos y utilidad neta. Cada empresa puede usar terminología distinta para conceptos similares (ej. utilidad bruta, utilidad neta), algunas partidas cambian según el tipo de negocio (manufactura vs. servicios) y cada empresa decide cuánto detalle muestra.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "4092",
+        "frase": "Companies have discretion about the level of detail they provide."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que cada empresa decide cuánto detalle da; lo que cambia entre manufactura y servicios son algunas partidas, no el nivel de detalle.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-lectura_estado_resultados-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar si las cifras están en miles, millones, o valores absolutos",
+      "texto_nuevo": "Verificar el periodo que cubre, si las cifras están en miles, millones o valores absolutos, y si es un estado real o pro forma (ante un pro forma, mira también el real)",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "471-486",
+        "frase": "you want to look at the actuals as well as the pro formas"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye revisar el periodo y si el estado es real o pro forma, con cautela ante el pro forma.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

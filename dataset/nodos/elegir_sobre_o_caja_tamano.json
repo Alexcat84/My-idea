@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir sobre o caja según el tamaño final del paquete",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
   "pasos_accionables": [
     "Arma el paquete completo con su protección antes de decidir el contenedor.",
     "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
@@ -55,6 +55,22 @@
       },
       "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el resumen repetia el CONTRARIO de fidelidad-t1-05 (un umbral que define el remitente). Se corrige con la misma cita; el resto del resumen no cambia.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-017"
+    },
+    {
+      "id": "final-e1-151-elegir_sobre_o_caja_tamano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando el envío es pequeño, meterlo en una caja grande desperdicia espacio, relleno y dinero; cuando es demasiado grande para un sobre o bolsa, forzarlo ahí arriesga que se rompa en el camino. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (en la guía de FedEx, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande; si lo supera, va en caja. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+      "texto_nuevo": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "99",
+        "frase": "Place small packages inside a larger outer box."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro manda poner los paquetes pequeños dentro de una caja exterior más grande; el nodo lo llama desperdicio.; El libro solo fija qué hacer por debajo del tamaño mínimo.; El riesgo de forzar un sobre no está en el libro.; Los dos porqués son añadidos; el primero además choca con el libro, corregido como contrario.; Misma regla añadida por encima del mínimo.; Mismo consejo invertido.; Mismo riesgo añadido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

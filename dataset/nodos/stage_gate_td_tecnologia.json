@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Generar ideas tecnológicas mediante prospección científica o mapeo de rutas tecnológicas",
     "Realizar un primer filtro cualitativo (Idea Screen) basado en potencial estratégico y viabilidad técnica",
-    "Ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+    "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes y alternativas competidoras) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
     "Profundizar en una investigación detallada si los resultados son prometedores",
-    "Planificar la transferencia de la tecnología a la unidad de negocio, incluyendo transferencia de personal clave"
+    "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave"
   ],
   "entregable_esperado": "Un plan de transferencia tecnológica documentado con gates claros y un business case preliminar de aplicación comercial",
   "nodos_previos": [
@@ -30,5 +30,41 @@
   "etiqueta_arbol": "Desarrolla tu Capacidad Tecnológica",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-153-stage_gate_td_tecnologia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+      "texto_nuevo": "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes y alternativas competidoras) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3695",
+        "frase": "include a technical literature search, a patent and IP search, assessment of competitive alternatives"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento pierde la etapa de alcance (literatura técnica, patentes, alternativas competidoras) que va antes de la evaluación técnica.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-153-stage_gate_td_tecnologia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar la transferencia de la tecnología a la unidad de negocio, incluyendo transferencia de personal clave",
+      "texto_nuevo": "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3715",
+        "frase": "Ensure that the business-unit gatekeepers are at the TD gates"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que la gente de la unidad de negocio esté desde temprano en las gates para comprometerse antes de la transferencia.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

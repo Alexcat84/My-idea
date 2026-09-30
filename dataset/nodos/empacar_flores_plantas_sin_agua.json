@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Empacar flores y plantas sin agua",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La técnica central es simple: nunca cargar agua en el envio. Vacía floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en transito. Cuando envíes varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+  "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja y protegerlas de temperaturas extremas. El agua puede filtrarse y dañar el producto o causar problemas de seguridad, así que la técnica central es simple: nunca cargar agua en el envío. Vacía floreros o macetas antes de cerrar la caja, mete la maceta en una bolsa cerrada alrededor del tallo o, si la planta no tiene un solo tallo principal, cubre la tierra con papel sujeto a la maceta, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en tránsito. Cuando envíes varias piezas u orquídeas, sepáralas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas en arreglos florales y plantas en maceta; los esquejes necesitan un empaque propio.",
   "pasos_accionables": [
     "Vacía toda el agua de floreros o recipientes antes de cerrar la caja.",
-    "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
+    "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo; si la planta no tiene un solo tallo principal, pon papel entre las hojas y sobre la tierra y sujétalo a la maceta.",
     "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de cartón.",
     "Separa cada planta u orquídea individual para que hojas y flores no se toquen entre sí.",
     "Pon la etiqueta de envío en la cara superior de la caja para aumentar la chance de que viaje derecha."
@@ -143,6 +143,39 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-151-empacar_flores_plantas_sin_agua-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La técnica central es simple: nunca cargar agua en el envio. Vacía floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en transito. Cuando envíes varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
+      "texto_nuevo": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja y protegerlas de temperaturas extremas. El agua puede filtrarse y dañar el producto o causar problemas de seguridad, así que la técnica central es simple: nunca cargar agua en el envío. Vacía floreros o macetas antes de cerrar la caja, mete la maceta en una bolsa cerrada alrededor del tallo o, si la planta no tiene un solo tallo principal, cubre la tierra con papel sujeto a la maceta, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en tránsito. Cuando envíes varias piezas u orquídeas, sepáralas para que hojas y flores no se rocen. Esta preparación reduce reclamos por derrames y por piezas rotas en arreglos florales y plantas en maceta; los esquejes necesitan un empaque propio.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "527-569",
+        "frase": "shipping with water is prohibited because it may leak during shipment and cause product damage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el agua puede filtrarse y causar daño al producto o problemas de seguridad; el nodo lo vuelve certeza y añade otros paquetes.; El libro dice que el empaque varía según el contenido y da a plantines y esquejes un método propio.; El papel es la alternativa para plantas sin un solo tallo principal y va sujeto a la maceta, no al tallo.; Misma condición del papel perdida.; Misma generalización a esquejes.; Mismo endurecimiento y efecto añadido.; Mismo requisito de temperatura perdido.; Se cae el requisito general de proteger de temperaturas extremas en el envío y tras la entrega.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-empacar_flores_plantas_sin_agua-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
+      "texto_nuevo": "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo; si la planta no tiene un solo tallo principal, pon papel entre las hojas y sobre la tierra y sujétalo a la maceta.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "569",
+        "frase": "If the plant does not have a single main stem, you can place paper"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la alternativa del libro para plantas sin un solo tallo principal.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ]
 }

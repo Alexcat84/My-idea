@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Margen de Ganancia Bruta (Gross Profit Margin)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender, ya que una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
+  "resumen_teorico": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender. Su tendencia importa igual: una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
   "pasos_accionables": [
     "Calcular: (Ingresos - COGS) / Ingresos",
     "Analizar si el margen es suficiente para cubrir gastos operativos y generar utilidad",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Calcula tu Margen Bruto",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-151-margen_bruto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender, ya que una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
+      "texto_nuevo": "El margen bruto es la ganancia bruta (ingresos menos costo de bienes vendidos) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de gastos generales, indicando cuánto de cada dólar de venta queda disponible para operar el negocio. Es considerado por emprendedores como Gary Erickson (Clif Bar) el ratio más importante a entender. Su tendencia importa igual: una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2497-2499",
+        "frase": "Trend lines in gross margin are equally important because they indicate potential problems."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la tendencia como un punto aparte e igual de importante, no como la razón por la que Erickson lo valora.; Mismo defecto: el 'ya que' inventa el porqué de la valoración de Erickson.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

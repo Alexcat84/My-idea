@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Satisfacción vs. Insatisfacción no son opuestos (Modelo Kano aplicado)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de nuevas características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
+  "resumen_teorico": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
   "pasos_accionables": [
     "Revisar las encuestas de satisfacción actuales para detectar sesgo hacia preguntas cerradas",
     "Incorporar preguntas abiertas tipo '¿qué deberíamos hacer que no estamos haciendo?'",
@@ -51,6 +51,22 @@
         "evidencia": "F29-003: Rediseña las encuestas de satisfaccion que ya se aplican a clientes de un negocio en marcha, es mejora de la medicion operativa y no exploracion de la idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-152-satisfaccion_vs_insatisfaccion_kano-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de nuevas características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
+      "texto_nuevo": "Principio del modelo Kano: eliminar fallas reduce la insatisfacción pero no necesariamente aumenta la satisfacción. Solo la presencia de características genera satisfacción real. Las encuestas cerradas tipo escala (1-5) suelen medir realmente índices de insatisfacción, no de satisfacción genuina, porque no permiten capturar necesidades no articuladas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3197",
+        "frase": "It is only the presence of features that creates satisfaction."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la satisfacción la crea la presencia de características, sin exigir que sean nuevas.; Mismo añadido: 'nuevas' no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [

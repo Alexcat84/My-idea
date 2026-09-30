@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Implementar un marco clasificatorio común para analizar múltiples incidentes pasados (no solo casos aislados)",
     "Identificar patrones recurrentes de causa-efecto en las condiciones locales y organizacionales",
-    "Diseñar entre 8 y 16 chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados",
+    "Diseñar chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados (suelen ser entre 8 y 16, según el tipo de sistema), para identificar los dos o tres procesos que más urgen atención",
     "Definir la frecuencia de cada chequeo según la velocidad de cambio del proceso (factores del lugar de trabajo cambian más rápido que los organizacionales)"
   ],
   "entregable_esperado": "Sistema documentado de indicadores reactivos y proactivos con frecuencia de medición definida",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Usa Alertas Reactivas y Preventivas",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-medidas_reactivas_proactivas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar entre 8 y 16 chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados",
+      "texto_nuevo": "Diseñar chequeos proactivos de 'signos vitales' organizacionales según los patrones detectados (suelen ser entre 8 y 16, según el tipo de sistema), para identificar los dos o tres procesos que más urgen atención",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2658",
+        "frase": "ranges typically from around eight to 16 and will vary"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da el rango de 8 a 16 como típico y variable según el sistema; el paso lo fija.; Mismo endurecimiento de la cifra.; Se pierde el propósito de los chequeos: hallar los dos o tres procesos que más urgen atención.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

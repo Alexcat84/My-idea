@@ -4,15 +4,15 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de la Relación con el Banco",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Los bancos requieren pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
+  "resumen_teorico": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Además de tus estados financieros, los bancos probablemente querrán ver pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
   "pasos_accionables": [
-    "Preparar un pronóstico de flujo de caja a 12 meses.",
+    "Preparar un pronóstico de flujo de caja, a veces de hasta 12 meses.",
     "Elaborar un presupuesto anual con actualizaciones mensuales.",
     "Compartir proactivamente los planes de negocio y forecasts con el banquero.",
     "Comunicar problemas financieros con anticipación, sin ocultarlos.",
     "Invitar al banquero a conocer la operación y el proceso de planificación."
   ],
-  "entregable_esperado": "Paquete financiero completo (forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+  "entregable_esperado": "Paquete financiero completo (estados financieros + forecast de cash flow + presupuesto anual) listo para presentar al banco.",
   "nodos_previos": [
     "ciclo_de_conversion_de_efectivo",
     "gestion_riesgo_credito",
@@ -29,5 +29,56 @@
   "etiqueta_arbol": "Cultiva tu Relación Bancaria",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-151-gestion_relacion_bancaria-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Los bancos requieren pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
+      "texto_nuevo": "Establecer una relación transparente y continua con la entidad bancaria facilita el acceso a financiamiento. Además de tus estados financieros, los bancos probablemente querrán ver pronósticos de flujo de caja, presupuestos anuales y actualizaciones mensuales para evaluar la capacidad de repago. La transparencia ante dificultades genera confianza y mejora las probabilidades de obtener apoyo en momentos críticos.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3439-3443",
+        "frase": "In addition, he or she will probably want to see the following"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el banquero probablemente querrá ver esos documentos, no que los exija.; Mismo endurecimiento de 'probably' a requisito.; Se cae que, antes que nada, el banquero querrá ver todos los estados financieros.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-gestion_relacion_bancaria-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Paquete financiero completo (forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+      "texto_nuevo": "Paquete financiero completo (estados financieros + forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3439",
+        "frase": "your banker will naturally want to see all the financial statements"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paquete que el banquero querrá ver incluye todos los estados financieros; el entregable los omite.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-gestion_relacion_bancaria-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar un pronóstico de flujo de caja a 12 meses.",
+      "texto_nuevo": "Preparar un pronóstico de flujo de caja, a veces de hasta 12 meses.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "3441",
+        "frase": "A forecast of cash flow, sometimes for as much as twelve months."
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el pronóstico a veces llega a doce meses; el nodo fija el plazo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

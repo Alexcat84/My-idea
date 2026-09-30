@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Roles del Equipo de Proyecto y Process Owners",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+  "resumen_teorico": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, normalmente no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
   "pasos_accionables": [
     "Identificar y convocar subject matter experts relevantes para el proceso bajo estudio",
     "Definir responsabilidades claras para los miembros del equipo en cada fase DMAIC",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Define Roles de tu Equipo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-152-roles_equipo_proyecto_six_sigma-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+      "texto_nuevo": "Los equipos Six Sigma están compuestos por miembros de distintas áreas funcionales (subject matter experts) que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, normalmente no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14133",
+        "frase": "They are typically not core team members"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que normalmente no son miembros centrales; el nodo lo vuelve absoluto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Prueba tu empaque antes de escalar envíos",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos días, sin costo. Esto te evita descubrir una falla de diseno después de haber comprado cien cajas iguales o de haber perdido mercancía en transito. La prueba también sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por daños y rechazos en bodega. Pregunta a tu proveedor de envíos si ofrece este servicio y en que consiste antes de escalar volumen.",
+  "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Tu courier puede tener un laboratorio de empaque donde enviar una muestra armada exactamente como la mandarías al cliente y recibir un resultado en unos cinco a siete días hábiles, sin costo, si tienes una cuenta activa con él. Esto te evita descubrir una falla de diseño después de haber comprado cien cajas iguales o de haber perdido mercancía en tránsito. La prueba también ayuda a predecir cómo se comportará tu empaque, y para algunos productos, como flores y plantas, el courier la exige antes de aceptar el envío. Pregunta a tu proveedor de envíos si ofrece este servicio y en qué consiste antes de escalar volumen.",
   "pasos_accionables": [
     "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
     "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
-    "Envía la muestra marcada como paquete de prueba según sus instrucciones.",
+    "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena y firmada y dentro de una caja exterior resistente, según sus instrucciones.",
     "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
     "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno."
   ],
@@ -169,6 +169,39 @@
       },
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-151-probar_empaque_antes_de_escalar_envios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Varios couriers ofrecen laboratorios de empaque donde puedes enviar una muestra armada exactamente como la mandarias al cliente y recibir un resultado en pocos días, sin costo. Esto te evita descubrir una falla de diseno después de haber comprado cien cajas iguales o de haber perdido mercancía en transito. La prueba también sirve para justificar ante el courier que tu empaque cumple sus requisitos, lo que reduce reclamos por daños y rechazos en bodega. Pregunta a tu proveedor de envíos si ofrece este servicio y en que consiste antes de escalar volumen.",
+      "texto_nuevo": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Tu courier puede tener un laboratorio de empaque donde enviar una muestra armada exactamente como la mandarías al cliente y recibir un resultado en unos cinco a siete días hábiles, sin costo, si tienes una cuenta activa con él. Esto te evita descubrir una falla de diseño después de haber comprado cien cajas iguales o de haber perdido mercancía en tránsito. La prueba también ayuda a predecir cómo se comportará tu empaque, y para algunos productos, como flores y plantas, el courier la exige antes de aceptar el envío. Pregunta a tu proveedor de envíos si ofrece este servicio y en qué consiste antes de escalar volumen.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "501, 637, 879",
+        "frase": "complimentary package testing, evaluation, and design services that can help you avoid product damage"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no promete menos reclamos ni rechazos en bodega; habla de predecir el desempeño y evitar daños.; El libro solo describe el laboratorio de un courier, no de varios.; Misma condición de la cuenta activa perdida.; Misma exigencia para flores y plantas perdida.; Mismo efecto añadido.; Para flores y plantas el libro hace la prueba obligatoria antes de enviar.; Se pierden la cuenta activa exigida y el plazo de cinco a siete días hábiles.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-151-probar_empaque_antes_de_escalar_envios-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Envía la muestra marcada como paquete de prueba según sus instrucciones.",
+      "texto_nuevo": "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena y firmada y dentro de una caja exterior resistente, según sus instrucciones.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "883-893",
+        "frase": "Complete and sign your application"
+      },
+      "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento exige enviar la solicitud llena y firmada con la muestra, dentro de una caja exterior resistente.; Mismo defecto.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
     }
   ],
   "fuentes_internas": [
