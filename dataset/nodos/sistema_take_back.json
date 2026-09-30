@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sistema de Recuperación (Take-Back)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Desso (alfombras) o Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
+  "resumen_teorico": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
   "pasos_accionables": [
     "Diseñar el producto para facilitar el desensamblaje de sus componentes",
     "Establecer acuerdos logísticos con clientes para la devolución del producto al final de su vida útil",
@@ -58,6 +58,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece 'casi infinita' a 'infinita', cuando el libro dice que aún no está probado.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-sistema_take_back-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Desso (alfombras) o Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
+      "texto_nuevo": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "22, 38",
+        "frase": "Gradually, they will accept the challenge of finding a technology"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro afirma el diseño para desensamble repetido solo del mobiliario de Steelcase y Orangebox; de Desso lo presenta como meta futura.; Mismo defecto: Desso solo buscará gradualmente la tecnología para recuperar y desensamblar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

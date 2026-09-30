@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica todos los puntos de inventario en tu flujo de valor (value stream)",
     "Determina si ese inventario es estratégico o es desperdicio puro",
-    "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+    "Calcula tus niveles mínimo y máximo según la demanda, la cantidad que se consume durante la reposición, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
     "Implementa un conteo por ciclos para mejorar la exactitud de tus registros",
     "Reduce o elimina el inventario que no sea estratégico"
   ],
@@ -45,6 +45,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el cuarto factor que el libro pide considerar: el impacto de las interrupciones del flujo.; Mismo defecto.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-inventory_analysis_lean-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+      "texto_nuevo": "Calcula tus niveles mínimo y máximo según la demanda, la cantidad que se consume durante la reposición, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13421",
+        "frase": "customer demand (and variation), quantity consumed during replenishment, cycle time intervals for replacement"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cuatro factores que el libro pide considerar se cae la cantidad consumida durante la reposición.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

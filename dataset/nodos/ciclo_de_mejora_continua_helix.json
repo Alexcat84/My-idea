@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ciclo de Cuatro Pasos y la Hélice de Mejora Continua",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "resumen_teorico": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real, descubrir qué piensa el usuario y por qué quien no lo usa no lo ha comprado. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
   "pasos_accionables": [
     "Diseñar el producto considerando uniformidad, no solo color/forma/tamaño",
     "Fabricarlo y probarlo en línea de producción y laboratorio",
@@ -40,6 +40,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1b-050-ciclo_de_mejora_continua_helix-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+      "texto_nuevo": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real, descubrir qué piensa el usuario y por qué quien no lo usa no lo ha comprado. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3969",
+        "frase": "what the user thinks of it, and why the nonuser has not bought it"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta averiguar por qué el no usuario no lo compró; tampoco entra el cambio a mayor costo de la propuesta.; Se cae la segunda mitad del cuarto paso: averiguar por qué quien no lo usa no lo ha comprado; la propuesta del lector cambiaba además menor costo por mayor costo, lo que no entra.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

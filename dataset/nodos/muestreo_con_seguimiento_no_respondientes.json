@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta hace peligroso sacar conclusiones, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
   "pasos_accionables": [
     "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
     "Enviar el cuestionario únicamente a esa muestra.",
@@ -113,6 +113,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cierra la salida común de limitar las conclusiones a tendencias, que llama una esperanza sin fundamento; el nodo la deja abierta. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-muestreo_con_seguimiento_no_respondientes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta hace peligroso sacar conclusiones, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "5007",
+        "frase": "every statistician knows the perils of drawing conclusions from incomplete returns"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla del peligro de sacar conclusiones de respuestas incompletas; el nodo lo da por hecho como un sesgo grave.; Mismo defecto: el peligro del libro pasa a sesgo grave afirmado.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

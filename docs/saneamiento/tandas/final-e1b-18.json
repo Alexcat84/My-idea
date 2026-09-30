@@ -1,0 +1,609 @@
+[
+ {
+  "id": "final-e1b-049-diseno_sistemico_partes_interesadas-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_sistemico_partes_interesadas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Las no humanas necesitan voz, aunque la controlen personas. En todo proyecto hay 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones que parecen solo técnicas, y distintos sistemas de valores. Tienes que reconocer estos compromisos, preguntarte si una parte debe sacrificarse por el conjunto, y aceptar que toda decisión implica sacrificios, tanto para el planeta como para ti.",
+  "texto_nuevo": "Cuando diseñas sistemas a gran escala (biomas, ecosistemas, comunidades), tienes que reconciliar los intereses de muchas partes involucradas, humanas y no humanas: flora, fauna, quienes financian, comunidades enteras. Las no humanas necesitan voz, aunque la controlen personas. En todo proyecto hay 'fuerzas ocultas', intereses de poder o de financiamiento que condicionan decisiones, y distintos sistemas de valores. Tienes que reconocer estos compromisos, preguntarte si una parte debe sacrificarse por el conjunto, y aceptar que son difíciles y están llenos de concesiones, tanto para el planeta como para ti.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "2649-2651",
+   "frase": "These trade-offs are tricky and full of compromises, both planetary and personal."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estos compromisos concretos son difíciles y llenos de concesiones; el nodo borra ese límite y lo extiende a toda decisión.; El libro dice que hay fuerzas ocultas y que los financiadores pueden ejercer control, pero no que operen tras decisiones que parecen solo técnicas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-indice_de_reparabilidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta, y cuéntaselo con claridad a quien te compra.",
+  "texto_nuevo": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4322",
+   "frase": "What system might you put in place to evaluate and respond to breakage"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pregunta qué cultura de arreglo tienes y quién gobierna el puntaje; no pide comunicárselo al comprador.; Mismo defecto: la norma de contárselo al comprador no está en el pasaje.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-gestion_decisiones_bajo_carga_emocional-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_decisiones_bajo_carga_emocional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un experimento mostró que cuando tu mente está ocupada, decides más con la emoción y menos con la razón: quienes tenían que recordar siete dígitos eligieron pastel en vez de fruta el doble de veces que quienes solo recordaban dos. Hasta el 90-95% de las decisiones humanas las gobiernan sistemas emocionales que no controlas de forma consciente. Por eso, cuando diseñes algo, asume que la emoción va a influir en cómo deciden las personas que lo usan, y también en cómo decides tú. En vez de intentar eliminar la emoción, crea condiciones de calma y bajo estrés que favorezcan mejores elecciones.",
+  "texto_nuevo": "Un experimento mostró que cuando tu mente está ocupada, decides más con la emoción y menos con la razón: quienes tenían que recordar siete dígitos eligieron pastel en vez de fruta el doble de veces que quienes solo recordaban dos. Se estima que entre el 90 y el 95 % de las decisiones humanas las moldean, de forma no consciente, sistemas emocionales del cerebro. Por eso, cuando diseñes algo, asume que la emoción va a influir en cómo deciden las personas que lo usan, y también en cómo decides tú. En vez de intentar eliminar la emoción, crea condiciones de calma y bajo estrés que favorezcan mejores elecciones.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "1224",
+   "frase": "estimates that 90 to 95 percent of human decisions and behaviors are being shaped"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la cifra como estimación de un investigador y dice que las emociones moldean las decisiones; el nodo la da como hecho.; Mismo defecto: estimación convertida en hecho y 'moldean' endurecido a 'gobiernan'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-diseno_etico_de_privacidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_etico_de_privacidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), los diseñadores deben considerar dar agencia real a los usuarios sobre su información. Rara vez el opt-out es la opción por defecto; diseñar sistemas éticos implica ofrecer control genuino y sopesar el trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
+  "texto_nuevo": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), puedes querer ser dueño de tus datos o al menos tener agencia sobre quién los usa, o puede que prefieras menos agencia a cambio de conveniencia. Rara vez, en realidad nunca, el opt-out es la opción por defecto; es un trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "985, 1009",
+   "frase": "You may find yourself wanting to own your own data... Maybe you want less agency."
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo redactar; doble lectura ciega, arbitro y verificador ciego): El libro no fija un deber del diseñador de dar agencia ni dice que el diseño ético implique ofrecer control; describe que puedes querer agencia, que puede no importarte o que prefieras menos.; El libro se corrige: rara vez, en realidad nunca, es la opción por defecto; el nodo deja solo 'rara vez'.; Mismo defecto que la marca 0: se pierde el 'en realidad nunca'.; Mismo defecto: la norma de diseño sobre agencia y control genuino no está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-indice_de_reparabilidad-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante, y publícalo con claridad.",
+  "texto_nuevo": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4336",
+   "frase": "But who should govern them? ... What are the boundaries of trust?"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pregunta quién gobierna el puntaje y cuáles son los límites de la confianza, pero no aconseja publicarlo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-049-sistema_triage_x_gray_p_list-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_triage_x_gray_p_list",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad, poder sensibilizante, efecto carcinógeno, mutágeno o disruptor endocrino, bioacumulación, biodegradabilidad y daño ambiental, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+  "texto_nuevo": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad aguda y crónica, poder sensibilizante, efecto carcinógeno, mutágeno, teratógeno o disruptor endocrino, bioacumulación, toxicidad para organismos acuáticos o del suelo, biodegradabilidad y potencial de agotar la capa de ozono, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "976-994",
+   "frase": "known or suspected carcinogen, mutagen, teratogen, or endocrine disruptor"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Además de perder el teratógeno, 'daño ambiental' sustituye la toxicidad para organismos acuáticos o del suelo y el agotamiento de la capa de ozono que el libro enumera.; La lista de criterios de la Lista P pierde el efecto teratógeno que el libro enumera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-sistema_take_back-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_take_back",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Desso (alfombras) o Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
+  "texto_nuevo": "Más allá del reciclaje convencional (que suele ser un 'downcycling' de un solo uso), se proponen sistemas sociales y logísticos de recuperación de productos donde el fabricante recupera el material al final de su vida útil para reintegrarlo en un nuevo ciclo de producción, potencialmente de forma infinita. Empresas como Steelcase y Orangebox (mobiliario de oficina) diseñan productos para ser desensamblados repetidamente, y los materiales se eligen específicamente por su capacidad de reutilización casi infinita.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "22, 38",
+   "frase": "Gradually, they will accept the challenge of finding a technology"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro afirma el diseño para desensamble repetido solo del mobiliario de Steelcase y Orangebox; de Desso lo presenta como meta futura.; Mismo defecto: Desso solo buscará gradualmente la tecnología para recuperar y desensamblar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-productos_crudos-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "productos_crudos",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
+  "texto_nuevo": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones, funcionar lo bastante bien y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "233",
+   "frase": "affordable, meets regulations, performs well enough, and lasts long enough"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La intención de diseño del libro tiene cinco elementos y el nodo pierde que el producto funcione lo bastante bien.; Mismo defecto: falta 'performs well enough'.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-reevolucion_industrial-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reevolucion_industrial",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan e incluso generen más energía de la que consumen.",
+  "texto_nuevo": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "551, 879",
+   "frase": "buildings that, like trees, produce more energy than they consume"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pone la meta de producir más energía de la que se consume para los edificios; el pasaje de la re-evolución no la extiende a procesos y productos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-reevolucion_industrial-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "reevolucion_industrial",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Buscar que los procesos generen más energía de la que consumen, no solo reducir el daño",
+  "texto_nuevo": "Buscar que los edificios generen más energía de la que consumen, no solo reducir el daño",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "551",
+   "frase": "buildings that, like trees, produce more energy than they consume"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone esta meta para los edificios, no para los procesos en general.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-049-nutrientes_biologicos-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "nutrientes_biologicos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
+  "texto_nuevo": "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, disruptores endocrinos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "648",
+   "frase": "filtering out mutagens, carcinogens, endocrine disrupters, persistent toxins, and bioaccumulative substances"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de sustancias que el libro filtra desde el inicio incluye los disruptores endocrinos, que el paso pierde.; Mismo defecto: faltan los disruptores endocrinos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-049-mensaje_marketing_franquicia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mensaje_marketing_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El mensaje de marketing de franquicia debe hablar a múltiples 'compradores' influyentes (el prospecto, su abogado, prestamista, contador, familia, buscadores web y reguladores estatales), no solo al interesado directo. Al mismo tiempo, la decisión de comprar una franquicia es altamente emocional, ligada a la identidad y el bienestar financiero del comprador, por lo que el mensaje debe combinar contenido racional de la oferta (propuesta de valor) con impacto emocional (aspiración, identidad, estilo de vida). Un error común es usar imágenes pensadas para atraer al consumidor final que en realidad asustan al franquiciado, como mostrar una tienda vacía sin clientes. Por eso los materiales deben revisarse desde la óptica del comprador de la franquicia y cuidar su calidad para transmitir seriedad.",
+  "texto_nuevo": "El mensaje de marketing de franquicia debe hablar a múltiples 'compradores' influyentes (el prospecto, su abogado, prestamista, contador, asesores de confianza y amigos, familia, buscadores web y reguladores estatales), no solo al interesado directo. Al mismo tiempo, la decisión de comprar una franquicia es altamente emocional, ligada a la identidad y el bienestar financiero del comprador, por lo que el mensaje debe combinar contenido racional de la oferta (propuesta de valor) con impacto emocional (aspiración, identidad, estilo de vida). Un error común es usar imágenes pensadas para atraer al consumidor final que en realidad asustan al franquiciado, como mostrar una tienda vacía sin clientes. Por eso los materiales deben revisarse desde la óptica del comprador de la franquicia y cuidar su calidad para transmitir seriedad.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3040-3056",
+   "frase": "Her trusted advisors and friends"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye a los asesores de confianza y amigos, que el nodo omite.; Mismo defecto: faltan los asesores de confianza y amigos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-ingenieria_inversa_metas-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ingenieria_inversa_metas",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Como atajo muy simplificado, te apoyas en estimar cuánto te deja cada franquiciado en regalías y margen neto, y multiplicas por el número de unidades que necesitas; el plan real pide un modelo financiero completo.",
+  "texto_nuevo": "Parte de la meta final que quieres lograr, por ejemplo vender tu negocio en $10M dentro de 5 años, y retrocede desde ahí para calcular cuánto tiene que crecer tu valoración, cuánta ganancia operativa (EBIT) necesitas generar y cuántas franquicias tienes que vender y abrir para llegar a esa meta. Como atajo muy simplificado, estimas cuánto te deja cada franquiciado en regalías, ventas de producto (restando su costo) y rebates si los hay, por tu margen neto, y divides entre esa cifra la ganancia que necesitas para saber cuántas unidades abrir; el plan real pide un modelo financiero completo.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1464-1474",
+   "frase": "divide the amount of your target earnings ($1 million) by your contribution per franchisee"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (contrario, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El atajo del libro incluye también las ventas de producto, restando su costo, y los rebates de proveedores si los hay.; El libro divide la ganancia necesaria entre la contribución por franquiciado para obtener cuántas unidades hacen falta; el nodo invierte la operación y da el número de unidades por conocido.; Mismo defecto: multiplicación por unidades ya conocidas en vez de la división del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-ingenieria_inversa_metas-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "ingenieria_inversa_metas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y cuál es tu margen neto por unidad",
+  "texto_nuevo": "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1464-1468",
+   "frase": "there are no reliable figures to use when estimating net margin"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro multiplica esos ingresos por una aproximación del margen neto y advierte que no hay cifras confiables para estimarlo; el paso pierde esa cautela.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-049-marketing_directo_y_llamadas_en_frio_franquicias-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "marketing_directo_y_llamadas_en_frio_franquicias",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las estrategias de contacto directo (direct mail, email, cold calling) pueden ser mucho más efectivas y dar un costo por lead atractivo si se ejecutan correctamente, aunque algunos las han descartado por ineficientes debido a su bajo close rate. La tasa de respuesta depende de factores como calidad de la lista, personalización, mensaje y momento de envío. Combinar correo directo con llamadas en frío puede generar un efecto sinérgico que aumenta significativamente el rendimiento de leads. Es un canal regulado en mercados como EE.UU. y Canadá, por lo que su ejecución experta o especializada mejora los resultados.",
+  "texto_nuevo": "Las estrategias de contacto directo (direct mail, email, cold calling) pueden ser mucho más efectivas y dar un costo por lead atractivo si se ejecutan correctamente, aunque algunos las han descartado por ineficientes debido a su bajo close rate. La tasa de respuesta depende de factores como calidad de la lista, personalización, mensaje y momento de envío. Combinar correo directo con llamadas en frío puede generar un efecto sinérgico que aumenta significativamente el rendimiento de leads. Es un canal regulado en mercados como EE.UU. y Canadá, y como la diferencia entre hacerlo bien y hacerlo mal es enorme, su ejecución experta o especializada mejora los resultados.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3811",
+   "frase": "given the vast chasm between a direct-contact strategy that is well done and one"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no deriva el especialista de la regulación: lo recomienda por la enorme diferencia entre un contacto directo bien hecho y uno mal hecho.; Mismo defecto que la marca 0: causa inventada.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-049-mensaje_desarrolladores_area-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mensaje_desarrolladores_area",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los operadores multi-unidad (que controlan más del 50% de las unidades de franquicia en EE.UU.) buscan la oportunidad como inversión, no como proyecto emocional de 'ser tu propio jefe'. Esperan datos financieros sólidos (FPR) y analizarán a fondo el soporte del franquiciador en publicidad, capacitación, bienes raíces, diseño, construcción y operaciones, además de su solidez financiera y de quienes lo dirigen.",
+  "texto_nuevo": "Los operadores multi-unidad (que en 2007 controlaban más del 50% de las unidades de franquicia en EE.UU.) suelen buscar la oportunidad como inversión, no como proyecto emocional de 'ser tu propio jefe'. Esperan datos financieros sólidos (FPR) y analizarán a fondo el soporte del franquiciador en publicidad, capacitación, bienes raíces, diseño, construcción y operaciones, además de su solidez financiera y de quienes lo dirigen.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "3114, 3120",
+   "frase": "area development franchisees are much more likely to focus on the franchise as an investment"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la cifra como dato del informe de 2007; el nodo la presenta como vigente.; El libro dice que es mucho más probable que se enfoquen en la inversión y que probablemente rechacen un discurso emocional; el nodo lo da por seguro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-implementacion_monitoreo_controles-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "implementacion_monitoreo_controles",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tras un periodo adecuado, transferir la función de auditoría a las fuerzas operativas y disolver el equipo",
+  "texto_nuevo": "Tras un periodo adecuado, transferir la función de auditoría a las fuerzas operativas y disolver el equipo, con las celebraciones y el reconocimiento adecuados",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "14999",
+   "frase": "disband the team (with appropriate celebrations and recognition)"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide disolver el equipo con las celebraciones y el reconocimiento adecuados, y el paso lo omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 5
+ },
+ {
+  "id": "final-e1b-050-iso_ts_16949_automotriz-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "iso_ts_16949_automotriz",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción y, cuando corresponda, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte remoto como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+  "texto_nuevo": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción y, cuando corresponda, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte, en el sitio o remotas, como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11405",
+   "frase": "Supporting functions, whether on-site or remote (such as design centers"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye las funciones de soporte tanto en el sitio como remotas; el nodo las limita a las remotas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-inventory_analysis_lean-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "inventory_analysis_lean",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula tus niveles mínimo y máximo según la demanda, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+  "texto_nuevo": "Calcula tus niveles mínimo y máximo según la demanda, la cantidad que se consume durante la reposición, el tiempo de reposición, la variación y el impacto de las interrupciones del flujo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13421",
+   "frase": "customer demand (and variation), quantity consumed during replenishment, cycle time intervals for replacement"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cuatro factores que el libro pide considerar se cae la cantidad consumida durante la reposición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 2
+ },
+ {
+  "id": "final-e1b-050-prediccion_confiabilidad_diseno-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "prediccion_confiabilidad_diseno",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+  "texto_nuevo": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de los clientes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20266-20276",
+   "frase": "Specified life tests; Customers' parts qualification and inspection tests"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de fuentes con las que el libro manda armar el banco de datos pierde las pruebas de vida especificadas, las asociaciones de la industria y las pruebas de calificación e inspección de los clientes; la propuesta del lector añadía además un plazo inventado que no entra.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-prediccion_confiabilidad_diseno-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "prediccion_confiabilidad_diseno",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+  "texto_nuevo": "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de calificación e inspección de los clientes, GIDEP, RIAC)",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20266-20276",
+   "frase": "Specified life tests; Customers' parts qualification and inspection tests"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro enumera cinco fuentes y el paso omite las pruebas de vida especificadas, las asociaciones de la industria y las pruebas de calificación e inspección de los clientes.; Mismo defecto: la lista de fuentes pierde tres de las que el libro enumera.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-050-planificacion_recoleccion_datos-pasos_accionables-11",
+  "fecha": "2026-09-30",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
+  "texto_nuevo": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos, en forma gráfica cuando convenga, con métodos estadísticos simples en el cuerpo del informe y los análisis complicados en un anexo",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19112-19118",
+   "frase": "Present the results in graphic form where appropriate. Use simple statistical methods"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la tercera indicación para presentar los resultados.; Se cae la tercera indicación del paso de presentación del libro: forma gráfica cuando convenga, métodos simples en el cuerpo y análisis complicados en un anexo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 11
+ },
+ {
+  "id": "final-e1b-050-planificacion_estudio_capacidad-pasos_accionables-7",
+  "fecha": "2026-09-30",
+  "node_id": "planificacion_estudio_capacidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define cómo vas a analizar los datos antes de empezar a recolectarlos",
+  "texto_nuevo": "Define cómo vas a analizar los datos antes de empezar a recolectarlos, para asegurarte de que tendrás todos los datos necesarios: cálculos de capacidad sobre la variabilidad, análisis de los datos de atributos sobre las equivocaciones y análisis de los experimentos diseñados que incluyas en el estudio",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20775",
+   "frase": "before starting the study, all necessary data for the analysis will be available"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: se caen la finalidad y los tres análisis del plan.; Se pierden la finalidad del plan de análisis (tener todos los datos necesarios antes de empezar) y los tres análisis que el libro dice que debe incluir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 7
+ },
+ {
+  "id": "final-e1b-050-planificacion_gobierno_organizaciones_familiares-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "planificacion_gobierno_organizaciones_familiares",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Decide qué necesitas para sumar a la junta a personas externas independientes: busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación y capacidad de ayudar a corregir las fuentes de conflicto familiar",
+  "texto_nuevo": "Decide qué necesitas para sumar a la junta a personas externas independientes: además de la experiencia y el conocimiento necesarios, busca respeto de sus pares, capacidad de trabajo en equipo, habilidad para desafiar a la gestión sin confrontación y capacidad de ayudar a corregir las fuentes de conflicto familiar",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10751",
+   "frase": "in addition to the necessary experience and knowledge requires that independent directors have the following"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide esas cualidades además de la experiencia y el conocimiento necesarios, requisito base que el paso omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 3
+ },
+ {
+  "id": "final-e1b-050-limitaciones_intervalos_confianza-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "limitaciones_intervalos_confianza",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+  "texto_nuevo": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y repetibles, sin fallas inexplicadas en un rango de condiciones ambientales, y conocimiento del área técnica (subject matter knowledge).",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "2860",
+   "frase": "A repeated and repeatable pattern, without unexplained failure over a range of environmental conditions"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la condición de repetirse sin fallas inexplicadas en un rango de condiciones.; Se cae la condición del libro: el patrón debe repetirse sin fallas inexplicadas en un rango de condiciones ambientales.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-gestion_participativa_qc_circle_supervisores-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_participativa_qc_circle_supervisores",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+  "texto_nuevo": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, desde que empiezas a darles formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "8707",
+   "frase": "weekly supervisors' meetings which had been initiated during the training period"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las reuniones semanales se iniciaron durante la formación, no después; después vino aplicar lo aprendido e informar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-ciclo_de_mejora_continua_helix-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real y descubrir qué piensa el usuario. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "texto_nuevo": "El 'viejo camino' (diseñar, fabricar, vender - tres pasos independientes basados en suposiciones) se contrasta con el 'nuevo camino', que añade un cuarto paso crítico: probar el producto en servicio real, descubrir qué piensa el usuario y por qué quien no lo usa no lo ha comprado. La repetición continua de este ciclo de cuatro pasos genera una hélice de mejora nunca terminada, que produce mejor calidad a menor costo con el tiempo.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3969",
+   "frase": "what the user thinks of it, and why the nonuser has not bought it"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta averiguar por qué el no usuario no lo compró; tampoco entra el cambio a mayor costo de la propuesta.; Se cae la segunda mitad del cuarto paso: averiguar por qué quien no lo usa no lo ha comprado; la propuesta del lector cambiaba además menor costo por mayor costo, lo que no entra.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-claridad_especificaciones_instrucciones-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "claridad_especificaciones_instrucciones",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El ejemplo de las señales de tránsito confusas ilustra cómo la falta de claridad en instrucciones o especificaciones puede generar errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
+  "texto_nuevo": "El ejemplo de las señales de tránsito confusas ilustra cómo la falta de claridad en instrucciones o especificaciones puede generar errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10713",
+   "frase": "The purpose of a road sign is to teach"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El pasaje del libro trata solo de las señales de tránsito; extender el principio a todo documento o procedimiento de la organización es un alcance que el libro no declara.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-ciclo_shewhart_pdsa-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "ciclo_shewhart_pdsa",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si los resultados son favorables, repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+  "texto_nuevo": "Si los resultados son favorables, puedes decidir repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1877",
+   "frase": "If the results of the change or test are favorable, we may decide"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta la repetición del ciclo como algo que se puede decidir, y el paso la vuelve obligatoria.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 4
+ },
+ {
+  "id": "final-e1b-050-muestreo_aleatorio_operacional-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "muestreo_aleatorio_operacional",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+  "texto_nuevo": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado, escrito de antemano (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "6836",
+   "frase": "Read out by an acceptable procedure, to be written out in advance"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición operacional del libro exige que el procedimiento de lectura de los números esté escrito de antemano, y el resumen lo omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-mejora_continua_del_sistema-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mejora_continua_del_sistema",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ventas, distribución, supervisión, capacitación, contabilidad y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
+  "texto_nuevo": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ubicación de las actividades, ventas, distribución, supervisión, capacitación, contabilidad, nómina y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1086",
+   "frase": "maintenance, locations of activities, sales, methods of distribution, supervision, retraining, accounting, payroll"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye también la ubicación de las actividades y la nómina, que el nodo deja fuera.; Mismo defecto: la lista pierde la ubicación de las actividades y la nómina.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-organizacion_liderazgo_estadistico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "organizacion_liderazgo_estadistico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe. Si tienes gente que hace trabajo estadístico en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas perder conocimiento y que cada área invente su propio criterio sin conexión con las demás.",
+  "texto_nuevo": "Conviene que exista una persona con dominio real de estadística, encargada de que el método sea coherente en todo tu negocio y no solo en un área suelta. Esa persona necesita autoridad para meterse donde haga falta, además de formación seria, experiencia práctica, trabajos demostrables y capacidad de enseñar lo que sabe y de guiar a la dirección hacia la mejora constante de la calidad y la productividad. Si tienes gente que hace trabajo estadístico en distintas partes del negocio, cada quien responde por su trabajo del día a día ante quien lleva esa área, pero en método y desarrollo profesional responde ante la persona con dominio estadístico. Así evitas que cada área invente su propio criterio sin conexión con las demás.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10509",
+   "frase": "demonstrated ability to teach and to lead top management toward constant improvement"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El cuarto requisito del libro es la capacidad demostrada de enseñar y de guiar a la dirección hacia la mejora constante; el nodo pierde la parte de guiar.; El libro no atribuye al esquema el resultado de evitar la pérdida de conocimiento.; Mismo defecto: se cae la segunda mitad del cuarto requisito.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-mejora_continua_del_proceso-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mejora_continua_del_proceso",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye la reducción a un solo proveedor confiable por cada artículo, mejor asignación del esfuerzo humano, selección y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
+  "texto_nuevo": "La mejora nunca termina; cada trabajo, producto o servicio debe ser mejor que el anterior. Esto implica trabajar sobre los procesos, equipos, materiales y procedimientos de prueba, no solo medir el desperdicio al final. La mejora incluye el trabajo continuo con los proveedores y, con el tiempo, la reducción a un solo proveedor confiable por cada artículo, mejor asignación del esfuerzo humano, selección, ubicación y capacitación del personal, y eliminación de barreras al orgullo por el trabajo bien hecho.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1116-1118",
+   "frase": "continual work with vendors and eventual reduction to one vendor"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera selección, ubicación y capacitación de las personas; el nodo omite la ubicación.; El libro habla de trabajo continuo con los proveedores y de una reducción eventual a uno solo; el nodo lo presenta como reducción directa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ },
+ {
+  "id": "final-e1b-050-medidas_productividad_no_mejoran-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "medidas_productividad_no_mejoran",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización.",
+  "texto_nuevo": "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización y qué está costando.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "303",
+   "frase": "consistent with the aim of the organization, and what it is costing"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El estudio que propone el libro pregunta si la actividad es coherente con el objetivo y también qué está costando; el paso omite el costo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7",
+  "indice": 1
+ },
+ {
+  "id": "final-e1b-050-muestreo_con_seguimiento_no_respondientes-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "muestreo_con_seguimiento_no_respondientes",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta hace peligroso sacar conclusiones, y el riesgo existe aunque responda el 90%, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen; limitar las conclusiones a tendencias no elimina ese riesgo. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "5007",
+   "frase": "every statistician knows the perils of drawing conclusions from incomplete returns"
+  },
+  "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla del peligro de sacar conclusiones de respuestas incompletas; el nodo lo da por hecho como un sesgo grave.; Mismo defecto: el peligro del libro pasa a sesgo grave afirmado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+ }
+]

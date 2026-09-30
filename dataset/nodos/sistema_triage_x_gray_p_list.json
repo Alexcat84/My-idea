@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Sistema de Triaje de Sustancias: Listas X, Gris y P",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad, poder sensibilizante, efecto carcinógeno, mutágeno o disruptor endocrino, bioacumulación, biodegradabilidad y daño ambiental, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+  "resumen_teorico": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad aguda y crónica, poder sensibilizante, efecto carcinógeno, mutágeno, teratógeno o disruptor endocrino, bioacumulación, toxicidad para organismos acuáticos o del suelo, biodegradabilidad y potencial de agotar la capa de ozono, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
   "pasos_accionables": [
     "Realizar un inventario completo de todos los materiales y sustancias usadas en la fabricación y uso del producto.",
     "Clasificar cada sustancia en Lista X (eliminar), Lista Gris (uso condicionado y gestionado) o Lista P (preferida).",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La Lista Gris tiene además las problemáticas de eliminación menos urgente.; La Lista X también incluye las sustancias fuertemente sospechosas aunque no esté probado.; Los criterios de la Lista P pierden el poder sensibilizante, los efectos carcinógenos o disruptores y los subproductos.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-sistema_triage_x_gray_p_list-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad, poder sensibilizante, efecto carcinógeno, mutágeno o disruptor endocrino, bioacumulación, biodegradabilidad y daño ambiental, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+      "texto_nuevo": "Es un método de inventario y clasificación de todos los materiales usados en un producto según su nivel de riesgo. La Lista X agrupa sustancias altamente peligrosas (carcinógenas, mutagénicas, teratogénicas) o fuertemente sospechosas de serlo, que deben eliminarse con prioridad. La Lista Gris incluye sustancias problemáticas de eliminación menos urgente y otras esenciales, sin sustituto viable, que requieren manejo especial (ej. cadmio en paneles solares bajo esquema de servicio). La Lista P (positiva/preferida) reúne sustancias definidas como seguras y saludables, evaluadas por toxicidad aguda y crónica, poder sensibilizante, efecto carcinógeno, mutágeno, teratógeno o disruptor endocrino, bioacumulación, toxicidad para organismos acuáticos o del suelo, biodegradabilidad y potencial de agotar la capa de ozono, incluidos sus subproductos. Este triaje permite iniciar un rediseño 'pasivo' del producto, sustituyendo ingredientes sin cambiar su concepto fundamental.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "976-994",
+        "frase": "known or suspected carcinogen, mutagen, teratogen, or endocrine disruptor"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Además de perder el teratógeno, 'daño ambiental' sustituye la toxicidad para organismos acuáticos o del suelo y el agotamiento de la capa de ozono que el libro enumera.; La lista de criterios de la Lista P pierde el efecto teratógeno que el libro enumera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

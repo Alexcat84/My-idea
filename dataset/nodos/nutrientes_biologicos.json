@@ -7,7 +7,7 @@
   "resumen_teorico": "Un nutriente biológico es un material o producto diseñado para regresar de forma segura al ciclo biológico, siendo consumido por microorganismos y otros seres vivos en el suelo. Aplica especialmente a empaques (aprox. 50% del volumen de residuos sólidos municipales), que pueden diseñarse para biodegradarse o incluso enriquecer el suelo tras su uso, eliminando la carga de reciclaje o vertedero.",
   "pasos_accionables": [
     "Identificar productos o empaques candidatos a rediseñarse como nutrientes biológicos (packaging, suelas, jabones, textiles)",
-    "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
+    "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, disruptores endocrinos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
     "Diseñar el producto para que pueda compostarse o biodegradarse de forma segura tras su uso",
     "Validar con pruebas de biodegradabilidad y ausencia de toxicidad en el compost resultante"
   ],
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye también las sustancias que se acumulan en los sistemas naturales.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-nutrientes_biologicos-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
+      "texto_nuevo": "Seleccionar materiales de origen natural libres de mutágenos, carcinógenos, disruptores endocrinos, toxinas persistentes u otras sustancias que se acumulen en los sistemas naturales",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "648",
+        "frase": "filtering out mutagens, carcinogens, endocrine disrupters, persistent toxins, and bioaccumulative substances"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de sustancias que el libro filtra desde el inicio incluye los disruptores endocrinos, que el paso pierde.; Mismo defecto: faltan los disruptores endocrinos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

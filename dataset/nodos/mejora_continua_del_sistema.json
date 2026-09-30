@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Mejora continua y permanente del sistema de producción y servicio (Punto 5)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ventas, distribución, supervisión, capacitación, contabilidad y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
+  "resumen_teorico": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ubicación de las actividades, ventas, distribución, supervisión, capacitación, contabilidad, nómina y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
   "pasos_accionables": [
     "Trabajar en el diseño desde el inicio, ya que 'solo hay una oportunidad para el éxito óptimo'",
     "Enfocarse en reducir la variación alrededor del valor nominal, no solo en cumplir especificaciones",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Mejora tu Sistema Constantemente",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1b-050-mejora_continua_del_sistema-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ventas, distribución, supervisión, capacitación, contabilidad y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
+      "texto_nuevo": "El Punto 5 de Deming establece que la calidad debe construirse desde la etapa de diseño y mejorarse constantemente en todas las actividades: procura, transporte, ingeniería, métodos, mantenimiento, ubicación de las actividades, ventas, distribución, supervisión, capacitación, contabilidad, nómina y servicio al cliente. La mejora continua reduce la variación alrededor del valor nominal, no solo el cumplimiento de especificaciones.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1086",
+        "frase": "maintenance, locations of activities, sales, methods of distribution, supervision, retraining, accounting, payroll"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye también la ubicación de las actividades y la nómina, que el nodo deja fuera.; Mismo defecto: la lista pierde la ubicación de las actividades y la nómina.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    }
   ]
 }

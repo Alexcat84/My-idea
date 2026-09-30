@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Limitaciones de los intervalos de confianza para predicción",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+  "resumen_teorico": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y repetibles, sin fallas inexplicadas en un rango de condiciones ambientales, y conocimiento del área técnica (subject matter knowledge).",
   "pasos_accionables": [
     "Distinguir claramente entre estudios enumerativos (resumen de datos pasados) y estudios analíticos (predicción futura)",
     "No usar p-values ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro concede utilidad solo al intervalo de confianza en estudios enumerativos; de los niveles de significancia dice que no dan ninguna medida para planificar y que no tienen aplicación.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-limitaciones_intervalos_confianza-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y conocimiento del área técnica (subject matter knowledge).",
+      "texto_nuevo": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y repetibles, sin fallas inexplicadas en un rango de condiciones ambientales, y conocimiento del área técnica (subject matter knowledge).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "2860",
+        "frase": "A repeated and repeatable pattern, without unexplained failure over a range of environmental conditions"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la condición de repetirse sin fallas inexplicadas en un rango de condiciones.; Se cae la condición del libro: el patrón debe repetirse sin fallas inexplicadas en un rango de condiciones ambientales.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

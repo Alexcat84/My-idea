@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Diseñar un puntaje de qué tan fácil es arreglar tu producto (índice de reparabilidad)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta, y cuéntaselo con claridad a quien te compra.",
+  "resumen_teorico": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta.",
   "pasos_accionables": [
     "Decide qué de esos cinco puntos (documentación, desarmado, repuestos, costo, particularidades) le aplica a tu producto.",
     "Revisa si tienes documentación técnica disponible para quien lo use o lo repare.",
     "Piensa el diseño de tu producto considerando cómo se desarma y se arregla, no solo cómo se arma.",
     "Decide qué tan disponibles van a estar los repuestos o el soporte a largo plazo, y cuánto cuestan los repuestos en relación con el precio de tu producto.",
-    "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante, y publícalo con claridad.",
+    "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante.",
     "Compara tu enfoque contra dejar que el producto simplemente se rompa y se deseche, y ajusta tu modelo si hace falta."
   ],
   "entregable_esperado": "Una ficha propia con los cinco puntos evaluados, un puntaje y un plan de soporte o mejora hasta que el producto termine su vida útil.",
@@ -89,6 +89,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el puntaje lo calculan los propios fabricantes y pregunta por los límites de la confianza; el paso presenta ambas vías como equivalentes.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-indice_de_reparabilidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta, y cuéntaselo con claridad a quien te compra.",
+      "texto_nuevo": "Todo se rompe eventualmente; la pregunta es qué haces cuando pasa. En Francia, desde 2021, los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad. Puedes tomar esa misma idea para tu producto y evaluarlo en cinco puntos: si existe documentación disponible, si es fácil de desarmar, si hay repuestos disponibles, cuánto cuestan esos repuestos y las particularidades propias de tu producto. Decide de antemano si tu producto va a vivir en una cultura de arreglo o si por defecto se rompe y se descarta.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4322",
+        "frase": "What system might you put in place to evaluate and respond to breakage"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pregunta qué cultura de arreglo tienes y quién gobierna el puntaje; no pide comunicárselo al comprador.; Mismo defecto: la norma de contárselo al comprador no está en el pasaje.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-049-indice_de_reparabilidad-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante, y publícalo con claridad.",
+      "texto_nuevo": "Decide tú mismo o busca quién revisa o certifica tu puntaje de reparabilidad, pensando en cuánta confianza da un puntaje que calcula el propio fabricante.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4336",
+        "frase": "But who should govern them? ... What are the boundaries of trust?"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pregunta quién gobierna el puntaje y cuáles son los límites de la confianza, pero no aconseja publicarlo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

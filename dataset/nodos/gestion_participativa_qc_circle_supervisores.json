@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Formación de Grupos de Mejora entre las Personas que Supervisan tu Negocio",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+  "resumen_teorico": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, desde que empiezas a darles formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
   "pasos_accionables": [
     "Capacita a las personas que supervisan tus áreas en métodos estadísticos y en la filosofía de mejora continua",
     "Establece reuniones periódicas, por ejemplo semanales, entre ellas para compartir problemas y soluciones",
@@ -60,6 +60,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro atribuye a las reuniones trabajo en equipo e interés; las mejoras vinieron del estudio posterior del departamento.; Mismo defecto: 'mejoras sostenidas' no se atribuye a las reuniones.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-gestion_participativa_qc_circle_supervisores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, después de darles alguna formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+      "texto_nuevo": "Reunir periódicamente a las personas que supervisan distintas áreas de tu negocio, desde que empiezas a darles formación en métodos estadísticos, te permite intercambiar ideas, construir equipo y aplicar en la práctica lo aprendido. Este mecanismo funcionó como un círculo de mejora informal que, en el caso de una fábrica de medias, generó un trabajo en equipo y un interés que antes faltaban.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8707",
+        "frase": "weekly supervisors' meetings which had been initiated during the training period"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las reuniones semanales se iniciaron durante la formación, no después; después vino aplicar lo aprendido e informar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

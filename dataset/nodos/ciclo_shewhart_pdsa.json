@@ -10,7 +10,7 @@
     "Llevar a cabo el cambio o prueba, preferiblemente a pequeña escala (Do)",
     "Estudiar los resultados obtenidos y comparar con lo esperado (Study)",
     "Actuar: adoptar, adaptar o abandonar el cambio según los resultados obtenidos (Act)",
-    "Si los resultados son favorables, repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados"
+    "Si los resultados son favorables, puedes decidir repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados"
   ],
   "entregable_esperado": "Un registro documentado de al menos un ciclo PDSA completo aplicado a una etapa de proceso, incluyendo hipótesis, datos y conclusiones",
   "nodos_previos": [
@@ -63,6 +63,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro repite el ciclo solo si los resultados del primero son favorables; el paso pierde esa condición.; Mismo defecto: se cae la condición de resultados favorables.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-ciclo_shewhart_pdsa-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si los resultados son favorables, repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+      "texto_nuevo": "Si los resultados son favorables, puedes decidir repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1877",
+        "frase": "If the results of the change or test are favorable, we may decide"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta la repetición del ciclo como algo que se puede decidir, y el paso la vuelve obligatoria.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

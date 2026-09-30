@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Productos Crudos (Crude Products)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
+  "resumen_teorico": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones, funcionar lo bastante bien y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
   "pasos_accionables": [
     "Evaluar si el producto actual fue diseñado solo pensando en atractivo, costo y regulación mínima",
     "Identificar qué consideraciones de salud humana y ecológica faltan en el diseño",
@@ -57,6 +57,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro los califica así por no estar diseñados para la salud humana y ecológica; la causa del sistema completo no está.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-productos_crudos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
+      "texto_nuevo": "Concepto que designa a los productos diseñados únicamente para ser atractivos, asequibles, cumplir regulaciones, funcionar lo bastante bien y durar lo suficiente para el mercado, sin considerar la salud humana y ecológica. Son calificados como 'poco inteligentes' y 'poco elegantes' precisamente por no estar diseñados para esa salud, sentando las bases para la necesidad de un nuevo enfoque de diseño (Cradle to Cradle).",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "233",
+        "frase": "affordable, meets regulations, performs well enough, and lasts long enough"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La intención de diseño del libro tiene cinco elementos y el nodo pierde que el producto funcione lo bastante bien.; Mismo defecto: falta 'performs well enough'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

@@ -17,7 +17,7 @@
     "Determinar si se necesitan más datos y análisis",
     "Considerar un análisis de sensibilidad",
     "Revisar que las conclusiones respondan al problema técnico original",
-    "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
+    "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos, en forma gráfica cuando convenga, con métodos estadísticos simples en el cuerpo del informe y los análisis complicados en un anexo",
     "Determinar si las conclusiones aplican a otros problemas"
   ],
   "entregable_esperado": "Plan documentado de recolección y análisis de datos con preguntas formuladas, método de muestreo definido y plan de presentación de resultados",
@@ -135,6 +135,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide expresar las conclusiones en términos del problema original y no de los índices estadísticos; se pierde. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 11,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-planificacion_recoleccion_datos-pasos_accionables-11",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos",
+      "texto_nuevo": "Presentar los resultados en un informe claro con resumen ejecutivo, expresando las conclusiones en términos del problema original y no de los índices estadísticos, en forma gráfica cuando convenga, con métodos estadísticos simples en el cuerpo del informe y los análisis complicados en un anexo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19112-19118",
+        "frase": "Present the results in graphic form where appropriate. Use simple statistical methods"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la tercera indicación para presentar los resultados.; Se cae la tercera indicación del paso de presentación del libro: forma gráfica cuando convenga, métodos simples en el cuerpo y análisis complicados en un anexo.",
+      "indice": 11,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [

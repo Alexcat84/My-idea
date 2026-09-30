@@ -4,11 +4,11 @@
   "dominio": "environmental",
   "titulo_concepto": "Re-Evolución Industrial",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan e incluso generen más energía de la que consumen.",
+  "resumen_teorico": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan.",
   "pasos_accionables": [
     "Evaluar si las tecnologías nuevas aplicadas realmente cambian el paradigma o solo optimizan el sistema existente",
     "Diseñar procesos que devuelvan nutrientes biológicos y técnicos al sistema",
-    "Buscar que los procesos generen más energía de la que consumen, no solo reducir el daño",
+    "Buscar que los edificios generen más energía de la que consumen, no solo reducir el daño",
     "Adoptar principios de diseño resonantes con el mundo vivo en toda la cadena de producción"
   ],
   "entregable_esperado": "Evaluación crítica de las tecnologías o procesos actuales del proyecto, identificando si constituyen una verdadera re-evolución o solo una optimización del sistema existente",
@@ -58,6 +58,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide pagar con intereses la energía consumida; generar más recursos de los consumidos no lo dice.; Mismo defecto.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-reevolucion_industrial-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan e incluso generen más energía de la que consumen.",
+      "texto_nuevo": "Concepto que plantea que las nuevas tecnologías (cybertecnología, biotecnología, nanotecnología) no generan por sí mismas una revolución industrial genuina si no cambian el contexto en el que operan; de lo contrario, solo son motores hipereficientes que perpetúan los mismos paradigmas dañinos del sistema industrial original. Los procesos y productos pueden ser más eficaces cuanto más se parecen al mundo vivo, y la meta es que devuelvan los nutrientes biológicos y técnicos que usan.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "551, 879",
+        "frase": "buildings that, like trees, produce more energy than they consume"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pone la meta de producir más energía de la que se consume para los edificios; el pasaje de la re-evolución no la extiende a procesos y productos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-049-reevolucion_industrial-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar que los procesos generen más energía de la que consumen, no solo reducir el daño",
+      "texto_nuevo": "Buscar que los edificios generen más energía de la que consumen, no solo reducir el daño",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "551",
+        "frase": "buildings that, like trees, produce more energy than they consume"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone esta meta para los edificios, no para los procesos en general.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

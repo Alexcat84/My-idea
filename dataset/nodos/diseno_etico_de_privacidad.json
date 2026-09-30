@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Agencia y Opt-Out: Diseño Ético de Privacidad de Datos",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), los diseñadores deben considerar dar agencia real a los usuarios sobre su información. Rara vez el opt-out es la opción por defecto; diseñar sistemas éticos implica ofrecer control genuino y sopesar el trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
+  "resumen_teorico": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), puedes querer ser dueño de tus datos o al menos tener agencia sobre quién los usa, o puede que prefieras menos agencia a cambio de conveniencia. Rara vez, en realidad nunca, el opt-out es la opción por defecto; es un trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
   "pasos_accionables": [
     "Enumera qué datos sensibles recolecta tu sistema (ubicación, salud, comportamiento, emociones).",
     "Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.",
@@ -46,6 +46,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'Data zero' viene de un pasaje de ficción sobre el futuro; el nodo lo presenta como tendencia real.; El libro habla de acuerdos más transparentes con salida difícil; no contrapone control genuino a un cumplimiento legal superficial.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-049-diseno_etico_de_privacidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), los diseñadores deben considerar dar agencia real a los usuarios sobre su información. Rara vez el opt-out es la opción por defecto; diseñar sistemas éticos implica ofrecer control genuino y sopesar el trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
+      "texto_nuevo": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), puedes querer ser dueño de tus datos o al menos tener agencia sobre quién los usa, o puede que prefieras menos agencia a cambio de conveniencia. Rara vez, en realidad nunca, el opt-out es la opción por defecto; es un trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "985, 1009",
+        "frase": "You may find yourself wanting to own your own data... Maybe you want less agency."
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo redactar; doble lectura ciega, arbitro y verificador ciego): El libro no fija un deber del diseñador de dar agencia ni dice que el diseño ético implique ofrecer control; describe que puedes querer agencia, que puede no importarte o que prefieras menos.; El libro se corrige: rara vez, en realidad nunca, es la opción por defecto; el nodo deja solo 'rara vez'.; Mismo defecto que la marca 0: se pierde el 'en realidad nunca'.; Mismo defecto: la norma de diseño sobre agencia y control genuino no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

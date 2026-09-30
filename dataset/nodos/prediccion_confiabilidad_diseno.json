@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Predicción de Confiabilidad Durante el Diseño",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+  "resumen_teorico": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de los clientes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
   "pasos_accionables": [
     "Definir el producto y su operación funcional mediante diagrama de bloques funcional",
     "Preparar un diagrama de bloques de confiabilidad mostrando redundancias e interrelaciones",
     "Desarrollar el modelo de probabilidad para predecir la confiabilidad",
-    "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+    "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de calificación e inspección de los clientes, GIDEP, RIAC)",
     "Combinar los datos para obtener la predicción numérica de confiabilidad del sistema"
   ],
   "entregable_esperado": "Reporte de predicción de confiabilidad del sistema con diagramas de bloques funcionales y de confiabilidad, y banco de datos de partes documentado",
@@ -65,6 +65,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la advertencia de que estas predicciones son controvertidas y difirieron mucho de lo observado en campo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-prediccion_confiabilidad_diseno-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, fabricantes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+      "texto_nuevo": "Metodología estructurada para predecir la confiabilidad de un producto desde la etapa de diseño, incluyendo la definición funcional del producto, elaboración de diagramas de bloques de confiabilidad, desarrollo de modelos probabilísticos, y recolección de datos de confiabilidad de partes desde múltiples fuentes (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de los clientes, bancos de datos gubernamentales). Son predicciones discutidas: han diferido mucho de lo real en campo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20266-20276",
+        "frase": "Specified life tests; Customers' parts qualification and inspection tests"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de fuentes con las que el libro manda armar el banco de datos pierde las pruebas de vida especificadas, las asociaciones de la industria y las pruebas de calificación e inspección de los clientes; la propuesta del lector añadía además un plazo inventado que no entra.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1b-050-prediccion_confiabilidad_diseno-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, fabricantes, GIDEP, RIAC)",
+      "texto_nuevo": "Reunir la información de cada parte (función, capacidades nominales, esfuerzos, ambientes y tiempo de operación) y recolectar datos de confiabilidad de partes desde fuentes confiables (pruebas de campo, pruebas de vida especificadas, fabricantes o asociaciones de la industria, pruebas de calificación e inspección de los clientes, GIDEP, RIAC)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20266-20276",
+        "frase": "Specified life tests; Customers' parts qualification and inspection tests"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El procedimiento del libro enumera cinco fuentes y el paso omite las pruebas de vida especificadas, las asociaciones de la industria y las pruebas de calificación e inspección de los clientes.; Mismo defecto: la lista de fuentes pierde tres de las que el libro enumera.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ]
 }

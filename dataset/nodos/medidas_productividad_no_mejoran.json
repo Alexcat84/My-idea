@@ -7,7 +7,7 @@
   "resumen_teorico": "Dedicar esfuerzos a medir y comparar la productividad (mes a mes, país a país) no conduce por sí mismo a mejorarla, de la misma forma que las estadísticas de accidentes no reducen los accidentes. Es más valioso hacer un estudio ordenado de si una actividad es consistente con el objetivo de la organización y qué está costando, en lugar de simplemente generar reportes comparativos.",
   "pasos_accionables": [
     "Evitar crear oficinas o reportes cuyo único fin sea medir productividad sin un plan de acción asociado.",
-    "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización.",
+    "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización y qué está costando.",
     "Cuestionar si las salidas (outputs) de un proceso realmente cumplen el objetivo (outcome) deseado, como en el ejemplo de la máquina de votación de Edison o la fiesta de lanzamiento de barcos."
   ],
   "entregable_esperado": "Un análisis crítico de las actividades de la organización que evalúe su coherencia con los objetivos reales, más allá de indicadores numéricos de productividad.",
@@ -66,6 +66,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reconoce que las medidas sirven para comparar con sentido; lo que no hacen es mostrar cómo mejorar. No pide sustituirlas.; Misma omisión que la marca 0.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1b-050-medidas_productividad_no_mejoran-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización.",
+      "texto_nuevo": "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización y qué está costando.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "303",
+        "frase": "consistent with the aim of the organization, and what it is costing"
+      },
+      "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El estudio que propone el libro pregunta si la actividad es coherente con el objetivo y también qué está costando; el paso omite el costo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
     }
   ],
   "fuentes_internas": [
