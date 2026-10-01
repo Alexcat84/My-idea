@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar el costo total de la inversión propuesta (incluyendo costos ocultos de instalación, mantenimiento, etc.)",
     "Estimar de forma conservadora los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos), traducidos a flujo de efectivo y no a utilidad",
-    "Sugerencia de My Idea: calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
+    "Calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
     "Comparar el ROI de esta inversión con otras alternativas de uso del capital",
     "Tomar la decisión de inversión basada en el análisis, no solo en la intuición"
   ],
@@ -71,6 +71,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Además de la cautela, el libro pide traducir los beneficios a flujo de efectivo, no a utilidad.; El libro pide proyectar los flujos de la inversión de forma conservadora, incluso cautelosa; se cae esa condición.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-020",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
+      "texto_nuevo": "Calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

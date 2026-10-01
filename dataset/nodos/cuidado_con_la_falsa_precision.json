@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "De cualquier cálculo de riesgo, rastrea de dónde salió cada número que metiste.",
     "Marca los datos que en realidad inventaste o supusiste sin base y, de esos, sal a medir los que más pesan en el resultado.",
-    "Sugerencia de My Idea: no presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
+    "No presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
     "Desconfía de todo resultado que parezca más seguro que la información que lo alimentó."
   ],
   "entregable_esperado": "Un cálculo de riesgo con el origen de cada dato marcado y los supuestos inventados señalados, redondeado con honestidad.",
@@ -92,6 +92,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no habla de decimales ni de redondear; su remedio son los rangos. Como consejo práctico queda como sugerencia. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-054",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: no presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
+      "texto_nuevo": "No presentes más decimales de los que tus datos aguantan; redondea con honestidad.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Define en qué tareas de tu negocio la IA solo te va a asistir y en cuáles nunca decide por ti",
     "Revisa con ojo crítico cada respuesta de la IA antes de usarla en una decisión real",
     "Anota los casos donde la IA se equivocó (alucinó) para saber cuánto confiar en ella la próxima vez",
-    "Sugerencia de My Idea: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto"
+    "Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto"
   ],
   "entregable_esperado": "Un protocolo escrito de cómo usas la IA, que diga con claridad qué decisiones necesitan tu revisión obligatoria antes de aplicarse",
   "nodos_previos": [
@@ -72,6 +72,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que complacer a menudo pesa más que ser exacto, no siempre.; Mismo defecto de grado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-140",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto",
+      "texto_nuevo": "Ponte una regla de doble revisión para las decisiones de alto impacto, como las financieras, legales o de producto",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

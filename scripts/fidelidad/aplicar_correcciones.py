@@ -38,6 +38,12 @@ Integracion del mundo 11 (decisiones del fundador, 28 sep 2026): el pack se limp
                 El texto viejo YA vive en el campo interno `notas_extraccion` (el importador lo copia alli): el
                 aplicador lo exige identico y en `correcciones` lo remite con `texto_anterior_en` en vez de duplicarlo.
                 Su "cita" es {"instrumento", "evidencia": {"fichero", "lineas"}}.
+
+Procedencia (regla dura del fundador, 30 sep 2026: jamas un usuario sabe ni intuye de donde sale una respuesta):
+  CASA          deja CONSTANCIA de que un paso es consejo practico de la casa (util, que el libro no da) SIN tocar el
+                texto visible: solo en pasos_accionables, con texto_nuevo identico al anterior y "cita"
+                {"regla", "motivo"}. Sustituye al prefijo visible "Sugerencia de My Idea:", que ninguna correccion
+                puede volver a poner.
 """
 import json
 import sys
@@ -55,6 +61,7 @@ CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "ent
 SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION", "ORTOGRAFIA", "CONTRARIO", "ANADIDO", "COHERENCIA"}}
 # Veredictos que declara una regla y los fragmentos que salen, no una frase del libro.
 POR_REGLA = {"ATRIBUCION", "VOZ", "CIFRA"}
+PREFIJO_PROCEDENCIA = "sugerencia de my idea"
 RESUMEN_MIN, RESUMEN_MAX = 400, 600
 FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
 DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
@@ -104,6 +111,13 @@ def validar(c, nodo):
             fallas.append("el resumen nuevo tiene %d caracteres (van de %d a %d)" % (largo, RESUMEN_MIN, RESUMEN_MAX))
         if nodo is not None and nodo.get("notas_extraccion") != c.get("texto_anterior"):
             fallas.append("el texto viejo del resumen no esta guardado en notas_extraccion")
+    elif c.get("veredicto") == "CASA":
+        if c.get("campo") != "pasos_accionables":
+            fallas.append("CASA solo deja constancia en pasos_accionables")
+        if c.get("texto_nuevo") != c.get("texto_anterior"):
+            fallas.append("CASA no cambia el texto: solo deja constancia en el registro")
+        if not cita.get("regla") or not cita.get("motivo"):
+            fallas.append("una CASA declara su regla y su motivo")
     elif c.get("veredicto") in POR_REGLA:
         if not cita.get("regla") or not cita.get("fragmentos"):
             fallas.append("una %s declara su regla y los fragmentos que salen" % c.get("veredicto"))
@@ -116,7 +130,9 @@ def validar(c, nodo):
                 fallas.append("cita sin %s" % k)
     if any(p in c.get("texto_nuevo", "") for p in PROHIBIDOS):
         fallas.append("el texto nuevo trae guion largo o medio")
-    if c.get("texto_nuevo") == c.get("texto_anterior"):
+    if PREFIJO_PROCEDENCIA in (c.get("texto_nuevo") or "").lower():
+        fallas.append("el texto nuevo trae un prefijo de procedencia visible (regla dura de procedencia)")
+    if c.get("texto_nuevo") == c.get("texto_anterior") and c.get("veredicto") != "CASA":
         fallas.append("el texto nuevo es igual al anterior")
     if nodo is None:
         return fallas + ["el nodo no existe"]

@@ -11,7 +11,7 @@
     "Documentar hallazgos como causas, contribuciones y riesgos por separado",
     "Dedicar una sección sustancial del informe a acciones de seguridad preventivas, que son la razón de ser de la investigación",
     "Contrastar la investigación oficial con relatos revisionistas o independientes si están disponibles",
-    "Sugerencia de My Idea: involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+    "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
     "Entrevistar a los involucrados para entender su percepción y objetivos en el momento"
   ],
   "entregable_esperado": "Informe de investigación de incidente estructurado según principios New View, con foco en prevención en lugar de culpabilización",
@@ -86,6 +86,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La consigna de honrar la experiencia humana no está en el libro; el informe dedica páginas a la acción de seguridad.; Mismo defecto: añade un qué que el libro no atribuye a la investigación.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-152",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+      "texto_nuevo": "Involucrar perspectivas de colegas, familiares o testigos cercanos para enriquecer el relato humano detrás del evento",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 5,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

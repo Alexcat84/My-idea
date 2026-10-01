@@ -9,7 +9,7 @@
     "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
     "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
     "Revisar si existen incentivos que fomenten el subreporte de incidentes",
-    "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
+    "Evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
     "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
   ],
   "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
@@ -55,6 +55,23 @@
         "evidencia": "F26-005: Es una auditoria de la burocracia de seguridad de una organizacion que ya opera, no una prueba con clientes o mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "procedencia-prefijo-019",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
+      "texto_nuevo": "Evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

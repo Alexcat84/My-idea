@@ -7,7 +7,7 @@
   "resumen_teorico": "Eres optimista y estás orientado a la acción, rasgos que necesitas para emprender, pero que a menudo se vuelven en tu contra. El optimismo excesivo te lleva a subestimar los recursos que necesitas, a sobreestimar tus propias capacidades frente a la competencia y a no planificar para problemas previsibles, y puede llevarte a involucrar a familiares o amigos de forma imprudente como empleados o inversionistas. Los entornos de un negocio propio, ambiguos y con señales poco claras, hacen que seas más susceptible a estos sesgos.",
   "pasos_accionables": [
     "Busca activamente una opinión externa y crítica (mentores, asesores) que contrarreste tu optimismo natural.",
-    "Sugerencia de My Idea: imagina que tu negocio ya fracasó y haz una lista de las razones más probables, como en un ejercicio de premortem.",
+    "Imagina que tu negocio ya fracasó y haz una lista de las razones más probables, como en un ejercicio de premortem.",
     "Antes de involucrar a familiares o amigos como empleados o inversionistas, evalúa con honestidad el riesgo para la relación y para el negocio.",
     "Planifica explícitamente para escenarios adversos, no solo para el caso optimista."
   ],
@@ -85,6 +85,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el exceso de optimismo puede llevar a involucrar a familiares y amigos; el nodo lo pone entre los efectos seguros.; Mismo defecto: el 'can lead' del libro pasa a efecto seguro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-257",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: imagina que tu negocio ya fracasó y haz una lista de las razones más probables, como en un ejercicio de premortem.",
+      "texto_nuevo": "Imagina que tu negocio ya fracasó y haz una lista de las razones más probables, como en un ejercicio de premortem.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

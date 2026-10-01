@@ -10,7 +10,7 @@
     "Suma materiales, herramientas y gastos fijos que ya pagas y que usarías para hacerlo.",
     "Pide cotización completa al proveedor incluyendo entrega y condiciones de pago.",
     "Compara ambas cifras y decide cuál te deja más margen.",
-    "Sugerencia de My Idea: repite el cálculo cuando el volumen que necesitas cambie de forma importante."
+    "Repite el cálculo cuando el volumen que necesitas cambie de forma importante."
   ],
   "entregable_esperado": "Una comparación escrita de costo propio contra costo de comprar, con la decisión tomada.",
   "nodos_previos": [],
@@ -201,6 +201,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): 'Más tiempo libre' es un criterio que el libro no da; compara costos para medir el ahorro.; Mismo criterio inventado.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-062",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: repite el cálculo cuando el volumen que necesitas cambie de forma importante.",
+      "texto_nuevo": "Repite el cálculo cuando el volumen que necesitas cambie de forma importante.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -10,7 +10,7 @@
     "Revisar las instrucciones para que sean más claras y establecer una política de devolución inmediata al emisor original, sin corregir internamente.",
     "Acompañar la devolución con una explicación clara del error y su impacto (ej. demora en pago).",
     "Registrar la tasa de incidencias semana a semana para verificar la reducción del problema.",
-    "Sugerencia de My Idea: comunicar los resultados a los involucrados para reforzar el nuevo comportamiento."
+    "Comunicar los resultados a los involucrados para reforzar el nuevo comportamiento."
   ],
   "entregable_esperado": "Un protocolo formal de devolución de documentos incorrectos al origen, con métricas de reducción de incidencias en pocas semanas.",
   "nodos_previos": [
@@ -74,6 +74,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro 'los rumores viajan rápido' explica por qué el problema desapareció solo; no es un consejo de comunicar resultados. Queda como sugerencia.; Mismo defecto: el paso usa la frase del libro para justificar algo que el libro no recomienda.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-234",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: comunicar los resultados a los involucrados para reforzar el nuevo comportamiento.",
+      "texto_nuevo": "Comunicar los resultados a los involucrados para reforzar el nuevo comportamiento.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

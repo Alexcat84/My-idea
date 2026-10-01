@@ -7,10 +7,10 @@
   "resumen_teorico": "Los líquidos, como las bebidas, piden un empaque suficiente y cuidadoso. Los artículos de más de 25 kg piden cajas de doble pared y material que no se desprenda con facilidad, y conviene sellarlos con cinta reforzada, revisando que no superen los límites de tamaño y peso de la caja; estos envíos deben cumplir los requisitos de empaque del courier, con una caja probada por el fabricante. Los objetos enrollados, como mapas, pósteres o planos, van en tubos triangulares o cilíndricos. Los artículos frágiles se envuelven por separado y van en una caja nueva de doble pared, sin reutilizar cajas gastadas, rotas o con esquinas dañadas. Conviene reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento.",
   "pasos_accionables": [
     "Clasifica cada producto que vendes en una de estas categorías: líquido, pesado, frágil o de forma irregular.",
-    "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+    "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
     "Para piezas pesadas, usa caja de doble pared y confirma que no exceda el límite de peso impreso en la caja.",
-    "Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
-    "Sugerencia de My Idea: documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
+    "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+    "Documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
   ],
   "entregable_esperado": "Una guía breve por categoría de producto con el método de empaque que le corresponde.",
   "nodos_previos": [
@@ -112,6 +112,57 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo enumera artículos especiales y cómo empacarlos; no afirma que el empaque genérico no resuelva cada punto débil.; Mismo defecto que la marca 1: se cae el requisito del courier y la prueba del fabricante.; Se cae que los envíos de más de 25 kg deben cumplir los requisitos de empaque del courier y estar probados por el fabricante.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-006",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+      "texto_nuevo": "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-007",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+      "texto_nuevo": "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-008",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas.",
+      "texto_nuevo": "Documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

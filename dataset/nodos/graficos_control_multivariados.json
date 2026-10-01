@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.",
   "pasos_accionables": [
     "Identificar las múltiples características de calidad correlacionadas del producto",
-    "Sugerencia de My Idea: calcular la matriz de covarianza entre las características",
+    "Calcular la matriz de covarianza entre las características",
     "Construir el estadístico multivariado (por ejemplo, T² de Hotelling)",
     "Establecer límites de control multivariados apropiados",
     "Monitorear el estadístico combinado en lugar de gráficos independientes"
@@ -57,6 +57,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "procedencia-prefijo-138",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: calcular la matriz de covarianza entre las características",
+      "texto_nuevo": "Calcular la matriz de covarianza entre las características",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

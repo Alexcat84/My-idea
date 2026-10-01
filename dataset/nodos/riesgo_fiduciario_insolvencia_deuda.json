@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores",
     "Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity",
-    "Sugerencia de My Idea: mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
-    "Sugerencia de My Idea: pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo"
+    "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+    "Pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo"
   ],
   "entregable_esperado": "Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada",
   "nodos_previos": [
@@ -76,6 +76,40 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no aconseja llevar registros; solo dice que los abogados juzgarán los actos de la junta durante la insolvencia. Queda como sugerencia.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-238",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+      "texto_nuevo": "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-239",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo",
+      "texto_nuevo": "Pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

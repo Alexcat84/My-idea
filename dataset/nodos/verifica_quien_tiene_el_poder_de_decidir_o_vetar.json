@@ -9,7 +9,7 @@
     "Antes de negociar, pregunta directamente quién más tiene que estar de acuerdo con esto además de ti.",
     "Escucha si tu interlocutor usa mucho yo, mi y me (suele decidir otra persona) o nosotros y ellos (suele tener capacidad de decisión).",
     "Si detectas un tercero con poder de veto, averigua qué le mueve y busca la forma de influir en él, de incluirlo o de que se entere del trato antes de cerrarlo.",
-    "Sugerencia de My Idea: deja por escrito quién aprobó cada parte del acuerdo, para que nadie lo desconozca después."
+    "Deja por escrito quién aprobó cada parte del acuerdo, para que nadie lo desconozca después."
   ],
   "entregable_esperado": "Un registro de quién tiene poder de aprobar o vetar el trato, obtenido antes de cerrar la negociación.",
   "nodos_previos": [
@@ -191,6 +191,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide descubrir cómo influir sobre quien puede vetar e identificar sus motivaciones. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-278",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: deja por escrito quién aprobó cada parte del acuerdo, para que nadie lo desconozca después.",
+      "texto_nuevo": "Deja por escrito quién aprobó cada parte del acuerdo, para que nadie lo desconozca después.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

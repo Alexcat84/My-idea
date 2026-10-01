@@ -109,8 +109,25 @@ def main():
         nodo = json.loads(ruta.read_text(encoding="utf-8"))
         if r.returncode != 0 or nodo.get("etiqueta_arbol") != "Deja la Fuerza Bruta":
             fallos.append("no corrigio la etiqueta de cara: " + r.stdout)
+    # POSITIVO: CASA registra que un paso es consejo practico de la casa SIN tocar el texto visible
+    # (regla dura de procedencia del fundador, 30 sep 2026: sin prefijo ni campo nuevo; la constancia va al registro)
+    casa = dict(id="casa-01", veredicto="CASA", indice=0, texto_anterior="Paso uno", texto_nuevo="Paso uno",
+                cita={"regla": "procedencia: paso de la casa", "motivo": "consejo practico util que el libro no da"})
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta = montar(tmp)
+        r = correr(repo, [correccion(**casa)])
+        nodo = json.loads(ruta.read_text(encoding="utf-8"))
+        if r.returncode != 0:
+            fallos.append("no aplico una constancia CASA valida: " + r.stdout)
+        elif nodo["pasos_accionables"][0] != "Paso uno" or nodo["correcciones"][0].get("veredicto") != "CASA":
+            fallos.append("CASA cambio el texto o no quedo en el registro")
     # NEGATIVOS: cada uno rechazado y sin escribir nada
     for nombre, mala in (
+        ("una CASA que cambia el texto", correccion(**dict(casa, id="mala-casa-1", texto_nuevo="Paso uno y algo mas"))),
+        ("una CASA fuera de los pasos",
+         correccion(**dict(casa, id="mala-casa-2", campo="resumen_teorico", indice=None,
+                           texto_anterior="Resumen de prueba.", texto_nuevo="Resumen de prueba."))),
+        ("un prefijo de procedencia visible", correccion(id="mala-pref", texto_nuevo="Sugerencia de My Idea: reporta en 8 horas")),
         ("una condicion con indice fuera de rango",
          correccion(id="mala-03", campo="condiciones_activacion", indice=5, texto_anterior="Siempre", texto_nuevo="Otra")),
         ("texto anterior que no es el vigente", correccion(texto_anterior="Otra cosa")),

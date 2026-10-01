@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "La varianza es la diferencia entre dos cifras financieras (presupuesto vs. real, mes actual vs. mes anterior). Es clave determinar si una varianza es favorable o desfavorable: más ingresos de lo esperado es favorable, más gastos de lo esperado es desfavorable. Los paréntesis o signos negativos no siempre indican lo mismo dependiendo si es línea de ingreso o gasto.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
+    "Calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
     "Determinar manualmente, con unos pocos cálculos que incluyan al menos una línea de ingreso y una de gasto, si las varianzas son favorables o desfavorables",
     "Verificar cómo el sistema contable presenta paréntesis/signos negativos",
     "Priorizar la revisión de varianzas grandes en términos porcentuales",
@@ -85,6 +85,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro propone unos pocos cálculos a mano, con una línea de ingreso y una de gasto, para entender cómo se muestran las varianzas; se pierde ese procedimiento.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-010",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
+      "texto_nuevo": "Calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

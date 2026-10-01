@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Ante un problema de diseño o negocio, genera deliberadamente múltiples soluciones alternativas sin descartarlas prematuramente.",
     "Somete cada alternativa a un 'diálogo' interno o grupal de objeciones y respuestas antes de comprometerte con una.",
-    "Sugerencia de My Idea: registra tanto las soluciones rechazadas como las razones de rechazo."
+    "Registra tanto las soluciones rechazadas como las razones de rechazo."
   ],
   "entregable_esperado": "Una lista de alternativas de solución evaluadas con sus respectivas objeciones y la solución final seleccionada, justificando por qué sobrevivió al proceso de ensayo mental.",
   "nodos_previos": [
@@ -76,6 +76,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro describe el diálogo de soluciones y objeciones, pero no aconseja registrar las rechazadas ni sus razones.; Mismo defecto: consejo útil de la casa que el libro no da, sin etiqueta.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-163",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: registra tanto las soluciones rechazadas como las razones de rechazo.",
+      "texto_nuevo": "Registra tanto las soluciones rechazadas como las razones de rechazo.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

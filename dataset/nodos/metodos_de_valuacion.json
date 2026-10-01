@@ -9,7 +9,7 @@
     "Calcular el valor de la empresa usando al menos dos métodos distintos (precio-ganancias, flujo de caja descontado, valor de activos)",
     "Comparar los resultados obtenidos y entender por qué difieren entre métodos",
     "Documentar y justificar los supuestos usados en cada método (tasa de descuento, múltiplos comparables, valor de activos)",
-    "Sugerencia de My Idea: consulta con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas."
+    "Consulta con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas."
   ],
   "entregable_esperado": "Un rango de valuación de la empresa sustentado en al menos dos metodologías diferentes, con los supuestos documentados y justificados",
   "condiciones_activacion": [
@@ -50,6 +50,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no recomienda consultar a un experto en valuación; queda como sugerencia de la casa.; Mismo defecto.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-168",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: consulta con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas.",
+      "texto_nuevo": "Consulta con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

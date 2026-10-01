@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Auditar la tasa de falsas alarmas de los sistemas de advertencia críticos",
     "Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad",
-    "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
+    "Establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
     "Capacitar al personal sobre los riesgos de desactivar alarmas por desconfianza histórica"
   ],
   "entregable_esperado": "Reporte de confiabilidad de sistemas de alarma con plan de reducción de falsos positivos",
@@ -55,6 +55,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da dos razones: la tripulación no creía estar en pérdida y desconfiaba del sistema.; El libro dice que no se sabe quién desactivó el sistema ni se sabrá con certeza por qué; la desconfianza es una creencia extendida.; Mismo defecto: presenta como hecho una causa que el libro da como creencia.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-126",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
+      "texto_nuevo": "Establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

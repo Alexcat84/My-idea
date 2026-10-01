@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Ubica en qué nivel estás: improvisas, arrancas, creces o ya tienes método propio.",
     "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
-    "Sugerencia de My Idea: no intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
+    "No intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
     "Repite y afina tu método en cada proyecto, para que suba de nivel con el tiempo."
   ],
   "entregable_esperado": "Tu nivel de madurez de riesgo identificado y la práctica concreta que te sube al siguiente escalón.",
@@ -80,6 +80,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que más allá del nivel 3 el sistema debería ser estable y en mejora continua, y que el nivel 4 es una meta; el nodo lo da por hecho.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-070",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: no intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
+      "texto_nuevo": "No intentes saltar al método perfecto; consolida un nivel antes de subir al otro.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
     "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
-    "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar."
+    "Diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar."
   ],
   "entregable_esperado": "Plan de entrenamiento y diseño de interfaz que aborde explícitamente las ironías de la automatización identificadas en los procesos de la organización.",
   "nodos_previos": [
@@ -55,6 +55,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: la ironía final se plantea con cautela ('perhaps', 'may need').; Mismo endurecimiento de la ironía final.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-154",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar.",
+      "texto_nuevo": "Diseñar apoyos de monitoreo que compensen la baja capacidad humana de mantener vigilancia sostenida ante eventos raros, sin olvidar que cada dispositivo nuevo añade complejidad y componentes que también pueden fallar.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

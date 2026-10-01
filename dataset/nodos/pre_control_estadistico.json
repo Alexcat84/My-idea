@@ -7,8 +7,8 @@
   "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso. Es un método discutido: comprueba que encaja en tu caso.",
   "pasos_accionables": [
     "Centrar el proceso entre los límites de especificación al iniciar",
-    "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) según la distancia a los límites de especificación",
-    "Sugerencia de My Idea: tomar muestras periódicas de tres piezas consecutivas",
+    "Definir zonas de PRE-Control (verde, amarilla, roja) según la distancia a los límites de especificación",
+    "Tomar muestras periódicas de tres piezas consecutivas",
     "Corregir el proceso cuando las mediciones indiquen un cambio en el centrado o la dispersión que pueda producir piezas fuera de especificación",
     "Ajustar el proceso y reiniciar el monitoreo"
   ],
@@ -133,6 +133,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la cautela del libro: el concepto ha generado controversia y conviene ver en qué aplicaciones es apropiado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-196",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) según la distancia a los límites de especificación",
+      "texto_nuevo": "Definir zonas de PRE-Control (verde, amarilla, roja) según la distancia a los límites de especificación",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-197",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: tomar muestras periódicas de tres piezas consecutivas",
+      "texto_nuevo": "Tomar muestras periódicas de tres piezas consecutivas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

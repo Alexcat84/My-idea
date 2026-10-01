@@ -9,7 +9,7 @@
     "Identificar qué aspectos de tu proyecto son tendencias inevitables del mercado/tecnología y cuáles son decisiones de diseño abiertas.",
     "Listar las opciones de diseño disponibles dentro de esa tendencia inevitable (abierto/cerrado, público/privado, con o sin fines de lucro).",
     "Elegir deliberadamente la configuración que mejor sirva a valores humanos y sociales, no solo a la rentabilidad.",
-    "Sugerencia de My Idea: documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro."
+    "Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro."
   ],
   "entregable_esperado": "Un documento de decisiones de diseño clave que distinga lo inevitable de lo elegible, y la justificación de las elecciones tomadas.",
   "nodos_previos": [
@@ -73,6 +73,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La elección del libro es transparente o abierta, de gobierno o sin fines de lucro; el nodo pierde lo gubernamental y cambia la lista.; Mismo defecto: se cae 'de gobierno' y entra 'con fines de lucro'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-075",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro.",
+      "texto_nuevo": "Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

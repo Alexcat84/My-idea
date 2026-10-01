@@ -10,7 +10,7 @@
     "Revisa uno por uno los riesgos abiertos y pregúntate cuáles se hicieron más graves o más probables desde que los anotaste.",
     "Piensa qué cosas cambiaron en el proyecto desde la última revisión y qué riesgos nuevos aparecieron por esos cambios, aunque no existieran al principio.",
     "Incorpora esos riesgos nuevos al registro con el mismo detalle que los demás, en vez de guardarlos aparte o dejarlos en tu cabeza.",
-    "Sugerencia de My Idea: si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima."
+    "Si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima."
   ],
   "entregable_esperado": "El mismo registro de riesgos, pero con los cierres justificados por el criterio de que ya no pueden afectarte, los riesgos que crecieron señalados como tales, y los riesgos nuevos incorporados con el mismo detalle que los originales.",
   "nodos_previos": [
@@ -64,6 +64,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese diagnóstico sobre una revisión sin cambios; queda como sugerencia de la casa.; Mismo defecto: convierte en regla segura algo que el libro no dice.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-161",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima.",
+      "texto_nuevo": "Si en una revisión no cierras nada, no cambias nada y no agregas nada, pregúntate si de verdad miraste a fondo o solo por encima.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

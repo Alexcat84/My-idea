@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
     "Pregunta si el contenido es líquido o en polvo, porque pide materiales y técnicas especiales, o de forma irregular, porque puede necesitar atención extra.",
-    "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+    "Verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
     "Revisa si tu producto entra en alguna categoría regulada, como perfumes, químicos o equipos electrónicos, antes de despacharlo.",
     "Con esa información decide si necesitas caja simple, de doble o triple pared, bolsa plástica, caja dentro de caja o un empaque especial."
   ],
@@ -239,6 +239,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro abre más opciones según la evaluación: triple pared, caja dentro de caja y empaque especial para líquidos, polvos y regulados.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-236",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+      "texto_nuevo": "Verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

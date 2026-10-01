@@ -10,7 +10,7 @@
     "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
     "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena, firmada y con el nombre de tu ejecutivo de cuenta, y el acolchado necesario, dentro de una caja exterior resistente marcada como sobreembalaje con paquete de prueba dentro, a la dirección que indica la solicitud.",
     "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
-    "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno."
+    "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
   ],
   "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
   "nodos_previos": [
@@ -235,6 +235,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: se caen el acolchado necesario y la marca de sobreembalaje en la caja exterior.; Se caen partes del procedimiento del libro: el nombre del ejecutivo de cuenta, el acolchado, la marca de la caja exterior y la dirección de la solicitud.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-206",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+      "texto_nuevo": "Repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

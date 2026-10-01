@@ -10,7 +10,7 @@
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
     "Marca por separado cuáles, si faltan, detienen tu operación o tus ventas de inmediato.",
     "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor que no comparta con el habitual el mismo país de riesgo ni los mismos transportistas o puertos, sabiendo que ambos reducen el riesgo a cambio de un costo mayor.",
-    "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar."
+    "Revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar."
   ],
   "entregable_esperado": "Una lista de insumos marcados por valor y por cuán crítico es que no falten, con una decisión de qué hacer con cada grupo.",
   "nodos_previos": [
@@ -236,6 +236,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro y verificador ciego): El libro solo dice que lo crítico se necesita de inmediato; el paro total y su causa (sin sustituto ni proveedor cercano) no están.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-039",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar.",
+      "texto_nuevo": "Revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

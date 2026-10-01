@@ -7,10 +7,10 @@
   "resumen_teorico": "Los costos de tu negocio se dividen en variables (los que cambian con el volumen producido, como materiales, que suelen estar en COGS) y fijos (los que no cambian con el volumen, como renta o salarios administrativos, que suelen estar en gastos operativos). Ojo: COGS no equivale sin más a costos variables ni los gastos operativos a fijos; el sueldo de un supervisor dentro de COGS es fijo a corto plazo, y las comisiones de venta dentro de gastos operativos son en parte variables. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
   "pasos_accionables": [
     "Clasificar cada costo del proyecto como variable (cambia con las unidades producidas: materiales, tiempo de producción) o fijo (no cambia: renta, herramientas, salarios administrativos)",
-    "Sugerencia de My Idea: calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
-    "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
-    "Sugerencia de My Idea: comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
-    "Sugerencia de My Idea: recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio"
+    "Calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
+    "Dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+    "Comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
+    "Recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio"
   ],
   "entregable_esperado": "Punto de equilibrio calculado en unidades por mes, con los costos fijos y el margen de contribución que lo sustentan",
   "nodos_previos": [
@@ -215,6 +215,74 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo pone los materiales como costo variable y el sueldo administrativo como fijo; la mano de obra directa y las herramientas no las clasifica.; Mismo defecto: clasificaciones de mano de obra directa y herramientas que el libro no hace.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-213",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
+      "texto_nuevo": "Calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-214",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+      "texto_nuevo": "Dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-215",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
+      "texto_nuevo": "Comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-216",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio",
+      "texto_nuevo": "Recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

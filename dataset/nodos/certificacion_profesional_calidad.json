@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Elige un organismo certificador con buena reputación (por ejemplo, ASQ)",
     "Define qué necesitas saber (tu cuerpo de conocimiento) según tu rol",
-    "Sugerencia de My Idea: evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
-    "Sugerencia de My Idea: recertifícate cada cierto tiempo para mantener tus competencias vigentes"
+    "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+    "Recertifícate cada cierto tiempo para mantener tus competencias vigentes"
   ],
   "entregable_esperado": "Tu plan de certificación con el organismo elegido y los criterios de evaluación definidos",
   "nodos_previos": [
@@ -111,6 +111,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro advierte que un proyecto no basta y que un examen sin supervisión no garantiza nada, pero no aconseja combinar ambos; es consejo de la casa sin etiqueta.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-026",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+      "texto_nuevo": "Evalúate con examen supervisado y con un proyecto aplicado, no solo con uno de los dos",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-027",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+      "texto_nuevo": "Recertifícate cada cierto tiempo para mantener tus competencias vigentes",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

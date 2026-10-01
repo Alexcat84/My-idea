@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar las funciones core que generan el valor diferencial de tu negocio",
     "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
-    "Sugerencia de My Idea: conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
+    "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
     "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
     "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente",
     "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS)."
@@ -80,6 +80,23 @@
         "motivo": "El IOTA integra analisis estrategicos de amenazas y oportunidades; no prepara la decision de construir sistemas con servicios cloud, SaaS y APIs."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "procedencia-prefijo-013",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
+      "texto_nuevo": "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

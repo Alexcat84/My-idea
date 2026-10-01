@@ -9,7 +9,7 @@
     "Identifica los pocos desastres que te dejarían fuera del juego: pérdida de datos, un incendio o una inundación en tu local.",
     "Para cada uno, escribe los pasos concretos que te devolverían a operar, en orden.",
     "Prepara de antemano lo que esa recuperación necesita: respaldos, contactos, un fondo.",
-    "Sugerencia de My Idea: guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo."
+    "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo."
   ],
   "entregable_esperado": "Un plan de recuperación escrito para cada desastre que te sacaría del juego, con sus pasos y recursos listos de antemano, mantenido al día y ensayado.",
   "nodos_previos": [
@@ -138,6 +138,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro pide pruebas periódicas contra crisis y desastres, no dónde guardar el plan; consejo propio sin etiqueta.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-190",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo.",
+      "texto_nuevo": "Guarda el plan donde puedas acceder a él aunque hayas perdido lo demás, mantenlo al día y ensáyalo.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

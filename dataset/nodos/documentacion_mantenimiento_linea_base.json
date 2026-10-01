@@ -7,7 +7,7 @@
   "resumen_teorico": "El mantenimiento de línea (tareas rápidas, a menudo no programadas) y el de base (revisiones programadas y extensas) requieren distintos niveles de documentación. Cuando una tarea de línea se ejecuta con paquetes de trabajo breves, que solo remiten a la documentación detallada, y es transferida a personal de base sin la documentación completa (manuales, advertencias, tarjetas de tarea paso a paso, mención del trabajo de restitución y firmas paso a paso que confirmen su realización), se genera una brecha peligrosa en las defensas del sistema.",
   "pasos_accionables": [
     "Auditar si existen procedimientos formales de traspaso de trabajo entre turnos o áreas (línea/base).",
-    "Sugerencia de My Idea: cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
+    "Cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
     "Crear hojas de traspaso (stage sheets) por escrito en lugar de brief verbales."
   ],
   "entregable_esperado": "Procedimiento formal de traspaso de trabajo con hojas de etapa documentadas.",
@@ -72,6 +72,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro señala que al paquete de línea le faltaba la mención del trabajo de restitución y las firmas paso a paso; la enumeración los pierde.; Mismo defecto que la marca 0: faltan el trabajo de restitución y las firmas que confirman su realización.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-082",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
+      "texto_nuevo": "Cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo",
     "Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas",
-    "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+    "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
     "Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)"
   ],
   "entregable_esperado": "Lista de proveedores únicos por artículo crítico y contratos de largo plazo firmados con criterios de calidad definidos",
@@ -60,6 +60,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U5-010 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "procedencia-prefijo-230",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "texto_nuevo": "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

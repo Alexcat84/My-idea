@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
     "Buscar activamente evidencia que contradiga la hipótesis favorita del equipo, no solo la que la confirma.",
-    "Sugerencia de My Idea: distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
-    "Sugerencia de My Idea: somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
+    "Distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+    "Somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
   ],
   "entregable_esperado": "Un documento de insights de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
   "nodos_previos": [
@@ -111,6 +111,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que apofenia y epifanía pueden sentirse parecidas (can feel similar); el resumen lo afirma sin matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-219",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+      "texto_nuevo": "Distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-220",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "texto_nuevo": "Somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

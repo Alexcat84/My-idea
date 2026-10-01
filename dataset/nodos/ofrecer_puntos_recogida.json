@@ -10,7 +10,7 @@
     "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
     "Define un plazo realista para tener el pedido listo antes de anunciar la opción.",
     "Notifica al cliente con claridad dónde y cuándo puede recoger su pedido.",
-    "Sugerencia de My Idea: revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta."
+    "Revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta."
   ],
   "entregable_esperado": "Una opción de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
   "nodos_previos": [
@@ -207,6 +207,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro describe dos visitas de reintento antes del centro de distribución, desde donde el cliente debe recoger el paquete.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-180",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "texto_nuevo": "Revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

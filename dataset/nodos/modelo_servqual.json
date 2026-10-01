@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar encuesta basada en las cinco dimensiones SERVQUAL",
     "Aplicar la encuesta a clientes reales del servicio",
-    "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
+    "Comparar expectativas vs. percepciones por dimensión",
     "Priorizar mejoras en las dimensiones con mayor brecha"
   ],
   "entregable_esperado": "Reporte de brechas de calidad percibida por dimensión SERVQUAL",
@@ -84,6 +84,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que los servicios se han medido de forma cualitativa, pero no atribuye a este modelo la capacidad de cuantificarlos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-169",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
+      "texto_nuevo": "Comparar expectativas vs. percepciones por dimensión",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

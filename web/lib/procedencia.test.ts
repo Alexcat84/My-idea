@@ -261,6 +261,21 @@ describe("procedencia: los avisos no revelan el origen", () => {
   });
 });
 
+// ---------------------------------------------------------------- 5. etiquetas de procedencia
+
+/** La instruccion a la IA cita las frases prohibidas como ejemplo: no es texto de cara al cliente. */
+const ES_INSTRUCCION = (donde: string) => donde.replace(/\\/g, "/").endsWith("web/lib/reglaSinFuentes.ts");
+
+/** El prefijo de procedencia en los once idiomas (fundador, 30 sep 2026: el texto visible queda limpio). */
+const PREFIJO = /sugerencia de my idea|suggestion (?:from|de|by) my idea|my idea suggest|sugest[aã]o (?:da|de|do) my idea|vorschlag (?:von|aus) my idea|suggerimento (?:di|da) my idea|my idea(?:の提案|の提案|建议|의 제안| का सुझाव)|اقتراح my idea/i;
+
+describe("procedencia: ninguna etiqueta de procedencia", () => {
+  it("ningun texto de cara al cliente lleva el prefijo de procedencia, en ningun idioma", () => {
+    const fallos = TODOS.filter(([donde, t]) => !ES_INSTRUCCION(donde) && PREFIJO.test(t)).map(([donde]) => donde);
+    expect(fallos.slice(0, 10), `${fallos.length} textos con prefijo de procedencia`).toEqual([]);
+  });
+});
+
 // ---------------------------------------------------------------- casos negativos
 
 describe("procedencia: casos negativos (la guarda muerde)", () => {

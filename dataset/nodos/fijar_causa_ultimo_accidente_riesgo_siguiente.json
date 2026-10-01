@@ -7,8 +7,8 @@
   "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto muestra dos problemas: las defensas de ingeniería nuevas añaden complejidad y componentes que también pueden fallar, y los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
   "pasos_accionables": [
     "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
-    "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
-    "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+    "Realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+    "Revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
     "Capacitar a operadores en el juicio situacional, no solo en el cumplimiento ciego de la nueva regla"
   ],
   "entregable_esperado": "Protocolo de revisión de nuevas medidas correctivas con análisis de escenarios contraproducentes",
@@ -86,6 +86,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro saca dos problemas y el nodo pierde el primero: las defensas de ingeniería nuevas añaden complejidad y componentes que pueden fallar.; Mismo problema omitido; el error humano imprevisto forma parte de él.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-110",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+      "texto_nuevo": "Realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-111",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+      "texto_nuevo": "Revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

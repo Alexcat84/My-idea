@@ -15,6 +15,14 @@
 `web/lib/guardasContenido.ts` y `guardasContenido.test.ts` impide que diverjan. La forja lo copia para limpiar un pack
 con la misma vara que el catálogo.
 
+## Reglas duras (fundador, 30 sep 2026): mandan sobre todas las demás
+
+| # | Regla | Origen | Fecha | Se cumple en |
+|---|---|---|---|---|
+| D1 | **JAMÁS un usuario debe saber, ni poder intuir, de dónde provienen las respuestas de la app.** Todo origen es control interno: ni títulos, ni autores, ni estudios, investigaciones o expertos como respaldo, ni etiquetas de procedencia, ni el año de una fuente. Las fusiones producen textos que no aparecen literalmente en ninguna fuente, y es correcto: el sistema toma lo mejor de todo y lo convierte en accionable | Fundador, tras el informe de la auditoría final | 30 sep 2026 | `web/lib/procedencia.test.ts` (guarda única de procedencia, once idiomas), `REGLA_SIN_FUENTES` en toda llamada a la IA, el aplicador de correcciones rechaza un prefijo de procedencia |
+| D2 | **NINGUNA COPIA FIEL:** los libros se convierten en NODOS DE CONOCIMIENTO; ningún texto de nodo es una copia ni una traducción palabra por palabra de un pasaje de un libro | Fundador | 30 sep 2026 | la política de corrección (C32, R8: devolver es devolver el sentido, no el pasaje); la comprobación de copias de la auditoría final (umbral 0) y la medida 2 |
+| D3 | **NINGÚN nodo vivo y funcional se retira** | Fundador | 30 sep 2026 | lectura: ningún remedio retira un nodo vivo; un problema de un nodo se corrige en su texto |
+
 ## A. Contenido (el dataset y el texto de los nodos)
 
 | # | Regla | Origen | Fecha | Se cumple en |
@@ -32,7 +40,7 @@ con la misma vara que el catálogo.
 | C11 | Espejo, jamás regaño: ni "vas tarde" ni "no cumpliste"; lo tardío en ámbar | BANCO; AUD-09 M38 | sin fecha | `reproche` |
 | C12 | Estados de tarea con su vocabulario (sin empezar, apenas empezada, en proceso, hecha, no aplica); nunca "a medias" | BANCO | jul 2026 | `aMedias` |
 | C13 | Glosario: un concepto, un nombre, en español neutro ("a tu cargo", "director general"; fuera "coger", "coche", "móvil"…) | Orquestador del mundo 11; la auditoría final lo aplica a todo el catálogo | 28 sep 2026 | `docs/saneamiento/resultados/M11/glosario/DECISIONES.md`, en `guardas_contenido.json`; lectura |
-| C14 | Fidelidad: nunca lo contrario de la fuente; los añadidos de cifra, plazo o norma salen; lo práctico va como "Sugerencia de My Idea" | Mandato del fundador (campaña de fidelidad) | 24 sep 2026 | `scripts/fidelidad/aplicar_correcciones.py`, `engine/test_aplicar_correcciones_fidelidad.py`; la muestra ciega de la auditoría final |
+| C14 | Fidelidad: nunca lo contrario de la fuente; los añadidos de cifra, plazo o norma salen; lo práctico útil de la casa se queda (desde el 30 sep 2026 sin prefijo visible: su constancia va al registro interno, D1) | Mandato del fundador (campaña de fidelidad) | 24 sep 2026 | `scripts/fidelidad/aplicar_correcciones.py`, `engine/test_aplicar_correcciones_fidelidad.py`; la muestra ciega de la auditoría final |
 | C15 | Corrección declarada, nunca borrado: el texto viejo queda en `correcciones` con su veredicto y su cita | Regla 8 del ejecutor; M11 | ago 2026; 24 y 28 sep | `scripts/fidelidad/aplicar_correcciones.py`, `scripts/saneamiento/aplicar_aristas.py`, `engine/test_correcciones_mundo11.py` |
 | C16 | Cero invención: ni pasos ni cifras nuevos; una reescritura de voz no alarga | M11; taller de re-voz | ago 2026; 28 sep | `engine/test_cifras.py`; lectura ciega |
 | C17 | Marco contra país: clases A, B y C declaradas; toda entrada de jurisdicción con país y clase | Texto ratificado por el fundador (`docs/POLITICA_MARCO_PAIS.md`) | 26 sep 2026 | `engine/test_jurisdiccion.py`, `scripts/auditoria_final/navegacion.py` |
@@ -47,10 +55,10 @@ con la misma vara que el catálogo.
 | C26 | Alcanzabilidad: todo nodo vivo se alcanza desde las puertas de su mundo (o las semillas del núcleo) | Auditoría final | 28 sep 2026 | `scripts/auditoria_final/navegacion.py`, Gate 0 (`scripts/run_phase1.py`) |
 | C27 | Puerta legítima: una situación que la persona cuenta y que ningún nodo produce; los aparcados no se borran | Fundador (mundo 11) | 28 sep 2026 | `engine/test_importar_forja_aparcados.py` |
 | C28 | El catálogo no se borra; los datos personales sí (borrar la cuenta borra de verdad) | Fundador | 26 sep 2026 | `web/app/api/cuenta/eliminar/borradoCompleto.test.ts` |
-| C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda. Desde el 30 sep, lo que no es operativo se clasifica en cuatro clases con su umbral: contrario (0), invención dura (0), paso práctico sin etiqueta (se etiqueta; 0,1 por nodo) y certeza endurecida (cuenta como matiz; 0,2 por nodo) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención); clases nuevas tras la muestra de parada de la etapa 1 | 28 sep 2026; clases el 30 sep | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 y R7 |
+| C29 | Frontera OPERATIVO / INVENCIÓN: lo operativo concreta el cómo sin afirmar nada nuevo y se queda. Desde el 30 sep, lo que no es operativo se clasifica en cuatro clases con su umbral: contrario (0), invención dura (0), paso práctico sin marca (se marca solo en el registro interno, veredicto CASA, sin prefijo visible; 0,1 por nodo) y certeza endurecida (cuenta como matiz; 0,2 por nodo) | Fundador, tras la auditoría final (dos pasos que la campaña dio por OPERATIVOS y el árbitro por invención); clases nuevas tras la muestra de parada de la etapa 1 | 28 sep 2026; clases el 30 sep | lectura ciega con árbitro (etapa 1 del remedio); detalle en R6 y R7 |
 | C30 | Las etiquetas llevan mayúscula de rótulo en las palabras con peso ("Traza tu Plan de Exportación"): es estilo de la casa, no falta de ortografía | Fundador (3.541 de 3.634 etiquetas ya lo usaban, sin regla escrita) | 28 sep 2026 | lectura; los lectores de ortografía no lo cuentan como falta |
 | C31 | Cada puerta de un mundo entra con su pregunta de ENTRADA propia (`pregunta_entrada`, campo aparte), que parte del concepto de la puerta y de la situación que la persona cuenta; la base no se toca; se verifica a ciegas con trampa sin marca | Fundador, tras la auditoría final (las bases miraban al siguiente concepto) | 28 sep 2026 | `web/lib/engine/puertasMundo.test.ts`, `web/lib/engine/preguntaEntrada.test.ts` |
-| C32 | Una corrección prefiere QUITAR lo que sobra o DEVOLVER las palabras del libro; solo redacta frase nueva cuando no hay otra forma, y esa frase se verifica a ciegas contra el libro antes de aplicarse | Fundador, tras la muestra de parada de la etapa 1 (15 de 39 invenciones estaban en textos ya corregidos) | 30 sep 2026 | el árbitro declara el `modo` de cada corrección; verificador ciego y `tanda_e1b.py` en las claves del remedio; detalle en R8 |
+| C32 | Una corrección prefiere QUITAR lo que sobra o DEVOLVER el SENTIDO y el TÉRMINO PRECISO del libro (un "puede", una condición, un plazo), nunca copiar ni traducir un pasaje palabra por palabra (D2); solo redacta frase nueva cuando no hay otra forma, y esa frase se verifica a ciegas contra el libro antes de aplicarse | Fundador, tras la muestra de parada de la etapa 1 (15 de 39 invenciones estaban en textos ya corregidos) | 30 sep 2026 | el árbitro declara el `modo` de cada corrección; verificador ciego y `tanda_e1b.py` en las claves del remedio; detalle en R8 |
 
 ## B. Producto (lo que la app hace, promete y cobra)
 
@@ -224,8 +232,9 @@ y la usa toda la etapa 1 del remedio.
 
 - **OPERATIVO:** concreta el CÓMO (el orden, el formato, una herramienta común) sin afirmar nada nuevo. **Se queda.**
 - **INVENCIÓN:** añade un QUÉ, un POR QUÉ o un CUÁNTO que el libro no dice (un hecho, una causa, una cifra, un plazo,
-  un resultado prometido), o **endurece** lo que el libro dice con cautela. **Sale**, o pasa a "Sugerencia de My Idea:"
-  si es un consejo práctico útil.
+  un resultado prometido), o **endurece** lo que el libro dice con cautela. **Sale**, o se queda como paso de la casa
+  si es un consejo práctico útil. Desde el 30 sep 2026 (D1) el paso de la casa no lleva prefijo visible: su constancia
+  va al registro interno de correcciones (veredicto CASA).
 
 **Los dos casos que la fijaron** (tanda `final-frontera`):
 - "esas pepitas de oro que valen más que cualquier encuesta": la comparación con las encuestas es un QUÉ nuevo. Sale.
@@ -236,14 +245,14 @@ y la usa toda la etapa 1 del remedio.
 ## R7. Las clases de defecto contra el libro y sus umbrales
 
 **Decisión del fundador, 30 sep 2026**, tras la muestra de parada de la etapa 1: la clase "invención" mezclaba un
-hecho inventado con un consejo práctico sin etiqueta y con un "puede" del libro dado por seguro. Desde hoy son cuatro
+hecho inventado con un consejo práctico sin marca y con un "puede" del libro dado por seguro. Desde hoy son cuatro
 clases, cada una con su umbral, y corrigen la frontera de R6 en lo que no es operativo:
 
 | Clase | Qué es | Qué se hace | Umbral en una muestra |
 |---|---|---|---|
 | **Contrario** | el nodo dice lo opuesto al libro | se corrige | 0 |
 | **Invención dura** | un hecho, una cifra, una causa, un plazo, una norma o un resultado prometido que el libro no dice | sale | 0 |
-| **Paso práctico sin etiqueta** | un consejo útil que el libro no da, sin "Sugerencia de My Idea:" delante | se etiqueta | 0,1 por nodo |
+| **Paso práctico sin marca** | un consejo útil que el libro no da y que no tiene constancia de la casa en el registro interno | se marca solo en el registro (veredicto CASA); el texto visible no cambia ni lleva prefijo (D1) | 0,1 por nodo |
 | **Certeza endurecida** | un "puede", "suele" o "a menudo" del libro convertido en afirmación | vuelve al grado del libro; **cuenta como matiz** | 0,2 por nodo, junto con los matices |
 
 Lo operativo (concreta el cómo sin afirmar nada nuevo) sigue sin ser defecto.
@@ -255,10 +264,15 @@ textos que la propia etapa había corregido: corregir redactando estaba creando 
 
 - **Orden de preferencia:**
   1. QUITAR lo que sobra.
-  2. DEVOLVER las palabras del libro (traducidas, sin añadir).
+  2. DEVOLVER el SENTIDO y el TÉRMINO PRECISO del libro: su "puede", su condición, su plazo, sin añadir nada.
+     **Nunca** copiar ni traducir un pasaje palabra por palabra (D2, aclaración del fundador del 30 sep 2026): el
+     nodo dice lo mismo que el libro con palabras de la casa.
   3. Solo si no hay otra forma, REDACTAR una frase nueva.
 - **Verificación:** toda corrección que redacta, o que trae palabras que no estaban en el texto, la lee un verificador
   ciego contra el libro antes de aplicarse. El verificador no ve el razonamiento del árbitro. Si no la sostiene, la
   corrección no entra.
-- **Dónde vive:** el árbitro declara el `modo` de cada corrección (`quitar`, `devolver` o `redactar`). El verificador
+- **Ningún prefijo visible:** un paso práctico útil que el libro no da se queda con su texto y se MARCA solo en el
+  registro interno (modo `marcar`, veredicto CASA del aplicador). El aplicador rechaza cualquier texto nuevo con un
+  prefijo de procedencia (D1).
+- **Dónde vive:** el árbitro declara el `modo` de cada corrección (`quitar`, `devolver`, `marcar` o `redactar`). El verificador
   y el filtro de la tanda viven en las claves del remedio (`tanda_e1b.py`).

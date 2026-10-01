@@ -9,7 +9,7 @@
     "Identificar patrones de justificación repetidos en reportes de equipo (rotación, ventas perdidas, retrasos)",
     "Validar directamente con clientes o datos objetivos las explicaciones dadas por el equipo",
     "Cuestionar narrativas que solo explican indicadores negativos pero celebran los positivos sin escrutinio",
-    "Sugerencia de My Idea: establecer métricas objetivas que no dependan de la interpretación subjetiva del equipo"
+    "Establecer métricas objetivas que no dependan de la interpretación subjetiva del equipo"
   ],
   "entregable_esperado": "Lista de narrativas de riesgo identificadas y proceso de validación cruzada con datos externos",
   "nodos_previos": [
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro propone validar con el cliente real, no establecer métricas objetivas; queda como sugerencia práctica.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-072",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: establecer métricas objetivas que no dependan de la interpretación subjetiva del equipo",
+      "texto_nuevo": "Establecer métricas objetivas que no dependan de la interpretación subjetiva del equipo",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

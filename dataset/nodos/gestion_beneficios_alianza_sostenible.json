@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir métricas de beneficio compartido (ahorro de costos, crecimiento de ingresos, participación de mercado).",
     "Asignar valor monetario a cada beneficio esperado por ambas partes.",
-    "Sugerencia de My Idea: implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
+    "Implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
     "Ajustar continuamente pequeñas operaciones para mantener el ratio costo/beneficio favorable.",
     "Evaluar si la relación con el socio requiere una oferta personalizada (no commodity).",
     "Definir KPIs conjuntos y metas de desempeño medibles para la coordinación.",
@@ -74,6 +74,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): En el libro el aumento de costos operativos es el de tu empresa al crecer, y ese aumento es el ingreso y la ganancia del socio.; Mismo defecto: el nodo atribuye al socio el aumento de costos que en el libro es de tu empresa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-120",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
+      "texto_nuevo": "Implementa un tablero para seguir estos beneficios cada mes o cada trimestre.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

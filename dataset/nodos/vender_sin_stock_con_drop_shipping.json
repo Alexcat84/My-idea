@@ -10,7 +10,7 @@
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
     "Haz un pedido de prueba a tu propio nombre y revisa cómo llega.",
     "Deja por escrito quién responde si el envío llega tarde, dañado o incompleto.",
-    "Sugerencia de My Idea: revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
+    "Revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
   ],
   "entregable_esperado": "Un acuerdo escrito con el proveedor de drop-shipping más el resultado documentado de un pedido de prueba.",
   "nodos_previos": [
@@ -202,6 +202,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el drop-shipping reduce la doble manipulación, no que la evite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-277",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: revisa cada mes las quejas reales de clientes atribuibles a ese proveedor.",
+      "texto_nuevo": "Revisa cada mes las quejas reales de clientes atribuibles a ese proveedor.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -10,7 +10,7 @@
     "Escribe también lo que te da pudor admitir: que el proyecto dependa solo de ti, que un cliente se vaya, que se te acabe el dinero antes de tiempo.",
     "Cuando termines de nombrar, revisa cada riesgo y pregúntate si de verdad amerita una acción tuya o si por ahora puedes soltarlo; desconfía de la probabilidad baja que le pongas a algo que te preocupó lo bastante para nombrarlo.",
     "De los que decidas atender, pásalos al registro con su descripción completa, su causa y su efecto, y como mínimo su señal de alerta, lo que harás antes de que ocurra y cuánto pesa frente a los demás.",
-    "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
+    "De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya."
   ],
   "entregable_esperado": "La lista inicial de riesgos nombrados sin filtro, separada en dos grupos: los que pasan al registro para atenderse y los que se dejan marcados como observados.",
   "nodos_previos": [
@@ -127,6 +127,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige para ignorar un riesgo improbable que además vuelva irrelevante el proyecto, pide que el de efecto mínimo no requiera preparación y añade el riesgo que es de otro.; El libro pide, como mínimo para cada riesgo que se maneja, la señal de transición y lo que se hace antes de que ocurra; la lista del registro los omite.; El libro solo deja soltar un riesgo de efecto mínimo si no requiere preparación previa; esa condición se cae.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-139",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: de los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.",
+      "texto_nuevo": "De los que decidas soltar, anótalos igual pero márcalos como observados, no como activos, para no perderlos de vista sin tener que actuar ya.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Revisar los procedimientos existentes e identificar dónde asumen linealidad, predictibilidad o controlabilidad",
     "Realizar observaciones de campo para contrastar el trabajo real (interleaving de tareas) contra el trabajo prescrito",
     "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes, sabiendo que solo muy pocas interrupciones pueden anticiparse por escrito y que no todo cabe en una guía",
-    "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas"
+    "Capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas"
   ],
   "entregable_esperado": "Documento de rediseño de procedimientos que contemple explícitamente la gestión de tareas concurrentes e interrupciones",
   "nodos_previos": [
@@ -89,6 +89,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea dos problemas y el resumen pierde el segundo: se subestima la mayor vulnerabilidad al error con tareas concurrentes. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-264",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas",
+      "texto_nuevo": "Capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

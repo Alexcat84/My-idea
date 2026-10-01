@@ -6,10 +6,10 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Existen distintos tipos de LLMs disponibles: modelos pequeños y especializados (limitados en capacidad pero baratos, ideales para usos acotados como responder preguntas simples de atención al cliente), modelos open-source (gratuitos, modificables, con comunidades de desarrolladores) y Frontier Models (los más avanzados y costosos, con capacidades emergentes pero también mayor costo de operación).",
   "pasos_accionables": [
-    "Sugerencia de My Idea: definir la complejidad de la tarea que la IA debe resolver",
+    "Definir la complejidad de la tarea que la IA debe resolver",
     "Evaluar el presupuesto disponible para infraestructura de IA",
     "Comparar modelos pequeños/especializados vs open-source vs frontier models",
-    "Sugerencia de My Idea: Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+    "Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
     "Decidir según relación costo-beneficio y facilidad de integración"
   ],
   "entregable_esperado": "Documento de decisión que especifique qué tipo de modelo de IA usará el negocio y por qué, con pruebas piloto realizadas.",
@@ -90,6 +90,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro solo describe los tipos de LLM y sus usos; no da como paso definir la complejidad de la tarea.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-249",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: definir la complejidad de la tarea que la IA debe resolver",
+      "texto_nuevo": "Definir la complejidad de la tarea que la IA debe resolver",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-250",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+      "texto_nuevo": "Realizar pruebas piloto con al menos dos opciones antes de comprometerse",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando un VC anuncia haber levantado un fondo, no significa que tenga ese dinero disponible en el banco. Debe solicitarlo a sus LPs mediante un 'capital call' cada vez que necesita invertir, proceso que toma típicamente dos semanas. Los LPs están legalmente obligados a responder, pero en crisis económicas (como 2008) algunos LPs no pudieron cumplir, afectando la capacidad del VC de cerrar inversiones. Es poco frecuente y, salvo en momentos de estrés extremo, el VC suele terminar consiguiendo el dinero. Entender este mecanismo ayuda al emprendedor a comprender riesgos de timing en el cierre de rondas de financiamiento.",
   "pasos_accionables": [
     "Considerar el timing de dos semanas típico para capital calls al planificar el cierre de una ronda",
-    "Sugerencia de My Idea: en momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+    "En momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
     "Entender que un mercado secundario de LPs existe para mitigar riesgos de incumplimiento"
   ],
   "entregable_esperado": "Comprensión del timing y riesgos asociados a la disponibilidad real de capital comprometido por el VC",
@@ -57,6 +57,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese consejo; como consejo práctico que no afirma un hecho queda como sugerencia de la casa.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-023",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: en momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+      "texto_nuevo": "En momentos de crisis económica, investigar la salud financiera de los LPs del fondo potencial",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

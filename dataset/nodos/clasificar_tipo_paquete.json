@@ -9,7 +9,7 @@
     "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
     "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
     "Marca si el contenido es frágil o si puede derramarse.",
-    "Sugerencia de My Idea: anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
+    "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
   ],
   "entregable_esperado": "Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.",
   "nodos_previos": [
@@ -98,6 +98,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: sin umbrales ni criterio de pequeño la comparación no clasifica como el libro.; Se pierden los umbrales de plano y alargado, el criterio de pequeño y la regla de plano y alargado a la vez.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-032",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: anota la categoría en tu checklist de empaque antes de elegir caja y relleno.",
+      "texto_nuevo": "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona o un grupo suele ser a la vez el agente y la víctima, con consecuencias que pueden ser grandes pero de alcance limitado (por ejemplo resbalones o caídas); y los organizacionales, un fenómeno moderno, relativamente raro pero a menudo catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que puede afectar a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
+    "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
     "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
     "Evitar centrarte únicamente en el error del operador cuando el sistema es tecnológicamente complejo.",
     "Mapear todos los actores del sistema, como operador, fabricante y regulador, que pudieron contribuir al evento.",
@@ -84,6 +84,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice a menudo catastróficos y que pueden tener efectos devastadores sobre terceros.; El libro dice que una persona o un grupo es a menudo agente y víctima, no siempre una persona.; El libro dice relativamente raros pero a menudo catastróficos, no siempre.; El libro limita el alcance de las consecuencias, no dice que las causas sean localizadas; suelen tener origen organizacional.; Mismo defecto que la marca 1: las causas no se dicen localizadas.; Mismo endurecimiento que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-003",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
+      "texto_nuevo": "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

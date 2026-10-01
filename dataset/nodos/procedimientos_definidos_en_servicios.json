@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Auditar todos los departamentos de servicio para verificar si existen procedimientos escritos y actualizados",
     "Definir operacionalmente qué constituye un error o defecto en cada proceso de servicio",
-    "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+    "Documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
     "Capacitar al personal en el uso correcto de los procedimientos definidos"
   ],
   "entregable_esperado": "Manual de procedimientos operacionales documentado y validado para cada área de servicio crítica",
@@ -103,6 +103,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no atribuye los errores de codificación a la falta de guías, sino a lo difícil de definir el código correcto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-207",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+      "texto_nuevo": "Documentar los procedimientos faltantes, comenzando por las áreas de mayor contacto con el cliente",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

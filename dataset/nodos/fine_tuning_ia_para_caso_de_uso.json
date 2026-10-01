@@ -10,7 +10,7 @@
     "Recopilar ejemplos reales de interacciones deseadas (preguntas y respuestas ideales)",
     "Entrenar o ajustar el modelo con esos ejemplos específicos del negocio",
     "Implementar un sistema de retroalimentación (thumbs up/down) para mejora continua",
-    "Sugerencia de My Idea: medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso"
+    "Medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso"
   ],
   "entregable_esperado": "Un modelo de IA ajustado (fine-tuned) con ejemplos específicos del negocio o con la retroalimentación de sus usuarios, documentado.",
   "nodos_previos": [
@@ -76,6 +76,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje solo habla de ajustar con ejemplos o con la retroalimentación de usuarios; la alternativa de prompts y la validación con métricas no están.; Misma invención que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-112",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso",
+      "texto_nuevo": "Medir el desempeño del modelo ajustado contra el genérico antes de escalar su uso",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

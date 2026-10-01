@@ -10,7 +10,7 @@
     "Investiga el historial de quien te compra ante el organismo regulador de valores de tu país (por ejemplo la SEC en Estados Unidos), incluyendo trámites pendientes y promesas de registro que haya hecho antes a otros vendedores",
     "Negocia compromisos lo más claros posible sobre el proceso de registro, aunque no sean vinculantes",
     "Piensa en el riesgo de que el valor de las acciones cambie si tienes que esperar mucho tiempo antes de poder venderlas",
-    "Sugerencia de My Idea: evalúa otras formas de pago si ese riesgo de no poder vender rápido te resulta demasiado alto"
+    "Evalúa otras formas de pago si ese riesgo de no poder vender rápido te resulta demasiado alto"
   ],
   "entregable_esperado": "Una cláusula sobre el registro de las acciones negociada y por escrito, con la investigación hecha sobre el historial regulatorio de quien te compra",
   "nodos_previos": [
@@ -44,6 +44,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no propone buscar otras formas de pago; solo pide asegurarte de recibir lo que crees. Queda como sugerencia.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-224",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: evalúa otras formas de pago si ese riesgo de no poder vender rápido te resulta demasiado alto",
+      "texto_nuevo": "Evalúa otras formas de pago si ese riesgo de no poder vender rápido te resulta demasiado alto",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

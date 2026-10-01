@@ -6,12 +6,12 @@
   "fuente": "OSHA3885",
   "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
+    "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
     "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o reportan",
     "Documenta hallazgos con fotos o video para su corrección posterior",
     "Usa listas de verificación por categoría de riesgo como eléctrico, incendio o ergonomía",
     "Evalúa los cambios propuestos en operaciones, puestos o flujo de trabajo, los cambios importantes de organización y la introducción de nuevos equipos, materiales o procesos antes de implementarlos, pidiendo la opinión de quienes trabajan contigo sobre sus posibles peligros",
-    "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
+    "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
   ],
   "entregable_esperado": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
   "nodos_previos": [
@@ -184,6 +184,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide evaluar también cambios de operaciones, puestos, flujo de trabajo, organización y materiales.; Misma omisión en la lista de cambios que piden evaluación previa.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-144",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
+      "texto_nuevo": "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-145",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+      "texto_nuevo": "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 5,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

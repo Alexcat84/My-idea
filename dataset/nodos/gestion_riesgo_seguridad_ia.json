@@ -7,9 +7,9 @@
   "resumen_teorico": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Es una debilidad conocida de estos sistemas: actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude, y puede que estos ataques deliberados no se puedan evitar del todo.",
   "pasos_accionables": [
     "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, emails)",
-    "Sugerencia de My Idea: realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
-    "Sugerencia de My Idea: Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
-    "Sugerencia de My Idea: monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación"
+    "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+    "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+    "Monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación"
   ],
   "entregable_esperado": "Plan de mitigación de riesgos de seguridad para el sistema de IA del negocio",
   "nodos_previos": [
@@ -119,6 +119,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice a qué negocios afecta el riesgo; lo presenta como una debilidad conocida que crea vulnerabilidades considerables.; Mismo defecto: la lista de tres usos de negocio en riesgo no está en el libro. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-130",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+      "texto_nuevo": "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-131",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+      "texto_nuevo": "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-132",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación",
+      "texto_nuevo": "Monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

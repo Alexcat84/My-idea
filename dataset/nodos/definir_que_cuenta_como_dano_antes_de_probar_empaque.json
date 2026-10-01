@@ -10,7 +10,7 @@
     "Decide qué nivel de daño toleras sin considerarlo falla, si es que toleras alguno.",
     "Anota el estado del producto y del empaque antes de enviarlo o probarlo.",
     "Compara ese registro contra el estado final para saber si hubo una falla real.",
-    "Sugerencia de My Idea: ajusta tu empaque cuando el daño supere el límite que tú mismo definiste."
+    "Ajusta tu empaque cuando el daño supere el límite que tú mismo definiste."
   ],
   "entregable_esperado": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
   "nodos_previos": [
@@ -191,6 +191,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide fijar el nivel de daño tolerable en general, no solo el superficial de la caja.; Mismo defecto: la tolerancia del libro no se limita a la superficie de la caja.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-068",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: ajusta tu empaque cuando el daño supere el límite que tú mismo definiste.",
+      "texto_nuevo": "Ajusta tu empaque cuando el daño supere el límite que tú mismo definiste.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

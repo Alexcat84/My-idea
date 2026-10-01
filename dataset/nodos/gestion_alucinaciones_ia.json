@@ -10,7 +10,7 @@
     "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
     "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
     "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.",
-    "Sugerencia de My Idea: Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
+    "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
   ],
   "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
   "nodos_previos": [
@@ -95,6 +95,23 @@
         "evidencia": "F26-008: Es una politica y protocolo interno de verificacion para la operacion diaria del equipo, no una validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "procedencia-prefijo-119",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas",
+      "texto_nuevo": "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

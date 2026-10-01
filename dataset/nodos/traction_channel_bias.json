@@ -9,7 +9,7 @@
     "Haz una lista con los 19 canales de tracción y marca con honestidad cuáles conoces menos y cuáles evitas solo por gusto personal",
     "Identifica los canales que te parecen tediosos y evalúalos con datos reales, no con tu impresión",
     "Busca a alguien que sepa de los canales que tú no conoces e inclúyelo en tu sesión de ideas de Bullseye",
-    "Sugerencia de My Idea: prueba al menos un canal que esté fuera de tu zona de confort en cada ronda de pruebas"
+    "Prueba al menos un canal que esté fuera de tu zona de confort en cada ronda de pruebas"
   ],
   "entregable_esperado": "Una autoevaluación escrita de tus sesgos por canal y un plan para probar al menos un canal que antes evitabas",
   "nodos_previos": [
@@ -41,6 +41,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro anima a salir de la zona de confort y a tomarse en serio cada canal, pero no impone la regla de al menos un canal así en cada ronda de pruebas.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C106-089"
+    },
+    {
+      "id": "procedencia-prefijo-269",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: prueba al menos un canal que esté fuera de tu zona de confort en cada ronda de pruebas",
+      "texto_nuevo": "Prueba al menos un canal que esté fuera de tu zona de confort en cada ronda de pruebas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Pega la etiqueta de envío en la cara más grande y plana de la caja.",
     "Deja la etiqueta completamente visible, sin cinta ni papeles encima.",
     "Quita o tapa cualquier etiqueta de un envío anterior si reutilizas la caja.",
-    "Sugerencia de My Idea: agrega una etiqueta de 'frágil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+    "Agrega una etiqueta de 'frágil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
     "Refuerza el acolchado interno en vez de confiar solo en la etiqueta de manejo."
   ],
   "entregable_esperado": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan al courier.",
@@ -163,6 +163,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo pide no poner cinta sobre la etiqueta para evitar problemas de escaneo; el papel, el atraso y la bodega son añadidos.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-034",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: agrega una etiqueta de 'frágil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+      "texto_nuevo": "Agrega una etiqueta de 'frágil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

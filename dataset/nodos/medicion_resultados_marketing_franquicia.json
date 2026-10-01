@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define qué vas a medir: costo por lead, costo por aplicación, tasa de cierre y velocidad de cierre",
     "Calcula tu costo por venta, pero interprétalo con cuidado si todavía tienes pocos casos",
-    "Sugerencia de My Idea: usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+    "Usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
     "Mide tu tasa de captura dividiendo los leads que generas entre los visitantes que llegan a la sección de franquicias de tu sitio",
     "Cada tres meses revisa el desempeño y reemplaza el 10-20% de los canales que peor te funcionan",
     "Haz pruebas A/B en tus páginas de aterrizaje y anuncios pagados, asegurándote de tener suficientes casos antes de sacar conclusiones"
@@ -71,6 +71,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "procedencia-prefijo-162",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "texto_nuevo": "Usa herramientas como AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

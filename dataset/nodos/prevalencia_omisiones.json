@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
     "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, después de lograr el objetivo principal, cerca del final, oculto, con varios elementos que instalar, que no se pide en tareas parecidas, con cambios recientes, que repite acciones previas, que depende de una acción previa o que no siempre se requiere)",
-    "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+    "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
     "Establecer métricas de seguimiento de omisiones por tipo de tarea"
   ],
   "entregable_esperado": "Reporte de clasificación de errores de mantenimiento con identificación de patrones de omisión",
@@ -77,6 +77,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento cuenta los rasgos que provocan omisión y la lista del paso deja fuera seis de los diez del libro.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-203",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+      "texto_nuevo": "Enfocar las intervenciones de mejora en los pasos con mayor tasa de omisión histórica",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

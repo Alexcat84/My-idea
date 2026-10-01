@@ -9,7 +9,7 @@
     "Revisar si la organización cuenta con una función de inspección independiente para tareas críticas de seguridad",
     "Evaluar los riesgos de permitir el autochequeo ('sign-off') sin verificación externa",
     "Establecer disponibilidad de personal de aseguramiento de calidad en todos los turnos, incluidos nocturnos",
-    "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma."
+    "Implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma."
   ],
   "entregable_esperado": "Política de aseguramiento de calidad con mecanismos de verificación independiente definidos",
   "nodos_previos": [
@@ -56,6 +56,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "procedencia-prefijo-217",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma.",
+      "texto_nuevo": "Implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

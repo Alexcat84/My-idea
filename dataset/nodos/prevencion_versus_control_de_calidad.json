@@ -9,7 +9,7 @@
     "Replantea cómo entiendes la calidad en tu negocio: no se trata solo de revisar o auditar, sino de prevenir.",
     "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, quítalas: la palabra 'calidad' basta sola.",
     "Entrena tu mirada para detectar riesgos antes de que se conviertan en errores, en vez de solo corregir después.",
-    "Sugerencia de My Idea: mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
+    "Mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste."
   ],
   "entregable_esperado": "Una forma clara de entender y trabajar la calidad en tu negocio, enfocada en prevenir, que puedas escribir como tu propia política de calidad.",
   "nodos_previos": [
@@ -86,6 +86,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no da ese criterio de medición; queda como sugerencia de la casa.; Mismo defecto.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-204",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste.",
+      "texto_nuevo": "Mide tu avance en calidad por la cantidad de errores que evitaste, no solo por cuántas revisiones hiciste.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

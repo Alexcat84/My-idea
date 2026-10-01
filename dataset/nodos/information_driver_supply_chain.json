@@ -10,7 +10,7 @@
     "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
     "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
     "Usa esos datos para ajustar tus programaciones semanales de producción, inventario y transporte",
-    "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada"
+    "Genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada"
   ],
   "entregable_esperado": "Mapa de flujo de información en tu cadena de suministro, con los puntos de mejora identificados, que alimente tus decisiones de producción, inventario, ubicación y transporte",
   "nodos_previos": [
@@ -99,6 +99,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la buena información tiende a maximizar la rentabilidad de la cadena, no que la maximice.; Mismo defecto: endurece el 'tend to maximize' del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-143",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada",
+      "texto_nuevo": "Genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

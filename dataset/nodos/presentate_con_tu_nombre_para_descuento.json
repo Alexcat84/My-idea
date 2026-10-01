@@ -9,8 +9,8 @@
     "Cuando compres en persona o por teléfono, di tu nombre de forma amistosa antes de pedir algo.",
     "Pregunta directamente si existe algún descuento con tu nombre, en tono de broma pero genuino.",
     "Deja que la persona disfrute también de la interacción y espera su respuesta: puede reírse o consultar con alguien más arriba.",
-    "Sugerencia de My Idea: si te dicen que deben preguntar a un superior, espera con paciencia y agradece el intento.",
-    "Sugerencia de My Idea: repite esta práctica en distintos comercios o con distintos proveedores."
+    "Si te dicen que deben preguntar a un superior, espera con paciencia y agradece el intento.",
+    "Repite esta práctica en distintos comercios o con distintos proveedores."
   ],
   "entregable_esperado": "Una interacción personalizada que abre la posibilidad de un descuento no listado en la política oficial.",
   "nodos_previos": [
@@ -128,6 +128,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro cuenta un caso y no aconseja repetir la práctica en otros comercios; consejo propio sin etiqueta.; Mismo defecto: consejo práctico que el libro no da, sin etiqueta.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-200",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: si te dicen que deben preguntar a un superior, espera con paciencia y agradece el intento.",
+      "texto_nuevo": "Si te dicen que deben preguntar a un superior, espera con paciencia y agradece el intento.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-201",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: repite esta práctica en distintos comercios o con distintos proveedores.",
+      "texto_nuevo": "Repite esta práctica en distintos comercios o con distintos proveedores.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

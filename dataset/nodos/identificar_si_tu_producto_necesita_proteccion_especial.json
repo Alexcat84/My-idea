@@ -10,7 +10,7 @@
     "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
     "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
     "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
-    "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
+    "Refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
   ],
   "entregable_esperado": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
   "nodos_previos": [
@@ -274,6 +274,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro clasifica en plano, alargado, pequeño o estándar el producto ya empacado por sus medidas exteriores, no el producto solo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-142",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos.",
+      "texto_nuevo": "Refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

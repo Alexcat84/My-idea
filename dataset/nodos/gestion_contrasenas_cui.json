@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
+    "Definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
     "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
     "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
     "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas."
@@ -68,6 +68,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "procedencia-prefijo-121",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
+      "texto_nuevo": "Definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

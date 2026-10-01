@@ -7,7 +7,7 @@
   "resumen_teorico": "Chopra y Meindl definieron seis atributos clave para entender qué necesita un mercado de su cadena de suministro: cantidad de producto por lote, tiempo de respuesta tolerado, variedad de productos requerida, nivel de servicio esperado, sensibilidad al precio, y tasa de innovación deseada del producto. Responder estas preguntas permite decidir si la cadena debe priorizar responsividad o eficiencia.",
   "pasos_accionables": [
     "Entrevistar o encuestar clientes sobre cada uno de los 6 atributos",
-    "Sugerencia de My Idea: comparar tus resultados con los de competidores en el mismo mercado",
+    "Comparar tus resultados con los de competidores en el mismo mercado",
     "Clasificar cada segmento que sirves como orientado a responsividad o a eficiencia, sabiendo que distintos mercados pueden tener requisitos distintos"
   ],
   "entregable_esperado": "Perfil de requerimientos del mercado documentado con los 6 atributos evaluados",
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la empresa puede servir varios mercados con requisitos distintos según estos atributos; el paso supone un solo segmento.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-015",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: comparar tus resultados con los de competidores en el mismo mercado",
+      "texto_nuevo": "Comparar tus resultados con los de competidores en el mismo mercado",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

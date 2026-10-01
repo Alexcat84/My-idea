@@ -6,7 +6,7 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Las capacidades de la IA vienen mejorando a ritmo exponencial y no hay motivos para esperar que dejen de crecer pronto; el modelo actual siempre será el más limitado que se use en el futuro. Este principio invita a planificar el negocio asumiendo mejoras continuas en las herramientas de IA, evitando descartar la tecnología por sus limitaciones actuales y manteniéndose abierto a integrar nuevas versiones y agentes semiautónomos de IA en los procesos del negocio.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
+    "Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
     "Documentar las limitaciones actuales de la IA usada para reevaluarlas periódicamente",
     "Diseñar procesos flexibles que puedan incorporar mejoras de IA sin rediseño total",
     "Explorar agentes de IA semiautónomos para tareas repetitivas a medida que maduran"
@@ -101,6 +101,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe los agentes que vienen como semiautónomos, con mínima ayuda humana; llamarlos autónomos endurece.; Mismo defecto: el libro dice semi-autonomous, el nodo dice autónomos. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-205",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
+      "texto_nuevo": "Revisar cada trimestre qué nuevas capacidades de IA podrían aplicarse al negocio",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

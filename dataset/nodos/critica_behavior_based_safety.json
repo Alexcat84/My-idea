@@ -11,7 +11,7 @@
     "Elimina prácticas que estigmaticen a trabajadores lesionados, como identificadores visibles frente al resto del equipo",
     "Evalúa si las políticas posteriores a un incidente, como pruebas de drogas obligatorias, desincentivan el reporte",
     "Sustituye las métricas basadas en tasas de incidentes por métricas de proceso o de condiciones de seguridad",
-    "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
+    "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores"
   ],
   "entregable_esperado": "Diagnóstico documentado de los efectos del sistema actual de incentivos sobre el reporte de incidentes, con recomendaciones de rediseño.",
   "nodos_previos": [
@@ -99,6 +99,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el clima de miedo a veces acompaña a estos programas y pueden dañar la solidaridad.; Endurece: el libro dice que algunas empresas usan premios o bonos y otras castigos.; Misma marca: 'suelen' convierte ejemplos en norma.; Misma marca: efecto posible afirmado como seguro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-047",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "texto_nuevo": "Evalúa el clima de reporte mediante entrevistas anónimas a tus trabajadores",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 5,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

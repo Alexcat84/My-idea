@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando diseñas o cambias tu empaque, existen protocolos profesionales, como los que usan los laboratorios de prueba de empaque, que ordenan las pruebas en una secuencia lógica, y tú puedes copiar esa lógica de forma casera como una aproximación. Primero se acondiciona el paquete 72 horas a temperatura y humedad controladas, luego se somete a caídas desde distintas alturas según su peso, después a vibración simulando el traqueteo del transporte, con y sin peso encima, y a otra serie de caídas que incluye una sobre un obstáculo; si es plano o alargado, también a caídas sobre un borde, a una caída rotacional completa en plano y a impactos, y si el contenido es líquido, a una prueba de fugas. Seguir este orden te ayuda a detectar fallas reales antes de mandar cientos de paquetes iguales. No se trata de aprobar un certificado, sino de simular con tus propias manos golpes parecidos a los que tu paquete puede recibir entre tu mesa de trabajo y la puerta del cliente.",
   "pasos_accionables": [
     "Suelta tu paquete cerrado diez veces sobre una superficie dura, desde una altura que depende de su peso.",
-    "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
+    "Agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
     "Si tu paquete es plano o alargado, déjalo caer sobre un borde desde unos 200 mm.",
     "Si envías líquidos, deja el paquete cerrado ocho horas y revisa si hay fugas.",
     "Registra el estado del producto y del empaque antes de probar, y abre el paquete después de la prueba para registrar qué se rompió o se movió."
@@ -273,6 +273,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide determinar el estado antes y después de la prueba; abrir el paquete tras cada prueba es una norma que no da y altera la muestra de la secuencia.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-259",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
+      "texto_nuevo": "Agítalo con fuerza dentro de una caja de cartón simulando vibración de varios minutos.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

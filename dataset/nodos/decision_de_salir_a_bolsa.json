@@ -10,7 +10,7 @@
     "Piensa en el impacto personal de la exposición pública: tus finanzas, tus decisiones, la presión de reportar cada trimestre",
     "Prepárate para el período de bloqueo después del IPO y para las restricciones al vender tus acciones",
     "Considera cómo va a cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
-    "Sugerencia de My Idea: diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo"
+    "Diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo"
   ],
   "entregable_esperado": "Un análisis de ventajas y desventajas hecho a tu medida sobre si te conviene salir a bolsa, incluyendo cómo afecta tu control, tus finanzas personales y la estructura de tu junta directiva.",
   "nodos_previos": [
@@ -78,6 +78,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro describe que no conoces a tus accionistas y que algunos piensan en el corto plazo, pero no aconseja diseñar una comunicación con ellos.; Mismo defecto que la marca 0.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-064",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo",
+      "texto_nuevo": "Diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

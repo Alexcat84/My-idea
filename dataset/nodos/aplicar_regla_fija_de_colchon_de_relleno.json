@@ -9,7 +9,7 @@
     "Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.",
     "Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.",
     "Rellena cualquier espacio vacío hasta que el producto no se mueva al agitar la caja con cuidado.",
-    "Sugerencia de My Idea: anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
+    "Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
   ],
   "entregable_esperado": "Una regla escrita de al menos cinco centímetros de colchón en todos los lados, aplicada en cada envío.",
   "nodos_previos": [
@@ -90,6 +90,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): La fuente da las cifras de colchón sin justificar esa distancia; el motivo del aplastamiento y el costo se refiere al tamaño de la caja, no a los 5 cm.; La fuente no promete menos reclamos ni una capacitación más fácil.; Mismo defecto que la marca 0: justificación causal de la distancia que la fuente no da.; Mismo defecto que la marca 1: resultado prometido que la fuente no afirma.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-012",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.",
+      "texto_nuevo": "Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

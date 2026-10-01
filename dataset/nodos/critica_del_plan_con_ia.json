@@ -10,7 +10,7 @@
     "Pedir 10 formas específicas en que el plan podría fallar",
     "Solicitar una visión de cómo sería el éxito del plan",
     "Invocar a tres personajes conocidos (emprendedores, líderes, artistas o filósofos) para que critiquen el plan en su propia voz",
-    "Sugerencia de My Idea: sintetizar los hallazgos en un documento de riesgos y mitigaciones"
+    "Sintetizar los hallazgos en un documento de riesgos y mitigaciones"
   ],
   "entregable_esperado": "Un documento de riesgos y mitigaciones construido con las críticas que la IA le hizo a tu plan",
   "nodos_previos": [
@@ -117,6 +117,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide una visión de éxito del proyecto, no una alternativa.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-048",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: sintetizar los hallazgos en un documento de riesgos y mitigaciones",
+      "texto_nuevo": "Sintetizar los hallazgos en un documento de riesgos y mitigaciones",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

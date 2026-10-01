@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisa si alguna cara de tu caja es grande y no tiene refuerzo ni soporte interno.",
     "Verifica que el producto nunca toque directamente la pared de la caja.",
-    "Sugerencia de My Idea: si el papel o el plástico estirable son tu única protección, considera cambiarlos por cartón corrugado que no sea de calibre delgado.",
+    "Si el papel o el plástico estirable son tu única protección, considera cambiarlos por cartón corrugado que no sea de calibre delgado.",
     "Aprieta la caja armada con las manos para sentir si el cartón es demasiado delgado.",
     "Anota cada señal de debilidad que encuentres antes de decidir si necesitas rediseñar."
   ],
@@ -161,6 +161,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro cierra esa señal con papel u otro material ligero similar; el nodo deja la lista cerrada.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-073",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: si el papel o el plástico estirable son tu única protección, considera cambiarlos por cartón corrugado que no sea de calibre delgado.",
+      "texto_nuevo": "Si el papel o el plástico estirable son tu única protección, considera cambiarlos por cartón corrugado que no sea de calibre delgado.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

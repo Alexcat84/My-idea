@@ -11,7 +11,7 @@
     "Permitir conexiones externas solo a través de interfaces gestionadas.",
     "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
     "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
-    "Sugerencia de My Idea: cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+    "Cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
     "Almacenar de forma segura las claves de cifrado."
   ],
   "entregable_esperado": "Arquitectura de red segmentada con controles de tráfico documentados y mecanismos de cifrado implementados.",
@@ -72,6 +72,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "procedencia-prefijo-135",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+      "texto_nuevo": "Cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 5,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

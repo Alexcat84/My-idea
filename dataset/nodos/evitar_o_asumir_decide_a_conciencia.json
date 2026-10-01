@@ -9,7 +9,7 @@
     "Antes de una decisión grande, pregúntate cuánto riesgo estás dispuesto a asumir en ella.",
     "Revisa si un éxito o un susto reciente te está inflando o encogiendo el apetito sin razón.",
     "Desconfía de datos viejos: comprueba si siguen siendo ciertos antes de apoyarte en ellos.",
-    "Sugerencia de My Idea: deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino."
+    "Deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino."
   ],
   "entregable_esperado": "Una declaración escrita de cuánto riesgo estás dispuesto a asumir en tu decisión clave, revisada contra tu estado de ánimo reciente.",
   "nodos_previos": [
@@ -90,6 +90,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye el aumento casi seguro del apetito a un éxito espectacular; 'un éxito reciente' pierde esa condición.; El libro dice que el perfil varía entre riesgos, en el tiempo y entre contextos; el estado de ánimo no lo menciona.; Mismo defecto que la marca 0.; Mismo defecto que la marca 0; se devuelve el contexto que nombra el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-109",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino.",
+      "texto_nuevo": "Deja por escrito el nivel de riesgo que aceptas, para no cambiarlo por impulso a mitad de camino.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

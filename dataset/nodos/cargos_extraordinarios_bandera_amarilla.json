@@ -9,7 +9,7 @@
     "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'restructuring' o 'write-off'",
     "Preguntar la justificación y metodología detrás del monto estimado",
     "Verificar si estos cargos se repiten en años consecutivos",
-    "Sugerencia de My Idea: ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios"
+    "Ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios"
   ],
   "entregable_esperado": "Análisis de utilidad que no trata como extraordinarios los cargos 'únicos' que se repiten año tras año, con nota de riesgo si se identifican patrones sospechosos",
   "nodos_previos": [
@@ -87,6 +87,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro explica el sesgo de estos cargos pero no aconseja excluirlos ni normalizarlos en el análisis.; Mismo defecto: consejo práctico propio sin la etiqueta.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-024",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios",
+      "texto_nuevo": "Ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

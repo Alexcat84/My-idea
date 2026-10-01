@@ -6,8 +6,8 @@
   "fuente": "Requisitos de empaque de los couriers",
   "resumen_teorico": "Los líquidos y polvos necesitan más de una barrera. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
-    "Sugerencia de My Idea: coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+    "Verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+    "Coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
     "Mete ese conjunto en una bolsa plástica sellada o un contenedor secundario hermético.",
     "Empaca todo dentro de una caja de fibra rígida, nunca en bolsa o sobre como único contenedor.",
     "Pregunta a tu courier si tu producto líquido o en polvo requiere trato como mercancía regulada."
@@ -123,6 +123,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe las barreras pero no afirma que un envase fallido arruine el paquete ni dañe otros envíos.; Mismo porqué inventado que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-094",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+      "texto_nuevo": "Verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-095",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+      "texto_nuevo": "Coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

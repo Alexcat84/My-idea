@@ -9,7 +9,7 @@
     "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron y que son eficaces",
     "Si la acción correctiva no se implementó, confirmar primero que las conclusiones del reporte original son correctas y que hay acuerdo sobre ellas; si no lo hay, resolver primero ese desacuerdo",
     "Si faltan recursos u otra cosa lo impide, reformular la seriedad de la deficiencia en términos monetarios u otros de impacto que ayuden a conseguir los recursos o quitar los obstáculos",
-    "Sugerencia de My Idea: cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas"
+    "Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas"
   ],
   "entregable_esperado": "Confirmación documentada de que las no conformidades quedaron cerradas, o la decisión de seguir dándole prioridad al tema si continúa pendiente",
   "nodos_previos": [
@@ -143,6 +143,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El libro solo nombra el cierre como último paso de la auditoría; la regla de cerrar solo con las no conformidades corregidas es un consejo propio.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-246",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas",
+      "texto_nuevo": "Cerrar el archivo de auditoría solo cuando las no conformidades quedaron corregidas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

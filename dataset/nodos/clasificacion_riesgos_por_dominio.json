@@ -10,7 +10,7 @@
     "Comparar el perfil de riesgo actual contra dominios similares usando referencias históricas",
     "Identificar si el enfoque de gestión de riesgos está desactualizado respecto a cambios tecnológicos o sociales recientes",
     "Priorizar recursos de gestión de riesgo según el tipo de riesgo predominante en el dominio, no solo en lesiones personales",
-    "Sugerencia de My Idea: definir cómo vas a vigilar cada tipo de riesgo que identifiques"
+    "Definir cómo vas a vigilar cada tipo de riesgo que identifiques"
   ],
   "entregable_esperado": "Matriz de clasificación de riesgos por tipo (personal, operador, latente, terceros) específica para la organización, con nivel estimado de cada uno",
   "nodos_previos": [
@@ -58,6 +58,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo etiquetar; doble lectura ciega, arbitro): El pasaje de los cuatro tipos de riesgo por dominio no aconseja definir cómo vigilar cada riesgo; es consejo útil sin la etiqueta.; Mismo defecto: consejo práctico que el libro no da, sin afirmar hechos y sin etiqueta.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-031",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+      "texto_nuevo": "Definir cómo vas a vigilar cada tipo de riesgo que identifiques",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Escribe todas las suposiciones sobre las que se sostiene tu plan.",
     "Marca cuáles has comprobado de verdad y cuáles solo estás dando por ciertas.",
     "De las no comprobadas, elige la más peligrosa: la que, si es falsa, tumba el plan.",
-    "Sugerencia de My Idea: define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella."
+    "Define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella."
   ],
   "entregable_esperado": "Las suposiciones clave de tu plan, marcadas como comprobadas o sin comprobar, con una prueba barata para la más peligrosa.",
   "nodos_previos": [
@@ -138,6 +138,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración pierde una de las diez fuentes de incertidumbre del libro, la de gestión.; Mismo defecto: falta la fuente de incertidumbre de gestión.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-175",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella.",
+      "texto_nuevo": "Define una forma barata de poner a prueba esa suposición antes de apostarlo todo a ella.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

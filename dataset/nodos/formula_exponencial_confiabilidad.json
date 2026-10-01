@@ -11,7 +11,7 @@
     "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
     "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
     "Evaluar el impacto de cambios en MTBF sobre la confiabilidad real del sistema",
-    "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantías, sin confundir el MTBF con la vida útil del producto"
+    "Usa el resultado como apoyo para planificar mantenimiento preventivo o garantías, sin confundir el MTBF con la vida útil del producto"
   ],
   "entregable_esperado": "Cálculo de confiabilidad del producto para un tiempo específico de operación, con MTBF documentado",
   "nodos_previos": [
@@ -101,6 +101,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que normalmente no hay datos para evaluar el supuesto y que a menudo se cumple bajo dos condiciones; el paso las pierde.; Mismo defecto.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-114",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: usa el resultado como apoyo para planificar mantenimiento preventivo o garantías, sin confundir el MTBF con la vida útil del producto",
+      "texto_nuevo": "Usa el resultado como apoyo para planificar mantenimiento preventivo o garantías, sin confundir el MTBF con la vida útil del producto",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 5,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
     "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
     "Ofrece la ventana angosta o el mismo día como opción de pago extra, no como estándar gratuito.",
-    "Sugerencia de My Idea: revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
+    "Revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
     "Elimina el nivel más rápido si notas que nadie paga la diferencia y solo te cuesta margen."
   ],
   "entregable_esperado": "Una tabla simple con los niveles de entrega que ofreces y cuánto cobras por cada uno, basada en el costo real de tu courier.",
@@ -187,6 +187,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro explica el mayor costo por las franjas que impiden agrupar entregas; 'más coordinación' y 'menos margen de error' son causas añadidas.; El libro no habla de subsidiar la entrega rápida; es una razón añadida.; Mismo defecto que la marca 0.; Mismo defecto que la marca 2.; Resultado prometido, la pérdida en cada venta, que el libro no afirma.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-063",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
+      "texto_nuevo": "Revisa cada mes cuántos clientes eligen cada nivel para ajustar precios.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
     "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
-    "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+    "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
     "Revisar incidentes pasados en busca de 'sorpresas de automatización' como indicador de este riesgo"
   ],
   "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
@@ -70,6 +70,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que esos avisos verbales suelen abandonarse (typically) con carga alta; el nodo lo afirma sin matiz.; Misma marca: 'typically get shed' pasa a afirmación absoluta.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-177",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+      "texto_nuevo": "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

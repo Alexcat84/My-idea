@@ -10,7 +10,7 @@
     "Aplica una tira sobre la costura central de la tapa y repite en el fondo de la caja.",
     "Aplica una tira sobre cada costura lateral, arriba y abajo, completando el patrón en H.",
     "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
-    "Sugerencia de My Idea: añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
+    "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
   ],
   "entregable_esperado": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
   "nodos_previos": [
@@ -109,6 +109,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no da causa de apertura; solo dice que el método ayuda a prevenir la apertura accidental, que el resumen ya recoge.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-251",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+      "texto_nuevo": "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -6,7 +6,7 @@
   "fuente": "SPIN Selling - Neil Rackham",
   "resumen_teorico": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta para llegar con menos preguntas de este tipo y usarlas con moderación.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
+    "Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
     "Limita tus preguntas de situación a lo estrictamente necesario para avanzar",
     "Úsalas como apertura breve y pasa pronto a preguntar por el problema"
   ],
@@ -97,6 +97,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "procedencia-prefijo-198",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
+      "texto_nuevo": "Investiga al cliente antes de la llamada (sitio web, redes, lo que encuentres) para reducir preguntas de situación innecesarias",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

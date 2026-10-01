@@ -6,7 +6,7 @@
   "fuente": "Edwards et al., Managing Project Risks",
   "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
+    "Cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
     "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
     "Guarda esas notas junto a tu lista de riesgos, no sueltas.",
     "Al cerrar el proyecto, relee tus decisiones y saca lecciones para el siguiente."
@@ -155,6 +155,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide la decisión y la respuesta descrita completa; la razón de la decisión no figura.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-011",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
+      "texto_nuevo": "Cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 0,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

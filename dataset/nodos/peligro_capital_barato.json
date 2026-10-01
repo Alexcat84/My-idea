@@ -7,8 +7,8 @@
   "resumen_teorico": "Cuando el capital es abundante y barato (como en burbujas de financiamiento), los inversionistas pueden preguntar '¿qué harías si el capital fuera gratis?'. Esta pregunta, aunque bien intencionada, puede llevar a decisiones de gasto y contratación desproporcionadas que no consideran la sostenibilidad del negocio ni el riesgo de un cambio brusco de ciclo económico.",
   "pasos_accionables": [
     "Cuestiona cualquier estrategia de crecimiento que dependa de suponer acceso ilimitado a capital futuro.",
-    "Sugerencia de My Idea: modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
-    "Sugerencia de My Idea: establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
+    "Modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+    "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
     "Distingue entre crecer rápido de forma sostenible y crecer rápido apalancado en supuestos financieros frágiles."
   ],
   "entregable_esperado": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre el runway de la empresa.",
@@ -59,6 +59,40 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no recomienda un plan de contingencia de financiamiento; es un consejo práctico que queda como sugerencia de la casa.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-prefijo-182",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+      "texto_nuevo": "Modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 1,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-183",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
+      "texto_nuevo": "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

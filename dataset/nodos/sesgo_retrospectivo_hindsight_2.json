@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Para explicar lo que pasó, no te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia; solo te sirve para prepararte ante situaciones parecidas",
     "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
-    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
+    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Ten en cuenta también el volumen de información disperso entre los participantes.",
     "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal",
-    "Sugerencia de My Idea: entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
+    "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
   ],
   "entregable_esperado": "Una reconstrucción en orden cronológico de la situación, contada desde lo que sabías o sabía la otra persona en ese momento, sin dejar que el resultado final contamine esa mirada",
   "nodos_previos": [
@@ -147,6 +147,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición de observable pierde los objetivos, intereses y conocimientos de quien mira.; Mismo defecto: se caen objetivos, intereses y conocimientos de la enumeración.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "procedencia-prefijo-255",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
+      "texto_nuevo": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Ten en cuenta también el volumen de información disperso entre los participantes.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 2,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-prefijo-256",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Sugerencia de My Idea: entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.",
+      "texto_nuevo": "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), la primera de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber, ni poder intuir, de donde provienen las respuestas de la app. El prefijo de procedencia sale del texto visible; la constancia de que es un paso de la casa queda en este registro.",
+        "fragmentos": [
+          "Sugerencia de My Idea:"
+        ]
+      },
+      "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
+      "indice": 4,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
     }
   ],
   "fuentes_internas": [
