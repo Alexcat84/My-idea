@@ -909,26 +909,26 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   - La guía de IDEO.org figura como CC BY-NC-ND 3.0, según el fundador. Tiene 20 nodos vivos.
   - Los libros comerciales y las guías de empresas tienen copyright sin licencia abierta.
 
-**Comprobación de copias (punto 7), diseño fijado ANTES de sortear:**
-- **Semilla:** 20271101. No choca con ninguna asignada ni con sus derivadas.
-- **Qué se busca (D2):** texto de nodo que reproduce un pasaje del libro, traducido o no, casi palabra por palabra y en
-  su mismo orden. Basta una frase larga (más de unas 20 palabras) o dos o más frases seguidas.
-  - No es copia un término preciso, un nombre de método, una definición técnica breve ni una paráfrasis que dice lo
-    mismo con otras palabras y otra estructura.
-  - Umbral: 0.
-- **Muestra, por estratos y con prioridad:**
-  - **A:** 120 elementos, al azar, entre los 611 que el pase dirigido corrigió en modo `devolver`.
-  - **B:** todos los elementos de los 20 nodos vivos de la guía de IDEO.org.
-  - **C:** 40 nodos vivos al azar fuera de A y B, con todos sus elementos (resumen, pasos y entregable).
-- **Lectura:**
-  - Un lector Opus por lote lee cada elemento contra el pasaje de su libro y marca la copia con su evidencia.
-  - Cada lote lleva una trampa sin marca: un elemento sustituido por la traducción literal de un pasaje del libro,
-    preparada aparte.
-  - Un árbitro Opus confirma cada marca y escribe el texto en palabras de la casa sin cambiar el sentido.
-  - Un verificador ciego comprueba que el texto nuevo sostiene el libro y ya no es copia.
-- **Corrección:** lo confirmado se reescribe por corrección declarada. La cuenta se registra aquí, con su riesgo
-  residual (Wilson 95 %) por estrato.
-- **Código:** `copias.py`, en las claves del remedio.
+**Comprobación de copias (punto 7): sin pase aparte, por ajuste del fundador (30 sep 2026).**
+- La copia fiel se mide como un criterio más de la medida 2 (U14, umbral 0), que ya lee una muestra con el libro
+  delante. El lector de la medida 2 la marca con la definición de D2, y el árbitro la confirma y la reescribe en
+  palabras de la casa sin cambiar el sentido.
+- Se había sorteado un pase aparte (semilla 20271101: 540 elementos en 22 lotes, con trampas preparadas). Se detuvo
+  tras el ajuste, con 2 lotes leídos. **No se cuenta ni se usa:** la vara de copias es la de la medida 2.
+- La política de corrección aclarada (punto 6: devolver es devolver el sentido, nunca copiar) ya está aplicada.
+
+**Prioridades del fundador hasta el jueves 8 de octubre** (la cuota se renueva el martes 6 a las 23:00):
+1. **Procedencia (puntos 1 a 6):** hecho.
+2. **Cerrar la etapa 1:**
+   - corrección de la muestra de cierre;
+   - vecindad de los 15 defectos duros;
+   - barridos de puntos ciegos, de cifras y plazos, y de pasos sin marca;
+   - cierre declarando el riesgo residual.
+3. **Medida 2**, que certifica, con el criterio de copias incluido.
+4. **Etapa 2** si cabe. Ortografía y calcos, solo en lo que ve el cliente; si no caben, pasan a mejora continua con
+   su ficha.
+5. **Antes de agotar la cuota del jueves:** `docs/PROXIMOS_PASOS.md` con lo que quede: la corrida final con el saldo
+   de la API, el re-embebido con Voyage y la copia de las reglas a la forja.
 
 **Después:** se retoman la corrección de la muestra de cierre y los barridos.
 
