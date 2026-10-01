@@ -4,7 +4,7 @@
 Las notas de extraccion de la forja (unidad de origen, rutas, lineas, razonamiento del extractor, marcas de
 discutible) se mudan del resumen a `notas_extraccion`, y ese campo jamas llega a la web ni a la IA: la vista web
 de scripts/sync_assets_web.py lo quita, igual que `fuente` o `correcciones`, y la guarda del navegador
-(web/lib/assets/sinInternos.test.ts) lo cuenta como clave interna.
+(web/lib/procedencia.test.ts, la guarda unica de procedencia) lo cuenta como clave interna.
 
     python engine/test_notas_extraccion_internas.py
 """
@@ -23,10 +23,10 @@ if 'notas_extraccion' in vista['nodos']['x']:
     fallos.append('la vista web deja pasar notas_extraccion')
 if 'notas_extraccion' not in s.CLAVES_INTERNAS_NODO:
     fallos.append('notas_extraccion no esta entre las claves internas del nodo (el chequeo de gemelos de Gate 0 no la vigilaria)')
-guarda = open(os.path.join(RAIZ, 'web', 'lib', 'assets', 'sinInternos.test.ts'), encoding='utf-8').read()
+guarda = open(os.path.join(RAIZ, 'web', 'lib', 'procedencia.test.ts'), encoding='utf-8').read()
 bloque = re.search(r'const CLAVES_INTERNAS = new Set\(\[(.*?)\]\)', guarda, re.S)
 if not bloque or '"notas_extraccion"' not in bloque.group(1):
-    fallos.append('la guarda del navegador (sinInternos.test.ts) no cuenta notas_extraccion como clave interna')
+    fallos.append('la guarda unica de procedencia (procedencia.test.ts) no cuenta notas_extraccion como clave interna')
 if fallos:
     print('ROJO:')
     for f in fallos:

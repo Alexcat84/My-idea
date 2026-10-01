@@ -21,7 +21,7 @@ CAMPOS_PERMITIDOS = {
     "ids_alias", "etiqueta_arbol",
     # Integracion del mundo 11 (decision del fundador, 28 sep 2026): las notas de extraccion de la forja
     # (unidad de origen, lineas, razonamiento del extractor) viven aqui, en un campo INTERNO que nunca llega a
-    # la web ni a la IA (scripts/sync_assets_web.py lo quita de la vista web; web/lib/assets/sinInternos.test.ts).
+    # la web ni a la IA (scripts/sync_assets_web.py lo quita de la vista web; web/lib/procedencia.test.ts).
     "notas_extraccion",
     # Fusión de duplicados (cirugía de Calidad, ago 2026):
     #  * `deprecado`: el nodo sigue existiendo para que la historia resuelva,

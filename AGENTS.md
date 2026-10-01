@@ -144,12 +144,12 @@ del navegador.
   `correcciones` ni `merged_originals`; vigencia solo con el año; jurisdicción
   solo con país y clase. Un componente de cliente jamás importa el grafo, las
   instrucciones de la IA ni las listas curadas.
-- Guardas: `engine/test_fuentes_de_cara.py` (ningún título de la lista canónica
-  en un texto de cara al cliente), `engine/test_fuentes_internas.py`
-  (`fuentes_internas` completas y al día), `web/lib/assets/sinInternos.test.ts`
-  (nada interno en los assets ni en el paquete del cliente),
-  `web/lib/reglaSinFuentes.test.ts` (la regla en toda llamada a la IA) y
-  `web/lib/engine/avisos.test.ts` (ningún aviso nombra un libro).
+- Guardas: la GUARDA ÚNICA DE PROCEDENCIA `web/lib/procedencia.test.ts` (desde
+  el 30 sep 2026 junta las cuatro que había: ningún título en un texto de cara al
+  cliente, nada interno en los assets ni en el paquete del cliente, la regla en
+  toda llamada a la IA, ningún aviso que revele el origen; y añade el prefijo de
+  procedencia, las atribuciones genéricas y los once idiomas) y
+  `engine/test_fuentes_internas.py` (`fuentes_internas` completas y al día).
 - Un libro nuevo entra a `fuentes_canonicas.json` con sus títulos antes que su
   primer nodo; una fusión nueva corre `python scripts/fuentes_internas.py`.
 

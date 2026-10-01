@@ -2,7 +2,7 @@
  * El rango en palabras de una banda de esfuerzo, para el detalle de la tarea. Modulo PURO a proposito: lo importa
  * un componente de cliente (DetalleActividad), y estimacion.ts, donde nacio, arrastra las instrucciones de la IA
  * (prompts.json), que jamas llegan al navegador (NADA INTERNO LLEGA AL NAVEGADOR, fundador, 27 sep 2026;
- * guarda: lib/assets/sinInternos.test.ts).
+ * guarda: lib/procedencia.test.ts).
  */
 import type { Banda } from "../dbContract";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";

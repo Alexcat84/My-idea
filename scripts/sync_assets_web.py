@@ -65,7 +65,7 @@ def _sha256_file(path: Path) -> str:
 # NADA INTERNO LLEGA AL NAVEGADOR (decision del fundador del 27 sep 2026, punto 2; REGLA ESTRICTA del 26 sep):
 # lo que se copia a web/ es la VISTA WEB de cada asset, sin la fuente de los nodos, sus fuentes internas, sus
 # correcciones (con sus citas) ni la procedencia de sus fusiones. Todo eso vive solo en dataset/.
-# La guarda es web/lib/assets/sinInternos.test.ts.
+# La guarda es web/lib/procedencia.test.ts (guarda unica de procedencia).
 # Integracion del mundo 11 (28 sep 2026): + notas_extraccion, las notas de extraccion de la forja.
 CLAVES_INTERNAS_NODO = ("fuente", "fuentes_internas", "correcciones", "merged_originals", "notas_extraccion")
 

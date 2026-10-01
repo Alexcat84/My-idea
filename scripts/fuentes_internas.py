@@ -5,7 +5,7 @@ Para cada nodo vivo calcula la lista COMPLETA de sus fuentes: la suya mas las de
 cualquier fusion y en cadena, sin limite de eslabones. La guarda en el campo interno `fuentes_internas` del nodo y en
 el inventario interno docs/internos/INVENTARIO_FUENTES.md. El campo `fuente` NO se toca. Es solo registro interno:
 jamas se muestra al cliente (scripts/sync_assets_web.py lo quita de la vista web; guarda:
-web/lib/assets/sinInternos.test.ts).
+web/lib/procedencia.test.ts).
 
 De donde sale quien absorbio a quien (absorbido -> absorbedor), por prioridad:
   1. `ids_alias` y `merged_originals` de cada nodo de dataset/nodos (la verdad de hoy: es lo que usa el resolutor);

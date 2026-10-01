@@ -46,12 +46,12 @@ Cada guarda PASA con 0 hallazgos; una excepción solo vale si ya estaba adjudica
 | G2 | Alcanzabilidad por mundo y por núcleo | sección 4 |
 | G3 | Ley del ancla: ningún nodo del núcleo ancla más de 2 puentes del mismo mundo, y todo puente ancla en el núcleo y llega a un nodo vivo de su mundo | `engine/test_puentes_tejidos.py` y sección 4 |
 | G4 | Cero aristas a deprecados | Gate 0 y `engine/test_gate_deprecado_reciproco.py` |
-| G5 | Títulos y autores fuera de lo que ve la persona | `engine/test_fuentes_de_cara.py`, `engine/test_fuentes_internas.py`, `web/lib/reglaSinFuentes.test.ts` |
+| G5 | Títulos y autores fuera de lo que ve la persona | `engine/test_fuentes_internas.py` y la guarda única de procedencia `web/lib/procedencia.test.ts` (desde el 30 sep 2026 junta `engine/test_fuentes_de_cara.py` y `web/lib/reglaSinFuentes.test.ts`) |
 | G6 | Voz de libro y de exposición | `web/lib/vozDeCliente.test.ts` (guarda de voz de cliente) sobre el grafo vivo y la caché |
 | G7 | Rutas y marcas de auditoría | la misma guarda (regla `marcasInternas`) |
 | G8 | Jurisdicción: toda entrada con país y clase | `engine/test_jurisdiccion.py` |
 | G9 | Vigencia de las traducciones de etiquetas | la guardia de vigencia de etiquetas (i18n) |
-| G10 | Nada interno en el navegador | `web/lib/assets/sinInternos.test.ts` |
+| G10 | Nada interno en el navegador | la guarda única de procedencia `web/lib/procedencia.test.ts` (antes `web/lib/assets/sinInternos.test.ts`) |
 | G11 | Puentes tejidos | `engine/test_puentes_tejidos.py` |
 | G12 | Las dos suites, tsc y el índice semántico (todo nodo vivo con vector) | `python engine/run_all_tests.py`, `pnpm vitest run`, `npx tsc --noEmit`, Gate 0 |
 

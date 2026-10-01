@@ -1,12 +1,12 @@
 /**
  * Los avisos de la tarjeta (decision del fundador del 26 sep 2026, saneamiento tanda 1; docs/POLITICA_MARCO_PAIS.md):
  * clase B y C de jurisdiccion, y vigencia. La prueba lee las listas curadas tal como las sincroniza
- * scripts/sync_assets_web.py y exige que cada entrada se pueda mostrar en los once idiomas.
+ * scripts/sync_assets_web.py y exige que cada entrada se pueda mostrar en los once idiomas. Que ningun aviso revele
+ * el origen lo exige la guarda unica de procedencia (lib/procedencia.test.ts).
  */
 import { describe, expect, it } from "vitest";
 import { LOCALES } from "../i18n/config";
 import { AVISO_NODO } from "../i18n/mensajes/avisoNodo";
-import { titulosCanonicos, titulosEn } from "../testFixtures/fuentesCanonicas";
 import { avisosNodo, JURISDICCION, VIGENCIA_NODOS } from "./avisos";
 import { cargarGrafo } from "./graph";
 
@@ -32,19 +32,6 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
     const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k] && VIGENCIA_NODOS[k].anio);
     expect(id).toBeTruthy();
     expect(avisosNodo(id!, graph, "es")).toEqual([`Esta información puede haber cambiado desde ${VIGENCIA_NODOS[id!].anio}: verifica la norma vigente en tu país.`]);
-  });
-
-  it("REGLA ESTRICTA (fundador, 26 sep 2026): ningun aviso nombra un libro ni su fuente, en ningun idioma", () => {
-    const titulos = titulosCanonicos();
-    const fallos: string[] = [];
-    for (const id of new Set([...Object.keys(VIGENCIA_NODOS), ...Object.keys(JURISDICCION)])) {
-      for (const idioma of LOCALES) {
-        for (const aviso of avisosNodo(id, graph, idioma)) {
-          if (titulosEn(aviso, titulos).length) fallos.push(`${id} ${idioma}: "${aviso}"`);
-        }
-      }
-    }
-    expect(fallos.slice(0, 5), `${fallos.length} avisos nombran un libro`).toEqual([]);
   });
 
   it("caso negativo: un nodo sin pais ni vigencia no avisa nada, y la clase A tampoco", () => {
