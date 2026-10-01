@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo Shingo de Evaluación de Excelencia Operacional",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+  "resumen_teorico": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente más maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando según distintos roles dentro de tu negocio el análisis de cultura, procesos y alineación; los resultados se valoran sin distinguir roles.",
   "pasos_accionables": [
     "Define las cuatro dimensiones que vas a evaluar: cultura, procesos, alineación y resultados",
     "Aplica la evaluación Shingo diferenciando roles como liderazgo senior, gerentes y asociados en cultura, procesos y alineación; los resultados se valoran sin distinguir roles",
@@ -118,6 +118,22 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que a menudo es razonable ajustar los pesos en la autoevaluación; el paso lo vuelve una instrucción.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido2-002-modelo_shingo_evaluacion_excelencia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+      "texto_nuevo": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente más maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando según distintos roles dentro de tu negocio el análisis de cultura, procesos y alineación; los resultados se valoran sin distinguir roles.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12953",
+        "frase": "assessment of results does not differentiate with respect to leaders, managers, and associates"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro diferencia por roles solo cultura, procesos y alineación, y valora los resultados sin distinguir roles; el nodo extiende la diferenciación a todo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reducción del Tiempo de Ciclo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
+  "resumen_teorico": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión de los clientes, de los costos y de la competencia impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
   "pasos_accionables": [
     "Diagnosticar las causas de consumo excesivo de tiempo en el proceso.",
     "Desarrollar remedios específicos para reducir el tiempo de ciclo.",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Reduce el Tiempo de tu Ciclo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-006-reduccion_de_tiempo_de_ciclo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
+      "texto_nuevo": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión de los clientes, de los costos y de la competencia impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4662",
+        "frase": "Pressures from customers, increasing costs, and competitive forces are driving organizations"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres presiones y pone primero la de los clientes; el resumen la deja fuera de la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

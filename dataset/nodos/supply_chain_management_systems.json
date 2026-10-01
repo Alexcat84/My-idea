@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Sistemas de Gestión de Cadena de Suministro (SCM)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos de sistemas ERP y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+  "resumen_teorico": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos del ERP u otros sistemas pertinentes y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
   "pasos_accionables": [
     "Identificar brechas analíticas no cubiertas por el ERP actual",
     "Seleccionar módulos SCM relevantes (APS, demand planning, inventory)",
@@ -41,6 +41,22 @@
         "motivo": "Los sistemas SCM con capacidad analitica son la base tecnologica tras la cual se entra a dashboards e integracion de impactos ambientales."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "final-e1-barrido2-002-supply_chain_management_systems-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos de sistemas ERP y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+      "texto_nuevo": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos del ERP u otros sistemas pertinentes y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2148",
+        "frase": "SCM systems rely on ERP or other relevant systems to provide them with data"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que se alimentan del ERP u otros sistemas pertinentes; el nodo deja el ERP como única fuente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

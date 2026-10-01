@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Inspección Automatizada",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón, superando la tasa de detección humana (80-90%) al acercarse a la detección total de defectos.",
+  "resumen_teorico": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón; con visión artificial se detectan prácticamente todos los defectos, frente al 80-90% que suele detectar la inspección humana.",
   "pasos_accionables": [
     "Identificar las pruebas que dominan el presupuesto de inspección y personal",
     "Calcular la economía de automatizar dichas pruebas (ROI)",
@@ -38,5 +38,23 @@
   "etiqueta_arbol": "Automatiza tu Inspección de Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-002-inspeccion_automatizada-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón, superando la tasa de detección humana (80-90%) al acercarse a la detección total de defectos.",
+      "texto_nuevo": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón; con visión artificial se detectan prácticamente todos los defectos, frente al 80-90% que suele detectar la inspección humana.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24695",
+        "frase": "with machine visual inspection, essentially all defects are detected"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye la detección prácticamente total a la visión artificial, no a toda inspección automatizada, y dice que la humana suele detectar del 80 al 90%.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

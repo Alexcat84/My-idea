@@ -1,0 +1,450 @@
+[
+ {
+  "id": "final-e1-barrido2-001-seguro_exportacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "seguro_exportacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida o robo durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+  "texto_nuevo": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida, robo o demora durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3649",
+   "frase": "usually covered by cargo insurance against loss, damage, and delay in transit"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye la demora en tránsito entre lo que cubre el seguro de carga y el nodo la omite de la lista, lo que recorta la cobertura que el emprendedor debería esperar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-supply_chain_management_systems-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "supply_chain_management_systems",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos de sistemas ERP y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+  "texto_nuevo": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos del ERP u otros sistemas pertinentes y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "2148",
+   "frase": "SCM systems rely on ERP or other relevant systems to provide them with data"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que se alimentan del ERP u otros sistemas pertinentes; el nodo deja el ERP como única fuente.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-plataforma_colaboracion_tiempo_real-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "plataforma_colaboracion_tiempo_real",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.",
+  "texto_nuevo": "Una plataforma basada en la nube que ofrece visibilidad casi en tiempo real a todos los actores de la cadena de suministro (fabricantes, logística, distribuidores, retailers) permite que, cuando comparten objetivos, cada parte identifique problemas y actúe sin esperar instrucciones de una autoridad central. Se combina con sesiones de 'colaboración masiva' (crowdsourcing) donde múltiples empresas ajustan en vivo el diseño de la cadena, corren simulaciones, y llegan a consenso sobre el plan operativo, generando compromiso genuino de todas las partes.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "5806",
+   "frase": "when people have common objectives and can see what is happening"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la autoorganización a que las partes compartan objetivos además de ver lo que pasa; el nodo cae esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-accion_correctiva-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "accion_correctiva",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
+  "texto_nuevo": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien; a menudo se resuelve con troubleshooting local, a veces con ayuda de un especialista, y se documenta de forma simple, por ejemplo con un proceso 8D. Su diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24495",
+   "frase": "local supervision is often able to identify what went wrong"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la supervisión local a menudo lo resuelve, a veces con un especialista, y que el 8D sirve para documentar; el nodo lo da por resuelto siempre y pone el 8D como vía de solución.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-adopciones_industria_especifica_iso9000-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "adopciones_industria_especifica_iso9000",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente es severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones equilibran el riesgo de proliferación de estándares con la necesidad de regulación sectorial.",
+  "texto_nuevo": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "26161-26163",
+   "frase": "they have been found effective in a very few industries where there are special circumstances"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estas adaptaciones tensionan la meta de no proliferar estándares y solo han sido eficaces en muy pocos sectores con circunstancias especiales y reglas aplicadas con consistencia; el nodo las presenta como un equilibrio logrado.; El libro habla de un impacto potencialmente severo; el nodo lo da como severo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-planificacion_auditoria_individual-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "planificacion_auditoria_individual",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y la conformación del equipo auditor liderado por un auditor líder.",
+  "texto_nuevo": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y quién audita: una persona o un equipo, que suele tener un auditor líder.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10102",
+   "frase": "conducted by individuals or by a team. A team usually has a lead auditor"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que audita una persona o un equipo y que el equipo suele tener un auditor líder; el nodo lo da por siempre.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-planificacion_cadena_suministro-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "planificacion_cadena_suministro",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad histórica de compras, identificar commodities críticos, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+  "texto_nuevo": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad de compras histórica, actual y futura, identificar commodities de alto gasto y alta criticidad, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23781-23783",
+   "frase": "Document the organization's historic, current, and future procurement activity."
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro elige la commodity de alto gasto y alta criticidad a la vez; el nodo deja solo la criticidad y cambia el criterio.; El libro pide documentar la actividad de compras histórica, actual y futura; el nodo deja solo la histórica.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-institucionalizar_breakthrough-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "institucionalizar_breakthrough",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para que una mejora importante se sostenga año tras año, tienes que integrarla en tu plan de negocio anual, hacerla parte de las responsabilidades de cada rol, revisar su progreso con regularidad, reflejarla en cómo evalúas el desempeño, y reconocer públicamente los logros de mejora que se van consiguiendo.",
+  "texto_nuevo": "Para que una mejora importante se sostenga año tras año, tienes que integrarla en tu plan de negocio anual, hacerla parte de las responsabilidades de cada rol, hacer que la dirección revise su progreso con regularidad, reflejarla en cómo evalúas el desempeño, y reconocer públicamente los logros de mejora que se van consiguiendo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7203",
+   "frase": "Establish upper management audits that include review of progress on breakthrough."
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la revisión del progreso en auditorías de la alta dirección; el nodo pierde quién la hace.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-inspeccion_automatizada-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "inspeccion_automatizada",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón, superando la tasa de detección humana (80-90%) al acercarse a la detección total de defectos.",
+  "texto_nuevo": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón; con visión artificial se detectan prácticamente todos los defectos, frente al 80-90% que suele detectar la inspección humana.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24695",
+   "frase": "with machine visual inspection, essentially all defects are detected"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye la detección prácticamente total a la visión artificial, no a toda inspección automatizada, y dice que la humana suele detectar del 80 al 90%.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-interpretacion_graficos_variables-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "interpretacion_graficos_variables",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La interpretación correcta de los gráficos de control requiere identificar puntos fuera de los límites y patrones no aleatorios. Valores de R fuera de límites indican cambios en la uniformidad del proceso (personal, material, desgaste de maquinaria). Valores de X-bar fuera de límites indican un cambio general que afecta a todas las piezas. Nelson (1984, 1985) propone ocho pruebas para detectar patrones no aleatorios usando zonas de 1σ.",
+  "texto_nuevo": "La interpretación correcta de los gráficos de control requiere identificar puntos fuera de los límites y patrones no aleatorios. Valores de R fuera de límites indican cambios en la uniformidad del proceso (personal, material, desgaste de maquinaria). Valores de X-bar fuera de límites indican un cambio general que afecta a todas las piezas desde el primer subgrupo fuera de límites. Hay ocho pruebas para detectar patrones no aleatorios usando zonas de 1σ.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18726",
+   "frase": "a general change affecting all pieces after the first out-of-limits subgroup"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el cambio afecta a todas las piezas desde el primer subgrupo fuera de límites; además se retira la cita al autor por la regla dura de la casa.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-normas_culturales_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "normas_culturales_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conjunto de creencias organizacionales que facilitan la transformación cultural hacia la calidad: priorizar calidad sobre cantidad, compromiso fanático con el cliente, búsqueda de metas ambiciosas y mejora continua, código de conducta ético orientado al cliente, y creencia en la necesidad de cambio adaptativo continuo.",
+  "texto_nuevo": "Conjunto de creencias organizacionales que facilitan la transformación cultural hacia la calidad: considerar la calidad al menos tan importante como la cantidad, y probablemente más, compromiso fanático con el cliente, búsqueda de metas ambiciosas y mejora continua, código de conducta ético orientado al cliente, y creencia en la necesidad de cambio adaptativo continuo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2017",
+   "frase": "at least of equal importance, and probably of greater importance than the mere quantity"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice al menos igual de importante y probablemente más; el nodo lo vuelve una prioridad sin matiz.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-002-modelo_shingo_evaluacion_excelencia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "modelo_shingo_evaluacion_excelencia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente mas maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando el análisis según distintos roles dentro de tu negocio.",
+  "texto_nuevo": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente más maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando según distintos roles dentro de tu negocio el análisis de cultura, procesos y alineación; los resultados se valoran sin distinguir roles.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12953",
+   "frase": "assessment of results does not differentiate with respect to leaders, managers, and associates"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro diferencia por roles solo cultura, procesos y alineación, y valora los resultados sin distinguir roles; el nodo extiende la diferenciación a todo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-003-circulos_calidad_qc-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "circulos_calidad_qc",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los círculos de calidad son grupos de personas que trabajan contigo y que detectan problemas de calidad y proponen soluciones. Su éxito depende por completo de que tú actúes sobre lo que proponen: si el círculo habla y nadie hace nada, se apaga solo. En Japón nacen de manera informal, por iniciativa de quienes trabajan; en Estados Unidos suelen volverse una estructura formal impuesta desde arriba, lo que les resta fuerza. No son una solución mágica: no pueden arreglar problemas de diseño, de especificaciones o de formación, porque esas decisiones son tuyas.",
+  "texto_nuevo": "Los círculos de calidad son grupos de personas que trabajan contigo y que detectan problemas de calidad y proponen soluciones. Su éxito depende por completo de que tú actúes sobre lo que proponen: si el círculo habla y nadie hace nada, se apaga solo. En Japón nacen de manera informal, por iniciativa de quienes trabajan; en Estados Unidos suelen volverse una estructura formal impuesta desde arriba, lo que les resta fuerza. No son una solución mágica: no pueden arreglar problemas de diseño, de especificaciones, de formación o de disposición y mantenimiento de las máquinas, porque esas decisiones son tuyas.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "2964",
+   "frase": "poor arrangement and maintenance of machines, and so on. These are all problems of management"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista cerrada de problemas que el círculo no puede resolver omite la mala disposición y el mal mantenimiento de las máquinas, que el libro incluye entre los problemas de gestión; la cifra del 40 % de la propuesta del lector es invención y no entra.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-003-reincorporacion_del_trabajo_previo-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "reincorporacion_del_trabajo_previo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Al iniciar la sesión de trabajo, releer o copiar las últimas líneas escritas el día anterior.",
+  "texto_nuevo": "Al iniciar la sesión de trabajo, releer todo lo escrito el día anterior o copiar sus últimas líneas.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "529",
+   "frase": "regularly begin work by rereading the whole of what they wrote the day before"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro la relectura abarca todo lo escrito el día anterior y solo la copia se limita a las últimas frases; reducir la relectura a las últimas líneas pierde la reorganización del conjunto que la sigue.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido2-003-wallas_etapa_incubacion-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "wallas_etapa_incubacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Programar tiempo de relajación mental real (caminatas, ejercicio, descanso) sin lectura ni estímulos que ocupen la mente.",
+  "texto_nuevo": "En los problemas creativos más difíciles, programar tiempo de relajación mental real (caminatas, ejercicio, descanso) sin lectura ni estímulos que ocupen la mente.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "325-327",
+   "frase": "in the case of the more difficult forms of creative thought"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro reserva la relajación mental completa sobre todo para las formas más difíciles del pensamiento creativo y dice que trabajar en otros problemas suele ser mejor porque ahorra tiempo; el paso la prescribe sin esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido2-003-asociacion_de_ideas-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "asociacion_de_ideas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Al enfrentar un problema, anotar la primera idea que venga a la mente y luego rastrear conscientemente qué asociaciones (semejanza, contigüidad, lógica) llevan de una idea a la siguiente",
+  "texto_nuevo": "Al enfrentar un problema, anotar la primera idea que venga a la mente y luego rastrear conscientemente qué asociaciones llevan de una idea a la siguiente",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "261-263",
+   "frase": "but also by the drive of passion in the thinker himself"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo quitar; doble lectura ciega, arbitro): El paréntesis cierra la lista de vínculos a rastrear en la versión clásica que el libro califica de simplificada, dejando fuera el deseo y el temor que también dirigen la cadena; basta con quitar la lista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido2-003-cuatro_etapas_del_pensamiento_creativo-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "cuatro_etapas_del_pensamiento_creativo",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación",
+  "texto_nuevo": "Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, como indicio de Intimación",
+  "cita": {
+   "libro": "The Art of Thought - Graham Wallas",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "345",
+   "frase": "which indicates that the fully conscious flash of success is coming"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (contrario; modo quitar; doble lectura ciega, arbitro): La intimación es el aviso previo de que el destello viene; tomar la llegada completa de la idea como indicio de intimación invierte el orden del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido2-004-atacar_mercados_establecidos_con_problema-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "atacar_mercados_establecidos_con_problema",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Se trata de 'rascar una picazón no rascada': identificar mercados grandes y establecidos con problemas persistentes que nadie ha resuelto bien (ej. agua potable, gestión de residuos, movilidad). Estas son oportunidades para innovación disruptiva que simplifica o facilita una tarea importante para el cliente.",
+  "texto_nuevo": "Se trata de 'rascar una picazón no rascada': identificar mercados grandes y establecidos, con potencial considerable a largo plazo, que enfrentan problemas nuevos o grandes que nadie ha resuelto bien (ej. agua potable, gestión de residuos, movilidad). Estas son oportunidades para innovación disruptiva que simplifica o facilita una tarea importante para el cliente.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "7936",
+   "frase": "considerable long-term potential but facing new or large unresolved problems"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide mercados con potencial considerable a largo plazo y problemas nuevos o grandes sin resolver; 'persistentes' excluye los problemas nuevos y se cae la condición del potencial.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-005-desafios_implementacion_ia-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "desafios_implementacion_ia",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, auditorías regulares, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+  "texto_nuevo": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, validación de datos, auditorías regulares, un equipo especializado que vigile a la IA en su primera etapa y corrija las entradas, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "2309",
+   "frase": "robust data governance practices, data validation, and regular audits"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera gobernanza, validación de datos y auditorías, más equipos especializados que vigilan la primera etapa y corrigen las entradas; el resumen presenta la solución como cerrada y deja fuera dos remedios.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-006-gestion_responsabilidad_vicaria-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_responsabilidad_vicaria",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Manual de operaciones y contrato de franquicia revisados legalmente que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
+  "texto_nuevo": "Manual de operaciones, contrato de franquicia y programas de entrenamiento redactados de forma coherente y revisados legalmente, que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2327",
+   "frase": "franchise agreement, operations manual, and training programs are all properly and consistently written"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide que contrato, manual y programas de entrenamiento se redacten de forma coherente para fijar la relación; el entregable deja fuera el entrenamiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-006-reconocimiento_publico_recompensas-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reconocimiento_publico_recompensas",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+  "texto_nuevo": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos constantes en el tiempo, otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1626",
+   "frase": "if doing so is rewarding to the followers consistently and over time"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro hace depender la consolidación de que la recompensa sea constante en el tiempo; lo público solo amplifica el efecto, y el resumen omite esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-006-rol_alta_direccion_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "rol_alta_direccion_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu involucramiento directo en la calidad es el factor mas importante para lograr una ventaja real. No basta con decir que la calidad importa: necesitas participar activamente creando un espacio de revisión de calidad, definiendo estrategias y metas claras, asignando recursos, capacitando, sumandote a los equipos de mejora, revisando el progreso y creando formas de reconocer los avances. Se estima que deberías dedicar al menos el 10% de tu tiempo a actividades de calidad.",
+  "texto_nuevo": "Tu involucramiento directo en la calidad es el factor más importante para lograr una ventaja real. No basta con decir que la calidad importa: necesitas participar activamente creando un espacio de revisión de calidad, definiendo estrategias y metas claras, asignando recursos, capacitando, sumándote a los equipos de mejora que atacan los problemas crónicos propios de tu nivel de dirección, revisando el progreso y creando formas de reconocer los avances. Se estima que deberías dedicar al menos el 10% de tu tiempo a actividades de calidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9500",
+   "frase": "quality improvement teams that address chronic problems of an upper management nature"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita la participación de la dirección a los equipos que atacan problemas crónicos de su propio nivel; el resumen la abre a cualquier equipo de mejora.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-006-reduccion_de_tiempo_de_ciclo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "reduccion_de_tiempo_de_ciclo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión competitiva y de costos impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
+  "texto_nuevo": "El tiempo de ciclo es el tiempo total transcurrido desde el inicio hasta el fin de un proceso. La presión de los clientes, de los costos y de la competencia impulsa a las organizaciones a reducir este tiempo mediante diagnóstico de causas de demora y remedios específicos, siguiendo el proceso de mejora de calidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4662",
+   "frase": "Pressures from customers, increasing costs, and competitive forces are driving organizations"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres presiones y pone primero la de los clientes; el resumen la deja fuera de la lista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ },
+ {
+  "id": "final-e1-barrido2-007-producto_minimo_viable-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "producto_minimo_viable",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.",
+  "texto_nuevo": "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental, hasta que suficientes usuarios te digan que sí.",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "1631",
+   "frase": "iterate or pivot until an adequate number say “yes.”"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el límite de la iteración o el cambio de rumbo: seguir hasta que un número suficiente de usuarios diga que sí; sin ese criterio el paso no dice cuándo parar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-barrido2-008-bullseye_framework-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "bullseye_framework",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Lista los 19 canales de tracción posibles y evalúa cuáles podrían aplicar a tu negocio sin descartar ninguno por default.",
+  "texto_nuevo": "Lista los 19 canales de tracción posibles y piensa para cada uno al menos una idea concreta de cómo podría funcionar en tu negocio, sin descartar ninguno por default.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "392-396",
+   "frase": "You should be able to think of at least one idea for every channel."
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El anillo exterior pide pensar al menos una idea o estrategia para cada uno de los 19 canales sin descartar ninguno; 'evalúa cuáles podrían aplicar' pierde esa exigencia e invita a filtrar antes de tiempo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido2-009-punto_unico_contacto_proveedores-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "punto_unico_contacto_proveedores",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+  "texto_nuevo": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto reduce las ocasiones de tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+  "cita": {
+   "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+   "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+   "lineas": "3985-3989",
+   "frase": "to minimize the opportunities for under-the-table deals"
+  },
+  "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que canalizar la comunicación minimiza las ocasiones de tratos indebidos; el nodo afirma que los evita sin matiz.; Mismo defecto: el libro habla de minimizar oportunidades, no de evitar del todo; la propuesta del lector cambia además 'a veces' por 'siempre', cosa que no se acepta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+ }
+]

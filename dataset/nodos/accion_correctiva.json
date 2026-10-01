@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva (Esporádica vs Crónica)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
+  "resumen_teorico": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien; a menudo se resuelve con troubleshooting local, a veces con ayuda de un especialista, y se documenta de forma simple, por ejemplo con un proceso 8D. Su diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
   "pasos_accionables": [
     "Clasificar la no conformidad como esporádica o crónica según su recurrencia.",
     "Para casos esporádicos, hacer una autopsia forense del producto o proceso y comparar datos antes y después del problema.",
@@ -67,6 +67,22 @@
         "motivo": "Referencia de un nodo vivo a decision_aptitud_para_uso, deprecado; su superviviente es decision_aptitud_uso."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-barrido2-002-accion_correctiva-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien y se resuelve con troubleshooting local o proceso 8D, cuyo diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
+      "texto_nuevo": "Distingue dos tipos de no conformidad. La esporádica es un cambio aislado en un proceso que normalmente funciona bien; a menudo se resuelve con troubleshooting local, a veces con ayuda de un especialista, y se documenta de forma simple, por ejemplo con un proceso 8D. Su diagnóstico consiste en descubrir qué cambió mediante autopsia forense del producto o proceso, comparación de datos antes y después, y reconstrucción cronológica de eventos como turnos, mantenimiento o personal nuevo. El remedio suele ser revertir el cambio y restaurar el estado anterior conocido, un proceso más simple que la mejora continua. La crónica o repetidora es un desperdicio persistente que exige un proyecto formal de mejora de calidad con análisis de causa raíz o metodologías Six Sigma, porque no basta con volver atrás: hay que rediseñar la condición base del proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24495",
+        "frase": "local supervision is often able to identify what went wrong"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la supervisión local a menudo lo resuelve, a veces con un especialista, y que el 8D sirve para documentar; el nodo lo da por resuelto siempre y pone el 8D como vía de solución.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

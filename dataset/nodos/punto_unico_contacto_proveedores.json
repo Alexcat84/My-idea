@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Designa un único punto de contacto con proveedores",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+  "resumen_teorico": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto reduce las ocasiones de tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
   "pasos_accionables": [
     "Decide quién es la única persona autorizada para negociar precios y condiciones con cada proveedor, y quién la suple cuando no esté disponible.",
     "Avisa a tu equipo, familiares o socios que las conversaciones de negociación se remiten a esa persona.",
@@ -89,6 +89,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja también una persona de respaldo para cuando la responsable no está disponible.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido2-009-punto_unico_contacto_proveedores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto evita tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+      "texto_nuevo": "Si más de una persona en tu negocio habla con tus proveedores sin coordinarse, corres el riesgo de que cada uno diga algo distinto y de que alguien diga de pasada algo que perjudique tu compra. Aunque seas solo tú, esto también aplica si tienes un socio, un familiar que ayuda o un empleado que a veces contesta llamadas del proveedor. Define quién habla oficialmente de precios, plazos y condiciones, y pide a los demás que remitan cualquier conversación de negociación a esa persona. Esto reduce las ocasiones de tratos desiguales, promesas contradictorias y filtraciones de información que después se usan en tu contra al negociar.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "3985-3989",
+        "frase": "to minimize the opportunities for under-the-table deals"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que canalizar la comunicación minimiza las ocasiones de tratos indebidos; el nodo afirma que los evita sin matiz.; Mismo defecto: el libro habla de minimizar oportunidades, no de evitar del todo; la propuesta del lector cambia además 'a veces' por 'siempre', cosa que no se acepta.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

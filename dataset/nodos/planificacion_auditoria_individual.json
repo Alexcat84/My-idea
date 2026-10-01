@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planificación de una Auditoría Individual",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y la conformación del equipo auditor liderado por un auditor líder.",
+  "resumen_teorico": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y quién audita: una persona o un equipo, que suele tener un auditor líder.",
   "pasos_accionables": [
     "Verificar la legitimidad de la auditoría según el charter aprobado",
     "Identificar al cliente principal de la auditoría (responsable de la actividad auditada)",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Planifica cada Auditoría a Fondo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-002-planificacion_auditoria_individual-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y la conformación del equipo auditor liderado por un auditor líder.",
+      "texto_nuevo": "Las auditorías individuales siguen pasos definidos: planificación, reunión de apertura, ejecución, reporte, seguimiento de acción correctiva y cierre. Cuestiones de política clave incluyen la legitimidad (derecho a auditar derivado del charter), el enfoque en el cliente de la auditoría (quien es afectado por ella), y quién audita: una persona o un equipo, que suele tener un auditor líder.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10102",
+        "frase": "conducted by individuals or by a team. A team usually has a lead auditor"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que audita una persona o un equipo y que el equipo suele tener un auditor líder; el nodo lo da por siempre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

@@ -12,7 +12,7 @@
     "Establecer un proceso de verificación rutinaria de certificados de seguro de franquiciados",
     "Hacer revisar el manual de operaciones por un abogado especializado antes de su publicación"
   ],
-  "entregable_esperado": "Manual de operaciones y contrato de franquicia revisados legalmente que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
+  "entregable_esperado": "Manual de operaciones, contrato de franquicia y programas de entrenamiento redactados de forma coherente y revisados legalmente, que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
   "nodos_previos": [
     "cumplimiento_ftc_rule_436",
     "contratar_abogado_franquicias"
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Evita la Responsabilidad Vicaria",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-006-gestion_responsabilidad_vicaria-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manual de operaciones y contrato de franquicia revisados legalmente que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
+      "texto_nuevo": "Manual de operaciones, contrato de franquicia y programas de entrenamiento redactados de forma coherente y revisados legalmente, que establecen claramente la independencia del franquiciado, junto con política de seguro obligatorio implementada",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2327",
+        "frase": "franchise agreement, operations manual, and training programs are all properly and consistently written"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide que contrato, manual y programas de entrenamiento se redacten de forma coherente para fijar la relación; el entregable deja fuera el entrenamiento.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

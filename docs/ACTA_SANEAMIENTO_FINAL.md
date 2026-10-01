@@ -1193,6 +1193,13 @@ reclasificado y 37 rechazados. Las cifras están en `docs/auditoria_final/medida
   - En total, 30 lotes con trampa sin marca (`barrido2.py`, semilla 20271501).
   - En las condiciones de activación, una marca de certeza ("si nunca has…") describe cuándo aplica el nodo y no
     afirma nada contra el libro: no entran.
+  - **Resultado del barrido de certeza y vecindad:**
+    - Trampas: el primer lector cazó 29 de 30. En el lote 027 la trampa, una certeza endurecida, se le escapó también
+      al segundo lector. Queda anotado como fallo de detección de ese lote.
+    - Arbitraje: 9 paquetes. Tanda `final-e1-barrido2-01`: 26 correcciones en 26 nodos (25 ANADIDO, sobre todo
+      certezas endurecidas devueltas al matiz del libro, y 1 CONTRARIO), en 19 resúmenes, 6 pasos y 1 entregable.
+    - Verificación ciega: 3 paquetes, 3 de 3 trampas cazadas, 24 de 24 correcciones sostenidas. Las 2 restantes son
+      quitas puras, sin palabra nueva, y por diseño no se verifican.
 
 ### 11.3 Medida final: diseño fijado antes de sortear
 

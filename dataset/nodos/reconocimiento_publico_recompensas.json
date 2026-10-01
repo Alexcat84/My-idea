@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reconocimiento Público y Recompensas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+  "resumen_teorico": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos constantes en el tiempo, otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
   "pasos_accionables": [
     "Identificar comportamientos o logros específicos alineados con los objetivos estratégicos",
     "Organizar eventos públicos de reconocimiento con presencia de líderes",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Celebra los Logros en Público",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-006-reconocimiento_publico_recompensas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+      "texto_nuevo": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos constantes en el tiempo, otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "1626",
+        "frase": "if doing so is rewarding to the followers consistently and over time"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro hace depender la consolidación de que la recompensa sea constante en el tiempo; lo público solo amplifica el efecto, y el resumen omite esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

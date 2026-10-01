@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Seguro de Exportación (Carga y Crédito)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida o robo durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+  "resumen_teorico": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida, robo o demora durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
   "pasos_accionables": [
     "Determinar según términos de venta quién es responsable del seguro de carga",
     "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
@@ -41,5 +41,23 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-001-seguro_exportacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida o robo durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+      "texto_nuevo": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida, robo o demora durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3649",
+        "frase": "usually covered by cargo insurance against loss, damage, and delay in transit"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye la demora en tránsito entre lo que cubre el seguro de carga y el nodo la omite de la lista, lo que recorta la cobertura que el emprendedor debería esperar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

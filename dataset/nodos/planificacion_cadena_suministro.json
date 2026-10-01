@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planificación de Calidad de la Cadena de Suministro (Sourcing Process)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad histórica de compras, identificar commodities críticos, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+  "resumen_teorico": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad de compras histórica, actual y futura, identificar commodities de alto gasto y alta criticidad, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
   "pasos_accionables": [
     "Documentar la actividad histórica y futura de compras",
     "Identificar commodities de alto gasto y alta criticidad",
@@ -107,6 +107,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso del libro de traducir las necesidades del cliente en un proceso de sourcing que optimice el costo total.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido2-002-planificacion_cadena_suministro-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad histórica de compras, identificar commodities críticos, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+      "texto_nuevo": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad de compras histórica, actual y futura, identificar commodities de alto gasto y alta criticidad, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23781-23783",
+        "frase": "Document the organization's historic, current, and future procurement activity."
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro elige la commodity de alto gasto y alta criticidad a la vez; el nodo deja solo la criticidad y cambia el criterio.; El libro pide documentar la actividad de compras histórica, actual y futura; el nodo deja solo la histórica.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

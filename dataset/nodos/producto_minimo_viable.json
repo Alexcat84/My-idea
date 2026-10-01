@@ -11,7 +11,7 @@
     "Evita agregar funciones extra que no sean estrictamente necesarias para empezar a aprender, por importantes que parezcan; ante la duda, simplifica.",
     "Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.",
     "Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.",
-    "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental."
+    "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental, hasta que suficientes usuarios te digan que sí."
   ],
   "entregable_esperado": "Tienes tu primera versión del producto, funcional o simulada, lanzada a un grupo reducido de primeros usuarios (early adopters), con las métricas de su respuesta real registradas.",
   "nodos_previos": [
@@ -119,6 +119,23 @@
         "motivo": "Balas de plomo trata de responder a una amenaza competitiva existencial con trabajo duro. No tiene relacion con construir y probar un MVP."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-barrido2-007-producto_minimo_viable-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental.",
+      "texto_nuevo": "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental, hasta que suficientes usuarios te digan que sí.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1631",
+        "frase": "iterate or pivot until an adequate number say “yes.”"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el límite de la iteración o el cambio de rumbo: seguir hasta que un número suficiente de usuarios diga que sí; sin ese criterio el paso no dice cuándo parar.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Desafíos en la Implementación de IA (Calidad de Datos y Confianza)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, auditorías regulares, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+  "resumen_teorico": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, validación de datos, auditorías regulares, un equipo especializado que vigile a la IA en su primera etapa y corrija las entradas, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
   "pasos_accionables": [
     "Implementar prácticas de gobernanza de datos: validación, limpieza y auditorías periódicas",
     "Formar un equipo especializado que monitoree el desempeño de la IA en su etapa inicial de despliegue",
@@ -35,5 +35,23 @@
   "etiqueta_arbol": "Enfrenta los Retos de la IA",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido2-005-desafios_implementacion_ia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, auditorías regulares, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+      "texto_nuevo": "Adoptar IA exitosamente requiere abordar dos grandes retos: la calidad de los datos (garbage in, garbage out) y la confianza en las decisiones autónomas de la IA. Los modelos de deep learning suelen operar como 'cajas negras', generando desconfianza y riesgo de 'alucinaciones' (información inventada o recomendaciones absurdas). La solución pasa por gobernanza de datos rigurosa, validación de datos, auditorías regulares, un equipo especializado que vigile a la IA en su primera etapa y corrija las entradas, y el uso de modelos de IA explicable que equilibren transparencia y desempeño, definiendo qué decisiones puede tomar la IA sola y cuáles requieren intervención humana.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2309",
+        "frase": "robust data governance practices, data validation, and regular audits"
+      },
+      "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera gobernanza, validación de datos y auditorías, más equipos especializados que vigilan la primera etapa y corrigen las entradas; el resumen presenta la solución como cerrada y deja fuera dos remedios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }
