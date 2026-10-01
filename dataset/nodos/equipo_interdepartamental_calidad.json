@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Equipo Interdepartamental para Resolución Conjunta de Problemas de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El caso de Charlie Gordon demuestra que cuando cada departamento investiga sus problemas de forma aislada, tienden a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
+  "resumen_teorico": "Cuando cada departamento investiga sus problemas de forma aislada, tiende a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
   "pasos_accionables": [
     "Identificar a todas las áreas involucradas en la cadena que genera el defecto",
     "Convocar una reunión conjunta presentando datos objetivos, no acusaciones",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Une Áreas para Resolver Calidad",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-015-equipo_interdepartamental_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El caso de Charlie Gordon demuestra que cuando cada departamento investiga sus problemas de forma aislada, tienden a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
+      "texto_nuevo": "Cuando cada departamento investiga sus problemas de forma aislada, tiende a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1041",
+        "frase": "It is apparent that no one feels responsible for the defects that are occurring."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro y verificador ciego): El libro narra un caso ilustrativo, no demuestra una regla general, y nombrar al personaje delata la procedencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

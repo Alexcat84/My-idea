@@ -7,7 +7,7 @@
   "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, lo que puede darte ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
   "pasos_accionables": [
     "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
-    "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
+    "Compara costos, tiempos de entrega y accesibilidad del producto para tu comprador entre transporte aéreo, marítimo y multimodal.",
     "Reserva espacio con anticipación mediante un booking contract si tu carga es voluminosa.",
     "Verifica con el comprador el destino final de la mercancía, incluyendo zonas francas o puertos libres.",
     "Agrega las marcas de exportación requeridas a tu documentación de embarque.",
@@ -158,6 +158,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que esos factores may give an edge; el nodo la da por segura.; Mismo defecto; la frase final de la propuesta sobre ventas que crecen un 30 % no está en el libro y no se incorpora.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-013-seleccion_metodo_transporte_internacional-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
+      "texto_nuevo": "Compara costos, tiempos de entrega y accesibilidad del producto para tu comprador entre transporte aéreo, marítimo y multimodal.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3637",
+        "frase": "accessibility to the shipped product by the foreign buyer are all factors to consider"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da tres factores para elegir el método y el paso omite la accesibilidad del producto para el comprador.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

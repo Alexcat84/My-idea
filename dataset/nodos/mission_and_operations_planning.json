@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Planificación de Misión y Operaciones (M&OP)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificación de demanda por instalación, planificación de transporte, modelado del supply chain y simulación para elegir el mejor plan antes de ejecutarlo en el mundo real.",
+  "resumen_teorico": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos: definición de la misión (CONOPS), planificación de demanda por instalación, planificación de transporte, modelado y simulación del supply chain para elegir el mejor plan antes de ejecutarlo, e implementación con seguimiento, en la que el modelo se actualiza y se sigue simulando.",
   "pasos_accionables": [
     "Definir el concepto de operaciones (CONOPS): origen de suministros, instalaciones y necesidades",
     "Realizar planificación de demanda por instalación según población afectada",
@@ -12,7 +12,7 @@
     "Modelar la cadena de suministro propuesta con los datos de demanda y transporte",
     "Simular el modelo para detectar problemas y elegir el plan de mejor desempeño antes de ejecutarlo"
   ],
-  "entregable_esperado": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo, simulación) validado antes de su ejecución",
+  "entregable_esperado": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo y simulación, implementación con seguimiento) validado antes de su ejecución",
   "nodos_previos": [
     "cadena_suministro_respuesta_desastres"
   ],
@@ -54,6 +54,38 @@
         "evidencia": "D-30: El M&OP para cadenas de respuesta a desastres con CONOPS es planificación logística muy especializada que casi ningún emprendedor necesita. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "final-e1-barrido-014-mission_and_operations_planning-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificación de demanda por instalación, planificación de transporte, modelado del supply chain y simulación para elegir el mejor plan antes de ejecutarlo en el mundo real.",
+      "texto_nuevo": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos: definición de la misión (CONOPS), planificación de demanda por instalación, planificación de transporte, modelado y simulación del supply chain para elegir el mejor plan antes de ejecutarlo, e implementación con seguimiento, en la que el modelo se actualiza y se sigue simulando.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5741",
+        "frase": "In step 5, implement and monitor, supply chain models of the implemented supply chains"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro modelar y simular forman un solo paso y el quinto es implementar y monitorear con simulación continua; el resumen pierde ese paso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-014-mission_and_operations_planning-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo, simulación) validado antes de su ejecución",
+      "texto_nuevo": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo y simulación, implementación con seguimiento) validado antes de su ejecución",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5741",
+        "frase": "In step 5, implement and monitor, supply chain models of the implemented supply chains"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de cinco pasos separa modelo y simulación, que el libro junta en el paso 4, y omite el paso 5 de implementar y monitorear.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

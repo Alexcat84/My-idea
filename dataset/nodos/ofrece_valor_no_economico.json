@@ -4,10 +4,10 @@
   "dominio": "compras",
   "titulo_concepto": "Ofrece valor no económico cuando el precio se estanca",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+  "resumen_teorico": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino, si la cifra quedó anclada alta, ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio; o, si quedó anclada baja, pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otra cosa, además del precio, podría darte la otra parte para que ese precio te compense. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
   "pasos_accionables": [
-    "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho.",
-    "Cuando el precio se estanque, pregunta qué otro factor haría que el trato funcione para el otro.",
+    "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho y qué elementos no económicos de valor tiene la otra parte.",
+    "Cuando el precio se estanque, pregunta qué otra cosa podría darte el otro para que ese precio te compense.",
     "Propón dejar el precio a un lado por un momento y hablar de esos otros elementos.",
     "Anota qué elementos no monetarios pides tú también a cambio, para no regalar valor sin recibir nada."
   ],
@@ -45,6 +45,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea el pivote en dos sentidos, ofrecer lo que al otro le importa o pedir algo no económico más importante para ti, y prepara la lista de lo no económico que tiene la otra parte; el resumen solo trae ofrecer.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-013-ofrece_valor_no_economico-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando el precio se estanque, pregunta qué otro factor haría que el trato funcione para el otro.",
+      "texto_nuevo": "Cuando el precio se estanque, pregunta qué otra cosa podría darte el otro para que ese precio te compense.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4126",
+        "frase": "¿Qué otra cosa podrías ofrecer para que ese precio terminara resultando bueno para mí?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): La pregunta del libro busca qué más puede darte el otro para que el precio te sea bueno a ti; el paso invierte el beneficiario.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-013-ofrece_valor_no_economico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+      "texto_nuevo": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino, si la cifra quedó anclada alta, ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio; o, si quedó anclada baja, pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otra cosa, además del precio, podría darte la otra parte para que ese precio te compense. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2695, 4126",
+        "frase": "¿Qué otra cosa podrías ofrecer para que ese precio terminara resultando bueno para mí?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona las opciones: ofrecer algo barato para ti si la cifra quedó anclada alta, pedir algo no económico si quedó anclada baja.; La pregunta del libro busca qué más puede darte el otro para que el precio te convenga a ti, no qué haría funcionar el trato para él.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-013-ofrece_valor_no_economico-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho.",
+      "texto_nuevo": "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho y qué elementos no económicos de valor tiene la otra parte.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "5424",
+        "frase": "Prepara una lista con los elementos no económicos de valor que posee tu interlocutor."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La preparación del libro es listar los elementos no económicos de valor que tiene el otro; el paso deja caer esa parte.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

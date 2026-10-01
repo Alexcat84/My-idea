@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Experimentación Iterativa en Mercados Físicos/Informales",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Ilustrado por Village Laundry Service en India: se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez/calidad), antes de construir la versión final del producto/servicio.",
+  "resumen_teorico": "Se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez), antes de construir la versión final del producto/servicio.",
   "pasos_accionables": [
     "Diseñar un experimento físico de bajo costo que simule el servicio central sin toda la infraestructura",
     "Probar en distintas ubicaciones/formatos para observar comportamiento y objeciones de los clientes",
@@ -45,6 +45,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro halla pago por planchado y por rapidez, no por calidad extra.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-015-experimentacion_iterativa_mercado_fisico-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ilustrado por Village Laundry Service en India: se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez/calidad), antes de construir la versión final del producto/servicio.",
+      "texto_nuevo": "Se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez), antes de construir la versión final del producto/servicio.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "783",
+        "frase": "willing to pay double the price to get their laundry back in four hours"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo registra disposición a pagar el doble por la rapidez; pagar más por calidad no aparece.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

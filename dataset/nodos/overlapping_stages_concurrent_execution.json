@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Mapear las etapas actuales del proyecto y detectar oportunidades de superposición",
     "Evaluar la información disponible en términos de confiabilidad (basada en hechos) y estabilidad (poco probable que cambie)",
-    "Adelantar actividades de largo plazo de entrega cuando la información sea suficientemente estable",
+    "Adelantar actividades de largo plazo de entrega cuando la información sea confiable y suficientemente estable, y el costo de retraso supere claramente el costo y la probabilidad de equivocarse",
     "Calcular el Costo de Retraso (cost of delay) usando los 5 componentes: ingreso diferido, ventana de oportunidad perdida, costos extra de desarrollo, pérdida de ventaja competitiva, otros costos",
     "Comparar el costo de retraso (días ahorrados x costo diario de retraso) vs. costo de estar equivocado x probabilidad de error",
     "Avanzar con la superposición solo si el costo de retraso supera claramente el riesgo calculado"
@@ -81,6 +81,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El 27.6 % es el ahorro de un ejemplo ilustrativo; el libro no lo da como techo general de reducción.; Mismo defecto: convertir la cifra del ejemplo en un tope general es un resultado que el libro no afirma; basta con quitarla.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-016-overlapping_stages_concurrent_execution-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adelantar actividades de largo plazo de entrega cuando la información sea suficientemente estable",
+      "texto_nuevo": "Adelantar actividades de largo plazo de entrega cuando la información sea confiable y suficientemente estable, y el costo de retraso supere claramente el costo y la probabilidad de equivocarse",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3896, 4008",
+        "frase": "If the cost of delay far exceeds the cost and probabilities of being wrong"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige información confiable además de estable, y adelanta lo de largo plazo de entrega solo si el costo de retraso supera con creces el riesgo de equivocarse.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

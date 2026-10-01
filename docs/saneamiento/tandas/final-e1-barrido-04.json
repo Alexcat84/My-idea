@@ -1,0 +1,463 @@
+[
+ {
+  "id": "final-e1-barrido-013-servicio_postventa_internacional-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "servicio_postventa_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Determinar el nivel de servicio postventa requerido según el tipo de producto",
+  "texto_nuevo": "Determinar el nivel de servicio postventa requerido según el tipo, la calidad y el precio del producto y el canal de distribución",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4741",
+   "frase": "Service varies by the product type, the quality of the product, the price"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro hace variar el servicio por tipo, calidad y precio del producto y por el canal; el paso deja solo el tipo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-013-servicio_postventa_internacional-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "servicio_postventa_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Definir el modelo de entrega de servicio: retorno del producto a EE.UU., uso de socio local, filial propia, o distribuidor",
+  "texto_nuevo": "Definir el modelo de entrega de servicio: retorno del producto a EE.UU., uso de socio local o distribuidor, servicio en sitio si vendes directo al usuario final, o filial propia si tu actividad en esa región crece a un nivel considerable",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4771-4773",
+   "frase": "If your export activity in a particular region grows to a considerable level"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye el servicio en sitio para ventas directas al usuario final y condiciona la filial propia a que la actividad en la región crezca mucho.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-013-servicio_postventa_internacional-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "servicio_postventa_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar la capacidad de servicio de distribuidores potenciales (instalaciones, personal capacitado, experiencia)",
+  "texto_nuevo": "Evaluar la capacidad de servicio de distribuidores potenciales (instalaciones, equipo de servicio, personal capacitado, experiencia con productos similares)",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4765",
+   "frase": "about the types, models, and age of existing service equipment"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La evaluación del libro incluye el equipo de servicio existente y la experiencia con productos similares; el paso recorta la lista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-013-seleccion_metodo_transporte_internacional-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "seleccion_metodo_transporte_internacional",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Compara costos y tiempos de entrega entre transporte aéreo, marítimo y multimodal.",
+  "texto_nuevo": "Compara costos, tiempos de entrega y accesibilidad del producto para tu comprador entre transporte aéreo, marítimo y multimodal.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3637",
+   "frase": "accessibility to the shipped product by the foreign buyer are all factors to consider"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da tres factores para elegir el método y el paso omite la accesibilidad del producto para el comprador.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-013-four_actions_framework_lado_cliente-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "four_actions_framework_lado_cliente",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+  "texto_nuevo": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) que parte del lado del cliente del Business Model Canvas: te haces las cuatro preguntas sobre cada bloque de ese lado, Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "3951, 3985",
+   "frase": "Ask yourself the Four Actions Framework questions about each business model Building Block"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro separa el punto de partida del cliente, que hace las cuatro preguntas sobre los bloques del lado del cliente, del punto de partida de la Propuesta de Valor; el nodo los confunde.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-013-preparate_para_marcharte_del_trato-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "preparate_para_marcharte_del_trato",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Define antes de negociar cuál es el mínimo que aceptarías y cuál el punto en que te retiras.",
+  "texto_nuevo": "Define antes de negociar cuál es el mínimo que aceptarías, cuál el punto en que te retiras y cuál el mejor resultado posible.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "5237",
+   "frase": "deberían pensar en los posibles resultados de los extremos: el mejor y el peor"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide preparar los dos extremos, lo inaceptable y el mejor resultado posible, y advierte contra quedarse solo en el mínimo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-013-ofrece_valor_no_economico-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "ofrece_valor_no_economico",
+  "campo": "pasos_accionables",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando el precio se estanque, pregunta qué otro factor haría que el trato funcione para el otro.",
+  "texto_nuevo": "Cuando el precio se estanque, pregunta qué otra cosa podría darte el otro para que ese precio te compense.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "4126",
+   "frase": "¿Qué otra cosa podrías ofrecer para que ese precio terminara resultando bueno para mí?"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): La pregunta del libro busca qué más puede darte el otro para que el precio te sea bueno a ti; el paso invierte el beneficiario.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-013-ofrece_valor_no_economico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ofrece_valor_no_economico",
+  "campo": "resumen_teorico",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio, o pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otro factor, además del precio, haría que el trato funcione para la otra parte. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+  "texto_nuevo": "Cuando la negociación se estanca en el precio, muchas veces la solución no es bajar el número sino, si la cifra quedó anclada alta, ofrecer algo que resuelva la preocupación real del otro sin costarte tanto dinero: un plazo de entrega garantizado, exclusividad temporal, condiciones de pago más cómodas o un extra de servicio; o, si quedó anclada baja, pedir algo no económico que sea más importante para ti que para el otro. Antes de la conversación conviene tener claro qué puedes ofrecer que no sea dinero y qué elementos no económicos de valor tiene la otra parte, y durante la negociación preguntar abiertamente qué otra cosa, además del precio, podría darte la otra parte para que ese precio te compense. Este movimiento saca la discusión del regateo puro de cifras y abre espacio para encontrar una solución que convenga a ambos, sin que tú te quedes sin margen ni el otro se sienta perdedor.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "2695, 4126",
+   "frase": "¿Qué otra cosa podrías ofrecer para que ese precio terminara resultando bueno para mí?"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona las opciones: ofrecer algo barato para ti si la cifra quedó anclada alta, pedir algo no económico si quedó anclada baja.; La pregunta del libro busca qué más puede darte el otro para que el precio te convenga a ti, no qué haría funcionar el trato para él.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-013-ofrece_valor_no_economico-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "ofrece_valor_no_economico",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho.",
+  "texto_nuevo": "Antes de negociar, lista qué cosas no monetarias podrías ofrecer sin que te cuesten mucho y qué elementos no económicos de valor tiene la otra parte.",
+  "cita": {
+   "libro": "Chris Voss, Rompe la barrera del no",
+   "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+   "lineas": "5424",
+   "frase": "Prepara una lista con los elementos no económicos de valor que posee tu interlocutor."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La preparación del libro es listar los elementos no económicos de valor que tiene el otro; el paso deja caer esa parte.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-014-sistema_triage_x_gray_p_list-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_triage_x_gray_p_list",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Sustituir ingredientes de la Lista X por alternativas de la Lista P cuando sea posible, manteniendo el mismo diseño de producto.",
+  "texto_nuevo": "Eliminar los ingredientes de la Lista X y, si hace falta reemplazarlos y es posible, usar alternativas de la Lista P, manteniendo el mismo diseño de producto.",
+  "cita": {
+   "libro": "Cradle to Cradle - Michael Braungart",
+   "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+   "lineas": "972",
+   "frase": "highest priorities for a complete phaseout and, if necessary and possible, replacement"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la Lista X como prioridad de eliminación completa y solo reemplazo si hace falta y es posible; el paso lo reduce todo a sustituir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-014-mission_and_operations_planning-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "mission_and_operations_planning",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos que comienza con la definición de la misión (CONOPS), sigue con planificación de demanda por instalación, planificación de transporte, modelado del supply chain y simulación para elegir el mejor plan antes de ejecutarlo en el mundo real.",
+  "texto_nuevo": "El M&OP es una adaptación del proceso comercial de Sales and Operations Planning (S&OP) para cadenas de suministro ad hoc como las de respuesta a desastres. Es un proceso de cinco pasos: definición de la misión (CONOPS), planificación de demanda por instalación, planificación de transporte, modelado y simulación del supply chain para elegir el mejor plan antes de ejecutarlo, e implementación con seguimiento, en la que el modelo se actualiza y se sigue simulando.",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "5741",
+   "frase": "In step 5, implement and monitor, supply chain models of the implemented supply chains"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro modelar y simular forman un solo paso y el quinto es implementar y monitorear con simulación continua; el resumen pierde ese paso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-014-mission_and_operations_planning-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "mission_and_operations_planning",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo, simulación) validado antes de su ejecución",
+  "texto_nuevo": "Plan de operaciones de cinco pasos (CONOPS, demanda, transporte, modelo y simulación, implementación con seguimiento) validado antes de su ejecución",
+  "cita": {
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "5741",
+   "frase": "In step 5, implement and monitor, supply chain models of the implemented supply chains"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de cinco pasos separa modelo y simulación, que el libro junta en el paso 4, y omite el paso 5 de implementar y monitorear.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-015-entrenamiento_supervisores_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "entrenamiento_supervisores_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu actitud y tus estándares se transmiten directamente a las personas que trabajan contigo, por eso eres la clave para lograr las metas de mejora. Antes de pedirles calidad necesitas entenderla tú mismo, con un entrenamiento estructurado por etapas, no solo con una charla general. Primero domina el sistema de medición de calidad y los costos de la no calidad, luego el programa de Cero Defectos y el método para eliminar las causas de los errores, y después vuelve a hacer todo el entrenamiento. Así podrás responder con seguridad las preguntas de quienes te ayudan y evitar creer que entiendes el concepto de calidad sin dominarlo realmente en la práctica antes de transmitírselo.",
+  "texto_nuevo": "Tu actitud y tus estándares se transmiten directamente a las personas que trabajan contigo, por eso eres la clave para lograr las metas de mejora. Antes de pedirles calidad necesitas entenderla tú mismo, con un entrenamiento estructurado por etapas, no solo con una charla general. Primero domina el sistema de medición de calidad, los costos de la no calidad, el sistema de acciones correctivas y el propósito de la etapa de conciencia de calidad, luego el programa de Cero Defectos y el método para eliminar las causas de los errores, y después vuelve a hacer todo el entrenamiento. Así podrás responder con seguridad las preguntas de quienes te ayudan y evitar creer que entiendes el concepto de calidad sin dominarlo realmente en la práctica antes de transmitírselo.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3093-3095",
+   "frase": "the corrective actions system, and the purpose of the quality awareness action"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La primera etapa del libro cubre cuatro temas y el resumen solo nombra dos, dejando fuera las acciones correctivas.; Mismo defecto: la enumeración de la primera etapa queda en dos de cuatro temas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-015-entrenamiento_supervisores_calidad-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "entrenamiento_supervisores_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Dedica al menos 6 horas a estudiar el sistema de medición de calidad, los costos de calidad y las acciones correctivas al iniciar la etapa de conciencia de calidad.",
+  "texto_nuevo": "Dedica al menos 6 horas a estudiar el sistema de medición de calidad, los costos de calidad, las acciones correctivas y el propósito de la etapa de conciencia de calidad al iniciar la etapa de conciencia de calidad.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3093-3095",
+   "frase": "the corrective actions system, and the purpose of the quality awareness action"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La instrucción inicial del libro incluye un cuarto tema, el propósito de la etapa de conciencia, que el paso omite.; Mismo defecto: falta el cuarto tema de la enumeración del libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-015-equipo_interdepartamental_calidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "equipo_interdepartamental_calidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El caso de Charlie Gordon demuestra que cuando cada departamento investiga sus problemas de forma aislada, tienden a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
+  "texto_nuevo": "Cuando cada departamento investiga sus problemas de forma aislada, tiende a atribuir la culpa a otras áreas sin resolver nada. La solución efectiva surge cuando el responsable asume la propiedad del problema y convoca a un equipo con representantes de todas las áreas implicadas (producción, calidad, compras, ingeniería) para analizar los datos juntos, sin buscar culpables, y generar acciones correctivas colaborativas.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1041",
+   "frase": "It is apparent that no one feels responsible for the defects that are occurring."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro y verificador ciego): El libro narra un caso ilustrativo, no demuestra una regla general, y nombrar al personaje delata la procedencia.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-015-experimentacion_iterativa_mercado_fisico-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "experimentacion_iterativa_mercado_fisico",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Ilustrado por Village Laundry Service en India: se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez/calidad), antes de construir la versión final del producto/servicio.",
+  "texto_nuevo": "Se puede validar un modelo de negocio con experimentos físicos de muy bajo costo (ej. una lavadora montada en un camión) para probar si la gente pagaría por el servicio, iterando rápidamente en ubicación, formato y oferta según el feedback y comportamiento observado (desconfianza, disposición a pagar más por rapidez), antes de construir la versión final del producto/servicio.",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "783",
+   "frase": "willing to pay double the price to get their laundry back in four hours"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo registra disposición a pagar el doble por la rapidez; pagar más por calidad no aparece.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-016-asset_deal_vs_stock_deal-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "asset_deal_vs_stock_deal",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, los directivos y consejeros pueden asumir responsabilidad personal",
+  "texto_nuevo": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, si hay acreedores impagos y la venta de activos no es en su mejor interés, los directivos y consejeros pueden asumir responsabilidad personal",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4046",
+   "frase": "can't sell its assets unless it is in the best interests of the creditors"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la condición del libro: la responsabilidad personal surge si hay acreedores impagos y la venta de activos no es en su mejor interés.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-016-overlapping_stages_concurrent_execution-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "overlapping_stages_concurrent_execution",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Adelantar actividades de largo plazo de entrega cuando la información sea suficientemente estable",
+  "texto_nuevo": "Adelantar actividades de largo plazo de entrega cuando la información sea confiable y suficientemente estable, y el costo de retraso supere claramente el costo y la probabilidad de equivocarse",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "3896, 4008",
+   "frase": "If the cost of delay far exceeds the cost and probabilities of being wrong"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige información confiable además de estable, y adelanta lo de largo plazo de entrega solo si el costo de retraso supera con creces el riesgo de equivocarse.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-013-plantea_oferta_como_rango_o_cifra_precisa-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "plantea_oferta_como_rango_o_cifra_precisa",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Practica decir el rango o la cifra en voz alta antes de la reunión para que suene natural, no improvisado.",
+  "texto_nuevo": "Practica decir el rango o la cifra en voz alta antes de la reunión para que suene natural, no improvisado.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro no aconseja ensayar la cifra en voz alta en el pasaje del rango ni en el de los números exactos; el índice 2 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-014-manufactura_aditiva_bajo_demanda-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "manufactura_aditiva_bajo_demanda",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Medir el impacto en costos de almacenamiento y nivel de servicio tras la implementación",
+  "texto_nuevo": "Medir el impacto en costos de almacenamiento y nivel de servicio tras la implementación",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe la oportunidad de bajar costos y subir el servicio, no un paso de medición; consejo útil que no afirma hechos y su índice no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-015-entrenamiento_supervisores_calidad-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "entrenamiento_supervisores_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Verifica que cada persona refuerce la formación en su área de responsabilidad.",
+  "texto_nuevo": "Verifica que cada persona refuerce la formación en su área de responsabilidad.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro no pide verificar que cada persona refuerce la formación en su área; la tercera etapa es repetir el entrenamiento."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-barrido-015-five_whys_inversion_proporcional-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "five_whys_inversion_proporcional",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones",
+  "texto_nuevo": "Revisar después de un tiempo si el problema se repitió para validar la efectividad de las correcciones",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro no programa una revisión posterior; solo dice que si el problema reaparece se vuelve a aplicar la técnica."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-015-evitar_paralisis_por_analisis-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "evitar_paralisis_por_analisis",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Establecer un límite de tiempo/alcance para la fase de análisis antes de pasar a construir un MVP",
+  "texto_nuevo": "Establecer un límite de tiempo/alcance para la fase de análisis antes de pasar a construir un MVP",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro responde cuándo dejar de analizar con el concepto de MVP; un límite de tiempo o alcance no lo da, aunque no lo contradice."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-016-antidilution_weighted_average_broad_narrow-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "antidilution_weighted_average_broad_narrow",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Calcular el impacto potencial de dilución bajo cada escenario antes de firmar",
+  "texto_nuevo": "Calcular el impacto potencial de dilución bajo cada escenario antes de firmar",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro pide acordar la misma definición de CSO, pero no aconseja calcular el impacto bajo cada escenario antes de firmar; es consejo de la casa sin afirmar un hecho."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-016-automatic_conversion-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "automatic_conversion",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.",
+  "texto_nuevo": "Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro pide umbrales bajos e iguales entre series, pero no aconseja investigar estándares de mercado antes de negociar; es consejo de la casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-016-breakup_fee_evaluation-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "breakup_fee_evaluation",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo",
+  "texto_nuevo": "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El pasaje sobre la comisión por cancelación no aconseja consultar a un asesor legal; es consejo de la casa sin afirmar un hecho."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-016-pruning_portafolio-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "pruning_portafolio",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Medir el impacto en tiempo-al-mercado tras la poda",
+  "texto_nuevo": "Medir el impacto en tiempo-al-mercado tras la poda",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro narra un ejemplo en que el tiempo al mercado bajó a la mitad, pero no aconseja medirlo tras la poda; es consejo de la casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ }
+]

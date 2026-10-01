@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Realizar un inventario completo de todos los materiales y sustancias usadas en la fabricación y uso del producto.",
     "Clasificar cada sustancia en Lista X (eliminar), Lista Gris (uso condicionado y gestionado) o Lista P (preferida).",
-    "Sustituir ingredientes de la Lista X por alternativas de la Lista P cuando sea posible, manteniendo el mismo diseño de producto.",
+    "Eliminar los ingredientes de la Lista X y, si hace falta reemplazarlos y es posible, usar alternativas de la Lista P, manteniendo el mismo diseño de producto.",
     "Documentar sustancias en Lista Gris con plan de gestión (ej. propiedad retenida por el fabricante como en modelo de servicio)."
   ],
   "entregable_esperado": "Documento de clasificación (triaje) de todas las sustancias del producto en listas X, Gris y P, con plan de sustitución inicial.",
@@ -58,6 +58,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Además de perder el teratógeno, 'daño ambiental' sustituye la toxicidad para organismos acuáticos o del suelo y el agotamiento de la capa de ozono que el libro enumera.; La lista de criterios de la Lista P pierde el efecto teratógeno que el libro enumera.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-014-sistema_triage_x_gray_p_list-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sustituir ingredientes de la Lista X por alternativas de la Lista P cuando sea posible, manteniendo el mismo diseño de producto.",
+      "texto_nuevo": "Eliminar los ingredientes de la Lista X y, si hace falta reemplazarlos y es posible, usar alternativas de la Lista P, manteniendo el mismo diseño de producto.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "972",
+        "frase": "highest priorities for a complete phaseout and, if necessary and possible, replacement"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la Lista X como prioridad de eliminación completa y solo reemplazo si hace falta y es posible; el paso lo reduce todo a sustituir.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

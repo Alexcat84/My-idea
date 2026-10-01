@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "En un asset deal, el comprador adquiere solo activos específicos y evita ciertas responsabilidades, dejando una entidad remanente (cascarón corporativo) que el vendedor debe liquidar con el tiempo. En un stock deal, el comprador adquiere la totalidad de la empresa, que desaparece completamente en la estructura del comprador. Los vendedores generalmente prefieren stock deals; los compradores prefieren asset deals, especialmente en épocas económicas inciertas.",
   "pasos_accionables": [
-    "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, los directivos y consejeros pueden asumir responsabilidad personal",
+    "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, si hay acreedores impagos y la venta de activos no es en su mejor interés, los directivos y consejeros pueden asumir responsabilidad personal",
     "Negociar por un stock deal siempre que sea posible, ya que puede configurarse para dar al comprador una protección funcionalmente equivalente con muchas menos complicaciones para el vendedor",
     "Evaluar el costo y tiempo de liquidar la entidad remanente si se acepta un asset deal",
     "Consultar con asesores fiscales el impacto de cada estructura en la carga impositiva"
@@ -75,6 +75,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que con esas condiciones el asset deal puede ser muy perjudicial y que cerca de la insolvencia los directivos pueden responder en lo personal; el paso pierde esa consecuencia.; Mismo defecto: se pierde la responsabilidad personal de los directivos cerca de la insolvencia, que da peso a la comprobación. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-016-asset_deal_vs_stock_deal-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, los directivos y consejeros pueden asumir responsabilidad personal",
+      "texto_nuevo": "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, si hay acreedores impagos y la venta de activos no es en su mejor interés, los directivos y consejeros pueden asumir responsabilidad personal",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4046",
+        "frase": "can't sell its assets unless it is in the best interests of the creditors"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la condición del libro: la responsabilidad personal surge si hay acreedores impagos y la venta de activos no es en su mejor interés.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

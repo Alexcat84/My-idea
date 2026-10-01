@@ -25,5 +25,22 @@
   "etiqueta_arbol": "Convierte tus Acciones al Salir",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-016-automatic_conversion-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.",
+      "texto_nuevo": "Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro pide umbrales bajos e iguales entre series, pero no aconseja investigar estándares de mercado antes de negociar; es consejo de la casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

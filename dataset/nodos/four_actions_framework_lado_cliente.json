@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Four Actions Framework: Impacto en el Cliente",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+  "resumen_teorico": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) que parte del lado del cliente del Business Model Canvas: te haces las cuatro preguntas sobre cada bloque de ese lado, Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
   "pasos_accionables": [
     "Para cada bloque (Canales, Relaciones, Ingresos) pregunta qué elementos eliminar, reducir, aumentar o crear",
     "Identifica qué nuevos Segmentos de Clientes podrían atenderse o cuáles reducir",
@@ -83,6 +83,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Omite las Fuentes de Ingresos, uno de los tres bloques del lado del cliente que el libro manda revisar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-013-four_actions_framework_lado_cliente-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) para analizar el impacto de cambios en la Propuesta de Valor sobre los bloques del lado del cliente en el Business Model Canvas: Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+      "texto_nuevo": "Extensión del Four Actions Framework (eliminar, reducir, aumentar, crear) que parte del lado del cliente del Business Model Canvas: te haces las cuatro preguntas sobre cada bloque de ese lado, Canales, Relaciones con Clientes y Fuentes de Ingresos. Permite analizar qué pasa en el lado de los costos cuando eliminas, reduces, aumentas o creas elementos del lado del valor.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "3951, 3985",
+        "frase": "Ask yourself the Four Actions Framework questions about each business model Building Block"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro separa el punto de partida del cliente, que hace las cuatro preguntas sobre los bloques del lado del cliente, del punto de partida de la Propuesta de Valor; el nodo los confunde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
