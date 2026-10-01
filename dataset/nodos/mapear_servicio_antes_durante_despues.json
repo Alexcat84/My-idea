@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Mapear el servicio antes, durante y después de la entrega",
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
-  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+  "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Revisa por separado tres momentos: antes de la compra, tu política de servicio escrita, qué tan fácil es contactarte, un solo punto de contacto para pedidos, cómo te organizas, cómo pide el cliente, los topes de tamaño de pedido y tu flexibilidad; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, los repuestos, el tiempo de respuesta, la facturación y su exactitud, el rastreo y la garantía, las devoluciones, las quejas y los reclamos. El envío es el momento que más se asocia con la logística, pero los otros dos también son parte del servicio. Mapearlos, aunque sea de forma simple, te deja ver dónde tienes un proceso claro y dónde improvisas cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
   "pasos_accionables": [
     "Escribe qué pasa antes de que el cliente compre: qué política escrita ve, qué tan fácil es contactarte y si hay un solo punto de contacto, cómo te organizas, cómo pide, qué topes de tamaño de pedido pones y qué tan flexible eres.",
     "Escribe qué pasa durante el envío: plazo, preparación del pedido, disponibilidad del producto, opciones de entrega, tiempo y confiabilidad de la entrega, pedido completo, estado en que llega y seguimiento del pedido.",
@@ -211,6 +211,22 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso recorta la lista posterior del libro: faltan repuestos, tiempo de respuesta, facturación y su exactitud, rastreo y quejas.",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-fuera-final-g02-mapear_servicio_antes_durante_despues-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+      "texto_nuevo": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Revisa por separado tres momentos: antes de la compra, tu política de servicio escrita, qué tan fácil es contactarte, un solo punto de contacto para pedidos, cómo te organizas, cómo pide el cliente, los topes de tamaño de pedido y tu flexibilidad; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, los repuestos, el tiempo de respuesta, la facturación y su exactitud, el rastreo y la garantía, las devoluciones, las quejas y los reclamos. El envío es el momento que más se asocia con la logística, pero los otros dos también son parte del servicio. Mapearlos, aunque sea de forma simple, te deja ver dónde tienes un proceso claro y dónde improvisas cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2483-2491",
+        "frase": "availability of spares, call-out time, invoicing procedures, invoicing accuracy"
+      },
+      "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]

@@ -12,7 +12,7 @@
     "Generar conciencia de calidad en todos los que trabajan contigo",
     "Aplicar acción correctiva de forma sistemática cuando detectes fallas",
     "Planificar y llevar a cabo un Día de Cero Defectos",
-    "Fijar metas, eliminar las causas de los errores, reconocer los logros, reunir con regularidad a quienes llevan la calidad para comunicarse entre sí y repetir el ciclo; a quienes coordinan equipos, entrenarlos antes de poner en marcha los pasos, para que sepan explicar cada uno a su gente",
+    "Antes de poner en marcha los pasos, dar una orientación formal a todos los que supervisan o coordinan a otros, de modo que cada uno pueda explicar cualquiera de ellos a quienes tiene a cargo; además, fijar metas, eliminar las causas de los errores, reconocer los logros, reunir con regularidad a quienes llevan la calidad para comunicarse entre sí y repetir el ciclo",
     "Establece medidas de calidad en todas las áreas, incluidas las que no son de producción, y pide que el costo de la calidad lo calcule quien lleve tus números, para que la cifra quede libre de sesgos."
   ],
   "entregable_esperado": "Plan de implementación de los 14 pasos documentado con responsables y cronograma",
@@ -182,6 +182,23 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el cálculo del costo de la calidad debe hacerlo quien lleva las cuentas, precisamente para quitarle cualquier sesgo; convertirlo en un simple apoyo pierde esa condición y su razón.",
       "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-fuera-final-g01-programa_mejora_calidad_14_pasos-pasos_accionables-6",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Fijar metas, eliminar las causas de los errores, reconocer los logros, reunir con regularidad a quienes llevan la calidad para comunicarse entre sí y repetir el ciclo; a quienes coordinan equipos, entrenarlos antes de poner en marcha los pasos, para que sepan explicar cada uno a su gente",
+      "texto_nuevo": "Antes de poner en marcha los pasos, dar una orientación formal a todos los que supervisan o coordinan a otros, de modo que cada uno pueda explicar cualquiera de ellos a quienes tiene a cargo; además, fijar metas, eliminar las causas de los errores, reconocer los logros, reunir con regularidad a quienes llevan la calidad para comunicarse entre sí y repetir el ciclo",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1629",
+        "frase": "should be conducted prior to implementation of all the steps"
+      },
+      "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],

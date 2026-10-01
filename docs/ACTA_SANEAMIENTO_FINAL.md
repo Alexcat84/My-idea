@@ -979,3 +979,74 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   - `diseno_estructura_recompensas_roles`, `reevolucion_industrial`, `desarrollo_expertos_capaces` y
     `sesgo_retrospectivo_hindsight_2`.
 
+
+### 9.10 Etapa 1 CERRADA con riesgo residual declarado (30 sep 2026)
+
+**Barridos de cierre (9.9) terminados:** 176 lotes y 3.873 elementos leídos contra su libro en 1.803 nodos, en 14
+oleadas cerradas de como mucho 20 agentes, todo en Opus. Tandas `final-e1-barrido-01` a `-12`.
+
+**Lo que encontraron y se corrigió.** El árbitro confirmó defecto en 360 elementos (9,3 % de lo leído). Por clase,
+contando la más grave de cada elemento:
+
+| Clase | Elementos | Umbral R7 |
+|---|---|---|
+| Contrario | 8 | 0 |
+| Invención dura | 28 | 0 |
+| Paso sin marca | 101 | 0,1 por nodo |
+| Certeza endurecida | 34 | 0,2 por nodo (con matiz) |
+| Matiz | 189 | 0,2 por nodo (con certeza) |
+
+- **Aplicado:** 343 correcciones en 301 nodos:
+  - 8 por contrario;
+  - 236 añadidos quitados o devueltos al sentido del libro;
+  - 99 constancias CASA de pasos de la casa, sin tocar el texto (D1).
+- **Verificador ciego:** leyó toda corrección con palabras nuevas, en 14 paquetes. Los 14 rechazaron su corrección
+  falsa de control. Rechazó además correcciones reales que:
+  - traducían casi palabra por palabra el libro (D2);
+  - ponían una condición que el libro no pone;
+  - añadían algo que el libro no dice.
+- **Arreglo del método:** el constructor de tandas descartaba los pasos en modo `marcar` por "igual al vigente", así
+  que se habrían perdido sus constancias. Se arregló desde la primera tanda y las 99 constancias entraron.
+
+**Reescritura final de lo que quedó FUERA (tanda `final-e1-fuera-final`).** Entran 25 elementos:
+- 5 del pase dirigido;
+- 6 de la muestra de cierre, entre ellos los dos defectos duros `separa_la_visita_de_evaluacion_de_la_decision_de_compra`
+  y `clausula_antidesviacion`;
+- 14 de los barridos.
+
+El hallazgo ya estaba arbitrado. El reescritor rehízo la forma, porque los textos tropezaban con la baranda, la cita,
+la jurisdicción, la copia literal (D2), el prefijo (D1) o una adición que el verificador no sostuvo. El verificador
+ciego sostuvo los 25 y rechazó su control. **Ya no queda ninguna corrección arbitrada sin aplicar en la etapa 1.**
+
+**Sensibilidad de la lectura, medida con las trampas:**
+
+| | Cazadas | Wilson 95 % |
+|---|---|---|
+| Primer lector | 168 de 176 | 91,3 % a 97,7 % |
+| Primer o segundo lector | 171 de 175 válidas | 94,3 % a 99,1 % |
+
+- La trampa del lote 103 no cuenta: cambiaba "para siempre" por "para nunca" y dejaba una frase agramatical.
+- **Las 4 trampas que no cazó ningún lector tienen la misma forma:** un "antes de" cambiado por "después de".
+  - En los lotes 106, 133 y 153 es la misma frase: "verifica la regulación vigente en tu jurisdicción antes de
+    actuar". Los lectores la leen como aviso fijo y no la cotejan.
+  - En el lote 057 es "después de eso" en un resumen.
+- **Cierre mecánico de ese punto ciego:** la frase aparece en 42 nodos vivos y en ninguno está invertida. Las cinco
+  apariciones de "después de actuar" del catálogo son legítimas (`vuelve_a_medir_despues_del_susto`).
+
+**Riesgo residual declarado (regla de parada, 9.7).** Si la lectura deja pasar defectos al ritmo que deja pasar
+trampas, lo que queda en los 3.873 elementos barridos es:
+
+| Clase | Encontrados | Residual esperado | Cota 95 % |
+|---|---|---|---|
+| Contrarios e invenciones duras | 36 | 0,8 | 2,2 |
+| Pasos sin marca | 101 | 2,4 | 6,1 |
+| Matiz y certeza | 223 | 5,2 | 13,6 |
+
+- **Fuera del universo barrido:** los elementos sin construcción temporal, condición ni cifra, y sin vecindad con un
+  defecto duro, solo los cubren el pase dirigido (9.7) y la muestra de cierre. Antes de sus correcciones, la muestra
+  midió 15 defectos duros en 150 nodos (Wilson 95 %: 6,2 % a 15,8 % por nodo).
+- Ese universo lo mide la **medida 2** (semilla 20261010), con el criterio de copias fieles (U14) incluido. **La
+  etapa 1 no se declara certificada: la certificación es la medida 2.**
+
+**Fallos de método anotados:** las trampas de los lotes 057, 106, 133 y 153 (patrón antes/después, cubierto arriba).
+Trampa inválida: la del lote 103.

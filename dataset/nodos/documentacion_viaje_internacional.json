@@ -12,7 +12,7 @@
     "Si vas a llevar muestras o equipo profesional, verifica si el país al que vas es miembro del Convenio ATA y, si lo es, solicita un carnet ATA",
     "Empieza todos estos trámites con al menos 6 a 8 semanas de anticipación"
   ],
-  "entregable_esperado": "Pasaporte, visa, certificados de vacunación y carnet ATA (si aplica) listos antes de viajar",
+  "entregable_esperado": "Pasaporte, visa si el país de destino la pide, certificados de vacunación en los casos que corresponda y carnet ATA (si aplica) listos antes de viajar",
   "nodos_previos": [
     "programas_estatales_locales_financiamiento_exportacion",
     "clausula_antidesviacion",
@@ -78,6 +78,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro indica comprobar si el país de destino es miembro del Convenio ATA; el paso lo omite.; Mismo defecto: el carnet solo aplica en países del Convenio ATA.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-fuera-final-g02-documentacion_viaje_internacional-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pasaporte, visa, certificados de vacunación y carnet ATA (si aplica) listos antes de viajar",
+      "texto_nuevo": "Pasaporte, visa si el país de destino la pide, certificados de vacunación en los casos que corresponda y carnet ATA (si aplica) listos antes de viajar",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4503",
+        "frase": "visas from certain host countries, and—in some instances—vaccination records"
+      },
+      "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

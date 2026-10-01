@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Benchmarking de Inversión en I+D por Industria",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
+  "resumen_teorico": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. En datos de empresas de un solo país, no de todo el mundo, sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
   "pasos_accionables": [
     "Calcular el gasto histórico en I+D de la empresa como porcentaje de ventas.",
     "Identificar el promedio de I+D/ventas de la industria específica usando fuentes como los datos de la NSF (o la autoridad equivalente en tu mercado) o asociaciones sectoriales.",
@@ -118,6 +118,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 1,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-fuera-final-g01-benchmark_inversion_rd_industria-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. Sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
+      "texto_nuevo": "Conviene comparar el nivel de inversión en I+D de la empresa (como porcentaje de ventas) contra los promedios de la industria específica. En datos de empresas de un solo país, no de todo el mundo, sectores como farmacéutica (10.3%) o semiconductores (18-28%) invierten mucho más que sectores como papel o petróleo (0.1-1%). Esta comparación te lleva a preguntarte por qué la empresa invierte más o menos que sus competidores o su industria, y si invierte lo suficiente para lograr los resultados que busca.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "595",
+        "frase": "R&D SPENDING BY COMPANIES IN THE UNITED STATES AS A PERCENT OF SALES"
+      },
+      "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

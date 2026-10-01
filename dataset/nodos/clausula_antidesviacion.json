@@ -9,7 +9,7 @@
     "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o trading companies que podrían revender tu producto al exterior",
     "Incluye la misma declaración en el bill of lading o air waybill",
     "Verifica si tu envío califica para alguna excepción según la Parte 758.6 del EAR",
-    "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu país sobre la declaración adecuada"
+    "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio del gobierno de Estados Unidos sobre la declaración adecuada"
   ],
   "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaración antidesviación correctamente incluida.",
   "nodos_previos": [
@@ -197,6 +197,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide la declaración en todas las facturas comerciales, también las de clientes nacionales o trading companies que puedan revender al exterior. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-fuera-final-g01-clausula_antidesviacion-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu país sobre la declaración adecuada",
+      "texto_nuevo": "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio del gobierno de Estados Unidos sobre la declaración adecuada",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2845",
+        "frase": "can be provided by the U.S. Department of Commerce, an attorney, or the freight forwarder"
+      },
+      "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
