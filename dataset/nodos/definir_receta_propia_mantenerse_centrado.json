@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Averiguar cuál es tu receta para mantenerte centrado y cumplirla, sobre todo cuando los tiempos se ponen duros",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "No hay una receta universal para mantenerse centrado: lo que a una persona le resulta valiosísimo a otra no le sirve de nada, así que vale lo que te funcione a ti. Hay quien ha visto que la clave es darle prioridad, sin pasarse, cuando llegan los tiempos duros, porque hacerle sitio importa más cuando estás estresado y ocupado que cuando todo está tranquilo. Una receta puede mezclar hábitos diarios con cosas de tarde en tarde. Una directiva cuenta que, si cumple la suya, suele mantenerse centrada pese a las tormentas, y si no, suele perder un poco el norte aunque todo esté tranquilo.",
+  "resumen_teorico": "No hay una receta universal para mantenerse centrado: lo que a una persona le resulta valiosísimo a otra no le sirve de nada, así que vale lo que te funcione a ti. Suele ayudar darle prioridad, sin pasarse, cuando llegan los tiempos duros, porque hacerle sitio importa más cuando estás estresado y ocupado que cuando todo está tranquilo. Una receta puede mezclar hábitos diarios con cosas de tarde en tarde. Puede pasar que, mientras la cumples, sigas en tu sitio aunque haya tormenta alrededor, y que, cuando la descuidas, pierdas un poco el norte aunque todo esté en calma.",
   "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_08.md, lineas 29 a 35, bajo el rotulo Figure out your recipe to stay centered and stick to it, dentro de la seccion STAY CENTERED, que no tiene cabeza propia. EL P1 ES EL ROTULO DEL LIBRO TRANSCRITO, y lo es porque ese rotulo esta escrito en imperativo por el propio texto. LA DIFICULTAD DE LA PIEZA ES QUE SU MATERIAL MAS CONCRETO ES LA RECETA DE LA AUTORA, Y ESA RECETA NO ES LA DEL LECTOR: el propio texto lo dice en la linea 31 (lo que a uno le resulta valioso para otro es basura) y en la 33 (haz lo que te funcione a ti). Por eso las ocho horas, los cuarenta y cinco minutos, la novela semanal, los cuatro fines de semana al anio y las dos semanas de vacaciones van todos DENTRO de pasos que dicen que son suyos, y ninguno se escribe como norma para quien lea. Escribirlos como norma habria sido el puente mas facil del capitulo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. P1 de la linea 29; P2 de la 31; P3, P4 y P5 de la 33; P6 de la 33 y la 35; P7, P8 y P9 de la 35. LA ANECDOTA DEL POLICIA DE NUEVA YORK Y EL DE MOSCU (linea 31) NO DA PASO PROPIO: su leccion es la del P2 y va dentro de el. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: como se averigua la receta propia cuando no la sabes, y que se hace cuando el trabajo no deja cumplirla.",
   "pasos_accionables": [
     "Averigua cuál es tu receta para mantenerte centrado, y después cúmplela.",
@@ -14,7 +14,7 @@
     "Hazle sitio a lo que te mantiene centrado con más empeño todavía cuando estás estresado y ocupado que cuando las cosas están relativamente tranquilas.",
     "Cuenta con lo que hacen otros como lo que hacen ellos y no como receta tuya: un emprendedor de mucho éxito iba al gimnasio antes y después del trabajo en las temporadas de más presión, y otra persona tiene como receta diaria dormir ocho horas, hacer ejercicio cuarenta y cinco minutos y desayunar y cenar con su familia.",
     "Cuenta con que una receta admite cosas de tarde en tarde y no solo diarias: en la de esa misma persona entran leer una novela, idealmente una a la semana, irse un fin de semana romántico con su marido, idealmente cuatro veces al año, y dos semanas de vacaciones con sus hermanos y sus padres, una vez al año.",
-    "Cuenta con que a esa misma persona saltarse una o dos cosas de su receta durante un día o dos no se la rompe, y con que aun así la rutina es la rutina.",
+    "Cuenta con que, según cómo sea tu receta, puede que fallar en una o dos cosas durante un par de días no la eche a perder, aunque la rutina siga siendo la base.",
     "Cuenta con esta señal para saber si está funcionando: cuando esa persona consigue hacer esas cosas suele mantenerse centrada por muchas tormentas que haya alrededor, y cuando no las consigue se le suele ir un poco la cabeza aunque todo esté tranquilo."
   ],
   "entregable_esperado": "Tu propia receta, sabida y cumplida, con prioridad reservada justo en las temporadas de más presión.",
@@ -305,6 +305,40 @@
         "motivo": "Con la receta para los tiempos duros ya hecha, el paso natural cuando llega la dificultad es no sumarle la culpa de estar pasándolo mal."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "medida3-vecindad-2-definir_receta_propia_mantenerse_centrado-pasos_accionables-7",
+      "fecha": "2026-10-01",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuenta con que a esa misma persona saltarse una o dos cosas de su receta durante un día o dos no se la rompe, y con que aun así la rutina es la rutina.",
+      "texto_nuevo": "Cuenta con que, según cómo sea tu receta, puede que fallar en una o dos cosas durante un par de días no la eche a perder, aunque la rutina siga siendo la base.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente, sin decir mas que el libro.",
+        "fragmentos": [
+          "a esa misma persona saltarse una o dos cosas de su receta durante un día o dos no se la rompe"
+        ]
+      },
+      "decision": "medida final, vecindad: reescritura sin atribucion que conserva el alcance del libro (experiencia o caso unico como posibilidad); verificada a ciegas (paq_w01-02, trampas cazadas)",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
+    },
+    {
+      "id": "medida3-vecindad-2-definir_receta_propia_mantenerse_centrado-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "No hay una receta universal para mantenerse centrado: lo que a una persona le resulta valiosísimo a otra no le sirve de nada, así que vale lo que te funcione a ti. Hay quien ha visto que la clave es darle prioridad, sin pasarse, cuando llegan los tiempos duros, porque hacerle sitio importa más cuando estás estresado y ocupado que cuando todo está tranquilo. Una receta puede mezclar hábitos diarios con cosas de tarde en tarde. Una directiva cuenta que, si cumple la suya, suele mantenerse centrada pese a las tormentas, y si no, suele perder un poco el norte aunque todo esté tranquilo.",
+      "texto_nuevo": "No hay una receta universal para mantenerse centrado: lo que a una persona le resulta valiosísimo a otra no le sirve de nada, así que vale lo que te funcione a ti. Suele ayudar darle prioridad, sin pasarse, cuando llegan los tiempos duros, porque hacerle sitio importa más cuando estás estresado y ocupado que cuando todo está tranquilo. Una receta puede mezclar hábitos diarios con cosas de tarde en tarde. Puede pasar que, mientras la cumples, sigas en tu sitio aunque haya tormenta alrededor, y que, cuando la descuidas, pierdas un poco el norte aunque todo esté en calma.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente, sin decir mas que el libro.",
+        "fragmentos": [
+          "Hay quien ha visto que ",
+          "Una directiva cuenta que, si cumple la suya, suele mantenerse centrada"
+        ]
+      },
+      "decision": "medida final, vecindad: reescritura sin atribucion que conserva el alcance del libro (experiencia o caso unico como posibilidad); verificada a ciegas (paq_w01-02, trampas cazadas)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
     }
   ],
   "etiqueta_arbol": "Encuentra tu Receta para Centrarte",

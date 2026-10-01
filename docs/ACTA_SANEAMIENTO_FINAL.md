@@ -1426,3 +1426,53 @@ de 13.1: un nombre de método con apellido no es procedencia. Cuenta en `docs/au
   95 %.
 - **Procedencia: no da 0.** El residuo estimado antes de corregir era 3,5 % de los nodos (1,7 a 7,1 %). Se cierra con
   la relectura de la vecindad, sin otra pasada.
+
+### 14.1 Vecindad de la procedencia, corregida
+
+Máquina en `auditoria-final-claves/medida3/vecindad.py`, semilla 20261111.
+
+- **Qué se releyó:** 3.485 elementos, todos los resúmenes y pasos vivos de los 6 libros y campos de las 9 procedencias,
+  sin la muestra. Fueron 24 lotes de unos 150, solo para procedencia, con una trampa sin marca de atribución blanda por
+  lote.
+- **Detección:** 24 de 24 trampas cazadas.
+- **Arbitraje:** 226 marcas reales y 218 confirmadas. El grueso está en los dos libros del mundo 11, donde la forja
+  escribió "una directiva", "hay quien" o "la autora" en lugar del nombre de la autora; el resto son "se estima que" y
+  "los datos".
+- **Corrección, por el método de la casa (C32/R8):**
+  - 54 quitas puras.
+  - 129 correcciones con palabras nuevas verificadas a ciegas (7 paquetes, 7 de 7 trampas cazadas). Están en la tanda
+    `medida3-vecindad`: 183 correcciones en 122 nodos.
+  - 35 no se sostuvieron. Al quitar la atribución, lo que el libro cuenta como la experiencia de una persona, un caso
+    único o un estudio quedaba como ley universal; en 7 casos, además, la frase seguía el libro casi palabra por
+    palabra. Se reescribieron conservando el alcance ("puede pasar que…") y se verificaron a ciegas (2 de 2 trampas
+    cazadas): 26 se sostienen, en la tanda `medida3-vecindad-2` (26 correcciones en 21 nodos).
+- **Quedan 9 sin corregir, para el visto del fundador.** El contenido es la vivencia de una sola persona: cualquier
+  generalización la endurece, y conservarla tal cual exige la atribución.
+  - Son 8 pasos del mundo 11 y un resumen de `riesgo_litigios_franquicia`.
+  - Propuesta: quitar la frase anecdótica entera cuando el resto del elemento se sostiene solo (quitar antes que
+    redactar). Si no se sostiene, el elemento se queda con la vivencia y sin nombre, como residuo declarado.
+
+**Veredicto final de la medida:**
+- **Contrarios e invenciones duras: SANEADO en la muestra** (0 en 200 nodos; residuo por nodo de 0 a 1,9 % al 95 %).
+- **Procedencia: NO da 0 en la muestra** (3,5 %, de 1,7 a 7,1 %).
+  - Se corrigieron las 9 de la muestra y 209 de su vecindad.
+  - El residuo conocido son las 9 de arriba.
+  - Fuera de esos 6 libros puede quedar atribución blanda, que ninguna guarda mecánica ve. La prevalencia medida antes
+    de corregir (3,5 % de los nodos) es la cota que se declara para el resto del catálogo.
+
+### 14.2 Auditoría de preguntas: tamaño y coste (para el visto del fundador, sin lanzar)
+
+- **Preguntas:** 3.374, que son 3.288 bases de nodos vivos y 86 de entrada de las puertas. Las versiones neutrales
+  todavía no existen: se generan con la API en el paso A2 de la corrida final, y tendrán que leerse después de
+  generarse.
+- **Método:** lotes de 40 preguntas, cada una con su nodo saneado y las etiquetas de sus candidatos. Una trampa sin
+  marca por lote, de las tres clases (contraria, inventa, lógica que no encaja), plantada antes. Dos lectores Opus por
+  lote, árbitro, y las que fallen se reemplazan con verificación ciega.
+- **Agentes estimados: unos 210 a 220, en unas 12 olas de hasta 20.**
+  - Lectores: 85 lotes × 2 = 170.
+  - Preparadores de trampas: 4.
+  - Árbitros: unos 28.
+  - Reescritores: de 5 a 8.
+  - Verificadores: de 5 a 8.
+- **Coste:** unos 20 a 25 millones de tokens de subagente, a la vista de lo medido hoy. Una ola de 20 lectores de
+  procedencia gastó 1,4 millones, y un lector de nodo contra su texto gasta unos 100.000.
