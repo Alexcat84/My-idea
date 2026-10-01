@@ -1050,3 +1050,44 @@ trampas, lo que queda en los 3.873 elementos barridos es:
 
 **Fallos de método anotados:** las trampas de los lotes 057, 106, 133 y 153 (patrón antes/después, cubierto arriba).
 Trampa inválida: la del lote 103.
+
+## 10. Medida 2: diseño fijado antes de sortear (30 sep 2026)
+
+La medida 2 certifica. Repite el diseño de la sección 3, con los cambios de abajo, y se cuenta contra los umbrales de
+la sección 1 (U1 a U14).
+
+- **Semilla:** 20261010, escrita aquí antes de sortear.
+- **Universo y reparto:** los mismos 3.634 nodos vivos y la misma tabla de la sección 3 (200 nodos). El sorteo usa
+  `random.Random(20261010 + índice del espacio)`. Un nodo puede salir en las dos medidas: son sorteos independientes.
+- **Lotes y trampas:**
+  - 22 lotes de 9 o 10 nodos, con 1 trampa sin marca por lote.
+  - Son 22 trampas, 2 de cada uno de los 11 tipos: los 10 de la sección 3 y la **copia fiel**.
+  - Cada trampa va bajo un id real del espacio del lote que no está en la muestra. El defecto se planta en la copia
+    del lector, nunca en el dataset.
+  - La trampa de copia sustituye un elemento por la traducción literal de un tramo de 30 a 50 palabras del libro del
+    nodo. La prepara un agente que no lee ningún lote.
+  - Las claves viven fuera de toda carpeta que lean los lectores.
+- **Lectores ciegos:** como en la sección 3, con cuatro precisiones:
+  1. **Copia fiel (U14, regla dura D2):** un elemento que reproduce un pasaje del libro casi palabra por palabra y en
+     su mismo orden, traducido o no. Basta una frase larga, de más de unas 20 palabras, o dos o más frases seguidas.
+     No lo es un término preciso, el nombre de un método o una definición breve.
+  2. **Pasos de la casa (C29, D1):** el lote trae `pasos_casa`, los índices de los pasos con constancia CASA. Un paso
+     práctico que el libro no da y que no afirma nada como hecho no es invención. Sí lo es si afirma una cifra, una
+     causa o un resultado que el libro no dice.
+  3. **Procedencia (D1):** el lector marca como defecto cualquier texto que nombre un libro, un autor, "los estudios" o
+     "los expertos" como respaldo, o que lleve una marca de procedencia.
+  4. **Alcance de ortografía y calcos (decisión del fundador, 30 sep 2026, escrita antes de medir):**
+     - El lector los marca en cualquier campo.
+     - **Cuentan para U7 y U9 solo en los campos que el cliente ve crudos:** `etiqueta_arbol`, `pasos_accionables`,
+       `entregable_esperado` y la pregunta del nodo, que el lote trae en `pregunta`.
+     - En `resumen_teorico`, `condiciones_activacion` y `titulo_concepto`, que solo lee la IA, se anotan para la mejora
+       continua (ficha de nivel 2) y no cuentan.
+     - Motivo: esos campos son los que llegan tal cual al plan sin IA y a la pantalla. Lo demás lo reformula la IA
+       antes de mostrarlo.
+- **Árbitro:** como en la sección 3. Cuando confirma una copia fiel, la reescribe en palabras de la casa, con el mismo
+  sentido y el término preciso.
+- **Segunda lectura:** la misma regla de la sección 3. Si el lector no caza la trampa, un segundo lector relee el lote
+  entero y cuenta la unión. Una trampa que tampoco caza el segundo lector es un fallo de método del criterio.
+- **Veredicto:** el de la sección 5. Con todos los criterios en PASA, esta acta abre con "DATASET CERTIFICADO" y la
+  fecha. Lo que no pase se corrige por la doctrina y se vuelve a medir solo ese punto, con semilla nueva escrita antes.
+- **Guardas y navegación (U11 a U13):** se repiten al 100 % del catálogo el mismo día de la medida.
