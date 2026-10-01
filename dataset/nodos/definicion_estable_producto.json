@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Definición Temprana y Estable del Producto (Evitar Scope Creep)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Según algunos estudios, las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+  "resumen_teorico": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) suelen ser la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
   "pasos_accionables": [
     "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
     "Documentar el alcance del proyecto (single customer, multi-customer, global) desde el inicio",
@@ -94,6 +94,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-atribucion-07",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Según algunos estudios, las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) son la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+      "texto_nuevo": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) suelen ser la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), D1 de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber ni intuir de donde provienen las respuestas. Las atribuciones genericas (estudios, investigacion, evidencia, expertos) salen y el consejo se dice directamente, sin cambiar su sentido.",
+        "fragmentos": [
+          "Según algunos estudios"
+        ]
+      },
+      "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Las Omisiones como Principal Tipo de Error en Mantenimiento",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores según diversos estudios (Rasmussen, INPO, aerolíneas). Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
+  "resumen_teorico": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores. Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
   "pasos_accionables": [
     "Clasificar los errores de mantenimiento históricos según tipo (omisión, instalación incorrecta, parte equivocada, otro)",
     "Identificar de antemano los pasos de cada tarea con más rasgos que provocan omisiones (paso aislado, después de lograr el objetivo principal, cerca del final, oculto, con varios elementos que instalar, que no se pide en tareas parecidas, con cambios recientes, que repite acciones previas, que depende de una acción previa o que no siempre se requiere)",
@@ -94,6 +94,24 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "procedencia-atribucion-16",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores según diversos estudios (Rasmussen, INPO, aerolíneas). Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
+      "texto_nuevo": "Entre los errores de mantenimiento, las omisiones (fallar en ejecutar pasos necesarios) constituyen la categoría más grande, representando entre 34-64% de los errores. Las omisiones pueden ocurrir en distintos niveles cognitivos: planificación (olvido o violación deliberada), almacenamiento de intención (lapsus), ejecución (deslices) o monitoreo (fallo en detectar la omisión previa).",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), D1 de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber ni intuir de donde provienen las respuestas. Las atribuciones genericas (estudios, investigacion, evidencia, expertos) salen y el consejo se dice directamente, sin cambiar su sentido.",
+        "fragmentos": [
+          "según diversos estudios",
+          "Rasmussen",
+          "INPO"
+        ]
+      },
+      "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
     }
   ],
   "fuentes_internas": [

@@ -9,7 +9,7 @@
     "Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)",
     "Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor",
     "Prepararse para usar preguntas de Situación, Problema, Implicación y Necesidad-Beneficio",
-    "Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas"
+    "Medir el impacto de indagar mejor las necesidades del cliente: puede traer incrementos de más del 20% en el volumen de ventas"
   ],
   "entregable_esperado": "Diagnóstico escrito de qué tipo de venta maneja el usuario (pequeña vs grande) y decisión de adoptar el enfoque SPIN en lugar de técnicas tradicionales",
   "nodos_previos": [
@@ -48,6 +48,23 @@
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
       "indice": 2,
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "procedencia-atribucion-11",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Medir el impacto de la investigación mejorada: los estudios muestran incrementos de más del 20% en volumen de ventas",
+      "texto_nuevo": "Medir el impacto de indagar mejor las necesidades del cliente: puede traer incrementos de más del 20% en el volumen de ventas",
+      "cita": {
+        "regla": "Regla dura del fundador (30 sep 2026), D1 de docs/REGLAS_DE_LA_CASA.md: jamas un usuario debe saber ni intuir de donde provienen las respuestas. Las atribuciones genericas (estudios, investigacion, evidencia, expertos) salen y el consejo se dice directamente, sin cambiar su sentido.",
+        "fragmentos": [
+          "los estudios muestran"
+        ]
+      },
+      "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
+      "indice": 3,
+      "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
     }
   ]
 }

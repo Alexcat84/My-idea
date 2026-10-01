@@ -276,6 +276,38 @@ describe("procedencia: ninguna etiqueta de procedencia", () => {
   });
 });
 
+// ---------------------------------------------------------------- 6. atribuciones genericas
+
+/**
+ * Atribuir un consejo a estudios, investigaciones, expertos o la literatura insinua un origen (D1). Se dice
+ * directamente. Los patrones no muerden las instrucciones al usuario ("busca en la literatura", "segun los datos
+ * obtenidos", "no se ha probado con usuarios"): solo la atribucion de un hecho.
+ */
+const VERBO_ES = "(?:muestra|muestran|demuestra|demuestran|demostr[oó]|demostraron|indica|indican|revela|revelan|sugiere|sugieren|confirma|confirman|ha mostrado|han mostrado|ha demostrado|han demostrado|encontr[oó]|encontraron|señala|señalan)";
+const ATRIBUCION: RegExp[] = [
+  // espanol
+  new RegExp(`\\b(?:un|el|los|varios|algunos|diversos|numerosos|muchos) estudios? ${VERBO_ES}`, "i"),
+  new RegExp(`\\b(?:la|las) investigaci(?:ón|on|ones) ${VERBO_ES}`, "i"),
+  new RegExp(`\\b(?:la evidencia|la ciencia) ${VERBO_ES}`, "i"),
+  /\bseg[uú]n (?:los |las |la |el |diversos |varios |algunos )?(?:expertos|especialistas|estudios|investigaciones|investigaci[oó]n|la literatura|investigadores|autores|analistas|estudios citados)/i,
+  /\blos (?:expertos|especialistas|investigadores|analistas) (?:recomiendan|coinciden|sugieren|dicen|afirman|advierten|han encontrado|encontraron)/i,
+  /\b(?:est[aá]|ha sido|se ha) (?:demostrado|comprobado) que/i,
+  // los otros diez idiomas de la interfaz
+  /\b(?:studies|research|evidence) (?:shows?|suggests?|has shown|have shown|proves?|indicates?)\b|\bexperts (?:recommend|agree|say)\b|\baccording to (?:studies|research|experts)\b/i,
+  /\b(?:les études|la recherche) (?:montrent|montre|suggèrent|suggère)\b|\bselon (?:les experts|des études|les études)\b/i,
+  /\b(?:estudos|a pesquisa) (?:mostram|mostra|sugerem|sugere)\b|\bsegundo (?:especialistas|estudos|os especialistas)\b/i,
+  /\b(?:studien|die forschung) (?:zeigen|zeigt|belegen|belegt)\b|\blaut (?:studien|experten)\b|\bexperten empfehlen\b/i,
+  /\b(?:gli studi|la ricerca) (?:mostrano|mostra|dimostrano|dimostra|suggeriscono)\b|\bsecondo (?:gli esperti|gli studi|studi)\b/i,
+  /研究によると|研究では|専門家によると|研究表明|研究显示|专家建议|据研究|연구에 따르면|전문가들은|تُظهر الدراسات|تظهر الدراسات|وفقًا للدراسات|يقول الخبراء|अध्ययनों से पता|विशेषज्ञों के अनुसार|शोध बताता/,
+];
+
+describe("procedencia: ninguna atribucion generica", () => {
+  it("ningun texto de cara al cliente atribuye lo que dice a estudios, investigaciones, expertos o la literatura", () => {
+    const fallos = TODOS.filter(([donde, t]) => !ES_INSTRUCCION(donde) && ATRIBUCION.some((rx) => rx.test(t))).map(([donde]) => donde);
+    expect(fallos.slice(0, 25), `${fallos.length} textos con atribucion generica`).toEqual([]);
+  });
+});
+
 // ---------------------------------------------------------------- casos negativos
 
 describe("procedencia: casos negativos (la guarda muerde)", () => {
@@ -285,5 +317,13 @@ describe("procedencia: casos negativos (la guarda muerde)", () => {
     clavesInternas({ nodos: { x: { fuente: "The Lean Startup - Eric Ries" } } }, "falso", out);
     expect(out).toEqual(["falso.nodos.x.fuente"]);
     expect(normal("Según")).toBe("segun");
+  });
+
+  it("detecta el prefijo y las atribuciones, y deja pasar las instrucciones al usuario", () => {
+    expect(PREFIJO.test("Sugerencia de My Idea: guarda el comprobante")).toBe(true);
+    for (const t of ["Los estudios muestran que escribir ayuda.", "La investigación sugiere que funciona.", "según diversos estudios (Rasmussen)", "Studies show it works.", "Selon les experts, c'est utile."])
+      expect(ATRIBUCION.some((rx) => rx.test(t)), t).toBe(true);
+    for (const t of ["Investigar la literatura sobre antropología cultural del país", "Confirmar el objetivo según los datos obtenidos", "Una estrategia que no se ha probado con usuarios reales", "aunque todavía no está probado que lo logren"])
+      expect(ATRIBUCION.some((rx) => rx.test(t)), t).toBe(false);
   });
 });
