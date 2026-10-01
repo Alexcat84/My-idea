@@ -28,10 +28,11 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
     expect(avisosNodo(id!, graph, "fr")).toEqual(["S'applique si tu opères ou vends aux États-Unis."]);
   });
 
-  it("un nodo con vigencia avisa el ano, sin nombrar el libro", () => {
-    const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k] && VIGENCIA_NODOS[k].anio);
+  it("un nodo con vigencia avisa que verifique la norma, sin ano ni libro (fundador, 30 sep 2026)", () => {
+    const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k]);
     expect(id).toBeTruthy();
-    expect(avisosNodo(id!, graph, "es")).toEqual([`Esta información puede haber cambiado desde ${VIGENCIA_NODOS[id!].anio}: verifica la norma vigente en tu país.`]);
+    expect(avisosNodo(id!, graph, "es")).toEqual(["Verifica la norma vigente en tu país: estas reglas cambian con el tiempo."]);
+    expect(avisosNodo(id!, graph, "en")).toEqual(["Check the rules in force in your country: these rules change over time."]);
   });
 
   it("caso negativo: un nodo sin pais ni vigencia no avisa nada, y la clase A tampoco", () => {
@@ -49,10 +50,7 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
       const pais = j.pais;
       for (const idioma of LOCALES) expect(AVISO_NODO[idioma].paises[pais], `${id} ${pais} ${idioma}`).toBeTruthy();
     }
-    for (const [id, v] of Object.entries(VIGENCIA_NODOS)) {
-      expect(graph[id], id).toBeTruthy();
-      expect(v.anio === null || (v.anio > 1900 && v.anio < 2100), id).toBe(true);
-    }
+    for (const id of Object.keys(VIGENCIA_NODOS)) expect(graph[id], id).toBeTruthy();
     for (const idioma of LOCALES) {
       const id = Object.keys(JURISDICCION).find((k) => JURISDICCION[k].clase !== "A") ?? Object.keys(VIGENCIA_NODOS)[0];
       for (const a of avisosNodo(id, graph, idioma)) expect(a).not.toMatch(/\{\{/);

@@ -243,6 +243,22 @@ describe("procedencia: los avisos no revelan el origen", () => {
         for (const aviso of avisosNodo(id, graph, idioma)) if (titulosEn(aviso, titulos).length) fallos.push(`${id} ${idioma}: "${aviso}"`);
     expect(fallos.slice(0, 5), `${fallos.length} avisos nombran un libro`).toEqual([]);
   });
+
+  it("el aviso de vigencia no lleva ano en ningun idioma: el ano de la fuente es dato interno (fundador, 30 sep 2026)", () => {
+    const fallos: string[] = [];
+    for (const id of Object.keys(VIGENCIA_NODOS))
+      for (const idioma of LOCALES)
+        for (const aviso of avisosNodo(id, graph, idioma)) if (/(1[89]|20)\d\d|\{\{/.test(aviso)) fallos.push(`${id} ${idioma}: "${aviso}"`);
+    expect(fallos.slice(0, 5), `${fallos.length} avisos con ano`).toEqual([]);
+    const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k])!;
+    expect(avisosNodo(id, graph, "es")).toEqual(["Verifica la norma vigente en tu país: estas reglas cambian con el tiempo."]);
+  });
+
+  it("la copia web de vigencia no lleva el ano: solo dice que nodos avisan", () => {
+    const vista = JSON.parse(readFileSync(path.join(ASSETS, "vigencia.json"), "utf-8")) as { nodos: Record<string, unknown> };
+    const conAnio = Object.entries(vista.nodos).filter(([, v]) => JSON.stringify(v).includes("anio"));
+    expect(conAnio.length, `${conAnio.length} entradas con ano en la copia web`).toBe(0);
+  });
 });
 
 // ---------------------------------------------------------------- casos negativos

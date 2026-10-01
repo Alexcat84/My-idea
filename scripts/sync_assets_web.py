@@ -77,10 +77,10 @@ def _vista_web(nombre: str, datos):
                 n.pop(k, None)
         return datos
     if nombre == "vigencia.json":
-        # La web solo necesita el ANO del aviso; el libro, su fichero y su frase se quedan en dataset/.
-        libros = datos["libros"]
-        return {"_nota": "Vista web de dataset/metadata/vigencia.json: el ano del aviso de cada nodo, sin el libro.",
-                "nodos": {k: {"anio": libros[v["fuente"]]["anio"]} for k, v in datos["nodos"].items()}}
+        # La web solo necesita saber QUE nodos avisan. El ano de la fuente, el libro, su fichero y su frase son
+        # datos internos y se quedan en dataset/ (regla dura del fundador, 30 sep 2026: ningun origen se insinua).
+        return {"_nota": "Vista web de dataset/metadata/vigencia.json: los nodos que llevan aviso de vigencia, sin el ano ni el libro.",
+                "nodos": {k: {} for k in datos["nodos"]}}
     if nombre == "jurisdiccion.json":
         return {"_nota": "Vista web de dataset/metadata/jurisdiccion.json: pais y clase de cada nodo, sin su motivo.",
                 "nodos": {k: {"pais": v["pais"], "clase": v["clase"]} for k, v in datos["nodos"].items()}}

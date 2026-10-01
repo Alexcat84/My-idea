@@ -5,7 +5,8 @@
  *   - clase C: nodo-frontera, aplica a quien opera o vende en ese pais;
  *   - vigencia: el nodo depende de una norma, un plazo, una cifra con fecha o una institucion. REGLA ESTRICTA
  *     (fundador, 26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor como fuente; el aviso dice
- *     solo el ano ("Esta informacion puede haber cambiado desde [ano]").
+ *     nada del origen: desde el 30 sep 2026 tampoco el ano de la fuente ("Verifica la norma vigente en tu pais: estas
+ *     reglas cambian con el tiempo"), regla dura del fundador.
  * Los paises llevan sus dos formas por idioma ("desde" y "en"), porque en varios idiomas la preposicion
  * se funde con el articulo (des Etats-Unis, aux Etats-Unis). Un pais nuevo en dataset/metadata/jurisdiccion.json
  * necesita su entrada aqui en los once idiomas (lo exige web/lib/engine/avisos.test.ts).
@@ -17,8 +18,7 @@ type Pais = { desde: string; en: string };
 const es = {
   claseB: "Ejemplo de {{desde}}: busca el equivalente en tu país.",
   claseC: "Aplica si operas o vendes en {{en}}.",
-  vigencia: "Esta información puede haber cambiado desde {{anio}}: verifica la norma vigente en tu país.",
-  vigenciaSinAnio: "Esta información puede haber cambiado: verifica la norma vigente en tu país.",
+  vigencia: "Verifica la norma vigente en tu país: estas reglas cambian con el tiempo.",
   paises: {
     US: { desde: "Estados Unidos", en: "Estados Unidos" } as Pais,
     EU: { desde: "la Unión Europea", en: "la Unión Europea" } as Pais,
@@ -35,8 +35,7 @@ const es = {
 const en: typeof es = {
   claseB: "Example from {{desde}}: look for the equivalent in your country.",
   claseC: "Applies if you operate or sell in {{en}}.",
-  vigencia: "This information may have changed since {{anio}}: check the rules in force in your country.",
-  vigenciaSinAnio: "This information may have changed: check the rules in force in your country.",
+  vigencia: "Check the rules in force in your country: these rules change over time.",
   paises: {
     US: { desde: "the United States", en: "the United States" },
     EU: { desde: "the European Union", en: "the European Union" },
@@ -53,8 +52,7 @@ const en: typeof es = {
 const fr: typeof es = {
   claseB: "Exemple {{desde}} : cherche l'équivalent dans ton pays.",
   claseC: "S'applique si tu opères ou vends {{en}}.",
-  vigencia: "Cette information a pu changer depuis {{anio}} : vérifie la réglementation en vigueur dans ton pays.",
-  vigenciaSinAnio: "Cette information a pu changer : vérifie la réglementation en vigueur dans ton pays.",
+  vigencia: "Vérifie la réglementation en vigueur dans ton pays : ces règles changent avec le temps.",
   paises: {
     US: { desde: "des États-Unis", en: "aux États-Unis" },
     EU: { desde: "de l'Union européenne", en: "dans l'Union européenne" },
@@ -71,8 +69,7 @@ const fr: typeof es = {
 const pt: typeof es = {
   claseB: "Exemplo {{desde}}: procure o equivalente no seu país.",
   claseC: "Aplica-se se você opera ou vende {{en}}.",
-  vigencia: "Esta informação pode ter mudado desde {{anio}}: verifique a norma vigente no seu país.",
-  vigenciaSinAnio: "Esta informação pode ter mudado: verifique a norma vigente no seu país.",
+  vigencia: "Verifique a norma vigente no seu país: estas regras mudam com o tempo.",
   paises: {
     US: { desde: "dos Estados Unidos", en: "nos Estados Unidos" },
     EU: { desde: "da União Europeia", en: "na União Europeia" },
@@ -89,8 +86,7 @@ const pt: typeof es = {
 const de: typeof es = {
   claseB: "Beispiel aus {{desde}}: Such die Entsprechung in deinem Land.",
   claseC: "Gilt, wenn du {{en}} tätig bist oder verkaufst.",
-  vigencia: "Diese Information kann sich seit {{anio}} geändert haben: Prüf die in deinem Land geltende Regelung.",
-  vigenciaSinAnio: "Diese Information kann sich geändert haben: Prüf die in deinem Land geltende Regelung.",
+  vigencia: "Prüf die in deinem Land geltende Regelung: Diese Regeln ändern sich mit der Zeit.",
   paises: {
     US: { desde: "den USA", en: "in den USA" },
     EU: { desde: "der Europäischen Union", en: "in der Europäischen Union" },
@@ -107,8 +103,7 @@ const de: typeof es = {
 const it: typeof es = {
   claseB: "Esempio {{desde}}: cerca l'equivalente nel tuo paese.",
   claseC: "Si applica se operi o vendi {{en}}.",
-  vigencia: "Questa informazione potrebbe essere cambiata dal {{anio}}: verifica la norma in vigore nel tuo paese.",
-  vigenciaSinAnio: "Questa informazione potrebbe essere cambiata: verifica la norma in vigore nel tuo paese.",
+  vigencia: "Verifica la norma in vigore nel tuo paese: queste regole cambiano nel tempo.",
   paises: {
     US: { desde: "degli Stati Uniti", en: "negli Stati Uniti" },
     EU: { desde: "dell'Unione europea", en: "nell'Unione europea" },
@@ -125,8 +120,7 @@ const it: typeof es = {
 const ja: typeof es = {
   claseB: "{{desde}}の例です。あなたの国で相当するものを探してください。",
   claseC: "{{en}}で事業を行う、または販売する場合に適用されます。",
-  vigencia: "この情報は{{anio}}年以降に変わっている可能性があります：あなたの国の現行の規則を確認してください。",
-  vigenciaSinAnio: "この情報は変わっている可能性があります：あなたの国の現行の規則を確認してください。",
+  vigencia: "あなたの国の現行の規則を確認してください：これらの規則は時とともに変わります。",
   paises: {
     US: { desde: "米国", en: "米国" },
     EU: { desde: "欧州連合", en: "欧州連合" },
@@ -143,8 +137,7 @@ const ja: typeof es = {
 const zh: typeof es = {
   claseB: "这是{{desde}}的例子：请在你所在的国家查找对应的规定。",
   claseC: "适用于在{{en}}经营或销售的情况。",
-  vigencia: "此信息自{{anio}}年以来可能已有变化：请核实你所在国家现行的规定。",
-  vigenciaSinAnio: "此信息可能已有变化：请核实你所在国家现行的规定。",
+  vigencia: "请核实你所在国家现行的规定：这些规定会随时间变化。",
   paises: {
     US: { desde: "美国", en: "美国" },
     EU: { desde: "欧盟", en: "欧盟" },
@@ -161,8 +154,7 @@ const zh: typeof es = {
 const ko: typeof es = {
   claseB: "{{desde}}의 사례예요. 자신의 나라에서 이에 해당하는 것을 찾아보세요.",
   claseC: "{{en}}에서 사업하거나 판매한다면 적용돼요.",
-  vigencia: "이 정보는 {{anio}}년 이후 바뀌었을 수 있어요. 자신의 나라에서 현재 유효한 규정을 확인하세요.",
-  vigenciaSinAnio: "이 정보는 바뀌었을 수 있어요. 자신의 나라에서 현재 유효한 규정을 확인하세요.",
+  vigencia: "자신의 나라에서 현재 유효한 규정을 확인하세요. 이런 규정은 시간이 지나면서 바뀝니다.",
   paises: {
     US: { desde: "미국", en: "미국" },
     EU: { desde: "유럽연합", en: "유럽연합" },
@@ -179,8 +171,7 @@ const ko: typeof es = {
 const ar: typeof es = {
   claseB: "مثال من {{desde}}: ابحثوا عن المقابل في بلدكم.",
   claseC: "ينطبق إذا كنتم تعملون أو تبيعون في {{en}}.",
-  vigencia: "ربما تغيّرت هذه المعلومات منذ {{anio}}: تحقّقوا من القواعد السارية في بلدكم.",
-  vigenciaSinAnio: "ربما تغيّرت هذه المعلومات: تحقّقوا من القواعد السارية في بلدكم.",
+  vigencia: "تحقّقوا من القواعد السارية في بلدكم: هذه القواعد تتغيّر مع الزمن.",
   paises: {
     US: { desde: "الولايات المتحدة", en: "الولايات المتحدة" },
     EU: { desde: "الاتحاد الأوروبي", en: "الاتحاد الأوروبي" },
@@ -197,8 +188,7 @@ const ar: typeof es = {
 const hi: typeof es = {
   claseB: "{{desde}} का उदाहरण: अपने देश में इसका समकक्ष खोजिए।",
   claseC: "{{en}} में काम करने या बेचने पर लागू होता है।",
-  vigencia: "यह जानकारी {{anio}} के बाद बदल गई हो सकती है: अपने देश में लागू नियम की जाँच कीजिए।",
-  vigenciaSinAnio: "यह जानकारी बदल गई हो सकती है: अपने देश में लागू नियम की जाँच कीजिए।",
+  vigencia: "अपने देश में लागू नियम की जाँच कीजिए: ये नियम समय के साथ बदलते रहते हैं।",
   paises: {
     US: { desde: "संयुक्त राज्य अमेरिका", en: "संयुक्त राज्य अमेरिका" },
     EU: { desde: "यूरोपीय संघ", en: "यूरोपीय संघ" },
