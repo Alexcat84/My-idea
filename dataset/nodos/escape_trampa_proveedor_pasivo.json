@@ -6,13 +6,13 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, que dejes de medirla con metas numéricas periódicas, que siga arraigada en la operación real y que su gente se forme en gestión de seguridad. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
   "pasos_accionables": [
-    "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
+    "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción ni de los financieros",
     "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
     "Eliminar las metas semanales, mensuales o trimestrales de seguridad basadas en cifras",
     "Mantener personal con experiencia operativa real, evitando que un solo tipo de profesional domine el equipo",
-    "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes"
+    "Capacitar al personal de seguridad en gestión de seguridad, investigación de incidentes y accidentes, redacción de informes y presentación"
   ],
-  "entregable_esperado": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+  "entregable_esperado": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas semanales, mensuales ni trimestrales de seguridad",
   "nodos_previos": [
     "diseno_departamento_seguridad_efectivo"
   ],
@@ -146,6 +146,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide cinco condiciones para salir de la trampa y el resumen presenta como solución solo tres; faltan el arraigo en la operación real y la formación del personal.; Misma omisión: se caen el arraigo operativo y la formación en gestión de seguridad e investigación de incidentes.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-cierre-c06-escape_trampa_proveedor_pasivo-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes",
+      "texto_nuevo": "Capacitar al personal de seguridad en gestión de seguridad, investigación de incidentes y accidentes, redacción de informes y presentación",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3078",
+        "frase": "educated in safety management, incident/accident investigation, report writing, presentation and so forth"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide formación en gestión de seguridad, investigación de incidentes y accidentes, redacción de informes y presentación; el paso cambia la gestión de seguridad por gestionar incidentes y funde informes y presentación.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-escape_trampa_proveedor_pasivo-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+      "texto_nuevo": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas semanales, mensuales ni trimestrales de seguridad",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3074",
+        "frase": "An end to weekly or monthly or quarterly targets."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide acabar con toda meta semanal, mensual o trimestral de seguridad, no solo con las que castigan.; Mismo defecto: el libro elimina las metas periódicas de seguridad en general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-escape_trampa_proveedor_pasivo-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
+      "texto_nuevo": "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción ni de los financieros",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3070",
+        "frase": "These resources must be independent of production or financial fluctuations"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide recursos independientes de los vaivenes de la producción y también de los financieros; se cae la segunda mitad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

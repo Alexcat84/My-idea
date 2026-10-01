@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
   "pasos_accionables": [
-    "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
+    "Antes de empezar, aclarar qué preguntas quieres responder o qué decisiones necesitas apoyar con el LCA, y definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
     "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
     "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
     "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
@@ -121,6 +121,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta datos primarios propios y promedios públicos del sector como opciones, sin jerarquía.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c02-realizar_analisis_ciclo_de_vida_lca-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
+      "texto_nuevo": "Antes de empezar, aclarar qué preguntas quieres responder o qué decisiones necesitas apoyar con el LCA, y definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1860-1862",
+        "frase": "get clear on the following: What question(s) are you trying to answer?"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae el paso previo que el libro llama requisito crucial: aclarar para qué se hace el LCA antes de embarcarse.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

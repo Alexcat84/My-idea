@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Vender el derecho a abrir varios locales en una zona (desarrollo de área)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+  "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número de locales, por lo general fijado de antemano, en una zona, siguiendo un calendario de aperturas en general acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
   "pasos_accionables": [
     "Decide el tamaño de la zona y el calendario de aperturas, lo recomendable es entre 3 y 5 locales.",
     "Pon criterios claros de capital y experiencia para quien va a desarrollar esa zona.",
     "Agrega cláusulas que penalicen si no se cumple el calendario de aperturas.",
-    "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez."
+    "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez, y si rinde mejor con un dueño que lo opere, porque quien desarrolla la zona contratará sus propios gerentes."
   ],
   "entregable_esperado": "Un contrato modelo de desarrollo de área con el calendario de aperturas y las cláusulas de cumplimiento.",
   "nodos_previos": [
@@ -41,6 +41,54 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro da la cifra de más del 50% solo como estimación y cuenta aparte los que no cumplen el calendario.; El libro dice que estos contratos pueden minimizar las disputas territoriales, no evitarlas.; Mismo defecto que la marca 0.; Mismo defecto que la marca 1.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c04-franquicia_desarrollo_area-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez.",
+      "texto_nuevo": "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez, y si rinde mejor con un dueño que lo opere, porque quien desarrolla la zona contratará sus propios gerentes.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1592",
+        "frase": "perform better with an owner-operator, area development franchising may not be the best route"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone dos condiciones y el paso solo conserva la de manejar varios locales; se cae la del negocio que rinde mejor con un dueño que lo opere.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-franquicia_desarrollo_area-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+      "texto_nuevo": "Aquí vendes a alguien el derecho exclusivo de abrir un número de locales, por lo general fijado de antemano, en una zona, siguiendo un calendario de aperturas en general acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1566",
+        "frase": "a (usually) pre-established number of individual franchises on a (generally) pre-defined opening schedule"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el número de locales suele estar fijado de antemano y el calendario por lo general definido; el nodo lo da como rasgo invariable.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-franquicia_desarrollo_area-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Agrega cláusulas que penalicen si no se cumple el calendario de aperturas.",
+      "texto_nuevo": "Agrega cláusulas que penalicen si no se cumple el calendario de aperturas.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro no habla de cláusulas de penalización; solo advierte que el incumplimiento suele obligar a recurrir a abogados para recuperar el territorio."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

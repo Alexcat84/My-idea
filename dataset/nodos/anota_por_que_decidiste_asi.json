@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Registrar las Decisiones de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+  "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto.",
   "pasos_accionables": [
     "Cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
     "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
@@ -172,6 +172,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 0,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c02-anota_por_que_decidiste_asi-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "texto_nuevo": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "5827",
+        "frase": "This is a decision and commitment point on the part of the project stakeholder."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no afirma que el registro sea la única memoria de nadie ni que convierta cada susto en una lección.; Mismo defecto: la única memoria institucional no está en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Muestra puntos en común para ganar confianza antes de negociar",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe, porque eso se nota y rompe la confianza en lugar de construirla. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
+  "resumen_teorico": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
   "pasos_accionables": [
     "En la primera conversación, dedica unos minutos a preguntas personales antes de entrar en cifras.",
     "Escucha qué palabras o valores repite la otra parte y usa ese mismo lenguaje al responder.",
@@ -74,6 +74,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c06-muestra_puntos_en_comun_antes_de_negociar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe, porque eso se nota y rompe la confianza en lugar de construirla. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
+      "texto_nuevo": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "4783",
+        "frase": "confiamos más en las personas cuando nos parecen similares a nosotros o nos resultan familiares"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo quitar; doble lectura ciega, arbitro): El pasaje del principio de similitud no dice que fingir la cercanía se note ni que rompa la confianza.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Validar el Modelo Financiero",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, pero deben estar respaldados por el aprendizaje extensivo de customer discovery y validation.",
+  "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, respaldadas, ojalá, por el aprendizaje extensivo de customer discovery y validation.",
   "pasos_accionables": [
-    "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable",
-    "Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)",
+    "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable e impacto de los efectos de red en el cliente",
+    "Calcular costos de adquisición de clientes, tasas de conversión, Customer Lifetime Value (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
     "Determinar costos operativos básicos, costos de canal y márgenes",
     "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año, según la curva de crecimiento de ingresos propia de tu tipo de mercado",
     "Verificar el balance de caja disponible (runway)",
@@ -48,6 +48,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye el tipo de mercado porque cada tipo tiene una curva de ingresos distinta que condiciona la proyección.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c04-validar_modelo_financiero-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable",
+      "texto_nuevo": "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable e impacto de los efectos de red en el cliente",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13038, 13434-13439",
+        "frase": "product cost, market size, attainable market share, and customer impact of network effects"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para la propuesta de valor trae cuatro métricas y el paso omite el impacto de los efectos de red en el cliente.; Mismo defecto: falta el cuarto elemento de la lista, tanto en el texto como en la lista de verificación del libro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-validar_modelo_financiero-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)",
+      "texto_nuevo": "Calcular costos de adquisición de clientes, tasas de conversión, Customer Lifetime Value (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13040, 13441-13449",
+        "frase": "customer switching costs that the company may have to pay"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para la relación con clientes trae cuatro métricas y el paso omite los costos de cambio de los clientes.; Mismo defecto: se cae el cuarto elemento de la lista del libro.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-validar_modelo_financiero-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, pero deben estar respaldados por el aprendizaje extensivo de customer discovery y validation.",
+      "texto_nuevo": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, respaldadas, ojalá, por el aprendizaje extensivo de customer discovery y validation.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "13418",
+        "frase": "the numbers are still only educated guesses, validated—we hope—through extensive customer discovery"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los números están validados, se espera, por el trabajo con clientes; el nodo lo vuelve una exigencia firme.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

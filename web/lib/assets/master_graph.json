@@ -3630,14 +3630,14 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
-      "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acciones correctivas tomar cuando no lo es.",
+      "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acción sobre el proceso conviene tomar, si alguna.",
       "pasos_accionables": [
         "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
         "Construir el histograma con los límites de especificación superpuestos",
         "Evaluar el centrado del histograma respecto al objetivo del proceso",
         "Evaluar el ancho de la distribución respecto a los límites de especificación",
         "Evaluar la forma de la distribución e investigar picos múltiples como indicio de mezcla de poblaciones o procesos distintos",
-        "Determinar si el proceso es capaz y definir acciones correctivas si no lo es"
+        "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si alguna"
       ],
       "entregable_esperado": "Histograma con límites de especificación e informe de capacidad de proceso indicando si cumple especificaciones y qué acciones tomar",
       "nodos_previos": [
@@ -5188,7 +5188,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Registrar las Decisiones de Riesgo",
-      "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
+      "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, registra esa decisión. Parece un trámite, pero es el momento en que te comprometes con una respuesta, y si no registras tus decisiones quedas expuesto a repetir malas decisiones. Registrar la respuesta elegida, descrita por completo y con el aspecto del riesgo que ataca, te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto.",
       "pasos_accionables": [
         "Cada vez que decidas qué hacer con un riesgo, escribe por qué lo decidiste así y describe completa la respuesta elegida.",
         "Describe por completo la respuesta que elegiste y qué aspecto del riesgo ataca, por ejemplo, reducir su probabilidad con inspecciones más frecuentes.",
@@ -9652,7 +9652,7 @@
         "Revisar la visión, misión y valores de tu negocio, sus políticas de calidad y de satisfacción del cliente, su compromiso total con los clientes y su satisfacción, su compromiso con la mejora continua, sus normas de conducta, ética incluida, y su beneficio a la comunidad y sus relaciones públicas",
         "Alinear cómo eliges, formas y reconoces a las personas que trabajan contigo con la cultura que quieres construir",
         "Reforzar de manera constante los nuevos comportamientos con reconocimiento y recompensas",
-        "No dejar a nadie fuera del cambio, ni siquiera a ti mismo",
+        "No dejar a nadie fuera del cambio, ni siquiera a ti mismo, ni tampoco las prácticas ni el contenido central de tu negocio",
         "Mantener el refuerzo durante un tiempo largo, porque adoptar una nueva forma de trabajar puede tomar varios años"
       ],
       "entregable_esperado": "Plan de transformación cultural con las formas de elegir, formar y reconocer a tu gente alineadas, y con mecanismos de refuerzo definidos",
@@ -12934,7 +12934,7 @@
       "titulo_concepto": "Carta de Crédito (Letter of Credit)",
       "resumen_teorico": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del monto que especifica la carta, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). A veces es confirmada por un banco en el país del exportador, lo que añade una capa de seguridad adicional al pago; si no, solo se avisa a través de un banco de ese país. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
-        "Revisar minuciosamente todos los términos y condiciones de la L/C recibida antes de aceptar la orden.",
+        "Revisar minuciosamente todos los términos y condiciones de la L/C recibida.",
         "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
         "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
         "Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.",
@@ -14572,12 +14572,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Certificados Genéricos de Origen",
-      "resumen_teorico": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "resumen_teorico": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados; para productos textiles, el país importador puede exigir un certificado emitido por el fabricante. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
-        "Confirmar que el producto no califica para un FTA existente",
+        "Confirmar que el producto no califica para un FTA existente y verificar con el comprador, con un transitario con experiencia o con el U.S. Commercial Service si se requiere un certificado de origen",
         "Contactar la cámara de comercio local o un proveedor privado",
         "Verificar membresía requerida en la cámara de comercio",
-        "Solicitar notarización y legalización consular si el país destino lo exige (común en Medio Oriente)",
+        "Solicitar notarización, certificación por una cámara de comercio local y legalización consular si el país destino lo exige (común en Medio Oriente)",
         "Consultar a la National U.S.–Arab Chamber of Commerce para destinos de Medio Oriente"
       ],
       "entregable_esperado": "Certificado genérico de origen notariado y legalizado según requisitos del país destino",
@@ -15355,7 +15355,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "franquicias",
       "titulo_concepto": "El Ciclo de Ventas-Control de Calidad de Franquicias",
-      "resumen_teorico": "Las ventas de franquicias son un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
+      "resumen_teorico": "Las ventas de franquicias son en gran medida un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que, una vez que tienes un proceso de ventas sólido, la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
       "pasos_accionables": [
         "Auditar los seis factores del ciclo de ventas de forma periódica",
         "Priorizar el concepto y la propuesta de valor como base del éxito de ventas",
@@ -16134,7 +16134,7 @@
         "Asignar peso (demérito) a cada categoría de defecto",
         "Registrar número de defectos por categoría durante inspección/auditoría",
         "Calcular deméritos totales y dividir entre unidades inspeccionadas",
-        "Usar el índice resultante para comparar tendencias históricas y frente a competencia"
+        "Usar el índice resultante para comparar tendencias históricas y, a veces, frente a competencia"
       ],
       "entregable_esperado": "Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad",
       "nodos_previos": [
@@ -16430,7 +16430,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Clasificar el tipo de paquete antes de despachar",
-      "resumen_teorico": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
+      "resumen_teorico": "Antes de despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
       "pasos_accionables": [
         "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
         "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
@@ -18647,7 +18647,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Adopción de Computación en la Nube (Cloud Computing)",
-      "resumen_teorico": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, desempeño y métricas ambientales del proveedor.",
+      "resumen_teorico": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, copias de los datos que te pertenecen y su protección, desempeño y métricas ambientales del proveedor.",
       "pasos_accionables": [
         "Evaluar qué aplicaciones internas pueden migrar a modelos SaaS.",
         "Comparar proveedores de nube según eficiencia energética y políticas de sostenibilidad.",
@@ -18848,7 +18848,7 @@
       "titulo_concepto": "Hablar del riesgo y tener claro quien hace que en una crisis",
       "resumen_teorico": "No puedes actuar ante un riesgo si tú y las personas que trabajan contigo no son conscientes de él. Por eso hablar del riesgo una y otra vez, por distintos canales, con tu equipo y también con tus clientes, consumidores y proveedores, es el primer paso crítico. Además necesitas tener claro quién hace qué cuando llega una crisis, y aprovechar simulacros o problemas pequeños como entrenamiento para responder mejor cuando venga uno de verdad.",
       "pasos_accionables": [
-        "Habla del riesgo varias veces y por distintos canales, con tu equipo y también con tus clientes, consumidores y proveedores: simulacros, charlas, políticas escritas",
+        "Habla del riesgo varias veces y por distintos canales, con tu equipo y también con tus clientes, consumidores y proveedores, y usa todas estas herramientas: simulacros, charlas, el sitio web de tu empresa, políticas escritas, guías, la definición de buenas prácticas y el propio proceso de evaluación de riesgos",
         "Deja claro qué le toca hacer a cada persona de tu equipo si llega una crisis",
         "Haz simulacros de crisis dándole a tu equipo información incompleta o equivocada, para ver cómo reacciona",
         "Después de cada crisis real o simulacro, reúnete a revisar qué funcionó y qué no",
@@ -23222,7 +23222,7 @@
       "pasos_accionables": [
         "Evaluar si el volumen de ventas proyectado atrae a un profesional con experiencia: con menos de 20 franquicias al año puede no querer unirse",
         "Buscar candidatos con experiencia en franquiciadores pequeños, no solo grandes marcas",
-        "Presupuestar costos de reclutamiento, beneficios (30%+ del salario) y equipo de soporte",
+        "Presupuestar costos de reclutamiento y reubicación, beneficios e impuestos sobre el salario (30%+ del salario), un posible asistente, el equipo (escritorios, computadoras, software de contactos) y el espacio de oficina",
         "Tener plan de contingencia si el vendedor falla o renuncia"
       ],
       "entregable_esperado": "Vendedor de franquicias contratado con plan de compensación y soporte definido",
@@ -24909,10 +24909,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Paso 4: Costo de la Calidad",
-      "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, incluyendo tu salario y tu tiempo involucrado, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+      "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
       "pasos_accionables": [
         "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
-        "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio, inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, incluyendo tu tiempo o salario, sin minimizar cifras",
+        "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
         "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
         "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
         "Establece una meta de reducción progresiva del costo de calidad",
@@ -27269,7 +27269,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Implementación como Habilidad Gerencial Crítica",
-      "resumen_teorico": "El gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. Los programas de mejora de calidad fallan a menudo porque los responsables de calidad exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
+      "resumen_teorico": "El gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. En los programas de mejora de calidad, muchos responsables de calidad se atascan porque exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
       "pasos_accionables": [
         "Aceptar la asignación sin exigir autoridad absoluta previa",
         "Identificar los problemas básicos detrás de la asignación",
@@ -27493,7 +27493,7 @@
         "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales, y evaluar la eficacia del programa de ciberseguridad para identificar qué necesita mejorar",
         "Clasificar y priorizar los datos del negocio según su sensibilidad",
         "Documentar amenazas internas y externas y sus respuestas asociadas en un registro de riesgos",
-        "Comunicar planes y políticas de ciberseguridad a todo el personal y terceros relevantes"
+        "Comunicar planes, políticas y buenas prácticas de ciberseguridad a todo el personal y terceros relevantes"
       ],
       "entregable_esperado": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
       "nodos_previos": [
@@ -27570,9 +27570,9 @@
       "titulo_concepto": "Perfiles Organizacionales del CSF (Current y Target Profile)",
       "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual), un Target Profile (estado deseado) o ambos, pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
       "pasos_accionables": [
-        "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida",
+        "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando (o intentando lograr) actualmente y en qué medida",
         "Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo",
-        "Considerar usar un Community Profile del sector como base para el Target Profile",
+        "Considerar usar un Community Profile de un sector, una tecnología, un tipo de amenaza u otro caso de uso como base para el Target Profile",
         "Considerar usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
         "Comparar el Current Profile con el Target Profile para identificar brechas y priorizar acciones futuras"
       ],
@@ -27762,12 +27762,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Determinar el Número Óptimo de Cofundadores",
-      "resumen_teorico": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital o quitarte carga real) que pese más que la complejidad que añade.",
+      "resumen_teorico": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital humano o quitarte carga real) que pese más que la complejidad que añade.",
       "pasos_accionables": [
         "Evalúa qué valor concreto y distinto te daría cada cofundador potencial.",
         "No sumes a alguien con habilidades y contactos que ya tienes cubiertos en el equipo.",
         "Antes de sumar a cada persona, piensa el costo de coordinar con ella y si su rol se solapa con el de otro.",
-        "Define con claridad el rol de cada cofundador antes de cerrar su entrada."
+        "Define con claridad el rol de cada cofundador antes de cerrar su entrada; pero si todavía no se conocen bien, definirlo demasiado pronto puede ser un gran error."
       ],
       "entregable_esperado": "Tu lista final de cofundadores, con el motivo concreto de por qué cada uno aporta algo único, y los roles bien diferenciados entre todos.",
       "nodos_previos": [
@@ -29006,7 +29006,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "risk_management",
       "titulo_concepto": "Cultura de Riesgo Abierta",
-      "resumen_teorico": "La gente solo se siente cómoda compartiendo lo que sabe, errores incluidos, donde existe una cultura genuina de no culpar. Una cultura sana descriminaliza el riesgo: valora la comunicación abierta y no pone el acento en buscar culpables. Aunque trabajes solo, esta cultura empieza contigo: en cómo te hablas a ti mismo y en a quién invitas a cuestionarte. Para el emprendedor, cultivar un espacio, aunque sea de uno, donde nombrar lo que puede salir mal sea bienvenido y no penado, es lo que mantiene sus riesgos a la vista en vez de bajo la alfombra.",
+      "resumen_teorico": "La gente solo se siente cómoda compartiendo lo que sabe, errores incluidos, donde existe una cultura genuina de no culpar. Una cultura sana descriminaliza el riesgo: valora la comunicación abierta y no pone el acento en buscar culpables. Para el emprendedor, cultivar un espacio, aunque sea de uno, donde nombrar lo que puede salir mal sea bienvenido y no penado, es lo que mantiene sus riesgos a la vista en vez de bajo la alfombra.",
       "pasos_accionables": [
         "Date permiso explícito de pensar en lo que puede fallar sin sentirte derrotista, pero sin caer en imaginar que todo irá cada vez peor.",
         "No te castigues por traer malas noticias: la mala noticia temprana es un regalo.",
@@ -31404,7 +31404,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "entrega",
       "titulo_concepto": "Decidir cuánto cobrar por velocidad y ventana de entrega",
-      "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
+      "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
       "pasos_accionables": [
         "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
         "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
@@ -31945,7 +31945,7 @@
         "Evalúa si de verdad necesitas capital público o si te sirven otras fuentes de financiamiento privadas",
         "Piensa en el impacto personal de la exposición pública: tus finanzas, tus decisiones, la presión de reportar cada trimestre",
         "Prepárate para el período de bloqueo después del IPO y para las restricciones al vender tus acciones",
-        "Considera cómo va a cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
+        "Considera cómo puede cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
         "Diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo"
       ],
       "entregable_esperado": "Un análisis de ventajas y desventajas hecho a tu medida sobre si te conviene salir a bolsa, incluyendo cómo afecta tu control, tus finanzas personales y la estructura de tu junta directiva.",
@@ -34350,7 +34350,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "risk_management",
       "titulo_concepto": "Niveles de Madurez en la Gestión de Riesgo",
-      "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+      "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
       "pasos_accionables": [
         "Ubica en qué nivel estás: improvisas, arrancas, creces o ya tienes método propio.",
         "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
@@ -37152,7 +37152,7 @@
       "titulo_concepto": "Determinación del Alcance y Aplicabilidad de SP 800-171",
       "resumen_teorico": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
       "pasos_accionables": [
-        "Inventariar todos los sistemas y componentes de la organización",
+        "Inventariar todos los sistemas y componentes de la organización y cómo fluyen los datos hacia ellos, dentro de ellos y fuera de ellos",
         "Identificar cuáles sistemas procesan, almacenan o transmiten CUI, y cuáles les proveen protección",
         "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
         "Documentar la decisión de alcance y su justificación"
@@ -42313,7 +42313,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "compras",
       "titulo_concepto": "Domina lo que compras antes de negociarlo",
-      "resumen_teorico": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+      "resumen_teorico": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
       "pasos_accionables": [
         "Investiga precios de referencia y variantes del insumo o servicio antes de hablar con el proveedor.",
         "Pregunta a otras personas de tu rubro qué condiciones de compra consideran normales.",
@@ -44239,7 +44239,7 @@
         "Incluir nombres y direcciones de vendedor y comprador.",
         "Detallar número de referencia y fecha de consulta del comprador.",
         "Listar productos solicitados con descripción breve y precio en USD.",
-        "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
+        "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
         "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
         "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
         "Incluir declaración de veracidad y país de origen de los bienes.",
@@ -45918,8 +45918,8 @@
       "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
       "pasos_accionables": [
         "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
-        "Empaca en contenedores fuertes, bien sellados y bien llenos",
-        "Distribuye el peso de forma uniforme y usa paletas cuando puedas",
+        "Empaca en contenedores fuertes, bien sellados y, cuando sea posible, bien llenos",
+        "Distribuye el peso de forma uniforme, pon la mercancía en paletas y, cuando puedas, colócalas en contenedores",
         "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
         "Pregunta si tu madera o tus materiales necesitan algún tratamiento especial o si son peligrosos",
         "Si no tienes cómo hacerlo bien tú mismo, contrata a alguien que se especialice en empaque"
@@ -48216,7 +48216,7 @@
       "titulo_concepto": "Entrenar a Franquiciados para la Validación",
       "resumen_teorico": "Los franquiciados existentes son la principal fuente de validación para nuevos candidatos, pero algunos temen la competencia de nuevas franquicias cercanas o sienten la obligación de parecer objetivos y mencionar aspectos negativos. Antes, asegúrate de que estén de verdad satisfechos; si no, ese es tu primer trabajo. Los mejores franquiciadores educan activamente a sus franquiciados sobre los beneficios de vender la marca (mayor poder publicitario, de compra, reconocimiento, una organización de soporte más grande y profesional y valorización del negocio) para que se conviertan en parte del equipo de ventas.",
       "pasos_accionables": [
-        "Explicar a los franquiciados los beneficios de que la marca crezca (poder de compra, publicidad, valorización)",
+        "Explicar a los franquiciados los beneficios de que la marca crezca (poder de compra, publicidad, reconocimiento de marca, una organización de soporte más grande y profesional, valorización)",
         "Comunicar que son parte del equipo de ventas de la franquicia",
         "Reforzar continuamente los beneficios únicos de la marca para que sea un discurso natural",
         "Fomentar referidos de amigos y conocidos como fuente de leads gratuitos y de calidad"
@@ -49615,13 +49615,13 @@
       "titulo_concepto": "Escapar de la Trampa del Proveedor Pasivo de Seguridad",
       "resumen_teorico": "Cuando el área de seguridad de tu negocio solo entrega números hacia arriba sin poder decidir nada, se vuelve un contador de datos, mientras tú castigas a quienes tienen incidentes, y así dejan de contarte lo que pasa. La solución es que esa área tenga peso real: presupuesto y gente propios, voz en tus decisiones, que dejes de medirla con metas numéricas periódicas, que siga arraigada en la operación real y que su gente se forme en gestión de seguridad. A cambio, debe entender la presión de producción y darte información útil, no solo estadísticas.",
       "pasos_accionables": [
-        "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción",
+        "Asegurar personas y dinero propios para el área de seguridad, sin que dependan de los altibajos de la producción ni de los financieros",
         "Exigir que el área de seguridad participe directamente cuando decidas entre seguridad y eficiencia, y en lo que hagas después de un incidente",
         "Eliminar las metas semanales, mensuales o trimestrales de seguridad basadas en cifras",
         "Mantener personal con experiencia operativa real, evitando que un solo tipo de profesional domine el equipo",
-        "Capacitar al personal de seguridad para investigar incidentes, gestionarlos y presentar informes"
+        "Capacitar al personal de seguridad en gestión de seguridad, investigación de incidentes y accidentes, redacción de informes y presentación"
       ],
-      "entregable_esperado": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas que castiguen",
+      "entregable_esperado": "Plan para reestructurar el área de seguridad, con acceso directo a las decisiones importantes y sin metas semanales, mensuales ni trimestrales de seguridad",
       "nodos_previos": [
         "diseno_departamento_seguridad_efectivo"
       ],
@@ -54776,9 +54776,9 @@
       "titulo_concepto": "Evaluación de Mercados Objetivo",
       "resumen_teorico": "Segunda etapa del proceso de investigación de mercado que profundiza en tendencias de producto, competencia, factores de marketing, barreras comerciales e incentivos para los mercados preseleccionados, con el fin de tomar una decisión informada sobre dónde enfocar los esfuerzos de exportación.",
       "pasos_accionables": [
-        "Examinar tendencias de consumo e importación del producto en cada mercado",
+        "Examinar tendencias de consumo e importación del producto y de los productos relacionados que puedan influir en la demanda en cada mercado",
         "Investigar competidores domésticos y extranjeros y su cuota de mercado",
-        "Analizar canales de distribución, idiosincrasias culturales y prácticas de negocio",
+        "Analizar sectores de usuario final, canales de distribución, idiosincrasias culturales y prácticas de negocio",
         "Identificar barreras arancelarias/no arancelarias y necesidad de licencias de exportación",
         "Identificar incentivos gubernamentales aplicables"
       ],
@@ -57289,7 +57289,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "La carta que certifica que una venta fue justa (fairness opinion)",
-      "resumen_teorico": "Una fairness opinion es una carta formal que la persona que te asesora en el banco entrega confirmando que la venta de tu empresa es justa para todos. Te sirve como protección adicional si algún inversionista descontento después te demanda, pero es cara (pregunta el precio en tu mercado) y en la mayoría de ventas tecnológicas solo tiene sentido si tu estructura de capital es compleja o hay conflictos de interés entre tus accionistas; es mucho más común con muchos inversionistas diversos. Tu mejor protección suele ser llevar un proceso de venta transparente y bien documentado, no la carta en sí.",
+      "resumen_teorico": "Una fairness opinion es una carta formal que la persona que te asesora en el banco entrega confirmando que la venta de tu empresa es justa para todos. Te sirve como protección adicional si algún inversionista, acreedor o pretendiente descontento después ejerce su derecho a oponerse o incluso te demanda, pero es cara (pregunta el precio en tu mercado) y en la mayoría de ventas tecnológicas solo tiene sentido si tu estructura de capital es compleja o hay conflictos de interés entre tus accionistas; es mucho más común en empresas que cotizan en bolsa o privadas con muchos inversionistas diversos. Tu mejor protección suele ser llevar un proceso de venta transparente y bien documentado, no la carta en sí.",
       "pasos_accionables": [
         "Revisa qué tan compleja es la estructura de capital de tu empresa antes de pedir esta carta",
         "Pregúntate si hay conflictos de interés entre tus accionistas",
@@ -59735,12 +59735,12 @@
       "fase_proyecto": "ejecucion",
       "dominio": "exportacion",
       "titulo_concepto": "Programas de Financiamiento Agrícola del USDA/FAS",
-      "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran o establecen instalaciones agrícolas en mercados emergentes).",
       "pasos_accionables": [
         "Determinar si el producto exportado es agrícola, o son bienes o servicios para instalaciones agrícolas en mercados emergentes, y si es elegible para programas USDA",
         "Seleccionar el programa adecuado según el plazo y tipo de transacción (GSM-102, SCGP o FGP)",
         "Registrar la documentación requerida en el sistema GSM Online",
-        "Contactar a FAS Contract and Registration branch para validar elegibilidad"
+        "Contactar a FAS Contract and Registration branch si necesitas más información"
       ],
       "entregable_esperado": "Registro y documentación presentada en el sistema GSM Online del USDA",
       "nodos_previos": [
@@ -61502,12 +61502,12 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Vender el derecho a abrir varios locales en una zona (desarrollo de área)",
-      "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número definido de locales en una zona, siguiendo un calendario de aperturas acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
+      "resumen_teorico": "Aquí vendes a alguien el derecho exclusivo de abrir un número de locales, por lo general fijado de antemano, en una zona, siguiendo un calendario de aperturas en general acordado. Trabajas con menos socios, pero más sólidos, y puedes reducir las peleas por territorio entre franquiciados. A cambio, necesitas candidatos con más capital detrás. Ten en cuenta que, según algunas estimaciones, más de la mitad de estos contratos no se cumplen, sin contar los que no respetan el calendario acordado. Por eso conviene limitar cada contrato a entre 3 y 5 locales, para que el riesgo se quede corto.",
       "pasos_accionables": [
         "Decide el tamaño de la zona y el calendario de aperturas, lo recomendable es entre 3 y 5 locales.",
         "Pon criterios claros de capital y experiencia para quien va a desarrollar esa zona.",
         "Agrega cláusulas que penalicen si no se cumple el calendario de aperturas.",
-        "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez."
+        "Piensa si tu negocio realmente permite que una sola persona maneje varios locales a la vez, y si rinde mejor con un dueño que lo opere, porque quien desarrolla la zona contratará sus propios gerentes."
       ],
       "entregable_esperado": "Un contrato modelo de desarrollo de área con el calendario de aperturas y las cláusulas de cumplimiento.",
       "nodos_previos": [
@@ -67113,7 +67113,7 @@
       "resumen_teorico": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados y almacenamiento seguro, y usarse con gafas o careta si pueden lanzar partículas o romperse. Las eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
       "pasos_accionables": [
         "Inspeccionar regularmente el estado de herramientas manuales y eléctricas",
-        "Reemplazar mangos rotos o herramientas con cabezas deformadas",
+        "Reemplazar mangos rotos y reacondicionar o reemplazar, según haga falta, las herramientas con cabezas deformadas",
         "Verificar que las herramientas eléctricas tengan conexión a tierra o doble aislamiento",
         "Instalar guardas en partes rotantes o móviles de equipos",
         "Almacenar herramientas en lugar seco y seguro"
@@ -67192,7 +67192,7 @@
       "pasos_accionables": [
         "Determinar si el producto se ajusta mejor a canal físico, digital o híbrido",
         "Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)",
-        "Calcular todos los costos del canal (descuentos, promoción, devoluciones)",
+        "Calcular todos los costos del canal (descuentos, distribución, promoción y, a veces, colocación en anaquel o devoluciones)",
         "Seleccionar UN canal principal para enfocar los esfuerzos iniciales (si es un canal físico, puede ir acompañado de apoyo web simultáneo)",
         "Recalcular el modelo de ingresos neto tras costos de canal"
       ],
@@ -69429,7 +69429,7 @@
         "Revisa si tu producto, sin empaque protector, se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
         "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
         "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
-        "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
+        "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica; si es plano y alargado a la vez, pruébalo como alargado.",
         "Refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
       ],
       "entregable_esperado": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
@@ -72981,7 +72981,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "IoT y Big Data para Trazabilidad de Supply Chain",
-      "resumen_teorico": "El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolución va desde códigos de barras, pasando por RFID, hasta microchips embebidos en cualquier producto, permitiendo un seguimiento continuo y granular del movimiento de mercancías.",
+      "resumen_teorico": "El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolución va desde códigos de barras, pasando por RFID, hasta microchips embebidos en casi cualquier producto, permitiendo un seguimiento continuo y granular del movimiento de mercancías.",
       "pasos_accionables": [
         "Mapear los puntos de la cadena de suministro donde se necesita visibilidad en tiempo real",
         "Seleccionar tecnología de tagging adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
@@ -73200,7 +73200,7 @@
       "resumen_teorico": "Este es tu primer paso para meter la sostenibilidad en tu negocio. Se trata de que identifiques qué problemas ambientales o sociales te afectan, mirando dos direcciones: de adentro hacia afuera (cómo tus actividades afectan al ambiente) y de afuera hacia adentro (de qué recursos naturales depende tu negocio y cómo podría afectarse tu acceso a ellos). Usa el marco AUDIO para asegurarte de revisar todo: lo que generas tú, lo de tus proveedores y lo de tus clientes.",
       "pasos_accionables": [
         "Lista los impactos ambientales que generan tus propias operaciones (residuos, emisiones, uso de agua, químicos, etc.)",
-        "Revisa los impactos de tus proveedores y los de tus clientes cuando usan tu producto",
+        "Revisa los impactos de tus proveedores y los de tus clientes cuando usan tu producto o lo desechan",
         "Usa el marco AUDIO para ordenar este análisis y, al final, mira cada problema también como una posible oportunidad de diferenciarte de tu competencia",
         "Identifica quiénes están mirando este tema (reguladores, organizaciones, comunidades, clientes) y entiende qué piensan",
         "Identifica tendencias que vienen (normas nuevas, dudas científicas sobre los materiales que usas, tecnología, escasez de recursos, mercado) que puedan cambiar el panorama"
@@ -80618,7 +80618,7 @@
       "titulo_concepto": "Cómo Definir el Tamaño de tu Territorio",
       "resumen_teorico": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Combínalas para tu mejor estimación y deja margen para ajustar los territorios con más datos. Con más presupuesto, considera una firma de mapeo geográfico (GIS).",
       "pasos_accionables": [
-        "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades",
+        "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades; luego traza un área hipotética alrededor del local y mide su demografía para fijar el tamaño con el que un franquiciado obtendría un retorno adecuado",
         "Si tienes una unidad en un mercado aislado, estudia su demografía para saber qué hace falta para generar cierto nivel de negocio (muchas veces no habrá un mercado adecuado)",
         "Si tienes un competidor parecido y sabes cómo definió sus territorios, analiza cómo los divide en mercados parecidos, sin dar por hecho que no se equivocó en su análisis",
         "Calcula tu penetración de mercado actual y proyéctala a nuevas zonas",
@@ -83532,7 +83532,7 @@
         "Elegir ubicaciones de oficina con buen acceso a transporte público",
         "Subsidiar pases de autobús o metro para empleados",
         "Eliminar o reducir el subsidio de estacionamiento gratuito",
-        "Ofrecer espacios preferenciales para carpooling o van pools",
+        "Ofrecer estacionamiento gratis o espacios preferenciales para carpooling o van pools",
         "Implementar shuttles compartidos hacia/desde el trabajo"
       ],
       "entregable_esperado": "Política de commuting sostenible con incentivos definidos y métricas de adopción",
@@ -83610,7 +83610,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "compras",
       "titulo_concepto": "Muestra puntos en común para ganar confianza antes de negociar",
-      "resumen_teorico": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe, porque eso se nota y rompe la confianza en lugar de construirla. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
+      "resumen_teorico": "La gente confía y cede más ante quienes percibe cercanos o parecidos a sí misma. Antes de discutir precio o condiciones, conviene prestar atención genuina a cómo habla la otra parte, qué valores repite y qué le preocupa, para encontrar puntos reales en común: forma de trabajar, experiencias parecidas, o una misma manera de entender el negocio. No se trata de fingir una cercanía que no existe. Mencionar con naturalidad algo compartido abre la puerta a una conversación más honesta y reduce la sensación de que estás frente a un extraño que solo quiere sacar ventaja.",
       "pasos_accionables": [
         "En la primera conversación, dedica unos minutos a preguntas personales antes de entrar en cifras.",
         "Escucha qué palabras o valores repite la otra parte y usa ese mismo lenguaje al responder.",
@@ -83854,9 +83854,9 @@
       "pasos_accionables": [
         "Identifica dos o más segmentos de clientes que se necesitan mutuamente y se beneficiarían de conectarse",
         "Diseña una propuesta de valor de acceso específica para cada lado de la plataforma",
-        "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando qué lado es más sensible al precio y si el otro cubrirá el subsidio",
+        "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando si puedes atraer suficientes clientes de cada lado, qué lado es más sensible al precio, si ese lado se deja atraer con una oferta subsidiada y si el otro cubrirá el subsidio",
         "Define los mecanismos de matchmaking que reduzcan costos de búsqueda entre los segmentos",
-        "Desarrolla las actividades y recursos necesarios para gestionar, promocionar y mantener tu plataforma"
+        "Desarrolla las actividades y recursos necesarios para gestionar, prestar el servicio, promocionar y mantener tu plataforma"
       ],
       "entregable_esperado": "Un diseño de modelo de negocio que muestre al menos dos segmentos de clientes interconectados, sus propuestas de valor diferenciadas y los flujos de ingresos cruzados entre ellos",
       "nodos_previos": [
@@ -86312,7 +86312,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "environmental",
       "titulo_concepto": "Optimización de Centros de Datos Verdes",
-      "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras reducen drásticamente el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
+      "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras tienen un gran potencial para reducir el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
       "pasos_accionables": [
         "Auditar la utilización real de almacenamiento y servidores para identificar excedentes.",
         "Implementar virtualización de servidores y de almacenamiento, y deduplicación de datos.",
@@ -87291,7 +87291,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "La Paradoja del Éxito Emprendedor",
-      "resumen_teorico": "Cuanto más rápido y exitoso es un fundador-CEO liderando las primeras etapas del startup (desarrollo de producto, recaudación de fondos), más rápido se acelera su propia obsolescencia como líder. El éxito en fundraising diluye el control del fundador en la junta directiva, y el éxito en producto lleva a una etapa donde se requieren habilidades distintas (ventas, gestión multifuncional) que el fundador técnico rara vez posee. Esto crea una situación paradójica donde el desempeño sobresaliente incrementa el riesgo de ser reemplazado, más que protegerlo.",
+      "resumen_teorico": "Cuanto más rápido y exitoso es un fundador-CEO liderando las primeras etapas del startup (desarrollo de producto, recaudación de fondos), más probable es que acelere su propia obsolescencia como líder. El éxito en fundraising diluye el control del fundador en la junta directiva, y el éxito en producto lleva a una etapa donde se requieren habilidades distintas (ventas, gestión multifuncional) que el fundador técnico rara vez posee. Esto crea una situación paradójica donde el desempeño sobresaliente incrementa el riesgo de ser reemplazado, más que protegerlo.",
       "pasos_accionables": [
         "Anticipar que el éxito en hitos tempranos (producto, financiamiento) puede acelerar la necesidad de un cambio de liderazgo.",
         "Invertir proactivamente en desarrollar habilidades de gestión multifuncional (ventas, marketing, finanzas) antes de que se vuelvan críticas.",
@@ -89023,7 +89023,7 @@
         "Implementar un programa escrito de espacios confinados.",
         "Realizar pruebas atmosféricas antes y durante la entrada (oxígeno, gases inflamables, tóxicos).",
         "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
-        "Verificar disponibilidad de servicios de rescate antes de cada entrada."
+        "Verificar la comunicación operativa con los servicios de rescate y su disponibilidad antes de cada entrada."
       ],
       "entregable_esperado": "Programa escrito de espacios confinados, señalización instalada y protocolo de rescate verificado.",
       "nodos_previos": [
@@ -90026,7 +90026,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Planes de Contingencia",
-      "resumen_teorico": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Tenerlo listo cambia todo, porque en el momento del golpe no tienes tiempo ni claridad para improvisar. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione. Para el emprendedor solo, que no tiene un equipo que reaccione por él, un plan B escrito es la diferencia entre responder con calma y congelarse ante el problema.",
+      "resumen_teorico": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione.",
       "pasos_accionables": [
         "Para cada riesgo grave, escribe qué harás concretamente si se vuelve realidad.",
         "Identifica qué necesitas preparar de antemano para que ese plan B sea posible.",
@@ -96627,7 +96627,7 @@
       "titulo_concepto": "Roadmap Estratégico de Producto y Tecnología",
       "resumen_teorico": "Un roadmap es una representación visual de las principales iniciativas de producto y tecnología en el tiempo (típicamente 5 años), derivada del Strat-Map y los planes de ataque. Es un 'plan rodante' que se actualiza anualmente, donde solo el primer año se implementa con certeza. Se compone de un roadmap de producto (qué productos desarrollar y cuándo) y un roadmap de tecnología (qué tecnologías se necesitan para soportar esos productos). Sirve como puente entre decisiones estratégicas y tácticas across funciones organizacionales.",
       "pasos_accionables": [
-        "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente",
+        "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
         "Ensamblar un equipo multifuncional de roadmapping",
         "Generar una 'wish list' de productos candidatos usando templates de una página",
         "Presentar candidatos en una reunión 'Gate 0' y calificarlos con un scorecard simplificado (fit estratégico, beneficios únicos, atractivo de mercado, factibilidad técnica, riesgo/recompensa)",
@@ -97003,7 +97003,7 @@
         "Definir estructura de pago simple inicial (comisión fija o porcentaje) por debajo del costo de adquisición aceptable",
         "Reclutar primero afiliados entre la base de clientes actuales",
         "Expandir reclutamiento a creadores de contenido (bloggers, influencers, listas de email) relacionados con el nicho",
-        "Medir conversión, calidad de leads y ajustar comisiones o segmentar por desempeño (tiered payouts)"
+        "Medir conversión, calidad de leads y ajustar comisiones o, cuando el programa esté más establecido, segmentar por desempeño (tiered payouts)"
       ],
       "entregable_esperado": "Programa de afiliados activo con red inicial de afiliados, estructura de comisiones definida y métricas de seguimiento de conversión",
       "nodos_previos": [
@@ -97149,11 +97149,11 @@
       "fase_proyecto": "ejecucion",
       "dominio": "franquicias",
       "titulo_concepto": "Un sistema para reducir el riesgo de demandas al vender franquicias",
-      "resumen_teorico": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
+      "resumen_teorico": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con tus franquiciados y con los interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
       "pasos_accionables": [
         "Junto con tu abogado de franquicias, capacita cada año a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluación que quede registrada, y da una capacitación más ligera al resto de tu equipo para que sepa pasar los interesados a quien vende",
         "Designa a una persona (puede ser tú mismo) como punto de contacto para dudas legales sobre las ventas y responsable de mantener vigentes todos los registros de tu franquicia",
-        "Usa un sistema para registrar todas las comunicaciones con cada interesado en comprar una franquicia",
+        "Usa un sistema para registrar todas las comunicaciones con tus franquiciados y con cada interesado en comprar una franquicia",
         "Haz una entrevista de cierre con cada franquiciado nuevo preguntando qué le dijeron durante la venta; si encuentras un problema, detente y llama de inmediato a tu abogado",
         "Realiza compras de prueba periódicas para verificar que se vende de forma correcta",
         "Establece una política de cero tolerancia ante infracciones e inclúyela en los acuerdos de trabajo"
@@ -97224,7 +97224,7 @@
       "titulo_concepto": "Programa de Referidos para Venta de Franquicias",
       "resumen_teorico": "Los leads por referencia (de franquiciados existentes, proveedores o personas cercanas al sistema) tienen algunas de las tasas de cierre más altas de la industria, ya que llegan con mayor credibilidad y menor probabilidad de comparar activamente con competidores. La calidad y volumen de referidos depende directamente del éxito y satisfacción de los franquiciados actuales. Formalizar este canal implica educar activamente a empleados, proveedores y franquiciados sobre el perfil buscado y motivarlos a generar contactos calificados.",
       "pasos_accionables": [
-        "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado y los beneficios del programa.",
+        "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado, los beneficios del programa y sus costos.",
         "Solicitar activamente referencias a franquiciados exitosos, destacando su rol como embajadores de marca.",
         "Contactar proactivamente a franquiciados existentes al expandirse a territorios cercanos, ofreciendo oportunidad de crecimiento multi-unidad.",
         "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación, y orientar a los que se consideren capaces de crecer sobre los requisitos para ser elegibles.",
@@ -98988,9 +98988,9 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Prototipado de Experiencias Intangibles (Acting Out)",
-      "resumen_teorico": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights que ninguna encuesta o simulación virtual lograría.",
+      "resumen_teorico": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights.",
       "pasos_accionables": [
-        "Construir una maqueta física aproximada del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
+        "Construir una maqueta física aproximada, a escala real, del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
         "Invitar a miembros del equipo, clientes y stakeholders a actuar situaciones reales dentro de la maqueta",
         "Documentar reacciones y sugerencias mediante post-its u observación directa",
         "Aplicar técnicas de improvisación teatral básicas para facilitar la actuación grupal",
@@ -100799,7 +100799,7 @@
       "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Metodología por Etapas",
       "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
       "pasos_accionables": [
-        "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
+        "Antes de empezar, aclarar qué preguntas quieres responder o qué decisiones necesitas apoyar con el LCA, y definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
         "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
         "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
         "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
@@ -100882,7 +100882,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Reasignación de Equity y Vesting Forzado por Inversores",
-      "resumen_teorico": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, aumentando la rotación tras la primera ronda de inversión.",
+      "resumen_teorico": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, y podría explicar por qué la rotación aumenta tras la primera ronda de inversión.",
       "pasos_accionables": [
         "Establecer acuerdos de vesting claros entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
         "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
@@ -102040,7 +102040,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "core",
       "titulo_concepto": "Mapa de los recursos que existen para financiar y hacer crecer tu negocio",
-      "resumen_teorico": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), y recursos educativos.",
+      "resumen_teorico": "Existe un ecosistema amplio de recursos que puedes usar para financiar tu negocio y hacerlo crecer: aceleradoras (como Techstars o Y Combinator), plataformas de financiamiento a cambio de participación (equity crowdfunding, como AngelList o Gust), financiamiento colectivo de producto (crowdfunding, como Kickstarter o Indiegogo), bases de datos de inversionistas (como Crunchbase o Pitchbook), recursos educativos, los documentos modelo de financiamiento de la NVCA y blogs especializados.",
       "pasos_accionables": [
         "Evalúa si tu negocio puede entrar a una aceleradora; suelen dar capital inicial y acompañamiento a cambio de un porcentaje de tu empresa, así que pregunta las condiciones típicas en tu mercado",
         "Explora plataformas de financiamiento a cambio de participación (equity crowdfunding) si buscas capital semilla",
@@ -106376,7 +106376,7 @@
       "resumen_teorico": "Muchos exportadores exitosos comenzaron respondiendo a consultas de empresas extranjeras. Es esencial crear un sistema para responder de forma pronta, completa y clara a las consultas internacionales, ya que estas pueden convertirse en oportunidades de negocio futuras. La mayoría de empresas que reciben consultas no llegan a ser exportadoras exitosas, y las que sí lo logran en general dan prioridad a crear sistemas para responderlas, investigar clientes extranjeros, distinguir ventas nacionales e internacionales y crear buenas relaciones con socios. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Establecer una política formal de respuesta a consultas de exportación",
-        "Utilizar servicios de traducción (bancos, freight forwarders, universidades) si la consulta no está en inglés",
+        "Utilizar servicios de traducción (bancos, freight forwarders, universidades, traductores comerciales) si la consulta no está en inglés",
         "Responder de forma rápida, completa y clara, incluyendo referencias bancarias y de confiabilidad",
         "Indicar la política de exportación de la empresa: costos, términos y entrega",
         "Adjuntar información sobre productos o servicios y considerar enviar una factura pro forma",
@@ -107542,10 +107542,10 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Revisión de Aprendizaje en Lugar de Investigación",
-      "resumen_teorico": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
+      "resumen_teorico": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué quieren hacer o qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
       "pasos_accionables": [
         "Renombrar el equipo investigador como 'equipo de aprendizaje'",
-        "Formular la pregunta clave: '¿qué necesitan ustedes para mejorar esto?'",
+        "Formular la pregunta clave: '¿qué quieren hacer o qué necesitan ustedes para mejorar esto?'",
         "Fomentar un diálogo abierto y honesto sobre cómo las personas se adaptan a conflictos de metas y restricciones de recursos",
         "Evitar connotaciones de interrogatorio o búsqueda de culpables en el proceso"
       ],
@@ -110471,7 +110471,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "franquicias",
       "titulo_concepto": "Estrechamiento del Perfil de Comprador de Franquicia",
-      "resumen_teorico": "Una de las formas más efectivas de mejorar el marketing de franquicias es reducir y precisar el perfil del prospecto objetivo. Un público objetivo demasiado amplio obliga a usar mensajes genéricos y a competir en medios saturados con muchas otras oportunidades de franquicia. Al narrowear el perfil, el mensaje se vuelve más específico y se pueden elegir medios menos saturados, mejorando la efectividad de la inversión en marketing. La investigación primaria (hablar con franquiciados de marcas similares, asociaciones de la industria, otros franquiciadores) complementa la intuición para definir este perfil.",
+      "resumen_teorico": "Una de las formas más efectivas de mejorar el marketing de franquicias es reducir y precisar el perfil del prospecto objetivo. Un público objetivo demasiado amplio obliga a usar mensajes genéricos y probablemente a competir en medios saturados con muchas otras oportunidades de franquicia. Al narrowear el perfil, el mensaje se vuelve más específico y se pueden elegir medios menos saturados, mejorando la efectividad de la inversión en marketing. La investigación primaria (hablar con franquiciados de marcas similares, asociaciones de la industria, otros franquiciadores) complementa la intuición para definir este perfil.",
       "pasos_accionables": [
         "Definir el perfil ideal de franquiciado (capital disponible, experiencia, ubicación geográfica, motivaciones)",
         "Realizar investigación primaria hablando con franquiciados de conceptos similares",
@@ -112331,7 +112331,7 @@
         "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
         "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
       ],
-      "entregable_esperado": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
+      "entregable_esperado": "Un paquete sellado con el patrón en H.",
       "nodos_previos": [
         "adaptar_empaque_segun_tipo_de_articulo",
         "empacar_flores_plantas_sin_agua",
@@ -112499,7 +112499,7 @@
       "resumen_teorico": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas, pasillos o escaleras que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia, donde la haya, debe probarse mensual y anualmente.",
       "pasos_accionables": [
         "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos donde la falta de una segunda salida aumentaría el riesgo de lesión por sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
-        "Instalar señalización iluminada de 'EXIT' en todas las rutas",
+        "Instalar señalización iluminada de 'EXIT' en todas las salidas y señales visibles en las rutas hacia ellas cuando no sean evidentes",
         "Marcar puertas/pasillos que no son salidas para evitar confusión",
         "Probar la iluminación de emergencia mensualmente (30 seg) y anualmente (90 min)"
       ],
@@ -115429,7 +115429,7 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Split Testing (A/B Testing)",
-      "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y campañas políticas.",
+      "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y la campaña de Obama de 2008.",
       "pasos_accionables": [
         "Define las variaciones a testear (precio, copy, features, packaging).",
         "Divide el tráfico equitativamente entre las opciones (control vs. challenge).",
@@ -121960,10 +121960,10 @@
       "fase_proyecto": "validacion",
       "dominio": "core",
       "titulo_concepto": "Validar el Modelo Financiero",
-      "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, pero deben estar respaldados por el aprendizaje extensivo de customer discovery y validation.",
+      "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, respaldadas, ojalá, por el aprendizaje extensivo de customer discovery y validation.",
       "pasos_accionables": [
-        "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable",
-        "Calcular costos de adquisición de clientes, tasas de conversión y Customer Lifetime Value (LTV)",
+        "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable e impacto de los efectos de red en el cliente",
+        "Calcular costos de adquisición de clientes, tasas de conversión, Customer Lifetime Value (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
         "Determinar costos operativos básicos, costos de canal y márgenes",
         "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año, según la curva de crecimiento de ingresos propia de tu tipo de mercado",
         "Verificar el balance de caja disponible (runway)",
@@ -124191,7 +124191,7 @@
         "Definir el perfil y responsabilidades múltiples del representante de campo",
         "Establecer frecuencia y tipo de visitas (programadas vs sorpresa)",
         "Calcular cuántos franquiciados puede atender un representante según la frecuencia y duración de las visitas, la complejidad del negocio, el tipo de franquiciado y qué tan agrupados estén",
-        "Crear un manual de soporte de campo con checklist de estándares de marca",
+        "Decidir si crear un manual de soporte de campo con checklist de estándares de marca",
         "Diseñar protocolo de escalamiento para incumplimientos"
       ],
       "entregable_esperado": "Manual de soporte de campo con checklist, frecuencia de visitas y protocolo de escalamiento",

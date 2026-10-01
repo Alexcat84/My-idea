@@ -10,7 +10,7 @@
     "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales, y evaluar la eficacia del programa de ciberseguridad para identificar qué necesita mejorar",
     "Clasificar y priorizar los datos del negocio según su sensibilidad",
     "Documentar amenazas internas y externas y sus respuestas asociadas en un registro de riesgos",
-    "Comunicar planes y políticas de ciberseguridad a todo el personal y terceros relevantes"
+    "Comunicar planes, políticas y buenas prácticas de ciberseguridad a todo el personal y terceros relevantes"
   ],
   "entregable_esperado": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
   "nodos_previos": [
@@ -73,6 +73,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La tabla de inventario del libro trae también el riesgo para el negocio si se pierde el acceso al activo.; Misma columna perdida de la tabla.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c06-csf_funcion_identify-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comunicar planes y políticas de ciberseguridad a todo el personal y terceros relevantes",
+      "texto_nuevo": "Comunicar planes, políticas y buenas prácticas de ciberseguridad a todo el personal y terceros relevantes",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "109",
+        "frase": "Communicate cybersecurity plans, policies, and best practices to all staff and relevant third parties."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide comunicar planes, políticas y buenas prácticas; se cae el tercer elemento.; Mismo defecto.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

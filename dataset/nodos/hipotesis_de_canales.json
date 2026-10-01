@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Determinar si el producto se ajusta mejor a canal físico, digital o híbrido",
     "Evaluar el precio del producto en relación al canal (ej. ventas enterprise vs apps de bajo costo)",
-    "Calcular todos los costos del canal (descuentos, promoción, devoluciones)",
+    "Calcular todos los costos del canal (descuentos, distribución, promoción y, a veces, colocación en anaquel o devoluciones)",
     "Seleccionar UN canal principal para enfocar los esfuerzos iniciales (si es un canal físico, puede ir acompañado de apoyo web simultáneo)",
     "Recalcular el modelo de ingresos neto tras costos de canal"
   ],
@@ -65,6 +65,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde la excepción del libro: lanzamiento físico con apoyo web simultáneo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c06-hipotesis_de_canales-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular todos los costos del canal (descuentos, promoción, devoluciones)",
+      "texto_nuevo": "Calcular todos los costos del canal (descuentos, distribución, promoción y, a veces, colocación en anaquel o devoluciones)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "5987",
+        "frase": "many channels charge for distribution, promotion, and even sometimes for placing products on the shelves"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista pierde la distribución y la colocación en anaquel que el libro enumera; los descuentos sí están en el libro como descuento del canal (línea 5925), así que se mantienen.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

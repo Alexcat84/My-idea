@@ -6,9 +6,9 @@
   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
   "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual), un Target Profile (estado deseado) o ambos, pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
   "pasos_accionables": [
-    "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida",
+    "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando (o intentando lograr) actualmente y en qué medida",
     "Definir el Target Profile: qué resultados se han priorizado como objetivo de gestión de riesgo",
-    "Considerar usar un Community Profile del sector como base para el Target Profile",
+    "Considerar usar un Community Profile de un sector, una tecnología, un tipo de amenaza u otro caso de uso como base para el Target Profile",
     "Considerar usar los CSF Tiers para calificar el rigor actual o deseado de las prácticas por Función o Categoría",
     "Comparar el Current Profile con el Target Profile para identificar brechas y priorizar acciones futuras"
   ],
@@ -111,6 +111,40 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c02-csf_perfiles_organizacionales-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando actualmente y en qué medida",
+      "texto_nuevo": "Documentar el Current Profile: qué resultados de ciberseguridad se están logrando (o intentando lograr) actualmente y en qué medida",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "317",
+        "frase": "desired outcomes an organization is currently achieving (or attempting to achieve)"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye en el Current Profile los resultados que se están intentando lograr; el paso lo reduce a los ya logrados.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c02-csf_perfiles_organizacionales-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considerar usar un Community Profile del sector como base para el Target Profile",
+      "texto_nuevo": "Considerar usar un Community Profile de un sector, una tecnología, un tipo de amenaza u otro caso de uso como base para el Target Profile",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "317",
+        "frase": "a baseline of targeted outcomes for a particular sector, technology, threat type"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el Community Profile para un sector, una tecnología, un tipo de amenaza u otro caso de uso; el paso deja solo el sector.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
   "pasos_accionables": [
-    "Inventariar todos los sistemas y componentes de la organización",
+    "Inventariar todos los sistemas y componentes de la organización y cómo fluyen los datos hacia ellos, dentro de ellos y fuera de ellos",
     "Identificar cuáles sistemas procesan, almacenan o transmiten CUI, y cuáles les proveen protección",
     "Evaluar la posibilidad de aislar estos sistemas en un dominio de seguridad separado (subredes, firewalls)",
     "Documentar la decisión de alcance y su justificación"
@@ -59,6 +59,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El alcance del libro incluye también los componentes que protegen a los que manejan CUI.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c01-determinar_alcance_cui-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inventariar todos los sistemas y componentes de la organización",
+      "texto_nuevo": "Inventariar todos los sistemas y componentes de la organización y cómo fluyen los datos hacia ellos, dentro de ellos y fuera de ellos",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "241",
+        "frase": "how the data flows into, within, and out of those systems or components"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide inventariar también cómo fluyen los datos hacia, dentro y fuera de esos sistemas.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

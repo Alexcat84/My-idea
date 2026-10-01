@@ -9,7 +9,7 @@
     "Incluir nombres y direcciones de vendedor y comprador.",
     "Detallar número de referencia y fecha de consulta del comprador.",
     "Listar productos solicitados con descripción breve y precio en USD.",
-    "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
+    "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
     "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
     "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
     "Incluir declaración de veracidad y país de origen de los bienes.",
@@ -79,6 +79,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye el total de cargos a pagar por el cliente y ningún paso lo recoge.; Se caen de la lista del libro los cargos totales, la fecha estimada de embarque y la moneda de la venta.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c06-elaboracion_pro_forma_invoice-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Especificar volumen cúbico, peso bruto/neto en unidades métricas.",
+      "texto_nuevo": "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3867, 3881",
+        "frase": "Appropriate total cubic volume and dimensions packed for export (in metric units where appropriate)"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide volumen cúbico total y dimensiones embalado para exportación, en unidades métricas cuando corresponda; se caen las dimensiones y la condición.; Mismo defecto: se caen las dimensiones del embalaje.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

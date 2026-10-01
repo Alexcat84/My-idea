@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Split Testing (A/B Testing)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y campañas políticas.",
+  "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y la campaña de Obama de 2008.",
   "pasos_accionables": [
     "Define las variaciones a testear (precio, copy, features, packaging).",
     "Divide el tráfico equitativamente entre las opciones (control vs. challenge).",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Compara Opciones con Datos Reales",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c06-split_testing-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y campañas políticas.",
+      "texto_nuevo": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA. Popularizada por Google, LinkedIn y la campaña de Obama de 2008.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "8695",
+        "frase": "popularized by companies such as Google and LinkedIn, as well as the 2008 Obama campaign"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro nombra una sola campaña, la de Obama de 2008; hablar de campañas políticas en general no lo dice.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

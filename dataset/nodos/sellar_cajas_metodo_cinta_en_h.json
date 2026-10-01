@@ -12,7 +12,7 @@
     "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
     "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
   ],
-  "entregable_esperado": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
+  "entregable_esperado": "Un paquete sellado con el patrón en H.",
   "nodos_previos": [
     "adaptar_empaque_segun_tipo_de_articulo",
     "empacar_flores_plantas_sin_agua",
@@ -126,6 +126,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c03-sellar_cajas_metodo_cinta_en_h-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un paquete sellado con el patrón en H, listo para resistir el manejo del courier.",
+      "texto_nuevo": "Un paquete sellado con el patrón en H.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "149",
+        "frase": "This will help prevent accidental opening."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro solo dice que el método ayuda a prevenir que se abra por accidente; no promete que resista el manejo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

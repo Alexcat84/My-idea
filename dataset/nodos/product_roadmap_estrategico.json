@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un roadmap es una representación visual de las principales iniciativas de producto y tecnología en el tiempo (típicamente 5 años), derivada del Strat-Map y los planes de ataque. Es un 'plan rodante' que se actualiza anualmente, donde solo el primer año se implementa con certeza. Se compone de un roadmap de producto (qué productos desarrollar y cuándo) y un roadmap de tecnología (qué tecnologías se necesitan para soportar esos productos). Sirve como puente entre decisiones estratégicas y tácticas across funciones organizacionales.",
   "pasos_accionables": [
-    "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente",
+    "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
     "Ensamblar un equipo multifuncional de roadmapping",
     "Generar una 'wish list' de productos candidatos usando templates de una página",
     "Presentar candidatos en una reunión 'Gate 0' y calificarlos con un scorecard simplificado (fit estratégico, beneficios únicos, atractivo de mercado, factibilidad técnica, riesgo/recompensa)",
@@ -37,5 +37,24 @@
   "etiqueta_arbol": "Traza tu Ruta de Producto",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c03-product_roadmap_estrategico-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente",
+      "texto_nuevo": "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "8483",
+        "frase": "there’s the existing list of “to do” projects gathered from other sources"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade a los insumos la lista existente de proyectos pendientes, que el paso deja fuera.; Mismo defecto: falta la lista de proyectos pendientes de otras fuentes.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Optimización de Centros de Datos Verdes",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras reducen drásticamente el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
+  "resumen_teorico": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras tienen un gran potencial para reducir el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
   "pasos_accionables": [
     "Auditar la utilización real de almacenamiento y servidores para identificar excedentes.",
     "Implementar virtualización de servidores y de almacenamiento, y deduplicación de datos.",
@@ -66,6 +66,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide subir la temperatura con cuidado por el menor margen ante una falla de refrigeración; la cautela se pierde.; Se pierden la dirección del ajuste (subir temperatura, ampliar humedad) y la cautela del libro.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c02-optimizacion_centro_datos_verde-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras reducen drásticamente el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
+      "texto_nuevo": "Los centros de datos consumen enormes cantidades de energía tanto para operar servidores como para refrigerarlos. La optimización incluye virtualización de almacenamiento, eliminación de redundancia de datos, uso de fuentes de poder eficientes, y estrategias avanzadas de refrigeración (contención de aire, economizadores de aire/agua, sistemas de enfriamiento líquido). Estas mejoras tienen un gran potencial para reducir el consumo eléctrico, los costos operativos y la huella de carbono de la empresa.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3338",
+        "frase": "Smarter IT offers a huge potential to reduce energy spending and emissions."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de un gran potencial y de ahorros que pueden ser significativos; la reducción drástica solo la aplica a la contención bien implementada.; Mismo defecto señalado por el otro lector.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

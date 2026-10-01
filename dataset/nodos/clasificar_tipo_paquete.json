@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Clasificar el tipo de paquete antes de despachar",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
+  "resumen_teorico": "Antes de despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
   "pasos_accionables": [
     "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
     "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
@@ -115,6 +115,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c06-clasificar_tipo_paquete-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de empacar y despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
+      "texto_nuevo": "Antes de despachar conviene identificar en qué categoría cae tu paquete: estándar, plano, alargado o pequeño, según sus dimensiones, su volumen y, para el pequeño, su peso. Esto importa porque a cada tipo le corresponden pruebas de tránsito distintas: por ejemplo, la caída rotacional sobre un borde solo se exige a los planos y alargados. También hay que anotar si el contenido es frágil o si puede derramarse, porque en esos casos conviene probar dos o más muestras y lo que puede derramarse suma una prueba de fugas. Esta clasificación no es un capricho de laboratorio: es una guía práctica para saber qué pruebas le corresponden a tu paquete antes de que salga de tus manos, evitando adivinarlas al ojo cada vez que empacas algo nuevo.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "87",
+        "frase": "Volume is 13,000 cm3 (800 in3) or greater based on outside dimensions"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (contrario; modo quitar; doble lectura ciega, arbitro): Las categorías se definen sobre el paquete ya armado (dimensiones exteriores), así que la clasificación no puede ir antes de empacar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

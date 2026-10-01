@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Planes de Contingencia",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Tenerlo listo cambia todo, porque en el momento del golpe no tienes tiempo ni claridad para improvisar. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione. Para el emprendedor solo, que no tiene un equipo que reaccione por él, un plan B escrito es la diferencia entre responder con calma y congelarse ante el problema.",
+  "resumen_teorico": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione.",
   "pasos_accionables": [
     "Para cada riesgo grave, escribe qué harás concretamente si se vuelve realidad.",
     "Identifica qué necesitas preparar de antemano para que ese plan B sea posible.",
@@ -111,6 +111,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c01-plan_b_antes_de_necesitarlo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Tenerlo listo cambia todo, porque en el momento del golpe no tienes tiempo ni claridad para improvisar. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione. Para el emprendedor solo, que no tiene un equipo que reaccione por él, un plan B escrito es la diferencia entre responder con calma y congelarse ante el problema.",
+      "texto_nuevo": "El mejor momento para decidir qué harás si un riesgo pega es antes de que pegue, con la cabeza fría, no en plena crisis. Un plan de contingencia es tu plan B ya pensado: para cada riesgo grave, qué acción concreta tomarás cuando se materialice. Algunas partes del plan hay que prepararlas de antemano para que sean posibles después: apartar un contacto, tener un proveedor alterno identificado, guardar una copia. Eso es preparar el terreno para que tu plan B funcione.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "2047-2055",
+        "frase": "cannot afford to rely solely on our ability to react to risks"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide planes preparados de antemano, pero no da esa causa de falta de tiempo y claridad ni dice que cambie todo.; El resultado prometido de responder con calma en vez de congelarse no aparece en el libro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

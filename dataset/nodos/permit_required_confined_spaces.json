@@ -10,7 +10,7 @@
     "Implementar un programa escrito de espacios confinados.",
     "Realizar pruebas atmosféricas antes y durante la entrada (oxígeno, gases inflamables, tóxicos).",
     "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
-    "Verificar disponibilidad de servicios de rescate antes de cada entrada."
+    "Verificar la comunicación operativa con los servicios de rescate y su disponibilidad antes de cada entrada."
   ],
   "entregable_esperado": "Programa escrito de espacios confinados, señalización instalada y protocolo de rescate verificado.",
   "nodos_previos": [
@@ -59,6 +59,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide aislar las tuberías con materiales peligrosos y bloquear las energías mecánicas antes de entrar; el resumen lo omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c01-permit_required_confined_spaces-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verificar disponibilidad de servicios de rescate antes de cada entrada.",
+      "texto_nuevo": "Verificar la comunicación operativa con los servicios de rescate y su disponibilidad antes de cada entrada.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1351",
+        "frase": "Before entry, operable communications with and availability of rescue services are verified."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide verificar antes de la entrada la comunicación operativa con los servicios de rescate y su disponibilidad; se cae la comunicación.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

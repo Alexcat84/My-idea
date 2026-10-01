@@ -9,7 +9,7 @@
     "Revisa si tu producto, sin empaque protector, se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
     "Revisa si tu producto es líquido o semilíquido, o si puede volverse líquido por encima de unos 21 °C (70 °F) y derramarse.",
     "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una; para un resultado más confiable, en cualquier producto te conviene repetir la prueba cinco o más veces con unidades nuevas.",
-    "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
+    "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica; si es plano y alargado a la vez, pruébalo como alargado.",
     "Refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
   ],
   "entregable_esperado": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
@@ -291,6 +291,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c03-identificar_si_tu_producto_necesita_proteccion_especial-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica.",
+      "texto_nuevo": "Clasifica la forma de tu empaque (estándar, plano, alargado o pequeño) para saber qué prueba de caída aplica; si es plano y alargado a la vez, pruébalo como alargado.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "105",
+        "frase": "If a packaged-product is both Flat and Elongated, test it as Elongated."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la regla del libro para el empaque que es plano y alargado a la vez, que decide la prueba que le corresponde.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

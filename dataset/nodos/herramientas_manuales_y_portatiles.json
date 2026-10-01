@@ -7,7 +7,7 @@
   "resumen_teorico": "Las herramientas manuales y eléctricas deben mantenerse en buen estado, con protecciones adecuadas, mangos bien ajustados, filos afilados y almacenamiento seguro, y usarse con gafas o careta si pueden lanzar partículas o romperse. Las eléctricas requieren conexión a tierra o doble aislamiento y protectores en partes móviles.",
   "pasos_accionables": [
     "Inspeccionar regularmente el estado de herramientas manuales y eléctricas",
-    "Reemplazar mangos rotos o herramientas con cabezas deformadas",
+    "Reemplazar mangos rotos y reacondicionar o reemplazar, según haga falta, las herramientas con cabezas deformadas",
     "Verificar que las herramientas eléctricas tengan conexión a tierra o doble aislamiento",
     "Instalar guardas en partes rotantes o móviles de equipos",
     "Almacenar herramientas en lugar seco y seguro"
@@ -42,6 +42,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide gafas, careta u otro EPP con herramientas que pueden lanzar partículas o romperse; el resumen lo omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c02-herramientas_manuales_y_portatiles-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reemplazar mangos rotos o herramientas con cabezas deformadas",
+      "texto_nuevo": "Reemplazar mangos rotos y reacondicionar o reemplazar, según haga falta, las herramientas con cabezas deformadas",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "687",
+        "frase": "which develop mushroomed heads during use are reconditioned or replaced as necessary"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide reacondicionar o reemplazar, según haga falta, las herramientas con cabezas deformadas; el paso deja solo el reemplazo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

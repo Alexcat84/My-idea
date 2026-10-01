@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Programas de Financiamiento Agrícola del USDA/FAS",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+  "resumen_teorico": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran o establecen instalaciones agrícolas en mercados emergentes).",
   "pasos_accionables": [
     "Determinar si el producto exportado es agrícola, o son bienes o servicios para instalaciones agrícolas en mercados emergentes, y si es elegible para programas USDA",
     "Seleccionar el programa adecuado según el plazo y tipo de transacción (GSM-102, SCGP o FGP)",
     "Registrar la documentación requerida en el sistema GSM Online",
-    "Contactar a FAS Contract and Registration branch para validar elegibilidad"
+    "Contactar a FAS Contract and Registration branch si necesitas más información"
   ],
   "entregable_esperado": "Registro y documentación presentada en el sistema GSM Online del USDA",
   "nodos_previos": [
@@ -85,6 +85,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El FGP financia bienes manufacturados y servicios para instalaciones agrícolas; limitar la elegibilidad a productos agrícolas lo deja fuera.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c06-financiamiento_usda_agricola-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran instalaciones agrícolas en mercados emergentes).",
+      "texto_nuevo": "El Foreign Agricultural Service (FAS) del USDA ofrece programas específicos para exportadores de productos agrícolas: el GSM-102 (garantías de crédito de hasta 3 años mediante cartas de crédito), el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo) y el Facility Guarantee Program (FGP, para financiar bienes y servicios que mejoran o establecen instalaciones agrícolas en mercados emergentes).",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4365",
+        "frase": "to improve or establish agriculture-related facilities in emerging markets"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el FGP financia bienes y servicios para mejorar o establecer instalaciones; se cae el caso de las instalaciones nuevas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-financiamiento_usda_agricola-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contactar a FAS Contract and Registration branch para validar elegibilidad",
+      "texto_nuevo": "Contactar a FAS Contract and Registration branch si necesitas más información",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4369",
+        "frase": "Exporters who need further information should contact the FAS Contract and Registration branch"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro remite a esa oficina a quien necesite más información; no le atribuye validar la elegibilidad.; Mismo defecto: la oficina es el contacto para más información.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

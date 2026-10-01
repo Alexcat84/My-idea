@@ -6,9 +6,9 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Segunda etapa del proceso de investigación de mercado que profundiza en tendencias de producto, competencia, factores de marketing, barreras comerciales e incentivos para los mercados preseleccionados, con el fin de tomar una decisión informada sobre dónde enfocar los esfuerzos de exportación.",
   "pasos_accionables": [
-    "Examinar tendencias de consumo e importación del producto en cada mercado",
+    "Examinar tendencias de consumo e importación del producto y de los productos relacionados que puedan influir en la demanda en cada mercado",
     "Investigar competidores domésticos y extranjeros y su cuota de mercado",
-    "Analizar canales de distribución, idiosincrasias culturales y prácticas de negocio",
+    "Analizar sectores de usuario final, canales de distribución, idiosincrasias culturales y prácticas de negocio",
     "Identificar barreras arancelarias/no arancelarias y necesidad de licencias de exportación",
     "Identificar incentivos gubernamentales aplicables"
   ],
@@ -42,5 +42,41 @@
   "etiqueta_arbol": "Evalúa tus Mercados Objetivo",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c03-evaluacion_mercados_objetivo-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Examinar tendencias de consumo e importación del producto en cada mercado",
+      "texto_nuevo": "Examinar tendencias de consumo e importación del producto y de los productos relacionados que puedan influir en la demanda en cada mercado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1277",
+        "frase": "Look at your products as well as related products that could influence demand."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro manda mirar también los productos relacionados que pueden influir en la demanda.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c03-evaluacion_mercados_objetivo-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Analizar canales de distribución, idiosincrasias culturales y prácticas de negocio",
+      "texto_nuevo": "Analizar sectores de usuario final, canales de distribución, idiosincrasias culturales y prácticas de negocio",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1287",
+        "frase": "such as end-user sectors, channels of distribution, cultural idiosyncrasies"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro trae cuatro factores y el paso pierde los sectores de usuario final.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

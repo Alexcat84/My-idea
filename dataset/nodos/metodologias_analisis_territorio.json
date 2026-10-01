@@ -6,7 +6,7 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Combínalas para tu mejor estimación y deja margen para ajustar los territorios con más datos. Con más presupuesto, considera una firma de mapeo geográfico (GIS).",
   "pasos_accionables": [
-    "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades",
+    "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades; luego traza un área hipotética alrededor del local y mide su demografía para fijar el tamaño con el que un franquiciado obtendría un retorno adecuado",
     "Si tienes una unidad en un mercado aislado, estudia su demografía para saber qué hace falta para generar cierto nivel de negocio (muchas veces no habrá un mercado adecuado)",
     "Si tienes un competidor parecido y sabes cómo definió sus territorios, analiza cómo los divide en mercados parecidos, sin dar por hecho que no se equivocó en su análisis",
     "Calcula tu penetración de mercado actual y proyéctala a nuevas zonas",
@@ -106,6 +106,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide una mejor estimación combinando métodos, con flexibilidad para ajustarla, no un tamaño ideal definitivo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c03-metodologias_analisis_territorio-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades",
+      "texto_nuevo": "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades; luego traza un área hipotética alrededor del local y mide su demografía para fijar el tamaño con el que un franquiciado obtendría un retorno adecuado",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1812",
+        "frase": "determine the size of the area from which a franchisee could earn an adequate ROI"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro completa el pin-map trazando un área alrededor del local y midiendo su demografía para fijar el tamaño con retorno adecuado; el paso se queda en el mapa.; Mismo defecto: se cae la segunda mitad del procedimiento, que es la que fija el tamaño del territorio.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

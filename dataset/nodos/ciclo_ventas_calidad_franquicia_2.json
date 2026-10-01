@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "El Ciclo de Ventas-Control de Calidad de Franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Las ventas de franquicias son un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
+  "resumen_teorico": "Las ventas de franquicias son en gran medida un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que, una vez que tienes un proceso de ventas sólido, la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
   "pasos_accionables": [
     "Auditar los seis factores del ciclo de ventas de forma periódica",
     "Priorizar el concepto y la propuesta de valor como base del éxito de ventas",
@@ -25,5 +25,38 @@
   "etiqueta_arbol": "Domina los Seis Factores de Venta",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c05-ciclo_ventas_calidad_franquicia_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las ventas de franquicias son un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
+      "texto_nuevo": "Las ventas de franquicias son en gran medida un juego de números que depende de seis factores: concepto y propuesta de valor, oferta/estructura, plan de marketing, mensaje y materiales, gasto publicitario, y proceso de ventas. El factor más importante para el éxito de ventas a largo plazo es la validación del franquiciado, por lo que, una vez que tienes un proceso de ventas sólido, la pregunta clave no es 'qué tan rápido puedo vender' sino 'qué tan rápido DEBERÍA vender'.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4884-4902",
+        "frase": "So once you have a strong sales process in place, the ultimate question"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las ventas de franquicias son en gran medida (largely) un juego de números; el resumen lo afirma sin matiz.; El libro plantea la pregunta de cuán rápido vender una vez que ya tienes un proceso de ventas sólido; el resumen pierde esa condición.; Mismo defecto que la marca 0: se cae la condición de tener antes un proceso de ventas sólido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c05-ciclo_ventas_calidad_franquicia_2-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Auditar los seis factores del ciclo de ventas de forma periódica",
+      "texto_nuevo": "Auditar los seis factores del ciclo de ventas de forma periódica",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro enumera los seis factores, aquí y en el ciclo del capítulo 6, pero no aconseja auditarlos periódicamente.; Mismo defecto: consejo útil que el libro no da, sin etiqueta."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

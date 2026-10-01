@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Determinar el Número Óptimo de Cofundadores",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital o quitarte carga real) que pese más que la complejidad que añade.",
+  "resumen_teorico": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital humano o quitarte carga real) que pese más que la complejidad que añade.",
   "pasos_accionables": [
     "Evalúa qué valor concreto y distinto te daría cada cofundador potencial.",
     "No sumes a alguien con habilidades y contactos que ya tienes cubiertos en el equipo.",
     "Antes de sumar a cada persona, piensa el costo de coordinar con ella y si su rol se solapa con el de otro.",
-    "Define con claridad el rol de cada cofundador antes de cerrar su entrada."
+    "Define con claridad el rol de cada cofundador antes de cerrar su entrada; pero si todavía no se conocen bien, definirlo demasiado pronto puede ser un gran error."
   ],
   "entregable_esperado": "Tu lista final de cofundadores, con el motivo concreto de por qué cada uno aporta algo único, y los roles bien diferenciados entre todos.",
   "nodos_previos": [
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Decide Cuántos Cofundadores Sumar",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c01-cuantos_cofundadores_agregar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital o quitarte carga real) que pese más que la complejidad que añade.",
+      "texto_nuevo": "Cada cofundador que suma añade también costo de coordinación, más complejidad de comunicación y más riesgo de choques por roles. Sueles subestimar esos costos y sobreestimar el valor de alguien que repite lo que ya tienes. La regla es simple: cada nuevo cofundador tiene que aportar algo claro (cubrir una carencia de capital humano o quitarte carga real) que pese más que la complejidad que añade.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "856",
+        "frase": "filling in gaps in human capital"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de cubrir carencias de capital humano; sin 'humano' se lee como aportar dinero.; Mismo defecto: se cae 'humano'.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c01-cuantos_cofundadores_agregar-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define con claridad el rol de cada cofundador antes de cerrar su entrada.",
+      "texto_nuevo": "Define con claridad el rol de cada cofundador antes de cerrar su entrada; pero si todavía no se conocen bien, definirlo demasiado pronto puede ser un gran error.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2044",
+        "frase": "jumping too soon to define roles can be a big mistake"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: se cae esa condición.; Se cae el límite del libro: con cofundadores que aún no se conocen bien, definir los roles demasiado pronto puede ser un gran error.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

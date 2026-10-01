@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Reasignación de Equity y Vesting Forzado por Inversores",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, aumentando la rotación tras la primera ronda de inversión.",
+  "resumen_teorico": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, y podría explicar por qué la rotación aumenta tras la primera ronda de inversión.",
   "pasos_accionables": [
     "Establecer acuerdos de vesting claros entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
     "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
@@ -30,5 +30,38 @@
   "etiqueta_arbol": "Negocia el Reparto de tu Capital",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c04-reasignacion_equity_fundadores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, aumentando la rotación tras la primera ronda de inversión.",
+      "texto_nuevo": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, y podría explicar por qué la rotación aumenta tras la primera ronda de inversión.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2902",
+        "frase": "This might be because investors may force renegotiation of equity stakes and roles"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro observa que la rotación sube con la primera ronda y solo sugiere que podría deberse a la renegociación; el nodo da la causa por segura.; Mismo defecto: el 'might be because' del libro pasa a relación causal firme.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-reasignacion_equity_fundadores-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
+      "texto_nuevo": "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro dice que los inversores revisan cómo se llegó al reparto, pero no aconseja documentar las contribuciones; consejo útil de la casa sin etiqueta.; Mismo defecto: el consejo de documentar no está en el libro."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Niveles de Madurez en la Gestión de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+  "resumen_teorico": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
   "pasos_accionables": [
     "Ubica en qué nivel estás: improvisas, arrancas, creces o ya tienes método propio.",
     "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
@@ -97,6 +97,37 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c04-del_caos_al_metodo_madurez_de_riesgo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo, y empiezas a mejorarlas. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+      "texto_nuevo": "Manejar el riesgo se aprende por niveles, del caos al método. En el primero apenas eres consciente: haces algo con algunos riesgos, pero de forma esporádica, reactiva y desordenada. En el segundo arrancas: reconoces que necesitas un sistema y empiezas a tener uno, aún torpe. En el tercero creces: tus prácticas se vuelven consistentes y las aplicas a todo. En el segundo y el tercero tu sistema corre el riesgo de decaer. En el cuarto maduras: la gestión de riesgo debería ser estable, propia, y estar en mejora continua. Saber en qué nivel estás te muestra el siguiente paso realista. Para el emprendedor solo, la meta no es llegar de golpe a un sistema perfecto, sino subir un escalón a la vez: pasar de improvisar ante cada susto a tener un método propio que repite y afina proyecto tras proyecto.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "10878",
+        "frase": "A cycle of improvement to some risk management procedures may be in train"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): En el nivel 3 el libro dice que un ciclo de mejora de algunos procedimientos puede estar en marcha; el nodo lo da por hecho.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-del_caos_al_metodo_madurez_de_riesgo-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
+      "texto_nuevo": "Identifica el escalón siguiente y una sola práctica que te llevaría a él.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro habla de determinar el nivel necesario y alcanzable, pero no aconseja elegir una sola práctica para subir de escalón; es consejo de la casa sin etiqueta."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

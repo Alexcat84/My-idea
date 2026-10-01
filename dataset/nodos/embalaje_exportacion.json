@@ -7,8 +7,8 @@
   "resumen_teorico": "Cuando exportas, tu embalaje tiene que protegerte de cuatro riesgos: que se rompa, que le entre humedad, que te lo roben en el camino (pilferage) y que pese de más. Usa contenedores resistentes, distribuye el peso de forma uniforme, elige materiales que resistan la humedad y evita escribir el contenido o tu marca por fuera para no llamar la atención de nadie. Lo que pagas por transporte depende del volumen y el peso, así que si usas materiales reforzados pero livianos puedes ahorrar. Esta mecánica refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; antes de actuar, pregunta el acuerdo y la regulación vigente en tu propio mercado.",
   "pasos_accionables": [
     "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
-    "Empaca en contenedores fuertes, bien sellados y bien llenos",
-    "Distribuye el peso de forma uniforme y usa paletas cuando puedas",
+    "Empaca en contenedores fuertes, bien sellados y, cuando sea posible, bien llenos",
+    "Distribuye el peso de forma uniforme, pon la mercancía en paletas y, cuando puedas, colócalas en contenedores",
     "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
     "Pregunta si tu madera o tus materiales necesitan algún tratamiento especial o si son peligrosos",
     "Si no tienes cómo hacerlo bien tú mismo, contrata a alguien que se especialice en empaque"
@@ -74,6 +74,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro contra el robo incluye flejes, sellos y película retráctil, que ningún paso recoge.; Mismo defecto: se cae la pauta de asegurar la carga con flejes, sellos y película retráctil.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c02-embalaje_exportacion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empaca en contenedores fuertes, bien sellados y bien llenos",
+      "texto_nuevo": "Empaca en contenedores fuertes, bien sellados y, cuando sea posible, bien llenos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3499",
+        "frase": "Pack in strong containers that are adequately sealed and filled when possible."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide llenar los contenedores cuando sea posible; el paso lo vuelve incondicional.; Mismo defecto señalado por el otro lector.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c02-embalaje_exportacion-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distribuye el peso de forma uniforme y usa paletas cuando puedas",
+      "texto_nuevo": "Distribuye el peso de forma uniforme, pon la mercancía en paletas y, cuando puedas, colócalas en contenedores",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3501-3503",
+        "frase": "Put goods on pallets and, when possible, place them in containers."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide poner la mercancía en paletas y, cuando sea posible, meterlas en contenedores; el paso vuelve opcionales las paletas y pierde los contenedores.; Mismo defecto señalado por el otro lector.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

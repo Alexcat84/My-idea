@@ -9,7 +9,7 @@
     "Evalúa si de verdad necesitas capital público o si te sirven otras fuentes de financiamiento privadas",
     "Piensa en el impacto personal de la exposición pública: tus finanzas, tus decisiones, la presión de reportar cada trimestre",
     "Prepárate para el período de bloqueo después del IPO y para las restricciones al vender tus acciones",
-    "Considera cómo va a cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
+    "Considera cómo puede cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
     "Diseña cómo vas a comunicarte con accionistas dispersos que no conoces, algunos de los cuales piensan en el corto plazo"
   ],
   "entregable_esperado": "Un análisis de ventajas y desventajas hecho a tu medida sobre si te conviene salir a bolsa, incluyendo cómo afecta tu control, tus finanzas personales y la estructura de tu junta directiva.",
@@ -95,6 +95,38 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c03-decision_de_salir_a_bolsa-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Evalúa si de verdad necesitas capital público o si te sirven otras fuentes de financiamiento privadas",
+      "texto_nuevo": "Evalúa si de verdad necesitas capital público o si te sirven otras fuentes de financiamiento privadas",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El pasaje pesa ventajas y costos de salir a bolsa, pero no aconseja comparar con fuentes privadas; consejo útil sin etiqueta.; Mismo defecto: el libro no compara la salida a bolsa con otras fuentes privadas de financiamiento."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c03-decision_de_salir_a_bolsa-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considera cómo va a cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
+      "texto_nuevo": "Considera cómo puede cambiar la composición y el funcionamiento de tu junta directiva después del IPO",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "4029",
+        "frase": "many founder-CEOs of newly public startups are answering to new boards of directors."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que muchos fundadores responden a juntas nuevas tras el IPO; el paso da por hecho que la junta va a cambiar.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

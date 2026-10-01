@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Adopción de Computación en la Nube (Cloud Computing)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, desempeño y métricas ambientales del proveedor.",
+  "resumen_teorico": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, copias de los datos que te pertenecen y su protección, desempeño y métricas ambientales del proveedor.",
   "pasos_accionables": [
     "Evaluar qué aplicaciones internas pueden migrar a modelos SaaS.",
     "Comparar proveedores de nube según eficiencia energética y políticas de sostenibilidad.",
@@ -27,5 +27,38 @@
   "etiqueta_arbol": "Adopta la Computación en la Nube",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c04-computacion_en_la_nube-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, desempeño y métricas ambientales del proveedor.",
+      "texto_nuevo": "La computación en la nube traslada la infraestructura de TI de la empresa a servidores compartidos externos, reduciendo la dependencia de hardware físico propio. Esto disminuye el consumo energético, los costos y la huella ambiental. Incluye estrategias como Software as a Service (SaaS) y almacenamiento/data centers como servicio, aunque requiere debida diligencia sobre privacidad, copias de los datos que te pertenecen y su protección, desempeño y métricas ambientales del proveedor.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "3422",
+        "frase": "can always provide you with copies of data you own"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La debida diligencia del libro incluye que el proveedor siempre pueda darte copias de tus datos y los proteja; ese elemento se cae de la lista.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-computacion_en_la_nube-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Comparar proveedores de nube según eficiencia energética y políticas de sostenibilidad.",
+      "texto_nuevo": "Comparar proveedores de nube según eficiencia energética y políticas de sostenibilidad.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro pide que el proveedor comparta métricas ambientales, pero no aconseja comparar proveedores por eficiencia energética ni por políticas de sostenibilidad."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

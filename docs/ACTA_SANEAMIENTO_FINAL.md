@@ -963,4 +963,19 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
 - **Cuota:** el pase se avanza en oleadas hasta el aviso del 90 %, se para en un punto limpio y se termina tras la
   renovación del martes 6 de octubre a las 23:00.
 - **Código:** `barrido.py`, en las claves del remedio.
+- **Plan generado:** 3.873 elementos en 1.803 nodos, en 176 lotes, con la vecindad expandida a 969 elementos.
+  - Trampas: 70 de cifra, 64 contrarios y 42 de certeza endurecida.
+  - En un lote sin elemento listado que admitiera trampa, la trampa va a otro elemento del mismo nodo, y ese elemento
+    se añade a lo que se juzga.
+
+**Corrección de la muestra de cierre (tanda `final-e1-cierre`, 30 sep 2026):** 117 correcciones en 77 nodos.
+- 40 son constancias CASA de pasos de la casa, sin tocar el texto (D1).
+- Las demás están en modo `devolver` o `quitar`, y el verificador ciego leyó todas las que traían palabras nuevas. Los
+  tres paquetes rechazaron su corrección falsa de control.
+- El verificador rechazó tres correcciones por ser traducción casi palabra por palabra del libro (D2).
+- **Quedan 6 FUERA**, pendientes de reescritura en palabras de la casa:
+  - dos defectos duros: `separa_la_visita_de_evaluacion_de_la_decision_de_compra` (resumen) y
+    `clausula_antidesviacion` (paso 3);
+  - `diseno_estructura_recompensas_roles`, `reevolucion_industrial`, `desarrollo_expertos_capaces` y
+    `sesgo_retrospectivo_hindsight_2`.
 

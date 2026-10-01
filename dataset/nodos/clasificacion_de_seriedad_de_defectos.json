@@ -10,7 +10,7 @@
     "Asignar peso (demérito) a cada categoría de defecto",
     "Registrar número de defectos por categoría durante inspección/auditoría",
     "Calcular deméritos totales y dividir entre unidades inspeccionadas",
-    "Usar el índice resultante para comparar tendencias históricas y frente a competencia"
+    "Usar el índice resultante para comparar tendencias históricas y, a veces, frente a competencia"
   ],
   "entregable_esperado": "Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad",
   "nodos_previos": [
@@ -44,6 +44,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro compara con el histórico y a veces con competidores; las líneas de producción son un añadido.; Mismo defecto que la marca 0: comparar entre líneas de producción no está en el libro.; Mismo matiz que la marca 1: se cae que el índice no es aceptado por todos.; Se pierde el límite: el índice no es aceptado universalmente y algunos gerentes quieren ver aparte los defectos críticos y mayores.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c01-clasificacion_de_seriedad_de_defectos-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el índice resultante para comparar tendencias históricas y frente a competencia",
+      "texto_nuevo": "Usar el índice resultante para comparar tendencias históricas y, a veces, frente a competencia",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10392",
+        "frase": "Sometimes it is compared with competitors' products"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la comparación con competidores se hace solo a veces; el paso la pone al nivel de la histórica.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

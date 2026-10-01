@@ -4,10 +4,10 @@
   "dominio": "health_safety",
   "titulo_concepto": "Revisión de Aprendizaje en Lugar de Investigación",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
+  "resumen_teorico": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué quieren hacer o qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
   "pasos_accionables": [
     "Renombrar el equipo investigador como 'equipo de aprendizaje'",
-    "Formular la pregunta clave: '¿qué necesitan ustedes para mejorar esto?'",
+    "Formular la pregunta clave: '¿qué quieren hacer o qué necesitan ustedes para mejorar esto?'",
     "Fomentar un diálogo abierto y honesto sobre cómo las personas se adaptan a conflictos de metas y restricciones de recursos",
     "Evitar connotaciones de interrogatorio o búsqueda de culpables en el proceso"
   ],
@@ -25,5 +25,40 @@
   "etiqueta_arbol": "Busca Aprendizaje, no Culpables",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c04-revision_de_aprendizaje-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
+      "texto_nuevo": "Cuando algo sale mal, no organices una investigación de error humano buscando culpables: dale a ese proceso el nombre de revisión de aprendizaje. Ese cambio de enfoque importa: en vez de preguntar qué hizo mal cada persona, pregúntales qué quieren hacer o qué necesitan para mejorar la situación. Tu objetivo no es señalar responsables, es aprender de lo ocurrido y mejorar cómo trabajan juntos.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2098",
+        "frase": "What do you guys want to do, or need, to make this better?"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La pregunta del libro tiene dos partes, qué quieren hacer o qué necesitan; el nodo pierde la primera.; Mismo defecto: se cae la parte de lo que las personas quieren hacer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c04-revision_de_aprendizaje-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formular la pregunta clave: '¿qué necesitan ustedes para mejorar esto?'",
+      "texto_nuevo": "Formular la pregunta clave: '¿qué quieren hacer o qué necesitan ustedes para mejorar esto?'",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2098",
+        "frase": "What do you guys want to do, or need, to make this better?"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La pregunta del libro incluye qué quieren hacer; el paso la reduce a qué necesitan.; Mismo defecto en la misma pregunta.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

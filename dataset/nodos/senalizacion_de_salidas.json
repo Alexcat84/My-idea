@@ -7,7 +7,7 @@
   "resumen_teorico": "Las rutas de egreso deben tener suficientes salidas para permitir escape rápido, señalizadas con letreros iluminados de 'EXIT' con letras de al menos 6 pulgadas. Puertas, pasillos o escaleras que puedan confundirse con salidas deben marcarse claramente como 'NOT AN EXIT'. La iluminación de emergencia, donde la haya, debe probarse mensual y anualmente.",
   "pasos_accionables": [
     "Determinar número adecuado de salidas según carga de ocupantes, con al menos dos salidas en plataformas elevadas, fosos y cuartos donde la falta de una segunda salida aumentaría el riesgo de lesión por sustancias calientes, tóxicas, corrosivas, asfixiantes, inflamables o explosivas",
-    "Instalar señalización iluminada de 'EXIT' en todas las rutas",
+    "Instalar señalización iluminada de 'EXIT' en todas las salidas y señales visibles en las rutas hacia ellas cuando no sean evidentes",
     "Marcar puertas/pasillos que no son salidas para evitar confusión",
     "Probar la iluminación de emergencia mensualmente (30 seg) y anualmente (90 min)"
   ],
@@ -76,6 +76,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige la segunda salida solo donde su ausencia aumentaría el riesgo de lesión por esas sustancias; el nodo la exige en todo cuarto que las tenga.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-cierre-c06-senalizacion_de_salidas-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar señalización iluminada de 'EXIT' en todas las rutas",
+      "texto_nuevo": "Instalar señalización iluminada de 'EXIT' en todas las salidas y señales visibles en las rutas hacia ellas cuando no sean evidentes",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "515-517",
+        "frase": "to exits, when not immediately apparent, are marked with visible exit signs"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro distingue letreros iluminados en todas las salidas y señales visibles en las rutas solo cuando no son evidentes.; Mismo defecto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

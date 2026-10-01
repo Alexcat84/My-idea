@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Domina lo que compras antes de negociarlo",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+  "resumen_teorico": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
   "pasos_accionables": [
     "Investiga precios de referencia y variantes del insumo o servicio antes de hablar con el proveedor.",
     "Pregunta a otras personas de tu rubro qué condiciones de compra consideran normales.",
@@ -133,6 +133,37 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la excepción del libro: puedes tomar información valiosa del formato del proveedor sabiendo qué significa para ambos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-cierre-c02-domina_lo_que_compras-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Anota las preguntas que aún no puedes responder antes de sentarte a negociar.",
+      "texto_nuevo": "Anota las preguntas que aún no puedes responder antes de sentarte a negociar.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El pasaje de conocer la mercancía no aconseja anotar las preguntas pendientes antes de negociar.; Mismo defecto señalado por el otro lector."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c02-domina_lo_que_compras-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro para saber qué condiciones son normales y cuáles son abusivas. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+      "texto_nuevo": "Si no conoces bien lo que estás comprando, cualquier vendedor con más información que tú puede llevarte a pagar de más o a aceptar condiciones que no te convienen. Antes de negociar, investiga precios de referencia, variantes del producto o servicio, y quiénes son los competidores de tu proveedor actual. No te apoyes en el formato de cotización que te entrega el proveedor, porque está pensado para que él salga ganando, no para que compares opciones a tu favor; puedes tomar de él la información valiosa para el tuyo, sabiendo qué significa para ti y para el proveedor. Habla con otras personas que compren lo mismo en tu rubro. Llegar informado te permite saber cuál es el mejor valor y qué es lo más importante en tu negociación.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5885",
+        "frase": "you can talk to them about professional topics, such as procurement techniques"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro habla de intercambiar técnicas de compra con otros profesionales, no de saber qué condiciones son normales o abusivas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

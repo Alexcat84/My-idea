@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Decidir cuánto cobrar por velocidad y ventana de entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
+  "resumen_teorico": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
   "pasos_accionables": [
     "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
     "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
@@ -204,6 +204,82 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-cierre-c06-decidir_cobro_velocidad_ventana_entrega-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de rapidez o de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
+      "texto_nuevo": "Ofrecer entrega el mismo día o una ventana de dos horas suena atractivo para el cliente, pero cada nivel adicional de precisión en el horario incrementa el costo de operar tu logística, porque exige más viajes: si dos clientes de la misma calle eligen franjas distintas, el vehículo no puede entregarles a la vez. Antes de prometer un servicio rápido, calcula cuánto te cuesta realmente sostenerlo: cuántas entregas puedes agrupar por ruta, cuánto cobra tu courier por el servicio express y si tus clientes están dispuestos a pagar la diferencia. Muchas tiendas ofrecen varios niveles, como entrega estándar, entrega rápida y ventana angosta, y dejan que el cliente elija según lo que valore y esté dispuesto a pagar.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "232",
+        "frase": "van cannot deliver at the same time as customers have chosen two different delivery slots"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro liga el costo a las franjas horarias que impiden agrupar entregas; no dice que la mayor rapidez encarezca por exigir más viajes.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-decidir_cobro_velocidad_ventana_entrega-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
+      "texto_nuevo": "Pide a tu courier las tarifas de cada nivel de servicio: estándar, rápido y mismo día.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro no aconseja pedir al courier las tarifas por nivel de servicio.; Mismo defecto."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-decidir_cobro_velocidad_ventana_entrega-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
+      "texto_nuevo": "Calcula cuánto te cuesta cada nivel frente a lo que cobras hoy por el envío.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro no propone comparar el costo de cada nivel con lo que cobras por el envío.; Mismo defecto."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-decidir_cobro_velocidad_ventana_entrega-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Elimina el nivel más rápido si notas que nadie paga la diferencia y solo te cuesta margen.",
+      "texto_nuevo": "Elimina el nivel más rápido si notas que nadie paga la diferencia y solo te cuesta margen.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro no trata de retirar niveles de servicio según su demanda.; Mismo defecto."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-decidir_cobro_velocidad_ventana_entrega-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Ofrece la ventana angosta o el mismo día como opción de pago extra, no como estándar gratuito.",
+      "texto_nuevo": "Ofrece la ventana angosta o el mismo día como opción de pago extra, no como estándar gratuito.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): un paso practico util que el libro no da se queda con su texto y su origen de la casa consta solo en este registro, sin prefijo visible.",
+        "motivo": "El libro describe que hay clientes dispuestos a pagar por ventanas angostas o el mismo día, pero no aconseja ofrecerlos como extra pagado."
+      },
+      "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ],
   "fuentes_internas": [

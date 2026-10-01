@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identifica dos o más segmentos de clientes que se necesitan mutuamente y se beneficiarían de conectarse",
     "Diseña una propuesta de valor de acceso específica para cada lado de la plataforma",
-    "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando qué lado es más sensible al precio y si el otro cubrirá el subsidio",
+    "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando si puedes atraer suficientes clientes de cada lado, qué lado es más sensible al precio, si ese lado se deja atraer con una oferta subsidiada y si el otro cubrirá el subsidio",
     "Define los mecanismos de matchmaking que reduzcan costos de búsqueda entre los segmentos",
-    "Desarrolla las actividades y recursos necesarios para gestionar, promocionar y mantener tu plataforma"
+    "Desarrolla las actividades y recursos necesarios para gestionar, prestar el servicio, promocionar y mantener tu plataforma"
   ],
   "entregable_esperado": "Un diseño de modelo de negocio que muestre al menos dos segmentos de clientes interconectados, sus propuestas de valor diferenciadas y los flujos de ingresos cruzados entre ellos",
   "nodos_previos": [
@@ -75,6 +75,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona la decisión a qué lado es más sensible al precio y si el otro cubrirá el subsidio.; El libro dice que un lado puede subsidiarse y muestra al Wii cobrando a ambos lados.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c01-multi_sided_platforms-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando qué lado es más sensible al precio y si el otro cubrirá el subsidio",
+      "texto_nuevo": "Decide si subsidiarás algún lado (también puedes cobrar a ambos) y cuál generará los ingresos principales, comprobando si puedes atraer suficientes clientes de cada lado, qué lado es más sensible al precio, si ese lado se deja atraer con una oferta subsidiada y si el otro cubrirá el subsidio",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "1225",
+        "frase": "Can we attract sufficient numbers of customers for each side of the platform?"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las cuatro preguntas clave del libro para decidir el subsidio se caen dos.; Mismo defecto: faltan atraer suficientes clientes de cada lado y si el lado sensible se deja atraer con una oferta subsidiada.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c01-multi_sided_platforms-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Desarrolla las actividades y recursos necesarios para gestionar, promocionar y mantener tu plataforma",
+      "texto_nuevo": "Desarrolla las actividades y recursos necesarios para gestionar, prestar el servicio, promocionar y mantener tu plataforma",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "1305-1307",
+        "frase": "The three Key Activities are usually platform management, service provisioning, and platform promotion."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las tres actividades clave del libro (gestión, provisión del servicio, promoción) se cae la provisión del servicio.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

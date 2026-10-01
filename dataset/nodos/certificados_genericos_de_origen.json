@@ -4,12 +4,12 @@
   "dominio": "exportacion",
   "titulo_concepto": "Certificados Genéricos de Origen",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados; para productos textiles, el país importador puede exigir un certificado emitido por el fabricante. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Confirmar que el producto no califica para un FTA existente",
+    "Confirmar que el producto no califica para un FTA existente y verificar con el comprador, con un transitario con experiencia o con el U.S. Commercial Service si se requiere un certificado de origen",
     "Contactar la cámara de comercio local o un proveedor privado",
     "Verificar membresía requerida en la cámara de comercio",
-    "Solicitar notarización y legalización consular si el país destino lo exige (común en Medio Oriente)",
+    "Solicitar notarización, certificación por una cámara de comercio local y legalización consular si el país destino lo exige (común en Medio Oriente)",
     "Consultar a la National U.S.–Arab Chamber of Commerce para destinos de Medio Oriente"
   ],
   "entregable_esperado": "Certificado genérico de origen notariado y legalizado según requisitos del país destino",
@@ -87,6 +87,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera tres requisitos (notarización, certificación por una cámara de comercio local y legalización consular); el nodo omite la certificación de la cámara.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c03-certificados_genericos_de_origen-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirmar que el producto no califica para un FTA existente",
+      "texto_nuevo": "Confirmar que el producto no califica para un FTA existente y verificar con el comprador, con un transitario con experiencia o con el U.S. Commercial Service si se requiere un certificado de origen",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5221",
+        "frase": "The exporter should verify whether a COO is required with the buyer"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide verificar con el comprador, un transitario con experiencia o el U.S. Commercial Service si el certificado se requiere, y el procedimiento lo omite.; Mismo defecto: se cae la verificación de si el certificado se exige.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c03-certificados_genericos_de_origen-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Cuando un producto no califica para un tratado de libre comercio (FTA), puede emitirse un certificado de origen genérico. Estos se obtienen a través de cámaras de comercio locales o proveedores privados; para productos textiles, el país importador puede exigir un certificado emitido por el fabricante. Algunas cámaras no emiten estos certificados o solo lo hacen para sus miembros, y únicamente se certifican bienes fabricados en EE.UU. Algunos países de Medio Oriente exigen notarización, certificación por una cámara de comercio local y legalización consular. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5223",
+        "frase": "For textile products, an importing country may require a COO issued by the manufacturer."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la excepción del libro para textiles: el país importador puede exigir un certificado emitido por el fabricante.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c03-certificados_genericos_de_origen-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar notarización y legalización consular si el país destino lo exige (común en Medio Oriente)",
+      "texto_nuevo": "Solicitar notarización, certificación por una cámara de comercio local y legalización consular si el país destino lo exige (común en Medio Oriente)",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5221",
+        "frase": "be notarized, certified by a local chamber of commerce, and legalized"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro trae tres requisitos y el paso omite la certificación por una cámara de comercio local.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }

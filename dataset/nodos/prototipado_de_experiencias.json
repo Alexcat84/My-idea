@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Prototipado de Experiencias Intangibles (Acting Out)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights que ninguna encuesta o simulación virtual lograría.",
+  "resumen_teorico": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights.",
   "pasos_accionables": [
-    "Construir una maqueta física aproximada del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
+    "Construir una maqueta física aproximada, a escala real, del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
     "Invitar a miembros del equipo, clientes y stakeholders a actuar situaciones reales dentro de la maqueta",
     "Documentar reacciones y sugerencias mediante post-its u observación directa",
     "Aplicar técnicas de improvisación teatral básicas para facilitar la actuación grupal",
@@ -47,5 +47,40 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-cierre-c06-prototipado_de_experiencias-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights que ninguna encuesta o simulación virtual lograría.",
+      "texto_nuevo": "Extiende el concepto de prototipado más allá de objetos físicos hacia servicios, experiencias virtuales o sistemas organizacionales. Usa técnicas como escenarios narrativos, maquetas a escala real (foam core), y actuación/role-play para explorar cómo se sentiría una experiencia antes de construirla completamente. Permite a equipos y clientes 'actuar' situaciones en tiempo real y espacio real, generando insights.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "648",
+        "frase": "No amount of survey work or virtual simulation would have achieved the same result."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro afirma eso de un caso concreto; el resumen lo vuelve regla general.; Mismo defecto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c06-prototipado_de_experiencias-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir una maqueta física aproximada del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
+      "texto_nuevo": "Construir una maqueta física aproximada, a escala real, del espacio o servicio (ej. foam core), y montarla en un lugar de bajo costo",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "648",
+        "frase": "they built a full-scale mock-up of the entrance lobby and a typical guest suite"
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la escala real de la maqueta, que en el libro es lo que permite explorar en espacio y tiempo reales.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    }
   ]
 }

@@ -4,11 +4,11 @@
   "dominio": "franquicias",
   "titulo_concepto": "Un sistema para reducir el riesgo de demandas al vender franquicias",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
+  "resumen_teorico": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con tus franquiciados y con los interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
   "pasos_accionables": [
     "Junto con tu abogado de franquicias, capacita cada año a quien vende tus franquicias en la ley de franquicias de tu mercado, con una evaluación que quede registrada, y da una capacitación más ligera al resto de tu equipo para que sepa pasar los interesados a quien vende",
     "Designa a una persona (puede ser tú mismo) como punto de contacto para dudas legales sobre las ventas y responsable de mantener vigentes todos los registros de tu franquicia",
-    "Usa un sistema para registrar todas las comunicaciones con cada interesado en comprar una franquicia",
+    "Usa un sistema para registrar todas las comunicaciones con tus franquiciados y con cada interesado en comprar una franquicia",
     "Haz una entrevista de cierre con cada franquiciado nuevo preguntando qué le dijeron durante la venta; si encuentras un problema, detente y llama de inmediato a tu abogado",
     "Realiza compras de prueba periódicas para verificar que se vende de forma correcta",
     "Establece una política de cero tolerancia ante infracciones e inclúyela en los acuerdos de trabajo"
@@ -178,6 +178,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae lo que el libro manda si aparece un problema: detenerse y llamar de inmediato al abogado.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-cierre-c01-programa_cumplimiento_legal-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
+      "texto_nuevo": "La mayoría de las demandas en franquicias giran en torno a dos temas: violaciones de la ley de franquicias y promesas falsas durante el proceso de venta. Puedes reducir mucho este riesgo con educación, cuidado, un abogado con experiencia en franquicias y un método claro de cumplimiento. Esto incluye capacitar cada año, junto con tu abogado, a quien venda tus franquicias en la ley que aplica, tener a alguien responsable de resolver dudas legales, dejar por escrito todas las conversaciones con tus franquiciados y con los interesados, hacer compras de prueba periódicas para revisar cómo se vende, y aplicar mano dura sin excepciones ante cualquier infracción.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2239",
+        "frase": "Document all communications with franchisees and prospective franchisees."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide documentar las comunicaciones con los franquiciados y con los interesados; el resumen pierde a los franquiciados.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "final-e1-cierre-c01-programa_cumplimiento_legal-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa un sistema para registrar todas las comunicaciones con cada interesado en comprar una franquicia",
+      "texto_nuevo": "Usa un sistema para registrar todas las comunicaciones con tus franquiciados y con cada interesado en comprar una franquicia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2239",
+        "frase": "Document all communications with franchisees and prospective franchisees."
+      },
+      "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide registrar las comunicaciones con los franquiciados y con los interesados; el paso deja fuera a los franquiciados.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
     }
   ]
 }
