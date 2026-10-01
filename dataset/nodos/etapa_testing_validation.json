@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Etapa 4 - Testing and Validation",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para confirmar la rentabilidad. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque antes de intentar lanzarlo de nuevo.",
+  "resumen_teorico": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para comprobar si el negocio sigue siendo viable. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque.",
   "pasos_accionables": [
     "Ejecuta pruebas técnicas internas (alfa) en condiciones controladas",
     "Realiza pruebas de campo con usuarios reales para verificar funcionamiento e intención de compra",
@@ -40,5 +40,23 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-024-etapa_testing_validation-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para confirmar la rentabilidad. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque antes de intentar lanzarlo de nuevo.",
+      "texto_nuevo": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para comprobar si el negocio sigue siendo viable. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3215-3217",
+        "frase": "to check on the continued business and economic viability of the project"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida, invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro actualiza el análisis para comprobar si el proyecto sigue siendo viable, no para confirmar una rentabilidad que se da por hecha.; La etapa ocurre antes de cualquier lanzamiento y un resultado negativo devuelve a la etapa anterior; 'lanzarlo de nuevo' supone un lanzamiento previo que el libro no plantea.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

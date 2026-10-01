@@ -11,7 +11,7 @@
     "Revisar minuciosamente todos los términos y condiciones de la carta de crédito recibida contra la pro forma invoice",
     "Coordinar con el freight forwarder para cumplir fechas de embarque y documentación requerida",
     "Presentar los documentos exactos y a tiempo para asegurar el pago",
-    "Solicitar amendments inmediatamente si algún término no puede cumplirse"
+    "Solicitar amendments inmediatamente si algún término no puede cumplirse o si algún dato es incorrecto o tiene errores de escritura"
   ],
   "entregable_esperado": "Carta de crédito irrevocable (confirmada si aplica) revisada y documentos de embarque conformes presentados al banco",
   "nodos_previos": [
@@ -47,6 +47,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos razones para pedir la confirmación y el resumen pierde la de no conocer al banco extranjero.; Mismo defecto: se cae la razón de no conocer al banco extranjero emisor.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-021-letters_of_credit-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solicitar amendments inmediatamente si algún término no puede cumplirse",
+      "texto_nuevo": "Solicitar amendments inmediatamente si algún término no puede cumplirse o si algún dato es incorrecto o tiene errores de escritura",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4087",
+        "frase": "if any of the information is incorrect or even misspelled"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide también la enmienda cuando algún dato es incorrecto o tiene errores de escritura, porque eso puede invalidar la carta y dejarte sin pago; esa condición se cae.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

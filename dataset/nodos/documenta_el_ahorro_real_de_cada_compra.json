@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Documenta el ahorro real de cada compra con una fórmula simple",
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
-  "resumen_teorico": "Sin un número claro de cuánto ahorraste, no tienes cómo defender que una compra valió la pena ni argumentos para la próxima negociación. El método más simple es comparar el nuevo gasto contra el promedio de lo que gastaste en el mismo producto o servicio en años anteriores, usando una fórmula sencilla: uno menos el nuevo gasto dividido entre el promedio histórico, multiplicado por cien. Ese porcentaje se documenta junto con la fecha y el proveedor en un archivo simple de compras. Con ese registro acumulado, cada vez que renueves o vuelvas a negociar tendrás evidencia concreta de tu historial de ahorro, en lugar de depender solo de impresiones o promesas del proveedor.",
+  "resumen_teorico": "Sin un número claro de cuánto ahorraste, no tienes cómo defender que una compra valió la pena. El método más simple es comparar el nuevo gasto contra el promedio de lo que gastaste en el mismo producto o servicio en años anteriores, usando una fórmula sencilla: uno menos el nuevo gasto dividido entre el promedio histórico, multiplicado por cien. Ese porcentaje se documenta junto con la fecha y el proveedor en un archivo simple de compras. Con ese registro acumulado, cada vez que renueves o vuelvas a negociar tendrás evidencia concreta de tu historial de ahorro.",
   "pasos_accionables": [
     "Reúne cuánto gastaste en este mismo producto o servicio en los últimos años.",
     "Calcula el promedio de ese gasto histórico.",
@@ -46,6 +46,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa el ahorro documentado para decidir si renovar o volver a concursar el contrato, no como argumento de negociación.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-022-documenta_el_ahorro_real_de_cada_compra-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sin un número claro de cuánto ahorraste, no tienes cómo defender que una compra valió la pena ni argumentos para la próxima negociación. El método más simple es comparar el nuevo gasto contra el promedio de lo que gastaste en el mismo producto o servicio en años anteriores, usando una fórmula sencilla: uno menos el nuevo gasto dividido entre el promedio histórico, multiplicado por cien. Ese porcentaje se documenta junto con la fecha y el proveedor en un archivo simple de compras. Con ese registro acumulado, cada vez que renueves o vuelvas a negociar tendrás evidencia concreta de tu historial de ahorro, en lugar de depender solo de impresiones o promesas del proveedor.",
+      "texto_nuevo": "Sin un número claro de cuánto ahorraste, no tienes cómo defender que una compra valió la pena. El método más simple es comparar el nuevo gasto contra el promedio de lo que gastaste en el mismo producto o servicio en años anteriores, usando una fórmula sencilla: uno menos el nuevo gasto dividido entre el promedio histórico, multiplicado por cien. Ese porcentaje se documenta junto con la fecha y el proveedor en un archivo simple de compras. Con ese registro acumulado, cada vez que renueves o vuelvas a negociar tendrás evidencia concreta de tu historial de ahorro.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "5803",
+        "frase": "very important when making the decision to renew or compete the contract."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro liga el ahorro documentado a la decisión de renovar o licitar, no a dar argumentos de negociación ni a contrastar promesas del proveedor.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

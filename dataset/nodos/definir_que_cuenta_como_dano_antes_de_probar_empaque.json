@@ -4,15 +4,15 @@
   "dominio": "entrega",
   "titulo_concepto": "Definir qué cuenta como daño antes de probar el empaque",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir dos cosas: qué cuenta como falla del producto y del empaque, y qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir tres cosas: qué cuenta como falla del producto y del empaque, qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro, y cómo vas a revisar el estado del producto y del empaque antes y después de la prueba, para comparar y saber si hubo falla real o solo desgaste normal.",
   "pasos_accionables": [
-    "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
+    "Decide antes de la prueba qué tipo de daño en el producto y en el empaque es inaceptable.",
     "Decide qué nivel de daño toleras sin considerarlo falla, si es que toleras alguno.",
     "Anota el estado del producto y del empaque antes de enviarlo o probarlo.",
     "Compara ese registro contra el estado final para saber si hubo una falla real.",
     "Ajusta tu empaque cuando el daño supere el límite que tú mismo definiste."
   ],
-  "entregable_esperado": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
+  "entregable_esperado": "Una lista escrita de qué es daño aceptable y qué no, y de cómo vas a comprobar el estado del producto y del empaque antes y después, lista antes de tu primera prueba de empaque.",
   "nodos_previos": [
     "identificar_si_tu_producto_necesita_proteccion_especial",
     "garantias_implicitas_vs_expresas"
@@ -208,6 +208,55 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-023-definir_que_cuenta_como_dano_antes_de_probar_empaque-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir dos cosas: qué cuenta como falla del producto y del empaque, y qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro. También conviene registrar el estado del producto y del empaque antes de enviarlo, para poder comparar contra el estado final y saber si hubo falla real o solo desgaste normal.",
+      "texto_nuevo": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir tres cosas: qué cuenta como falla del producto y del empaque, qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro, y cómo vas a revisar el estado del producto y del empaque antes y después de la prueba, para comparar y saber si hubo falla real o solo desgaste normal.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "193-195",
+        "frase": "The test requestor shall determine all of the following before testing"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige decidir antes de probar tres cosas, incluida cómo se comprobará el estado antes y después; el nodo cuenta dos y deja la tercera como algo que solo conviene.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-023-definir_que_cuenta_como_dano_antes_de_probar_empaque-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide antes de la prueba qué tipo de daño en el producto es inaceptable.",
+      "texto_nuevo": "Decide antes de la prueba qué tipo de daño en el producto y en el empaque es inaceptable.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "193-195",
+        "frase": "What constitutes failure of the product and packaging"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide definir qué es falla del producto y del empaque; el paso deja fuera el empaque.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-023-definir_que_cuenta_como_dano_antes_de_probar_empaque-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista escrita de qué es daño aceptable y qué no, lista antes de tu primera prueba de empaque.",
+      "texto_nuevo": "Una lista escrita de qué es daño aceptable y qué no, y de cómo vas a comprobar el estado del producto y del empaque antes y después, lista antes de tu primera prueba de empaque.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "193-195",
+        "frase": "How to determine product and package condition before and after the test"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye entre lo que debe estar decidido antes de probar cómo se comprobará el estado antes y después; el entregable lo omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

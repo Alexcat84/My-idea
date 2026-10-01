@@ -7,7 +7,7 @@
   "resumen_teorico": "Si tu proyecto es grande, caro y de larga duración, no te alcanza con validar con clientes mientras desarrollas: conviene que agregues una etapa de pruebas aparte, con su propia decisión de avanzar (pasar a pruebas). Ahí puede haber pruebas de producción, ensayos de campo formales, pruebas con usuarios reales (beta) y pruebas de mercado. Esto te permite revisar todo antes de comprometer dinero en equipo de producción o en un lanzamiento a media escala.",
   "pasos_accionables": [
     "Mira el tamaño, el costo y la duración de tu proyecto para decidir si necesitas una etapa de pruebas separada",
-    "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas, distinto de cuando cierras el desarrollo",
+    "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas",
     "En la etapa de pruebas incluye: ensayos de producción, pruebas de campo o con usuarios reales, y pruebas de mercado",
     "Mantente involucrado junto con quien desarrolló el producto durante esta etapa para no perder continuidad ni compromiso"
   ],
@@ -55,6 +55,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los proyectos grandes pueden tener estas pruebas; el nodo afirma que se hacen todas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-024-etapa_pruebas_necesaria-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas, distinto de cuando cierras el desarrollo",
+      "texto_nuevo": "Si el proyecto es grande, define un momento claro de decidir si pasas a pruebas",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4700",
+        "frase": "Building in a gate at the end of Development—the “Go to Test” gate"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): El libro coloca la decisión de pasar a pruebas justo al final del desarrollo; lo que se separa son las etapas, no el momento de decidir respecto del cierre del desarrollo.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

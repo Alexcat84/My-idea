@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir sobre o caja según el tamaño final del paquete",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+  "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
   "pasos_accionables": [
     "Arma el paquete completo con su protección antes de decidir el contenedor.",
     "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
@@ -71,6 +71,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario, invencion; doble lectura ciega y arbitro): El libro manda poner los paquetes pequeños dentro de una caja exterior más grande; el nodo lo llama desperdicio.; El libro solo fija qué hacer por debajo del tamaño mínimo.; El riesgo de forzar un sobre no está en el libro.; Los dos porqués son añadidos; el primero además choca con el libro, corregido como contrario.; Misma regla añadida por encima del mínimo.; Mismo consejo invertido.; Mismo riesgo añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-022-elegir_sobre_o_caja_tamano-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio. Conocer ese umbral del courier para tu catálogo evita comprar de más en un solo formato de empaque cuando en realidad necesitas dos.",
+      "texto_nuevo": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "99",
+        "frase": "Place small packages inside a larger outer box."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo da la regla del tamaño mínimo; el ahorro por no comprar de más en un formato es un resultado que no afirma.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

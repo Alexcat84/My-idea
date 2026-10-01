@@ -10,7 +10,7 @@
     "Definir la propuesta de valor, la relación con el cliente y el modelo de ingresos para cada lado del mercado por separado",
     "Validar la hipótesis de canal para cada lado del mercado de forma independiente",
     "Calcular cuánto estaría dispuesto a pagar el lado que paga (por ejemplo, los anunciantes) por alcanzar al lado gratuito",
-    "Diseñar estrategias de venta diferenciadas para cada tipo de actor, enfocando primero los recursos en la fuente de ingresos principal antes de expandir a fuentes secundarias"
+    "Diseñar estrategias de venta diferenciadas para cada tipo de actor"
   ],
   "entregable_esperado": "Un diagrama de canal multilateral con todos los actores y roles identificados, y un modelo de negocio diferenciado para cada lado del mercado con su propuesta de valor y flujo de ingresos correspondiente",
   "condiciones_activacion": [
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Atiende Varios Lados del Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-024-mercados_multilaterales-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Diseñar estrategias de venta diferenciadas para cada tipo de actor, enfocando primero los recursos en la fuente de ingresos principal antes de expandir a fuentes secundarias",
+      "texto_nuevo": "Diseñar estrategias de venta diferenciadas para cada tipo de actor",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6418",
+        "frase": "Almost universally, multi-sided marketers focus first on efforts to get users."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): En un mercado multilateral el libro pone primero el esfuerzo en conseguir usuarios, el lado gratuito, y después en el lado que paga; enfocar primero la fuente de ingresos invierte ese orden.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

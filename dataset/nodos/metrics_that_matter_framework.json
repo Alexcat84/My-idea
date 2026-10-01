@@ -10,7 +10,7 @@
     "Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes",
     "Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto",
     "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo",
-    "Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo",
+    "Construye una hoja de cálculo por periodos, del largo que tenga sentido para tu negocio (más espaciados cuanto más largo sea tu ciclo de venta), que muestre el efectivo restante en banco después de cada periodo",
     "Acuerda con tus inversionistas cuál burn rate es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos"
   ],
   "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
@@ -110,6 +110,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que fundadores e inversionistas acuerden el burn rate y los pivotes costeables.; Mismo defecto.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-024-metrics_that_matter_framework-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construye una hoja de cálculo trimestral que muestre el efectivo restante en banco después de cada periodo",
+      "texto_nuevo": "Construye una hoja de cálculo por periodos, del largo que tenga sentido para tu negocio (más espaciados cuanto más largo sea tu ciclo de venta), que muestre el efectivo restante en banco después de cada periodo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2335-2338",
+        "frase": "Use the time frames that make the most sense for your startup."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide usar el periodo que más sentido tenga para el negocio, más espaciado cuanto más largo el ciclo de venta, y el trimestral es solo el de su ejemplo.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

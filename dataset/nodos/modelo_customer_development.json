@@ -7,7 +7,7 @@
   "resumen_teorico": "Marco metodológico que organiza las actividades relacionadas con el cliente en una startup en cuatro pasos iterativos: Customer Discovery, Customer Validation, Customer Creation y Company-Building. Los dos primeros pasos constituyen la 'búsqueda' del modelo de negocio, mientras que los dos últimos son la 'ejecución' del modelo ya validado. A diferencia de los planes de producto tradicionales lineales, este modelo es cíclico y acepta retrocesos como parte natural del aprendizaje.",
   "pasos_accionables": [
     "Identificar en qué paso del proceso se encuentra la startup actualmente",
-    "Formular hipótesis de negocio antes de iniciar cualquier paso",
+    "Formular hipótesis de negocio",
     "Diseñar experimentos para testear cada hipótesis fuera del edificio",
     "Evaluar en cada 'stop sign' si se alcanzó 'velocidad de escape' antes de avanzar",
     "Estar dispuesto a retroceder a pasos anteriores si el aprendizaje lo indica"
@@ -33,5 +33,24 @@
   "etiqueta_arbol": "Sigue los Pasos del Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-024-modelo_customer_development-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formular hipótesis de negocio antes de iniciar cualquier paso",
+      "texto_nuevo": "Formular hipótesis de negocio",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "844",
+        "frase": "Customer discovery translates a founder’s vision for the company into hypotheses about each component"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro sitúa la traducción de la visión en hipótesis en el descubrimiento de clientes; no la fija como norma previa a cada uno de los cuatro pasos.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

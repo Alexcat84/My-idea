@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Las tres partes de la reunión para decidir si tu proyecto sigue adelante (gate)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Cuando revises si un proyecto tuyo sigue adelante, separa la conversación en tres partes claras. Primero, revisa si lo que entregaste está completo y con la calidad esperada: si falta algo, lo corriges, no lo cancelas. Segundo, evalúa si el proyecto sigue siendo una buena inversión, mirando los números y los criterios que ya definiste; si no lo es, ahí sí lo cierras. Tercero, compara ese proyecto con tus otras iniciativas para decidir a cuál le dedicas tiempo y recursos ahora. Mantener estas tres preguntas separadas evita que sientas que te penalizan por un buen trabajo cuando en realidad el proyecto solo perdió prioridad frente a otro.",
+  "resumen_teorico": "Cuando revises si un proyecto tuyo sigue adelante, separa la conversación en tres partes claras. Primero, revisa si lo que entregaste está completo, con la calidad esperada y con datos confiables: si falta algo, lo corriges, no lo cancelas. Segundo, evalúa si el proyecto sigue siendo una buena inversión, mirando los números y los criterios que ya definiste; si no lo es, ahí sí lo cierras. Tercero, compara ese proyecto con tus otras iniciativas para decidir a cuál le dedicas tiempo y recursos ahora. Mantener estas tres preguntas separadas evita que sientas que te penalizan por un buen trabajo cuando en realidad el proyecto solo perdió prioridad frente a otro.",
   "pasos_accionables": [
-    "Empieza revisando solo si lo que entregaste está completo y con la calidad que esperabas (chequeo de preparación).",
+    "Empieza revisando solo si lo que entregaste está completo, con la calidad que esperabas y con datos confiables (chequeo de preparación).",
     "Si pasa esa revisión, evalúa el negocio: mira los números y los criterios que ya tenías definidos.",
     "Si el negocio se sostiene, compara este proyecto con tus otras iniciativas activas para decidir a cuál le das prioridad.",
     "Mantén estas tres preguntas separadas durante la revisión, no las mezcles."
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Divide tu Decisión en Fases",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-024-diamante_decision_tres_partes-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando revises si un proyecto tuyo sigue adelante, separa la conversación en tres partes claras. Primero, revisa si lo que entregaste está completo y con la calidad esperada: si falta algo, lo corriges, no lo cancelas. Segundo, evalúa si el proyecto sigue siendo una buena inversión, mirando los números y los criterios que ya definiste; si no lo es, ahí sí lo cierras. Tercero, compara ese proyecto con tus otras iniciativas para decidir a cuál le dedicas tiempo y recursos ahora. Mantener estas tres preguntas separadas evita que sientas que te penalizan por un buen trabajo cuando en realidad el proyecto solo perdió prioridad frente a otro.",
+      "texto_nuevo": "Cuando revises si un proyecto tuyo sigue adelante, separa la conversación en tres partes claras. Primero, revisa si lo que entregaste está completo, con la calidad esperada y con datos confiables: si falta algo, lo corriges, no lo cancelas. Segundo, evalúa si el proyecto sigue siendo una buena inversión, mirando los números y los criterios que ya definiste; si no lo es, ahí sí lo cierras. Tercero, compara ese proyecto con tus otras iniciativas para decidir a cuál le dedicas tiempo y recursos ahora. Mantener estas tres preguntas separadas evita que sientas que te penalizan por un buen trabajo cuando en realidad el proyecto solo perdió prioridad frente a otro.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7057",
+        "frase": "the content of the deliverables, the quality of work underlying them, and data integrity"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El chequeo de preparación del libro tiene tres elementos y el nodo pierde el tercero, que los datos sean confiables.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-024-diamante_decision_tres_partes-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empieza revisando solo si lo que entregaste está completo y con la calidad que esperabas (chequeo de preparación).",
+      "texto_nuevo": "Empieza revisando solo si lo que entregaste está completo, con la calidad que esperabas y con datos confiables (chequeo de preparación).",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "7057, 7070",
+        "frase": "Are the deliverables in place? Based on good quality work? Data integrity satisfactory?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El chequeo de preparación del libro incluye que los datos sean confiables, y el paso lo omite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

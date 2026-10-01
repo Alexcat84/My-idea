@@ -7,7 +7,7 @@
   "resumen_teorico": "El reporte de auditoría debe documentar los resultados con claridad y revisarse con la persona responsable del área auditada antes de compartirlo en su versión final. Debe incluir un resumen ejecutivo, el propósito y alcance, los detalles del plan, los criterios usados, las observaciones con su evidencia, las conclusiones, las recomendaciones y a quién se le va a entregar. Puedes clasificar la gravedad de cada hallazgo (crítico, mayor, menor), como hacen algunos programas de auditoría.",
   "pasos_accionables": [
     "Redacta el reporte incluyendo resumen ejecutivo, alcance, hallazgos y recomendaciones",
-    "Revisa el borrador con la persona responsable del área auditada antes de compartirlo, en una reunión de cierre",
+    "Revisa el borrador con la persona responsable del área auditada antes de compartirlo, de preferencia en una reunión de cierre",
     "Clasifica cada hallazgo según su gravedad (crítica, mayor, menor)",
     "Define de antemano, junto con la persona auditada, a quién se le va a entregar el reporte",
     "Empieza el reporte con lo que sí funciona bien, para mantener el equilibrio"
@@ -59,6 +59,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que algunos programas clasifican la gravedad, sin atribuirle el propósito de priorizar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-023-reporte_auditoria-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa el borrador con la persona responsable del área auditada antes de compartirlo, en una reunión de cierre",
+      "texto_nuevo": "Revisa el borrador con la persona responsable del área auditada antes de compartirlo, de preferencia en una reunión de cierre",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10195",
+        "frase": "a draft should be reviewed (preferably at the postaudit meeting) with the management"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el borrador se revisa de preferencia en la reunión posterior a la auditoría; el paso lo fija sin ese matiz.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

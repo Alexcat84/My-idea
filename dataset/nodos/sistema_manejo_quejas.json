@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema Organizado de Manejo de Quejas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
+  "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
   "pasos_accionables": [
     "Define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
     "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
@@ -157,6 +157,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 0,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-023-sistema_manejo_quejas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
+      "texto_nuevo": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas, atención capacitada y la búsqueda activa de quejas para no perder clientes en el futuro, genera alto retorno de inversión. Además, durante fallas de servicio tus clientes quieren que los mantengas informados de las causas y del tiempo probable de solución.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "900-902",
+        "frase": "Of customers who were dissatisfied with products or services, nearly 70 percent did not complain"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Las cifras están en el libro, pero el prefijo de procedencia 'Estudios muestran que' lo prohíbe la regla dura de la casa; basta con quitarlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

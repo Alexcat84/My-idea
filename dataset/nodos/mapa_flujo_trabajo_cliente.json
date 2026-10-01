@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Mapa de Flujo de Trabajo del Cliente",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Antes de decidir si cambias de rumbo (pivotar) o sigues adelante, tienes que construir un diagrama que muestre cómo tu cliente típico hace su trabajo hoy, con quién interactúa y cómo gasta su tiempo y su dinero. Este mapa te sirve para comprobar si tus hipótesis iniciales sobre el cliente son ciertas, comparando el flujo de trabajo con y sin el producto que propones.",
+  "resumen_teorico": "Antes de decidir si cambias de rumbo (pivotar) o sigues adelante, tienes que construir un diagrama que muestre cómo tu cliente típico hace su trabajo hoy, con quién interactúa y cómo gasta su tiempo y su dinero. Este mapa te sirve para comprobar si tus hipótesis iniciales sobre el cliente son ciertas y, al dibujar el flujo con y sin el producto que propones, ver si la diferencia es grande y si el cliente pagaría por ella.",
   "pasos_accionables": [
     "Reúne todos los datos que recolectaste en las entrevistas con tus clientes",
     "Diagrama cómo tu cliente hace su trabajo o vive su día hoy",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Dibuja el Flujo del Cliente",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-024-mapa_flujo_trabajo_cliente-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir si cambias de rumbo (pivotar) o sigues adelante, tienes que construir un diagrama que muestre cómo tu cliente típico hace su trabajo hoy, con quién interactúa y cómo gasta su tiempo y su dinero. Este mapa te sirve para comprobar si tus hipótesis iniciales sobre el cliente son ciertas, comparando el flujo de trabajo con y sin el producto que propones.",
+      "texto_nuevo": "Antes de decidir si cambias de rumbo (pivotar) o sigues adelante, tienes que construir un diagrama que muestre cómo tu cliente típico hace su trabajo hoy, con quién interactúa y cómo gasta su tiempo y su dinero. Este mapa te sirve para comprobar si tus hipótesis iniciales sobre el cliente son ciertas y, al dibujar el flujo con y sin el producto que propones, ver si la diferencia es grande y si el cliente pagaría por ella.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "8715-8717",
+        "frase": "Draw the customer workflow with and without your product. Is the difference dramatic?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compara el mapa con las hipótesis iniciales y, aparte, dibuja el flujo con y sin producto para ver si la diferencia es grande y si el cliente pagaría por ella; el nodo funde ambas y pierde esa prueba.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }
