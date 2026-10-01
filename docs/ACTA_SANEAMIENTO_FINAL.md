@@ -1476,3 +1476,20 @@ Máquina en `auditoria-final-claves/medida3/vecindad.py`, semilla 20261111.
   - Verificadores: de 5 a 8.
 - **Coste:** unos 20 a 25 millones de tokens de subagente, a la vista de lo medido hoy. Una ola de 20 lectores de
   procedencia gastó 1,4 millones, y un lector de nodo contra su texto gasta unos 100.000.
+
+### 14.3 Los 9 elementos con anécdota (decisión del fundador, 1 oct 2026)
+
+Aprobada la propuesta: se quita la frase anecdótica cuando el resto se sostiene solo, por corrección declarada y sin
+palabras nuevas.
+
+- **Corregidos 4** (tanda `medida3-anecdotas`):
+  - `reservar_valor_unico_prioridades_arriba`, paso 8: sale la vivencia de la directiva.
+  - `pedir_critica_equipo_premiarla`, paso 6: queda "No reacciones a la defensiva."
+  - `riesgo_litigios_franquicia`, resumen: sale la frase del estudio y su 26 %.
+  - `alinear_prioridades_reporte_directivo`, paso 10: queda la pregunta sobre procesos sanos.
+- **No se tocan 5, porque el consejo no se sostiene sin la anécdota** (el elemento entero es la vivencia). Quedan como
+  residuo declarado de procedencia: no nombran a nadie, pero cuentan la experiencia de una persona.
+  - `mover_rapido_persona_papel_equivocado`, pasos 0 y 1;
+  - `pedir_ayuda_grupo_apoyo`, paso 0;
+  - `disenar_entorno_rendir_mejor`, paso 4;
+  - `admitir_pronto_mal_desempenio_cuatro_razones`, paso 0.
