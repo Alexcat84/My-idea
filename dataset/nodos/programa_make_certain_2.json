@@ -7,7 +7,7 @@
   "resumen_teorico": "El programa 'Make Certain' es una metodología estructurada diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios.",
   "pasos_accionables": [
     "Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.",
-    "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+    "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
     "Capacitar a supervisores en el programa y que ellos se reúnan con su gente para explicarle su lógica y hacer con ella la discusión: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
     "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.",
     "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.",
@@ -97,6 +97,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro los supervisores se reúnen con su gente, le explican la lógica y hacen con ella la discusión; el nodo la deja como capacitación de supervisores.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-047-programa_make_certain_2-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+      "texto_nuevo": "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3795",
+        "frase": "Tell them they will need at least three of these examples."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide a los coordinadores al menos tres ejemplos; el paso pierde ese mínimo del procedimiento.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

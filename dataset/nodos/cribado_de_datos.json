@@ -9,7 +9,7 @@
     "Calcular la media y desviación estándar del conjunto de datos",
     "Definir el multiplicador L según el tamaño de la muestra (ej. L=3 para n=1000, L=2.5 para n=100)",
     "Identificar observaciones fuera del intervalo ±L desviaciones estándar",
-    "Investigar la causa de cada posible outlier antes de eliminarlo",
+    "Investigar la causa de cada posible outlier y eliminarlo solo si se puede atribuir a una causa específica",
     "Visualizar los datos con diagramas de caja o dispersión para detectar anomalías",
     "Repetir el cribado tras corregir o eliminar datos erróneos"
   ],
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Limpia tus Datos Primero",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-047-cribado_de_datos-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Investigar la causa de cada posible outlier antes de eliminarlo",
+      "texto_nuevo": "Investigar la causa de cada posible outlier y eliminarlo solo si se puede atribuir a una causa específica",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "19419",
+        "frase": "deleted from the analysis only if they can be traced to specific causes"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso da por hecha la eliminación; el libro solo la admite si el outlier se rastrea a una causa específica y advierte del riesgo de borrar datos valiosos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

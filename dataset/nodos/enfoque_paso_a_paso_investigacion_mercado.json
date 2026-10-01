@@ -7,7 +7,7 @@
   "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
   "pasos_accionables": [
     "Obtén estadísticas de exportación de tu producto por país usando el U.S. Census Bureau",
-    "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento y explora mercados emergentes con menor competencia, considerando agrupaciones por tratados de libre comercio",
+    "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento mirando sus tendencias de los últimos 3 a 5 años, y explora mercados emergentes, donde puede haber menos competencia, considerando agrupaciones por tratados de libre comercio",
     "Selecciona de 3 a 5 mercados más prometedores para profundizar el análisis",
     "Examina las tendencias de consumo e importación del producto y estudia la competencia doméstica y extranjera en cada mercado",
     "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
@@ -79,6 +79,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El precio no figura entre los factores de marketing que el libro manda analizar en este paso.; Mismo defecto: el libro nombra los sectores de usuarios finales, no el precio.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-046-enfoque_paso_a_paso_investigacion_mercado-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento y explora mercados emergentes con menor competencia, considerando agrupaciones por tratados de libre comercio",
+      "texto_nuevo": "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento mirando sus tendencias de los últimos 3 a 5 años, y explora mercados emergentes, donde puede haber menos competencia, considerando agrupaciones por tratados de libre comercio",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1261-1263",
+        "frase": "there may be fewer competitors than in established markets"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que en un mercado que recién se abre puede haber menos competidores; el paso lo da como rasgo seguro.; El libro identifica esos mercados mirando su tendencia de los últimos 3 a 5 años, criterio que el paso pierde.; Mismo defecto que la marca 0: el libro dice que puede haber menos competidores.; Mismo defecto: se cae la revisión de tendencias de 3 a 5 años con que el libro hace esa identificación.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

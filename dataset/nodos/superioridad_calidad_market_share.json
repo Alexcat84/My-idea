@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Superioridad de Calidad y Participación de Mercado",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
+  "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos, por una ventaja pequeña pero demostrable que se le hace notar y que valora, o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento y lo demás es igual, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
   "pasos_accionables": [
     "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder; si tu producto es complejo, puede hacer falta un análisis más sofisticado, como el análisis conjunto",
     "Determinar si la diferencia de preferencia cae fuera del rango 25-75 por ciento",
@@ -74,6 +74,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La elección forzada vale para productos relativamente simples; los complejos pueden requerir análisis más sofisticados.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-047-superioridad_calidad_market_share-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
+      "texto_nuevo": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos, por una ventaja pequeña pero demostrable que se le hace notar y que valora, o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento y lo demás es igual, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "585",
+        "frase": "such quality differences are decisive in share of market, all other things being equal"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da una cuarta vía, la superioridad pequeña pero demostrable que gana cuota si el cliente la nota y la valora; la lista del nodo la pierde.; El libro dice que la calidad decide la cuota solo si lo demás es igual; el nodo suelta esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

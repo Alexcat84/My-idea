@@ -7,7 +7,7 @@
   "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, ocultan el contenido, ayudan a los receptores a identificar el embarque y cumplen normas ambientales y de seguridad, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias e ingredientes (si aplica) en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Confirmar marcas de exportación requeridas por el comprador",
-    "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
+    "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos, puerto de entrada e ingredientes si aplica (también en el idioma del país destino)",
     "Agregar símbolos pictóricos internacionales de manejo",
     "Incluir advertencias en inglés y en idioma del país destino",
     "Etiquetar materiales peligrosos según símbolos de IATA/OMI si aplica"
@@ -60,6 +60,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de funciones del libro incluye ocultar la identidad del contenido, que el nodo omite.; La lista de marcas del libro incluye los ingredientes, si aplica, también en el idioma de destino.; Mismo defecto que la marca 1: faltan los ingredientes.; Se caen dos funciones del libro: ocultar el contenido y asegurar normas ambientales y de seguridad.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-046-etiquetado_exportacion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
+      "texto_nuevo": "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos, puerto de entrada e ingredientes si aplica (también en el idioma del país destino)",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3555-3559",
+        "frase": "Ingredients (if applicable, also included in the language of the destination country)"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de marcas del libro incluye el puerto de entrada y los ingredientes (si aplica, también en el idioma de destino), que ningún paso recoge.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -20607,7 +20607,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "compras",
       "titulo_concepto": "Conoce tus insumos vitales",
-      "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla.",
+      "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla, sabiendo que ambas protecciones bajan el riesgo pero cuestan más.",
       "pasos_accionables": [
         "Haz una lista de los insumos que compras regularmente.",
         "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
@@ -26431,7 +26431,7 @@
         "Calcular la media y desviación estándar del conjunto de datos",
         "Definir el multiplicador L según el tamaño de la muestra (ej. L=3 para n=1000, L=2.5 para n=100)",
         "Identificar observaciones fuera del intervalo ±L desviaciones estándar",
-        "Investigar la causa de cada posible outlier antes de eliminarlo",
+        "Investigar la causa de cada posible outlier y eliminarlo solo si se puede atribuir a una causa específica",
         "Visualizar los datos con diagramas de caja o dispersión para detectar anomalías",
         "Repetir el cribado tras corregir o eliminar datos erróneos"
       ],
@@ -31299,7 +31299,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Fase Decide del Roadmap de Transformación",
-      "resumen_teorico": "Primera fase del Juran Transformation Roadmap, que comienza cuando el equipo ejecutivo decide que se necesita un cambio y termina con un plan claro. Requiere generar nueva información mediante evaluaciones de lealtad de cliente, análisis de costos de procesos deficientes, y revisión de calidad de clase mundial en todas las unidades de negocio, culminando en un breakthrough de liderazgo y gestión.",
+      "resumen_teorico": "Primera fase del Juran Transformation Roadmap, que comienza cuando el equipo ejecutivo decide que se necesita un cambio y termina con un plan claro. Requiere generar nueva información mediante evaluaciones como las de lealtad de cliente, actitudes del personal y procesos clave ante el cambio, análisis de costos de procesos deficientes y revisión de calidad de clase mundial en todas las unidades de negocio, culminando en un breakthrough de liderazgo y gestión.",
       "pasos_accionables": [
         "Realizar evaluación de lealtad de cliente",
         "Identificar fortalezas y problemas de desempeño organizacional",
@@ -31767,7 +31767,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Decisión de Aptitud para el Uso (Fitness for Use)",
-      "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. La decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
+      "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. A veces la respuesta es obvia; cuando no lo es y hay suficiente en juego, la decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
       "pasos_accionables": [
         "Identifica quién es el usuario final, su nivel de sofisticación técnica y si tiene fácil acceso a servicio técnico.",
         "Determina cómo se usará realmente el producto no conforme.",
@@ -44678,7 +44678,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "entrega",
       "titulo_concepto": "Elegir el material de relleno según el producto",
-      "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+      "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan huecos alrededor de artículos livianos, pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos y el artículo vaya envuelto en plástico de burbujas. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
       "pasos_accionables": [
         "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
         "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
@@ -47328,7 +47328,7 @@
       "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
       "pasos_accionables": [
         "Obtén estadísticas de exportación de tu producto por país usando el U.S. Census Bureau",
-        "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento y explora mercados emergentes con menor competencia, considerando agrupaciones por tratados de libre comercio",
+        "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento mirando sus tendencias de los últimos 3 a 5 años, y explora mercados emergentes, donde puede haber menos competencia, considerando agrupaciones por tratados de libre comercio",
         "Selecciona de 3 a 5 mercados más prometedores para profundizar el análisis",
         "Examina las tendencias de consumo e importación del producto y estudia la competencia doméstica y extranjera en cada mercado",
         "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
@@ -53103,7 +53103,7 @@
         "Realizar el análisis de situación: producto/servicio, operaciones, personal y recursos internos",
         "Desarrollar el componente de marketing: selección de mercados, producto, precio, distribución y términos",
         "Definir tácticas y pasos de acción para países meta primarios y secundarios",
-        "Elaborar el presupuesto de exportación y estados financieros pro-forma",
+        "Elaborar el presupuesto de exportación, con estados financieros pro-forma y las mejoras del sitio web",
         "Establecer el cronograma de implementación y seguimiento periódico"
       ],
       "entregable_esperado": "Documento de Plan de Exportación con sus secciones (política, análisis, marketing, tácticas, presupuesto, cronograma), simple y de pocas páginas la primera vez y más detallado a medida que ganas experiencia, listo para guiar la ejecución",
@@ -53732,7 +53732,7 @@
       "resumen_teorico": "Las cajas y contenedores de exportación requieren marcas específicas que cumplen regulaciones de envío, aseguran manejo adecuado, ocultan el contenido, ayudan a los receptores a identificar el embarque y cumplen normas ambientales y de seguridad, incluyendo marca del embarcador, país de origen, peso, número/tamaño de bultos, marcas de manejo, advertencias e ingredientes (si aplica) en el idioma de destino, puerto de entrada y etiquetas de materiales peligrosos. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
         "Confirmar marcas de exportación requeridas por el comprador",
-        "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos",
+        "Incluir marca del embarcador, país de origen, peso en libras/kg, número y tamaño de bultos, puerto de entrada e ingredientes si aplica (también en el idioma del país destino)",
         "Agregar símbolos pictóricos internacionales de manejo",
         "Incluir advertencias en inglés y en idioma del país destino",
         "Etiquetar materiales peligrosos según símbolos de IATA/OMI si aplica"
@@ -59042,7 +59042,7 @@
       "resumen_teorico": "Poner el precio correcto a tu producto en el mercado internacional es uno de los pasos más críticos y difíciles de vender afuera. Trabajas con tres piezas: tus costos, la demanda del mercado y la competencia, pero cada una se mira distinto que en tu mercado local. Tienes que pensar en tu objetivo, en cómo quieres posicionarte, en los descuentos que darás y en costos extra como aranceles, el tipo de cambio y el impuesto al valor agregado (IVA), que pueden llegar a duplicar lo que finalmente paga quien te compra. Pregunta siempre el acuerdo comercial y la regulación vigente en tu propio mercado antes de decidir, porque cambian según el país y el momento.",
       "pasos_accionables": [
         "Define tu objetivo en ese mercado: entrar con fuerza, crecer a largo plazo o sacarte de encima un excedente.",
-        "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia.",
+        "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia, pero tus costos directos de producir y vender para exportar son el piso: por debajo de ellos pierdes dinero.",
         "Saca de la cuenta los costos que no aportan nada a la venta afuera, como tu publicidad local.",
         "Suma los costos que no son de mercado, como aranceles y trámites de aduana.",
         "Evalúa la demanda en ese mercado: cuánto gana la gente, qué tan sensible es al precio y quién es tu cliente ahí.",
@@ -59648,7 +59648,7 @@
         "Identificar si el mercado meta cuenta con proyectos activos financiados por un MDB",
         "Revisar la lista de MDBs y sus sectores de enfoque (agricultura, energía, infraestructura, etc.)",
         "Contactar al MDB correspondiente o a la oficina de U.S. Commercial Service para explorar oportunidades de participación",
-        "Preparar propuesta de viabilidad financiera y social del proyecto"
+        "Preparar propuesta de viabilidad financiera, económica y social del proyecto"
       ],
       "entregable_esperado": "Identificación de oportunidades de negocio vinculadas a proyectos financiados por MDBs en el mercado meta",
       "nodos_previos": [
@@ -78900,7 +78900,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Medición de Calidad en Áreas de Servicio y Administrativas",
-      "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+      "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
       "pasos_accionables": [
         "Reconocer que las áreas de servicio también generan costos de no calidad",
         "Definir una base de medición: cambios causados por desviación no planificada de procedimientos",
@@ -90274,7 +90274,7 @@
         "Para cada actividad define quién la hace, qué táctica usas (posicionamiento en buscadores SEO, anuncios pagos PPC, correo, referidos), cuánto presupuesto le das, en cuánto tiempo la corres y qué meta medible persigues; si tu mercado tiene usuarios y pagadores, arma un plan separado para cada lado",
         "Establece antes de cada prueba qué resultado la hace pasar o fracasar, con el número concreto que lo decide",
         "Instrumenta tu sitio, tu app o tu producto para capturar cada acción del cliente antes de lanzar cualquier prueba",
-        "Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado, con el gasto de cada prueba limitado a una cifra que puedas permitirte y preguntada en tu mercado antes de comprometerte, y escala con más fuerza y más presupuesto solo lo que de verdad funcione",
+        "Lanza las pruebas de forma escalonada, no todas a la vez, para poder medir cada resultado por separado, con el gasto de cada prueba limitado a una cifra que puedas permitirte, y cuando una prueba parezca funcionar, amplíala con más presupuesto para comprobar que resiste la escala",
         "Asegúrate de que todo lo que activa a un cliente (el sistema detrás, los pagos, los correos de confirmación) esté listo antes de lanzar la adquisición"
       ],
       "entregable_esperado": "Tu plan de adquisición de una página, con las tácticas nombradas, el presupuesto, quién hace qué, el cronograma y la meta medible de cada prueba, con su número de pasar o fracasar decidido de antemano, más tu sistema de datos ya activo para medir cada acción del cliente",
@@ -93762,7 +93762,7 @@
         "Construye una lista inicial de 50 clientes potenciales usando tus contactos personales, redes y referencias",
         "Crea una lista paralela de innovadores y líderes de opinión del sector",
         "Redacta una historia de referencia que explique el problema, por qué importa resolverlo y la solución que construyes, y que pida tiempo, no venda producto",
-        "Envía mensajes introductorios (referidos, LinkedIn, correo) pidiendo reuniones breves de 15 a 20 minutos",
+        "Envía mensajes introductorios (referidos, LinkedIn, correo) que anuncien la llamada que harás después, y en esa llamada pide una reunión breve de 15 a 20 minutos",
         "Agenda al menos 10 conversaciones diarias hasta llenar tu agenda de reuniones",
         "Arma un calendario maestro de citas y repártelas entre tú y quienes te acompañen en el proyecto"
       ],
@@ -94592,9 +94592,9 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Prevención como Filosofía Central de Gestión de Calidad",
-      "resumen_teorico": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra que cuando se gestiona a distancia hace falta que cada plan y cada control se pruebe, se controle y se audite.",
+      "resumen_teorico": "La gestión de calidad es una disciplina enfocada en prevenir problemas antes de que ocurran, en lugar de corregirlos después. Esto exige actuar hoy (invertir en pruebas, capacitación, inspecciones y acciones correctivas) para evitar problemas futuros, algo difícil de sostener porque implica invertir en algo que todavía no ha fallado. La analogía del piloto que vuela con el avión, y por eso está comprometido con su seguridad, muestra que cuando se gestiona a distancia hace falta que cada plan y cada control se pruebe, se controle y se audite.",
       "pasos_accionables": [
-        "Destina tiempo y presupuesto propios a actividades preventivas: pruebas, capacitación, inspecciones",
+        "Destina tiempo y presupuesto propios a actividades preventivas: pruebas, capacitación, inspecciones y acciones correctivas",
         "Establece controles y revisiones en cada etapa de tu proceso antes de que aparezcan las fallas",
         "Mantente cerca de los resultados de tu negocio, evitando gestionar todo a distancia y sin involucrarte",
         "Actúa ahora para cosechar después: no esperes a que una falla te dé la evidencia para invertir en prevención"
@@ -94681,7 +94681,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Prevención de Defectos vs. Control/Aseguramiento de Calidad",
-      "resumen_teorico": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
+      "resumen_teorico": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que a menudo previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
       "pasos_accionables": [
         "Replantea cómo entiendes la calidad en tu negocio: no se trata solo de revisar o auditar, sino de prevenir.",
         "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, quítalas: la palabra 'calidad' basta sola.",
@@ -97385,7 +97385,7 @@
       "resumen_teorico": "El programa 'Make Certain' es una metodología estructurada diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios.",
       "pasos_accionables": [
         "Informar al staff de dirección sobre el concepto e intención del programa y designar coordinadores por departamento.",
-        "Reunirse con los coordinadores para explicarles el programa y solicitar ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+        "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
         "Capacitar a supervisores en el programa y que ellos se reúnan con su gente para explicarle su lógica y hacer con ella la discusión: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
         "Convertir esas respuestas negativas en sugerencias positivas de cómo 'hacer cierto' que el cliente reciba lo prometido.",
         "Registrar y medir las sugerencias entregadas, entregar reconocimiento (badge) y publicar los avances en carteleras.",
@@ -116398,7 +116398,7 @@
       "fase_proyecto": "validacion",
       "dominio": "quality",
       "titulo_concepto": "Superioridad de Calidad y Participación de Mercado",
-      "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
+      "resumen_teorico": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos, por una ventaja pequeña pero demostrable que se le hace notar y que valora, o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento y lo demás es igual, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
       "pasos_accionables": [
         "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder; si tu producto es complejo, puede hacer falta un análisis más sofisticado, como el análisis conjunto",
         "Determinar si la diferencia de preferencia cae fuera del rango 25-75 por ciento",
@@ -120556,7 +120556,7 @@
         "Identificar condiciones estándar y reducir procesos a sus elementos más simples para evitar Muri",
         "Implementar sistemas Just-in-Time (JIT) y sistemas pull para evitar Mura",
         "Examinar el muda existente, eliminar sus causas profundas considerando su conexión con Muri y Mura, y retroalimentar el muda y el muri hacia la etapa de planificación de Mura",
-        "Balancear demanda y capacidad antes de eliminar actividades sin valor agregado",
+        "Balancear demanda y capacidad, y comprender las condiciones actuales antes de eliminar actividades sin valor agregado",
         "Institucionalizar el trabajo estándar para prevenir la sobrecarga de los asociados"
       ],
       "entregable_esperado": "Diagnóstico de los tres tipos de desperdicio en los procesos clave con plan de acción integrado para su eliminación",

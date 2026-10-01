@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Conoce tus insumos vitales",
   "fuente": "Max Muller, Essentials of Inventory Management",
-  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla.",
+  "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla, sabiendo que ambas protecciones bajan el riesgo pero cuestan más.",
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
@@ -253,6 +253,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-047-conoce_insumos_vitales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla.",
+      "texto_nuevo": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen fácilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene. Si miras solo el dinero, puedes terminar vigilando de cerca un insumo caro y fácil de reponer, mientras un insumo crítico y económico recibe menos atención de la que necesita. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a qué insumos ponerles más atención, más stock de seguridad, o más de un proveedor disponible por si el habitual te falla, sabiendo que ambas protecciones bajan el riesgo pero cuestan más.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:/Users/AlexDesk/Documents/OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "6477",
+        "frase": "More buffer stock, less risk but at a higher cost"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta más stock de seguridad y el proveedor alternativo como un intercambio: menos riesgo a mayor costo; el resumen pierde ese límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

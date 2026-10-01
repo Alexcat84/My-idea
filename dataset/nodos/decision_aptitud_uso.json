@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Decisión de Aptitud para el Uso (Fitness for Use)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. La decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
+  "resumen_teorico": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. A veces la respuesta es obvia; cuando no lo es y hay suficiente en juego, la decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
   "pasos_accionables": [
     "Identifica quién es el usuario final, su nivel de sofisticación técnica y si tiene fácil acceso a servicio técnico.",
     "Determina cómo se usará realmente el producto no conforme.",
@@ -129,6 +129,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el otro rasgo del usuario que el libro pide mirar: si tiene fácil acceso a servicio técnico.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-047-decision_aptitud_uso-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. La decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
+      "texto_nuevo": "Cuando un producto no conforma a especificación, surge la pregunta de si es apto para el uso previsto. A veces la respuesta es obvia; cuando no lo es y hay suficiente en juego, la decisión exige reunir información sobre el usuario final, su nivel de sofisticación técnica, el uso real del producto, riesgos de seguridad o impacto ambiental, urgencia de entrega, economía de reparación frente a uso tal cual y las medidas de aptitud del cliente, que pueden diferir de las del fabricante. Las opciones de disposición incluyen desecho, clasificación, reproceso, devolución al proveedor o venta con descuento. Para no sobrecargar procesos formales en casos de bajo impacto, conviene delegar decisiones menores en personal designado y reservar la revisión formal para casos críticos, documentando reglas claras que minimicen la pérdida total sin caer en la búsqueda de culpables; los cargos por pérdidas se aplican solo cuando el impacto es significativo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24400",
+        "frase": "if enough is at stake, a study is made to determine fitness for use"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro reserva el estudio con esas entradas a los casos no obvios en que hay bastante en juego; el nodo lo vuelve requisito de toda decisión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

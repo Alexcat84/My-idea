@@ -7,7 +7,7 @@
   "resumen_teorico": "Poner el precio correcto a tu producto en el mercado internacional es uno de los pasos más críticos y difíciles de vender afuera. Trabajas con tres piezas: tus costos, la demanda del mercado y la competencia, pero cada una se mira distinto que en tu mercado local. Tienes que pensar en tu objetivo, en cómo quieres posicionarte, en los descuentos que darás y en costos extra como aranceles, el tipo de cambio y el impuesto al valor agregado (IVA), que pueden llegar a duplicar lo que finalmente paga quien te compra. Pregunta siempre el acuerdo comercial y la regulación vigente en tu propio mercado antes de decidir, porque cambian según el país y el momento.",
   "pasos_accionables": [
     "Define tu objetivo en ese mercado: entrar con fuerza, crecer a largo plazo o sacarte de encima un excedente.",
-    "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia.",
+    "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia, pero tus costos directos de producir y vender para exportar son el piso: por debajo de ellos pierdes dinero.",
     "Saca de la cuenta los costos que no aportan nada a la venta afuera, como tu publicidad local.",
     "Suma los costos que no son de mercado, como aranceles y trámites de aduana.",
     "Evalúa la demanda en ese mercado: cuánto gana la gente, qué tan sensible es al precio y quién es tu cliente ahí.",
@@ -50,6 +50,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no prohíbe el cost-plus: dice que puede dejar el precio fuera de competencia y que el marginal es más competitivo para entrar al mercado.; Mismo defecto: convierte en regla absoluta lo que el libro condiciona a la entrada al mercado.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-046-fijacion_precio_exportacion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia.",
+      "texto_nuevo": "Calcula el costo real de tu producto para exportación; para entrar al mercado, el costeo marginal es más competitivo que el método de costo más margen (cost-plus), que puede dejar tu precio fuera de competencia, pero tus costos directos de producir y vender para exportar son el piso: por debajo de ellos pierdes dinero.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3799",
+        "frase": "a floor beneath which prices cannot be set without incurring a loss"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro define el costeo marginal con un límite: los costos directos de producir y vender para exportar son el piso bajo el cual se vende con pérdida; sin él, el consejo invita a bajar el precio sin tope.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

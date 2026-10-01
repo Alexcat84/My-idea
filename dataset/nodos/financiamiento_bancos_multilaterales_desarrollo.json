@@ -9,7 +9,7 @@
     "Identificar si el mercado meta cuenta con proyectos activos financiados por un MDB",
     "Revisar la lista de MDBs y sus sectores de enfoque (agricultura, energía, infraestructura, etc.)",
     "Contactar al MDB correspondiente o a la oficina de U.S. Commercial Service para explorar oportunidades de participación",
-    "Preparar propuesta de viabilidad financiera y social del proyecto"
+    "Preparar propuesta de viabilidad financiera, económica y social del proyecto"
   ],
   "entregable_esperado": "Identificación de oportunidades de negocio vinculadas a proyectos financiados por MDBs en el mercado meta",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Busca Fondos en Bancos Multilaterales",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-046-financiamiento_bancos_multilaterales_desarrollo-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar propuesta de viabilidad financiera y social del proyecto",
+      "texto_nuevo": "Preparar propuesta de viabilidad financiera, económica y social del proyecto",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4403",
+        "frase": "secured on the basis of the financial, economic, and social viability of the projects"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que ese financiamiento se otorga por la viabilidad financiera, económica y social; el paso pierde la económica.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

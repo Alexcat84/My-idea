@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Medición de Calidad en Áreas de Servicio y Administrativas",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+  "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
   "pasos_accionables": [
     "Reconocer que las áreas de servicio también generan costos de no calidad",
     "Definir una base de medición: cambios causados por desviación no planificada de procedimientos",
@@ -54,6 +54,22 @@
         "motivo": "El trabajo previo de estudio de mercado y analisis tecnico para desarrollar productos no prepara la medicion de la calidad en areas administrativas y de servicio. Son temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-barrido-047-medicion_servicios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+      "texto_nuevo": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2527",
+        "frase": "over 85 percent of these pieces of paper contain an error—at least one error"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Las cifras son fieles, pero el prefijo de procedencia está prohibido por la regla dura de la casa; basta quitarlo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [
