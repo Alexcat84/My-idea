@@ -909,6 +909,26 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   - La guía de IDEO.org figura como CC BY-NC-ND 3.0, según el fundador. Tiene 20 nodos vivos.
   - Los libros comerciales y las guías de empresas tienen copyright sin licencia abierta.
 
-**Pendiente:** la comprobación de copias (punto 7), con su semilla escrita aquí antes de sortear. Después se retoman la
-corrección de la muestra de cierre y los barridos.
+**Comprobación de copias (punto 7), diseño fijado ANTES de sortear:**
+- **Semilla:** 20271101. No choca con ninguna asignada ni con sus derivadas.
+- **Qué se busca (D2):** texto de nodo que reproduce un pasaje del libro, traducido o no, casi palabra por palabra y en
+  su mismo orden. Basta una frase larga (más de unas 20 palabras) o dos o más frases seguidas.
+  - No es copia un término preciso, un nombre de método, una definición técnica breve ni una paráfrasis que dice lo
+    mismo con otras palabras y otra estructura.
+  - Umbral: 0.
+- **Muestra, por estratos y con prioridad:**
+  - **A:** 120 elementos, al azar, entre los 611 que el pase dirigido corrigió en modo `devolver`.
+  - **B:** todos los elementos de los 20 nodos vivos de la guía de IDEO.org.
+  - **C:** 40 nodos vivos al azar fuera de A y B, con todos sus elementos (resumen, pasos y entregable).
+- **Lectura:**
+  - Un lector Opus por lote lee cada elemento contra el pasaje de su libro y marca la copia con su evidencia.
+  - Cada lote lleva una trampa sin marca: un elemento sustituido por la traducción literal de un pasaje del libro,
+    preparada aparte.
+  - Un árbitro Opus confirma cada marca y escribe el texto en palabras de la casa sin cambiar el sentido.
+  - Un verificador ciego comprueba que el texto nuevo sostiene el libro y ya no es copia.
+- **Corrección:** lo confirmado se reescribe por corrección declarada. La cuenta se registra aquí, con su riesgo
+  residual (Wilson 95 %) por estrato.
+- **Código:** `copias.py`, en las claves del remedio.
+
+**Después:** se retoman la corrección de la muestra de cierre y los barridos.
 
