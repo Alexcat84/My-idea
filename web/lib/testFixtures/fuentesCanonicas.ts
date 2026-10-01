@@ -17,8 +17,16 @@ export function titulosCanonicos(): string[] {
   return [...new Set(Object.values(canon.fuentes).flatMap((f) => f.titulos).map(normal))];
 }
 
+const PATRONES = new Map<string, RegExp>();
+
 export function titulosEn(texto: string, titulos: string[]): string[] {
   const bajo = normal(texto);
   const escapar = (t: string) => t.replace(/[.*+?^$|()[\]{}\\]/g, "\\$&");
-  return titulos.filter((t) => new RegExp("(?<![a-z0-9])" + escapar(t) + "(?![a-z0-9])").test(bajo));
+  return titulos.filter((t) => {
+    // filtro literal barato antes del patron con limites de palabra: mismo veredicto, sin compilar un patron por texto
+    if (!bajo.includes(t)) return false;
+    let re = PATRONES.get(t);
+    if (!re) PATRONES.set(t, (re = new RegExp("(?<![a-z0-9])" + escapar(t) + "(?![a-z0-9])")));
+    return re.test(bajo);
+  });
 }
