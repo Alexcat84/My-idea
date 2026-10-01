@@ -6,7 +6,7 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligación de llevar registro de lesiones y enfermedades laborales, salvo las lesiones menores que solo requieren primeros auxilios, mediante formularios específicos: un registro general, un reporte por incidente y un resumen anual. Según el tamaño de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o pérdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo más para hospitalizaciones, amputaciones o pérdida de un ojo (24 en Estados Unidos). Conviene preguntar cuáles son las reglas exactas en tu mercado.",
   "pasos_accionables": [
-    "Averigua si tu negocio está exento o no de los requisitos de registro según su tamaño y su actividad",
+    "Averigua si tu negocio está parcialmente exento de los requisitos de registro según su tamaño y su actividad",
     "Registra cada lesión o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
     "Completa un reporte detallado por cada caso registrable",
     "Prepara el resumen anual y publícalo en el periodo que indique la norma de tu mercado",
@@ -204,6 +204,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro excluye del registro las lesiones menores que solo requieren primeros auxilios; el nodo pierde esa excepción.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-044-registro_reporte_lesiones-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Averigua si tu negocio está exento o no de los requisitos de registro según su tamaño y su actividad",
+      "texto_nuevo": "Averigua si tu negocio está parcialmente exento de los requisitos de registro según su tamaño y su actividad",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "247",
+        "frase": "Employers are partially exempt from OSHA's injury and illness recordkeeping requirements"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La exención por tamaño o actividad es solo parcial: el reporte de fatalidades y lesiones graves sigue siendo obligatorio para todos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

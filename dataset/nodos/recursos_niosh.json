@@ -6,7 +6,7 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. NIOSH es la agencia de investigación del CDC enfocada en la seguridad y salud de los trabajadores. Puedes pedir una Evaluación de Riesgos para la Salud (HHE) gratuita, usar su Guía de Recursos para Pequeñas Empresas, y revisar el Programa de Evaluación y Control de Fatalidades (FACE), que investiga muertes laborales para prevenir que se repitan.",
   "pasos_accionables": [
-    "Si tienes dudas sobre peligros en tu lugar de trabajo, solicita una Evaluación de Riesgos para la Salud (HHE), que es gratuita",
+    "Si tienes dudas sobre peligros para la salud en tu lugar de trabajo, solicita una Evaluación de Riesgos para la Salud (HHE), que es gratuita",
     "Revisa la Guía de Recursos para Pequeñas Empresas de NIOSH",
     "Busca reportes del programa FACE relacionados con tu rubro",
     "Contacta a NIOSH directamente si tienes consultas específicas de salud ocupacional"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Aprovecha los Recursos del NIOSH",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-044-recursos_niosh-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tienes dudas sobre peligros en tu lugar de trabajo, solicita una Evaluación de Riesgos para la Salud (HHE), que es gratuita",
+      "texto_nuevo": "Si tienes dudas sobre peligros para la salud en tu lugar de trabajo, solicita una Evaluación de Riesgos para la Salud (HHE), que es gratuita",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1905-1907",
+        "frase": "learn whether health hazards are present at their workplace"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro): La evaluación gratuita sirve para saber si hay peligros para la salud en el lugar de trabajo; el paso la abre a cualquier peligro.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

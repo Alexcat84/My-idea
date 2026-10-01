@@ -7,7 +7,7 @@
   "resumen_teorico": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantías e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, probablemente puedas aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofía de trabajo.",
   "pasos_accionables": [
     "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantías, desperdicio e inspecciones adicionales.",
-    "Calcula el costo actual de estos fallos internos y externos como referencia base.",
+    "Calcula el costo actual de estos fallos internos y externos como referencia base, sabiendo que la primera estimación suele quedarse muy por debajo del costo real y conviene afinarla.",
     "Registra esta cifra para usarla como punto de partida y medir la mejora con el tiempo.",
     "Adopta el mensaje hacer las cosas bien la primera vez como filosofía de trabajo diario.",
     "Usa el diagnóstico de costos para decidir en qué prevención invertir primero."
@@ -179,6 +179,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'probablemente'; el nodo lo afirma sin cautela.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-043-concepto_quality_is_free-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula el costo actual de estos fallos internos y externos como referencia base.",
+      "texto_nuevo": "Calcula el costo actual de estos fallos internos y externos como referencia base, sabiendo que la primera estimación suele quedarse muy por debajo del costo real y conviene afinarla.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1393, 1617",
+        "frase": "obtain only one-third of the real cost the first time you try it"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que el primer cálculo suele captar solo una fracción del costo real y que hay que afinarlo después; sin esa advertencia la cifra base se toma como fiable y cambia cómo se usa.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

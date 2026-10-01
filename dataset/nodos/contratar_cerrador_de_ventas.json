@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Contratar un Cerrador de Ventas (Sales Closer)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Un cerrador de ventas es distinto de quien dirige un equipo de ventas: es alguien agresivo, con experiencia en mercados nuevos, que sabe escuchar y reconocer patrones, y cuyo objetivo es cerrar los primeros acuerdos, no armar una organización de ventas. Lo necesitas cuando tú y quien te acompaña no tienen la experiencia para negociar y cerrar tratos con compradores o gerentes de compras. Puedes validar una primera vuelta sin él, salvo que frene tu avance.",
+  "resumen_teorico": "Un cerrador de ventas es distinto de quien dirige un equipo de ventas: es alguien agresivo, con experiencia en mercados nuevos, que sabe escuchar, reconocer patrones y colaborar, y cuyo objetivo es cerrar los primeros acuerdos, no armar una organización de ventas. Lo necesitas cuando tú y quien te acompaña no tienen la experiencia para negociar y cerrar tratos con compradores o gerentes de compras. Puedes validar una primera vuelta sin él, salvo que frene tu avance.",
   "pasos_accionables": [
     "Evalúa con honestidad si tú y quien te acompaña tienen experiencia cerrando ventas",
     "Busca un vendedor con experiencia en startups y buenos contactos en tu mercado objetivo",
@@ -63,6 +63,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite una primera vuelta de validación sin cerrador salvo que frene el avance; el nodo lo pierde.; Mismo defecto: se cae la condición de momento para contratar al cerrador.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-044-contratar_cerrador_de_ventas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un cerrador de ventas es distinto de quien dirige un equipo de ventas: es alguien agresivo, con experiencia en mercados nuevos, que sabe escuchar y reconocer patrones, y cuyo objetivo es cerrar los primeros acuerdos, no armar una organización de ventas. Lo necesitas cuando tú y quien te acompaña no tienen la experiencia para negociar y cerrar tratos con compradores o gerentes de compras. Puedes validar una primera vuelta sin él, salvo que frene tu avance.",
+      "texto_nuevo": "Un cerrador de ventas es distinto de quien dirige un equipo de ventas: es alguien agresivo, con experiencia en mercados nuevos, que sabe escuchar, reconocer patrones y colaborar, y cuyo objetivo es cerrar los primeros acuerdos, no armar una organización de ventas. Lo necesitas cuando tú y quien te acompaña no tienen la experiencia para negociar y cerrar tratos con compradores o gerentes de compras. Puedes validar una primera vuelta sin él, salvo que frene tu avance.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "22746",
+        "frase": "fabulous listening, pattern-recognition and collaboration skills"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de habilidades del cerrador incluye la colaboración, clave porque trabaja junto a los fundadores, y el resumen la omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

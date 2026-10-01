@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Preparar el Franchise Disclosure Document (FDD)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El FDD es el documento legal obligatorio que todo franquiciador debe entregar a los prospectos antes de vender una franquicia. Debe contener 23 ítems específicos de divulgación, los contratos que el franquiciado deberá firmar, y los estados financieros auditados del franquiciador. Este documento protege al franquiciado y regula el proceso de venta de franquicias.",
+  "resumen_teorico": "El FDD es el documento legal obligatorio que todo franquiciador debe entregar a los prospectos antes de vender una franquicia. Debe contener 23 ítems específicos de divulgación, los contratos que el franquiciado deberá firmar, y los estados financieros auditados (en tu primer año puede bastar un balance sin auditar, salvo en algunos estados). Este documento protege al franquiciado y regula el proceso de venta de franquicias.",
   "pasos_accionables": [
     "Contratar un abogado especializado en franquicias para redactar el FDD",
     "Reunir los 23 ítems de divulgación requeridos por la FTC",
     "Incluir el contrato de franquicia y documentos legales ancilares (acuerdos de financiamiento, desarrollo de área, etc.)",
-    "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos",
+    "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos; una entidad nueva puede presentar el primer año un balance sin auditar, salvo en algunos estados, y si es filial de otra empresa puede que debas presentar los estados auditados de esa empresa",
     "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador, sin contar el día de la entrega ni el de la firma, o en un plazo razonable si el candidato lo pide (y entregar el contrato de franquicia completo al menos 7 días naturales antes de la firma, plazo que puede correr a la vez; si negocias cambios, la espera puede alargarse)",
     "Asegurar que todas las cuotas y fuentes de ingresos estén completamente divulgadas",
     "Documentar la entrega del FDD mediante la página de recibo (Item 23)"
@@ -96,6 +96,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro añade la entrega en un plazo razonable cuando el candidato la pide, y el proceso la omite.; El libro fija el plazo antes de cobrar cualquier cuota o firmar; los pagos a una filial no aparecen en ese pasaje.; El libro precisa que no se cuentan el día de la entrega ni el de la firma (se firma el día 16), y sin eso el plazo se calcula mal.; Mismo defecto que la marca 0: la filial no aparece en el libro.; Mismo defecto que la marca 2: falta la entrega a petición razonable del candidato. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-042-preparar_fdd-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El FDD es el documento legal obligatorio que todo franquiciador debe entregar a los prospectos antes de vender una franquicia. Debe contener 23 ítems específicos de divulgación, los contratos que el franquiciado deberá firmar, y los estados financieros auditados del franquiciador. Este documento protege al franquiciado y regula el proceso de venta de franquicias.",
+      "texto_nuevo": "El FDD es el documento legal obligatorio que todo franquiciador debe entregar a los prospectos antes de vender una franquicia. Debe contener 23 ítems específicos de divulgación, los contratos que el franquiciado deberá firmar, y los estados financieros auditados (en tu primer año puede bastar un balance sin auditar, salvo en algunos estados). Este documento protege al franquiciado y regula el proceso de venta de franquicias.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2076",
+        "frase": "allows a startup franchisor to provide an unaudited balance sheet in the first year"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro permite a un franquiciador que empieza presentar el primer año un balance sin auditar, regla que algunos estados no adoptan; el nodo exige auditados sin excepción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-042-preparar_fdd-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos",
+      "texto_nuevo": "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos; una entidad nueva puede presentar el primer año un balance sin auditar, salvo en algunos estados, y si es filial de otra empresa puede que debas presentar los estados auditados de esa empresa",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2076",
+        "frase": "allows a startup franchisor to provide an unaudited balance sheet in the first year"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro permite a la entidad nueva un balance sin auditar el primer año, salvo en algunos estados, y advierte que una filial puede necesitar los estados auditados de la otra empresa.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

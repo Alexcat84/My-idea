@@ -38,6 +38,21 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por plan_de_contingencia_b."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "final-e1-barrido-043-planificacion_recuperacion_post_accidente-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Probar (testear) el plan de recuperación mediante simulacros antes de que ocurra un evento real",
+      "texto_nuevo": "Probar (testear) el plan de recuperación mediante simulacros antes de que ocurra un evento real",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro dice que la mayoría de los planes fallan la primera vez y cita un programa probado por un evento real, pero no aconseja simulacros; el índice 3 no está en pasos_casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

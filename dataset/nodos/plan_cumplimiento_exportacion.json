@@ -11,7 +11,7 @@
     "Crear un campo en el sistema de gestión de inventario para ECCNs",
     "Agregar campo con países donde la exportación está prohibida por EAR",
     "Contactar a BIS para revisar el plan final",
-    "Adaptar el software de inventario para marcar pedidos problemáticos"
+    "Si es posible, adaptar el software de inventario para marcar pedidos problemáticos"
   ],
   "entregable_esperado": "Documento escrito de plan de cumplimiento con sistema de inventario actualizado que incluya ECCNs y restricciones por país.",
   "nodos_previos": [
@@ -77,6 +77,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye las facturas a empresas comercializadoras y da el motivo (que revendan a un cliente internacional); el nodo pierde ambas cosas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-042-plan_cumplimiento_exportacion-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adaptar el software de inventario para marcar pedidos problemáticos",
+      "texto_nuevo": "Si es posible, adaptar el software de inventario para marcar pedidos problemáticos",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "411",
+        "frase": "If possible, adapt your inventory-management software so it flags problematic orders."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la adaptación del software a que sea posible; el nodo la vuelve requisito.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

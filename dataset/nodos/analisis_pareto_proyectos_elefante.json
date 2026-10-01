@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Proyectos Tamaño Elefante y Análisis de Pareto",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Algunos proyectos son demasiado amplios ('elephant-sized') y deben subdividirse en proyectos más manejables ('bite-sized') usando el análisis de Pareto como herramienta principal. Un equipo coordinador 'corta al elefante' y luego equipos separados atacan cada parte concurrentemente, acortando el tiempo total y evitando la frustración y pérdida de moral que ocurre cuando un solo equipo se extiende por años en un proyecto demasiado grande.",
+  "resumen_teorico": "Algunos proyectos son demasiado amplios ('elephant-sized') y deben subdividirse en proyectos más manejables ('bite-sized'); el análisis de Pareto es una herramienta muy útil para hacerlo. Un equipo coordinador 'corta al elefante' y luego equipos separados atacan cada parte concurrentemente, acortando el tiempo total y evitando la frustración y pérdida de moral que ocurre cuando un solo equipo se extiende por años en un proyecto demasiado grande.",
   "pasos_accionables": [
     "Identificar si el proyecto es demasiado amplio para un solo equipo",
     "Aplicar análisis de Pareto para segmentar el problema en partes manejables",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Divide tu Proyecto Elefante",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-042-analisis_pareto_proyectos_elefante-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Algunos proyectos son demasiado amplios ('elephant-sized') y deben subdividirse en proyectos más manejables ('bite-sized') usando el análisis de Pareto como herramienta principal. Un equipo coordinador 'corta al elefante' y luego equipos separados atacan cada parte concurrentemente, acortando el tiempo total y evitando la frustración y pérdida de moral que ocurre cuando un solo equipo se extiende por años en un proyecto demasiado grande.",
+      "texto_nuevo": "Algunos proyectos son demasiado amplios ('elephant-sized') y deben subdividirse en proyectos más manejables ('bite-sized'); el análisis de Pareto es una herramienta muy útil para hacerlo. Un equipo coordinador 'corta al elefante' y luego equipos separados atacan cada parte concurrentemente, acortando el tiempo total y evitando la frustración y pérdida de moral que ocurre cuando un solo equipo se extiende por años en un proyecto demasiado grande.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6751",
+        "frase": "A most useful tool for cutting up the elephant is the Pareto analysis."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro llama al análisis de Pareto una herramienta muy útil para dividir el proyecto, no la herramienta principal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

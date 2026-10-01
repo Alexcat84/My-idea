@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Reglas de Origen (Rules of Origin - ROOs)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Las Reglas de Origen determinan si un producto exportado califica para tratamiento arancelario preferencial bajo un Tratado de Libre Comercio (FTA). Existen ROOs no preferenciales (genéricas, para países OMC bajo trato de Nación Más Favorecida) y preferenciales (específicas de cada FTA). Un bien califica si es 'wholly obtained' (totalmente originario) en el territorio de una parte del FTA, o si contiene insumos extranjeros pero cumple con las reglas específicas de cambio arancelario o contenido de valor regional establecidas en el acuerdo. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Las Reglas de Origen determinan si un producto exportado califica para tratamiento arancelario preferencial bajo un Tratado de Libre Comercio (FTA). Existen ROOs no preferenciales (genéricas, para países OMC bajo trato de Nación Más Favorecida) y preferenciales (específicas de cada FTA). Un bien califica si es 'wholly obtained' (totalmente originario) en el territorio de una parte del FTA, o si contiene insumos extranjeros pero cumple con las reglas específicas de cambio arancelario o contenido de valor regional establecidas en el acuerdo, o con otros requisitos que el propio acuerdo fije. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar el número de clasificación HS del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
     "Determinar si existe ventaja arancelaria comparando la tasa MFN vs la tasa preferencial del FTA (export.customsinfo.com)",
@@ -118,6 +118,22 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-barrido-042-reglas_de_origen_fta_2-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las Reglas de Origen determinan si un producto exportado califica para tratamiento arancelario preferencial bajo un Tratado de Libre Comercio (FTA). Existen ROOs no preferenciales (genéricas, para países OMC bajo trato de Nación Más Favorecida) y preferenciales (específicas de cada FTA). Un bien califica si es 'wholly obtained' (totalmente originario) en el territorio de una parte del FTA, o si contiene insumos extranjeros pero cumple con las reglas específicas de cambio arancelario o contenido de valor regional establecidas en el acuerdo. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Las Reglas de Origen determinan si un producto exportado califica para tratamiento arancelario preferencial bajo un Tratado de Libre Comercio (FTA). Existen ROOs no preferenciales (genéricas, para países OMC bajo trato de Nación Más Favorecida) y preferenciales (específicas de cada FTA). Un bien califica si es 'wholly obtained' (totalmente originario) en el territorio de una parte del FTA, o si contiene insumos extranjeros pero cumple con las reglas específicas de cambio arancelario o contenido de valor regional establecidas en el acuerdo, o con otros requisitos que el propio acuerdo fije. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4913",
+        "frase": "or meets other requirements specified in the agreement"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro reconoce otra vía de calificación, cumplir otros requisitos que fije el acuerdo, que el nodo deja fuera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

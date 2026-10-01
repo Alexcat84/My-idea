@@ -4,13 +4,13 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cómo planificar tu viaje de negocios al extranjero",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Un itinerario bien planificado te ayuda a aprovechar el tiempo y sacarle el máximo provecho a tu viaje de negocios al extranjero. Agenda pocas reuniones bien espaciadas en vez de llenar el día de citas, confirma cada cita antes de salir de tu país, prepara tarjetas de presentación en dos idiomas, y toma en cuenta el clima, la salud, la moneda, el transporte y la cultura del lugar. Deja además un día libre para recuperarte del cambio de horario.",
+  "resumen_teorico": "Un itinerario bien planificado te ayuda a aprovechar el tiempo y sacarle el máximo provecho a tu viaje de negocios al extranjero. Agenda pocas reuniones bien espaciadas en vez de llenar el día de citas, confirma cada cita antes de salir de tu país, prepara tarjetas de presentación en dos idiomas, y toma en cuenta el clima, la salud, la moneda, el transporte y la cultura del lugar. Si es posible, deja además un día libre para recuperarte del cambio de horario antes de empezar tus reuniones.",
   "pasos_accionables": [
     "Agenda y confirma tus reuniones antes de salir de tu país",
     "Decide si necesitas un intérprete y contrátalo con anticipación",
     "Prepara tarjetas de presentación en inglés y en el idioma local",
     "Investiga el clima, la moneda, el transporte y el tipo de corriente eléctrica del destino",
-    "Deja un día de descanso para adaptarte al cambio de horario",
+    "Si es posible, deja un día de descanso para adaptarte al cambio de horario antes de empezar tus reuniones",
     "Confirma los días y horarios laborales del país al que viajas, porque pueden ser distintos a los tuyos"
   ],
   "entregable_esperado": "Tu itinerario de viaje confirmado, con las reuniones agendadas y la logística resuelta",
@@ -41,6 +41,39 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-barrido-042-planificacion_itinerario_viaje_negocios-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un itinerario bien planificado te ayuda a aprovechar el tiempo y sacarle el máximo provecho a tu viaje de negocios al extranjero. Agenda pocas reuniones bien espaciadas en vez de llenar el día de citas, confirma cada cita antes de salir de tu país, prepara tarjetas de presentación en dos idiomas, y toma en cuenta el clima, la salud, la moneda, el transporte y la cultura del lugar. Deja además un día libre para recuperarte del cambio de horario.",
+      "texto_nuevo": "Un itinerario bien planificado te ayuda a aprovechar el tiempo y sacarle el máximo provecho a tu viaje de negocios al extranjero. Agenda pocas reuniones bien espaciadas en vez de llenar el día de citas, confirma cada cita antes de salir de tu país, prepara tarjetas de presentación en dos idiomas, y toma en cuenta el clima, la salud, la moneda, el transporte y la cultura del lugar. Si es posible, deja además un día libre para recuperarte del cambio de horario antes de empezar tus reuniones.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4531",
+        "frase": "If possible, you should plan an extra day to rest to deal with jet lag"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aconseja el día extra de descanso solo si es posible y antes de empezar las citas agendadas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-042-planificacion_itinerario_viaje_negocios-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Deja un día de descanso para adaptarte al cambio de horario",
+      "texto_nuevo": "Si es posible, deja un día de descanso para adaptarte al cambio de horario antes de empezar tus reuniones",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4531",
+        "frase": "If possible, you should plan an extra day to rest to deal with jet lag"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aconseja el día de descanso solo si es posible y antes de las citas agendadas.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

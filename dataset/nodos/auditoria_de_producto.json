@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Esta auditoría es una revisión independiente y adicional de tu producto terminado, distinta de la inspección normal que ya haces. Compara el desempeño real, idealmente el uso que le da el cliente, contra lo que especificaste o contra lo que el usuario realmente necesita. La haces en distintos momentos del recorrido del producto: en fábrica, en el distribuidor, en el servicio o ya en manos del cliente. Tu plan debería prever las dos formas: al azar, para tener una imagen sin sesgo de la calidad general, y enfocada en los puntos donde ya sabes que hay problemas.",
   "pasos_accionables": [
-    "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
+    "Define si vas a comparar contra lo que el usuario realmente necesita, que es lo ideal aunque difícil y costoso, o contra tus propias especificaciones, una aproximación útil y económica si tu producto es simple y estable",
     "Elige en qué momento revisas: fábrica, distribuidor, servicio o ya en campo, según qué tan complejo sea tu producto",
     "Decide cuántas unidades vas a revisar: si produces en masa, con un método estadístico; si fabricas unidades grandes o en poca cantidad, con una regla práctica como revisar un porcentaje pequeño de lo que produces por turno",
     "Diseña qué vas a mirar en cada revisión, previendo tanto revisiones al azar como revisiones enfocadas en un problema que ya conoces",
@@ -255,6 +255,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): En el libro el 98% es la calificación que dio la propia auditoría de producto, cuyo alcance no medía la reacción del cliente; el nodo presenta la auditoría como lo que detecta ese número engañoso.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-042-auditoria_de_producto-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define si vas a comparar contra tus propias especificaciones o contra lo que el usuario realmente necesita",
+      "texto_nuevo": "Define si vas a comparar contra lo que el usuario realmente necesita, que es lo ideal aunque difícil y costoso, o contra tus propias especificaciones, una aproximación útil y económica si tu producto es simple y estable",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10341-10343",
+        "frase": "This ideal is so difficult and costly to administer"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro orienta la elección: comparar con la necesidad del usuario es lo ideal pero difícil y costoso, y comparar con especificaciones es útil y económico en productos simples y estables.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
