@@ -94,3 +94,65 @@ Se completa al cierre de la semana. Esto es lo previsto:
 - **A mejora continua, con su ficha:** la ortografía y los calcos del resumen, las condiciones y el título.
 - **Decisión del fundador o de un abogado:** la licencia de IDEO.org (CC BY-NC-ND 3.0) frente a la regla D1 y al uso
   comercial. No se retiró nada.
+
+## 6. Plan del miércoles 7 y el jueves 8 de octubre (decisión del fundador, 1 oct 2026)
+
+La cuota semanal se renueva el martes 6 a las 23:00, y el Max se cancela el jueves 8. Todo lo que lleva muchos agentes
+se hace en estos dos días, **en este orden**, con commit después de cada punto.
+
+### a. Páginas legales y de cuenta
+
+Se copia la estructura de The Original I Ching, que está en local en `C:/Users/AlexDesk/Documents/iching-app`.
+
+| Página de My Idea | Referencia en el I Ching | Contenido |
+|---|---|---|
+| Privacidad | `apps/web/src/app/privacy` y `components/legal/PrivacyArticleContent.tsx` | Publicada desde `docs/legal/PRIVACIDAD.md` y `docs/legal/fr/CONFIDENTIALITE.md` (español y francés), con su fecha de última actualización |
+| Términos | `apps/web/src/app/terms` y `components/legal/TermsArticleContent.tsx` | Desde `docs/legal/TERMINOS.md` y `docs/legal/fr/CONDITIONS.md`, con su fecha |
+| Cookies | `components/CookieConsentGate.tsx` y `lib/cookie-consent.ts` | Desde `docs/legal/COOKIES.md` y `docs/legal/fr/TEMOINS.md` |
+| Instrucciones para eliminar la cuenta | `apps/web/src/app/delete-account` (y `api/account/delete`) | **Página pública que funciona sin la app**: es requisito de Google Play. Explica cómo pedir la eliminación desde la app y sin ella, qué se borra y en qué plazo. El borrado de cuenta ya está en producción (`web-v2.6.9`, migración 044) |
+| Preguntas frecuentes | `apps/web/src/app/faqs` y `components/FaqAccordion.tsx` | Incluye la eliminación de cuenta, los créditos y qué es gratis, que la Claridad sin cuenta se borra a los 30 días, y la privacidad |
+
+- Los enlaces de la app apuntan a ellas: el pie de la portada (hoy `href="#"`), el centro de cuenta y la ficha de
+  Google Play.
+- La revisión profesional queda pendiente, para afinarlas después de publicarlas.
+- La guarda `procedencia.test.ts` sigue mandando: ningún libro ni autor en estas páginas.
+
+### b. Auditoría de preguntas
+
+Acta, sección 14.2.
+
+- 3.374 preguntas: 3.288 base y 86 de entrada.
+- Lotes de 40 con su nodo saneado y una trampa sin marca de las tres clases (contraria, inventa, lógica que no
+  encaja).
+- Dos lectores Opus y árbitro.
+- Las que fallen se reemplazan por corrección declarada con `scripts/fidelidad/corregir_preguntas.py`, verificadas a
+  ciegas.
+- Unos 210 a 220 agentes en unas 12 olas.
+
+### c. Los otros 18 ajustes de prompts
+
+`docs/auditoria_final/informes/auditoria_prompts.md`, secciones B y C. Los 6 graves ya están aplicados (1 oct).
+
+### d. El script del juez de fidelidad y los cambios a `coherencia.ts`
+
+- **El extractor del juez:** paso D de `docs/producto/CORRIDA_FINAL.md`, ficha `juez-fidelidad-salida`.
+- **Los cambios a la prueba de coherencia** (`docs/auditoria_final/informes/estado_memoria_contexto.md`):
+  - ficha e hilo;
+  - continuidad desde el núcleo y con todas las respuestas;
+  - contexto en cada llamada, con lista blanca;
+  - las cuatro condiciones de caché.
+
+### e. Las promesas no graves y las condiciones de los nodos de otro país
+
+- **Promesas:** los 28 hallazgos medios y bajos de `docs/auditoria_final/informes/promesas_publicas.md`.
+- **Condiciones:** las condiciones de activación de los nodos-frontera de otro país (ficha
+  `condiciones-frontera-otro-pais`).
+
+## 7. Después del jueves 8, con la suscripción normal
+
+1. **Corrida final con la API** (sección 3 y `docs/producto/CORRIDA_FINAL.md`, pasos A a D). Antes, las versiones
+   neutrales de A2 se generan y se auditan como el resto de las preguntas.
+2. **Re-embebido con Voyage**, una sola pasada (sección 2).
+3. **Copia de las reglas a la forja** (sección 4).
+4. **Lanzamiento en Google Play.** El botón de la portada pasa de "Próximamente en Google Play" al enlace real, en los
+   once idiomas.
