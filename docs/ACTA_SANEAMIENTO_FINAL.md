@@ -1141,3 +1141,73 @@ reclasificado y 37 rechazados. Las cifras están en `docs/auditoria_final/medida
     - Es sistémico: los nodos se escribieron traduciendo, y la regla D2 es posterior a su extracción.
 - **Veredicto:** el catálogo **no se certifica**. Corregir la copia fiel a escala es una decisión del fundador (alcance,
   método y coste), igual que el resto de los criterios que no pasan.
+
+## 11. Prioridad única del fundador: contrarios, invenciones y procedencia (1 oct 2026)
+
+**Decisión del fundador tras la medida 2:**
+- Se cierran solo los contrarios, las invenciones duras y la procedencia.
+- No se relee el catálogo desde cero ni se vuelve sobre lo ya leído y corregido: se continúa desde aquí.
+- La copia fiel, las etiquetas, la ortografía y los calcos esperan.
+
+**Principio:** todo lo que presenta la app es consejo de My Idea (regla dura D4).
+- Se elimina la clase "paso sin marca" de las reglas (R7, C29 y R8), de las instrucciones de lectura y de esta acta, y
+  su barrido no se hace.
+- La regla de procedencia de los métodos queda como D5 en `docs/REGLAS_DE_LA_CASA.md`.
+
+### 11.1 Lo que ya estaba hecho de procedencia (comprobado el 1 oct 2026)
+
+- **Prefijo "Sugerencia de My Idea":**
+  - quitado de 280 pasos en 231 nodos (tanda `procedencia-prefijo`);
+  - 0 campos visibles lo llevan;
+  - la copia web del grafo no lo lleva;
+  - solo queda en el registro interno de correcciones (`texto_anterior`), que es control interno.
+- **Atribuciones genéricas:** de los 26 casos que dio la búsqueda, 19 eran atribuciones y se corrigieron en 16 nodos
+  (tanda `procedencia-atribuciones`). Los otros 7 eran falsos positivos: instrucciones al usuario.
+- **Aviso de vigencia:** sin año en los 11 idiomas ("Verifica la norma vigente en tu país: estas reglas cambian con el
+  tiempo"). La copia web de vigencia no lleva el año.
+- **Guarda única de procedencia** (`web/lib/procedencia.test.ts`): en verde.
+
+### 11.2 Lo que se hizo hoy
+
+- **Métodos con persona y atribuciones a personas.** La guarda nueva (sección 7, prueba en rojo primero) encontró 47
+  campos visibles con una persona como fuente o con un método con persona que tiene nombre neutro.
+  - Ejemplos: "Como decía Drucker", "Jane Jacobs demostró", "ciclo de Shewhart", "triángulo de Heinrich", "trilogía
+    de Juran".
+  - Se corrigieron con 3 procedencias de la medida 2 en la tanda `procedencia-metodos`: 50 correcciones ATRIBUCION en
+    44 nodos.
+  - La etiqueta `no_usar_triangulo_heinrich` pasó a "Deja la pirámide de accidentes" y se retradujo a los 10 idiomas
+    con su huella.
+  - `REGLA_SIN_FUENTES` dice ahora que el método se nombra, nunca se atribuye, y con su nombre neutro.
+- **Medida 2, defectos duros:**
+  - 3 invenciones en campos visibles: corregidas, quitando o devolviendo, con verificador ciego.
+  - 4 procedencias: corregidas en `procedencia-metodos`.
+  - Quedan 2 casos para el visto del fundador, porque tocarlos choca con una regla vigente:
+    - El **contrario está en la pregunta base** de `outsourcing_ventas_fso`. La pregunta atribuye al equipo externo
+      la generación de candidatos, y el libro dice lo contrario. Las bases de la caché no se tocan.
+    - Una **invención está en el `titulo_concepto`** de `tratar_packaging_costo_marca` ("variable de costo y de
+      marca"). El título es material interno y no se modifica por doctrina.
+- **Barridos dirigidos.** Ya hechos: "antes de / después de" y condiciones, y cifras y plazos (barridos de cierre,
+  9.9 y 9.10). Faltaba el de marcas de certeza ("siempre", "nunca", "garantiza", "sin duda"…).
+  - Se hace solo sobre resúmenes, pasos y entregables que ninguna pasada leyó: 40 elementos.
+  - Va con la vecindad, mismo libro y mismo campo, de las 3 invenciones: 288 elementos.
+  - En total, 30 lotes con trampa sin marca (`barrido2.py`, semilla 20271501).
+  - En las condiciones de activación, una marca de certeza ("si nunca has…") describe cuándo aplica el nodo y no
+    afirma nada contra el libro: no entran.
+
+### 11.3 Medida final: diseño fijado antes de sortear
+
+- **Semilla:** 20261101, escrita aquí antes de sortear. La misma tabla de reparto de la sección 3: 200 nodos vivos.
+- **Qué mide:** solo contrarios (U1), invenciones duras (U2) y procedencia (D1, D5).
+- **Lotes y trampas:** 20 lotes de 10 nodos, con 1 trampa sin marca por lote.
+  - Son 7 contrarios, 7 invenciones duras y 6 procedencias.
+  - Una trampa de procedencia es una atribución a una persona, a un libro, a "los estudios" o a "los expertos", o un
+    método con persona que tiene nombre neutro.
+- **Lectura:**
+  - Lector ciego por lote, contra el libro.
+  - Segundo lector si no caza la trampa.
+  - Árbitro de cada defecto marcado en un nodo de la muestra.
+- **Lo que aparezca** se corrige y se relee su vecindad (mismo libro y mismo campo, sin volver sobre lo ya leído). No
+  hay otra pasada.
+- **Veredicto en esta acta:**
+  - "SANEADO en contrarios, invenciones y procedencia" si da 0;
+  - si no da 0, el residuo estimado por nodo con su intervalo de Wilson al 95 %.

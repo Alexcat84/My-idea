@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Retroalimentación Efectiva a Trabajadores y Supervisores",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Para lograr el autocontrol, la retroalimentación a los trabajadores debe ser reconocible de un vistazo, enfocarse en los pocos defectos importantes, tratar solo defectos controlables por el trabajador, ser oportuna y proveer información suficiente para guiar la acción correctiva. A nivel de supervisores se usan resúmenes matriciales, análisis de Pareto e información automatizada de calidad (QIE).",
+  "resumen_teorico": "Para lograr el autocontrol, la retroalimentación a los trabajadores debe ser reconocible de un vistazo, enfocarse en los pocos defectos importantes, tratar solo defectos controlables por el trabajador, ser oportuna y proveer información suficiente para guiar la acción correctiva. A nivel de supervisores se usan resúmenes matriciales, análisis de Pareto e información automatizada de calidad.",
   "pasos_accionables": [
     "Diseñar reportes de retroalimentación simples y visuales para trabajadores",
     "Filtrar la información a los defectos vitales y controlables por el trabajador",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Da Retroalimentación Clara y Oportuna",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "medida2-invenciones-d01-feedback_supervisores_trabajadores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para lograr el autocontrol, la retroalimentación a los trabajadores debe ser reconocible de un vistazo, enfocarse en los pocos defectos importantes, tratar solo defectos controlables por el trabajador, ser oportuna y proveer información suficiente para guiar la acción correctiva. A nivel de supervisores se usan resúmenes matriciales, análisis de Pareto e información automatizada de calidad (QIE).",
+      "texto_nuevo": "Para lograr el autocontrol, la retroalimentación a los trabajadores debe ser reconocible de un vistazo, enfocarse en los pocos defectos importantes, tratar solo defectos controlables por el trabajador, ser oportuna y proveer información suficiente para guiar la acción correctiva. A nivel de supervisores se usan resúmenes matriciales, análisis de Pareto e información automatizada de calidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22780",
+        "frase": "Some situations justify the mechanization of both the recording and analysis of data."
+      },
+      "decision": "medida 2: invencion confirmada por el arbitro, corregida quitando o devolviendo el sentido del libro",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11.2"
+    }
   ]
 }
