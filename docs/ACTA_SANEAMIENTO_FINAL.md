@@ -1391,3 +1391,38 @@ Inventario del código de producción (`web/`): 21 llamadas a la IA.
      - El texto anterior queda en el registro interno `dataset/metadata/correcciones_preguntas.json`.
    - La regla queda en R1 y en R3 (excepción): las preguntas no se reescriben para adaptarlas, pero se reemplazan
      cuando son contrarias, inventan o su lógica no encaja.
+
+## 14. Medida final: contrarios, invenciones duras y procedencia (1 oct 2026)
+
+Diseño fijado en 11.3 antes de sortear: semilla 20261101, 200 nodos vivos con el reparto de la sección 3, 20 lotes de
+10 con una trampa sin marca cada uno (7 contrarios, 7 invenciones duras y 6 procedencias), lector ciego contra el
+libro, segundo lector si no caza la trampa, y árbitro. Las instrucciones son las de 11.3, con la precisión del fundador
+de 13.1: un nombre de método con apellido no es procedencia. Cuenta en `docs/auditoria_final/medida_final.json`.
+
+- **Detección:** el primer lector cazó 19 de 20 trampas. La del lote 05 (una invención) la cazó el segundo lector:
+  20 de 20.
+- **Arbitraje:** 9 defectos marcados en 7 nodos, los 9 confirmados como procedencia.
+
+| Clase | Hallazgos | Por nodo | Wilson 95 % | Umbral | Resultado |
+|---|---|---|---|---|---|
+| Contrarios (U1) | 0 | 0 | 0 a 1,9 % | 0 | **PASA** |
+| Invenciones duras (U2) | 0 | 0 | 0 a 1,9 % | 0 | **PASA** |
+| Procedencia (D1) | 9 en 7 nodos | 3,5 % | 1,7 a 7,1 % | 0 | **NO PASA** |
+
+- **Las 9 procedencias** son atribuciones blandas que las guardas mecánicas no ven:
+  - "los datos muestran";
+  - "según una estimación" y "según algunas estimaciones";
+  - "al estilo Darwin";
+  - "se dice que un fundador atribuía…" y "el fundador de una gran empresa explicaba";
+  - y, en el mundo 11, "una directiva" o "en la experiencia de una directiva", que es como la forja anonimizó a la
+    autora.
+- **Corregidas** en la tanda `medida3-procedencia`: 9 correcciones ATRIBUCION en 7 nodos. Sale la atribución y queda
+  el consejo dicho directamente.
+- **Vecindad** (mismo libro y mismo campo, sin la muestra): 3.711 elementos en 6 libros. Se relee solo para
+  procedencia, con trampas sin marca de atribución blanda (sección 14.1).
+
+**Veredicto:**
+- **Contrarios e invenciones: SANEADO en la muestra.** 0 en 200 nodos, con un residuo por nodo de como mucho 1,9 % al
+  95 %.
+- **Procedencia: no da 0.** El residuo estimado antes de corregir era 3,5 % de los nodos (1,7 a 7,1 %). Se cierra con
+  la relectura de la vecindad, sin otra pasada.
