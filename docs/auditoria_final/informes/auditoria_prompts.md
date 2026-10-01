@@ -17,6 +17,8 @@ Dónde viven los prompts:
 
 ## A. Severidad alta
 
+**APLICADOS los 6 (decisión del fundador, 1 oct 2026)** en `engine/prototipo_motor.py`, sincronizados a `prompts.json`, con las suites en verde. El ejemplo de las velas ya no lleva ninguna cifra. Los 18 medios y bajos siguen pendientes (`docs/PROXIMOS_PASOS.md`).
+
 | # | Prompt (dónde) | Instrucción | Por qué empuja a inventar | Ajuste propuesto |
 |---|---|---|---|---|
 | A1 | SYSTEM_PLAN, ejemplo de las velas (motor:1118-1131) | "cada vela te cuesta $3 … a $8 … 10 velas al mes, eso son $50" | El perfil del ejemplo dice "No ha calculado costos" (motor:1083) y su material no trae cifras, pero el prompt afirma que "$3 y $8 salen directamente del material". El ejemplo más largo enseña a inventar cifras, volumen y un juicio | Un ejemplo sin cifras: "Todavía no sabes cuánto te cuesta cada vela… **Costo por unidad:** suma lo que gastas en una tanda y divide entre las velas que salen. **Primera acción:** anota lo que gastaste en tu última tanda". Borrar "la cifra de $3 y $8 salen directamente del material" |
