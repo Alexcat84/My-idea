@@ -155,6 +155,33 @@ describe("ninguna referencia de origen llega a la IA", () => {
     expect(origenEn(s)).toEqual([]);
   });
 
+  it("los titulos con autor llegan a la IA con sentido: sin el apellido o con el nombre neutro del metodo", () => {
+    // Escritos a mano (decision del fundador del 1 oct 2026, punto 3): si quitar el apellido deja el titulo sin
+    // sentido ("Paso 6 de Crosby" -> "Paso 6"), va el nombre neutro del metodo.
+    const ESPERADOS: Record<string, string> = {
+      accion_correctiva_sistematica: "Acción Correctiva Sistemática (Paso 6 del programa de cero defectos)",
+      adaptacion_14_puntos_servicio_medico: "Adaptación de los 14 Principios de Gestión de la Calidad al Servicio Médico",
+      aim_of_leadership: "Objetivo del Liderazgo",
+      benchmarking_7_pasos_juran: "Proceso de Benchmarking de 7 Pasos",
+      benchmarking_trilogia_juran: "Benchmarking y la Trilogía de la Calidad",
+      ciclo_pdca_pdsa: "Ciclo PDCA/PDSA",
+      ciclo_shewhart_pdsa: "Ciclo PDCA (PDSA) para la Mejora Continua",
+      consejo_de_calidad: "Consejo de Calidad (Liderazgo y Selección de Proyectos)",
+      consejo_de_calidad_2: "Consejo de Calidad (Red Autogestionada de Profesionales)",
+      control_calidad_definicion: "Control de Calidad como Proceso Universal (Trilogía de la Calidad)",
+      cuatro_etapas_del_pensamiento_creativo: "Las Cuatro Etapas del Pensamiento Creativo",
+      juran_quality_by_design: "Modelo de Calidad por Diseño (Quality by Design)",
+      juran_rcca_metodo: "Método RCCA (Análisis de Causa Raíz)",
+      los_14_puntos_deming: "Los 14 Principios de Gestión de la Calidad para la Transformación de la Gestión",
+      modelo_lubin_esty_4_etapas: "Modelo de 4 Etapas de Creación de Valor en Sostenibilidad",
+      modelo_transformacion_juran: "Modelo de Transformación (Cinco Breakthroughs)",
+      planificacion_cero_defectos: "Planificación de Cero Defectos (Paso 7 del programa de cero defectos)",
+      proceso_benchmarking_juran_7pasos: "Ciclo de Benchmarking de 7 Pasos",
+      trilogia_de_juran: "Trilogía de la Calidad (Planificación, Control y Mejora)",
+    };
+    for (const [id, titulo] of Object.entries(ESPERADOS)) expect(graph[id].titulo_concepto, id).toBe(titulo);
+  });
+
   it("la orden fija de toda llamada no nombra a ningun autor ni libro de la lista", async () => {
     const { REGLA_SIN_FUENTES } = await import("./reglaSinFuentes");
     expect(origenEn(REGLA_SIN_FUENTES)).toEqual([]);
@@ -171,10 +198,10 @@ describe("ninguna referencia de origen llega a la IA", () => {
 
 /**
  * Los identificadores de nodo viajan en el texto (clasificacion, interprete, puerta, replanteamiento y plan: el
- * modelo responde con ids). Hay ids vivos con un apellido de la lista. Esta lista es la PENDIENTE declarada ante el
- * fundador (acta, seccion 11): no puede crecer; si se renombran, se vacia.
+ * modelo responde con ids). Hay ids vivos con un apellido de la lista: el fundador los ACEPTA como claves tecnicas
+ * (decision del 1 oct 2026, opcion c; acta, seccion 13) y no se renombra ninguno. La lista no puede crecer.
  */
-const IDS_CON_APELLIDO_PENDIENTES = [
+const IDS_CON_APELLIDO_ACEPTADOS = [
   "accion_correctiva_crosby", "benchmarking_7_pasos_juran", "benchmarking_trilogia_juran", "crosby_creatividad_gerencial",
   "crosby_habilidad_transmision", "crosby_implementacion_gerencial", "crosby_liderazgo_abierto",
   "crosby_programa_14_pasos_introduccion", "juran_quality_by_design", "juran_rcca_metodo", "los_14_puntos_deming",
@@ -185,9 +212,9 @@ const IDS_CON_APELLIDO_PENDIENTES = [
 ];
 
 describe("identificadores de nodo con un apellido de la lista", () => {
-  it("no aparece ninguno nuevo fuera de la pendiente declarada", () => {
+  it("no aparece ninguno nuevo fuera de los aceptados", () => {
     const apellidos = new Set(AUTORES.filter((a) => !/[\s.]/.test(a)).map((a) => a.toLowerCase()));
     const conApellido = vivos.map(([id]) => id).filter((id) => id.split("_").some((p) => apellidos.has(p))).sort();
-    expect(conApellido).toEqual([...IDS_CON_APELLIDO_PENDIENTES].sort());
+    expect(conApellido).toEqual([...IDS_CON_APELLIDO_ACEPTADOS].sort());
   });
 });

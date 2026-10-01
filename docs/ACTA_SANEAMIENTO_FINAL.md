@@ -1351,3 +1351,43 @@ Inventario del código de producción (`web/`): 21 llamadas a la IA.
   viejos, con autor, y el intérprete reenvía ese historial en cada turno de una sesión abierta. Lo nuevo sale limpio.
   Limpiarlo pide un script sobre la base: no se hace sin el visto.
 - **Herramienta local.** El motor Python no lleva `REGLA_SIN_FUENTES`. No es producción.
+
+## 13. Decisiones del fundador sobre el añadido (1 oct 2026)
+
+1. **Los nombres de método con apellido no son defecto.** Juran, Deming, Wallas, Crosby y similares son nombres de
+   método, no atribuciones.
+   - En lo que ve el cliente se prefiere el nombre neutro cuando existe (trilogía de la calidad, las cuatro etapas
+     del proceso creativo). Si no existe ("los 14 puntos de Deming"), se queda.
+   - La guarda de procedencia (sección 7) deja pasar los nombres sin alternativa neutra. Está en D5.
+2. **Identificadores de nodo: opción (c).** Los 25 identificadores con apellido se aceptan como claves técnicas y no se
+   renombra ninguno. La guarda impide que aparezca uno nuevo. Está en D6.
+3. **Filtro hacia la IA con nombre neutro.** Si quitar el apellido deja el título sin sentido, el filtro pone el
+   nombre neutro del método. Las sustituciones (`NEUTROS` en `scripts/origen_ia.py`) van antes de las quitas:
+   - "Paso N de Crosby" pasa a "Paso N del programa de cero defectos";
+   - "Trilogía de Juran" pasa a "Trilogía de la Calidad";
+   - "14 Puntos de Deming" pasa a "14 Principios de Gestión de la Calidad";
+   - "ciclo de Deming" o "de Shewhart" pasa a "ciclo PDCA";
+   - "Cuatro Etapas de Wallas" pasa a "Cuatro Etapas del Proceso Creativo".
+
+   Revisados los 18 títulos vivos, más uno nuevo (`ciclo_shewhart_pdsa`, "Ciclo PDCA (PDSA) para la Mejora
+   Continua"), con este criterio:
+   - Cambian a nombre neutro siete: los dos "Paso 6/7 de Crosby", los dos "14 Puntos de Deming" y las tres
+     "Trilogía de Juran".
+   - Los demás ya tenían sentido sin el apellido.
+
+   La prueba web fija a mano el título que llega a la IA en cada uno de los 19, y el registro anota cada sustitución
+   como "original -> neutro". El filtro hace ahora 101 quitas.
+4. **Conversaciones guardadas antes de hoy:** no se limpian, porque todavía no hay usuarios reales.
+5. **Los 2 casos pendientes de la medida 2, corregidos**, verificados a ciegas (paquete `paq_vp`: 3 elementos con 1
+   trampa sin marca, una cifra inventada; la trampa se cazó y las 2 correcciones se sostienen):
+   - a. `tratar_packaging_costo_marca`, título. "Trata el empaque como una variable de costo y de marca" pasa a "Trata
+     el empaque como una variable de peso y de eficiencia en tus envíos". Es la tanda `medida2-pendientes` (ANADIDO):
+     el libro habla del peso que añade el empaque y de su efecto en la eficiencia, no de la marca.
+   - b. `outsourcing_ventas_fso`, pregunta base. La versión anterior atribuía al equipo externo conseguir a los
+     posibles franquiciados; el libro dice que no genera los contactos. La pregunta nueva dice que atiende a los que
+     atrae tu propia mercadotecnia y los lleva hasta el cierre, y conserva sus dos opciones.
+     - Se corrigió directamente, sin campo aparte (corrección del fundador al punto 5b), con la herramienta nueva
+       `scripts/fidelidad/corregir_preguntas.py` (tanda `preguntas-medida2-pendientes`, veredicto CONTRARIO).
+     - El texto anterior queda en el registro interno `dataset/metadata/correcciones_preguntas.json`.
+   - La regla queda en R1 y en R3 (excepción): las preguntas no se reescriben para adaptarlas, pero se reemplazan
+     cuando son contrarias, inventan o su lógica no encaja.

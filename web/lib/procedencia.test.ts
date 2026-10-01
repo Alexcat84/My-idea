@@ -319,7 +319,10 @@ describe("procedencia: ninguna atribucion generica", () => {
  * sin alternativa neutra corriente.
  */
 const PERSONAS = /\b(Deming|Shewhart|Juran|Crosby|Taguchi|Heinrich|Drucker|Christensen|Geoffrey Moore|Jacobs|Goodall|Eames|Porter|Feigenbaum|Osterwalder|Fulton Suri|Kotter|Covey|Maslow|Eisenhower)\b/;
-const METODO_SIN_NEUTRO = /diagrama de Eames|diagramas de Eames/g;
+// Decision del fundador (1 oct 2026, punto 1): un nombre de metodo con apellido NO es atribucion. En lo que ve el
+// cliente se prefiere el nombre neutro cuando existe (ciclo PDCA, trilogia de la calidad, las cuatro etapas del proceso
+// creativo); si no existe, el nombre se queda. Estos son los que no tienen nombre neutro corriente.
+const METODO_SIN_NEUTRO = /diagramas? de Eames|(?:los )?14 puntos de Deming/gi;
 const CAMPOS_VISIBLES = new Set(["etiqueta_arbol", "resumen_teorico", "entregable_esperado", "pasos_accionables", "condiciones_activacion"]);
 
 function personaEn(t: string): string | null {
@@ -357,7 +360,9 @@ describe("procedencia: casos negativos (la guarda muerde)", () => {
   it("detecta la persona como fuente y deja pasar el metodo sin nombre neutro", () => {
     for (const t of ["Como decía Drucker, no hay nada tan inútil", "El ciclo de Deming tiene cuatro pasos", "Deja el Triángulo de Heinrich"])
       expect(personaEn(t), t).not.toBeNull();
-    for (const t of ["Usa el diagrama de Eames para ver la intersección", "Aplica el ciclo PDCA", "Ordena tus causas con un diagrama de Pareto"])
+    // decision del fundador (1 oct 2026, punto 1): un nombre de metodo con apellido no es atribucion; sin nombre
+    // neutro corriente, se queda ("los 14 puntos de Deming")
+    for (const t of ["Usa el diagrama de Eames para ver la intersección", "Aplica el ciclo PDCA", "Ordena tus causas con un diagrama de Pareto", "Repasa los 14 puntos de Deming con tu equipo"])
       expect(personaEn(t), t).toBeNull();
   });
 });

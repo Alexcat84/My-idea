@@ -32,13 +32,18 @@ def test_autor_dentro_de_un_parentesis_con_mas_texto():
     # ", Crosby" sale y el resto del parentesis queda: "(Red Autogestionada de Profesionales)"
     assert q("Consejo de Calidad (Red Autogestionada de Profesionales, Crosby)")[0] == \
         "Consejo de Calidad (Red Autogestionada de Profesionales)"
-    # " de Crosby" sale: "(Paso 6)"
-    assert q("Acción Correctiva Sistemática (Paso 6 de Crosby)")[0] == "Acción Correctiva Sistemática (Paso 6)"
+    # decision del fundador (1 oct 2026, punto 3): si quitar el apellido deja el titulo sin sentido, va el nombre
+    # neutro del metodo. "Paso 6 de Crosby" -> "Paso 6 del programa de cero defectos"
+    assert q("Acción Correctiva Sistemática (Paso 6 de Crosby)")[0] ==         "Acción Correctiva Sistemática (Paso 6 del programa de cero defectos)"
 
 
 def test_de_autor_y_autor_como_adjetivo():
-    assert q("Los 14 Puntos de Deming para la Transformación")[0] == "Los 14 Puntos para la Transformación"
-    assert q("Benchmarking y la Trilogía de Juran")[0] == "Benchmarking y la Trilogía"
+    # nombre neutro: "14 Puntos de Deming" -> "14 Principios de Gestión de la Calidad"; "Trilogía de Juran" ->
+    # "Trilogía de la Calidad" (con la mayuscula del original)
+    assert q("Adaptación de los 14 Puntos de Deming al Servicio Médico")[0] ==         "Adaptación de los 14 Principios de Gestión de la Calidad al Servicio Médico"
+    assert q("Benchmarking y la Trilogía de Juran")[0] == "Benchmarking y la Trilogía de la Calidad"
+    assert q("aplica la trilogía de Juran y el ciclo de Deming")[0] == "aplica la trilogía de la calidad y el ciclo PDCA"
+    assert q("Las Cuatro Etapas de Wallas")[0] == "Las Cuatro Etapas del Proceso Creativo"
     assert q("Modelo Juran de Calidad por Diseño")[0] == "Modelo de Calidad por Diseño"
     assert q("Método RCCA de Juran (Análisis de Causa Raíz)")[0] == "Método RCCA (Análisis de Causa Raíz)"
 
@@ -58,20 +63,22 @@ def test_no_toca_palabras_comunes_ni_excepciones():
 
 def test_cada_quita_queda_registrada():
     nuevo, quitas = q("Trilogía de Juran (Planificación, Control y Mejora)")
-    assert nuevo == "Trilogía (Planificación, Control y Mejora)"
-    assert quitas == [" de Juran"]
+    assert nuevo == "Trilogía de la Calidad (Planificación, Control y Mejora)"
+    assert quitas == ["Trilogía de Juran -> Trilogía de la Calidad"]
+    nuevo, quitas = q("Objetivo del Liderazgo (Deming)")
+    assert (nuevo, quitas) == ("Objetivo del Liderazgo", [" (Deming)"])
 
 
 def test_vista_de_nodo_y_registro():
     nodo = {"node_id": "x", "titulo_concepto": "Objetivo del Liderazgo (Deming)", "resumen_teorico": "Sin autores.",
-            "pasos_accionables": ["Paso uno.", "Aplica el paso 7 de Crosby."], "etiqueta_arbol": "Lidera con un fin"}
+            "pasos_accionables": ["Paso uno.", "Aplica el Modelo Juran de calidad."], "etiqueta_arbol": "Lidera con un fin"}
     registro = []
     oi.limpiar_nodo(nodo, oi.patrones(CANON), registro)
     assert nodo["titulo_concepto"] == "Objetivo del Liderazgo"
-    assert nodo["pasos_accionables"] == ["Paso uno.", "Aplica el paso 7."]
+    assert nodo["pasos_accionables"] == ["Paso uno.", "Aplica el Modelo de calidad."]
     assert nodo["resumen_teorico"] == "Sin autores."
     assert [(r["node_id"], r["campo"], r["indice"], r["quitado"]) for r in registro] == [
-        ("x", "titulo_concepto", None, " (Deming)"), ("x", "pasos_accionables", 1, " de Crosby")]
+        ("x", "titulo_concepto", None, " (Deming)"), ("x", "pasos_accionables", 1, " Juran")]
 
 
 def test_la_vista_web_del_grafo_no_lleva_ningun_autor_ni_titulo():

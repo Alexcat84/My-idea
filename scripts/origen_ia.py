@@ -27,6 +27,18 @@ EXCEPCIONES = ("MINI Cooper",)
 
 _NOMBRE = r"[A-ZÁÉÍÓÚÑ][\wáéíóúñ'.]*"
 
+# Decision del fundador (1 oct 2026, punto 3): cuando quitar el apellido deja el nombre sin sentido ("Paso 6 de
+# Crosby" -> "Paso 6"), se SUSTITUYE por el nombre neutro del metodo. Van antes que las quitas. Cada entrada: patron,
+# nombre neutro en minuscula y en mayusculas de titulo (se elige por la mayuscula de la primera letra del original).
+NEUTROS = [
+    (r"[Tt]rilog[íi]a de Juran", "trilogía de la calidad", "Trilogía de la Calidad"),
+    (r"[Cc]iclo (?:de )?(?:Shewhart-Deming|Deming|Shewhart)", "ciclo PDCA", "Ciclo PDCA"),
+    (r"14 [Pp]untos de Deming", "14 principios de gestión de la calidad", "14 Principios de Gestión de la Calidad"),
+    (r"[Pp]aso (\d+) de Crosby", r"paso \1 del programa de cero defectos", r"Paso \1 del programa de cero defectos"),
+    (r"[Cc]uatro [Ee]tapas de Wallas", "cuatro etapas del proceso creativo", "Cuatro Etapas del Proceso Creativo"),
+]
+_NEUTROS = [(re.compile(p), m, t) for p, m, t in NEUTROS]
+
 
 def cargar_canon():
     fuentes = json.loads(CANON.read_text(encoding="utf-8"))["fuentes"].values()
@@ -55,7 +67,7 @@ def patrones(canon):
 
 
 def quitar_origen(texto, pats):
-    """Devuelve (texto_limpio, quitas). Una quita es el trozo exacto que salio."""
+    """Devuelve (texto_limpio, quitas). Una quita es el trozo exacto que salio, o "original -> nombre neutro"."""
     if not texto:
         return texto, []
     guardados = {}
@@ -65,6 +77,12 @@ def quitar_origen(texto, pats):
             guardados[marca] = e
             texto = texto.replace(e, marca)
     quitas = []
+    for p, minus, titulo in _NEUTROS:
+        def _neutro(m, minus=minus, titulo=titulo):
+            nuevo = m.expand(titulo if next(c for c in m.group(0) if c.isalpha()).isupper() else minus)
+            quitas.append("%s -> %s" % (m.group(0), nuevo))
+            return nuevo
+        texto = p.sub(_neutro, texto)
     for p in pats:
         def _quita(m):
             quitas.append(m.group(0))
