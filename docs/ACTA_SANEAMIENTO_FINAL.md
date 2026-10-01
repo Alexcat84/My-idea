@@ -1091,3 +1091,53 @@ la sección 1 (U1 a U14).
 - **Veredicto:** el de la sección 5. Con todos los criterios en PASA, esta acta abre con "DATASET CERTIFICADO" y la
   fecha. Lo que no pase se corrige por la doctrina y se vuelve a medir solo ese punto, con semilla nueva escrita antes.
 - **Guardas y navegación (U11 a U13):** se repiten al 100 % del catálogo el mismo día de la medida.
+
+### 10.1 Resultado de la medida 2 (1 oct 2026): NO CERTIFICADO
+
+**Método:** 22 lotes, 200 nodos de la muestra y 22 trampas. El arbitraje dio 403 defectos confirmados, 1
+reclasificado y 37 rechazados. Las cifras están en `docs/auditoria_final/medida_2.json`.
+
+**Trampas:**
+- El primer lector cazó 21 de 22, incluidas las 2 de copia fiel.
+- La trampa de fase del lote 10 (`escalonar_complejidad_puesto_empleado_nuevo`, de planificación a ejecución) no la
+  cazó ninguno de los dos lectores: es un fallo de método del criterio de fase.
+
+**Guardas y navegación, repetidas hoy al 100 % del catálogo:** en verde.
+- Navegación: murallas, puentes, ley del ancla, puertas, alcanzabilidad del 100 % en el núcleo y en cada mundo, y 0
+  aristas a deprecados.
+- Los dos nodos que la medida 1 dejó sin alcanzar ya se alcanzan.
+- U11, U12 y U13 pasan.
+
+| # | Criterio | Medida 1 | Medida 2 | Intervalo 95 % | Umbral | Veredicto |
+|---|---|---|---|---|---|---|
+| U1 | Contrarios | 4 | 1 | | 0 | **NO PASA** |
+| U2 | Invenciones | 25 | 4 | | 0 | **NO PASA** |
+| U3 | Fase | 5,0 % | 2,5 % | 1,1 a 5,7 % | ≤ 3 % | **PASA** |
+| U4 | Dominio | 1,5 % | 1,0 % | 0,3 a 3,6 % | ≤ 2 % | **PASA** |
+| U5 | Condiciones | 3,0 % | 6,0 % | 3,5 a 10,2 % | ≤ 2 % | **NO PASA** |
+| U6 | Etiquetas | 6,0 % | 8,0 % | 5,0 a 12,6 % | ≤ 2 % | **NO PASA** |
+| U7 | Ortografía, solo campos crudos | 19,5 % (todo) | 6,0 % | 3,5 a 10,2 % | ≤ 1 % | **NO PASA** |
+| U8 | Matices | 0,50 por nodo | 0,075 por nodo | 0,042 a 0,124 | ≤ 0,2 | **PASA** |
+| U9 | Calcos, solo campos crudos | 0,72 por nodo (todo) | 0,44 por nodo | 0,35 a 0,54 | ≤ 0,2 | **NO PASA** |
+| U10 | Regionalismos | 0,025 | 0,04 | 0,017 a 0,079 | ≤ 0,2 | **PASA** |
+| U14 | Copias fieles (D2) | no medido | 148 elementos en 53 nodos | 20,8 a 33,1 % de los nodos | 0 | **NO PASA** |
+| D1 | Procedencia | no medido | 4 | | 0 | **NO PASA** |
+
+- **Mejora continua:** fuera de los campos crudos se anotaron 58 calcos y 31 faltas de ortografía. No cuentan (sección
+  10) y van a la ficha de nivel 2.
+- **Lo que mejoró el remedio:**
+  - Contrarios e invenciones bajan de 29 a 5.
+  - Matiz baja de 0,50 a 0,075 por nodo y pasa.
+  - Fase baja a 2,5 % y pasa.
+- **Lo que no pasa:**
+  - Contrarios e invenciones, con umbral 0.
+  - Condiciones y etiquetas.
+  - Ortografía y calcos en los campos crudos.
+  - Procedencia.
+  - Y la **copia fiel**, el hallazgo de más peso:
+    - El 26,5 % de los nodos de la muestra trae al menos un elemento que traduce un pasaje del libro casi palabra por
+      palabra. Son 117 pasos, 29 resúmenes y 2 condiciones.
+    - Proyectado al catálogo, son entre unos 750 y 1.200 nodos.
+    - Es sistémico: los nodos se escribieron traduciendo, y la regla D2 es posterior a su extracción.
+- **Veredicto:** el catálogo **no se certifica**. Corregir la copia fiel a escala es una decisión del fundador (alcance,
+  método y coste), igual que el resto de los criterios que no pasan.

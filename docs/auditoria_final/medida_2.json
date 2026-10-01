@@ -1,0 +1,140 @@
+{
+ "filas": [
+  {
+   "criterio": "U1",
+   "tipo": "contrario",
+   "valor": 1,
+   "ic95": null,
+   "umbral": 0,
+   "pasa": false,
+   "n": 1
+  },
+  {
+   "criterio": "U2",
+   "tipo": "invencion",
+   "valor": 4,
+   "ic95": null,
+   "umbral": 0,
+   "pasa": false,
+   "n": 4
+  },
+  {
+   "criterio": "U3",
+   "tipo": "fase",
+   "valor": 0.025,
+   "ic95": [
+    0.010724719583860124,
+    0.05717834075165468
+   ],
+   "umbral": 0.03,
+   "pasa": true,
+   "n": 5
+  },
+  {
+   "criterio": "U4",
+   "tipo": "dominio",
+   "valor": 0.01,
+   "ic95": [
+    0.00274665810884896,
+    0.035721762026734716
+   ],
+   "umbral": 0.02,
+   "pasa": true,
+   "n": 2
+  },
+  {
+   "criterio": "U5",
+   "tipo": "condicion",
+   "valor": 0.06,
+   "ic95": [
+    0.034652194106514544,
+    0.10193169336217284
+   ],
+   "umbral": 0.02,
+   "pasa": false,
+   "n": 12
+  },
+  {
+   "criterio": "U6",
+   "tipo": "etiqueta",
+   "valor": 0.08,
+   "ic95": [
+    0.049840585704871626,
+    0.12598948869705723
+   ],
+   "umbral": 0.02,
+   "pasa": false,
+   "n": 16
+  },
+  {
+   "criterio": "U7",
+   "tipo": "ortografia",
+   "valor": 0.06,
+   "ic95": [
+    0.034652194106514544,
+    0.10193169336217284
+   ],
+   "umbral": 0.01,
+   "pasa": false,
+   "n": 12
+  },
+  {
+   "criterio": "U8",
+   "tipo": "matiz",
+   "valor": 0.075,
+   "ic95": [
+    0.04197693066391658,
+    0.12370109435742922
+   ],
+   "umbral": 0.2,
+   "pasa": true,
+   "n": 15
+  },
+  {
+   "criterio": "U9",
+   "tipo": "calco",
+   "valor": 0.44,
+   "ic95": [
+    0.35289286635548406,
+    0.5420923062122714
+   ],
+   "umbral": 0.2,
+   "pasa": false,
+   "n": 88
+  },
+  {
+   "criterio": "U10",
+   "tipo": "regionalismo",
+   "valor": 0.04,
+   "ic95": [
+    0.01726916088374251,
+    0.07881594610096657
+   ],
+   "umbral": 0.2,
+   "pasa": true,
+   "n": 8
+  },
+  {
+   "criterio": "U14",
+   "tipo": "copia",
+   "valor": 148,
+   "ic95": null,
+   "umbral": 0,
+   "pasa": false,
+   "n": 148
+  },
+  {
+   "criterio": "D1",
+   "tipo": "procedencia",
+   "valor": 4,
+   "ic95": null,
+   "umbral": 0,
+   "pasa": false,
+   "n": 4
+  }
+ ],
+ "mejora_continua": {
+  "calco": 58,
+  "ortografia": 31
+ }
+}
