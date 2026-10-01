@@ -10,7 +10,7 @@
     "Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.",
     "No dejes que los ingenieros, incluido quien diseñó el producto, hagan las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
     "Involucra el control de calidad desde el principio al elegir y desarrollar proveedores, no solo al momento de comprarles.",
-    "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo."
+    "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo. Planifica esa aceptación y hazla según los términos de tu orden de compra, no según un plan anterior."
   ],
   "entregable_esperado": "Un procedimiento escrito que define cómo haces inspección, pruebas y control de proveedores, con quién hace qué.",
   "nodos_previos": [
@@ -78,6 +78,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige que los inspectores estén separados en la organización de las operaciones que inspeccionan; que no sea la misma persona pierde esa condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-007-funciones_del_departamento_de_calidad-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo.",
+      "texto_nuevo": "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo. Planifica esa aceptación y hazla según los términos de tu orden de compra, no según un plan anterior.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "783-785",
+        "frase": "make certain that the acceptance is conducted by the terms of the purchase order"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la aceptación de compras es cuestión de planificación y que lo más importante es hacerla según la orden de compra, no un plan sobrante; el paso lo omite.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -13,7 +13,7 @@
     "Confirma que tu producto cumple con la normativa del país destino (por ejemplo, aprobaciones médicas)",
     "Actúa de buena fe: da información clara, muestra tus términos y resuelve rápido las quejas"
   ],
-  "entregable_esperado": "Una lista de verificación legal por mercado (privacidad, firma electrónica, publicidad, jurisdicción) antes de lanzar tus ventas online",
+  "entregable_esperado": "Una lista de verificación legal por mercado (privacidad, seguridad, firma electrónica, correo comercial no solicitado, publicidad, jurisdicción y buena fe) antes de lanzar tus ventas online",
   "nodos_previos": [
     "fiscalidad_comercio_electronico_internacional"
   ],
@@ -74,6 +74,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro de lo que conviene evitar incluye loterías, concursos, juegos y apuestas en promociones; se cae.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-005-marco_legal_comercio_electronico_internacional-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista de verificación legal por mercado (privacidad, firma electrónica, publicidad, jurisdicción) antes de lanzar tus ventas online",
+      "texto_nuevo": "Una lista de verificación legal por mercado (privacidad, seguridad, firma electrónica, correo comercial no solicitado, publicidad, jurisdicción y buena fe) antes de lanzar tus ventas online",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3361-3419",
+        "frase": "you should post a security statement to reassure customers"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de verificación deja fuera seguridad, correo comercial no solicitado y buena fe, marcos que el libro y el propio nodo exigen revisar.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

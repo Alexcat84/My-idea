@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Conocimiento Defectuoso e Inerte (Buggy and Inert Knowledge)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Para aplicar conocimiento correctamente las personas necesitan poseerlo, tenerlo organizado de forma usable, y activarlo en contexto. El conocimiento 'buggy' (defectuoso) tiene huecos o errores por entrenamiento incompleto; el conocimiento mal organizado lleva a malinterpretar procesos dinámicos como estáticos, independientes cuando están interconectados, o varios procesos distintos como si fueran uno solo. El conocimiento 'inerte' es aquel que la persona posee (puede recitarlo en teoría) pero no logra activar cuando se necesita en una situación real, por desajuste entre cómo se aprendió (en formatos estáticos) y cómo debe aplicarse (en situaciones dinámicas y novedosas).",
+  "resumen_teorico": "Para aplicar conocimiento correctamente las personas necesitan poseerlo, tenerlo organizado de forma usable, y activarlo en contexto. El conocimiento 'buggy' (defectuoso) tiene huecos o errores por entrenamiento incompleto; el conocimiento mal organizado lleva a malinterpretar procesos dinámicos como estáticos, independientes cuando están interconectados, o varios procesos distintos como si fueran uno solo. El conocimiento 'inerte' es aquel que la persona posee (puede recitarlo en teoría) pero no logra activar cuando se necesita en una situación real; ese riesgo aparece cuando hay desajuste entre cómo se aprendió (en formatos estáticos) y cómo debe aplicarse (en situaciones dinámicas y novedosas).",
   "pasos_accionables": [
     "Verificar si el personal poseía el conocimiento correcto, completo y no erróneo (buscar bugs)",
     "Evaluar si el conocimiento fue enseñado de forma que refleje la interconexión y dinamismo real de los procesos",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres errores de organización del conocimiento; el nodo omite tratar varios procesos distintos como si fueran uno solo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-007-buggy_inert_knowledge-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para aplicar conocimiento correctamente las personas necesitan poseerlo, tenerlo organizado de forma usable, y activarlo en contexto. El conocimiento 'buggy' (defectuoso) tiene huecos o errores por entrenamiento incompleto; el conocimiento mal organizado lleva a malinterpretar procesos dinámicos como estáticos, independientes cuando están interconectados, o varios procesos distintos como si fueran uno solo. El conocimiento 'inerte' es aquel que la persona posee (puede recitarlo en teoría) pero no logra activar cuando se necesita en una situación real, por desajuste entre cómo se aprendió (en formatos estáticos) y cómo debe aplicarse (en situaciones dinámicas y novedosas).",
+      "texto_nuevo": "Para aplicar conocimiento correctamente las personas necesitan poseerlo, tenerlo organizado de forma usable, y activarlo en contexto. El conocimiento 'buggy' (defectuoso) tiene huecos o errores por entrenamiento incompleto; el conocimiento mal organizado lleva a malinterpretar procesos dinámicos como estáticos, independientes cuando están interconectados, o varios procesos distintos como si fueran uno solo. El conocimiento 'inerte' es aquel que la persona posee (puede recitarlo en teoría) pero no logra activar cuando se necesita en una situación real; ese riesgo aparece cuando hay desajuste entre cómo se aprendió (en formatos estáticos) y cómo debe aplicarse (en situaciones dinámicas y novedosas).",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2310",
+        "frase": "then inert knowledge is a risk"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta el desajuste entre aprendizaje estático y aplicación dinámica como un riesgo de conocimiento inerte, no como su causa establecida.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

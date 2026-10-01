@@ -9,7 +9,7 @@
     "Evaluar el riesgo del comprador y del mercado para elegir el método de pago adecuado",
     "Usar el Sight Draft con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar el air waybill",
     "Ofrecer Time Draft si se desea otorgar crédito comercial al comprador",
-    "Priorizar Letter of Credit irrevocable para operaciones de alto riesgo o compradores nuevos"
+    "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una Letter of Credit irrevocable y confirmada, un Sight Draft o incluso el pago por adelantado"
   ],
   "entregable_esperado": "Método de pago seleccionado y formalizado en el contrato de venta con el comprador extranjero",
   "nodos_previos": [
@@ -63,6 +63,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el riesgo aumenta con envío aéreo, no que el sight draft deba usarse solo en marítimos.; Mismo endurecimiento.; Mismo endurecimiento: el libro no prohíbe el sight draft en aéreos.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-005-metodos_de_pago_internacional-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar Letter of Credit irrevocable para operaciones de alto riesgo o compradores nuevos",
+      "texto_nuevo": "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una Letter of Credit irrevocable y confirmada, un Sight Draft o incluso el pago por adelantado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4007",
+        "frase": "a documentary sight draft or an irrevocable confirmed letter of credit—or even payment in advance"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro, si el riesgo es demasiado alto, propone en lugar del crédito un giro a la vista, una carta de crédito irrevocable y confirmada o el pago por adelantado; el paso pierde la confirmación y las alternativas y añade a los compradores nuevos.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

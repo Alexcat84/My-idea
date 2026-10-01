@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adoptar e Instituir el Liderazgo (Punto 7)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+  "resumen_teorico": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar por números (metas, cuotas, cumplir especificaciones, cero errores, evaluación del desempeño). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
   "pasos_accionables": [
     "Dejar de evaluar el trabajo, propio o de quien te ayuda, con metas numéricas, cuotas o cifras frías",
     "Aprender a fondo el trabajo real antes de dirigirlo o delegarlo",
@@ -178,6 +178,22 @@
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro descarta el criterio de quedar bajo el promedio; 'no solo' lo conserva como criterio válido. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-006-adopcion_liderazgo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar por números (metas, cuotas, cero errores). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+      "texto_nuevo": "Tu trabajo no es vigilar, es liderar. Si alguien te ayuda, tienes que conocer a fondo el trabajo que esa persona hace, quitarle las trabas que le impiden sentirse orgullosa de lo que hace, y enfocarte en mejorar el sistema en vez de gestionar por números (metas, cuotas, cumplir especificaciones, cero errores, evaluación del desempeño). Un error común es tratar cada falla individual como si fuera culpa de la persona cuando en realidad el sistema es estable, lo que empeora las cosas en vez de mejorarlas.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1186",
+        "frase": "meet specifications, zero defects, appraisal of performance) must be abolished, leadership put in place"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro de lo que hay que abolir incluye cumplir especificaciones y la evaluación del desempeño, y el resumen las pierde.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tres Requisitos para Sistemas de Retroalimentación de Alto Desempeño",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa.",
+  "resumen_teorico": "Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa; después hay que orientarlo con metas claras y reglas razonables hacia fines útiles.",
   "pasos_accionables": [
     "Implementar plataformas de datos compartidos y visibles para todos los actores relevantes",
     "Delegar autoridad de decisión a unidades autónomas dentro de reglas claras",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Diseña tu Sistema de Retroalimentación",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-006-requisitos_sistema_retroalimentacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa.",
+      "texto_nuevo": "Para que un sistema de retroalimentación funcione en un entorno impredecible se necesitan tres condiciones simultáneas: (1) transparencia de datos en tiempo real para que todos vean lo que ocurre, (2) autoridad delegada para actuar dentro de reglas definidas sin esperar aprobación, y (3) un interés personal (stake) en el resultado que motive el aprendizaje y la mejora continua. Cuando estas tres condiciones se combinan, emerge un sistema autoorganizado capaz de responder rápido y con calidad, similar a como el fuego surge de combustible, oxígeno y chispa; después hay que orientarlo con metas claras y reglas razonables hacia fines útiles.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "5569-5571",
+        "frase": "Once called into being, a feedback system, like fire, is a powerful creation."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que, una vez creado, el sistema hay que guiarlo con metas claras y reglas razonables hacia fines útiles; el nodo lo da por bueno solo con las tres condiciones.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

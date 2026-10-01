@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
     "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
-    "Elige el envío rápido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+    "Elige el envío rápido solo cuando lo que pierdes sin producto, sumado a lo que ahorras en inventario, sea mayor que esa diferencia.",
     "Revisa esta decisión cada vez que cambien tus proveedores de envío o tus márgenes."
   ],
   "entregable_esperado": "Un criterio simple para decidir cuándo pagar envío rápido y cuándo no.",
@@ -160,6 +160,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compensa el flete más caro con el ahorro de inventario y la disponibilidad; el resumen pierde el ahorro de inventario.; Mismo defecto: falta el ahorro de inventario en la balanza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-007-pagar_mas_por_velocidad-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige el envío rápido solo cuando el costo de quedarte sin producto sea mayor que esa diferencia.",
+      "texto_nuevo": "Elige el envío rápido solo cuando lo que pierdes sin producto, sumado a lo que ahorras en inventario, sea mayor que esa diferencia.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "14298",
+        "frase": "additional transport costs can be offset against inventory savings/stock availability"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compensa el flete más caro con el ahorro de inventario y la disponibilidad; el paso deja solo el costo de quedarse sin producto, contra los pasos 1 y 2.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

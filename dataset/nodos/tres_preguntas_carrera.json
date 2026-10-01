@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Las tres preguntas antes de saltar a emprender (factores de carrera, personales y de mercado)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Antes de dar el salto emprendedor, evalúa tres preguntas que se repiten siempre: la de carrera (tu experiencia y habilidades acumuladas), la personal (tu situación familiar y el apoyo de tu entorno) y la de mercado (si la oportunidad es favorable). Cuando las tres respuestas son buenas, es el momento de saltar. Rara vez se alinean las tres a la perfección, así que tienes que decidir qué tan cerca de ese ideal estás dispuesto a actuar, y trabajar activamente en mejorar los factores débiles antes de lanzarte.",
+  "resumen_teorico": "Antes de dar el salto emprendedor, evalúa tres preguntas: la de carrera (tu experiencia, tus habilidades y tus contactos acumulados), la personal (tu situación familiar y el apoyo de tu entorno) y la de mercado (si la oportunidad es favorable). Cuando las tres respuestas son buenas, es el momento de saltar. Rara vez se alinean las tres a la perfección, así que tienes que decidir qué tan cerca de ese ideal estás dispuesto a actuar, y trabajar activamente en mejorar los factores débiles antes de lanzarte.",
   "pasos_accionables": [
-    "Evalúa el factor de carrera: pregúntate si tienes la experiencia y las habilidades necesarias",
+    "Evalúa el factor de carrera: pregúntate si tienes la experiencia, las habilidades y los contactos necesarios",
     "Evalúa el factor personal: pregúntate si tu situación familiar y financiera soporta el riesgo",
     "Evalúa el factor de mercado: pregúntate si la oportunidad y el momento son favorables",
     "Identifica cuál de los tres factores está débil y diseña un plan para fortalecerlo antes de lanzarte, vigilando mientras tanto que los otros dos no se vuelvan desfavorables"
@@ -46,6 +46,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido que la marca 0.; Se cae la advertencia del blanco móvil: al trabajar el factor débil hay que vigilar que los otros no se vuelvan desfavorables.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-008-tres_preguntas_carrera-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de dar el salto emprendedor, evalúa tres preguntas que se repiten siempre: la de carrera (tu experiencia y habilidades acumuladas), la personal (tu situación familiar y el apoyo de tu entorno) y la de mercado (si la oportunidad es favorable). Cuando las tres respuestas son buenas, es el momento de saltar. Rara vez se alinean las tres a la perfección, así que tienes que decidir qué tan cerca de ese ideal estás dispuesto a actuar, y trabajar activamente en mejorar los factores débiles antes de lanzarte.",
+      "texto_nuevo": "Antes de dar el salto emprendedor, evalúa tres preguntas: la de carrera (tu experiencia, tus habilidades y tus contactos acumulados), la personal (tu situación familiar y el apoyo de tu entorno) y la de mercado (si la oportunidad es favorable). Cuando las tres respuestas son buenas, es el momento de saltar. Rara vez se alinean las tres a la perfección, así que tienes que decidir qué tan cerca de ese ideal estás dispuesto a actuar, y trabajar activamente en mejorar los factores débiles antes de lanzarte.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "637-660",
+        "frase": "he felt he had gained the skills, contacts, and experience he needed"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de tres factores recurrentes en los casos que examina; el 'siempre' los vuelve universales.; En el libro la base de carrera incluye los contactos junto a las habilidades y la experiencia, y pide diagnosticar esa carencia; el nodo la deja fuera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-008-tres_preguntas_carrera-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa el factor de carrera: pregúntate si tienes la experiencia y las habilidades necesarias",
+      "texto_nuevo": "Evalúa el factor de carrera: pregúntate si tienes la experiencia, las habilidades y los contactos necesarios",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "673",
+        "frase": "assume that they are missing important skills and contacts"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide diagnosticar las carencias de habilidades y también de contactos; el paso omite los contactos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

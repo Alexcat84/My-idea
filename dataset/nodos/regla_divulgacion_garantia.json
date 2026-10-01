@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Regla de Divulgación de Términos de Garantía (Disclosure Rule)",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esto es una ley estadounidense (de la FTC): si vendes algo con garantía escrita y el producto cuesta más de 15 dólares, la ley te exige poner en un único documento, claro y fácil de leer, la información básica: qué cubre, qué excluye, cuánto dura, cómo se pide el servicio, y cómo aplica la ley de tu estado. Esa claridad no es solo un trámite: le permite a quien te compra comparar tu garantía con la de otro antes de decidirse, así que también es algo que puede diferenciarte.",
+  "resumen_teorico": "Esto es una ley estadounidense (de la FTC): si vendes algo con garantía escrita y el producto cuesta más de 15 dólares, la ley te exige poner en un único documento, claro y fácil de leer, la información básica: qué cubre, qué excluye, cuánto dura, qué harás si el producto falla, cómo se pide el servicio, y cómo aplica la ley de tu estado. Esa claridad no es solo un trámite: le permite a quien te compra comparar tu garantía con la de otro antes de decidirse, así que también es algo que puede diferenciarte.",
   "pasos_accionables": [
     "Redacta un solo documento que incluya: qué cubre, qué no cubre, cuánto dura, cómo se pide el servicio, y un aviso sobre los derechos que da la ley de tu estado.",
     "Usa un lenguaje simple, sin jerga legal innecesaria.",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Aclara los Términos de tu Garantía",
   "fuentes_internas": [
     "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-005-regla_divulgacion_garantia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto es una ley estadounidense (de la FTC): si vendes algo con garantía escrita y el producto cuesta más de 15 dólares, la ley te exige poner en un único documento, claro y fácil de leer, la información básica: qué cubre, qué excluye, cuánto dura, cómo se pide el servicio, y cómo aplica la ley de tu estado. Esa claridad no es solo un trámite: le permite a quien te compra comparar tu garantía con la de otro antes de decidirse, así que también es algo que puede diferenciarte.",
+      "texto_nuevo": "Esto es una ley estadounidense (de la FTC): si vendes algo con garantía escrita y el producto cuesta más de 15 dólares, la ley te exige poner en un único documento, claro y fácil de leer, la información básica: qué cubre, qué excluye, cuánto dura, qué harás si el producto falla, cómo se pide el servicio, y cómo aplica la ley de tu estado. Esa claridad no es solo un trámite: le permite a quien te compra comparar tu garantía con la de otro antes de decidirse, así que también es algo que puede diferenciarte.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "591-593",
+        "frase": "Counterpoint will repair any carpet that proves to be defective in materials or workmanship."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Todos los modelos de garantía del libro incluyen qué hará el garante ante la falla; la lista del resumen omite ese apartado, que es el núcleo de la cobertura.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

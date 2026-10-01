@@ -6,9 +6,9 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "El servicio al cliente en la entrega no termina cuando el paquete sale de tus manos. Existen tres momentos distintos que conviene revisar por separado: antes de la compra, es decir cómo el cliente hace su pedido y qué políticas conoce; durante el envío, el plazo, la preparación, la disponibilidad, las opciones, el tiempo y la confiabilidad de la entrega, el pedido completo, el estado en que llega y el seguimiento; y después de la entrega, las devoluciones, la garantía y los reclamos. El momento del envío es el que más se asocia con la logística, pero los otros dos también forman parte del servicio. Mapear estos tres momentos, aunque sea de forma simple, te permite ver dónde tienes un proceso claro y dónde estás improvisando cada vez que surge un problema, y así decidir por dónde empezar a mejorar.",
   "pasos_accionables": [
-    "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
+    "Escribe qué pasa antes de que el cliente compre: qué política escrita ve, qué tan fácil es contactarte y si hay un solo punto de contacto, cómo te organizas, cómo pide, qué topes de tamaño de pedido pones y qué tan flexible eres.",
     "Escribe qué pasa durante el envío: plazo, preparación del pedido, disponibilidad del producto, opciones de entrega, tiempo y confiabilidad de la entrega, pedido completo, estado en que llega y seguimiento del pedido.",
-    "Escribe qué pasa después de entregar: devoluciones, garantía, manejo de reclamos.",
+    "Escribe qué pasa después de entregar: repuestos, tiempo de respuesta cuando te llaman, facturación y su exactitud, rastreo y garantía, devoluciones, quejas y manejo de reclamos.",
     "Marca en cuáles de los tres momentos no tienes un proceso claro y resuelve ese primero."
   ],
   "entregable_esperado": "Un mapa simple de los tres momentos del servicio con los huecos identificados.",
@@ -178,6 +178,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El momento del envío pierde disponibilidad, confiabilidad, pedido completo y estado de llegada, que el libro pone en esa lista; la confirmación no figura en ella.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-007-mapear_servicio_antes_durante_despues-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe qué pasa antes de que el cliente compre: cómo pide, qué le respondes, qué política ve.",
+      "texto_nuevo": "Escribe qué pasa antes de que el cliente compre: qué política escrita ve, qué tan fácil es contactarte y si hay un solo punto de contacto, cómo te organizas, cómo pide, qué topes de tamaño de pedido pones y qué tan flexible eres.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2483",
+        "frase": "single order contact point, organizational structure, method of ordering, order size constraints"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso recorta la lista previa del libro: faltan punto único de contacto, organización, topes de tamaño de pedido y flexibilidad.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-007-mapear_servicio_antes_durante_despues-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe qué pasa después de entregar: devoluciones, garantía, manejo de reclamos.",
+      "texto_nuevo": "Escribe qué pasa después de entregar: repuestos, tiempo de respuesta cuando te llaman, facturación y su exactitud, rastreo y garantía, devoluciones, quejas y manejo de reclamos.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "2491",
+        "frase": "availability of spares, call-out time, invoicing procedures, invoicing accuracy, product tracing/warranty"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso recorta la lista posterior del libro: faltan repuestos, tiempo de respuesta, facturación y su exactitud, rastreo y quejas.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

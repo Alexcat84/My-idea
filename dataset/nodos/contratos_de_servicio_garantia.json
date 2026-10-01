@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ofrecer Contratos de Servicio (Service Contracts) Correctamente",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esto viene de una ley federal de Estados Unidos, la Ley Magnuson Moss de Garantías. Un contrato de servicio es un acuerdo aparte, porque se hace después de la venta o porque cuesta algo además del precio, para dar mantenimiento o reparación más allá de la garantía normal del producto. La sección 106 de esa ley te exige dejar claros los términos y condiciones de ese contrato. Y si haces tú el contrato sobre tu producto, no puedes usarlo para quitarle ni limitarle al comprador las garantías implícitas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+  "resumen_teorico": "Esto viene de una ley federal de Estados Unidos, la Ley Magnuson Moss de Garantías. Un contrato de servicio es un acuerdo aparte, porque se hace después de la venta o porque cuesta algo además del precio, para dar mantenimiento o reparación más allá de la garantía normal del producto. La sección 106 de esa ley exige que quien hace el contrato deje claros sus términos y condiciones; si solo lo vendes, esa obligación no es tuya, salvo que seas la misma empresa que lo hace. Y si haces tú el contrato sobre tu producto, no puedes usarlo para quitarle ni limitarle al comprador las garantías implícitas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
   "pasos_accionables": [
     "Redacta los términos y condiciones del contrato de servicio de forma clara y separada de la garantía base del producto.",
     "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantías implícitas de forma ilegal.",
@@ -185,6 +185,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-005-contratos_de_servicio_garantia-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto viene de una ley federal de Estados Unidos, la Ley Magnuson Moss de Garantías. Un contrato de servicio es un acuerdo aparte, porque se hace después de la venta o porque cuesta algo además del precio, para dar mantenimiento o reparación más allá de la garantía normal del producto. La sección 106 de esa ley te exige dejar claros los términos y condiciones de ese contrato. Y si haces tú el contrato sobre tu producto, no puedes usarlo para quitarle ni limitarle al comprador las garantías implícitas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+      "texto_nuevo": "Esto viene de una ley federal de Estados Unidos, la Ley Magnuson Moss de Garantías. Un contrato de servicio es un acuerdo aparte, porque se hace después de la venta o porque cuesta algo además del precio, para dar mantenimiento o reparación más allá de la garantía normal del producto. La sección 106 de esa ley exige que quien hace el contrato deje claros sus términos y condiciones; si solo lo vendes, esa obligación no es tuya, salvo que seas la misma empresa que lo hace. Y si haces tú el contrato sobre tu producto, no puedes usarlo para quitarle ni limitarle al comprador las garantías implícitas; si solo lo vendes como agente de otra empresa y no das garantía escrita, sí puedes.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "876-878",
+        "frase": "The company that makes the service contract is responsible for ensuring that the terms"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la obligación de divulgar los términos es de quien hace el contrato, no de quien solo lo vende salvo que sean la misma empresa; el resumen se la carga a cualquiera que lo ofrezca.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

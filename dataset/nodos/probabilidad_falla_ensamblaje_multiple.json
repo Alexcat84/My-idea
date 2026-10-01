@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Probabilidad de Falla en Ensamblajes con Múltiples Partes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando un ensamblaje contiene múltiples partes no inspeccionadas, la probabilidad de falla del conjunto se aproxima a la suma de las fracciones defectuosas individuales (p1+p2+...+pm) cuando cada pi es pequeña. A medida que aumenta el número de partes (ej. 300 en una radio, 10,000 en un automóvil), la probabilidad de falla del ensamblaje crece, y el costo de reparación k2 también aumenta, por lo que se requiere que los componentes individuales tengan calidad cercana a cero defectos.",
+  "resumen_teorico": "Cuando un ensamblaje contiene múltiples partes no inspeccionadas, la probabilidad de falla del conjunto se aproxima a la suma de las fracciones defectuosas individuales (p1+p2+...+pm) cuando cada pi es pequeña. A medida que aumenta el número de partes (ej. 300 en una radio, 10,000 en un automóvil), la probabilidad de falla del ensamblaje crece, y el costo de reparación k2 también aumenta, por lo que solo unas pocas partes pueden ir a inspección al 100%, para que el costo de inspección no se dispare, y el resto requiere calidad en cero defectos o cercana.",
   "pasos_accionables": [
     "Listar todas las partes componentes del ensamblaje final y su fracción defectuosa individual (pi).",
     "Calcular la probabilidad de falla del ensamblaje usando la fórmula acumulativa (aproximación por suma de pi si son pequeñas).",
@@ -61,6 +61,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro pide calidad en cero defectos o cerca de cero, no una garantía de cero defectos.; Mismo endurecimiento: 'at or close to zero defective' no es 'garantizado'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-006-probabilidad_falla_ensamblaje_multiple-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un ensamblaje contiene múltiples partes no inspeccionadas, la probabilidad de falla del conjunto se aproxima a la suma de las fracciones defectuosas individuales (p1+p2+...+pm) cuando cada pi es pequeña. A medida que aumenta el número de partes (ej. 300 en una radio, 10,000 en un automóvil), la probabilidad de falla del ensamblaje crece, y el costo de reparación k2 también aumenta, por lo que se requiere que los componentes individuales tengan calidad cercana a cero defectos.",
+      "texto_nuevo": "Cuando un ensamblaje contiene múltiples partes no inspeccionadas, la probabilidad de falla del conjunto se aproxima a la suma de las fracciones defectuosas individuales (p1+p2+...+pm) cuando cada pi es pequeña. A medida que aumenta el número de partes (ej. 300 en una radio, 10,000 en un automóvil), la probabilidad de falla del ensamblaje crece, y el costo de reparación k2 también aumenta, por lo que solo unas pocas partes pueden ir a inspección al 100%, para que el costo de inspección no se dispare, y el resto requiere calidad en cero defectos o cercana.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9657-9663",
+        "frase": "We can tolerate only a few parts in Case 2 (100 percent inspection)"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La conclusión del libro tiene dos mitades: pocas partes pueden ir a inspección total por su costo y el resto debe venir en cero defectos o cerca; el nodo exige lo segundo a todas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

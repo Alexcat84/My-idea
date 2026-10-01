@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Proceso Colaborativo S&OP (Sales and Operations Planning) en 5 Pasos",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discrepancias entre demanda y suministro, y (5) Ajuste y consenso del plan operativo final. Este proceso convierte datos en un plan operativo compartido y revisado continuamente por todos los actores de la cadena.",
+  "resumen_teorico": "Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discrepancias entre demanda y suministro y ajustar los planes hasta conciliarlos, y (5) Puesta en marcha y monitoreo del plan operativo final. Este proceso convierte datos en un plan operativo compartido y revisado continuamente por todos los actores de la cadena.",
   "pasos_accionables": [
     "Establecer un ciclo recurrente (ej. mensual) de planificación de demanda y suministro.",
     "Recolectar pronósticos de ventas y precios de mercado.",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma omisión del paso de crear el plan de suministro.; Se salta el paso del libro que arma el plan de suministro con ritmos de producción o compra y rutas; el nodo simula un plan que nunca se pidió hacer.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-006-sop_colaborativo-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discrepancias entre demanda y suministro, y (5) Ajuste y consenso del plan operativo final. Este proceso convierte datos en un plan operativo compartido y revisado continuamente por todos los actores de la cadena.",
+      "texto_nuevo": "Un proceso simplificado de S&OP guiado por simulaciones, ejecutado en ciclos (ej. cada 30 días): (1) Pronóstico de demanda y precios, (2) Plan de demanda por instalación, (3) Plan de suministro (producción/rutas), (4) Modelado y simulación para detectar discrepancias entre demanda y suministro y ajustar los planes hasta conciliarlos, y (5) Puesta en marcha y monitoreo del plan operativo final. Este proceso convierte datos en un plan operativo compartido y revisado continuamente por todos los actores de la cadena.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4165, 5741",
+        "frase": "In step 5, implement and monitor, supply chain models of the implemented supply chains"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro el ajuste y la conciliación de los planes ocurren dentro del paso 4, y el paso 5 es poner en marcha y monitorear; el nodo pierde ese quinto paso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

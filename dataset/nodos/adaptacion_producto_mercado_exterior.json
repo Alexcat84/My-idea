@@ -9,7 +9,7 @@
     "Investiga las reglas del gobierno del país al que quieres vender, tanto aranceles como otros requisitos",
     "Averigua los gustos culturales, sensoriales y de tamaño corporal de la gente en ese mercado",
     "Revisa si tienes que convertir a sistema métrico o ajustar estándares eléctricos (voltaje, ciclos, fases)",
-    "Adapta tu marca, etiquetas, empaque, colores e idioma según la norma y la cultura local",
+    "Revisa si tu marca, etiquetas, empaque, colores e idioma deben adaptarse a la norma y la cultura local",
     "Calcula cuánto cuesta adaptar el producto contra cuántos ingresos adicionales esperas por hacerlo"
   ],
   "entregable_esperado": "Tu producto adaptado (diseño, etiquetado, empaque) listo para el mercado que elegiste, con el cálculo de costo contra beneficio",
@@ -64,6 +64,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide determinar los ingresos adicionales esperados; el paso da por hecho que vas a ganar más.; Mismo defecto: el libro habla de ingresos esperados, no seguros.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-005-adaptacion_producto_mercado_exterior-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Adapta tu marca, etiquetas, empaque, colores e idioma según la norma y la cultura local",
+      "texto_nuevo": "Revisa si tu marca, etiquetas, empaque, colores e idioma deben adaptarse a la norma y la cultura local",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2567-2581",
+        "frase": "Your U.S. brand name is important to you, but it may be less important"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea marca, colores, idioma y etiquetas como preguntas a evaluar y advierte que la marca propia puede valer más afuera; el paso ordena adaptarlo todo.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

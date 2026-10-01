@@ -23,5 +23,22 @@
   "etiqueta_arbol": "Cuidado con la Falsa Redundancia",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-007-falacia_redundancia_social-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Medir tasas de error antes y después de implementar controles redundantes",
+      "texto_nuevo": "Medir tasas de error antes y después de implementar controles redundantes",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro relata el caso de la sala con más eventos adversos, pero no aconseja medir tasas de error antes y después; índice fuera de pasos_casa.; Mismo defecto: consejo útil que el libro no da y cuyo índice no está en pasos_casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

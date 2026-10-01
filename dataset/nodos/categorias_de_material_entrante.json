@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Clasificar todos los lotes de material entrante según las cuatro categorías definidas",
     "Cuantificar el costo real del material usado en desesperación (retrabajo, desperdicio, riesgo de rechazo)",
-    "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra, quien produce y quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
+    "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra y quien produce, y si hace falta la de quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
     "Evitar mantener inventario, salvo como protección ante un alza de precio o una huelga inminente; si ya tienes material de origen desconocido, la única vía segura es la inspección total",
     "Revisar las especificaciones de compra cuando el problema recurrente sea de origen técnico, no del proveedor"
   ],
@@ -55,6 +55,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con origen desconocido la inspección total es la única vía segura; el paso la presenta como último recurso y pierde esa condición.; El libro aconseja evitar el inventario salvo como protección ante un alza de precio o una huelga inminente; el paso pierde las excepciones.; Mismo defecto que la marca 0: se caen las excepciones de precio y huelga.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-006-categorias_de_material_entrante-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra, quien produce y quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
+      "texto_nuevo": "Antes de decidir sobre un material cuestionable, juntar la mirada de quien compra y quien produce, y si hace falta la de quien puede evaluarlo técnicamente, aunque seas tú quien cumpla varios de esos roles",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1998",
+        "frase": "the plant manager and the buyer, possibly also by an expert from the laboratory"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone al experto técnico solo como posible tercer participante de la reunión; el paso lo vuelve fijo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

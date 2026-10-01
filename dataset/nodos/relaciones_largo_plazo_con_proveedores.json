@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reducción de Proveedores y Relaciones de Largo Plazo",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+  "resumen_teorico": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo, avanzando hacia uno solo, y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
   "pasos_accionables": [
     "Revisar cuántos proveedores tienes hoy para cada artículo clave que compras",
     "Definir criterios de evaluación que incluyan evidencia estadística de calidad, no solo el precio",
@@ -37,6 +37,22 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-barrido-006-relaciones_largo_plazo_con_proveedores-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+      "texto_nuevo": "Comprar basándote únicamente en el precio más bajo, con varios proveedores para el mismo artículo, te genera problemas de calidad e ineficiencia. Conviene reducir el número de proveedores por artículo, avanzando hacia uno solo, y construir relaciones de lealtad y confianza a largo plazo, evaluando evidencia estadística de calidad además del precio.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "526",
+        "frase": "Move toward a single supplier for any one item, on a long-term relationship"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro no pide solo reducir proveedores sino avanzar hacia uno solo por artículo; se cae la meta que orienta el consejo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

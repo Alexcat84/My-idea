@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Captura del Conocimiento de Riesgo",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Cada riesgo que viviste, cada susto que enfrentaste, deja una lección que se evapora si no la guardas. Capturar el conocimiento de riesgo es convertir esa experiencia en algo que tu próximo proyecto pueda usar: qué pasó, qué señal lo anunció, qué respuesta funcionó y cuál no. Sin esto, cada proyecto empieza de cero y repites los mismos golpes; con esto, tu experiencia se acumula y te vuelves más difícil de sorprender. El ciclo es simple: lo que aprendes de un riesgo alimenta cómo enfrentas el siguiente. Para el emprendedor solo, que no tiene una empresa con memoria, este registro es su memoria propia: transforma cada tropiezo en un activo, y hace que el segundo proyecto arranque más sabio que el primero.",
+  "resumen_teorico": "Cada riesgo que viviste, cada susto que enfrentaste, deja una lección que se evapora si no la guardas. Capturar el conocimiento de riesgo es convertir esa experiencia en algo que tu próximo proyecto pueda usar: qué pasó, qué consecuencias tuvo, cómo lo trataste y qué lección te deja. Sin esto, cada proyecto empieza de cero y repites los mismos golpes; con esto, tu experiencia se acumula y te vuelves más difícil de sorprender. El ciclo es simple: lo que aprendes de un riesgo alimenta cómo enfrentas el siguiente. Para el emprendedor solo, que no tiene una empresa con memoria, este registro es su memoria propia: transforma cada tropiezo en un activo, y hace que el segundo proyecto arranque más sabio que el primero.",
   "pasos_accionables": [
     "Al cerrar un riesgo o superar un susto, anota qué pasó y qué señal lo anunció.",
     "Escribe qué respuesta funcionó y cuál no, para no repetir el error.",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Guarda lo Que Aprendiste",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-006-guarda_lo_que_aprendiste_de_cada_golpe-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada riesgo que viviste, cada susto que enfrentaste, deja una lección que se evapora si no la guardas. Capturar el conocimiento de riesgo es convertir esa experiencia en algo que tu próximo proyecto pueda usar: qué pasó, qué señal lo anunció, qué respuesta funcionó y cuál no. Sin esto, cada proyecto empieza de cero y repites los mismos golpes; con esto, tu experiencia se acumula y te vuelves más difícil de sorprender. El ciclo es simple: lo que aprendes de un riesgo alimenta cómo enfrentas el siguiente. Para el emprendedor solo, que no tiene una empresa con memoria, este registro es su memoria propia: transforma cada tropiezo en un activo, y hace que el segundo proyecto arranque más sabio que el primero.",
+      "texto_nuevo": "Cada riesgo que viviste, cada susto que enfrentaste, deja una lección que se evapora si no la guardas. Capturar el conocimiento de riesgo es convertir esa experiencia en algo que tu próximo proyecto pueda usar: qué pasó, qué consecuencias tuvo, cómo lo trataste y qué lección te deja. Sin esto, cada proyecto empieza de cero y repites los mismos golpes; con esto, tu experiencia se acumula y te vuelves más difícil de sorprender. El ciclo es simple: lo que aprendes de un riesgo alimenta cómo enfrentas el siguiente. Para el emprendedor solo, que no tiene una empresa con memoria, este registro es su memoria propia: transforma cada tropiezo en un activo, y hace que el segundo proyecto arranque más sabio que el primero.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "6897-6915",
+        "frase": "Risk event Consequences Treatment Lesson learned"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El registro del libro recoge evento, consecuencias, tratamiento y lección; el nodo pierde las consecuencias y mete una señal previa que el libro no pide.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }
