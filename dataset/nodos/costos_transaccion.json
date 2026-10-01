@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Minimización de Costos de Transacción en Acuerdos",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla ahorra muchas horas de negociación posterior en los documentos definitivos.",
+  "resumen_teorico": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla puede ahorrarte muchas horas de negociación posterior en los documentos definitivos.",
   "pasos_accionables": [
     "Negociar detalladamente la LOI antes de firmarla para reducir ambigüedad futura",
     "Comparar los costos de transacción de la deuda convertible y de una ronda de equity antes de elegir estructura, sabiendo que hoy la diferencia suele ser pequeña",
@@ -41,6 +41,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que hoy casi no hay diferencia de costo entre ambas estructuras y pide considerar los costos de transacción de cada una.; Mismo defecto: el paso supone una brecha de costos que el libro dice que hoy casi no existe.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-033-costos_transaccion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla ahorra muchas horas de negociación posterior en los documentos definitivos.",
+      "texto_nuevo": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla puede ahorrarte muchas horas de negociación posterior en los documentos definitivos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4522",
+        "frase": "what would take two hours to negotiate now could save you dozens of hours"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que negociar ahora podría ahorrar muchas horas después; el resumen lo da por seguro.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

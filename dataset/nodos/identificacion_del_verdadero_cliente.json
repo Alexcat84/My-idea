@@ -6,7 +6,7 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "No siempre quien paga o usa el producto es quien decide sobre su calidad. Ejemplos como los tambores de selenio, las etiquetas de carne o los lentes ópticos ilustran cómo un técnico, gerente intermedio u otro actor de la cadena puede ser el verdadero árbitro de calidad, distinto del usuario final o pagador.",
   "pasos_accionables": [
-    "Mapear toda la cadena de actores que interactúan con el producto antes de llegar al usuario final",
+    "Mapear toda la cadena de actores que interactúan con el producto",
     "Determinar quién tiene poder de rechazo o aceptación en cada etapa",
     "Diseñar especificaciones considerando los criterios de todos los decisores relevantes, no solo del usuario final"
   ],
@@ -37,6 +37,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-002 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "final-e1-barrido-031-identificacion_del_verdadero_cliente-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mapear toda la cadena de actores que interactúan con el producto antes de llegar al usuario final",
+      "texto_nuevo": "Mapear toda la cadena de actores que interactúan con el producto",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3856-3862",
+        "frase": "The customer for a selenium drum for a copying machine is the technician"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pone como verdadero cliente al técnico que repara o mantiene la máquina ya en uso, actor que queda fuera si el mapa se limita a lo previo al usuario final.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

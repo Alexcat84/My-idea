@@ -10,7 +10,7 @@
     "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
     "Presenta la elección 83(b) ante la autoridad fiscal de Estados Unidos dentro de los 30 días posteriores a la entrega de las acciones",
     "Guarda el comprobante de que la enviaste y de que la recibieron",
-    "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa"
+    "Verifica que todos los que recibieron acciones con vesting hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa"
   ],
   "entregable_esperado": "Elecciones 83(b) presentadas y guardadas para ti y para todos los que tienen acciones con vesting",
   "nodos_previos": [
@@ -151,6 +151,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-033-eleccion_83b-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa",
+      "texto_nuevo": "Verifica que todos los que recibieron acciones con vesting hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4700-4702",
+        "frase": "83(b) elections are therefore only applicable to grants of stock that are subject to vesting."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La elección 83(b) solo aplica a acciones sujetas a vesting; el paso la extiende a cualquier accionista.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

@@ -1,0 +1,343 @@
+[
+ {
+  "id": "final-e1-barrido-030-documentacion_exportacion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "documentacion_exportacion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede causarte retrasos, impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+  "texto_nuevo": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede impedir que la mercancía salga, causarte impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3561",
+   "frase": "slight discrepancies or omissions may prevent merchandise from being exported"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que un error puede impedir que la mercancía se exporte (no habla de retrasos); se perdía la consecuencia más grave.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-030-cronograma_proyecto-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cronograma_proyecto",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se elabora cuando toda la información de actividades, recursos y duraciones está lista para consolidar el cronograma final. Se puede representar como diagrama de Gantt o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
+  "texto_nuevo": "Documento que combina la lista de actividades, diagrama de red, requisitos de recursos y estimaciones de duración para determinar fechas de inicio y fin de las actividades del proyecto. Se puede representar como diagrama de Gantt o como gráfico de hitos, que solo marca eventos clave. El diagrama de Gantt incluye los nombres de los recursos asignados a cada actividad, y permiten visualizar la secuencia temporal del proyecto.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "2022",
+   "frase": "combines the information from the Activity List, Network Diagram, Activity Resource Requirements"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo dice que el cronograma combina esos insumos; no fija como norma que toda la información deba estar lista ni habla de un cronograma final.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-030-estimate_at_completion_eac-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "estimate_at_completion_eac",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La Estimación al Completar (EAC) te pronostica cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto.",
+  "texto_nuevo": "La Estimación al Completar (EAC) te pronostica cuánto vas a gastar en total cuando termines el proyecto, según cómo vas con los costos y el tiempo hasta ahora. Hay varias fórmulas según lo que asumas: si crees que tu ritmo de gasto actual (CPI) se va a mantener igual, usas EAC = BAC/CPI; si crees que tanto tu ritmo de gasto como tu ritmo de avance (SPI) van a afectar lo que falta, usas EAC = AC + [(BAC-EV)/(CPI×SPI)]. Además, el TCPI te muestra qué tan eficiente tienes que ser con el trabajo que te queda para no salirte del presupuesto o para terminar dentro del EAC que calculaste.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "5098-5102",
+   "frase": "TCPI = (BAC-EV)/(EAC-AC) to complete the current EAC"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos TCPI, para terminar según el plan y para terminar según el EAC vigente; el resumen pierde el segundo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-030-requirements_documentation-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "requirements_documentation",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Anota con detalle lo que cada persona interesada necesita y conviértelo en requisitos claros y comprobables, agrupados por tipo: negocio, interesados, solución, transición, proyecto y calidad. Esta lista te sirve de base para definir el alcance del proyecto (scope baseline) y para decidir qué priorizar cuando tengas que elegir entre opciones.",
+  "texto_nuevo": "Anota con detalle lo que cada persona interesada necesita y conviértelo en requisitos claros y comprobables, agrupados por tipo: negocio, interesados, solución, transición, proyecto y calidad. Esta lista te sirve de base para definir el alcance del proyecto (scope baseline), para decidir qué priorizar cuando tengas que elegir entre opciones y para manejar lo que esperan las personas interesadas.",
+  "cita": {
+   "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+   "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+   "lineas": "788",
+   "frase": "in making tradeoff decisions among requirements and in managing stakeholder expectations"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la documentación también sirve para manejar las expectativas de los interesados; el resumen perdía ese uso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-030-tres_espacios_innovacion_prototipado-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "tres_espacios_innovacion_prototipado",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recurrir a expertos externos (modelistas, actores, videógrafos) solo cuando la precisión requerida supere las capacidades internas del equipo.",
+  "texto_nuevo": "Recurrir a expertos externos (modelistas, videógrafos, escritores o actores) solo cuando la precisión requerida supere las capacidades internas del equipo.",
+  "cita": {
+   "libro": "Change by Design, Revised and U - Tim Brown",
+   "fichero": "txt/Change by Design, Revised and U - Tim Brown.txt",
+   "lineas": "700",
+   "frase": "model makers, videographers, writers, or actors, as the case may be"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración de expertos externos del libro incluye a los escritores, que el paso omite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-031-identificacion_del_verdadero_cliente-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "identificacion_del_verdadero_cliente",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Mapear toda la cadena de actores que interactúan con el producto antes de llegar al usuario final",
+  "texto_nuevo": "Mapear toda la cadena de actores que interactúan con el producto",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3856-3862",
+   "frase": "The customer for a selenium drum for a copying machine is the technician"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pone como verdadero cliente al técnico que repara o mantiene la máquina ya en uso, actor que queda fuera si el mapa se limita a lo previo al usuario final.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-031-mejora_de_proceso_como_via_a_productividad-entregable_esperado",
+  "fecha": "2026-09-30",
+  "node_id": "mejora_de_proceso_como_via_a_productividad",
+  "campo": "entregable_esperado",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos sin inversión adicional en personal o equipo.",
+  "texto_nuevo": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10881-10889",
+   "frase": "with the same people, same machines, same plant, same materials"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro reporta producir más con la misma gente, máquinas y planta solo en uno de los casos; el entregable lo exige como resultado de toda mejora.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-032-obtencion_compromiso-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "obtencion_compromiso",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando vendes algo grande, son relativamente pocas las ocasiones en que consigues el compromiso final con un pedido directo. Lo normal es lograr un avance (Advance) hacia la decisión, como conseguir una demostración o pasar al siguiente nivel de decisión. La investigación de Huthwaite muestra que las técnicas de cierre clásicas (cierre asumido, alternativo, de última oportunidad, etc.) no aumentan tu éxito en ventas grandes y hasta pueden perjudicarlo, al contrario de lo que suele creerse sobre que 'cerrar más' siempre es mejor.",
+  "texto_nuevo": "Cuando vendes algo grande, son relativamente pocas las ocasiones en que consigues el compromiso final con un pedido directo. Lo normal es lograr un avance (Advance) hacia la decisión, como conseguir una demostración o pasar al siguiente nivel de decisión. Las técnicas de cierre clásicas (cierre asumido, alternativo, de última oportunidad, etc.) no aumentan tu éxito en ventas grandes y hasta pueden perjudicarlo, al contrario de lo que suele creerse sobre que 'cerrar más' siempre es mejor.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "687-695",
+   "frase": "traditional closing techniques are ineffective or have a negative effect when"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El prefijo nombra la procedencia, prohibido por la regla dura; el contenido que sigue sí está en el libro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-032-prevencion_objeciones_vs_manejo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "prevencion_objeciones_vs_manejo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Contrario a la creencia de que más objeciones significan más interés del cliente, los vendedores más exitosos reciben menos objeciones, no más, porque han aprendido a prevenirlas en vez de manejarlas. Las objeciones suelen ser creadas por el propio vendedor al ofrecer soluciones o ventajas antes de haber construido suficiente valor o necesidad explícita en el cliente. Entrenar en manejo de objeciones trata el síntoma, no la causa; la cura real es prevenir la objeción construyendo valor mediante preguntas de implicación y necesidad beneficio antes de presentar la solución. Aun así, siempre habrá objeciones genuinas, cuando tu producto no cubre una necesidad o un competidor es claramente superior, y ahí el manejo sigue sirviendo. Estudios muestran que entrenar en prevención redujo las objeciones en un 55 por ciento, y que a mayor número de objeciones en una llamada, menor probabilidad de éxito. Esto aplica sobre todo en ventas de tamaño mediano o grande.",
+  "texto_nuevo": "Contrario a la creencia de que más objeciones significan más interés del cliente, los vendedores más exitosos reciben menos objeciones, no más, porque han aprendido a prevenirlas en vez de manejarlas. Las objeciones suelen ser creadas por el propio vendedor al ofrecer soluciones o ventajas antes de haber construido suficiente valor o necesidad explícita en el cliente. Entrenar en manejo de objeciones trata el síntoma, no la causa; la cura real es prevenir la objeción construyendo valor mediante preguntas de implicación y necesidad beneficio antes de presentar la solución. Aun así, siempre habrá objeciones genuinas, cuando tu producto no cubre una necesidad o un competidor es claramente superior, y ahí el manejo sigue sirviendo. Entrenar en prevención puede reducir las objeciones a menos de la mitad, y a mayor número de objeciones en una llamada, menor probabilidad de éxito. Esto aplica sobre todo en ventas de tamaño mediano o grande.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "2365-2373",
+   "frase": "objections can be cut by more than half by using the SPIN behaviors"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El 55 por ciento es de un solo grupo de ocho vendedores con objeciones inusualmente altas; lo general en el libro es reducirlas a menos de la mitad, y el prefijo de procedencia está prohibido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-032-sesgo_optimismo_fundador-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "sesgo_optimismo_fundador",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: estudios muestran que el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
+  "texto_nuevo": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "614",
+   "frase": "95% of the respondents believed that their own startups had a better than 50% chance"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro cita una sola encuesta, no varios estudios, y el prefijo de procedencia está prohibido; la cifra sí está.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-032-rotacion_equipo_fundador-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "rotacion_equipo_fundador",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Revisar acuerdos legales previos (no competencia, PI) antes de cofundar con excompañeros",
+  "texto_nuevo": "Revisar acuerdos legales previos (no competencia, no solicitación, PI) antes de cofundar con excompañeros",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "1193",
+   "frase": "a noncompete or nonsolicitation agreement with the prior employer"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye el acuerdo de no solicitación, que el paso omite.; Mismo defecto: falta la no solicitación entre los tres acuerdos que pueden estorbar.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-033-proceso_venta_b2b-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "proceso_venta_b2b",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Determinar el punto de entrada correcto: nivel medio antes de subir a nivel alto",
+  "texto_nuevo": "Determinar el punto de entrada correcto: reunirse primero a solas con personas de nivel medio y llegar a nivel alto lo antes posible, sin precipitarse",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "23356",
+   "frase": "Get “to the top” as quickly as you can but not too quickly."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide llegar arriba lo antes posible sin precipitarse, empezando a solas con mandos medios; el paso pierde la prisa por subir.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-033-scorecard_descubrimiento_cliente-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "scorecard_descubrimiento_cliente",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
+  "texto_nuevo": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, cuánto impacto tendría el producto en su negocio, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "20304",
+   "frase": "how important or transformative will the adoption of this technology be on the customer?"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista pierde uno de los seis criterios del libro: el impacto de adoptar el producto en el negocio del cliente.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-033-seleccion_canal_distribucion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "seleccion_canal_distribucion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Elegir el canal de ventas adecuado (físico, web/mobile o híbrido) es crítico y debe alinearse con el precio del producto, los hábitos de compra existentes y los costos asociados. Un error común de las startups es intentar lanzar por múltiples canales simultáneamente antes de validar cuál funciona mejor.",
+  "texto_nuevo": "Elegir el canal de ventas adecuado (físico, web/mobile o híbrido) es crítico: debe alinearse con los hábitos de compra, con si refuerza el proceso de venta y a qué costo, y con el precio y la complejidad del producto. Un error común es usar varios canales a la vez antes de completar la validación de clientes, salvo un lanzamiento físico con apoyo web simultáneo.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "5996-6004",
+   "frase": "Until the company completes customer validation, it should pick a sales channel"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro fija el foco en un canal hasta completar la validación de clientes y exceptúa el lanzamiento físico con apoyo web simultáneo; el resumen cambia el límite y pierde la excepción.; La lista de criterios pierde si el canal refuerza el proceso de venta y la complejidad del producto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-033-eleccion_83b-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "eleccion_83b",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa",
+  "texto_nuevo": "Verifica que todos los que recibieron acciones con vesting hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4700-4702",
+   "frase": "83(b) elections are therefore only applicable to grants of stock that are subject to vesting."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La elección 83(b) solo aplica a acciones sujetas a vesting; el paso la extiende a cualquier accionista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-033-costos_transaccion-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "costos_transaccion",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla ahorra muchas horas de negociación posterior en los documentos definitivos.",
+  "texto_nuevo": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla puede ahorrarte muchas horas de negociación posterior en los documentos definitivos.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4522",
+   "frase": "what would take two hours to negotiate now could save you dozens of hours"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que negociar ahora podría ahorrar muchas horas después; el resumen lo da por seguro.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-030-decision_estrategica_exportar-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "decision_estrategica_exportar",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Busca datos de rentabilidad entre empresas de tu sector que exportan y las que no, para comparar",
+  "texto_nuevo": "Busca datos de rentabilidad entre empresas de tu sector que exportan y las que no, para comparar",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro da una cifra general de rentabilidad, pero no aconseja buscar ni comparar datos del propio sector; consejo práctico de la casa sin afirmar hechos."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-032-rotacion_equipo_fundador-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "rotacion_equipo_fundador",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Documentar el impacto en equity y roles cuando ocurre una salida",
+  "texto_nuevo": "Documentar el impacto en equity y roles cuando ocurre una salida",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El pasaje sobre rotación no aconseja documentar el efecto de una salida en equity y roles; es consejo de la casa.; Mismo paso: consejo práctico sin respaldo en el pasaje y fuera de pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-032-riesgo_contratar_amigos_familia-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "riesgo_contratar_amigos_familia",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Establecer criterios objetivos de desempeño antes de contratar a un conocido.",
+  "texto_nuevo": "Establecer criterios objetivos de desempeño antes de contratar a un conocido.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe el riesgo de contratar conocidos pero no aconseja fijar criterios de desempeño antes; es consejo de la casa.; Mismo paso: consejo práctico sin respaldo en el pasaje y fuera de pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-032-riesgo_contratar_amigos_familia-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "riesgo_contratar_amigos_familia",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Considerar la opinión de un tercero neutral antes de tomar la decisión de contratación.",
+  "texto_nuevo": "Considerar la opinión de un tercero neutral antes de tomar la decisión de contratación.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro no aconseja consultar a un tercero neutral para decidir una contratación; es consejo de la casa.; El tercero imparcial del libro media desacuerdos entre socios, no decisiones de contratación."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ }
+]

@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Tu exceso de optimismo y de confianza como fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: estudios muestran que el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
+  "resumen_teorico": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
   "pasos_accionables": [
     "Busca activamente una evaluación externa objetiva (un mentor, un asesor, un inversionista) que contraste con tu propio optimismo",
     "Aplica la regla de descontar tus proyecciones: divide tus proyecciones de ingresos entre 10 y súmale un año al tiempo que estimaste para entregar",
@@ -117,6 +117,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-032-sesgo_optimismo_fundador-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: estudios muestran que el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
+      "texto_nuevo": "Tiendes a ser sistemáticamente sobreconfiado sobre las probabilidades de éxito de tu propio proyecto, muchas veces de forma poco realista: el 95% de los emprendedores cree tener más de 50% de probabilidad de éxito, y un tercio cree tener el 100% de certeza. Este optimismo es un arma de doble filo: puede impulsarte a innovar y actuar rápido, pero también tiende a llevarte a armar planes poco realistas, a sobrecomprometerte con tu idea inicial, y a subestimar a la competencia y los recursos que necesitas. Si eres un fundador serial con alto optimismo, en promedio muestras peor desempeño en crecimiento de ingresos y de empleo que quienes tienen menos optimismo.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "614",
+        "frase": "95% of the respondents believed that their own startups had a better than 50% chance"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro cita una sola encuesta, no varios estudios, y el prefijo de procedencia está prohibido; la cifra sí está.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

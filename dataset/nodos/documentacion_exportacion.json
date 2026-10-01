@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Documentación de Exportación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede causarte retrasos, impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+  "resumen_teorico": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede impedir que la mercancía salga, causarte impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
     "Determina qué documentos necesitas según el destino y el tipo de producto",
     "Prepara la factura pro forma para cotizar al comprador antes del envío",
@@ -165,6 +165,22 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide considerar seriamente que el agente maneje la documentación y aclara que no es obligatorio usarlo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-030-documentacion_exportacion-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede causarte retrasos, impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "texto_nuevo": "Cuando exportas necesitas varios documentos según el destino y el tipo de mercancía: factura pro forma, guía aérea, conocimiento de embarque, factura comercial, factura consular, certificado de libre venta, certificado de conformidad, certificado de origen (incluido NAFTA), certificado de inspección, recibo de muelle o almacén, declaración de control de destino, declaración de exportación del embarcador (SED), licencia de exportación, lista de empaque y certificado de seguro. La factura pro forma te sirve para cotizar al comprador antes de enviar, con los bienes, el valor y las especificaciones. La precisión es crítica: un error puede impedir que la mercancía salga, causarte impago o que te confisquen la mercancía. Esto refleja la normativa de Estados Unidos y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu mercado antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3561",
+        "frase": "slight discrepancies or omissions may prevent merchandise from being exported"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que un error puede impedir que la mercancía se exporte (no habla de retrasos); se perdía la consecuencia más grave.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

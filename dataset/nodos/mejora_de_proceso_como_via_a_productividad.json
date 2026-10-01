@@ -12,7 +12,7 @@
     "Medir el impacto en productividad, reprocesos y rentabilidad tras la mejora",
     "Difundir los resultados como evidencia interna de que calidad y productividad no son objetivos opuestos"
   ],
-  "entregable_esperado": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos sin inversión adicional en personal o equipo.",
+  "entregable_esperado": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos.",
   "nodos_previos": [
     "educacion_estadistica_para_la_calidad",
     "circulos_de_calidad_qc_circles"
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Lo de las mismas personas, máquinas, planta y materiales es solo del caso de Tanabe; el nodo lo extiende a los tres.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-031-mejora_de_proceso_como_via_a_productividad-entregable_esperado",
+      "fecha": "2026-09-30",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos sin inversión adicional en personal o equipo.",
+      "texto_nuevo": "Un caso documentado de mejora de proceso con métricas de antes/después que demuestren ganancia en productividad y reducción de costos.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10881-10889",
+        "frase": "with the same people, same machines, same plant, same materials"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro reporta producir más con la misma gente, máquinas y planta solo en uno de los casos; el entregable lo exige como resultado de toda mejora.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

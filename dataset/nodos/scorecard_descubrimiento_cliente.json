@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Scorecard de Descubrimiento de Clientes",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
+  "resumen_teorico": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, cuánto impacto tendría el producto en su negocio, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
   "pasos_accionables": [
     "Definir las dimensiones de puntuación relevantes al producto (excitación, urgencia, impacto, workaround, ventana de compra, decisor)",
     "Puntuar cada cliente entrevistado en escala 1-3 por dimensión, comprobando primero que el sistema de puntuación es preciso antes de aplicarlo a todo el conjunto",
@@ -69,6 +69,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo control perdido.; Se cae el control del libro: discutir si el sistema es preciso antes de puntuar a todo el conjunto.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-033-scorecard_descubrimiento_cliente-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
+      "texto_nuevo": "Es una tabla que armas para comparar a los clientes que entrevistaste, dándole un puntaje a cada respuesta según qué tan interesados están, qué tan urgente es su problema, cuánto impacto tendría el producto en su negocio, si ya usan una solución casera, si comprarían en los próximos meses y si hablaste con quien realmente decide la compra. Con esos puntajes puedes ver quiénes son clientes con entusiasmo real y no solo curiosidad.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "20304",
+        "frase": "how important or transformative will the adoption of this technology be on the customer?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista pierde uno de los seis criterios del libro: el impacto de adoptar el producto en el negocio del cliente.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
