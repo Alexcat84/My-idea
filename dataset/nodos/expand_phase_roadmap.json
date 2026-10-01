@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Fase Expand y Sustain del Roadmap de Transformación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cuarta y quinta fase del roadmap. La fase Expand implica desplegar el plan de mejora a través de toda la organización, unidad por unidad, proceso que puede tomar de 3 a 5 años dependiendo del tamaño organizacional. La fase Sustain implica que la organización tiene una operación totalmente integrada, con metas de mejora alineadas a la estrategia, procesos bien gestionados con dueños asignados, y sistemas de compensación alineados a los cambios. Concluye con breakthroughs en cultura y sostenibilidad ágil.",
+  "resumen_teorico": "Cuarta y quinta fase del roadmap. La fase Expand implica desplegar el plan de mejora a través de toda la organización, unidad por unidad, proceso que puede tomar de 3 a 5 años dependiendo del tamaño organizacional. La fase Sustain implica que la organización tiene una operación totalmente integrada, con metas de mejora alineadas a la estrategia, procesos bien gestionados con dueños asignados, evaluaciones de desempeño y compensación alineadas a los cambios, y revisiones y auditorías regulares del proceso de cambio por parte de la dirección. Concluye con breakthroughs en cultura y sostenibilidad ágil.",
   "pasos_accionables": [
     "Expandir la implementación del plan de mejora unidad por unidad",
     "Alinear metas de mejora y Six Sigma con la estrategia organizacional",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Expande y Sostén tu Transformación",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-001-expand_phase_roadmap-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuarta y quinta fase del roadmap. La fase Expand implica desplegar el plan de mejora a través de toda la organización, unidad por unidad, proceso que puede tomar de 3 a 5 años dependiendo del tamaño organizacional. La fase Sustain implica que la organización tiene una operación totalmente integrada, con metas de mejora alineadas a la estrategia, procesos bien gestionados con dueños asignados, y sistemas de compensación alineados a los cambios. Concluye con breakthroughs en cultura y sostenibilidad ágil.",
+      "texto_nuevo": "Cuarta y quinta fase del roadmap. La fase Expand implica desplegar el plan de mejora a través de toda la organización, unidad por unidad, proceso que puede tomar de 3 a 5 años dependiendo del tamaño organizacional. La fase Sustain implica que la organización tiene una operación totalmente integrada, con metas de mejora alineadas a la estrategia, procesos bien gestionados con dueños asignados, evaluaciones de desempeño y compensación alineadas a los cambios, y revisiones y auditorías regulares del proceso de cambio por parte de la dirección. Concluye con breakthroughs en cultura y sostenibilidad ágil.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2279",
+        "frase": "The executives and business unit heads conduct regular reviews and audits of the change process."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La descripción de la fase Sustain pierde las evaluaciones de desempeño y las revisiones y auditorías regulares del proceso de cambio que el libro le atribuye.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

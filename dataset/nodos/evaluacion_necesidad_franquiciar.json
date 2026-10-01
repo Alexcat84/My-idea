@@ -4,14 +4,14 @@
   "dominio": "franquicias",
   "titulo_concepto": "Evaluación de la Necesidad de Franquiciar",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Antes de franquiciar, evalúa si puedes alcanzar tus metas de crecimiento con tu estrategia actual de expansión propia y si tienes el capital y la capacidad de gestión necesarios. Si no puedes, decide entre extender el plazo, reducir metas o cambiar de estrategia. Franquiciar significa entrar en un nuevo negocio, el de franquiciar: una alternativa a la deuda y el capital de terceros que usa el dinero y la motivación de franquiciados para crecer rápido, pero no es solución para un negocio débil, y tu éxito dependerá del éxito de ellos. Antes de avanzar, confirma que tu negocio es franquiciable: prototipo probado, diferenciable, replicable por alguien de competencia promedio en menos de tres meses, con ROI adecuado tras regalías y capacidad de dar soporte a largo plazo. Sopesa ventajas y desventajas frente a tus objetivos.",
+  "resumen_teorico": "Antes de franquiciar, evalúa si puedes alcanzar tus metas de crecimiento con tu estrategia actual de expansión propia y si tienes el capital y la capacidad de gestión necesarios, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas. Si no puedes, decide entre extender el plazo, reducir metas o cambiar de estrategia. Franquiciar significa entrar en un nuevo negocio, el de franquiciar: una alternativa a la deuda y el capital de terceros que usa el dinero y la motivación de franquiciados para crecer rápido, pero no es solución para un negocio débil, y tu éxito dependerá del éxito de ellos. Antes de avanzar, confirma que tu negocio es franquiciable: prototipo probado, diferenciable, replicable por alguien de competencia promedio en menos de tres meses, con ROI adecuado tras regalías y capacidad de dar soporte a largo plazo. Sopesa ventajas y desventajas frente a tus objetivos.",
   "pasos_accionables": [
     "Define tus metas de crecimiento personales y del negocio",
-    "Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia",
+    "Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia",
     "Confirma que tu negocio tiene un prototipo probado, rentable y diferenciable frente a la competencia",
     "Verifica que tus procesos pueden documentarse y enseñarse a alguien de competencia promedio en menos de tres meses",
     "Calcula el ROI que obtendría un franquiciado tras deducir regalías y confirma que tienes recursos para dar soporte a largo plazo",
-    "Compara las ventajas de franquiciar (capital sin deuda, expansión rápida, dueños motivados) contra sus desventajas antes de decidir"
+    "Compara las ventajas de franquiciar (capital sin deuda, expansión rápida, dueños motivados, menor riesgo) contra sus desventajas antes de decidir"
   ],
   "entregable_esperado": "Documento de autoevaluación que determine si necesitas franquiciar, si tu negocio es franquiciable, y que compare sus ventajas y desventajas frente a otras formas de expansión.",
   "nodos_previos": [
@@ -131,6 +131,56 @@
         "motivo": "Referencia de un nodo vivo a leverage_una_sola_franquicia, deprecado; su superviviente es principio_apalancamiento_numero_magico."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "final-e1-barrido-001-evaluacion_necesidad_franquiciar-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de franquiciar, evalúa si puedes alcanzar tus metas de crecimiento con tu estrategia actual de expansión propia y si tienes el capital y la capacidad de gestión necesarios. Si no puedes, decide entre extender el plazo, reducir metas o cambiar de estrategia. Franquiciar significa entrar en un nuevo negocio, el de franquiciar: una alternativa a la deuda y el capital de terceros que usa el dinero y la motivación de franquiciados para crecer rápido, pero no es solución para un negocio débil, y tu éxito dependerá del éxito de ellos. Antes de avanzar, confirma que tu negocio es franquiciable: prototipo probado, diferenciable, replicable por alguien de competencia promedio en menos de tres meses, con ROI adecuado tras regalías y capacidad de dar soporte a largo plazo. Sopesa ventajas y desventajas frente a tus objetivos.",
+      "texto_nuevo": "Antes de franquiciar, evalúa si puedes alcanzar tus metas de crecimiento con tu estrategia actual de expansión propia y si tienes el capital y la capacidad de gestión necesarios, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas. Si no puedes, decide entre extender el plazo, reducir metas o cambiar de estrategia. Franquiciar significa entrar en un nuevo negocio, el de franquiciar: una alternativa a la deuda y el capital de terceros que usa el dinero y la motivación de franquiciados para crecer rápido, pero no es solución para un negocio débil, y tu éxito dependerá del éxito de ellos. Antes de avanzar, confirma que tu negocio es franquiciable: prototipo probado, diferenciable, replicable por alguien de competencia promedio en menos de tres meses, con ROI adecuado tras regalías y capacidad de dar soporte a largo plazo. Sopesa ventajas y desventajas frente a tus objetivos.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1301",
+        "frase": "ask yourself if you can realistically raise the capital needed without giving up more"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Antes de las tres alternativas el libro pide ver si puedes conseguir el capital de forma realista sin ceder más de lo que aceptas; el resumen omite esa opción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-001-evaluacion_necesidad_franquiciar-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia",
+      "texto_nuevo": "Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1301",
+        "frase": "ask yourself if you can realistically raise the capital needed without giving up more"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso omite la opción intermedia del libro: ver si puedes conseguir el capital sin ceder más de lo que aceptas antes de pasar a las alternativas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-001-evaluacion_necesidad_franquiciar-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compara las ventajas de franquiciar (capital sin deuda, expansión rápida, dueños motivados) contra sus desventajas antes de decidir",
+      "texto_nuevo": "Compara las ventajas de franquiciar (capital sin deuda, expansión rápida, dueños motivados, menor riesgo) contra sus desventajas antes de decidir",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "249",
+        "frase": "capital, speed of growth, motivated management, and risk reduction"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro nombra cuatro ventajas principales y el paso pierde la reducción del riesgo.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

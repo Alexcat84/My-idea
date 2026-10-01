@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Acuerdos para vender junto con los inversionistas o arrastrar a los minoritarios en una venta (Co-Sale y Drag-Along)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los demás accionistas, incluidos tú y los otros fundadores, a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
+  "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, en su primera variante obliga a los demás accionistas, incluidos tú y los otros fundadores, a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. En la otra variante, si un fundador se va, sus acciones votan en la misma proporción que las demás.",
   "pasos_accionables": [
     "Acepta que la cláusula de co-venta va a estar ahí, porque es prácticamente estándar en todo financiamiento de capital de riesgo",
     "Negocia un piso mínimo de acciones que puedas vender sin necesidad de ofrecer co-venta a los inversionistas",
@@ -132,6 +132,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 5,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-004-co_sale_drag_along_agreements-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los demás accionistas, incluidos tú y los otros fundadores, a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
+      "texto_nuevo": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, en su primera variante obliga a los demás accionistas, incluidos tú y los otros fundadores, a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. En la otra variante, si un fundador se va, sus acciones votan en la misma proporción que las demás.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1527-1543",
+        "frase": "More recently, a second flavor of drag-along has come to exist"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta dos variantes del arrastre y prefiere la segunda (el fundador que se va vota en proporción al resto); el resumen da solo la primera como si fuera la única.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

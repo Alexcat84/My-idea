@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Conversión de Deuda en caso de Venta de la Empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Establece qué sucede con la deuda convertible si la empresa es adquirida antes de una ronda de equity formal. Existen tres escenarios típicos: devolución del principal más interés, devolución con un múltiplo adicional, o conversión en acciones de la empresa adquirente sujeta a un cap. Es crítico documentar esto para evitar conflictos en una adquisición.",
+  "resumen_teorico": "Establece qué sucede con la deuda convertible si la empresa es adquirida antes de una ronda de equity formal. Existen tres escenarios típicos: devolución del principal más interés, devolución con un múltiplo adicional, o, si la venta se paga en acciones, conversión en acciones de la empresa adquirente sujeta a un cap. Es crítico documentar esto para evitar conflictos en una adquisición.",
   "pasos_accionables": [
     "Definir explícitamente en el contrato qué ocurre con la deuda en caso de una venta antes de la conversión.",
     "Negociar si se pagará solo principal + interés, o un múltiplo adicional (usualmente 2x-3x).",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Define la Conversión al Vender",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-004-conversion_venta_empresa-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establece qué sucede con la deuda convertible si la empresa es adquirida antes de una ronda de equity formal. Existen tres escenarios típicos: devolución del principal más interés, devolución con un múltiplo adicional, o conversión en acciones de la empresa adquirente sujeta a un cap. Es crítico documentar esto para evitar conflictos en una adquisición.",
+      "texto_nuevo": "Establece qué sucede con la deuda convertible si la empresa es adquirida antes de una ronda de equity formal. Existen tres escenarios típicos: devolución del principal más interés, devolución con un múltiplo adicional, o, si la venta se paga en acciones, conversión en acciones de la empresa adquirente sujeta a un cap. Es crítico documentar esto para evitar conflictos en una adquisición.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2295",
+        "frase": "converts into stock of the acquiring company (if it’s a stock deal)"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita la conversión en acciones del adquirente al caso en que la venta se paga en acciones; si no, aplica uno de los otros escenarios.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

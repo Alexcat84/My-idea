@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Contactar a la oficina local de U.S. Commercial Service para coordinar con la embajada del país destino",
     "Revisar la Country Commercial Guide del país a visitar",
-    "Compartir con anticipación información de la empresa y objetivos del viaje",
+    "Compartir con anticipación información de la empresa, su experiencia internacional y los objetivos del viaje",
     "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal"
   ],
   "entregable_esperado": "Contacto establecido con la embajada/consulado y briefing programado antes del viaje",
@@ -72,6 +72,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no ofrece apoyo de la embajada en disputas comerciales; la ayuda con cobros la da el U.S. Commercial Service, con banco y asesor legal, si la negociación falla.; La ayuda con problemas de pago se busca, según el libro, si la negociación falla y el monto es significativo; el paso pierde ambas condiciones.; Mismo defecto: las disputas comerciales en general no tienen respaldo en el libro.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-001-asistencia_embajadas_consulados_comerciales-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Compartir con anticipación información de la empresa y objetivos del viaje",
+      "texto_nuevo": "Compartir con anticipación información de la empresa, su experiencia internacional y los objetivos del viaje",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4551",
+        "frase": "a description of your company and the extent of your international experience will be helpful"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide dar a los funcionarios la descripción de la empresa y el alcance de su experiencia internacional; el paso deja fuera la experiencia.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

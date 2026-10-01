@@ -9,7 +9,7 @@
     "Mapea toda tu cadena de suministro e identifica a los proveedores críticos",
     "Haz auditorías periódicas de cumplimiento ambiental a tus proveedores",
     "Fija estándares de cumplimiento comunes para toda tu cadena",
-    "Coordínate con otros negocios de tu sector cuando compartan los mismos proveedores"
+    "Coordínate con otros negocios de tu sector cuando por tu cuenta no tengas peso para que tus proveedores cambien"
   ],
   "entregable_esperado": "Un programa propio de auditoría a proveedores, con los estándares de cumplimiento documentados por escrito",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Vigila Toda Tu Cadena",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-003-seguimiento_cumplimiento_cadena_suministro-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Coordínate con otros negocios de tu sector cuando compartan los mismos proveedores",
+      "texto_nuevo": "Coordínate con otros negocios de tu sector cuando por tu cuenta no tengas peso para que tus proveedores cambien",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4096",
+        "frase": "If your company has little market power over suppliers, a collaborative effort may"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro recomienda la colaboración sectorial cuando la empresa sola no logra que sus proveedores cambien por falta de peso; el paso cambia esa condición.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

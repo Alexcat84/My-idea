@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Recopilar datos de todas las fuentes de problemas o costos de mala calidad",
     "Construir un diagrama de Pareto para identificar las causas de mayor impacto",
-    "Priorizar los proyectos que atacan las causas 'vitales pocas' antes que los 'útiles muchos'"
+    "Priorizar los proyectos que atacan las causas 'vitales pocas'"
   ],
   "entregable_esperado": "Diagrama de Pareto con las causas priorizadas y su impacto relativo",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Prioriza con el Principio Pareto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-001-principio_pareto-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Priorizar los proyectos que atacan las causas 'vitales pocas' antes que los 'útiles muchos'",
+      "texto_nuevo": "Priorizar los proyectos que atacan las causas 'vitales pocas'",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6704-6710",
+        "frase": "The vital few and useful many projects can be carried out simultaneously."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro da máxima prioridad a los pocos vitales pero dice que ambos tipos pueden avanzar a la vez con personas distintas; el 'antes que' sugiere posponer los muchos útiles.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

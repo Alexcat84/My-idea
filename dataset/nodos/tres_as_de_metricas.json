@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Las tres cualidades de una métrica útil (accionable, accesible, auditable)",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Antes de confiar en un número, pregúntate si cumple tres condiciones. Accionable: te muestra una relación clara de causa y efecto que puedes repetir para lograr el mismo resultado otra vez. Accesible: el reporte es simple, se entiende de un vistazo y usa unidades que representan personas reales, no datos abstractos, y cualquiera que trabaje contigo puede verlo. Auditable: los datos son creíbles y puedes comprobarlos tú mismo hablando con clientes reales, así nadie duda de un resultado solo porque contradice lo que creías.",
+  "resumen_teorico": "Antes de confiar en un número, pregúntate si cumple tres condiciones. Accionable: te muestra una relación clara de causa y efecto que puedes repetir para lograr el mismo resultado otra vez. Accesible: el reporte es simple, se entiende de un vistazo y usa unidades que representan personas reales, no datos abstractos, y cualquiera que trabaje contigo puede verlo. Auditable: los datos son creíbles y puedes comprobarlos tú mismo hablando con clientes reales, así puedes responder cuando alguien duda de un resultado porque contradice lo que creía.",
   "pasos_accionables": [
     "Revisa cada métrica que uses hoy y pregúntate si muestra una causa y un efecto claros",
     "Simplifica tus reportes usando unidades centradas en personas, no en datos abstractos",
@@ -30,5 +30,23 @@
   "etiqueta_arbol": "Mide con Métricas Realmente Útiles",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-004-tres_as_de_metricas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de confiar en un número, pregúntate si cumple tres condiciones. Accionable: te muestra una relación clara de causa y efecto que puedes repetir para lograr el mismo resultado otra vez. Accesible: el reporte es simple, se entiende de un vistazo y usa unidades que representan personas reales, no datos abstractos, y cualquiera que trabaje contigo puede verlo. Auditable: los datos son creíbles y puedes comprobarlos tú mismo hablando con clientes reales, así nadie duda de un resultado solo porque contradice lo que creías.",
+      "texto_nuevo": "Antes de confiar en un número, pregúntate si cumple tres condiciones. Accionable: te muestra una relación clara de causa y efecto que puedes repetir para lograr el mismo resultado otra vez. Accesible: el reporte es simple, se entiende de un vistazo y usa unidades que representan personas reales, no datos abstractos, y cualquiera que trabaje contigo puede verlo. Auditable: los datos son creíbles y puedes comprobarlos tú mismo hablando con clientes reales, así puedes responder cuando alguien duda de un resultado porque contradice lo que creía.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1629-1635",
+        "frase": "most data reporting systems are not designed to answer them successfully"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los cuestionamientos a los datos son frecuentes y que el sistema debe poder responderlos; no promete que nadie dudará.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

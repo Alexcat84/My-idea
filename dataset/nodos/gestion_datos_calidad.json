@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Que hacer cuando crees que no tienes datos para medir la calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es común pensar que no tienes datos para empezar a medir la calidad de tu negocio. Pero a menudo existen más datos sin explotar guardados en tus sistemas de los que crees. Revísalos antes de asumir que no hay nada. Si de verdad no existen o no son confiables, empieza a recolectarlos desde cero, y explica a las personas con las que trabajas por qué lo haces, para evitar resistencia al cambio.",
+  "resumen_teorico": "Es común pensar que no tienes datos para empezar a medir la calidad de tu negocio. Pero a menudo existen más datos sin explotar guardados en tus sistemas de los que crees. Revísalos antes de asumir que no hay nada. Si de verdad no existen o no son confiables, antes de empezar a recolectarlos desde cero explica a las personas con las que trabajas, y a tus clientes si les afecta, por qué lo vas a hacer, para evitar resistencia al cambio.",
   "pasos_accionables": [
     "Pregunta a quien maneja tus sistemas si ya existen bases de datos que puedas usar",
     "Revisa si esos datos son confiables y realmente te sirven",
@@ -99,6 +99,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide preparar el cambio antes de recolectar, incluye a los clientes y advierte que saltarse el paso puede condenar el programa.; Mismo defecto: se pierden el 'antes', los clientes y la advertencia.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-001-gestion_datos_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es común pensar que no tienes datos para empezar a medir la calidad de tu negocio. Pero a menudo existen más datos sin explotar guardados en tus sistemas de los que crees. Revísalos antes de asumir que no hay nada. Si de verdad no existen o no son confiables, empieza a recolectarlos desde cero, y explica a las personas con las que trabajas por qué lo haces, para evitar resistencia al cambio.",
+      "texto_nuevo": "Es común pensar que no tienes datos para empezar a medir la calidad de tu negocio. Pero a menudo existen más datos sin explotar guardados en tus sistemas de los que crees. Revísalos antes de asumir que no hay nada. Si de verdad no existen o no son confiables, antes de empezar a recolectarlos desde cero explica a las personas con las que trabajas, y a tus clientes si les afecta, por qué lo vas a hacer, para evitar resistencia al cambio.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22032",
+        "frase": "Appropriate introduction of change methodologies should be used prior to gathering new data"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la explicación antes de empezar a recolectar y la extiende a los clientes; el resumen deja el orden ambiguo y omite a los clientes.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Si usas herramientas accionadas por explosivos, necesitas estar capacitado y contar con una tarjeta válida que lo acredite. Mantén la herramienta descargada hasta el momento de usarla, revísala antes de cada uso y guárdala en un contenedor individual con llave. Mientras la uses, lleva la protección personal adecuada y coloca una señal visible que avise que hay una herramienta explosiva en funcionamiento.",
   "pasos_accionables": [
     "Capacítate y obtén tu tarjeta de operador válida",
-    "Revisa la herramienta antes de cada uso para detectar defectos",
+    "Revisa la herramienta antes de cada uso para detectar obstrucciones o defectos",
     "Guarda la herramienta en un contenedor bloqueado, uno por cada herramienta",
     "Coloca la señal de 'EXPLOSIVE-TOOL IN USE' mientras la usas"
   ],
@@ -41,6 +41,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige que quien opera la herramienta use el equipo de protección personal adecuado; el resumen lo omite.; Mismo defecto: se pierde el equipo de protección personal del operador. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-003-herramientas_accionadas_por_explosivos-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa la herramienta antes de cada uso para detectar defectos",
+      "texto_nuevo": "Revisa la herramienta antes de cada uso para detectar obstrucciones o defectos",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "647",
+        "frase": "Explosive-actuated tools are inspected for obstructions or defects before use."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide revisar la herramienta antes de usarla por obstrucciones y por defectos; el paso deja fuera las obstrucciones.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

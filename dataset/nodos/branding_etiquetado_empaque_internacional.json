@@ -9,7 +9,7 @@
     "Evaluar si el nombre de marca estadounidense debe mantenerse o adaptarse localmente",
     "Investigar el significado cultural de colores usados en el empaque y etiqueta",
     "Verificar requisitos legales de idioma para etiquetas e instrucciones, si cada unidad debe etiquetarse por separado y si hay requisitos especiales de etiquetado para alimentos, fármacos u otros productos",
-    "Incluir información de contenido, origen y medidas en unidades locales (kilogramos, litros)",
+    "Verificar si hay que incluir información de contenido y origen, y si conviene expresar las medidas en unidades locales (kilogramos, litros)",
     "Adaptar imágenes, endosos y referencias culturales al público local"
   ],
   "entregable_esperado": "Empaque y etiquetado final del producto, aprobado para cumplir normativa y preferencias culturales del país destino",
@@ -61,6 +61,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye si cada pieza debe etiquetarse por separado y los requisitos especiales para alimentos, fármacos y otros productos; el paso los pierde.; Mismo defecto: se cae ese elemento de la lista.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-001-branding_etiquetado_empaque_internacional-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir información de contenido, origen y medidas en unidades locales (kilogramos, litros)",
+      "texto_nuevo": "Verificar si hay que incluir información de contenido y origen, y si conviene expresar las medidas en unidades locales (kilogramos, litros)",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2579-2581",
+        "frase": "Does information on product content and country of origin have to be provided?"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro plantea como pregunta si hay que dar contenido y origen y dice que las unidades métricas pueden ser importantes; el paso lo vuelve obligación fija.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

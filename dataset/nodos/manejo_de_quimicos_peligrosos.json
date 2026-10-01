@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Manejo Seguro de Químicos Peligrosos en el Lugar de Trabajo",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
+  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para los trabajadores elegibles por su exposición a ciertas sustancias, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
   "pasos_accionables": [
     "Instalar estaciones de lavado de ojos y duchas de seguridad donde se manejen químicos",
     "Proveer EPP adecuado (guantes, protección ocular, respiradores)",
@@ -89,6 +89,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye vapores asfixiantes, sofocantes o anestésicos, no solo tóxicos.; Mismo defecto en el paso.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-003-manejo_de_quimicos_peligrosos-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
+      "texto_nuevo": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para los trabajadores elegibles por su exposición a ciertas sustancias, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos, asfixiantes, sofocantes o anestésicos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "801",
+        "frase": "Medical or biological monitoring systems are in operation for eligible workers"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita el monitoreo a los trabajadores elegibles por exposición a sustancias concretas, no a cualquier expuesto.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

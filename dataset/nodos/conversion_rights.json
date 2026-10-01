@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Conversion Rights (Conversión de Acciones Preferentes)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Derecho no negociable que permite a los accionistas preferentes convertir sus acciones en common stock en cualquier momento, típicamente a una tasa 1:1. Es útil para los inversionistas cuando conviene recibir pago en base a acciones comunes en lugar de la preferencia de liquidación. Una vez convertido, no se puede revertir a preferente.",
+  "resumen_teorico": "Derecho no negociable que permite a los accionistas preferentes convertir sus acciones en common stock en cualquier momento, típicamente a una tasa 1:1. Es útil para los inversionistas cuando conviene recibir pago en base a acciones comunes en lugar de la preferencia de liquidación, y en casos extremos para controlar un voto del common stock. Una vez convertido, no se puede revertir a preferente.",
   "pasos_accionables": [
     "Entender que este término es prácticamente no negociable en cualquier deal de VC.",
     "Revisar la tasa de conversión inicial (usualmente 1:1) y sus ajustes por splits o dividendos.",
@@ -44,6 +44,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En la misma cláusula de conversión el libro destaca que la conversión automática tiene componentes negociables y umbrales críticos de negociar.; Mismo defecto: se cae que los umbrales de la conversión automática sí se negocian.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-004-conversion_rights-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Derecho no negociable que permite a los accionistas preferentes convertir sus acciones en common stock en cualquier momento, típicamente a una tasa 1:1. Es útil para los inversionistas cuando conviene recibir pago en base a acciones comunes en lugar de la preferencia de liquidación. Una vez convertido, no se puede revertir a preferente.",
+      "texto_nuevo": "Derecho no negociable que permite a los accionistas preferentes convertir sus acciones en common stock en cualquier momento, típicamente a una tasa 1:1. Es útil para los inversionistas cuando conviene recibir pago en base a acciones comunes en lugar de la preferencia de liquidación, y en casos extremos para controlar un voto del common stock. Una vez convertido, no se puede revertir a preferente.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1594",
+        "frase": "used in certain extreme circumstances whereby the preferred wants to control a vote"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da un segundo uso, en casos extremos controlar una votación de las acciones comunes, que toca el control del fundador y se cae del resumen.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
