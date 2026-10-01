@@ -17848,3 +17848,34 @@ del proyecto) y que Tus Números, el Expediente y los documentos la usen.
 
 **Condición de cierre:** la moneda elegida se guarda en el proyecto y se pinta en todas las cifras
 de dinero, con su prueba por idioma.
+
+## Ficha de función futura: `valoracion-del-usuario` (decisión del fundador, 30 sep 2026; no prioritaria, no se construye ahora)
+
+**Qué.** La persona puede decir si lo que la app le dio le sirvió:
+- un pulgar arriba o abajo en el plan completo y, discreto, en cada etapa;
+- también en lo demás que genera la app: Claridad, el replanteamiento y los mundos.
+
+**Pulgar abajo.** Abre una pregunta corta con cuatro opciones y texto libre opcional:
+- "No es correcto";
+- "No aplica a mi caso";
+- "Es confuso";
+- "Otro".
+
+**Contexto interno.** Cada valoración se guarda con su contexto: el plan, la versión, la etapa y los nodos usados para
+generarla. Ese contexto es control interno: nunca se le muestra a la persona de dónde viene nada (regla dura D1,
+`docs/REGLAS_DE_LA_CASA.md`).
+
+**Revisión periódica de los pulgares abajo:**
+- **De contenido** ("No es correcto"): se leen contra la fuente y, si procede, se corrigen por corrección declarada
+  (`scripts/fidelidad/aplicar_correcciones.py`).
+- **De adaptación** ("No aplica a mi caso", "Es confuso"): van al equipo de prompts.
+
+**Privacidad.** Entra en el inventario de datos y en la Política de privacidad, y se borra con la cuenta (el mismo
+camino que el borrado de cuenta en producción).
+
+**Condición de cierre:**
+- los pulgares y la pregunta corta funcionan en las superficies listadas;
+- cada valoración se guarda con su contexto interno y nada de ese contexto llega al cliente (prueba en
+  `web/lib/procedencia.test.ts`);
+- el borrado de cuenta la elimina, con su prueba;
+- el inventario de datos y la Política la nombran.
