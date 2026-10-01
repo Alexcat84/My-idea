@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se necesita detectar desplazamientos pequeños y sostenidos en la media del proceso",
-    "Cuando los gráficos Shewhart tradicionales no son suficientemente sensibles"
+    "Cuando los gráficos de control tradicionales no son suficientemente sensibles"
   ],
   "etiqueta_arbol": "Detecta Cambios Acumulados a Tiempo",
   "fuentes_internas": [
@@ -44,6 +44,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El pasaje no compara con los gráficos Shewhart; solo dice que cada punto acumula todas las observaciones.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-metodos-grafico_cusum-condiciones_activacion-1",
+      "fecha": "2026-10-01",
+      "campo": "condiciones_activacion",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuando los gráficos Shewhart tradicionales no son suficientemente sensibles",
+      "texto_nuevo": "Cuando los gráficos de control tradicionales no son suficientemente sensibles",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "gráficos Shewhart"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Eliminación del Desperdicio en la Innovación",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "El mayor desperdicio no viene de hacer las tareas mal, sino de hacer con mucha eficiencia algo que ni siquiera valía la pena hacer. Como decía Drucker, no hay nada tan inútil como hacer con gran eficiencia lo que no debería hacerse en absoluto. El movimiento Lean Startup sostiene que la mayoría de las formas de desperdicio al innovar se pueden evitar una vez que entiendes sus causas, y que para eso necesitas cambiar tu forma de pensar sobre cómo trabajas: aplicar el método científico a la pregunta más urgente que tienes como emprendedor, que es cómo construir un negocio que se sostenga.",
+  "resumen_teorico": "El mayor desperdicio no viene de hacer las tareas mal, sino de hacer con mucha eficiencia algo que ni siquiera valía la pena hacer. No hay nada tan inútil como hacer con gran eficiencia lo que no debería hacerse en absoluto. La mayoría de las formas de desperdicio al innovar se pueden evitar una vez que entiendes sus causas, y para eso necesitas cambiar tu forma de pensar sobre cómo trabajas: aplicar el método científico a la pregunta más urgente que tienes como emprendedor, que es cómo construir un negocio que se sostenga.",
   "pasos_accionables": [
     "Antes de pulir cómo ejecutas algo, pregúntate si ese proyecto realmente vale la pena hacerse",
     "Revisa qué tareas o proyectos estás haciendo de forma eficiente pero que no te están dejando ningún aprendizaje validado ni valor real",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "No Trabajes en lo Equivocado",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-eliminar_desperdicio_organizacional-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El mayor desperdicio no viene de hacer las tareas mal, sino de hacer con mucha eficiencia algo que ni siquiera valía la pena hacer. Como decía Drucker, no hay nada tan inútil como hacer con gran eficiencia lo que no debería hacerse en absoluto. El movimiento Lean Startup sostiene que la mayoría de las formas de desperdicio al innovar se pueden evitar una vez que entiendes sus causas, y que para eso necesitas cambiar tu forma de pensar sobre cómo trabajas: aplicar el método científico a la pregunta más urgente que tienes como emprendedor, que es cómo construir un negocio que se sostenga.",
+      "texto_nuevo": "El mayor desperdicio no viene de hacer las tareas mal, sino de hacer con mucha eficiencia algo que ni siquiera valía la pena hacer. No hay nada tan inútil como hacer con gran eficiencia lo que no debería hacerse en absoluto. La mayoría de las formas de desperdicio al innovar se pueden evitar una vez que entiendes sus causas, y para eso necesitas cambiar tu forma de pensar sobre cómo trabajas: aplicar el método científico a la pregunta más urgente que tienes como emprendedor, que es cómo construir un negocio que se sostenga.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Como decía Drucker, ",
+          "El movimiento Lean Startup sostiene que "
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

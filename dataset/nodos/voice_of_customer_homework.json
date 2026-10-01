@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Trabajo de Front-End y Voz del Cliente (Front-End Homework)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Muchas empresas fallan por hacer superficialmente o no hacer el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Datos muestran que entre 75-96% de las peores empresas ejecutan pobremente estas tareas, resultando en decisiones basadas en supuestos en vez de hechos. La falta de voz del cliente (VoC) es la causa número uno de fracaso de nuevos productos en muchos estudios. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.",
+  "resumen_teorico": "Muchas empresas fallan por hacer superficialmente o no hacer el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Entre el 75 y el 96 % de las peores empresas ejecutan pobremente estas tareas, resultando en decisiones basadas en supuestos en vez de hechos. La falta de voz del cliente (VoC) es la causa número uno de fracaso de nuevos productos. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.",
   "pasos_accionables": [
     "Realizar investigación de mercado y VoC antes de comenzar el desarrollo formal",
     "Ampliar la base de clientes consultados, incluyendo clientes de los clientes (value chain)",
@@ -42,6 +42,23 @@
         "motivo": "El trabajo previo de estudio de mercado y analisis tecnico para desarrollar productos no prepara la medicion de la calidad en areas administrativas y de servicio. Son temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "procedencia-metodos-voice_of_customer_homework-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Muchas empresas fallan por hacer superficialmente o no hacer el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Datos muestran que entre 75-96% de las peores empresas ejecutan pobremente estas tareas, resultando en decisiones basadas en supuestos en vez de hechos. La falta de voz del cliente (VoC) es la causa número uno de fracaso de nuevos productos en muchos estudios. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.",
+      "texto_nuevo": "Muchas empresas fallan por hacer superficialmente o no hacer el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Entre el 75 y el 96 % de las peores empresas ejecutan pobremente estas tareas, resultando en decisiones basadas en supuestos en vez de hechos. La falta de voz del cliente (VoC) es la causa número uno de fracaso de nuevos productos. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Datos muestran que entre 75-96%",
+          " en muchos estudios"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

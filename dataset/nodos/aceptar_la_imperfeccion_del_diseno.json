@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Aceptar la Imperfección: Todo se Rompe",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Toda tecnología o diseño, sin importar cuán bien intencionado, eventualmente se romperá, fallará o generará consecuencias no previstas ('cuando inventas el barco, inventas el naufragio'). La historia de los Eames muestra que incluso los diseñadores más idealistas cometen 'errores en sus sueños': lo que se desea y lo que se obtiene rara vez coinciden. En vez de negar esta realidad, los diseñadores deben planificar activamente para la ruptura, preparándose para sanar y ajustar antes, durante y después de que las cosas fallen.",
+  "resumen_teorico": "Toda tecnología o diseño, sin importar cuán bien intencionado, eventualmente se romperá, fallará o generará consecuencias no previstas ('cuando inventas el barco, inventas el naufragio'). Incluso los diseñadores más idealistas cometen 'errores en sus sueños': lo que se desea y lo que se obtiene rara vez coinciden. En vez de negar esta realidad, los diseñadores deben planificar activamente para la ruptura, preparándose para sanar y ajustar antes, durante y después de que las cosas fallen.",
   "pasos_accionables": [
     "Durante la planificación, pregunta explícitamente: ¿de qué formas puede fallar o romperse este diseño?",
     "Identifica consecuencias negativas no deseadas que podrían surgir incluso si el diseño funciona 'según lo planeado'",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Acepta que Todo se Rompe",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-aceptar_la_imperfeccion_del_diseno-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Toda tecnología o diseño, sin importar cuán bien intencionado, eventualmente se romperá, fallará o generará consecuencias no previstas ('cuando inventas el barco, inventas el naufragio'). La historia de los Eames muestra que incluso los diseñadores más idealistas cometen 'errores en sus sueños': lo que se desea y lo que se obtiene rara vez coinciden. En vez de negar esta realidad, los diseñadores deben planificar activamente para la ruptura, preparándose para sanar y ajustar antes, durante y después de que las cosas fallen.",
+      "texto_nuevo": "Toda tecnología o diseño, sin importar cuán bien intencionado, eventualmente se romperá, fallará o generará consecuencias no previstas ('cuando inventas el barco, inventas el naufragio'). Incluso los diseñadores más idealistas cometen 'errores en sus sueños': lo que se desea y lo que se obtiene rara vez coinciden. En vez de negar esta realidad, los diseñadores deben planificar activamente para la ruptura, preparándose para sanar y ajustar antes, durante y después de que las cosas fallen.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "La historia de los Eames muestra que "
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

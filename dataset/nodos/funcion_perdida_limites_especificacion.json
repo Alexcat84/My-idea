@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Función de Pérdida para Establecer Límites de Especificación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
+  "resumen_teorico": "La función de pérdida de calidad permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
   "pasos_accionables": [
     "Determinar el costo de ajuste en campo/garantía cuando el cliente detecta la desviación",
     "Determinar el costo de ajuste en fábrica antes del envío, que es usualmente menor",
@@ -71,6 +71,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el ejemplo del libro k sale del costo del ajuste en garantía y de la desviación que provoca la queja; el paso omite el costo.; Mismo defecto: falta el costo en garantía en el cálculo de k.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-metodos-funcion_perdida_limites_especificacion-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "La función de pérdida (basada en el trabajo de Taguchi y ejemplificada por Ross) permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
+      "texto_nuevo": "La función de pérdida de calidad permite calcular límites de especificación óptimos comparando el costo de ajuste en fábrica versus el costo de reparación bajo garantía. En lugar de fijar límites arbitrarios, se determinan matemáticamente igualando ambos costos: más allá del límite, ajustar en fábrica sale más barato que esperar la queja y ajustar bajo garantía.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "(basada en el trabajo de Taguchi y ejemplificada por Ross)"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

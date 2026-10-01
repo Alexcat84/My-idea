@@ -4,14 +4,14 @@
   "dominio": "quality",
   "titulo_concepto": "Control de Calidad como Proceso Universal (Trilogía de Juran)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El control de calidad es el tercer proceso universal de la Trilogía de Juran (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.",
+  "resumen_teorico": "El control de calidad es el tercer proceso universal de la trilogía de la calidad (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.",
   "pasos_accionables": [
     "Identificar en qué zona de control se encuentra el proceso (estable pero deficiente vs. mejorado)",
     "Diferenciar entre necesidad de control y necesidad de mejora",
     "Establecer nuevos controles después de cada mejora para evitar retroceso",
     "Aplicar el concepto de control tanto a nivel de proceso como de producto"
   ],
-  "entregable_esperado": "Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas",
+  "entregable_esperado": "Diagrama de la trilogía de la calidad (planificación, control y mejora) aplicado al proceso actual con zonas de control identificadas",
   "nodos_previos": [
     "entrenamiento_para_breakthrough"
   ],
@@ -24,5 +24,39 @@
   "etiqueta_arbol": "Mantén Estable tu Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-control_calidad_definicion-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El control de calidad es el tercer proceso universal de la Trilogía de Juran (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.",
+      "texto_nuevo": "El control de calidad es el tercer proceso universal de la trilogía de la calidad (junto con planificación y mejora). Su propósito es mantener la estabilidad del proceso mediante un bucle de retroalimentación, evitando el deterioro del desempeño una vez alcanzado un nuevo nivel tras la mejora.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Trilogía de Juran"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "procedencia-metodos-control_calidad_definicion-entregable_esperado",
+      "fecha": "2026-10-01",
+      "campo": "entregable_esperado",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Diagrama de la Trilogía de Juran aplicado al proceso actual con zonas de control identificadas",
+      "texto_nuevo": "Diagrama de la trilogía de la calidad (planificación, control y mejora) aplicado al proceso actual con zonas de control identificadas",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Trilogía de Juran"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

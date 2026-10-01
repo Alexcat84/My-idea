@@ -4,12 +4,12 @@
   "dominio": "quality",
   "titulo_concepto": "Normalización de Datos en Benchmarking (Comparación Justa)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (alcance, escala, contrato, regulación, geografía y política). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF), útiles cuando la normalización simple por unidad no basta; el Índice de Calidad Juran (JQI) sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+  "resumen_teorico": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (alcance, escala, contrato, regulación, geografía y política). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como un factor de complejidad, útiles cuando la normalización simple por unidad no basta; un índice de calidad normalizado sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
   "pasos_accionables": [
     "Identifica los factores que impulsan las diferencias de desempeño entre lo que estás comparando",
     "Agrupa los sujetos en categorías o grupos de pares con características similares",
     "Selecciona un factor de normalización relevante, como costo por unidad, por hora o por factura",
-    "Calcula un índice normalizado (por ejemplo el Juran Complexity Factor) cuando la normalización simple no sea suficiente",
+    "Calcula un índice normalizado (por ejemplo un factor de complejidad) cuando la normalización simple no sea suficiente",
     "Prueba la validez del factor mediante análisis de correlación con la métrica de desempeño",
     "Aplica el índice normalizado para generar comparaciones válidas entre sitios o unidades"
   ],
@@ -79,6 +79,40 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye el alcance y las diferencias políticas, que el nodo omite al enumerar los factores de diferencia.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "procedencia-metodos-normalizacion_datos_benchmarking-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (alcance, escala, contrato, regulación, geografía y política). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como el Factor de Complejidad Juran (CF), útiles cuando la normalización simple por unidad no basta; el Índice de Calidad Juran (JQI) sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+      "texto_nuevo": "El mayor problema al hacer benchmarking es comparar sujetos de forma equitativa (like for like) cuando son inherentemente diferentes en tamaño, diseño o contexto (alcance, escala, contrato, regulación, geografía y política). Sin normalizar, las comparaciones directas de desempeño pueden ser erróneas o llevarte a conclusiones equivocadas. Conviertes las métricas a una forma comparable mediante estratificación en grupos de pares, medición por unidad o por hora, o factores de ponderación como un factor de complejidad, útiles cuando la normalización simple por unidad no basta; un índice de calidad normalizado sirve después para comparar los sitios. Validas el método comprobando que el factor elegido realmente correlaciona con la métrica de desempeño que estás midiendo.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "el Factor de Complejidad Juran (CF)",
+          "el Índice de Calidad Juran (JQI)"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "procedencia-metodos-normalizacion_datos_benchmarking-pasos_accionables-3",
+      "fecha": "2026-10-01",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Calcula un índice normalizado (por ejemplo el Juran Complexity Factor) cuando la normalización simple no sea suficiente",
+      "texto_nuevo": "Calcula un índice normalizado (por ejemplo un factor de complejidad) cuando la normalización simple no sea suficiente",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "el Juran Complexity Factor"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

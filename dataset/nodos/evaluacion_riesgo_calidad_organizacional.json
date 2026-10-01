@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Evaluación de Riesgo de Calidad (Quality Risk Assessment)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Es una revisión integral del estado de la calidad en toda la organización, basada en el Juran Organization Health Check. A diferencia de auditorías como ISO 9000, se enfoca en tres criterios: enfoque (approach), despliegue (deployment) y resultados (results), evaluando siete categorías organizacionales que suman 1000 puntos, desde alineación estratégica hasta resultados de scorecard.",
+  "resumen_teorico": "Es una revisión integral del estado de la calidad en toda la organización, basada en un chequeo de salud organizacional. A diferencia de auditorías como ISO 9000, se enfoca en tres criterios: enfoque (approach), despliegue (deployment) y resultados (results), evaluando siete categorías organizacionales que suman 1000 puntos, desde alineación estratégica hasta resultados de scorecard.",
   "pasos_accionables": [
     "Definir el equipo evaluador y sus roles",
     "Establecer objetivos claros de la evaluación",
@@ -57,6 +57,22 @@
         "evidencia": "F13-011: Ambos aciertan en que validacion es erronea, pero tiene razon A: el diagnostico se integra en un FODA y sus condiciones lo situan antes de definir el plan estrategico de calidad, asi que alimenta la planificacion. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "procedencia-metodos-evaluacion_riesgo_calidad_organizacional-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es una revisión integral del estado de la calidad en toda la organización, basada en el Juran Organization Health Check. A diferencia de auditorías como ISO 9000, se enfoca en tres criterios: enfoque (approach), despliegue (deployment) y resultados (results), evaluando siete categorías organizacionales que suman 1000 puntos, desde alineación estratégica hasta resultados de scorecard.",
+      "texto_nuevo": "Es una revisión integral del estado de la calidad en toda la organización, basada en un chequeo de salud organizacional. A diferencia de auditorías como ISO 9000, se enfoca en tres criterios: enfoque (approach), despliegue (deployment) y resultados (results), evaluando siete categorías organizacionales que suman 1000 puntos, desde alineación estratégica hasta resultados de scorecard.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "el Juran Organization Health Check"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

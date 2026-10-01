@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gestión del Miedo en el Reporte de Datos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de los 14 puntos de Deming.",
+  "resumen_teorico": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del principio 8 (eliminar el miedo) de los 14 principios de gestión de la calidad.",
   "pasos_accionables": [
     "Auditar la distribución de datos reportados en busca de patrones anómalos de concentración cerca de límites regulatorios.",
     "Investigar si el personal evita reportar valores extremos por temor a consecuencias.",
@@ -58,6 +58,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-034 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "procedencia-metodos-gestion_miedo_reportes-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de los 14 puntos de Deming.",
+      "texto_nuevo": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del principio 8 (eliminar el miedo) de los 14 principios de gestión de la calidad.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Punto 8",
+          "los 14 puntos de Deming"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ],
   "fuentes_internas": [

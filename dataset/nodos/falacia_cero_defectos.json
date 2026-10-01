@@ -4,9 +4,9 @@
   "dominio": "quality",
   "titulo_concepto": "La falacia del cero defectos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de Taguchi, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
+  "resumen_teorico": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de calidad, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
   "pasos_accionables": [
-    "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de Taguchi",
+    "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de calidad",
     "Buscar reducir la variación alrededor del valor nominal, no solo estar dentro de límites",
     "Evitar mecanismos que fuercen artificialmente el cumplimiento de especificaciones sin reducir variación real",
     "Medir la pérdida económica asociada a la distancia del valor nominal, no solo el conteo de defectos"
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Supera el Cero Defectos",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-falacia_cero_defectos-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de Taguchi, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
+      "texto_nuevo": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de calidad, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "función de pérdida de Taguchi"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "procedencia-metodos-falacia_cero_defectos-pasos_accionables-0",
+      "fecha": "2026-10-01",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de Taguchi",
+      "texto_nuevo": "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de calidad",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "función de pérdida de Taguchi"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

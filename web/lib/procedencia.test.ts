@@ -200,9 +200,10 @@ describe("procedencia: nada interno llega al navegador", () => {
 // ---------------------------------------------------------------- 3. la regla en toda llamada a la IA
 
 describe("procedencia: la IA no menciona ni insinua el origen", () => {
-  it("la regla prohibe libros, autores, estudios, investigaciones, expertos y etiquetas de procedencia, y deja el concepto con nombre propio", () => {
-    for (const rx of [/libro/, /autor/, /estudio/, /investigaci/, /experto/, /procedencia/, /insin/, /ciclo de Deming/])
+  it("la regla prohibe libros, autores, estudios, investigaciones, expertos y etiquetas de procedencia; deja nombrar el metodo, con su nombre neutro si lo tiene, y nunca atribuirlo", () => {
+    for (const rx of [/libro/, /autor/, /estudio/, /investigaci/, /experto/, /procedencia/, /insin/, /ciclo PDCA/, /nombre neutro/, /nunca lo atribuyas/])
       expect(REGLA_SIN_FUENTES, String(rx)).toMatch(rx);
+    expect(REGLA_SIN_FUENTES).not.toMatch(/sí puedes usarlo \(el ciclo de Deming/);
   });
 
   it("toda llamada lleva la regla, en espanol y en cualquier otro idioma, sin tocar el prompt cacheado", () => {
@@ -308,6 +309,32 @@ describe("procedencia: ninguna atribucion generica", () => {
   });
 });
 
+// ---------------------------------------------------------------- 7. metodos con nombre de persona
+
+/**
+ * Regla de procedencia del fundador (1 oct 2026, docs/REGLAS_DE_LA_CASA.md D5): todo lo que presenta la app es consejo
+ * de My Idea. Un metodo se nombra y se explica, pero nunca se atribuye ("segun Deming", "como decia Drucker", "Jane
+ * Jacobs demostro"), y si tiene nombre neutro se usa ese ("ciclo PDCA", no "ciclo de Deming"). El titulo del concepto
+ * es material interno para la IA y no entra. Una persona de la lista solo puede aparecer dentro de un nombre de metodo
+ * sin alternativa neutra corriente.
+ */
+const PERSONAS = /\b(Deming|Shewhart|Juran|Crosby|Taguchi|Heinrich|Drucker|Christensen|Geoffrey Moore|Jacobs|Goodall|Eames|Porter|Feigenbaum|Osterwalder|Fulton Suri|Kotter|Covey|Maslow|Eisenhower)\b/;
+const METODO_SIN_NEUTRO = /diagrama de Eames|diagramas de Eames/g;
+const CAMPOS_VISIBLES = new Set(["etiqueta_arbol", "resumen_teorico", "entregable_esperado", "pasos_accionables", "condiciones_activacion"]);
+
+function personaEn(t: string): string | null {
+  const m = t.replace(METODO_SIN_NEUTRO, "").match(PERSONAS);
+  return m ? m[1] : null;
+}
+
+describe("procedencia: ningun metodo se atribuye a una persona", () => {
+  it("ningun campo visible de un nodo vivo nombra a una persona como fuente ni usa un metodo con persona que tiene nombre neutro", () => {
+    const fallos = DE_NODOS.filter(([donde]) => CAMPOS_VISIBLES.has(donde.split(".")[1].replace(/\[\d+\]$/, "")))
+      .map(([donde, t]) => [donde, personaEn(t)] as const).filter(([, p]) => p).map(([donde, p]) => `${donde}: ${p}`);
+    expect(fallos.slice(0, 25), `${fallos.length} campos con una persona`).toEqual([]);
+  });
+});
+
 // ---------------------------------------------------------------- casos negativos
 
 describe("procedencia: casos negativos (la guarda muerde)", () => {
@@ -325,5 +352,12 @@ describe("procedencia: casos negativos (la guarda muerde)", () => {
       expect(ATRIBUCION.some((rx) => rx.test(t)), t).toBe(true);
     for (const t of ["Investigar la literatura sobre antropología cultural del país", "Confirmar el objetivo según los datos obtenidos", "Una estrategia que no se ha probado con usuarios reales", "aunque todavía no está probado que lo logren"])
       expect(ATRIBUCION.some((rx) => rx.test(t)), t).toBe(false);
+  });
+
+  it("detecta la persona como fuente y deja pasar el metodo sin nombre neutro", () => {
+    for (const t of ["Como decía Drucker, no hay nada tan inútil", "El ciclo de Deming tiene cuatro pasos", "Deja el Triángulo de Heinrich"])
+      expect(personaEn(t), t).not.toBeNull();
+    for (const t of ["Usa el diagrama de Eames para ver la intersección", "Aplica el ciclo PDCA", "Ordena tus causas con un diagrama de Pareto"])
+      expect(personaEn(t), t).toBeNull();
   });
 });

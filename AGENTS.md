@@ -113,8 +113,8 @@ viven SOLO en metadatos internos: el campo `fuente` de cada nodo, su
 `fuentes_internas` (todos los libros de los que viene, fusiones incluidas), el
 registro `correcciones`, `dataset/metadata/fuentes_canonicas.json`,
 `vigencia.json` y el inventario interno `docs/internos/INVENTARIO_FUENTES.md`.
-Un concepto con nombre propio es vocabulario del oficio y sí se usa (el ciclo de
-Deming, las cinco fuerzas de Porter); una cita a un autor o a un libro como
+Un método se nombra y se explica (los cinco porqués, el ciclo PDCA, el diagrama de
+Ishikawa) y, si tiene nombre neutro, se usa ese (D5 de REGLAS_DE_LA_CASA, 1 oct 2026); una cita a un autor o a un libro como
 fuente ("según Blank", "en su libro") no, y si aparece en el texto de un nodo
 sale por corrección declarada (veredicto ATRIBUCION de
 `scripts/fidelidad/aplicar_correcciones.py`), sin cambiar el sentido.

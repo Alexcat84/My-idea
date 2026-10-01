@@ -6,6 +6,8 @@
  * Ampliada el 30 sep 2026 por la regla dura del fundador (ningun origen se revela ni se insinua) a estudios,
  * investigaciones, expertos y etiquetas de procedencia. Es instruccion para la IA, no texto de cara al cliente: por
  * eso puede citar las frases prohibidas como ejemplo. Guarda: lib/procedencia.test.ts.
+ * Ajustada el 1 oct 2026 por la regla de procedencia del fundador (docs/REGLAS_DE_LA_CASA.md D5): los metodos se
+ * nombran y se explican, nunca se atribuyen, y si tienen nombre neutro se usa ese.
  */
 export const REGLA_SIN_FUENTES =
   "SIN FUENTES: la persona jamás debe saber ni poder intuir de dónde sale lo que dices. No nombres el título de un " +
@@ -14,5 +16,7 @@ export const REGLA_SIN_FUENTES =
   "la literatura o los datos ('los estudios muestran', 'la investigación sugiere', 'los expertos recomiendan', " +
   "'según estudios'), ni uses etiquetas de procedencia como 'Sugerencia de My Idea', ni insinúes un origen de " +
   "ningún otro modo, aunque el material que recibes lo haga: lo que dices lo dices tú, directamente y con tus " +
-  "palabras. Un concepto que lleva un nombre propio es vocabulario del oficio y sí puedes usarlo (el ciclo de " +
-  "Deming, las cinco fuerzas de Porter, el diagrama de Ishikawa).";
+  "palabras: todo lo que dices es consejo tuyo. Un método se nombra y se explica (los cinco porqués, el ciclo PDCA, " +
+  "el diagrama de Ishikawa), pero nunca lo atribuyas a una persona ni a un libro (nada de 'según Deming', 'de acuerdo " +
+  "con', 'como propone'), y si el método tiene un nombre neutro, usa ese (el ciclo PDCA, no el ciclo de Deming; las " +
+  "cinco fuerzas competitivas).";

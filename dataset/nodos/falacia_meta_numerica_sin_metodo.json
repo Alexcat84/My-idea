@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "La Falacia de la Meta Numérica sin Método (Sistema de Semáforo)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El ejemplo de la refinería de azúcar muestra cómo establecer una meta numérica arbitraria (ej. consumo de agua ≤3.5 ton/ton) sin un método sistemático de mejora conduce a sobre-ajuste o sub-ajuste constante: cada desviación del objetivo dispara explicaciones improvisadas y correcciones no fundamentadas, generando más pérdidas que ganancias. Una meta sin un plan de mejora basado en conocimiento del proceso (ciclo de Shewhart, diseño experimental, análisis de variables naturales) es solo una ilusión de control.",
+  "resumen_teorico": "El ejemplo de la refinería de azúcar muestra cómo establecer una meta numérica arbitraria (ej. consumo de agua ≤3.5 ton/ton) sin un método sistemático de mejora conduce a sobre-ajuste o sub-ajuste constante: cada desviación del objetivo dispara explicaciones improvisadas y correcciones no fundamentadas, generando más pérdidas que ganancias. Una meta sin un plan de mejora basado en conocimiento del proceso (ciclo PDCA, diseño experimental, análisis de variables naturales) es solo una ilusión de control.",
   "pasos_accionables": [
     "Antes de fijar una meta numérica, estudiar el proceso mediante observación de variación natural (temperatura, presión, velocidad, etc.)",
     "Aplicar el ciclo PDSA (Planificar-Hacer-Estudiar-Actuar) para probar cambios fundamentados en conocimiento técnico",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Define Método, No Solo Metas",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-falacia_meta_numerica_sin_metodo-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El ejemplo de la refinería de azúcar muestra cómo establecer una meta numérica arbitraria (ej. consumo de agua ≤3.5 ton/ton) sin un método sistemático de mejora conduce a sobre-ajuste o sub-ajuste constante: cada desviación del objetivo dispara explicaciones improvisadas y correcciones no fundamentadas, generando más pérdidas que ganancias. Una meta sin un plan de mejora basado en conocimiento del proceso (ciclo de Shewhart, diseño experimental, análisis de variables naturales) es solo una ilusión de control.",
+      "texto_nuevo": "El ejemplo de la refinería de azúcar muestra cómo establecer una meta numérica arbitraria (ej. consumo de agua ≤3.5 ton/ton) sin un método sistemático de mejora conduce a sobre-ajuste o sub-ajuste constante: cada desviación del objetivo dispara explicaciones improvisadas y correcciones no fundamentadas, generando más pérdidas que ganancias. Una meta sin un plan de mejora basado en conocimiento del proceso (ciclo PDCA, diseño experimental, análisis de variables naturales) es solo una ilusión de control.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "ciclo de Shewhart"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

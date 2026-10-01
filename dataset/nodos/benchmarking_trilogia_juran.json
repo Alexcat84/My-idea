@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Benchmarking y la Trilogía de Juran",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El benchmarking se relaciona directamente con los tres procesos de la Trilogía de Juran: planificación de calidad (diseño de nuevos productos/procesos basado en mejores prácticas externas), control de calidad (comparación continua de estándares de desempeño) y mejora de calidad (identificación de brechas y priorización de proyectos usando el principio de Pareto). Esta interacción convierte al benchmarking en un insumo clave para el ciclo completo de gestión de la calidad.",
+  "resumen_teorico": "El benchmarking se relaciona directamente con los tres procesos de la trilogía de la calidad: planificación de calidad (diseño de nuevos productos/procesos basado en mejores prácticas externas), control de calidad (comparación continua de estándares de desempeño) y mejora de calidad (identificación de brechas y priorización de proyectos usando el principio de Pareto). Esta interacción convierte al benchmarking en un insumo clave para el ciclo completo de gestión de la calidad.",
   "pasos_accionables": [
     "Utilizar los hallazgos de benchmarking para alimentar el diseño de nuevos productos o procesos.",
     "Aplicar el principio de Pareto (80/20) para priorizar las áreas de mejora identificadas por el benchmarking.",
@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se han obtenido resultados de benchmarking y se necesita traducirlos en acciones concretas de calidad.",
-    "Si la organización ya aplica la Trilogía de Juran como marco de gestión de calidad."
+    "Si la organización ya aplica la trilogía de la calidad (planificación, control y mejora) como marco de gestión de calidad."
   ],
   "etiqueta_arbol": "Conecta Benchmarking con tu Calidad",
   "fuentes_internas": [
@@ -43,6 +43,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro usa las brechas para ver dónde el desempeño es más débil o más fuerte y priorizar proyectos; no para diagnosticar causas raíz.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "procedencia-metodos-benchmarking_trilogia_juran-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El benchmarking se relaciona directamente con los tres procesos de la Trilogía de Juran: planificación de calidad (diseño de nuevos productos/procesos basado en mejores prácticas externas), control de calidad (comparación continua de estándares de desempeño) y mejora de calidad (identificación de brechas y priorización de proyectos usando el principio de Pareto). Esta interacción convierte al benchmarking en un insumo clave para el ciclo completo de gestión de la calidad.",
+      "texto_nuevo": "El benchmarking se relaciona directamente con los tres procesos de la trilogía de la calidad: planificación de calidad (diseño de nuevos productos/procesos basado en mejores prácticas externas), control de calidad (comparación continua de estándares de desempeño) y mejora de calidad (identificación de brechas y priorización de proyectos usando el principio de Pareto). Esta interacción convierte al benchmarking en un insumo clave para el ciclo completo de gestión de la calidad.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Trilogía de Juran"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "procedencia-metodos-benchmarking_trilogia_juran-condiciones_activacion-1",
+      "fecha": "2026-10-01",
+      "campo": "condiciones_activacion",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Si la organización ya aplica la Trilogía de Juran como marco de gestión de calidad.",
+      "texto_nuevo": "Si la organización ya aplica la trilogía de la calidad (planificación, control y mejora) como marco de gestión de calidad.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Trilogía de Juran"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
     }
   ]
 }

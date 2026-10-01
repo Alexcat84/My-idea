@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Dejar de Usar el Triángulo de Heinrich",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El 'triángulo' de Heinrich propone una relación proporcional entre incidentes menores, lesiones y accidentes fatales (ej. 600 incidentes menores por cada fatalidad). Sin embargo, estos datos provenían de ciencia actuarial y de seguros, no de prevención de accidentes. La investigación reciente muestra que en sistemas más seguros, los incidentes menores tienen causas radicalmente distintas a los accidentes graves, por lo que reducir incidentes menores no predice ni previene accidentes mayores. El caso Macondo/Deepwater Horizon es un ejemplo: seis años sin lesiones no evitaron una catástrofe fatal.",
+  "resumen_teorico": "La 'pirámide de accidentes' propone una relación proporcional entre incidentes menores, lesiones y accidentes fatales (ej. 600 incidentes menores por cada fatalidad). Sin embargo, estos datos provenían de ciencia actuarial y de seguros, no de prevención de accidentes. En sistemas más seguros, los incidentes menores tienen causas radicalmente distintas a los accidentes graves, por lo que reducir incidentes menores no predice ni previene accidentes mayores. El caso Macondo/Deepwater Horizon es un ejemplo: seis años sin lesiones no evitaron una catástrofe fatal.",
   "pasos_accionables": [
     "Dejar de usar proporciones fijas entre incidentes menores y accidentes graves como indicador de seguridad",
     "Investigar los incidentes menores y los accidentes graves como fenómenos con causas potencialmente distintas",
@@ -23,8 +23,43 @@
     "Al diseñar indicadores (KPIs) de desempeño en seguridad ocupacional",
     "Si se celebra la ausencia de lesiones como garantía de seguridad frente a accidentes mayores"
   ],
-  "etiqueta_arbol": "Deja el Triángulo de Heinrich",
+  "etiqueta_arbol": "Deja la pirámide de accidentes",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-no_usar_triangulo_heinrich-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El 'triángulo' de Heinrich propone una relación proporcional entre incidentes menores, lesiones y accidentes fatales (ej. 600 incidentes menores por cada fatalidad). Sin embargo, estos datos provenían de ciencia actuarial y de seguros, no de prevención de accidentes. La investigación reciente muestra que en sistemas más seguros, los incidentes menores tienen causas radicalmente distintas a los accidentes graves, por lo que reducir incidentes menores no predice ni previene accidentes mayores. El caso Macondo/Deepwater Horizon es un ejemplo: seis años sin lesiones no evitaron una catástrofe fatal.",
+      "texto_nuevo": "La 'pirámide de accidentes' propone una relación proporcional entre incidentes menores, lesiones y accidentes fatales (ej. 600 incidentes menores por cada fatalidad). Sin embargo, estos datos provenían de ciencia actuarial y de seguros, no de prevención de accidentes. En sistemas más seguros, los incidentes menores tienen causas radicalmente distintas a los accidentes graves, por lo que reducir incidentes menores no predice ni previene accidentes mayores. El caso Macondo/Deepwater Horizon es un ejemplo: seis años sin lesiones no evitaron una catástrofe fatal.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "El 'triángulo' de Heinrich",
+          "La investigación reciente muestra que "
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "procedencia-metodos-no_usar_triangulo_heinrich-etiqueta_arbol",
+      "fecha": "2026-10-01",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deja el Triángulo de Heinrich",
+      "texto_nuevo": "Deja la pirámide de accidentes",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "el Triángulo de Heinrich"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }

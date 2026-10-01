@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Aprende Desde el Amor (la empatía como motor de descubrimiento)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Inspirado en el trabajo de Jane Goodall con chimpancés, la idea es que la empatía y el afecto genuino, no la distancia 'objetiva', son el combustible del descubrimiento verdadero. Goodall rompió las reglas científicas convencionales (alimentar y nombrar a los animales) y precisamente por acercarse con amor logró el hallazgo histórico de que los animales no humanos fabrican herramientas. Cuando te importa de verdad la gente que estudias, miras más de cerca y más tiempo, y ves lo que un enfoque puramente analítico dejaría pasar.",
+  "resumen_teorico": "La idea es que la empatía y el afecto genuino, no la distancia 'objetiva', son el combustible del descubrimiento verdadero. Romper las reglas convencionales que piden mantener la distancia y acercarte con afecto a lo que estudias es precisamente lo que puede llevarte a un hallazgo que el enfoque habitual nunca habría alcanzado. Cuando te importa de verdad la gente que estudias, miras más de cerca y más tiempo, y ves lo que un enfoque puramente analítico dejaría pasar.",
   "pasos_accionables": [
     "Acércate a las personas o al problema con curiosidad y afecto genuinos, no como si fueran solo un objeto de estudio.",
     "Deja que la relación con las personas se desarrolle con el tiempo, aunque eso rompa un protocolo de investigación estándar.",
@@ -26,5 +26,25 @@
   "etiqueta_arbol": "Aprende Desde el Cariño",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "procedencia-metodos-aprender_desde_el_amor_empatia-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Inspirado en el trabajo de Jane Goodall con chimpancés, la idea es que la empatía y el afecto genuino, no la distancia 'objetiva', son el combustible del descubrimiento verdadero. Goodall rompió las reglas científicas convencionales (alimentar y nombrar a los animales) y precisamente por acercarse con amor logró el hallazgo histórico de que los animales no humanos fabrican herramientas. Cuando te importa de verdad la gente que estudias, miras más de cerca y más tiempo, y ves lo que un enfoque puramente analítico dejaría pasar.",
+      "texto_nuevo": "La idea es que la empatía y el afecto genuino, no la distancia 'objetiva', son el combustible del descubrimiento verdadero. Romper las reglas convencionales que piden mantener la distancia y acercarte con afecto a lo que estudias es precisamente lo que puede llevarte a un hallazgo que el enfoque habitual nunca habría alcanzado. Cuando te importa de verdad la gente que estudias, miras más de cerca y más tiempo, y ves lo que un enfoque puramente analítico dejaría pasar.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026): los métodos se nombran y se explican, nunca se atribuyen a una persona, un libro, estudios o expertos; si un método tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Inspirado en el trabajo de Jane Goodall con chimpancés, ",
+          "Goodall rompió las reglas científicas convencionales (alimentar y nombrar a los animales)",
+          "logró el hallazgo histórico de que los animales no humanos fabrican herramientas"
+        ]
+      },
+      "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    }
   ]
 }
