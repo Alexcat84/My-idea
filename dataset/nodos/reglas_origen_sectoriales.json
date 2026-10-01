@@ -4,10 +4,10 @@
   "dominio": "exportacion",
   "titulo_concepto": "Consideraciones Sectoriales de Reglas de Origen (Textiles, Autos, Químicos, Agrícolas)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Ciertos sectores industriales cuentan con reglas de origen especiales bajo los FTAs. Los textiles siguen el estándar 'yarn-forward' (hilo hacia adelante), que exige que la producción de hilo y procesos posteriores ocurran en EE.UU. o el país socio. La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA. Los químicos utilizan reglas simplificadas comunes para los capítulos 28-39 del HS. Los productos agrícolas pueden estar sujetos a cuotas arancelarias. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Ciertos sectores industriales cuentan con reglas de origen especiales bajo los FTAs. Los textiles siguen el estándar 'yarn-forward' (hilo hacia adelante), que exige que la producción de hilo y procesos posteriores ocurran en EE.UU. o el país socio, salvo fibras, hilos o telas que no se consigan allí en cantidades comerciales a tiempo, que pueden venir de fuera. La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA. Los químicos utilizan reglas simplificadas comunes para los capítulos 28-39 del HS. Los productos agrícolas pueden estar sujetos a cuotas arancelarias. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el producto pertenece a un sector con reglas especiales (textiles, autos, químicos, agrícola)",
-    "Para textiles, verificar cumplimiento del estándar yarn-forward en www.trade.gov/otexa",
+    "Para textiles, verificar cumplimiento del estándar yarn-forward en otexa.ita.doc.gov",
     "Para agrícolas, consultar cuotas y restricciones en www.fas.usda.gov",
     "Para autos bajo NAFTA, aplicar el método de trazabilidad y RVC por costo neto"
   ],
@@ -56,6 +56,39 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-barrido-017-reglas_origen_sectoriales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ciertos sectores industriales cuentan con reglas de origen especiales bajo los FTAs. Los textiles siguen el estándar 'yarn-forward' (hilo hacia adelante), que exige que la producción de hilo y procesos posteriores ocurran en EE.UU. o el país socio. La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA. Los químicos utilizan reglas simplificadas comunes para los capítulos 28-39 del HS. Los productos agrícolas pueden estar sujetos a cuotas arancelarias. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Ciertos sectores industriales cuentan con reglas de origen especiales bajo los FTAs. Los textiles siguen el estándar 'yarn-forward' (hilo hacia adelante), que exige que la producción de hilo y procesos posteriores ocurran en EE.UU. o el país socio, salvo fibras, hilos o telas que no se consigan allí en cantidades comerciales a tiempo, que pueden venir de fuera. La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA. Los químicos utilizan reglas simplificadas comunes para los capítulos 28-39 del HS. Los productos agrícolas pueden estar sujetos a cuotas arancelarias. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5107",
+        "frase": "fibers, yarns, and fabrics determined not to be available in commercial quantities"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la excepción del libro para fibras, hilos y telas sin disponibilidad comercial oportuna, que pueden venir de fuera.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-017-reglas_origen_sectoriales-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para textiles, verificar cumplimiento del estándar yarn-forward en www.trade.gov/otexa",
+      "texto_nuevo": "Para textiles, verificar cumplimiento del estándar yarn-forward en otexa.ita.doc.gov",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5107",
+        "frase": "To look up ROOs for textile products, visit otexa.ita.doc.gov"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): La dirección que da el libro para consultar las reglas textiles es otexa.ita.doc.gov, no la del paso.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Gestión de Diferencias Culturales en Negocios Internacionales",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Las diferencias culturales afectan estilos de negociación, puntualidad, regalos, saludos, gestos, uso de títulos y nombres. La falta de familiaridad con las prácticas de negocios, costumbres sociales y etiqueta de un país puede debilitar la posición de una empresa en el mercado y llevar al fracaso del esfuerzo exportador. Es crítico entender y respetar estas diferencias para tener éxito en negocios internacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Las diferencias culturales afectan estilos de negocio, la actitud ante las relaciones comerciales, puntualidad, estilos de negociación, regalos, saludos, gestos, el significado de colores y números, y el uso de títulos y nombres. La falta de familiaridad con las prácticas de negocios, costumbres sociales y etiqueta de un país puede debilitar la posición de una empresa en el mercado y llevar al fracaso del esfuerzo exportador. Es crítico entender y respetar estas diferencias para tener éxito en negocios internacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Investigar la literatura sobre antropología cultural del país objetivo",
     "Hablar con personas que conozcan la cultura antes de viajar",
@@ -50,6 +50,22 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "final-e1-barrido-017-gestion_diferencias_culturales-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las diferencias culturales afectan estilos de negociación, puntualidad, regalos, saludos, gestos, uso de títulos y nombres. La falta de familiaridad con las prácticas de negocios, costumbres sociales y etiqueta de un país puede debilitar la posición de una empresa en el mercado y llevar al fracaso del esfuerzo exportador. Es crítico entender y respetar estas diferencias para tener éxito en negocios internacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Las diferencias culturales afectan estilos de negocio, la actitud ante las relaciones comerciales, puntualidad, estilos de negociación, regalos, saludos, gestos, el significado de colores y números, y el uso de títulos y nombres. La falta de familiaridad con las prácticas de negocios, costumbres sociales y etiqueta de un país puede debilitar la posición de una empresa en el mercado y llevar al fracaso del esfuerzo exportador. Es crítico entender y respetar estas diferencias para tener éxito en negocios internacionales. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4559",
+        "frase": "business styles, attitudes toward business relationships and punctuality"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye estilos de negocio, la actitud ante las relaciones y el significado de colores y números, que el resumen deja caer.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

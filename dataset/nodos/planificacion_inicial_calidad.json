@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La planificación de calidad en manufactura inicia con la revisión del diseño de producto y proceso para identificar características clave, determinar su importancia, analizar el diagrama de flujo, fijar las características vitales, evaluar capacidad y control, aplicar error-proofing, planear un lugar de trabajo limpio, validar sistemas de medición y planear el autocontrol del operador, buscando prevenir defectos y minimizar variabilidad.",
   "pasos_accionables": [
-    "Revisar el diseño del producto con personal de operaciones antes de su lanzamiento",
+    "Revisar el diseño del producto con personal de operaciones antes de que el diseño quede definitivo",
     "Identificar características clave del producto y del proceso (KPCs)",
     "Clasificar características por importancia (crítica, mayor, menor, incidental)",
     "Analizar el diagrama de flujo del proceso por estación de trabajo",
@@ -48,6 +48,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Además de esos dos, se cae determinar las características vitales del proceso, parte de la misma enumeración.; La lista del libro incluye planear un lugar de trabajo limpio y el autocontrol del operador, que el resumen omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-018-planificacion_inicial_calidad-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar el diseño del producto con personal de operaciones antes de su lanzamiento",
+      "texto_nuevo": "Revisar el diseño del producto con personal de operaciones antes de que el diseño quede definitivo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22360",
+        "frase": "reviewed by operations personnel before the design is finalized for the marketplace"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la revisión por operaciones antes de que el diseño quede definitivo, no solo antes del lanzamiento.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

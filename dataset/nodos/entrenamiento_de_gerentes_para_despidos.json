@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Establecer como regla que cada gerente despide a su propio personal",
     "Capacitar a los gerentes en un guion breve: fallo de empresa, decisión no negociable",
-    "Proveer a los gerentes toda la información de paquetes de beneficios antes de la conversación",
+    "Proveer a los gerentes toda la información de beneficios y del apoyo que la empresa va a dar antes de la conversación",
     "Realizar simulacros o ensayos de la conversación de despido"
   ],
   "entregable_esperado": "Guion estandarizado y sesión de capacitación para gerentes antes de la ejecución del despido",
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Prepara a tus Gerentes para Despedir",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-020-entrenamiento_de_gerentes_para_despidos-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Proveer a los gerentes toda la información de paquetes de beneficios antes de la conversación",
+      "texto_nuevo": "Proveer a los gerentes toda la información de beneficios y del apoyo que la empresa va a dar antes de la conversación",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "887",
+        "frase": "all of the details about the benefits and support the company plans to provide"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide que el gerente lleve los detalles de los beneficios y del apoyo que dará la empresa; el paso pierde el apoyo.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

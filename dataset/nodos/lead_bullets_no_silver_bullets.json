@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Balas de Plomo, No Balas de Plata",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando una empresa enfrenta una amenaza existencial (un competidor superior en velocidad, funcionalidad o recursos), la tentación es buscar atajos o 'balas de plata': pivotar, ir a nichos más pequeños, usar partners en vez de competir directamente. Sin embargo, la única solución real suele ser el trabajo duro y sostenido para resolver el problema de fondo (ej: mejorar el producto). No hay atajos mágicos para los problemas fundamentales del negocio.",
+  "resumen_teorico": "Cuando una empresa enfrenta una amenaza existencial (un competidor superior en velocidad, funcionalidad o recursos), la tentación es buscar atajos o 'balas de plata': pivotar, ir a nichos más pequeños, usar partners en vez de competir directamente. Sin embargo, si el problema no es de mercado (los clientes sí compran, pero no tu producto), la única solución real suele ser el trabajo duro y sostenido para resolver el problema de fondo (ej: mejorar el producto). En ese caso no hay atajos mágicos.",
   "pasos_accionables": [
     "Identifica si el problema es de mercado (no hay demanda) o de producto/ejecución (hay demanda pero tu producto pierde frente a competencia).",
     "Si es un problema de producto, resiste la tentación de buscar mercados alternativos o modelos de negocio distintos como escape., y lo mismo con asociaciones o adquisiciones",
@@ -52,6 +52,22 @@
         "motivo": "Balas de plomo trata de responder a una amenaza competitiva existencial con trabajo duro. No tiene relacion con construir y probar un MVP."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "final-e1-barrido-020-lead_bullets_no_silver_bullets-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando una empresa enfrenta una amenaza existencial (un competidor superior en velocidad, funcionalidad o recursos), la tentación es buscar atajos o 'balas de plata': pivotar, ir a nichos más pequeños, usar partners en vez de competir directamente. Sin embargo, la única solución real suele ser el trabajo duro y sostenido para resolver el problema de fondo (ej: mejorar el producto). No hay atajos mágicos para los problemas fundamentales del negocio.",
+      "texto_nuevo": "Cuando una empresa enfrenta una amenaza existencial (un competidor superior en velocidad, funcionalidad o recursos), la tentación es buscar atajos o 'balas de plata': pivotar, ir a nichos más pequeños, usar partners en vez de competir directamente. Sin embargo, si el problema no es de mercado (los clientes sí compran, pero no tu producto), la única solución real suele ser el trabajo duro y sostenido para resolver el problema de fondo (ej: mejorar el producto). En ese caso no hay atajos mágicos.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "1097",
+        "frase": "The customers were buying; they just weren’t buying our product. This was not a time"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro descarta los atajos porque no hay problema de mercado (los clientes compran, pero no el producto propio); el cierre del nodo lo generaliza a todo problema de fondo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

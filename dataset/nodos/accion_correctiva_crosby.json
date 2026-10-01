@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva Sistemática",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Paso del programa donde se investigan las causas reales de los problemas de calidad, en lugar de conclusiones superficiales. Requiere acudir directamente a los trabajadores operativos para entender lo que realmente sucede, y realizar auditorías independientes periódicas de cada departamento.",
+  "resumen_teorico": "Paso del programa donde se investigan las causas reales de los problemas de calidad, en lugar de conclusiones superficiales. Requiere acudir directamente a los trabajadores operativos para entender lo que realmente sucede, y revisar cuándo fue la última vez que cada departamento tuvo una auditoría independiente.",
   "pasos_accionables": [
     "Investigar las causas raíz consultando directamente al personal operativo",
     "Realizar auditorías independientes periódicas por departamento",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Investiga las Causas Reales",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-018-accion_correctiva_crosby-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Paso del programa donde se investigan las causas reales de los problemas de calidad, en lugar de conclusiones superficiales. Requiere acudir directamente a los trabajadores operativos para entender lo que realmente sucede, y realizar auditorías independientes periódicas de cada departamento.",
+      "texto_nuevo": "Paso del programa donde se investigan las causas reales de los problemas de calidad, en lugar de conclusiones superficiales. Requiere acudir directamente a los trabajadores operativos para entender lo que realmente sucede, y revisar cuándo fue la última vez que cada departamento tuvo una auditoría independiente.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3611",
+        "frase": "Ask everyone when was the last time they had an independent audit"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo invita a preguntar cuándo fue la última auditoría independiente de cada departamento; el nodo la vuelve un requisito periódico del paso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

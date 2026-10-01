@@ -9,7 +9,7 @@
     "Establecer políticas internas anticorrupción antes de iniciar operaciones internacionales",
     "Capacitar a empleados, agentes y distribuidores sobre la FCPA",
     "Evitar cualquier pago, promesa o autorización de pago a funcionarios extranjeros para obtener negocios",
-    "Consultar a un abogado especializado ante cualquier duda sobre transacciones internacionales",
+    "Consultar a un abogado especializado ante cualquier duda relacionada con la FCPA",
     "Revisar el procedimiento de opinión de la FCPA del Departamento de Justicia si hay incertidumbre"
   ],
   "entregable_esperado": "Política de cumplimiento anticorrupción documentada y capacitación del personal involucrado en operaciones internacionales",
@@ -89,6 +89,53 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro prohíbe también autorizar el pago o la promesa y el resumen lo omite de la lista de conductas.; Mismo defecto: se cae la autorización del pago o la promesa de la enumeración.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-017-foreign_corrupt_practices_act-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Consultar a un abogado especializado ante cualquier duda sobre transacciones internacionales",
+      "texto_nuevo": "Consultar a un abogado especializado ante cualquier duda relacionada con la FCPA",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2863",
+        "frase": "should consult an attorney when confronted with FCPA issues"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la consulta al abogado a las cuestiones de la FCPA, no a cualquier duda sobre transacciones internacionales.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-017-foreign_corrupt_practices_act-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Establecer políticas internas anticorrupción antes de iniciar operaciones internacionales",
+      "texto_nuevo": "Establecer políticas internas anticorrupción antes de iniciar operaciones internacionales",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro solo describe la prohibición y remite a un abogado; no aconseja políticas internas anticorrupción."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-017-foreign_corrupt_practices_act-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Capacitar a empleados, agentes y distribuidores sobre la FCPA",
+      "texto_nuevo": "Capacitar a empleados, agentes y distribuidores sobre la FCPA",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro no habla de capacitar a empleados, agentes ni distribuidores."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

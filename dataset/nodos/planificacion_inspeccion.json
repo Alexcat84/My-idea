@@ -7,7 +7,7 @@
   "resumen_teorico": "Actividad de designar las 'estaciones' donde debe realizarse la inspección (incoming inspection, process inspection, lot approval, finished-goods inspection, etc.) y proporcionar los medios e instrucciones necesarias. Se apoya en el flowchart del proceso para ubicar los puntos críticos de control.",
   "pasos_accionables": [
     "Mapear el proceso completo mediante un flowchart.",
-    "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
+    "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas o costosas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
     "Definir si la inspección será fija, itinerante (roving) o integrada al operador (poka-yoke).",
     "Documentar instrucciones y facilidades requeridas en cada estación."
   ],
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro trae además antes de una operación costosa e irreversible y en las mirillas naturales del proceso.; Mismo defecto: se caen dos ubicaciones de la enumeración del libro.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-018-planificacion_inspeccion-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
+      "texto_nuevo": "Identificar puntos críticos: recepción de materiales, setup, operaciones críticas o costosas, transferencia entre departamentos, producto terminado, antes de una operación costosa e irreversible y en las mirillas naturales del proceso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24519",
+        "frase": "During the running of critical or costly operations, usually called “process inspection.”"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro ubica la inspección de proceso durante operaciones críticas o costosas; el paso deja fuera las costosas.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

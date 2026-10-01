@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Flujo de Caja Libre (Free Cash Flow)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El flujo de caja libre es el efectivo que genera tu negocio menos lo que inviertes para mantenerlo funcionando (inversión en activos o capex). Es la métrica que hoy prefieren los inversionistas por encima del EBITDA, y equivale a lo que Warren Buffett llama 'ganancias del dueño' (owner earnings). Si tu flujo de caja libre es saludable, tienes opciones reales: pagar deuda, comprar un competidor, subir salarios, sin depender todo el tiempo de financiamiento externo.",
+  "resumen_teorico": "El flujo de caja libre es el efectivo que genera tu negocio menos lo que inviertes para mantenerlo funcionando (inversión en activos o capex). Es la métrica que hoy prefieren los inversionistas por encima del EBITDA, y equivale a lo que Warren Buffett llama 'ganancias del dueño' (owner earnings). Si tu flujo de caja libre es saludable y va en aumento, tienes opciones reales: pagar deuda, comprar un competidor, subir salarios, sin depender todo el tiempo de financiamiento externo.",
   "pasos_accionables": [
     "Consigue el estado de flujo de caja del periodo",
     "Toma el efectivo neto que dejaron las operaciones",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Calcula tu Flujo de Caja",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-017-flujo_de_caja_libre-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El flujo de caja libre es el efectivo que genera tu negocio menos lo que inviertes para mantenerlo funcionando (inversión en activos o capex). Es la métrica que hoy prefieren los inversionistas por encima del EBITDA, y equivale a lo que Warren Buffett llama 'ganancias del dueño' (owner earnings). Si tu flujo de caja libre es saludable, tienes opciones reales: pagar deuda, comprar un competidor, subir salarios, sin depender todo el tiempo de financiamiento externo.",
+      "texto_nuevo": "El flujo de caja libre es el efectivo que genera tu negocio menos lo que inviertes para mantenerlo funcionando (inversión en activos o capex). Es la métrica que hoy prefieren los inversionistas por encima del EBITDA, y equivale a lo que Warren Buffett llama 'ganancias del dueño' (owner earnings). Si tu flujo de caja libre es saludable y va en aumento, tienes opciones reales: pagar deuda, comprar un competidor, subir salarios, sin depender todo el tiempo de financiamiento externo.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2373",
+        "frase": "if your company’s free cash flow is healthy and increasing"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona las opciones a un flujo libre saludable y en aumento; el resumen deja caer la segunda condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }
