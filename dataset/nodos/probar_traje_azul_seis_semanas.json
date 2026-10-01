@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Hacer una prueba de seis semanas comparando dos vestuarios completos para medir el efecto del color en las ventas",
   "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
-  "resumen_teorico": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Según lo que han visto una y otra vez los clientes de una consultoría, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
+  "resumen_teorico": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Una y otra vez, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_12.md, unidad Cap. 10, titulo textual The Business Development Process. Sale de la PIEZA R3d de la frontera fina publicada en la vuelta 4 (.gerber_v4/frontera_cap12.txt), L63 a L64, 82 palabras. Es el segundo de los tres ejemplos THE INNOVATION que la vuelta 3 leyo de golpe como R3 (L22 a L83, POSTURA y CASO) y que d101 (ACTA G3 3.1) devolvio a leer pieza por pieza. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 y 9.1 delante: el parrafo trae su propio inventario de OBJETOS DE TRABAJO, nombrados uno a uno para cada una de las dos etapas (traje, camisa, corbata o accesorio, zapatos, cuatro prendas por etapa, ocho en total), sin adjetivo de adecuacion en el sitio del criterio: no dice vistete de forma profesional, dice el color y la prenda exactos de cada semana. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v4/cita_cap12_L63.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice a cuantos vendedores se aplica el test, ni quien mide las ventas de cada mitad del periodo (eso lo desarrolla el nodo cuantificar_impacto_innovacion_6_pasos de la vuelta 3, vecino de este), asi que no invento destinatario ni responsable. EL RESULTADO ATRIBUIDO (blue suits outsell brown suits, sin cifra ni banda, mas la postura de que McDonalds, Federal Express, Disney y Mrs Fields tambien invierten en su apariencia) NO es parte de los pasos: es la pieza R3e de la misma frontera fina (L65 a L68), postura y caso, y no se transcribe aqui porque no es un paso que el lector ejecute.",
   "pasos_accionables": [
     "Durante las primeras tres semanas de la prueba, haz que el vendedor vista: un traje marrón, una camisa tostada almidonada, una corbata marrón (para hombres) y zapatos marrones bien lustrados, cuidando que todas las piezas estén limpias y bien planchadas.",
@@ -132,6 +132,22 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "medida3-vecindad-probar_traje_azul_seis_semanas-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Según lo que han visto una y otra vez los clientes de una consultoría, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
+      "texto_nuevo": "Es una prueba de seis semanas para quien vende. Durante las tres primeras, el vendedor va a trabajar con traje marrón, camisa tostada almidonada, corbata marrón y zapatos marrones bien lustrados, todo limpio y bien planchado. Durante las tres siguientes, con traje azul marino, camisa blanca almidonada, corbata con algo de rojo, o un broche o un pañuelo con rojo, y zapatos negros muy lustrados. Una y otra vez, las ventas suben en la segunda mitad, porque el traje azul vende más que el marrón, lo lleve quien lo lleve.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Según lo que han visto una y otra vez los clientes de una consultoría, "
+        ]
+      },
+      "decision": "medida final, vecindad: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
     }
   ],
   "etiqueta_arbol": "Prueba el Efecto del Vestuario",

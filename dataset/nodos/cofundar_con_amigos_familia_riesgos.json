@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Riesgos de Cofundar con Amigos y Familia (Relational Teams)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+  "resumen_teorico": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
   "pasos_accionables": [
     "Evaluar honestamente si la relación social previa (amistad/familia) aporta las habilidades necesarias o solo comodidad, identificando primero de qué tipo es: familiar, amigo, excompañero de trabajo, conocido o desconocido",
     "Discutir explícitamente temas difíciles antes de fundar: reparto de equity, roles, qué pasa si el negocio falla",
@@ -47,5 +47,23 @@
   ],
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "medida3-vecindad-cofundar_con_amigos_familia_riesgos-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero datos muestran que estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+      "texto_nuevo": "Fundar con amigos o familiares ('equipos relacionales') es común (40% de equipos incluyen amigos, 17.3% incluyen familiares) por facilidad de acceso y apoyo emocional, pero estos equipos son menos estables que equipos de extraños o excompañeros de trabajo. Cada relación social adicional en el equipo aumenta en 28.6% la probabilidad de salida de un cofundador. El problema surge porque es difícil transformar una relación social preexistente en una relación profesional funcional, especialmente al tomar decisiones difíciles como reparto de equity o roles.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "datos muestran que "
+        ]
+      },
+      "decision": "medida final, vecindad: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
+    }
   ]
 }

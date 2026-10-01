@@ -8,7 +8,7 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_06.md, unidad Cap. 3, Understand What Motivates Each Person on Your Team. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'person you are firing', corrida con grep contra las quince unidades del libro. El inventario es del texto y viene numerado por el mismo con dos recordatorios, uno y dos, cada uno con su desarrollo. Se extrae separado del procedimiento de decidir cuando toca porque el propio texto los separa con dos rotulos y porque son dos actos distintos: uno se hace con una lista de preguntas delante y el otro dentro de una conversacion. El caso del verano de cajera y el del empresario que sudaba van nombrados dentro de sus pasos, que es la condicion con la que esta casa admite la transcripcion de caso, y el entregable no lleva ningun dato de ninguno de los dos. Lo que el texto NO dice, y por eso no esta escrito aqui, es que palabras usar en la reunion, cuanto preaviso dar, ni que hacer si la persona no acepta la reformulacion del problema. CORRECCION DECLARADA DE LA VUELTA 27, 16 sep 2026, por el punto 3 de la TAREA 1 de su encargo y la adjudicacion 3.1 de la ACTA 25, SIN BORRAR LO QUE HAY ENCIMA: la frase de la vuelta 19 que llama ancla textual unica a 'person you are firing' es FALSA, y de la especie peor de las cuatro, porque la unidad declarada NO contiene su propia ancla. grep -ril 'person you are firing' contra las quince unidades del libro da un solo fichero y es cap_10.md, corrido el 16 sep 2026. La UNIDAD DE ORIGEN cap_06 SE SOSTIENE IGUAL, y no por la palabra sino por el texto: los pasos 3 y 4 salen de cap_06 linea 297, el verano de cajera de banco, y los pasos 5, 6, 7 y 8 salen de cap_06 linea 299, que es donde el libro escribe 'Can I help by making an introduction?'. El ancla que SI es unica de cap_06, comprobada con el mismo comando, es 'bank teller'. Lo que estaba mal es la etiqueta de procedencia, NO el procedimiento: ni un paso ni una cita cambian.",
   "pasos_accionables": [
     "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, lo vas a hacer mal.",
-    "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, que parecía más descarado que compasivo a la hora de despedir, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+    "Cuenta con que esto es duro de verdad y con que no eres el único: incluso quien parece más descarado que compasivo a la hora de despedir puede despertarse con sudores fríos las mañanas en que va a despedir a alguien.",
     "Para llegar con la actitud adecuada, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter.",
     "Cuenta con la lección de ese caso: si aquella jefa la hubiera despedido diciendo que claramente ese trabajo no le interesaba y que por qué no buscaba otro ese verano, le habría hecho un gran favor y le habría ahorrado mucho dinero al banco.",
     "Parte de que al despedir a alguien creas la posibilidad de que esa persona destaque y encuentre felicidad haciendo un trabajo con sentido en otro sitio, porque parte de conseguir un buen trabajo es dejar uno malo, o uno que es malo para ti.",
@@ -422,6 +422,23 @@
       "motivos": [
         "matiz"
       ]
+    },
+    {
+      "id": "medida3-vecindad-despedir_persona_franqueza_radical-pasos_accionables-1",
+      "fecha": "2026-10-01",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, que parecía más descarado que compasivo a la hora de despedir, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+      "texto_nuevo": "Cuenta con que esto es duro de verdad y con que no eres el único: incluso quien parece más descarado que compasivo a la hora de despedir puede despertarse con sudores fríos las mañanas en que va a despedir a alguien.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "un empresario de éxito, que parecía más descarado que compasivo a la hora de despedir, confesaba que"
+        ]
+      },
+      "decision": "medida final, vecindad: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
     }
   ],
   "etiqueta_arbol": "Despide con Franqueza Radical",
