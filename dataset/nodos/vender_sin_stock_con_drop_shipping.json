@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Vender sin stock con drop-shipping",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+  "resumen_teorico": "El drop-shipping te permite ofrecer productos sin guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
   "pasos_accionables": [
     "Contacta fabricantes o mayoristas de tu categoría y pregunta si envían directo al cliente final.",
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
@@ -219,6 +219,37 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-010-vender_sin_stock_con_drop_shipping-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El drop-shipping te permite ofrecer productos sin comprarlos ni guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+      "texto_nuevo": "El drop-shipping te permite ofrecer productos sin guardarlos: cuando alguien te compra, tú pasas ese pedido al fabricante o mayorista y es él quien empaca y envía directo al comprador. Esto baja tu necesidad de capital y bodega, sobre todo útil con artículos pesados, donde reduces la doble manipulación de la carga. El riesgo es que te cuesta asegurar el nivel de servicio que quieres darle al cliente, porque el envío queda en manos de un tercero. Existen proveedores que no cumplen lo prometido.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "198",
+        "frase": "does not keep the goods in stock (thereby minimizing stockholding costs)"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que quien hace drop-shipping no guarda los productos en stock y transfiere el pedido; no dice que no los compre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-010-vender_sin_stock_con_drop_shipping-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
+      "texto_nuevo": "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro solo advierte que cuesta asegurar el nivel de servicio y que hay proveedores incumplidos; no aconseja pedir referencias antes de firmar, y el índice 1 no está en pasos_casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Validar Posicionamiento con Analistas e Influenciadores",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en mercados técnicos donde vender a grandes empresas es muy difícil hasta que una firma de análisis importante respalda el producto, sobre todo si es nuevo. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
+  "resumen_teorico": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en algunos mercados técnicos donde vender a grandes empresas es muy difícil hasta que una firma de análisis importante respalda el producto, sobre todo si es nuevo. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
   "pasos_accionables": [
     "Identificar a los analistas e influenciadores relevantes, rastreados desde el descubrimiento de clientes",
     "Investigar qué compañías e industrias cubre cada analista antes de contactarlo",
@@ -50,6 +50,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que en ciertos mercados técnicos vender a grandes empresas es muy difícil hasta que una gran firma de análisis respalda el producto; 'puede facilitar' lo suaviza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-012-validar_posicionamiento_con_analistas-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en mercados técnicos donde vender a grandes empresas es muy difícil hasta que una firma de análisis importante respalda el producto, sobre todo si es nuevo. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
+      "texto_nuevo": "Los analistas de la industria y las personas con influencia (por ejemplo, en firmas de análisis reconocidas) aportan credibilidad externa valiosa, especialmente en algunos mercados técnicos donde vender a grandes empresas es muy difícil hasta que una firma de análisis importante respalda el producto, sobre todo si es nuevo. Antes de escalar el negocio, conviene reunirse con ellos para validar el posicionamiento del producto y la empresa -no para venderles- y obtener retroalimentación experta sobre el ajuste con el mercado, la comparación con la competencia y los precios, usando esas reuniones además como referencia futura en relaciones con prensa.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12674",
+        "frase": "In some technical markets (enterprise software, for example) sales to large companies are very difficult"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita esa dificultad a algunos mercados técnicos, con el software empresarial como ejemplo; el nodo la generaliza a todos.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

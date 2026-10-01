@@ -9,7 +9,7 @@
     "Convertir el problema general en una pregunta específica y verificable.",
     "Diseñar un método sistemático de exploración del problema (por categorías, por orden lógico, por eliminación).",
     "Adoptar deliberadamente una postura de 'caso a probar o refutar' para filtrar información relevante.",
-    "Usar el método del diálogo interno: cuando la mente esté confusa, seguir las implicaciones de dos proposiciones que se daban por verdaderas hasta descubrir cuál de ellas es falsa."
+    "Usar el método del diálogo interno: cuando la mente esté confusa, seguir las implicaciones de dos proposiciones que se daban por verdaderas hasta descubrir que una de ellas no puede ser verdadera."
   ],
   "entregable_esperado": "Una pregunta de investigación o hipótesis de trabajo claramente formulada, junto con un método de exploración sistemático.",
   "nodos_previos": [
@@ -57,6 +57,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro describe seguir las implicaciones de dos proposiciones tenidas por verdaderas, cuando la mente está confusa, hasta hallar la falsa; el paso pierde el procedimiento y la condición.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-010-wallas_pensamiento_regulado-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usar el método del diálogo interno: cuando la mente esté confusa, seguir las implicaciones de dos proposiciones que se daban por verdaderas hasta descubrir cuál de ellas es falsa.",
+      "texto_nuevo": "Usar el método del diálogo interno: cuando la mente esté confusa, seguir las implicaciones de dos proposiciones que se daban por verdaderas hasta descubrir que una de ellas no puede ser verdadera.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "319",
+        "frase": "until he had discovered that one of them must be untrue"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el ejercicio lleva a descubrir que una de las dos debe ser falsa, no a saber cuál de ellas lo es.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

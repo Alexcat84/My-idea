@@ -94,6 +94,21 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-009-tratar_las_historias_como_herramientas-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Antes de lanzar una prueba de validación, define explícitamente qué resultado haría que abandones o cambies tu hipótesis actual.",
+      "texto_nuevo": "Antes de lanzar una prueba de validación, define explícitamente qué resultado haría que abandones o cambies tu hipótesis actual.",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro solo dice ajustar o cambiar la historia cuando falla; fijar de antemano un criterio de abandono es consejo de la casa y el índice 0 no está en pasos_casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Tener un sitio web no garantiza tráfico ni ventas; se requiere promoción activa mediante publicaciones en medios especializados, inclusión de la URL en materiales corporativos, campañas de e-mail opt-in, seguimiento a visitantes que no compraron, y uso de redes sociales.",
   "pasos_accionables": [
     "Enviar notas de prensa sobre la empresa y el sitio web a publicaciones del sector en el mercado objetivo",
-    "Incluir la URL en tarjetas de presentación, papelería y empaques",
+    "Incluir la URL en tarjetas de presentación, papelería, empaques y todo tipo de material promocional",
     "Implementar campañas de e-mail opt-in para clientes interesados",
     "Enviar seguimiento con descuentos a visitantes que no completaron compra",
     "Utilizar redes sociales para promover productos y experiencia de la empresa"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Promociona tu Sitio Web",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-009-promocion_sitio_web-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluir la URL en tarjetas de presentación, papelería y empaques",
+      "texto_nuevo": "Incluir la URL en tarjetas de presentación, papelería, empaques y todo tipo de material promocional",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3299",
+        "frase": "envelopes, packaging, and promotional materials of all kinds"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye en la lista el material promocional de todo tipo, que el paso omite.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

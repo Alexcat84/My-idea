@@ -9,7 +9,7 @@
     "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
     "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
     "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank (en general exige contenido de EE.UU. y, en algunas pólizas, asegurar todas tus ventas elegibles) o privado si ya tienes historial como exportador establecido",
-    "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
+    "Revisa si tu comprador extranjero, si es solvente, podría financiarse con un banco respaldado por la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
     "Presenta tu inventario y tus cuentas por cobrar de exportación como garantía y negocia las tasas de anticipo con el prestamista",
     "Consulta con la oficina local del U.S. Commercial Service o en exim.gov el proceso de solicitud y los bancos participantes"
   ],
@@ -258,6 +258,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que en muchos casos la garantía cuesta menos que el préstamo, sin condicionarlo al tamaño de la venta.; Mismo defecto: la condición 'para ventas grandes' no está en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-009-programas_ex_im_bank-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
+      "texto_nuevo": "Revisa si tu comprador extranjero, si es solvente, podría financiarse con un banco respaldado por la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1589",
+        "frase": "encourage banks and other lenders to make export loans to creditworthy foreign buyers"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La póliza respalda a bancos y prestamistas que financian a compradores extranjeros solventes; no es algo para lo que califique el exportador.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

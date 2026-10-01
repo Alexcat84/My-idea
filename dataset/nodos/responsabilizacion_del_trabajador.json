@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Cuando la culpa de la seguridad cae solo en el trabajador (worker responsibilization)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Existe una tendencia a trasladar la responsabilidad de la seguridad en el trabajo desde el negocio hacia cada trabajador, culpando su comportamiento personal en vez de mirar cómo organizas y das recursos al trabajo. Se nota cuando las sanciones y llamadas de atención caen sobre todo en los trabajadores y supervisores directos, invirtiendo la idea más antigua de que quien organiza el trabajo, es decir tú, es quien debe responder.",
+  "resumen_teorico": "Existe una tendencia a trasladar la responsabilidad de la seguridad en el trabajo desde el negocio hacia cada trabajador, culpando su comportamiento personal en vez de mirar cómo organizas y das recursos al trabajo. En algunos lugares e industrias se nota en que las sanciones de los inspectores de seguridad caen sobre todo en los trabajadores y supervisores directos, invirtiendo la idea más antigua de que quien organiza el trabajo, es decir tú, es quien debe responder.",
   "pasos_accionables": [
     "Revisa quién recibe las sanciones o llamadas de atención por seguridad en tu negocio: ¿los trabajadores o tú y quienes organizan el trabajo?",
     "Pregúntate si tus políticas de seguridad culpan siempre a las personas por fallos que en realidad vienen de cómo organizaste el trabajo.",
@@ -38,6 +38,22 @@
         "evidencia": "F09-032: Diagnosticar cómo reparte la responsabilidad de seguridad un negocio con trabajadores es gestión operativa; no valida nada con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "final-e1-barrido-011-responsabilizacion_del_trabajador-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Existe una tendencia a trasladar la responsabilidad de la seguridad en el trabajo desde el negocio hacia cada trabajador, culpando su comportamiento personal en vez de mirar cómo organizas y das recursos al trabajo. Se nota cuando las sanciones y llamadas de atención caen sobre todo en los trabajadores y supervisores directos, invirtiendo la idea más antigua de que quien organiza el trabajo, es decir tú, es quien debe responder.",
+      "texto_nuevo": "Existe una tendencia a trasladar la responsabilidad de la seguridad en el trabajo desde el negocio hacia cada trabajador, culpando su comportamiento personal en vez de mirar cómo organizas y das recursos al trabajo. En algunos lugares e industrias se nota en que las sanciones de los inspectores de seguridad caen sobre todo en los trabajadores y supervisores directos, invirtiendo la idea más antigua de que quien organiza el trabajo, es decir tú, es quien debe responder.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "3926",
+        "frase": "In some places and industries, workers themselves are increasingly blamed (sanctioned, ticketed) for safety violations"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa el dato en las sanciones de los inspectores y solo en algunos lugares e industrias; el nodo lo generaliza como señal universal.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

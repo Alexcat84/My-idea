@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Metodología y criterios claros de reporte",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
+  "resumen_teorico": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, cómo normalizas los datos para que las comparaciones sean válidas, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
   "pasos_accionables": [
     "Elige y anota un año base para comparar tus tendencias",
     "Aclara si tus datos son absolutos o normalizados por intensidad",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): 'No te conviene' rebaja a preferencia lo que el libro da como no aceptable.; El libro dice que donde la ley fija el reporte o hay un método establecido, las métricas propias no serán aceptadas; el nodo pierde el caso de la ley y lo rebaja a conveniencia.; Se cae el caso en que la ley determina los requisitos de reporte.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-011-metodologia_clara_reporte-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
+      "texto_nuevo": "Cuando reportas datos de sostenibilidad, tienes que ser explícito sobre cómo los calculas: qué año usas como base, cómo normalizas los datos para que las comparaciones sean válidas, si comparas cifras absolutas o por intensidad, y qué supuestos aplicaste. Si la ley fija cómo reportar tu tema o existe un protocolo estándar reconocido (como el de gases de efecto invernadero), un método inventado por ti no será aceptado: usa el que ya existe.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7267",
+        "frase": "how data has been normalized to ensure appropriate comparisons can be made"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye explicitar cómo se normalizaron los datos para comparar bien; el nodo la omite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
