@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Cuando tus notas convertibles se convierten en participación accionaria durante una ronda Serie A, tienes tres formas comunes de decidir quién absorbe la dilución que genera el descuento de conversión: (1) fijas la valuación de tu empresa antes de la inversión (método pre-money), y la dilución recae sobre ti y los inversionistas de la Serie A en proporción a su participación; (2) fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo), y toda la dilución la absorbes tú; o (3) fijas el valor de tu empresa después de la inversión igual a la valuación antes de la inversión más lo que invierte la Serie A más el capital y el interés acumulado de las notas que se convierten (método de dólares invertidos), un punto intermedio donde solo tú absorbes la dilución del descuento, aunque bastante menos que con el porcentaje fijo.",
   "pasos_accionables": [
-    "Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, y la tasa de descuento",
+    "Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, la tasa de descuento y las acciones en circulación totalmente diluidas antes de la inversión",
     "Calcula el resultado si fijas la valuación antes de la inversión (método pre-money) y derivas el precio de conversión con el descuento",
     "Calcula el resultado si fijas el porcentaje de propiedad de los inversionistas de la Serie A (método de porcentaje fijo)",
     "Calcula el resultado si fijas el valor de tu empresa después de la inversión (método de dólares invertidos): valor después de la inversión igual a valor antes más inversión más notas convertidas",
@@ -61,6 +61,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la regla que define el método de dólares invertidos; fijar sin más el valor posterior equivale, según el libro, al porcentaje fijo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-029-metodo_conversion_notas_cap_table-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, y la tasa de descuento",
+      "texto_nuevo": "Identifica la valuación acordada antes de la inversión, el monto que invertirá la Serie A, el capital más interés de tus notas, la tasa de descuento y las acciones en circulación totalmente diluidas antes de la inversión",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2489-2499",
+        "frase": "Shares Outstanding on a Fully Diluted Basis, Pre-Investment: 1 million"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de datos del libro incluye las acciones en circulación totalmente diluidas antes de la inversión, sin las cuales no se obtiene el precio por acción; el paso lo omite.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
   "fuente": "OSHA3886",
-  "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes para los peligros de mayor riesgo, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te ayuda a entender los peligros en el contexto de tu propio lugar de trabajo y a priorizarlos para su control permanente.",
+  "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te ayuda a entender los peligros en el contexto de tu propio lugar de trabajo y a priorizarlos para su control permanente.",
   "pasos_accionables": [
     "Evalúa la severidad potencial y la probabilidad de ocurrencia de cada peligro identificado",
     "Determina el número de personas expuestas a cada peligro",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la evaluación ayuda a entender los peligros en tu contexto y priorizarlos, no que dé un criterio objetivo para justificar el orden.; Mismo propósito añadido; el libro no habla de criterio objetivo ni de justificar el orden.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-027-caracterizacion_priorizacion_peligros-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes para los peligros de mayor riesgo, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te ayuda a entender los peligros en el contexto de tu propio lugar de trabajo y a priorizarlos para su control permanente.",
+      "texto_nuevo": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te ayuda a entender los peligros en el contexto de tu propio lugar de trabajo y a priorizarlos para su control permanente.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "625-629",
+        "frase": "Use interim control measures to protect workers until more permanent solutions can be implemented."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro pide controles provisionales hasta la solución permanente de cualquier peligro, sin limitarlo a los de mayor riesgo.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

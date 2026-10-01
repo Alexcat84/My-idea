@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo de Costo Óptimo de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo esto no siempre es económicamente viable. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.",
+  "resumen_teorico": "Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo o en algunas situaciones esto no es necesariamente lo más económico. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.",
   "pasos_accionables": [
     "Grafica las curvas de costo de fallas y de evaluación/prevención en función del nivel de conformidad de tu producto",
     "Identifica el punto mínimo de la curva de costo total de calidad",
@@ -82,6 +82,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro sitúa el óptimo en el mínimo de la curva de costo total; la intersección de las curvas es un añadido.; Mismo defecto: el libro no habla de intersección, solo del mínimo del costo total.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-026-modelo_costo_optimo_calidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo esto no siempre es económicamente viable. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.",
+      "texto_nuevo": "Este modelo grafica tres curvas: costo de fallas, que crece cuando el producto es más defectuoso; costo de evaluación y prevención, que crece conforme te acercas a la perfección; y el costo total de calidad, que es la suma de ambas. Tradicionalmente se creía que existía un punto óptimo de conformidad menor al 100%, pero la creciente capacidad de cuantificar el impacto de fallas en tus ventas sugiere que el mínimo costo total tiende hacia la perfección o cero defectos en el largo plazo, aunque en el corto plazo o en algunas situaciones esto no es necesariamente lo más económico. Te sirve para decidir cuánto invertir en prevenir fallas frente a aceptar un cierto nivel de defectos según el beneficio económico real.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25865",
+        "frase": "not necessarily the most economic goal for the short run or for every situation"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita la perfección como meta económica en el corto plazo y también en no toda situación; el nodo deja solo el corto plazo y pierde la segunda excepción.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

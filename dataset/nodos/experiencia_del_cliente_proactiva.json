@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Experiencia del Cliente como Diferenciador Proactivo (no Servicio Reactivo)",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Customer service y customer experience no son lo mismo: el servicio al cliente es reactivo (resuelve problemas cuando ya ocurrieron), mientras que la experiencia del cliente es proactiva (anticipa las emociones y necesidades del cliente y diseña las interacciones para evitar problemas). En un mercado donde precio, calidad y disponibilidad ya están estandarizados, la experiencia del cliente es la única palanca de diferenciación real y difícil de copiar.",
+  "resumen_teorico": "Customer service y customer experience no son lo mismo: el servicio al cliente es reactivo (resuelve problemas cuando ya ocurrieron), mientras que la experiencia del cliente es proactiva (anticipa las emociones y necesidades del cliente y diseña las interacciones para evitar problemas). En un mercado donde precio, calidad, personalización y disponibilidad ya están estandarizados, la experiencia del cliente es la única palanca de diferenciación real y difícil de copiar.",
   "pasos_accionables": [
     "Definir la diferencia explícita entre 'servicio' (reactivo) y 'experiencia' (proactivo) dentro del equipo.",
     "Mapear el journey emocional del cliente desde la firma del contrato/compra, identificando momentos de miedo, duda o incertidumbre (FUD).",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Anticípate a tu Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-027-experiencia_del_cliente_proactiva-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Customer service y customer experience no son lo mismo: el servicio al cliente es reactivo (resuelve problemas cuando ya ocurrieron), mientras que la experiencia del cliente es proactiva (anticipa las emociones y necesidades del cliente y diseña las interacciones para evitar problemas). En un mercado donde precio, calidad y disponibilidad ya están estandarizados, la experiencia del cliente es la única palanca de diferenciación real y difícil de copiar.",
+      "texto_nuevo": "Customer service y customer experience no son lo mismo: el servicio al cliente es reactivo (resuelve problemas cuando ya ocurrieron), mientras que la experiencia del cliente es proactiva (anticipa las emociones y necesidades del cliente y diseña las interacciones para evitar problemas). En un mercado donde precio, calidad, personalización y disponibilidad ya están estandarizados, la experiencia del cliente es la única palanca de diferenciación real y difícil de copiar.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "904-912",
+        "frase": "With zero product defects, customized offerings, bargain basement pricing, and ubiquitous availability becoming the norm"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro tiene cuatro vías ya agotadas y el nodo omite la personalización, dejando entender que aún diferencia.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

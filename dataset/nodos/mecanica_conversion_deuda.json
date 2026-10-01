@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Mecánica de Conversión de la Deuda (Conversion Mechanics)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Define las condiciones bajo las cuales la deuda convertible se transforma automáticamente en equity: un plazo máximo (Maturity Date), un monto mínimo de la ronda calificada (Qualified Financing) y el proceso de conversión si no se cumplen las condiciones. También regula qué porcentaje de tenedores de deuda debe aprobar cambios en los términos.",
+  "resumen_teorico": "Define las condiciones bajo las cuales la deuda convertible se transforma automáticamente en equity: un plazo máximo (Maturity Date) y un monto mínimo de la ronda calificada (Qualified Financing), que deben cumplirse todas; si no, la deuda sigue vigente salvo que los tenedores acepten convertirla. También regula qué porcentaje de tenedores de deuda debe aprobar cambios en los términos.",
   "pasos_accionables": [
     "Definir el plazo máximo (Maturity Date) para que ocurra una ronda de financiamiento calificada, buscando que sea lo más largo posible (con un fondo de capital de riesgo, un año puede ser el máximo que logres negociar).",
     "Establecer el monto mínimo de la ronda futura que activa la conversión automática (Qualified Financing).",
     "Especificar el porcentaje de tenedores de deuda (Majority Holders) necesario para aprobar cambios en los términos, cuidando que no sea demasiado alto (por ejemplo, una mayoría calificada en lugar de una mayoría simple).",
-    "Anticipar qué sucede si no se cumplen las condiciones de conversión (deuda permanece vigente)."
+    "Anticipar qué sucede si no se cumplen las condiciones de conversión (la deuda permanece vigente salvo que los tenedores acepten convertirla)."
   ],
   "entregable_esperado": "Cláusulas de conversión documentadas con plazos, montos mínimos y reglas de mayoría para enmiendas.",
   "nodos_previos": [
@@ -60,6 +60,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Misma advertencia perdida.; Se pierde la advertencia de que la exigencia para aprobar cambios no sea demasiado alta.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-029-mecanica_conversion_deuda-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define las condiciones bajo las cuales la deuda convertible se transforma automáticamente en equity: un plazo máximo (Maturity Date), un monto mínimo de la ronda calificada (Qualified Financing) y el proceso de conversión si no se cumplen las condiciones. También regula qué porcentaje de tenedores de deuda debe aprobar cambios en los términos.",
+      "texto_nuevo": "Define las condiciones bajo las cuales la deuda convertible se transforma automáticamente en equity: un plazo máximo (Maturity Date) y un monto mínimo de la ronda calificada (Qualified Financing), que deben cumplirse todas; si no, la deuda sigue vigente salvo que los tenedores acepten convertirla. También regula qué porcentaje de tenedores de deuda debe aprobar cambios en los términos.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2256-2266",
+        "frase": "The debt stays outstanding unless the debt holders agree to convert their holdings."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que todas las condiciones deben cumplirse y que, si no, no hay conversión automática y la deuda sigue vigente salvo que los tenedores acepten convertir; el nodo habla de un proceso de conversión.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-029-mecanica_conversion_deuda-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipar qué sucede si no se cumplen las condiciones de conversión (deuda permanece vigente).",
+      "texto_nuevo": "Anticipar qué sucede si no se cumplen las condiciones de conversión (la deuda permanece vigente salvo que los tenedores acepten convertirla).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2266",
+        "frase": "The debt stays outstanding unless the debt holders agree to convert their holdings."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Cae la excepción del libro: la deuda sigue vigente salvo que los tenedores acepten convertirla.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
