@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Entrenar a quienes lideran equipos es trabajo tuyo, como fundador",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Entrenar a las personas que lideran equipos es esencial para dejar claras las expectativas de liderazgo: reuniones uno a uno, dar retroalimentación sobre el desempeño, fijar objetivos y desarrollar a su propia gente. Andy Grove decía que entrenar es 'el trabajo del jefe', y tú, como fundador, debes impartir personalmente al menos el curso donde explicas qué esperas de quienes lideran equipos.",
+  "resumen_teorico": "Entrenar a las personas que lideran equipos es esencial para dejar claras las expectativas de liderazgo: reuniones uno a uno, dar retroalimentación sobre el desempeño, fijar objetivos y desarrollar a su propia gente. Entrenar es parte del trabajo de quien dirige, y tú, como fundador, debes impartir personalmente al menos el curso donde explicas qué esperas de quienes lideran equipos.",
   "pasos_accionables": [
     "Define las expectativas mínimas para cualquier persona que lidere un equipo (reuniones uno a uno, retroalimentación, entrenar a su gente).",
     "Enseña tú mismo, en persona, el curso donde explicas qué esperas de quienes lideran equipos.",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Forma a tus Propios Gerentes",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "origen-ia-atribuciones-entrenamiento_gerencial-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Entrenar a las personas que lideran equipos es esencial para dejar claras las expectativas de liderazgo: reuniones uno a uno, dar retroalimentación sobre el desempeño, fijar objetivos y desarrollar a su propia gente. Andy Grove decía que entrenar es 'el trabajo del jefe', y tú, como fundador, debes impartir personalmente al menos el curso donde explicas qué esperas de quienes lideran equipos.",
+      "texto_nuevo": "Entrenar a las personas que lideran equipos es esencial para dejar claras las expectativas de liderazgo: reuniones uno a uno, dar retroalimentación sobre el desempeño, fijar objetivos y desarrollar a su propia gente. Entrenar es parte del trabajo de quien dirige, y tú, como fundador, debes impartir personalmente al menos el curso donde explicas qué esperas de quienes lideran equipos.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026) y regla 'ninguna referencia de origen llega a la IA' (1 oct 2026): nada se atribuye a una persona, un libro, estudios o expertos; si un metodo tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Andy Grove decía"
+        ]
+      },
+      "decision": "procedencia (D5): sale la persona citada como fuente o protagonista; el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 12"
+    }
   ]
 }

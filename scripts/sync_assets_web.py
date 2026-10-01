@@ -70,12 +70,25 @@ def _sha256_file(path: Path) -> str:
 CLAVES_INTERNAS_NODO = ("fuente", "fuentes_internas", "correcciones", "merged_originals", "notas_extraccion")
 
 
+# NINGUNA REFERENCIA DE ORIGEN LLEGA A LA IA (regla del fundador, 1 oct 2026): todo texto de nodo de la vista web
+# pasa por scripts/origen_ia.py, la funcion unica que quita titulos y autores de la lista canonica antes de que
+# cualquier llamada a la IA pueda leerlo. Cada quita queda en dataset/metadata/quitas_origen_ia.json (interno).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import origen_ia  # noqa: E402
+
+_PATRONES_ORIGEN = origen_ia.patrones(origen_ia.cargar_canon())
+_QUITAS_ORIGEN: list = []
+
+
 def _vista_web(nombre: str, datos):
     if nombre == "master_graph.json":
         for n in datos["nodos"].values():
             for k in CLAVES_INTERNAS_NODO:
                 n.pop(k, None)
+            origen_ia.limpiar_nodo(n, _PATRONES_ORIGEN, _QUITAS_ORIGEN)
         return datos
+    if nombre == "preguntas_cache.json":
+        return origen_ia.limpiar_textos(datos, _PATRONES_ORIGEN, _QUITAS_ORIGEN, [nombre])
     if nombre == "vigencia.json":
         # La web solo necesita saber QUE nodos avisan. El ano de la fuente, el libro, su fichero y su frase son
         # datos internos y se quedan en dataset/ (regla dura del fundador, 30 sep 2026: ningun origen se insinua).
@@ -126,6 +139,9 @@ def main():
             "origen": str(origen.relative_to(BASE)).replace("\\", "/"),
         }
         print(f"  {nombre}: {manifest[nombre]['bytes']} bytes, sha256={manifest[nombre]['sha256'][:12]}...")
+
+    origen_ia.escribir_registro(_QUITAS_ORIGEN)
+    print(f"  filtro de origen hacia la IA: {len(_QUITAS_ORIGEN)} quitas (dataset/metadata/quitas_origen_ia.json)")
 
     destino_prompts, contenido_prompts = _exportar_prompts()
     manifest["prompts.json"] = {

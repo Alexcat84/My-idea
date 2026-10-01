@@ -7,7 +7,7 @@
   "resumen_teorico": "Principio central en el análisis de accidentes organizacionales (Challenger, Dryden, Piper Alpha): los grandes desastres rara vez se explican por el error de una sola persona en el momento del incidente. En cambio, resultan de una cadena de factores latentes a nivel organizacional y regulatorio (recursos, procedimientos, comunicación, cultura) que crean las condiciones para que un error activo tenga consecuencias catastróficas, y que a veces bastan por sí solos para que fallen las defensas, como en Challenger.",
   "pasos_accionables": [
     "Al investigar un incidente, mapear factores organizacionales y regulatorios previos, no solo la acción del operador en el momento del evento",
-    "Usar un modelo de causalidad de accidentes (ej. modelo de Reason) para clasificar fallas activas vs latentes",
+    "Usar un modelo de causalidad de accidentes (por ejemplo, el modelo del queso suizo) para clasificar fallas activas vs latentes",
     "Evitar conclusiones apresuradas de 'error humano' sin explorar condiciones sistémicas subyacentes",
     "Documentar la cadena completa de decisiones organizacionales que condujeron al incidente"
   ],
@@ -42,6 +42,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro precisa que el acto inseguro no es condición necesaria: en Challenger las defensas fallaron solo por condiciones latentes.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "origen-ia-atribuciones-falla_sistemica_vs_error_individual-pasos_accionables-1",
+      "fecha": "2026-10-01",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Usar un modelo de causalidad de accidentes (ej. modelo de Reason) para clasificar fallas activas vs latentes",
+      "texto_nuevo": "Usar un modelo de causalidad de accidentes (por ejemplo, el modelo del queso suizo) para clasificar fallas activas vs latentes",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026) y regla 'ninguna referencia de origen llega a la IA' (1 oct 2026): nada se atribuye a una persona, un libro, estudios o expertos; si un metodo tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "modelo de Reason"
+        ]
+      },
+      "decision": "procedencia (D5): sale la persona citada como fuente o protagonista; el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 12"
     }
   ]
 }

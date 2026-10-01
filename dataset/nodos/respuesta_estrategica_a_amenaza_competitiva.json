@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Pivote Estratégico Rápido Ante Amenaza de Competidor Dominante",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+  "resumen_teorico": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
   "pasos_accionables": [
     "Analizar en detalle el producto/oferta del competidor (ingeniería inversa si es posible) para entender la amenaza real",
     "Definir una ventana de tiempo crítica para responder antes de perder mercado",
@@ -91,6 +91,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "origen-ia-atribuciones-respuesta_estrategica_a_amenaza_competitiva-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo (liderado por Homer y Horowitz) desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+      "texto_nuevo": "Cuando Microsoft anunció que regalaría su navegador junto con Windows 95, Netscape enfrentó una amenaza existencial a su modelo de ingresos y apostó por servidores web, pero el de Microsoft igualaba sus funciones y era cinco veces más rápido. En lugar de paralizarse, el equipo desarrolló en meses una nueva estrategia de producto (SuiteSpot) ofreciendo una alternativa más barata y abierta a la suite propietaria de Microsoft, adquiriendo empresas y cerrando alianzas clave (Informix) para ejecutar el pivote en tiempo récord, mucho más rápido que los ciclos tradicionales de producto de 18 meses.",
+      "cita": {
+        "regla": "Regla de procedencia del fundador (D5, 1 oct 2026) y regla 'ninguna referencia de origen llega a la IA' (1 oct 2026): nada se atribuye a una persona, un libro, estudios o expertos; si un metodo tiene nombre neutro se usa ese.",
+        "fragmentos": [
+          "Homer y Horowitz"
+        ]
+      },
+      "decision": "procedencia (D5): sale la persona citada como fuente o protagonista; el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 12"
     }
   ]
 }

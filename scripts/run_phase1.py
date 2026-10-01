@@ -555,15 +555,23 @@ def gemelos_divergentes(nodos_dataset, nodos_web):
     llega al navegador): no lleva las claves internas de scripts/sync_assets_web.py
     (fuente, fuentes_internas, correcciones, merged_originals, notas_extraccion). Esas no se comparan,
     y si una aparece en la copia web es una divergencia.
+
+    Y sus textos pasan por el filtro de origen hacia la IA (regla del fundador del 1 oct 2026, scripts/origen_ia.py):
+    el dataset se compara DESPUES de pasar por ese mismo filtro, asi que una quita esperada no es divergencia y un
+    texto web que no coincide con el filtrado si lo es.
     """
+    import copy
     sys.path.insert(0, str(BASE / "scripts"))
     from sync_assets_web import CLAVES_INTERNAS_NODO
+    import origen_ia
+    pats = origen_ia.patrones(origen_ia.cargar_canon())
     dif = {}
     for nid in sorted(set(nodos_dataset) | set(nodos_web)):
         a, b = nodos_dataset.get(nid), nodos_web.get(nid)
         if a is None or b is None:
             dif[nid] = "solo en " + ("dataset" if b is None else "web")
             continue
+        a = origen_ia.limpiar_nodo(copy.deepcopy(a), pats, [])
         campos = sorted(k for k in set(a) | set(b) if k not in CLAVES_INTERNAS_NODO and a.get(k) != b.get(k))
         campos += ["%s en la web" % k for k in sorted(set(b) & set(CLAVES_INTERNAS_NODO))]
         if campos:

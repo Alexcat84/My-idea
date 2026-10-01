@@ -1218,3 +1218,136 @@ reclasificado y 37 rechazados. Las cifras están en `docs/auditoria_final/medida
 - **Veredicto en esta acta:**
   - "SANEADO en contrarios, invenciones y procedencia" si da 0;
   - si no da 0, el residuo estimado por nodo con su intervalo de Wilson al 95 %.
+
+## 12. Ninguna referencia de origen llega a la IA (añadido del fundador, 1 oct 2026)
+
+Encargo: que ningún título de libro ni autor de la lista canónica llegue nunca a la IA, para que nunca pueda aparecer
+en lo que escribe. No basta con la orden `REGLA_SIN_FUENTES`. Se hizo antes de la medida final. La regla queda como D6
+en `docs/REGLAS_DE_LA_CASA.md`.
+
+### 12.1 A. Campos internos, llamada por llamada
+
+Inventario del código de producción (`web/`): 21 llamadas a la IA.
+
+| Llamada | Lo que lleva del grafo |
+|---|---|
+| Claridad / organizador (2 rutas) | id, fase, `titulo_concepto` y resumen recortado de las semillas de entrada |
+| Clasificación de la entrada | id, fase, `titulo_concepto` y resumen recortado de las semillas |
+| Intérprete de la entrevista (turno, variante sin historial, reintento) | id, `titulo_concepto`, 2 condiciones y pregunta en caché del nodo actual y sus sucesores; saltos con id, título, fase y condiciones |
+| Adaptador de preguntas | la pregunta base de la caché y las etiquetas de los candidatos |
+| Pregunta dirigida, decisión de plan | la pregunta en caché, o solo la respuesta de la persona |
+| Puerta del seguimiento | candidatos: id, título, fase, resumen recortado y 2 condiciones |
+| Replanteamiento | candidatos: id, título, fase y resumen recortado; el plan anterior |
+| Plan | id, `titulo_concepto`, etiqueta, pasos y entregable de la ruta |
+| Estado vivo, juez de la sesión | títulos de los nodos recorridos |
+| Diagnóstico del mundo | etiquetas de los nodos recorridos |
+| Estimación, enlazador y reformulador de protección, consulta al español, oferta y narración del reporte | nada del grafo |
+
+- **Ninguna llamada envía `fuente`, `fuentes_internas`, `correcciones`, `merged_originals`, `notas_extraccion` ni
+  campos con citas, líneas o rutas de libro.** Todas leen el nodo de la vista web (`cargarGrafo`) y eligen sus
+  campos uno a uno. La vista web ya no lleva esas claves (`scripts/sync_assets_web.py`), y ningún código de `web/` lee
+  `dataset/`. Las preguntas en caché tampoco las llevan.
+- No había nada que quitar en las llamadas.
+- Fuera de producción: el motor Python (herramienta local de línea de órdenes) lee el grafo completo, con los campos
+  internos, pero también elige sus campos uno a uno y no envía ninguno interno. No lleva `REGLA_SIN_FUENTES`. Los
+  scripts de extracción de libros envían texto de libro por diseño: son la forja, no la app.
+
+### 12.2 B. El filtro único
+
+- `scripts/origen_ia.py`: la función única por la que pasa **todo** texto de nodo (título, etiqueta, resumen, pasos,
+  entregable y condiciones) y toda pregunta en caché antes de llegar a la vista web.
+  - Quita los títulos de la lista canónica con sus comillas.
+  - Quita los autores: entre paréntesis ("(Juran)", "(Shewhart-Deming)"), al final de un paréntesis ("…, Crosby)"),
+    tras "de" ("Paso 6 de Crosby"), o como adjetivo ("Modelo Juran de…").
+  - No toca el resto del texto ni los nombres de método. Un autor se busca con mayúscula y como palabra entera, así
+    que "reason to buy" y "brown-bag" quedan intactos. "MINI Cooper" es una excepción declarada.
+  - Cada quita queda en `dataset/metadata/quitas_origen_ia.json`, un registro interno que no viaja a la web.
+- **Por qué va al sincronizar y no en cada llamada.** Las 21 llamadas leen el texto de nodo de esa misma vista, así que
+  el filtro vale para todas por construcción, y para las que vengan. Filtrar en cada llamada obligaría a copiar la
+  lista canónica de libros y autores a `web/`, y la decisión del 27 sep lo prohíbe.
+  - El dataset no cambia: el `titulo_concepto` sigue intacto por doctrina.
+  - El validador (`run_phase1.py`) compara ya la copia web con la copia filtrada del dataset.
+- **La orden fija de toda llamada** (`REGLA_SIN_FUENTES`) nombraba a Blank, Osterwalder y Deming como ejemplos de lo
+  prohibido. Ahora sus ejemplos no nombran a nadie ("según el autor", "como decía tal persona").
+- **Lo visible no depende del filtro.** Las personas citadas en campos visibles salieron por corrección declarada.
+  - Tanda `origen-ia-atribuciones`: 5 correcciones ATRIBUCION. Fuera "Andy Grove" en 3 resúmenes, "Steve Jobs" y
+    "Bill Campbell" del mismo resumen, y "liderado por Homer y Horowitz". El "modelo de Reason" pasa a "el modelo del
+    queso suizo".
+  - Tanda `origen-ia-atribuciones-2`: sale "al momento de esta fuente" de `antiboycott_regulations`.
+
+### 12.3 C. La prueba en rojo primero
+
+- `web/lib/origenIA.test.ts` construye los mensajes **reales** que recibe la IA, con un cliente falso que los
+  captura:
+  - la clasificación de la entrada;
+  - el intérprete, con cada nodo de la muestra como nodo actual;
+  - la puerta del seguimiento, en las cuatro fases;
+  - el material del plan.
+- La muestra es de 3 nodos vivos por cada uno de los espacios, más los 9 nodos con autor en el título que más pesan
+  (entre ellos los tres "(Juran)"). La prueba mira también el grafo entero, las preguntas en caché, la orden fija y
+  que no viaje ningún campo interno.
+- **Antes del filtro, 6 pruebas en rojo:**
+  - el grafo, con 98 textos;
+  - la clasificación;
+  - el intérprete, con 131 apariciones;
+  - la puerta, con 13;
+  - el plan;
+  - la orden fija.
+- **Después, 10 de 10 en verde.** `engine/test_origen_ia.py` prueba el filtro con casos calculados a mano y la vista
+  entera.
+
+### 12.4 D. Lo que quitaría el filtro en todo el catálogo
+
+100 quitas.
+
+- **En nodos vivos: 18 quitas en 18 nodos, todas en `titulo_concepto`.**
+
+  | Nodo | Título que llega a la IA |
+  |---|---|
+  | `accion_correctiva_sistematica` | "Acción Correctiva Sistemática (Paso 6)" |
+  | `adaptacion_14_puntos_servicio_medico` | "Adaptación de los 14 Puntos al Servicio Médico" |
+  | `aim_of_leadership` | "Objetivo del Liderazgo" |
+  | `benchmarking_7_pasos_juran` | "Proceso de Benchmarking de 7 Pasos" |
+  | `benchmarking_trilogia_juran` | "Benchmarking y la Trilogía" |
+  | `ciclo_pdca_pdsa` | "Ciclo PDCA/PDSA" |
+  | `consejo_de_calidad` | "Consejo de Calidad (Liderazgo y Selección de Proyectos)" |
+  | `consejo_de_calidad_2` | "Consejo de Calidad (Red Autogestionada de Profesionales)" |
+  | `control_calidad_definicion` | "Control de Calidad como Proceso Universal (Trilogía)" |
+  | `cuatro_etapas_del_pensamiento_creativo` | "Las Cuatro Etapas del Pensamiento Creativo" |
+  | `juran_quality_by_design` | "Modelo de Calidad por Diseño (Quality by Design)" |
+  | `juran_rcca_metodo` | "Método RCCA (Análisis de Causa Raíz)" |
+  | `los_14_puntos_deming` | "Los 14 Puntos para la Transformación de la Gestión" |
+  | `modelo_lubin_esty_4_etapas` | "Modelo de 4 Etapas de Creación de Valor en Sostenibilidad" |
+  | `modelo_transformacion_juran` | "Modelo de Transformación (Cinco Breakthroughs)" |
+  | `planificacion_cero_defectos` | "Planificación de Cero Defectos (Paso 7)" |
+  | `proceso_benchmarking_juran_7pasos` | "Ciclo de Benchmarking de 7 Pasos" |
+  | `trilogia_de_juran` | "Trilogía (Planificación, Control y Mejora)" |
+
+- **En nodos deprecados: 82 quitas en 73 nodos** (72 en resúmenes, 9 en títulos y 1 en un paso). Son autores citados
+  como fuente ("Crosby define…", "Deming enfatiza…"). Ningún nodo deprecado llega a una llamada ni al cliente.
+- **Falsos positivos: ninguno.** Las 100 quitas son el autor de la lista. Las coincidencias con palabras comunes
+  quedan fuera por diseño:
+  - "reason to buy" y "brown-bag", en minúscula;
+  - "MINI Cooper", la excepción declarada.
+
+### 12.5 E. Cierre, y lo que no se puede cumplir sin una decisión del fundador
+
+- A cumplido: ninguna llamada envía un campo interno. B aplicado a todas las llamadas por construcción. C en verde.
+  D reportado.
+- **Lo que no se puede cumplir tal cual: los identificadores de nodo.**
+  - 25 nodos vivos llevan un apellido de la lista en su `node_id`. Ejemplos: `trilogia_de_juran`,
+    `los_14_puntos_deming`, `wallas_etapa_incubacion` y 10 que empiezan o acaban en `crosby`.
+  - Los ids viajan en el texto de 7 llamadas: Claridad (2), clasificación, intérprete, puerta, replanteamiento y plan.
+    El modelo tiene que responder con ellos.
+  - El filtro limpia textos, no identificadores. La guarda los mide aparte con una lista pendiente declarada, que no
+    puede crecer.
+  - Tres caminos:
+    - **(a) Renombrar los 25 nodos** a ids neutros y dejar el viejo en `ids_alias`, el mecanismo que ya resuelve los
+      proyectos guardados. Toca el dataset, los enlaces, las claves de la caché, las etiquetas traducidas y el índice
+      semántico, sin re-embeber. Recomendado.
+    - **(b) Traducir los ids en la frontera de cada llamada** y deshacerlo en la respuesta. Más cirugía y más riesgo.
+    - **(c) Aceptarlos** como claves técnicas que la orden fija prohíbe citar.
+- **Residuo histórico.** Las conversaciones y los estados vivos guardados antes de hoy en la base llevan los títulos
+  viejos, con autor, y el intérprete reenvía ese historial en cada turno de una sesión abierta. Lo nuevo sale limpio.
+  Limpiarlo pide un script sobre la base: no se hace sin el visto.
+- **Herramienta local.** El motor Python no lleva `REGLA_SIN_FUENTES`. No es producción.
