@@ -932,3 +932,35 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
 
 **Después:** se retoman la corrección de la muestra de cierre y los barridos.
 
+### 9.9 Cierre de la etapa 1: pase dirigido de los barridos (diseño fijado antes de generar, 30 sep 2026)
+
+- **Qué entra:** los elementos de los campos de la etapa 1 (resumen, pasos y entregable) de los nodos vivos que caen
+  en alguno de los tres barridos que pidió el fundador, más la vecindad de los 15 defectos duros de la muestra de
+  cierre.
+  - **Puntos ciegos, orden temporal:** "antes de", "antes que", "después de", "después que", "una vez que", "tras".
+  - **Puntos ciegos, condiciones que acotan a quién o cuándo:** "cuando", "si tienes", "si tu", "si vas", "si eres",
+    "si ya", "si no", "solo en", "solo si", "salvo que", "salvo si", "excepto si", "excepto cuando", "a menos que",
+    "siempre que", "en caso de que", "únicamente si", "únicamente cuando".
+  - **Cifras y plazos:** un número con %, días, semanas, meses, años, horas, minutos o veces, en cifra o en letra.
+  - **Vecindad:** 423 pares nodo-campo en 8 libros, el mismo libro y el mismo campo de cada contrario e invención
+    dura.
+  - Quedan fuera los 150 nodos de la muestra de cierre, recién leídos y corregidos.
+  - Tamaño medido: 4.109 elementos en 2.108 nodos, más la vecindad.
+- **Lectura:**
+  - Un lector Opus por lote lee contra el libro, con las instrucciones v3 y las reglas duras D1 y D2.
+  - Cada lote lleva una trampa sin marca: contrario de orden temporal, cifra inventada o certeza endurecida. Semilla
+    20271201.
+  - Si el lector no caza la trampa, un segundo lector relee el lote entero.
+  - Un árbitro Opus confirma, corrige y declara el modo.
+  - Un verificador ciego lee toda corrección que trae palabras nuevas. Cada paquete lleva una corrección falsa de
+    control.
+- **Pasos sin marca:** el lector los marca en los elementos que lee. Se registran como constancia CASA, sin prefijo
+  visible (D1).
+  - No hay un barrido de todos los pasos del catálogo, porque no hay filtro mecánico posible.
+  - El resto se declara como riesgo residual y lo mide la medida 2.
+- **Cierre de la etapa 1:** con las tandas aplicadas, la etapa se cierra declarando el riesgo residual (Wilson 95 %)
+  de la muestra de cierre, sin un tercer pase completo (regla de parada, 9.7).
+- **Cuota:** el pase se avanza en oleadas hasta el aviso del 90 %, se para en un punto limpio y se termina tras la
+  renovación del martes 6 de octubre a las 23:00.
+- **Código:** `barrido.py`, en las claves del remedio.
+
