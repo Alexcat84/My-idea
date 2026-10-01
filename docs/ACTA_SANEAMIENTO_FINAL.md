@@ -27,6 +27,7 @@ muestra con su semilla y la regla del veredicto. Los resultados van en la secci�
 | U11 | Jurisdicción sin clase | 0 | guarda, 100 % (2) |
 | U12 | Alcanzabilidad | 100 % | navegación, 100 % (4) |
 | U13 | Guardas | todas en verde | 100 % del catálogo (2) |
+| U14 | Copias fieles: texto de nodo que copia o traduce palabra por palabra un pasaje de un libro (regla dura D2, fundador, 30 sep 2026; criterio nuevo de la medida 2) | 0 | muestra (3) y comprobación de copias |
 
 **Cómo se lee un umbral:**
 - **Tasa de nodos (U3 a U7):** la proporción de nodos de la muestra con al menos un defecto confirmado por el árbitro
@@ -870,3 +871,44 @@ libro antes de aplicarse. El árbitro declara el `modo` de cada corrección (`qu
   - La vecindad es el mismo libro y el mismo campo: 423 pares nodo-campo en 8 libros.
   - Antes de cerrar va el barrido de puntos ciegos que decidió el fundador el 30 sep, tras el informe: construcciones
     "antes de / después de" y condiciones que acotan a quién o cuándo aplica el consejo.
+
+### 9.8 Decisión del fundador sobre la procedencia (30 sep 2026)
+
+**Reglas duras**, las primeras de `docs/REGLAS_DE_LA_CASA.md`:
+- **D1:** jamás un usuario debe saber, ni poder intuir, de dónde provienen las respuestas de la app. Todo origen es
+  control interno.
+- **D2:** ninguna copia fiel. Ningún texto de nodo es copia ni traducción palabra por palabra de un pasaje de un libro.
+- **D3:** ningún nodo vivo y funcional se retira.
+
+**Aplicado, cada paso con su prueba en rojo primero y las dos suites en verde:**
+- **Guarda única de procedencia** (`web/lib/procedencia.test.ts`, c8eed6b8).
+  - Junta las cuatro guardas que había.
+  - Exige, en los once idiomas, que ningún texto de cara al cliente lleve un título, una clave interna, un aviso con
+    año, el prefijo de procedencia o una atribución genérica.
+  - `REGLA_SIN_FUENTES` se amplía a estudios, investigaciones, expertos, etiquetas de procedencia y a no insinuar el
+    origen.
+- **Aviso de vigencia sin año** en los once idiomas: "Verifica la norma vigente en tu país: estas reglas cambian con el
+  tiempo". La copia web de `vigencia.json` ya no lleva el año (e0cc913b).
+- **El prefijo "Sugerencia de My Idea:" sale de 280 pasos en 231 nodos** (tanda `procedencia-prefijo`, 7bb43edb).
+  Uno de ellos lo llevaba a media frase.
+  - No hay campo nuevo ni cambio de esquema: la constancia de que es un paso de la casa queda en el registro de
+    correcciones.
+  - El aplicador gana el veredicto CASA, una constancia sin tocar el texto, para los barridos futuros.
+  - El aplicador rechaza cualquier prefijo de procedencia visible.
+  - Se ajustan C14, C29, C32 y R6 a R8, y las instrucciones de lectores, árbitros y verificadores: la clase pasa a
+    "paso sin marca" y el modo, a "marcar".
+- **Atribuciones genéricas:** salen las 19 reales de 16 nodos, incluido el caso con nombres de fuente entre paréntesis
+  (tanda `procedencia-atribuciones`, 186e4c5a).
+  - Del conteo de 26, siete eran instrucciones al usuario o negaciones y se quedan: "busca en la literatura", "según
+    los datos obtenidos", "no se ha probado".
+- **Política de corrección aclarada (C32, R8 e instrucciones):** devolver es devolver el sentido y el término preciso
+  del libro, nunca copiar ni traducir un pasaje palabra por palabra.
+- **Licencias (punto 8):** cada fuente lleva su licencia en la lista canónica, y el inventario interno la muestra en
+  una columna. Ninguna fuente se retira.
+  - Las nueve guías del gobierno de EE. UU. y el manual de pymes de OSHA son de dominio público.
+  - La guía de IDEO.org figura como CC BY-NC-ND 3.0, según el fundador. Tiene 20 nodos vivos.
+  - Los libros comerciales y las guías de empresas tienen copyright sin licencia abierta.
+
+**Pendiente:** la comprobación de copias (punto 7), con su semilla escrita aquí antes de sortear. Después se retoman la
+corrección de la muestra de cierre y los barridos.
+

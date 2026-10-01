@@ -159,6 +159,22 @@ def inventario(resultado, absorbidos, sin_fuente, nodos):
         "- Fuentes distintas: %d" % len(libros),
         "- Ids absorbidos sin fuente registrada en ningun sitio (referencias que nunca fueron nodo): %d" % len(sin_fuente),
         "",
+        "## Licencia de cada fuente",
+        "",
+        "Fundador, 30 sep 2026, punto 8: la licencia vive en dataset/metadata/fuentes_canonicas.json (metadato interno). "
+        "Ninguna fuente se retira por su licencia (regla dura D3); de ninguna se copia texto (D2).",
+        "",
+        "| fuente | nodos vivos | licencia |",
+        "|---|---:|---|",
+    ]
+    cuenta = {}
+    for v in resultado.values():
+        for f in v:
+            cuenta[f] = cuenta.get(f, 0) + 1
+    for f in libros:
+        out.append("| %s | %d | %s |" % (f.replace("|", "/"), cuenta.get(f, 0), str(CANON.get(f, {}).get("licencia") or "SIN REGISTRAR").replace("|", "/")))
+    out += [
+        "",
         "## Nodos con mas de un libro",
         "",
         "| nodo | fuentes | absorbio |",

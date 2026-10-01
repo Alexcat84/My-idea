@@ -38,6 +38,16 @@ def main():
             fallos.append('%s: un deprecado no lleva fuentes_internas (las lleva quien lo absorbio)' % k)
     if fi.main(['--comprobar']) != 0:
         fallos.append('el inventario interno no esta al dia')
+    # LICENCIAS (fundador, 30 sep 2026, punto 8): cada fuente lleva su licencia en la lista canonica (metadato
+    # interno) y el inventario la muestra. Ninguna se retira por su licencia; la de IDEO.org la fija el fundador.
+    for f, e in fi.CANON.items():
+        if 'igual_a' not in e and not str(e.get('licencia') or '').strip():
+            fallos.append('la fuente %r no tiene su licencia registrada' % f)
+    ideo = fi.CANON.get('The field guide to human-centered design', {}).get('licencia', '')
+    if 'CC BY-NC-ND 3.0' not in ideo:
+        fallos.append('la guia de IDEO.org no figura como CC BY-NC-ND 3.0')
+    if '## Licencia de cada fuente' not in open(fi.INVENTARIO, encoding='utf-8').read():
+        fallos.append('el inventario interno no tiene la columna de licencia de cada fuente')
 
     # caso negativo: vivo <- deprecado (ids_alias) <- perdedor de un cluster <- id de capa <- id historico
     falsos = {

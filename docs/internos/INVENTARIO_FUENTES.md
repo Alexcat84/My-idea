@@ -10,6 +10,72 @@ INTERNO. Decisiones del fundador del 27 sep 2026, puntos 1 y 4: cada nodo vivo c
 - Fuentes distintas: 59
 - Ids absorbidos sin fuente registrada en ningun sitio (referencias que nunca fueron nodo): 333
 
+## Licencia de cada fuente
+
+Fundador, 30 sep 2026, punto 8: la licencia vive en dataset/metadata/fuentes_canonicas.json (metadato interno). Ninguna fuente se retira por su licencia (regla dura D3); de ninguna se copia texto (D2).
+
+| fuente | nodos vivos | licencia |
+|---|---:|---|
+| A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | 131 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| A Project Manager's Book of Forms - Cynthia Stackpole Snyder | 61 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Assembling Tomorrow: A Guide to Designing a Thriving Future | 64 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Business Model Generation - Osterwalder, Alexander | 50 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Businessperson's Guide to Federal Warranty Law | 11 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| Change by Design, Revised and U - Tim Brown | 78 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Chris Voss, Rompe la barrera del no | 18 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Co-Intelligence_ Living and Wor - Ethan Mollick | 40 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Cradle to Cradle - Michael Braungart | 56 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC) | 6 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| DHL Express, Guia de empaque | 3 | Copyright de la empresa que la publica, todos los derechos reservados: no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| DeMarco y Lister, Waltzing with Bears | 13 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014) | 23 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Edwards et al., Managing Project Risks | 30 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Essentials of Supply Chain Management - Michael H. Hugos | 95 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | 76 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Franchise Your Business - Mark Siebert | 182 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses | 7 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| Guia de empaque para envios (FedEx) | 9 | Copyright de la empresa que la publica, todos los derechos reservados: no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| Guia de empaque para transporte | 1 | Copyright de la empresa que la publica, todos los derechos reservados: no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| Guia visual de empaque | 4 | Copyright de la empresa que la publica, todos los derechos reservados: no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| High Output Management - Andrew S. Grove | 91 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Hubbard, The Failure of Risk Management | 10 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| ISTA 3P, Protocolo de ensayo de empaque para paqueteria | 5 | Copyright de ISTA (norma de ensayo con derechos reservados): no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| Juran's Quality Handbook_ The C - Joseph A. Defeo | 462 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Managing the Risks of Organizat - Reason, J. T_ | 91 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Max Muller, Essentials of Inventory Management | 5 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide | 7 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide | 11 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | 23 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| Never Lose a Customer Again - Joey Coleman | 61 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| OSHA3885 | 19 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| OSHA3886 | 19 | Dominio publico: obra del gobierno federal de EE. UU. (17 U.S.C. 105); no exige atribucion |
+| Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | 153 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Quality is free _ the art of making quality certain -- Philip B_ Crosby | 83 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Radical Candor: Fully Revised and Updated Edition - Kim Scott | 141 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Requisitos de empaque de los couriers | 3 | Copyright de la empresa que la publica, todos los derechos reservados: no exige atribucion. Se toman ideas, nunca texto (D2). Sin verificar |
+| Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management | 14 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| SMALL_BUSINESS | 47 | Dominio publico: obra del gobierno federal de EE. UU. (OSHA; el propio manual se declara de dominio publico); no exige atribucion |
+| SPIN Selling - Neil Rackham | 32 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | 8 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack) | 1 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona) | 1 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Art of Thought - Wallas, Graham | 40 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber | 21 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Field Guide to Understandin - Dekker, Sidney | 103 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Founder's Dilemmas - Wasserman, Noam | 120 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Green to Gold Business Play - Daniel C. Esty | 209 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Hard Thing About Hard Things - Ben Horowitz | 87 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Lean Startup - Eric Ries | 76 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo | 135 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The Startup Owner's Manual - Blank, Steve | 169 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| The field guide to human-centered design | 20 | Creative Commons Atribucion-NoComercial-SinDerivadas 3.0 (CC BY-NC-ND 3.0), segun el fundador (30 sep 2026): EXIGE atribucion y no permite uso comercial ni obras derivadas. No se retira (D3); sus nodos tienen prioridad en la comprobacion de copias (D2) |
+| Traction - Gabriel Weinberg | 61 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet | 19 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Value Proposition Design | 46 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Venture Deals - Brad Feld | 135 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Who: The A Method for Hiring - Geoff Smart y Randy Street | 58 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+| Winning at New Products - Robert G. Cooper | 148 | Copyright de la editorial y sus autores, todos los derechos reservados: no es una licencia abierta y no exige atribucion. Del libro se toman ideas, nunca texto (D2). Edicion sin verificar |
+
 ## Nodos con mas de un libro
 
 | nodo | fuentes | absorbio |
