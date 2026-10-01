@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Llamar lo que Falta (Call Out What's Missing)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos —incluso imaginarios— ayuda a revelar oportunidades de diseño ocultas. El acto de nombrar transforma observaciones vagas en posibilidades concretas de acción. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
+  "resumen_teorico": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos, incluso imaginarios, ayuda a revelar oportunidades de diseño ocultas. Nombrarlos puede darles forma y darte permiso para mirarlos de otra manera. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
   "pasos_accionables": [
     "Identifica una sensación de incomodidad, vacío o algo que 'no cuadra' en tu proyecto o contexto",
     "Intenta ponerle nombre, aunque sea una palabra inventada o prestada de otro idioma",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Nombra lo que Sientes que Falta",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-038-llamar_lo_que_falta-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos —incluso imaginarios— ayuda a revelar oportunidades de diseño ocultas. El acto de nombrar transforma observaciones vagas en posibilidades concretas de acción. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
+      "texto_nuevo": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos, incluso imaginarios, ayuda a revelar oportunidades de diseño ocultas. Nombrarlos puede darles forma y darte permiso para mirarlos de otra manera. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "3020",
+        "frase": "Just calling out these missing words can give shape to things"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que nombrar puede dar forma a lo que falta y dar permiso para verlo de otro modo; el nodo lo vuelve una transformación segura en acciones concretas.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

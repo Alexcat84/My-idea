@@ -1,0 +1,392 @@
+[
+ {
+  "id": "final-e1-barrido-038-llamar_lo_que_falta-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "llamar_lo_que_falta",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos —incluso imaginarios— ayuda a revelar oportunidades de diseño ocultas. El acto de nombrar transforma observaciones vagas en posibilidades concretas de acción. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
+  "texto_nuevo": "Muchas veces sentimos que algo falta o genera incomodidad antes de poder nombrarlo explícitamente. Poner en palabras esas sensaciones, gaps o vacíos, incluso imaginarios, ayuda a revelar oportunidades de diseño ocultas. Nombrarlos puede darles forma y darte permiso para mirarlos de otra manera. Explorar cómo otros idiomas nombran conceptos similares (ej. 'awkward' en alemán vs español) puede revelar matices que el propio idioma no captura, abriendo nuevas capas de comprensión sobre un fenómeno.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "3020",
+   "frase": "Just calling out these missing words can give shape to things"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que nombrar puede dar forma a lo que falta y dar permiso para verlo de otro modo; el nodo lo vuelve una transformación segura en acciones concretas.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-038-el_riesgo_eres_tu-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "el_riesgo_eres_tu",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+  "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+  "cita": {
+   "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+   "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+   "lineas": "1006",
+   "frase": "People sometimes leave during a project."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El pasaje de rotación solo habla de que la gente se va, de que eso suele quedar fuera de la estimación y de la holgura; lo de accesos y contraseñas en tu cabeza se afirma como hecho sin base.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-039-como_sabes_que_tu_metodo_sirve-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "como_sabes_que_tu_metodo_sirve",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si no acierta, cambia de método en vez de repetir uno que solo te da calma.",
+  "texto_nuevo": "Si en algún tipo de predicción no acierta, cambia cómo estimas esa parte, por ejemplo con datos históricos, en vez de repetir lo que solo te da calma.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "4800-4806",
+   "frase": "the historical data for project cancellations and changes in business volumes was more reliable"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro comprueba por tipo de estimación: conserva lo que acierta y corrige solo lo que falla, pasando a datos históricos, no cambia todo el método.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-039-cuanto_sabes_y_cuanto_solo_crees-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "cuanto_sabes_y_cuanto_solo_crees",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "texto_nuevo": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, suele dar respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "2220",
+   "frase": "the second estimate was usually more than 10 percentage points different from the first"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la segunda estimación solía diferir y que un 22 % repitió la misma respuesta; el nodo lo da como algo que siempre ocurre.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-039-cuanto_sabes_y_cuanto_solo_crees-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "cuanto_sabes_y_cuanto_solo_crees",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
+  "texto_nuevo": "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación constante, rápida y clara de tus errores pasados.",
+  "cita": {
+   "libro": "Hubbard, The Failure of Risk Management",
+   "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+   "lineas": "627-629",
+   "frase": "Risk management simply does not provide the type of consistent, immediate, and clear feedback"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide retroalimentación constante, rápida y sin ambigüedad; el paso deja solo la claridad y pierde justo las dos que faltan al estimar riesgos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-039-costo_de_calidad-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "costo_de_calidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Calcula cuánto te cuestan los defectos, el retrabajo, el desperdicio y las garantías.",
+  "texto_nuevo": "Calcula cuánto te cuestan el retrabajo (también el administrativo), el desperdicio, las garantías y lo que atiendes después de ellas, las quejas, la inspección y las pruebas, y otros errores como los cambios de diseño o de pedidos de compra.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1393",
+   "frase": "after- warranty; (5) complaint handling; (6) inspection and test; and (7) other costs of error"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro suma siete partidas en el primer cálculo; el paso omite posgarantía, quejas, inspección y prueba y otros costos de error, y el costo queda corto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-039-compensacion_fundadores_cash_vs_equity-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "compensacion_fundadores_cash_vs_equity",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
+  "texto_nuevo": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces, cuando ya entró inversión o se formó una junta, pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "1890",
+   "frase": "a labor of love can become a trap after the startup receives outside funding"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa la trampa involuntaria después de que entra financiación externa o se forma una junta; el nodo la presenta sin esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-040-contextualizacion_datos_sostenibilidad-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "contextualizacion_datos_sostenibilidad",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, tienes que traducir la información a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
+  "texto_nuevo": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, ponlas frente a una referencia, y si le hablas a alguien que no es experto, tradúcelas a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "7271",
+   "frase": "For nonexpert audiences, it's important to go a step further by eliminating jargon"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide primero poner la cifra en un contexto comparativo y reserva la traducción a equivalencias cotidianas para audiencias no expertas; el nodo la vuelve obligatoria para todos y omite el primer paso.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-040-enfoque_motor_unico_crecimiento-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "enfoque_motor_unico_crecimiento",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero la experiencia muestra que los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+  "texto_nuevo": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2526",
+   "frase": "in my experience, successful startups usually focus on just one engine of growth"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro lo da como experiencia personal con un 'usually'; el nodo lo eleva a algo que la experiencia muestra en general, y además es un prefijo de procedencia prohibido.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-040-enfoque_motor_unico_crecimiento-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "enfoque_motor_unico_crecimiento",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa los resultados a fondo antes de decidir si cambias de motor",
+  "texto_nuevo": "Persigue ese motor a fondo antes de plantearte cambiar a otro",
+  "cita": {
+   "libro": "The Lean Startup - Eric Ries",
+   "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+   "lineas": "2526",
+   "frase": "Only after pursuing one engine thoroughly should a startup consider a pivot"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el cambio a haber perseguido el motor a fondo; el paso lo sustituye por evaluar resultados a fondo y pierde esa condición.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-041-teoria_de_juegos_en_negociacion-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "teoria_de_juegos_en_negociacion",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Preguntar directamente a la contraparte cuáles son sus 3 términos más importantes antes de iniciar la negociación formal",
+  "texto_nuevo": "Preguntar directamente a la contraparte cuáles son sus 3 términos más importantes antes de iniciar la negociación formal, y tener claros los tuyos para poder expresarlos",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "3468",
+   "frase": "You should know and be prepared to articulate your top three wants as well."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La táctica del libro incluye conocer y estar listo para decir tus propios tres términos prioritarios; el paso deja caer esa mitad.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-041-preparacion_materiales_fundraising-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "preparacion_materiales_fundraising",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de salir a buscar inversión, prepara una descripción corta de tu negocio (de 1 a 3 párrafos, lo que afuera llaman elevator pitch), un resumen ejecutivo y una presentación clara y concisa. El contenido pesa más que el diseño: lo que armes debe entenderse sin que estés ahí para explicarlo, porque muchas veces es la primera y única impresión que le das a un inversor.",
+  "texto_nuevo": "Antes de salir a buscar inversión, prepara una descripción corta de tu negocio (de 1 a 3 párrafos, lo que afuera llaman elevator pitch), un resumen ejecutivo y una presentación clara y concisa. Céntrate en el contenido sin recargar el diseño, aunque la calidad sigue importando mucho: lo que armes debe entenderse sin que estés ahí para explicarlo, porque muchas veces es la primera y única impresión que le das a un inversor.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "419",
+   "frase": "Quality still matters a lot, but don't overdesign your information."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide no recargar el diseño pero advierte que la calidad sigue importando mucho; el resumen deja caer ese límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-041-patentes_startup-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "patentes_startup",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evaluar si tu mercado es lo bastante estable como para justificar invertir en una patente",
+  "texto_nuevo": "Sopesar lo que te costaría la patente frente a lo que podría aportarte, sobre todo si tu mercado cambia tan rápido que el invento podría quedar obsoleto antes de obtenerla",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4610",
+   "frase": "founders should weigh the investment required versus the potential upside in securing patent protection"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide sopesar la inversión contra el beneficio posible, con el mercado que cambia rápido solo como ejemplo; el paso reduce la evaluación a la estabilidad del mercado.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-041-no_shop_extension_negotiation-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "no_shop_extension_negotiation",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor suele ganar temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, sobrepasar esta ventana de negociación puede endurecer al comprador en el resto del proceso hasta el cierre.",
+  "texto_nuevo": "Cuando el periodo de no-shop está por expirar y el comprador solicita extenderlo, el vendedor suele ganar temporalmente algo de apalancamiento (leverage) que puede usar para obtener concesiones menores como alivio en el umbral de capital de trabajo, financiamiento puente o ajustes en reps and warranties. Sin embargo, pedir demasiado en ese momento puede endurecer al comprador en el resto del proceso hasta el cierre.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4307",
+   "frase": "If the seller asks for too much at this point in time"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye el endurecimiento del comprador a pedir demasiado en ese momento, no a sobrepasar una ventana de negociación.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-041-definicion_estable_producto-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "definicion_estable_producto",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
+  "texto_nuevo": "Congelar las especificaciones clave que ya se conocen antes de iniciar la fase de desarrollo formal y, si tu mercado es cambiante, dejar marcadas las que siguen siendo variables",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "1669-1677",
+   "frase": "some elements can indeed be nailed down before Development begins even in fluid markets"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que en mercados fluidos no todo se congela: se fija lo conocido y lo variable se marca para confirmarlo durante el desarrollo.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-038-gestion_decisiones_bajo_carga_emocional-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "gestion_decisiones_bajo_carga_emocional",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Al evaluar un prototipo, piensa en qué estado emocional o mental estará la persona cuando interactúe con él.",
+  "texto_nuevo": "Al evaluar un prototipo, piensa en qué estado emocional o mental estará la persona cuando interactúe con él.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro habla del estado emocional de quien decide y crea, no de evaluar un prototipo según el estado de quien lo usa; el índice 4 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-038-reconocer_sesgo_de_apofenia-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "reconocer_sesgo_de_apofenia",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
+  "texto_nuevo": "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro solo advierte que apofenia y epifanía se sienten parecidas; no da el procedimiento de revisar la evidencia antes de aceptar un insight, y el índice 0 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-038-reconocer_el_sesgo_narrativo-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "reconocer_el_sesgo_narrativo",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Busca deliberadamente evidencia que contradiga tu narrativa antes de buscar la que la confirma.",
+  "texto_nuevo": "Busca deliberadamente evidencia que contradiga tu narrativa antes de buscar la que la confirma.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe el razonamiento motivado y pide soltar creencias, pero no propone buscar primero la evidencia contraria; pasos_casa está vacío."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-038-ciclo_virtuoso_datos_electronicos-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "ciclo_virtuoso_datos_electronicos",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Validar que los datos compartidos sean precisos antes de escalar el sistema",
+  "texto_nuevo": "Validar que los datos compartidos sean precisos antes de escalar el sistema",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro pide datos que todas las partes acepten como fieles, pero no da el paso de validar su precisión antes de escalar el sistema; el índice no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-038-drum_buffer_rope-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "drum_buffer_rope",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización",
+  "texto_nuevo": "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro propone medir el efecto látigo como punto de partida, no vigilar su reducción después de sincronizar; el índice no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-038-colaboracion_transporte_ctm-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "colaboracion_transporte_ctm",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Medir ahorros logrados en costo de transporte tras la colaboración",
+  "texto_nuevo": "Medir ahorros logrados en costo de transporte tras la colaboración",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro estima el ahorro del caso y advierte que documentar los beneficios totales es difícil, pero no da el paso de medir el ahorro logrado; el índice no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-041-original_issue_discount_oid-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "original_issue_discount_oid",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Consulta con un abogado fiscal o corporativo antes de cerrar la ronda",
+  "texto_nuevo": "Consulta con un abogado fiscal o corporativo antes de cerrar la ronda",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El pasaje del libro sobre el OID da como solución pagar algo por los warrants y no aconseja consultar a un abogado; el índice 3 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-041-atacar_mercados_establecidos_con_problema-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "atacar_mercados_establecidos_con_problema",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Validar el tamaño del problema y el potencial de mercado antes de invertir",
+  "texto_nuevo": "Validar el tamaño del problema y el potencial de mercado antes de invertir",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El pasaje pide hallar mercados grandes con problemas enormes y aplicar las fortalezas propias, sin aconsejar validar tamaño y potencial antes de invertir; el índice 3 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ }
+]

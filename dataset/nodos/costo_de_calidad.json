@@ -7,7 +7,7 @@
   "resumen_teorico": "El Costo de la Calidad es una forma de traducir los problemas de calidad (defectos, retrabajo, desperdicio, garantías) en dinero, en términos que tú puedas entender y usar para decidir. Así como revisas cada mes en cifras el crecimiento del inventario o la caída de ventas, la calidad también debe reportarse en números, para conectar tus decisiones del día a día con su impacto económico real y priorizar qué corregir primero según lo que realmente te cuesta, no solo según lo que te parece grave.",
   "pasos_accionables": [
     "Arma una revisión mensual de tu negocio con números financieros y operativos juntos.",
-    "Calcula cuánto te cuestan los defectos, el retrabajo, el desperdicio y las garantías.",
+    "Calcula cuánto te cuestan el retrabajo (también el administrativo), el desperdicio, las garantías y lo que atiendes después de ellas, las quejas, la inspección y las pruebas, y otros errores como los cambios de diseño o de pedidos de compra.",
     "Compara esas cifras contra lo que tenías presupuestado y detecta si hay costos evitables que van en aumento.",
     "Define qué parte de tu negocio (compras, control de materiales, ventas) va a investigar y corregir cada desviación.",
     "Usa el costo de calidad como argumento concreto para decidir si vale la pena invertir en prevenir estos problemas."
@@ -82,6 +82,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El inventario excesivo no forma parte del costo de calidad del libro.; Mismo defecto: los inventarios excesivos no son costo de calidad.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-039-costo_de_calidad-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcula cuánto te cuestan los defectos, el retrabajo, el desperdicio y las garantías.",
+      "texto_nuevo": "Calcula cuánto te cuestan el retrabajo (también el administrativo), el desperdicio, las garantías y lo que atiendes después de ellas, las quejas, la inspección y las pruebas, y otros errores como los cambios de diseño o de pedidos de compra.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1393",
+        "frase": "after- warranty; (5) complaint handling; (6) inspection and test; and (7) other costs of error"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro suma siete partidas en el primer cálculo; el paso omite posgarantía, quejas, inspección y prueba y otros costos de error, y el costo queda corto.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

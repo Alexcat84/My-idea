@@ -4,12 +4,12 @@
   "dominio": "core",
   "titulo_concepto": "Enfócate en un Solo Motor de Crecimiento",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero la experiencia muestra que los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+  "resumen_teorico": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
   "pasos_accionables": [
     "Identifica cuál es tu apuesta de fe (leap of faith): el motor de crecimiento en el que más confías para tu producto",
     "Si no tienes claro qué motor perseguir, sal a hablar directamente con tus clientes",
     "Concentra tu desarrollo y tus métricas en ese único motor",
-    "Evalúa los resultados a fondo antes de decidir si cambias de motor"
+    "Persigue ese motor a fondo antes de plantearte cambiar a otro"
   ],
   "entregable_esperado": "Un documento propio donde dejes escrito qué motor de crecimiento elegiste y por qué, con la evidencia de clientes que respalda tu decisión",
   "nodos_previos": [
@@ -60,6 +60,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las startups exitosas suelen ('usually') concentrarse en un solo motor.; Mismo defecto: se pierde el 'usually' del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "final-e1-barrido-040-enfoque_motor_unico_crecimiento-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero la experiencia muestra que los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+      "texto_nuevo": "Es posible que tu negocio tenga más de un motor de crecimiento en marcha (viral, de retención o pegajoso, y de pago), pero los negocios que despegan de verdad suelen concentrarse en uno solo a la vez. Si intentas vigilar los tres motores al mismo tiempo, lo más probable es que termines confundido sobre qué mirar y qué mover. Conviene perseguir un motor a fondo antes de pensar en cambiar hacia otro.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2526",
+        "frase": "in my experience, successful startups usually focus on just one engine of growth"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro lo da como experiencia personal con un 'usually'; el nodo lo eleva a algo que la experiencia muestra en general, y además es un prefijo de procedencia prohibido.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-040-enfoque_motor_unico_crecimiento-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evalúa los resultados a fondo antes de decidir si cambias de motor",
+      "texto_nuevo": "Persigue ese motor a fondo antes de plantearte cambiar a otro",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2526",
+        "frase": "Only after pursuing one engine thoroughly should a startup consider a pivot"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el cambio a haber perseguido el motor a fondo; el paso lo sustituye por evaluar resultados a fondo y pierde esa condición.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

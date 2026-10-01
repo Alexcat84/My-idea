@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Da contexto a tus datos de sostenibilidad",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, tienes que traducir la información a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
+  "resumen_teorico": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, ponlas frente a una referencia, y si le hablas a alguien que no es experto, tradúcelas a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
   "pasos_accionables": [
     "Acompaña cada métrica con una comparación o referencia que tenga sentido",
     "Elimina la jerga técnica cuando le hables a alguien que no es experto",
@@ -38,6 +38,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-barrido-040-contextualizacion_datos_sostenibilidad-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, tienes que traducir la información a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
+      "texto_nuevo": "Tus datos de sostenibilidad no dicen nada por sí solos si no los comparas con algo. En vez de solo mostrar cifras absolutas, ponlas frente a una referencia, y si le hablas a alguien que no es experto, tradúcelas a términos que cualquiera entienda, por ejemplo comparar las toneladas de CO2 evitadas con 'autos retirados de circulación'.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7271",
+        "frase": "For nonexpert audiences, it's important to go a step further by eliminating jargon"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide primero poner la cifra en un contexto comparativo y reserva la traducción a equivalencias cotidianas para audiencias no expertas; el nodo la vuelve obligatoria para todos y omite el primer paso.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

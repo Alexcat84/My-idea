@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Cuánto sueldo dejas de cobrar a cambio de participación",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
+  "resumen_teorico": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces, cuando ya entró inversión o se formó una junta, pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
   "pasos_accionables": [
     "Habla claramente con cada cofundador sobre qué prefiere: más sueldo o más participación",
     "Anota qué tanto sueldo está dispuesto a ceder cada fundador a cambio de cuántos puntos de participación",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Decide entre Salario y Equity",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-039-compensacion_fundadores_cash_vs_equity-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
+      "texto_nuevo": "Como fundador vas a decidir cuánto priorizas participación (equity) frente a sueldo en efectivo. Existe un fenómeno conocido como el descuento del fundador: sueles ganar bastante menos que un ejecutivo equivalente que no fundó el negocio. A veces es porque tú lo eliges así, porque crees en el proyecto; otras veces, cuando ya entró inversión o se formó una junta, pierdes fuerza para negociar tu propio sueldo por el apego emocional que tienes con tu negocio. Ese descuento tiende a desaparecer cuando tu negocio crece y madura.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "1890",
+        "frase": "a labor of love can become a trap after the startup receives outside funding"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa la trampa involuntaria después de que entra financiación externa o se forma una junta; el nodo la presenta sin esa condición.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

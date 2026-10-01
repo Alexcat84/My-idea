@@ -9,7 +9,7 @@
     "Escribe hoy tus predicciones de riesgo, con probabilidad, y guárdalas con fecha.",
     "Cuando pase el tiempo, compara lo que predijiste con lo que de verdad ocurrió.",
     "Pregunta: ¿lo que predije ocurrió más o menos con la frecuencia que le di? Lo que llamé diez por ciento debió pasar cerca de una de cada diez veces.",
-    "Si no acierta, cambia de método en vez de repetir uno que solo te da calma."
+    "Si en algún tipo de predicción no acierta, cambia cómo estimas esa parte, por ejemplo con datos históricos, en vez de repetir lo que solo te da calma."
   ],
   "entregable_esperado": "Un registro fechado de tus predicciones de riesgo para contrastarlo después contra lo que realmente pasó.",
   "nodos_previos": [
@@ -106,6 +106,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade probar el modelo contra datos históricos que ya tienes y advierte que con eventos raros esperar tarda demasiado. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-039-como_sabes_que_tu_metodo_sirve-pasos_accionables-3",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si no acierta, cambia de método en vez de repetir uno que solo te da calma.",
+      "texto_nuevo": "Si en algún tipo de predicción no acierta, cambia cómo estimas esa parte, por ejemplo con datos históricos, en vez de repetir lo que solo te da calma.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "4800-4806",
+        "frase": "the historical data for project cancellations and changes in business volumes was more reliable"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro comprueba por tipo de estimación: conserva lo que acierta y corrige solo lo que falla, pasando a datos históricos, no cambia todo el método.",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

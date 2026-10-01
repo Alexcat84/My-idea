@@ -4,9 +4,9 @@
   "dominio": "risk_management",
   "titulo_concepto": "Los Límites del Conocimiento Experto",
   "fuente": "Hubbard, The Failure of Risk Management",
-  "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+  "resumen_teorico": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, suele dar respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
   "pasos_accionables": [
-    "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
+    "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación constante, rápida y clara de tus errores pasados.",
     "Separa lo que sabes con datos de lo que solo crees por intuición.",
     "En las decisiones grandes, busca al menos un dato externo que confirme o rete tu juicio.",
     "Acepta que puedes estar sobreconfiado y deja margen para equivocarte."
@@ -71,6 +71,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro repitió el caso dentro de la misma lista y sesión, no en días distintos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-039-cuanto_sabes_y_cuanto_solo_crees-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, da respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+      "texto_nuevo": "Creemos saber más de lo que sabemos, y eso distorsiona cómo estimamos el riesgo. La experiencia no siempre nos hace mejores: cuando la retroalimentación de nuestros errores llega tarde, escasa o confusa, no aprendemos de ellos y seguimos igual de confiados. Estimar riesgos se parece justo a eso, a un terreno de retroalimentación tardía y ambigua, así que la sola experiencia no basta para pronosticar bien. La gente es sistemáticamente sobreconfiada y hasta inconsistente: la misma persona, ante el mismo caso presentado dos veces, suele dar respuestas diferentes. Para el emprendedor solo esto es una advertencia de humildad: tu juicio es tu principal instrumento, pero conviene tratarlo con desconfianza sana y apoyarlo con datos y con calibración.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "2220",
+        "frase": "the second estimate was usually more than 10 percentage points different from the first"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la segunda estimación solía diferir y que un 22 % repitió la misma respuesta; el nodo lo da como algo que siempre ocurre.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-039-cuanto_sabes_y_cuanto_solo_crees-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación clara de tus errores pasados.",
+      "texto_nuevo": "Antes de fiarte de tu experiencia, pregúntate si de verdad recibiste retroalimentación constante, rápida y clara de tus errores pasados.",
+      "cita": {
+        "libro": "Hubbard, The Failure of Risk Management",
+        "fichero": "books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "627-629",
+        "frase": "Risk management simply does not provide the type of consistent, immediate, and clear feedback"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide retroalimentación constante, rápida y sin ambigüedad; el paso deja solo la claridad y pierde justo las dos que faltan al estimar riesgos.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

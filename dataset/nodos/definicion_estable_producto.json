@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Las especificaciones inestables y el 'scope creep' (expansión no controlada del alcance) suelen ser la causa número uno de retrasos al final de los proyectos. Ocurre cuando el alcance o las especificaciones del producto cambian constantemente durante el desarrollo; a veces por factores externos, pero la mayoría de las veces por información que debió haberse recopilado desde el inicio. La raíz de este problema suele ser un front-end homework débil. Lograr definición clara y temprana del producto y proyecto se asocia con tasas de éxito más altas y llegada más rápida al mercado.",
   "pasos_accionables": [
-    "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
+    "Congelar las especificaciones clave que ya se conocen antes de iniciar la fase de desarrollo formal y, si tu mercado es cambiante, dejar marcadas las que siguen siendo variables",
     "Documentar el alcance del proyecto (single customer, multi-customer, global) desde el inicio",
     "Establecer un proceso de control de cambios para nuevas features o requerimientos",
     "Anticipar necesidades de mercado mediante investigación robusta previa, evitando 'sorpresas' tardías"
@@ -110,6 +110,23 @@
       },
       "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-041-definicion_estable_producto-pasos_accionables-0",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Congelar especificaciones clave antes de iniciar la fase de desarrollo formal",
+      "texto_nuevo": "Congelar las especificaciones clave que ya se conocen antes de iniciar la fase de desarrollo formal y, si tu mercado es cambiante, dejar marcadas las que siguen siendo variables",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1669-1677",
+        "frase": "some elements can indeed be nailed down before Development begins even in fluid markets"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro advierte que en mercados fluidos no todo se congela: se fija lo conocido y lo variable se marca para confirmarlo durante el desarrollo.",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Fundador Como Punto Único de Falla",
   "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
-  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
   "pasos_accionables": [
     "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
     "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
@@ -275,6 +275,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "final-e1-barrido-038-el_riesgo_eres_tu-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+      "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra. A esto se le llama riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Esa posibilidad suele quedar fuera de los planes, así que reserva algo de holgura en tus plazos para contenerla. Manejar este riesgo no es trabajar más, es también dejar preparado el terreno para tu propia ausencia.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1006",
+        "frase": "People sometimes leave during a project."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El pasaje de rotación solo habla de que la gente se va, de que eso suele quedar fuera de la estimación y de la holgura; lo de accesos y contraseñas en tu cabeza se afirma como hecho sin base.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [
