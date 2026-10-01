@@ -13,6 +13,11 @@ venta en español. **Nada se cambia sin el visto.**
 
 ## Severidad alta
 
+**Decisión del fundador (1 oct 2026), sin quitar nada:**
+- A1: el botón se queda y dice "Próximamente en Google Play" en los once idiomas; el día del lanzamiento será el enlace real.
+- A2: los enlaces de Privacidad y Términos se quedan; las páginas se publican el 7 y el 8 de octubre (`docs/PROXIMOS_PASOS.md`).
+- A3: corregido en los once idiomas ("con tu cuenta queda guardada; sin cuenta, se borra a los 30 días sin actividad").
+
 | # | Dónde | Texto | Lo que es verdad | Propuesta |
 |---|---|---|---|---|
 | A1 | `portada.ts:85-87`, Landing.tsx:371-378 y el enlace "App" del menú (:141) | "Llévala en el bolsillo" · "Descargar en Google Play" | No hay app Android publicada (`docs/APK_READINESS.md` la trata como futura). El botón no lleva a ningún sitio | "Pronto en Android. Mientras tanto, úsala desde el navegador de tu teléfono." Botón "Abrir en el navegador", o quitar la sección |

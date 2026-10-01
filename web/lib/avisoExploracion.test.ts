@@ -14,7 +14,7 @@ describe("el aviso de precio antes de explorar (AUD-09 M32)", () => {
   it("dice el precio de precios.ts y cuándo se cobra", () => {
     // A MANO: PRECIOS.plan_completo = 10.
     expect(AVISO_PRECIO_EXPLORACION).toBe(
-      "La Exploración usa 10 créditos, que se cobran solo cuando recibes tu plan. Tu Claridad es gratis y queda guardada para siempre."
+      "La Exploración usa 10 créditos, que se cobran solo cuando recibes tu plan. Tu Claridad es gratis. Con tu cuenta queda guardada; sin cuenta, se borra a los 30 días sin actividad."
     );
     // i18n F2: la versión por idioma da lo mismo en el base.
     expect(avisoPrecioExploracion("es")).toBe(AVISO_PRECIO_EXPLORACION);

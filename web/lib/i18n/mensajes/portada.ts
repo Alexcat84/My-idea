@@ -84,7 +84,7 @@ const es = {
     etiqueta: "La app",
     titulo: "Llévala en el bolsillo",
     texto: "Las mejores respuestas llegan lejos del escritorio.",
-    googlePlay: "Descargar en Google Play",
+    googlePlay: "Próximamente en Google Play",
     dictar: "también puedes dictarla",
   },
   cta: {
@@ -179,7 +179,7 @@ const en: typeof es = {
     etiqueta: "The app",
     titulo: "Keep it in your pocket",
     texto: "The best answers come to you away from your desk.",
-    googlePlay: "Get it on Google Play",
+    googlePlay: "Coming soon to Google Play",
     dictar: "you can also just say it",
   },
   cta: {
@@ -266,7 +266,7 @@ const fr: typeof es = {
     etiqueta: "L'appli",
     titulo: "Garde-la dans ta poche",
     texto: "Les meilleures réponses arrivent loin du bureau.",
-    googlePlay: "Disponible sur Google Play",
+    googlePlay: "Bientôt sur Google Play",
     dictar: "tu peux aussi la dicter",
   },
   cta: {
@@ -353,7 +353,7 @@ const pt: typeof es = {
     etiqueta: "O app",
     titulo: "Leve no bolso",
     texto: "As melhores respostas chegam longe da mesa de trabalho.",
-    googlePlay: "Disponível no Google Play",
+    googlePlay: "Em breve no Google Play",
     dictar: "você também pode ditar",
   },
   cta: {
@@ -440,7 +440,7 @@ const de: typeof es = {
     etiqueta: "Die App",
     titulo: "Immer in deiner Tasche",
     texto: "Die besten Antworten kommen dir fern vom Schreibtisch.",
-    googlePlay: "Jetzt bei Google Play",
+    googlePlay: "Demnächst bei Google Play",
     dictar: "du kannst sie auch einsprechen",
   },
   cta: {
@@ -527,7 +527,7 @@ const it: typeof es = {
     etiqueta: "L'app",
     titulo: "Portala sempre con te",
     texto: "Le risposte migliori arrivano lontano dalla scrivania.",
-    googlePlay: "Disponibile su Google Play",
+    googlePlay: "Presto su Google Play",
     dictar: "puoi anche dettarla",
   },
   cta: {
@@ -614,7 +614,7 @@ const ja: typeof es = {
     etiqueta: "アプリ",
     titulo: "いつもポケットの中に",
     texto: "いい答えは、机を離れたときに浮かぶものです。",
-    googlePlay: "Google Play で手に入れよう",
+    googlePlay: "Google Play で近日公開",
     dictar: "話して入力することもできます",
   },
   cta: {
@@ -701,7 +701,7 @@ const zh: typeof es = {
     etiqueta: "应用",
     titulo: "把它装进口袋",
     texto: "最好的答案，往往在你离开办公桌时出现。",
-    googlePlay: "在 Google Play 下载",
+    googlePlay: "即将登陆 Google Play",
     dictar: "也可以直接说出来",
   },
   cta: {
@@ -788,7 +788,7 @@ const ko: typeof es = {
     etiqueta: "앱",
     titulo: "주머니 속에 넣고 다니세요",
     texto: "가장 좋은 답은 책상에서 멀리 떨어져 있을 때 떠올라요.",
-    googlePlay: "Google Play에서 다운로드",
+    googlePlay: "Google Play 출시 예정",
     dictar: "말로 해도 돼요",
   },
   cta: {
@@ -875,7 +875,7 @@ const ar: typeof es = {
     etiqueta: "التطبيق",
     titulo: "احملوه في جيبكم",
     texto: "أفضل الإجابات تأتي بعيدًا عن المكتب.",
-    googlePlay: "متوفر على Google Play",
+    googlePlay: "قريبًا على Google Play",
     dictar: "ويمكنكم أيضًا إملاؤها",
   },
   cta: {
@@ -962,7 +962,7 @@ const hi: typeof es = {
     etiqueta: "ऐप",
     titulo: "इसे अपनी जेब में रखें",
     texto: "सबसे अच्छे जवाब अक्सर डेस्क से दूर सूझते हैं।",
-    googlePlay: "Google Play पर पाएँ",
+    googlePlay: "जल्द ही Google Play पर",
     dictar: "इसे बोलकर भी लिखवाया जा सकता है",
   },
   cta: {
