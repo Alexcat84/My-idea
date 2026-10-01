@@ -121,6 +121,47 @@ corren enteras desde el 9 de septiembre.
   exigía `unlock_revertido` verdadero. Desde AUD-09 H04 (nada se borra jamás) la respuesta dice `false`, y el vuelo
   habría caído por su propio arnés. Ahora exige `false`.
 
+### Paso D. Juez de fidelidad de la salida (añadido del fundador, 1 oct 2026)
+
+Va después de B y C, sobre todo lo que generaron.
+
+**Qué se juzga.** Cada salida de la IA que la persona lee como consejo:
+- cada plan del núcleo;
+- cada Claridad (organizador);
+- cada plan de mundo;
+- cada replanteamiento.
+
+Los 14 planes, los 2 organizadores y los replanteamientos que haya. La salida se divide en afirmaciones y cada una se
+coteja contra dos cosas:
+- **los nodos que se usaron** para generarla: la ruta y la cosecha del plan, las semillas de la Claridad, los
+  candidatos del replanteamiento, con su texto vigente del dataset;
+- **el contexto de la persona**: lo que contó, su ficha, el estado vivo y el plan anterior.
+
+**Rúbrica.** Cada afirmación es una de estas:
+- `sostenida`: la dice un nodo o la contó la persona;
+- `operativa`: concreta el cómo sin afirmar nada nuevo, que es consejo de la casa (D4);
+- `contrario`: dice lo opuesto a un nodo o a lo que contó la persona;
+- `invencion`: una cifra, una ley o norma, un plazo, una causa o un resultado prometido que ningún nodo dice y la
+  persona no contó. Las cifras que salen de la calculadora determinista y las que dio la persona no son invención;
+- `procedencia`: nombra un libro, un autor, "los estudios" o "los expertos", o insinúa un origen (D1, D6).
+
+**Umbral, fijado antes de medir:** 0 contrarios, 0 invenciones y 0 procedencias en el total de salidas. Una sola
+cualquiera es un fallo, y se anota con su sesión, la afirmación y el nodo o el dato que contradice o que falta.
+
+**Cómo.** Con el mismo método de la auditoría final:
+- **Juez ciego:** un agente de Claude Code, no la API, por paquete. Un paquete es una salida con su material: los
+  nodos usados y el contexto de la persona.
+- **Trampas sin marca:** 1 por cada 5 salidas, escritas antes de leer. Son copias de una salida real con un contrario,
+  una invención o una procedencia plantada. Si el juez no caza alguna, su paquete se relee con otro juez.
+- **Árbitro:** cada hallazgo pasa por un árbitro antes de contar.
+- **Instrucciones del juez:** `docs/producto/JUEZ_FIDELIDAD.md`.
+- **Pendiente** (ficha `juez-fidelidad-salida` en `docs/PENDIENTES.md`): el extractor que arma los paquetes desde la
+  base.
+  - Las salidas salen de `sessions` y `projects`.
+  - Los nodos usados salen de `nodos_por_etapa`, la ruta y la cosecha.
+  - El contexto sale de `projects.memoria` y del estado vivo.
+- **Informe:** `docs/coherencia/<fecha>/fidelidad.md`, con la cuenta por clase y por tipo de salida.
+
 ## Cuántos planes y mundos genera
 
 | | Planes | Mundos | Créditos |

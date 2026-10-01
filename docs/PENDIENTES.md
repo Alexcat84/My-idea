@@ -17879,3 +17879,42 @@ camino que el borrado de cuenta en producción).
   `web/lib/procedencia.test.ts`);
 - el borrado de cuenta la elimina, con su prueba;
 - el inventario de datos y la Política la nombran.
+
+## Fichas del añadido del fundador del 1 oct 2026 (para después de la auditoría de preguntas)
+
+### `juez-fidelidad-salida` (corrida final, paso D)
+
+- **Hecho:** la rúbrica, el umbral (0 contrarios, 0 invenciones, 0 procedencias, fijado antes de medir) y las
+  instrucciones del juez. Están en `docs/producto/CORRIDA_FINAL.md` (paso D) y `docs/producto/JUEZ_FIDELIDAD.md`.
+- **Falta:** el extractor que arma un paquete por salida (plan del núcleo, Claridad, plan de mundo, replanteamiento).
+  - La salida, los nodos usados (`nodos_por_etapa`, la ruta y la cosecha, con su texto vigente del dataset) y el
+    contexto de la persona (`projects.memoria`, estado vivo, plan anterior).
+  - Planta 1 trampa sin marca por cada 5 salidas.
+  - Corre después de B y C de la corrida final, con jueces y árbitro de Claude Code.
+
+### `condiciones-frontera-otro-pais` (etapa 2)
+
+- Dentro de la etapa 2 del remedio, las condiciones de activación de los nodos-frontera de otro país van primero:
+  los nodos con aviso de jurisdicción, `dataset/metadata/jurisdiccion.json`.
+
+### `auditoria-de-prompts` (solo lectura, sin cambios hasta el visto)
+
+- Leer juntos los prompts de todas las llamadas a la IA y listar toda instrucción que empuje a añadir contenido que no
+  está en los nodos ni en el contexto de la persona: datos de mercado, ejemplos con cifras, normas.
+- Cada hallazgo, con su ajuste propuesto. Nada se cambia hasta el visto del fundador.
+- **Hecho el informe** (`docs/auditoria_final/informes/auditoria_prompts.md`): 24 hallazgos, 6 altos. Esperan el
+  visto del fundador.
+
+### `promesas-publicas` (una revisión)
+
+- Portada y todo texto de venta: lista de afirmaciones que dicen más de lo que es verdad, con su reescritura propuesta.
+- **Hecho el informe** (`docs/auditoria_final/informes/promesas_publicas.md`): 31 hallazgos, 3 altos (Google Play,
+  enlaces legales vacíos, "guardada para siempre"). Espera el visto.
+
+### `estado-memoria-de-contexto`
+
+- Tabla de producción de la ficha, el contexto completo en cada llamada y entre mundos, y la caché, y si la prueba de
+  coherencia de la corrida final valida cada parte.
+- **Hecha la tabla** (`docs/auditoria_final/informes/estado_memoria_contexto.md`): las 4 partes están en producción
+  (`web-v2.13.0`, migración 049 aplicada). La prueba de coherencia solo valida bien la continuidad entre mundos, y con
+  huecos. Los cambios propuestos a `coherencia.ts` esperan el visto.
