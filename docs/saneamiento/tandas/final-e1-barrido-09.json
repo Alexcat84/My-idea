@@ -1,0 +1,431 @@
+[
+ {
+  "id": "final-e1-barrido-034-uso_del_us_commercial_service-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "uso_del_us_commercial_service",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo. Un caso real muestra que usar este servicio de forma constante permite expandirse a mercados en desarrollo con bajo costo y alto impacto.",
+  "texto_nuevo": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "5283",
+   "frase": "Swinko added that Jet got a lot of new business at very low cost."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro cuenta la experiencia de una sola empresa que consiguió negocio a muy bajo costo; el nodo la convierte en un resultado general asegurado, añade alto impacto y anuncia la procedencia.; Mismo defecto: el caso existe en el libro, pero el nodo lo generaliza como resultado seguro; es endurecimiento de certeza más que invención.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-034-transitarios_freight_forwarders-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "transitarios_freight_forwarders",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero pueden ser útiles, especialmente para exportadores primerizos, al entrar a un nuevo país o si prefieres que otro se encargue de esos trámites. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "texto_nuevo": "Los freight forwarders ayudan a preparar documentación de exportación, reservar transporte y, si hace falta, gestionar el despacho aduanero en el puerto de llegada. No es obligatorio tener uno, pero pueden ser útiles, especialmente para exportadores primerizos, al entrar a un nuevo país o si prefieres que otro se encargue de esos trámites. Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1741",
+   "frase": "and, if needed, arrange for customs clearance at the port of arrival"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el forwarder gestiona el despacho aduanero en destino solo si hace falta; el nodo lo vuelve una función incondicional.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-034-transitarios_freight_forwarders-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "transitarios_freight_forwarders",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Coordinar el despacho aduanero en el país de destino",
+  "texto_nuevo": "Coordinar el despacho aduanero en el país de destino, si hace falta",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "1741",
+   "frase": "and, if needed, arrange for customs clearance at the port of arrival"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta el despacho aduanero en destino como algo que el forwarder gestiona solo si hace falta; el paso lo vuelve obligatorio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-034-international_partner_search-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "international_partner_search",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar",
+  "texto_nuevo": "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar, si su país no tiene proveedores privados adecuados de informes de crédito; si los tiene, pide el informe de crédito a esas fuentes privadas",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2193-2211",
+   "frase": "The ICP service is offered in countries that lack adequate private-sector providers of credit"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita el ICP a países sin proveedores privados adecuados de información crediticia y remite a esas fuentes privadas donde existen; el paso lo presenta como siempre disponible.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-034-letra_de_cambio_bill_of_exchange-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "letra_de_cambio_bill_of_exchange",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
+  "texto_nuevo": "Entrega la letra y los documentos a tu banco para que los envíe al banco del comprador, siguiendo las instrucciones que el comprador te dio.",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4097",
+   "frase": "the exporter entrusts the collection of the payment for a sale to its bank"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el cobro documentario el exportador confía la letra y los documentos a su propio banco, que los remite al banco del comprador; el paso se salta tu banco y sugiere enviarlos directamente.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-barrido-034-ratios_eficiencia_inventario-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "ratios_eficiencia_inventario",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa.",
+  "texto_nuevo": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa, siempre que alcance para atender la demanda de los clientes.",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "2733",
+   "frase": "So long as you have enough inventory on hand to meet customer demands"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la ventaja de rotar más rápido a tener inventario suficiente para atender la demanda de los clientes; sin esa condición el consejo empuja a recortar inventario sin límite.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-035-seleccion_consultor_franquicias-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "seleccion_consultor_franquicias",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica que el consultor evalúe tu negocio antes de recomendar franquiciar, como señal de integridad",
+  "texto_nuevo": "Verifica que el consultor evalúe tu negocio, tus metas y tus recursos antes de recomendar franquiciar, como señal de integridad",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5270-5272",
+   "frase": "tells you to franchise before evaluating your business, goals, and resources"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide desconfiar de quien recomienda franquiciar sin evaluar tu negocio, tus metas y tus recursos; el paso deja fuera metas y recursos, que forman parte de lo que decide si te conviene.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-036-buyer_rating_system-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "buyer_rating_system",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Conversar los resultados con quienes te ayudan a comprar antes de aplicar cambios",
+  "texto_nuevo": "Antes de adoptar este método, conversarlo con quienes te ayudan a comprar y escuchar qué opinan",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2569-2571",
+   "frase": "Ill talk it over with the buyers and see what they say."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): No es lo opuesto: el libro también consulta a los compradores, pero sobre el método y antes de adoptarlo; el paso cambia el objeto y el momento de esa consulta.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-036-cero_defectos-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "cero_defectos",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos",
+  "texto_nuevo": "Comunícalo con absoluta claridad, explicándolo primero a cada persona por separado y dejando el mensaje a todos a la vez para el día de lanzamiento",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2725-2731",
+   "frase": "We probably should take that approach when we get to Zero Defects day"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide explicarlo a cada persona en la etapa previa, pero reserva el enfoque conjunto para el día de Cero Defectos; el paso lo vuelve absoluto.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-036-definicion_calidad_conformidad-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "definicion_calidad_conformidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+  "texto_nuevo": "Si detectas que un requisito no es lo que tú y tu cliente de verdad necesitan, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2061",
+   "frase": "cause the requirement to be officially changed to what we and our customers really need."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el cambio oficial a que ni tú ni el cliente necesiten ese criterio, no a que parezca poco realista.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-036-resolucion_problemas_niveles_supervision-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "resolucion_problemas_niveles_supervision",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+  "texto_nuevo": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "943",
+   "frase": "Over 85 percent of all problems can be resolved at the first level of supervision"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro ubica la solución en el primer nivel que encuentra el problema; no dice que se resuelva sin ayuda de nadie.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-036-resolucion_problemas_niveles_supervision-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "resolucion_problemas_niveles_supervision",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Resolver tú mismo, sin pedir ayuda, el 85% de los problemas que puedes atender donde los notas",
+  "texto_nuevo": "Resolver tú mismo el 85% de los problemas que puedes atender donde los notas",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "943",
+   "frase": "Over 85 percent of all problems can be resolved at the first level of supervision"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que ese 85% se resuelve en el primer nivel donde aparece, no que se resuelva sin pedir ayuda.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-036-emocion_e_imagen_en_el_pensamiento-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "emocion_e_imagen_en_el_pensamiento",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "El afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Hay evidencia de psicólogos de laboratorio que muestra que atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. La retención efectiva del pensamiento y su comunicación a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
+  "texto_nuevo": "El afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. Retener la emoción y comunicarla con eficacia a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "443",
+   "frase": "the retention by the thinker of his emotion and its effective communication to others"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que lo que se retiene y se comunica mejor con una imagen vívida es la emoción del pensador, no el pensamiento.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-036-esfuerzo_voluntario_vs_urge_espontaneo-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "esfuerzo_voluntario_vs_urge_espontaneo",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando sientas que una idea puede llevarte a algo, intenta sostenerla o desviarla a propósito.",
+  "texto_nuevo": "Cuando sientas que una idea puede llevarte a algo, intenta frenarla, sostenerla o desviarla a propósito.",
+  "cita": {
+   "libro": "The Art of Thought - Wallas, Graham",
+   "fichero": "txt/The Art of Thought - Wallas, Graham.txt",
+   "lineas": "347",
+   "frase": "We can at least attempt to inhibit, or prolong, or divert"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De las tres intervenciones que el libro enumera ante la Intimación (frenar, prolongar o desviar), el paso pierde la de frenarla.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-barrido-037-earned_vs_paid_media-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "earned_vs_paid_media",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso la prefieren los negocios chicos, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
+  "texto_nuevo": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso los negocios chicos suelen preferirla, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7132",
+   "frase": "These tactics are often favored by startups because they're far less expensive"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las startups a menudo la prefieren; el nodo lo da como regla general.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-037-anillo_interior_explotar_el_canal_nucleo-resumen_teorico",
+  "fecha": "2026-09-30",
+  "node_id": "anillo_interior_explotar_el_canal_nucleo",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "La diana de tracción tiene tres anillos y el ultimo no es elegir: es exprimir. Cuando las pruebas del anillo medio ya dijeron cual canal funciona, el trabajo cambia de forma. Deja de ser abrir frentes y pasa a ser concentrar: todos los recursos de marketing van al canal que gano, y los canales secundarios que dieron resultados apenas moderados se sueltan, por prometedores que parezcan. Dentro de ese canal único el método es la prueba continua, con grupo de control y confianza estadística antes de sacar conclusiones, sobre las variables que el canal permite mover. Las tácticas que ganan se documentan y se escalan hasta que el canal se satura, y ese es el momento, y no antes, de volver a correr la diana entera para encontrar el siguiente.",
+  "texto_nuevo": "La diana de tracción tiene tres anillos y el último no es elegir: es exprimir. Cuando las pruebas del anillo medio ya dijeron cuál canal funciona, el trabajo cambia de forma. Deja de ser abrir frentes y pasa a ser concentrar: todos los recursos de marketing van al canal que ganó, y los canales secundarios que dieron resultados apenas moderados se sueltan, por prometedores que parezcan, salvo los que sirven para alimentar al que ganó. Dentro de ese canal único el método es la prueba continua, con grupo de control y confianza estadística antes de sacar conclusiones, sobre las variables que el canal permite mover y también sobre otras estrategias dentro del mismo canal. Las tácticas que ganan se documentan y se escalan hasta que el canal se satura, y ese es el momento, y no antes, de volver a correr la diana entera para encontrar el siguiente.",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+   "lineas": "448, 553",
+   "frase": "One channel is still dominant, but others feed into it."
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da dos fines a las pruebas del anillo interior; el resumen omite probar otras estrategias dentro del mismo canal.; El libro precisa que concentrarse en el canal núcleo a menudo usa otros canales que lo alimentan; el resumen ordena soltar todo lo secundario sin esa excepción.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+ },
+ {
+  "id": "final-e1-barrido-037-revision_portafolio_periodica-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "revision_portafolio_periodica",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Evalúa si el conjunto está alineado con tu estrategia, si está balanceado y si tienes los recursos suficientes para sostenerlo.",
+  "texto_nuevo": "Evalúa si el conjunto está alineado con tu estrategia, si está balanceado, si tienes los recursos suficientes para sostenerlo y si con esos proyectos alcanzas tus metas de ventas de productos nuevos.",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6029",
+   "frase": "if you do these projects, will you achieve your stated product-innovation goals"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la pregunta de suficiencia del libro: si con esos proyectos alcanzas tus metas de ventas de productos nuevos.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-037-sistema_captura_ideas-pasos_accionables-1",
+  "fecha": "2026-09-30",
+  "node_id": "sistema_captura_ideas",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Crear un grupo de incubación (I-Group) que refine ideas crudas antes de la revisión formal",
+  "texto_nuevo": "Considerar crear un grupo de incubación (I-Group) que refine ideas crudas antes de la revisión formal",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "4949",
+   "frase": "Next, consider installing an incubation group"
+  },
+  "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro propone considerar el grupo de incubación; el paso lo da como obligatorio.",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 1
+ },
+ {
+  "id": "final-e1-barrido-034-uso_del_us_commercial_service-pasos_accionables-5",
+  "fecha": "2026-09-30",
+  "node_id": "uso_del_us_commercial_service",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Da seguimiento a los contactos que generes y evalúa qué oportunidades de distribución te convienen",
+  "texto_nuevo": "Da seguimiento a los contactos que generes y evalúa qué oportunidades de distribución te convienen",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro enumera servicios para localizar y evaluar compradores, pero no da el consejo de dar seguimiento a los contactos; no afirma hechos y el índice 5 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 5
+ },
+ {
+  "id": "final-e1-barrido-034-diseno_de_eucatastrofe_organizacional-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_de_eucatastrofe_organizacional",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Revisa los procesos donde podrías meter IA (atención a clientes, ventas, operaciones) y piensa el impacto humano de cada uno antes de aplicarlo.",
+  "texto_nuevo": "Revisa los procesos donde podrías meter IA (atención a clientes, ventas, operaciones) y piensa el impacto humano de cada uno antes de aplicarlo.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro dice que muchas personas en las organizaciones darán forma al uso de la IA, pero no aconseja revisar procesos concretos uno a uno; no afirma hechos y el índice 0 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ },
+ {
+  "id": "final-e1-barrido-034-comprender_alineacion_etica_ia-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "comprender_alineacion_etica_ia",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar",
+  "texto_nuevo": "Pregunta en tu mercado qué implicaciones legales y regulatorias tiene usar IA en tu tipo de decisiones antes de avanzar",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro solo menciona que la legalidad del entrenamiento varía entre países; no aconseja consultar la regulación del uso de IA en tus decisiones; no afirma hechos y el índice 3 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-034-ia_como_nivelador_habilidades-pasos_accionables-4",
+  "fecha": "2026-09-30",
+  "node_id": "ia_como_nivelador_habilidades",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Usar esta evidencia de nivelación como argumento para justificar la inversión en IA cuando tus recursos son limitados.",
+  "texto_nuevo": "Usar esta evidencia de nivelación como argumento para justificar la inversión en IA cuando tus recursos son limitados.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe el efecto nivelador, pero no aconseja usarlo como argumento para justificar la inversión; no afirma hechos y el índice 4 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 4
+ },
+ {
+  "id": "final-e1-barrido-035-compensacion_de_riesgo-pasos_accionables-2",
+  "fecha": "2026-09-30",
+  "node_id": "compensacion_de_riesgo",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Monitorear indicadores de margen de seguridad tras la implementación de nuevas tecnologías protectoras.",
+  "texto_nuevo": "Monitorear indicadores de margen de seguridad tras la implementación de nuevas tecnologías protectoras.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe el fenómeno de la compensación de riesgo y la erosión del margen, pero no aconseja monitorear indicadores de margen tras una tecnología protectora, y el índice no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 2
+ },
+ {
+  "id": "final-e1-barrido-035-diseno_recordatorios_efectivos_2-pasos_accionables-3",
+  "fecha": "2026-09-30",
+  "node_id": "diseno_recordatorios_efectivos_2",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
+  "texto_nuevo": "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro da los criterios del buen recordatorio y su límite como primeros auxilios, pero no aconseja probarlo en el flujo real antes de generalizarlo, y el índice 3 no está en pasos_casa."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 3
+ },
+ {
+  "id": "final-e1-barrido-036-disciplina_atencion_dirigida-pasos_accionables-0",
+  "fecha": "2026-09-30",
+  "node_id": "disciplina_atencion_dirigida",
+  "campo": "pasos_accionables",
+  "veredicto": "CASA",
+  "texto_anterior": "Antes de una sesión de pensamiento profundo o ideación, define no solo el tema abstracto sino una secuencia concreta de preguntas o imágenes que guiarán la reflexión paso a paso.",
+  "texto_nuevo": "Antes de una sesión de pensamiento profundo o ideación, define no solo el tema abstracto sino una secuencia concreta de preguntas o imágenes que guiarán la reflexión paso a paso.",
+  "cita": {
+   "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+   "motivo": "El libro describe la secuencia prescrita de imágenes de la meditación ignaciana y la juzga con reservas, pero no la recomienda como técnica de ideación; es consejo de la casa sin registrar."
+  },
+  "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9",
+  "indice": 0
+ }
+]

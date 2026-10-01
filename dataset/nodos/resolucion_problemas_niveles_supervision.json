@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Resolución de Problemas por Alcance (Regla 85-13-2)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+  "resumen_teorico": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
   "pasos_accionables": [
     "Clasificar cada problema que detectas según cuánta ayuda realmente necesita para resolverse",
-    "Resolver tú mismo, sin pedir ayuda, el 85% de los problemas que puedes atender donde los notas",
+    "Resolver tú mismo el 85% de los problemas que puedes atender donde los notas",
     "Coordinarte con otra persona (proveedor, socio o colaborador) para el 13% de problemas que necesitan ese apoyo",
     "Sumar a varias personas o áreas, hasta tres, solo para el 2% de casos verdaderamente complejos"
   ],
@@ -88,6 +88,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La tercera franja del libro es la intervención de hasta tres áreas o niveles, no la ayuda experta.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-036-resolucion_problemas_niveles_supervision-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "texto_nuevo": "Más del 85% de los problemas de calidad se pueden resolver justo donde los detectas. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% puede requerir que intervengan hasta tres personas o áreas distintas. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "943",
+        "frase": "Over 85 percent of all problems can be resolved at the first level of supervision"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro ubica la solución en el primer nivel que encuentra el problema; no dice que se resuelva sin ayuda de nadie.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-036-resolucion_problemas_niveles_supervision-pasos_accionables-1",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Resolver tú mismo, sin pedir ayuda, el 85% de los problemas que puedes atender donde los notas",
+      "texto_nuevo": "Resolver tú mismo el 85% de los problemas que puedes atender donde los notas",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "943",
+        "frase": "Over 85 percent of all problems can be resolved at the first level of supervision"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que ese 85% se resuelve en el primer nivel donde aparece, no que se resuelva sin pedir ayuda.",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

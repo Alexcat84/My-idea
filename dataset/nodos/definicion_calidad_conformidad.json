@@ -10,7 +10,7 @@
     "Elimina de tu lenguaje términos subjetivos como alta calidad, elegancia o buena calidad al describir tu trabajo.",
     "Comunica esos requisitos con precisión a cualquiera que dependa de ti para cumplirlos.",
     "Evalúa tu trabajo solo por si cumple o no cumple el requisito, documentando cualquier desviación como no conformidad.",
-    "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+    "Si detectas que un requisito no es lo que tú y tu cliente de verdad necesitan, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
     "Cuando alguien mencione calidad de forma vaga, pregunta qué requisito específico está evaluando."
   ],
   "entregable_esperado": "Un documento de requisitos claros y medibles para tu producto o servicio, que usas como único criterio para decidir si algo cumple o no cumple.",
@@ -213,6 +213,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no limita el cambio al momento de definir el requisito: pide cambiarlo oficialmente por el sistema.; Mismo defecto: el libro manda cambiar el requisito oficialmente, sin fijar cuándo.; Mismo defecto: la restricción de tiempo no está en el libro.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-036-definicion_calidad_conformidad-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si detectas que un requisito es poco realista, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+      "texto_nuevo": "Si detectas que un requisito no es lo que tú y tu cliente de verdad necesitan, haz que se cambie oficialmente, sin saltarte ningún paso; no lo justifiques después en la entrega.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2061",
+        "frase": "cause the requirement to be officially changed to what we and our customers really need."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona el cambio oficial a que ni tú ni el cliente necesiten ese criterio, no a que parezca poco realista.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ],
   "fuentes_internas": [

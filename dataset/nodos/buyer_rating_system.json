@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir una forma simple de registrar los defectos de cada proveedor y a quién corresponde esa relación",
     "Calcular la tasa de defectos por persona que gestiona proveedores, no solo por proveedor",
-    "Conversar los resultados con quienes te ayudan a comprar antes de aplicar cambios",
+    "Antes de adoptar este método, conversarlo con quienes te ayudan a comprar y escuchar qué opinan",
     "Usar los resultados para mejorar cómo eliges y gestionas a tus proveedores"
   ],
   "entregable_esperado": "Un reporte de tasas de defectos por persona compradora, compartido con quienes participan en tus decisiones de compra",
@@ -40,6 +40,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "final-e1-barrido-036-buyer_rating_system-pasos_accionables-2",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conversar los resultados con quienes te ayudan a comprar antes de aplicar cambios",
+      "texto_nuevo": "Antes de adoptar este método, conversarlo con quienes te ayudan a comprar y escuchar qué opinan",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2569-2571",
+        "frase": "Ill talk it over with the buyers and see what they say."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): No es lo opuesto: el libro también consulta a los compradores, pero sobre el método y antes de adoptarlo; el paso cambia el objeto y el momento de esa consulta.",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Prensa gratis vs publicidad pagada para conseguir clientes",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso la prefieren los negocios chicos, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
+  "resumen_teorico": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso los negocios chicos suelen preferirla, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
   "pasos_accionables": [
     "Haz una lista de las tácticas de prensa gratis que puedes usar (notas de prensa, reseñas, muestras gratis)",
     "Haz una lista de las tácticas de publicidad pagada y pregunta el precio en tu mercado",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Elige Medios Gratis o Pagados",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-037-earned_vs_paid_media-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso la prefieren los negocios chicos, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
+      "texto_nuevo": "La prensa gratis (notas de prensa, reseñas, marketing de guerrilla) te da exposición sin costo y por eso los negocios chicos suelen preferirla, pero no puedes controlar cuándo ni cómo aparece. La publicidad pagada (televisión, publicidad online, correo directo) la compras tú, y si la escalas puede costarte mucho dinero. Por eso conviene que la pruebes en pequeño antes de lanzar tu producto.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7132",
+        "frase": "These tactics are often favored by startups because they're far less expensive"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las startups a menudo la prefieren; el nodo lo da como regla general.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

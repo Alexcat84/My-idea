@@ -11,7 +11,7 @@
     "Detalla en tu carta de instrucciones qué documentos vas a adjuntar: factura, conocimiento de embarque, lista de empaque, certificados.",
     "Indica si entregas los documentos solo contra el pago (sight draft) o contra la aceptación de pago futuro (time draft).",
     "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten, sabiendo que los gastos extra del protesto suelen cargarse a ti.",
-    "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
+    "Entrega la letra y los documentos a tu banco para que los envíe al banco del comprador, siguiendo las instrucciones que el comprador te dio.",
     "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
   ],
   "entregable_esperado": "Tu letra de cambio y tu carta de instrucciones completas y firmadas, listas para enviar al banco junto con los documentos de embarque que te pidieron.",
@@ -77,6 +77,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los gastos extra del protesto suelen cargarse al vendedor, dato que pesa en la decisión.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-034-letra_de_cambio_bill_of_exchange-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Envía la letra y los documentos al banco corresponsal o al banco del comprador, siguiendo las instrucciones que él te dio.",
+      "texto_nuevo": "Entrega la letra y los documentos a tu banco para que los envíe al banco del comprador, siguiendo las instrucciones que el comprador te dio.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4097",
+        "frase": "the exporter entrusts the collection of the payment for a sale to its bank"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el cobro documentario el exportador confía la letra y los documentos a su propio banco, que los remite al banco del comprador; el paso se salta tu banco y sugiere enviarlos directamente.",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

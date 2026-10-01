@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Aprovechamiento del U.S. Commercial Service",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo. Un caso real muestra que usar este servicio de forma constante permite expandirse a mercados en desarrollo con bajo costo y alto impacto.",
+  "resumen_teorico": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo.",
   "pasos_accionables": [
     "Contacta la oficina local del U.S. Commercial Service más cercana a ti, incluida la afiliada a un DEC",
     "Pide una evaluación de tu potencial exportador y define qué requisitos técnicos y comerciales buscas en un distribuidor",
@@ -108,6 +108,37 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "final-e1-barrido-034-uso_del_us_commercial_service-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo. Un caso real muestra que usar este servicio de forma constante permite expandirse a mercados en desarrollo con bajo costo y alto impacto.",
+      "texto_nuevo": "El U.S. Commercial Service es una red de especialistas comerciales del gobierno de Estados Unidos que te ayuda a evaluar tu potencial como exportador, identificar mercados y localizar distribuidores o socios en el extranjero. Tiene presencia en más de 75 países, con oficinas locales e internacionales que funcionan como ventanilla única. La asesoría es gratuita o de bajo costo, ideal si estás empezando a exportar o no tienes contactos en mercados en desarrollo. Además de la orientación inicial, puedes acceder a programas como el International Buyer Program, participar en ferias y misiones comerciales, y pedir una investigación a fondo de distribuidores potenciales antes de cerrar un acuerdo.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5283",
+        "frase": "Swinko added that Jet got a lot of new business at very low cost."
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro cuenta la experiencia de una sola empresa que consiguió negocio a muy bajo costo; el nodo la convierte en un resultado general asegurado, añade alto impacto y anuncia la procedencia.; Mismo defecto: el caso existe en el libro, pero el nodo lo generaliza como resultado seguro; es endurecimiento de certeza más que invención.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "final-e1-barrido-034-uso_del_us_commercial_service-pasos_accionables-5",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "CASA",
+      "texto_anterior": "Da seguimiento a los contactos que generes y evalúa qué oportunidades de distribución te convienen",
+      "texto_nuevo": "Da seguimiento a los contactos que generes y evalúa qué oportunidades de distribución te convienen",
+      "cita": {
+        "regla": "Regla dura D1 (fundador, 30 sep 2026): el paso de la casa se queda con su texto; su origen consta solo en este registro.",
+        "motivo": "El libro enumera servicios para localizar y evaluar compradores, pero no da el consejo de dar seguimiento a los contactos; no afirma hechos y el índice 5 no está en pasos_casa."
+      },
+      "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }

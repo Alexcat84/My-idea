@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ratios de Eficiencia de Inventario (Días de Inventario y Rotación)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa.",
+  "resumen_teorico": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa, siempre que alcance para atender la demanda de los clientes.",
   "pasos_accionables": [
     "Calcular inventario promedio dividido entre COGS diario para obtener DII",
     "Calcular COGS anual dividido entre inventario promedio para obtener rotación",
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Mide tu Eficiencia de Inventario",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "final-e1-barrido-034-ratios_eficiencia_inventario-resumen_teorico",
+      "fecha": "2026-09-30",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa.",
+      "texto_nuevo": "Miden qué tan eficientemente la empresa gestiona su inventario. Días en Inventario (DII) indica cuántos días permanece el inventario antes de venderse; Rotación de Inventario indica cuántas veces al año se vende y repone el stock. Mientras más rápido rote el inventario, mejor la posición de caja de la empresa, siempre que alcance para atender la demanda de los clientes.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2733",
+        "frase": "So long as you have enough inventory on hand to meet customer demands"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona la ventaja de rotar más rápido a tener inventario suficiente para atender la demanda de los clientes; sin esa condición el consejo empuja a recortar inventario sin límite.",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    }
   ]
 }

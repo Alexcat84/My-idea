@@ -10,7 +10,7 @@
     "Solicita el International Partner Search en la oficina local del U.S. Commercial Service, indicando el mercado objetivo y el perfil de socio que buscas",
     "Recibe y evalúa la lista de hasta 5 socios potenciales prescreened en 15 días",
     "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, interprete y apoyo para cerrar el trato",
-    "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar",
+    "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar, si su país no tiene proveedores privados adecuados de informes de crédito; si los tiene, pide el informe de crédito a esas fuentes privadas",
     "Contacta directamente a los socios interesados con la información proporcionada"
   ],
   "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
@@ -145,6 +145,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el ICP solo se ofrece en países sin proveedores privados adecuados; el nodo lo presenta como disponible en general.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "final-e1-barrido-034-international_partner_search-pasos_accionables-4",
+      "fecha": "2026-09-30",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar",
+      "texto_nuevo": "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar, si su país no tiene proveedores privados adecuados de informes de crédito; si los tiene, pide el informe de crédito a esas fuentes privadas",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2193-2211",
+        "frase": "The ICP service is offered in countries that lack adequate private-sector providers of credit"
+      },
+      "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita el ICP a países sin proveedores privados adecuados de información crediticia y remite a esas fuentes privadas donde existen; el paso lo presenta como siempre disponible.",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
     }
   ]
 }
