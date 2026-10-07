@@ -22,7 +22,7 @@
     "alianzas_cross_industry"
   ],
   "condiciones_activacion": [
-    "Si un proveedor esencial no cumple estándares pero es difícil de reemplazar",
+    "Si un proveedor no cumple estándares pero te da un insumo esencial o es difícil de reemplazar",
     "Si se busca desarrollo a largo plazo en vez de descarte inmediato"
   ],
   "merged_originals": [
@@ -72,6 +72,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el modelo del libro el primer nivel es inaceptable y exige un plan de acción inmediato, y el mínimo exigido es el segundo; el paso borra ese escalón.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-programa_mentoria_proveedores-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si un proveedor esencial no cumple estándares pero es difícil de reemplazar",
+      "texto_nuevo": "Si un proveedor no cumple estándares pero te da un insumo esencial o es difícil de reemplazar",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4132",
+        "frase": "they supply an essential input or are difficult to replace"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

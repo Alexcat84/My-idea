@@ -22,7 +22,7 @@
     "machine_guarding_abrasive_wheels"
   ],
   "condiciones_activacion": [
-    "Cuando debas dar mantenimiento, servicio o ajuste a máquinas o equipos con riesgo de energización accidental.",
+    "Cuando debas limpiar, dar mantenimiento o servicio, ajustar o poner a punto máquinas o equipos con riesgo de energización accidental.",
     "Cuando tu negocio maneje equipos con fuentes de energía almacenada peligrosa."
   ],
   "etiqueta_arbol": "Bloquea y Etiqueta antes de Reparar",
@@ -87,6 +87,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-lockout_tagout_procedures-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando debas dar mantenimiento, servicio o ajuste a máquinas o equipos con riesgo de energización accidental.",
+      "texto_nuevo": "Cuando debas limpiar, dar mantenimiento o servicio, ajustar o poner a punto máquinas o equipos con riesgo de energización accidental.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "961",
+        "frase": "locked out during cleaning, servicing, adjusting, or setting up operations"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

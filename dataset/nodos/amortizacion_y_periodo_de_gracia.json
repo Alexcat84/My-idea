@@ -19,7 +19,7 @@
     "covenants_control_terms"
   ],
   "condiciones_activacion": [
-    "Si la empresa ya negoció el warrant y necesita definir la estructura de repago del préstamo."
+    "Si la empresa necesita definir la estructura de repago del préstamo."
   ],
   "etiqueta_arbol": "Define tus Plazos de Pago",
   "fuentes_internas": [
@@ -161,6 +161,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-amortizacion_y_periodo_de_gracia-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la empresa ya negoció el warrant y necesita definir la estructura de repago del préstamo.",
+      "texto_nuevo": "Si la empresa necesita definir la estructura de repago del préstamo.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2883-2887",
+        "frase": "I/O periods are usually linked to the cost of the loan and the warrant pricing"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

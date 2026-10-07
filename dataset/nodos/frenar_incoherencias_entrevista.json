@@ -17,7 +17,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir."
+    "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que ves u oyes una incoherencia entre lo que el candidato dice y cómo lo dice, por ejemplo en su lenguaje corporal."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -203,6 +203,23 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "condiciones-resto-frenar_incoherencias_entrevista-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir.",
+      "texto_nuevo": "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que ves u oyes una incoherencia entre lo que el candidato dice y cómo lo dice, por ejemplo en su lenguaje corporal.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "89",
+        "frase": "The biggest indicator, as it turns out, is when you see or hear inconsistencies."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Persigue las Incoherencias en la Entrevista",

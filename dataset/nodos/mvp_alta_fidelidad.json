@@ -27,7 +27,7 @@
     "usability_testing_producto"
   ],
   "condiciones_activacion": [
-    "Cuando se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios"
+    "Cuando vendes por canales web o móviles, se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios"
   ],
   "etiqueta_arbol": "Construye un Prototipo Más Pulido",
   "fuentes_internas": [
@@ -66,6 +66,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-mvp_alta_fidelidad-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios",
+      "texto_nuevo": "Cuando vendes por canales web o móviles, se pasa de customer discovery a customer validation y se necesita probar el producto con más usuarios",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2045, 8683",
+        "frase": "the product solution presentation (physical channel) or the high fidelity MVP test (web/mobile)"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
