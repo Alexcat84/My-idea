@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Impacto Negativo del Cierre Forzado en la Satisfacción Post-Venta",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Un estudio con 145 clientes de una cadena minorista reveló que quienes fueron atendidos por vendedores entrenados en técnicas de cierre reportaron menor satisfacción con su compra y menor probabilidad de volver a comprar en la misma tienda. La interpretación más probable es que las personas se sienten menos satisfechas con decisiones que perciben como forzadas o presionadas que con las tomadas con libre voluntad. El estudio tiene limitaciones y no se hizo en ventas grandes, pero invita a ser aún más cauto con el cierre en ellas, donde la satisfacción posventa puede pesar en ventas futuras.",
+  "resumen_teorico": "En un estudio hecho en una cadena minorista, los clientes atendidos por vendedores entrenados en técnicas de cierre declararon, pocos días después de la compra, menos satisfacción con lo comprado y menos intención de volver a comprar en la misma tienda. La lectura más probable es que la mayoría tiende a quedar menos contenta con las decisiones que siente presionadas que con las que toma por voluntad propia. Es un solo estudio, con dudas de método y hecho fuera de las ventas grandes, pero invita a ser todavía más prudente con el cierre en ellas, donde la satisfacción posventa puede pesar en ventas futuras.",
   "pasos_accionables": [
     "Medir la satisfacción del cliente 3-5 días después de la compra usando escalas de 1-10",
     "Correlacionar el uso de técnicas de cierre por vendedor con los índices de satisfacción y recompra",
@@ -76,6 +76,24 @@
       "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "barrido-procedencia-2-cierre_satisfaccion_postventa-resumen_teorico",
+      "fecha": "2026-10-06",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Un estudio con 145 clientes de una cadena minorista reveló que quienes fueron atendidos por vendedores entrenados en técnicas de cierre reportaron menor satisfacción con su compra y menor probabilidad de volver a comprar en la misma tienda. La interpretación más probable es que las personas se sienten menos satisfechas con decisiones que perciben como forzadas o presionadas que con las tomadas con libre voluntad. El estudio tiene limitaciones y no se hizo en ventas grandes, pero invita a ser aún más cauto con el cierre en ellas, donde la satisfacción posventa puede pesar en ventas futuras.",
+      "texto_nuevo": "En un estudio hecho en una cadena minorista, los clientes atendidos por vendedores entrenados en técnicas de cierre declararon, pocos días después de la compra, menos satisfacción con lo comprado y menos intención de volver a comprar en la misma tienda. La lectura más probable es que la mayoría tiende a quedar menos contenta con las decisiones que siente presionadas que con las que toma por voluntad propia. Es un solo estudio, con dudas de método y hecho fuera de las ventas grandes, pero invita a ser todavía más prudente con el cierre en ellas, donde la satisfacción posventa puede pesar en ventas futuras.",
+      "cita": {
+        "regla": "Decision del fundador del 6 oct 2026: la vivencia de una persona se dice como consejo con su matiz ('suele', 'tiende a'), sin contar de quien es, sin endurecerla y sin anadir nada (D1, D5).",
+        "fragmentos": [
+          "Un estudio con 145 clientes de una cadena minorista reveló",
+          "reportaron menor satisfacción con su compra y menor probabilidad de volver a comprar en la misma tienda",
+          "El estudio tiene limitaciones"
+        ]
+      },
+      "decision": "barrido de procedencia: reescritura con su matiz, verificada a ciegas (paq_w01, 13 de 13, trampa cazada)",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
     }
   ]
 }
