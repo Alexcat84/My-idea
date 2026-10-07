@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Define el 'camino ideal' de experiencia que debe seguir un nuevo usuario",
     "Identifica los pasos críticos necesarios para que el usuario obtenga valor del producto",
-    "Crea emails automatizados disparados por inacción en cada paso crítico",
+    "Crea correos automatizados disparados por inacción en cada paso crítico",
     "Usa herramientas como Vero o Customer.io para automatizar estos mensajes",
-    "Envía emails personales (no 'no-reply') para abrir canal de feedback directo"
+    "Envía correos personales (no 'no-reply') para abrir canal de comentarios directo"
   ],
-  "entregable_esperado": "Flujo de emails de activación automatizado con triggers definidos por comportamiento del usuario",
+  "entregable_esperado": "Flujo de correos de activación automatizado con disparadores definidos por comportamiento del usuario",
   "nodos_previos": [
     "email_marketing_para_captacion"
   ],
@@ -27,5 +27,59 @@
   "etiqueta_arbol": "Activa Clientes con Correos",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-email_marketing_activacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea emails automatizados disparados por inacción en cada paso crítico",
+      "texto_nuevo": "Crea correos automatizados disparados por inacción en cada paso crítico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_activacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Envía emails personales (no 'no-reply') para abrir canal de feedback directo",
+      "texto_nuevo": "Envía correos personales (no 'no-reply') para abrir canal de comentarios directo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails personales",
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_activacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Flujo de emails de activación automatizado con triggers definidos por comportamiento del usuario",
+      "texto_nuevo": "Flujo de correos de activación automatizado con disparadores definidos por comportamiento del usuario",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails",
+          "triggers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -10,7 +10,7 @@
     "Deja espacio por lado para el relleno protector, sin sobredimensionar la caja.",
     "Evita usar un solo tamaño de caja para todos tus pedidos: ten varios tamaños disponibles.",
     "Prefiere formas cúbicas sobre cilíndricas cuando el producto lo permita, porque aprovechan mejor el espacio de transporte.",
-    "Revisa el peso volumétrico que cobra tu courier antes de decidir el tamaño final."
+    "Revisa el peso volumétrico que cobra tu empresa de mensajería antes de decidir el tamaño final."
   ],
   "entregable_esperado": "Una tabla simple con varios tamaños de caja asignados a tus productos o rangos de pedido.",
   "nodos_previos": [
@@ -94,6 +94,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El libro presenta la caja hecha a la medida del pedido como ventaja: menos volumen, flete y relleno.; Mismo defecto: el nodo convierte en problema lo que el libro presenta como ventaja.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-hacer_cajas_a_medida_del_pedido-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa el peso volumétrico que cobra tu courier antes de decidir el tamaño final.",
+      "texto_nuevo": "Revisa el peso volumétrico que cobra tu empresa de mensajería antes de decidir el tamaño final.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

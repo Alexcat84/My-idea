@@ -7,11 +7,11 @@
   "resumen_teorico": "Un EMS clarifica prioridades, establece líneas de responsabilidad, rastrea el progreso y proporciona retroalimentación. Las empresas pueden usar desde hojas de cálculo simples hasta bases de datos relacionales complejas, o adoptar el estándar ISO 14000 como punto de partida estructurado y económico.",
   "pasos_accionables": [
     "Definir prioridades y líneas claras de responsabilidad ambiental",
-    "Seleccionar o diseñar una herramienta de gestión de datos (desde spreadsheets hasta software especializado)",
+    "Seleccionar o diseñar una herramienta de gestión de datos (desde hojas de cálculo hasta software especializado)",
     "Considerar adoptar el estándar ISO 14000/14001 como marco base",
     "Establecer mecanismos de revisión y actualización continua de métricas y metas"
   ],
-  "entregable_esperado": "Sistema EMS implementado, potencialmente alineado con ISO 14000, con métricas actualizadas periódicamente",
+  "entregable_esperado": "Sistema de gestión ambiental (EMS) implementado, potencialmente alineado con ISO 14000, con métricas actualizadas periódicamente",
   "nodos_previos": [
     "sistema_recoleccion_datos",
     "chief_sustainability_officer"
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Construye tu Sistema Ambiental",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-sistema_gestion_ambiental-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar o diseñar una herramienta de gestión de datos (desde spreadsheets hasta software especializado)",
+      "texto_nuevo": "Seleccionar o diseñar una herramienta de gestión de datos (desde hojas de cálculo hasta software especializado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "spreadsheets"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gestion_ambiental-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema EMS implementado, potencialmente alineado con ISO 14000, con métricas actualizadas periódicamente",
+      "texto_nuevo": "Sistema de gestión ambiental (EMS) implementado, potencialmente alineado con ISO 14000, con métricas actualizadas periódicamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sistema EMS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

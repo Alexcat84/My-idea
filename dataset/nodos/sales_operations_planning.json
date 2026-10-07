@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Establecer un ciclo mensual de revisión de demanda y oferta a nivel agregado",
     "Involucrar a Gerencia General, Ventas, Operaciones, Finanzas y Desarrollo de Producto en el proceso",
-    "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
+    "Adoptar un enfoque de afuera hacia adentro, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
     "Definir el mínimo de datos necesarios para tomar decisiones rápidas y precisas, evitando el exceso de datos",
     "Ajustar continuamente los planes operativos según cambien los pronósticos, en lugar de seguir un plan anual fijo"
   ],
-  "entregable_esperado": "Proceso mensual de S&OP documentado con roles, calendario y KPIs de balance oferta-demanda",
+  "entregable_esperado": "Proceso mensual de planificación de ventas y operaciones (S&OP) documentado con roles, calendario y KPIs de balance oferta-demanda",
   "nodos_previos": [
     "drum_buffer_rope",
     "estandarizacion_codigos_producto_epc",
@@ -93,6 +93,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de funciones del libro incluye a la gerencia general y el resumen la omite.; Mismo defecto: se cae la gerencia general de la enumeración de áreas que participan.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-sales_operations_planning-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adoptar un enfoque outside-in, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
+      "texto_nuevo": "Adoptar un enfoque de afuera hacia adentro, priorizando el análisis de factores externos (clientes, socios, competencia, mercado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outside-in"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sales_operations_planning-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proceso mensual de S&OP documentado con roles, calendario y KPIs de balance oferta-demanda",
+      "texto_nuevo": "Proceso mensual de planificación de ventas y operaciones (S&OP) documentado con roles, calendario y KPIs de balance oferta-demanda",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mensual de S&OP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

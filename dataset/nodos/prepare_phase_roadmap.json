@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Desplegar el plan creado en la fase Decide e identificar las fortalezas y los posibles problemas de desempeño detectados en esa fase",
     "Identificar flujos de valor y procesos clave que requieren mejora",
-    "Seleccionar proyectos piloto multifuncionales y crear sus charters",
+    "Seleccionar proyectos piloto multifuncionales y crear sus actas de constitución",
     "Crear plan de entrenamiento para los equipos",
     "Comunicar los pasos tomados a toda la organización"
   ],
-  "entregable_esperado": "Proyectos piloto seleccionados con charters, equipos entrenados y plan de comunicación ejecutado",
+  "entregable_esperado": "Proyectos piloto seleccionados con actas de constitución, equipos entrenados y plan de comunicación ejecutado",
   "nodos_previos": [
     "decide_phase_roadmap"
   ],
@@ -43,6 +43,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La primera acción que el libro enumera para esta fase, identificar fortalezas y posibles problemas de la fase uno, no está en ningún paso.; Mismo elemento perdido del procedimiento.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-prepare_phase_roadmap-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar proyectos piloto multifuncionales y crear sus charters",
+      "texto_nuevo": "Seleccionar proyectos piloto multifuncionales y crear sus actas de constitución",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "charters"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-prepare_phase_roadmap-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proyectos piloto seleccionados con charters, equipos entrenados y plan de comunicación ejecutado",
+      "texto_nuevo": "Proyectos piloto seleccionados con actas de constitución, equipos entrenados y plan de comunicación ejecutado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "charters"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

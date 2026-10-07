@@ -7,12 +7,12 @@
   "resumen_teorico": "Para que las iniciativas colaborativas tengan éxito se requieren habilitadores humanos y tecnológicos: interés común, apertura, reconocimiento de prioridades, expectativas claras, liderazgo, cooperación (no castigo), confianza, reparto de beneficios y TI avanzada. Sin estos elementos, la colaboración fracasa ante los obstáculos naturales del negocio tradicional.",
   "pasos_accionables": [
     "Evaluar si existe un interés común genuino entre todas las partes",
-    "Fomentar la apertura en el intercambio de información, respetando normas antitrust",
-    "Designar un líder o champion que impulse la colaboración",
-    "Establecer un sistema de reparto de beneficios (ej. scorecard compartido)",
+    "Fomentar la apertura en el intercambio de información, respetando normas antimonopolio",
+    "Designar un líder o promotor que impulse la colaboración",
+    "Establecer un sistema de reparto de beneficios (ej. tablero de indicadores compartido)",
     "Invertir en TI avanzada para habilitar transferencia de datos en tiempo real"
   ],
-  "entregable_esperado": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
+  "entregable_esperado": "Lista de verificación de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
   "nodos_previos": [
     "coordinacion_colaboracion_cadena_suministro"
   ],
@@ -78,6 +78,73 @@
         "motivo": "arista entre dos mundos (compras -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "voz-collaboration_enablers-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fomentar la apertura en el intercambio de información, respetando normas antitrust",
+      "texto_nuevo": "Fomentar la apertura en el intercambio de información, respetando normas antimonopolio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "antitrust"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-collaboration_enablers-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Designar un líder o champion que impulse la colaboración",
+      "texto_nuevo": "Designar un líder o promotor que impulse la colaboración",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "champion"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-collaboration_enablers-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un sistema de reparto de beneficios (ej. scorecard compartido)",
+      "texto_nuevo": "Establecer un sistema de reparto de beneficios (ej. tablero de indicadores compartido)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "scorecard compartido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-collaboration_enablers-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
+      "texto_nuevo": "Lista de verificación de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

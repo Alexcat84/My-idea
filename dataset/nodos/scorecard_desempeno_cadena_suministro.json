@@ -7,12 +7,12 @@
   "resumen_teorico": "Cuando los datos fluyen continuamente entre empresas, es posible generar scorecards actualizados que muestren el desempeño de toda la cadena y de cada empresa individual. La transparencia total (todos ven el desempeño de todos) crea un bucle de retroalimentación autocorrectivo: cuando una empresa ve que su desempeño cae por debajo de los estándares acordados y sabe que es visible para todos, corrige sus propios problemas rápidamente sin esperar instrucciones. Esto eleva el desempeño colectivo de la cadena por encima de lo que lograría cada empresa operando de forma aislada.",
   "pasos_accionables": [
     "Definir métricas clave de desempeño compartidas entre todos los socios de la cadena (entregas a tiempo, niveles de inventario, precisión de pronósticos)",
-    "Construir un scorecard visible para todas las partes, actualizado en tiempo real o casi real",
+    "Construir un tablero de indicadores visible para todas las partes, actualizado en tiempo real o casi real",
     "Comunicar que el desempeño de cada empresa es visible para el resto de la cadena",
     "Dejar que las empresas autocorrijan su desempeño sin intervención centralizada constante",
-    "Revisar el scorecard periódicamente en reuniones de coordinación (ej: conference calls)"
+    "Revisar el tablero de indicadores periódicamente en reuniones de coordinación (ej: llamadas en conferencia)"
   ],
-  "entregable_esperado": "Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
+  "entregable_esperado": "Tablero de indicadores funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
   "nodos_previos": [
     "ciclo_virtuoso_datos_electronicos",
     "colaboracion_transporte_ctm",
@@ -83,6 +83,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dispara la autocorrección cuando cada empresa ve su desempeño caer por debajo de los estándares acordados y sabe que todos lo ven.; Mismo defecto: se cae la condición de los estándares acordados.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-scorecard_desempeno_cadena_suministro-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir un scorecard visible para todas las partes, actualizado en tiempo real o casi real",
+      "texto_nuevo": "Construir un tablero de indicadores visible para todas las partes, actualizado en tiempo real o casi real",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "scorecard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-scorecard_desempeno_cadena_suministro-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el scorecard periódicamente en reuniones de coordinación (ej: conference calls)",
+      "texto_nuevo": "Revisar el tablero de indicadores periódicamente en reuniones de coordinación (ej: llamadas en conferencia)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "scorecard",
+          "conference calls"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-scorecard_desempeno_cadena_suministro-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Scorecard funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
+      "texto_nuevo": "Tablero de indicadores funcional compartido entre los miembros de la cadena de suministro con métricas actualizadas regularmente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Scorecard funcional"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

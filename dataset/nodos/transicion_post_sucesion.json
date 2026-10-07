@@ -11,7 +11,7 @@
     "Evalúa si también debes dejar la presidencia del consejo, para que quede clara la señal de que el mando cambió de manos.",
     "Anticipa qué pasaría si la persona que asumió el mando no funciona, y considera si tú te quedas como respaldo por si hace falta retomar el liderazgo."
   ],
-  "entregable_esperado": "Un plan de transición de roles y un organigrama actualizado, donde quede claro quién manda y a quién le reporta cada quien.",
+  "entregable_esperado": "Un plan de transición de roles y un organigrama actualizado, donde quede claro quién manda y de quién depende cada quien.",
   "nodos_previos": [
     "evaluacion_disimilitud_sucesor",
     "riesgo_beneficio_retener_fundador",
@@ -46,6 +46,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que quedarse puede ser riesgoso sobre todo si al fundador lo mueve el control o no está conforme; el nodo pierde la condición.; El libro habla de resistencia al nuevo líder, nunca de que sea oculta; su ejemplo es de interferencia abierta.; Misma condición perdida sobre el riesgo de quedarse.; Misma condición perdida: el riesgo es sobre todo si te mueve el control o no estás conforme con el cambio.; Se cae el mayor apoyo de los empleados que contrató el fundador.; Se sostiene por el apoyo de los empleados que contrataste, que se devuelve; el papel de respaldo ya está en el paso 4 del nodo y no cabe en el resumen sin pasar el tope de longitud.; Se sostiene: el libro cuenta entre los beneficios el mayor apoyo de los empleados que contrató el fundador, y se devuelve; su papel de respaldo si el nuevo líder fracasa ya lo recoge el paso 4 del nodo y no cabe en el resumen sin pasar",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-transicion_post_sucesion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de transición de roles y un organigrama actualizado, donde quede claro quién manda y a quién le reporta cada quien.",
+      "texto_nuevo": "Un plan de transición de roles y un organigrama actualizado, donde quede claro quién manda y de quién depende cada quien.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a quién le reporta cada quien"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

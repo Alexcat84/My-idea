@@ -7,9 +7,9 @@
   "resumen_teorico": "Tu actitud y tus estándares se transmiten directamente a las personas que trabajan contigo, por eso eres la clave para lograr las metas de mejora. Antes de pedirles calidad necesitas entenderla tú mismo, con un entrenamiento estructurado por etapas, no solo con una charla general. Primero domina el sistema de medición de calidad, los costos de la no calidad, el sistema de acciones correctivas y el propósito de la etapa de conciencia de calidad, luego el programa de Cero Defectos y el método para eliminar las causas de los errores, y después vuelve a hacer todo el entrenamiento. Así podrás responder con seguridad las preguntas de quienes te ayudan y evitar creer que entiendes el concepto de calidad sin dominarlo realmente en la práctica antes de transmitírselo.",
   "pasos_accionables": [
     "Dedica al menos 6 horas a estudiar el sistema de medición de calidad, los costos de calidad, las acciones correctivas y el propósito de la etapa de conciencia de calidad al iniciar la etapa de conciencia de calidad.",
-    "Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.",
+    "Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día de Cero Defectos.",
     "Prepara un manual o guía detallada del programa para usarla como referencia.",
-    "Haz un test de comprensión sobre el concepto ZD antes de replicarlo con tu equipo.",
+    "Haz un test de comprensión sobre el concepto de Cero Defectos antes de replicarlo con tu equipo.",
     "Resuelve de forma individual las dudas de cada persona antes de la implementación.",
     "Verifica que cada persona refuerce la formación en su área de responsabilidad."
   ],
@@ -34,7 +34,7 @@
     "Si existe riesgo de que quienes te ayudan no comprendan realmente el concepto ZD antes de comunicarlo a otros.",
     "Si detectas que crees entender el concepto de calidad pero en la practica no lo dominas."
   ],
-  "etiqueta_arbol": "El Supervisor, tu Pieza Clave",
+  "etiqueta_arbol": "Domina la Calidad antes de Pedirla",
   "ids_alias": [
     "entrenamiento_supervisores_2"
   ],
@@ -209,6 +209,56 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-entrenamiento_supervisores_calidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "El Supervisor, tu Pieza Clave",
+      "texto_nuevo": "Domina la Calidad antes de Pedirla",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "El Supervisor, tu Pieza Clave"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-entrenamiento_supervisores_calidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día ZD.",
+      "texto_nuevo": "Explica de forma completa el programa Cero Defectos y el método para eliminar las causas de los errores a quienes te ayudan, al menos 4 semanas antes del día de Cero Defectos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "día ZD"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-entrenamiento_supervisores_calidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz un test de comprensión sobre el concepto ZD antes de replicarlo con tu equipo.",
+      "texto_nuevo": "Haz un test de comprensión sobre el concepto de Cero Defectos antes de replicarlo con tu equipo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "concepto ZD"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

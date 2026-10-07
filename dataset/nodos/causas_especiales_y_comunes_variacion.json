@@ -9,7 +9,7 @@
     "Analizar si la desviación observada tiene origen en una sola variable dominante (especial) o en múltiples variables menores (común)",
     "Si es causa especial: activar acción correctiva inmediata vía PDCA",
     "Si es causa común: derivar el problema a un proyecto de mejora (ej. Six Sigma DMAIC)",
-    "Evitar tomar acción correctiva sobre variación común (riesgo de 'tampering')"
+    "Evitar aplicar una acción correctiva sobre variación común (riesgo de sobreajustar el proceso)"
   ],
   "entregable_esperado": "Clasificación documentada de la variación observada como causa especial o común, con la acción correspondiente definida",
   "nodos_previos": [
@@ -59,6 +59,24 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice típicamente, a menudo, comparativamente y por lo general; el nodo quita esa cautela.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-causas_especiales_y_comunes_variacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar tomar acción correctiva sobre variación común (riesgo de 'tampering')",
+      "texto_nuevo": "Evitar aplicar una acción correctiva sobre variación común (riesgo de sobreajustar el proceso)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tomar acción correctiva",
+          "'tampering'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

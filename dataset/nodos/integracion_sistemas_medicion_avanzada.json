@@ -11,7 +11,7 @@
     "Comparar consumo diario contra normas históricas",
     "Usar herramientas que normalicen eventos climáticos extremos"
   ],
-  "entregable_esperado": "Sistema de gestión de edificios (BMS) implementado con dashboard de métricas energéticas",
+  "entregable_esperado": "Sistema de gestión de edificios (BMS) implementado con tablero de métricas energéticas",
   "nodos_previos": [
     "compra_energia_limpia",
     "contratos_desempeno_energetico_esco"
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Mide tu Edificio Inteligente",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-integracion_sistemas_medicion_avanzada-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de gestión de edificios (BMS) implementado con dashboard de métricas energéticas",
+      "texto_nuevo": "Sistema de gestión de edificios (BMS) implementado con tablero de métricas energéticas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

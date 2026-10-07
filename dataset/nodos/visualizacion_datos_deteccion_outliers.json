@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Método para identificar puntos de datos anómalos (outliers) mediante técnicas gráficas como box plots y scatter plots. Los puntos visualmente distantes deben ser investigados y solo eliminados si son atribuibles a una causa específica no relacionada con la pregunta de análisis. El análisis de residuos de una regresión también ayuda a detectar puntos inusuales.",
   "pasos_accionables": [
-    "Graficar los datos en box plots o scatter plots",
+    "Graficar los datos en diagramas de caja o diagramas de dispersión",
     "Identificar visualmente puntos distantes del resto",
     "Investigar la causa de los puntos atípicos",
     "Eliminar el punto solo si se atribuye a una causa específica no relacionada con el análisis",
     "Usar residuos de regresión como verificación adicional"
   ],
-  "entregable_esperado": "Conjunto de datos depurado y justificación documentada de cualquier exclusión de outliers",
+  "entregable_esperado": "Conjunto de datos depurado y justificación documentada de cualquier exclusión de datos atípicos",
   "nodos_previos": [
     "diseno_de_metodos_de_recoleccion_de_datos"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Detecta Datos Atípicos Visualmente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-visualizacion_datos_deteccion_outliers-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Graficar los datos en box plots o scatter plots",
+      "texto_nuevo": "Graficar los datos en diagramas de caja o diagramas de dispersión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "box plots o scatter plots"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-visualizacion_datos_deteccion_outliers-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conjunto de datos depurado y justificación documentada de cualquier exclusión de outliers",
+      "texto_nuevo": "Conjunto de datos depurado y justificación documentada de cualquier exclusión de datos atípicos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outliers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

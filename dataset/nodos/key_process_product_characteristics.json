@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, te ayuda a dirigir el esfuerzo de control a lo que el cliente valora y a lo que realmente afecta el resultado final.",
   "pasos_accionables": [
-    "Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
+    "Recolecta información de investigación de mercado, QFD, revisión de diseño y AMFE",
     "Clasifica las características del producto según su importancia relativa: crítica, mayor, menor o incidental",
     "Identifica las partes sensibles a calidad usando criterios de complejidad y tasa de fallos",
     "Descubre con análisis de datos la relación entre las características de proceso y los resultados de producto, y documéntala",
@@ -91,6 +91,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide descubrir esa relación mediante análisis de datos, no solo anotarla.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-key_process_product_characteristics-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recolecta inputs de investigación de mercado, QFD, revisión de diseño y AMFE",
+      "texto_nuevo": "Recolecta información de investigación de mercado, QFD, revisión de diseño y AMFE",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "inputs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

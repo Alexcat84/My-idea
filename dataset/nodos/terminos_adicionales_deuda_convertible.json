@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Inversionistas sofisticados pueden solicitar términos adicionales en la deuda convertible, como derechos de pro rata (incluso 'super pro rata') para participar en futuras rondas, o preferencias de liquidación que les garantizan recuperar su inversión (o un múltiplo) antes que otros accionistas en caso de liquidación.",
   "pasos_accionables": [
-    "Evaluar solicitudes de pro rata rights, que son bastante habituales.",
-    "Ser cauteloso con solicitudes de 'super pro rata rights' que limiten opciones futuras de financiamiento.",
+    "Evaluar solicitudes de derechos de prorrata, que son bastante habituales.",
+    "Ser cauteloso con solicitudes de derechos de 'superprorrata' que limiten opciones futuras de financiamiento.",
     "Considerar si se otorgará preferencia de liquidación en el contrato de deuda convertible (bridge loan).",
-    "Negociar el múltiplo de preferencia de liquidación si aplica."
+    "Negociar el múltiplo de preferencia de liquidación si corresponde."
   ],
-  "entregable_esperado": "Cláusulas de pro rata rights y liquidation preference (si aplican) documentadas en el acuerdo de deuda convertible.",
+  "entregable_esperado": "Cláusulas de derechos de prorrata y preferencia de liquidación (si corresponden) documentadas en el acuerdo de deuda convertible.",
   "nodos_previos": [
     "convertible_debt_fundamentos"
   ],
@@ -45,6 +45,75 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye al pro rata un impacto en la dilución; lo llama bastante típico y reserva la cautela para el super pro rata.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-terminos_adicionales_deuda_convertible-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar solicitudes de pro rata rights, que son bastante habituales.",
+      "texto_nuevo": "Evaluar solicitudes de derechos de prorrata, que son bastante habituales.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pro rata rights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-terminos_adicionales_deuda_convertible-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ser cauteloso con solicitudes de 'super pro rata rights' que limiten opciones futuras de financiamiento.",
+      "texto_nuevo": "Ser cauteloso con solicitudes de derechos de 'superprorrata' que limiten opciones futuras de financiamiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'super pro rata rights'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-terminos_adicionales_deuda_convertible-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar el múltiplo de preferencia de liquidación si aplica.",
+      "texto_nuevo": "Negociar el múltiplo de preferencia de liquidación si corresponde.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-terminos_adicionales_deuda_convertible-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusulas de pro rata rights y liquidation preference (si aplican) documentadas en el acuerdo de deuda convertible.",
+      "texto_nuevo": "Cláusulas de derechos de prorrata y preferencia de liquidación (si corresponden) documentadas en el acuerdo de deuda convertible.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pro rata rights",
+          "liquidation preference",
+          "si aplican"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v06): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
