@@ -26,8 +26,8 @@
     "linea_base_costos"
   ],
   "condiciones_activacion": [
-    "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales",
-    "Cuando existe incertidumbre significativa en la duración o costo de una actividad",
+    "Cuando se requiere una estimación cuantitativa de la duración de las actividades usando métodos formales",
+    "Cuando existe incertidumbre significativa en la duración de una actividad",
     "Cuando se requiere un análisis cuantitativo de riesgo en la planificación"
   ],
   "etiqueta_arbol": "Calcula la Duración de Tareas",
@@ -61,6 +61,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el método a estimaciones de alto nivel cuando no hay información detallada y admite ajustar por factores como la complejidad.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-duration_estimating_worksheet-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se requiere una estimación cuantitativa y detallada de la duración de las actividades usando métodos formales",
+      "texto_nuevo": "Cuando se requiere una estimación cuantitativa de la duración de las actividades usando métodos formales",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1904",
+        "frase": "generally used to get a high-level estimate when detailed information is not available"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): matiz; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-duration_estimating_worksheet-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando existe incertidumbre significativa en la duración o costo de una actividad",
+      "texto_nuevo": "Cuando existe incertidumbre significativa en la duración de una actividad",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1906",
+        "frase": "A three-point estimate can be used to account for uncertainty in the duration estimate"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

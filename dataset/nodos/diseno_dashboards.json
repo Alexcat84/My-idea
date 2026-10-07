@@ -7,11 +7,11 @@
   "resumen_teorico": "Los dashboards son despliegues de una página que muestran a cada usuario, de un vistazo, los indicadores clave que le competen. Difieren según el nivel: alta dirección necesita ver el cumplimiento de metas globales, gerencia media requiere detalle de las operaciones bajo su responsabilidad, y el personal operativo necesita datos tácticos específicos de sus tareas diarias (compras, crédito, inventario). La velocidad para detectar problemas y oportunidades mediante dashboards es una ventaja competitiva crítica.",
   "pasos_accionables": [
     "Identificar los indicadores clave (KPIs) responsabilidad de cada rol/nivel",
-    "Diseñar un dashboard diferenciado para alta dirección, gerencia media y personal operativo",
-    "Permitir 'drill-down' desde el dashboard estratégico hacia el detalle operativo y táctico",
-    "Iterar el diseño del dashboard conforme el equipo gana experiencia usándolo"
+    "Diseñar un tablero diferenciado para alta dirección, gerencia media y personal operativo",
+    "Permitir profundizar desde el tablero estratégico hacia el detalle operativo y táctico",
+    "Iterar el diseño del tablero conforme el equipo gana experiencia usándolo"
   ],
-  "entregable_esperado": "Set de dashboards personalizados por nivel jerárquico, con capacidad de detalle progresivo",
+  "entregable_esperado": "Conjunto de tableros personalizados por nivel jerárquico, con capacidad de detalle progresivo",
   "nodos_previos": [
     "creacion_data_warehouse",
     "jerarquia_datos_scor"
@@ -38,6 +38,74 @@
         "motivo": "Tiene razon B: disenar dashboards internos por nivel no lleva naturalmente a analizar los datos de un estudio de benchmarking (normalizacion, significancia, cuartiles, antitrust); el lazo por indicadores y graficos es de palabras, y el salto exige explicacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-diseno_dashboards-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar un dashboard diferenciado para alta dirección, gerencia media y personal operativo",
+      "texto_nuevo": "Diseñar un tablero diferenciado para alta dirección, gerencia media y personal operativo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_dashboards-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Permitir 'drill-down' desde el dashboard estratégico hacia el detalle operativo y táctico",
+      "texto_nuevo": "Permitir profundizar desde el tablero estratégico hacia el detalle operativo y táctico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'drill-down'",
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_dashboards-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Iterar el diseño del dashboard conforme el equipo gana experiencia usándolo",
+      "texto_nuevo": "Iterar el diseño del tablero conforme el equipo gana experiencia usándolo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_dashboards-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Set de dashboards personalizados por nivel jerárquico, con capacidad de detalle progresivo",
+      "texto_nuevo": "Conjunto de tableros personalizados por nivel jerárquico, con capacidad de detalle progresivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Set de dashboards"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

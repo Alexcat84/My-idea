@@ -7,12 +7,12 @@
   "resumen_teorico": "Un reto crítico al crecer una comunidad es mantener su calidad, ya sea la precisión de contenido (Yelp, Wikipedia) o la relevancia de interacciones (reddit, Stack Overflow). Si la calidad se diluye, los evangelistas se van, lo que provoca un círculo vicioso de deterioro. La solución es establecer estándares estrictos desde el inicio (co-creados con la comunidad), publicarlos claramente, y crear mecanismos de auto-regulación (sistemas de karma, guías de contenido, moderación) para que la comunidad se policie a sí misma.",
   "pasos_accionables": [
     "Definir qué significa 'calidad' para tu tipo específico de comunidad (precisión, relevancia, utilidad).",
-    "Co-crear con los primeros miembros guías y estándares claros de participación.",
+    "Cocrear con los primeros miembros guías y estándares claros de participación.",
     "Publicar estas guías de forma visible (FAQ, reglas del foro) desde el lanzamiento.",
-    "Implementar mecanismos de auto-moderación (votación, karma, invitación) para escalar sin perder control central.",
-    "Monitorear señales tempranas de dilución de calidad y actuar antes de que evangelistas empiecen a irse."
+    "Implementar mecanismos de automoderación (votación, karma, invitación) para escalar sin perder control central.",
+    "Monitorear señales tempranas de dilución de calidad y actuar antes de que los miembros más entusiastas empiecen a irse."
   ],
-  "entregable_esperado": "Documento de guías/estándares de comunidad publicado y un sistema (manual o automatizado) de auto-moderación funcionando.",
+  "entregable_esperado": "Documento de guías/estándares de comunidad publicado y un sistema (manual o automatizado) de automoderación funcionando.",
   "nodos_previos": [
     "community_building_estrategia"
   ],
@@ -42,6 +42,67 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-gestion_calidad_comunidad_a_escala-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Co-crear con los primeros miembros guías y estándares claros de participación.",
+      "texto_nuevo": "Cocrear con los primeros miembros guías y estándares claros de participación.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v14)",
+        "evidencia": "El prefijo co- se escribe unido a la palabra; la corrección es solo gráfica."
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_calidad_comunidad_a_escala-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Implementar mecanismos de auto-moderación (votación, karma, invitación) para escalar sin perder control central.",
+      "texto_nuevo": "Implementar mecanismos de automoderación (votación, karma, invitación) para escalar sin perder control central.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v14)",
+        "evidencia": "El prefijo auto- se escribe unido a la palabra; la corrección es solo gráfica."
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_calidad_comunidad_a_escala-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorear señales tempranas de dilución de calidad y actuar antes de que evangelistas empiecen a irse.",
+      "texto_nuevo": "Monitorear señales tempranas de dilución de calidad y actuar antes de que los miembros más entusiastas empiecen a irse.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "evangelistas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_calidad_comunidad_a_escala-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documento de guías/estándares de comunidad publicado y un sistema (manual o automatizado) de auto-moderación funcionando.",
+      "texto_nuevo": "Documento de guías/estándares de comunidad publicado y un sistema (manual o automatizado) de automoderación funcionando.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v14)",
+        "evidencia": "El prefijo auto- se escribe unido a la palabra; la corrección es solo gráfica."
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

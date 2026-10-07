@@ -9,7 +9,7 @@
     "Definir métricas ambientales clave (emisiones de aire, uso de materiales, residuos peligrosos, uso de agua/energía)",
     "Indexar métricas ambientales a variables financieras (ej. ventas netas) para facilitar seguimiento",
     "Capacitar personal en metodologías Six Sigma con enfoque ambiental",
-    "Implementar sensores y dashboards para monitoreo en tiempo real de procesos (si aplica a escala)"
+    "Implementar sensores y tableros para monitoreo en tiempo real de procesos (si aplica a escala)"
   ],
   "entregable_esperado": "Un sistema de métricas Six Sigma con indicadores ambientales integrados y proyectos de mejora en curso",
   "nodos_previos": [
@@ -22,7 +22,7 @@
     "Cuando la empresa ya tiene cultura de mejora continua (Six Sigma) y quiere sumar sostenibilidad",
     "Si se requiere reducir variabilidad de procesos junto con impacto ambiental"
   ],
-  "etiqueta_arbol": "Reduce Defectos y Desperdicio Verde",
+  "etiqueta_arbol": "Reduce Defectos y Desperdicio Ambiental",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
   ],
@@ -42,6 +42,39 @@
       },
       "decision": "quita pura (guarda engine/test_procedencia_nombres.py): sale la organizacion de origen del metodo, sin palabras nuevas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-green_six_sigma-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reduce Defectos y Desperdicio Verde",
+      "texto_nuevo": "Reduce Defectos y Desperdicio Ambiental",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Desperdicio Verde"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-green_six_sigma-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar sensores y dashboards para monitoreo en tiempo real de procesos (si aplica a escala)",
+      "texto_nuevo": "Implementar sensores y tableros para monitoreo en tiempo real de procesos (si aplica a escala)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboards"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

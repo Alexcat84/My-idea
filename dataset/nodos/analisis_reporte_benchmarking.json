@@ -8,14 +8,14 @@
   "pasos_accionables": [
     "Analizar los datos de desempeño y normalización para determinar brechas entre participantes",
     "Verificar la significancia estadística de las comparaciones realizadas",
-    "Comparar contra top quartile, mejor de la clase y promedio, evaluando pros y contras de cada enfoque",
+    "Comparar contra el cuartil superior, mejor de la clase y promedio, evaluando pros y contras de cada enfoque",
     "Considerar factores contextuales (geografía, tipo de cambio, regulación) que expliquen diferencias",
     "Elaborar el reporte con hallazgos claros, gráficos y recomendaciones de mejora",
     "Definir el nivel de anonimización de datos balanceando confidencialidad y potencial de aprendizaje",
-    "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antitrust en el reporte",
+    "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antimonopolio en el reporte",
     "Define cómo y por dónde vas a entregar el reporte (electrónico o físico), según lo que acordaste al inicio"
   ],
-  "entregable_esperado": "Reporte de benchmarking completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
+  "entregable_esperado": "Reporte de evaluación comparativa completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
   "nodos_previos": [
     "normalizacion_datos_benchmarking",
     "recoleccion_validacion_datos_benchmarking",
@@ -31,7 +31,7 @@
     "Si se requiere comunicar resultados a los participantes del estudio de benchmarking",
     "Cuando tienes que equilibrar proteger datos sensibles con que el reporte siga siendo útil para aprender"
   ],
-  "etiqueta_arbol": "Reporta tus Hallazgos Comparativos",
+  "etiqueta_arbol": "Presenta tus Hallazgos Comparativos",
   "ids_alias": [
     "desarrollo_reporte_benchmarking"
   ],
@@ -74,6 +74,72 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide además identificar, en lo posible, las razones de las brechas; el nodo lo omite.; El libro pide cuantificar las brechas donde sea posible; el nodo da la cuantificación por hecha.; Mismo defecto que la marca 0: se cae la condición 'where possible', es un matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-analisis_reporte_benchmarking-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporta tus Hallazgos Comparativos",
+      "texto_nuevo": "Presenta tus Hallazgos Comparativos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporta"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_reporte_benchmarking-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comparar contra top quartile, mejor de la clase y promedio, evaluando pros y contras de cada enfoque",
+      "texto_nuevo": "Comparar contra el cuartil superior, mejor de la clase y promedio, evaluando pros y contras de cada enfoque",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "top quartile"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_reporte_benchmarking-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antitrust en el reporte",
+      "texto_nuevo": "Asegurar cumplimiento de acuerdos de confidencialidad y legislación antimonopolio en el reporte",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "antitrust"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_reporte_benchmarking-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de benchmarking completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
+      "texto_nuevo": "Reporte de evaluación comparativa completo con hallazgos, brechas cuantificadas y recomendaciones de mejora",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

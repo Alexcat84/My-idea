@@ -6,15 +6,15 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un roadmap es una representación visual de las principales iniciativas de producto y tecnología en el tiempo (típicamente 5 años), derivada del Strat-Map y los planes de ataque. Es un 'plan rodante' que se actualiza anualmente, donde solo el primer año se implementa con certeza. Se compone de un roadmap de producto (qué productos desarrollar y cuándo) y un roadmap de tecnología (qué tecnologías se necesitan para soportar esos productos). Sirve como puente entre decisiones estratégicas y tácticas across funciones organizacionales.",
   "pasos_accionables": [
-    "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
-    "Ensamblar un equipo multifuncional de roadmapping",
-    "Generar una 'wish list' de productos candidatos usando templates de una página",
+    "Reunir insumos: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
+    "Ensamblar un equipo multifuncional para trazar la hoja de ruta",
+    "Generar una lista de deseos de productos candidatos usando plantillas de una página",
     "Presentar candidatos en una reunión 'Gate 0' y calificarlos con un scorecard simplificado (fit estratégico, beneficios únicos, atractivo de mercado, factibilidad técnica, riesgo/recompensa)",
-    "Seleccionar proyectos 'in' y definir línea de tiempo considerando recursos disponibles",
-    "Derivar el roadmap de tecnología a partir del roadmap de producto",
-    "Actualizar el roadmap anualmente como plan rodante"
+    "Seleccionar los proyectos que entran y definir línea de tiempo considerando recursos disponibles",
+    "Derivar la hoja de ruta de tecnología a partir de la hoja de ruta de producto",
+    "Actualizar la hoja de ruta anualmente como plan rodante"
   ],
-  "entregable_esperado": "Un roadmap de producto a 5 años con placemarks de proyectos mayores, y un roadmap de tecnología asociado",
+  "entregable_esperado": "Una hoja de ruta de producto a 5 años con espacios reservados para proyectos mayores, y una hoja de ruta de tecnología asociada",
   "nodos_previos": [
     "desarrollo_attack_plans",
     "strat_map_arenas_estrategicas",
@@ -55,6 +55,126 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro añade a los insumos la lista existente de proyectos pendientes, que el paso deja fuera.; Mismo defecto: falta la lista de proyectos pendientes de otras fuentes.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reunir inputs: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
+      "texto_nuevo": "Reunir insumos: evaluación estratégica, revisión de portafolio existente, análisis competitivo, tendencias tecnológicas y de mercado, voz del cliente y la lista existente de proyectos pendientes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "inputs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ensamblar un equipo multifuncional de roadmapping",
+      "texto_nuevo": "Ensamblar un equipo multifuncional para trazar la hoja de ruta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de roadmapping"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar una 'wish list' de productos candidatos usando templates de una página",
+      "texto_nuevo": "Generar una lista de deseos de productos candidatos usando plantillas de una página",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'wish list'",
+          "templates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar proyectos 'in' y definir línea de tiempo considerando recursos disponibles",
+      "texto_nuevo": "Seleccionar los proyectos que entran y definir línea de tiempo considerando recursos disponibles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "proyectos 'in'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Derivar el roadmap de tecnología a partir del roadmap de producto",
+      "texto_nuevo": "Derivar la hoja de ruta de tecnología a partir de la hoja de ruta de producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualizar el roadmap anualmente como plan rodante",
+      "texto_nuevo": "Actualizar la hoja de ruta anualmente como plan rodante",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_roadmap_estrategico-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un roadmap de producto a 5 años con placemarks de proyectos mayores, y un roadmap de tecnología asociado",
+      "texto_nuevo": "Una hoja de ruta de producto a 5 años con espacios reservados para proyectos mayores, y una hoja de ruta de tecnología asociada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "roadmap",
+          "placemarks"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

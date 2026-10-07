@@ -9,7 +9,7 @@
     "Identificar la metodología de programación (ruta crítica, cadena crítica, etc.)",
     "Seleccionar herramientas de programación",
     "Definir nivel de precisión y unidades de medida para estimaciones",
-    "Establecer umbrales de varianza para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
+    "Establecer umbrales de variación para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
     "Documentar procesos para identificar, secuenciar y estimar actividades, la información de reporte y el proceso para actualizar y controlar el cronograma y su línea base"
   ],
   "entregable_esperado": "Plan de gestión del cronograma documentado con metodología y herramientas definidas",
@@ -29,7 +29,7 @@
   "condiciones_activacion": [
     "Cuando se necesita establecer las reglas y procesos para gestionar el cronograma del proyecto"
   ],
-  "etiqueta_arbol": "Planifica Tu Cronograma",
+  "etiqueta_arbol": "Planifica la Gestión de tu Cronograma",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
   ],
@@ -67,6 +67,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El plan del libro incluye la información de reporte y el proceso para actualizar y controlar el cronograma, que ningún paso recoge.; Mismo defecto: falta el proceso de actualización y control con su línea base.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-schedule_management_plan-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planifica Tu Cronograma",
+      "texto_nuevo": "Planifica la Gestión de tu Cronograma",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Planifica Tu Cronograma"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-schedule_management_plan-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer umbrales de varianza para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
+      "texto_nuevo": "Establecer umbrales de variación para determinar si algo va a tiempo, requiere acción preventiva o va tarde y requiere acción correctiva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "umbrales de varianza"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -19,7 +19,7 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la organización opera en un dominio de alto riesgo sin plan formal de continuidad de negocio",
-    "Después de completar el análisis de costos de accidentes y antes de finalizar el presupuesto de gestión de riesgos"
+    "Cuando ya planeas cómo prevenir accidentes pero todavía no has planeado cómo recuperarte después de uno"
   ],
   "etiqueta_arbol": "Planifica tu Recuperación Post-Accidente",
   "fuentes_internas": [
@@ -107,6 +107,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-planificacion_recuperacion_post_accidente-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de completar el análisis de costos de accidentes y antes de finalizar el presupuesto de gestión de riesgos",
+      "texto_nuevo": "Cuando ya planeas cómo prevenir accidentes pero todavía no has planeado cómo recuperarte después de uno",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "5894",
+        "frase": "It is therefore not enough simply to plan for their prevention"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c16): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

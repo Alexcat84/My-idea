@@ -11,9 +11,9 @@
     "Calcula el ingreso neto de canal descontando comisiones, márgenes y costos promocionales",
     "Suma los ingresos totales y resta los costos operativos y de adquisición de clientes",
     "Repite el cálculo en tres escenarios: optimista, esperado y pesimista",
-    "Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado"
+    "Evalúa tu ritmo de consumo de caja y la caja disponible para saber si sobrevives el periodo proyectado"
   ],
-  "entregable_esperado": "Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis de cash burn y Business Model Canvas actualizado.",
+  "entregable_esperado": "Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis del ritmo de consumo de caja y lienzo del modelo de negocio actualizado.",
   "nodos_previos": [
     "verificar_clientes_y_canales",
     "escenarios_diseno_modelo_negocio",
@@ -78,6 +78,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Faltan datos de la lista del libro (compras esperadas por los clientes, industria, competencia y sus precios) y la indicación de verificar y llenar huecos.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-verificar_modelo_ingresos-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa tu cash burn y la caja disponible para saber si sobrevives el periodo proyectado",
+      "texto_nuevo": "Evalúa tu ritmo de consumo de caja y la caja disponible para saber si sobrevives el periodo proyectado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cash burn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-verificar_modelo_ingresos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis de cash burn y Business Model Canvas actualizado.",
+      "texto_nuevo": "Pronóstico financiero de ingresos netos a 4-8 trimestres en tres escenarios, con análisis del ritmo de consumo de caja y lienzo del modelo de negocio actualizado.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cash burn",
+          "Business Model Canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

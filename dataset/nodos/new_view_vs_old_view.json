@@ -6,12 +6,12 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "El Old View considera el 'error humano' como la principal amenaza a sistemas básicamente seguros, buscando reducir el número de errores mediante monitoreo, automatización, procedimientos más estrictos y reprimendas. El New View entiende que el error humano es el efecto, no la causa, de problemas más profundos del sistema; propone entender la brecha entre trabajo-como-imaginado y trabajo-como-realizado, los desajustes entre autoridad y responsabilidad, y fomentar el aprendizaje continuo sobre cómo se gestiona la seguridad y el riesgo.",
   "pasos_accionables": [
-    "Identificar el lenguaje usado en la organización al hablar de errores ('deberían haber...' indica Old View)",
+    "Identificar el lenguaje usado en la organización al hablar de errores ('deberían haber...' indica la visión antigua)",
     "Evaluar si las estrategias de seguridad buscan reducir 'violaciones' o entender la brecha trabajo-imaginado/trabajo-real",
     "Determinar si existe desajuste entre la autoridad otorgada y la responsabilidad exigida a los empleados",
     "Promover que la organización aprenda activamente cómo está aprendiendo sobre seguridad"
   ],
-  "entregable_esperado": "Diagnóstico de la cultura de seguridad organizacional clasificado según marcos Old View / New View, con recomendaciones de transición",
+  "entregable_esperado": "Diagnóstico de la cultura de seguridad organizacional clasificado según los marcos de la visión antigua y la visión nueva, con recomendaciones de transición",
   "nodos_previos": [
     "hard_fixes_organizacionales"
   ],
@@ -24,8 +24,59 @@
     "Al diseñar o revisar políticas de gestión de seguridad organizacional",
     "Cuando se detectan discursos que culpan al individuo en vez de analizar el sistema"
   ],
-  "etiqueta_arbol": "Dos Miradas al Error Humano",
+  "etiqueta_arbol": "Compara Dos Miradas del Error Humano",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-new_view_vs_old_view-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dos Miradas al Error Humano",
+      "texto_nuevo": "Compara Dos Miradas del Error Humano",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Miradas al"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-new_view_vs_old_view-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar el lenguaje usado en la organización al hablar de errores ('deberían haber...' indica Old View)",
+      "texto_nuevo": "Identificar el lenguaje usado en la organización al hablar de errores ('deberían haber...' indica la visión antigua)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Old View"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-new_view_vs_old_view-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagnóstico de la cultura de seguridad organizacional clasificado según marcos Old View / New View, con recomendaciones de transición",
+      "texto_nuevo": "Diagnóstico de la cultura de seguridad organizacional clasificado según los marcos de la visión antigua y la visión nueva, con recomendaciones de transición",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "marcos Old View / New View"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Cuando la empresa opera montacargas u otros vehículos industriales motorizados."
   ],
-  "etiqueta_arbol": "Asegura tus Montacargas",
+  "etiqueta_arbol": "Opera tus Montacargas con Seguridad",
   "fuentes_internas": [
     "SMALL_BUSINESS"
   ],
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide inspeccionar al inicio de cada turno; una bitácora diaria no lo refleja cuando hay varios turnos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-powered_industrial_trucks_safety-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegura tus Montacargas",
+      "texto_nuevo": "Opera tus Montacargas con Seguridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Asegura"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

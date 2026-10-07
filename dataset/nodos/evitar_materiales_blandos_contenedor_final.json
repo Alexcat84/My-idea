@@ -10,9 +10,9 @@
     "En envíos regulados, como muestras clínicas, descarta bolsas plásticas, sobres de papel o cartón delgado como empaque exterior; en envíos comunes, mete el cartón delgado dentro de una caja de cartón corrugado.",
     "Usa cartón corrugado, madera, metal o plástico resistente como contenedor final.",
     "Si tu producto viene en una bolsa o sobre, mételo dentro de una caja rígida antes de sellar.",
-    "Confirma con tu courier qué contenedores rechaza antes de programar la recolección."
+    "Confirma con tu empresa de mensajería qué contenedores rechaza antes de programar la recolección."
   ],
-  "entregable_esperado": "Un envío con contenedor exterior rígido que el courier acepta sin objeciones.",
+  "entregable_esperado": "Un envío con contenedor exterior rígido que la empresa de mensajería acepta sin objeciones.",
   "nodos_previos": [
     "elegir_caja_correcta"
   ],
@@ -204,6 +204,39 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-evitar_materiales_blandos_contenedor_final-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Confirma con tu courier qué contenedores rechaza antes de programar la recolección.",
+      "texto_nuevo": "Confirma con tu empresa de mensajería qué contenedores rechaza antes de programar la recolección.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tu courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-evitar_materiales_blandos_contenedor_final-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un envío con contenedor exterior rígido que el courier acepta sin objeciones.",
+      "texto_nuevo": "Un envío con contenedor exterior rígido que la empresa de mensajería acepta sin objeciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -21,8 +21,26 @@
   "condiciones_activacion": [
     "Si el emprendedor necesita validar la integridad de sus estados financieros o entender por qué no cuadran"
   ],
-  "etiqueta_arbol": "Entiende Por Qué Balancea tu Balance",
+  "etiqueta_arbol": "Entiende Por Qué Cuadra tu Balance",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-por_que_balancea_el_balance-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende Por Qué Balancea tu Balance",
+      "texto_nuevo": "Entiende Por Qué Cuadra tu Balance",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Balancea"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

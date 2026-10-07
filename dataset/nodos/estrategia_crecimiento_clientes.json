@@ -14,7 +14,7 @@
   ],
   "entregable_esperado": "Plan de tácticas de crecimiento (venta cruzada, venta adicional, referidos) con el valor de vida del cliente calculado y las hipótesis a probar con clientes reales",
   "condiciones_activacion": [
-    "Cuando ya existe una base de clientes y se busca maximizar ingresos sin incurrir en el costo de adquirir nuevos clientes",
+    "Cuando ya existe una base de clientes y se busca maximizar ingresos con un costo menor que el de adquirir nuevos clientes",
     "Si el proyecto tiene suficientes clientes activos como para testear programas de crecimiento"
   ],
   "node_id": "estrategia_crecimiento_clientes",
@@ -112,6 +112,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-estrategia_crecimiento_clientes-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ya existe una base de clientes y se busca maximizar ingresos sin incurrir en el costo de adquirir nuevos clientes",
+      "texto_nuevo": "Cuando ya existe una base de clientes y se busca maximizar ingresos con un costo menor que el de adquirir nuevos clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7303",
+        "frase": "why not sell them more, since it costs less than acquiring new customers?"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

@@ -13,7 +13,7 @@
     "Comunicar de forma regular y segura con partes interesadas internas y externas durante el proceso de recuperación",
     "Documentar la finalización del incidente y la reanudación de actividades normales"
   ],
-  "entregable_esperado": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
+  "entregable_esperado": "Manual de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
   "nodos_previos": [
     "funcion_respond_plan_incidentes"
   ],
@@ -95,6 +95,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El playbook del libro incluye documentar los sistemas que procesan y guardan la información, que orienta el orden de restauración.; Mismo elemento perdido, con su énfasis en los activos clave.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-csf_funcion_recover-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Playbook de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
+      "texto_nuevo": "Manual de recuperación con procesos formales, documentación de criticidad de recursos, documentación de los sistemas que procesan y guardan la información (sobre todo los activos clave) para ordenar la restauración, lista de personal responsable y plan de comunicación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Playbook"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

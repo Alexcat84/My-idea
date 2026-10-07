@@ -7,11 +7,11 @@
   "resumen_teorico": "Describe las características de una propuesta de valor específica de forma estructurada y detallada, desglosándola en Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Es el lado de 'crear valor' del Value Proposition Canvas, y debe diseñarse en función del Customer Profile.",
   "pasos_accionables": [
     "Listar todos los productos y servicios de la propuesta de valor",
-    "Definir cómo cada pain reliever alivia un pain específico del cliente",
-    "Definir cómo cada gain creator produce una ganancia específica para el cliente",
-    "Ordenar productos y servicios, pain relievers y gain creators según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el customer profile"
+    "Definir cómo cada aliviador de dolor alivia un dolor específico del cliente",
+    "Definir cómo cada creador de ganancia produce una ganancia específica para el cliente",
+    "Ordenar productos y servicios, aliviadores de dolor y creadores de ganancia según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el perfil del cliente"
   ],
-  "entregable_esperado": "Mapa de valor completo con productos/servicios, pain relievers y gain creators",
+  "entregable_esperado": "Mapa de valor completo con productos/servicios, aliviadores de dolor y creadores de ganancia",
   "nodos_previos": [
     "customer_profile",
     "customer_pains",
@@ -47,6 +47,75 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso del libro de ordenar productos, aliviadores y creadores según lo esenciales que son para el cliente.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-value_map-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir cómo cada pain reliever alivia un pain específico del cliente",
+      "texto_nuevo": "Definir cómo cada aliviador de dolor alivia un dolor específico del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pain reliever",
+          "un pain"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-value_map-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir cómo cada gain creator produce una ganancia específica para el cliente",
+      "texto_nuevo": "Definir cómo cada creador de ganancia produce una ganancia específica para el cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gain creator"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-value_map-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ordenar productos y servicios, pain relievers y gain creators según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el customer profile",
+      "texto_nuevo": "Ordenar productos y servicios, aliviadores de dolor y creadores de ganancia según lo esenciales que son para el cliente, y verificar que el mapa de valor conecte con el perfil del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pain relievers y gain creators",
+          "customer profile"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-value_map-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapa de valor completo con productos/servicios, pain relievers y gain creators",
+      "texto_nuevo": "Mapa de valor completo con productos/servicios, aliviadores de dolor y creadores de ganancia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pain relievers y gain creators"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

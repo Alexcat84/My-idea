@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Determinar si el producto requiere licencia de exportación bajo controles de doble uso",
     "Contactar la oficina distrital de BIS o la División de Educación y Difusión",
-    "Solicitar la licencia de exportación correspondiente si aplica",
+    "Solicitar la licencia de exportación correspondiente si procede",
     "Verificar cumplimiento continuo de regulaciones de control de exportación"
   ],
   "entregable_esperado": "Determinación de clasificación de exportación (ECCN) y licencia obtenida si es necesaria",
@@ -44,6 +44,23 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "voz-control_exportaciones_bis-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solicitar la licencia de exportación correspondiente si aplica",
+      "texto_nuevo": "Solicitar la licencia de exportación correspondiente si procede",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

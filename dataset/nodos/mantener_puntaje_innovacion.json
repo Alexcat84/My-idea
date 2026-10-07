@@ -7,14 +7,14 @@
   "resumen_teorico": "Lo que no mides no lo puedes gestionar, y eso aplica directamente a la innovación de productos. Muchas empresas no llevan estadísticas confiables sobre tasas de éxito, fracaso y cancelación, proporción de recursos invertidos en ganadores vs. perdedores, o número de proyectos que cumplen sus metas de tiempo y ganancia. Establecer métricas claras es el primer paso para mejorar el desempeño de innovación, pero antes acuerda qué cuenta como nuevo producto.",
   "pasos_accionables": [
     "Definir y registrar la tasa de éxito vs. fracaso en el lanzamiento.",
-    "Registrar las tasas de atrición en cada etapa del proceso de innovación.",
+    "Registrar las tasas de abandono en cada etapa del proceso de innovación.",
     "Medir qué proporción de recursos se destina a proyectos ganadores, perdedores y cancelados.",
     "Medir qué proporción de proyectos cumple con los objetivos de tiempo, ganancia y ventas.",
     "Calcula qué porcentaje de tus ventas actuales viene de productos que lanzaste en los últimos tres años.",
     "Calcula tu tasa de atraso: compara cuándo pensabas lanzar cada producto contra cuándo lo lanzaste de verdad.",
     "Compara estos resultados con el estándar de tu industria, para ver si estás entre los mejores o entre los que se quedan atrás."
   ],
-  "entregable_esperado": "Un dashboard o reporte periódico de KPIs de innovación (éxito, atrición, recursos, cumplimiento de metas).",
+  "entregable_esperado": "Un tablero o informe periódico de indicadores clave de innovación (éxito, abandono, recursos, cumplimiento de metas).",
   "nodos_previos": [
     "embudo_atricion_nuevos_productos",
     "curva_atricion_optima",
@@ -106,6 +106,42 @@
       },
       "decision": "lectura total de procedencia (w45): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-mantener_puntaje_innovacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar las tasas de atrición en cada etapa del proceso de innovación.",
+      "texto_nuevo": "Registrar las tasas de abandono en cada etapa del proceso de innovación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "atrición"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mantener_puntaje_innovacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un dashboard o reporte periódico de KPIs de innovación (éxito, atrición, recursos, cumplimiento de metas).",
+      "texto_nuevo": "Un tablero o informe periódico de indicadores clave de innovación (éxito, abandono, recursos, cumplimiento de metas).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard",
+          "reporte",
+          "KPIs",
+          "atrición"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

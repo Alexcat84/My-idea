@@ -20,7 +20,7 @@
     "desarrollo_de_controles_de_proceso"
   ],
   "condiciones_activacion": [
-    "Cuando el tiempo de entrega o respuesta del proceso es una queja frecuente de clientes o una desventaja competitiva"
+    "Cuando el tiempo de entrega o respuesta del proceso es una queja frecuente de clientes o una desventaja competitiva, o cuando los costos crecientes presionan para acortarlo"
   ],
   "etiqueta_arbol": "Reduce el Tiempo de tu Ciclo",
   "fuentes_internas": [
@@ -42,6 +42,23 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera tres presiones y pone primero la de los clientes; el resumen la deja fuera de la lista.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "condiciones-resto-reduccion_de_tiempo_de_ciclo-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el tiempo de entrega o respuesta del proceso es una queja frecuente de clientes o una desventaja competitiva",
+      "texto_nuevo": "Cuando el tiempo de entrega o respuesta del proceso es una queja frecuente de clientes o una desventaja competitiva, o cuando los costos crecientes presionan para acortarlo",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4661",
+        "frase": "Pressures from customers, increasing costs, and competitive forces are driving organizations"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

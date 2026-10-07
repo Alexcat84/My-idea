@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se está definiendo la estrategia inicial de un producto y se busca apoyo en comparaciones históricas de mercado",
-    "Cuando se necesita convencer a inversionistas del riesgo real (o falta de él) de una idea de negocio"
+    "Cuando se necesita convencer a inversionistas del riesgo real de una idea de negocio"
   ],
   "etiqueta_arbol": "Compara con Casos Previos",
   "correcciones": [
@@ -39,6 +39,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U1-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "condiciones-resto-analogos_antilogos-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se necesita convencer a inversionistas del riesgo real (o falta de él) de una idea de negocio",
+      "texto_nuevo": "Cuando se necesita convencer a inversionistas del riesgo real de una idea de negocio",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "905",
+        "frase": "That is their goal: to make the business seem less risky"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

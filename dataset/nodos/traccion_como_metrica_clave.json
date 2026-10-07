@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Define qué métrica concreta representará 'tracción' para tu negocio (usuarios, ingresos, transacciones).",
     "Establece una cifra objetivo específica y una tasa de crecimiento esperada, no solo una dirección general.",
-    "Mide y reporta esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto."
+    "Mide y comunica esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto."
   ],
-  "entregable_esperado": "Definición documentada de la métrica de tracción principal y su meta cuantitativa (goal numérico).",
+  "entregable_esperado": "Definición documentada de la métrica de tracción principal y su meta cuantitativa (objetivo numérico).",
   "nodos_previos": [
     "producto_minimo_viable"
   ],
@@ -90,6 +90,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-traccion_como_metrica_clave-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide y reporta esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto.",
+      "texto_nuevo": "Mide y comunica esta métrica de forma recurrente (semanal o mensual) desde el inicio del proyecto.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporta"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-traccion_como_metrica_clave-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definición documentada de la métrica de tracción principal y su meta cuantitativa (goal numérico).",
+      "texto_nuevo": "Definición documentada de la métrica de tracción principal y su meta cuantitativa (objetivo numérico).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "goal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

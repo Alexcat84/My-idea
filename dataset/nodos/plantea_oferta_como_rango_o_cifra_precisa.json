@@ -20,7 +20,7 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Te van a preguntar tu precio antes de conocer el de la otra parte.",
-    "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando.",
+    "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando y no lograste que la otra parte diera su cifra primero.",
     "Quieres dar la impresión de haber calculado bien tu oferta, no de haber tirado un número al azar."
   ],
   "etiqueta_arbol": "Ofrece rangos, no cifras redondas",
@@ -174,6 +174,23 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-plantea_oferta_como_rango_o_cifra_precisa-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando.",
+      "texto_nuevo": "No conoces con certeza el valor de mercado de lo que estás vendiendo o comprando y no lograste que la otra parte diera su cifra primero.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "2651-2653",
+        "frase": "Por eso sugiero ceder la iniciativa a la otra parte"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c16): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

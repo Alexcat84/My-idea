@@ -20,7 +20,7 @@
     "reacciones_al_fallo"
   ],
   "condiciones_activacion": [
-    "Cuando un trabajador está involucrado en un incidente que causó daño a terceros",
+    "Cuando un trabajador está involucrado en un incidente que causó o pudo causar daño a terceros y se siente personalmente responsable de ello",
     "Cuando se diseñan políticas de bienestar laboral post-incidente"
   ],
   "etiqueta_arbol": "Apoya a la Segunda Víctima",
@@ -105,6 +105,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-soporte_segunda_victima-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un trabajador está involucrado en un incidente que causó daño a terceros",
+      "texto_nuevo": "Cuando un trabajador está involucrado en un incidente que causó o pudo causar daño a terceros y se siente personalmente responsable de ello",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "658",
+        "frase": "an incident that (potentially) hurt or killed someone else"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c15): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

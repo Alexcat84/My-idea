@@ -7,7 +7,7 @@
   "resumen_teorico": "Ciertas características de los pasos de una tarea aumentan la probabilidad de que sean omitidos: aislamiento funcional (no lo señala la acción anterior), ocurrir después de alcanzado el objetivo principal, cercanía al final, ítem oculto, acciones o ítems no requeridos en tareas muy parecidas, cambios recientes de práctica, repetición de acciones según condiciones locales, instalación de varios ítems similares, dependencia de condiciones previas y pasos no siempre requeridos. Identificar estos rasgos permite anticipar qué pasos requieren refuerzo.",
   "pasos_accionables": [
     "Desglosar cada tarea de mantenimiento en sus pasos discretos",
-    "Evaluar cada paso contra la lista de características omission-prone (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
+    "Evaluar cada paso contra la lista de características propensas a la omisión (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
     "Marcar los pasos con múltiples características de riesgo como críticos",
     "Diseñar controles específicos (recordatorios, verificaciones) para esos pasos críticos"
   ],
@@ -42,6 +42,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade tres rasgos más que la lista del nodo omite y que amplían los pasos a evaluar.; Misma omisión: faltan tres de las diez características que da el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-caracteristicas_tareas_propensas_omision-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar cada paso contra la lista de características omission-prone (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
+      "texto_nuevo": "Evaluar cada paso contra la lista de características propensas a la omisión (aislamiento funcional, cercanía al final, ocultamiento, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "omission-prone"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

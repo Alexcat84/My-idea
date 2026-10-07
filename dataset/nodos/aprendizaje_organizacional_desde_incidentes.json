@@ -6,12 +6,12 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "El reporte honesto y el análisis profundo de incidentes y cuasi-accidentes (near misses) es clave para el aprendizaje organizacional, especialmente en sistemas 'seguros', donde los incidentes actúan como 'ensayos generales' de accidentes mayores. Suprimir este aprendizaje mediante incentivos perversos o políticas punitivas es peligroso, no solo contraproducente.",
   "pasos_accionables": [
-    "Establecer un sistema de reporte de incidentes libre de castigo (just culture)",
+    "Establecer un sistema de notificación de incidentes libre de castigo (just culture)",
     "Analizar sistemáticamente los cuasi-accidentes para identificar precursores comunes de accidentes graves",
     "Comunicar los aprendizajes obtenidos a toda la organización sin estigmatizar a los involucrados",
     "Brindar apoyo psicológico a trabajadores involucrados en incidentes ('segundas víctimas')"
   ],
-  "entregable_esperado": "Sistema de reporte y análisis de incidentes implementado con protocolo de apoyo a los involucrados",
+  "entregable_esperado": "Sistema de notificación y análisis de incidentes implementado con protocolo de apoyo a los involucrados",
   "nodos_previos": [
     "paradoja_bajos_incidentes_altas_fatalidades",
     "sistemas_alta_confiabilidad_hro",
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Aprende de Cada Incidente",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-aprendizaje_organizacional_desde_incidentes-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un sistema de reporte de incidentes libre de castigo (just culture)",
+      "texto_nuevo": "Establecer un sistema de notificación de incidentes libre de castigo (just culture)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sistema de reporte de incidentes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-aprendizaje_organizacional_desde_incidentes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de reporte y análisis de incidentes implementado con protocolo de apoyo a los involucrados",
+      "texto_nuevo": "Sistema de notificación y análisis de incidentes implementado con protocolo de apoyo a los involucrados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sistema de reporte y análisis"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

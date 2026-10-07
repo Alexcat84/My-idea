@@ -9,10 +9,10 @@
     "Pregúntale a clientes potenciales qué dudas y objeciones tienen antes de comprar",
     "Revisa tu embudo de ventas actual y marca en qué puntos se te va la gente",
     "Rediseña tu sitio web y tus materiales para responder esas preguntas antes de que te las hagan",
-    "Simplifica el proceso de compra con pruebas gratis, demos, preguntas frecuentes, testimoniales e instalación sencilla",
+    "Simplifica el proceso de compra con pruebas gratis, demos, preguntas frecuentes, testimonios e instalación sencilla",
     "Define con claridad qué disparador va a motivar la decisión final de compra"
   ],
-  "entregable_esperado": "Mapa de tu embudo de ventas con los puntos de fricción identificados y un plan para reducirlos (contenido, pruebas gratis, testimoniales, etc.)",
+  "entregable_esperado": "Mapa de tu embudo de ventas con los puntos de fricción identificados y un plan para reducirlos (contenido, pruebas gratis, testimonios, etc.)",
   "nodos_previos": [
     "clasificacion_leads_abc",
     "elementos_creadores_valor",
@@ -29,5 +29,40 @@
   "etiqueta_arbol": "Piensa Ventas como tu Cliente",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-diseno_embudo_ventas_cliente-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Simplifica el proceso de compra con pruebas gratis, demos, preguntas frecuentes, testimoniales e instalación sencilla",
+      "texto_nuevo": "Simplifica el proceso de compra con pruebas gratis, demos, preguntas frecuentes, testimonios e instalación sencilla",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testimoniales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_embudo_ventas_cliente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapa de tu embudo de ventas con los puntos de fricción identificados y un plan para reducirlos (contenido, pruebas gratis, testimoniales, etc.)",
+      "texto_nuevo": "Mapa de tu embudo de ventas con los puntos de fricción identificados y un plan para reducirlos (contenido, pruebas gratis, testimonios, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testimoniales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

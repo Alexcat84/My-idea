@@ -13,7 +13,7 @@
     "Crea una hoja de cálculo o tablero simple que documente cada medida, su método de recolección y frecuencia de reporte",
     "Revisa periódicamente tu desempeño frente a las metas establecidas"
   ],
-  "entregable_esperado": "Un tablero o hoja de cálculo con KPIs documentados, vinculados a tu estrategia, con método de recolección y frecuencia de reporte definidos",
+  "entregable_esperado": "Un tablero o hoja de cálculo con indicadores clave documentados, vinculados a tu estrategia, con método de recolección y frecuencia de reporte definidos",
   "nodos_previos": [
     "diagrama_arbol_despliegue",
     "planificacion_estrategica_despliegue_2",
@@ -63,6 +63,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no pone esa condición; pide revisar una vez que el sistema está en marcha.; Misma condición añadida; el libro pide la revisión una vez que el sistema está en marcha.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-sistema_medicion_kpi-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un tablero o hoja de cálculo con KPIs documentados, vinculados a tu estrategia, con método de recolección y frecuencia de reporte definidos",
+      "texto_nuevo": "Un tablero o hoja de cálculo con indicadores clave documentados, vinculados a tu estrategia, con método de recolección y frecuencia de reporte definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "KPIs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

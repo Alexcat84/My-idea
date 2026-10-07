@@ -22,7 +22,7 @@
     "participacion_trabajadores"
   ],
   "condiciones_activacion": [
-    "Si tu negocio opera en una industria de alto riesgo de violencia o ha tenido incidentes previos"
+    "Si tu negocio opera en una industria de alto riesgo de violencia, ha tenido incidentes previos, un análisis de tu lugar de trabajo identificó riesgos de violencia o quienes trabajan contigo han expresado preocupación por ella"
   ],
   "etiqueta_arbol": "Previene la Violencia Laboral",
   "fuentes_internas": [
@@ -62,6 +62,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cuenta también los registros de compensación laboral y los reportes de seguros.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-prevencion_violencia_laboral-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio opera en una industria de alto riesgo de violencia o ha tenido incidentes previos",
+      "texto_nuevo": "Si tu negocio opera en una industria de alto riesgo de violencia, ha tenido incidentes previos, un análisis de tu lugar de trabajo identificó riesgos de violencia o quienes trabajan contigo han expresado preocupación por ella",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1683-1685",
+        "frase": "A worksite analysis has identified workplace violence-related hazards."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c16): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

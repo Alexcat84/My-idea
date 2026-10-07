@@ -7,13 +7,13 @@
   "resumen_teorico": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad de compras histórica, actual y futura, identificar commodities de alto gasto y alta criticidad, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
   "pasos_accionables": [
     "Documentar la actividad histórica y futura de compras",
-    "Identificar commodities de alto gasto y alta criticidad",
-    "Formar equipo cross-funcional para la commodity seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
+    "Identificar categorías de compra de alto gasto y alta criticidad",
+    "Formar equipo multifuncional para la categoría de compra seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
     "Analizar estructura y tendencias de la industria proveedora",
-    "Calcular el costo total de propiedad del commodity y traducir las necesidades del cliente en un proceso de sourcing que las satisfaga y permita gestionar y optimizar ese costo",
-    "Obtener respaldo de la dirección para implementar la estrategia de sourcing"
+    "Calcular el costo total de propiedad de la categoría de compra y traducir las necesidades del cliente en un proceso de abastecimiento que las satisfaga y permita gestionar y optimizar ese costo",
+    "Obtener respaldo de la dirección para implementar la estrategia de abastecimiento"
   ],
-  "entregable_esperado": "Estrategia de sourcing aprobada por la dirección con plan de implementación",
+  "entregable_esperado": "Estrategia de abastecimiento aprobada por la dirección con plan de implementación",
   "nodos_previos": [
     "evaluacion_encuesta_calidad_proveedor",
     "seleccion_fuente_unica_multiple",
@@ -123,6 +123,92 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro elige la commodity de alto gasto y alta criticidad a la vez; el nodo deja solo la criticidad y cambia el criterio.; El libro pide documentar la actividad de compras histórica, actual y futura; el nodo deja solo la histórica.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-planificacion_cadena_suministro-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar commodities de alto gasto y alta criticidad",
+      "texto_nuevo": "Identificar categorías de compra de alto gasto y alta criticidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "commodities"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-planificacion_cadena_suministro-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Formar equipo cross-funcional para la commodity seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
+      "texto_nuevo": "Formar equipo multifuncional para la categoría de compra seleccionada y determinar las necesidades de abastecimiento del cliente mediante recolección de datos y encuestas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cross-funcional",
+          "commodity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-planificacion_cadena_suministro-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el costo total de propiedad del commodity y traducir las necesidades del cliente en un proceso de sourcing que las satisfaga y permita gestionar y optimizar ese costo",
+      "texto_nuevo": "Calcular el costo total de propiedad de la categoría de compra y traducir las necesidades del cliente en un proceso de abastecimiento que las satisfaga y permita gestionar y optimizar ese costo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "commodity",
+          "sourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-planificacion_cadena_suministro-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Obtener respaldo de la dirección para implementar la estrategia de sourcing",
+      "texto_nuevo": "Obtener respaldo de la dirección para implementar la estrategia de abastecimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-planificacion_cadena_suministro-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estrategia de sourcing aprobada por la dirección con plan de implementación",
+      "texto_nuevo": "Estrategia de abastecimiento aprobada por la dirección con plan de implementación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

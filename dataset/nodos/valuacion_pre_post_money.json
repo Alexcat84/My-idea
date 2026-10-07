@@ -6,8 +6,8 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "La valuación determina cuánto de la empresa se vende y la dilución resultante. La valuación pre-money es el valor antes de la inversión; la post-money es pre-money más el monto invertido. Confundir estos términos en la negociación verbal puede llevar a diferencias significativas en el porcentaje de propiedad cedido.",
   "pasos_accionables": [
-    "Al recibir una oferta verbal de valuación, clarificar explícitamente si es pre-money o post-money.",
-    "Calcular el porcentaje de dilución usando la fórmula: inversión / post-money valuation.",
+    "Al recibir una oferta verbal de valuación, clarificar explícitamente si es previa o posterior a la inversión.",
+    "Calcular el porcentaje de dilución usando la fórmula: inversión / valuación posterior a la inversión.",
     "Usar frases como 'asumo que te refieres a $X pre-money' para forzar claridad en la negociación."
   ],
   "entregable_esperado": "Cálculo claro y documentado del porcentaje de dilución esperado en la ronda.",
@@ -25,8 +25,60 @@
   "condiciones_activacion": [
     "Cuando el usuario negocia el monto de inversión y porcentaje de equity con un VC."
   ],
-  "etiqueta_arbol": "Distingue Pre y Post Money",
+  "etiqueta_arbol": "Distingue la Valuación Previa y Posterior",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-valuacion_pre_post_money-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Distingue Pre y Post Money",
+      "texto_nuevo": "Distingue la Valuación Previa y Posterior",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Pre y Post Money"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuacion_pre_post_money-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al recibir una oferta verbal de valuación, clarificar explícitamente si es pre-money o post-money.",
+      "texto_nuevo": "Al recibir una oferta verbal de valuación, clarificar explícitamente si es previa o posterior a la inversión.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pre-money o post-money"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuacion_pre_post_money-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el porcentaje de dilución usando la fórmula: inversión / post-money valuation.",
+      "texto_nuevo": "Calcular el porcentaje de dilución usando la fórmula: inversión / valuación posterior a la inversión.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "post-money valuation"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

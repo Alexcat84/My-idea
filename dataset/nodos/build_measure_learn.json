@@ -6,12 +6,12 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Ciclo iterativo que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.",
   "pasos_accionables": [
-    "Paso 0: Generar una hipótesis clara a partir de los Canvas de Value Proposition y Business Model",
-    "Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o MVP) para testear la hipótesis",
+    "Paso 0: Generar una hipótesis clara a partir de los lienzos de la propuesta de valor y del modelo de negocio",
+    "Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o producto mínimo viable) para probar la hipótesis",
     "Paso 2: Medir el desempeño del artefacto",
     "Paso 3: Aprender comparando lo esperado vs lo ocurrido y definir qué cambiar"
   ],
-  "entregable_esperado": "Un ciclo completo documentado de Build-Measure-Learn con hipótesis, artefacto de prueba, métricas y aprendizajes registrados",
+  "entregable_esperado": "Un ciclo completo documentado de construir, medir y aprender con hipótesis, artefacto de prueba, métricas y aprendizajes registrados",
   "nodos_previos": [
     "customer_development_process",
     "desarrollo_de_clientes_customer_development",
@@ -52,6 +52,59 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "voz-build_measure_learn-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 0: Generar una hipótesis clara a partir de los Canvas de Value Proposition y Business Model",
+      "texto_nuevo": "Paso 0: Generar una hipótesis clara a partir de los lienzos de la propuesta de valor y del modelo de negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Canvas",
+          "Value Proposition",
+          "Business Model"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-build_measure_learn-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o MVP) para testear la hipótesis",
+      "texto_nuevo": "Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o producto mínimo viable) para probar la hipótesis",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testear",
+          "MVP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-build_measure_learn-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un ciclo completo documentado de Build-Measure-Learn con hipótesis, artefacto de prueba, métricas y aprendizajes registrados",
+      "texto_nuevo": "Un ciclo completo documentado de construir, medir y aprender con hipótesis, artefacto de prueba, métricas y aprendizajes registrados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Build-Measure-Learn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

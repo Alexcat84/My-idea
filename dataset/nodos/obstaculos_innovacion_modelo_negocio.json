@@ -6,11 +6,11 @@
   "fuente": "Business Model Generation - Osterwalder, Alexander",
   "resumen_teorico": "La innovación de modelos de negocio enfrenta barreras humanas y organizacionales recurrentes: falta de lenguaje común para hablar de modelos de negocio, resistencia al cambio hasta que aparecen crisis, miedo a canibalizar el negocio actual, métricas de éxito que premian la eficiencia sobre la exploración, y estructuras de compensación desalineadas con la innovación. El éxito actual de una empresa suele ser el mayor obstáculo para cuestionar su propio modelo.",
   "pasos_accionables": [
-    "Diagnosticar si la organización tiene un lenguaje/framework común para discutir modelos de negocio",
+    "Diagnosticar si la organización tiene un lenguaje o marco común para discutir modelos de negocio",
     "Identificar métricas de éxito que puedan estar limitando la exploración de nuevos modelos",
     "Evaluar el nivel de tolerancia al riesgo y la disposición a canibalizar el negocio actual",
     "Alinear estructuras de compensación e incentivos con los objetivos de innovación",
-    "Generar sentido de urgencia antes de que una crisis externa (ej: pérdida de crédito, caída de ventas) fuerce el cambio"
+    "Generar sentido de urgencia antes de que una crisis externa (ej.: pérdida de crédito, caída de ventas) fuerce el cambio"
   ],
   "entregable_esperado": "Un diagnóstico organizacional de barreras a la innovación con plan de mitigación para cada una",
   "nodos_previos": [
@@ -27,5 +27,39 @@
   "etiqueta_arbol": "Supera los Obstáculos al Innovar",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-obstaculos_innovacion_modelo_negocio-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagnosticar si la organización tiene un lenguaje/framework común para discutir modelos de negocio",
+      "texto_nuevo": "Diagnosticar si la organización tiene un lenguaje o marco común para discutir modelos de negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "lenguaje/framework común"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-obstaculos_innovacion_modelo_negocio-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Generar sentido de urgencia antes de que una crisis externa (ej: pérdida de crédito, caída de ventas) fuerce el cambio",
+      "texto_nuevo": "Generar sentido de urgencia antes de que una crisis externa (ej.: pérdida de crédito, caída de ventas) fuerce el cambio",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v14)",
+        "evidencia": "La abreviatura de 'ejemplo' lleva su punto; solo se añade ese punto."
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

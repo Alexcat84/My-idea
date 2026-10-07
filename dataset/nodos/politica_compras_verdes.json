@@ -6,12 +6,12 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Una política de compras verdes formaliza los criterios ambientales que la empresa exige en sus decisiones de adquisición, complementando los criterios tradicionales de precio, calidad y servicio. Puede incluir directrices simples como comprar papel reciclado o equipos Energy Star, y herramientas de autoevaluación como GEMI New Paths o Eco-S.A.T. para calibrar el rigor de la política.",
   "pasos_accionables": [
-    "Evaluar si existe una política de procurement previa y añadir requisitos ambientales",
+    "Evaluar si existe una política de compras previa y añadir requisitos ambientales",
     "Usar herramientas de autoevaluación (GEMI, Eco-S.A.T) para medir rigor de la política actual",
     "Definir directrices simples de compra (ej. papel reciclado, productos Energy Star)",
     "Comunicar la política a compradores internos y establecer incentivos ligados a cumplimiento"
   ],
-  "entregable_esperado": "Documento de política de compras verdes aprobado e implementado en el proceso de procurement",
+  "entregable_esperado": "Documento de política de compras verdes aprobado e implementado en el proceso de compras",
   "nodos_previos": [
     "identificacion_proveedores_criticos"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Compra con Criterios Verdes",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-politica_compras_verdes-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar si existe una política de procurement previa y añadir requisitos ambientales",
+      "texto_nuevo": "Evaluar si existe una política de compras previa y añadir requisitos ambientales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "procurement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-politica_compras_verdes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de política de compras verdes aprobado e implementado en el proceso de procurement",
+      "texto_nuevo": "Documento de política de compras verdes aprobado e implementado en el proceso de compras",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "procurement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

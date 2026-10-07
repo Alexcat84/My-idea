@@ -6,9 +6,9 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Son problemas de seguridad aparentes que capturan la atención y recursos de la organización (a veces etiquetados como 'prioridad top'), desviando la atención de otras fuentes de riesgo desconocidas o subestimadas. Son típicos en organizaciones en el 'borde delgado de la cuña' que, persiguiendo lo que ven como las últimas fronteras de mejora, pueden centrarse tanto en uno o pocos temas que pierden de vista el resto.",
   "pasos_accionables": [
-    "Identificar cuáles son los 'top 3' o 'top 5' riesgos priorizados actualmente por la organización",
+    "Identificar cuáles son los tres o cinco riesgos principales priorizados actualmente por la organización",
     "Cuestionar si estos riesgos priorizados están consumiendo desproporcionadamente la atención y recursos",
-    "Buscar activamente riesgos no reportados o subestimados fuera del foco actual",
+    "Buscar activamente riesgos no notificados o subestimados fuera del foco actual",
     "Considerar que incidentes menores recurrentes pueden ser marcadores de resiliencia, no solo de riesgo"
   ],
   "entregable_esperado": "Mapa de riesgos ampliado que incluya áreas fuera del foco de atención actual de la organización",
@@ -26,7 +26,7 @@
   "ids_alias": [
     "fenomenos_señuelo"
   ],
-  "etiqueta_arbol": "Cuidado con los Señuelos de Seguridad",
+  "etiqueta_arbol": "Desconfía de los Señuelos de Seguridad",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
   ],
@@ -62,6 +62,56 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-fenomenos_senuelo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con los Señuelos de Seguridad",
+      "texto_nuevo": "Desconfía de los Señuelos de Seguridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fenomenos_senuelo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar cuáles son los 'top 3' o 'top 5' riesgos priorizados actualmente por la organización",
+      "texto_nuevo": "Identificar cuáles son los tres o cinco riesgos principales priorizados actualmente por la organización",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'top 3' o 'top 5' riesgos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fenomenos_senuelo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar activamente riesgos no reportados o subestimados fuera del foco actual",
+      "texto_nuevo": "Buscar activamente riesgos no notificados o subestimados fuera del foco actual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "riesgos no reportados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

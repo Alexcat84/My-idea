@@ -12,7 +12,7 @@
     "Medir comportamiento de ambos grupos usando las mismas métricas",
     "Comparar resultados para determinar si la variación tuvo impacto real"
   ],
-  "entregable_esperado": "Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
+  "entregable_esperado": "Informe de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
   "nodos_previos": [
     "producto_minimo_viable",
     "metricas_accionables"
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Prueba Versiones, Mide Resultados",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-split_testing_experimentos_ab-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
+      "texto_nuevo": "Informe de resultados de al menos un experimento A/B con conclusiones sobre el impacto de una funcionalidad en el comportamiento del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte de resultados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

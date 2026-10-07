@@ -6,7 +6,7 @@
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
   "resumen_teorico": "Cuando una empresa comienza a perder terreno, surgen narrativas falsas recurrentes para evitar enfrentar la realidad: atribuir renuncias a 'decisiones de la empresa', culpar a la competencia por 'vender barato', justificar retrasos de producto, o culpar al churn a falta de marketing. Estas mentiras suelen ser autoengaños más que mentiras deliberadas, ya que las personas solo prestan atención a indicadores positivos.",
   "pasos_accionables": [
-    "Identificar patrones de justificación repetidos en reportes de equipo (rotación, ventas perdidas, retrasos)",
+    "Identificar patrones de justificación repetidos en informes de equipo (rotación, ventas perdidas, retrasos)",
     "Validar directamente con clientes o datos objetivos las explicaciones dadas por el equipo",
     "Cuestionar narrativas que solo explican indicadores negativos pero celebran los positivos sin escrutinio",
     "Establecer métricas objetivas que no dependan de la interpretación subjetiva del equipo"
@@ -75,6 +75,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-deteccion_de_mentiras_organizacionales-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar patrones de justificación repetidos en reportes de equipo (rotación, ventas perdidas, retrasos)",
+      "texto_nuevo": "Identificar patrones de justificación repetidos en informes de equipo (rotación, ventas perdidas, retrasos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
