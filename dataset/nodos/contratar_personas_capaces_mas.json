@@ -7,11 +7,11 @@
   "resumen_teorico": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Al formar equipos es difícil que falten problemas grandes para el talento, y puede pasar que alguien que parecía excesivo para su puesto brille, impulse iniciativas propias y acabe liderando más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
   "notas_extraccion": "Es la octava tactica de apostar con cabeza y la que trae su propio limite escrito, lo cual es raro en este capitulo: el libro pone el caso en que NO se aplica, el primer ejecutivo para un puesto de comercial, y ademas lo ata al presupuesto. Ese limite es lo que impide que el nodo se lea como contrata siempre por encima. La condicion del trabajo de conocimiento tambien la pone el libro y va transcrita, porque fuera de ella el consejo no se sostiene. El caso del director va dentro y no a nodo propio (manual seccion 3.5). Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto por encima es demasiado, ni que se le promete a esa persona al contratarla, ni que pasa si los problemas grandes no llegan.",
   "pasos_accionables": [
-    "Desconfía cuando te oigas decir, o le oigas decir a otro directivo, que solo necesitas a alguien que se ocupe de esto ahora mismo y que no necesitas a alguien que además pueda hacer aquello otro.",
-    "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un vendedor de primera línea.",
-    "Al mismo tiempo, si estás en trabajo de conocimiento, contrata a alguien que parezca ofrecer más de lo que el puesto necesita ahora mismo, porque eso significa que puede ayudarte a atacar problemas más grandes en el futuro.",
+    "Sospecha de la frase, tuya o de otro directivo, «solo me hace falta alguien que resuelva esto ahora; no necesito que además sepa hacer lo otro».",
+    "Respeta el límite: si lo que piden el puesto y su presupuesto es un vendedor de primera línea, no busques candidatos a primer ejecutivo.",
+    "Aun así, cuando tu trabajo es de conocimiento, quédate con el candidato que parece dar más de lo que hoy exige el puesto: eso indica que mañana podrá ayudarte con problemas de mayor tamaño.",
     "Cuenta con que difícilmente faltarán problemas grandes suficientes para toda la gente con talento que tengas.",
-    "Mira un caso: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+    "Fíjate en este ejemplo: para arrancar una iniciativa nueva incorporaron a un candidato con nivel de director; el equipo empezaba siendo modesto y él venía de dirigir estructuras mucho más grandes, así que en teoría el puesto se le quedaba corto. A los pocos meses brillaba en el área que le encargaron, detectaba y sacaba adelante por iniciativa propia otros proyectos que ayudaban a crecer, y cuando surgió la ocasión de liderar otro equipo fue el primer nombre que vino a la mente. Antes de un año ya llevaba varios proyectos clave.",
     "Contrata a las mejores personas y dales poder para hacer más y más hasta que estires los límites de sus capacidades, que es una de las formas más inteligentes de multiplicar el impacto de tu equipo."
   ],
   "entregable_esperado": "Una contratación que hoy cubre el puesto y mañana ataca problemas más grandes, con esa persona empujada a hacer más y más hasta el límite de sus capacidades.",
@@ -352,6 +352,74 @@
       },
       "decision": "barrido de procedencia: reescritura con su matiz, verificada a ciegas (paq_w01, 13 de 13, trampa cazada)",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Desconfía cuando te oigas decir, o le oigas decir a otro directivo, que solo necesitas a alguien que se ocupe de esto ahora mismo y que no necesitas a alguien que además pueda hacer aquello otro.",
+      "texto_nuevo": "Sospecha de la frase, tuya o de otro directivo, «solo me hace falta alguien que resuelva esto ahora; no necesito que además sepa hacer lo otro».",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "199",
+        "frase": "I only need someone to take care of X right now"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Respeta el límite: no deberías mirar candidatos a primer ejecutivo cuando el puesto, y el presupuesto, piden un vendedor de primera línea.",
+      "texto_nuevo": "Respeta el límite: si lo que piden el puesto y su presupuesto es un vendedor de primera línea, no busques candidatos a primer ejecutivo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "201",
+        "frase": "You certainly shouldn't look at CEO candidates when the role"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Al mismo tiempo, si estás en trabajo de conocimiento, contrata a alguien que parezca ofrecer más de lo que el puesto necesita ahora mismo, porque eso significa que puede ayudarte a atacar problemas más grandes en el futuro.",
+      "texto_nuevo": "Aun así, cuando tu trabajo es de conocimiento, quédate con el candidato que parece dar más de lo que hoy exige el puesto: eso indica que mañana podrá ayudarte con problemas de mayor tamaño.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "201",
+        "frase": "if you're dealing with knowledge work, hiring someone who seems"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Mira un caso: en una iniciativa nueva se contrató a un candidato de nivel director; el tamaño inicial del equipo era modesto y esa persona tenía experiencia dirigiendo organizaciones mucho mayores, así que sobre el papel el puesto parecía demasiado pequeño para lo que era capaz de hacer. Unos meses después lo estaba haciendo muy bien en el área que le habían pedido liderar, además identificaba y ejecutaba por su cuenta otras iniciativas que ayudaban a crecer, y cuando apareció la oportunidad de liderar otro equipo fue la primera persona en la que pensaron. En un año llevaba varios proyectos clave.",
+      "texto_nuevo": "Fíjate en este ejemplo: para arrancar una iniciativa nueva incorporaron a un candidato con nivel de director; el equipo empezaba siendo modesto y él venía de dirigir estructuras mucho más grandes, así que en teoría el puesto se le quedaba corto. A los pocos meses brillaba en el área que le encargaron, detectaba y sacaba adelante por iniciativa propia otros proyectos que ayudaban a crecer, y cuando surgió la ocasión de liderar otro equipo fue el primer nombre que vino a la mente. Antes de un año ya llevaba varios proyectos clave.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "203-205",
+        "frase": "I once hired a director-level candidate when we were starting"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Contrata a Quien Da Más",

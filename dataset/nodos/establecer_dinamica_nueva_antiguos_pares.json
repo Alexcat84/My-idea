@@ -8,12 +8,12 @@
   "notas_extraccion": "El libro escribe esta descripcion una sola vez, dentro del camino del aprendiz, y despues la invoca por su titulo desde el camino del sucesor con la formula See description from The Apprentice. Esa invocacion por nombre es lo que la convierte en una pieza con id propio y no en prosa de su capitulo: el libro la trata como una unidad direccionable. Trae inventario propio, que son las tres cosas nombradas una a una, y trae encargo propio en imperativo, que son el no evitar las conversaciones, el abordar de frente lo que estorba y el dar por normal que te compartan menos. Va en un solo nodo y no en cabeza mas tres porque las tres partes no traen procedimiento por igual: la primera trae un inventario de cuatro cosas que entender y tres encargos, la segunda una doctrina y un encargo, y la tercera un reconocimiento sin encargo ninguno. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto dura esa rareza ni que hacer si el antiguo par no acepta la relacion nueva.",
   "pasos_accionables": [
     "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a tu cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que pueden hacerse difíciles al empezar, y sobre todo con personas a tu cargo a las que consideras amigas.",
-    "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas.",
-    "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a las nuevas personas a tu cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
-    "La segunda, tener conversaciones duras: la relación entre directivo y persona a su cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
-    "Si algo se interpone en que salga buen trabajo, abórdalo rápido y de frente, aunque eso signifique dar a alguien una opinión difícil o tomar decisiones duras: cuanto antes interiorices que los resultados de tu equipo son tuyos, más fácil se hace tener esas conversaciones.",
-    "La tercera, que te traten distinto o te compartan menos información: puede que dejen de contarte cuando están peleando con algo, cuando están molestos o cuando han tenido un desacuerdo con otro del equipo, y que se callen al verte entrar.",
-    "Y con esa tercera, con el tiempo puede verse que es normal: las personas a tu cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza."
+    "Asume primero el papel de entrenador: ahora te toca entender a qué aspiran en su carrera quienes antes eran tus pares, qué proyectos casan con sus fuerzas e intereses, dónde necesitan apoyo y cómo van frente a lo esperado.",
+    "Ten esas conversaciones aunque resulten incómodas: averigua qué le importa a cada persona nueva de tu equipo, dile qué hace bien y en qué podría estirarse más, y mírate como un entrenador que está para respaldarla y ayudarla a alcanzar sus metas.",
+    "Prepárate, en segundo lugar, para las conversaciones difíciles: dirigir a alguien no es lo mismo que trabajar a su lado como par, porque ahora el resultado de tu equipo corre de tu cuenta, igual que todas las decisiones que salen de él.",
+    "Afronta deprisa y sin rodeos todo lo que impida que salga buen trabajo, aunque te obligue a dar una opinión difícil o a tomar decisiones duras: estas conversaciones se vuelven más fáciles cuanto antes asumas que los resultados del equipo son tuyos.",
+    "Cuenta, en tercer lugar, con que te traten de otra manera o te cuenten menos: quizá ya no te digan cuándo algo les cuesta, cuándo están enfadados o cuándo chocaron con alguien del equipo, y quizá dejen de hablar en cuanto apareces.",
+    "Acepta que, con el tiempo, quizá veas que esto es normal: quien está a tu cargo puede temer molestarte o dar mala imagen, y es tarea tuya esforzarte más para construir una relación de confianza."
   ],
   "entregable_esperado": "La dinámica nueva con tus antiguos pares establecida, con las tres cosas que se tuercen ya vigiladas: el papel de entrenador asumido, las conversaciones duras tenidas de frente, y dado por normal que te compartan menos de lo que te compartían.",
   "nodos_previos": [
@@ -538,6 +538,108 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas.",
+      "texto_nuevo": "Asume primero el papel de entrenador: ahora te toca entender a qué aspiran en su carrera quienes antes eran tus pares, qué proyectos casan con sus fuerzas e intereses, dónde necesitan apoyo y cómo van frente a lo esperado.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "75",
+        "frase": "Playing the role of coach: Your job now includes understanding your former"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a las nuevas personas a tu cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "texto_nuevo": "Ten esas conversaciones aunque resulten incómodas: averigua qué le importa a cada persona nueva de tu equipo, dile qué hace bien y en qué podría estirarse más, y mírate como un entrenador que está para respaldarla y ayudarla a alcanzar sus metas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "77",
+        "frase": "But don't avoid those conversations, even if they feel awkward"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "La segunda, tener conversaciones duras: la relación entre directivo y persona a su cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+      "texto_nuevo": "Prepárate, en segundo lugar, para las conversaciones difíciles: dirigir a alguien no es lo mismo que trabajar a su lado como par, porque ahora el resultado de tu equipo corre de tu cuenta, igual que todas las decisiones que salen de él.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "81",
+        "frase": "The manager-report relationship is different than the peer relationship"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si algo se interpone en que salga buen trabajo, abórdalo rápido y de frente, aunque eso signifique dar a alguien una opinión difícil o tomar decisiones duras: cuanto antes interiorices que los resultados de tu equipo son tuyos, más fácil se hace tener esas conversaciones.",
+      "texto_nuevo": "Afronta deprisa y sin rodeos todo lo que impida que salga buen trabajo, aunque te obligue a dar una opinión difícil o a tomar decisiones duras: estas conversaciones se vuelven más fáciles cuanto antes asumas que los resultados del equipo son tuyos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "81",
+        "frase": "If something is getting in the way of great work happening"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "La tercera, que te traten distinto o te compartan menos información: puede que dejen de contarte cuando están peleando con algo, cuando están molestos o cuando han tenido un desacuerdo con otro del equipo, y que se callen al verte entrar.",
+      "texto_nuevo": "Cuenta, en tercer lugar, con que te traten de otra manera o te cuenten menos: quizá ya no te digan cuándo algo les cuesta, cuándo están enfadados o cuándo chocaron con alguien del equipo, y quizá dejen de hablar en cuanto apareces.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "83",
+        "frase": "They wouldn't always tell me when they were struggling or annoyed"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Y con esa tercera, con el tiempo puede verse que es normal: las personas a tu cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "texto_nuevo": "Acepta que, con el tiempo, quizá veas que esto es normal: quien está a tu cargo puede temer molestarte o dar mala imagen, y es tarea tuya esforzarte más para construir una relación de confianza.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_03.md",
+        "lineas": "85",
+        "frase": "Over time, however, I recognized that, yes, this was normal"
+      },
+      "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Establece tu Nueva Dinámica",
