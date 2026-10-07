@@ -9,9 +9,10 @@ las decisiones del fundador de ese día: la copia fiel (regla D2, sección 8) y 
 
 **Lo que sigue, en este orden, con suscripción normal** (cada punto tiene su sección abajo):
 1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
-2. **Re-embebido con Voyage** (sección 4): una sola pasada, al final, con la copia fiel incluida, menos de 0,05 USD.
-   Se pide la clave al fundador en ese momento.
-3. **Despliegue**, con el índice nuevo.
+2. **Segunda pasada de Voyage** (sección 4). La primera se hizo el 7 oct 2026 por orden del fundador, antes de que
+   se acabara la cuota. Re-embebió 2.706 nodos, con la copia fiel aplicada hasta la tanda k26. Falta otra pasada
+   cuando la copia fiel termine de corregir resúmenes y condiciones; los pasos no entran en el vector.
+3. **Despliegue**, con el índice de la segunda pasada.
 4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
 5. **Lanzamiento en Google Play** (sección 8).
 El saneamiento continuo (sección 7) quedó completo la noche del 7 oct: las dos corrientes leídas enteras y su pasada
@@ -133,23 +134,45 @@ de cierre hecha.
 3. Corrida final.
 4. Juez de fidelidad sobre lo que la corrida generó.
 
-## 4. Re-embebido con Voyage (una sola pasada)
+## 4. Re-embebido con Voyage (primera pasada hecha, falta la segunda)
 
-Decisión del fundador: Voyage corre una sola vez, al final, con todos los nodos corregidos. Las tandas de la auditoría
-cambiaron el texto de **3.187 nodos vivos**, según la prueba en seco del cierre del saneamiento continuo (noche del
-7 oct). Si entra otra tanda, la prueba en seco del día da el número de verdad.
+**Primera pasada, 7 oct 2026.** El fundador la ordenó antes de que se acabara la cuota, sin esperar al final de la
+copia fiel.
+- Re-embebió **2.706 nodos vivos**: los que cambiaron título, resumen o condiciones desde el índice anterior, con la
+  copia fiel aplicada hasta la tanda k26.
+- La lista no salió de los nombres de las tandas, sino de comparar el texto que se embebe
+  (`texto_nodo` de `scripts/build_semantic_index_voyage.py`) con el del grafo en el último commit que tocó el índice.
+  La línea de tandas habría dado 3.495 nodos, porque cuenta también los nodos donde solo cambiaron los pasos, y los
+  pasos no entran en el vector.
+- Coherencia antes y después:
+  - 3.634 vectores para 3.634 nodos vivos;
+  - lista roja vacía, es decir, ningún vector de un nodo no vivo;
+  - sin duplicados, dimensión 512;
+  - el script no reportó ningún fallo;
+  - `MIN_SCORE_SALTO` sigue en 0,3;
+  - el vecino más cercano de cada nodo pasó de 0,796 a 0,800 de media.
+- Gate 0 y las dos suites en verde.
 
-1. Pon `VOYAGE_API_KEY` en el `.env` raíz. La quitas al terminar.
-2. Prueba en seco, que no llama a nadie:
+**Segunda pasada: cuando la copia fiel termine resúmenes y condiciones**, después de la medida 7.
+1. Pon `VOYAGE_API_KEY` en el `.env` raíz, o pásala solo al proceso. La quitas al terminar.
+2. Saca la lista de nodos con texto embebible cambiado desde el índice vigente:
 
    ```
-   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json docs/saneamiento/tandas/voz-*.json docs/saneamiento/tandas/copia-*.json
+   python - <<'EOF'
+   import json, subprocess, sys
+   sys.path.insert(0, "scripts"); import build_semantic_index_voyage as bsi
+   c = subprocess.run(["git", "log", "-1", "--format=%H", "--", "web/lib/assets/semantic_index.json"], capture_output=True, text=True).stdout.strip()
+   viejo = json.loads(subprocess.run(["git", "show", c + ":dataset/metadata/master_graph.json"], capture_output=True).stdout)["nodos"]
+   nuevo = json.load(open("dataset/metadata/master_graph.json", encoding="utf-8"))["nodos"]
+   ids = [k for k, n in nuevo.items() if not n.get("deprecado") and (k not in viejo or bsi.texto_nodo(viejo[k]) != bsi.texto_nodo(n))]
+   json.dump([{"node_id": i} for i in ids], open("voyage_ids.json", "w")); print(len(ids))
+   EOF
    ```
 
-   Si después de esta fecha entra otra tanda que cambie texto de nodos, se añade a la línea.
-3. La pasada de verdad: la misma línea con `--yes` al final.
-4. Corre `python scripts/sync_assets_web.py` y las dos suites (`PYTHONIOENCODING=utf-8 python engine/run_all_tests.py`
-   y `cd web && npx vitest run`). Después, commit y despliegue.
+3. Prueba en seco: `python scripts/auditoria_final/reembeber.py voyage_ids.json`. La pasada de verdad es la misma
+   línea con `--yes`. Borra `voyage_ids.json` al terminar.
+4. Corre `python scripts/sync_assets_web.py`, Gate 0 y las dos suites (`PYTHONIOENCODING=utf-8 python
+   engine/run_all_tests.py` y `cd web && npx vitest run`). Después, commit y despliegue.
 
 **Si el script dice "NO SE ESCRIBE":** comprueba la coherencia del índice y no escribe nada si algo falla.
 - Comprueba:
