@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fatiga y su Efecto en el Desempeño Seguro",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; la fatiga deteriora el juicio de las personas sobre su propio nivel de fatiga, así que su autoevaluación es poco fiable. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
+  "resumen_teorico": "Cuando el trabajo cruza las horas normales de vigilia o varias zonas horarias, la fatiga aparece con frecuencia, y medir sus efectos cuesta porque se mezclan con los de otros factores. Lo único que de verdad la combate es descansar, y lo que cada quien opina de su propio cansancio vale poco, porque la fatiga misma nubla ese juicio. Se le vinculan una vigilancia más baja, un pensamiento más lento, fallos de memoria y microsueños (lapsing). Además, estrecha la capacidad de ver otras opciones y empuja a aferrarse a un único curso de acción.",
   "pasos_accionables": [
     "Registrar en las investigaciones el tiempo de vigilia continua de los operadores involucrados",
     "Identifica qué contribuyó al cansancio: demasiada carga de trabajo o, al revés, demasiada inactividad, unida a un esfuerzo prolongado; desgaste del cuerpo y de la mente; falta de sueño o un sueño alterado; la hora del día en que ocurrió y el desajuste del reloj biológico",
@@ -93,6 +93,22 @@
       },
       "decision": "copia fiel (regla D2, ola k10): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-fatigue_performance_effects-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La fatiga es una condición común en trabajos que cruzan periodos normales de vigilia o zonas horarias, cuyos efectos son difíciles de medir por estar confundidos con otros factores. Solo el descanso es efectivo contra ella; la fatiga deteriora el juicio de las personas sobre su propio nivel de fatiga, así que su autoevaluación es poco fiable. Se asocia con: reducción de vigilancia, enlentecimiento cognitivo, fallas de memoria y micro-sueños (lapsing). La fatiga también reduce la capacidad de considerar opciones alternativas, favoreciendo la fijación en un curso de acción.",
+      "texto_nuevo": "Cuando el trabajo cruza las horas normales de vigilia o varias zonas horarias, la fatiga aparece con frecuencia, y medir sus efectos cuesta porque se mezclan con los de otros factores. Lo único que de verdad la combate es descansar, y lo que cada quien opina de su propio cansancio vale poco, porque la fatiga misma nubla ese juicio. Se le vinculan una vigilancia más baja, un pensamiento más lento, fallos de memoria y microsueños (lapsing). Además, estrecha la capacidad de ver otras opciones y empuja a aferrarse a un único curso de acción.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "2257",
+        "frase": "Fatigue is a common condition, especially in work that cuts across normal"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

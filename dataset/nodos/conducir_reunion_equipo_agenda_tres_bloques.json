@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Conducir la reunión semanal de equipo con una agenda de tres bloques: aprender, escuchar y aclarar, sin debatir ni decidir dentro",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con un dueño que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+  "resumen_teorico": "La reunión de equipo suele pesar: tú llegas a temerla y los demás sienten que pierden el tiempo. Bien llevada, puede ahorrártelo, porque te alerta de los problemas y hace circular las novedades sin desperdicio. Persigue tres fines con tiempo fijo: revisar indicadores para aprender, poner en común novedades y dejar claro qué decisiones y debates pesan la semana siguiente, sin zanjarlos ahí. Si tu equipo pasa de unas veinte personas, lleva los grandes temas a reuniones propias, con un responsable que en general no serás tú: delegarlos los acerca a los hechos y evita el pensamiento jerárquico.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_11.md, unidad Cap. 8, Results. Sale de las lineas 129 a 145 y de las lineas 159 a 163, bajo el rotulo STAFF MEETINGS. ES LA PIEZA P6 DE LA FRONTERA DE cap_11, Y SU TRAMO ES NO CONTIGUO: entre sus dos mitades viven las lineas 147 a 157, que son el mecanismo de los apuntes de sala de estudio y salen en su propio nodo, escribir_apuntes_sala_estudio_equipo. Lo digo aqui para que la frontera se pueda comprobar. POR QUE LOS TRES BLOQUES VAN EN UN SOLO NODO Y NO EN TRES: comparten UNA activacion (conduces la reunion semanal) y UN entregable (la reunion corrida con sus tres bloques), y el libro los encadena el mismo en la linea 137 con una sola frase (Here's the agenda that I've found to be most effective). Es la vara de la ACTA 20 seccion 4.1 confirmada por la ACTA 21 seccion 4.2. LA CUENTA QUE EL LIBRO SI ESCRIBE, y por eso el id la lleva: la linea 135 dice An effective staff meeting has three goals. PERO ES UNA CUENTA DE GOLES, NO DE PARTES, y por eso esto NO es una serie D.37: EXTRACTOR.md 15.6 pide que la cuenta sea de las PARTES que existen como nodos, y aqui los tres goles son fines, que la restriccion 1 de D.27 excluye expresamente. Los tres bloques de la agenda son pasos de este nodo y no nodos hermanos. EL PAR QUE DECLARO YO ANTES DE QUE LO LEVANTE NADIE: el paso 6 de este nodo nombra en una linea poner las actualizaciones en un documento compartido, y escribir_apuntes_sala_estudio_equipo lo despliega en su mecanismo entero. CONTINUA CON ARISTA, declarada en docs/loop/REPORTE.md de la vuelta 22 con su paso citado. Y lo mismo con los pasos 18 y 20, que nombran las reuniones de gran debate y de gran decision, desplegadas en montar_reunion_gran_debate y montar_reunion_gran_decision. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 22 pasos, 22 TRANSCRIPCION, 0 PUENTE. P1 de la linea 133; P2 a P4 de la 135; P5 a P7 de las 139, 141 y 143; P8 a P15 de la 145; P16 y P17 de la 159; P18 a P20 de la 161; P21 y P22 de la 163. LAS CIFRAS SON TODAS DEL LIBRO: veinte minutos, quince minutos, treinta minutos, veinte personas y una o dos decisiones y un debate estan escritas en las lineas 139, 141, 143, 159 y 161. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto dura la reunion entera, quien la convoca, que se hace si un bloque se pasa de su tiempo, y cada cuanto se revisa el cuadro de mando en si.",
   "pasos_accionables": [
     "Valora, entre otras ventajas, que una reunión de equipo bien llevada puede ahorrarte tiempo: te alerta de los problemas, hace circular las novedades con eficiencia y logra que todos coincidan en cuáles son las prioridades compartidas de la semana.",
@@ -39,7 +39,7 @@
     "pedir_opinion_propia_reunion"
   ],
   "condiciones_activacion": [
-    "Cuando conduces la reunión semanal con las personas a tu cargo y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no."
+    "Cuando te toca llevar la reunión semanal con quienes dependen de ti y quieres que valga la pena: que quien no asiste no se sienta apartado, que quien asiste no crea que pierde el tiempo y que tú dejes de temerla."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -856,6 +856,39 @@
       },
       "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 18,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-conducir_reunion_equipo_agenda_tres_bloques-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando conduces la reunión semanal con las personas a tu cargo y quieres que sirva para algo, en vez de que la temas tú, la vean como pérdida de tiempo los que van, y se sientan excluidos los que no.",
+      "texto_nuevo": "Cuando te toca llevar la reunión semanal con quienes dependen de ti y quieres que valga la pena: que quien no asiste no se sienta apartado, que quien asiste no crea que pierde el tiempo y que tú dejes de temerla.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_11.md",
+        "lineas": "133-133",
+        "frase": "All too often, the person leading the meeting comes to dread it"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-conducir_reunion_equipo_agenda_tres_bloques-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Muchas veces quien dirige la reunión de equipo acaba temiéndola y los demás la ven como tiempo perdido, pero bien llevada puede ahorrarte tiempo: te avisa de los problemas y comparte las actualizaciones con eficiencia. Tiene tres fines con tiempos fijos: aprender de los indicadores, compartir actualizaciones y aclarar qué decisiones y debates importan la semana próxima, sin resolverlos ahí. Si el equipo pasa de unas veinte personas, lleva los grandes temas a reuniones aparte, con un dueño que por lo general no seas tú: delegarlos los empuja hacia los hechos y evita el pensamiento jerárquico.",
+      "texto_nuevo": "La reunión de equipo suele pesar: tú llegas a temerla y los demás sienten que pierden el tiempo. Bien llevada, puede ahorrártelo, porque te alerta de los problemas y hace circular las novedades sin desperdicio. Persigue tres fines con tiempo fijo: revisar indicadores para aprender, poner en común novedades y dejar claro qué decisiones y debates pesan la semana siguiente, sin zanjarlos ahí. Si tu equipo pasa de unas veinte personas, lleva los grandes temas a reuniones propias, con un responsable que en general no serás tú: delegarlos los acerca a los hechos y evita el pensamiento jerárquico.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_11.md",
+        "lineas": "133-135",
+        "frase": "All too often, the person leading the meeting comes to dread it"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

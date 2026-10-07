@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Almacenamiento Seguro de Líquidos y Materiales Inflamables/Combustibles",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Los líquidos inflamables deben almacenarse en contenedores aprobados, con conexiones herméticas, ventilación adecuada, cableado a prueba de explosión, y señalización de 'NO SMOKING'. Los residuos combustibles deben guardarse en receptáculos metálicos cubiertos y retirarse del sitio de trabajo con prontitud.",
+  "resumen_teorico": "Guarda los líquidos inflamables solo en recipientes aprobados y con todas sus conexiones bien selladas, en un espacio con buena ventilación, con cableado a prueba de explosión y con letreros de 'NO SMOKING' a la vista. Lo que sobre de material combustible va a recipientes de metal con tapa, y sácalo pronto del lugar de trabajo.",
   "pasos_accionables": [
     "Usar contenedores y tanques aprobados para líquidos inflamables",
     "Instalar ventilación mecánica o por gravedad en cuartos de almacenamiento",
@@ -77,6 +77,22 @@
       "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-almacenamiento_liquidos_inflamables-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los líquidos inflamables deben almacenarse en contenedores aprobados, con conexiones herméticas, ventilación adecuada, cableado a prueba de explosión, y señalización de 'NO SMOKING'. Los residuos combustibles deben guardarse en receptáculos metálicos cubiertos y retirarse del sitio de trabajo con prontitud.",
+      "texto_nuevo": "Guarda los líquidos inflamables solo en recipientes aprobados y con todas sus conexiones bien selladas, en un espacio con buena ventilación, con cableado a prueba de explosión y con letreros de 'NO SMOKING' a la vista. Lo que sobre de material combustible va a recipientes de metal con tapa, y sácalo pronto del lugar de trabajo.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "601-623",
+        "frase": "Combustible scrap, debris and waste materials (oily rags, etc. ) are stored"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Consulta en Sitio de OSHA (On-Site Consultation)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros y cómo corregirlos, te asesora sobre qué exige la norma, capacita y educa a tus trabajadores y te ayuda a armar un programa de seguridad. Si tu negocio es pequeño, usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. Si tienes un negocio pequeño o mediano, OSHA te da asesoría en seguridad y salud ocupacional sin costo y de forma confidencial, y atiende primero a los lugares de trabajo de mayor riesgo. La visita la hace un consultor capacitado, que revisa contigo qué peligros hay y cómo resolverlos, te explica lo que pide la norma, capacita y forma a tus trabajadores y te acompaña al armar tu programa de seguridad. Además, si tu negocio es pequeño, ya pasó por la consulta y sostiene un programa de seguridad y salud ejemplar, puede optar a SHARP, que pospone las inspecciones programadas de OSHA mientras esa designación siga vigente.",
   "pasos_accionables": [
     "Pide una visita de consulta al programa estatal de consultoría en el lugar de trabajo",
     "Decide junto al consultor qué necesitas: resolver un problema puntual o una evaluación completa",
@@ -159,6 +159,22 @@
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-programa_consulta_osha_onsite-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional pensado para negocios pequeños y medianos, con prioridad para los de más riesgo. Un consultor capacitado visita tu lugar de trabajo, te ayuda a identificar peligros y cómo corregirlos, te asesora sobre qué exige la norma, capacita y educa a tus trabajadores y te ayuda a armar un programa de seguridad. Si tu negocio es pequeño, usaste la consulta y mantienes un programa de seguridad y salud ejemplar, puedes calificar para el programa SHARP, que aplaza las inspecciones programadas de OSHA mientras tu designación esté vigente.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un programa del gobierno estadounidense. Si tienes un negocio pequeño o mediano, OSHA te da asesoría en seguridad y salud ocupacional sin costo y de forma confidencial, y atiende primero a los lugares de trabajo de mayor riesgo. La visita la hace un consultor capacitado, que revisa contigo qué peligros hay y cómo resolverlos, te explica lo que pide la norma, capacita y forma a tus trabajadores y te acompaña al armar tu programa de seguridad. Además, si tu negocio es pequeño, ya pasó por la consulta y sostiene un programa de seguridad y salud ejemplar, puede optar a SHARP, que pospone las inspecciones programadas de OSHA mientras esa designación siga vigente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1783-1791",
+        "frase": "The OSHA On-Site Consultation Program offers no-cost and confidential occupational safety"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

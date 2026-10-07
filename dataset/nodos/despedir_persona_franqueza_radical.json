@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Despedir con franqueza radical, sin distanciarte de la persona y con el trabajo siguiente imaginado antes de la reunión",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Despedir bien exige no distanciarte de la persona: si intentas no sentir el dolor de la situación, lo harás mal. Recordar un trabajo en el que tú fuiste malo ayuda a ver que dejar un puesto que no encaja abre la posibilidad de destacar en otro sitio. Antes de la reunión, imagina un trabajo concreto para esa persona, piensa que el problema está en el puesto y no en ella, y pregúntate si puedes presentarla a alguien. Además, retener a quien rinde mal castiga a quien rinde bien, que suele acabar cargando con el trabajo pendiente, y es aún más dañino si quien rinde mal es un jefe.",
+  "resumen_teorico": "Para despedir bien no puedes poner distancia con la persona; si tratas de no sentir lo doloroso del momento, te saldrá mal. Ayuda pensar en algún trabajo en el que fuiste malo: salir de un puesto que no encaja abre la puerta a brillar en otro lugar. Antes de la conversación, piensa en un empleo concreto que podría irle bien, ten presente que el fallo es del puesto y no de la persona, y plantéate si puedes presentarle a alguien. Además, conservar a quien rinde mal perjudica a quien rinde bien, que suele acabar asumiendo lo que queda sin hacer, y el daño crece si quien rinde mal es un jefe.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_06.md, unidad Cap. 3, Understand What Motivates Each Person on Your Team. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'person you are firing', corrida con grep contra las quince unidades del libro. El inventario es del texto y viene numerado por el mismo con dos recordatorios, uno y dos, cada uno con su desarrollo. Se extrae separado del procedimiento de decidir cuando toca porque el propio texto los separa con dos rotulos y porque son dos actos distintos: uno se hace con una lista de preguntas delante y el otro dentro de una conversacion. El caso del verano de cajera y el del empresario que sudaba van nombrados dentro de sus pasos, que es la condicion con la que esta casa admite la transcripcion de caso, y el entregable no lleva ningun dato de ninguno de los dos. Lo que el texto NO dice, y por eso no esta escrito aqui, es que palabras usar en la reunion, cuanto preaviso dar, ni que hacer si la persona no acepta la reformulacion del problema. CORRECCION DECLARADA DE LA VUELTA 27, 16 sep 2026, por el punto 3 de la TAREA 1 de su encargo y la adjudicacion 3.1 de la ACTA 25, SIN BORRAR LO QUE HAY ENCIMA: la frase de la vuelta 19 que llama ancla textual unica a 'person you are firing' es FALSA, y de la especie peor de las cuatro, porque la unidad declarada NO contiene su propia ancla. grep -ril 'person you are firing' contra las quince unidades del libro da un solo fichero y es cap_10.md, corrido el 16 sep 2026. La UNIDAD DE ORIGEN cap_06 SE SOSTIENE IGUAL, y no por la palabra sino por el texto: los pasos 3 y 4 salen de cap_06 linea 297, el verano de cajera de banco, y los pasos 5, 6, 7 y 8 salen de cap_06 linea 299, que es donde el libro escribe 'Can I help by making an introduction?'. El ancla que SI es unica de cap_06, comprobada con el mismo comando, es 'bank teller'. Lo que estaba mal es la etiqueta de procedencia, NO el procedimiento: ni un paso ni una cita cambian.",
   "pasos_accionables": [
     "Mantente cerca de la persona que vas a despedir: si tratas de no sentir el dolor propio de la situación, sobre todo el de quien se va, lo harás mal.",
@@ -574,6 +574,22 @@
       },
       "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-despedir_persona_franqueza_radical-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Despedir bien exige no distanciarte de la persona: si intentas no sentir el dolor de la situación, lo harás mal. Recordar un trabajo en el que tú fuiste malo ayuda a ver que dejar un puesto que no encaja abre la posibilidad de destacar en otro sitio. Antes de la reunión, imagina un trabajo concreto para esa persona, piensa que el problema está en el puesto y no en ella, y pregúntate si puedes presentarla a alguien. Además, retener a quien rinde mal castiga a quien rinde bien, que suele acabar cargando con el trabajo pendiente, y es aún más dañino si quien rinde mal es un jefe.",
+      "texto_nuevo": "Para despedir bien no puedes poner distancia con la persona; si tratas de no sentir lo doloroso del momento, te saldrá mal. Ayuda pensar en algún trabajo en el que fuiste malo: salir de un puesto que no encaja abre la puerta a brillar en otro lugar. Antes de la conversación, piensa en un empleo concreto que podría irle bien, ten presente que el fallo es del puesto y no de la persona, y plantéate si puedes presentarle a alguien. Además, conservar a quien rinde mal perjudica a quien rinde bien, que suele acabar asumiendo lo que queda sin hacer, y el daño crece si quien rinde mal es un jefe.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_06.md",
+        "lineas": "295-301",
+        "frase": "it's important not to distance yourself from the person you're about to"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

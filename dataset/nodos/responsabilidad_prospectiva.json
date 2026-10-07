@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "De culpar por lo que ya pasó a responsabilizarte de lo que sigue",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso, la parte técnica, la forma en que explicas las cosas o incluso lo político necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+  "resumen_teorico": "Ante un error puedes responder de dos formas. Una mira hacia atrás: señalas a quien falló y lo sancionas (responsabilidad retrospectiva), y lo único que consigues es que la gente se vuelva cautelosa al reportar y acabe callándose información. La otra mira hacia adelante (responsabilidad prospectiva): tomas lo ocurrido como aviso de que hay algo por mejorar, ya sea en tu negocio, en tu proceso, en lo técnico, en cómo explicas las cosas o incluso en lo político. Desde ahí decides qué vas a cambiar y a quién le toca aplicar esos cambios y revisar si dan resultado.",
   "pasos_accionables": [
     "Cuando revises un problema, en vez de preguntar quién falló, pregunta qué necesitas cambiar",
     "Asigna quién va a poner en marcha esos cambios, no quién va a recibir el castigo",
@@ -185,6 +185,22 @@
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-responsabilidad_prospectiva-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando algo sale mal tienes dos maneras de reaccionar. La primera es buscar quién falló y sancionarlo (responsabilidad retrospectiva), pero eso solo logra que las personas se cuiden de reportar los problemas y terminen ocultando información. La segunda es ver el error como señal de que algo en tu negocio, tu proceso, la parte técnica, la forma en que explicas las cosas o incluso lo político necesita mejorar (responsabilidad prospectiva). Ahí te preguntas qué vas a cambiar y quién se va a encargar de poner en marcha esos cambios y de comprobar si funcionan.",
+      "texto_nuevo": "Ante un error puedes responder de dos formas. Una mira hacia atrás: señalas a quien falló y lo sancionas (responsabilidad retrospectiva), y lo único que consigues es que la gente se vuelva cautelosa al reportar y acabe callándose información. La otra mira hacia adelante (responsabilidad prospectiva): tomas lo ocurrido como aviso de que hay algo por mejorar, ya sea en tu negocio, en tu proceso, en lo técnico, en cómo explicas las cosas o incluso en lo político. Desde ahí decides qué vas a cambiar y a quién le toca aplicar esos cambios y revisar si dan resultado.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "654",
+        "frase": "If, instead, we see somebody's act as a representation of an organizational"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

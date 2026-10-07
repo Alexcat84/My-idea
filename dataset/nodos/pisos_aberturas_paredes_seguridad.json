@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Seguridad en Aberturas de Piso y Pared",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras y en entradas de escaleras de mano. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
+  "resumen_teorico": "Cada hueco en el piso necesita protección por todos sus lados, ya sea con una cubierta, una barandilla o algo equivalente; solo quedan fuera las escaleras y los accesos a escaleras de mano. Toda cubierta, también las pantallas de los tragaluces, tiene que aguantar el doble de la carga máxima prevista para ella, y las rejillas tienen que dejar pasar sin estorbo a quien camina y a los equipos con ruedas.",
   "pasos_accionables": [
     "Inspeccionar todas las aberturas de piso existentes en la instalación",
     "Cubre cada abertura por todos sus lados con una tapa, una barandilla o algo equivalente, salvo en escaleras y accesos a escaleras de mano, y usa tapas que aguanten el doble de la carga más alta que esperas sobre ellas",
@@ -136,6 +136,22 @@
       },
       "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-pisos_aberturas_paredes_seguridad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras y en entradas de escaleras de mano. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
+      "texto_nuevo": "Cada hueco en el piso necesita protección por todos sus lados, ya sea con una cubierta, una barandilla o algo equivalente; solo quedan fuera las escaleras y los accesos a escaleras de mano. Toda cubierta, también las pantallas de los tragaluces, tiene que aguantar el doble de la carga máxima prevista para ella, y las rejillas tienen que dejar pasar sin estorbo a quien camina y a los equipos con ruedas.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1477-1483",
+        "frase": "Floor holes are guarded by a cover, a guardrail, or equivalent"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

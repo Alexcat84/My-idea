@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Recorrer los siete pasos del Programa de Desarrollo del Negocio, empezando por tu Objetivo Principal",
   "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
-  "resumen_teorico": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+  "resumen_teorico": "Con tu Programa de Desarrollo del Negocio transformas, paso a paso, el negocio que ya tienes o el que estás por crear en un modelo de organización impecable, listo para miles de réplicas iguales; es la herramienta para levantar tu Prototipo de Franquicia. Consta de siete pasos distintos que sigues en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. Apunta a un negocio que alguien solo compraría si funciona, y únicamente si lo hace sin exigir mucho trabajo y sin que tú estés.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_13.md, unidad Cap. 11, titulo textual Your Business Development Program. Sale de la PIEZA R3 de la frontera publicada en esta misma vuelta (.gerber_v4/frontera_cap13.txt), L39 a L58, 82 palabras. ESTO ES UNA SERIE NUMERADA Y SE TRATA COMO TAL (manual seccion 3.4, EXTRACTOR.md 9): un nodo por paso mas UNA cabeza, y esta es la CABEZA. Es el mismo patron de fingir_prototipo_cinco_mil_replicas (cap_11, vuelta 1) y de recorrer_trece_elementos_proceso_evaluacion_formal (scott_radical_candor): EXTRACTOR.md 9.1, tabla SI ES UN NODO, tercera fila, un procedimiento que el libro nombra en una tabla y desarrolla en otro sitio. La tabla es literal aqui: siete lineas numeradas 1 a 7, cada una el titulo exacto de un capitulo futuro (cap_14 a cap_19, mas el cap. 17 reservado). ES D.37 Y NO D.29: el texto DICE CUANTAS PARTES TIENE (seven distinct steps) Y LAS NOMBRA UNA A UNA, las dos condiciones que D.37 pide. HOY NINGUNA DE LAS SIETE EXISTE COMO NODO: cap_14 a cap_19 estan SIN TOCAR (ACTA G3 seccion 2, unidades SIN TOCAR). Al entrar esta cabeza quedaria en 0 de 7 partes en el grafo, igual que recorrer_trece_elementos_proceso_evaluacion_formal entro con 0 de 13. Las aristas cabeza a parte se declaran cuando cada capitulo se mine y produzca su cabeza propia, citando esta misma linea (L43 a L57), no antes. PUNTERO PARA LA VUELTA QUE MINE cap_14 A cap_19: si alguna de las siete no llega a tener nodo cabeza propio (por ejemplo si el capitulo entero es postura sin inventario, como paso con cap_09 y cap_10), la serie se queda incompleta a proposito, que ya tiene precedente (fingir_prototipo entro con 4 de 6 partes, D.27 descarto dos por ser fines y no medios). NOTA QUE NO ES DISCUTIBLE PERO CONVIENE DEJAR ESCRITA: el paso 6 (Your Marketing Strategy) corresponde al cap. 17, que esta APARTADO en fuentes/gerber_emyth_cap17_reservado/ y no en las 22 unidades normales del libro; si esa reserva no se revierte, esta serie puede quedarse permanentemente en 6 de 7. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v4/cita_cap13_L39.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice nada mas de cada paso en este capitulo (ni una linea de descripcion, a diferencia de las seis reglas del Prototipo que si traian una frase cada una); escribir una glosa por paso seria inventar exactamente lo que D.30 15.4 llama completar un inventario delgado, asi que cada paso se queda con su nombre desnudo, tal como el libro lo deja.",
   "pasos_accionables": [
     "Ve tu Programa de Desarrollo del Negocio como el camino, paso a paso, para transformar el negocio que tienes, o el que estás por crear, en un modelo organizado a la perfección para replicarse en miles de negocios idénticos.",
@@ -28,7 +28,7 @@
     "distinguir_tres_tipos_sistemas_negocio"
   ],
   "condiciones_activacion": [
-    "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y necesitas el programa paso a paso con el que conviertes ese negocio, el que tienes o el que vas a crear, en un modelo organizado."
+    "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y te falta el programa que, paso a paso, convierta en un modelo organizado el negocio actual o el que estás por crear."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -382,6 +382,39 @@
       },
       "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-recorrer_siete_pasos_programa_desarrollo_negocio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y necesitas el programa paso a paso con el que conviertes ese negocio, el que tienes o el que vas a crear, en un modelo organizado.",
+      "texto_nuevo": "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y te falta el programa que, paso a paso, convierta en un modelo organizado el negocio actual o el que estás por crear.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_13.md",
+        "lineas": "39",
+        "frase": "Your Business Development Program is the step-by-step process through which you"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-recorrer_siete_pasos_programa_desarrollo_negocio-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "texto_nuevo": "Con tu Programa de Desarrollo del Negocio transformas, paso a paso, el negocio que ya tienes o el que estás por crear en un modelo de organización impecable, listo para miles de réplicas iguales; es la herramienta para levantar tu Prototipo de Franquicia. Consta de siete pasos distintos que sigues en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. Apunta a un negocio que alguien solo compraría si funciona, y únicamente si lo hace sin exigir mucho trabajo y sin que tú estés.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_13.md",
+        "lineas": "21-57",
+        "frase": "Your Business Development Program is the step-by-step process through which you"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

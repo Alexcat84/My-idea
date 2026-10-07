@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Obtención de Datos de Factores Humanos",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El 'error humano' no trata solo de humanos, sino de cómo las herramientas, tareas y entorno de trabajo influyen sistemáticamente en el desempeño. Hay dos fuentes directas de datos: los debriefings de los participantes y los registros de parámetros de desempeño (grabadoras de voz, sistemas de monitoreo, videos). Ambas fuentes tienen limitaciones: la memoria humana no es una grabación fiel y tiende a estructurar los eventos de forma más lineal de lo que realmente fueron; los registros son solo ventanas parciales que apuntan a un mundo más amplio de tareas, metas y presiones organizacionales.",
+  "resumen_teorico": "El 'error humano' no se limita a las personas: abarca la manera en que sus herramientas, sus tareas y su entorno de trabajo moldean de forma sistemática lo que hacen. Para estudiarlo cuentas con dos fuentes directas: los debriefings con quienes participaron y los registros del desempeño, como grabaciones de voz, sistemas de monitoreo o videos. Ninguna es perfecta. La memoria no funciona como una grabación fiel y suele ordenar lo ocurrido de forma más lineal de lo que fue, y cada registro es apenas una ventana parcial hacia un mundo más amplio de tareas, metas y presiones de la empresa.",
   "pasos_accionables": [
     "Identificar todas las fuentes posibles de datos: entrevistas posteriores con los participantes, grabaciones de voz, registros de eventos, lecturas de máquina",
     "Reconocer las limitaciones de la memoria humana antes de entrevistar participantes",
@@ -93,6 +93,22 @@
       },
       "decision": "copia fiel (regla D2, ola k10): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-obtencion_datos_factores_humanos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El 'error humano' no trata solo de humanos, sino de cómo las herramientas, tareas y entorno de trabajo influyen sistemáticamente en el desempeño. Hay dos fuentes directas de datos: los debriefings de los participantes y los registros de parámetros de desempeño (grabadoras de voz, sistemas de monitoreo, videos). Ambas fuentes tienen limitaciones: la memoria humana no es una grabación fiel y tiende a estructurar los eventos de forma más lineal de lo que realmente fueron; los registros son solo ventanas parciales que apuntan a un mundo más amplio de tareas, metas y presiones organizacionales.",
+      "texto_nuevo": "El 'error humano' no se limita a las personas: abarca la manera en que sus herramientas, sus tareas y su entorno de trabajo moldean de forma sistemática lo que hacen. Para estudiarlo cuentas con dos fuentes directas: los debriefings con quienes participaron y los registros del desempeño, como grabaciones de voz, sistemas de monitoreo o videos. Ninguna es perfecta. La memoria no funciona como una grabación fiel y suele ordenar lo ocurrido de forma más lineal de lo que fue, y cada registro es apenas una ventana parcial hacia un mundo más amplio de tareas, metas y presiones de la empresa.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "992-996",
+        "frase": "'Human error' is not just about humans. It is about how features"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

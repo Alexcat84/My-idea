@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Parar un debate cuando la gente está agotada o demasiado cargada de emoción, y aplazarlo en vez de dejar que decida el cansancio",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Cuando la gente está demasiado cansada, quemada o cargada de emoción para un debate productivo, conviene darse cuenta, porque esos momentos rara vez acaban bien. Tu papel es intervenir y pedir tiempo muerto; si no, la gente decidirá cualquier cosa para poder irse a casa o, peor, estallará una pelea salida de la emoción en carne viva. Aplazas el debate hasta que los ánimos estén mejor. Si has llegado a conocer bien a cada persona de tu equipo, serás lo bastante consciente de sus emociones y su energía como para saber cuándo hace falta intervenir.",
+  "resumen_teorico": "Hay momentos en que tu gente llega a un debate tan agotada, quemada o con las emociones tan a flor de piel que ya no puede discutir con provecho, y te conviene notarlo, porque casi nunca terminan bien. Te toca intervenir y pedir una pausa; de lo contrario, acabarán decidiendo lo que sea con tal de marcharse a casa o, peor aún, saltará una pelea nacida de emociones en carne viva. Deja el debate para cuando los ánimos estén mejor. Si conoces bien a cada persona de tu equipo, captarás lo suficiente de sus emociones y de su energía para saber en qué momento hace falta que intervengas.",
   "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 235 a 237, bajo el rotulo Pause for emotion/exhaustion, y es la tercera de las tecnicas que el libro ofrece dentro del paso DEBATE de la rueda de hacer cosas. Es la pieza mas corta del capitulo y lo digo antes que nadie: cinco pasos de un solo parrafo. La dejo como nodo propio porque el libro le da rotulo y porque tiene lo que un procedimiento necesita: un disparador nombrado, un acto (pedir tiempo muerto), una consecuencia escrita de no hacerlo, y una condicion previa que el propio texto pone (conocer a cada uno lo bastante bien). El P5 es el que la ata al resto del libro, porque es la franqueza radical aplicada a esta decision concreta. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. Los cinco de la linea 237. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto se aplaza, quien decide que ya se puede retomar, y como se sabe que la gente ya esta en mejor disposicion.",
   "pasos_accionables": [
     "Estate atento a cuándo la gente llega demasiado cansada, quemada o con las emociones a flor de piel para debatir; es clave que lo notes, porque de esos momentos casi nunca sale nada bueno.",
@@ -21,7 +21,7 @@
     "fijar_fecha_cierre_debate_equipo"
   ],
   "condiciones_activacion": [
-    "Cuando en un debate de tu equipo la gente está demasiado cansada, quemada o cargada de emoción como para discutir de forma productiva."
+    "Cuando ves que en un debate de tu equipo la gente llega agotada, quemada o con las emociones tan a flor de piel que ya no puede discutir con provecho."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -257,6 +257,39 @@
       },
       "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-parar_debate_emocion_agotamiento-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando en un debate de tu equipo la gente está demasiado cansada, quemada o cargada de emoción como para discutir de forma productiva.",
+      "texto_nuevo": "Cuando ves que en un debate de tu equipo la gente llega agotada, quemada o con las emociones tan a flor de piel que ya no puede discutir con provecho.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_07.md",
+        "lineas": "237",
+        "frase": "people are just too tired, burnt out, or emotionally charged up to"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-parar_debate_emocion_agotamiento-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando la gente está demasiado cansada, quemada o cargada de emoción para un debate productivo, conviene darse cuenta, porque esos momentos rara vez acaban bien. Tu papel es intervenir y pedir tiempo muerto; si no, la gente decidirá cualquier cosa para poder irse a casa o, peor, estallará una pelea salida de la emoción en carne viva. Aplazas el debate hasta que los ánimos estén mejor. Si has llegado a conocer bien a cada persona de tu equipo, serás lo bastante consciente de sus emociones y su energía como para saber cuándo hace falta intervenir.",
+      "texto_nuevo": "Hay momentos en que tu gente llega a un debate tan agotada, quemada o con las emociones tan a flor de piel que ya no puede discutir con provecho, y te conviene notarlo, porque casi nunca terminan bien. Te toca intervenir y pedir una pausa; de lo contrario, acabarán decidiendo lo que sea con tal de marcharse a casa o, peor aún, saltará una pelea nacida de emociones en carne viva. Deja el debate para cuando los ánimos estén mejor. Si conoces bien a cada persona de tu equipo, captarás lo suficiente de sus emociones y de su energía para saber en qué momento hace falta que intervengas.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_07.md",
+        "lineas": "237",
+        "frase": "There are times when people are just too tired, burnt out, or"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

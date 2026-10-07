@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Ofrecer puntos de recogida en vez de entrega a domicilio",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Cuando el cliente no está en casa, la entrega falla; por lo general se hacen dos visitas más y, si la última también falla, el paquete termina en un centro de distribución lejano desde donde el cliente tiene que ir a recogerlo, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+  "resumen_teorico": "Si nadie está en casa cuando llega el repartidor, la entrega falla. Lo habitual es volver dos veces más, y si en el último intento tampoco hay nadie, el paquete se queda en un centro de distribución alejado y el cliente tiene que desplazarse a buscarlo: a ti te cuesta dinero y al comprador lo frustra. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
   "pasos_accionables": [
     "Pregunta a empresas de mensajería y negocios cercanos qué puntos de recogida tienen disponibles.",
     "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
@@ -273,6 +273,22 @@
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-ofrecer_puntos_recogida-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando el cliente no está en casa, la entrega falla; por lo general se hacen dos visitas más y, si la última también falla, el paquete termina en un centro de distribución lejano desde donde el cliente tiene que ir a recogerlo, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+      "texto_nuevo": "Si nadie está en casa cuando llega el repartidor, la entrega falla. Lo habitual es volver dos veces más, y si en el último intento tampoco hay nadie, el paquete se queda en un centro de distribución alejado y el cliente tiene que desplazarse a buscarlo: a ti te cuesta dinero y al comprador lo frustra. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "234",
+        "frase": "Two return visits are usually made and failure on the last visit means"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

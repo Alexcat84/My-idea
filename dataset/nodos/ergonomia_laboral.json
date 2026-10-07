@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programa de Ergonomía Laboral",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos, cuyo riesgo aumenta al levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+  "resumen_teorico": "Adaptar el trabajo a quien lo hace es la idea central de la ergonomía, y su fin es evitar los trastornos musculoesqueléticos. Ese riesgo crece con ciertas actividades: levantar peso con frecuencia, estirarte de forma repetida para alcanzar algo por encima de la cabeza, empujar o jalar con fuerza una y otra vez, adoptar posturas incómodas o repetir tareas manuales. Para que un programa funcione hace falta que te comprometas, que participen quienes hacen las tareas, que analices el lugar de trabajo, que des prioridad a los controles de ingeniería, que ajustes cómo organizas las tareas, que haya equipo de protección y que revises cada cierto tiempo si esas medidas dan resultado.",
   "pasos_accionables": [
     "Revisar tus registros de accidentes y casi accidentes, incapacidades, reportes de primeros auxilios y los síntomas que comuniquen quienes trabajan contigo para identificar problemas existentes (consulta qué registros exige tu mercado)",
     "Enseñar a quienes trabajan contigo a reconocer señales y síntomas de trastornos musculoesqueléticos y a comunicarlos desde los primeros síntomas",
@@ -126,6 +126,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-ergonomia_laboral-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos, cuyo riesgo aumenta al levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+      "texto_nuevo": "Adaptar el trabajo a quien lo hace es la idea central de la ergonomía, y su fin es evitar los trastornos musculoesqueléticos. Ese riesgo crece con ciertas actividades: levantar peso con frecuencia, estirarte de forma repetida para alcanzar algo por encima de la cabeza, empujar o jalar con fuerza una y otra vez, adoptar posturas incómodas o repetir tareas manuales. Para que un programa funcione hace falta que te comprometas, que participen quienes hacen las tareas, que analices el lugar de trabajo, que des prioridad a los controles de ingeniería, que ajustes cómo organizas las tareas, que haya equipo de protección y que revises cada cierto tiempo si esas medidas dan resultado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "377",
+        "frase": "Ergonomics, fitting the job to the worker, helps prevent musculoskeletal disorders"
+      },
+      "decision": "copia fiel (regla D2, ola k23): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
