@@ -7,11 +7,11 @@
   "resumen_teorico": "Los sistemas de calefacción, ventilación y aire acondicionado representan más de la mitad del consumo energético en edificios de oficina en EE.UU. La actualización de equipos, ajuste de controles automáticos y aprovechamiento de calor residual reduce significativamente costos operativos.",
   "pasos_accionables": [
     "Ajustar controles automáticos según ocupación real del edificio",
-    "Reemplazar equipos HVAC obsoletos por alternativas eficientes",
+    "Reemplazar equipos de climatización obsoletos por alternativas eficientes",
     "Sellar ductos para reducir fugas de aire (hasta 80% menos fuga)",
     "A medida que tu estrategia madure, explorar recuperación de calor residual de procesos de producción, hornos, compresores de aire, calderas y ductos de escape"
   ],
-  "entregable_esperado": "Plan de modernización HVAC con estimación de ahorro energético",
+  "entregable_esperado": "Plan de modernización de la climatización con estimación de ahorro energético",
   "nodos_previos": [
     "actualizacion_iluminacion",
     "mejora_envolvente_edificio"
@@ -75,6 +75,39 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cinco fuentes de calor residual; reducirla a procesos industriales deja fuera calderas, compresores o ductos que muchas empresas sí tienen.; Mismo defecto: la lista de cinco fuentes queda reducida a una.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-actualizacion_hvac-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reemplazar equipos HVAC obsoletos por alternativas eficientes",
+      "texto_nuevo": "Reemplazar equipos de climatización obsoletos por alternativas eficientes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equipos HVAC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-actualizacion_hvac-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de modernización HVAC con estimación de ahorro energético",
+      "texto_nuevo": "Plan de modernización de la climatización con estimación de ahorro energético",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "modernización HVAC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

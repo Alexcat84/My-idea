@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir protocolo de notificación a clientes, empleados y otros cuyos datos puedan estar en riesgo",
     "Establecer procedimientos para mantener operaciones durante un incidente",
-    "Crear proceso de reporte a autoridades y fuerzas del orden",
+    "Crear proceso de notificación a autoridades y fuerzas del orden",
     "Documentar pasos de investigación y contención de ataques",
     "Probar el plan de respuesta regularmente mediante simulacros"
   ],
@@ -73,6 +73,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye a todos aquellos cuyos datos puedan estar en riesgo, no solo a los afectados.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-funcion_respond_plan_incidentes-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear proceso de reporte a autoridades y fuerzas del orden",
+      "texto_nuevo": "Crear proceso de notificación a autoridades y fuerzas del orden",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

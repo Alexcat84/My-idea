@@ -22,7 +22,7 @@
     "cierre_segun_complejidad_venta"
   ],
   "condiciones_activacion": [
-    "Cuando se diagnostica el estilo de venta de un equipo antes de implementar un nuevo método",
+    "Cuando se mide la actitud de un equipo hacia el cierre antes de implementar un nuevo método",
     "Si un vendedor tiene bajo desempeño en ventas complejas y se sospecha dependencia excesiva de técnicas de cierre"
   ],
   "ids_alias": [
@@ -94,6 +94,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la actitud no predice con precisión la conducta y que la mejor prueba es observar las llamadas.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-escala_actitud_cierre-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se diagnostica el estilo de venta de un equipo antes de implementar un nuevo método",
+      "texto_nuevo": "Cuando se mide la actitud de un equipo hacia el cierre antes de implementar un nuevo método",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "450, 3288",
+        "frase": "you can’t use attitude scales to predict behavior accurately"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

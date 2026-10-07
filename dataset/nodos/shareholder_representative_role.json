@@ -20,7 +20,7 @@
     "gestion_sindicato_inversores"
   ],
   "condiciones_activacion": [
-    "Cuando se cierra una adquisición y existen mecanismos de escrow, earn-out o litigio pendientes post-cierre"
+    "Cuando se cierra una adquisición, que no termina con el cierre: quedan escrow, earn-outs, ajustes de capital de trabajo o litigios pendientes post-cierre"
   ],
   "etiqueta_arbol": "Nombra un Representante de Accionistas",
   "fuentes_internas": [
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte desconfiar de dejar el rol a un VC; el paso lo presenta como opción neutra.; Mismo defecto que la marca 0.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-shareholder_representative_role-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se cierra una adquisición y existen mecanismos de escrow, earn-out o litigio pendientes post-cierre",
+      "texto_nuevo": "Cuando se cierra una adquisición, que no termina con el cierre: quedan escrow, earn-outs, ajustes de capital de trabajo o litigios pendientes post-cierre",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4362",
+        "frase": "Acquisitions are not actually finished when the deal closes and the money trades hands."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

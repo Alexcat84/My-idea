@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir el plan de muestreo (n, c) a evaluar",
     "Calcular la probabilidad de aceptación para distintos niveles de p usando distribución Poisson, binomial o hipergeométrica",
-    "Graficar la curva OC resultante",
+    "Graficar la curva característica de operación resultante",
     "Analizar los riesgos α (productor) y β (consumidor) en la curva",
     "Ajustar el plan de muestreo si los riesgos no son aceptables"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Evalúa el Riesgo de Muestreo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-curva_caracteristica_operativa-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Graficar la curva OC resultante",
+      "texto_nuevo": "Graficar la curva característica de operación resultante",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "curva OC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

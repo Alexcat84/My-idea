@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones; el tiempo ocioso, cuando el producto no se necesita, queda fuera. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando, bajo ciertas condiciones, la fórmula de estado estable basada en MTBF y MTTR.",
   "pasos_accionables": [
-    "Determinar el MTBF del producto o sistema",
+    "Determinar el tiempo medio entre fallas (MTBF) del producto o sistema",
     "Determinar el MTTR (tiempo medio de reparación) o MDT (tiempo medio de inactividad)",
     "Calcular la disponibilidad usando la fórmula de estado estable A = MTBF/(MTBF+MDT)",
     "Verificar que se cumplan los supuestos, que no siempre se dan: tasa de fallo y de reparación constantes, que buscar fallas no cambie la tasa de fallo, que no haya crecimiento de confiabilidad y que el mantenimiento preventivo quede fuera del periodo calculado; si no se cumplen, usar fórmulas más precisas",
@@ -73,6 +73,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la fórmula de estado estable vale bajo ciertas condiciones y se basa en supuestos que no siempre se cumplen.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-disponibilidad_producto-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar el MTBF del producto o sistema",
+      "texto_nuevo": "Determinar el tiempo medio entre fallas (MTBF) del producto o sistema",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el MTBF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

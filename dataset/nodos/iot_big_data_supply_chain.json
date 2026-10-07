@@ -7,9 +7,9 @@
   "resumen_teorico": "El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolución va desde códigos de barras, pasando por RFID, hasta microchips embebidos en casi cualquier producto, permitiendo un seguimiento continuo y granular del movimiento de mercancías.",
   "pasos_accionables": [
     "Mapear los puntos de la cadena de suministro donde se necesita visibilidad en tiempo real",
-    "Seleccionar tecnología de tagging adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
-    "Establecer una base de datos centralizada que capture y almacene los datos generados por los dispositivos IoT",
-    "Definir qué patrones o KPIs se analizarán con los datos recolectados (tiempos de tránsito, quiebres de stock, etc.)"
+    "Seleccionar tecnología de etiquetado adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
+    "Establecer una base de datos centralizada que capture y almacene los datos generados por los dispositivos de internet de las cosas (IoT)",
+    "Definir qué patrones o indicadores clave se analizarán con los datos recolectados (tiempos de tránsito, quiebres de stock, etc.)"
   ],
   "entregable_esperado": "Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis",
   "nodos_previos": [
@@ -23,7 +23,7 @@
     "Cuando la empresa carece de visibilidad en tiempo real sobre el movimiento de sus productos",
     "Si se busca alimentar sistemas de IA con datos operativos de calidad"
   ],
-  "etiqueta_arbol": "Rastrea tu Cadena con IoT",
+  "etiqueta_arbol": "Rastrea tu Cadena con Dispositivos Conectados",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
   ],
@@ -112,6 +112,73 @@
       },
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los chips pueden ir en casi cualquier producto; el resumen lo vuelve absoluto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-iot_big_data_supply_chain-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rastrea tu Cadena con IoT",
+      "texto_nuevo": "Rastrea tu Cadena con Dispositivos Conectados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "IoT"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-iot_big_data_supply_chain-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar tecnología de tagging adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
+      "texto_nuevo": "Seleccionar tecnología de etiquetado adecuada (código de barras, RFID, chips IoT) según costo y necesidad de datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tagging"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-iot_big_data_supply_chain-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer una base de datos centralizada que capture y almacene los datos generados por los dispositivos IoT",
+      "texto_nuevo": "Establecer una base de datos centralizada que capture y almacene los datos generados por los dispositivos de internet de las cosas (IoT)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dispositivos IoT"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-iot_big_data_supply_chain-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir qué patrones o KPIs se analizarán con los datos recolectados (tiempos de tránsito, quiebres de stock, etc.)",
+      "texto_nuevo": "Definir qué patrones o indicadores clave se analizarán con los datos recolectados (tiempos de tránsito, quiebres de stock, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "KPIs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

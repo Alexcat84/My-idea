@@ -6,13 +6,13 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Herramienta complementaria al Test Card para documentar los resultados de los experimentos: qué hipótesis se testeó, qué resultados se obtuvieron, qué tan confiables son los datos, qué conclusiones se derivan y qué acciones se tomarán (pivotar, buscar confirmación, profundizar, avanzar al siguiente bloque, o ejecutar).",
   "pasos_accionables": [
-    "Registrar la hipótesis testeada y los datos/resultados obtenidos",
+    "Registrar la hipótesis probada y los datos/resultados obtenidos",
     "Evaluar la fiabilidad de los datos",
-    "Definir las conclusiones e insights derivados",
+    "Definir las conclusiones y hallazgos derivados",
     "Determinar qué tan drásticas son las acciones requeridas según lo aprendido",
-    "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los insights y la fiabilidad de los datos te satisfagan"
+    "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los hallazgos y la fiabilidad de los datos te satisfagan"
   ],
-  "entregable_esperado": "Learning Card completo por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
+  "entregable_esperado": "Tarjeta de aprendizaje completa por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
   "nodos_previos": [
     "test_card",
     "build_measure_learn"
@@ -78,6 +78,73 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro permite que una Learning Card reúna las observaciones de varias Test Cards; el entregable exige una por experimento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-learning_card-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar la hipótesis testeada y los datos/resultados obtenidos",
+      "texto_nuevo": "Registrar la hipótesis probada y los datos/resultados obtenidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hipótesis testeada"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-learning_card-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir las conclusiones e insights derivados",
+      "texto_nuevo": "Definir las conclusiones y hallazgos derivados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-learning_card-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los insights y la fiabilidad de los datos te satisfagan",
+      "texto_nuevo": "Decidir la acción concreta: pivotar si la hipótesis se invalidó; confirmar con más pruebas si pocos datos sugieren acciones drásticas; profundizar para entender por qué ocurre algo; avanzar o ejecutar cuando los hallazgos y la fiabilidad de los datos te satisfagan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-learning_card-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Learning Card completo por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
+      "texto_nuevo": "Tarjeta de aprendizaje completa por cada experimento o grupo de experimentos, con decisión clara sobre próximos pasos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Learning Card completo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -24,7 +24,7 @@
   ],
   "condiciones_activacion": [
     "Te cansaste de que tus entregas fallen porque nadie esta en casa",
-    "Vendes en una zona con calles difíciles de encontrar o mucho trafico",
+    "Vendes en una zona con calles difíciles de encontrar",
     "Quieres bajar el costo de la ultima milla sin perder ventas",
     "Tus clientes te piden recoger su pedido cuando les convenga a ellos"
   ],
@@ -239,6 +239,23 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-ofrecer_puntos_recogida-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vendes en una zona con calles difíciles de encontrar o mucho trafico",
+      "texto_nuevo": "Vendes en una zona con calles difíciles de encontrar",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "244",
+        "frase": "properties can be more difficult to find and drop locations can be more idiosyncratic"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

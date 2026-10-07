@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Evaluar si existe una necesidad real de capital antes de acudir a este círculo cercano",
     "Considerar tratar la inversión como una donación (sin expectativa de retorno) para reducir el riesgo relacional",
-    "Establecer acuerdos explícitos y 'firewalls' sobre escenarios de pérdida total",
+    "Establecer acuerdos explícitos y salvaguardas sobre escenarios de pérdida total",
     "Discutir abiertamente el peor escenario posible con los inversores antes de aceptar el dinero y, si no se puede, resistir la tentación de aceptarlo"
   ],
-  "entregable_esperado": "Acuerdo de inversión claro (documento o conversación explícita) que defina expectativas, riesgos y el tipo de relación financiera (deuda, equity o donación)",
+  "entregable_esperado": "Acuerdo de inversión claro (documento o conversación explícita) que defina expectativas, riesgos y el tipo de relación financiera (deuda, participación accionaria o donación)",
   "nodos_previos": [
     "mvp_catalogo_tecnicas",
     "embudo_secuencial_de_inversores"
@@ -76,6 +76,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona este dinero a cortafuegos y a hablar del peor escenario; si no, pide resistir la tentación de aceptarlo, y el paso pierde esa alternativa.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-financiamiento_amigos_y_familia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer acuerdos explícitos y 'firewalls' sobre escenarios de pérdida total",
+      "texto_nuevo": "Establecer acuerdos explícitos y salvaguardas sobre escenarios de pérdida total",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'firewalls'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-financiamiento_amigos_y_familia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerdo de inversión claro (documento o conversación explícita) que defina expectativas, riesgos y el tipo de relación financiera (deuda, equity o donación)",
+      "texto_nuevo": "Acuerdo de inversión claro (documento o conversación explícita) que defina expectativas, riesgos y el tipo de relación financiera (deuda, participación accionaria o donación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -1,0 +1,326 @@
+[
+ {
+  "id": "condiciones-resto-card_sort-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "card_sort",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Durante síntesis de investigación cualitativa",
+  "texto_nuevo": "Durante la investigación con la persona para quien diseñas",
+  "cita": {
+   "libro": "The field guide to human-centered design",
+   "fichero": "txt/The field guide to human-center - Unknown.txt",
+   "lineas": "2285-2335",
+   "frase": "Now give the cards to the person you’re designing for"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-ciclo_shewhart_pdsa-condiciones_activacion-3",
+  "fecha": "2026-10-07",
+  "node_id": "ciclo_shewhart_pdsa",
+  "campo": "condiciones_activacion",
+  "indice": 3,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente.",
+  "texto_nuevo": "Cuando no conoces con certeza la causa raíz de un problema y quieres probar cambios guiados por lo que sabes del proceso, con una prueba bien diseñada.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "8872-8874",
+   "frase": "trying changes suggested with the aid of knowledge of chemistry, following the Shewhart cycle"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-correlacion_cero_muestra_remanente-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "correlacion_cero_muestra_remanente",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando se desea justificar estadísticamente por qué la inspección por muestreo no mejora la calidad final del lote",
+  "texto_nuevo": "Cuando se desea justificar estadísticamente por qué, con el proceso en estado de control estadístico, la inspección por muestreo no mejora la calidad final del lote",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9310, 9370, 10081",
+   "frase": "in a state of statistical control samples from lots and remainders are uncorrelated"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-costo_de_calidad-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "costo_de_calidad",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando notas crecimientos inusuales en inventario, retrabajo o costos operativos ligados a defectos.",
+  "texto_nuevo": "Cuando notas crecimientos inusuales en retrabajo o costos operativos ligados a defectos.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1353-1371, 1393",
+   "frase": "fully loaded costs of (1) all efforts involved in doing work over"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-dependency_analysis-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "dependency_analysis",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el modelo de negocio depende de tendencias tecnológicas o de mercado que la empresa no controla",
+  "texto_nuevo": "Cuando el modelo de negocio depende de cambios tecnológicos, regulatorios o de mercado que la empresa no controla",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "7477",
+   "frase": "Dependencies also include changes in consumers’ lifestyles or buying behavior, new laws"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-dividends_terms-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "dividends_terms",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando la ronda es muy grande (más de 50 millones de dólares)",
+  "texto_nuevo": "Cuando la ronda es muy grande (por lo general, más de 50 millones de dólares)",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "1662",
+   "frase": "private equity and buyout deals where big money is involved (typically greater than $50 million)"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-escala_actitud_cierre-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "escala_actitud_cierre",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando se diagnostica el estilo de venta de un equipo antes de implementar un nuevo método",
+  "texto_nuevo": "Cuando se mide la actitud de un equipo hacia el cierre antes de implementar un nuevo método",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "450, 3288",
+   "frase": "you can’t use attitude scales to predict behavior accurately"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-escenarios_diseno_modelo_negocio-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "escenarios_diseno_modelo_negocio",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Necesitas anticipar cómo un entorno futuro, como tecnología o competencia, impactará tu modelo de negocio actual",
+  "texto_nuevo": "Necesitas pensar cómo podría tener que evolucionar tu modelo de negocio actual ante distintos entornos futuros posibles, como cambios de tecnología o competencia",
+  "cita": {
+   "libro": "Business Model Generation - Osterwalder, Alexander",
+   "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+   "lineas": "2849",
+   "frase": "The goal here is not to predict the future, but rather to imagine possible futures"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-evaluacion_desempeno_junta_directiva-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "evaluacion_desempeno_junta_directiva",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática, con datos concretos en vez de impresiones",
+  "texto_nuevo": "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "10851-10853",
+   "frase": "we take a different approach, “Improvement through Awareness.”"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-getting_started_security_assessment_monitoring-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_security_assessment_monitoring",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Después de completar una auditoría o evaluación de seguridad que revele brechas.",
+  "texto_nuevo": "De forma periódica, para evaluar si tus requisitos de seguridad funcionan, y después de completar una auditoría o evaluación de seguridad que revele brechas.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "633-645",
+   "frase": "Periodically assess systems to determine if the requirements are effective"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-mapa_flujo_trabajo_cliente-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "mapa_flujo_trabajo_cliente",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando terminaste la fase de descubrimiento del problema con tus clientes (Customer Discovery) y necesitas validar tus hipótesis antes de construir la solución",
+  "texto_nuevo": "Cuando terminaste la fase de descubrimiento del problema con tus clientes y necesitas validar tus hipótesis antes de presentarles tu solución",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "8690-8721, 8763",
+   "frase": "the group moves on to present its potential product solution to customers"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-mentor_dos_tipos_de_amigos-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "mentor_dos_tipos_de_amigos",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el fundador enfrenta una decisión crítica y necesita consejo de alguien con experiencia relevante y confianza total.",
+  "texto_nuevo": "Cuando al fundador las cosas le salen terriblemente mal y necesita consejo de alguien con experiencia relevante y confianza total.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "284-290",
+   "frase": "somebody you can call when things go horribly wrong"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-metodologia_6s-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "metodologia_6s",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Antes de implementar cualquier otra solución de mejora de procesos",
+  "texto_nuevo": "Antes de poner en marcha la solución de un proyecto de mejora de procesos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22484, 13408",
+   "frase": "should be put in place prior to the project solution being implemented"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-metodologia_evaluacion_entrenamiento_ventas-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "metodologia_evaluacion_entrenamiento_ventas",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión antes de decidir",
+  "texto_nuevo": "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "3023-3033",
+   "frase": "Assuming that we pass on Test 1 and Test 2, measure the productivity gain"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-ofrecer_puntos_recogida-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "ofrecer_puntos_recogida",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Vendes en una zona con calles difíciles de encontrar o mucho trafico",
+  "texto_nuevo": "Vendes en una zona con calles difíciles de encontrar",
+  "cita": {
+   "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+   "fichero": "txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+   "lineas": "244",
+   "frase": "properties can be more difficult to find and drop locations can be more idiosyncratic"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-promocion_sitio_web-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "promocion_sitio_web",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si el sitio web ya está en línea pero no genera tráfico o ventas suficientes",
+  "texto_nuevo": "Si el sitio web ya está en línea, sin esperar a que el tráfico o las ventas lleguen solos",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "3295",
+   "frase": "you must not wait for people to stumble across it"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-resolver_dudas_frecuentes_pedir_critica-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "resolver_dudas_frecuentes_pedir_critica",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando ya estás pidiendo crítica y te tropiezas con una de estas dudas frecuentes.",
+  "texto_nuevo": "Cuando empiezas a pedir crítica, o quieres empezar, y te tropiezas con una de estas dudas frecuentes.",
+  "cita": {
+   "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+   "fichero": "fuentes/scott_radical_candor/cap_13.md",
+   "lineas": "177-183",
+   "frase": "If I'm really being honest, I am afraid to get critical feedback."
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-shareholder_representative_role-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "shareholder_representative_role",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando se cierra una adquisición y existen mecanismos de escrow, earn-out o litigio pendientes post-cierre",
+  "texto_nuevo": "Cuando se cierra una adquisición, que no termina con el cierre: quedan escrow, earn-outs, ajustes de capital de trabajo o litigios pendientes post-cierre",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4362",
+   "frase": "Acquisitions are not actually finished when the deal closes and the money trades hands."
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

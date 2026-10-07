@@ -20,10 +20,29 @@
     "key_partners_hypothesis"
   ],
   "condiciones_activacion": [
-    "Cuando el modelo de negocio depende de tendencias tecnológicas o de mercado que la empresa no controla"
+    "Cuando el modelo de negocio depende de cambios tecnológicos, regulatorios o de mercado que la empresa no controla"
   ],
   "etiqueta_arbol": "Mapea lo que no Controlas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-dependency_analysis-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el modelo de negocio depende de tendencias tecnológicas o de mercado que la empresa no controla",
+      "texto_nuevo": "Cuando el modelo de negocio depende de cambios tecnológicos, regulatorios o de mercado que la empresa no controla",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "7477",
+        "frase": "Dependencies also include changes in consumers’ lifestyles or buying behavior, new laws"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

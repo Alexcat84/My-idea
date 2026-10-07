@@ -9,11 +9,11 @@
     "Revisar los estados financieros históricos de la empresa objetivo en detalle",
     "Verificar la calidad y consistencia de las prácticas contables utilizadas",
     "Evaluar la salud del flujo de caja operativo y el mantenimiento de activos",
-    "Calcular el valor del goodwill y otros intangibles",
+    "Calcular el valor de la plusvalía y otros intangibles",
     "Aplicar métodos de valoración (múltiplos, flujo de caja descontado, etc.)",
     "Estimar sinergias y ahorros por eliminación de duplicidades"
   ],
-  "entregable_esperado": "Un informe de due diligence financiero completo con una valoración justificada del precio de adquisición propuesto.",
+  "entregable_esperado": "Un informe completo de revisión financiera previa a la compra con una valoración justificada del precio de adquisición propuesto.",
   "nodos_previos": [
     "estrategias_de_crecimiento_empresarial",
     "metodos_de_valuacion",
@@ -26,8 +26,57 @@
     "Cuando la estrategia de crecimiento elegida es la adquisición de otra empresa",
     "Antes de cerrar cualquier negociación de compra de un negocio"
   ],
-  "etiqueta_arbol": "Revisa Todo antes de Comprar",
+  "etiqueta_arbol": "Revisa la Empresa antes de Comprarla",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-due_diligence_adquisiciones-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Revisa Todo antes de Comprar",
+      "texto_nuevo": "Revisa la Empresa antes de Comprarla",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v01)",
+        "evidencia": "El concepto es revisar a fondo una empresa antes de adquirirla y 'Revisa Todo antes de Comprar' promete revisar cualquier compra; la nueva etiqueta nombra justo eso, con 6 palabras y verbo en segunda persona."
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-due_diligence_adquisiciones-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el valor del goodwill y otros intangibles",
+      "texto_nuevo": "Calcular el valor de la plusvalía y otros intangibles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "goodwill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-due_diligence_adquisiciones-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un informe de due diligence financiero completo con una valoración justificada del precio de adquisición propuesto.",
+      "texto_nuevo": "Un informe completo de revisión financiera previa a la compra con una valoración justificada del precio de adquisición propuesto.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "due diligence"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

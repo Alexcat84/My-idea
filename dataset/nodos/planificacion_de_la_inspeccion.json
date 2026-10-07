@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Designar las estaciones de inspección a lo largo del proceso productivo",
     "Especificar instrucciones detalladas para cada punto de inspección",
-    "Definir las facilidades y equipos requeridos para la inspección",
+    "Definir las instalaciones y equipos requeridos para la inspección",
     "Elaborar una clasificación de características derivada de especificaciones",
     "Elaborar una clasificación de defectos basada en síntomas de no conformidad"
   ],
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Planifica tus Puntos de Inspección",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-planificacion_de_la_inspeccion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir las facilidades y equipos requeridos para la inspección",
+      "texto_nuevo": "Definir las instalaciones y equipos requeridos para la inspección",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "facilidades"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Las provisiones de antidilución protegen a los inversionistas de rondas 'down round' ajustando el precio de conversión de sus acciones preferentes. El cálculo se hace sobre base 'as-if-converted' a common stock y, por lo general, no se emiten más acciones sino que se ajusta el precio de conversión. La diferencia entre broad-based y narrow-based radica en la definición de 'common stock outstanding' (CSO): broad-based incluye todas las opciones, warrants y valores convertibles (incluyendo opciones de empleados), mientras narrow-based solo cuenta acciones actualmente en circulación. Esta definición afecta significativamente el nivel de dilución resultante.",
   "pasos_accionables": [
-    "Identificar si el term sheet usa weighted average broad-based o narrow-based",
-    "Verificar la definición exacta de CSO (common stock outstanding) en el documento legal",
+    "Identificar si la hoja de términos usa promedio ponderado de base amplia o de base restringida",
+    "Verificar la definición exacta de CSO (acciones ordinarias en circulación) en el documento legal",
     "Calcular el impacto potencial de dilución bajo cada escenario antes de firmar",
-    "Negociar por broad-based si se es fundador/empleado, ya que diluye menos"
+    "Negociar por base amplia si se es fundador/empleado, ya que diluye menos"
   ],
-  "entregable_esperado": "Cláusula de antidilución revisada con definición clara de CSO y cálculo de impacto en cap table",
+  "entregable_esperado": "Cláusula de antidilución revisada con definición clara de CSO y cálculo de impacto en la tabla de capitalización",
   "nodos_previos": [
     "term_sheet_negociacion",
     "preferencia_de_liquidacion",
@@ -60,6 +60,74 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-antidilution_weighted_average_broad_narrow-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar si el term sheet usa weighted average broad-based o narrow-based",
+      "texto_nuevo": "Identificar si la hoja de términos usa promedio ponderado de base amplia o de base restringida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "term sheet",
+          "weighted average broad-based o narrow-based"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-antidilution_weighted_average_broad_narrow-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar la definición exacta de CSO (common stock outstanding) en el documento legal",
+      "texto_nuevo": "Verificar la definición exacta de CSO (acciones ordinarias en circulación) en el documento legal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "common stock outstanding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-antidilution_weighted_average_broad_narrow-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar por broad-based si se es fundador/empleado, ya que diluye menos",
+      "texto_nuevo": "Negociar por base amplia si se es fundador/empleado, ya que diluye menos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "broad-based"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-antidilution_weighted_average_broad_narrow-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de antidilución revisada con definición clara de CSO y cálculo de impacto en cap table",
+      "texto_nuevo": "Cláusula de antidilución revisada con definición clara de CSO y cálculo de impacto en la tabla de capitalización",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cap table"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

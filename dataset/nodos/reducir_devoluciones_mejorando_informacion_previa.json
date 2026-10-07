@@ -7,7 +7,7 @@
   "resumen_teorico": "Puede pasar que buena parte de tus devoluciones nazca de que la información que das antes de la compra no alcanza, y que el comprador te eche la culpa a ti. Esto pesa mucho porque una devolución no es gratis: cada producto devuelto pierde valor frente al precio original y hay que revisarlo antes de poder revenderlo. Además de gestionar bien los retornos, conviene reducirlos desde el principio atacando la causa antes de que ocurra: dar información honesta y completa antes de que la persona compre. Esto es especialmente crítico en categorías como ropa, donde es común que la gente compre varias tallas o colores a propósito sabiendo que va a devolver lo que no le sirva.",
   "pasos_accionables": [
     "Revisa la descripción de tu producto y agrega medidas, materiales o detalles que hoy falten.",
-    "Suma fotos desde varios ángulos y, si aplica, una tabla de tallas o guía de uso.",
+    "Suma fotos desde varios ángulos y, si corresponde, una tabla de tallas o guía de uso.",
     "Lee las últimas devoluciones que recibiste y busca el motivo repetido en la descripción.",
     "Corrige la ficha del producto que más se devuelve primero, no todo el catálogo a la vez.",
     "Pregunta directamente al cliente que devuelve qué esperaba y qué recibió."
@@ -22,7 +22,7 @@
     "Vendes ropa u otra categoría donde la gente compra varias opciones para probar y devolver.",
     "Quieres bajar el costo de devoluciones sin mejorar toda la logística de retorno."
   ],
-  "etiqueta_arbol": "Describe mejor para devolver menos",
+  "etiqueta_arbol": "Describe Mejor para Recibir Menos Devoluciones",
   "fuentes_internas": [
     "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)"
   ],
@@ -215,6 +215,37 @@
       },
       "decision": "lectura total de procedencia (w24r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-reducir_devoluciones_mejorando_informacion_previa-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Describe mejor para devolver menos",
+      "texto_nuevo": "Describe Mejor para Recibir Menos Devoluciones",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v01)",
+        "evidencia": "Quien devuelve es el comprador, no la persona; la meta del concepto es recibir menos devoluciones, y se ponen las mayúsculas de la casa."
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reducir_devoluciones_mejorando_informacion_previa-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Suma fotos desde varios ángulos y, si aplica, una tabla de tallas o guía de uso.",
+      "texto_nuevo": "Suma fotos desde varios ángulos y, si corresponde, una tabla de tallas o guía de uso.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

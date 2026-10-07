@@ -20,7 +20,7 @@
   "condiciones_activacion": [
     "Cuando ya cuentas con una junta o consejo que te asesora y necesitas medir qué tan efectivo es",
     "Si notas que los intereses de las personas involucradas en el negocio no coinciden y necesitas volver a enfocarlos",
-    "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática, con datos concretos en vez de impresiones"
+    "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática"
   ],
   "etiqueta_arbol": "Evalúa a tu Junta Directiva",
   "fuentes_internas": [
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que un nivel general aceptable no compensa un punto con nivel muy bajo, que sería inadmisible.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-evaluacion_desempeno_junta_directiva-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática, con datos concretos en vez de impresiones",
+      "texto_nuevo": "Cuando quieres mejorar el gobierno de tu negocio de forma sistemática",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10851-10853",
+        "frase": "we take a different approach, “Improvement through Awareness.”"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -29,7 +29,7 @@
     "Cuando se requiere mejorar sistemáticamente una etapa de un proceso",
     "Si se ha detectado una causa especial mediante control estadístico de procesos",
     "Cuando quieres probar experimentalmente si un cambio propuesto genera una mejora antes de institucionalizarlo.",
-    "Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente."
+    "Cuando no conoces con certeza la causa raíz de un problema y quieres probar cambios guiados por lo que sabes del proceso, con una prueba bien diseñada."
   ],
   "etiqueta_arbol": "Investiga Causas y Mejora",
   "ids_alias": [
@@ -96,6 +96,23 @@
       },
       "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "condiciones-resto-ciclo_shewhart_pdsa-condiciones_activacion-3",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando no conoces con certeza la causa raíz de un problema y prefieres probar cambios directamente.",
+      "texto_nuevo": "Cuando no conoces con certeza la causa raíz de un problema y quieres probar cambios guiados por lo que sabes del proceso, con una prueba bien diseñada.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8872-8874",
+        "frase": "trying changes suggested with the aid of knowledge of chemistry, following the Shewhart cycle"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

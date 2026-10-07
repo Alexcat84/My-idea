@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se diseña o evalúa un plan de muestreo de aceptación",
-    "Cuando se desea justificar estadísticamente por qué la inspección por muestreo no mejora la calidad final del lote"
+    "Cuando se desea justificar estadísticamente por qué, con el proceso en estado de control estadístico, la inspección por muestreo no mejora la calidad final del lote"
   ],
   "etiqueta_arbol": "Entiende la Correlación Cero",
   "correcciones": [
@@ -52,6 +52,23 @@
         "evidencia": "F11-012: Disenar planes de muestreo y verificar el control estadistico de un proceso de produccion es control operativo; la palabra validacion del entregable no es validacion de mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "condiciones-resto-correlacion_cero_muestra_remanente-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se desea justificar estadísticamente por qué la inspección por muestreo no mejora la calidad final del lote",
+      "texto_nuevo": "Cuando se desea justificar estadísticamente por qué, con el proceso en estado de control estadístico, la inspección por muestreo no mejora la calidad final del lote",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9310, 9370, 10081",
+        "frase": "in a state of statistical control samples from lots and remainders are uncorrelated"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

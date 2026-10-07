@@ -29,7 +29,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando ya estás pidiendo crítica y te tropiezas con una de estas dudas frecuentes."
+    "Cuando empiezas a pedir crítica, o quieres empezar, y te tropiezas con una de estas dudas frecuentes."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -502,6 +502,23 @@
       "motivos": [
         "regionalismo"
       ]
+    },
+    {
+      "id": "condiciones-resto-resolver_dudas_frecuentes_pedir_critica-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ya estás pidiendo crítica y te tropiezas con una de estas dudas frecuentes.",
+      "texto_nuevo": "Cuando empiezas a pedir crítica, o quieres empezar, y te tropiezas con una de estas dudas frecuentes.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_13.md",
+        "lineas": "177-183",
+        "frase": "If I'm really being honest, I am afraid to get critical feedback."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Resuelve tus Dudas al Pedir Crítica",

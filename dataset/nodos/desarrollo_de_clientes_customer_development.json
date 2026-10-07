@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Convertir las hipótesis de negocio en preguntas específicas para el cliente.",
     "Salir a entrevistar clientes potenciales antes de construir el producto completo.",
-    "Iterar el producto basándose en el feedback ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.",
+    "Iterar el producto basándose en la retroalimentación ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.",
     "Combinar el aprendizaje del cliente con ingeniería ágil para ajustar rápidamente el producto."
   ],
   "entregable_esperado": "Un ciclo de retroalimentación de clientes documentado que valide o invalide las hipótesis iniciales del modelo de negocio.",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Sal y Valida con Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-desarrollo_de_clientes_customer_development-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Iterar el producto basándose en el feedback ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.",
+      "texto_nuevo": "Iterar el producto basándose en la retroalimentación ('dos pasos adelante, uno atrás') en lugar de seguir un plan rígido.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

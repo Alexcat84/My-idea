@@ -7,7 +7,7 @@
   "resumen_teorico": "Una vez decidida la ubicación de una instalación (decisión costosa y difícil de revertir), la gestión continua se enfoca en tres decisiones clave: el rol que jugará cada instalación (qué actividades realiza, lo que afecta la flexibilidad de la cadena de suministro), cómo se asigna la capacidad en cada instalación (equipo y mano de obra, afectando rentabilidad), y la asignación de proveedores y mercados a cada instalación (afectando costos de transporte y capacidad de cumplir la demanda).",
   "pasos_accionables": [
     "Definir el rol específico de cada instalación (única función vs. multipropósito)",
-    "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajas tasas de utilización y mayores costos) o sub-capacidad (pérdida de ventas)",
+    "Calcular la capacidad óptima a asignar evitando sobrecapacidad (bajas tasas de utilización y mayores costos) o subcapacidad (pérdida de ventas)",
     "Asignar proveedores y mercados a cada instalación considerando costos de transporte",
     "Evaluar el impacto de estas decisiones en la flexibilidad general de la cadena de suministro"
   ],
@@ -55,6 +55,21 @@
         "motivo": "La gestion del rol y la capacidad de instalaciones no se continua en el proceso de sourcing por commodities; la relacion es solo de cadena de suministro en general."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-gestion_instalaciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajas tasas de utilización y mayores costos) o sub-capacidad (pérdida de ventas)",
+      "texto_nuevo": "Calcular la capacidad óptima a asignar evitando sobrecapacidad (bajas tasas de utilización y mayores costos) o subcapacidad (pérdida de ventas)",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v01)",
+        "evidencia": "Los prefijos 'sobre' y 'sub' se escriben unidos a la palabra; se arreglan ambos sin tocar nada más."
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

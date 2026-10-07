@@ -6,14 +6,14 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Elegir el método de transporte internacional (aéreo, marítimo o multimodal) depende del costo, el tiempo de entrega y la accesibilidad del producto para el comprador extranjero. Aunque el transporte aéreo puede ser más caro, su costo puede compensarse con menores costos de transporte doméstico y entregas más rápidas, lo que puede darte ventaja competitiva. En el transporte multimodal, un único operador asume la responsabilidad de todo el trayecto desde tu fábrica hasta el destino final. Para envíos voluminosos, puedes reservar espacio con anticipación mediante un booking contract. Además, debes verificar el destino exacto de la mercancía, incluyendo posibles zonas francas o puertos libres, y asegurar que la documentación de embarque incluya las marcas de exportación correspondientes.",
   "pasos_accionables": [
-    "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
+    "Consulta con un agente de carga internacional para determinar el mejor método de envío.",
     "Compara costos, tiempos de entrega y accesibilidad del producto para tu comprador entre transporte aéreo, marítimo y multimodal.",
-    "Reserva espacio con anticipación mediante un booking contract si tu carga es voluminosa.",
+    "Reserva espacio con anticipación mediante un contrato de reserva si tu carga es voluminosa.",
     "Verifica con el comprador el destino final de la mercancía, incluyendo zonas francas o puertos libres.",
     "Agrega las marcas de exportación requeridas a tu documentación de embarque.",
-    "Confirma las instrucciones de notificación al freight forwarder por parte del transportista terrestre."
+    "Confirma las instrucciones de notificación al agente de carga por parte del transportista terrestre."
   ],
-  "entregable_esperado": "Método de transporte internacional seleccionado, con booking contract confirmado si tu carga es voluminosa, y documentación de embarque preparada con marcas de exportación.",
+  "entregable_esperado": "Método de transporte internacional seleccionado, con contrato de reserva confirmado si tu carga es voluminosa, y documentación de embarque preparada con marcas de exportación.",
   "nodos_previos": [
     "documentacion_exportacion",
     "incoterms_reglas_comerciales_internacionales"
@@ -175,6 +175,73 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da tres factores para elegir el método y el paso omite la accesibilidad del producto para el comprador.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-seleccion_metodo_transporte_internacional-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consulta con un freight forwarder internacional para determinar el mejor método de envío.",
+      "texto_nuevo": "Consulta con un agente de carga internacional para determinar el mejor método de envío.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarder"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_metodo_transporte_internacional-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reserva espacio con anticipación mediante un booking contract si tu carga es voluminosa.",
+      "texto_nuevo": "Reserva espacio con anticipación mediante un contrato de reserva si tu carga es voluminosa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "booking contract"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_metodo_transporte_internacional-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Confirma las instrucciones de notificación al freight forwarder por parte del transportista terrestre.",
+      "texto_nuevo": "Confirma las instrucciones de notificación al agente de carga por parte del transportista terrestre.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarder"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_metodo_transporte_internacional-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Método de transporte internacional seleccionado, con booking contract confirmado si tu carga es voluminosa, y documentación de embarque preparada con marcas de exportación.",
+      "texto_nuevo": "Método de transporte internacional seleccionado, con contrato de reserva confirmado si tu carga es voluminosa, y documentación de embarque preparada con marcas de exportación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "booking contract"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

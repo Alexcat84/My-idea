@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "El ambiente y la cultura que construyes en tu equipo son uno de los mayores factores que separan a los mejores innovadores de los peores. Esto incluye mostrar apoyo visible a la iniciativa, reconocer tanto a quienes lideran un proyecto como a todo el equipo que participó, asegurarte de que tu equipo entienda cómo funciona el proceso de innovación, mantener una comunicación abierta entre las distintas áreas y ubicaciones, y animarte a asumir más riesgo en proyectos audaces. También ayuda tener una política clara de no castigar los errores honestos cuando el trabajo se hizo con seriedad, y crear espacios de reconocimiento, como un muro de la fama, para los equipos que lograron resultados. Todo esto genera un entorno donde las personas se animan a proponer y liderar iniciativas, en lugar de frenarse por miedo al error o por no tener claro cómo funciona el proceso.",
   "pasos_accionables": [
-    "Muestra de forma visible tu compromiso con la innovación mediante reportes, exhibiciones o carteles",
+    "Muestra de forma visible tu compromiso con la innovación mediante informes, exhibiciones o carteles",
     "Diseña un sistema de reconocimiento y recompensa para quienes lideran proyectos y para los equipos completos, como un muro de la fama",
     "Establece una política clara de no castigar los errores honestos cuando el trabajo se hizo con seriedad",
     "Explica a tu equipo cómo funciona el proceso de innovación de tu negocio, de la idea al lanzamiento (idea to launch)",
@@ -46,5 +46,24 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-cultura_de_innovacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Muestra de forma visible tu compromiso con la innovación mediante reportes, exhibiciones o carteles",
+      "texto_nuevo": "Muestra de forma visible tu compromiso con la innovación mediante informes, exhibiciones o carteles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

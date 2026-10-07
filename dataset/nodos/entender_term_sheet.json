@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "El term sheet es el documento que resume los términos propuestos de una inversión de capital de riesgo. Aunque hoy puede tener 8 páginas con cláusulas complejas, en esencia solo existen dos cosas que realmente importan en la negociación: economía (cuánto vale la empresa y quién recibe qué) y control (quién toma las decisiones). Entender esto evita perderse en detalles irrelevantes durante la negociación.",
   "pasos_accionables": [
-    "Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
+    "Antes de negociar, identificar qué cláusulas de la hoja de términos afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
     "Priorizar la negociación en estos dos ejes y no distraerse con cláusulas secundarias",
-    "Solicitar asesoría legal especializada en VC para revisar el documento completo",
+    "Solicitar asesoría legal especializada en capital de riesgo para revisar el documento completo",
     "Identificar cláusulas que no afectan ni economía ni control (posibles tácticas de distracción)."
   ],
-  "entregable_esperado": "Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet",
+  "entregable_esperado": "Lista de verificación personal de términos de economía y control identificados antes de firmar cualquier hoja de términos",
   "nodos_previos": [
     "por_que_existen_los_term_sheets",
     "gestion_angel_investors",
@@ -29,7 +29,7 @@
     "Cuando el emprendedor recibe una oferta de inversión de capital de riesgo",
     "Cuando se prepara para negociar una ronda de financiamiento"
   ],
-  "etiqueta_arbol": "Domina tu Term Sheet",
+  "etiqueta_arbol": "Domina tu Hoja de Términos",
   "ids_alias": [
     "term_sheet_overview"
   ],
@@ -42,5 +42,74 @@
   ],
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-entender_term_sheet-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Domina tu Term Sheet",
+      "texto_nuevo": "Domina tu Hoja de Términos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Term Sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-entender_term_sheet-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de negociar, identificar qué cláusulas del term sheet afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
+      "texto_nuevo": "Antes de negociar, identificar qué cláusulas de la hoja de términos afectan la economía (valoración, participación) y cuáles afectan el control (juntas, votos, protecciones)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-entender_term_sheet-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solicitar asesoría legal especializada en VC para revisar el documento completo",
+      "texto_nuevo": "Solicitar asesoría legal especializada en capital de riesgo para revisar el documento completo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-entender_term_sheet-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist personal de términos de economía y control identificados antes de firmar cualquier term sheet",
+      "texto_nuevo": "Lista de verificación personal de términos de economía y control identificados antes de firmar cualquier hoja de términos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist",
+          "term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

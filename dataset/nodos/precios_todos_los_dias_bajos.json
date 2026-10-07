@@ -10,7 +10,7 @@
     "Diseñar una política de precios estables en lugar de descuentos periódicos agresivos",
     "Medir la reducción en fluctuaciones de demanda tras implementar precios constantes"
   ],
-  "entregable_esperado": "Política de pricing estable documentada con proyección de impacto en demanda",
+  "entregable_esperado": "Política de precios estable documentada con proyección de impacto en demanda",
   "nodos_previos": [
     "demand_curve_pricing",
     "mitigacion_efecto_latigo"
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El efecto depende de que el cliente crea que obtendrá un buen precio cada vez que compra, no de la mera estabilidad.; El libro dice que las fluctuaciones pueden crear oleadas de demanda ('can create'); el nodo lo afirma como efecto seguro.; Mismo defecto: se cae la condición de precios bajos en los que el cliente confía cada vez que compra.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-precios_todos_los_dias_bajos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Política de pricing estable documentada con proyección de impacto en demanda",
+      "texto_nuevo": "Política de precios estable documentada con proyección de impacto en demanda",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "El tamaño del option pool (reserva de acciones para futuros empleados) afecta directamente la valuación pre-money efectiva. Los VCs suelen exigir que el aumento del pool ocurra antes de la financiación, diluyendo a los accionistas existentes en lugar de a los nuevos inversores. En etapa temprana, un pool típico está entre 10% y 20%; después suele ser menor.",
   "pasos_accionables": [
-    "Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
-    "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC, aceptando un pool algo mayor que tu presupuesto pero sin un margen enorme.",
-    "Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.",
-    "Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool)."
+    "Crear un presupuesto de opciones: lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
+    "Negociar el tamaño de la reserva de opciones basado en el presupuesto de opciones real, no en cifras arbitrarias del inversionista de capital de riesgo, aceptando una reserva algo mayor que tu presupuesto pero sin un margen enorme.",
+    "Considerar alternativas de negociación: reserva de opciones más pequeña, valuación pre-money más alta, o reserva post-money.",
+    "Verificar si la reserva de opciones incluye opciones ya otorgadas o solo la reserva no emitida."
   ],
-  "entregable_esperado": "Option budget documentado y tamaño de pool negociado alineado con necesidades reales de contratación.",
+  "entregable_esperado": "Presupuesto de opciones documentado y tamaño de la reserva de opciones negociado alineado con necesidades reales de contratación.",
   "nodos_previos": [
     "valuacion_pre_post_money"
   ],
@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Cuando el VC propone un tamaño de option pool que impacta la valuación pre-money."
   ],
-  "etiqueta_arbol": "Calcula tu Pool de Opciones",
+  "etiqueta_arbol": "Calcula tu Reserva de Opciones",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
   ],
@@ -58,6 +58,110 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que conviene aceptar un pool algo mayor que el presupuesto, aunque no por un gran margen.; Misma advertencia perdida.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula tu Pool de Opciones",
+      "texto_nuevo": "Calcula tu Reserva de Opciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Pool"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear un 'option budget': lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
+      "texto_nuevo": "Crear un presupuesto de opciones: lista de contrataciones planeadas hasta la próxima ronda con el tamaño de opción estimado para cada una.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'option budget'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar el tamaño del pool basado en el option budget real, no en cifras arbitrarias del VC, aceptando un pool algo mayor que tu presupuesto pero sin un margen enorme.",
+      "texto_nuevo": "Negociar el tamaño de la reserva de opciones basado en el presupuesto de opciones real, no en cifras arbitrarias del inversionista de capital de riesgo, aceptando una reserva algo mayor que tu presupuesto pero sin un margen enorme.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pool",
+          "option budget",
+          "VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar alternativas de negociación: pool más pequeño, valuación pre-money más alta, o pool post-money.",
+      "texto_nuevo": "Considerar alternativas de negociación: reserva de opciones más pequeña, valuación pre-money más alta, o reserva post-money.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pool"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar si el pool incluye opciones ya otorgadas o solo el pool no emitido (unissued option pool).",
+      "texto_nuevo": "Verificar si la reserva de opciones incluye opciones ya otorgadas o solo la reserva no emitida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pool",
+          "(unissued option pool)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pool_opciones_empleados-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Option budget documentado y tamaño de pool negociado alineado con necesidades reales de contratación.",
+      "texto_nuevo": "Presupuesto de opciones documentado y tamaño de la reserva de opciones negociado alineado con necesidades reales de contratación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Option budget",
+          "pool"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

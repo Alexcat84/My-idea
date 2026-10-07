@@ -6,14 +6,14 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Un plan de acción de emergencia guía tus acciones y las de tus trabajadores durante emergencias laborales. Debe contemplar emergencias internas y externas, definir quién da las órdenes y quién autoriza una evacuación, rutas de evacuación, puntos de encuentro, procedimientos para personas con discapacidad, y métodos de conteo de personal. Aunque solo es obligatorio bajo ciertas normas, revísalo en tu mercado, es una buena práctica general para cualquier negocio.",
   "pasos_accionables": [
-    "Identificar emergencias potenciales internas y externas relevantes a tu negocio",
+    "Identificar emergencias potenciales internas y externas relevantes para tu negocio",
     "Definir quién da las órdenes y quién está autorizado para ordenar una evacuación",
     "Documentar rutas de evacuación y puntos de encuentro",
     "Establecer procedimientos para asistir a personas con discapacidad o que no hablan el idioma local",
     "Definir un método para contar a trabajadores y visitantes después de una evacuación",
     "Capacitar a tus trabajadores en el plan y en el rol específico de cada uno"
   ],
-  "entregable_esperado": "Documento escrito de Plan de Acción de Emergencia con roles, rutas, y procedimientos de evacuación",
+  "entregable_esperado": "Documento escrito de Plan de Acción de Emergencia con roles, rutas y procedimientos de evacuación",
   "nodos_previos": [
     "rutas_salida_planificacion_emergencias"
   ],
@@ -29,5 +29,38 @@
   "etiqueta_arbol": "Prepara tu Plan de Emergencia",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-plan_de_accion_de_emergencia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar emergencias potenciales internas y externas relevantes a tu negocio",
+      "texto_nuevo": "Identificar emergencias potenciales internas y externas relevantes para tu negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "relevantes a"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_accion_de_emergencia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documento escrito de Plan de Acción de Emergencia con roles, rutas, y procedimientos de evacuación",
+      "texto_nuevo": "Documento escrito de Plan de Acción de Emergencia con roles, rutas y procedimientos de evacuación",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v01)",
+        "evidencia": "En una enumeración simple no va coma antes de la 'y' final; quitarla no toca el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

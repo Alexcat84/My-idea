@@ -9,13 +9,13 @@
     "Insertar sprints cortos (de 1 a 4 semanas) dentro de las etapas técnicas de desarrollo y pruebas",
     "Establecer reuniones diarias breves (15-20 min) lideradas por un facilitador de equipo (scrum master) para sincronizar el trabajo",
     "Definir un entregable tangible y demostrable al final de cada sprint (prototipo, diseño, informe de investigación con clientes, modelo funcional)",
-    "Usar tableros visuales y un backlog priorizado para dar seguimiento a las tareas",
+    "Usar tableros visuales y una lista priorizada de pendientes para dar seguimiento a las tareas",
     "Realizar revisiones de sprint periódicas con los interesados o representantes de clientes",
     "Dedicar al equipo de forma exclusiva al proyecto durante los sprints",
     "Expandir gradualmente el uso de sprints a etapas tempranas (ideación, caso de negocio) conforme el equipo gane confianza",
     "Mantener reuniones periódicas con la dirección para no perder de vista el objetivo final del proyecto"
   ],
-  "entregable_esperado": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de backlog, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
+  "entregable_esperado": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de pendientes, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
   "condiciones_activacion": [
     "Si el proyecto tiene alta incertidumbre técnica o de mercado (información del cliente poco clara)",
     "Si el equipo necesita mayor velocidad y flexibilidad sin perder el control de gestión de la dirección",
@@ -44,7 +44,7 @@
     "automatizacion_software_gestion_innovacion",
     "equipo_dedicado_continuo"
   ],
-  "etiqueta_arbol": "Combina Etapas con Sprints Ágiles",
+  "etiqueta_arbol": "Combina Etapas con Ciclos Ágiles",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
   ],
@@ -81,6 +81,55 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que dos semanas sea lo típico.; Mismo defecto: el rango típico del libro es de uno a cuatro o dos a cuatro semanas.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-modelo_hibrido_agile_stage_gate-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Combina Etapas con Sprints Ágiles",
+      "texto_nuevo": "Combina Etapas con Ciclos Ágiles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sprints"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_hibrido_agile_stage_gate-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar tableros visuales y un backlog priorizado para dar seguimiento a las tareas",
+      "texto_nuevo": "Usar tableros visuales y una lista priorizada de pendientes para dar seguimiento a las tareas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un backlog priorizado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_hibrido_agile_stage_gate-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de backlog, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
+      "texto_nuevo": "Proceso de desarrollo documentado que combine etapas y compuertas de decisión estratégica con sprints operativos, incluyendo tablero de pendientes, calendario de sprints y definición de 'sprint terminado' para el producto en cuestión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tablero de backlog"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

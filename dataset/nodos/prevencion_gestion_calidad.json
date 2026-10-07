@@ -21,7 +21,7 @@
     "Al diseñar cómo vas a manejar la calidad en tu negocio",
     "Cuando dudas en invertir en prevención por falta de evidencia inmediata de retorno"
   ],
-  "etiqueta_arbol": "Previene Antes de Corregir",
+  "etiqueta_arbol": "Prevén Antes de Corregir",
   "correcciones": [
     {
       "id": "saneamiento-t1-c21-1",
@@ -104,6 +104,22 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista omite las acciones correctivas que el libro pone junto a inspecciones y pruebas como trabajo a hacer antes de que los problemas crezcan.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-prevencion_gestion_calidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Previene Antes de Corregir",
+      "texto_nuevo": "Prevén Antes de Corregir",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Previene"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

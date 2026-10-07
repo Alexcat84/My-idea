@@ -6,8 +6,8 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Usar las mismas herramientas y procesos de testing y monitoreo para mejorar continuamente la propuesta de valor una vez en el mercado, probando escenarios de tipo 'qué pasaría si' y midiendo su impacto en la satisfacción del cliente.",
   "pasos_accionables": [
-    "Generar hipótesis de mejora ('what if') sobre la propuesta de valor actual",
-    "Testear pequeños cambios de forma experimental",
+    "Generar hipótesis de mejora ('qué pasaría si') sobre la propuesta de valor actual",
+    "Probar pequeños cambios de forma experimental",
     "Medir el impacto de cada cambio en la satisfacción y desempeño",
     "Iterar continuamente en lugar de esperar a una revisión anual"
   ],
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Mejora sin Descanso tu Propuesta",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-mejora_continua_relentless-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar hipótesis de mejora ('what if') sobre la propuesta de valor actual",
+      "texto_nuevo": "Generar hipótesis de mejora ('qué pasaría si') sobre la propuesta de valor actual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'what if'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mejora_continua_relentless-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Testear pequeños cambios de forma experimental",
+      "texto_nuevo": "Probar pequeños cambios de forma experimental",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

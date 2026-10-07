@@ -10,7 +10,7 @@
     "Asigna a cada paso una probabilidad de que funcione, tanto en lo técnico como en lo comercial",
     "Dibuja un árbol de decisiones y calcula el valor esperado hacia atrás, partiendo del resultado final",
     "Compara el ECV que obtienes en cada punto de decisión contra lo que cuesta avanzar al siguiente paso",
-    "Usa el ECV, no solo el NPV simple, para decidir si sigues o paras en proyectos grandes y riesgosos"
+    "Usa el ECV, no solo el valor presente neto simple, para decidir si sigues o paras en proyectos grandes y riesgosos"
   ],
   "entregable_esperado": "Un árbol de decisiones con el cálculo del ECV en cada punto de decisión, que te muestre cuánto vale el proyecto y qué decisión tomar sobre seguir invirtiendo",
   "nodos_previos": [
@@ -36,5 +36,24 @@
   "etiqueta_arbol": "Calcula tu Valor Comercial Esperado",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-expected_commercial_value_ecv-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el ECV, no solo el NPV simple, para decidir si sigues o paras en proyectos grandes y riesgosos",
+      "texto_nuevo": "Usa el ECV, no solo el valor presente neto simple, para decidir si sigues o paras en proyectos grandes y riesgosos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

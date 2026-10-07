@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Cuando el inversionista viene del mundo de private equity",
-    "Cuando la ronda es muy grande (más de 50 millones de dólares)"
+    "Cuando la ronda es muy grande (por lo general, más de 50 millones de dólares)"
   ],
   "etiqueta_arbol": "Negocia los Dividendos Preferentes",
   "fuentes_internas": [
@@ -59,6 +59,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide la aprobación de la mayoría del consejo, o incluso de una mayoría amplia; el nodo solo deja la opción más dura.; Mismo endurecimiento.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-dividends_terms-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la ronda es muy grande (más de 50 millones de dólares)",
+      "texto_nuevo": "Cuando la ronda es muy grande (por lo general, más de 50 millones de dólares)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1662",
+        "frase": "private equity and buyout deals where big money is involved (typically greater than $50 million)"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

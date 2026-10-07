@@ -6,10 +6,10 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Marco de tres niveles de testing: primero el 'círculo' (perfil del cliente: jobs, pains y gains que realmente importan), luego el 'cuadrado' (mapa de valor: si los productos/servicios realmente alivian esos pains y crean esos gains), y finalmente el 'rectángulo' (el modelo de negocio completo: si generará más ingresos que costos y es viable). Testear en este orden evita perder tiempo desarrollando soluciones para problemas irrelevantes.",
   "pasos_accionables": [
-    "Primero, validar con evidencia qué jobs, pains y gains le importan realmente al cliente (círculo)",
-    "Luego, validar que los pain relievers y gain creators propuestos resuelven esos problemas (cuadrado)",
+    "Primero, validar con evidencia qué trabajos, frustraciones y alegrías le importan realmente al cliente (círculo)",
+    "Luego, validar que los aliviadores de frustraciones y creadores de alegrías propuestos resuelven esos problemas (cuadrado)",
     "Finalmente, validar que el modelo de negocio completo (socios, canales, ingresos, costos) es viable (rectángulo)",
-    "No empezar a testear la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)"
+    "No empezar a probar la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)"
   ],
   "entregable_esperado": "Evidencia documentada en cada uno de los tres niveles (perfil del cliente, mapa de valor, modelo de negocio) antes de escalar",
   "nodos_previos": [
@@ -26,7 +26,7 @@
     "Cuando el usuario quiere saber en qué orden testear sus supuestos",
     "Si el usuario ya está testeando el producto sin haber validado que el problema es real"
   ],
-  "etiqueta_arbol": "Testea tu Encaje de Valor",
+  "etiqueta_arbol": "Prueba tu Encaje de Valor",
   "fuentes_internas": [
     "Value Proposition Design"
   ],
@@ -47,6 +47,73 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Generaliza a los tres niveles una compuerta que el libro solo pone entre círculo y cuadrado; del modelo de negocio pide no descuidarlo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-testear_circulo_cuadrado_rectangulo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Testea tu Encaje de Valor",
+      "texto_nuevo": "Prueba tu Encaje de Valor",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Testea"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-testear_circulo_cuadrado_rectangulo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Primero, validar con evidencia qué jobs, pains y gains le importan realmente al cliente (círculo)",
+      "texto_nuevo": "Primero, validar con evidencia qué trabajos, frustraciones y alegrías le importan realmente al cliente (círculo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "jobs, pains y gains"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-testear_circulo_cuadrado_rectangulo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Luego, validar que los pain relievers y gain creators propuestos resuelven esos problemas (cuadrado)",
+      "texto_nuevo": "Luego, validar que los aliviadores de frustraciones y creadores de alegrías propuestos resuelven esos problemas (cuadrado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pain relievers y gain creators"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-testear_circulo_cuadrado_rectangulo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No empezar a testear la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)",
+      "texto_nuevo": "No empezar a probar la propuesta de valor (cuadrado) sin evidencia de lo que le importa al cliente (círculo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

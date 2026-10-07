@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Conjunto de pruebas A/B sobre la landing page y otros puntos de contacto que buscan convertir 'visitantes' en usuarios, compradores o suscriptores en cuestión de segundos. Incluye definir dos tipos de acciones (en y fuera de la home page), pruebas iterativas y métricas pass/fail claras.",
   "pasos_accionables": [
-    "Diseñar la landing page respondiendo a las preguntas mentales del visitante: por qué estoy aquí, qué lo hace especial, cómo sé que es bueno, dónde obtengo más información, qué hago después",
-    "Crear al menos dos pruebas A/B para cada elemento de activación (color, copy, botones, ofertas)",
-    "Definir métricas de éxito pass/fail antes de cada prueba",
-    "Diseñar acciones de activación tanto dentro como fuera de la home page (ej. emails de seguimiento)",
+    "Diseñar la página de aterrizaje respondiendo a las preguntas mentales del visitante: por qué estoy aquí, qué lo hace especial, cómo sé que es bueno, dónde obtengo más información, qué hago después",
+    "Crear al menos dos pruebas A/B para cada elemento de activación (color, texto, botones, ofertas)",
+    "Definir métricas de éxito de aprobado o reprobado antes de cada prueba",
+    "Diseñar acciones de activación tanto dentro como fuera de la página de inicio (ej. correos de seguimiento)",
     "Iterar rápidamente basado en respuestas medidas de los clientes"
   ],
-  "entregable_esperado": "Un plan de activación con pruebas definidas, métricas de éxito y ejemplos de landing page optimizada",
+  "entregable_esperado": "Un plan de activación con pruebas definidas, métricas de éxito y ejemplos de página de aterrizaje optimizada",
   "nodos_previos": [
     "plan_de_adquisicion_acquire",
     "acquisicion_viral_engineering",
@@ -31,5 +31,92 @@
   "etiqueta_arbol": "Prueba tus Puntos de Contacto",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-plan_de_activacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar la landing page respondiendo a las preguntas mentales del visitante: por qué estoy aquí, qué lo hace especial, cómo sé que es bueno, dónde obtengo más información, qué hago después",
+      "texto_nuevo": "Diseñar la página de aterrizaje respondiendo a las preguntas mentales del visitante: por qué estoy aquí, qué lo hace especial, cómo sé que es bueno, dónde obtengo más información, qué hago después",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "landing page"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_activacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear al menos dos pruebas A/B para cada elemento de activación (color, copy, botones, ofertas)",
+      "texto_nuevo": "Crear al menos dos pruebas A/B para cada elemento de activación (color, texto, botones, ofertas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "copy"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_activacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir métricas de éxito pass/fail antes de cada prueba",
+      "texto_nuevo": "Definir métricas de éxito de aprobado o reprobado antes de cada prueba",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_activacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar acciones de activación tanto dentro como fuera de la home page (ej. emails de seguimiento)",
+      "texto_nuevo": "Diseñar acciones de activación tanto dentro como fuera de la página de inicio (ej. correos de seguimiento)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "home page",
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_activacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de activación con pruebas definidas, métricas de éxito y ejemplos de landing page optimizada",
+      "texto_nuevo": "Un plan de activación con pruebas definidas, métricas de éxito y ejemplos de página de aterrizaje optimizada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "landing page"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

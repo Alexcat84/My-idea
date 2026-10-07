@@ -25,7 +25,7 @@
     "deteccion_efecto_hawthorne"
   ],
   "condiciones_activacion": [
-    "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión antes de decidir",
+    "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión",
     "Cuando quieras medir si una capacitación comercial realmente da resultados",
     "Si tienes dudas sobre si un método de ventas de verdad funciona"
   ],
@@ -63,6 +63,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que aun con grupo de control el resultado puede engañar si otra explicación igual de plausible lo explica.; Mismo defecto.",
       "indice": 8,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-metodologia_evaluacion_entrenamiento_ventas-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión antes de decidir",
+      "texto_nuevo": "Cuando estés por implementar un nuevo programa de entrenamiento o método de ventas y quieras tener claro si vale la pena la inversión",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "3023-3033",
+        "frase": "Assuming that we pass on Test 1 and Test 2, measure the productivity gain"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

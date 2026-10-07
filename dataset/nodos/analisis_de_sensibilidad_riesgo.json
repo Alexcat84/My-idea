@@ -7,12 +7,12 @@
   "resumen_teorico": "Técnica para identificar riesgos clave de un proyecto probando cómo cambian los resultados financieros al variar supuestos críticos (ej. ventas al 75%, costos +10%, retraso de lanzamiento): el supuesto que vuelve negativo el retorno es crítico. También se calcula el ratio riesgo-retorno dividiendo la máxima pérdida acumulada posible entre el NPV del proyecto; un ratio alto indica alto riesgo.",
   "pasos_accionables": [
     "Identificar los supuestos clave del modelo financiero (ventas, costos, fecha de lanzamiento)",
-    "Modificar cada supuesto uno a la vez y recalcular NPV/IRR/Payback",
+    "Modificar cada supuesto uno a la vez y recalcular VAN/TIR/periodo de recuperación",
     "Construir escenarios de mejor y peor caso",
     "Calcular la curva de flujo de caja acumulado para hallar la posición negativa máxima",
-    "Calcular el ratio riesgo-retorno = máxima pérdida acumulada / NPV"
+    "Calcular el ratio riesgo-retorno = máxima pérdida acumulada / VAN"
   ],
-  "entregable_esperado": "Un análisis de sensibilidad documentado con escenarios best/worst case y el ratio riesgo-retorno del proyecto",
+  "entregable_esperado": "Un análisis de sensibilidad documentado con escenarios de mejor y peor caso y el ratio riesgo-retorno del proyecto",
   "nodos_previos": [
     "ranking_proyectos_por_npv"
   ],
@@ -90,6 +90,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: se pierde cómo leer ambos resultados.; Se cae el criterio de lectura del libro: supuesto crítico si da retornos negativos y ratio alto igual a alto riesgo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-analisis_de_sensibilidad_riesgo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modificar cada supuesto uno a la vez y recalcular NPV/IRR/Payback",
+      "texto_nuevo": "Modificar cada supuesto uno a la vez y recalcular VAN/TIR/periodo de recuperación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV/IRR/Payback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_de_sensibilidad_riesgo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el ratio riesgo-retorno = máxima pérdida acumulada / NPV",
+      "texto_nuevo": "Calcular el ratio riesgo-retorno = máxima pérdida acumulada / VAN",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_de_sensibilidad_riesgo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un análisis de sensibilidad documentado con escenarios best/worst case y el ratio riesgo-retorno del proyecto",
+      "texto_nuevo": "Un análisis de sensibilidad documentado con escenarios de mejor y peor caso y el ratio riesgo-retorno del proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "best/worst case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

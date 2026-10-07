@@ -30,7 +30,7 @@
   "condiciones_activacion": [
     "Tienes insights de clientes pero no sabes cómo traducirlos en decisiones de modelo de negocio",
     "Tienes múltiples segmentos de clientes y no sabes si necesitas un modelo distinto para cada uno",
-    "Necesitas anticipar cómo un entorno futuro, como tecnología o competencia, impactará tu modelo de negocio actual",
+    "Necesitas pensar cómo podría tener que evolucionar tu modelo de negocio actual ante distintos entornos futuros posibles, como cambios de tecnología o competencia",
     "Las decisiones sobre canales o relaciones con clientes son ambiguas y requieren contexto específico"
   ],
   "etiqueta_arbol": "Diseña tu Modelo con Escenarios",
@@ -92,6 +92,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): La cifra de 2 a 3 no está en el libro, que solo recomienda idealmente de dos a cuatro para escenarios de futuro.; Mismo defecto: fija una cantidad que el libro no da.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-escenarios_diseno_modelo_negocio-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Necesitas anticipar cómo un entorno futuro, como tecnología o competencia, impactará tu modelo de negocio actual",
+      "texto_nuevo": "Necesitas pensar cómo podría tener que evolucionar tu modelo de negocio actual ante distintos entornos futuros posibles, como cambios de tecnología o competencia",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2849",
+        "frase": "The goal here is not to predict the future, but rather to imagine possible futures"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

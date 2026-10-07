@@ -9,7 +9,7 @@
     "Segmentar la base de usuarios por atributos relevantes (país, edad, canal de origen)",
     "Calcular el coeficiente viral por cada segmento",
     "Identificar los segmentos con K más alto (bolsas virales)",
-    "Optimizar la experiencia específicamente para esos segmentos (idioma, mensajes, features)"
+    "Optimizar la experiencia específicamente para esos segmentos (idioma, mensajes, funciones)"
   ],
   "entregable_esperado": "Análisis segmentado de coeficiente viral por grupo de usuarios con recomendaciones de enfoque",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Detecta tus Bolsas Virales",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-identificacion_bolsas_virales-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Optimizar la experiencia específicamente para esos segmentos (idioma, mensajes, features)",
+      "texto_nuevo": "Optimizar la experiencia específicamente para esos segmentos (idioma, mensajes, funciones)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

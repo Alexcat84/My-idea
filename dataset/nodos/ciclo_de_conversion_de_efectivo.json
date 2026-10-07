@@ -5,10 +5,10 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "El ciclo de conversión de efectivo mide cuántos días tarda una empresa en recuperar el efectivo invertido en sus operaciones, desde el pago de materias primas hasta el cobro de las ventas, integrando los periodos de cuentas por pagar, inventario y cuentas por cobrar. Se calcula como DSO + DII − DPO (días de cobro más días de inventario menos días de pago). Un ciclo largo implica una mayor necesidad de capital de trabajo; acortarlo libera efectivo significativo para el negocio, aunque maximizar el DPO (tardar más en pagar a proveedores) debe equilibrarse contra el riesgo de deteriorar las relaciones con ellos.",
   "pasos_accionables": [
-    "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario",
+    "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre costo de ventas diario",
     "Aplicar la fórmula: Ciclo = DSO + DII - DPO",
     "Multiplicar el resultado por las ventas diarias para estimar el capital de trabajo requerido",
-    "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
+    "Evaluar el equilibrio entre maximizar el DPO y mantener buenas relaciones con los proveedores",
     "Identificar en qué punto del ciclo se puede acelerar el retorno de efectivo (reducir DSO, reducir inventario, aumentar DPO razonablemente)",
     "Monitorear el ciclo periódicamente, especialmente tras fusiones o adquisiciones",
     "Investigar causas de un DSO elevado: quejas de clientes, términos de venta laxos, falta de seguimiento cuando la factura vence, facturación lenta, necesidad de un software de gestión financiera actualizado"
@@ -86,6 +86,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera cinco causas a revisar; falta la del software de gestión financiera actualizado.; Mismo defecto.",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-ciclo_de_conversion_de_efectivo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre COGS diario",
+      "texto_nuevo": "Calcular DSO (días de cobro), DII (días de inventario) y DPO (días de pago), el DSO es cuentas por cobrar finales dividido entre ingresos diarios, y el DPO es cuentas por pagar finales dividido entre costo de ventas diario",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_de_conversion_de_efectivo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el trade-off entre maximizar el DPO y mantener buenas relaciones con los proveedores",
+      "texto_nuevo": "Evaluar el equilibrio entre maximizar el DPO y mantener buenas relaciones con los proveedores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el trade-off"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

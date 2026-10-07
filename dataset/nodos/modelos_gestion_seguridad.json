@@ -6,9 +6,9 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos, auditorías de comportamiento, escribir otro procedimiento, formación y selección. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano más como consecuencia de condiciones latentes en el sistema que como causa, vinculado a la gestión de calidad total. Los tres modelos pueden coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
   "pasos_accionables": [
-    "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. LTIF para el modelo de persona)",
+    "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. el índice de frecuencia de lesiones con tiempo perdido para el modelo de persona)",
     "Identificar las brechas: ¿se están ignorando los riesgos organizacionales por enfocarse solo en lesiones individuales?",
-    "Aplicar herramientas del modelo de ingeniería (HAZOP, PRA, análisis de tareas cognitivas) donde haya desajustes humano-máquina",
+    "Aplicar herramientas del modelo de ingeniería (HAZOP, análisis probabilístico de riesgos, análisis de tareas cognitivas) donde haya desajustes humano-máquina",
     "Incorporar análisis de condiciones latentes y defensas del sistema propio del modelo organizacional",
     "Integrar los tres modelos de forma complementaria según el tipo de riesgo predominante en el dominio operativo"
   ],
@@ -61,6 +61,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice 'more as a consequence than as a cause'; el nodo lo convierte en una exclusión tajante.; El libro enumera seis contramedidas del modelo de la persona; el nodo omite escribir otro procedimiento, la formación y la selección.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-modelos_gestion_seguridad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. LTIF para el modelo de persona)",
+      "texto_nuevo": "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. el índice de frecuencia de lesiones con tiempo perdido para el modelo de persona)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "LTIF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelos_gestion_seguridad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar herramientas del modelo de ingeniería (HAZOP, PRA, análisis de tareas cognitivas) donde haya desajustes humano-máquina",
+      "texto_nuevo": "Aplicar herramientas del modelo de ingeniería (HAZOP, análisis probabilístico de riesgos, análisis de tareas cognitivas) donde haya desajustes humano-máquina",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "PRA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,8 +7,8 @@
   "resumen_teorico": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios de bienes y servicios electrónicos registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado objetivo aplica impuestos según ubicación del cliente o del vendedor",
-    "Verificar si se requiere registro fiscal en el país destino (ej. régimen VAT de la UE)",
-    "Consultar herramientas de proveedores de e-commerce y U.S. Commercial Service sobre recaudación fiscal",
+    "Verificar si se requiere registro fiscal en el país destino (ej. régimen de IVA de la UE)",
+    "Consultar herramientas de proveedores de comercio electrónico y U.S. Commercial Service sobre recaudación fiscal",
     "Si el mercado destino grava las ventas según la ubicación del cliente (como la UE), establecer un proceso de cobro y remisión de impuestos según el país del comprador"
   ],
   "entregable_esperado": "Matriz de obligaciones fiscales por país objetivo y proceso de registro/cobro de impuestos definido",
@@ -87,6 +87,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El defecto existe, pero es la condición perdida (la excepción de la UE vuelta regla general), el mismo que la marca 0; se resuelve devolviendo la condición.; Se cae la condición: en general sin establecimiento permanente no hay sujeción fiscal, y el cobro según el país del cliente solo aplica en mercados con esa excepción, como la UE. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-fiscalidad_comercio_electronico_internacional-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar si se requiere registro fiscal en el país destino (ej. régimen VAT de la UE)",
+      "texto_nuevo": "Verificar si se requiere registro fiscal en el país destino (ej. régimen de IVA de la UE)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VAT"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fiscalidad_comercio_electronico_internacional-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consultar herramientas de proveedores de e-commerce y U.S. Commercial Service sobre recaudación fiscal",
+      "texto_nuevo": "Consultar herramientas de proveedores de comercio electrónico y U.S. Commercial Service sobre recaudación fiscal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "e-commerce"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

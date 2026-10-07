@@ -20,7 +20,7 @@
     "getting_started_system_communication_protection"
   ],
   "condiciones_activacion": [
-    "Después de completar una auditoría o evaluación de seguridad que revele brechas."
+    "De forma periódica, para evaluar si tus requisitos de seguridad funcionan, y después de completar una auditoría o evaluación de seguridad que revele brechas."
   ],
   "etiqueta_arbol": "Monitorea tu Seguridad Constantemente",
   "fuentes_internas": [
@@ -56,6 +56,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece en instrucción lo que el libro presenta como opción disponible (existen herramientas y terceros que pueden apoyar).",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-getting_started_security_assessment_monitoring-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de completar una auditoría o evaluación de seguridad que revele brechas.",
+      "texto_nuevo": "De forma periódica, para evaluar si tus requisitos de seguridad funcionan, y después de completar una auditoría o evaluación de seguridad que revele brechas.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "633-645",
+        "frase": "Periodically assess systems to determine if the requirements are effective"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
