@@ -8,6 +8,7 @@
  * cuando la razón existe. La regla: el genérico SOLO cuando el servidor no dio
  * razón. Sin imports de servidor: lo usan los componentes del cliente.
  */
+import type { MotivoAceptacion } from "./dbContract";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 
@@ -20,13 +21,18 @@ export const ERROR_GENERICO = errorGenerico(LOCALE_BASE);
 export type Rechazo =
   | { tipo: "mensaje"; mensaje: string }
   /** 403 del doble factor: la pantalla abre el desafío en vez de solo avisar. */
-  | { tipo: "segundo_factor"; mensaje: string };
+  | { tipo: "segundo_factor"; mensaje: string }
+  /** 428 sin la aceptación vigente de los Términos y la Privacidad (corrección del fundador, 7 oct 2026): la
+   * pantalla pinta la línea y el botón de aceptar, y no envía nada hasta que el servidor confirme que la guardó. */
+  | { tipo: "consentimiento"; mensaje: string; motivo: MotivoAceptacion };
 
-const CON_RAZON = new Set([402, 403, 409, 429, 503]);
+const CON_RAZON = new Set([402, 403, 409, 428, 429, 503]);
 
 interface CuerpoRechazo {
   error?: unknown;
   segundo_factor_requerido?: unknown;
+  consentimiento_requerido?: unknown;
+  motivo?: unknown;
   limite?: unknown;
 }
 
@@ -41,6 +47,13 @@ export async function leerRechazo(res: Response, idioma: Locale = LOCALE_BASE): 
   const error = typeof cuerpo?.error === "string" && cuerpo.error.trim() ? cuerpo.error : null;
   if (cuerpo?.segundo_factor_requerido === true) {
     return { tipo: "segundo_factor", mensaje: error ?? generico };
+  }
+  if (cuerpo?.consentimiento_requerido === true) {
+    return {
+      tipo: "consentimiento",
+      mensaje: error ?? generico,
+      motivo: cuerpo.motivo === "nueva_version" ? "nueva_version" : "primera_aceptacion",
+    };
   }
   const conRazon = CON_RAZON.has(res.status) || (res.status === 400 && typeof cuerpo?.limite === "number");
   return { tipo: "mensaje", mensaje: error && conRazon ? error : generico };

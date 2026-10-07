@@ -29,6 +29,9 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
 - "Escríbela tal como la tienes en mente, o díctala si tu navegador lo permite. Ese es todo el requisito."
 - "Sin formularios ni casillas que llenar. Solo tu idea, en tus palabras." (las preguntas salen de un banco que se adapta: no se promete "sin plantillas"; promesas públicas, 7 oct 2026)
 - "Tu primera idea empieza aquí." (home vacío)
+- "Al continuar, aceptas los Términos y la Política de Privacidad" y el botón **"Aceptar y generar"** (la línea del
+  consentimiento junto al botón del primer envío de datos, con sus enlaces; navegar es libre y nada tapa la página;
+  corrección del fundador, 7 oct 2026, regla P24)
 - Los 6 hitos: **La Chispa · Claridad · La Exploración · Tu Plan · Manos a la Obra · Realizado**
   (el sexto es la celebración; corregido en la AUD-09, que encontró aquí 5)
 - Distintivo final: **Proyecto**

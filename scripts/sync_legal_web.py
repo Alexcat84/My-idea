@@ -8,7 +8,7 @@ Guarda: engine/test_legal_web.py.
 La VERSION de los textos que se aceptan (decision del fundador, 7 oct 2026: consentimiento versionado) tiene una sola
 fuente, docs/legal/version.json: el historial de versiones con la huella (sha256) de los Terminos y la Privacidad de
 cada una, en espanol y en frances. Este script la publica en web/lib/legal/version.ts (un archivo aparte y pequeno:
-el modal del cliente lo importa sin cargar los textos enteros). Si cambias un texto versionado, sube la version:
+la linea del consentimiento lo importa sin cargar los textos enteros). Si cambias un texto versionado, sube la version:
 
     python scripts/sync_legal_web.py --nueva-version AAAA-MM-DD
 
@@ -68,7 +68,7 @@ def generar_version():
     return ("// GENERADO por scripts/sync_legal_web.py desde docs/legal/version.json. No editar a mano: para subir la\n"
             "// version corre python scripts/sync_legal_web.py --nueva-version AAAA-MM-DD (guarda:\n"
             "// engine/test_version_legal.py, que falla si los textos cambian sin subir la version).\n"
-            "/** La versión vigente de los Términos y la Privacidad: la que se pide aceptar a las cuentas reales. */\n"
+            "/** La versión vigente de los Términos y la Privacidad: la que se pide aceptar en el primer envío de datos. */\n"
             f"export const VERSION_LEGAL = \"{reg['vigente']}\";\n"
             "/** sha256 de esos textos (es y fr) en la versión vigente: se guarda con cada aceptación. */\n"
             f"export const HUELLA_LEGAL = \"{vigente['huella']}\";\n")

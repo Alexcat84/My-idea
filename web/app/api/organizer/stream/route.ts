@@ -39,6 +39,7 @@ import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { garantizarTerminal } from "@/lib/streamTerminal";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { exigirAceptacionVigente } from "@/lib/legal/aceptacionServidor";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -80,6 +81,12 @@ export async function POST(request: Request) {
   if (!user) {
     return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
+
+  // Consentimiento (corrección del fundador, 7 oct 2026): la idea no se envía a la IA sin la aceptación vigente de
+  // los Términos y la Privacidad registrada para esta identidad (invitada o cuenta). Antes de crear nada, de contar
+  // el límite diario y de tocar la IA; si el registro no se puede leer, tampoco se envía (503).
+  const sinAceptacion = await exigirAceptacionVigente(user.id, idioma);
+  if (sinAceptacion) return sinAceptacion;
 
   // AUD-09 M28: ordenar una idea que YA existe (su organizador falló antes y
   // quedó sin Claridad). Se reusa la misma idea en vez de crear otra; solo si es

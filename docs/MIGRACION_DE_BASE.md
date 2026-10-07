@@ -60,7 +60,7 @@ sigas: esa migración no entró.
 
 | Migración | Qué crea | Verificador | Estado |
 |---|---|---|---|
-| `my_idea_050_consentimiento_legal.sql` | tabla `aceptaciones_legales` (una fila por cuenta real y versión aceptada: `version`, `huella_textos`, `idioma_texto`, `motivo`, `aceptada_at`), cascada con `auth.users`, RLS de solo lectura del dueño, escribe solo service_role | bloque 050 de `my_idea_check_migraciones.sql` | aplicada en producción el 7 oct 2026 |
+| `my_idea_050_consentimiento_legal.sql` | tabla `aceptaciones_legales` (una fila por identidad y versión aceptada; desde la corrección del fundador del mismo día también la identidad invisible, que la adopción copia a la cuenta, sin SQL nuevo: `version`, `huella_textos`, `idioma_texto`, `motivo`, `aceptada_at`), cascada con `auth.users`, RLS de solo lectura del dueño, escribe solo service_role | bloque 050 de `my_idea_check_migraciones.sql` | aplicada en producción el 7 oct 2026 |
 
 ## Paso 3 · Authentication (el clon de la config de staging)
 

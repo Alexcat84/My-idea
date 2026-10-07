@@ -27,9 +27,13 @@ aplicación My Idea.
 tu identidad de Google si entras con ella, y la configuración de seguridad (el doble factor, con su
 secreto cifrado y sus códigos en hash).
 
-**Tu aceptación de los Términos y de esta política:** cuando entras con tu cuenta te pedimos que los
-aceptes, y guardamos la versión que aceptaste, el idioma del texto que leíste (español o francés) y
-la fecha. Si los textos cambian, te pedimos aceptar la versión nueva y guardamos esa también.
+**Tu aceptación de los Términos y de esta política:** te pedimos que los aceptes
+la primera vez que envías tu idea para generar tu evaluación gratuita, también sin cuenta, antes de
+enviar nada a la inteligencia artificial; navegar por el sitio no lo requiere. Guardamos la versión que aceptaste, el
+idioma del texto que leíste (español o francés) y la fecha. Sin cuenta, ese registro queda con tu
+identidad invisible; si luego creas tu cuenta, pasa a tu cuenta y no te lo volvemos a pedir. Si los
+textos cambian, te pedimos aceptar la versión nueva la próxima vez que envíes tus datos o entres con
+tu cuenta, y guardamos esa también.
 
 **Lo que escribes o dictas:** el texto de tu idea tal como lo escribiste, tus respuestas en la
 entrevista, tus notas, las tareas de tu plan y los motivos que das (por ejemplo, al retirar una
@@ -45,7 +49,7 @@ identificador de usuario durante un máximo de 48 horas.
 
 **Sin cuenta:** la primera vez que visitas My Idea creamos una **identidad invisible** (un
 identificador sin correo) para que puedas escribir tu idea sin registrarte. Si luego creas tu cuenta,
-tus ideas pasan a ella.
+tus ideas y tu aceptación de los Términos y de esta política pasan a ella.
 
 **El dictado:** cuando dictas, el reconocimiento de voz lo hace tu navegador; nosotros no grabamos
 ni recibimos audio, solo el texto que queda en el campo. Dónde procesa el audio tu navegador depende
@@ -67,9 +71,10 @@ datos de cada proveedor están en su política (§6).
 
 ## 4. Base de nuestro tratamiento
 
-Tratamos tus datos con tu consentimiento, que das al crear tu cuenta y al usar el servicio, y en la
-medida necesaria para prestarte el servicio que pediste. Con tu cuenta, ese consentimiento queda
-registrado: la versión de los Términos y de esta política que aceptaste y su fecha (§2). Puedes retirar tu consentimiento en
+Tratamos tus datos con tu consentimiento, que das al enviar tu idea por primera vez, al crear tu
+cuenta y al usar el servicio, y en la medida necesaria para prestarte el servicio que pediste. Ese
+consentimiento queda registrado, con cuenta o sin ella: la versión de los Términos y de esta política
+que aceptaste y su fecha (§2). Puedes retirar tu consentimiento en
 cualquier momento borrando tu cuenta (§8), sabiendo que sin tus datos no podemos prestarte el
 servicio.
 
@@ -143,7 +148,9 @@ Conservamos tus datos mientras tu cuenta exista, y los borramos cuando borras tu
 salvedades:
 - Una huella cifrada (hash) de tu correo se conserva para evitar el abuso de ofertas de bienvenida.
 - El registro de tus aceptaciones de los Términos y de esta política se conserva mientras tu cuenta
-  exista y se borra con ella.
+  exista y se borra con ella. Sin cuenta, queda con tu identidad invisible, y pasa a tu cuenta si la
+  creas. Sin cuenta, queda con tu identidad invisible, y pasa a tu cuenta si la
+  creas.
 - Los límites de uso guardan tu IP o identificador un máximo de 48 horas.
 - Los registros técnicos del alojamiento y las copias de seguridad de la base se conservan según los
   plazos de esos proveedores.
@@ -172,7 +179,7 @@ consentimiento de tu madre, padre o tutor para usarla.
 
 ## 14. Cambios a esta política
 
-Si cambiamos esta política, publicaremos la nueva versión con su fecha. La próxima vez que entres
-con tu cuenta te pediremos que aceptes la versión nueva antes de seguir; si no la aceptas, puedes
-salir de tu cuenta, seguir usando lo que no la necesita o borrarla. Sin cuenta, la versión vigente
-es siempre la publicada aquí.
+Si cambiamos esta política, publicaremos la nueva versión con su fecha. La próxima vez que envíes
+tus datos o entres con tu cuenta te pediremos que aceptes la versión nueva, con una línea junto al
+botón; nunca te impedimos navegar por el sitio. Si no la aceptas, no enviamos tus datos: puedes
+seguir navegando o borrar tu cuenta. La versión vigente es siempre la publicada aquí.

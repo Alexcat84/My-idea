@@ -27,9 +27,10 @@ l'application, vous acceptez les présentes conditions et la Politique de confid
 - Pour utiliser les fonctions qui consomment des crédits, vous avez besoin d'un compte. Vous pouvez
   écrire votre idée et recevoir votre Clarté sans compte, avec une identité invisible qui est
   transférée à votre compte lorsque vous le créez.
-- Avec votre compte, nous vous demandons d'accepter les présentes conditions et la Politique de
-  confidentialité, et de nouveau chaque fois qu'elles changent; nous conservons la version que vous
-  avez acceptée et sa date.
+- Nous vous demandons d'accepter les présentes conditions et la Politique de confidentialité la
+  première fois que vous envoyez votre idée, même sans compte, et de nouveau chaque fois qu'elles
+  changent; nous conservons la version que vous avez acceptée et sa date, et si vous créez votre
+  compte, ce registre y est transféré.
 - Vous êtes responsable de la sécurité de votre mot de passe. Vous pouvez activer la vérification
   en deux étapes.
 - Pendant la version bêta, l'accès peut être limité aux personnes invitées.

@@ -12,6 +12,7 @@ import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { estaEnAllowlist, registrarAdopcionPendiente } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { aceptacionDelCuerpo, guardarAceptacion } from "@/lib/legal/aceptacionServidor";
 import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
@@ -19,7 +20,7 @@ import { createClient } from "@/lib/supabase/server";
 export async function POST(request: Request) {
   const idioma = idiomaDeRequest(request);
   const t = elegir(SERVIDOR_CUENTA, idioma);
-  let body: { email?: unknown; password?: unknown; next?: unknown };
+  let body: { email?: unknown; password?: unknown; next?: unknown; acepta_legal?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -98,6 +99,18 @@ export async function POST(request: Request) {
       await registrarAdopcionPendiente(data.user.id, anonId);
     } catch (e) {
       console.error(`[registrar] no se pudo anotar la adopcion pendiente de ${anonId}:`, e);
+    }
+  }
+
+  // Consentimiento al crear la cuenta (corrección del fundador, 7 oct 2026): la línea "Al continuar, aceptas los
+  // Términos y la Política de Privacidad" va junto al botón; la aceptación de la versión vigente queda guardada en la
+  // cuenta nueva. Si falla, se dice en el registro y la guarda del envío de datos la volverá a pedir.
+  const idiomaAceptado = aceptacionDelCuerpo(body.acepta_legal);
+  if (idiomaAceptado && data.user?.id) {
+    try {
+      await guardarAceptacion(data.user.id, idiomaAceptado);
+    } catch (e) {
+      console.error("[registrar] no se pudo guardar la aceptacion de los textos legales; se pedira al enviar datos:", e);
     }
   }
 

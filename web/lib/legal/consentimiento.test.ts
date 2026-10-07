@@ -1,49 +1,119 @@
-// CONSENTIMIENTO LEGAL VERSIONADO (decisión del fundador, 7 oct 2026; idea tomada de The Original I Ching,
-// auth/complete-legal + user_legal_acceptances). Las cuentas REALES aceptan los Términos y la Privacidad por
-// versión y la app vuelve a pedirlo cuando la versión cambia. La web sigue ABIERTA: la identidad invisible jamás ve
-// el modal, y las páginas legales, el login y el centro de cuenta (desde donde se borra la cuenta) nunca lo muestran.
-// Prueba en rojo primero: nació antes que lib/legal/consentimiento.ts y que el modal.
-import { readFileSync } from "node:fs";
+// CONSENTIMIENTO LEGAL VERSIONADO, corrección del fundador del 7 oct 2026 (manda sobre el modal de cbf087fe):
+// - Navegar es libre: el modal que tapaba la página se retira y nada tapa nada.
+// - La aceptación se pide en el PRIMER ENVÍO DE DATOS (escribir la idea y generar la evaluación gratuita), con una
+//   línea junto al botón y el botón "Aceptar y generar", antes de mandar nada a la IA.
+// - Sin cuenta también: se guarda en la identidad invisible y pasa a la cuenta con la adopción.
+// - Si los textos cambian, se vuelve a pedir en el siguiente envío o al entrar con la cuenta, nunca al cargar.
+// Prueba en rojo primero: escrita antes de retirar el modal y de mover la aceptación al envío.
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { LOCALES } from "@/lib/i18n/config";
 import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
-import { estadoConsentimiento, HUELLA_LEGAL, idiomaTextoLegal, rutaSinConsentimiento, VERSION_LEGAL } from "./consentimiento";
+import { estadoConsentimiento, HUELLA_LEGAL, idiomaTextoLegal, VERSION_LEGAL } from "./consentimiento";
 
 const RAIZ = path.resolve(__dirname, "..", "..", "..");
 const leer = (rel: string) => readFileSync(path.join(RAIZ, rel), "utf-8");
+const leerSiExiste = (rel: string) => (existsSync(path.join(RAIZ, rel)) ? leer(rel) : "");
 
-describe("estadoConsentimiento: a quién se le pide y por qué", () => {
-  it("la identidad invisible nunca: la web es abierta, sin muro", () => {
-    expect(estadoConsentimiento(false, null)).toEqual({ requiere: false, motivo: null });
-    expect(estadoConsentimiento(false, "1999-01-01")).toEqual({ requiere: false, motivo: null });
+describe("estadoConsentimiento: a toda identidad que envía datos, invitada o con cuenta", () => {
+  it("sin ninguna aceptación: la primera", () => {
+    expect(estadoConsentimiento(null)).toEqual({ requiere: true, motivo: "primera_aceptacion" });
   });
 
-  it("una cuenta real sin ninguna aceptación: la primera", () => {
-    expect(estadoConsentimiento(true, null)).toEqual({ requiere: true, motivo: "primera_aceptacion" });
+  it("con una versión anterior: la nueva", () => {
+    expect(estadoConsentimiento("2000-01-01")).toEqual({ requiere: true, motivo: "nueva_version" });
   });
 
-  it("una cuenta real que aceptó una versión anterior: la nueva", () => {
-    expect(estadoConsentimiento(true, "2000-01-01")).toEqual({ requiere: true, motivo: "nueva_version" });
-  });
-
-  it("una cuenta real al día: nada", () => {
-    expect(estadoConsentimiento(true, VERSION_LEGAL)).toEqual({ requiere: false, motivo: null });
+  it("al día: nada", () => {
+    expect(estadoConsentimiento(VERSION_LEGAL)).toEqual({ requiere: false, motivo: null });
   });
 });
 
-describe("rutaSinConsentimiento: dónde el modal no aparece nunca", () => {
-  it("las páginas legales y de ayuda, el login, los regresos de auth y el centro de cuenta", () => {
-    for (const r of ["/terminos", "/privacidad", "/cookies", "/login", "/auth/callback", "/auth/update-password",
-      "/eliminar-cuenta", "/preguntas-frecuentes", "/cuenta"]) {
-      expect(rutaSinConsentimiento(r), r).toBe(true);
+describe("navegar es libre: el modal se retira y nada tapa la página", () => {
+  it("el layout raíz ya no monta ningún modal de consentimiento", () => {
+    expect(leer("web/app/layout.tsx")).not.toContain("ConsentimientoLegal");
+    expect(existsSync(path.join(RAIZ, "web/app/ui/ConsentimientoLegal.tsx"))).toBe(false);
+  });
+
+  it("la línea del consentimiento no es un diálogo ni flota sobre la página", () => {
+    const linea = leerSiExiste("web/app/ui/LineaConsentimiento.tsx");
+    expect(linea).not.toBe("");
+    expect(linea).not.toMatch(/aria-modal|role="dialog"|fixed inset-0/);
+  });
+});
+
+describe("el primer envío de datos: la línea junto al botón y 'Aceptar y generar'", () => {
+  it("/nueva pinta la línea, cambia el botón y guarda la aceptación ANTES de llamar al organizador", () => {
+    const nueva = leer("web/app/nueva/page.tsx");
+    expect(nueva).toContain("<LineaConsentimiento");
+    expect(nueva).toContain("aceptarYGenerar");
+    const iAceptar = nueva.indexOf("consentimiento.aceptar(");
+    const iOrganizador = nueva.indexOf('fetch("/api/organizer/stream"');
+    expect(iAceptar).toBeGreaterThan(-1);
+    expect(iOrganizador).toBeGreaterThan(iAceptar);
+  });
+
+  it("La Exploración (la idea ya existe): si el servidor pide aceptar, la vista pinta la línea, no un error mudo", () => {
+    const vista = leer("web/app/idea/[id]/IdeaView.tsx");
+    expect(vista).toContain('r.tipo === "consentimiento"');
+    expect(vista).toContain("<LineaConsentimiento");
+    expect(vista).toContain("aceptarYSeguir");
+  });
+
+  it("la línea enlaza a /terminos y a /privacidad (en otra pestaña: la idea escrita no se pierde)", () => {
+    const linea = leerSiExiste("web/app/ui/LineaConsentimiento.tsx");
+    expect(linea).toContain('href="/terminos"');
+    expect(linea).toContain('href="/privacidad"');
+    expect(linea).toContain('target="_blank"');
+  });
+
+  it("los textos existen en los once idiomas, y la línea nombra los dos documentos con sus enlaces", () => {
+    for (const l of LOCALES) {
+      const t = CONSENTIMIENTO[l] as unknown as Record<string, Record<string, string> | undefined>;
+      expect(t, l).toBeDefined();
+      const claves: Array<[string, string]> = [
+        ["envio", "linea"], ["envio", "lineaNueva"], ["envio", "aceptarYGenerar"], ["envio", "aceptarYSeguir"],
+        ["envio", "guardando"], ["envio", "errorGuardar"], ["envio", "versionCambio"], ["login", "enlaces"],
+        ["login", "linea"], ["servidor", "requerida"], ["servidor", "requeridaNueva"], ["servidor", "noLeido"],
+        ["cookies", "aviso"],
+      ];
+      for (const [grupo, clave] of claves) {
+        expect((t[grupo]?.[clave] ?? "").trim().length, `${l} ${grupo}.${clave}`).toBeGreaterThan(0);
+      }
+      for (const [grupo, clave] of [["envio", "linea"], ["envio", "lineaNueva"], ["login", "linea"]]) {
+        const v = t[grupo]?.[clave] ?? "";
+        expect(v, `${l} ${grupo}.${clave}`).toMatch(/<terminos>.+<\/terminos>/);
+        expect(v, `${l} ${grupo}.${clave}`).toMatch(/<privacidad>.+<\/privacidad>/);
+      }
     }
   });
 
-  it("la app sí (con cuenta real y sin aceptar)", () => {
-    for (const r of ["/ideas", "/idea/abc", "/nueva", "/creditos", "/potenciadores", "/", "/terminos-falsos"]) {
-      expect(rutaSinConsentimiento(r), r).toBe(false);
-    }
+  it("en español, las palabras del fundador", () => {
+    const es = CONSENTIMIENTO.es as unknown as { envio?: { linea: string; aceptarYGenerar: string } };
+    expect(es.envio?.linea).toBe(
+      "Al continuar, aceptas los <terminos>Términos</terminos> y la <privacidad>Política de Privacidad</privacidad>"
+    );
+    expect(es.envio?.aceptarYGenerar).toBe("Aceptar y generar");
+  });
+});
+
+describe("al entrar con la cuenta: una línea en el flujo de entrada, no un modal", () => {
+  it("/login enlaza a /terminos y a /privacidad, pinta la línea junto al botón y manda la aceptación", () => {
+    const fuente = leer("web/app/login/page.tsx");
+    expect(fuente).toContain('href="/terminos"');
+    expect(fuente).toContain('href="/privacidad"');
+    expect(fuente).toContain(".linea");
+    expect(fuente).toContain("acepta_legal");
+  });
+});
+
+describe("las cookies: solo necesarias, un aviso pequeño abajo que no tapa nada", () => {
+  it("el layout monta el aviso, en el flujo de la página (no flotante) y con enlace a /cookies", () => {
+    expect(leer("web/app/layout.tsx")).toContain("<AvisoCookies");
+    const aviso = leerSiExiste("web/app/ui/AvisoCookies.tsx");
+    expect(aviso).toContain('href="/cookies"');
+    expect(aviso).not.toMatch(/\bfixed\b|aria-modal|role="dialog"/);
   });
 });
 
@@ -64,7 +134,7 @@ describe("la versión tiene una sola fuente: docs/legal/version.json", () => {
   });
 });
 
-describe("el borrado de la cuenta se lleva el registro (coherente con la 044: borrar borra de verdad)", () => {
+describe("el registro: se borra con la cuenta y la Privacidad dice cuándo se pide", () => {
   it("aceptaciones_legales cuelga de auth.users con ON DELETE CASCADE", () => {
     const sql = leer("supabase/migrations/my_idea_050_consentimiento_legal.sql");
     expect(sql).toMatch(/user_id\s+uuid NOT NULL REFERENCES auth\.users \(id\) ON DELETE CASCADE/);
@@ -74,36 +144,20 @@ describe("el borrado de la cuenta se lleva el registro (coherente con la 044: bo
     expect(leer("web/app/api/cuenta/eliminar/route.ts")).not.toContain("aceptaciones_legales");
   });
 
-  it("la Privacidad (es y fr) y el inventario lo dicen", () => {
-    expect(leer("docs/legal/PRIVACIDAD.md")).toContain("el registro de tus aceptaciones");
-    expect(leer("docs/legal/fr/CONFIDENTIALITE.md")).toContain("registre de vos acceptations");
-    expect(leer("docs/legal/INVENTARIO_DATOS.md")).toContain("aceptaciones_legales");
-  });
-});
-
-describe("la interfaz: el login enlaza los textos y el modal vive en el layout", () => {
-  it("los textos del modal y del login existen en los once idiomas", () => {
-    for (const l of LOCALES) {
-      const t = CONSENTIMIENTO[l];
-      expect(t, l).toBeDefined();
-      for (const v of [t.tituloPrimera, t.tituloNueva, t.introPrimera, t.introNueva, t.casilla, t.aceptar,
-        t.salir, t.borrar, t.errorGuardar, t.errorEstado, t.versionCambio, t.login.enlaces, t.login.aviso]) {
-        expect(v.trim().length, l).toBeGreaterThan(0);
-      }
-    }
-  });
-
-  it("/login enlaza a /terminos y a /privacidad", () => {
-    const fuente = leer("web/app/login/page.tsx");
-    expect(fuente).toContain('href="/terminos"');
-    expect(fuente).toContain('href="/privacidad"');
-  });
-
-  it("el modal enlaza a los dos textos, guarda por la ruta del servidor y está montado en el layout raíz", () => {
-    const modal = leer("web/app/ui/ConsentimientoLegal.tsx");
-    expect(modal).toContain('href="/terminos"');
-    expect(modal).toContain('href="/privacidad"');
-    expect(modal).toContain("/api/cuenta/consentimiento");
-    expect(leer("web/app/layout.tsx")).toContain("<ConsentimientoLegal");
+  it("la Privacidad (es y fr) y el inventario: se pide al enviar tu idea, también sin cuenta, y pasa a tu cuenta", () => {
+    const es = leer("docs/legal/PRIVACIDAD.md");
+    const fr = leer("docs/legal/fr/CONFIDENTIALITE.md");
+    const inv = leer("docs/legal/INVENTARIO_DATOS.md");
+    expect(es).toContain("el registro de tus aceptaciones");
+    expect(es).toContain("la primera vez que envías tu idea");
+    expect(es).toContain("también sin cuenta");
+    expect(es).toContain("pasa a tu cuenta");
+    expect(es).not.toContain("cuando entras con tu cuenta te pedimos que los");
+    expect(fr).toContain("registre de vos acceptations");
+    expect(fr).toContain("la première fois que vous envoyez votre idée");
+    expect(fr).toContain("même sans compte");
+    expect(fr).toContain("est transféré à votre compte");
+    expect(inv).toContain("aceptaciones_legales");
+    expect(inv).toContain("también la identidad invisible");
   });
 });

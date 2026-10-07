@@ -16,6 +16,7 @@
 import { createHash } from "node:crypto";
 import type { User } from "@supabase/supabase-js";
 import { esInvitadoInvisible } from "./identidad";
+import { trasladarAceptaciones } from "./legal/aceptacionServidor";
 import { createAdminClient } from "./supabase/admin";
 
 /** Huella sha256 (hex) del email en minúsculas: la llave de
@@ -59,7 +60,8 @@ export async function estaEnAllowlist(email: string): Promise<boolean> {
 /**
  * El acto de la bienvenida tras un login exitoso: la ADOPCIÓN de la identidad
  * invisible. Si el navegador traía un organizador anónimo, sus proyectos pasan
- * al dueño recién autenticado. `anonId` SIEMPRE debe venir de la sesión que el
+ * al dueño recién autenticado, y con ellos la aceptación de los Términos y la
+ * Privacidad que esa identidad dio al enviar su idea (se copia a la cuenta). `anonId` SIEMPRE debe venir de la sesión que el
  * propio request traía en cookies ANTES de verificar (prueba de posesión),
  * jamás de un parámetro, o de la anotación que el servidor dejó al registrar.
  * No bloquea el login si falla: se reintenta, se dice fuerte, queda anotada
@@ -139,6 +141,11 @@ async function adoptarConReintento(deId: string, aId: string): Promise<boolean> 
     try {
       const adoptados = await adoptarProyectosDeUsuario(deId, aId);
       if (adoptados > 0) console.log(`[login] ${adoptados} proyecto(s) adoptado(s) de ${deId}`);
+      // Consentimiento (corrección del fundador, 7 oct 2026): la aceptación de los Términos y la Privacidad que la
+      // identidad invisible dio al enviar su idea pasa a la cuenta, sin volver a preguntar. Si falla, la adopción
+      // entera se reintenta y queda pendiente: nada se pierde en silencio.
+      const trasladadas = await trasladarAceptaciones(deId, aId);
+      if (trasladadas > 0) console.log(`[login] ${trasladadas} aceptacion(es) legal(es) trasladada(s) de ${deId}`);
       return true;
     } catch (e) {
       console.error(`[login] fallo la adopcion de ${deId} (intento ${intento}/${INTENTOS_ADOPCION}):`, e);

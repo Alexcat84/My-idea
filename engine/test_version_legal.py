@@ -1,7 +1,8 @@
 """La version de los textos legales (decision del fundador, 7 oct 2026: consentimiento versionado como en iching-app).
 
-Las cuentas reales aceptan los Terminos y la Privacidad por VERSION, y la app vuelve a pedir la aceptacion cuando la
-version cambia (tabla aceptaciones_legales, migracion 050). La version tiene UNA sola fuente: docs/legal/version.json,
+Toda identidad que envia datos (la invisible tambien; correccion del fundador del mismo dia) acepta los Terminos y la
+Privacidad por VERSION, y la app vuelve a pedir la aceptacion en el siguiente envio cuando la version cambia (tabla
+aceptaciones_legales, migracion 050). La version tiene UNA sola fuente: docs/legal/version.json,
 con el historial de versiones y la huella (sha256) de los textos de cada una. scripts/sync_legal_web.py la publica en
 web/lib/legal/version.ts, que es lo unico que lee la app.
 

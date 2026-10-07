@@ -7,6 +7,9 @@ Privacidad y Cookies de esta carpeta.
 
 **Adición del 7 oct 2026 (migración 050):** el registro de la aceptación de los Términos y la
 Privacidad por versión (`aceptaciones_legales`, fila nueva de §1; borrado en §4; pendiente en §7).
+**Corrección del fundador del mismo día:** la aceptación se pide en el primer envío de datos (al
+generar la evaluación gratuita), no en un modal al navegar, y la guarda también la identidad
+invisible; la adopción la copia a la cuenta al crearla (`lib/cuentas.ts`). Sin SQL nuevo.
 
 ## 1. Qué se guarda y dónde
 
@@ -28,7 +31,7 @@ de `projects`.
 | Créditos | `credit_accounts`, `credit_transactions`, `credit_reservas`, `query_credits` (antiguo), `beta_courtesy_log` | saldo, movimientos (cobros, otorgamientos, reembolsos), reservas en curso |
 | Reembolsos | `credit_refund_log` | id de usuario, monto y motivo. **Sin FK a la cuenta: sobrevive al borrado** (hallazgo B1) |
 | Eventos de pago | `revenuecat_webhook_events` | id de usuario del procesador, tipo de evento. **Sin FK: sobreviviría al borrado** (hallazgo B2). Hoy no hay código que la escriba |
-| Aceptación de los textos legales | `aceptaciones_legales` (migración 050) | una fila por cuenta real y versión aceptada de los Términos y la Privacidad: la versión, la huella sha256 de esos textos, el idioma del texto leído (`es` o `fr`), si fue la primera aceptación o una versión nueva, y la hora del servidor. Sin IP ni navegador. La identidad invisible no escribe aquí. Cuelga de la cuenta con `ON DELETE CASCADE` |
+| Aceptación de los textos legales | `aceptaciones_legales` (migración 050) | una fila por identidad y versión aceptada de los Términos y la Privacidad: la versión, la huella sha256 de esos textos, el idioma del texto leído (`es` o `fr`), si fue la primera aceptación o una versión nueva, y la hora del servidor. Sin IP ni navegador. La escribe toda identidad que envía datos, también la identidad invisible (su fila de `auth.users`), al generar la evaluación gratuita; al crear la cuenta, la adopción copia esas filas a la cuenta con su versión, huella, idioma y fecha. Cuelga de `auth.users` con `ON DELETE CASCADE` |
 | Doble factor | `user_seguridad` (secreto TOTP cifrado AES-256-GCM), `two_factor_recovery_codes` (hash bcrypt), `two_factor_email_codes` (hash, vence a los 10 min), `two_factor_attempts` | secretos cifrados, códigos en hash, **dirección IP** y sesión de cada intento |
 | Lista de invitados de la beta | `beta_allowlist` | **el correo en claro**, quién invitó y notas. **Sin vínculo con la cuenta: sobrevive al borrado** (hallazgo B3) |
 | Huella anti-abuso de la cortesía | `cortesia_email_log` | el hash SHA-256 del correo. Sin vínculo con la cuenta **a propósito**: evita que borrar y volver a crear la cuenta repita la cortesía (hoy la cortesía está dormida) |
@@ -110,7 +113,10 @@ conserva el procesador de pagos.**
 - **`post_login_next`:** a dónde volver tras el login (httpOnly, 10 min).
 - **localStorage:** `mi-idea:gantt-vista` (vista preferida del Gantt) y
   `mi-idea:selector-estado-usado` (una pista ya vista).
-- **Próxima (i18n, F2):** `myidea_idioma`, el idioma preferido.
+- **`myidea_idioma`:** el idioma preferido (cookie de preferencia, 1 año; vigente desde i18n F2).
+- Ninguna cookie de analítica, de publicidad ni de terceros que siga entre sitios. El pie de cada
+  página lo avisa en una línea pequeña que no tapa nada ni bloquea nada (`web/app/ui/AvisoCookies.tsx`,
+  corrección del fundador del 7 oct 2026).
 
 ## 6. El dictado
 
@@ -135,7 +141,9 @@ depende del navegador.
 10. Si la prueba del consentimiento a los Términos y la Privacidad debe conservarse un plazo después
     de borrar la cuenta (por ejemplo, para defender un reclamo). Hoy se borra con la cuenta
     (migración 050, `ON DELETE CASCADE`); conservarla pediría una migración aparte y un cambio en la
-    Privacidad.
+    Privacidad. Y el plazo de la aceptación que queda en una identidad invisible que nunca creó cuenta:
+    la limpieza de los 30 días (044) borra las ideas, no la identidad, así que esa fila vive mientras
+    viva la identidad invisible en `auth.users`.
 9. ~~El nombre legal~~ CONFIRMADO por el fundador contra sus certificados de Revenu Québec:
    **Alexis Garcia Hurtado** (empresa individual, sin segundos nombres); TPS/TVH (GST/HST)
    72180 8434 RT0001 y TVQ (QST) 4056093040 TQ0001, vigentes desde el 7 de abril de 2026. Contactos:

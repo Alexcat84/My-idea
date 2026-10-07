@@ -33,10 +33,15 @@ hachage, jamais en clair) ou votre identité Google si vous vous connectez avec 
 vos paramètres de sécurité (la vérification en deux étapes, avec son secret chiffré et ses codes
 hachés).
 
-**Votre acceptation des Conditions et de la présente politique :** lorsque vous vous connectez avec
-votre compte, nous vous demandons de les accepter, et nous conservons la version que vous avez
-acceptée, la langue du texte que vous avez lu (espagnol ou français) et la date. Si les textes
-changent, nous vous demandons d'accepter la nouvelle version et nous la conservons aussi.
+**Votre acceptation des Conditions et de la présente politique :** nous vous demandons de les
+accepter la première fois que vous envoyez votre idée pour générer votre évaluation gratuite,
+même sans compte, avant de transmettre quoi que ce soit à l'intelligence artificielle; naviguer sur le
+site ne l'exige pas. Nous conservons la version que vous avez acceptée, la langue du texte que vous
+avez lu (espagnol ou français) et la date. Sans compte, ce registre reste lié à votre identité
+invisible; si vous créez ensuite votre compte, il est transféré à votre compte et nous ne vous le
+redemandons pas. Si les textes changent, nous vous demandons d'accepter la nouvelle version la
+prochaine fois que vous envoyez vos données ou que vous vous connectez avec votre compte, et nous la
+conservons aussi.
 
 **Ce que vous écrivez ou dictez :** le texte de votre idée tel que vous l'avez écrit, vos réponses
 pendant l'entretien, vos notes, les tâches de votre plan et les motifs que vous indiquez (par
@@ -54,7 +59,8 @@ limiter l'utilisation quotidienne, votre adresse IP ou votre identifiant d'utili
 
 **Sans compte :** la première fois que vous visitez My Idea, nous créons une **identité
 invisible** (un identifiant sans adresse courriel) pour que vous puissiez écrire votre idée sans
-vous inscrire. Si vous créez ensuite votre compte, vos idées y sont transférées.
+vous inscrire. Si vous créez ensuite votre compte, vos idées et votre acceptation des Conditions et
+de la présente politique y sont transférées.
 
 **La dictée :** lorsque vous dictez, la reconnaissance vocale est effectuée par votre navigateur;
 nous n'enregistrons ni ne recevons aucun son, seulement le texte qui s'inscrit dans le champ.
@@ -78,10 +84,10 @@ politique (§6).
 
 ## 4. Fondement de notre traitement
 
-Nous traitons vos données avec votre consentement, que vous donnez en créant votre compte et en
-utilisant le service, et dans la mesure nécessaire pour vous fournir le service que vous avez
-demandé. Avec votre compte, ce consentement est enregistré : la version des Conditions et de la
-présente politique que vous avez acceptée et sa date (§2). Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (§8),
+Nous traitons vos données avec votre consentement, que vous donnez en envoyant votre idée pour la
+première fois, en créant votre compte et en utilisant le service, et dans la mesure nécessaire pour
+vous fournir le service que vous avez demandé. Ce consentement est enregistré, avec ou sans compte :
+la version des Conditions et de la présente politique que vous avez acceptée et sa date (§2). Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (§8),
 étant entendu que, sans vos données, nous ne pouvons pas vous fournir le service.
 
 ## 5. L'intelligence artificielle
@@ -163,7 +169,8 @@ supprimez votre compte, sous les réserves suivantes :
 - Une empreinte chiffrée (hachage) de votre adresse courriel est conservée afin de prévenir l'abus
   des offres de bienvenue.
 - Le registre de vos acceptations des Conditions et de la présente politique est conservé tant que
-  votre compte existe et il est supprimé avec lui.
+  votre compte existe et il est supprimé avec lui. Sans compte, il reste lié à votre identité
+  invisible, et il est transféré à votre compte si vous en créez un.
 - Les limites d'utilisation conservent votre adresse IP ou votre identifiant pendant 48 heures au
   maximum.
 - Les journaux techniques de l'hébergement et les copies de sauvegarde de la base de données sont
@@ -194,7 +201,8 @@ devez obtenir le consentement de votre mère, de votre père ou de votre tuteur 
 ## 14. Modifications de la présente politique
 
 Si nous modifions la présente politique, nous publierons la nouvelle version avec sa date. La
-prochaine fois que vous vous connecterez avec votre compte, nous vous demanderons d'accepter la
-nouvelle version avant de continuer; si vous ne l'acceptez pas, vous pouvez vous déconnecter de
-votre compte, continuer à utiliser ce qui ne l'exige pas ou le supprimer. Sans compte, la version en
-vigueur est toujours celle publiée ici.
+prochaine fois que vous enverrez vos données ou que vous vous connecterez avec votre compte, nous
+vous demanderons d'accepter la nouvelle version, au moyen d'une ligne à côté du bouton; nous ne vous
+empêchons jamais de naviguer sur le site. Si vous ne l'acceptez pas, nous n'envoyons pas vos
+données : vous pouvez continuer à naviguer ou supprimer votre compte. La version en vigueur est
+toujours celle publiée ici.

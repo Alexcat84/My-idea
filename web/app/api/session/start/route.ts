@@ -33,6 +33,7 @@ import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
+import { exigirAceptacionVigente } from "@/lib/legal/aceptacionServidor";
 import { createClient } from "@/lib/supabase/server";
 import { aperturaDeSesion, contextoDeSesion } from "@/lib/engine/memoria";
 
@@ -80,6 +81,12 @@ export async function POST(request: Request) {
   if (await faltaSegundoFactor()) {
     return NextResponse.json(aviso2FA(idioma), { status: 403 });
   }
+
+  // Consentimiento (corrección del fundador, 7 oct 2026): la idea no se envía a la IA ni al buscador sin la aceptación vigente de
+  // los Términos y la Privacidad registrada para esta identidad (invitada o cuenta). Antes de crear nada, de contar
+  // el límite diario y de tocar la IA; si el registro no se puede leer, tampoco se envía (503).
+  const sinAceptacion = await exigirAceptacionVigente(user.id, idioma);
+  if (sinAceptacion) return sinAceptacion;
 
   // ETAPA 2 — VERIFICAR al inicio (no cobrar): la Exploración cuesta
   // PRECIOS.plan_completo. El descuento ocurre A LA ENTREGA del plan (ruta del

@@ -27,7 +27,7 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import Anthropic from "@anthropic-ai/sdk";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
+import { aceptarTextosLegales, autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
 import { costoAcumuladoUsd, llamarClaude, MODEL, MODEL_HAIKU, usoVacio, type RegistroLlamada, type UsoAcumulado } from "../lib/costmeter";
 import { memoriaDe, type EntradaHilo, type MemoriaProyecto } from "../lib/engine/memoria";
 import {
@@ -194,6 +194,7 @@ async function main() {
   if (sinMemoria) throw new Error(`projects.memoria no existe (migracion 049 sin aplicar): ${sinMemoria.message}`);
 
   const cookie = await autenticarComoDevUser();
+  await aceptarTextosLegales(cookie);
   const arnes = { uso: usoVacio() };
   const informe: Record<string, unknown>[] = [];
   const todasMetricas: Metricas[] = [];

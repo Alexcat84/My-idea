@@ -22,6 +22,7 @@ import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { cookies } from "next/headers";
 import { bienvenidaTrasLogin, adoptarProyectosDeUsuario, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { trasladarAceptaciones } from "@/lib/legal/aceptacionServidor";
 import { COOKIE_NEXT, destinoPostLogin } from "@/lib/nextSeguro";
 import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
@@ -93,6 +94,9 @@ export async function GET(request: Request) {
         const nuevoId = nueva?.user?.id ?? null;
         if (errAnon || !nuevoId) throw errAnon ?? new Error("sin usuario anonimo nuevo");
         await adoptarProyectosDeUsuario(anonId, nuevoId);
+        // Y su aceptación de los Términos y la Privacidad (corrección del fundador, 7 oct 2026): el visitante no
+        // tiene que volver a aceptar lo que ya aceptó al enviar su idea.
+        await trasladarAceptaciones(anonId, nuevoId);
       } catch (e) {
         // Ruidoso: los proyectos quedan bajo el anónimo viejo (recuperables
         // por el script del fundador), pero nadie debe perder trabajo mudo.
