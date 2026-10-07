@@ -1737,3 +1737,20 @@ endurecen), las olas siguientes bajaron a entre 0 y 6 rechazos por ola.
 - Esto **no es una medida**. Un solo lector por lote y una trampa de forma conocida no dicen cuánta procedencia sutil
   queda. Para saberlo hace falta una medida 6 con semilla nueva, sobre una muestra que no se haya leído para corregir.
 - El alcance fue solo procedencia: contrarios e invenciones siguen con el estado de la sección 14.
+
+### 15.9 Medida 6, solo procedencia, después de la lectura total: diseño fijado antes de sortear (7 oct 2026)
+
+Mide cuánta procedencia queda en el catálogo después de la lectura total (15.8). No reinterpreta las medidas 4 y 5.
+- **Semilla: 20261021**, escrita aquí antes de sortear. Muestra con `scripts/auditoria_final/muestra.py 20261021`:
+  200 nodos vivos con el reparto de la sección 3.
+- **Igual que las medidas 4 y 5 (15.3 y 15.6):**
+  - 20 lotes de 10 nodos, con todos los textos de cara;
+  - una trampa sin marca por lote, con la misma lista de atribuciones blandas de la medida 5;
+  - lector Opus ciego, segundo lector si no caza, y árbitro.
+- **Lector:** las instrucciones de la lectura total (`auditoria-final/lectura_total/INSTRUCCIONES_LECTOR.md`), que
+  añaden las formas que más se escaparon: "los mejores X", "hay quien", el autor nombrado de pasada, la cita sin fuente,
+  y contar dónde o cuándo se observó un dato.
+- **Veredicto:**
+  - "SANEADO en procedencia" si da 0 nodos.
+  - Si no, nodos sobre 200 con su Wilson al 95 %.
+  - Lo que aparezca se corrige por el método de la casa.
