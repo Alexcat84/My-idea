@@ -9,7 +9,7 @@
     "Identificar las expresiones de miedo en las personas que trabajan contigo (temor a perder su lugar, a admitir errores, a hacer preguntas)",
     "Crear canales seguros para que cualquiera exprese problemas sin temor a represalias",
     "Formar primero en liderazgo y después eliminar la evaluación anual de desempeño como fuente de miedo, porque el liderazgo ocupa su lugar",
-    "Analizar las quejas con datos, por cálculo y no a ojo, para saber si una categoría está fuera de control respecto de las demás; si lo está, darle atención y ayuda, y trabajar en el sistema para reducir todas las quejas"
+    "Usa números y no tu impresión para comprobar si alguna categoría de quejas se sale de control frente al resto; cuando ocurra, préstale atención y ayuda, y mejora el sistema para que bajen las quejas de todo tipo"
   ],
   "entregable_esperado": "Diagnóstico de las fuentes de miedo en tu negocio y un plan para eliminarlas, con evidencia de canales de comunicación seguros ya funcionando.",
   "nodos_previos": [
@@ -145,6 +145,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone como primer paso formar en liderazgo; solo después se elimina la evaluación anual, que el liderazgo reemplaza. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-eliminar_miedo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Analizar las quejas con datos, por cálculo y no a ojo, para saber si una categoría está fuera de control respecto de las demás; si lo está, darle atención y ayuda, y trabajar en el sistema para reducir todas las quejas",
+      "texto_nuevo": "Usa números y no tu impresión para comprobar si alguna categoría de quejas se sale de control frente al resto; cuando ocurra, préstale atención y ayuda, y mejora el sistema para que bajen las quejas de todo tipo",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1352",
+        "frase": "discover by calculation, not by judgment, whether this category is out of control"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

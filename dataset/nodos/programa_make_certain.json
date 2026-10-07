@@ -9,7 +9,7 @@
     "Identificar tasas de repetición de trabajo (rework) en áreas administrativas y de papeleo",
     "Diseñar el programa de cinco semanas enfocado en detectar y prevenir errores de oficina",
     "Lanzar el programa como parte de la etapa de concientización de calidad",
-    "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio con cargas sociales, recordando que la idea del programa es instalar la actitud de prevenir defectos"
+    "Calcula el valor de cada sugerencia contando las horas de trabajo que te ahorras por hacer las cosas bien y multiplicándolas por el salario promedio con cargas sociales; no pierdas de vista que lo que buscas con el programa es sembrar la actitud de prevenir defectos"
   ],
   "entregable_esperado": "Programa Make Certain de cinco semanas diseñado e implementado en áreas administrativas, con la medición de las sugerencias en horas de trabajo ahorradas",
   "nodos_previos": [
@@ -95,6 +95,23 @@
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-programa_make_certain-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio con cargas sociales, recordando que la idea del programa es instalar la actitud de prevenir defectos",
+      "texto_nuevo": "Calcula el valor de cada sugerencia contando las horas de trabajo que te ahorras por hacer las cosas bien y multiplicándolas por el salario promedio con cargas sociales; no pierdas de vista que lo que buscas con el programa es sembrar la actitud de prevenir defectos",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3823",
+        "frase": "Measurement of the suggestions should be based on how many hours of work"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

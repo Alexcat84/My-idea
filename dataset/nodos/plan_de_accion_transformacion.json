@@ -7,10 +7,10 @@
   "resumen_teorico": "El principio 14 describe los pasos que debes seguir, como quien lidera el negocio, para lograr la transformación: acordar qué significan los 14 principios, las enfermedades mortales y los obstáculos, tener el coraje de romper con la tradición, explicarle el cambio a un grupo suficiente de personas, ver cada trabajo como un proceso por etapas, formar equipos que mejoren cada etapa y empezar cuanto antes a construir, con estadísticos competentes, una forma de trabajar orientada a la mejora continua de la calidad, guiada por el ciclo PDCA.",
   "pasos_accionables": [
     "Reunir a quienes toman las decisiones clave en tu negocio para acordar el significado y la dirección de los 14 puntos, las enfermedades y los obstáculos",
-    "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario y que involucrará a todos",
+    "Organiza charlas o sesiones para que un grupo suficiente de personas de tu negocio entienda por qué hace falta cambiar y que el cambio va a tocar a todos",
     "Dividir cada proceso de tu negocio en un diagrama de flujo por etapas, cada una con su cliente interno",
     "Formar grupos de trabajo variados para mejorar lo que entra y lo que sale de cada etapa del proceso",
-    "Empezar cuanto antes a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad, con la participación de personas que conozcan bien la estadística"
+    "Arma desde ya, con la ayuda de personas que dominen la estadística, una manera de trabajar cuyo propósito sea conducir la mejora continua de la calidad"
   ],
   "entregable_esperado": "Un documento de compromiso firmado por ti, o por quienes lideran contigo el negocio, junto con un cronograma de charlas de sensibilización y un diagrama de flujo inicial de los procesos clave",
   "nodos_previos": [
@@ -130,6 +130,40 @@
       "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "copia-plan_de_accion_transformacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario y que involucrará a todos",
+      "texto_nuevo": "Organiza charlas o sesiones para que un grupo suficiente de personas de tu negocio entienda por qué hace falta cambiar y que el cambio va a tocar a todos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1825",
+        "frase": "Management in authority will explain by seminars and other means to a critical mass"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_accion_transformacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Empezar cuanto antes a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad, con la participación de personas que conozcan bien la estadística",
+      "texto_nuevo": "Arma desde ya, con la ayuda de personas que dominen la estadística, una manera de trabajar cuyo propósito sea conducir la mejora continua de la calidad",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "1867",
+        "frase": "Start as soon as possible to construct with deliberate speed an organization"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

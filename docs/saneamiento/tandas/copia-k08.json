@@ -1,0 +1,1635 @@
+[
+ {
+  "id": "copia-csf_funcion_recover-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_recover",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Preparar un informe post-incidente (after-action report) que documente el incidente, las acciones de respuesta y de recuperación tomadas y las lecciones aprendidas",
+  "texto_nuevo": "Redacta un informe posterior al incidente donde quede registrado qué pasó, qué hiciste para responder y para recuperarte, y qué aprendiste.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "279",
+   "frase": "preparing an after-action report"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_recover-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_recover",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Evaluar la integridad de los datos y activos respaldados antes de usarlos para la restauración",
+  "texto_nuevo": "Comprueba que los datos y activos de tus copias de seguridad estén íntegros antes de restaurar con ellos.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "279",
+   "frase": "Assess the integrity of your backed-up data and assets before using them"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_recover-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_recover",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Comunicar de forma regular y segura con partes interesadas internas y externas durante el proceso de recuperación",
+  "texto_nuevo": "Mantén al tanto, con frecuencia y por canales seguros, a la gente de dentro y de fuera de tu negocio mientras dura la recuperación.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "287",
+   "frase": "Communicate regularly and securely with internal and external stakeholders."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_detect-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_detect",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Contratar un proveedor de servicios de monitoreo si no hay recursos internos para hacerlo, y comunicar a tu responsable autorizado de incidentes (por ejemplo, ese proveedor) los detalles relevantes del incidente para que lo analice y lo mitigue",
+  "texto_nuevo": "Contrata un proveedor que vigile tus equipos si no tienes recursos propios para hacerlo y, ante un incidente, pásale a quien autorizaste para atenderlo (ese proveedor, por ejemplo) los datos importantes del caso para que lo analice y lo mitigue.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "189-193",
+   "frase": "Communicate with your authorized incident responder, such as an MSSP, about the relevant"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_identify-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_identify",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Evaluar activos de TI y físicos en busca de vulnerabilidades potenciales, y evaluar la eficacia del programa de ciberseguridad para identificar qué necesita mejorar",
+  "texto_nuevo": "Busca posibles vulnerabilidades en tus activos, tanto tecnológicos como físicos, y revisa qué tan bien funciona tu programa de ciberseguridad para descubrir dónde hace falta mejorarlo.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "101",
+   "frase": "Assess your assets (IT and physical) for potential vulnerabilities."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_protect-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_protect",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Restringir el acceso a información sensible solo a empleados que la necesiten para su trabajo",
+  "texto_nuevo": "Limita la información sensible a las personas de tu equipo que de verdad la necesitan para hacer su trabajo.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "143",
+   "frase": "Restrict sensitive information access to only those employees who need it"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_protect-pasos_accionables-6",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_protect",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "COPIA",
+  "texto_anterior": "Capacitar al personal para reconocer ataques comunes, avisar de ataques o actividad sospechosa y realizar higiene cibernética básica",
+  "texto_nuevo": "Enseña a tu equipo a identificar los ataques más frecuentes, a dar aviso cuando note un ataque o algo sospechoso y a cumplir con los hábitos básicos de higiene cibernética.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "155",
+   "frase": "how to recognize common attacks, report attacks or suspicious activity, and perform basic"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_funcion_govern-pasos_accionables-6",
+  "fecha": "2026-10-07",
+  "node_id": "csf_funcion_govern",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "COPIA",
+  "texto_anterior": "Comunicar el apoyo del liderazgo a una cultura consciente del riesgo, ética y de mejora continua, y comunicar, hacer cumplir y mantener políticas de gestión de riesgo de ciberseguridad en toda la organización",
+  "texto_nuevo": "Deja claro que tú, como quien dirige, respaldas una cultura atenta al riesgo, ética y que mejora siempre, y da a conocer, haz respetar y mantén al día en todo tu negocio las políticas para manejar los riesgos de ciberseguridad.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "59",
+   "frase": "Communicate leadership's support of a risk-aware, ethical, and continually improving culture."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-csf_perfiles_organizacionales-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "csf_perfiles_organizacionales",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Documentar el perfil actual: qué resultados de ciberseguridad se están logrando (o intentando lograr) actualmente y en qué medida",
+  "texto_nuevo": "Describe tu perfil actual: anota qué resultados de ciberseguridad ya consigues hoy, o estás tratando de conseguir, y hasta qué punto los alcanzas.",
+  "cita": {
+   "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+   "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+   "lineas": "317",
+   "frase": "the desired outcomes an organization is currently achieving (or attempting to achieve)"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-mantenimiento_sistema_cui-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "mantenimiento_sistema_cui",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Determinar un cronograma regular de mantenimiento, verificar su cumplimiento y registrar el mantenimiento programado y las reparaciones de emergencia",
+  "texto_nuevo": "Fija cada cuánto toca dar mantenimiento, comprueba que ese calendario se respete y lleva registro tanto de las revisiones previstas como de cualquier reparación urgente",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "477",
+   "frase": "Determine a regular maintenance schedule and build in mechanisms to verify it is followed."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-mantenimiento_sistema_cui-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "mantenimiento_sistema_cui",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar la autenticación multifactor (MFA) en la sesión y terminar completamente la conexión al finalizar",
+  "texto_nuevo": "Cuando el mantenimiento se haga a distancia, abre la sesión solo con un proveedor autorizado, comprueba que use autenticación multifactor (MFA) y, al acabar el trabajo, cierra la conexión por completo",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "479-481",
+   "frase": "Ensure a maintenance session with an authorized provider is established."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-control_acceso_least_privilege-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "control_acceso_least_privilege",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Implementar políticas que limiten el acceso a la información controlada no clasificada solo a individuos que lo requieren para su trabajo",
+  "texto_nuevo": "Pon en marcha políticas que reserven el acceso a la información controlada no clasificada a las personas que lo necesitan para hacer su trabajo, y a nadie más",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "279",
+   "frase": "Implement policies and procedures that limit access to CUI on systems and devices"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-getting_started_system_information_integrity-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_system_information_integrity",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades o condiciones inusuales o no autorizadas en tráfico entrante/saliente.",
+  "texto_nuevo": "Vigila el sistema para descubrir ataques y señales de que podría venir uno, conexiones y usos que nadie autorizó, y cualquier actividad o situación extraña o no permitida en el tráfico que entra o que sale.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "709",
+   "frase": "Monitoring the system to detect attacks, indicators of potential attacks, and unauthorized connections."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-estructura_sp800171-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "estructura_sp800171",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Priorizar la implementación por fases según tus recursos (tiempo, experiencia, presupuesto), partiendo de los requisitos que ya cumples",
+  "texto_nuevo": "Avanza por fases, empezando por los requisitos que ya cumples y fijando prioridades según el tiempo, la experiencia y el presupuesto que tengas.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "265",
+   "frase": "Implement in phases based upon your resources (including time, expertise, budget, etc.), starting with"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-gestion_configuracion_least_functionality-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "gestion_configuracion_least_functionality",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Deshabilitar o remover funciones, puertos, protocolos, conexiones y servicios innecesarios o inseguros en los sistemas",
+  "texto_nuevo": "Apaga o quita de tus sistemas cualquier servicio, conexión, protocolo, puerto o función que no necesites o que no sea seguro.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "387",
+   "frase": "Disable or remove functions, ports, protocols, connections, and services that are unnecessary or nonsecure."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-getting_started_supply_chain_risk_management-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Definir la frecuencia de revisión y actualización del plan de gestión de riesgos de la cadena de suministro.",
+  "texto_nuevo": "Fija cada cuánto vas a revisar y poner al día el plan con que manejas los riesgos de tu cadena de suministro.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "795",
+   "frase": "Define the frequency for reviewing and updating the supply chain risk management plan"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-getting_started_supply_chain_risk_management-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
+  "texto_nuevo": "Busca riesgos en cada etapa de vida del sistema, de sus componentes o de sus servicios: diseño, desarrollo, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "797",
+   "frase": "Identify risks associated with the development, design, manufacturing, acquisition, delivery, integration, operations"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-determinar_alcance_cui-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "determinar_alcance_cui",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Inventariar todos los sistemas y componentes de la organización y cómo fluyen los datos hacia ellos, dentro de ellos y fuera de ellos",
+  "texto_nuevo": "Haz la lista de cada sistema y componente de tu negocio y traza por dónde les entran los datos, cómo circulan dentro de cada uno y por dónde salen.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "241",
+   "frase": "Inventorying what systems or components the business has, and how the data flows into"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-inspeccion_lugar_trabajo_peligros-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "inspeccion_lugar_trabajo_peligros",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o señalan",
+  "texto_nuevo": "Pregúntales a otros trabajadores qué peligros han visto o reportado, y llévalos contigo cuando inspecciones",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "505",
+   "frase": "Have workers participate on the inspection team, and talk to them"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-inspeccion_lugar_trabajo_peligros-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "inspeccion_lugar_trabajo_peligros",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Evalúa los cambios propuestos en operaciones, puestos o flujo de trabajo, los cambios importantes de organización y la introducción de nuevos equipos, materiales o procesos antes de implementarlos, pidiendo la opinión de quienes trabajan contigo sobre sus posibles peligros",
+  "texto_nuevo": "Pregunta a quienes trabajan contigo qué peligros ven y revisa los riesgos de cualquier cambio antes de aplicarlo: equipos, materiales o procesos nuevos, una reorganización importante, o ajustes en la forma de operar, en los puestos o en el flujo de trabajo",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "537",
+   "frase": "Before changing operations, workstations, or workflow; making major organizational changes"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-identificacion_recopilacion_informacion_peligros-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "identificacion_recopilacion_informacion_peligros",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Organiza y revisa con tu equipo toda la información recopilada para identificar qué peligros puede haber, quién está o podría estar expuesto y los patrones de lesiones o enfermedades",
+  "texto_nuevo": "Siéntate con tu equipo a ordenar y estudiar todo lo reunido, hasta tener claro qué peligros podría haber, quién queda o podría quedar expuesto y qué lesiones o enfermedades se repiten",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "465",
+   "frase": "Collect, organize, and review information with workers to determine what types"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-investigacion_incidentes-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "investigacion_incidentes",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Define un plan y un procedimiento claro para investigar incidentes, que te permita empezar de inmediato, con quiénes participan, líneas de comunicación, materiales necesarios y formularios de reporte",
+  "texto_nuevo": "Deja definido de antemano quiénes investigan un incidente, cómo se comunican, qué materiales necesitan y qué formularios de reporte usan, en un plan y un procedimiento claros que te permitan empezar en cuanto ocurra",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "567-575",
+   "frase": "Develop a clear plan and procedure for conducting incident investigations, so that"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-peligros_emergencias_no_rutinarias-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "peligros_emergencias_no_rutinarias",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Revisar el análisis de peligros de la tarea con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
+  "texto_nuevo": "Repasa el análisis de peligros con quienes van a hacer una tarea no rutinaria, siempre antes de empezar cualquiera de ellas, y cuéntale al resto de qué trabajo se trata, cuándo se hará y qué precauciones hacen falta",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "731",
+   "frase": "Prior to initiating such work, review JSAs/JHAs with any workers involved"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-peligros_emergencias_no_rutinarias-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "peligros_emergencias_no_rutinarias",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada",
+  "texto_nuevo": "Prepara planes nuevos o ajusta los que ya tienes para controlar los peligros que una emergencia pueda traer, consigue el equipo que haga falta, nombra a los responsables y practica simulacros que confirmen que la protección es la adecuada",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "737-743",
+   "frase": "Develop or modify plans to control hazards that may arise in emergency situations"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-implementacion_controles-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "implementacion_controles",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Aplicar de inmediato medidas simples y económicas como orden, limpieza e iluminación, sin importar su prioridad relativa",
+  "texto_nuevo": "Pon en marcha ya las medidas fáciles y baratas, como el orden, la limpieza y la iluminación, sin fijarte en la prioridad relativa que tengan",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "757",
+   "frase": "Promptly implement any measures that are easy and inexpensive"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-capacitacion_identificacion_peligros-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "capacitacion_identificacion_peligros",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Dar capacitación adicional, según haga falta, cuando un cambio de instalaciones, equipos, procesos, materiales u organización del trabajo pueda aumentar los peligros, y cada vez que se asigne una tarea nueva",
+  "texto_nuevo": "Vuelve a capacitar cuando haga falta: cada vez que alguien reciba una tarea nueva y siempre que un cambio en las instalaciones, los equipos, los procesos, los materiales o la forma de organizar el trabajo pueda traer más peligros",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "879",
+   "frase": "Provide additional training, as necessary, when a change in facilities, equipment, processes"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-capacitacion_roles_gerencia-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "capacitacion_roles_gerencia",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Reforzar el conocimiento de responsabilidades legales bajo la OSH Act y de los derechos que esa ley garantiza a los trabajadores",
+  "texto_nuevo": "Refresca qué obligaciones legales impone la OSH Act y qué derechos garantiza esa misma ley a los trabajadores",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "835",
+   "frase": "Reinforce employers, managers, and supervisors' knowledge of their responsibilities under the OSH Act"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-participacion_trabajadores-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "participacion_trabajadores",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Crea un proceso simple para que te informen de lesiones, enfermedades, casi accidentes, peligros y otras inquietudes de seguridad y salud, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
+  "texto_nuevo": "Facilita una vía sencilla, con opción anónima, para que te avisen de lesiones, enfermedades, casi accidentes, peligros o cualquier otra inquietud de seguridad y salud, y dale a cada persona la autoridad de parar, o de pedir que se pare por un tiempo, toda tarea que considere insegura",
+  "cita": {
+   "libro": "OSHA3886",
+   "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+   "lineas": "359-365",
+   "frase": "Establish a simple process for workers to report injuries, illnesses, close calls/near misses"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-coordinacion_sitios_multiempleador-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "coordinacion_sitios_multiempleador",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Define especificaciones y calificaciones de seguridad para contratistas y agencias de personal, inclúyelas en los contratos y asegúrate de que los seleccionados las cumplan",
+  "texto_nuevo": "Fija los requisitos y las credenciales de seguridad que pedirás a contratistas y agencias de personal, ponlos por escrito en los contratos y confirma que cumplen con ellos quienes resulten elegidos",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "221, 1047",
+   "frase": "Include in contracts and bid documents any safety-related specifications and qualifications"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-coordinacion_sitios_multiempleador-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "coordinacion_sitios_multiempleador",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Establece un canal para notificar incidentes y da a contratistas y agencias el derecho a visitar e inspeccionar el sitio y a acceder a los registros de lesiones y enfermedades y a otra información de seguridad y salud",
+  "texto_nuevo": "Reconoce a contratistas y agencias el derecho a consultar tus registros de lesiones y enfermedades y cualquier otro dato de seguridad y salud, y a recorrer e inspeccionar el sitio; además, abre una vía para que te notifiquen incidentes",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "1033",
+   "frase": "The host employer gives contract employers and staffing agencies the right to conduct"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-capacitacion_educacion_seguridad-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "capacitacion_educacion_seguridad",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Capacita a todos en las políticas, metas y procedimientos de tu programa de seguridad, explicando cómo funciona, a quién acudir con dudas, cómo notificar peligros, lesiones, enfermedades y cuasi accidentes, qué hacer en una emergencia, cuáles son tus responsabilidades como empleador dentro del programa y cuáles son los derechos de los trabajadores",
+  "texto_nuevo": "Capacita a todos para que entiendan tu programa de seguridad: qué derechos tienen los trabajadores y qué te toca a ti como empleador dentro de él, cómo funciona con sus políticas, metas y procedimientos, con quién hablar si surge una duda, cómo dar aviso de un peligro, una lesión, una enfermedad o un cuasi accidente, y cómo actuar ante una emergencia",
+  "cita": {
+   "libro": "OSHA3885",
+   "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+   "lineas": "805-819",
+   "frase": "Provide training to all managers; supervisors; workers; and contractor, subcontractor"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-nueve_pasos_iniciar_programa-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "nueve_pasos_iniciar_programa",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Crea y comunica un canal simple y sin represalias para informar de lesiones, enfermedades, incidentes (incluidos los cuasiaccidentes), peligros o inquietudes de seguridad y salud, con una opción para informar de peligros o inquietudes de forma anónima",
+  "texto_nuevo": "Diseña y da a conocer una vía sencilla para reportar, sin miedo a represalias, lesiones, enfermedades, incidentes (también los cuasiaccidentes), peligros o inquietudes de seguridad y salud, y deja abierta la posibilidad de avisar de peligros o inquietudes sin dar el nombre",
+  "cita": {
+   "libro": "OSHA3886",
+   "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+   "lineas": "117-119",
+   "frase": "Develop and communicate a simple procedure for workers to report any injuries, illnesses"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-nueve_pasos_iniciar_programa-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "nueve_pasos_iniciar_programa",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, e identifica las emergencias previsibles, prepara instrucciones para cada caso, reúnete a comentarlas y publícalas en un lugar visible del sitio",
+  "texto_nuevo": "Deja en manos de tus trabajadores elegir, poner en marcha y evaluar las soluciones que encontraron; además, anticipa qué emergencias pueden ocurrir, escribe qué hacer ante cada una, repásalo en una reunión y pon esas instrucciones a la vista en el sitio",
+  "cita": {
+   "libro": "OSHA3886",
+   "fichero": "books/Especificos/Health and Safety/OSHA3886.md",
+   "lineas": "139-143",
+   "frase": "Assign workers the task of choosing, implementing, and evaluating the solutions."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-deteccion_defectos_raros_control_estadistico-pasos_accionables-5",
+  "fecha": "2026-10-07",
+  "node_id": "deteccion_defectos_raros_control_estadistico",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "COPIA",
+  "texto_anterior": "Decide racionalmente si condenas todo el lote o liberas solo la parte que corresponda según lo que encontraste.",
+  "texto_nuevo": "Con base en lo que encontraste, elige con criterio racional entre rechazar el lote completo o dar salida solo a la porción que corresponda.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9789",
+   "frase": "a rational decision can be made on whether to condemn the whole run"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-pruebas_inadecuadas_prototipos-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "pruebas_inadecuadas_prototipos",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Formular preguntas clave sobre a qué se refieren los resultados de prueba: ¿predicen la corrida de mañana o el resultado del próximo año? ¿Bajo qué condiciones lo predicen? ¿Aumentan tu confianza en alguna predicción que necesitas para planear? ¿Cómo te ayudan a planear un cambio? ¿Qué significa en la práctica aprender, al estudiar un proceso para mejorarlo?",
+  "texto_nuevo": "Hazte estas preguntas sobre los resultados de cada prueba: a qué se refieren; si anticipan la producción de mañana o lo que pasará el año próximo, y en qué condiciones lo anticipan; si refuerzan tu certeza sobre algún pronóstico que necesitas para planear; de qué manera te sirven para planear un cambio; y qué quiere decir, en concreto, aprender cuando estudias un proceso para mejorarlo",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3039-3051",
+   "frase": "Anyone engaged in testing should ask himself the following questions"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-eliminar_miedo-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "eliminar_miedo",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Analizar las quejas con datos, por cálculo y no a ojo, para saber si una categoría está fuera de control respecto de las demás; si lo está, darle atención y ayuda, y trabajar en el sistema para reducir todas las quejas",
+  "texto_nuevo": "Usa números y no tu impresión para comprobar si alguna categoría de quejas se sale de control frente al resto; cuando ocurra, préstale atención y ayuda, y mejora el sistema para que bajen las quejas de todo tipo",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1352",
+   "frase": "discover by calculation, not by judgment, whether this category is out of control"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-medidas_productividad_no_mejoran-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "medidas_productividad_no_mejoran",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Además de comparar cifras históricas, que dicen cómo han ido las cosas pero no muestran cómo mejorar, analizar si cada actividad o proceso es coherente con el objetivo real de la organización y qué está costando.",
+  "texto_nuevo": "No te quedes solo en comparar cifras históricas, que te cuentan cómo te ha ido pero no te señalan cómo mejorar: estudia si cada actividad o proceso sirve de verdad al propósito real de tu negocio y cuánto te cuesta.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "299-303",
+   "frase": "Figures like this tell the management how things have been going"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-plan_de_accion_transformacion-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "plan_de_accion_transformacion",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Explicarle a un grupo suficiente de personas de tu negocio, mediante charlas o sesiones, por qué el cambio es necesario y que involucrará a todos",
+  "texto_nuevo": "Organiza charlas o sesiones para que un grupo suficiente de personas de tu negocio entienda por qué hace falta cambiar y que el cambio va a tocar a todos",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1825",
+   "frase": "Management in authority will explain by seminars and other means to a critical mass"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-plan_de_accion_transformacion-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "plan_de_accion_transformacion",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Empezar cuanto antes a construir una forma de trabajar dedicada a guiar la mejora continua de la calidad, con la participación de personas que conozcan bien la estadística",
+  "texto_nuevo": "Arma desde ya, con la ayuda de personas que dominen la estadística, una manera de trabajar cuyo propósito sea conducir la mejora continua de la calidad",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1867",
+   "frase": "Start as soon as possible to construct with deliberate speed an organization"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-ciclo_de_mejora_continua_helix-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "ciclo_de_mejora_continua_helix",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Probarlo en servicio real: averiguar qué piensa el usuario y por qué el no-usuario no lo compró",
+  "texto_nuevo": "Pon a prueba el producto mientras se usa de verdad: pregunta qué opina quien lo usa y averigua por qué quien no lo usa no lo ha comprado",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "3969",
+   "frase": "Test it in service; find out what the user thinks of it"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-categorias_de_material_entrante-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "categorias_de_material_entrante",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Evitar mantener inventario, salvo como protección ante un alza de precio o una huelga inminente; si ya tienes material de origen desconocido, la única vía segura es la inspección total",
+  "texto_nuevo": "Guarda inventario solo si te protege de una subida de precio o de una huelga que se ve venir; con el material cuya procedencia ignoras, no te queda otra opción segura que revisarlo todo, pieza por pieza",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "2014",
+   "frase": "With origin unknown, the only safe course is 100 percent inspection"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-control_estadistico_metodo_medicion-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "control_estadistico_metodo_medicion",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Verifica que el rango de variación se mantenga dentro de límites de control estadístico y que su nivel no sea tan grande que la precisión no alcance para el uso.",
+  "texto_nuevo": "Comprueba que el gráfico de rangos siga en control estadístico y que su nivel sea lo bastante bajo para que la precisión del método te sirva en el uso que le darás.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "6441",
+   "frase": "The level of the R-chart for repeated measurements for any operator must not"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-probabilidad_falla_ensamblaje_multiple-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "probabilidad_falla_ensamblaje_multiple",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Identificar qué partes requieren inspección 100%, que solo pueden ser unas pocas para que el costo de inspección no sea excesivo, versus las que pueden dejarse sin inspección con calidad casi cero defectos.",
+  "texto_nuevo": "Decide qué partes revisarás al 100%, limitándolas a unas pocas para no disparar el costo de inspección, y cuáles podrás dejar sin revisar siempre que su calidad esté en cero defectos o muy cerca.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9657-9661",
+   "frase": "We can tolerate only a few parts in Case 2 (100 percent inspection)"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-ciclo_shewhart_pdsa-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "ciclo_shewhart_pdsa",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Si los resultados son favorables, puedes decidir repetir el ciclo, de preferencia bajo condiciones ambientales diferentes, para confirmar la validez de los resultados",
+  "texto_nuevo": "Valora volver a recorrer el ciclo cuando los resultados te favorezcan, mejor en condiciones ambientales distintas, para comprobar que esos resultados son válidos.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1877",
+   "frase": "If the results of the change or test are favorable, we may decide"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-preguntas_para_formacion_de_equipos-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "preguntas_para_formacion_de_equipos",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Responder como equipo: ¿dónde encaja nuestra unidad en la organización total, qué produce, con qué procesos lo produce y qué pasaría si dejara de producirlo? ¿Cómo sabemos si nuestros resultados son buenos o malos, con qué estándares, y cómo se fijaron?",
+  "texto_nuevo": "Responde junto a tu equipo, sobre su unidad: qué entrega, por medio de qué procesos, en qué lugar del negocio completo se ubica y qué pasaría si dejara de entregarlo. Responde también qué estándares les dicen si un resultado es bueno o malo, y cómo se definieron esos estándares.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1911-1933",
+   "frase": "Where in the total organizational structure does your department fit?"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-entrenamiento_y_control_estadistico-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "entrenamiento_y_control_estadistico",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Cuando la curva de aprendizaje se estabilice, usar la carta de control para determinar si se alcanzó el control estadístico y cuándo",
+  "texto_nuevo": "Espera a que la curva de aprendizaje se aplane y entonces consulta la carta de control: te dirá si la persona ya llegó al control estadístico y en qué momento",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "6056",
+   "frase": "Once the learning curve levels off, a control chart will indicate"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-entrenamiento_y_control_estadistico-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "entrenamiento_y_control_estadistico",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Si el trabajo de la persona aún no está en control estadístico, continuar y reforzar el entrenamiento, sabiendo que en un estado de caos (mala supervisión, mala gestión) nadie puede desarrollar su potencial",
+  "texto_nuevo": "Sigue entrenando, y con más fuerza, a quien todavía no tiene su trabajo en control estadístico; ten presente que nadie logra desarrollar su potencial en medio del caos, con una supervisión mala y una gestión mala",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "6058-6060",
+   "frase": "Curiously, if a man's work has not yet reached statistical control"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-punto_equilibrio_calidad_inspeccion-pasos_accionables-6",
+  "fecha": "2026-10-07",
+  "node_id": "punto_equilibrio_calidad_inspeccion",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "COPIA",
+  "texto_anterior": "Elige la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor. Si la calidad que llega está en caos, ten presente que decidir lote por lote con muestras deja algunos lotes del lado equivocado del punto de equilibrio, y cada lote mal ubicado sale al costo más alto. Ahí la inspección al 100% merece considerarse; como alternativa sencilla de administrar, decide por la razón k2/k1: si k2 es 1000 veces k1 o más, inspecciona todo; si está entre 10 y 1000 veces k1, revisa una muestra de 200 piezas, acepta el resto si no aparece ningún defecto y revísalo completo si aparece uno; si k2 es menor que 10 veces k1, no inspecciones.",
+  "texto_nuevo": "Elige la estrategia de inspección según el resultado: ninguna si p es menor que k1/k2, 100% si es mayor. Cuando la calidad que te llega es un caos, recuerda que cualquier regla basada en muestras para decidir lote por lote termina mandando algunos lotes al lado incorrecto del punto de equilibrio, y esos lotes mal ubicados son justo los que salen al costo más alto. En ese caso vale la pena pensar en revisarlo todo; si prefieres algo fácil de manejar, guíate por cuántas veces k2 supera a k1: con 1000 veces o más, inspecciona el 100%; entre 10 y menos de 1000 veces, toma una muestra de 200 piezas y acepta el resto si no encuentras ningún defecto, pero revísalo completo si aparece uno; con menos de 10 veces, no inspecciones.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "9370-9391",
+   "frase": "Samples and any rule for use of samples will place some lots"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-reglas_deming_consultoria_calidad-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "reglas_deming_consultoria_calidad",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Acuerda una relación de largo plazo, que cualquiera de las dos partes puede terminar en cualquier momento, con honorarios claros desde el inicio",
+  "texto_nuevo": "Pacta desde el principio un vínculo largo con honorarios claros, dejando abierta la puerta para que tú o el negocio lo terminen cuando quieran",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "10613",
+   "frase": "The arrangement will be long-term, though the company or I may"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-eliminar_metas_numericas_gerencia-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "eliminar_metas_numericas_gerencia",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Determinar la capacidad real del sistema mediante análisis estadístico, sabiendo que si es estable no sirve fijar una meta: obtendrás lo que el sistema da",
+  "texto_nuevo": "Calcula con análisis estadístico cuánto da de verdad tu sistema, y ten claro que, si es estable, ponerle una meta no cambia nada: el resultado será el que el sistema pueda entregar",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1571",
+   "frase": "If you have a stable system, then there is no use to"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-eliminar_metas_numericas_gerencia-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "eliminar_metas_numericas_gerencia",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Reconocer que manejar tu negocio con metas numéricas, sin saber qué hacer para lograrlas, suele ser manejarlo por miedo",
+  "texto_nuevo": "Acepta que, si diriges tu negocio a punta de metas numéricas sin tener claro cómo alcanzarlas, lo más común es que lo estés dirigiendo con miedo",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "1577",
+   "frase": "management by numerical goal is an attempt to manage without knowledge"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-gestion_participativa_qc_circle_supervisores-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "gestion_participativa_qc_circle_supervisores",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Elige un área piloto para empezar la mejora donde parezca haber problemas y cuya persona a cargo haya aprendido la filosofía y trabaje bien con los demás",
+  "texto_nuevo": "Arranca la mejora en un área piloto que muestre señales de problemas, con alguien al frente que ya domine la filosofía y sepa colaborar con el resto del equipo",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "8711",
+   "frase": "the main reason for choice of this department was that (1) there appeared"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-organizacion_independiente_de_calidad-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "organizacion_independiente_de_calidad",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Elige a alguien capaz de comunicarse, e incluso llamar la atención a otros responsables, sin generar antagonismo.",
+  "texto_nuevo": "Busca a una persona que sepa hablar con otros responsables, y hasta corregirlos cuando haga falta, sin ganarse su enemistad.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "759",
+   "frase": "headed by an individual who knew how to communicate with, and even discipline"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planificacion_cero_defectos-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "planificacion_cero_defectos",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Explicar el concepto de Cero Defectos a todo el personal supervisor y prepararlos para transmitirlo a sus equipos",
+  "texto_nuevo": "Reúne a todos tus supervisores, cuéntales qué es Cero Defectos y déjalos listos para llevar ese mensaje a su propia gente",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2999",
+   "frase": "Explaining the concept and program to all supervisory personnel, Preparing supervisors to explain"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-auditoria_calidad_proveedores-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "auditoria_calidad_proveedores",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Redactar el informe final, revisarlo primero con el gerente de calidad y luego con el gerente general",
+  "texto_nuevo": "Deja el informe en su versión final y repásalo con el responsable de calidad antes de llevárselo al responsable de toda la planta",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2939",
+   "frase": "Write your report in its final format and have it typed. Review the report"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-auditoria_calidad_proveedores-pasos_accionables-5",
+  "fecha": "2026-10-07",
+  "node_id": "auditoria_calidad_proveedores",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "COPIA",
+  "texto_anterior": "Anotar en el informe final los desacuerdos del cliente o, si sus comentarios son correctos, cambiar el informe",
+  "texto_nuevo": "Deja constancia en el informe final de cualquier objeción del cliente y, cuando tenga razón, corrige el informe en lugar de anotarla",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2941",
+   "frase": "If they have any disagreements with your findings, note them on your report"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-identificacion_empleado_con_el_trabajo-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "identificacion_empleado_con_el_trabajo",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Mostrar a los empleados cómo va su desempeño, de dónde viene su trabajo y quién lo recibe después, y el resultado final de su trabajo y su impacto en la cadena de valor.",
+  "texto_nuevo": "Enséñale a cada persona del equipo cómo le está yendo, de qué paso anterior llega su trabajo y a quién se lo pasa al terminar, además del resultado final y su efecto en la cadena de valor.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1207",
+   "frase": "the supervisor can find ways of showing employees how they are performing"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-politica_formal_de_calidad-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "politica_formal_de_calidad",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Establecer que el gerente general debe acordar con el director corporativo de calidad el grado de función de calidad necesario.",
+  "texto_nuevo": "Deja por escrito que quien dirige tiene que acordar con el máximo responsable de calidad de la empresa cuánta función de calidad hace falta.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "735",
+   "frase": "The company general manager is responsible for obtaining agreement with the corporate director"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-politica_formal_de_calidad-pasos_accionables-2",
+  "fecha": "2026-10-07",
+  "node_id": "politica_formal_de_calidad",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "COPIA",
+  "texto_anterior": "Especificar que el jefe de calidad debe depender directamente del gerente general, al mismo nivel que las áreas que evalúa.",
+  "texto_nuevo": "Deja claro en la política que quien encabeza calidad responde directamente a quien dirige y ocupa el mismo nivel que las áreas cuyo trabajo evalúa.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "737",
+   "frase": "the head of the quality function in each unit shall report directly to the general"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-politica_formal_de_calidad-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "politica_formal_de_calidad",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+  "texto_nuevo": "Escribe sin omitir nada qué le toca a la función de calidad: sobre el producto, aceptarlo, aprobar la calificación de productos, procesos y procedimientos y cuidar su seguridad; hacia afuera, la calidad de los proveedores y los asuntos del consumidor; en el método, la ingeniería de calidad, la planificación, la auditoría, el análisis de datos con su reporte de estado y la acción correctiva; y para crecer, la educación y la mejora.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "739-741",
+   "frase": "Product acceptance at all levels, Supplier quality, Quality engineering, Data analysis and status reporting"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-politica_formal_de_calidad-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "politica_formal_de_calidad",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan.",
+  "texto_nuevo": "Haz llegar la política a todos los empleados y comprueba que la entiendan: se trata de cumplir el requisito al pie de la letra o de lograr que se cambie de manera oficial por lo que tú y tu cliente necesitan en realidad.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "735",
+   "frase": "take affirmative steps to ensure that the employees understand that the quality policy"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-make_certain_programa-pasos_accionables-6",
+  "fecha": "2026-10-07",
+  "node_id": "make_certain_programa",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "COPIA",
+  "texto_anterior": "Sugerir a cada grupo que tenga reuniones regulares de prevención de defectos, similares a los círculos de acción correctiva en manufactura",
+  "texto_nuevo": "Propón que cada grupo se junte con regularidad a hablar de cómo prevenir defectos, igual que hacen en manufactura los círculos de acción correctiva",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3795",
+   "frase": "Suggest that they might like to have regular meetings in their groups"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-crosby_habilidad_transmision-pasos_accionables-4",
+  "fecha": "2026-10-07",
+  "node_id": "crosby_habilidad_transmision",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "COPIA",
+  "texto_anterior": "Buscar ayuda profesional para aprender a construir un discurso, y un grupo de práctica (ej. Toastmasters) para ganar confianza en la comunicación oral",
+  "texto_nuevo": "Apóyate en un profesional que te enseñe a armar un discurso y únete a un grupo de práctica (por ejemplo, Toastmasters) para comunicarte de viva voz con más confianza",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "1765",
+   "frase": "Professional help is advised for learning how to construct a speech, but Toastmasters"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_make_certain_2-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "programa_make_certain_2",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Informar a quienes dirigen el negocio sobre el concepto e intención del programa y designar coordinadores por departamento.",
+  "texto_nuevo": "Explica a quienes dirigen el negocio contigo en qué consiste el programa y qué persigue, y nombra a una persona coordinadora en cada departamento.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3795",
+   "frase": "Brief management staff on the program concept and intent. Agree to appoint coordinators"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_make_certain_2-pasos_accionables-1",
+  "fecha": "2026-10-07",
+  "node_id": "programa_make_certain_2",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "COPIA",
+  "texto_anterior": "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+  "texto_nuevo": "Junta a las personas coordinadoras, cuéntales cómo funciona el programa y pídeles por lo menos tres casos reales de errores en los procesos, como los de facturación, órdenes de compra o instrucciones de trabajo.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3795",
+   "frase": "Meet with coordinators to explain the program. Ask them to plan a meeting"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_make_certain_2-pasos_accionables-5",
+  "fecha": "2026-10-07",
+  "node_id": "programa_make_certain_2",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "COPIA",
+  "texto_anterior": "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
+  "texto_nuevo": "Calcula cuánto rinde cada sugerencia contando las horas de trabajo que dejaron de gastarse porque algo salió bien y multiplicándolas por el costo salarial cargado; no olvides que lo que buscas con el programa es sembrar la actitud de prevenir defectos.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3823",
+   "frase": "Measurement of the suggestions should be based on how many hours of work"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_make_certain_2-pasos_accionables-7",
+  "fecha": "2026-10-07",
+  "node_id": "programa_make_certain_2",
+  "campo": "pasos_accionables",
+  "indice": 7,
+  "veredicto": "COPIA",
+  "texto_anterior": "Implementar tantas sugerencias como sea posible e informar sobre su seguimiento durante varios meses.",
+  "texto_nuevo": "Pon en marcha todas las sugerencias que puedas y sigue contando cómo avanzan durante varios meses.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3827",
+   "frase": "Implement as many suggestions as you can, and keep reporting on that"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-educacion_calidad-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "educacion_calidad",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Diseñar orientación inicial sobre conceptos, procedimientos, problemas que dañan el producto y expectativas del cliente",
+  "texto_nuevo": "Prepara una primera orientación que explique las ideas y los procedimientos de calidad, qué problemas perjudican al producto y qué espera el cliente",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "841",
+   "frase": "Orientation to the concepts and procedures of quality; the problems that have"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-entrenamiento_supervisores_calidad-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "entrenamiento_supervisores_calidad",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Dedica al menos 6 horas a estudiar el sistema de medición de calidad, los costos de calidad, las acciones correctivas y el propósito de la etapa de conciencia de calidad al iniciar la etapa de conciencia de calidad.",
+  "texto_nuevo": "Reserva al menos 6 horas, apenas empiece la etapa de conciencia de calidad, para entender a fondo cuatro temas: el sistema de acciones correctivas, la forma en que mides la calidad, tus costos de calidad y para qué sirve esa etapa de conciencia.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3093-3095",
+   "frase": "the supervisors should be given at least six hours of instruction covering"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-equipo_mejora_calidad_2-pasos_accionables-0",
+  "fecha": "2026-10-07",
+  "node_id": "equipo_mejora_calidad_2",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Elige a la persona que va a liderar la mejora de calidad: alguien con experiencia de dirección que entienda la necesidad de mejorar, esté de acuerdo con Cero Defectos y la prevención de defectos y cuente con tu confianza, por ejemplo quien se encarga de marketing u operaciones.",
+  "texto_nuevo": "Elige a quien va a liderar la mejora de calidad: una persona con oficio de dirección, convencida de que hace falta mejorar, que comparta la meta de Cero Defectos y la idea de prevenir defectos y en la que confíes; puede ser, por ejemplo, quien lleva marketing u operaciones.",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "2107-2109",
+   "frase": "The chairperson should be a mature member of management who understands the need"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_make_certain-pasos_accionables-3",
+  "fecha": "2026-10-07",
+  "node_id": "programa_make_certain",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "COPIA",
+  "texto_anterior": "Medir las sugerencias por las horas de trabajo que ya no hay que gastar al hacer las cosas bien, multiplicadas por el salario promedio con cargas sociales, recordando que la idea del programa es instalar la actitud de prevenir defectos",
+  "texto_nuevo": "Calcula el valor de cada sugerencia contando las horas de trabajo que te ahorras por hacer las cosas bien y multiplicándolas por el salario promedio con cargas sociales; no pierdas de vista que lo que buscas con el programa es sembrar la actitud de prevenir defectos",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "3823",
+   "frase": "Measurement of the suggestions should be based on how many hours of work"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ }
+]

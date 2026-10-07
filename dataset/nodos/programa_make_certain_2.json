@@ -6,14 +6,14 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "El programa 'Make Certain' es una metodología estructurada diseñada especialmente para áreas de servicio y trabajo administrativo (paperwork), donde se involucra a supervisores y empleados en identificar cómo podrían fallar en satisfacer a su cliente interno o externo, y luego invertir esa lógica para generar sugerencias concretas de prevención de defectos. Se apoya en la participación activa de todos los niveles, coordinadores por departamento, medición de sugerencias en horas-hombre ahorradas, y reconocimiento simbólico (como el badge 'Certain Maker') en lugar de premios monetarios.",
   "pasos_accionables": [
-    "Informar a quienes dirigen el negocio sobre el concepto e intención del programa y designar coordinadores por departamento.",
-    "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+    "Explica a quienes dirigen el negocio contigo en qué consiste el programa y qué persigue, y nombra a una persona coordinadora en cada departamento.",
+    "Junta a las personas coordinadoras, cuéntales cómo funciona el programa y pídeles por lo menos tres casos reales de errores en los procesos, como los de facturación, órdenes de compra o instrucciones de trabajo.",
     "Capacitar a supervisores en el programa y que ellos se reúnan con su gente para explicarle su lógica y hacer con ella la discusión: identificar cliente interno/externo, qué espera ese cliente, y qué podría hacer el equipo para NO cumplirlo (pregunta invertida); luego elegir las mejores acciones, pedir a todos cómo medirlas y anotar esas medidas como base de la medición posterior.",
     "Convertir esas respuestas negativas en sugerencias positivas de cómo asegurar que el cliente reciba lo prometido.",
     "Registrar y medir las sugerencias entregadas, entregar reconocimiento (insignia) y publicar los avances en carteleras.",
-    "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
+    "Calcula cuánto rinde cada sugerencia contando las horas de trabajo que dejaron de gastarse porque algo salió bien y multiplicándolas por el costo salarial cargado; no olvides que lo que buscas con el programa es sembrar la actitud de prevenir defectos.",
     "Realizar cuenta regresiva pública antes del cierre del programa y agradecer formalmente a todos los participantes al finalizar.",
-    "Implementar tantas sugerencias como sea posible e informar sobre su seguimiento durante varios meses."
+    "Pon en marcha todas las sugerencias que puedas y sigue contando cómo avanzan durante varios meses."
   ],
   "entregable_esperado": "Un programa documentado de prevención de defectos por departamento, con coordinadores asignados, formato de sugerencias, sistema de medición en horas/dinero ahorrado, y reporte de implementación de mejoras.",
   "nodos_previos": [
@@ -198,6 +198,74 @@
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-programa_make_certain_2-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Informar a quienes dirigen el negocio sobre el concepto e intención del programa y designar coordinadores por departamento.",
+      "texto_nuevo": "Explica a quienes dirigen el negocio contigo en qué consiste el programa y qué persigue, y nombra a una persona coordinadora en cada departamento.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3795",
+        "frase": "Brief management staff on the program concept and intent. Agree to appoint coordinators"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-programa_make_certain_2-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Reunirse con los coordinadores para explicarles el programa y solicitar al menos tres ejemplos reales de errores de proceso (facturación, órdenes de compra, instrucciones de trabajo).",
+      "texto_nuevo": "Junta a las personas coordinadoras, cuéntales cómo funciona el programa y pídeles por lo menos tres casos reales de errores en los procesos, como los de facturación, órdenes de compra o instrucciones de trabajo.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3795",
+        "frase": "Meet with coordinators to explain the program. Ask them to plan a meeting"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-programa_make_certain_2-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Medir el impacto en horas de trabajo no gastadas por hacer las cosas bien, multiplicado por el costo salarial cargado, recordando que la idea del programa es instalar la actitud de prevenir defectos.",
+      "texto_nuevo": "Calcula cuánto rinde cada sugerencia contando las horas de trabajo que dejaron de gastarse porque algo salió bien y multiplicándolas por el costo salarial cargado; no olvides que lo que buscas con el programa es sembrar la actitud de prevenir defectos.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3823",
+        "frase": "Measurement of the suggestions should be based on how many hours of work"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-programa_make_certain_2-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Implementar tantas sugerencias como sea posible e informar sobre su seguimiento durante varios meses.",
+      "texto_nuevo": "Pon en marcha todas las sugerencias que puedas y sigue contando cómo avanzan durante varios meses.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3827",
+        "frase": "Implement as many suggestions as you can, and keep reporting on that"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

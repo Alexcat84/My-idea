@@ -9,8 +9,8 @@
     "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
     "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
     "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
-    "Revisar el análisis de peligros de la tarea con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
-    "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada"
+    "Repasa el análisis de peligros con quienes van a hacer una tarea no rutinaria, siempre antes de empezar cualquiera de ellas, y cuéntale al resto de qué trabajo se trata, cuándo se hará y qué precauciones hacen falta",
+    "Prepara planes nuevos o ajusta los que ya tienes para controlar los peligros que una emergencia pueda traer, consigue el equipo que haga falta, nombra a los responsables y practica simulacros que confirmen que la protección es la adecuada"
   ],
   "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
   "nodos_previos": [
@@ -200,6 +200,40 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-peligros_emergencias_no_rutinarias-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisar el análisis de peligros de la tarea con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
+      "texto_nuevo": "Repasa el análisis de peligros con quienes van a hacer una tarea no rutinaria, siempre antes de empezar cualquiera de ellas, y cuéntale al resto de qué trabajo se trata, cuándo se hará y qué precauciones hacen falta",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "731",
+        "frase": "Prior to initiating such work, review JSAs/JHAs with any workers involved"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-peligros_emergencias_no_rutinarias-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada",
+      "texto_nuevo": "Prepara planes nuevos o ajusta los que ya tienes para controlar los peligros que una emergencia pueda traer, consigue el equipo que haga falta, nombra a los responsables y practica simulacros que confirmen que la protección es la adecuada",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "737-743",
+        "frase": "Develop or modify plans to control hazards that may arise in emergency situations"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

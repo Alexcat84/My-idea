@@ -7,8 +7,8 @@
   "resumen_teorico": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
   "pasos_accionables": [
     "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten información controlada no clasificada (CUI) o que les suministran componentes.",
-    "Definir la frecuencia de revisión y actualización del plan de gestión de riesgos de la cadena de suministro.",
-    "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
+    "Fija cada cuánto vas a revisar y poner al día el plan con que manejas los riesgos de tu cadena de suministro.",
+    "Busca riesgos en cada etapa de vida del sistema, de sus componentes o de sus servicios: diseño, desarrollo, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho.",
     "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
     "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
     "Establecer estrategia de monitoreo de desempeño frente al plan de gestión de riesgos de la cadena de suministro."
@@ -186,6 +186,40 @@
       "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-getting_started_supply_chain_risk_management-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Definir la frecuencia de revisión y actualización del plan de gestión de riesgos de la cadena de suministro.",
+      "texto_nuevo": "Fija cada cuánto vas a revisar y poner al día el plan con que manejas los riesgos de tu cadena de suministro.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "795",
+        "frase": "Define the frequency for reviewing and updating the supply chain risk management plan"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-getting_started_supply_chain_risk_management-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
+      "texto_nuevo": "Busca riesgos en cada etapa de vida del sistema, de sus componentes o de sus servicios: diseño, desarrollo, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "797",
+        "frase": "Identify risks associated with the development, design, manufacturing, acquisition, delivery, integration, operations"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

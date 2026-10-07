@@ -7,10 +7,10 @@
   "resumen_teorico": "La calidad rara vez se define y dirige mediante políticas formales, lo que provoca que cada quien invente sus propias reglas. Es necesario documentar una política clara de la función de calidad que establezca sus objetivos (cumplir estándares de aceptación/desempeño y metas de costo de calidad), su nivel jerárquico y sus responsabilidades, evitando que se convierta en un documento rígido o dogmático, pero garantizando que sea completo porque las políticas sirven para resolver disputas.",
   "pasos_accionables": [
     "Redactar una política de calidad simple, breve y completa que cubra toda la operación de calidad.",
-    "Establecer que el gerente general debe acordar con el director corporativo de calidad el grado de función de calidad necesario.",
-    "Especificar que el jefe de calidad debe depender directamente del gerente general, al mismo nivel que las áreas que evalúa.",
-    "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
-    "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan."
+    "Deja por escrito que quien dirige tiene que acordar con el máximo responsable de calidad de la empresa cuánta función de calidad hace falta.",
+    "Deja claro en la política que quien encabeza calidad responde directamente a quien dirige y ocupa el mismo nivel que las áreas cuyo trabajo evalúa.",
+    "Escribe sin omitir nada qué le toca a la función de calidad: sobre el producto, aceptarlo, aprobar la calificación de productos, procesos y procedimientos y cuidar su seguridad; hacia afuera, la calidad de los proveedores y los asuntos del consumidor; en el método, la ingeniería de calidad, la planificación, la auditoría, el análisis de datos con su reporte de estado y la acción correctiva; y para crecer, la educación y la mejora.",
+    "Haz llegar la política a todos los empleados y comprueba que la entiendan: se trata de cumplir el requisito al pie de la letra o de lograr que se cambie de manera oficial por lo que tú y tu cliente necesitan en realidad."
   ],
   "entregable_esperado": "Documento formal de política de calidad firmado por la dirección, con objetivos, nivel jerárquico y responsabilidades definidas.",
   "nodos_previos": [
@@ -110,6 +110,74 @@
       },
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-politica_formal_de_calidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Establecer que el gerente general debe acordar con el director corporativo de calidad el grado de función de calidad necesario.",
+      "texto_nuevo": "Deja por escrito que quien dirige tiene que acordar con el máximo responsable de calidad de la empresa cuánta función de calidad hace falta.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "735",
+        "frase": "The company general manager is responsible for obtaining agreement with the corporate director"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-politica_formal_de_calidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Especificar que el jefe de calidad debe depender directamente del gerente general, al mismo nivel que las áreas que evalúa.",
+      "texto_nuevo": "Deja claro en la política que quien encabeza calidad responde directamente a quien dirige y ocupa el mismo nivel que las áreas cuyo trabajo evalúa.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "737",
+        "frase": "the head of the quality function in each unit shall report directly to the general"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-politica_formal_de_calidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Listar explícitamente las responsabilidades de la función de calidad (aceptación de producto, calidad de proveedores, ingeniería de calidad, análisis de datos y reporte de estado, acción correctiva, planificación, aprobación de la calificación de productos, procesos y procedimientos, auditoría, educación, mejora, asuntos del consumidor, seguridad del producto).",
+      "texto_nuevo": "Escribe sin omitir nada qué le toca a la función de calidad: sobre el producto, aceptarlo, aprobar la calificación de productos, procesos y procedimientos y cuidar su seguridad; hacia afuera, la calidad de los proveedores y los asuntos del consumidor; en el método, la ingeniería de calidad, la planificación, la auditoría, el análisis de datos con su reporte de estado y la acción correctiva; y para crecer, la educación y la mejora.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "739-741",
+        "frase": "Product acceptance at all levels, Supplier quality, Quality engineering, Data analysis and status reporting"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-politica_formal_de_calidad-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Difundir la política a todos los empleados y asegurarte de que entiendan que consiste en cumplir exactamente el requisito o hacer que se cambie oficialmente a lo que tú y tu cliente de verdad necesitan.",
+      "texto_nuevo": "Haz llegar la política a todos los empleados y comprueba que la entiendan: se trata de cumplir el requisito al pie de la letra o de lograr que se cambie de manera oficial por lo que tú y tu cliente necesitan en realidad.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "735",
+        "frase": "take affirmative steps to ensure that the employees understand that the quality policy"
+      },
+      "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [
