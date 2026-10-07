@@ -6,7 +6,6 @@ import { IdiomaProvider } from "@/lib/i18n/IdiomaProvider";
 import { SITIO } from "@/lib/i18n/mensajes/sitio";
 import { localeOg, SITIO_URL } from "@/lib/i18n/seo";
 import { idiomaDeCookies } from "@/lib/i18n/servidor";
-import { AvisoCookies } from "./ui/AvisoCookies";
 import { TipografiasDeEscritura } from "./ui/PapelEnIdioma";
 
 const inter = Inter({
@@ -88,9 +87,9 @@ export default async function RootLayout({
         <IdiomaProvider idioma={idioma}>
           <TipografiasDeEscritura clases={CLASES_ESCRITURA}>{children}</TipografiasDeEscritura>
           {/* Corrección del fundador (7 oct 2026): navegar es libre y nada tapa la página. El consentimiento legal se
-              pide en el primer envío de datos (app/ui/LineaConsentimiento.tsx), no aquí. Al pie, el aviso pequeño de
-              cookies, en el flujo de la página: solo usamos cookies necesarias y la del idioma. */}
-          <AvisoCookies />
+              pide en el primer envío de datos (app/ui/LineaConsentimiento.tsx), no aquí. El aviso pequeño de cookies
+              NO va aquí (8 oct 2026: debajo de una página que carga se veía en cada transición); vive al pie de la
+              portada y de las páginas públicas (Landing, PaginaPublica). */}
         </IdiomaProvider>
         <footer className="px-4 py-2 text-end text-[10px] text-white/25 select-all" aria-label={elegir(SITIO, idioma).etiquetaVersion}>
           v·{SELLO_VERSION}

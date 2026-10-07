@@ -23,6 +23,7 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { PORTADA } from "@/lib/i18n/mensajes/portada";
 import { createClient } from "@/lib/supabase/client";
 import { interpolar } from "@/lib/i18n/interpolar";
+import { AvisoCookies } from "./AvisoCookies";
 import { SelectorIdioma } from "./SelectorIdioma";
 import { HeroMasa } from "./portada/HeroMasa";
 import "./landing.css";
@@ -60,10 +61,6 @@ function TipeoDemo() {
   }, [FRASE_DEMO]);
   return <>{typed}</>;
 }
-
-/** La tinta de los enlaces legales del pie: contraste 16.7 sobre el negro
- * (AAA), más clara que el gris de la navegación (#A6A7AD, 8.8). */
-const COLOR_LEGAL = "#E4E5EA";
 
 export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {}) {
   const t = elegir(PORTADA, useIdioma());
@@ -424,47 +421,25 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
       </section>
 
       {/* ============ FOOTER ============ */}
-      {/* Decisión del fundador (8 oct 2026): la ayuda en una TARJETA destacada y
-          lo legal en su propia fila, en tinta clara y subrayado (contraste AAA,
-          más claro que la navegación del pie): nada legal se pierde entre enlaces. */}
       <footer style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-        <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "40px 24px 32px", display: "flex", flexDirection: "column", gap: "28px" }}>
-          <a
-            href="/preguntas-frecuentes"
-            className="lh6"
-            style={{ display: "flex", alignItems: "center", gap: "16px", padding: "18px 22px", borderRadius: "16px", border: "1px solid rgba(77,124,254,0.45)", background: "rgba(77,124,254,0.10)", color: "#F5F6F8", textDecoration: "none", transition: "border-color 180ms ease-out,box-shadow 180ms ease-out" }}
-          >
-            <span aria-hidden style={{ flexShrink: "0", width: "40px", height: "40px", borderRadius: "50%", border: "1.5px solid rgba(77,124,254,0.7)", display: "flex", alignItems: "center", justifyContent: "center", color: "#4D7CFE", fontSize: "19px", fontWeight: "700" }}>?</span>
-            <span style={{ flex: "1", minWidth: "0" }}>
-              <span style={{ display: "block", fontSize: "16px", fontWeight: "700" }}>{t.pie.preguntas}</span>
-              <span style={{ display: "block", marginTop: "3px", fontSize: "14px", color: "#C9CAD0" }}>{t.pie.preguntasDesc}</span>
-            </span>
-            <svg width="16" height="16" viewBox="0 0 12 12" aria-hidden className="rtl:-scale-x-100" style={{ flexShrink: "0" }}>
-              <path d="M4 2l4 4-4 4" stroke="#4D7CFE" strokeWidth="1.6" fill="none" />
-            </svg>
-          </a>
-          <div style={{ display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
-            <span style={{ display: "flex", alignItems: "center", gap: "8px" }}><span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#4D7CFE" }}></span><span style={{ fontSize: "13.5px", fontWeight: "700" }}>My Idea</span></span>
-            <span style={{ flex: "1" }}></span>
-            <div style={{ display: "flex", alignItems: "center", gap: "22px", fontSize: "14.5px", flexWrap: "wrap" }}>
-              <a href="#acerca" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.acercaDe}</a>
-              <a href="#como-funciona" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.comoFunciona}</a>
-              <a href="#descargar" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.app}</a>
-            </div>
-            <SelectorIdioma haciaArriba style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
+        <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "32px 24px", display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
+          <span style={{ display: "flex", alignItems: "center", gap: "8px" }}><span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#4D7CFE" }}></span><span style={{ fontSize: "13.5px", fontWeight: "700" }}>My Idea</span></span>
+          <span style={{ flex: "1" }}></span>
+          <div style={{ display: "flex", alignItems: "center", gap: "22px", fontSize: "14.5px", flexWrap: "wrap" }}>
+            <a href="#acerca" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.acercaDe}</a>
+            <a href="#como-funciona" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.comoFunciona}</a>
+            <a href="#descargar" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.app}</a>
+            <a href="/privacidad" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.privacidad}</a>
+            <a href="/terminos" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.terminos}</a>
+            <a href="/cookies" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.cookies}</a>
+            <a href="/preguntas-frecuentes" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.preguntas}</a>
+            <a href="/eliminar-cuenta" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.eliminarCuenta}</a>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px 24px", flexWrap: "wrap", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: "20px" }}>
-            <nav aria-label={t.pie.legal} style={{ display: "flex", alignItems: "center", gap: "10px 22px", fontSize: "14.5px", fontWeight: "500", flexWrap: "wrap" }}>
-              <a href="/privacidad" style={{ color: COLOR_LEGAL, textDecoration: "underline", textUnderlineOffset: "3px" }} className="lh5">{t.pie.privacidad}</a>
-              <a href="/terminos" style={{ color: COLOR_LEGAL, textDecoration: "underline", textUnderlineOffset: "3px" }} className="lh5">{t.pie.terminos}</a>
-              <a href="/cookies" style={{ color: COLOR_LEGAL, textDecoration: "underline", textUnderlineOffset: "3px" }} className="lh5">{t.pie.cookies}</a>
-              <a href="/eliminar-cuenta" style={{ color: COLOR_LEGAL, textDecoration: "underline", textUnderlineOffset: "3px" }} className="lh5">{t.pie.eliminarCuenta}</a>
-            </nav>
-            <span style={{ flex: "1" }}></span>
-            <span style={{ fontSize: "14.5px", color: "#A6A7AD" }}>{interpolar(t.pie.derechos, { ano: new Date().getFullYear() })}</span>
-          </div>
+          <SelectorIdioma haciaArriba style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
+          <span style={{ fontSize: "14.5px", color: "#A6A7AD" }}>{interpolar(t.pie.derechos, { ano: new Date().getFullYear() })}</span>
         </div>
       </footer>
+      <AvisoCookies />
     </div>
   );
 }

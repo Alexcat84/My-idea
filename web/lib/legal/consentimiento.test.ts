@@ -109,8 +109,21 @@ describe("al entrar con la cuenta: una línea en el flujo de entrada, no un moda
 });
 
 describe("las cookies: solo necesarias, un aviso pequeño abajo que no tapa nada", () => {
-  it("el layout monta el aviso, en el flujo de la página (no flotante) y con enlace a /cookies", () => {
-    expect(leer("web/app/layout.tsx")).toContain("<AvisoCookies");
+  // Decisión del fundador (8 oct 2026): el aviso no aparece en ninguna transición
+  // entre páginas. Montado en el layout raíz quedaba justo debajo del contenido y,
+  // mientras una página cargaba (contenido corto), subía a la vista. Ahora vive solo
+  // al pie de la portada y de las páginas públicas, debajo de su contenido completo.
+  it("el layout raíz NO lo monta (se veía al cambiar de página)", () => {
+    expect(leer("web/app/layout.tsx")).not.toContain("AvisoCookies");
+  });
+
+  it("lo montan el pie de la portada y el de las páginas públicas", () => {
+    // debajo del pie original de la portada (que no se toca), como antes salía del layout
+    expect(leer("web/app/ui/Landing.tsx")).toMatch(/<\/footer>\s*<AvisoCookies \/>/);
+    expect(leer("web/app/ui/PaginaPublica.tsx")).toContain("<AvisoCookies");
+  });
+
+  it("en el flujo de la página (no flotante) y con enlace a /cookies", () => {
     const aviso = leerSiExiste("web/app/ui/AvisoCookies.tsx");
     expect(aviso).toContain('href="/cookies"');
     expect(aviso).not.toMatch(/\bfixed\b|aria-modal|role="dialog"/);

@@ -22,8 +22,9 @@ export default async function PreguntasFrecuentes() {
       <p>{m.intro}</p>
       {m.items.map((it) => (
         <details key={it.p} style={{ margin: "12px 0" }}>
-          <summary style={{ cursor: "pointer", fontWeight: 600 }}>{it.p}</summary>
-          <p>{it.r}</p>
+          {/* La pregunta en azul y la respuesta en blanco (fundador, 8 oct 2026). */}
+          <summary className="text-accent" style={{ cursor: "pointer", fontWeight: 600 }}>{it.p}</summary>
+          <p className="text-ink">{it.r}</p>
         </details>
       ))}
     </PaginaPublica>

@@ -8,19 +8,20 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ActiveLocale } from "@/lib/i18n/config";
 import { navPublica } from "@/lib/legal/paginas";
+import { AvisoCookies } from "./AvisoCookies";
 
-/** Los legales; la ayuda (Preguntas frecuentes) va aparte, en su tarjeta. */
-const LEGALES = [
+const ENLACES = [
   ["/privacidad", "privacidad"],
   ["/terminos", "terminos"],
   ["/cookies", "cookies"],
   ["/eliminar-cuenta", "eliminar"],
+  ["/preguntas-frecuentes", "preguntas"],
 ] as const;
 
 // Tinta del TEMA (tokens.css: --text sobre --bg). Antes el marco pedía un
-// --ink que no existe y caía en #1a1a1a: texto casi negro sobre el negro.
-// Decisión del fundador (8 oct 2026): los legales se leen claros y subrayados,
-// y Preguntas frecuentes va en una tarjeta destacada.
+// --ink que no existe y caía en #1a1a1a: texto casi negro sobre el negro, las
+// páginas "opacas" que vio el fundador (8 oct 2026). La barra de enlaces es la
+// de siempre; ahora hereda la tinta clara.
 export function PaginaPublica({ idioma, children }: { idioma: ActiveLocale; children: ReactNode }) {
   const t = navPublica(idioma);
   return (
@@ -30,27 +31,16 @@ export function PaginaPublica({ idioma, children }: { idioma: ActiveLocale; chil
           ← {t.inicio}
         </Link>
         <article className="pagina-publica mt-6 leading-relaxed">{children}</article>
-        <nav aria-label="My Idea" className="mt-12 flex flex-col gap-6">
-          <Link
-            href="/preguntas-frecuentes"
-            className="flex items-center gap-4 rounded-panel border border-accent/45 bg-accent/10 px-5 py-4 font-semibold text-ink hover:border-accent/70"
-          >
-            <span aria-hidden className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-accent/70 text-[19px] font-bold text-accent">
-              ?
-            </span>
-            <span className="flex-1">{t.preguntas}</span>
-            <svg width="16" height="16" viewBox="0 0 12 12" aria-hidden className="shrink-0 rtl:-scale-x-100">
-              <path d="M4 2l4 4-4 4" stroke="var(--accent)" strokeWidth="1.6" fill="none" />
-            </svg>
-          </Link>
-          <div className="flex flex-wrap gap-x-6 gap-y-3 border-t border-hairline pt-5 text-[14.5px] font-medium">
-            {LEGALES.map(([href, clave]) => (
-              <Link key={href} href={href} className="text-ink underline underline-offset-[3px] hover:text-accent">
-                {t[clave]}
-              </Link>
-            ))}
-          </div>
+        <nav aria-label="My Idea" style={{ display: "flex", flexWrap: "wrap", gap: 16, marginTop: 48, fontSize: 14 }}>
+          {ENLACES.map(([href, clave]) => (
+            <Link key={href} href={href}>
+              {t[clave]}
+            </Link>
+          ))}
         </nav>
+        <div className="mt-8">
+          <AvisoCookies />
+        </div>
       </div>
     </main>
   );

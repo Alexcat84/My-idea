@@ -6,6 +6,8 @@
  * una de preferencia que recuerda el idioma (docs/legal/COOKIES.md). Sin analítica ni publicidad, no hay nada que
  * consentir ni bloquear: un aviso pequeño al pie, en el flujo de la página, que no tapa nada y no se puede "cerrar"
  * porque no estorba. Si algún día entra una cookie que no sea necesaria, este aviso no basta: habrá que pedir permiso.
+ * Dónde (8 oct 2026): al pie de la portada y de las páginas públicas, nunca en el layout raíz, porque ahí asomaba en
+ * cada transición entre páginas.
  */
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
