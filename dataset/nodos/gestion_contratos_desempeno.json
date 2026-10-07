@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Gestión y Seguimiento del Desempeño de Proveedores",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. A menudo conviene que el propio proveedor siga y cuide su desempeño. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+  "resumen_teorico": "Firmar el contrato con un proveedor no cierra el trabajo: desde ahí te toca medir cómo cumple lo pactado y gestionar ese desempeño. Como las empresas trabajan con cada vez menos proveedores, cada uno se vuelve decisivo. Muchas veces conviene que sea el mismo proveedor quien siga y cuide su nivel de cumplimiento. Un ejemplo es el inventario administrado por el proveedor (Vendor-Managed Inventory, VMI): él vigila el inventario que el cliente tiene de su producto, le envía reposición por iniciativa propia según su ritmo de uso y se la factura con las condiciones del contrato.",
   "pasos_accionables": [
     "Establecer indicadores de desempeño (KPIs) alineados al contrato",
     "Recolectar datos de desempeño de proveedores de forma rutinaria",
@@ -103,6 +103,22 @@
       "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-gestion_contratos_desempeno-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una vez firmados los contratos, es necesario medir y gestionar el desempeño de los proveedores contra lo acordado. Dado que las empresas reducen su base de proveedores, cada uno se vuelve crítico. A menudo conviene que el propio proveedor siga y cuide su desempeño. El Vendor-Managed Inventory (VMI) es un ejemplo donde el proveedor monitorea el inventario del cliente y envía productos proactivamente según niveles de uso, facturando bajo los términos del contrato.",
+      "texto_nuevo": "Firmar el contrato con un proveedor no cierra el trabajo: desde ahí te toca medir cómo cumple lo pactado y gestionar ese desempeño. Como las empresas trabajan con cada vez menos proveedores, cada uno se vuelve decisivo. Muchas veces conviene que sea el mismo proveedor quien siga y cuide su nivel de cumplimiento. Un ejemplo es el inventario administrado por el proveedor (Vendor-Managed Inventory, VMI): él vigila el inventario que el cliente tiene de su producto, le envía reposición por iniciativa propia según su ritmo de uso y se la factura con las condiciones del contrato.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1031-1036",
+        "frase": "Once contracts are in place, vendor performance against these contracts must be measured"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

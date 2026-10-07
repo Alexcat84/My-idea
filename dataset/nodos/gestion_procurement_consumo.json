@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Cuánto y qué compras en tu negocio (procurement)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades, o expectativas imprecisas que debes reajustar.",
+  "resumen_teorico": "Conocer a fondo tus compras es el punto de partida antes de sentarte a negociar con proveedores: qué compras y en qué cantidad, en el negocio entero y en cada unidad, a quién se lo compras y a qué precio. Cada cierto tiempo, pon lado a lado lo que de verdad consumes y lo que esperabas consumir, con una meta fijada para cada categoría de producto y cada lugar donde operas. Las desviaciones te avisan de un problema o de una oportunidad, o te muestran que tus expectativas eran imprecisas y toca reajustarlas.",
   "pasos_accionables": [
     "Clasifica lo que compras en materiales estratégicos y compras indirectas (MRO)",
     "Define cuánto esperas consumir de cada producto en cada lugar donde operas",
@@ -129,6 +129,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-gestion_procurement_consumo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio y en cada unidad, a quién y a qué precio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades, o expectativas imprecisas que debes reajustar.",
+      "texto_nuevo": "Conocer a fondo tus compras es el punto de partida antes de sentarte a negociar con proveedores: qué compras y en qué cantidad, en el negocio entero y en cada unidad, a quién se lo compras y a qué precio. Cada cierto tiempo, pon lado a lado lo que de verdad consumes y lo que esperabas consumir, con una meta fijada para cada categoría de producto y cada lugar donde operas. Las desviaciones te avisan de un problema o de una oportunidad, o te muestran que tus expectativas eran imprecisas y toca reajustarlas.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "997-999",
+        "frase": "Effective procurement begins with an understanding of how much of what categories"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

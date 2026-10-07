@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Outsourcing de Operaciones de Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, proveedores de logística, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
+  "resumen_teorico": "Cuando los márgenes de utilidad se aprietan, crece la tercerización de todo lo que no forma parte del núcleo competitivo de una empresa. Hay tareas, como el crédito y la cobranza, el diseño de producto o la gestión de pedidos, que quizá ningún actor tradicional de la cadena (productores, operadores logísticos, distribuidores y minoristas) domine como competencia central. Ese hueco deja espacio a proveedores especializados que aportan eficiencia y pueden encargarse de ese trabajo por menos de lo que te costaría hacerlo en casa.",
   "pasos_accionables": [
     "Listar todas las operaciones de la cadena de suministro actualmente realizadas internamente",
     "Clasificar cada operación según si es núcleo competitivo o no",
@@ -103,6 +103,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-outsourcing_cadena_suministro-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La presión sobre los márgenes de utilidad impulsa el outsourcing de operaciones que no son núcleo competitivo de una empresa. Actividades como crédito y cobranzas, diseño de producto o gestión de pedidos pueden no ser competencia central de ningún participante tradicional (productores, proveedores de logística, distribuidores, minoristas), lo que abre oportunidades a proveedores especializados que aportan eficiencia y que pueden realizarlas a un costo menor que el de hacerlas internamente.",
+      "texto_nuevo": "Cuando los márgenes de utilidad se aprietan, crece la tercerización de todo lo que no forma parte del núcleo competitivo de una empresa. Hay tareas, como el crédito y la cobranza, el diseño de producto o la gestión de pedidos, que quizá ningún actor tradicional de la cadena (productores, operadores logísticos, distribuidores y minoristas) domine como competencia central. Ese hueco deja espacio a proveedores especializados que aportan eficiencia y pueden encargarse de ese trabajo por menos de lo que te costaría hacerlo en casa.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "1749-1751",
+        "frase": "There are some operations such as credit and collections, product design, and order"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

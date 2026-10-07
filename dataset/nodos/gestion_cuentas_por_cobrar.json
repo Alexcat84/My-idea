@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión de Cuentas por Cobrar (Accounts Receivable)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Es probable que los acreedores también la estén vigilando.",
+  "resumen_teorico": "Tus cuentas por cobrar son el dinero que tus clientes todavía le deben a la empresa; en el fondo, la empresa les está prestando ese dinero. Es una línea crítica: de ella depende directamente el efectivo que entrará más adelante, así que vigílala muy de cerca, y ten en cuenta que lo más probable es que tus acreedores también le tengan el ojo puesto.",
   "pasos_accionables": [
     "Revisar periódicamente el saldo total de cuentas por cobrar",
     "Establecer una política de reserva para cuentas incobrables basada en experiencia histórica",
@@ -60,6 +60,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-gestion_cuentas_por_cobrar-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las cuentas por cobrar representan el dinero que los clientes deben a la empresa; es esencialmente un préstamo de la empresa a sus clientes. Es una línea crítica que emprendedores deben vigilar de cerca ya que afecta directamente el flujo de caja futuro. Es probable que los acreedores también la estén vigilando.",
+      "texto_nuevo": "Tus cuentas por cobrar son el dinero que tus clientes todavía le deben a la empresa; en el fondo, la empresa les está prestando ese dinero. Es una línea crítica: de ella depende directamente el efectivo que entrará más adelante, así que vigílala muy de cerca, y ten en cuenta que lo más probable es que tus acreedores también le tengan el ojo puesto.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "1209",
+        "frase": "Accounts receivable, or A/R, is the amount customers owe"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

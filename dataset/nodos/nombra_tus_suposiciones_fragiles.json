@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Las Fuentes de Incertidumbre del Proyecto",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo encajará lo que haces con quienes lo usan y con otros sistemas, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si la gestión tendrá talento suficiente para armar equipos productivos, mantener la moral, retener a la gente y coordinar tareas complejas, si terceros cumplirán, si alguien usará su poder para imponer condiciones que chocan con la realidad, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Entre lo que hace que un proyecto se tuerza están los supuestos ocultos, esos que das por ciertos sin haberlos comprobado, así que conviene sacarlos a la luz.",
+  "resumen_teorico": "Por más pulido que sea tu proceso, la incertidumbre no desaparece. Siempre te quedan preguntas abiertas: qué es justo lo que tu cliente necesita; cómo encajará lo que construyes con quienes lo usan y con otros sistemas; cómo se moverán las cosas mientras trabajas; con qué recursos y personas contarás cuando te hagan falta; si habrá talento de dirección para formar equipos que rindan, sostener el ánimo, conservar a la gente y coordinar tareas complejas; si los terceros harán su parte; si alguien con poder impondrá condiciones que no cuadran con la realidad; cómo se conciliarán las metas opuestas de quienes tienen algo en juego; qué resultado dará lo novedoso que estás ensayando, o cómo te impactará crecer por encima de lo que ya has vivido. Toda incertidumbre trae riesgo, y todo riesgo pide que lo manejes de forma deliberada. Entre lo que desvía un proyecto están los supuestos ocultos, lo que tomas por cierto sin haberlo verificado, así que te conviene sacarlos a la luz.",
   "pasos_accionables": [
     "Escribe todas las suposiciones sobre las que se sostiene tu plan.",
     "Marca cuáles has comprobado de verdad y cuáles solo estás dando por ciertas.",
@@ -155,6 +155,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-nombra_tus_suposiciones_fragiles-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ni el mejor proceso elimina la incertidumbre: siempre queda sin resolver qué exactamente necesita el cliente, cómo encajará lo que haces con quienes lo usan y con otros sistemas, cómo cambiará todo mientras avanzas, qué recursos y personas tendrás cuando los necesites, si la gestión tendrá talento suficiente para armar equipos productivos, mantener la moral, retener a la gente y coordinar tareas complejas, si terceros cumplirán, si alguien usará su poder para imponer condiciones que chocan con la realidad, cómo se resolverán las metas en conflicto de las partes, cómo resultará lo nuevo que estás probando, o cómo te afectará crecer más allá de tu experiencia. Donde hay incertidumbre hay riesgo, y donde hay riesgo hace falta un esfuerzo consciente por manejarlo. Entre lo que hace que un proyecto se tuerza están los supuestos ocultos, esos que das por ciertos sin haberlos comprobado, así que conviene sacarlos a la luz.",
+      "texto_nuevo": "Por más pulido que sea tu proceso, la incertidumbre no desaparece. Siempre te quedan preguntas abiertas: qué es justo lo que tu cliente necesita; cómo encajará lo que construyes con quienes lo usan y con otros sistemas; cómo se moverán las cosas mientras trabajas; con qué recursos y personas contarás cuando te hagan falta; si habrá talento de dirección para formar equipos que rindan, sostener el ánimo, conservar a la gente y coordinar tareas complejas; si los terceros harán su parte; si alguien con poder impondrá condiciones que no cuadran con la realidad; cómo se conciliarán las metas opuestas de quienes tienen algo en juego; qué resultado dará lo novedoso que estás ensayando, o cómo te impactará crecer por encima de lo que ya has vivido. Toda incertidumbre trae riesgo, y todo riesgo pide que lo manejes de forma deliberada. Entre lo que desvía un proyecto están los supuestos ocultos, lo que tomas por cierto sin haberlo verificado, así que te conviene sacarlos a la luz.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "186-208",
+        "frase": "Even the most perfect construction process can't remove uncertainty"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

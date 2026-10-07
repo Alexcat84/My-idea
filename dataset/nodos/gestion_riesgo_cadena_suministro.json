@@ -4,7 +4,7 @@
   "dominio": "risk_management",
   "titulo_concepto": "Cómo manejar el riesgo natural y operativo en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo y brotes de enfermedades infecciosas) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir. En entornos muy cambiantes, esta evaluación es un proceso continuo, no algo de una sola vez.",
+  "resumen_teorico": "En tu cadena de suministro, el riesgo se maneja buscando todo el tiempo el punto medio: por un lado quieres rendir bien gastando poco, por otro necesitas protegerte de lo que podría frenar tu operación. Quitar proveedores de respaldo, instalaciones adicionales o stock de seguridad te ahorra dinero, pero te deja más expuesto si llega una disrupción. Revisa en cada país o ubicación donde operas el riesgo natural (desastres) y el operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo y brotes de enfermedades infecciosas), y con eso decide cuánto stock de seguridad te hace falta según el riesgo que aceptas correr. Si tu entorno cambia mucho, esa revisión no se hace una vez: es continua.",
   "pasos_accionables": [
     "Define cuánto riesgo estás dispuesto a asumir hoy",
     "Cuantifica el riesgo natural de cada país o región donde operas (terremotos, huracanes, sequías, etc.)",
@@ -129,6 +129,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de riesgos operativos del libro cierra con terrorismo y brotes de enfermedades infecciosas; el nodo pierde lo segundo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-gestion_riesgo_cadena_suministro-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo y brotes de enfermedades infecciosas) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir. En entornos muy cambiantes, esta evaluación es un proceso continuo, no algo de una sola vez.",
+      "texto_nuevo": "En tu cadena de suministro, el riesgo se maneja buscando todo el tiempo el punto medio: por un lado quieres rendir bien gastando poco, por otro necesitas protegerte de lo que podría frenar tu operación. Quitar proveedores de respaldo, instalaciones adicionales o stock de seguridad te ahorra dinero, pero te deja más expuesto si llega una disrupción. Revisa en cada país o ubicación donde operas el riesgo natural (desastres) y el operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo y brotes de enfermedades infecciosas), y con eso decide cuánto stock de seguridad te hace falta según el riesgo que aceptas correr. Si tu entorno cambia mucho, esa revisión no se hace una vez: es continua.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3826",
+        "frase": "Supply chain risk management is a continuous balancing act between trying to achieve"
+      },
+      "decision": "copia fiel (regla D2, ola k18): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

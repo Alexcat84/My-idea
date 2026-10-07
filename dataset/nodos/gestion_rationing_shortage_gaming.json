@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Gestión del Racionamiento y Shortage Gaming",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Cuando la demanda supera la oferta, un modo común de racionar es que el fabricante reparta el producto según los pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+  "resumen_teorico": "Cuando hay más demanda que oferta, una forma frecuente de racionar es que el fabricante asigne lo disponible en proporción a los pedidos que recibe. Eso empuja a los distribuidores a pedir de más de forma artificial para quedarse con una porción mayor, práctica conocida como shortage gaming, y la demanda real que se percibe a lo largo de toda la cadena de suministro queda distorsionada.",
   "pasos_accionables": [
     "Basar las decisiones de racionamiento en patrones históricos de pedidos del cliente, no en el tamaño de la orden actual",
     "Comunicar con anticipación a los clientes cuando se detecte que la demanda superará la oferta",
@@ -71,6 +71,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que avisar con anticipación deja menos compras de pánico, no que las evite.; Mismo defecto: endurece el 'less panic buying' del libro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-gestion_rationing_shortage_gaming-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando la demanda supera la oferta, un modo común de racionar es que el fabricante reparta el producto según los pedidos recibidos, lo que incentiva a distribuidores a inflar artificialmente sus órdenes para recibir más asignación (shortage gaming). Esto distorsiona la demanda real percibida en toda la cadena de suministro.",
+      "texto_nuevo": "Cuando hay más demanda que oferta, una forma frecuente de racionar es que el fabricante asigne lo disponible en proporción a los pedidos que recibe. Eso empuja a los distribuidores a pedir de más de forma artificial para quedarse con una porción mayor, práctica conocida como shortage gaming, y la demanda real que se percibe a lo largo de toda la cadena de suministro queda distorsionada.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3567",
+        "frase": "One common rationing approach is for a manufacturer to allocate the available"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

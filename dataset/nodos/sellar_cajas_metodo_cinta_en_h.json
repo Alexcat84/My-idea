@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Sellar cajas con el método de cinta en H",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
+  "resumen_teorico": "Aunque la caja vaya bien protegida por dentro, puede fallar si el cierre no resiste el viaje. Con el método de cinta en H pegas una tira a lo largo de la juntura central y otra en cada juntura lateral, y repites ese mismo patrón arriba y abajo de la caja. Para cerrar, elige una cinta de por lo menos cinco centímetros (2 pulgadas) de ancho: plástica sensible a la presión, de papel activada con agua (con grado mínimo de 60 lb) o reforzada activada con agua. Deja fuera el cordel, la cuerda y las cintas de celofán, americana o de enmascarar, porque no sirven para sellar. Cerrar así cada envío, sea cual sea el tamaño de la caja, ayuda a que no se abra por accidente en el trayecto.",
   "pasos_accionables": [
     "Compra cinta de embalar sensible a la presión de al menos cinco centímetros de ancho.",
     "Aplica una tira sobre la juntura central de la tapa y repite en el fondo de la caja.",
@@ -176,6 +176,22 @@
       "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-sellar_cajas_metodo_cinta_en_h-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
+      "texto_nuevo": "Aunque la caja vaya bien protegida por dentro, puede fallar si el cierre no resiste el viaje. Con el método de cinta en H pegas una tira a lo largo de la juntura central y otra en cada juntura lateral, y repites ese mismo patrón arriba y abajo de la caja. Para cerrar, elige una cinta de por lo menos cinco centímetros (2 pulgadas) de ancho: plástica sensible a la presión, de papel activada con agua (con grado mínimo de 60 lb) o reforzada activada con agua. Deja fuera el cordel, la cuerda y las cintas de celofán, americana o de enmascarar, porque no sirven para sellar. Cerrar así cada envío, sea cual sea el tamaño de la caja, ayuda a que no se abra por accidente en el trayecto.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "181-185",
+        "frase": "Use pressure-sensitive plastic tape, water-activated paper tape (minimum 60-lb. grade)"
+      },
+      "decision": "copia fiel (regla D2, ola k18): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

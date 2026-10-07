@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Communicate: Transparencia y Comunicación de Privacidad",
   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-  "resumen_teorico": "La función Communicate se centra en desarrollar políticas de comunicación interna y externa sobre las actividades de procesamiento de datos. Incluye aumentar la transparencia mediante avisos claros y accesibles, alertas y señales que informen a los individuos sobre el procesamiento de sus datos y sus opciones, incorporar la privacidad en encuestas o grupos focales de diseño de producto, y preparar un plan de respuesta ante brechas de datos (notificaciones, monitoreo de crédito, congelamientos).",
+  "resumen_teorico": "Con la función Communicate defines tus políticas para hablar, dentro y fuera del negocio, de lo que haces con los datos. Abarca ser más transparente con avisos claros y fáciles de consultar, y con alertas y señales que le cuenten a cada persona qué pasa con sus datos y qué opciones tiene; sumar la privacidad a las encuestas o grupos focales con los que diseñas tu producto; y tener listo un plan por si sufres una brecha de datos, con notificaciones, monitoreo de crédito y congelamientos.",
   "pasos_accionables": [
     "Redactar políticas de comunicación interna y externa sobre procesamiento de datos",
     "Crear avisos e informes claros y accesibles para los usuarios",
@@ -45,6 +45,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-communicate_transparencia-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La función Communicate se centra en desarrollar políticas de comunicación interna y externa sobre las actividades de procesamiento de datos. Incluye aumentar la transparencia mediante avisos claros y accesibles, alertas y señales que informen a los individuos sobre el procesamiento de sus datos y sus opciones, incorporar la privacidad en encuestas o grupos focales de diseño de producto, y preparar un plan de respuesta ante brechas de datos (notificaciones, monitoreo de crédito, congelamientos).",
+      "texto_nuevo": "Con la función Communicate defines tus políticas para hablar, dentro y fuera del negocio, de lo que haces con los datos. Abarca ser más transparente con avisos claros y fáciles de consultar, y con alertas y señales que le cuenten a cada persona qué pasa con sus datos y qué opciones tiene; sumar la privacidad a las encuestas o grupos focales con los que diseñas tu producto; y tener listo un plan por si sufres una brecha de datos, con notificaciones, monitoreo de crédito y congelamientos.",
+      "cita": {
+        "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+        "fichero": "books/seguridad_digital/Getting-Started-NIST-Privacy-Framework-Guide.txt",
+        "lineas": "89-95",
+        "frase": "Craft policies for communicating internally and externally about your data processing"
+      },
+      "decision": "copia fiel (regla D2, ola k18): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Fase de Eliminación de No Comercializables (Unmarketables)",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen formas de detoxificarlos o de prescindir de ellos (ej. PVC, residuos nucleares, antimonio en PET). Pueden almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
+  "resumen_teorico": "Hay materiales peligrosos que no caben ni en el ciclo biológico ni en el técnico: son los llamados 'unmarketables', como el PVC, los residuos nucleares o el PET con antimonio, y seguirán fuera de ambos ciclos mientras no exista una manera de quitarles la toxicidad o de dejar de usarlos. Mientras llegan esas soluciones, puedes guardarlos en depósitos seguros ('parking lots'), y si tu empresa quiere adelantarse, puede emprender un 'waste phaseout' que los saque del flujo actual de residuos.",
   "pasos_accionables": [
     "Identificar los materiales peligrosos o no clasificables presentes en los productos actuales",
     "Establecer sistemas de almacenamiento seguro ('parking lots') para estos materiales",
@@ -60,6 +60,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el phaseout los retira del flujo de residuos actual, no del mercado.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-fase_de_eliminacion_de_no_comercializables-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los 'unmarketables' son materiales peligrosos que no encajan en ningún metabolismo (biológico o técnico) hasta que se desarrollen formas de detoxificarlos o de prescindir de ellos (ej. PVC, residuos nucleares, antimonio en PET). Pueden almacenarse en 'parking lots' seguros mientras se desarrollan soluciones, y las empresas pueden iniciar un 'waste phaseout' para retirarlos proactivamente del flujo de residuos actual.",
+      "texto_nuevo": "Hay materiales peligrosos que no caben ni en el ciclo biológico ni en el técnico: son los llamados 'unmarketables', como el PVC, los residuos nucleares o el PET con antimonio, y seguirán fuera de ambos ciclos mientras no exista una manera de quitarles la toxicidad o de dejar de usarlos. Mientras llegan esas soluciones, puedes guardarlos en depósitos seguros ('parking lots'), y si tu empresa quiere adelantarse, puede emprender un 'waste phaseout' que los saque del flujo actual de residuos.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "686-688",
+        "frase": "Some materials do not fit into either the organic or technical metabolism"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

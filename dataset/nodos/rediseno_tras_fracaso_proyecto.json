@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "No Repetir el Mismo Enfoque tras un Fracaso de Proyecto",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. Es probable que el equipo esté desmoralizado y no responda sin cambios de fondo; requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
+  "resumen_teorico": "Si un proyecto ya fracasó, no basta con insistir más fuerte ni con poner más empeño. Lo más probable es que tu equipo haya quedado desanimado y no se comprometa de nuevo a menos que cambies algo de fondo; necesitas otro enfoque, que muestre con claridad lo que aprendiste del fracaso y abra un camino mejor hacia la meta de negocio.",
   "pasos_accionables": [
     "Realizar un análisis post-mortem detallado del proyecto fallido",
     "Identificar causas raíz específicas, no solo síntomas",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la gente probablemente está desmoralizada; el nodo lo afirma como hecho.; Mismo defecto: endurece el 'probably' del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-rediseno_tras_fracaso_proyecto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Después de que un proyecto ha fallado, simplemente reforzar el esfuerzo o intentarlo con más ganas no es suficiente. Es probable que el equipo esté desmoralizado y no responda sin cambios de fondo; requiere un enfoque nuevo que refleje claramente lo aprendido del fracaso anterior, ofreciendo una mejor vía hacia la meta de negocio.",
+      "texto_nuevo": "Si un proyecto ya fracasó, no basta con insistir más fuerte ni con poner más empeño. Lo más probable es que tu equipo haya quedado desanimado y no se comprometa de nuevo a menos que cambies algo de fondo; necesitas otro enfoque, que muestre con claridad lo que aprendiste del fracaso y abra un camino mejor hacia la meta de negocio.",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "4513",
+        "frase": "A mere reinforcement of effort or just trying harder is not"
+      },
+      "decision": "copia fiel (regla D2, ola k17): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
