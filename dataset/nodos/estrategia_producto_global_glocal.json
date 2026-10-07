@@ -7,7 +7,7 @@
   "resumen_teorico": "Los productos diseñados para mercados internacionales desde el inicio (globales o 'glocales': concepto global, adaptado localmente) superan en rentabilidad a los productos diseñados solo para el mercado doméstico y luego adaptados. Una orientación global implica definir el mercado como internacional, hacer VoC y testing en múltiples países, y contar con equipos de proyecto multinacionales, no solo ajustar tardíamente un producto local.",
   "pasos_accionables": [
     "Definir el mercado objetivo como internacional desde la fase de concepto, no solo doméstico",
-    "Realizar investigación VoC y testing de concepto en múltiples países",
+    "Realizar investigación de la voz del cliente y pruebas de concepto en múltiples países",
     "Decidir entre producto global único, producto glocal con variantes, o plataforma dual (mercados desarrollados vs. en desarrollo)",
     "Conformar un equipo de proyecto con miembros de distintos países",
     "Planificar el lanzamiento simultáneo o en rápida sucesión en múltiples mercados"
@@ -28,5 +28,25 @@
   "etiqueta_arbol": "Piensa Global, Adapta Local",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-estrategia_producto_global_glocal-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar investigación VoC y testing de concepto en múltiples países",
+      "texto_nuevo": "Realizar investigación de la voz del cliente y pruebas de concepto en múltiples países",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "investigación VoC",
+          "testing de concepto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

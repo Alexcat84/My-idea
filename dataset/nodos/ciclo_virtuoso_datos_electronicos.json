@@ -6,9 +6,9 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "La estrategia efectiva de cadena de suministro comienza con mejorar la precisión y flujo de datos entre empresas. Las conexiones electrónicas simples de datos (vs. EDI/XML costosos y complejos) son la base de un ciclo virtuoso de mejora continua, especialmente relevante para las empresas tier 2/3 que aún dependen de email, fax y hojas de cálculo. Sistemas simples con datos buenos superan a sistemas complejos con datos malos ('garbage in, garbage out').",
   "pasos_accionables": [
-    "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, email, fax, APIs)",
+    "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, correo electrónico, fax, APIs)",
     "Priorizar soluciones de conectividad simples y de bajo costo sobre sistemas complejos y caros",
-    "Implementar APIs o conexiones cloud-based (SaaS) para automatizar el intercambio de datos",
+    "Implementar APIs o conexiones en la nube (SaaS) para automatizar el intercambio de datos",
     "Establecer el flujo continuo de datos como base para todas las decisiones estratégicas y tácticas",
     "Validar que los datos compartidos sean precisos antes de escalar el sistema"
   ],
@@ -58,6 +58,40 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-ciclo_virtuoso_datos_electronicos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, email, fax, APIs)",
+      "texto_nuevo": "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, correo electrónico, fax, APIs)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_virtuoso_datos_electronicos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar APIs o conexiones cloud-based (SaaS) para automatizar el intercambio de datos",
+      "texto_nuevo": "Implementar APIs o conexiones en la nube (SaaS) para automatizar el intercambio de datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cloud-based"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

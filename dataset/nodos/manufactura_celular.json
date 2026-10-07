@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "La manufactura celular divide grandes procesos unitarios en 'células' flexibles y de tamaño adecuado, procesando una pieza a la vez, o cantidades pequeñas, en lugar de lotes grandes ('batch and queue'). A menudo utiliza innovaciones como SMED (cambio rápido de matriz), autonomación (equipos que se detienen/inician automáticamente) y equipos de tamaño adecuado para responder rápidamente a la demanda del cliente, y puede reducir la sobreproducción y el desperdicio.",
   "pasos_accionables": [
-    "Rediseñar el layout de producción para minimizar tiempos de transferencia entre etapas",
+    "Rediseñar la distribución de la planta de producción para minimizar tiempos de transferencia entre etapas",
     "Implementar SMED para reducir tiempos de cambio de configuración de máquinas",
     "Incorporar autonomación en los equipos para operación sin supervisión constante",
     "Adaptar el tamaño del equipo a las necesidades reales de producción (right-sizing)"
@@ -118,6 +118,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro admite procesar una pieza o cantidades pequeñas; el resumen lo restringe a una sola pieza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-manufactura_celular-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rediseñar el layout de producción para minimizar tiempos de transferencia entre etapas",
+      "texto_nuevo": "Rediseñar la distribución de la planta de producción para minimizar tiempos de transferencia entre etapas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "layout"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

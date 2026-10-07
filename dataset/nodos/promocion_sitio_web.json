@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Enviar notas de prensa sobre la empresa y el sitio web a publicaciones del sector en el mercado objetivo",
     "Incluir la URL en tarjetas de presentación, papelería, empaques y todo tipo de material promocional",
-    "Implementar campañas de e-mail opt-in para clientes interesados",
+    "Implementar campañas de correo electrónico con suscripción voluntaria para clientes interesados",
     "Enviar seguimiento con descuentos a visitantes que no completaron compra",
     "Utilizar redes sociales para promover productos y experiencia de la empresa"
   ],
@@ -61,6 +61,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-promocion_sitio_web-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar campañas de e-mail opt-in para clientes interesados",
+      "texto_nuevo": "Implementar campañas de correo electrónico con suscripción voluntaria para clientes interesados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "e-mail opt-in"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

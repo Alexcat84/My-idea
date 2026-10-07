@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Calcular el costo real de producción por unidad a diferentes escalas de volumen",
     "Determinar el precio óptimo que maximice tanto volumen como rentabilidad",
-    "Evaluar mecanismos de pricing: descuentos por volumen, envío gratis, puntos de lealtad",
+    "Evaluar mecanismos de fijación de precios: descuentos por volumen, envío gratis, puntos de lealtad",
     "Proyectar cómo el precio puede evolucionar con economías de escala en producción"
   ],
-  "entregable_esperado": "Análisis de sensibilidad precio-volumen-costo que determine el punto óptimo de pricing",
+  "entregable_esperado": "Análisis de sensibilidad precio-volumen-costo que determine el punto óptimo de precio",
   "nodos_previos": [
     "metrics_that_matter_framework",
     "analisis_de_sensibilidad_riesgo"
@@ -43,6 +43,39 @@
         "evidencia": "F05-001: Es diseño de la estrategia de precios con un análisis de costos y sensibilidad, sin ninguna prueba con clientes o con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-demand_curve_pricing-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar mecanismos de pricing: descuentos por volumen, envío gratis, puntos de lealtad",
+      "texto_nuevo": "Evaluar mecanismos de fijación de precios: descuentos por volumen, envío gratis, puntos de lealtad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-demand_curve_pricing-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Análisis de sensibilidad precio-volumen-costo que determine el punto óptimo de pricing",
+      "texto_nuevo": "Análisis de sensibilidad precio-volumen-costo que determine el punto óptimo de precio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

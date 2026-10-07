@@ -12,7 +12,7 @@
     "Descomponer hasta llegar a paquetes de trabajo discretos y medibles",
     "Representar como gráfico jerárquico o esquema"
   ],
-  "entregable_esperado": "Diagrama o esquema jerárquico del WBS con paquetes de trabajo identificados",
+  "entregable_esperado": "Diagrama o esquema jerárquico de la estructura de desglose del trabajo con paquetes de trabajo identificados",
   "nodos_previos": [
     "project_scope_statement",
     "scope_management_plan",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Divide tu Proyecto en Partes",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-work_breakdown_structure-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagrama o esquema jerárquico del WBS con paquetes de trabajo identificados",
+      "texto_nuevo": "Diagrama o esquema jerárquico de la estructura de desglose del trabajo con paquetes de trabajo identificados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del WBS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

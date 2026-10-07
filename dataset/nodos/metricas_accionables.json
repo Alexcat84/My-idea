@@ -7,16 +7,16 @@
   "resumen_teorico": "Las métricas de vanidad (usuarios totales, ingresos brutos, hits al sitio) suben y generan sensación de progreso, pero no muestran relación causa efecto ni guían decisiones. Son peligrosas porque explotan un sesgo humano: cuando los números suben te atribuyes el mérito, cuando bajan culpas a factores externos. Las métricas accionables, en cambio, muestran con claridad qué acción específica generó qué resultado, permitiendo aprendizaje real. Deben ser comprensibles y accesibles para ti y cualquiera que revise tus reportes, y auditables. El análisis de cohortes, en lugar de gráficos de línea acumulativa, revela el progreso real del negocio en vez de esconder estancamiento detrás de números brutos que solo crecen.",
   "pasos_accionables": [
     "Evitar guiarte por números brutos acumulativos (usuarios totales, ingresos totales) como única señal de éxito, distinguiendo entre métricas de vanidad (visitas, descargas) y métricas accionables (retención, conversión, recompra)",
-    "Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó",
+    "Para cada métrica que uses, preguntarte si, cuando sube o baja, sabes exactamente qué acción lo causó",
     "Diseñar métricas que muestren relación causal clara entre los cambios que haces y el comportamiento del cliente",
     "Reemplazar gráficos de línea acumulativa por análisis de cohortes para evaluar el progreso real",
     "Eliminar o sustituir cualquier métrica que no permita esta trazabilidad",
-    "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard",
+    "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un panel",
     "Definir qué hipótesis de negocio se quiere validar antes de buscar crecimiento en números brutos",
-    "Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales",
-    "Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas"
+    "Evitar campañas de marketing o de relaciones públicas diseñadas solo para inflar métricas superficiales",
+    "Presentar a inversores y otros interesados el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas"
   ],
-  "entregable_esperado": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando el success theater",
+  "entregable_esperado": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando fingir un éxito que no hay",
   "nodos_previos": [
     "analisis_de_cohortes",
     "contabilidad_innovacion",
@@ -64,5 +64,89 @@
   ],
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-metricas_accionables-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para cada métrica que uses, preguntarte si sube o baja, sabes exactamente qué acción lo causó",
+      "texto_nuevo": "Para cada métrica que uses, preguntarte si, cuando sube o baja, sabes exactamente qué acción lo causó",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v19)",
+        "evidencia": "Errata de construcción: faltaba el nexo y la frase no se entendía; restituirlo deja la misma pregunta de causa y efecto."
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metricas_accionables-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un dashboard",
+      "texto_nuevo": "Validar que las métricas que sigues sean comprensibles y accesibles, no solo datos crudos de un panel",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metricas_accionables-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar campañas de marketing o PR diseñadas solo para inflar métricas superficiales",
+      "texto_nuevo": "Evitar campañas de marketing o de relaciones públicas diseñadas solo para inflar métricas superficiales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "PR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metricas_accionables-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presentar a inversores y stakeholders el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas",
+      "texto_nuevo": "Presentar a inversores y otros interesados el aprendizaje validado (curvas de comportamiento real de clientes) en lugar de cifras aisladas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stakeholders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metricas_accionables-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando el success theater",
+      "texto_nuevo": "Una lista de tus métricas actuales clasificadas como vanidad o accionables, con plan de reemplazo y usadas de forma consistente en tus decisiones, evitando fingir un éxito que no hay",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "success theater"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

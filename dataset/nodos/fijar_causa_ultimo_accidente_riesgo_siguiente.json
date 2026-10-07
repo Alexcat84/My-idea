@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
     "Realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
-    "Revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+    "Revisar periódicamente las reglas posteriores a un accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
     "Capacitar a operadores en el juicio situacional, no solo en el cumplimiento ciego de la nueva regla"
   ],
   "entregable_esperado": "Protocolo de revisión de nuevas medidas correctivas con análisis de escenarios contraproducentes",
@@ -22,7 +22,7 @@
     "Cuando se está por implementar una nueva regla o dispositivo tras investigar un accidente",
     "Si la organización opera sistemas complejos y fuertemente acoplados"
   ],
-  "etiqueta_arbol": "Cuidado con las Soluciones Riesgosas",
+  "etiqueta_arbol": "Vigila los Riesgos de tus Correcciones",
   "correcciones": [
     {
       "id": "fidelidad-t3-18",
@@ -150,6 +150,37 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-fijar_causa_ultimo_accidente_riesgo_siguiente-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con las Soluciones Riesgosas",
+      "texto_nuevo": "Vigila los Riesgos de tus Correcciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con las Soluciones Riesgosas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fijar_causa_ultimo_accidente_riesgo_siguiente-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+      "texto_nuevo": "Revisar periódicamente las reglas posteriores a un accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v19)",
+        "evidencia": "El prefijo no se separa con guion; posteriores a un accidente dice lo mismo sin la falta."
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

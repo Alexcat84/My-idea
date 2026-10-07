@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El diseño del producto determina la forma de la cadena de suministro necesaria para fabricarlo, impactando fuertemente en costo y disponibilidad. Diseñar productos con menos partes, diseños simples y construcción modular a partir de subensambles genéricos permite trabajar con menos proveedores, reducir inventarios de producto terminado y responder más rápido a la demanda. Equipos multifuncionales (diseño, procurement, manufactura) deben coordinar para lograr productos exitosos y rentables.",
   "pasos_accionables": [
-    "Formar equipos multifuncionales de diseño, procurement y manufactura",
+    "Formar equipos multifuncionales de diseño, compras y manufactura",
     "Diseñar productos con menor cantidad de partes y componentes modulares",
     "Evaluar si proveedores actuales pueden suministrar los componentes necesarios",
     "Analizar riesgos de dependencia de proveedores únicos por componente",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Simplifica el Diseño de tu Producto",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-diseno_producto_cadena_suministro-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Formar equipos multifuncionales de diseño, procurement y manufactura",
+      "texto_nuevo": "Formar equipos multifuncionales de diseño, compras y manufactura",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "procurement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

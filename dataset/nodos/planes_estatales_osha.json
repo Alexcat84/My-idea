@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Revisa si el estado donde tienes tu negocio cuenta con un Plan Estatal aprobado y si ese plan cubre a los negocios privados o solo a los trabajadores del gobierno estatal y local",
     "Busca en la página de Planes Estatales de OSHA los requisitos que te tocan específicamente",
-    "Ajusta tu forma de cumplir según lo que pida tu plan estatal, si aplica",
+    "Ajusta tu forma de cumplir según lo que pida tu plan estatal, si corresponde",
     "Si tienes dudas puntuales, contacta directamente al Plan Estatal de tu zona"
   ],
-  "entregable_esperado": "Saber con claridad qué reglas te aplican a ti: las federales o las de tu estado",
+  "entregable_esperado": "Saber con claridad qué reglas te corresponden a ti: las federales o las de tu estado",
   "nodos_previos": [
     "derecho_rechazo_trabajo_peligroso"
   ],
@@ -57,6 +57,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro distingue los planes que cubren solo a trabajadores del gobierno estatal y local; ahí el negocio privado sigue bajo OSHA federal.; Mismo defecto: falta revisar si el plan cubre al sector privado.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-planes_estatales_osha-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajusta tu forma de cumplir según lo que pida tu plan estatal, si aplica",
+      "texto_nuevo": "Ajusta tu forma de cumplir según lo que pida tu plan estatal, si corresponde",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-planes_estatales_osha-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Saber con claridad qué reglas te aplican a ti: las federales o las de tu estado",
+      "texto_nuevo": "Saber con claridad qué reglas te corresponden a ti: las federales o las de tu estado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "te aplican a ti"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

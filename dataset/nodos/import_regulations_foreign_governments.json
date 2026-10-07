@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Consultar con el U.S. Commercial Service antes de exportar a un nuevo país",
     "Investigar los requisitos de documentación específicos del país destino",
-    "Contactar a freight forwarders para obtener información sobre documentos requeridos",
+    "Contactar a agentes de carga para obtener información sobre documentos requeridos",
     "Verificar requisitos aunque ya se haya exportado antes a otros países"
   ],
   "entregable_esperado": "Lista de documentos y certificaciones requeridas por el país de destino específico",
@@ -44,6 +44,23 @@
       },
       "decision": "la etiqueta interna 'Puntero jurisdiccional' sale del texto de cara; el aviso de verificar la norma vigente en tu jurisdiccion se conserva (BANCO de textos, seccion de limites); 'a la fecha de la fuente' es voz de libro: pasa a 'en su momento'",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "voz-import_regulations_foreign_governments-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contactar a freight forwarders para obtener información sobre documentos requeridos",
+      "texto_nuevo": "Contactar a agentes de carga para obtener información sobre documentos requeridos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

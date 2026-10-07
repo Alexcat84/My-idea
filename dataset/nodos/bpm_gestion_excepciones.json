@@ -7,8 +7,8 @@
   "resumen_teorico": "El uso de software BPM interfaced con los sistemas transaccionales permite definir reglas de negocio y detectar automáticamente excepciones (errores en pedidos, retrasos, facturación) para alertar al personal correspondiente, permitiendo una atención al cliente proactiva en vez de reactiva.",
   "pasos_accionables": [
     "Define las reglas de negocio críticas para cada tipo de cliente/proveedor (ej. plazos de entrega, tolerancias de error)",
-    "Implementa software BPM interfaced con la base de datos transaccional existente",
-    "Configura alertas automáticas por email cuando se detecten excepciones a las reglas",
+    "Implementa software BPM conectado con la base de datos transaccional existente",
+    "Configura alertas automáticas por correo electrónico cuando se detecten excepciones a las reglas",
     "Capacita al equipo de servicio al cliente para actuar proactivamente ante las alertas"
   ],
   "entregable_esperado": "Sistema BPM configurado con reglas de negocio y alertas automáticas de excepciones",
@@ -22,8 +22,60 @@
     "Cuando errores en pedidos o facturación tardan mucho en detectarse",
     "Cuando el servicio al cliente reacciona tarde a problemas de la cadena de suministro"
   ],
-  "etiqueta_arbol": "Detecta Excepciones Automáticamente",
+  "etiqueta_arbol": "Detecta Excepciones de Forma Automática",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-bpm_gestion_excepciones-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Detecta Excepciones Automáticamente",
+      "texto_nuevo": "Detecta Excepciones de Forma Automática",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Automáticamente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-bpm_gestion_excepciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementa software BPM interfaced con la base de datos transaccional existente",
+      "texto_nuevo": "Implementa software BPM conectado con la base de datos transaccional existente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "interfaced"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-bpm_gestion_excepciones-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Configura alertas automáticas por email cuando se detecten excepciones a las reglas",
+      "texto_nuevo": "Configura alertas automáticas por correo electrónico cuando se detecten excepciones a las reglas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

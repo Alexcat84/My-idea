@@ -9,10 +9,10 @@
     "Inventariar todo el hardware de oficina y de centro de datos (computadoras, servidores, impresoras, etc.)",
     "Listar todo el software utilizado a nivel empresa e individual",
     "Medir consumo de papel usando contadores de dispositivos",
-    "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, UPS, transformadores y pérdidas de distribución)",
+    "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, sistemas de alimentación ininterrumpida, transformadores y pérdidas de distribución)",
     "Utilizar herramientas como el 'Aberdeen/IBM Green IT Assessment Calculator' para benchmarking"
   ],
-  "entregable_esperado": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares best-in-class",
+  "entregable_esperado": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares de los mejores del sector",
   "nodos_previos": [
     "programas_5s_verdes"
   ],
@@ -60,6 +60,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide también el consumo de los equipos auxiliares del centro de datos para fijar cuánta energía consume la TI.; Misma omisión: faltan climatización, humidificación, UPS, transformadores y pérdidas de distribución del centro de datos.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-auditoria_ti_verde-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, UPS, transformadores y pérdidas de distribución)",
+      "texto_nuevo": "Calcular consumo energético por componente de TI y por persona, y el de los equipos auxiliares del centro de datos (climatización, humidificación, sistemas de alimentación ininterrumpida, transformadores y pérdidas de distribución)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "UPS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-auditoria_ti_verde-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares best-in-class",
+      "texto_nuevo": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares de los mejores del sector",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "best-in-class"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

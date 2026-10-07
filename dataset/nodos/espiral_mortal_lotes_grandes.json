@@ -7,11 +7,11 @@
   "resumen_teorico": "Fenómeno donde los lotes de trabajo tienden a crecer indefinidamente porque mover el lote hacia adelante suele generar trabajo adicional, retrabajo y retrasos, incentivando a todos a trabajar en lotes aún más grandes para minimizar esa sobrecarga. A diferencia de la manufactura física, no hay límite natural al tamaño del lote en trabajo intangible (software, diseño), lo que puede llevar a que un proyecto se convierta en una apuesta 'todo o nada' que nunca se lanza por miedo a no cubrir todos los casos.",
   "pasos_accionables": [
     "Detectar señales de alerta: fechas de lanzamiento que se posponen repetidamente",
-    "Auditar si el equipo está agregando features/arreglos 'de último momento' antes de cada release",
+    "Auditar si el equipo está agregando funciones/arreglos 'de último momento' antes de cada lanzamiento",
     "Establecer un límite máximo de tamaño de lote antes de iniciar cualquier desarrollo",
     "Forzar lanzamientos parciales o incrementales aunque se sienta 'incompleto'"
   ],
-  "entregable_esperado": "Un límite de tamaño de lote definido y documentado (por ejemplo, número máximo de features por release) para evitar la acumulación indefinida",
+  "entregable_esperado": "Un límite de tamaño de lote definido y documentado (por ejemplo, número máximo de funciones por versión) para evitar la acumulación indefinida",
   "nodos_previos": [
     "trabajo_en_lotes_pequenos",
     "cinco_porques_master",
@@ -44,6 +44,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que mover el lote a menudo genera esa sobrecarga; el nodo lo vuelve seguro.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-espiral_mortal_lotes_grandes-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Auditar si el equipo está agregando features/arreglos 'de último momento' antes de cada release",
+      "texto_nuevo": "Auditar si el equipo está agregando funciones/arreglos 'de último momento' antes de cada lanzamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features",
+          "release"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-espiral_mortal_lotes_grandes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un límite de tamaño de lote definido y documentado (por ejemplo, número máximo de features por release) para evitar la acumulación indefinida",
+      "texto_nuevo": "Un límite de tamaño de lote definido y documentado (por ejemplo, número máximo de funciones por versión) para evitar la acumulación indefinida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features por release"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

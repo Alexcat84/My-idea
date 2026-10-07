@@ -6,7 +6,7 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento que define todas las actividades necesarias para completar el trabajo del proyecto, describiéndolas con suficiente detalle para que quien las ejecute entienda los requisitos necesarios.",
   "pasos_accionables": [
-    "Identificar cada actividad a partir de los entregables del WBS",
+    "Identificar cada actividad a partir de los entregables de la EDT (estructura de desglose del trabajo)",
     "Asignar un identificador único a cada actividad",
     "Nombrar cada actividad comenzando con un verbo",
     "Describir el trabajo con el detalle necesario"
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Lista tus Actividades del Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-activity_list-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar cada actividad a partir de los entregables del WBS",
+      "texto_nuevo": "Identificar cada actividad a partir de los entregables de la EDT (estructura de desglose del trabajo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del WBS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

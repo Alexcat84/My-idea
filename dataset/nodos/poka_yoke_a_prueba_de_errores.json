@@ -21,7 +21,7 @@
     "Cuando se detectan defectos recurrentes causados por error humano",
     "Cuando la inspección posterior no es suficiente para garantizar calidad"
   ],
-  "etiqueta_arbol": "Previene el Error en su Origen",
+  "etiqueta_arbol": "Prevén el Error en su Origen",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro reconoce un modo reactivo: si no se previene en el diseño, lo siguiente mejor es impedir que el defecto pase a la operación siguiente.; Mismo modo reactivo perdido; el nodo lo excluye.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-poka_yoke_a_prueba_de_errores-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Previene el Error en su Origen",
+      "texto_nuevo": "Prevén el Error en su Origen",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Previene"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

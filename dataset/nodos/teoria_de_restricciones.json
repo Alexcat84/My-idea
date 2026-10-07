@@ -6,11 +6,11 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Todo sistema tiene al menos una restricción (cuello de botella) que determina su rendimiento total. En vez de intentar eliminar constantemente nuevas restricciones, es mejor identificarlas y gestionarlas deliberadamente. El objetivo es aumentar lo que el sistema produce y vende mientras reduces a la vez inventario y gastos operativos.",
   "pasos_accionables": [
-    "Definir el objetivo del sistema (aumentar throughput, reducir inventario y gastos operativos)",
+    "Definir el objetivo del sistema (aumentar el rendimiento, reducir inventario y gastos operativos)",
     "Establecer las métricas para medir el progreso hacia ese objetivo",
     "Aplicar los cinco pasos de enfoque para gestionar las restricciones identificadas: identificar los cuellos de botella, decidir cómo explotarlos para que operen a su máxima capacidad, subordinar todo lo demás a esa decisión, elevar su capacidad y, si un cuello de botella se rompe, volver al primer paso"
   ],
-  "entregable_esperado": "Documento de objetivo del sistema con métricas de throughput, inventario y gasto operativo definidas",
+  "entregable_esperado": "Documento de objetivo del sistema con métricas de rendimiento, inventario y gasto operativo definidas",
   "nodos_previos": [
     "constraint_management",
     "produccion_scheduling_balance_objetivos"
@@ -23,7 +23,7 @@
     "Cuando existen cuellos de botella recurrentes en producción o cadena de suministro",
     "Si se busca un modelo sistémico para priorizar mejoras operativas"
   ],
-  "etiqueta_arbol": "Explota Antes de Elevar",
+  "etiqueta_arbol": "Aprovecha tu Cuello de Botella Primero",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
   ],
@@ -90,6 +90,55 @@
       },
       "decision": "lectura total de procedencia (w39): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-teoria_de_restricciones-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Explota Antes de Elevar",
+      "texto_nuevo": "Aprovecha tu Cuello de Botella Primero",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Explota Antes de Elevar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-teoria_de_restricciones-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el objetivo del sistema (aumentar throughput, reducir inventario y gastos operativos)",
+      "texto_nuevo": "Definir el objetivo del sistema (aumentar el rendimiento, reducir inventario y gastos operativos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "throughput"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-teoria_de_restricciones-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de objetivo del sistema con métricas de throughput, inventario y gasto operativo definidas",
+      "texto_nuevo": "Documento de objetivo del sistema con métricas de rendimiento, inventario y gasto operativo definidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "throughput"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

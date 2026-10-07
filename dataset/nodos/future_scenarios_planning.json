@@ -9,7 +9,7 @@
     "Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios",
     "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos del entorno futuro de tu empresa",
     "Titula y narra cada escenario con una historia breve que describa sus elementos principales",
-    "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno",
+    "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (socios clave, actividades clave, propuesta de valor, relación con clientes, segmentos de clientes, estructura de costos y fuentes de ingresos) para cada uno",
     "Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
     "Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo"
   ],
@@ -32,7 +32,7 @@
     "Cuando tu empresa depende fuertemente de un solo modelo de futuro esperado",
     "Si necesitas anticipar cómo adaptar tu modelo de negocio a futuros cambios y qué decisiones estratégicas de inversión en tecnología o negocio tomar"
   ],
-  "etiqueta_arbol": "Construye Escenarios con Drivers Clave",
+  "etiqueta_arbol": "Construye Escenarios con Impulsores Clave",
   "ids_alias": [
     "escenarios_futuros"
   ],
@@ -228,6 +228,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 5,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-future_scenarios_planning-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construye Escenarios con Drivers Clave",
+      "texto_nuevo": "Construye Escenarios con Impulsores Clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Drivers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-future_scenarios_planning-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno",
+      "texto_nuevo": "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (socios clave, actividades clave, propuesta de valor, relación con clientes, segmentos de clientes, estructura de costos y fuentes de ingresos) para cada uno",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(KP, KA, VP, CR, CS, C$, R$)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

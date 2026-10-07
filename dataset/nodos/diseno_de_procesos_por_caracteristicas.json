@@ -10,7 +10,7 @@
     "Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.",
     "Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.",
     "Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.",
-    "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega."
+    "Confirmar la capacidad de los macroprocesos organizacionales que sostienen el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega."
   ],
   "entregable_esperado": "Hoja de cálculo de diseño de proceso completa, verificada y sin redundancias.",
   "nodos_previos": [
@@ -95,6 +95,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice qué hacer si no son capaces: mejorarlos en el diseño o reemplazarlos por otra forma de entrega.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_de_procesos_por_caracteristicas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Confirmar la capacidad de los macroprocesos organizacionales que soportan el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega.",
+      "texto_nuevo": "Confirmar la capacidad de los macroprocesos organizacionales que sostienen el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "que soportan el nuevo proceso"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identifica los aspectos del proceso con riesgo serio para la vida, la salud, el ambiente o grandes pérdidas económicas",
     "Aplica un análisis de criticidad y FMEA para priorizar estos factores",
-    "Diseña márgenes de seguridad, sistemas fail safe, redundancia y alarmas múltiples",
+    "Diseña márgenes de seguridad, sistemas a prueba de fallas, redundancia y alarmas múltiples",
     "Analiza tus datos de errores humanos y aplica el principio de Pareto para priorizar los tipos de error vitales",
-    "Aplica principios de mistake proofing como la eliminación de operaciones propensas al error",
+    "Aplica principios de prevención de errores como la eliminación de operaciones propensas al error",
     "Documenta las contramedidas de prevención de fallas y error humano incorporadas al proceso"
   ],
   "entregable_esperado": "Plan de diseño con análisis de criticidad, FMEA y mecanismos a prueba de error implementados.",
@@ -39,5 +39,41 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-diseno_para_factores_criticos_y_error_humano-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña márgenes de seguridad, sistemas fail safe, redundancia y alarmas múltiples",
+      "texto_nuevo": "Diseña márgenes de seguridad, sistemas a prueba de fallas, redundancia y alarmas múltiples",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fail safe"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_para_factores_criticos_y_error_humano-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica principios de mistake proofing como la eliminación de operaciones propensas al error",
+      "texto_nuevo": "Aplica principios de prevención de errores como la eliminación de operaciones propensas al error",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mistake proofing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

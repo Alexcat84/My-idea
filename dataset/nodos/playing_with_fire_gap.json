@@ -9,7 +9,7 @@
     "Evaluar el daño potencial a la relación social si el negocio genera tensión",
     "Evaluar la probabilidad real de que el equipo discuta temas incómodos abiertamente",
     "Calcular la brecha entre ambos factores para cada relación de cofundador",
-    "Identificar 'elefantes en la habitación' no discutidos (roles, equity, compromiso, visión)"
+    "Identificar temas incómodos no discutidos (roles, reparto de acciones, compromiso, visión)"
   ],
   "entregable_esperado": "Diagnóstico visual o escrito de la brecha de riesgo por cada par de cofundadores, identificando temas pendientes de discutir",
   "nodos_previos": [
@@ -25,5 +25,25 @@
   "etiqueta_arbol": "Mide el Riesgo entre Socios",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-playing_with_fire_gap-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar 'elefantes en la habitación' no discutidos (roles, equity, compromiso, visión)",
+      "texto_nuevo": "Identificar temas incómodos no discutidos (roles, reparto de acciones, compromiso, visión)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'elefantes en la habitación'",
+          "equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

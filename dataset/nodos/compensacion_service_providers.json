@@ -6,13 +6,13 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Ante la escasez de efectivo, las startups compensan a empleados, consultores y asesores mediante equity (stock u options), a menudo bajo un plan de incentivos de equity (equity incentive plan / option pool), aunque no es obligatorio. El stock otorga derechos de voto, si el tipo de acción recibida los tiene, pero genera ingreso gravable por el valor de mercado recibido por encima de lo que el receptor pagó, en el año de la concesión si presenta la elección 83(b). Las options otorgan el derecho a comprar acciones a un precio de ejercicio predeterminado, sin generar impuesto en el momento de la concesión si el precio de ejercicio iguala el valor justo de mercado, pero requieren que el receptor pague ese precio para ejercerlas. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
-    "Crear un equity incentive plan (option pool) con asesoría legal",
-    "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
-    "Definir cronograma de vesting para cada concesión de equity",
-    "Establecer el precio de ejercicio de las options basado en la valuación 409A vigente",
+    "Crear un plan de incentivos en acciones (option pool) con asesoría legal",
+    "Decidir entre otorgar acciones directas (con 83(b)) u opciones sobre acciones según implicaciones fiscales del receptor",
+    "Definir cronograma de vesting para cada concesión de acciones",
+    "Establecer el precio de ejercicio de las opciones basado en la valuación 409A vigente",
     "Comunicar claramente a los receptores las implicaciones fiscales de su elección"
   ],
-  "entregable_esperado": "Plan de incentivos de equity (option pool) formalizado con concesiones documentadas para cada proveedor de servicios",
+  "entregable_esperado": "Plan de incentivos en acciones (option pool) formalizado con concesiones documentadas para cada proveedor de servicios",
   "nodos_previos": [
     "valuacion_409a",
     "clasificacion_consultores_empleados",
@@ -91,6 +91,91 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que las empresas a menudo usan el plan por simplicidad legal y fiscal, pero que las concesiones no tienen que hacerse con él.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-compensacion_service_providers-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear un equity incentive plan (option pool) con asesoría legal",
+      "texto_nuevo": "Crear un plan de incentivos en acciones (option pool) con asesoría legal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity incentive plan"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compensacion_service_providers-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir entre otorgar stock directo (con 83(b)) u options según implicaciones fiscales del receptor",
+      "texto_nuevo": "Decidir entre otorgar acciones directas (con 83(b)) u opciones sobre acciones según implicaciones fiscales del receptor",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stock directo",
+          "options"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compensacion_service_providers-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir cronograma de vesting para cada concesión de equity",
+      "texto_nuevo": "Definir cronograma de vesting para cada concesión de acciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "concesión de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compensacion_service_providers-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer el precio de ejercicio de las options basado en la valuación 409A vigente",
+      "texto_nuevo": "Establecer el precio de ejercicio de las opciones basado en la valuación 409A vigente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de las options"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compensacion_service_providers-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de incentivos de equity (option pool) formalizado con concesiones documentadas para cada proveedor de servicios",
+      "texto_nuevo": "Plan de incentivos en acciones (option pool) formalizado con concesiones documentadas para cada proveedor de servicios",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "incentivos de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

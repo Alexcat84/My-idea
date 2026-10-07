@@ -6,14 +6,14 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Los earlyvangelists son clientes visionarios que compran un producto inacabado porque quieren ser los primeros y creen en tu visión. Se diferencian de evaluadores tempranos, clientes escalables y mainstream porque reconocen su problema, lo buscan resolver con urgencia y un plazo definido, ya improvisaron una solución casera dolorosa, y tienen o pueden conseguir presupuesto rápido. Están dispuestos a pagar, no solo a probar gratis, y toleran features faltantes porque actúan como socios en el proceso de venta. Evita prospectos que solo quieren aprender sobre la tecnología sin intención de compra, y detecta change agents sin autoridad real para decidir. Prioriza a quienes acepten ser referencia o caso de estudio.",
   "pasos_accionables": [
-    "Revisa las características de earlyvangelists que identificaste en tu customer discovery: problema reconocido, solución casera, presupuesto y urgencia",
-    "Crea una lista de earlyvangelists potenciales y verifica que tengan presupuesto disponible o accesible rápidamente",
-    "Contacta a cada uno usando tu lista de clientes, un email introductorio y un guion de referencia para agendar citas",
+    "Revisa las características de clientes visionarios que identificaste en tu descubrimiento de clientes: problema reconocido, solución casera, presupuesto y urgencia",
+    "Crea una lista de clientes visionarios potenciales y verifica que tengan presupuesto disponible o accesible rápidamente",
+    "Contacta a cada uno usando tu lista de clientes, un correo introductorio y un guion de referencia para agendar citas",
     "Pregunta si antes implementaron tecnología nueva en su empresa y descarta a quienes solo buscan aprender sin intención de compra",
     "Confirma que estén dispuestos a pagar por tu solución incompleta y a servir como referencia o caso de estudio",
-    "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu hit rate para mejorar"
+    "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu tasa de aciertos para mejorar"
   ],
-  "entregable_esperado": "Una lista de earlyvangelists con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
+  "entregable_esperado": "Una lista de clientes visionarios con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
   "nodos_previos": [
     "customer_discovery",
     "pivot_post_ventas",
@@ -38,7 +38,7 @@
     "Si intentas vender a clientes mainstream con un producto no terminado",
     "Si no distingues entre visionarios con poder de compra y change agents sin autoridad"
   ],
-  "etiqueta_arbol": "Busca Clientes Visionarios",
+  "etiqueta_arbol": "Busca a tus Clientes Visionarios",
   "ids_alias": [
     "earlyvangelists",
     "earlyvangelists_identificacion"
@@ -76,6 +76,107 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que de los pocos que entran al proceso solo uno de cada tres o menos firma; se cae y cambia la expectativa.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca Clientes Visionarios",
+      "texto_nuevo": "Busca a tus Clientes Visionarios",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Busca Clientes Visionarios"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa las características de earlyvangelists que identificaste en tu customer discovery: problema reconocido, solución casera, presupuesto y urgencia",
+      "texto_nuevo": "Revisa las características de clientes visionarios que identificaste en tu descubrimiento de clientes: problema reconocido, solución casera, presupuesto y urgencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earlyvangelists",
+          "customer discovery"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea una lista de earlyvangelists potenciales y verifica que tengan presupuesto disponible o accesible rápidamente",
+      "texto_nuevo": "Crea una lista de clientes visionarios potenciales y verifica que tengan presupuesto disponible o accesible rápidamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earlyvangelists"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contacta a cada uno usando tu lista de clientes, un email introductorio y un guion de referencia para agendar citas",
+      "texto_nuevo": "Contacta a cada uno usando tu lista de clientes, un correo introductorio y un guion de referencia para agendar citas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu hit rate para mejorar",
+      "texto_nuevo": "Acepta una tasa de rechazo alta, asume que el 95% te dirá que no y que, de quienes sigan, uno de cada tres o menos firmará una orden de compra, y registra tu tasa de aciertos para mejorar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hit rate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_earlyvangelists-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista de earlyvangelists con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
+      "texto_nuevo": "Una lista de clientes visionarios con evidencia de dolor, presupuesto y disposición de compra, con citas de ventas ya agendadas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earlyvangelists"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

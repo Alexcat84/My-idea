@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisar las suposiciones subyacentes en los modelos financieros de otros.",
     "Preguntar sobre la sensibilidad del análisis a cambios en las suposiciones.",
-    "Argumentar contra proyecciones lineales estáticas, considerando precios de energía crecientes o precificación de carbono.",
+    "Argumentar contra proyecciones lineales estáticas, considerando precios de energía crecientes o la fijación de un precio al carbono.",
     "Usar el argumento de 'no podemos permitirnos no invertir' cuando aplique.",
     "Citar precedentes de otras empresas (Unilever, 3M) que ajustaron sus tasas de retorno mínimas para sostenibilidad."
   ],
@@ -40,6 +40,23 @@
         "evidencia": "F22-029: Rebatir supuestos de modelos financieros para justificar una inversion y su tasa minima de retorno es trabajo de plan y recursos. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-cuestionar_supuestos_financieros-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Argumentar contra proyecciones lineales estáticas, considerando precios de energía crecientes o precificación de carbono.",
+      "texto_nuevo": "Argumentar contra proyecciones lineales estáticas, considerando precios de energía crecientes o la fijación de un precio al carbono.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "precificación de carbono"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

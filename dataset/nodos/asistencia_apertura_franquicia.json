@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Definir el nivel de involucramiento en selección de sitio (buscar, guiar o aprobar)",
     "Decidir si se aprobarán o dictarán términos de arrendamiento",
-    "Determinar si el franquiciante poseerá bienes raíces o firmará contratos de arrendamiento maestro",
+    "Determinar si el franquiciante poseerá bienes raíces o firmará contratos de arrendamiento principal",
     "Especificar requisitos sobre arquitectos, contratistas y proveedores de construcción",
     "Establecer protocolo para pedidos de equipo e inventario inicial"
   ],
-  "entregable_esperado": "Documento de políticas de apertura que defina el rol del franquiciante en cada etapa pre-apertura",
+  "entregable_esperado": "Documento de políticas de apertura que defina el rol del franquiciante en cada etapa de preapertura",
   "nodos_previos": [
     "investigacion_desarrollo_concepto"
   ],
@@ -72,6 +72,37 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que buscar el sitio podría traer reclamos después; el nodo lo afirma como seguro.; El libro liga la exposición de poseer o subarrendar a que el franquiciado fracase y dice que buscar el sitio podría traer reclamos; el nodo lo da por seguro.; Mismo defecto que la marca 1.; Mismo defecto que la marca 2.; Se cae la condición del libro: la exposición es si el franquiciado fracasa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-asistencia_apertura_franquicia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si el franquiciante poseerá bienes raíces o firmará contratos de arrendamiento maestro",
+      "texto_nuevo": "Determinar si el franquiciante poseerá bienes raíces o firmará contratos de arrendamiento principal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "arrendamiento maestro"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-asistencia_apertura_franquicia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documento de políticas de apertura que defina el rol del franquiciante en cada etapa pre-apertura",
+      "texto_nuevo": "Documento de políticas de apertura que defina el rol del franquiciante en cada etapa de preapertura",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v19)",
+        "evidencia": "El prefijo 'pre' va unido sin guion; el 'de' solo lo pide la gramática y no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

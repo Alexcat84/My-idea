@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Identificar los factores clave (costos y beneficios) más relevantes y monetizables.",
     "Recolectar datos confiables sobre estos factores (ej. costo de reclutamiento, retención).",
-    "Calcular el NPV del proyecto incorporando estos factores.",
+    "Calcular el VPN (valor presente neto) del proyecto incorporando estos factores.",
     "Ser selectivo: priorizar precisión sobre exhaustividad.",
     "Probar y documentar los supuestos utilizados para resistir escrutinio, y evaluar los riesgos a la baja, su probabilidad y cómo mitigarlos."
   ],
-  "entregable_esperado": "Un cálculo de NPV documentado con supuestos claros, listo para presentar a tomadores de decisión financiera.",
+  "entregable_esperado": "Un cálculo de VPN (valor presente neto) documentado con supuestos claros, listo para presentar a tomadores de decisión financiera.",
   "nodos_previos": [
     "voces_externas_credibles",
     "indicadores_desempeno_recursos",
@@ -46,6 +46,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide, junto a probar los supuestos, evaluar los riesgos a la baja con su probabilidad y su mitigación.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-monetizacion_npv_caso_negocio-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el NPV del proyecto incorporando estos factores.",
+      "texto_nuevo": "Calcular el VPN (valor presente neto) del proyecto incorporando estos factores.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-monetizacion_npv_caso_negocio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un cálculo de NPV documentado con supuestos claros, listo para presentar a tomadores de decisión financiera.",
+      "texto_nuevo": "Un cálculo de VPN (valor presente neto) documentado con supuestos claros, listo para presentar a tomadores de decisión financiera.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

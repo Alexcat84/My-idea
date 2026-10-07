@@ -10,7 +10,7 @@
     "Cuestiona cualquier estadística del tipo 'X% de los incidentes son por error humano' y pide que te expliquen qué condiciones de fondo la explican.",
     "Evita que quien maneje el personal convierta las investigaciones de seguridad en una evaluación de desempeño individual."
   ],
-  "entregable_esperado": "Un checklist de señales de alerta aplicado a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
+  "entregable_esperado": "Una lista de comprobación de señales de alerta aplicada a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
   "nodos_previos": [
     "old_view_vs_new_view_human_error"
   ],
@@ -111,6 +111,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que ese estándar a menudo solo se ve en retrospectiva.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-riesgos_del_enfoque_en_error_humano-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un checklist de señales de alerta aplicado a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
+      "texto_nuevo": "Una lista de comprobación de señales de alerta aplicada a tu negocio, revisando cómo investigas los incidentes, cómo aplicas la disciplina y quién es responsable de la seguridad.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Un checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

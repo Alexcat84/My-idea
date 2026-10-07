@@ -8,14 +8,14 @@
   "pasos_accionables": [
     "Analizar qué valora más tu segmento de clientes: precio bajo o rapidez/servicio.",
     "Evaluar el nivel de exceso de capacidad, inventario y flexibilidad de transporte actuales.",
-    "Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
-    "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.",
+    "Ajustar cada palanca (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
+    "Revisar periódicamente el equilibrio, ya que cambios en el mercado pueden requerir reajustes.",
     "Monitorear factores clave: demanda de producto, precios, tasas de producción, frecuencia de entregas",
     "Evaluar la confiabilidad de los pronósticos y datos disponibles",
-    "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)",
-    "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)"
+    "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece capacidad de respuesta)",
+    "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, funciones, velocidad)"
   ],
-  "entregable_esperado": "Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
+  "entregable_esperado": "Documento de posicionamiento estratégico que indique, para cada palanca de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
     "information_driver_supply_chain",
@@ -63,6 +63,90 @@
         "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "voz-trade_off_responsividad_eficiencia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajustar cada driver (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
+      "texto_nuevo": "Ajustar cada palanca (producción, inventario, ubicación, transporte, información) hacia el extremo del espectro que corresponda a la estrategia elegida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "driver"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_off_responsividad_eficiencia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar periódicamente el balance, ya que cambios en el mercado pueden requerir reajustes.",
+      "texto_nuevo": "Revisar periódicamente el equilibrio, ya que cambios en el mercado pueden requerir reajustes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el balance"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_off_responsividad_eficiencia-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece responsividad)",
+      "texto_nuevo": "Determinar si el entorno actual es estable/predecible (favorece eficiencia) o volátil/incierto (favorece capacidad de respuesta)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "responsividad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_off_responsividad_eficiencia-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, features, velocidad)",
+      "texto_nuevo": "Evitar el error de optimizar solo por costo bajo cuando el mercado empieza a valorar otros atributos (diseño, funciones, velocidad)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_off_responsividad_eficiencia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de posicionamiento estratégico que indique, para cada driver de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
+      "texto_nuevo": "Documento de posicionamiento estratégico que indique, para cada palanca de la cadena de suministro, si la decisión prioriza eficiencia o capacidad de respuesta.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "driver"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

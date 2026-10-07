@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La fuerza laboral (empleados sin roles gerenciales) tiene un papel esencial al nominar problemas de calidad, participar en equipos, identificar elementos de su trabajo que no cumplen criterios de autocontrol y conocer las necesidades de sus clientes internos y externos. Aprovechar el conocimiento y experiencia de quienes ejecutan el trabajo diario es clave para el éxito de la calidad.",
   "pasos_accionables": [
-    "Establecer canales para que los trabajadores nominen problemas de calidad",
+    "Establecer canales para que los trabajadores señalen problemas de calidad",
     "Formar equipos de calidad con participación voluntaria o asignada del personal operativo",
     "Capacitar a los trabajadores en criterios de autocontrol",
     "Fomentar el conocimiento de las necesidades de clientes internos y externos"
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Involucra a tu Equipo en Calidad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-rol_de_la_fuerza_laboral_en_calidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer canales para que los trabajadores nominen problemas de calidad",
+      "texto_nuevo": "Establecer canales para que los trabajadores señalen problemas de calidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "nominen"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

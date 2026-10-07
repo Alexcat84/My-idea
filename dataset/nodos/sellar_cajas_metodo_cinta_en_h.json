@@ -7,8 +7,8 @@
   "resumen_teorico": "Una caja bien empacada por dentro puede fallar igual si el sellado no aguanta el trayecto. El método de cinta en H consiste en aplicar una tira sobre la juntura central y una tira sobre cada juntura lateral, repitiendo el mismo patrón en la tapa y en el fondo de la caja. Sirven la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos cinco centímetros (2 pulgadas) de ancho; la cinta de celofán, la cinta americana, la cinta de enmascarar, el cordel o la cuerda no sirven para sellar. Sellar así cada envío, sin importar el tamaño de la caja, ayuda a evitar que se abra por accidente en tránsito.",
   "pasos_accionables": [
     "Compra cinta de embalar sensible a la presión de al menos cinco centímetros de ancho.",
-    "Aplica una tira sobre la costura central de la tapa y repite en el fondo de la caja.",
-    "Aplica una tira sobre cada costura lateral, arriba y abajo, completando el patrón en H.",
+    "Aplica una tira sobre la juntura central de la tapa y repite en el fondo de la caja.",
+    "Aplica una tira sobre cada juntura lateral, arriba y abajo, completando el patrón en H.",
     "Descarta cinta de celofán, cinta americana (duct tape), cinta de enmascarar (masking tape), cordel o cuerda para sellar; la cinta plástica sensible a la presión, la cinta de papel activada con agua (grado mínimo de 60 lb) o la cinta reforzada activada con agua, de al menos 2 pulgadas de ancho, sí sirven.",
     "Añade tiras adicionales si el paquete pesa más de lo habitual para tu empaque estándar."
   ],
@@ -142,6 +142,40 @@
       },
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro solo dice que el método ayuda a prevenir que se abra por accidente; no promete que resista el manejo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-sellar_cajas_metodo_cinta_en_h-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica una tira sobre la costura central de la tapa y repite en el fondo de la caja.",
+      "texto_nuevo": "Aplica una tira sobre la juntura central de la tapa y repite en el fondo de la caja.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "costura central"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sellar_cajas_metodo_cinta_en_h-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica una tira sobre cada costura lateral, arriba y abajo, completando el patrón en H.",
+      "texto_nuevo": "Aplica una tira sobre cada juntura lateral, arriba y abajo, completando el patrón en H.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "costura lateral"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

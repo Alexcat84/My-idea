@@ -7,10 +7,10 @@
   "resumen_teorico": "Cpk es un índice que refleja tanto la variación del proceso como la ubicación de su media respecto a los límites de especificación, a diferencia de Cp que asume centrado perfecto. Cpk indica qué tan cerca está la media actual del proceso del límite de especificación más próximo; algunas organizaciones lo usan como uno de sus criterios para certificar proveedores, y sirve para detectar procesos descentrados.",
   "pasos_accionables": [
     "Calcular la media actual del proceso y su desviación estándar",
-    "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
+    "Calcular la distancia de la media a cada límite de especificación (el superior y el inferior)",
     "Determinar Cpk como el mínimo entre (USL-media)/3σ y (media-LSL)/3σ",
     "Comparar Cpk con Cp para determinar si el proceso está descentrado",
-    "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación",
+    "Si Cpk es menor a Cp, actuar para centrar la media del proceso y/o reducir su variación",
     "Revisar siempre el histograma del proceso, no solo el valor numérico de Cpk",
     "Comparar con el índice Cpm si existe un valor objetivo (target) diferente de la media"
   ],
@@ -72,6 +72,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que algunas organizaciones usan Cpk como un elemento de sus criterios de certificación; 'crítico' endurece.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-indice_cpk-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular la distancia de la media a cada límite de especificación (USL y LSL)",
+      "texto_nuevo": "Calcular la distancia de la media a cada límite de especificación (el superior y el inferior)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(USL y LSL)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-indice_cpk-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si Cpk es menor a Cp, tomar acciones para centrar la media del proceso y/o reducir su variación",
+      "texto_nuevo": "Si Cpk es menor a Cp, actuar para centrar la media del proceso y/o reducir su variación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tomar acciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

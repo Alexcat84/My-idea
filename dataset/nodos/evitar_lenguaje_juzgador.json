@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisa tus informes de incidentes y elimina frases como 'fallo en', 'debería haber' o 'no logró'",
     "Reformula las conclusiones describiendo cómo tenía sentido esa acción desde la perspectiva de quien la hizo en ese momento",
-    "Pregúntate '¿cómo pudo esto tener sentido para ellos en ese momento?' en cada conclusión de tu reporte"
+    "Pregúntate '¿cómo pudo esto tener sentido para ellos en ese momento?' en cada conclusión de tu informe"
   ],
   "entregable_esperado": "Un informe de investigación reescrito sin lenguaje juzgador, enfocado en explicar el comportamiento desde la perspectiva interna de los involucrados",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Evita Juzgar en tus Investigaciones",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-evitar_lenguaje_juzgador-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate '¿cómo pudo esto tener sentido para ellos en ese momento?' en cada conclusión de tu reporte",
+      "texto_nuevo": "Pregúntate '¿cómo pudo esto tener sentido para ellos en ese momento?' en cada conclusión de tu informe",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

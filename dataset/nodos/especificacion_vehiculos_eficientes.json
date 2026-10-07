@@ -6,13 +6,13 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "La configuración técnica de un vehículo (tren motriz, peso, aerodinámica y generación de energía auxiliar) tiene un impacto directo y medible en el consumo de combustible y las emisiones. Ajustes como transmisiones automatizadas, llantas de base ancha, reducción de peso innecesario y mejoras aerodinámicas pueden generar ahorros significativos con periodos de retorno de inversión relativamente cortos.",
   "pasos_accionables": [
-    "Trabajar con distribuidores para igualar motor, transmisión y relación de engranajes según el uso específico del vehículo.",
-    "Auditar el peso del vehículo e identificar componentes innecesarios (filtros de bypass, tanques sobredimensionados).",
+    "Trabajar con distribuidores para ajustar motor, transmisión y relación de engranajes según el uso específico del vehículo.",
+    "Auditar el peso del vehículo e identificar componentes innecesarios (filtros de derivación, tanques sobredimensionados).",
     "Instalar llantas de base ancha y de baja resistencia a la rodadura.",
     "Eliminar elementos que generan resistencia aerodinámica (cajas de batería expuestas, escapes verticales sin optimizar).",
     "Evaluar la instalación de generadores auxiliares para evitar el uso del motor principal en marcha lenta (idling)."
   ],
-  "entregable_esperado": "Checklist de especificaciones técnicas aplicadas a la flota con estimación de ahorro de combustible por vehículo.",
+  "entregable_esperado": "Lista de comprobación de especificaciones técnicas aplicadas a la flota con estimación de ahorro de combustible por vehículo.",
   "nodos_previos": [
     "vehiculos_combustibles_alternativos_2"
   ],
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Optimiza tus Vehículos para Eficiencia",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-especificacion_vehiculos_eficientes-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trabajar con distribuidores para igualar motor, transmisión y relación de engranajes según el uso específico del vehículo.",
+      "texto_nuevo": "Trabajar con distribuidores para ajustar motor, transmisión y relación de engranajes según el uso específico del vehículo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "igualar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-especificacion_vehiculos_eficientes-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Auditar el peso del vehículo e identificar componentes innecesarios (filtros de bypass, tanques sobredimensionados).",
+      "texto_nuevo": "Auditar el peso del vehículo e identificar componentes innecesarios (filtros de derivación, tanques sobredimensionados).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "filtros de bypass"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-especificacion_vehiculos_eficientes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de especificaciones técnicas aplicadas a la flota con estimación de ahorro de combustible por vehículo.",
+      "texto_nuevo": "Lista de comprobación de especificaciones técnicas aplicadas a la flota con estimación de ahorro de combustible por vehículo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist de especificaciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }
