@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Ironías de la Automatización (Bainbridge)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. Quizás la ironía final sea que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, pueden ser los que más requieren inversión en entrenamiento del operador.",
+  "resumen_teorico": "Automatizar trae paradojas de fondo. Cuando la máquina se queda con lo sencillo, lo difícil que queda en manos de la persona se vuelve todavía más difícil. A la gente se le deja justo lo que no se supo automatizar, sobre todo devolver el sistema a un estado seguro después de una falla que nadie previó. Quien opera tiene que vigilar durante horas que todo marche, aunque mantener la atención tanto tiempo cuesta incluso a la persona más motivada. Y como el sistema casi nunca falla, no hay ocasión de practicar, así que las habilidades se pierden justo cuando una emergencia las va a pedir. De ahí sale una ironía más: el sistema automático que mejor funciona y que casi nunca necesita que alguien intervenga a mano puede ser el que más formación exige a quien lo maneja.",
   "pasos_accionables": [
     "Evaluar qué tareas fueron automatizadas y cuáles quedaron 'residualmente' a cargo del humano (usualmente las más difíciles e impredecibles).",
     "Implementar programas de entrenamiento recurrente en escenarios de fallo simulado para mantener las habilidades manuales de los operadores.",
@@ -72,6 +72,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "lectura-total-ironias_de_la_automatizacion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: al quitar las partes fáciles de una tarea, la automatización puede hacer más difíciles las partes complejas; los diseñadores dejan a los humanos las tareas que no supieron automatizar (restaurar el sistema tras fallos imprevistos); los operadores deben mantener vigilancia por largos períodos pese a que los humanos son malos en eso; y las habilidades se deterioran por falta de práctica justo cuando más se necesitan en emergencias. Quizás la ironía final sea que los sistemas automatizados más exitosos, con rara necesidad de intervención manual, pueden ser los que más requieren inversión en entrenamiento del operador.",
+      "texto_nuevo": "Automatizar trae paradojas de fondo. Cuando la máquina se queda con lo sencillo, lo difícil que queda en manos de la persona se vuelve todavía más difícil. A la gente se le deja justo lo que no se supo automatizar, sobre todo devolver el sistema a un estado seguro después de una falla que nadie previó. Quien opera tiene que vigilar durante horas que todo marche, aunque mantener la atención tanto tiempo cuesta incluso a la persona más motivada. Y como el sistema casi nunca falla, no hay ocasión de practicar, así que las habilidades se pierden justo cuando una emergencia las va a pedir. De ahí sale una ironía más: el sistema automático que mejor funciona y que casi nunca necesita que alguien intervenga a mano puede ser el que más formación exige a quien lo maneja.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Lisanne Bainbridge identificó paradojas fundamentales en la automatización: "
+        ]
+      },
+      "decision": "lectura total de procedencia (w33r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ],
   "fuentes_internas": [
