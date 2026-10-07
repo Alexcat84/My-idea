@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "De Productos a Servicios y Experiencias",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "Argumenta que la línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mientras el sector servicios dependía de la interacción persona a persona. La tecnología (Internet) ahora permite a las empresas de servicios innovar sistemáticamente, pero deben evitar que la tecnología deshumanice la experiencia del cliente.",
+  "resumen_teorico": "La línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mientras el sector servicios dependía de la interacción persona a persona. La tecnología (Internet) ahora permite a las empresas de servicios innovar sistemáticamente, pero deben evitar que la tecnología deshumanice la experiencia del cliente.",
   "pasos_accionables": [
     "Auditar el 'producto' actual e identificar los servicios implícitos que lo rodean (mantenimiento, soporte, actualización).",
     "Mapear el recorrido completo del cliente antes, durante y después de la compra.",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Vende Experiencias, no solo Productos",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "lectura-total-transicion_producto_a_experiencia-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Argumenta que la línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mientras el sector servicios dependía de la interacción persona a persona. La tecnología (Internet) ahora permite a las empresas de servicios innovar sistemáticamente, pero deben evitar que la tecnología deshumanice la experiencia del cliente.",
+      "texto_nuevo": "La línea entre 'producto' y 'servicio' se ha difuminado; los consumidores ya no esperan solo rendimiento funcional, sino una experiencia satisfactoria completa. Históricamente, el sector manufacturero invirtió fuertemente en I+D tecnológico, mientras el sector servicios dependía de la interacción persona a persona. La tecnología (Internet) ahora permite a las empresas de servicios innovar sistemáticamente, pero deben evitar que la tecnología deshumanice la experiencia del cliente.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Argumenta que "
+        ]
+      },
+      "decision": "lectura total de procedencia (w42): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    }
   ]
 }
