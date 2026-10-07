@@ -23,16 +23,16 @@ follow you across sites.**
 |---|---|---|---|
 | `sb-*` (Supabase) | necessary cookie | keeping your session open, including that of the invisible identity that lets you write your idea without an account | for as long as your session lasts |
 | Supabase PKCE verifier | necessary cookie | completing sign-in with Google securely | a few minutes |
-| `post_login_next` | necessary cookie | returning to the page where you were after signing in | 10 minutes |
-| `myidea_idioma` | preference cookie | remembering the language you chose (it is activated with the app in several languages) | 1 year |
+| `post_login_next` | necessary cookie | taking you back to the page you were on after you sign in | 10 minutes |
+| `myidea_idioma` | preference cookie | remembering the language you chose (it takes effect once the app is available in several languages) | 1 year |
 | `mi-idea:gantt-vista` | local storage | remembering the Gantt view you prefer | until you clear your browser data |
-| `mi-idea:selector-estado-usado` | local storage | not showing you again a hint you have already seen | until you clear your browser data |
+| `mi-idea:selector-estado-usado` | local storage | making sure a hint you have already seen is not shown again | until you clear your browser data |
 
 ## 2. Your choice
 
 Necessary cookies cannot be turned off without the app ceasing to work (for example, you
 could not keep your session open). You can delete preference cookies and local storage from your
-browser settings; the app will go back to its default values. If we ever used
+browser settings; the app will revert to its default settings. If we ever used
 cookies that are not necessary, we would ask for your permission first.
 
 ## 3. More information

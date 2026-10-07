@@ -12,7 +12,7 @@
 > the Spanish version prevails, and in Quebec, the French version.
 
 **Last updated:** October 7, 2026
-**Controller:** Alexis Garcia Hurtado, sole proprietorship registered in Quebec, Canada ("we"), which operates the
+**Controller:** Alexis Garcia Hurtado, a sole proprietorship registered in Quebec, Canada ("we"), which operates the
 My Idea application.
 
 ## 1. In short
@@ -21,8 +21,8 @@ My Idea application.
   interviewing you, writing your plan and supporting you as you carry it out.
 - **We do not sell your data** or use it for advertising. There is no third-party analytics or
   advertising in the app.
-- To work, some providers process your data on our behalf, some of them **outside Quebec** (§6).
-- You can ask for access to, correction, portability or deletion of your data (§8).
+- For the app to work, some providers process your data on our behalf, some of them **outside Quebec** (§6).
+- You can request access to your data, or its correction, portability or deletion (§8).
 
 ## 2. What data we process
 
@@ -46,7 +46,7 @@ us in Your Numbers (costs, hours, prices, sales).
 **What the app generates for you:** your Clarity, your plan and its cycles, the diagnoses of the worlds,
 the Full Record, the logbook of your decisions and the dashboard of your numbers.
 
-**Usage and security data:** your credits and their movements (charges, reservations, refunds); the
+**Usage and security data:** your credits and their transactions (charges, reservations, refunds); the
 IP address of two-step verification attempts; and, to limit daily use, your IP or your
 user identifier for a maximum of 48 hours.
 
@@ -64,8 +64,8 @@ on the browser you use: some send the audio to their maker's servers.
   plan, your documents and your numbers.
 - **Your account and its security:** signing in, two-step verification, preventing abuse (daily
   usage limits).
-- **Credits:** keeping track of your balance, reserving the price of a delivery when it starts and charging it only if
-  the delivery arrives (§9).
+- **Credits:** keeping track of your balance, reserving the price of a piece of work when it starts and charging it only if
+  it is delivered (§9).
 - **Contacting you** about your account (for example, the verification code by email).
 
 **We do not use your ideas for other purposes:** we do not sell them, we do not use them for advertising and we do not
@@ -85,7 +85,7 @@ service to you.
 
 My Idea uses language models to talk with you and write your documents. To do so, the
 text of your idea, your answers and the figures you give us are sent to an AI provider (§6). The
-plan you receive is a suggestion for you to decide on: the app does not make decisions about you with
+plan you receive is a suggestion for you to decide on: the app makes no decisions about you that have
 legal effects. The numbers are calculated by deterministic code, not by the AI.
 
 ## 6. Providers that process your data
@@ -106,7 +106,7 @@ outside Quebec.
 ## 7. Transfers outside Quebec
 
 Some providers in §6 process your data outside Quebec, mainly in the United States (see the table in §6). Before communicating personal information outside Quebec, Quebec law requires
-assessing whether it will receive adequate protection and putting this in writing with the provider; that assessment
+us to assess whether it will receive adequate protection and to set this out in writing with the provider; that assessment
 is part of the professional review of this policy.
 
 ## 8. Your rights and how to exercise them
@@ -130,7 +130,7 @@ You have the right to:
 - **Withdraw your consent** and file a complaint with the Commission d'accès à l'information du
   Québec (Quebec's access to information commission).
 
-To exercise them, write to the person in charge of data protection (§12). We respond within a
+To exercise them, write to the person in charge of the protection of personal information (§12). We respond within a
 maximum of 30 days.
 
 ## 9. Credits and payments
@@ -139,10 +139,10 @@ maximum of 30 days.
 - When you start an action that uses the AI, we **reserve** its price from your balance; the reservation expires if the
   action is abandoned. **You are only charged if the AI delivers** what was promised; a plan put together without AI is
   delivered free of charge. If something fails after a charge, it is refunded.
-- We keep your credit movements (charges, reservations, refunds) for as long as your account exists.
+- We keep your credit transactions (charges, reservations, refunds) for as long as your account exists.
   If you delete it, they become anonymous: only the amount, its type and the date, with no link to you.
-- During the beta, credits are granted manually and purchasing with money is not active. When it
-  is activated, the payment processor will process the payment data and keep the tax records of
+- During the beta, credits are granted manually and buying credits with money is not enabled. Once it
+  is, the payment processor will process the payment data and keep the tax records of
   sales; we do not store card numbers.
 
 ## 10. Retention
@@ -154,7 +154,7 @@ exceptions:
   exists and is deleted with it. Without an account, it stays with your invisible identity, and it moves to your account if you
   create one.
 - Usage limits keep your IP or identifier for a maximum of 48 hours.
-- The hosting's technical logs and the database backups are kept according to those
+- Technical logs from hosting and database backups are kept according to those
   providers' retention periods.
 - Ideas written without creating an account (with the invisible identity) that never moved to an account
   **are deleted automatically after 30 days of inactivity**.
@@ -177,7 +177,7 @@ contact details are published in the app. Merchant's mailing address: it will be
 ## 13. Minors
 
 My Idea is not intended for children under 14. If you are under 14, you need the
-consent of your mother, father or guardian to use it.
+consent of your parent or guardian to use it.
 
 ## 14. Changes to this policy
 

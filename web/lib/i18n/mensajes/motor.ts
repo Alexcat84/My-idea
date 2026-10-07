@@ -102,7 +102,7 @@ const fr: typeof es = {
   reporteDisclaimer: "\n\n---\n_Estimations basées sur les chiffres que tu as donnés; elles ne remplacent pas une comptabilité en bonne et due forme ni des conseils fiscaux, qui varient selon ton pays._",
   preguntaTipoOferta: "Qu'est-ce que tu vends exactement, et comment te fais-tu payer?",
   preguntaGenerica: "En pensant à « {{titulo}} », raconte-moi dans tes mots où tu en es avec ton idée en ce moment, et ce qui t'inquiète ou t'enthousiasme le plus.",
-  preguntaNeutralSinTema: "Où en est ton idée avec cette étape aujourd'hui, et qu'est-ce qui t'inquiète ou t'enthousiasme le plus ?",
+  preguntaNeutralSinTema: "Où en est ton idée avec cette étape aujourd'hui, et qu'est-ce qui t'inquiète ou t'enthousiasme le plus?",
   temaFamilia: {
     accionClientes: "Aller valider auprès de clients",
     viabilidadEconomica: "Tes vrais chiffres",
@@ -133,7 +133,7 @@ const pt: typeof es = {
   reporteDisclaimer: "\n\n---\n_Estimativas baseadas nos valores que você informou; não substituem contabilidade formal nem assessoria tributária, que variam conforme o seu país._",
   preguntaTipoOferta: "O que exatamente você vende e como cobra por isso?",
   preguntaGenerica: "Pensando em \"{{titulo}}\", me conte com suas palavras em que ponto você está agora com sua ideia e o que mais preocupa ou empolga você.",
-  preguntaNeutralSinTema: "Em que ponto está sua ideia nesta etapa hoje, e o que mais preocupa ou empolga você nela?",
+  preguntaNeutralSinTema: "Em que ponto está sua ideia hoje neste passo, e o que mais preocupa ou empolga você nele?",
   temaFamilia: {
     accionClientes: "Sair para validar com clientes",
     viabilidadEconomica: "Seus números de verdade",

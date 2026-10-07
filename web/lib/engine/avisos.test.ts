@@ -25,7 +25,7 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
     const id = ids("C").find((k) => JURISDICCION[k].pais === "US" && !VIGENCIA_NODOS[k]);
     expect(id).toBeTruthy();
     expect(avisosNodo(id!, graph, "es")).toEqual(["Aplica si operas o vendes en Estados Unidos."]);
-    expect(avisosNodo(id!, graph, "fr")).toEqual(["S'applique si tu opères ou vends aux États-Unis."]);
+    expect(avisosNodo(id!, graph, "fr")).toEqual(["S'applique si tu exerces des activités ou vends aux États-Unis."]);
   });
 
   it("un nodo con vigencia avisa que verifique la norma, sin ano ni libro (fundador, 30 sep 2026)", () => {

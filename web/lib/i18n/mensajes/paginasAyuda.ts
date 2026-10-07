@@ -97,7 +97,7 @@ const en: typeof es = {
       "Your credit and payment history becomes anonymous: only the amount, its type and the date remain, with no link to you. An encrypted fingerprint of your email is kept to prevent abuse of welcome offers.",
     sinAccesoTitulo: "If you cannot sign in",
     sinAcceso:
-      "Email us from your account address at {{privacidad}} with the subject “Delete my account”. We will confirm the account is yours and delete it within 30 days at most.",
+      "Email {{privacidad}} from your account's email address with the subject “Delete my account”. We will confirm the account is yours and delete it within 30 days.",
     sinCuentaTitulo: "If you never created an account",
     sinCuenta: "Ideas written without an account are deleted automatically after 30 days of inactivity.",
   },
@@ -142,7 +142,7 @@ const fr: typeof es = {
     borraTitulo: "Ce qui est supprimé",
     borra: [
       "Ton compte, tes idées, tes plans, tes tâches, tes notes, ton journal de bord et tes chiffres.",
-      "Ton solde de crédits et tes réservations, tes données de sécurité ainsi que le registre de ton acceptation des Conditions et de la Confidentialité.",
+      "Ton solde de crédits et tes réservations, tes données de sécurité ainsi que la trace de ton acceptation des Conditions et de la Politique de confidentialité.",
       "Les idées écrites avant la création de ton compte, si elles n'y avaient pas encore été transférées.",
     ],
     quedaTitulo: "Ce qui est conservé",
@@ -163,7 +163,7 @@ const fr: typeof es = {
       { p: "Qu'est-ce qui est gratuit?", r: "Ta Clarté (mettre ton idée en ordre) est gratuite et ne demande pas de compte. Le diagnostic de chaque monde est aussi gratuit. Enregistrer ta progression, tes notes, tes documents et tes chiffres est inclus." },
       { p: "Qu'est-ce qui coûte des crédits?", r: "Ton plan utilise {{plan}} crédits; chaque cycle de suivi ou de nouveau cap, {{seguimiento}}; le plan d'un monde, {{mundo}}. Ils ne sont prélevés que lorsque tu reçois ce qui est promis; en cas de problème, rien n'est prélevé ou c'est remboursé." },
       { p: "Ai-je besoin d'un compte?", r: "Pour la Clarté, non. Pour enregistrer ton travail et générer ton plan, oui. Les idées écrites sans compte sont supprimées automatiquement après 30 jours d'inactivité." },
-      { p: "My Idea remplace-t-elle un conseiller professionnel?", r: "Non. Elle t'apporte une méthode et de l'ordre pour décider, pas un avis juridique, comptable ni d'aucun autre professionnel. Les décisions t'appartiennent." },
+      { p: "My Idea remplace-t-elle un conseiller professionnel?", r: "Non. Elle t'apporte une méthode et de l'ordre pour décider, pas des conseils juridiques, comptables ou de tout autre professionnel. Les décisions t'appartiennent." },
       { p: "Comment supprimer mon compte?", r: "Depuis le centre de compte, dans « {{zona}} ». Si tu ne peux pas te connecter, écris à {{privacidad}}. Les instructions complètes sont sur la page « {{paginaEliminar}} »." },
       { p: "Que fait My Idea de mes données?", r: "Tes idées t'appartiennent. Nous ne vendons pas tes données et ne les utilisons pas à des fins publicitaires. Tout le détail est dans la Politique de confidentialité." },
       { p: "Dans quelles langues fonctionne l'application?", r: "En onze langues. L'application te parle dans la tienne et tu peux la changer quand tu veux." },
@@ -212,7 +212,7 @@ const pt: typeof es = {
     descripcion: "Respostas às perguntas mais comuns sobre o My Idea: o que é, o que é grátis, créditos, conta e privacidade.",
     intro: "O que mais nos perguntam. Se não encontrar sua resposta, escreva para {{contacto}}.",
     items: [
-      { p: "O que é o My Idea?", r: "Um app que faz perguntas com método sobre a sua ideia de negócio ou de organização e organiza o que você responde em um plano para colocá-la em prática, com acompanhamento." },
+      { p: "O que é o My Idea?", r: "Um app que faz perguntas metódicas sobre a sua ideia de negócio ou de organização e organiza suas respostas em um plano para colocá-la em prática, com acompanhamento." },
       { p: "O que é grátis?", r: "Sua Clareza (organizar sua ideia) é grátis e não precisa de conta. O diagnóstico de cada mundo também é grátis. Registrar seu avanço, suas notas, seus documentos e seus números está incluído." },
       { p: "O que custa créditos?", r: "Seu plano usa {{plan}} créditos; cada ciclo de acompanhamento ou de novo rumo, {{seguimiento}}; o plano de um mundo, {{mundo}}. Eles só são cobrados quando você recebe o que foi prometido; se algo falhar, nada é cobrado ou o valor é reembolsado." },
       { p: "Preciso de uma conta?", r: "Para a Clareza, não. Para salvar seu trabalho e gerar seu plano, sim. As ideias escritas sem conta são apagadas automaticamente após 30 dias sem atividade." },
@@ -241,7 +241,7 @@ const de: typeof es = {
     comoTitulo: "In der App oder auf der Website",
     pasos: [
       "Melde dich auf myideaproject.com mit deinem Konto an.",
-      "Öffne die Kontoverwaltung (Konto) und scrolle nach unten bis „{{zona}}“.",
+      "Öffne die Kontoverwaltung (Konto) und scrolle nach unten zu „{{zona}}“.",
       "Tippe auf „{{borrarTuCuenta}}“ und gib zur Bestätigung das verlangte Wort ein. Wenn die Bestätigung in zwei Schritten aktiv ist, fragen wir dich nach deinem Code.",
       "Tippe auf „{{borrarParaSiempre}}“. Die Löschung erfolgt sofort und lässt sich nicht rückgängig machen.",
     ],
@@ -320,7 +320,7 @@ const it: typeof es = {
     items: [
       { p: "Cos'è My Idea?", r: "Un'app che ti fa domande con metodo sulla tua idea di impresa o di organizzazione e mette in ordine le tue risposte in un piano per realizzarla, con le sue revisioni." },
       { p: "Cosa è gratis?", r: "La tua Chiarezza (mettere in ordine la tua idea) è gratis e non richiede un account. Anche la diagnosi di ogni mondo è gratis. Registrare i tuoi progressi, le tue note, i tuoi documenti e i tuoi numeri è incluso." },
-      { p: "Cosa si paga con i crediti?", r: "Il tuo piano usa {{plan}} crediti; ogni ciclo di revisione o di nuova rotta, {{seguimiento}}; il piano di un mondo, {{mundo}}. Si addebitano solo quando ricevi ciò che è stato promesso; se qualcosa va storto, non si addebita nulla o viene rimborsato." },
+      { p: "Cosa si paga con i crediti?", r: "Il tuo piano usa {{plan}} crediti; ogni ciclo di revisione o di nuova rotta, {{seguimiento}}; il piano di un mondo, {{mundo}}. I crediti vengono addebitati solo quando ricevi ciò che ti è stato promesso; se qualcosa va storto, non si addebita nulla o i crediti vengono rimborsati." },
       { p: "Mi serve un account?", r: "Per la Chiarezza, no. Per salvare il tuo lavoro e generare il tuo piano, sì. Le idee scritte senza account si cancellano da sole dopo 30 giorni di inattività." },
       { p: "My Idea prende il posto di un consulente professionale?", r: "No. Ti dà metodo e ordine per decidere, non una consulenza legale, contabile o di qualsiasi altro professionista. Le decisioni sono tue." },
       { p: "Come elimino il mio account?", r: "Dal centro account, in «{{zona}}». Se non riesci ad accedere, scrivi a {{privacidad}}. Le istruzioni complete sono nella pagina «{{paginaEliminar}}»." },
@@ -407,7 +407,7 @@ const zh: typeof es = {
     borraTitulo: "会删除什么",
     borra: [
       "你的账户、想法、计划、任务、笔记、日志和数字。",
-      "你的点数余额和预留、安全数据，以及你接受条款和隐私政策的记录。",
+      "你的点数余额和已预留的点数、你的安全数据，以及你接受条款和隐私政策的记录。",
       "你在创建账户之前写下、但尚未转入账户的想法。",
     ],
     quedaTitulo: "会保留什么",
@@ -424,7 +424,7 @@ const zh: typeof es = {
     descripcion: "关于 My Idea 最常见问题的解答：它是什么、哪些免费、点数、账户和隐私。",
     intro: "这些是大家最常问的问题。如果找不到答案，请写信到 {{contacto}}。",
     items: [
-      { p: "My Idea 是什么？", r: "一款应用：它围绕你的商业或组织想法，有方法地向你提问，把你的回答整理成一份付诸实践的计划，并持续跟进。" },
+      { p: "My Idea 是什么？", r: "一款应用：它围绕你的商业或组织想法，系统地向你提问，把你的回答整理成一份将想法付诸实践的计划，并持续跟进。" },
       { p: "哪些是免费的？", r: "“清晰”阶段（整理你的想法）免费，而且不需要账户。每个世界的诊断也免费。记录进展、笔记、文档和数字都包含在内。" },
       { p: "哪些需要点数？", r: "你的计划需要 {{plan}} 点；每次跟进或重新规划的循环需要 {{seguimiento}} 点；一个世界的计划需要 {{mundo}} 点。只有在你收到承诺的内容时才会扣除；如果出现问题，则不会扣除或会退还。" },
       { p: "我需要账户吗？", r: "使用“清晰”阶段不需要。要保存你的工作并生成计划，则需要。未注册账户时写下的想法，在 30 天无活动后会自动删除。" },
@@ -460,7 +460,7 @@ const ko: typeof es = {
     borraTitulo: "삭제되는 것",
     borra: [
       "계정, 아이디어, 계획, 할 일, 메모, 기록장, 숫자.",
-      "크레딧 잔액과 예약, 보안 정보, 이용약관과 개인정보 처리방침에 동의한 기록.",
+      "크레딧 잔액과 예약된 크레딧, 보안 정보, 이용약관과 개인정보 처리방침에 동의한 기록.",
       "계정을 만들기 전에 쓴 아이디어 중 아직 계정으로 옮겨지지 않은 것.",
     ],
     quedaTitulo: "보관되는 것",
@@ -533,7 +533,7 @@ const ar: typeof es = {
       { p: "ما هو My Idea؟", r: "تطبيق يطرح عليكم أسئلة منهجية حول فكرة مشروعكم أو مؤسستكم، ويرتّب إجاباتكم في خطة لوضعها موضع التنفيذ، مع متابعتها." },
       { p: "ما المجاني؟", r: "الوضوح (ترتيب فكرتكم) مجاني ولا يحتاج إلى حساب. وتشخيص كل عالم مجاني أيضًا. أما تسجيل تقدمكم وملاحظاتكم ومستنداتكم وأرقامكم فمشمول." },
       { p: "ما الذي يستهلك الرصيد؟", r: "النقاط المطلوبة لخطتكم: {{plan}}؛ ولكل دورة متابعة أو إعادة توجيه: {{seguimiento}}؛ ولخطة عالم: {{mundo}}. لا تُخصم إلا عندما تتلقّون ما وُعدتم به؛ وإذا حدث خطأ، فلا يُخصم شيء أو تُعاد إليكم." },
-      { p: "هل أحتاج إلى حساب؟", r: "للوضوح، لا. ولحفظ عملكم وإنشاء خطتكم، نعم. تُحذف الأفكار المكتوبة دون حساب تلقائيًا بعد 30 يومًا دون نشاط." },
+      { p: "هل أحتاج إلى حساب؟", r: "لا تحتاجون إليه في مرحلة الوضوح، لكنكم تحتاجون إليه لحفظ عملكم وإنشاء خطتكم. تُحذف الأفكار المكتوبة دون حساب تلقائيًا بعد 30 يومًا من عدم النشاط." },
       { p: "هل يحل My Idea محل مستشار مهني؟", r: "لا. فهو يقدّم لكم المنهج والترتيب لاتخاذ القرار، لا استشارة قانونية أو محاسبية أو من أي مهني آخر. القرارات قراراتكم." },
       { p: "كيف أحذف حسابي؟", r: "من مركز الحساب، في «{{zona}}». إذا لم تتمكنوا من تسجيل الدخول، فراسلوا {{privacidad}}. التعليمات الكاملة في صفحة «{{paginaEliminar}}»." },
       { p: "ماذا يحدث لبياناتي؟", r: "أفكاركم ملك لكم. لا نبيع بياناتكم ولا نستخدمها للإعلان. كل التفاصيل في سياسة الخصوصية." },
@@ -583,7 +583,7 @@ const hi: typeof es = {
     descripcion: "My Idea के बारे में सबसे आम सवालों के जवाब: यह क्या है, क्या मुफ़्त है, क्रेडिट, खाता और गोपनीयता।",
     intro: "हमसे सबसे ज़्यादा यही पूछा जाता है। अगर आपको अपना जवाब न मिले, तो हमें {{contacto}} पर लिखें।",
     items: [
-      { p: "My Idea क्या है?", r: "एक ऐप जो आपके व्यवसाय या संगठन के विचार पर आपसे तरीके से सवाल पूछता है और आपके जवाबों को उसे अमल में लाने की योजना में बदलता है, साथ में फ़ॉलो-अप भी देता है।" },
+      { p: "My Idea क्या है?", r: "एक ऐप जो आपके व्यवसाय या संगठन के विचार पर आपसे व्यवस्थित तरीके से सवाल पूछता है और आपके जवाबों को उसे अमल में लाने की योजना में बदलता है, साथ में फ़ॉलो-अप भी देता है।" },
       { p: "क्या मुफ़्त है?", r: "आपकी स्पष्टता (अपने विचार को व्यवस्थित करना) मुफ़्त है और इसके लिए खाते की ज़रूरत नहीं। हर दुनिया का आकलन भी मुफ़्त है। अपनी प्रगति, नोट्स, दस्तावेज़ और आंकड़े दर्ज करना शामिल है।" },
       { p: "किसमें क्रेडिट लगते हैं?", r: "आपकी योजना में {{plan}} क्रेडिट लगते हैं; हर फ़ॉलो-अप या नई दिशा के चक्र में {{seguimiento}}; किसी दुनिया की योजना में {{mundo}}। ये तभी काटे जाते हैं जब आपको वादा किया गया नतीजा मिलता है; अगर कुछ गड़बड़ होती है, तो कुछ नहीं काटा जाता या क्रेडिट लौटा दिए जाते हैं।" },
       { p: "क्या मुझे खाते की ज़रूरत है?", r: "स्पष्टता के लिए नहीं। अपना काम सहेजने और अपनी योजना बनाने के लिए हाँ। बिना खाते के लिखे गए विचार 30 दिनों तक कोई गतिविधि न होने पर अपने आप हट जाते हैं।" },

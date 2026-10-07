@@ -153,7 +153,7 @@ const de: typeof es = {
   },
   entrega: {
     nombre: "Von der Werkstatt in ihre Hände",
-    promesa: "Plane deine Lieferungen so, dass sie heil, pünktlich und mit eingeplanten Kosten ankommen.",
+    promesa: "Plane deine Lieferungen so, dass sie heil, pünktlich und zu den eingeplanten Kosten ankommen.",
   },
   primer_equipo: {
     nombre: "Erstes Team",
@@ -211,7 +211,7 @@ const ja: typeof es = {
   },
   health_safety: {
     nombre: "安全と人",
-    promesa: "日々の安全上のリスクに、仲間とビジネスで備えましょう。",
+    promesa: "日々のリスクに向けて、仲間とビジネスの備えを整えましょう。",
   },
   environmental: {
     nombre: "環境と未来",
@@ -340,7 +340,7 @@ const ar: typeof es = {
   },
   health_safety: {
     nombre: "السلامة والناس",
-    promesa: "جهّزوا فريقكم وعملكم لمخاطر السلامة اليومية.",
+    promesa: "جهّزوا فريقكم وعملكم للمخاطر اليومية.",
   },
   environmental: {
     nombre: "البيئة والمستقبل",

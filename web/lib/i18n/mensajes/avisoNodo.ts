@@ -50,9 +50,9 @@ const en: typeof es = {
 };
 
 const fr: typeof es = {
-  claseB: "Exemple {{desde}} : cherche l'équivalent dans ton pays.",
-  claseC: "S'applique si tu opères ou vends {{en}}.",
-  vigencia: "Vérifie la réglementation en vigueur dans ton pays : ces règles changent avec le temps.",
+  claseB: "Exemple {{desde}} : cherche l'équivalent dans ton pays.",
+  claseC: "S'applique si tu exerces des activités ou vends {{en}}.",
+  vigencia: "Vérifie la réglementation en vigueur dans ton pays : ces règles changent avec le temps.",
   paises: {
     US: { desde: "des États-Unis", en: "aux États-Unis" },
     EU: { desde: "de l'Union européenne", en: "dans l'Union européenne" },
@@ -118,9 +118,9 @@ const it: typeof es = {
 };
 
 const ja: typeof es = {
-  claseB: "{{desde}}の例です。あなたの国で相当するものを探してください。",
+  claseB: "{{desde}}の例です。お住まいの国で相当するものを探してください。",
   claseC: "{{en}}で事業を行う、または販売する場合に適用されます。",
-  vigencia: "あなたの国の現行の規則を確認してください：これらの規則は時とともに変わります。",
+  vigencia: "お住まいの国で現在有効な規則を確認してください。こうした規則は時とともに変わります。",
   paises: {
     US: { desde: "米国", en: "米国" },
     EU: { desde: "欧州連合", en: "欧州連合" },
@@ -154,7 +154,7 @@ const zh: typeof es = {
 const ko: typeof es = {
   claseB: "{{desde}}의 사례예요. 자신의 나라에서 이에 해당하는 것을 찾아보세요.",
   claseC: "{{en}}에서 사업하거나 판매한다면 적용돼요.",
-  vigencia: "자신의 나라에서 현재 유효한 규정을 확인하세요. 이런 규정은 시간이 지나면서 바뀝니다.",
+  vigencia: "내 나라에서 지금 유효한 규정을 확인하세요. 이런 규정은 시간이 지나면서 바뀌어요.",
   paises: {
     US: { desde: "미국", en: "미국" },
     EU: { desde: "유럽연합", en: "유럽연합" },

@@ -140,7 +140,7 @@ const en: typeof es = {
   acerca: {
     titulo: "Entrepreneurs don't lack ideas. What they lack is a serious sounding board",
     parrafo1:
-      "My Idea was born from that belief. We built a knowledge engine that asks you questions with method and organizes your answers into a plan: it listens to your context, adapts its questions to what you've already shared, and knows when a stage is already covered.",
+      "My Idea was born from that belief. We built a knowledge engine that asks you questions methodically and organizes your answers into a plan: it listens to your context, adapts its questions to what you've already shared, and knows when a stage is already covered.",
     parrafo2:
       "What you get isn't a conversation that fades away: it's a living project. Pause, act in the real world, and come back whenever you want: with your account, your idea waits for you just as you left it. And if your idea needs it, you can add specialized worlds, each with a free diagnosis.",
   },
@@ -639,7 +639,7 @@ const ja: typeof es = {
     etiqueta: "アプリ",
     titulo: "いつもポケットの中に",
     texto: "いい答えは、机を離れたときに浮かぶものです。",
-    googlePlay: "Google Play で近日公開",
+    googlePlay: "Google Playで近日公開",
     dictar: "ブラウザが対応していれば、話して入力することもできます",
   },
   cta: {
@@ -709,7 +709,7 @@ const zh: typeof es = {
     paso4: {
       demo: "你的下一步",
       titulo: "去执行，再回来",
-      texto: "暂停，去现实中行动，再回来：勾选你完成的事，看看自己的进展。如果现实发生变化，用你的点数申请一个新周期，计划就会从你现在的位置重新制定。",
+      texto: "暂停，去现实中行动，再回来：勾选你完成的事，看看自己的进展。如果现实发生变化，用你的点数申请一个新的循环，计划就会根据你目前的进度重新制定。",
     },
   },
   mockup: {
@@ -777,7 +777,7 @@ const ko: typeof es = {
   acerca: {
     titulo: "창업가에게 부족한 건 아이디어가 아니에요. 진지하게 함께 고민해 줄 상대예요",
     parrafo1: "My Idea는 바로 이 믿음에서 시작했어요. 체계적으로 질문하고, 답한 내용을 계획으로 정리하는 지식 엔진을 만들었어요. 상황에 귀 기울이고, 이미 들려준 이야기에 맞춰 질문을 바꾸며, 어떤 단계가 이미 채워졌는지 알아차려요.",
-    parrafo2: "그 결과는 흘러가 버리는 대화가 아니라 살아 있는 프로젝트예요. 잠시 멈추고, 현실에서 실행하고, 언제든 돌아오세요. 계정이 있으면 아이디어가 떠날 때 모습 그대로 기다리고 있어요. 아이디어에 필요하면 전문 월드를 더할 수도 있어요. 월드마다 진단은 무료예요.",
+    parrafo2: "그 결과는 흘러가 버리는 대화가 아니라 살아 있는 프로젝트예요. 잠시 멈추고, 현실에서 실행하고, 언제든 돌아오세요. 계정이 있으면 아이디어가 두고 간 모습 그대로 기다리고 있어요. 아이디어에 필요하면 전문 월드를 더할 수도 있어요. 월드마다 진단은 무료예요.",
   },
   como: {
     titulo: "아이디어에서 현실로",
@@ -889,7 +889,7 @@ const ar: typeof es = {
     paso4: {
       demo: "خطوتكم التالية",
       titulo: "نفّذوا وعودوا",
-      texto: "توقّفوا، واعملوا في العالم الحقيقي، ثم عودوا: علّموا ما أنجزتموه وتابعوا تقدّمكم. وإن تغيّر الواقع، اطلبوا دورة جديدة بنقاطكم، فتُعاد خطتكم من حيث أنتم.",
+      texto: "توقّفوا، واعملوا في العالم الحقيقي، ثم عودوا: علّموا ما أنجزتموه وتابعوا تقدّمكم. وإن تغيّر الواقع، اطلبوا دورة جديدة بنقاطكم، فيُعاد بناء خطتكم من حيث أنتم.",
     },
   },
   mockup: {

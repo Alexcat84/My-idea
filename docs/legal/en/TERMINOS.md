@@ -14,18 +14,18 @@
 > the Spanish version prevails, and in Quebec, the French version.
 
 **Last updated:** October 7, 2026
-**Who provides the service:** Alexis Garcia Hurtado, sole proprietorship registered in Quebec, Canada
+**Who provides the service:** Alexis Garcia Hurtado, a sole proprietorship registered in Quebec, Canada
 ("we"). Merchant's mailing address: it will be published here as soon as it is confirmed; in the meantime, you can write to us at support@myideaproject.com.
 
 ## 1. What My Idea is
 
 My Idea helps you turn an idea into a plan and carry it out: it puts your idea in order, interviews you
-with guided questions, writes your plan with artificial intelligence and supports you as you carry it out.
+with guided questions, writes your plan with artificial intelligence and supports you as you put it into action.
 By using the app you accept these terms and the Privacy Policy.
 
 ## 2. Your account
 
-- To use the features that use credits you need an account. You can write your idea and
+- You need an account to use the features that consume credits. You can write your idea and
   receive your Clarity without an account, with an invisible identity that moves to your account when you create it.
 - We ask you to accept these terms and the Privacy Policy the first time you send your
   idea, even without an account, and again every time they change; we keep the version you accepted and its
@@ -37,7 +37,7 @@ By using the app you accept these terms and the Privacy Policy.
 ## 3. Your ideas are yours
 
 - **Everything you write or dictate, and the plans and documents the app generates for you, are yours.**
-- You give us only the permission needed to store, process and show them to you for the sole purpose of
+- You grant us only the permission needed to store, process and show them to you for the sole purpose of
   providing the service to you, including sending them to the providers that make it possible (see the Privacy
   Policy). We do not use them for other purposes or share them with other users.
 - If you delete your account, that permission ends.
@@ -51,8 +51,8 @@ By using the app you accept these terms and the Privacy Policy.
   or replace an accredited audit.
 - **Your numbers are estimates** based on the figures you provide; they do not replace formal
   accounting or tax advice.
-- **Regulations change** by country and over time: check with the official source anything that affects
-  your case.
+- **Regulations change** by country and over time: check anything that affects
+  your case against the official source.
 - AI-generated content may contain errors. Review your plan carefully before acting.
 
 ## 5. Prices, credits and taxes
@@ -61,17 +61,17 @@ By using the app you accept these terms and the Privacy Policy.
   of each action is the one the app shows before you start it.
 - **Reservation and charge:** when you start an action that uses the AI, its price is **reserved** from your balance; if
   you abandon it, the reservation expires on its own. **You are only charged when the AI delivers** what was promised. A plan
-  put together without AI (for example, because of a technical limit) is delivered **free of charge**, with a notice, and you can
+  put together without AI (for example, because of a technical limit) is delivered **free of charge** (we let you know), and you can
   ask for it to be generated again. If something fails after a charge, it is refunded automatically.
 - Logging your progress, your notes, your documents and your logbook is included: it is never charged separately.
-- During the beta, credits are granted manually and purchasing with money is not active. When it
-  is activated, the payment processor's terms will also apply.
-- Today credits have no expiry date in the system. How they are handled (refund,
+- During the beta, credits are granted manually and buying credits with money is not enabled. Once it
+  is, the payment processor's terms will also apply.
+- Credits currently have no expiry date in the system. How they are handled (refund,
   withdrawal, expiry) is governed by Quebec's Consumer Protection Act.
 - Credits are personal and cannot be transferred to another account.
 - **Taxes:** Alexis Garcia Hurtado is registered for consumption taxes:
   **GST/HST (TPS/TVH) 72180 8434 RT0001** and **QST (TVQ) 4056093040 TQ0001**, both in effect since
-  April 7, 2026. When purchasing with money is activated, the applicable taxes will be shown next to the
+  April 7, 2026. Once buying credits with money is enabled, the applicable taxes will be shown next to the
   price of the credits.
 
 ## 6. Acceptable use
