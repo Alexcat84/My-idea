@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son eficaces para proteger tus datos contra la mayoría de los atacantes.",
+  "resumen_teorico": "Antes de dejar que un usuario, un proceso o un dispositivo use los recursos de tu sistema, tienes que confirmar que es quien dice ser. Hoy una contraseña por sí sola ya no basta para proteger tus datos de la mayoría de los atacantes, así que la autenticación multifactor (MFA) es un refuerzo importante: pide que la identidad se pruebe con al menos dos de estos tres factores, algo que la persona sabe (una contraseña o un PIN), algo que tiene (una tarjeta inteligente o una llave de seguridad) y algo que es (su huella o su rostro).",
   "pasos_accionables": [
     "Implementar autenticación multifactor (MFA) para acceso a cuentas privilegiadas y no privilegiadas",
     "Definir reglas de contraseñas para la organización",
@@ -124,6 +124,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-identificacion_autenticacion_mfa-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son eficaces para proteger tus datos contra la mayoría de los atacantes.",
+      "texto_nuevo": "Antes de dejar que un usuario, un proceso o un dispositivo use los recursos de tu sistema, tienes que confirmar que es quien dice ser. Hoy una contraseña por sí sola ya no basta para proteger tus datos de la mayoría de los atacantes, así que la autenticación multifactor (MFA) es un refuerzo importante: pide que la identidad se pruebe con al menos dos de estos tres factores, algo que la persona sabe (una contraseña o un PIN), algo que tiene (una tarjeta inteligente o una llave de seguridad) y algo que es (su huella o su rostro).",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "399-405",
+        "frase": "Verifying the identity of a user, process, or device, as a prerequisite"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

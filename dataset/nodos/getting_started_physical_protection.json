@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Protección Física de Instalaciones y Sistemas",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
+  "resumen_teorico": "Deja entrar solo a personas autorizadas donde están tus sistemas, tus equipos y su entorno de operación, también en sitios de trabajo alternos; cuida el local y su infraestructura, asegura los servicios de apoyo y controla las amenazas del ambiente.",
   "pasos_accionables": [
     "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
     "Emitir credenciales de identificación para empleados y visitantes.",
@@ -75,6 +75,22 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "copia-getting_started_physical_protection-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
+      "texto_nuevo": "Deja entrar solo a personas autorizadas donde están tus sistemas, tus equipos y su entorno de operación, también en sitios de trabajo alternos; cuida el local y su infraestructura, asegura los servicios de apoyo y controla las amenazas del ambiente.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "573-581",
+        "frase": "Limiting physical access to systems, equipment, and the respective operating environments to"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Uso de Redundancia en el Diseño de Componentes Críticos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando diseñas un aparato o sistema complejo, identifica primero los componentes críticos cuya falla tendría alto costo o riesgo. Para esos casos, considera colocar dos o más partes en paralelo, de modo que si una falla, otra la reemplace automáticamente: dos componentes con fracción defectuosa promedio p equivalen a uno solo con fracción defectuosa aproximada p², reduciendo drásticamente la probabilidad de falla del conjunto. Sin embargo, esta estrategia tiene límites prácticos: restricciones de peso y tamaño, además de la incertidumbre de si el componente redundante realmente se activará cuando se necesite. Por eso, en algunos casos la mejor solución no es duplicar partes, sino enfocar el esfuerzo en lograr alta confiabilidad en una sola pieza bien diseñada.",
+  "resumen_teorico": "Al diseñar un aparato o sistema complejo, empieza por ubicar los componentes críticos, aquellos cuya falla te costaría caro o te expondría a un riesgo alto. En esos puntos puedes evaluar poner dos o más piezas trabajando en paralelo: cuando una falla, otra entra sola a cubrir su función. El efecto es fuerte, porque un par en paralelo donde cada pieza tiene una fracción defectuosa promedio p se comporta casi como una sola pieza con fracción defectuosa p², y así baja drásticamente la probabilidad de que falle el conjunto. Esta vía tiene topes prácticos: el peso y el tamaño pueden no permitirla, y no hay certeza de que la pieza de respaldo se active cuando haga falta. Por eso, a veces lo mejor no es duplicar, sino concentrar el esfuerzo en que una sola pieza bien diseñada sea muy confiable.",
   "pasos_accionables": [
     "Identifica los componentes críticos cuya falla tendría alto impacto o costo en tu producto.",
     "Evalúa si el diseño permite colocar un componente redundante en paralelo sin romper restricciones de peso o tamaño.",
@@ -55,6 +55,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro nombra solo restricciones de peso y tamaño; el costo es un elemento añadido a la lista.; Mismo elemento añadido a la enumeración.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-redundancia_en_diseno-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando diseñas un aparato o sistema complejo, identifica primero los componentes críticos cuya falla tendría alto costo o riesgo. Para esos casos, considera colocar dos o más partes en paralelo, de modo que si una falla, otra la reemplace automáticamente: dos componentes con fracción defectuosa promedio p equivalen a uno solo con fracción defectuosa aproximada p², reduciendo drásticamente la probabilidad de falla del conjunto. Sin embargo, esta estrategia tiene límites prácticos: restricciones de peso y tamaño, además de la incertidumbre de si el componente redundante realmente se activará cuando se necesite. Por eso, en algunos casos la mejor solución no es duplicar partes, sino enfocar el esfuerzo en lograr alta confiabilidad en una sola pieza bien diseñada.",
+      "texto_nuevo": "Al diseñar un aparato o sistema complejo, empieza por ubicar los componentes críticos, aquellos cuya falla te costaría caro o te expondría a un riesgo alto. En esos puntos puedes evaluar poner dos o más piezas trabajando en paralelo: cuando una falla, otra entra sola a cubrir su función. El efecto es fuerte, porque un par en paralelo donde cada pieza tiene una fracción defectuosa promedio p se comporta casi como una sola pieza con fracción defectuosa p², y así baja drásticamente la probabilidad de que falle el conjunto. Esta vía tiene topes prácticos: el peso y el tamaño pueden no permitirla, y no hay certeza de que la pieza de respaldo se active cuando haga falta. Por eso, a veces lo mejor no es duplicar, sino concentrar el esfuerzo en que una sola pieza bien diseñada sea muy confiable.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9798",
+        "frase": "It may be possible and wise in the design of complex apparatus"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

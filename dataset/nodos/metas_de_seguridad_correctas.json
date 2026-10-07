@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+  "resumen_teorico": "Es frecuente que encares la seguridad como si fuera producción al revés y te pongas metas de bajar accidentes, por ejemplo reducir a la mitad los que hacen perder días de trabajo. El problema es que no puedes controlar los accidentes de forma directa: buena parte de lo que los causa escapa a tu alcance. Gestionar bien la seguridad se parece más a seguir un plan de entrenamiento físico de largo plazo. En lugar de intentar dominar los incidentes de manera directa, mide y mejora con regularidad los procesos que sí puedes manejar y que intervienen en los accidentes: diseño, equipos, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación y conflictos entre metas. Lo alcanzable no es llegar a cero accidentes, sino alcanzar la zona del espacio de seguridad donde la resistencia es máxima y quedarte ahí, haciendo de esto una parte central de tu negocio y no un agregado suelto.",
   "pasos_accionables": [
     "Reemplazar metas de reducción de accidentes por metas de mejora de procesos manejables (diseño, entrenamiento, mantenimiento, procedimientos)",
     "Identificar qué procesos de tu negocio han estado implicados históricamente en accidentes previos",
@@ -91,6 +91,22 @@
       "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-metas_de_seguridad_correctas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+      "texto_nuevo": "Es frecuente que encares la seguridad como si fuera producción al revés y te pongas metas de bajar accidentes, por ejemplo reducir a la mitad los que hacen perder días de trabajo. El problema es que no puedes controlar los accidentes de forma directa: buena parte de lo que los causa escapa a tu alcance. Gestionar bien la seguridad se parece más a seguir un plan de entrenamiento físico de largo plazo. En lugar de intentar dominar los incidentes de manera directa, mide y mejora con regularidad los procesos que sí puedes manejar y que intervienen en los accidentes: diseño, equipos, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación y conflictos entre metas. Lo alcanzable no es llegar a cero accidentes, sino alcanzar la zona del espacio de seguridad donde la resistencia es máxima y quedarte ahí, haciendo de esto una parte central de tu negocio y no un agregado suelto.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2594-2598",
+        "frase": "Many organizations treat safety management as a negative production process."
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

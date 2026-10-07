@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Plan de Seguridad del Sistema (SSP) y Plan de Acción y Cronograma (POAM)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "El Plan de Seguridad del Sistema (SSP) documenta cómo una organización cumple o planea cumplir los requisitos de seguridad para un sistema, describiendo el límite del sistema, el entorno operativo, cómo se satisfacen los requisitos y las relaciones con otros sistemas. El Plan de Acción y Cronograma (POAM) describe cómo se cumplirán los requisitos de seguridad no satisfechos y cómo se implementarán las mitigaciones planificadas. Las agencias federales pueden considerar estos documentos como insumos para decisiones de riesgo sobre si procesar CUI en sistemas de la organización no federal.",
+  "resumen_teorico": "En el Plan de Seguridad del Sistema (SSP) dejas por escrito cómo cumples, o cómo piensas cumplir, los requisitos de seguridad de un sistema: dónde están sus límites, en qué entorno funciona, de qué manera satisfaces cada requisito y con qué otros sistemas se relaciona. El Plan de Acción y Cronograma (POAM) recoge lo pendiente: cómo vas a cumplir los requisitos que aún no satisfaces y cómo pondrás en marcha las mitigaciones que planeaste. Una agencia federal puede usar ambos documentos al decidir, según el riesgo, si deja que la CUI se procese en los sistemas de tu negocio no federal.",
   "pasos_accionables": [
     "Realizar una autoevaluación o auditoría de seguridad usando SP 800-171A",
     "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
@@ -92,6 +92,22 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "copia-plan_seguridad_sistema_poam-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El Plan de Seguridad del Sistema (SSP) documenta cómo una organización cumple o planea cumplir los requisitos de seguridad para un sistema, describiendo el límite del sistema, el entorno operativo, cómo se satisfacen los requisitos y las relaciones con otros sistemas. El Plan de Acción y Cronograma (POAM) describe cómo se cumplirán los requisitos de seguridad no satisfechos y cómo se implementarán las mitigaciones planificadas. Las agencias federales pueden considerar estos documentos como insumos para decisiones de riesgo sobre si procesar CUI en sistemas de la organización no federal.",
+      "texto_nuevo": "En el Plan de Seguridad del Sistema (SSP) dejas por escrito cómo cumples, o cómo piensas cumplir, los requisitos de seguridad de un sistema: dónde están sus límites, en qué entorno funciona, de qué manera satisfaces cada requisito y con qué otros sistemas se relaciona. El Plan de Acción y Cronograma (POAM) recoge lo pendiente: cómo vas a cumplir los requisitos que aún no satisfaces y cómo pondrás en marcha las mitigaciones que planeaste. Una agencia federal puede usar ambos documentos al decidir, según el riesgo, si deja que la CUI se procese en los sistemas de tu negocio no federal.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "265-267",
+        "frase": "A system security plan documents how an organization meets or plans to"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

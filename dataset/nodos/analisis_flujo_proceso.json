@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis del Diagrama de Flujo de Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y condiciones de proceso a mantener.",
+  "resumen_teorico": "Puedes revisar cómo está diseñado tu proceso con un diagrama de flujo que siga el camino de los materiales desde que entran hasta que salen como producto terminado. Con ese diagrama partes el proceso en estaciones de trabajo y, para cada una, dejas por escrito qué operaciones lleva, en qué orden, con qué instalaciones e instrumentos y bajo qué condiciones de proceso debe mantenerse.",
   "pasos_accionables": [
     "Elaborar diagrama de flujo del proceso completo",
     "Dividir el flujo en estaciones de trabajo lógicas",
@@ -63,6 +63,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye las instalaciones a emplear en cada estación, que el paso omite.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-analisis_flujo_proceso-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y condiciones de proceso a mantener.",
+      "texto_nuevo": "Puedes revisar cómo está diseñado tu proceso con un diagrama de flujo que siga el camino de los materiales desde que entran hasta que salen como producto terminado. Con ese diagrama partes el proceso en estaciones de trabajo y, para cada una, dejas por escrito qué operaciones lleva, en qué orden, con qué instalaciones e instrumentos y bajo qué condiciones de proceso debe mantenerse.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22413",
+        "frase": "A process design can be reviewed by laying out the overall process"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

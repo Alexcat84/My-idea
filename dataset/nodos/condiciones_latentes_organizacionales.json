@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Condiciones Latentes en Sistemas Complejos",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las condiciones latentes son debilidades preexistentes y a menudo antiguas dentro de un sistema (fallas de diseño, construcción, mantenimiento, capacitación, supervisión) que permanecen dormidas hasta que interactúan con factores desencadenantes locales para producir un accidente organizacional. Los fallos activos (errores y violaciones de quienes están en la 'línea de fuego') son bastante comunes en estos accidentes, pero no son causas necesarias ni suficientes, mientras que las condiciones latentes están siempre presentes en sistemas complejos. El caso del descarrilamiento de Nakina (1992) ilustra esto: una vía férrea construida en 1916 sobre una presa de castores inestable colapsó 76 años después sin que hubiera errores activos de la tripulación o del personal de mantenimiento.",
+  "resumen_teorico": "Una condición latente es una debilidad que ya estaba en el sistema, muchas veces desde hace años, por fallas de diseño, construcción, mantenimiento, capacitación o supervisión. Se queda dormida hasta que se cruza con algún detonante local y entonces produce un accidente organizacional. En estos accidentes abundan los fallos activos, es decir, errores y violaciones de quienes están en la 'línea de fuego', pero no hacen falta para que el accidente ocurra ni bastan para provocarlo; las condiciones latentes, en cambio, nunca faltan en un sistema complejo. Lo ilustra el descarrilamiento de Nakina (1992): una vía tendida en 1916 sobre una presa de castores inestable cedió 76 años más tarde, sin ningún error activo de la tripulación ni del personal de mantenimiento.",
   "pasos_accionables": [
     "Identificar los procesos organizacionales genéricos (diseño, construcción, operación, mantenimiento, comunicación, selección, capacitación, supervisión, gestión) como fuentes potenciales de condiciones latentes.",
     "Realizar auditorías periódicas enfocadas en detectar debilidades estructurales, no solo errores humanos evidentes.",
@@ -72,6 +72,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que los errores y violaciones de primera línea son bastante comunes aunque no sean necesarios ni suficientes.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-condiciones_latentes_organizacionales-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las condiciones latentes son debilidades preexistentes y a menudo antiguas dentro de un sistema (fallas de diseño, construcción, mantenimiento, capacitación, supervisión) que permanecen dormidas hasta que interactúan con factores desencadenantes locales para producir un accidente organizacional. Los fallos activos (errores y violaciones de quienes están en la 'línea de fuego') son bastante comunes en estos accidentes, pero no son causas necesarias ni suficientes, mientras que las condiciones latentes están siempre presentes en sistemas complejos. El caso del descarrilamiento de Nakina (1992) ilustra esto: una vía férrea construida en 1916 sobre una presa de castores inestable colapsó 76 años después sin que hubiera errores activos de la tripulación o del personal de mantenimiento.",
+      "texto_nuevo": "Una condición latente es una debilidad que ya estaba en el sistema, muchas veces desde hace años, por fallas de diseño, construcción, mantenimiento, capacitación o supervisión. Se queda dormida hasta que se cruza con algún detonante local y entonces produce un accidente organizacional. En estos accidentes abundan los fallos activos, es decir, errores y violaciones de quienes están en la 'línea de fuego', pero no hacen falta para que el accidente ocurra ni bastan para provocarlo; las condiciones latentes, en cambio, nunca faltan en un sistema complejo. Lo ilustra el descarrilamiento de Nakina (1992): una vía tendida en 1916 sobre una presa de castores inestable cedió 76 años más tarde, sin ningún error activo de la tripulación ni del personal de mantenimiento.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "580",
+        "frase": "Errors and violations committed by those at the sharp end are common enough"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

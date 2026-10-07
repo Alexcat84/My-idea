@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Componentes de la Cultura de Seguridad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "La cultura de seguridad es el resultado de los valores, actitudes, competencias y patrones de comportamiento que determinan tu compromiso con la salud y la seguridad. Se compone de cuatro subcomponentes críticos que interactúan entre si: cultura de reporte, cultura justa, cultura flexible y cultura de aprendizaje. Juntos crean una cultura informada, en la que tu y las personas que te ayudan tienen conocimiento actualizado sobre los factores humanos, técnicos, organizacionales y ambientales que determinan la seguridad del conjunto.",
+  "resumen_teorico": "Tu compromiso con la salud y la seguridad nace de una mezcla de valores, actitudes, capacidades y hábitos de conducta: a eso se le llama cultura de seguridad. Tiene cuatro piezas clave que se influyen unas a otras: una cultura de reporte, una cultura justa, una cultura flexible y una cultura de aprendizaje. Cuando funcionan juntas aparece una cultura informada, en la que tú y quienes te ayudan saben al día qué factores humanos, técnicos, organizacionales y ambientales deciden la seguridad del conjunto.",
   "pasos_accionables": [
     "Evaluar el estado actual de cada uno de los cuatro subcomponentes en tu negocio",
     "Monta un sistema que reúna los datos de incidentes, casi accidentes y revisiones proactivas periódicas del estado del sistema, para analizarlos y compartirlos",
@@ -166,6 +166,22 @@
       },
       "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-cultura_de_seguridad_componentes-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La cultura de seguridad es el resultado de los valores, actitudes, competencias y patrones de comportamiento que determinan tu compromiso con la salud y la seguridad. Se compone de cuatro subcomponentes críticos que interactúan entre si: cultura de reporte, cultura justa, cultura flexible y cultura de aprendizaje. Juntos crean una cultura informada, en la que tu y las personas que te ayudan tienen conocimiento actualizado sobre los factores humanos, técnicos, organizacionales y ambientales que determinan la seguridad del conjunto.",
+      "texto_nuevo": "Tu compromiso con la salud y la seguridad nace de una mezcla de valores, actitudes, capacidades y hábitos de conducta: a eso se le llama cultura de seguridad. Tiene cuatro piezas clave que se influyen unas a otras: una cultura de reporte, una cultura justa, una cultura flexible y una cultura de aprendizaje. Cuando funcionan juntas aparece una cultura informada, en la que tú y quienes te ayudan saben al día qué factores humanos, técnicos, organizacionales y ambientales deciden la seguridad del conjunto.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "4730, 4757, 4777",
+        "frase": "The safety culture of an organization is the product of individual and group"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

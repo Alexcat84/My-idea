@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "El Proceso de Siete Pasos del RMF",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Los siete pasos son necesarios para ejecutarlo con éxito; aunque van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+  "resumen_teorico": "Para gestionar los riesgos de seguridad de la información y de privacidad, el Risk Management Framework (RMF) de NIST te da un método de siete pasos: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar y Monitorear. Es completo, se adapta, puedes repetirlo y puedes medirlo. Ninguno de los siete sobra si quieres que funcione. La primera vez los recorres en orden; después de esa implementación inicial puedes saltar de uno a otro según lo necesites. Sirve para un sistema que estrenas y para uno que ya tienes, con la tecnología que sea y sin importar el tamaño de tu negocio.",
   "pasos_accionables": [
     "Familiarizarse con los siete pasos del RMF: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear.",
     "Asignar responsables para la ejecución de cada paso.",
@@ -58,6 +58,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los siete pasos son necesarios; sin ese límite la flexibilidad de orden puede leerse como permiso para saltarlos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-proceso_rmf_siete_pasos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Los siete pasos son necesarios para ejecutarlo con éxito; aunque van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+      "texto_nuevo": "Para gestionar los riesgos de seguridad de la información y de privacidad, el Risk Management Framework (RMF) de NIST te da un método de siete pasos: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar y Monitorear. Es completo, se adapta, puedes repetirlo y puedes medirlo. Ninguno de los siete sobra si quieres que funcione. La primera vez los recorres en orden; después de esa implementación inicial puedes saltar de uno a otro según lo necesites. Sirve para un sistema que estrenas y para uno que ya tienes, con la tecnología que sea y sin importar el tamaño de tu negocio.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "29-39",
+        "frase": "The RMF provides a comprehensive, flexible, repeatable, and measurable seven-step process"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

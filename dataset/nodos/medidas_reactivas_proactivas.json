@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sistema de Ayudas de Navegación: Medidas Reactivas y Proactivas",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las ayudas de navegación en seguridad se dividen en dos categorías: medidas reactivas (aplicadas después de un evento, revelando patrones recurrentes de causa-efecto a través del análisis de múltiples incidentes) y medidas proactivas (aplicadas antes de un evento, evaluando la 'salud de seguridad' del sistema mediante chequeos regulares de condiciones organizacionales y defensas). Un error común es enfocarse solo en eventos individuales, lo que lleva a contramedidas dirigidas a fallos humanos aislados, ignorando que los accidentes organizacionales tienen causas múltiples. El análisis de varios eventos relacionados usando un marco clasificatorio común revela patrones que guían qué procesos muestrear proactivamente.",
+  "resumen_teorico": "Para orientarte en seguridad cuentas con dos tipos de ayudas. Las reactivas solo sirven después de que algo ocurre: cuando analizas muchos incidentes juntos, dejan ver las cadenas de causa y efecto que se repiten. Las proactivas se usan antes de cualquier evento y revisan con regularidad la 'salud de seguridad' del sistema, mirando sus condiciones organizativas de fondo y sus defensas. Un tropiezo frecuente es quedarte en cada evento por separado: así terminas con medidas que apuntan a fallos humanos sueltos y olvidas que un accidente organizacional nace de varias causas a la vez. Si estudias varios eventos emparentados con un mismo esquema de clasificación, aparecen patrones que te indican qué procesos conviene revisar por muestreo de forma preventiva.",
   "pasos_accionables": [
     "Implementar un marco clasificatorio común para analizar múltiples incidentes pasados (no solo casos aislados)",
     "Identificar patrones recurrentes de causa-efecto en las condiciones locales y organizacionales",
@@ -44,6 +44,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro da el rango de 8 a 16 como típico y variable según el sistema; el paso lo fija.; Mismo endurecimiento de la cifra.; Se pierde el propósito de los chequeos: hallar los dos o tres procesos que más urgen atención.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-medidas_reactivas_proactivas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las ayudas de navegación en seguridad se dividen en dos categorías: medidas reactivas (aplicadas después de un evento, revelando patrones recurrentes de causa-efecto a través del análisis de múltiples incidentes) y medidas proactivas (aplicadas antes de un evento, evaluando la 'salud de seguridad' del sistema mediante chequeos regulares de condiciones organizacionales y defensas). Un error común es enfocarse solo en eventos individuales, lo que lleva a contramedidas dirigidas a fallos humanos aislados, ignorando que los accidentes organizacionales tienen causas múltiples. El análisis de varios eventos relacionados usando un marco clasificatorio común revela patrones que guían qué procesos muestrear proactivamente.",
+      "texto_nuevo": "Para orientarte en seguridad cuentas con dos tipos de ayudas. Las reactivas solo sirven después de que algo ocurre: cuando analizas muchos incidentes juntos, dejan ver las cadenas de causa y efecto que se repiten. Las proactivas se usan antes de cualquier evento y revisan con regularidad la 'salud de seguridad' del sistema, mirando sus condiciones organizativas de fondo y sus defensas. Un tropiezo frecuente es quedarte en cada evento por separado: así terminas con medidas que apuntan a fallos humanos sueltos y olvidas que un accidente organizacional nace de varias causas a la vez. Si estudias varios eventos emparentados con un mismo esquema de clasificación, aparecen patrones que te indican qué procesos conviene revisar por muestreo de forma preventiva.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2638-2654",
+        "frase": "Navigational aids fall into two main categories: reactive measures that can only be applied"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

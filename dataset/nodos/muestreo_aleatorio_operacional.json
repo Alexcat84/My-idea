@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Definición Operacional de Selección Aleatoria",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado, escrito de antemano (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+  "resumen_teorico": "Define tu muestreo aleatorio en términos operativos: asigna un número a cada unidad del marco muestral y elige las unidades, sin repetir ninguna, con un procedimiento aceptado que dejes escrito antes de empezar, ya sea una tabla estándar de números aleatorios o números que generes guiado por alguien que conozca los errores típicos al producirlos. La muestra por sí sola no es aleatoria ni deja de serlo; lo que juzgas es el procedimiento con que la elegiste, que cumple la definición fijada o no la cumple. De eso depende que tus inspecciones de calidad y tus auditorías tengan validez estadística.",
   "pasos_accionables": [
     "Numerar todas las unidades del marco muestral de 1 a N.",
     "Definir por escrito, antes de seleccionar, el procedimiento de generación de números aleatorios a usar.",
@@ -74,6 +74,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición operacional del libro exige que el procedimiento de lectura de los números esté escrito de antemano, y el resumen lo omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-muestreo_aleatorio_operacional-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado, escrito de antemano (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+      "texto_nuevo": "Define tu muestreo aleatorio en términos operativos: asigna un número a cada unidad del marco muestral y elige las unidades, sin repetir ninguna, con un procedimiento aceptado que dejes escrito antes de empezar, ya sea una tabla estándar de números aleatorios o números que generes guiado por alguien que conozca los errores típicos al producirlos. La muestra por sí sola no es aleatoria ni deja de serlo; lo que juzgas es el procedimiento con que la elegiste, que cumple la definición fijada o no la cumple. De eso depende que tus inspecciones de calidad y tus auditorías tengan validez estadística.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "6829-6842",
+        "frase": "A sample is neither random nor not random. It is the procedure"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

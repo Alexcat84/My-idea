@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Implementación de Controles en el Lugar de Trabajo",
   "fuente": "OSHA3885",
-  "resumen_teorico": "Una vez definido y aprobado el plan de control, los controles deben implementarse siguiendo las prioridades establecidas en él. Cuando los recursos son limitados, aplica el enfoque 'lo peor primero', priorizando el control de los peligros más serios. Independientemente del nivel de prioridad relativa, implementa de inmediato las medidas simples y económicas, como orden, limpieza, iluminación y remoción de riesgos de tropiezo. Los peligros serios reconocidos deben controlarse sin demora. Este proceso también aplica cuando necesitas ejecutar medidas correctivas identificadas en inspecciones previas, asegurando que la ejecución en el sitio sea consistente con lo planificado.",
+  "resumen_teorico": "Con tu plan de control ya definido y aprobado, pon en marcha los controles en el orden de prioridad que fijaste ahí. Si te faltan recursos, empieza por lo peor primero: atiende antes los peligros más serios. Las medidas sencillas y baratas, como mantener el orden y la limpieza, mejorar la iluminación y quitar aquello con lo que alguien pueda tropezar, aplícalas de inmediato, ocupen el lugar que ocupen en tu lista de prioridades. Un peligro serio que ya tienes identificado no espera: contrólalo sin demora. Todo esto vale también cuando te toca ejecutar las correcciones que salieron de inspecciones anteriores, cuidando que lo que haces en el sitio coincida con lo que planificaste.",
   "pasos_accionables": [
     "Implementar los controles según las prioridades establecidas en el plan",
     "Pon en marcha ya las medidas fáciles y baratas, como el orden, la limpieza y la iluminación, sin fijarte en la prioridad relativa que tengan",
@@ -84,6 +84,22 @@
       },
       "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-implementacion_controles-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una vez definido y aprobado el plan de control, los controles deben implementarse siguiendo las prioridades establecidas en él. Cuando los recursos son limitados, aplica el enfoque 'lo peor primero', priorizando el control de los peligros más serios. Independientemente del nivel de prioridad relativa, implementa de inmediato las medidas simples y económicas, como orden, limpieza, iluminación y remoción de riesgos de tropiezo. Los peligros serios reconocidos deben controlarse sin demora. Este proceso también aplica cuando necesitas ejecutar medidas correctivas identificadas en inspecciones previas, asegurando que la ejecución en el sitio sea consistente con lo planificado.",
+      "texto_nuevo": "Con tu plan de control ya definido y aprobado, pon en marcha los controles en el orden de prioridad que fijaste ahí. Si te faltan recursos, empieza por lo peor primero: atiende antes los peligros más serios. Las medidas sencillas y baratas, como mantener el orden y la limpieza, mejorar la iluminación y quitar aquello con lo que alguien pueda tropezar, aplícalas de inmediato, ocupen el lugar que ocupen en tu lista de prioridades. Un peligro serio que ya tienes identificado no espera: contrólalo sin demora. Todo esto vale también cuando te toca ejecutar las correcciones que salieron de inspecciones anteriores, cuidando que lo que haces en el sitio coincida con lo que planificaste.",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "749-757",
+        "frase": "Implement hazard control measures according to the priorities established in the hazard control plan."
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

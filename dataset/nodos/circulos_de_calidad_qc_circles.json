@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Círculos de Calidad (Origen con Ishikawa)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Los QC-Circles son grupos pequeños de trabajadores que colaboran voluntariamente para identificar y eliminar causas especiales de variabilidad en los procesos, y para mejorar el sistema mediante cambios en herramientas, diseño, programación y procesos de producción. Representan la forma natural japonesa de trabajo en equipo y constituyen un mecanismo estructurado para canalizar el conocimiento operativo de los trabajadores hacia la mejora continua. Es responsabilidad de la dirección difundir los éxitos logrados en un círculo hacia otras áreas de la empresa e incluso hacia otras compañías.",
+  "resumen_teorico": "Un círculo de calidad (QC-Circle) reúne a un grupo pequeño de trabajadores que, por voluntad propia, detectan y quitan las causas especiales de variabilidad de sus procesos y mejoran el sistema con cambios en el diseño, en las herramientas, en la programación del trabajo y en el propio proceso de producción. Es la forma natural de trabajar en equipo en Japón y te da un cauce ordenado para que lo que tu gente sabe de la operación alimente la mejora continua. Cuando un círculo logra algo, te toca a ti, como quien dirige, llevar ese éxito a otras áreas de tu empresa y hasta a otras compañías.",
   "pasos_accionables": [
     "Formar grupos pequeños de trabajadores voluntarios en un área de trabajo específica",
     "Capacitar a los miembros en métodos estadísticos básicos y herramientas de análisis de causas",
@@ -81,6 +81,22 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-circulos_de_calidad_qc_circles-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los QC-Circles son grupos pequeños de trabajadores que colaboran voluntariamente para identificar y eliminar causas especiales de variabilidad en los procesos, y para mejorar el sistema mediante cambios en herramientas, diseño, programación y procesos de producción. Representan la forma natural japonesa de trabajo en equipo y constituyen un mecanismo estructurado para canalizar el conocimiento operativo de los trabajadores hacia la mejora continua. Es responsabilidad de la dirección difundir los éxitos logrados en un círculo hacia otras áreas de la empresa e incluso hacia otras compañías.",
+      "texto_nuevo": "Un círculo de calidad (QC-Circle) reúne a un grupo pequeño de trabajadores que, por voluntad propia, detectan y quitan las causas especiales de variabilidad de sus procesos y mejoran el sistema con cambios en el diseño, en las herramientas, en la programación del trabajo y en el propio proceso de producción. Es la forma natural de trabajar en equipo en Japón y te da un cauce ordenado para que lo que tu gente sabe de la operación alimente la mejora continua. Cuando un círculo logra algo, te toca a ti, como quien dirige, llevar ese éxito a otras áreas de tu empresa y hasta a otras compañías.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "10900",
+        "frase": "The formalization of QC-Circles was accomplished by Dr. K. Ishikawa"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

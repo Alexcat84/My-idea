@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Plan de Seguridad del Sistema (System Security Plan)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+  "resumen_teorico": "Para cada sistema, escribe un plan de seguridad que diga qué medidas de protección ya tiene o tendrá y qué reglas de conducta deben seguir quienes entran en él; ponlo en práctica y revísalo cada cierto tiempo para mantenerlo al día.",
   "pasos_accionables": [
     "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
     "Describir amenazas específicas al sistema y su entorno operativo, incluidas sus dependencias o conexiones con otros sistemas o componentes.",
@@ -112,6 +112,22 @@
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-getting_started_planning-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+      "texto_nuevo": "Para cada sistema, escribe un plan de seguridad que diga qué medidas de protección ya tiene o tendrá y qué reglas de conducta deben seguir quienes entran en él; ponlo en práctica y revísalo cada cierto tiempo para mantenerlo al día.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "727",
+        "frase": "Develop, periodically update, and implement security plans for organizational systems that"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

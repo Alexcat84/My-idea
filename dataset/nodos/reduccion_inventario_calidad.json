@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Reducción de Inventario mediante Mejora de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, eliminación de márgenes de seguridad por materiales defectuosos y, más importante aún, menos piezas esperando retrabajo.",
+  "resumen_teorico": "Si mejoras la calidad de los materiales que recibes y reduces el retrabajo, puedes bajar drásticamente tu inventario en proceso y ahorrar mucho dinero. Lo consigues cooperando con tus proveedores, trabajando con menos de ellos, dejando de guardar reservas extra para cubrir material defectuoso y, lo que más pesa, teniendo menos piezas a la espera de retrabajo.",
   "pasos_accionables": [
     "Medir el inventario en proceso actual (incluyendo materiales entrantes y piezas en espera de retrabajo)",
     "Establecer un programa de cooperación con proveedores para mejorar calidad de materiales entrantes",
@@ -40,6 +40,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración de medios pierde el que el libro señala como más importante: menos piezas esperando retrabajo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-reduccion_inventario_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, eliminación de márgenes de seguridad por materiales defectuosos y, más importante aún, menos piezas esperando retrabajo.",
+      "texto_nuevo": "Si mejoras la calidad de los materiales que recibes y reduces el retrabajo, puedes bajar drásticamente tu inventario en proceso y ahorrar mucho dinero. Lo consigues cooperando con tus proveedores, trabajando con menos de ellos, dejando de guardar reservas extra para cubrir material defectuoso y, lo que más pesa, teniendo menos piezas a la espera de retrabajo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "7900",
+        "frase": "What brought the decrease? Better quality of incoming materials"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

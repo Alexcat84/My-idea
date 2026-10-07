@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Gestión de Errores (Error Management - EM)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+  "resumen_teorico": "Gestionar errores implica dos frentes. Uno es reducirlos, con medidas para que ocurran menos. El otro es contenerlos: como nunca vas a lograr reducirlos del todo, necesitas también medidas que limiten el daño de los que igual se produzcan. Abarca acciones para bajar la tendencia a equivocarse de cada persona o equipo, hacer menos vulnerables ciertas tareas, encontrar y quitar del lugar de trabajo lo que provoca errores, diagnosticar los factores organizacionales que los originan, detectar mejor los errores, volver el sistema más tolerante a ellos, sacar a la luz las condiciones latentes y reforzar la resistencia propia de tu negocio ante la falibilidad humana. La forma tradicional de gestionar errores suele ser reactiva, se concentra en las fallas activas y le atribuye la culpa a la persona en lugar de mirar la situación.",
   "pasos_accionables": [
     "Diseñar medidas de reducción de errores (mejorar diseño de tareas, información, entrenamiento)",
     "Diseñar medidas de contención de errores (detección temprana, barreras, tolerancia del sistema)",
@@ -62,6 +62,22 @@
       "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-gestion_de_errores-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+      "texto_nuevo": "Gestionar errores implica dos frentes. Uno es reducirlos, con medidas para que ocurran menos. El otro es contenerlos: como nunca vas a lograr reducirlos del todo, necesitas también medidas que limiten el daño de los que igual se produzcan. Abarca acciones para bajar la tendencia a equivocarse de cada persona o equipo, hacer menos vulnerables ciertas tareas, encontrar y quitar del lugar de trabajo lo que provoca errores, diagnosticar los factores organizacionales que los originan, detectar mejor los errores, volver el sistema más tolerante a ellos, sacar a la luz las condiciones latentes y reforzar la resistencia propia de tu negocio ante la falibilidad humana. La forma tradicional de gestionar errores suele ser reactiva, se concentra en las fallas activas y le atribuye la culpa a la persona en lugar de mirar la situación.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2823-2864",
+        "frase": "Error management (EM) has two components: error reduction and error containment"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

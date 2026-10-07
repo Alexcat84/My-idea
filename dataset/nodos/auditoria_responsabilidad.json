@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Auditoría y Responsabilidad (Audit and Accountability)",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
+  "resumen_teorico": "Te toca generar registros de auditoría de tus sistemas, resguardarlos y conservarlos durante el tiempo necesario para vigilar, analizar, investigar y reportar cualquier actividad del sistema que sea ilegal, no autorizada o inapropiada, de modo que puedas rastrear cada acción hasta la persona usuaria que la hizo y pedirle cuentas. También implica decidir qué datos guardan esos registros, cómo los proteges, a quién avisas si falla su captura o se llena el espacio donde se guardan, y cada cuánto los revisas.",
   "pasos_accionables": [
     "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
     "Verificar que los registros contengan tipo de evento, momento, lugar, origen, resultado e identidad del individuo asociado",
@@ -90,6 +90,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye definir a quién alertar ante fallas en la captura de registros o al llenarse su almacenamiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-auditoria_responsabilidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
+      "texto_nuevo": "Te toca generar registros de auditoría de tus sistemas, resguardarlos y conservarlos durante el tiempo necesario para vigilar, analizar, investigar y reportar cualquier actividad del sistema que sea ilegal, no autorizada o inapropiada, de modo que puedas rastrear cada acción hasta la persona usuaria que la hizo y pedirle cuentas. También implica decidir qué datos guardan esos registros, cómo los proteges, a quién avisas si falla su captura o se llena el espacio donde se guardan, y cada cuánto los revisas.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "341",
+        "frase": "Creating, protecting, and retaining system audit records to the extent needed"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

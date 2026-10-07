@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Control de Acceso y Principio de Mínimo Privilegio",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "El Control de Acceso limita el acceso al sistema de información a usuarios autorizados, procesos actuando en su nombre, o dispositivos, y a los tipos de transacciones y funciones que estos usuarios están permitidos ejercer. El concepto fundamental de Mínimo Privilegio implica limitar los derechos de acceso solo a los usuarios que lo necesitan para cumplir sus tareas asignadas, incluyendo restringir privilegios administrativos solo a quienes los requieren.",
+  "resumen_teorico": "El control de acceso deja entrar a tu sistema de información solo a usuarios autorizados, a los procesos que actúan en su nombre o a dispositivos, y les permite únicamente las transacciones y funciones que tienen autorizadas. Su base es el mínimo privilegio: concedes cada derecho de acceso solo a quien lo necesita para cumplir las tareas que tiene asignadas, y reservas los privilegios de administrador para las personas que de verdad los requieren.",
   "pasos_accionables": [
     "Pon en marcha políticas que reserven el acceso a la información controlada no clasificada a las personas que lo necesitan para hacer su trabajo, y a nadie más",
     "Revisar información pública (sitio web de la empresa) para eliminar información controlada no clasificada expuesta",
@@ -174,6 +174,22 @@
       },
       "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-control_acceso_least_privilege-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El Control de Acceso limita el acceso al sistema de información a usuarios autorizados, procesos actuando en su nombre, o dispositivos, y a los tipos de transacciones y funciones que estos usuarios están permitidos ejercer. El concepto fundamental de Mínimo Privilegio implica limitar los derechos de acceso solo a los usuarios que lo necesitan para cumplir sus tareas asignadas, incluyendo restringir privilegios administrativos solo a quienes los requieren.",
+      "texto_nuevo": "El control de acceso deja entrar a tu sistema de información solo a usuarios autorizados, a los procesos que actúan en su nombre o a dispositivos, y les permite únicamente las transacciones y funciones que tienen autorizadas. Su base es el mínimo privilegio: concedes cada derecho de acceso solo a quien lo necesita para cumplir las tareas que tiene asignadas, y reservas los privilegios de administrador para las personas que de verdad los requieren.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "275, 289",
+        "frase": "Limiting information system access to authorized users, processes acting on behalf"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

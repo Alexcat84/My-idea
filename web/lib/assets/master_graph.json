@@ -507,7 +507,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Distinción entre Accidentes Individuales y Organizacionales",
-      "resumen_teorico": "Existen dos tipos de accidentes: los individuales, donde una persona o un grupo suele ser a la vez el agente y la víctima, con consecuencias que pueden ser grandes pero de alcance limitado (por ejemplo resbalones o caídas); y los organizacionales, un fenómeno moderno, relativamente raro pero a menudo catastrófico, que surge de sistemas tecnológicos complejos con múltiples capas de defensa, con causas distribuidas en distintos niveles de la organización (operador, fabricante, regulador) y que puede afectar a poblaciones no involucradas, activos y el ambiente, sin poder explicarse por un solo fallo humano. Comprender esta diferencia es esencial para dirigir el análisis de riesgo hacia el nivel correcto de explicación y evitar culpar prematuramente a un solo trabajador.",
+      "resumen_teorico": "Hay accidentes de dos clases. En los individuales, quien provoca el daño y quien lo sufre suelen ser la misma persona o el mismo grupo; el golpe puede ser fuerte, pero se queda en un círculo pequeño, como pasa con un resbalón o una caída. Los organizacionales son un fenómeno de la época moderna: ocurren relativamente poco, pero muchas veces son catastróficos. Brotan de sistemas tecnológicos complejos protegidos por varias capas de defensa, sus causas se reparten entre distintos niveles (el operador, el fabricante, el regulador), ningún fallo humano aislado alcanza para explicarlos y pueden dañar a gente que no tenía nada que ver, a los bienes y al medio ambiente. Tener clara esta diferencia es clave para llevar tu análisis de riesgo al nivel de explicación que corresponde y no culpar antes de tiempo a un solo trabajador.",
       "pasos_accionables": [
         "Clasificar los eventos de seguridad pasados de la organización según sean individuales u organizacionales antes de iniciar cualquier investigación, sabiendo que la frontera entre ambos tipos no siempre es nítida y que los accidentes individuales suelen tener también origen organizacional.",
         "Identificar si el enfoque actual de gestión de riesgos se centra solo en errores individuales, ignorando causas sistémicas.",
@@ -2231,7 +2231,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Adopciones y Extensiones Específicas de la Industria a ISO 9000",
-      "resumen_teorico": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
+      "resumen_teorico": "Hay sectores que amplían ISO 9000 a su medida: aquellos donde un producto puede dañar gravemente la salud, la seguridad o el medio ambiente (como dispositivos médicos o farmacéutica), o donde la industria ya tenía sus propios requisitos de calidad antes de ISO 9000; de ahí salen extensiones regulatorias como las cGMP en farmacéutica o normas propias como las de ISO/TC210 para dispositivos médicos. Estas adaptaciones chocan con el objetivo de no multiplicar los estándares, y solo han funcionado en muy pocos sectores: los que viven circunstancias especiales y aplican siempre reglas claras.",
       "pasos_accionables": [
         "Identificar si el sector de la organización tiene requisitos regulatorios de salud/seguridad/ambiente",
         "Determinar si existen estándares específicos de la industria previos a ISO 9000 aplicables",
@@ -4473,7 +4473,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Análisis del Diagrama de Flujo de Proceso",
-      "resumen_teorico": "El diseño de un proceso puede revisarse mediante un diagrama de flujo que muestra la trayectoria de los materiales hasta convertirse en producto terminado. Este diagrama divide el proceso en estaciones de trabajo, para las cuales se documentan operaciones, secuencia, instalaciones e instrumentos, y condiciones de proceso a mantener.",
+      "resumen_teorico": "Puedes revisar cómo está diseñado tu proceso con un diagrama de flujo que siga el camino de los materiales desde que entran hasta que salen como producto terminado. Con ese diagrama partes el proceso en estaciones de trabajo y, para cada una, dejas por escrito qué operaciones lleva, en qué orden, con qué instalaciones e instrumentos y bajo qué condiciones de proceso debe mantenerse.",
       "pasos_accionables": [
         "Elaborar diagrama de flujo del proceso completo",
         "Dividir el flujo en estaciones de trabajo lógicas",
@@ -7694,7 +7694,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Auditoría y Responsabilidad (Audit and Accountability)",
-      "resumen_teorico": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, a quién se alerta si falla su captura o se llena su almacenamiento, y con qué frecuencia se revisan.",
+      "resumen_teorico": "Te toca generar registros de auditoría de tus sistemas, resguardarlos y conservarlos durante el tiempo necesario para vigilar, analizar, investigar y reportar cualquier actividad del sistema que sea ilegal, no autorizada o inapropiada, de modo que puedas rastrear cada acción hasta la persona usuaria que la hizo y pedirle cuentas. También implica decidir qué datos guardan esos registros, cómo los proteges, a quién avisas si falla su captura o se llena el espacio donde se guardan, y cada cuánto los revisas.",
       "pasos_accionables": [
         "Preguntar al personal de TI o proveedor de seguridad qué información de auditoría se captura actualmente",
         "Verificar que los registros contengan tipo de evento, momento, lugar, origen, resultado e identidad del individuo asociado",
@@ -8404,7 +8404,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Autorización del Sistema para Operar",
-      "resumen_teorico": "Un funcionario senior de la organización (Authorizing Official) determina si el riesgo de seguridad y privacidad derivado de la operación del sistema es aceptable, basándose en un paquete de autorización que incluye planes de seguridad/privacidad, informes de evaluación y el POA&M. El resultado es una decisión formal que autoriza o no la operación del sistema.",
+      "resumen_teorico": "Quien tiene un cargo de alto nivel y el papel de Authorizing Official revisa el paquete de autorización, que reúne los planes de seguridad y privacidad, los informes de evaluación y el POA&M. Con esa base juzga si es aceptable el riesgo para la seguridad y la privacidad que trae poner el sistema a operar, y lo resuelve con una decisión formal: el sistema queda autorizado para operar, o no.",
       "pasos_accionables": [
         "Reunir el paquete de autorización y enviarlo al funcionario autorizante (Tarea R-1).",
         "El funcionario autorizante analiza la información y determina el riesgo residual (Tarea R-2).",
@@ -8458,7 +8458,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Autoservicio y Autosanación del Producto",
-      "resumen_teorico": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+      "resumen_teorico": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Sobre esa base levantas las herramientas de autoservicio y autosanación: con ellas tu cliente se encarga por sí mismo de la mayoría de sus problemas, y tú te mantienes preparado para los que no consiga resolver. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
       "pasos_accionables": [
         "Revisar los puntos de fricción del producto que generan llamadas de soporte",
         "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
@@ -11666,7 +11666,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Calificación de Calidad de Proveedores (Supplier Rating)",
-      "resumen_teorico": "Proporciona un resumen cuantitativo de la calidad del proveedor a lo largo de un periodo de tiempo, útil para decidir cómo asignar compras entre proveedores. Puede basarse en porcentaje de no conformidad, calidad general del producto (puntos por fase), análisis económico de costo total, o un plan compuesto que incluya calidad, entrega, precio y capacidad de respuesta con pesos ponderados.",
+      "resumen_teorico": "Te da una cifra que resume cómo se ha comportado en calidad cada proveedor durante cierto tiempo, y te sirve para decidir cómo repartir tus compras entre ellos. Puede apoyarse en el porcentaje de no conformidad, en la calidad general del producto (puntos por fase), en un análisis económico del costo total o en un plan compuesto que combine calidad, entrega, precio y capacidad de respuesta con pesos ponderados.",
       "pasos_accionables": [
         "Seleccionar las métricas de calidad relevantes (% no conformidad, DPM, etc.)",
         "Definir un plan compuesto con pesos para calidad, entrega, costo y respuesta",
@@ -11692,7 +11692,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
-      "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que compitan, no por el precio, demostrando compromiso activo de su gerencia con los 14 puntos, sobre todo la mejora continua de procesos, y con erradicar las enfermedades de gestión, más capacidad de I+D y récord de desarrollo de producto.",
+      "resumen_teorico": "Deja de lado los manuales estándar para 'calificar' proveedores (como Military Standard 9858A) y los equipos de auditores sin preparación que los aplican. Haz mejor que compitan por ser elegidos, no por el precio, sino aportando pruebas de que quienes los dirigen se involucran de verdad con los 14 puntos, sobre todo con la mejora continua de procesos, y con eliminar las enfermedades de gestión; suma a eso su capacidad de I+D y su historial desarrollando productos.",
       "pasos_accionables": [
         "Descartar procesos de calificación basados solo en listas de verificación genéricas",
         "Solicitar evidencia de inversión en investigación y desarrollo del proveedor",
@@ -12511,7 +12511,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Capacitación de Trabajadores en Identificación y Control de Peligros",
-      "resumen_teorico": "Brindar a los trabajadores comprensión sobre reconocimiento y control de peligros, involucrándolos activamente, ayuda a eliminar riesgos antes de que ocurra un incidente. Incluye capacitación en análisis de peligros de tarea (JHA) y uso correcto de EPP.",
+      "resumen_teorico": "Un equipo al que formas para reconocer y controlar los peligros, y al que haces participar activamente, te ayuda a eliminar riesgos antes de que llegue un incidente. Esa formación incluye el análisis de peligros de cada tarea (JHA) y el uso correcto del EPP.",
       "pasos_accionables": [
         "Capacitar en técnicas de identificación de peligros como el análisis de peligros de la tarea (JHA)",
         "Enseñar a reconocer peligros específicos de su puesto y generales",
@@ -12530,7 +12530,7 @@
       ],
       "condiciones_activacion": [
         "Cuando se asigna una nueva tarea a un trabajador",
-        "Al introducir cambios en instalaciones, equipos, procesos, materiales u organización del trabajo que puedan aumentar los peligros"
+        "Cuando vas a cambiar algo en tus instalaciones, equipos, procesos o materiales, o en cómo organizas el trabajo, y ese cambio podría traer más peligros."
       ],
       "etiqueta_arbol": "Entrena para Identificar Peligros"
     },
@@ -12539,7 +12539,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Capacitación de Empleadores, Gerentes y Supervisores en sus Roles",
-      "resumen_teorico": "Los líderes de la organización pueden necesitar capacitación específica sobre sus responsabilidades bajo la OSH Act y los derechos que da a los trabajadores, cómo responder a reportes de incidentes sin desalentar el reporte, técnicas de reconocimiento y control de peligros, y técnicas de investigación de incidentes, incluyendo análisis de causa raíz.",
+      "resumen_teorico": "Quienes dirigen y supervisan en tu negocio, empezando por ti, pueden necesitar formación propia para su papel: lo que la OSH Act les obliga a cumplir y los derechos que esa ley reconoce a los trabajadores, cómo atender un reporte de incidente sin desanimar a nadie de reportar, técnicas para reconocer y controlar peligros, y cómo investigar incidentes, análisis de causa raíz incluido.",
       "pasos_accionables": [
         "Refresca qué obligaciones legales impone la OSH Act y qué derechos garantiza esa misma ley a los trabajadores",
         "Capacita en cómo responder a los avisos de lesiones, enfermedades e incidentes, y enseña también maneras de responder que no desanimen a la gente a avisar.",
@@ -12798,7 +12798,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Caracterización y Priorización de Peligros (Evaluación de Riesgo)",
-      "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. La evaluación te ayuda a entender los peligros en el contexto de tu propio lugar de trabajo y a priorizarlos para su control permanente.",
+      "resumen_teorico": "El riesgo de un peligro surge de combinar su severidad potencial, su probabilidad de ocurrencia y el número de personas expuestas a él. Evaluar estos tres factores te permite ordenar los peligros identificados de mayor a menor urgencia y decidir por cuál empezar cuando no puedes atender todos a la vez. Mientras diseñas o instalas las soluciones permanentes, debes aplicar controles provisionales que reduzcan la exposición de inmediato. Esta priorización no te exime de responsabilidad sobre el resto: todo peligro grave reconocido sigue requiriendo control, aunque no sea el primero en tu lista. Hacer este análisis te sirve para ver cada peligro a la luz de cómo es tu propio lugar de trabajo y para fijar el orden en que lo vas a controlar de forma permanente.",
       "pasos_accionables": [
         "Evalúa la severidad potencial y la probabilidad de ocurrencia de cada peligro identificado",
         "Determina el número de personas expuestas a cada peligro",
@@ -13441,7 +13441,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Categorías de Brechas en el Desempeño de Materiales Entrantes",
-      "resumen_teorico": "Todo lote de material que te llega cae en una de cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+      "resumen_teorico": "Cada lote de material que recibes termina en alguna de estas cuatro situaciones: lo usas en producción sin ningún problema; lo usas en desesperación aunque no cumple los requisitos, con retrabajo o desperdicio de por medio; no sirve para nada; o se queda en inventario sin un uso claro. Lo habitual es que tu contabilidad registre con exactitud solo los dos últimos casos, mientras que el costo real y escondido del material usado en desesperación suele ser mucho mayor y nadie lo conoce.",
       "pasos_accionables": [
         "Clasificar todos los lotes de material entrante según las cuatro categorías definidas",
         "Cuantificar el costo real del material usado en desesperación (retrabajo, desperdicio, riesgo de rechazo)",
@@ -15068,7 +15068,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "El Ciclo de la Culpa (Blame Cycle)",
-      "resumen_teorico": "El ciclo de la culpa nace de la ilusión del libre albedrío, propia de muchas culturas: como te consideras un agente libre, ves tus errores (o los de otros) como acciones al menos parcialmente voluntarias. Esto lleva a responder con advertencias, sanciones o amenazas, medidas que tienen poco o ningún efecto sobre los factores reales que producen el error, así que este vuelve a ocurrir. La repetición genera una doble frustración: sentir que ya advertiste o castigaste y aun así el error persiste, lo que se interpreta como desafío deliberado y empuja a sanciones todavía más duras, perpetuando el ciclo sin tocar la causa raíz. Reconocer que hasta las personas más capaces pueden a veces cometer los peores errores es el punto de partida para romperlo.",
+      "resumen_teorico": "La raíz del ciclo de la culpa es una ilusión muy extendida en muchas culturas: la del libre albedrío. Si te ves como alguien que decide con total libertad, tiendes a leer cada error, tuyo o ajeno, como algo que al menos en parte se eligió. Tu reacción es advertir, sancionar o amenazar, pero esas medidas apenas tocan, o no tocan en absoluto, lo que de verdad provoca el error, y el fallo regresa. Entonces la frustración se duplica: ya advertiste, ya castigaste, y el error sigue; lo lees como un desafío hecho a propósito y endureces todavía más las sanciones, con lo que el ciclo continúa sin llegar nunca a la causa de fondo. Para salir de él, parte de aceptar que incluso la gente más capaz puede a veces cometer los peores errores.",
       "pasos_accionables": [
         "Reconoce que casi siempre hay factores que escapan al control inmediato de la persona y que ponen límite a lo que hace",
         "Evitar usar sanciones o advertencias como única respuesta a errores recurrentes, identificando los patrones repetitivos de 'culpar y entrenar' tras incidentes",
@@ -15921,7 +15921,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Círculos de Calidad (Origen con Ishikawa)",
-      "resumen_teorico": "Los QC-Circles son grupos pequeños de trabajadores que colaboran voluntariamente para identificar y eliminar causas especiales de variabilidad en los procesos, y para mejorar el sistema mediante cambios en herramientas, diseño, programación y procesos de producción. Representan la forma natural japonesa de trabajo en equipo y constituyen un mecanismo estructurado para canalizar el conocimiento operativo de los trabajadores hacia la mejora continua. Es responsabilidad de la dirección difundir los éxitos logrados en un círculo hacia otras áreas de la empresa e incluso hacia otras compañías.",
+      "resumen_teorico": "Un círculo de calidad (QC-Circle) reúne a un grupo pequeño de trabajadores que, por voluntad propia, detectan y quitan las causas especiales de variabilidad de sus procesos y mejoran el sistema con cambios en el diseño, en las herramientas, en la programación del trabajo y en el propio proceso de producción. Es la forma natural de trabajar en equipo en Japón y te da un cauce ordenado para que lo que tu gente sabe de la operación alimente la mejora continua. Cuando un círculo logra algo, te toca a ti, como quien dirige, llevar ese éxito a otras áreas de tu empresa y hasta a otras compañías.",
       "pasos_accionables": [
         "Formar grupos pequeños de trabajadores voluntarios en un área de trabajo específica",
         "Capacitar a los miembros en métodos estadísticos básicos y herramientas de análisis de causas",
@@ -17007,7 +17007,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Cognisance: Conciencia Organizacional del Peligro",
-      "resumen_teorico": "Además del compromiso y la competencia, una organización necesita 'cognisance': una conciencia correcta y permanente de los peligros que amenazan sus operaciones. Dos síntomas revelan su ausencia: la 'paradoja posicional' (los directivos, con mayor autonomía decisional, culpan de los problemas de seguridad al personal de primera línea que solo sigue procedimientos) y el 'fenómeno del tick-off' (tratar las medidas de seguridad como equipos que se instalan y se marcan como completados, ignorando que son procesos que requieren vigilancia y ajuste continuo). Las organizaciones cognitivamente conscientes entienden que la 'guerra de la seguridad' es una lucha continua sin victoria final, y que un largo período sin accidentes graves señala mayor peligro, no paz.",
+      "resumen_teorico": "Con el compromiso y la competencia no basta: tu negocio necesita también 'cognisance', es decir, tener siempre presente, y bien entendido, qué peligros amenazan tus operaciones. Cuando falta, aparecen dos síntomas. Uno es la 'paradoja posicional': quienes dirigen, que son los que más margen tienen para decidir, achacan los problemas de seguridad a la gente de primera línea, que se limita a seguir los procedimientos. El otro es el 'fenómeno del tick-off': ver las medidas de seguridad como aparatos que basta con instalar y tachar de la lista, cuando en realidad son procesos que piden vigilancia y ajustes constantes. Quien tiene esta conciencia sabe que la 'guerra de la seguridad' es una lucha que no termina y que nunca se gana del todo, y que pasar mucho tiempo sin accidentes graves no anuncia paz, sino un peligro mayor.",
       "pasos_accionables": [
         "Evaluar si los líderes atribuyen los problemas de seguridad a fallos personales del personal operativo o a factores sistémicos",
         "Auditar si las medidas de seguridad implementadas reciben seguimiento continuo o solo se registran como 'completadas'",
@@ -17898,7 +17898,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Compensación de Riesgo (Risk Homeostasis)",
-      "resumen_teorico": "Las mejoras en protección introducidas tras un accidente suelen convertirse, con el tiempo, en ventajas productivas (mayor velocidad, más producción, menos precaución), anulando el beneficio de seguridad original o dejando una situación incluso peor que la anterior. Ejemplos históricos incluyen la lámpara Davy en minería y el radar marino, que permitieron operar en condiciones más riesgosas que antes. Este fenómeno se conoce como 'compensación de riesgo' u 'homeostasis de riesgo'.",
+      "resumen_teorico": "Cuando refuerzas la protección después de un accidente, esa mejora suele terminar, con el tiempo, al servicio de la producción: más velocidad, más volumen, menos precaución. El resultado es que el beneficio en seguridad desaparece o que la situación queda incluso peor que antes. Pasó con la lámpara Davy en las minas y con el radar en los barcos, que sirvieron para trabajar en condiciones de más riesgo que las de antes. Este fenómeno lleva el nombre de 'compensación de riesgo' u 'homeostasis de riesgo'.",
       "pasos_accionables": [
         "Revisar si las mejoras de seguridad implementadas han sido aprovechadas para aumentar la producción o velocidad de operación.",
         "Establecer políticas que impidan que las ganancias de protección se traduzcan en mayor exposición al riesgo.",
@@ -18180,7 +18180,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Riesgo de comprar solo por el precio más bajo",
-      "resumen_teorico": "Elegir siempre al proveedor más barato es un riesgo. Ese criterio ignora el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que puede provocar. El precio no significa nada sin una medida de la calidad que compras: sin ella, terminas con baja calidad y alto costo, con costos ocultos que aparecen después, en producción, ensamblaje o servicio.",
+      "resumen_teorico": "Quedarte siempre con el proveedor más barato es arriesgado, porque así no ves el costo total real: el retrabajo, las fallas de compatibilidad entre materiales y las pérdidas en producción que esa compra puede causarte. Un precio solo dice algo cuando sabes qué calidad estás pagando; si no la mides, acabas pagando caro por algo malo, y los costos escondidos salen a la luz más tarde, en producción, ensamblaje o servicio.",
       "pasos_accionables": [
         "Deja de usar el precio más bajo como el único criterio para decidir a quién le compras",
         "Calcula el costo total: lo que te cuesta rehacer trabajo, el tiempo perdido y las fallas",
@@ -19829,7 +19829,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Concientización y Entrenamiento en Seguridad para Personal",
-      "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, directivas, políticas, estándares, regulaciones o procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
+      "resumen_teorico": "Busca que tu personal conozca los riesgos de seguridad que traen sus propias actividades, y también las leyes, directivas, políticas, estándares, regulaciones o procedimientos que tocan la seguridad de tus sistemas, y que reciba la formación necesaria para cumplir con su parte en seguridad de la información. Lo que enseñes debe cubrir por qué importa la seguridad, las acciones concretas que le exiges (usar MFA, no compartir contraseñas), cómo responder ante incidentes, cómo manejar el CUI de forma segura y cómo detectar y reportar amenazas internas, ingeniería social y minería social.",
       "pasos_accionables": [
         "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
         "Proveer entrenamiento antes de autorizar acceso al sistema o a la información no clasificada controlada",
@@ -19951,7 +19951,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Condiciones Latentes de Largo Plazo en Infraestructura",
-      "resumen_teorico": "El caso del descarrilamiento de Nakina ilustra cómo una condición latente puede permanecer inactiva durante décadas (76 años) hasta que un evento local disparador (en este caso, la eliminación de castores y una temporada lluviosa) la activa, causando un accidente. La debilidad venía de la construcción original y no daba señales visibles: solo un análisis geotécnico detallado podía revelarla. Es un caso muy especial, porque lo habitual es que las debilidades latentes sean potencialmente, o incluso realmente, evidentes antes de un mal resultado.",
+      "resumen_teorico": "El descarrilamiento de Nakina muestra que una condición latente puede quedar dormida durante décadas (76 años) hasta que un detonante local (aquí, la eliminación de los castores sumada a una temporada de lluvias) la despierta y provoca el accidente. El punto débil estaba en la obra original y no se veía a simple vista: solo un estudio geotécnico detallado habría podido sacarlo a la luz. Por eso es un caso tan excepcional: lo más común es que una debilidad latente ya se pueda notar, o incluso ya esté a la vista, antes de que algo salga mal.",
       "pasos_accionables": [
         "Revisar el historial de diseño original de infraestructuras críticas, no solo su mantenimiento actual.",
         "Identificar interacciones entre políticas de mantenimiento y factores ambientales naturales. Cuentan entre ellos la eliminación de fauna, patrones climáticos",
@@ -19981,7 +19981,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Condiciones Latentes en Sistemas Complejos",
-      "resumen_teorico": "Las condiciones latentes son debilidades preexistentes y a menudo antiguas dentro de un sistema (fallas de diseño, construcción, mantenimiento, capacitación, supervisión) que permanecen dormidas hasta que interactúan con factores desencadenantes locales para producir un accidente organizacional. Los fallos activos (errores y violaciones de quienes están en la 'línea de fuego') son bastante comunes en estos accidentes, pero no son causas necesarias ni suficientes, mientras que las condiciones latentes están siempre presentes en sistemas complejos. El caso del descarrilamiento de Nakina (1992) ilustra esto: una vía férrea construida en 1916 sobre una presa de castores inestable colapsó 76 años después sin que hubiera errores activos de la tripulación o del personal de mantenimiento.",
+      "resumen_teorico": "Una condición latente es una debilidad que ya estaba en el sistema, muchas veces desde hace años, por fallas de diseño, construcción, mantenimiento, capacitación o supervisión. Se queda dormida hasta que se cruza con algún detonante local y entonces produce un accidente organizacional. En estos accidentes abundan los fallos activos, es decir, errores y violaciones de quienes están en la 'línea de fuego', pero no hacen falta para que el accidente ocurra ni bastan para provocarlo; las condiciones latentes, en cambio, nunca faltan en un sistema complejo. Lo ilustra el descarrilamiento de Nakina (1992): una vía tendida en 1916 sobre una presa de castores inestable cedió 76 años más tarde, sin ningún error activo de la tripulación ni del personal de mantenimiento.",
       "pasos_accionables": [
         "Identificar los procesos organizacionales genéricos (diseño, construcción, operación, mantenimiento, comunicación, selección, capacitación, supervisión, gestión) como fuentes potenciales de condiciones latentes.",
         "Realizar auditorías periódicas enfocadas en detectar debilidades estructurales, no solo errores humanos evidentes.",
@@ -20349,7 +20349,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Conexión mediante Datos Personales y Emocionales",
-      "resumen_teorico": "No todos los datos que tienes de tus clientes valen lo mismo para la relación. Un dato personal es único de esa persona (por ejemplo, dónde estudió); un dato emocional tiene carga afectiva fuerte e idealmente positiva (por ejemplo, cómo vivió esa etapa). Cuando un dato es las dos cosas a la vez, es el que más conexión genera. Usar el nombre del cliente es por donde empezar y una técnica muy simple para lograrlo.",
+      "resumen_teorico": "Los datos que guardas de tus clientes no pesan igual a la hora de crear relación. El dato personal pertenece solo a esa persona, como el lugar donde estudió; el emocional despierta en ella un sentimiento intenso, de preferencia positivo, como la manera en que vivió aquella etapa. El que reúne ambas cualidades es el que más te conecta con ella. Para empezar, usa su nombre: es una técnica muy sencilla y el punto de partida para lograrlo.",
       "pasos_accionables": [
         "Clasifica los datos que tienes de tus clientes en personales, emocionales, o ambos a la vez",
         "Da prioridad a recolectar los datos que caen en ambas categorías",
@@ -22413,7 +22413,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Gestión del Contacto con el Cliente en Organizaciones de Servicio",
-      "resumen_teorico": "En muchas organizaciones, solo algunos empleados (vendedores, cajeros, técnicos) tienen contacto directo con el cliente, y estos son quienes moldean la percepción del cliente sobre la empresa. Por eso, la capacidad de agradar al cliente debería ser prioridad máxima en la contratación y capacitación de estos 'hombres de contacto', pues son los clientes quienes sostienen el negocio.",
+      "resumen_teorico": "En muchos negocios solo unas cuantas personas (vendedores, cajeros, técnicos) tratan directamente con el cliente, y son ellas las que forman la imagen que el cliente se hace de la empresa. Como el negocio se sostiene gracias a sus clientes, al contratar y capacitar a esa gente de contacto tu prioridad máxima debería ser que sepan agradar al cliente.",
       "pasos_accionables": [
         "Identificar quiénes en la organización tienen contacto directo con el cliente, aunque seas tú mismo",
         "Priorizar en la contratación la capacidad de trato y servicio al cliente",
@@ -23323,7 +23323,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Control de Acceso y Principio de Mínimo Privilegio",
-      "resumen_teorico": "El Control de Acceso limita el acceso al sistema de información a usuarios autorizados, procesos actuando en su nombre, o dispositivos, y a los tipos de transacciones y funciones que estos usuarios están permitidos ejercer. El concepto fundamental de Mínimo Privilegio implica limitar los derechos de acceso solo a los usuarios que lo necesitan para cumplir sus tareas asignadas, incluyendo restringir privilegios administrativos solo a quienes los requieren.",
+      "resumen_teorico": "El control de acceso deja entrar a tu sistema de información solo a usuarios autorizados, a los procesos que actúan en su nombre o a dispositivos, y les permite únicamente las transacciones y funciones que tienen autorizadas. Su base es el mínimo privilegio: concedes cada derecho de acceso solo a quien lo necesita para cumplir las tareas que tiene asignadas, y reservas los privilegios de administrador para las personas que de verdad los requieren.",
       "pasos_accionables": [
         "Pon en marcha políticas que reserven el acceso a la información controlada no clasificada a las personas que lo necesitan para hacer su trabajo, y a nadie más",
         "Revisar información pública (sitio web de la empresa) para eliminar información controlada no clasificada expuesta",
@@ -24434,7 +24434,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Coordinación y Comunicación en Sitios Multiempleador",
-      "resumen_teorico": "Cuando en tu sitio de trabajo coexisten contratistas, subcontratistas o personal de agencias de staffing junto a tu propio equipo, necesitas coordinar y comunicar los peligros presentes para que todos reciban el mismo nivel de protección. No hacerlo puede debilitar tu programa de seguridad: si las políticas son inconsistentes, como las de uso de EPP, los trabajadores pueden creer por error que el equipo no hace falta y lesionarse, o dudar de la credibilidad del programa y participar menos en la prevención. Esto implica intercambiar información sobre riesgos y controles antes de iniciar labores y, según haga falta, cuando cambien las condiciones, definir a quién se reportan incidentes, dar acceso a registros de lesiones e inspecciones, incluir requisitos de seguridad en los contratos, y asegurar que el personal temporal llegue capacitado y equipado antes de comenzar a trabajar.",
+      "resumen_teorico": "Si en tu sitio trabajan, además de tu equipo, contratistas, subcontratistas o personas enviadas por agencias de staffing, te toca coordinarte con todos y avisarles de los peligros que hay, de modo que cada quien quede igual de protegido. Saltarte este paso puede minar tu programa de seguridad. Cuando cada empleador aplica reglas distintas, por ejemplo sobre el uso de EPP, alguien puede convencerse, sin razón, de que no necesita el equipo y terminar herido; también puede pasar que la gente deje de creer en el programa y se involucre menos en prevenir. En la práctica, compartes información sobre riesgos y controles antes de arrancar y, cuando haga falta, cada vez que cambien las condiciones; dejas claro a quién se le reportan los incidentes; abres el acceso a los registros de lesiones e inspecciones; pones requisitos de seguridad en los contratos, y te aseguras de que el personal temporal llegue capacitado y equipado antes de empezar.",
       "pasos_accionables": [
         "Establece el compromiso de brindar el mismo nivel de protección a todos los trabajadores presentes en el sitio, sin importar su empleador",
         "Comunica los peligros del sitio y las medidas de control antes de iniciar el trabajo, incluyendo riesgos no rutinarios o de emergencia, y actualiza esta información cuando cambien las condiciones",
@@ -26426,7 +26426,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Cribado de Datos (Data Screening)",
-      "resumen_teorico": "El cribado de datos consiste en detectar valores atípicos (outliers) o errores de transcripción antes del análisis. Un método común clasifica como outlier a observaciones fuera de un intervalo de L desviaciones estándar de la media (L típicamente 2.5, 3 o 4). Los outliers solo deben eliminarse si pueden rastrearse a causas específicas; de lo contrario existe riesgo de eliminar información valiosa. También se usan métodos visuales como diagramas de dispersión y análisis de regresión con residuos.",
+      "resumen_teorico": "Antes de analizar tus datos, revísalos para encontrar valores atípicos (outliers) o errores al transcribirlos: en eso consiste el cribado de datos. Una forma muy usada es fijar un número L, que suele ser 2.5, 3 o 4, y marcar como atípica cualquier observación que se aleje de la media más de L desviaciones estándar. Elimina un outlier solo cuando puedas atribuirlo a una causa concreta, porque si no corres el riesgo de tirar información valiosa. También te sirven métodos visuales como los diagramas de dispersión y el análisis de regresión con sus residuos.",
       "pasos_accionables": [
         "Calcular la media y desviación estándar del conjunto de datos",
         "Definir el multiplicador L según el tamaño de la muestra (ej. L=3 para n=1000, L=2.5 para n=100)",
@@ -26455,7 +26455,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Método de Cribado con Prueba Barata Antes de la Prueba Maestra",
-      "resumen_teorico": "Cuando la inspección al 100% es necesaria (pk2 > k1), se puede reducir el costo total usando primero una prueba barata ajustada para no aceptar nunca una parte que la prueba maestra rechazaría. Las partes que pasan la prueba barata se ponen directamente en producción; solo las que no pasan se someten a la prueba maestra más costosa. Esto puede lograr ahorros dignos de considerar si el costo de aplicar la prueba maestra a las partes no aceptadas no es demasiado alto.",
+      "resumen_teorico": "Si tus cuentas indican que te conviene revisar el 100% de las partes (pk2 > k1), puedes abaratar el costo total con un filtro previo: una prueba económica que calibras de modo que jamás deje pasar una parte que la prueba maestra fuera a rechazar. Todo lo que supera ese filtro va directo a producción, y solo lo que no lo supera pasa por la prueba maestra, que es la más cara. Cuando revisar con la prueba maestra esas partes no aceptadas no sale demasiado caro, el ahorro puede ser lo bastante grande como para tomarlo en serio.",
       "pasos_accionables": [
         "Verificar que se cumple la condición pk2 > k1 (inspección al 100% es óptima).",
         "Diseñar y calibrar una prueba barata que nunca acepte lo que la prueba maestra rechazaría.",
@@ -27541,7 +27541,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Función Recover y Playbook de Recuperación",
-      "resumen_teorico": "Recover involucra las actividades para restaurar activos y operaciones afectados por un incidente de ciberseguridad, incluyendo procesos formales de recuperación, priorización de restauración, y documentación de lecciones aprendidas.",
+      "resumen_teorico": "La función Recover reúne lo que haces para devolver a la normalidad los activos y las operaciones que dañó un incidente de ciberseguridad. Abarca seguir procesos formales de recuperación, decidir en qué orden restauras cada cosa y dejar por escrito las lecciones aprendidas.",
       "pasos_accionables": [
         "Identificar quién dentro y fuera del negocio tiene responsabilidades de recuperación",
         "Redacta un informe posterior al incidente donde quede registrado qué pasó, qué hiciste para responder y para recuperarte, y qué aprendiste.",
@@ -27568,7 +27568,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Perfiles Organizacionales del CSF (Current y Target Profile)",
-      "resumen_teorico": "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core. Incluye un Current Profile (estado actual), un Target Profile (estado deseado) o ambos, pudiendo usarse Community Profiles como base y Tiers para calificar el rigor de las prácticas.",
+      "resumen_teorico": "Tu perfil de ciberseguridad retrata, con los resultados del núcleo del marco, dónde está tu negocio hoy, adónde quiere llegar, o las dos cosas. Puede tener un perfil actual (Current Profile, el estado de hoy), un perfil objetivo (Target Profile, el estado deseado) o ambos; para armarlo puedes partir de un perfil de comunidad (Community Profile) y usar los niveles (Tiers) para calificar qué tan rigurosas son tus prácticas.",
       "pasos_accionables": [
         "Describe tu perfil actual: anota qué resultados de ciberseguridad ya consigues hoy, o estás tratando de conseguir, y hasta qué punto los alcanzas.",
         "Definir el perfil objetivo: qué resultados se han priorizado como objetivo de gestión de riesgo",
@@ -28324,7 +28324,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Cultura como Mecanismo de Descentralización Coordinada",
-      "resumen_teorico": "Una cultura organizacional fuerte crea un conjunto homogéneo de supuestos y premisas de decisión que, al ser invocados localmente, preservan la coordinación sin necesidad de vigilancia constante. Esto contrasta con la centralización por reglas o jerarquía, que exige alta supervisión y es ineficaz ante emergencias sin precedentes. La cultura permite el cumplimiento sin vigilancia porque las personas comparten los mismos marcos mentales de decisión.",
+      "resumen_teorico": "Cuando la cultura es fuerte, todas las personas parten de los mismos supuestos y criterios para decidir, y al aplicarlos cada una en su puesto el conjunto sigue coordinado sin que nadie tenga que vigilar todo el tiempo. Lo opuesto es coordinar a punta de reglas o de jerarquía: eso obliga a supervisar mucho y falla ante emergencias que nunca antes habían ocurrido. Con una cultura compartida la gente cumple sin vigilancia, porque piensa sus decisiones con los mismos marcos mentales.",
       "pasos_accionables": [
         "Identificar los supuestos y premisas de decisión compartidos que guían al personal en situaciones no estandarizadas",
         "Fomentar la socialización temprana del personal en estos valores compartidos antes de otorgar autonomía operativa",
@@ -28353,7 +28353,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Cultura de Aprendizaje Organizacional",
-      "resumen_teorico": "Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.",
+      "resumen_teorico": "Tener una cultura de aprendizaje significa que tu equipo sabe y quiere sacar las lecciones acertadas de lo que recoge su sistema de información de seguridad, y que está dispuesto a emprender cambios de fondo cuando esos datos muestran que hacen falta. Es la última pieza de la cultura de seguridad y la que cierra el ciclo: convierte la información reunida en mejoras concretas del sistema.",
       "pasos_accionables": [
         "Establecer mecanismos formales de análisis de datos del sistema de notificación de seguridad, incluida una forma sistemática de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
         "Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas",
@@ -28573,7 +28573,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Ingeniería de una Cultura de Reporte",
-      "resumen_teorico": "Una cultura de reporte es un clima organizacional en el que las personas están dispuestas a reportar sus propios errores y cuasi-accidentes (near-misses). Hay cinco factores clave para lograrlo: (1) indemnidad contra procesos disciplinarios, en la medida de lo practicable y con límites, (2) confidencialidad o des-identificación, (3) separación entre la agencia que recolecta reportes y quienes tienen autoridad disciplinaria, (4) retroalimentación rápida, útil y accesible a la comunidad reportante, y (5) facilidad para hacer el reporte. La confianza es el fundamento más importante de un programa de reporte exitoso.",
+      "resumen_teorico": "La cultura de reporte es el clima en el que las personas se animan a contar sus propios errores y los cuasi-accidentes (near-misses). Para construirla pesan cinco factores: (1) protegerlas de sanciones disciplinarias hasta donde sea posible, aunque con límites; (2) guardar la confidencialidad o quitar los datos que identifican a quien informa; (3) que quien recoge y analiza los reportes esté separado de quien tiene poder para sancionar; (4) devolver pronto a quienes reportan una respuesta útil y fácil de consultar; y (5) que reportar cueste poco. Un programa de reporte que funcione bien descansa, antes que en nada, en la confianza.",
       "pasos_accionables": [
         "Diseñar un sistema de indemnidad ante sanciones disciplinarias para reportes honestos",
         "Establecer protocolos de confidencialidad o des-identificación de los reportes",
@@ -28603,7 +28603,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Componentes de la Cultura de Seguridad",
-      "resumen_teorico": "La cultura de seguridad es el resultado de los valores, actitudes, competencias y patrones de comportamiento que determinan tu compromiso con la salud y la seguridad. Se compone de cuatro subcomponentes críticos que interactúan entre si: cultura de reporte, cultura justa, cultura flexible y cultura de aprendizaje. Juntos crean una cultura informada, en la que tu y las personas que te ayudan tienen conocimiento actualizado sobre los factores humanos, técnicos, organizacionales y ambientales que determinan la seguridad del conjunto.",
+      "resumen_teorico": "Tu compromiso con la salud y la seguridad nace de una mezcla de valores, actitudes, capacidades y hábitos de conducta: a eso se le llama cultura de seguridad. Tiene cuatro piezas clave que se influyen unas a otras: una cultura de reporte, una cultura justa, una cultura flexible y una cultura de aprendizaje. Cuando funcionan juntas aparece una cultura informada, en la que tú y quienes te ayudan saben al día qué factores humanos, técnicos, organizacionales y ambientales deciden la seguridad del conjunto.",
       "pasos_accionables": [
         "Evaluar el estado actual de cada uno de los cuatro subcomponentes en tu negocio",
         "Monta un sistema que reúna los datos de incidentes, casi accidentes y revisiones proactivas periódicas del estado del sistema, para analizarlos y compartirlos",
@@ -28719,7 +28719,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Cultura Flexible en Organizaciones de Alta Confiabilidad",
-      "resumen_teorico": "Las organizaciones de alta confiabilidad (high-reliability organizations) poseen la capacidad de reconfigurarse ante operaciones de alto ritmo o ciertos tipos de peligro. Una cultura flexible adopta varias formas, pero en muchos casos implica pasar del modo jerárquico convencional a una estructura profesional más plana, donde el control pasa a los expertos en la tarea presentes en el lugar, para luego revertir al modo burocrático tradicional una vez pasada la emergencia. Esta adaptabilidad depende crucialmente del respeto por las habilidades, experiencia y capacidades del personal y, sobre todo, de los supervisores de primera línea, respeto que debe ganarse mediante una inversión importante en capacitación.",
+      "resumen_teorico": "Las organizaciones de alta confiabilidad (high-reliability organizations) saben cambiar de forma cuando el ritmo de trabajo se dispara o cuando aparecen ciertos peligros. Esa cultura flexible puede tomar distintas formas; muchas veces consiste en dejar de lado la jerarquía de siempre y pasar a una estructura más plana y profesional, en la que mandan quienes dominan la tarea y están ahí en ese momento, para regresar a la estructura burocrática habitual cuando la emergencia termina. Que esto funcione depende sobre todo del respeto por las habilidades, la experiencia y la capacidad de tu gente y, más que nada, de tus supervisores de primera línea. Ese respeto no viene solo: lo ganas con una inversión fuerte en capacitación.",
       "pasos_accionables": [
         "Identificar situaciones de crisis donde la jerarquía tradicional impide respuestas ágiles",
         "Diseñar protocolos que permitan transferir autoridad a expertos técnicos durante emergencias",
@@ -28824,7 +28824,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Ingeniería de una Cultura Justa",
-      "resumen_teorico": "Una cultura justa es un atmósfera de confianza en la que se anima y hasta se recompensa a las personas por proporcionar información esencial relacionada con la seguridad, pero en la que también se tiene claridad sobre dónde trazar la línea entre comportamiento aceptable e inaceptable. No es lo mismo que una cultura de 'no culpa' (no-blame), ya que ciertos actos inseguros egregios (abuso de sustancias, incumplimiento imprudente, sabotaje) sí ameritan sanciones. El desafío está en discriminar entre estas pocas 'malas conductas' verdaderas y la mayoría de actos inseguros donde la atribución de culpa no es apropiada ni útil. Se basa en el análisis de tres elementos de la acción humana: intención, acción y consecuencias.",
+      "resumen_teorico": "En una cultura justa reina la confianza: animas, e incluso premias, a quien te da información clave sobre seguridad, y al mismo tiempo todos tienen claro qué conducta es aceptable y cuál cruza la raya. No equivale a una cultura de 'no culpa' (no-blame), porque algunos actos inseguros graves y evidentes, como el abuso de sustancias, el incumplimiento temerario o el sabotaje, sí merecen sanción. Lo difícil es separar esas pocas faltas de verdad de la gran mayoría de actos inseguros, en los que culpar a alguien ni corresponde ni sirve de nada. Todo descansa en analizar tres elementos de cualquier acción humana: la intención, la acción y sus consecuencias.",
       "pasos_accionables": [
         "Definir criterios claros y consensuados para distinguir comportamiento aceptable de inaceptable",
         "Establecer una línea explícita entre errores humanos normales y actos verdaderamente negligentes o maliciosos, y dejarla por escrito",
@@ -28949,7 +28949,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Cultura de Narrativas para Reducir la Brecha de Variedad Requerida",
-      "resumen_teorico": "Las tecnologías peligrosas enfrentan el problema de 'requisite variety': la complejidad del sistema supera la capacidad de quienes deben controlarlo, causando diagnósticos incompletos y remedios miopes. Una cultura que valora las 'historias de guerra' (war stories), la comunicación cara a cara y equipos de trabajo diversos aumenta el conocimiento colectivo sobre errores potenciales y mejora la confianza para manejarlos, funcionando como sustituto del aprendizaje por ensayo-error, que es limitado en sistemas de alto riesgo.",
+      "resumen_teorico": "Cuando trabajas con una tecnología peligrosa, el sistema encierra más complejidad de la que alcanzan a abarcar quienes lo controlan: es el problema de la variedad requerida ('requisite variety'), que deja diagnósticos incompletos y remedios miopes. Te ayuda una cultura que aprecia las 'historias de guerra' (war stories), conversa cara a cara y arma equipos diversos: así crece lo que todos saben sobre los errores posibles y la confianza para enfrentarlos, y eso reemplaza al aprendizaje por ensayo y error, que en sistemas de alto riesgo tiene poco margen.",
       "pasos_accionables": [
         "Establecer espacios formales e informales donde el personal comparta experiencias de errores e incidentes pasados",
         "Promover la comunicación cara a cara en lugar de canales impersonales cuando se trata de temas de seguridad complejos",
@@ -32841,7 +32841,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Defensas Peligrosas: Paradojas de las Barreras de Seguridad",
-      "resumen_teorico": "Las defensas, barreras y salvaguardas diseñadas para proteger contra un tipo de peligro pueden exponer a sus usuarios a otros tipos de riesgo no previstos por quienes las crearon —ilustrado históricamente con la armadura de placas en la batalla de Agincourt (1415), que protegía de armas penetrantes pero volvía a los caballeros indefensos al caer al suelo. En sistemas de alta tecnología, las defensas redundantes y diversas han reducido eventos adversos en términos absolutos, pero han transformado la naturaleza de los accidentes que sí ocurren y la relación entre componentes humanos y técnicos del sistema. Es esencial que gestores y operadores comprendan tanto las ventajas como los peligros de las defensas multicapa.",
+      "resumen_teorico": "Toda barrera, defensa o salvaguarda que pones contra un peligro puede dejar expuesto a quien la usa ante otro riesgo distinto, uno que quien la diseñó no vio venir. En Agincourt, en 1415, la armadura de placas frenaba las armas que perforan, pero el caballero que caía al suelo quedaba sin forma de defenderse. En los sistemas de alta tecnología, sumar defensas variadas y redundantes bajó la cantidad total de eventos adversos, aunque cambió el tipo de accidente que todavía ocurre y la manera en que se relacionan las personas y la parte técnica del sistema. Por eso, quien dirige y quien opera necesitan entender lo que esas capas de defensa aportan y también los peligros que traen.",
       "pasos_accionables": [
         "Analizar cada capa de defensa/seguridad implementada preguntando: ¿qué nuevo riesgo podría estar introduciendo esta protección?",
         "Revisar incidentes y casi accidentes ('lecciones gratis') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
@@ -35841,7 +35841,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Diseño para Ensamblaje (DFA)",
-      "resumen_teorico": "Metodología para evaluar el diseño de partes y ensamblajes con el fin de identificar piezas innecesarias y determinar tiempos y costos de ensamblaje. Busca simplificar el producto reduciendo el número de partes, mejorando calidad, confiabilidad y acortando ciclos de desarrollo.",
+      "resumen_teorico": "Metodología para revisar cómo diseñaste cada pieza y el conjunto armado, descubrir qué partes sobran y calcular cuánto tiempo y dinero cuesta ensamblarlo. Su propósito es dejar tu producto más simple y con menos piezas, para ganar calidad y confiabilidad y acortar los ciclos de desarrollo.",
       "pasos_accionables": [
         "Evaluar la contribución de costo de cada parte del ensamblaje",
         "Aplicar estrategias de reducción de partes combinando funciones en una sola pieza, hasta donde sea económicamente viable",
@@ -36729,7 +36729,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Detección de Defectos Extremadamente Raros mediante Cartas de Control",
-      "resumen_teorico": "Cuando la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos), inspeccionar el producto terminado ya sea de forma visual o mecánica deja de ser confiable: necesitarías muestras enormes y el error estándar sería muy alto para saber realmente qué está pasando. Con requisitos extremos de confiabilidad, la única forma posible de saber qué está pasando es mediante cartas de control (X-barra y R) construidas con mediciones reales tomadas durante el proceso, no al final. Estas cartas muestran si el proceso permanece estable o si algo cambió, y si algo cambió, retienes la tanda producida hasta encontrar la causa.",
+      "resumen_teorico": "Si tu proceso produce defectos en una proporción extremadamente baja (por ejemplo 1 en 5000 o menos), revisar el producto terminado, a ojo o con máquina, ya no te da información confiable: necesitarías muestras enormes y aun así el error estándar sería demasiado alto para conocer de verdad lo que ocurre. Cuando las exigencias de confiabilidad son extremas, solo puedes saberlo con cartas de control (X-barra y R) alimentadas con mediciones reales de las piezas mientras se fabrican, no al terminar. Esas cartas te indican si el proceso sigue igual o si algo se alteró; en ese segundo caso, detienes la tanda producida hasta dar con la causa.",
       "pasos_accionables": [
         "Determina si la fracción defectuosa de tu proceso es extremadamente baja (por ejemplo 1 en 5000 o menos).",
         "Reemplaza la inspección masiva del producto terminado por mediciones continuas durante el proceso.",
@@ -37150,7 +37150,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Determinación del Alcance y Aplicabilidad de SP 800-171",
-      "resumen_teorico": "Los requisitos de seguridad de SP 800-171 solo aplican a los componentes de sistemas no federales que procesan, almacenan o transmiten CUI, o que proveen protección a dichos componentes. Un alcance adecuado es clave para decisiones de inversión en protección y gestión de riesgos. Se puede limitar el alcance aislando componentes en un dominio de seguridad separado mediante subredes, firewalls u otros dispositivos de protección perimetral, usando separación física, lógica o ambas.",
+      "resumen_teorico": "Los requisitos de seguridad de SP 800-171 no cubren todo tu negocio: alcanzan únicamente a los componentes de tus sistemas no federales que procesan, almacenan o transmiten CUI, y a los que protegen esos componentes. Delimitar bien ese alcance pesa mucho cuando decides cuánto invertir en protección y cómo manejar tus riesgos. Puedes reducirlo si apartas esos componentes en un dominio de seguridad propio, separado con subredes, firewalls u otros equipos que protejan el perímetro; esa separación puede ser física, lógica o una mezcla de las dos.",
       "pasos_accionables": [
         "Haz la lista de cada sistema y componente de tu negocio y traza por dónde les entran los datos, cómo circulan dentro de cada uno y por dónde salen.",
         "Identificar cuáles sistemas procesan, almacenan o transmiten CUI, y cuáles les proveen protección",
@@ -40770,7 +40770,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Diseño de Recordatorios Efectivos para Prevenir Omisiones",
-      "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados, aunque no los eliminan del todo: son primeros auxilios. Soluciones más duraderas serían diseñar piezas que solo puedan instalarse bien, que el sistema se desactive solo al detectar piezas faltantes y, más de fondo, eliminar la necesidad de contacto manual en las inspecciones. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
+      "resumen_teorico": "En el mantenimiento, saltarse un paso es un error frecuente; un recordatorio bien diseñado lo reduce mucho, aunque no lo elimina del todo, porque es solo una medida de primeros auxilios. Si buscas algo más duradero, puedes apostar por piezas que no admitan una instalación incorrecta, por un sistema que se desactive por sí mismo cuando detecte que falta alguna pieza y, como remedio de fondo, por inspecciones que ya no necesiten contacto manual. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Como criterios secundarios, puede ser también comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (sigue visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Diseñarlos así te ayuda a reducir costos y accidentes causados por olvidos en procedimientos con pasos secuenciales.",
       "pasos_accionables": [
         "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
         "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y verificable",
@@ -41454,7 +41454,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Distribuciones de Probabilidad (Continuas y Discretas)",
-      "resumen_teorico": "Una distribución de probabilidad relaciona los valores de una característica con su probabilidad de ocurrencia en la población. Se dividen en continuas (datos variables, como la distribución normal, exponencial o Weibull) y discretas (datos de atributos, como Poisson o binomial). Comprender estas distribuciones es fundamental para modelar datos y estimar probabilidades en la gestión de calidad.",
+      "resumen_teorico": "Cuando mides una característica, cada valor posible tiene su probabilidad de aparecer en la población; la distribución de probabilidad es lo que los relaciona. Hay dos familias: las continuas, para datos de variables, como la normal, la exponencial o la de Weibull, y las discretas, para datos de atributos, como la de Poisson o la binomial. Entenderlas es clave para modelar tus datos y estimar probabilidades al gestionar la calidad.",
       "pasos_accionables": [
         "Determinar si los datos son de tipo variable (continuo) o atributo (discreto)",
         "Seleccionar la distribución teórica apropiada (normal, exponencial, Weibull, Poisson, binomial)",
@@ -43363,7 +43363,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Economía de Inspección mediante Construcción de Subensambles Intermedios",
-      "resumen_teorico": "El costo de corrección (k2) suele multiplicarse en cada etapa del proceso de producción y puede alcanzar valores muy altos en el ensamblaje final. A veces es posible evitar este costo extremo construyendo subensambles intermedios, inspeccionándolos y ajustándolos antes de integrarlos al ensamblaje final, tratando cada subensamble como un nuevo punto de partida con su propio análisis de costo k1/k2.",
+      "resumen_teorico": "A lo largo de la línea de producción, el costo de corregir una falla (k2) suele multiplicarse etapa tras etapa y puede volverse muy alto al llegar al ensamblaje final. En ocasiones puedes esquivar ese costo extremo si armas subensambles intermedios, los inspeccionas y los ajustas antes de unirlos al producto final. Cada subensamble pasa entonces a ser un nuevo punto de partida, con su propio análisis de costos k1/k2.",
       "pasos_accionables": [
         "Dividir el proceso de producción en etapas de subensamblaje intermedio.",
         "Aplicar la teoría de costos k1/k2 a cada subensamblaje de forma independiente.",
@@ -45369,7 +45369,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Eliminación de Estándares de Trabajo Numéricos",
-      "resumen_teorico": "Los estándares de trabajo basados en números (cuotas de producción, medición de jornada) deben ser reemplazados por conocimiento competente y liderazgo. Estos estándares fijan un límite artificial que no fomenta la mejora continua y quitan el orgullo por el trabajo bien hecho.",
+      "resumen_teorico": "Los estándares de trabajo hechos de números, como las cuotas de producción o la jornada medida, tienen que dar paso al liderazgo y al conocimiento competente. Ponen un techo artificial que no empuja a mejorar de forma continua, y a la gente le quitan el orgullo de hacer bien su trabajo.",
       "pasos_accionables": [
         "Identificar todos los estándares numéricos de trabajo vigentes en la planta",
         "Sustituir dichos estándares por criterios de liderazgo basados en conocimiento del proceso",
@@ -45606,7 +45606,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Eliminación de Metas Numéricas Internas sin Método",
-      "resumen_teorico": "Fijar metas numéricas internas (ej. 'aumentar productividad 3%') sin un plan o método concreto para lograrlas es una farsa gerencial. Esta 'gestión por números' suele ser en realidad gestión por miedo y no aporta conocimiento sobre cómo mejorar el proceso. Si un sistema es estable, no sirve fijar una meta: se obtendrá lo que el sistema puede dar, y una meta más allá de su capacidad no se alcanzará; si es inestable, tampoco, porque no hay capacidad predecible. La única cifra válida es un hecho claro sobre la supervivencia del negocio.",
+      "resumen_teorico": "Ponerte metas numéricas internas (por ejemplo, 'subir la productividad un 3%') sin un plan ni un método concreto para alcanzarlas es una farsa de gestión. Eso que llaman 'gestión por números' suele ser, en el fondo, gestión por miedo, y no te enseña nada sobre cómo mejorar el proceso. Con un sistema estable la meta sobra: obtendrás lo que el sistema es capaz de dar, y cualquier meta por encima de esa capacidad quedará sin cumplir. Con un sistema inestable tampoco sirve, porque su capacidad no es predecible. La única cifra que vale es un hecho claro sobre la supervivencia del negocio.",
       "pasos_accionables": [
         "Revisar las metas numéricas actuales de gerencia y verificar si cuentan con un plan de acción concreto",
         "Eliminar metas que solo se basen en deseos o presión sin método definido",
@@ -47507,7 +47507,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)",
-      "resumen_teorico": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Lo que la tecnología o la sociedad considera 'seguridad suficiente' influye en cómo se reducen los accidentes y sus consecuencias, y es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa, salvo interrupciones en épocas de crisis económica o alto desempleo.",
+      "resumen_teorico": "Para decidir qué cuenta como 'seguro' al gestionar riesgos tienes varios criterios: ALARP (bajar el riesgo tanto como sea razonablemente practicable), el riesgo comparativo (medirlo contra riesgos que la sociedad ya acepta), de minimis (tratarlo como trivial, por lo general en 10^-6) y riesgo cero. La idea de 'seguridad suficiente' que tengan la tecnología o la sociedad pesa en cómo se reducen los accidentes y sus consecuencias. Además, esa vara se mueve: a medida que la sociedad avanza, se desplaza hacia el riesgo cero, con pausas en épocas de crisis económica o de mucho desempleo.",
       "pasos_accionables": [
         "Determinar qué enfoque de riesgo aceptable aplica al contexto regulatorio o industrial de la organización",
         "Justificar la elección del enfoque frente a partes interesadas y reguladores",
@@ -47614,7 +47614,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Enseñanza deficiente de métodos estadísticos en la industria",
-      "resumen_teorico": "La capacitación masiva y apresurada en métodos estadísticos, impartida por instructores incompetentes, genera más daño que beneficio. La correcta enseñanza de cartas de control y teoría estadística requiere conocimiento profundo (nivel de maestría) y experiencia bajo la guía de un experto. La enseñanza universitaria de la teoría suele ser excelente y su aplicación a estudios enumerativos casi siempre correcta, pero muchos libros de texto fallan al aplicarla a problemas analíticos de predicción y mejora continua.",
+      "resumen_teorico": "Formar a mucha gente a toda prisa en métodos estadísticos, con instructores sin la competencia necesaria, hace más daño que bien. Para enseñar bien cartas de control y teoría estadística hace falta un dominio profundo (de nivel de maestría), sumado a experiencia acumulada junto a alguien experto. Las universidades suelen enseñar la teoría de forma excelente y casi siempre la aplican bien a los estudios enumerativos; donde muchos libros de texto fallan es al llevarla a problemas analíticos, los de predicción y mejora continua.",
       "pasos_accionables": [
         "Verificar las credenciales y experiencia real de quienes imparten capacitación estadística",
         "Diferenciar entre estudios enumerativos y estudios analíticos antes de aplicar técnicas",
@@ -48190,7 +48190,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Entrenamiento en Función del Control Estadístico",
-      "resumen_teorico": "Cuando el trabajo de una persona ha alcanzado el control estadístico, la hayan entrenado bien o mal, ha completado su aprendizaje de esa tarea particular; por eso importa entrenar bien a quien llega a un puesto. Continuar entrenándola de la misma forma no es económico, aunque podría beneficiarse de aprender otra tarea. Sin embargo, si el trabajo aún no ha alcanzado el control estadístico, más entrenamiento sí ayuda. En un estado de caos (mala supervisión, mala gestión, nada bajo control estadístico) es imposible que alguien desarrolle su potencial de uniformidad o calidad. La carta de control indica cuándo una persona ha llegado al estado de control estadístico.",
+      "resumen_teorico": "Cuando una persona ya lleva su trabajo al control estadístico, terminó de aprender esa tarea concreta, sin importar si la formaron bien o mal; de ahí la importancia de enseñarle bien desde que entra al puesto. Seguir entrenándola con el mismo método ya no compensa lo que cuesta, aunque aprender una tarea distinta sí podría servirle. En cambio, mientras su trabajo no llegue al control estadístico, entrenarla más sí le ayuda. Y si reina el caos, con supervisión deficiente, mala gestión y nada bajo control estadístico, nadie puede desplegar su capacidad de trabajar con uniformidad o con calidad. Es la carta de control la que te muestra en qué momento alguien alcanzó ese estado.",
       "pasos_accionables": [
         "Establecer cartas de control para monitorear el aprendizaje de cada trabajador",
         "Espera a que la curva de aprendizaje se aplane y entonces consulta la carta de control: te dirá si la persona ya llegó al control estadístico y en qué momento",
@@ -49153,7 +49153,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Erosión de Defensas por Períodos sin Accidentes",
-      "resumen_teorico": "Un largo período sin accidentes graves puede erosionar la protección porque las demandas productivas (crecimiento, ganancias, participación de mercado) toman prioridad. La inversión en protección declina, el mantenimiento de las defensas existentes se descuida y la producción crece sin defensas nuevas o ampliadas, aumentando el riesgo de un accidente catastrófico futuro. Este fenómeno se conoce como el peligro del 'bote que no se mece'.",
+      "resumen_teorico": "Cuando pasa mucho tiempo sin un accidente grave, tu protección puede irse desgastando, porque el crecimiento, las ganancias y la participación de mercado pasan a tener prioridad. Inviertes menos en protegerte, dejas de cuidar las defensas que ya tienes y aumentas la producción sin sumar defensas nuevas ni ampliar las existentes; así sube el riesgo de sufrir más adelante un accidente catastrófico. Es el peligro conocido como el del 'bote que no se mece'.",
       "pasos_accionables": [
         "Auditar la inversión en mantenimiento de seguridad durante los últimos períodos sin incidentes.",
         "Implementar revisiones periódicas obligatorias de defensas independientemente del historial de accidentes.",
@@ -49331,7 +49331,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "El Error Humano como Consecuencia, no como Causa",
-      "resumen_teorico": "El error humano suele presentarse en medios y reportes como una 'causa' de accidentes, pero en realidad es una consecuencia de factores organizacionales y del lugar de trabajo que lo moldean y provocan. Identificar un error es solo el inicio de la búsqueda de causas, no el final. La razón por la que las personas aceptan tan fácilmente el 'error humano' como explicación es el 'error fundamental de atribución': tendemos a atribuir el mal desempeño de otros a rasgos de personalidad duraderos (descuido, incompetencia) en lugar de a la situación, mientras que atribuimos nuestro propio mal desempeño a las circunstancias.",
+      "resumen_teorico": "En la prensa y en los informes, el error humano aparece a menudo como la 'causa' de un accidente. En realidad es un efecto: lo moldean y lo provocan factores organizacionales y del lugar de trabajo. Por eso, encontrar el error no cierra la búsqueda de causas, apenas la abre. Si te preguntas por qué cuesta tan poco aceptar el 'error humano' como explicación, la respuesta está en el 'error fundamental de atribución': cuando otros rinden mal, tendemos a culpar a rasgos estables de su carácter, como el descuido o la incompetencia, y no a la situación; cuando el mal desempeño es nuestro, lo achacamos a las circunstancias.",
       "pasos_accionables": [
         "Al investigar un incidente, tratar el error identificado como punto de partida, no como conclusión",
         "Buscar sistemáticamente los factores del lugar de trabajo y organizacionales que provocaron el error",
@@ -50962,7 +50962,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Establecimiento de Metas de Calidad",
-      "resumen_teorico": "Idealmente, las metas de calidad deberían ser legítimas (con estatus oficial indudable), medibles (comunicables con precisión), alcanzables (evidenciadas por logros de otros) y equitativas (comparables entre responsabilidades similares). Se establecen combinando análisis tecnológico para productos/procesos y benchmarking externo/necesidades del negocio para funciones y personas, en lugar de basarse en el desempeño histórico.",
+      "resumen_teorico": "Las metas de calidad, en el caso ideal, cumplen cuatro rasgos: que nadie dude de su carácter oficial (legítimas), que puedas comunicarlas sin ambigüedad (medibles), que otros ya las hayan conseguido (alcanzables) y que pidan un esfuerzo parecido a quienes tienen responsabilidades similares (equitativas). Para fijarlas, combina el análisis tecnológico en productos y procesos con el benchmarking externo y las necesidades del negocio en funciones y personas, en vez de partir del desempeño histórico.",
       "pasos_accionables": [
         "Definir metas cuantificables y comunicables con precisión",
         "Validar que las metas ya hayan sido alcanzadas por otras organizaciones o referentes",
@@ -52157,7 +52157,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Estrategia de Gestión de Riesgo y Tolerancia al Riesgo",
-      "resumen_teorico": "La estrategia de gestión de riesgo guía las decisiones sobre cómo se enmarca, evalúa, responde y monitorea el riesgo, haciendo explícitas las percepciones de riesgo usadas en decisiones de inversión y operación. Define la tolerancia al riesgo, es decir, el nivel de riesgo o incertidumbre aceptable para la organización, el cual no tiene un valor 'correcto' universal sino que suele basarse en la cultura organizacional, puede variar según el tipo de pérdida y puede estar influido por la tolerancia al riesgo de quienes dirigen.",
+      "resumen_teorico": "Tu estrategia de gestión de riesgo es la guía para decidir cómo planteas el riesgo, cómo lo evalúas, cómo respondes a él y cómo lo vigilas; además, deja a la vista qué idea del riesgo hay detrás de tus decisiones de inversión y de operación. En ella fijas tu tolerancia al riesgo: cuánto riesgo o cuánta incertidumbre estás dispuesto a aceptar. No existe un nivel correcto que sirva para todos; esa tolerancia suele salir de la cultura de tu negocio, puede cambiar de un tipo de pérdida a otro y puede verse influida por lo que toleran quienes lo dirigen.",
       "pasos_accionables": [
         "Documentar supuestos, restricciones, prioridades y compensaciones de riesgo.",
         "Definir explícitamente el nivel de tolerancia al riesgo de la organización.",
@@ -53313,7 +53313,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Estudio de Lealtad del Cliente",
-      "resumen_teorico": "A diferencia de las encuestas de satisfacción, que tienen limitaciones metodológicas importantes, puedes hacer un estudio de lealtad del cliente en persona, con entrevistadores capacitados, cada seis meses aproximadamente y con las mismas personas. Esto te permite saber qué mejoras concretas harían que los clientes que perdiste regresen, y calcular el impacto financiero de hacer esas mejoras o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
+      "resumen_teorico": "Frente a las encuestas de satisfacción, cuyos métodos tienen limitaciones importantes, tienes otra opción: el estudio de lealtad del cliente. Puedes hacerlo cara a cara, más o menos cada seis meses, con entrevistadores bien preparados y volviendo siempre a las mismas personas. Así descubres qué mejoras concretas traerían de vuelta a los clientes que perdiste y calculas el impacto financiero de hacerlas o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
       "pasos_accionables": [
         "Diseña preguntas estandarizadas, pensadas con cuidado, sobre tus productos y tu desempeño, para hacérselas a tus clientes y también a quienes dejaron de serlo",
         "Entrena a quienes hagan las entrevistas para que puedan hacer seguimiento y preguntas que aclaren las respuestas",
@@ -54196,7 +54196,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Evaluación de la Cultura de Seguridad Más Allá de sus Componentes",
-      "resumen_teorico": "Tener los elementos 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía supervisora, mejoras implementadas) no equivale a tener una cultura de seguridad real. La cultura es algo que la organización 'es' más que algo que 'tiene', pero para llegar a ese estado primero debe poseer los componentes esenciales. Conviene que te hagas una serie de preguntas críticas sobre responsabilidad en el consejo directivo, presupuesto y jerarquía del área de seguridad, tratamiento de la información organizacional, costeo de las pérdidas por incidentes y número de especialistas en factores humanos y organizacionales.",
+      "resumen_teorico": "Contar con las piezas 'de ingeniería' de una cultura de seguridad (sistema de reporte, política disciplinaria justa, autonomía para quien supervisa, mejoras aplicadas) no significa que esa cultura exista de verdad. Más que algo que tu negocio tiene, la cultura es algo que tu negocio es; aun así, ese estado no llega sin que antes reúnas sus componentes esenciales. Conviene que te hagas varias preguntas críticas: quién responde por la seguridad en el consejo directivo, qué presupuesto y rango tiene el área de seguridad, cómo manejas la información de seguridad, cómo calculas lo que te cuestan los incidentes y cuántos especialistas en factores humanos y organizacionales tienes.",
       "pasos_accionables": [
         "Responder honestamente las preguntas clave: ¿quién en la junta directiva es responsable de la seguridad organizacional?, ¿se discute en reuniones regulares de alto nivel?",
         "Evaluar el presupuesto, personal y nivel jerárquico del área que recopila y analiza información de seguridad",
@@ -55295,7 +55295,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Evaluación de Controles Implementados",
-      "resumen_teorico": "La evaluación determina si los controles están implementados correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+      "resumen_teorico": "Evaluar tus controles es comprobar tres cosas frente a tus requisitos de seguridad y privacidad: que quedaron bien puestos, que funcionan como esperabas y que logran el resultado buscado. Primero eliges quién evalúa, alguien de dentro o alguien independiente; luego preparas los planes de evaluación y los apruebas, los ejecutas y, al final, recoges los hallazgos en un informe acompañado de un plan de acción y remediación (POA&M).",
       "pasos_accionables": [
         "Seleccionar un individuo o equipo responsable de la evaluación de controles (Tarea A-1).",
         "Desarrollar, revisar y aprobar planes de evaluación (Tarea A-2).",
@@ -57313,7 +57313,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "La falacia del cero defectos",
-      "resumen_teorico": "La suposición de que todo está bien dentro de los límites de especificación y mal fuera de ellos no corresponde a la realidad. Una descripción más precisa es la función de pérdida de calidad, donde la pérdida es mínima en el valor nominal y aumenta progresivamente conforme se aleja de él en cualquier dirección. Dispositivos que fuerzan el cumplimiento de especificaciones ('cero defectos') pueden destaparse una distribución angosta y aumentar las pérdidas reales.",
+      "resumen_teorico": "Dar por bueno todo lo que queda dentro de los límites de especificación y por malo todo lo que queda fuera es una idea que no se ajusta a la realidad. La describe mejor la función de pérdida de calidad: la pérdida es mínima justo en el valor nominal y crece cada vez más a medida que te apartas de él, hacia un lado o hacia el otro. Los dispositivos que fuerzan el cumplimiento de la especificación ('cero defectos') pueden arruinar la ventaja de una distribución angosta y aumentar las pérdidas reales.",
       "pasos_accionables": [
         "Reemplazar el criterio binario de conformidad/no conformidad por la función de pérdida de calidad",
         "Buscar reducir la variación alrededor del valor nominal, no solo estar dentro de límites",
@@ -57337,7 +57337,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "La falacia de culpar únicamente a los trabajadores",
-      "resumen_teorico": "Existe la creencia generalizada de que los problemas de producción se resolverían si la persona que hace el trabajo simplemente lo hiciera bien. En realidad, la mayoría de las oportunidades de mejora residen en el sistema, no en el desempeño individual de quien ejecuta, que está limitado por las condiciones que tú has establecido.",
+      "resumen_teorico": "Mucha gente cree que bastaría con que quien hace el trabajo lo hiciera bien para que los problemas de producción desaparecieran. La realidad es otra: la mayor parte de lo que puedes mejorar está en el sistema y no en lo que rinde cada persona, porque su desempeño queda limitado por las condiciones que tú mismo pusiste.",
       "pasos_accionables": [
         "Analizar qué porcentaje de defectos son atribuibles al sistema versus a quien ejecuta la tarea",
         "Revisar diseño de producto, especificaciones, materiales entrantes y mantenimiento de máquinas antes de culpar a la persona",
@@ -57716,7 +57716,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Falta de Constancia de Propósito (La Enfermedad Más Incapacitante)",
-      "resumen_teorico": "Es la primera y más incapacitante de las enfermedades mortales: la ausencia de un compromiso constante para planear productos y servicios que tengan mercado, mantengan tu negocio en marcha y generen empleo. Mucha gente dirige su negocio pensando solo en el resultado del mes o la ganancia inmediata, y eso sacrifica la inversión continua en investigación, capacitación, mejora de procesos, producto y servicio que fideliza al cliente a largo plazo. Sin esta constancia, tu negocio prioriza lo visible de corto plazo sobre su propia continuidad futura, poniendo en riesgo tanto la permanencia de tu empresa como los empleos que genera.",
+      "resumen_teorico": "Es la primera enfermedad mortal y la que más incapacita: no sostener en el tiempo el empeño de planear productos y servicios que la gente vaya a comprar, que mantengan vivo tu negocio y que den trabajo. Mucha gente dirige su negocio mirando solo el resultado del mes o la ganancia inmediata, y así sacrifica la inversión continua en investigación, capacitación, mejora de procesos, producto y servicio que hace que el cliente vuelva a largo plazo. Sin esa constancia, tu negocio antepone lo visible y cercano a su propia continuidad, y pone en riesgo tanto la permanencia de tu empresa como los empleos que genera.",
       "pasos_accionables": [
         "Define una declaración de propósito para tu negocio a largo plazo, más allá del resultado del mes",
         "Evalúa tus decisiones actuales bajo el criterio de si fortalecen la permanencia futura de tu negocio",
@@ -57808,7 +57808,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Fase 5: Acclimate (Aclimatar)",
-      "resumen_teorico": "El cliente aprende y se acostumbra a la forma particular de operar de la organización. Las empresas suelen asumir erróneamente que los clientes ya conocen sus procesos internos, cuando lo más probable es que sea la primera vez que el cliente los experimenta. Si no se guía adecuadamente al cliente en este proceso, nunca se convertirá en un cliente leal a largo plazo.",
+      "resumen_teorico": "En esta fase tu cliente va conociendo tu manera particular de trabajar y se va habituando a ella. Es común que un negocio dé por hecho que sus clientes ya entienden cómo funciona por dentro, y se equivoca: lo más probable es que para el cliente sea su primera vez con ese proceso. Si no lo acompañas bien mientras se adapta, nunca llegará a ser un cliente fiel por mucho tiempo.",
       "pasos_accionables": [
         "Crear materiales de bienvenida que expliquen claramente 'cómo trabajamos aquí'.",
         "Acompañar activamente al cliente durante su proceso de adaptación (no asumir que ya sabe).",
@@ -58127,7 +58127,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Fase 7: Adopt (Adoptar)",
-      "resumen_teorico": "El cliente toma posesión de la relación, liderando el fortalecimiento del vínculo con la marca. Muestra con orgullo su apoyo y afinidad, sintiéndose parte de una 'tribu' exclusiva. Si no se le hace sentir parte de algo especial con recompensas y lenguaje compartido, nunca se logrará su lealtad completa.",
+      "resumen_teorico": "En esta fase tu cliente se adueña de la relación y es él quien empuja para que el lazo con tu marca se vuelva más hondo y más firme. Exhibe con orgullo que te apoya y que se identifica contigo, porque se siente miembro de una 'tribu' exclusiva. Si no logras que sienta que pertenece a algo especial, con recompensas propias y un lenguaje que comparten, jamás tendrás su lealtad completa.",
       "pasos_accionables": [
         "Crear una comunidad o 'tribu' exclusiva para clientes que han alcanzado esta etapa.",
         "Ofrecer recompensas y reconocimientos únicos para quienes adoptan la marca.",
@@ -58159,7 +58159,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Fase Adopt del Ciclo de Vida del Cliente",
-      "resumen_teorico": "La fase Adopt ocurre cuando el cliente ha adoptado completamente el producto/servicio y ve resultados significativos, y probablemente también mejoras en áreas inesperadas de su vida o negocio. Es el momento de formalizar una relación de largo plazo usando los canales que elijas entre los seis de comunicación (en persona, email, correo físico, teléfono, video, regalo) para recompensar la lealtad y profundizar el vínculo, antes de que el cliente pase a la fase Advocate.",
+      "resumen_teorico": "Tu cliente entra en la fase Adopt cuando ya usa de lleno tu producto o servicio y obtiene resultados importantes; lo más probable es que, además, note mejoras en partes de su vida o de su negocio que no esperaba. Aprovecha ese punto para darle forma a una relación de largo plazo: escoge, entre los seis canales de comunicación (en persona, email, correo físico, teléfono, video, regalo), los que prefieras para premiar su lealtad y estrechar el vínculo antes de que pase a la fase Advocate.",
       "pasos_accionables": [
         "Define qué comportamientos/métricas indican que un cliente ha 'adoptado' tu producto",
         "Diseña interacciones específicas considerando cada uno de los 6 canales (en persona, correo electrónico, correo físico, teléfono, video, regalo), sin que haga falta usarlos todos",
@@ -58314,7 +58314,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Fase 1: Assess (Evaluar)",
-      "resumen_teorico": "En esta fase tu cliente potencial está decidiendo si quiere hacer negocios contigo. Aprende qué esperar de ti y comparte, de forma explícita o implícita, sus expectativas. Esto es lo que tradicionalmente se llama 'ventas y marketing'. Si no logras posicionarte como la solución envuelta en una gran experiencia, el cliente no avanzará con la compra.",
+      "resumen_teorico": "Tu cliente potencial está evaluando aquí si le conviene hacer negocios contigo. Mientras lo piensa, va descubriendo qué puede esperar de ti y te deja ver sus expectativas, tanto con palabras como sin ellas. Es el terreno que por tradición recibe el nombre de 'ventas y marketing'. Si no consigues mostrarte como la solución que necesita, rodeada de una gran experiencia, no dará el paso de comprarte.",
       "pasos_accionables": [
         "Investiga los intereses y motivaciones personales del cliente potencial antes de la reunión de ventas.",
         "Comunica con claridad cómo tu oferta resuelve la necesidad específica del cliente potencial.",
@@ -62112,7 +62112,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Fundamentos de la Gestión de Riesgo (Frame, Assess, Respond, Monitor)",
-      "resumen_teorico": "La gestión de riesgo es un proceso integral compuesto por cuatro actividades: enmarcar el riesgo (establecer contexto, tolerancia, estrategia), evaluar el riesgo (identificar, priorizar y estimar impactos), responder al riesgo (aceptar, evitar, mitigar, compartir o transferir) y monitorear el riesgo (verificar que las respuestas planificadas se implementaron, determinar su efectividad continua y monitorear el riesgo de forma continua). Conviene entender estas actividades antes de explorar en detalle el Risk Management Framework (RMF) de NIST.",
+      "resumen_teorico": "Gestionar el riesgo es un proceso completo con cuatro actividades. Primero lo enmarcas: fijas el contexto, cuánto riesgo toleras y con qué estrategia lo vas a manejar. Después lo evalúas: lo identificas, lo priorizas y estimas su impacto. Luego respondes, eligiendo entre aceptarlo, evitarlo, mitigarlo, compartirlo o transferirlo. Por último lo monitoreas: compruebas que las respuestas que planeaste se pusieron en marcha, revisas si siguen siendo efectivas y no le quitas el ojo al riesgo. Conviene tenerlas claras antes de entrar al detalle del Risk Management Framework (RMF) de NIST.",
       "pasos_accionables": [
         "Definir el contexto de riesgo de la organización (misión, activos, entorno).",
         "Establecer la tolerancia al riesgo organizacional.",
@@ -62375,7 +62375,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Garantía de Devolución para Eliminar el Miedo a la Pérdida",
-      "resumen_teorico": "Una garantía de devolución de dinero elimina dos elementos centrales de la disonancia cognitiva postcompra: el miedo a perder el dinero invertido y el miedo al compromiso a largo plazo. Empresas como Casper, Zappos, CarMax y Lands' End han usado políticas de devolución generosas (desde 5 días hasta garantía de por vida) como herramienta estratégica de confianza; en Lands' End, la lealtad de sus clientes mantiene las devoluciones dentro del estándar de su industria.",
+      "resumen_teorico": "Ofrecer la devolución del dinero quita de golpe dos de los motivos principales de la disonancia cognitiva que siente quien acaba de comprar: el temor a quedarse sin lo que invirtió y el temor a quedar atado por mucho tiempo. Casper, Zappos, CarMax y Lands' End han convertido sus políticas de devolución generosas, que van desde 5 días hasta una garantía de por vida, en una herramienta estratégica para ganarse la confianza; en el caso de Lands' End, sus clientes son tan leales que las devoluciones no se salen del estándar de su industria.",
       "pasos_accionables": [
         "Evaluar el nivel de riesgo percibido por el cliente al comprar tu producto/servicio",
         "Diseñar una política de devolución o garantía que elimine ese riesgo específico",
@@ -63080,7 +63080,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Gestión de Configuración y Mínima Funcionalidad",
-      "resumen_teorico": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
+      "resumen_teorico": "Implica fijar y mantener al día las configuraciones base y los inventarios de tus sistemas (hardware, software, firmware y documentación), junto con los ajustes de seguridad de los productos de tecnología que usas. Su idea central es la mínima funcionalidad: dejas el sistema con solo las capacidades esenciales para tu misión y desactivas o quitas las funciones, puertos, protocolos y servicios que sobran o que no son seguros.",
       "pasos_accionables": [
         "Limitar quién puede realizar cambios en sistemas que contienen información no clasificada controlada (CUI)",
         "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
@@ -63334,7 +63334,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Gestión de Errores (Error Management - EM)",
-      "resumen_teorico": "La Gestión de Errores tiene dos componentes: reducción de errores (medidas para limitar su ocurrencia) y contención de errores (medidas para limitar las consecuencias adversas de los errores que igualmente ocurren, dado que la reducción nunca será totalmente exitosa). Incluye medidas para minimizar la propensión al error individual/equipo, reducir la vulnerabilidad de tareas específicas, descubrir y eliminar factores productores de error en el lugar de trabajo, diagnosticar factores organizacionales causantes, mejorar la detección de errores, aumentar la tolerancia del sistema, hacer visibles las condiciones latentes y mejorar la resistencia intrínseca de la organización a la falibilidad humana. Las prácticas tradicionales de EM suelen ser reactivas, centradas en fallos activos y en atribución personal en lugar de situacional.",
+      "resumen_teorico": "Gestionar errores implica dos frentes. Uno es reducirlos, con medidas para que ocurran menos. El otro es contenerlos: como nunca vas a lograr reducirlos del todo, necesitas también medidas que limiten el daño de los que igual se produzcan. Abarca acciones para bajar la tendencia a equivocarse de cada persona o equipo, hacer menos vulnerables ciertas tareas, encontrar y quitar del lugar de trabajo lo que provoca errores, diagnosticar los factores organizacionales que los originan, detectar mejor los errores, volver el sistema más tolerante a ellos, sacar a la luz las condiciones latentes y reforzar la resistencia propia de tu negocio ante la falibilidad humana. La forma tradicional de gestionar errores suele ser reactiva, se concentra en las fallas activas y le atribuye la culpa a la persona en lugar de mirar la situación.",
       "pasos_accionables": [
         "Diseñar medidas de reducción de errores (mejorar diseño de tareas, información, entrenamiento)",
         "Diseñar medidas de contención de errores (detección temprana, barreras, tolerancia del sistema)",
@@ -65296,7 +65296,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Protección de Medios (Media Protection)",
-      "resumen_teorico": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
+      "resumen_teorico": "Cuida cualquier soporte que guarde CUI, sea digital o no (memorias USB, discos, papel): que solo lo consulte quien tiene autorización y que, antes de desecharlo o darle otro uso, la información se borre de forma segura o el soporte se destruya.",
       "pasos_accionables": [
         "Inventariar qué medios contienen información controlada no clasificada (CUI).",
         "Establecer procedimientos de préstamo y devolución de medios físicos.",
@@ -65323,7 +65323,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Seguridad del Personal",
-      "resumen_teorico": "Asegura que las personas, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad; protege la información durante y después de despidos o transferencias, y sanciona formalmente a quien incumpla las políticas de seguridad.",
+      "resumen_teorico": "Comprueba que quienes trabajan contigo, también los proveedores externos, sean de fiar y cumplan los criterios de seguridad; cuando despides a alguien o lo transfieres, cuida la información durante el cambio y después; y aplica sanciones formales a quien no respete tus políticas de seguridad.",
       "pasos_accionables": [
         "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
         "Definir políticas de desvinculación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
@@ -65346,7 +65346,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Protección Física de Instalaciones y Sistemas",
-      "resumen_teorico": "Limita a personas autorizadas el acceso físico a sistemas, equipos y entornos operativos, aun en sitios de trabajo alternos; protege la instalación y su infraestructura, provee servicios de soporte y controla amenazas ambientales.",
+      "resumen_teorico": "Deja entrar solo a personas autorizadas donde están tus sistemas, tus equipos y su entorno de operación, también en sitios de trabajo alternos; cuida el local y su infraestructura, asegura los servicios de apoyo y controla las amenazas del ambiente.",
       "pasos_accionables": [
         "Desarrollar y mantener una lista de personas autorizadas a acceder a las instalaciones.",
         "Emitir credenciales de identificación para empleados y visitantes.",
@@ -65373,7 +65373,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Plan de Seguridad del Sistema (System Security Plan)",
-      "resumen_teorico": "Desarrolla, actualiza periódicamente e implementa planes de seguridad para los sistemas organizacionales, describiendo las medidas de seguridad existentes o planeadas y las reglas de comportamiento para quienes acceden a ellos.",
+      "resumen_teorico": "Para cada sistema, escribe un plan de seguridad que diga qué medidas de protección ya tiene o tendrá y qué reglas de conducta deben seguir quienes entran en él; ponlo en práctica y revísalo cada cierto tiempo para mantenerlo al día.",
       "pasos_accionables": [
         "Definir componentes del sistema y tipos de información procesada, almacenada y transmitida.",
         "Describir amenazas específicas al sistema y su entorno operativo, incluidas sus dependencias o conexiones con otros sistemas o componentes.",
@@ -65402,7 +65402,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Evaluación de Riesgos (Risk Assessment)",
-      "resumen_teorico": "Evalúa periódicamente los riesgos a las operaciones, activos e individuos de la organización derivados del uso de sistemas que procesan CUI, considerando amenazas, vulnerabilidades, probabilidad e impacto, incluyendo riesgos de terceros y de la cadena de suministro.",
+      "resumen_teorico": "Cada cierto tiempo, revisa qué riesgos corren tus operaciones, tus activos y las personas por usar sistemas que procesan CUI. Toma en cuenta las amenazas, las vulnerabilidades, qué tan probable es cada riesgo y cuánto daño haría, sin dejar fuera los que vienen de terceros y de tu cadena de suministro.",
       "pasos_accionables": [
         "Convocar un equipo multidisciplinario (incluyendo proveedores/contratistas) para el análisis.",
         "Inventariar todos los sistemas, datos y activos físicos que procesan información no clasificada controlada (CUI), incluidos los de terceros.",
@@ -65432,7 +65432,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Evaluación de Seguridad y Monitoreo Continuo",
-      "resumen_teorico": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
+      "resumen_teorico": "Revisa cada cierto tiempo si tus requisitos de seguridad están dando resultado; arma un Plan de Acción y Cronograma (POAM) para corregir lo que falle y vigila el sistema de forma continua, de modo que tengas en qué apoyarte al decidir cómo gestionar el riesgo.",
       "pasos_accionables": [
         "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
         "Desarrollar un Plan de Acción y Cronograma (POAM) detallando debilidades, responsables, recursos y fechas de mitigación.",
@@ -65483,7 +65483,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Protección de Comunicaciones y Límites del Sistema",
-      "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+      "resumen_teorico": "Pon bajo vigilancia y control las comunicaciones de tu negocio en los límites externos de tu sistema y en sus límites internos clave, y protégelas; cifra la CUI para que siga siendo confidencial cuando viaja (con TLS o IPsec) y cuando está guardada.",
       "pasos_accionables": [
         "Monitorear y controlar comunicaciones en interfaces gestionadas (pasarelas, enrutadores, cortafuegos).",
         "Separar redes internas de las públicas mediante subredes.",
@@ -65510,7 +65510,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Integridad de Sistemas e Información",
-      "resumen_teorico": "Identifica, reporta y corrige fallas de sistema oportunamente, provee protección contra código malicioso, y monitorea alertas de seguridad para actuar en consecuencia, además de gestionar la retención adecuada de CUI.",
+      "resumen_teorico": "Detecta a tiempo las fallas de tus sistemas, avísalas y arréglalas; protégete contra el código malicioso; sigue de cerca las alertas de seguridad para responder como corresponde, y administra bien cuánto tiempo conservas el CUI.",
       "pasos_accionables": [
         "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
         "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
@@ -68388,7 +68388,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Identificación, Autenticación y Autenticación Multifactor (MFA)",
-      "resumen_teorico": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son eficaces para proteger tus datos contra la mayoría de los atacantes.",
+      "resumen_teorico": "Antes de dejar que un usuario, un proceso o un dispositivo use los recursos de tu sistema, tienes que confirmar que es quien dice ser. Hoy una contraseña por sí sola ya no basta para proteger tus datos de la mayoría de los atacantes, así que la autenticación multifactor (MFA) es un refuerzo importante: pide que la identidad se pruebe con al menos dos de estos tres factores, algo que la persona sabe (una contraseña o un PIN), algo que tiene (una tarjeta inteligente o una llave de seguridad) y algo que es (su huella o su rostro).",
       "pasos_accionables": [
         "Implementar autenticación multifactor (MFA) para acceso a cuentas privilegiadas y no privilegiadas",
         "Definir reglas de contraseñas para la organización",
@@ -69713,7 +69713,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Implementación de Controles en el Lugar de Trabajo",
-      "resumen_teorico": "Una vez definido y aprobado el plan de control, los controles deben implementarse siguiendo las prioridades establecidas en él. Cuando los recursos son limitados, aplica el enfoque 'lo peor primero', priorizando el control de los peligros más serios. Independientemente del nivel de prioridad relativa, implementa de inmediato las medidas simples y económicas, como orden, limpieza, iluminación y remoción de riesgos de tropiezo. Los peligros serios reconocidos deben controlarse sin demora. Este proceso también aplica cuando necesitas ejecutar medidas correctivas identificadas en inspecciones previas, asegurando que la ejecución en el sitio sea consistente con lo planificado.",
+      "resumen_teorico": "Con tu plan de control ya definido y aprobado, pon en marcha los controles en el orden de prioridad que fijaste ahí. Si te faltan recursos, empieza por lo peor primero: atiende antes los peligros más serios. Las medidas sencillas y baratas, como mantener el orden y la limpieza, mejorar la iluminación y quitar aquello con lo que alguien pueda tropezar, aplícalas de inmediato, ocupen el lugar que ocupen en tu lista de prioridades. Un peligro serio que ya tienes identificado no espera: contrólalo sin demora. Todo esto vale también cuando te toca ejecutar las correcciones que salieron de inspecciones anteriores, cuidando que lo que haces en el sitio coincida con lo que planificaste.",
       "pasos_accionables": [
         "Implementar los controles según las prioridades establecidas en el plan",
         "Pon en marcha ya las medidas fáciles y baratas, como el orden, la limpieza y la iluminación, sin fijarte en la prioridad relativa que tengan",
@@ -69798,7 +69798,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Implementación de Controles de Seguridad y Privacidad",
-      "resumen_teorico": "Una vez seleccionados los controles, se procede a implementarlos y documentarlos formalmente. No siempre es posible implementar los controles exactamente como se planificó, por lo que es necesario documentar las revisiones necesarias que reflejen cómo se implementó realmente cada control, actualizando los planes de seguridad y privacidad.",
+      "resumen_teorico": "Con los controles ya elegidos, toca ponerlos en marcha y dejarlos documentados formalmente. Puede que no logres aplicar alguno tal como lo planeaste; en ese caso, anota los cambios que hagan falta para que quede claro cómo lo aplicaste en realidad, y actualiza con ellos tus planes de seguridad y privacidad.",
       "pasos_accionables": [
         "Implementar los controles seleccionados y adaptados.",
         "Actualizar los planes de seguridad y privacidad para reflejar cambios necesarios en la implementación.",
@@ -71132,7 +71132,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Inspección del Lugar de Trabajo para Identificar Peligros de Seguridad",
-      "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
+      "resumen_teorico": "Un mantenimiento descuidado, equipos que se desgastan, trabajos que avanzan o procesos que cambian: todo eso puede traer peligros nuevos con el paso del tiempo. Recorre tu lugar de trabajo cada cierto tiempo para encontrar las condiciones peligrosas antes de que alguien sufra un incidente. Si puedes, suma a otros trabajadores a la revisión y deja registro de lo que encuentres con fotos o video; apóyate en listas de verificación por tipo de riesgo, como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Adelanta estas revisiones cuando llegue equipo nuevo o cambien los procesos, y examina los cambios propuestos antes de ponerlos en marcha para prevenir riesgos desde el diseño.",
       "pasos_accionables": [
         "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
         "Pregúntales a otros trabajadores qué peligros han visto o reportado, y llévalos contigo cuando inspecciones",
@@ -72071,7 +72071,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Inventario y Aprovechamiento del Conocimiento Estadístico Interno",
-      "resumen_teorico": "Muchas empresas tienen empleados con formación estadística avanzada (maestrías, estudios en una universidad cercana) cuyo talento no es aprovechado. Así como las empresas hacen inventario de propiedad física, deberían hacer inventario del conocimiento disponible internamente, dando a estas personas la oportunidad de trabajar bajo la guía de un estadístico competente y continuar su educación.",
+      "resumen_teorico": "En muchas empresas hay personas con formación estadística avanzada (con maestría, o estudiando en una universidad cercana) cuyo talento nadie aprovecha. Si las empresas llevan la cuenta de sus bienes físicos, también deberían llevar la del conocimiento que ya tienen dentro: identifica a esa gente y dale la oportunidad de trabajar guiada por un estadístico competente y de seguir formándose.",
       "pasos_accionables": [
         "Realizar un mapeo del personal con formación o interés en estadística, matemáticas o teoría de probabilidad",
         "Identificar oportunidades para que estas personas trabajen bajo la guía de un líder estadístico competente",
@@ -74590,7 +74590,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Diferencia entre Legislación de Riesgos Específicos y Riesgos Organizacionales",
-      "resumen_teorico": "Las legislaciones de seguridad más exitosas históricamente (acopladores Janney en ferrocarriles, límites de velocidad, cinturones de seguridad) han sido efectivas porque atacan actos inseguros específicos con peligros, situaciones y personas en riesgo bien conocidas. Sin embargo, el mismo grado de especificidad, o incluso de comprensión, no existe para los accidentes organizacionales, lo que deja abierta la pregunta de cómo pueden los reguladores limitar mejor estos eventos catastróficos pero infrecuentes.",
+      "resumen_teorico": "Las leyes de seguridad que mejor han funcionado a lo largo de la historia, como los acopladores Janney en los ferrocarriles, los límites de velocidad o el cinturón de seguridad, deben su eficacia a que apuntan a actos inseguros concretos, en los que el peligro, la situación y las personas expuestas se conocen bien. Los accidentes organizacionales no cuentan con esa precisión, y ni siquiera con esa comprensión, así que sigue pendiente saber cómo pueden los reguladores contener mejor unos eventos tan catastróficos como poco frecuentes.",
       "pasos_accionables": [
         "Clasificar el tipo de riesgo que se busca regular: riesgo individual específico vs riesgo organizacional sistémico",
         "Para riesgos específicos, diseñar reglas prescriptivas claras dirigidas al acto inseguro concreto",
@@ -75458,7 +75458,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "El Límite en la Búsqueda de Causas Distales (¿Ha Ido el Péndulo Demasiado Lejos?)",
-      "resumen_teorico": "En los últimos años el análisis de accidentes se ha expandido cada vez más hacia atrás: de actos inseguros a factores organizacionales, reguladores, e incluso factores societales y económicos. Cabe preguntarse si este alcance ha llegado al punto de rendimientos decrecientes, especialmente para fines de remediación. Los factores individuales tienen valor explicativo, predictivo y remedial pequeño-moderado; los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; los factores más remotos (sociales, económicos) tienen rendimientos decrecientes, particularmente para contramedidas prácticas, ya que están fuera del alcance de los gestores del sistema.",
+      "resumen_teorico": "En los últimos años, el análisis de accidentes ha ido buscando causas cada vez más atrás: de los actos inseguros pasó a los factores organizacionales y regulatorios, y hasta a los sociales y económicos. Vale la pena que te preguntes si ese alcance ya llegó a dar rendimientos decrecientes, sobre todo cuando lo que buscas es corregir. Mirar solo a la persona deja un valor entre pequeño y moderado para explicar, predecir y remediar; lo que más valor suma es el entorno de trabajo y la organización; y las causas más lejanas, como las sociales o las económicas, rinden cada vez menos, en especial para tomar medidas concretas, porque quedan fuera del alcance de quien gestiona el sistema.",
       "pasos_accionables": [
         "Al investigar un accidente, evaluar en qué punto el análisis causal deja de aportar valor correctivo práctico",
         "Enfocar recursos de investigación en factores de lugar de trabajo y organizacionales, que ofrecen el mayor retorno",
@@ -77011,7 +77011,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Mantenimiento de Sistemas que Procesan CUI",
-      "resumen_teorico": "Consiste en realizar mantenimiento periódico y oportuno a los sistemas de información organizacionales, y proveer controles efectivos sobre las herramientas, técnicas, mecanismos y personal usados para realizar el mantenimiento del sistema. Sin este mantenimiento, los sistemas quedan vulnerables a riesgos de ciberseguridad, exponiendo potencialmente el CUI. Incluye consideraciones especiales para el mantenimiento remoto (no local), como asegurar MFA en las sesiones de mantenimiento y terminar completamente la conexión al finalizar.",
+      "resumen_teorico": "Se trata de darles a tus sistemas de información un mantenimiento regular y a tiempo, y de controlar bien las herramientas, técnicas, mecanismos y personas que lo hacen. Si lo descuidas, tus sistemas quedan abiertos a riesgos de ciberseguridad y el CUI puede terminar expuesto. El mantenimiento a distancia (no local) pide cuidados propios, como exigir MFA en cada sesión y cerrar la conexión por completo cuando el trabajo acaba.",
       "pasos_accionables": [
         "Identificar las herramientas usadas para diagnóstico y reparación del sistema, y las personas u organizaciones autorizadas para darle mantenimiento, considerando credenciales temporales para externos",
         "Fija cada cuánto toca dar mantenimiento, comprueba que ese calendario se respete y lleva registro tanto de las revisiones previstas como de cualquier reparación urgente",
@@ -78517,7 +78517,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Maintenance Error Decision Aid (MEDA)",
-      "resumen_teorico": "MEDA es una herramienta para investigar errores de mantenimiento en aviación, aplicable a cualquier actividad de mantenimiento crítica para la seguridad. Consta de cinco secciones que cubren qué pasó, cómo y por qué ocurrió el error, qué defensas fallaron y qué soluciones potenciales existen. Opera tanto a nivel de investigación de línea como de análisis de tendencias organizacionales.",
+      "resumen_teorico": "MEDA nació en la aviación para indagar errores de mantenimiento, pero sirve en cualquier mantenimiento del que dependa la seguridad. Su recorrido tiene cinco secciones: primero reconstruyes lo que pasó, luego averiguas cómo y por qué se cometió el error, después ubicas las defensas que no funcionaron y al final anotas las posibles soluciones. Trabaja en dos planos: la investigación de cada caso en línea y el análisis de tendencias organizacionales.",
       "pasos_accionables": [
         "Completar la Sección 1-3 documentando qué ocurrió (aerolínea, tipo de evento, naturaleza del fallo)",
         "Clasificar el tipo de lapso o error de mantenimiento según las categorías definidas",
@@ -78977,7 +78977,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Sistema de Ayudas de Navegación: Medidas Reactivas y Proactivas",
-      "resumen_teorico": "Las ayudas de navegación en seguridad se dividen en dos categorías: medidas reactivas (aplicadas después de un evento, revelando patrones recurrentes de causa-efecto a través del análisis de múltiples incidentes) y medidas proactivas (aplicadas antes de un evento, evaluando la 'salud de seguridad' del sistema mediante chequeos regulares de condiciones organizacionales y defensas). Un error común es enfocarse solo en eventos individuales, lo que lleva a contramedidas dirigidas a fallos humanos aislados, ignorando que los accidentes organizacionales tienen causas múltiples. El análisis de varios eventos relacionados usando un marco clasificatorio común revela patrones que guían qué procesos muestrear proactivamente.",
+      "resumen_teorico": "Para orientarte en seguridad cuentas con dos tipos de ayudas. Las reactivas solo sirven después de que algo ocurre: cuando analizas muchos incidentes juntos, dejan ver las cadenas de causa y efecto que se repiten. Las proactivas se usan antes de cualquier evento y revisan con regularidad la 'salud de seguridad' del sistema, mirando sus condiciones organizativas de fondo y sus defensas. Un tropiezo frecuente es quedarte en cada evento por separado: así terminas con medidas que apuntan a fallos humanos sueltos y olvidas que un accidente organizacional nace de varias causas a la vez. Si estudias varios eventos emparentados con un mismo esquema de clasificación, aparecen patrones que te indican qué procesos conviene revisar por muestreo de forma preventiva.",
       "pasos_accionables": [
         "Implementar un marco clasificatorio común para analizar múltiples incidentes pasados (no solo casos aislados)",
         "Identificar patrones recurrentes de causa-efecto en las condiciones locales y organizacionales",
@@ -80157,7 +80157,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Establecer Metas de Seguridad Correctas: Gestión de Procesos vs. Resultados Negativos",
-      "resumen_teorico": "Muchas veces tratas la gestión de seguridad como producción negativa, fijando metas de reducción de accidentes (por ejemplo, reducir a la mitad los accidentes con tiempo perdido). Pero los accidentes no son directamente controlables porque gran parte de su varianza causal está fuera de tu alcance. La gestión efectiva de seguridad se parece más a un programa de acondicionamiento físico a largo plazo: en vez de intentar controlar directamente los incidentes, debes medir y mejorar regularmente los procesos manejables (diseño, hardware, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación, conflictos de metas) que están implicados en los accidentes. La meta alcanzable no es cero accidentes, sino llegar a la región de máxima resistencia del espacio de seguridad y mantenerte ahí, integrando esto como parte central de tu negocio y no como un añadido aislado.",
+      "resumen_teorico": "Es frecuente que encares la seguridad como si fuera producción al revés y te pongas metas de bajar accidentes, por ejemplo reducir a la mitad los que hacen perder días de trabajo. El problema es que no puedes controlar los accidentes de forma directa: buena parte de lo que los causa escapa a tu alcance. Gestionar bien la seguridad se parece más a seguir un plan de entrenamiento físico de largo plazo. En lugar de intentar dominar los incidentes de manera directa, mide y mejora con regularidad los procesos que sí puedes manejar y que intervienen en los accidentes: diseño, equipos, entrenamiento, procedimientos, mantenimiento, planificación, presupuesto, comunicación y conflictos entre metas. Lo alcanzable no es llegar a cero accidentes, sino alcanzar la zona del espacio de seguridad donde la resistencia es máxima y quedarte ahí, haciendo de esto una parte central de tu negocio y no un agregado suelto.",
       "pasos_accionables": [
         "Reemplazar metas de reducción de accidentes por metas de mejora de procesos manejables (diseño, entrenamiento, mantenimiento, procedimientos)",
         "Identificar qué procesos de tu negocio han estado implicados históricamente en accidentes previos",
@@ -82672,7 +82672,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Tres Modelos de Gestión de la Seguridad: Persona, Ingeniería y Organizacional",
-      "resumen_teorico": "Existen tres enfoques distintos para gestionar la seguridad, cada uno con una perspectiva diferente del error humano. El modelo de la persona se centra en actos inseguros individuales y factores psicológicos (descuido, falta de motivación), usando campañas de miedo, premios/castigos, auditorías de comportamiento, escribir otro procedimiento, formación y selección. El modelo de ingeniería ve la seguridad como algo a diseñar en el sistema, enfocándose en el desajuste humano-máquina mediante HAZOPS, HAZANS, PRA y ergonomía. El modelo organizacional considera el error humano más como consecuencia de condiciones latentes en el sistema que como causa, vinculado a la gestión de calidad total. Los tres modelos pueden coexistir armónicamente reconociendo sus fortalezas y debilidades según el dominio de aplicación.",
+      "resumen_teorico": "Hay tres maneras de encarar la seguridad, y cada una entiende el error humano a su modo. La primera mira a la persona: atribuye los fallos a actos inseguros de cada individuo y a causas psicológicas como el descuido o la poca motivación, y responde con campañas que apelan al miedo, premios y castigos, auditorías de comportamiento, un procedimiento escrito más, formación y selección. La segunda es la de ingeniería: trata la seguridad como algo que diseñas dentro del sistema y pone el foco en el desajuste entre las personas y las máquinas, con herramientas como HAZOPS, HAZANS, PRA y la ergonomía. La tercera, la organizacional, ve el error humano menos como causa y más como efecto de condiciones latentes del sistema, y está emparentada con la gestión de calidad total. Puedes hacer convivir las tres sin choques si tienes claros sus puntos fuertes y débiles y el dominio en el que rinde cada una.",
       "pasos_accionables": [
         "Diagnosticar qué modelo(s) predomina actualmente en la organización y sus métricas asociadas (ej. el índice de frecuencia de lesiones con tiempo perdido para el modelo de persona)",
         "Identificar las brechas: ¿se están ignorando los riesgos organizacionales por enfocarse solo en lesiones individuales?",
@@ -83636,7 +83636,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Definición Operacional de Selección Aleatoria",
-      "resumen_teorico": "Un procedimiento de muestreo aleatorio debe estar operacionalmente definido: numerar todas las unidades del marco muestral, y usar un procedimiento aceptado, escrito de antemano (tabla estándar de números aleatorios, o números generados bajo la guía de alguien que conozca las trampas de esa generación) para seleccionar unidades sin duplicar. Una muestra no es 'aleatoria' o 'no aleatoria' en sí misma; lo que se evalúa es si el procedimiento de selección cumple con la definición prescrita. Esto es clave para que las inspecciones de calidad y auditorías tengan validez estadística.",
+      "resumen_teorico": "Define tu muestreo aleatorio en términos operativos: asigna un número a cada unidad del marco muestral y elige las unidades, sin repetir ninguna, con un procedimiento aceptado que dejes escrito antes de empezar, ya sea una tabla estándar de números aleatorios o números que generes guiado por alguien que conozca los errores típicos al producirlos. La muestra por sí sola no es aleatoria ni deja de serlo; lo que juzgas es el procedimiento con que la elegiste, que cumple la definición fijada o no la cumple. De eso depende que tus inspecciones de calidad y tus auditorías tengan validez estadística.",
       "pasos_accionables": [
         "Numerar todas las unidades del marco muestral de 1 a N.",
         "Definir por escrito, antes de seleccionar, el procedimiento de generación de números aleatorios a usar.",
@@ -85690,7 +85690,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Los Ocho Desperdicios de Lean (Ohno)",
-      "resumen_teorico": "Existen siete tipos de desperdicio en procesos productivos, más un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Estos desperdicios existen en la mayoría de los procesos y, si no se atienden, llevan a procesos de bajo desempeño. Debes enfocarte en reducir o eliminar estos desperdicios, típicamente mediante eventos de mejora rápida tipo Kaizen.",
+      "resumen_teorico": "En la mayoría de los procesos aparecen ocho formas de desperdicio: siete pensadas para la producción y una octava que apunta al talento que no aprovechas. Son la sobreproducción, la espera, el transporte, un proceso mal diseñado, el inventario, el movimiento, los defectos y la creatividad o el talento propios que quedan subutilizados. Si los dejas sin atender, tu proceso termina rindiendo poco. Concéntrate en reducirlos o eliminarlos; lo típico es hacerlo con eventos de mejora rápida al estilo Kaizen.",
       "pasos_accionables": [
         "Mapea el proceso actual identificando cada uno de los ocho tipos de desperdicio",
         "Cuantifica el impacto de cada desperdicio detectado",
@@ -85751,7 +85751,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Las Ocho Fases de la Experiencia del Cliente",
-      "resumen_teorico": "Todo cliente atraviesa potencialmente ocho fases emocionales y funcionales en su relación con una empresa: Assess, Admit, Affirm, Activate, Acclimate, Accomplish, Adopt y Advocate. Estas fases ocurren en el mismo orden sin importar la industria o tipo de cliente. La mayoría de las empresas se detienen entre las fases 4 y 6, perdiendo la oportunidad de generar clientes leales y promotores (advocates). Diseñar deliberadamente la experiencia emocional en cada fase, como hace una película con su audiencia, es clave para el éxito.",
+      "resumen_teorico": "Quien te compra puede pasar por ocho fases, emocionales y funcionales, a lo largo de su relación con un negocio: Assess, Admit, Affirm, Activate, Acclimate, Accomplish, Adopt y Advocate. El orden nunca cambia, sea cual sea la industria o el tipo de cliente. La mayor parte de los negocios se atascan en algún punto entre la cuarta y la sexta fase, y así dejan escapar la ocasión de tener clientes leales y promotores (advocates). Para tener éxito, diseña a propósito lo que tu cliente siente en cada fase, igual que una película diseña lo que siente su audiencia.",
       "pasos_accionables": [
         "Identificar en qué fase se encuentra actualmente cada segmento de clientes.",
         "Diseñar la experiencia emocional deseada para cada una de las ocho fases.",
@@ -86024,7 +86024,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Onboarding basado en Comunidad y Lenguaje Compartido",
-      "resumen_teorico": "Un proceso de incorporación estructurado que combina educación progresiva, asignación de mentores/coaches personalizados según la personalidad del cliente, introducción a un lenguaje o cultura propia de la marca, y eventos sociales, genera un fuerte sentido de pertenencia. Aunque es más caro y puede intimidar al principio, esto incrementa dramáticamente la retención y a menudo transforma a clientes escépticos en miembros comprometidos de una comunidad.",
+      "resumen_teorico": "Cuando incorporas a tus clientes con un proceso estructurado, que los educa paso a paso, les asigna un mentor o coach elegido según su personalidad, los introduce en el lenguaje o la cultura propia de tu marca y los invita a eventos sociales, nace en ellos un fuerte sentido de pertenencia. Te costará más y al principio puede intimidarlos, pero la retención sube de forma dramática y, a menudo, quien llegaba con escepticismo termina siendo un miembro comprometido de tu comunidad.",
       "pasos_accionables": [
         "Diseñar un recorrido introductorio breve y educativo (no orientado a venta) para nuevos prospectos.",
         "Asignar guías o mentores compatibles con el perfil/personalidad del cliente.",
@@ -86962,7 +86962,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Orgullo por el Trabajo (Pride of Workmanship)",
-      "resumen_teorico": "La posibilidad de sentir orgullo por el trabajo bien hecho es más importante para quien trabaja contigo que beneficios recreativos como un gimnasio o una cancha. Las barreras a ese orgullo, como mala supervisión, falta de mantenimiento, materiales defectuosos, ausencia de canales de comunicación o evaluaciones de desempeño injustas, pueden estar entre las mayores causas de baja productividad, alto ausentismo y rotación. Por eso te toca eliminar esas barreras y escuchar de verdad los problemas que te reportan.",
+      "resumen_teorico": "Para quien trabaja contigo, poder enorgullecerse de un trabajo bien hecho pesa más que cualquier gimnasio, cancha u otro beneficio recreativo. Lo que bloquea ese orgullo (una mala supervisión, la falta de mantenimiento, materiales defectuosos, la falta de canales para comunicarse o evaluaciones de desempeño injustas) puede estar entre las mayores causas de baja productividad, ausentismo alto y rotación. Te corresponde quitar esas barreras y escuchar en serio los problemas que te reportan.",
       "pasos_accionables": [
         "Hablar directamente con las personas que hacen el trabajo día a día para identificar qué barreras concretas les impiden hacerlo bien",
         "Crear una forma simple para que quien trabaja contigo pueda avisar de fallas de herramientas o materiales, y asegurarte de darle seguimiento real",
@@ -90121,7 +90121,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "health_safety",
       "titulo_concepto": "Plan de Control de Peligros",
-      "resumen_teorico": "Documento que describe cómo implementarás los controles, empezando por los peligros más serios, con controles provisionales si hace falta y la meta de un control eficaz a largo plazo. Asigna responsables, fechas, seguimiento y verificación de eficacia, y se actualiza al cambiar las condiciones del sitio.",
+      "resumen_teorico": "Es la hoja de ruta para poner en marcha los controles que ya elegiste. Primero van los peligros graves; mientras tanto puedes necesitar medidas temporales, pero lo que buscas al final es que el control funcione bien y de forma duradera. Ahí dejas claro quién se encarga de cada control, para cuándo, cómo sigues el avance y cómo compruebas que funciona, y lo vas ajustando cada vez que cambian las condiciones del sitio.",
       "pasos_accionables": [
         "Listar los peligros a controlar en orden de prioridad",
         "Asignar responsables con autoridad para implementar cada control",
@@ -90338,7 +90338,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Plan de Control",
-      "resumen_teorico": "El plan de control se usa para sostener las ganancias obtenidas de un proyecto de mejora de calidad. Especifica las variables de control a monitorear, cómo medirlas y las acciones a tomar según criterios explícitos, asegurando el máximo uso del autocontrol.",
+      "resumen_teorico": "Cuando terminas un proyecto de mejora de calidad, el plan de control es lo que evita que pierdas lo ganado. En él defines qué variables vas a vigilar, de qué manera las medirás y qué harás en cada caso siguiendo criterios explícitos, y buscas que quien hace el trabajo se controle a sí mismo lo más posible.",
       "pasos_accionables": [
         "Detecta qué variables influyen, de forma directa o indirecta, tanto en el remedio aplicado como en tu cliente",
         "Fija el estándar que disparará una acción; lo ideal es que ese estándar sea un límite de control sacado de una carta de control",
@@ -90847,7 +90847,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Plan de Seguridad del Sistema (SSP) y Plan de Acción y Cronograma (POAM)",
-      "resumen_teorico": "El Plan de Seguridad del Sistema (SSP) documenta cómo una organización cumple o planea cumplir los requisitos de seguridad para un sistema, describiendo el límite del sistema, el entorno operativo, cómo se satisfacen los requisitos y las relaciones con otros sistemas. El Plan de Acción y Cronograma (POAM) describe cómo se cumplirán los requisitos de seguridad no satisfechos y cómo se implementarán las mitigaciones planificadas. Las agencias federales pueden considerar estos documentos como insumos para decisiones de riesgo sobre si procesar CUI en sistemas de la organización no federal.",
+      "resumen_teorico": "En el Plan de Seguridad del Sistema (SSP) dejas por escrito cómo cumples, o cómo piensas cumplir, los requisitos de seguridad de un sistema: dónde están sus límites, en qué entorno funciona, de qué manera satisfaces cada requisito y con qué otros sistemas se relaciona. El Plan de Acción y Cronograma (POAM) recoge lo pendiente: cómo vas a cumplir los requisitos que aún no satisfaces y cómo pondrás en marcha las mitigaciones que planeaste. Una agencia federal puede usar ambos documentos al decidir, según el riesgo, si deja que la CUI se procese en los sistemas de tu negocio no federal.",
       "pasos_accionables": [
         "Realizar una autoevaluación o auditoría de seguridad usando SP 800-171A",
         "Documentar en el SSP cómo se satisface cada requisito de seguridad aplicable",
@@ -93516,7 +93516,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Premio Shingo (Shingo Prize)",
-      "resumen_teorico": "Programa de reconocimiento público a empresas en distintas etapas de su camino hacia la excelencia empresarial, mediante niveles diferenciados: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Sirve como marco de referencia y validación externa del nivel de madurez Lean; muchas empresas no postulan y lo usan como autoevaluación, por lo general anual.",
+      "resumen_teorico": "Es un programa que reconoce en público a las empresas según el punto en que van de su camino hacia la excelencia empresarial, con tres niveles distintos: Shingo Prize, Shingo Silver Medallion y Shingo Bronze Medallion. Te sirve como referencia y como validación externa de qué tan madura está tu práctica Lean. Muchas empresas nunca se postulan y lo usan para autoevaluarse, normalmente una vez al año.",
       "pasos_accionables": [
         "Evaluar el nivel de madurez Lean de la organización frente a los criterios Shingo",
         "Documentar evidencia de implementación de principios Lean y cultura de mejora",
@@ -95899,7 +95899,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "El Proceso como Cadena de Etapas Cliente-Proveedor",
-      "resumen_teorico": "Todo trabajo y actividad forma parte de un proceso, representable mediante un diagrama de flujo que divide el trabajo en etapas. Cada etapa tiene un cliente (la siguiente etapa) y recibe entradas de un proveedor (la etapa anterior). En cada etapa hay mejora continua de métodos y procedimientos para satisfacer mejor a la etapa siguiente. Ninguna etapa debe operar buscando su máximo beneficio individual; todas deben trabajar coordinadamente hacia la satisfacción óptima del cliente final.",
+      "resumen_teorico": "Cualquier actividad o trabajo que hagas pertenece a un proceso, y puedes dibujarlo con un diagrama de flujo que lo parte en etapas. Piensa en cada etapa como proveedora de la que viene después, que es su cliente, y como clienta de la anterior, que le entrega sus insumos. Dentro de cada una vas mejorando sin pausa los métodos y procedimientos para atender mejor a la etapa siguiente. Ninguna debería perseguir por separado su propio beneficio máximo: todas tienen que coordinarse para lograr la mejor satisfacción posible del cliente final.",
       "pasos_accionables": [
         "Mapear el proceso completo desde el proveedor inicial hasta el cliente final en un diagrama de flujo",
         "Identificar en cada etapa quién es el cliente inmediato y qué necesita",
@@ -96229,7 +96229,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "El Proceso de Siete Pasos del RMF",
-      "resumen_teorico": "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos (Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear) para gestionar el riesgo de seguridad de la información y privacidad. Los siete pasos son necesarios para ejecutarlo con éxito; aunque van en orden, tras la implementación inicial las organizaciones pueden moverse entre pasos según sea necesario. Es aplicable a sistemas nuevos y existentes, de cualquier tecnología y tamaño de organización.",
+      "resumen_teorico": "Para gestionar los riesgos de seguridad de la información y de privacidad, el Risk Management Framework (RMF) de NIST te da un método de siete pasos: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar y Monitorear. Es completo, se adapta, puedes repetirlo y puedes medirlo. Ninguno de los siete sobra si quieres que funcione. La primera vez los recorres en orden; después de esa implementación inicial puedes saltar de uno a otro según lo necesites. Sirve para un sistema que estrenas y para uno que ya tienes, con la tecnología que sea y sin importar el tamaño de tu negocio.",
       "pasos_accionables": [
         "Familiarizarse con los siete pasos del RMF: Preparar, Categorizar, Seleccionar, Implementar, Evaluar, Autorizar, Monitorear.",
         "Asignar responsables para la ejecución de cada paso.",
@@ -99553,7 +99553,7 @@
       "fase_proyecto": "validacion",
       "dominio": "quality",
       "titulo_concepto": "Pruebas inadecuadas de prototipos",
-      "resumen_teorico": "Es práctica común construir prototipos con partes muy cercanas al valor nominal, lo que hace que las pruebas iniciales sean exitosas. Sin embargo, en producción real todas las características variarán, y sin control estadístico establecido, la variación puede no seguir ninguna distribución predecible. Esto puede resultar en que solo una fracción mínima de la producción real se comporte como el prototipo probado.",
+      "resumen_teorico": "Cuando armas un prototipo, lo habitual es usar piezas casi exactas a su valor nominal, y por eso las primeras pruebas salen bien. El problema llega con la producción real: ahí cada característica va a variar y, si todavía no tienes el proceso en control estadístico, esa variación puede no ajustarse a ninguna distribución que puedas prever. El resultado puede ser que apenas una fracción mínima de lo que fabriques funcione igual que el prototipo que probaste.",
       "pasos_accionables": [
         "Realizar pruebas con muestras que reflejen la variación real esperada en producción, no solo valores nominales",
         "Aplicar métodos Monte Carlo para simular variaciones de dimensión, presión, temperatura, etc. en diseño asistido por computadora",
@@ -100422,7 +100422,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Comprensión de la Información No Clasificada Controlada (CUI)",
-      "resumen_teorico": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Cuando se entrega como parte de un contrato gubernamental, incluye por ejemplo información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
+      "resumen_teorico": "Llamamos CUI a la información que genera o tiene el gobierno, o que otra entidad genera o tiene por encargo suyo, y que una ley, una regulación o una política del gobierno obliga a resguardar con medidas técnicas y operativas. Si te llega dentro de un contrato con el gobierno, puede tratarse, por ejemplo, de información técnica controlada (datos de ingeniería, especificaciones) o de información de negocio propietaria (datos financieros, secretos comerciales). Identificar y marcar el CUI en los contratos que correspondan le toca a la agencia federal.",
       "pasos_accionables": [
         "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de información controlada no clasificada (CUI)",
         "Contactar al funcionario a cargo del contrato para confirmar qué información específica es CUI",
@@ -101559,7 +101559,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Reconocimiento Público y Recompensas",
-      "resumen_teorico": "Estrategia de liderazgo para consolidar nuevos comportamientos deseados mediante recompensas y reconocimientos constantes en el tiempo, otorgados públicamente, con ceremonia, en presencia de las personas cuyo comportamiento se busca influenciar, y explicando claramente la conexión entre el premio y el comportamiento específico deseado. Ejemplo típico: asambleas para reconocer equipos de proyectos Six Sigma completados.",
+      "resumen_teorico": "Es una estrategia de liderazgo para que la gente haga suyos los nuevos comportamientos que buscas: premia y reconoce de manera constante a lo largo del tiempo, hazlo en público y con ceremonia, delante de las personas en quienes quieres influir, y deja claro qué comportamiento concreto estás premiando con cada reconocimiento. Un ejemplo típico es una asamblea para reconocer a los equipos que terminaron proyectos Six Sigma.",
       "pasos_accionables": [
         "Identificar comportamientos o logros específicos alineados con los objetivos estratégicos",
         "Organizar eventos públicos de reconocimiento con presencia de líderes",
@@ -102512,7 +102512,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Reducción de Inventario mediante Mejora de Calidad",
-      "resumen_teorico": "La mejora de la calidad en materiales entrantes y la reducción de retrabajo permiten disminuir drásticamente el inventario en proceso, generando ahorros significativos. Esto se logra mediante cooperación con proveedores, reducción del número de vendedores, eliminación de márgenes de seguridad por materiales defectuosos y, más importante aún, menos piezas esperando retrabajo.",
+      "resumen_teorico": "Si mejoras la calidad de los materiales que recibes y reduces el retrabajo, puedes bajar drásticamente tu inventario en proceso y ahorrar mucho dinero. Lo consigues cooperando con tus proveedores, trabajando con menos de ellos, dejando de guardar reservas extra para cubrir material defectuoso y, lo que más pesa, teniendo menos piezas a la espera de retrabajo.",
       "pasos_accionables": [
         "Medir el inventario en proceso actual (incluyendo materiales entrantes y piezas en espera de retrabajo)",
         "Establecer un programa de cooperación con proveedores para mejorar calidad de materiales entrantes",
@@ -102856,7 +102856,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Uso de Redundancia en el Diseño de Componentes Críticos",
-      "resumen_teorico": "Cuando diseñas un aparato o sistema complejo, identifica primero los componentes críticos cuya falla tendría alto costo o riesgo. Para esos casos, considera colocar dos o más partes en paralelo, de modo que si una falla, otra la reemplace automáticamente: dos componentes con fracción defectuosa promedio p equivalen a uno solo con fracción defectuosa aproximada p², reduciendo drásticamente la probabilidad de falla del conjunto. Sin embargo, esta estrategia tiene límites prácticos: restricciones de peso y tamaño, además de la incertidumbre de si el componente redundante realmente se activará cuando se necesite. Por eso, en algunos casos la mejor solución no es duplicar partes, sino enfocar el esfuerzo en lograr alta confiabilidad en una sola pieza bien diseñada.",
+      "resumen_teorico": "Al diseñar un aparato o sistema complejo, empieza por ubicar los componentes críticos, aquellos cuya falla te costaría caro o te expondría a un riesgo alto. En esos puntos puedes evaluar poner dos o más piezas trabajando en paralelo: cuando una falla, otra entra sola a cubrir su función. El efecto es fuerte, porque un par en paralelo donde cada pieza tiene una fracción defectuosa promedio p se comporta casi como una sola pieza con fracción defectuosa p², y así baja drásticamente la probabilidad de que falle el conjunto. Esta vía tiene topes prácticos: el peso y el tamaño pueden no permitirla, y no hay certeza de que la pieza de respaldo se active cuando haga falta. Por eso, a veces lo mejor no es duplicar, sino concentrar el esfuerzo en que una sola pieza bien diseñada sea muy confiable.",
       "pasos_accionables": [
         "Identifica los componentes críticos cuya falla tendría alto impacto o costo en tu producto.",
         "Evalúa si el diseño permite colocar un componente redundante en paralelo sin romper restricciones de peso o tamaño.",
@@ -104898,7 +104898,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Sistemas de Reporte de Casi Accidentes (Near-Miss)",
-      "resumen_teorico": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, pueden actuar como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo, siempre que los datos se difundan ampliamente, sobre todo en los niveles altos de la organización. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+      "resumen_teorico": "Un casi accidente es todo suceso que podía haber terminado con consecuencias graves y al final no las tuvo. Son 'lecciones gratis' que te sirven de varias maneras. Si sacas de ellos las conclusiones acertadas y actúas en consecuencia, pueden funcionar como una vacuna: refuerzan las defensas de tu sistema sin causar ningún daño real. Te enseñan cómo fallas pequeñas en las defensas pueden ir alineándose hasta formar un desastre. Como pasan con más frecuencia que los accidentes de verdad, te dan muchos datos para contar y medir. Y mantienen presentes los peligros, para que el miedo no se olvide, con una condición: que esa información circule mucho, sobre todo entre quienes deciden en lo más alto. Su punto débil está en dos cosas: que la gente quiera informar de sucesos en los que quizá tuvo alguna responsabilidad, y que sepa reconocer los factores que de verdad contribuyeron, porque a veces no ve los antecedentes que vienen de más arriba o ya da por normales unas condiciones deficientes.",
       "pasos_accionables": [
         "Establecer un sistema formal de reporte de casi accidentes, diferenciando eventos benignos de aquellos que casi fueron catastróficos",
         "Desarrollar una cultura de reporte sin represalias que incentive la notificación honesta",
@@ -106181,7 +106181,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Tu responsabilidad en la mejora de la calidad",
-      "resumen_teorico": "La transformación de la calidad en Japón se basó en entender que mejorar la calidad y la productividad es responsabilidad de quien dirige el negocio, no solo de quien hace el trabajo técnico o revisa el resultado. Los gerentes japoneses aprendieron una nueva forma de asumir ese papel. La confianza en que ese cambio tendría éxito se apoyaba en la fuerza de trabajo, en la dedicación y el conocimiento de esos gerentes sobre su propio trabajo, su disposición a aprender y su compromiso real con la tarea, y en la expansión de la formación. La mejora la encabezó la propia dirección, metida de lleno en la planta.",
+      "resumen_teorico": "En Japón, el giro hacia la calidad partió de una idea: mejorar la calidad y la productividad le toca a quien dirige el negocio, no solo a quien ejecuta la parte técnica o revisa lo que sale. Los gerentes japoneses aprendieron a ejercer ese papel de una manera nueva. Había cuatro apoyos para confiar en que el cambio funcionaría: la fuerza de trabajo; unos gerentes que conocían a fondo su propio trabajo, se entregaban a él y tenían ganas de aprender; su compromiso real con la tarea, y una formación que se extendía cada vez más. Fue la propia dirección la que encabezó la mejora, metida de lleno en la planta.",
       "pasos_accionables": [
         "Comprometerte a aprender de primera mano la filosofía y los métodos de calidad",
         "Asumir tú mismo la responsabilidad de liderar las mejoras en tus procesos",
@@ -106429,7 +106429,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Plan de Respuesta a Incidentes para CUI",
-      "resumen_teorico": "Establece una capacidad de manejo de incidentes para los sistemas que incluye preparación adecuada, detección, análisis, contención, recuperación y actividades de respuesta del usuario, así como el rastreo, documentación y reporte de incidentes a las autoridades y funcionarios organizacionales apropiados. Debe existir un plan antes de que ocurra un incidente, incluyendo un campeón del negocio responsable, lista de contactos y roles, y requisitos de reporte según leyes, regulaciones, contratos, acuerdos o políticas.",
+      "resumen_teorico": "Consiste en montar, para tus sistemas, la capacidad de atender incidentes: prepararte bien, detectarlos, analizarlos, contenerlos, recuperarte y coordinar las acciones de respuesta de los usuarios, además de seguir cada incidente, documentarlo y reportarlo a las autoridades y a los responsables internos que correspondan. Antes de que algo pase necesitas un plan con una persona del negocio a cargo de él, la lista de contactos con sus roles, y lo que te obligan a reportar las leyes, regulaciones, contratos, acuerdos o políticas.",
       "pasos_accionables": [
         "Designar un responsable (business champion) del plan de respuesta a incidentes",
         "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
@@ -108486,7 +108486,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Paso Preparar del RMF",
-      "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo, determinar el alcance del sistema a proteger y evaluar regularmente los riesgos a nivel organizacional y de sistema. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
+      "resumen_teorico": "Empezar por el paso Preparar te deja listo para aplicar el RMF de forma práctica, eficiente y sin gastar de más. En este paso nombras a quién o a quiénes les toca llevarlo, armas tu estrategia de gestión de riesgo, pones en marcha una estrategia de monitoreo continuo, defines hasta dónde llega el sistema que vas a proteger y revisas con regularidad los riesgos, tanto del negocio en conjunto como del sistema. Cuando apliques el RMF por primera vez, conviene que arranques justo por aquí.",
       "pasos_accionables": [
         "Designar a un individuo o equipo responsable de ejecutar el marco de gestión de riesgos (RMF), que puede ser interno o externo a la organización (Tarea P-1).",
         "Crear una estrategia de gestión de riesgo que exprese la tolerancia al riesgo (Tarea P-2).",
@@ -109527,7 +109527,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Ingeniería de la Cultura de Seguridad",
-      "resumen_teorico": "Una cultura de seguridad efectiva no surge de una transformación mística, sino que puede diseñarse socialmente identificando y ensamblando sus componentes esenciales mediante prácticas compartidas persistentes. A diferencia de las culturas nacionales (basadas en valores compartidos), las culturas organizacionales se forman principalmente por prácticas compartidas, que son más manejables de cambiar que los valores. La cultura de seguridad se define como el producto de valores, actitudes, competencias y patrones de comportamiento individuales y grupales que determinan el compromiso con los programas de salud y seguridad.",
+      "resumen_teorico": "Una cultura de seguridad eficaz no nace de una transformación mística: puedes construirla socialmente, reconociendo las piezas esenciales que la forman y ensamblándolas con prácticas compartidas que se mantienen en el tiempo. Las culturas de un país descansan en valores comunes; las de una empresa, en cambio, se forman sobre todo con prácticas comunes, y cambiar prácticas es más manejable que cambiar valores. Por definición, esta cultura es el resultado de cuatro ingredientes, presentes tanto en cada persona como en cada grupo: valores, actitudes, competencias y pautas de conducta; de ellos depende el compromiso con los programas de salud y seguridad.",
       "pasos_accionables": [
         "Identificar las prácticas compartidas actuales relacionadas con seguridad en la organización",
         "Diseñar e introducir nuevas prácticas y sistemas de gestión enfocados en seguridad, incluido un sistema de información de seguridad eficaz",
@@ -110572,7 +110572,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "risk_management",
       "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
-      "resumen_teorico": "Uno de los principios básicos del negocio de valores es mantener estrictamente separados a quien ejecuta una operación (trading) y a quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
+      "resumen_teorico": "En el negocio de valores hay una regla básica: quien ejecuta una operación (trading) y quien la verifica y la concilia (settlement/back office) deben estar en manos estrictamente separadas. El caso Barings lo demuestra: si una sola persona ocupa los dos puestos, desaparece un mecanismo crítico para detectar errores o fraudes y las irregularidades pueden quedar ocultas.",
       "pasos_accionables": [
         "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separadas.",
         "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
@@ -110647,7 +110647,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Seguimiento de la Efectividad de los Controles (Industria General)",
-      "resumen_teorico": "Para asegurar que los controles sigan siendo efectivos, verifica que se implementaron según lo planeado, que los controles de ingeniería fueron instalados y probados, que quienes trabajan contigo fueron capacitados en su uso correcto y que los controles se usan de forma correcta y constante. Evalúa su funcionamiento con inspecciones regulares y, si está indicado, monitoreo de higiene industrial, aplicando mantenimiento preventivo rutinario a equipos y controles. Si detectas que un control ya no funciona bien o sospechas que perdió efectividad, modifícalo o implementa medidas adicionales. Involucrar a quienes trabajan contigo en esta evaluación, tanto en la instalación inicial como en revisiones periódicas posteriores, ayuda a mantener la protección a lo largo del tiempo.",
+      "resumen_teorico": "Si quieres que tus controles sigan protegiendo, repasa si quedaron puestos tal como los planeaste, si los de ingeniería se instalaron y pasaron sus pruebas, si la gente que trabaja contigo recibió formación para usarlos bien y si de verdad los usa como corresponde y todo el tiempo. Para saber si funcionan, haz inspecciones periódicas, súmales mediciones de higiene industrial cuando haga falta y da a equipos y controles su mantenimiento preventivo de rutina. Cuando notes que un control ya no cumple o sospeches que perdió eficacia, ajústalo o agrega otras medidas. Te ayudará a sostener la protección en el tiempo sumar a quienes trabajan contigo a esta revisión, tanto al instalar el control por primera vez como en los repasos que hagas después cada cierto tiempo.",
       "pasos_accionables": [
         "Verificar que todos los controles se implementaron según el plan y que se usan de forma correcta y constante",
         "Confirmar que los controles de ingeniería fueron instalados y probados",
@@ -111510,7 +111510,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "seguridad_digital",
       "titulo_concepto": "Selección y Adaptación (Tailoring) de Controles",
-      "resumen_teorico": "Tras categorizar el sistema, se selecciona un conjunto inicial de controles (baseline) para proteger la confidencialidad, integridad y disponibilidad, usando catálogos como NIST SP 800-53. Luego, estos controles se adaptan (tailoring) a los requisitos específicos de seguridad y privacidad de la organización, guiados por evaluaciones de riesgo. Los controles seleccionados y adaptados se documentan en un plan de seguridad y/o privacidad.",
+      "resumen_teorico": "Cuando ya categorizaste tu sistema, eliges un primer conjunto de controles de base (baseline) que cuide la confidencialidad, la integridad y la disponibilidad; para escogerlos puedes apoyarte en catálogos como NIST SP 800-53. Después ajustas esos controles (tailoring) a lo que tu negocio necesita en concreto en seguridad y privacidad, y te guías por tus evaluaciones de riesgo para hacerlo. Al final, dejas por escrito en un plan de seguridad, de privacidad o de ambas cosas qué controles elegiste y cómo los ajustaste.",
       "pasos_accionables": [
         "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de una línea base predefinida o elegir controles propios.",
         "Adaptar (tailor) los controles a los riesgos y necesidades específicas de tu proyecto.",
@@ -117722,7 +117722,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Necesidad de una Teoría de Gestión (no solo experiencia)",
-      "resumen_teorico": "La experiencia por sí sola no enseña qué hacer para mejorar la calidad y la posición competitiva; se necesita una teoría (aunque sea una hipótesis o conjunto de principios) que guíe qué preguntas hacer a la experiencia. Sin un plan integrado y preguntas claras (¿dónde quiere estar la empresa en 5 años? ¿cómo llegar?), los mejores esfuerzos individuales pueden hacer mucho daño y dispersar el conocimiento y el esfuerzo.",
+      "resumen_teorico": "Acumular años de práctica no te dice, por sí mismo, qué hacer para mejorar tu calidad ni tu posición frente a la competencia. Te hace falta una teoría, aunque sea apenas una hipótesis o unos cuantos principios, porque es ella la que te indica qué preguntarle a la experiencia. Si no tienes un plan de conjunto ni preguntas claras (¿dónde quieres que esté tu empresa dentro de 5 años? ¿cómo vas a llegar?), hasta el mejor esfuerzo de cada persona puede causar mucho daño y dispersar el conocimiento y el esfuerzo.",
       "pasos_accionables": [
         "Formular hipótesis o principios de gestión antes de actuar",
         "Definir preguntas estratégicas: dónde quiere estar la organización en 5 años y por qué método",
@@ -118561,7 +118561,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "core",
       "titulo_concepto": "Timing Correcto para Solicitar Referencias",
-      "resumen_teorico": "Solicitar referencias demasiado pronto (inmediatamente después de la compra) destruye las posibilidades de obtenerlas, ya que el cliente aún no ha experimentado el beneficio real del producto. La solicitud debe ocurrir solo después de que el cliente haya alcanzado su objetivo original de compra (point-of-purchase goal): aunque antes pueda sentir confianza para asociar su nombre con la marca, solo está listo para dar un referido cuando ya vivió la relación a fondo.",
+      "resumen_teorico": "Si pides referencias muy pronto, justo después de la compra, arruinas la posibilidad de conseguirlas, porque tu cliente todavía no ha vivido el beneficio real de lo que compró. Pide la recomendación únicamente cuando ya haya logrado el objetivo que lo llevó a comprarte (point-of-purchase goal). Puede que antes ya se sienta seguro de vincular su nombre con tu marca, pero no estará listo para recomendarte hasta haber experimentado la relación a fondo.",
       "pasos_accionables": [
         "Identificar el 'punto de logro' donde el cliente obtiene el beneficio prometido del producto/servicio",
         "Configurar un disparador automatizado (ej. correo a los 30 días) que se active después de este punto de logro",
@@ -120606,7 +120606,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Triángulo de Interacción de la Calidad",
-      "resumen_teorico": "La calidad no se determina solo por el producto en sí, sino por la interacción de tres vértices: (1) el producto, (2) el usuario, cómo lo usa/instala/cuida y lo que le llevaron a esperar, y (3) las instrucciones, capacitación, servicio de soporte y repuestos disponibles. Ningún vértice por sí solo define la calidad percibida.",
+      "resumen_teorico": "La calidad no depende únicamente del producto: nace de cómo se relacionan tres vértices. Uno es el producto. Otro es el usuario: la manera en que lo instala, lo usa y lo cuida, y lo que lo llevaron a esperar de él. El tercero es el apoyo que lo rodea: instrucciones, capacitación, servicio de soporte y repuestos a mano. La calidad percibida no la define ninguno de los tres por separado.",
       "pasos_accionables": [
         "Evaluar el producto en pruebas de laboratorio y campo",
         "Estudiar cómo el usuario realmente instala, usa y mantiene el producto, y qué le llevaron a esperar de él",
@@ -123965,7 +123965,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "health_safety",
       "titulo_concepto": "Violaciones Procedimentales por Sobreespecificación de Reglas",
-      "resumen_teorico": "Cada vez que ocurre un accidente, las organizaciones suelen añadir nuevas restricciones al manual de procedimientos para prohibir la acción implicada. Con el tiempo, esta acumulación de reglas reduce el espacio de acciones permitidas a un rango menor del necesario para realizar el trabajo en condiciones no óptimas, forzando a los trabajadores a violar procedimientos para poder cumplir con la tarea. Esto es contrario a los errores, que surgen de la subespecificación; muchas violaciones nacen de la sobreespecificación procedimental.",
+      "resumen_teorico": "Tras cada accidente, lo común es sumar al manual de procedimientos una prohibición nueva contra la acción que estuvo implicada. Regla tras regla, el margen de lo permitido se va estrechando hasta quedar por debajo de lo que el trabajo exige cuando las condiciones no son las ideales, y a tu gente no le queda otra forma de sacar la tarea adelante que saltarse algún procedimiento. Así, mientras el error nace de que algo quedó sin especificar, muchas violaciones nacen justo de lo contrario: de especificar de más los procedimientos.",
       "pasos_accionables": [
         "Revisar el historial de modificaciones al manual de procedimientos y su acumulación en el tiempo",
         "Identificar tareas donde el cumplimiento estricto del procedimiento hace imposible completar el trabajo",

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Autoservicio y Autosanación del Producto",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+  "resumen_teorico": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Sobre esa base levantas las herramientas de autoservicio y autosanación: con ellas tu cliente se encarga por sí mismo de la mayoría de sus problemas, y tú te mantienes preparado para los que no consiga resolver. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
   "pasos_accionables": [
     "Revisar los puntos de fricción del producto que generan llamadas de soporte",
     "Diseñar mecanismos de detección proactiva de errores con notificación automática al cliente",
@@ -97,6 +97,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no afirma que toda llamada de soporte nazca de algo que el producto pidió y el cliente no supo resolver; solo pide construir el producto como si no existiera el centro de llamadas.; Mismo defecto: una causa universal de toda llamada que el libro no enuncia.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-autoservicio_y_autosanacion_del_producto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Encima de eso se construyen las herramientas de autoservicio y autosanación, para que tu cliente resuelva por su cuenta la mayoría de los problemas y tú quedes listo para arreglar los que no pueda. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+      "texto_nuevo": "La cura no empieza por reforzar el soporte sino por mirar qué puntos de fricción generan llamadas, y después por darle la vuelta a quien avisa: en vez de esperar a que tu cliente descubra el fallo y te escriba, el producto detecta la anomalía y le avisa el primero, con lo que ya está haciendo para arreglarla. Sobre esa base levantas las herramientas de autoservicio y autosanación: con ellas tu cliente se encarga por sí mismo de la mayoría de sus problemas, y tú te mantienes preparado para los que no consiga resolver. Y el avance se puede ver en qué porcentaje de tus clientes resuelve su problema sin tener que llamar.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "6340",
+        "frase": "Comcast also recognized the need to develop 100 percent self-healing products"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

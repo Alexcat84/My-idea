@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Evaluación de Controles Implementados",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "La evaluación determina si los controles están implementados correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+  "resumen_teorico": "Evaluar tus controles es comprobar tres cosas frente a tus requisitos de seguridad y privacidad: que quedaron bien puestos, que funcionan como esperabas y que logran el resultado buscado. Primero eliges quién evalúa, alguien de dentro o alguien independiente; luego preparas los planes de evaluación y los apruebas, los ejecutas y, al final, recoges los hallazgos en un informe acompañado de un plan de acción y remediación (POA&M).",
   "pasos_accionables": [
     "Seleccionar un individuo o equipo responsable de la evaluación de controles (Tarea A-1).",
     "Desarrollar, revisar y aprobar planes de evaluación (Tarea A-2).",
@@ -59,6 +59,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro define el plan por tareas, recursos, hitos y fechas; no pide priorizarlas.; Mismo defecto que la marca 0. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-evaluar_controles-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La evaluación determina si los controles están implementados correctamente, operan como se pretende y producen el resultado deseado respecto a los requisitos de seguridad y privacidad. Se designa un evaluador (interno o independiente), se desarrollan y aprueban planes de evaluación, se ejecutan las evaluaciones y se documentan los hallazgos en un informe, junto con un plan de acción y remediación (POA&M).",
+      "texto_nuevo": "Evaluar tus controles es comprobar tres cosas frente a tus requisitos de seguridad y privacidad: que quedaron bien puestos, que funcionan como esperabas y que logran el resultado buscado. Primero eliges quién evalúa, alguien de dentro o alguien independiente; luego preparas los planes de evaluación y los apruebas, los ejecutas y, al final, recoges los hallazgos en un informe acompañado de un plan de acción y remediación (POA&M).",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "193-201",
+        "frase": "ASSESS if the controls selected are implemented correctly, operating as intended"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

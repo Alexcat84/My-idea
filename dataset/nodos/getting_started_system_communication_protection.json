@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Protección de Comunicaciones y Límites del Sistema",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+  "resumen_teorico": "Pon bajo vigilancia y control las comunicaciones de tu negocio en los límites externos de tu sistema y en sus límites internos clave, y protégelas; cifra la CUI para que siga siendo confidencial cuando viaja (con TLS o IPsec) y cuando está guardada.",
   "pasos_accionables": [
     "Monitorear y controlar comunicaciones en interfaces gestionadas (pasarelas, enrutadores, cortafuegos).",
     "Separar redes internas de las públicas mediante subredes.",
@@ -142,6 +142,22 @@
       "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-getting_started_system_communication_protection-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+      "texto_nuevo": "Pon bajo vigilancia y control las comunicaciones de tu negocio en los límites externos de tu sistema y en sus límites internos clave, y protégelas; cifra la CUI para que siga siendo confidencial cuando viaja (con TLS o IPsec) y cuando está guardada.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "669-683",
+        "frase": "Monitor, control, and protect organizational communications (i.e., information transmitted or received"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

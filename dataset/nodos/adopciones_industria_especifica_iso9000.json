@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Adopciones y Extensiones Específicas de la Industria a ISO 9000",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
+  "resumen_teorico": "Hay sectores que amplían ISO 9000 a su medida: aquellos donde un producto puede dañar gravemente la salud, la seguridad o el medio ambiente (como dispositivos médicos o farmacéutica), o donde la industria ya tenía sus propios requisitos de calidad antes de ISO 9000; de ahí salen extensiones regulatorias como las cGMP en farmacéutica o normas propias como las de ISO/TC210 para dispositivos médicos. Estas adaptaciones chocan con el objetivo de no multiplicar los estándares, y solo han funcionado en muy pocos sectores: los que viven circunstancias especiales y aplican siempre reglas claras.",
   "pasos_accionables": [
     "Identificar si el sector de la organización tiene requisitos regulatorios de salud/seguridad/ambiente",
     "Determinar si existen estándares específicos de la industria previos a ISO 9000 aplicables",
@@ -109,6 +109,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-adopciones_industria_especifica_iso9000-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
+      "texto_nuevo": "Hay sectores que amplían ISO 9000 a su medida: aquellos donde un producto puede dañar gravemente la salud, la seguridad o el medio ambiente (como dispositivos médicos o farmacéutica), o donde la industria ya tenía sus propios requisitos de calidad antes de ISO 9000; de ahí salen extensiones regulatorias como las cGMP en farmacéutica o normas propias como las de ISO/TC210 para dispositivos médicos. Estas adaptaciones chocan con el objetivo de no multiplicar los estándares, y solo han funcionado en muy pocos sectores: los que viven circunstancias especiales y aplican siempre reglas claras.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "26161",
+        "frase": "As problems, such adaptations and extensions strain the goal of nonproliferation."
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Estudio de Lealtad del Cliente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "A diferencia de las encuestas de satisfacción, que tienen limitaciones metodológicas importantes, puedes hacer un estudio de lealtad del cliente en persona, con entrevistadores capacitados, cada seis meses aproximadamente y con las mismas personas. Esto te permite saber qué mejoras concretas harían que los clientes que perdiste regresen, y calcular el impacto financiero de hacer esas mejoras o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
+  "resumen_teorico": "Frente a las encuestas de satisfacción, cuyos métodos tienen limitaciones importantes, tienes otra opción: el estudio de lealtad del cliente. Puedes hacerlo cara a cara, más o menos cada seis meses, con entrevistadores bien preparados y volviendo siempre a las mismas personas. Así descubres qué mejoras concretas traerían de vuelta a los clientes que perdiste y calculas el impacto financiero de hacerlas o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
   "pasos_accionables": [
     "Diseña preguntas estandarizadas, pensadas con cuidado, sobre tus productos y tu desempeño, para hacérselas a tus clientes y también a quienes dejaron de serlo",
     "Entrena a quienes hagan las entrevistas para que puedan hacer seguimiento y preguntas que aclaren las respuestas",
@@ -89,6 +89,22 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da la frecuencia como aproximada y el paso la fija en seis meses exactos.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-estudio_lealtad_cliente-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "A diferencia de las encuestas de satisfacción, que tienen limitaciones metodológicas importantes, puedes hacer un estudio de lealtad del cliente en persona, con entrevistadores capacitados, cada seis meses aproximadamente y con las mismas personas. Esto te permite saber qué mejoras concretas harían que los clientes que perdiste regresen, y calcular el impacto financiero de hacer esas mejoras o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
+      "texto_nuevo": "Frente a las encuestas de satisfacción, cuyos métodos tienen limitaciones importantes, tienes otra opción: el estudio de lealtad del cliente. Puedes hacerlo cara a cara, más o menos cada seis meses, con entrevistadores bien preparados y volviendo siempre a las mismas personas. Así descubres qué mejoras concretas traerían de vuelta a los clientes que perdiste y calculas el impacto financiero de hacerlas o de no hacerlas, algo que te sirve mucho para planificar y para pensar en cambios que rompan con lo habitual.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2185",
+        "frase": "is the customer loyalty study, which is conducted in person with trained"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

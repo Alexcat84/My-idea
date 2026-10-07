@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sistemas de Reporte de Casi Accidentes (Near-Miss)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, pueden actuar como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo, siempre que los datos se difundan ampliamente, sobre todo en los niveles altos de la organización. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+  "resumen_teorico": "Un casi accidente es todo suceso que podía haber terminado con consecuencias graves y al final no las tuvo. Son 'lecciones gratis' que te sirven de varias maneras. Si sacas de ellos las conclusiones acertadas y actúas en consecuencia, pueden funcionar como una vacuna: refuerzan las defensas de tu sistema sin causar ningún daño real. Te enseñan cómo fallas pequeñas en las defensas pueden ir alineándose hasta formar un desastre. Como pasan con más frecuencia que los accidentes de verdad, te dan muchos datos para contar y medir. Y mantienen presentes los peligros, para que el miedo no se olvide, con una condición: que esa información circule mucho, sobre todo entre quienes deciden en lo más alto. Su punto débil está en dos cosas: que la gente quiera informar de sucesos en los que quizá tuvo alguna responsabilidad, y que sepa reconocer los factores que de verdad contribuyeron, porque a veces no ve los antecedentes que vienen de más arriba o ya da por normales unas condiciones deficientes.",
   "pasos_accionables": [
     "Establecer un sistema formal de reporte de casi accidentes, diferenciando eventos benignos de aquellos que casi fueron catastróficos",
     "Desarrollar una cultura de reporte sin represalias que incentive la notificación honesta",
@@ -89,6 +89,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-reporte_casi_accidentes-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Un 'casi accidente' es cualquier evento que pudo tener consecuencias graves pero no las tuvo. Estos ofrecen 'lecciones gratis': si sacas las conclusiones correctas y actúas sobre ellas, pueden actuar como vacunas que fortalecen las defensas del sistema sin causar daño real, muestran cómo pequeñas fallas de las defensas pueden alinearse hasta un desastre, ofrecen datos cuantitativos abundantes (ocurren más frecuentemente que los accidentes reales) y recuerdan a la organización los peligros existentes, combatiendo el olvido del miedo, siempre que los datos se difundan ampliamente, sobre todo en los niveles altos de la organización. Sin embargo, enfrentan problemas: dependen de la voluntad de las personas para reportar eventos en los que ellos mismos pudieron tener responsabilidad, y de su capacidad para identificar los factores contribuyentes reales (a veces no perciben los precursores ascendentes o normalizan condiciones deficientes).",
+      "texto_nuevo": "Un casi accidente es todo suceso que podía haber terminado con consecuencias graves y al final no las tuvo. Son 'lecciones gratis' que te sirven de varias maneras. Si sacas de ellos las conclusiones acertadas y actúas en consecuencia, pueden funcionar como una vacuna: refuerzan las defensas de tu sistema sin causar ningún daño real. Te enseñan cómo fallas pequeñas en las defensas pueden ir alineándose hasta formar un desastre. Como pasan con más frecuencia que los accidentes de verdad, te dan muchos datos para contar y medir. Y mantienen presentes los peligros, para que el miedo no se olvide, con una condición: que esa información circule mucho, sobre todo entre quienes deciden en lo más alto. Su punto débil está en dos cosas: que la gente quiera informar de sucesos en los que quizá tuvo alguna responsabilidad, y que sepa reconocer los factores que de verdad contribuyeron, porque a veces no ve los antecedentes que vienen de más arriba o ya da por normales unas condiciones deficientes.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "2669-2691",
+        "frase": "A near-miss is any event that could have had bad consequences"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

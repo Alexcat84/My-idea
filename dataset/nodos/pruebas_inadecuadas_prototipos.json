@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Pruebas inadecuadas de prototipos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Es práctica común construir prototipos con partes muy cercanas al valor nominal, lo que hace que las pruebas iniciales sean exitosas. Sin embargo, en producción real todas las características variarán, y sin control estadístico establecido, la variación puede no seguir ninguna distribución predecible. Esto puede resultar en que solo una fracción mínima de la producción real se comporte como el prototipo probado.",
+  "resumen_teorico": "Cuando armas un prototipo, lo habitual es usar piezas casi exactas a su valor nominal, y por eso las primeras pruebas salen bien. El problema llega con la producción real: ahí cada característica va a variar y, si todavía no tienes el proceso en control estadístico, esa variación puede no ajustarse a ninguna distribución que puedas prever. El resultado puede ser que apenas una fracción mínima de lo que fabriques funcione igual que el prototipo que probaste.",
   "pasos_accionables": [
     "Realizar pruebas con muestras que reflejen la variación real esperada en producción, no solo valores nominales",
     "Aplicar métodos Monte Carlo para simular variaciones de dimensión, presión, temperatura, etc. en diseño asistido por computadora",
@@ -101,6 +101,22 @@
       },
       "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-pruebas_inadecuadas_prototipos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Es práctica común construir prototipos con partes muy cercanas al valor nominal, lo que hace que las pruebas iniciales sean exitosas. Sin embargo, en producción real todas las características variarán, y sin control estadístico establecido, la variación puede no seguir ninguna distribución predecible. Esto puede resultar en que solo una fracción mínima de la producción real se comporte como el prototipo probado.",
+      "texto_nuevo": "Cuando armas un prototipo, lo habitual es usar piezas casi exactas a su valor nominal, y por eso las primeras pruebas salen bien. El problema llega con la producción real: ahí cada característica va a variar y, si todavía no tienes el proceso en control estadístico, esa variación puede no ajustarse a ninguna distribución que puedas prever. El resultado puede ser que apenas una fracción mínima de lo que fabriques funcione igual que el prototipo que probaste.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "3037",
+        "frase": "A common practice among engineers is to put together a prototype"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

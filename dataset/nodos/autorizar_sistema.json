@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Autorización del Sistema para Operar",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "Un funcionario senior de la organización (Authorizing Official) determina si el riesgo de seguridad y privacidad derivado de la operación del sistema es aceptable, basándose en un paquete de autorización que incluye planes de seguridad/privacidad, informes de evaluación y el POA&M. El resultado es una decisión formal que autoriza o no la operación del sistema.",
+  "resumen_teorico": "Quien tiene un cargo de alto nivel y el papel de Authorizing Official revisa el paquete de autorización, que reúne los planes de seguridad y privacidad, los informes de evaluación y el POA&M. Con esa base juzga si es aceptable el riesgo para la seguridad y la privacidad que trae poner el sistema a operar, y lo resuelve con una decisión formal: el sistema queda autorizado para operar, o no.",
   "pasos_accionables": [
     "Reunir el paquete de autorización y enviarlo al funcionario autorizante (Tarea R-1).",
     "El funcionario autorizante analiza la información y determina el riesgo residual (Tarea R-2).",
@@ -43,6 +43,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-autorizar_sistema-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Un funcionario senior de la organización (Authorizing Official) determina si el riesgo de seguridad y privacidad derivado de la operación del sistema es aceptable, basándose en un paquete de autorización que incluye planes de seguridad/privacidad, informes de evaluación y el POA&M. El resultado es una decisión formal que autoriza o no la operación del sistema.",
+      "texto_nuevo": "Quien tiene un cargo de alto nivel y el papel de Authorizing Official revisa el paquete de autorización, que reúne los planes de seguridad y privacidad, los informes de evaluación y el POA&M. Con esa base juzga si es aceptable el riesgo para la seguridad y la privacidad que trae poner el sistema a operar, y lo resuelve con una decisión formal: el sistema queda autorizado para operar, o no.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "213-223",
+        "frase": "A senior organization official determines if security and privacy risk based on"
+      },
+      "decision": "copia fiel (regla D2, ola k21): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
