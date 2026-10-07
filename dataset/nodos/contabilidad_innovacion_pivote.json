@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Contabilidad de Innovación aplicada a Pivotes",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "El 95% del trabajo real en una startup no es la idea inicial sino el trabajo diario medido por la contabilidad de innovación: decisiones de priorización de producto, elección de clientes, y someter la visión a pruebas constantes. Esta disciplina permite tomar decisiones informadas sobre pivotar o perseverar en lugar de basarse en historias mitificadas del éxito.",
+  "resumen_teorico": "La idea inicial pesa poco en una startup: el 95% del trabajo real es el día a día que mide la contabilidad de innovación, es decir, decidir qué priorizas en el producto, elegir a qué clientes te diriges y poner tu visión a prueba una y otra vez. Esta disciplina te permite decidir con información si pivotas o perseveras, en lugar de guiarte por historias de éxito mitificadas.",
   "pasos_accionables": [
     "Documentar de forma explícita las hipótesis de salto de fe (leaps of faith) al inicio del proyecto",
     "Medir métricas accionables (registro, activación, retención, referencia) en cada iteración",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Evalúa tus Pivotes con Datos",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-contabilidad_innovacion_pivote-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El 95% del trabajo real en una startup no es la idea inicial sino el trabajo diario medido por la contabilidad de innovación: decisiones de priorización de producto, elección de clientes, y someter la visión a pruebas constantes. Esta disciplina permite tomar decisiones informadas sobre pivotar o perseverar en lugar de basarse en historias mitificadas del éxito.",
+      "texto_nuevo": "La idea inicial pesa poco en una startup: el 95% del trabajo real es el día a día que mide la contabilidad de innovación, es decir, decidir qué priorizas en el producto, elegir a qué clientes te diriges y poner tu visión a prueba una y otra vez. Esta disciplina te permite decidir con información si pivotas o perseveras, en lugar de guiarte por historias de éxito mitificadas.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "1645",
+        "frase": "The other 95 percent is the gritty work that is measured"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

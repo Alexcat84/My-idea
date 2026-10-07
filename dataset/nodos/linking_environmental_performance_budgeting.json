@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Vincular Desempeño Ambiental al Presupuesto Departamental",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Estrategia que consiste en hacer que los departamentos asuman la responsabilidad directa de sus propios costos de energía y residuos, en lugar de distribuir estos costos como un porcentaje fijo de gastos generales. Este cambio de asignación presupuestaria genera incentivos reales para la eficiencia, como ocurrió en Microsoft al corregir el uso ineficiente de servidores.",
+  "resumen_teorico": "La idea es que cada departamento cargue en su propio presupuesto lo que gasta en energía y en residuos, en vez de repartir esas facturas como un porcentaje fijo de los gastos generales. Al cambiar quién paga, aparecen motivos reales para ser eficiente; así lo vivió Microsoft cuando corrigió el uso ineficiente de sus servidores.",
   "pasos_accionables": [
     "Auditar cómo se distribuyen actualmente los costos de energía y residuos entre departamentos",
     "Rediseñar el sistema de facturación interna para reflejar el consumo real por unidad",
@@ -57,6 +57,22 @@
       },
       "decision": "lectura total de procedencia (w28): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-linking_environmental_performance_budgeting-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Estrategia que consiste en hacer que los departamentos asuman la responsabilidad directa de sus propios costos de energía y residuos, en lugar de distribuir estos costos como un porcentaje fijo de gastos generales. Este cambio de asignación presupuestaria genera incentivos reales para la eficiencia, como ocurrió en Microsoft al corregir el uso ineficiente de servidores.",
+      "texto_nuevo": "La idea es que cada departamento cargue en su propio presupuesto lo que gasta en energía y en residuos, en vez de repartir esas facturas como un porcentaje fijo de los gastos generales. Al cambiar quién paga, aparecen motivos reales para ser eficiente; así lo vivió Microsoft cuando corrigió el uso ineficiente de sus servidores.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6743",
+        "frase": "making departments responsible for their own energy and waste bills"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

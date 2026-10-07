@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Crear manuales de jugadas para lo que haces una y otra vez",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "La mayor parte del trabajo que hace falta para que algo ocurra es tan complejo que es casi imposible recordarlo de cabeza, y menos improvisarlo en el momento. Un manual que fija los pasos correctos para las condiciones actuales ayuda con eso, y si te ves haciendo algo parecido una y otra vez, hay buenas probabilidades de que se pueda escribir en uno. Además, una vez escrito, lo puedes pasar a otros para que lo aprendan y lo ejecuten. Ningún proceso está terminado: en un caso, quien se volvió el cuello de botella repartió el trabajo, y al repetir la misma indicación la dejó por escrito.",
+  "resumen_teorico": "Casi todo lo que hay que hacer para sacar algo adelante tiene tantos pasos que retenerlos de memoria resulta casi imposible, e inventarlos sobre la marcha, todavía más. Para eso sirve un manual: deja fijada la secuencia correcta según las circunstancias de hoy. Cuando repites una tarea parecida muchas veces, lo más probable es que puedas ponerla por escrito, y ya escrita puedes entregarla a otras personas para que la aprendan y la ejecuten. Ningún proceso queda cerrado: en un caso, quien se había vuelto el cuello de botella repartió el trabajo y, al ver que repetía la misma indicación, la puso por escrito.",
   "notas_extraccion": "Cierra el capitulo y es la unica pieza cuyo objeto es el propio procedimiento. Lo que la hace procedimentable son dos inventarios propios: los ejemplos de manual que el libro nombra, reunion de equipo, cierre de contratacion, proyecto a tiempo y presupuesto, y la senal de que hay un manual por escribir, que es hacer lo mismo una y otra vez. El caso del correo semanal va dentro y no a nodo propio (manual seccion 3.5), y va entero porque cada fase trae el sintoma que la provoca y el remedio que la sigue, que es lo que convierte la historia en procedimiento: el cuello de botella se reparte, el reparto se normaliza, y la norma se escribe cuando te oyes repitiendo la misma indicacion. Lo que el libro NO dice, y por eso no esta escrito aqui, es en que formato vive el manual, ni quien lo mantiene, ni cada cuanto se revisa.",
   "pasos_accionables": [
     "Asume que nada queda terminado, ni un producto ni un proceso: lanzas una versión, aprendes de ella, iteras y la mejoras, y tu manera de avanzar debería quedar igual de abierta a mejoras.",
@@ -739,6 +739,22 @@
       },
       "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 10,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-crear_manuales_jugadas_repetibles-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La mayor parte del trabajo que hace falta para que algo ocurra es tan complejo que es casi imposible recordarlo de cabeza, y menos improvisarlo en el momento. Un manual que fija los pasos correctos para las condiciones actuales ayuda con eso, y si te ves haciendo algo parecido una y otra vez, hay buenas probabilidades de que se pueda escribir en uno. Además, una vez escrito, lo puedes pasar a otros para que lo aprendan y lo ejecuten. Ningún proceso está terminado: en un caso, quien se volvió el cuello de botella repartió el trabajo, y al repetir la misma indicación la dejó por escrito.",
+      "texto_nuevo": "Casi todo lo que hay que hacer para sacar algo adelante tiene tantos pasos que retenerlos de memoria resulta casi imposible, e inventarlos sobre la marcha, todavía más. Para eso sirve un manual: deja fijada la secuencia correcta según las circunstancias de hoy. Cuando repites una tarea parecida muchas veces, lo más probable es que puedas ponerla por escrito, y ya escrita puedes entregarla a otras personas para que la aprendan y la ejecuten. Ningún proceso queda cerrado: en un caso, quien se había vuelto el cuello de botella repartió el trabajo y, al ver que repetía la misma indicación, la puso por escrito.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "265-269",
+        "frase": "Most of the work needed to make something happen in today's world"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

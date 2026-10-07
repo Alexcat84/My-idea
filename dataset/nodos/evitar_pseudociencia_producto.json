@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evitar la Pseudociencia en el Desarrollo de Producto",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, y solo construyendo un modelo de comportamiento del cliente y mostrando que con tu producto o servicio logras cambiarlo con el tiempo estableces hechos reales sobre tu visión.",
+  "resumen_teorico": "Es frecuente que un equipo que innova monte un 'teatro del éxito': escoge solo los datos que le dan la razón a su visión y evita someterla a experimentos de verdad, o se esconde en modo sigiloso, una zona sin datos donde prueba cosas sin que ningún cliente real le responda. Señalar puntos en una gráfica de métricas brutas para probar que una cosa causó otra es pseudociencia, y también lo es disculpar un fracaso alegando que hubo 'aprendizaje' sin mostrar evidencia. Si de verdad aprendiste en un ciclo, lo pruebas al convertirlo en aprendizaje validado en el ciclo siguiente. Solo estableces hechos reales sobre tu visión cuando construyes un modelo del comportamiento de tu cliente y demuestras que tu producto o servicio lo va cambiando con el tiempo.",
   "pasos_accionables": [
     "Revisar si las métricas usadas para justificar decisiones son métricas de vanidad o métricas accionables con relación causa-efecto clara",
     "Preguntar explícitamente: '¿Cómo sabemos que la causa y efecto propuestos son verdaderos?'",
@@ -46,6 +46,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: el nodo cambia cambiar el comportamiento por modificar el modelo.; Se pierde lo que el libro exige: mostrar que con el producto logras cambiar ese comportamiento con el tiempo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-evitar_pseudociencia_producto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Muchos equipos de innovación caen en 'teatro del éxito': seleccionan datos que apoyan su visión en lugar de exponerla a experimentos verdaderos, o se refugian en modo sigiloso para crear una zona libre de datos donde experimentan sin retroalimentación real de clientes. Cualquier intento de demostrar causa y efecto resaltando puntos en un gráfico de métricas brutas, o de justificar fracasos apelando al 'aprendizaje' sin evidencia, constituye pseudociencia. El aprendizaje real se demuestra convirtiéndolo en aprendizaje validado en el siguiente ciclo, y solo construyendo un modelo de comportamiento del cliente y mostrando que con tu producto o servicio logras cambiarlo con el tiempo estableces hechos reales sobre tu visión.",
+      "texto_nuevo": "Es frecuente que un equipo que innova monte un 'teatro del éxito': escoge solo los datos que le dan la razón a su visión y evita someterla a experimentos de verdad, o se esconde en modo sigiloso, una zona sin datos donde prueba cosas sin que ningún cliente real le responda. Señalar puntos en una gráfica de métricas brutas para probar que una cosa causó otra es pseudociencia, y también lo es disculpar un fracaso alegando que hubo 'aprendizaje' sin mostrar evidencia. Si de verdad aprendiste en un ciclo, lo pruebas al convertirlo en aprendizaje validado en el ciclo siguiente. Solo estableces hechos reales sobre tu visión cuando construyes un modelo del comportamiento de tu cliente y demuestras que tu producto o servicio lo va cambiando con el tiempo.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "3337-3339",
+        "frase": "too many innovation teams engage in success theater, selectively finding data that support"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

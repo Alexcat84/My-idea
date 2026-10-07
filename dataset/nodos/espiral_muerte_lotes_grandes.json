@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Espiral de Muerte de los Lotes Grandes",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Describe el fenómeno organizacional donde trabajar en lotes grandes (por especialización funcional) parece eficiente a nivel individual pero genera interrupciones constantes, retrabajos y cuellos de botella cuando surgen errores o dudas. Por ejemplo, un diseñador que entrega treinta diseños de una vez a ingeniería, en lugar de trabajar de forma colaborativa e iterativa, termina generando más retrabajo (a veces cinco o seis veces por lanzamiento) debido a malentendidos o errores que se descubren tarde. La instintiva preferencia por lotes grandes es tan fuerte que incluso cuando el sistema falla, las personas tienden a culparse a sí mismas en lugar de cuestionar el proceso.",
+  "resumen_teorico": "Explica lo que pasa cuando el trabajo se reparte por especialidad y circula en lotes grandes: a cada persona le parece eficiente, pero el proceso se llena de interrupciones, retrabajos y cuellos de botella cada vez que aparece un error o una duda. Piensa en alguien de diseño que entrega de golpe treinta diseños a ingeniería en vez de trabajar con ese equipo en iteraciones cortas: los malentendidos y errores salen a la luz tarde y obligan a rehacer el trabajo, a veces cinco o seis veces por lanzamiento. El apego instintivo a los lotes grandes pesa tanto que, aun cuando el sistema falla, la gente suele echarse la culpa antes que poner en duda el proceso.",
   "pasos_accionables": [
     "Identificar los puntos de entrega o 'handoff' entre departamentos o roles en el proceso actual",
     "Medir cuántas veces se repite o corrige el trabajo por cada lanzamiento",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Rompe el Ciclo de Lotes",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-espiral_muerte_lotes_grandes-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Describe el fenómeno organizacional donde trabajar en lotes grandes (por especialización funcional) parece eficiente a nivel individual pero genera interrupciones constantes, retrabajos y cuellos de botella cuando surgen errores o dudas. Por ejemplo, un diseñador que entrega treinta diseños de una vez a ingeniería, en lugar de trabajar de forma colaborativa e iterativa, termina generando más retrabajo (a veces cinco o seis veces por lanzamiento) debido a malentendidos o errores que se descubren tarde. La instintiva preferencia por lotes grandes es tan fuerte que incluso cuando el sistema falla, las personas tienden a culparse a sí mismas en lugar de cuestionar el proceso.",
+      "texto_nuevo": "Explica lo que pasa cuando el trabajo se reparte por especialidad y circula en lotes grandes: a cada persona le parece eficiente, pero el proceso se llena de interrupciones, retrabajos y cuellos de botella cada vez que aparece un error o una duda. Piensa en alguien de diseño que entrega de golpe treinta diseños a ingeniería en vez de trabajar con ese equipo en iteraciones cortas: los malentendidos y errores salen a la luz tarde y obligan a rehacer el trabajo, a veces cinco o seis veces por lanzamiento. El apego instintivo a los lotes grandes pesa tanto que, aun cuando el sistema falla, la gente suele echarse la culpa antes que poner en duda el proceso.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2297",
+        "frase": "So strong is the instinct to work in large batches, that even"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

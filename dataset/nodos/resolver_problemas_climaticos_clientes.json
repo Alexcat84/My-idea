@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Resolver los Problemas Climáticos de los Clientes",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El mayor impacto ambiental de una empresa puede no estar en sus propias operaciones sino en cómo sus productos son usados por los clientes. Unilever descubrió que sus productos de lavandería se usan más de 125 mil millones de veces al año a nivel mundial, por lo que una sola innovación multiplicada a esa escala genera un impacto mucho mayor que cualquier reducción interna. Empresas como Eileen Fisher diseñan productos duraderos para reducir la necesidad de reemplazo, mientras que los mercados de agricultores locales reducen las 'millas de comida' y las emisiones asociadas al transporte.",
+  "resumen_teorico": "Puede que la mayor huella ambiental de tu negocio no esté en lo que haces puertas adentro, sino en el uso que tus clientes dan a tus productos. Unilever descubrió que en todo el mundo sus productos de lavandería se usan más de 125 mil millones de veces al año; con semejante volumen, una única innovación, repetida en cada uso, logra un impacto muy superior a cualquier recorte en la operación propia. Eileen Fisher hace prendas duraderas para que haga falta reemplazarlas menos, y los mercados de agricultores locales acortan las 'millas de comida' y las emisiones que trae el transporte.",
   "pasos_accionables": [
     "Analizar el ciclo de vida completo del producto, incluyendo su uso por el cliente.",
     "Identificar innovaciones de producto que reduzcan el impacto ambiental en la fase de uso.",
@@ -76,6 +76,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-resolver_problemas_climaticos_clientes-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El mayor impacto ambiental de una empresa puede no estar en sus propias operaciones sino en cómo sus productos son usados por los clientes. Unilever descubrió que sus productos de lavandería se usan más de 125 mil millones de veces al año a nivel mundial, por lo que una sola innovación multiplicada a esa escala genera un impacto mucho mayor que cualquier reducción interna. Empresas como Eileen Fisher diseñan productos duraderos para reducir la necesidad de reemplazo, mientras que los mercados de agricultores locales reducen las 'millas de comida' y las emisiones asociadas al transporte.",
+      "texto_nuevo": "Puede que la mayor huella ambiental de tu negocio no esté en lo que haces puertas adentro, sino en el uso que tus clientes dan a tus productos. Unilever descubrió que en todo el mundo sus productos de lavandería se usan más de 125 mil millones de veces al año; con semejante volumen, una única innovación, repetida en cada uso, logra un impacto muy superior a cualquier recorte en la operación propia. Eileen Fisher hace prendas duraderas para que haga falta reemplazarlas menos, y los mercados de agricultores locales acortan las 'millas de comida' y las emisiones que trae el transporte.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "6412-6414",
+        "frase": "Unilever calculates, for example, that its laundry products are used worldwide"
+      },
+      "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
