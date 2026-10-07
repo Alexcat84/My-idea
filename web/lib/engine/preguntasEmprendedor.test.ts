@@ -40,7 +40,6 @@ function supuestos(): string[] {
 const BASES_CON_SUPUESTO = new Set<string>([
   "acordar_plan_conjunto_jefe",
   "aplicar_ejercicio_codigo_genetico_control",
-  "calibrar_decision_despido_documentarla",
   "construir_apoyo_equipo_directivo_metodo",
   "disenar_equipo_plan_anual",
   "eliminar_seguimiento_descendente_responsabilizar_dueno",
