@@ -128,6 +128,7 @@ async function enTrabajador(nivel: NivelLiquido, o: OpcionesMontaje): Promise<Co
           reducido: o.reducido,
           tiempoFijo: o.tiempoFijo,
           adaptativo: o.adaptativo,
+          orden: o.orden,
         },
         [fuera],
       );
@@ -173,6 +174,7 @@ async function enHiloPrincipal(nivel: NivelLiquido, o: OpcionesMontaje): Promise
       reducido: o.reducido,
       tiempoFijo: o.tiempoFijo,
       adaptativo: o.adaptativo,
+      orden: o.orden,
       alPrimerFotograma: () => {
         lienzo.style.opacity = "1";
         o.alPrimerFotograma();

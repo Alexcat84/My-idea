@@ -27,6 +27,8 @@ export interface OpcionesMontaje {
   tiempoFijo: number | null;
   /** Medir los primeros segundos y avisar si el nivel no se sostiene. */
   adaptativo: boolean;
+  /** El orden de la visita: indices del catalogo, uno por ciclo (ciclo.ts). */
+  orden: number[];
   alPrimerFotograma: () => void;
   alAviso: (aviso: Aviso, fps: number) => void;
 }
@@ -44,6 +46,7 @@ export interface OpcionesMotor {
   reducido: boolean;
   tiempoFijo: number | null;
   adaptativo: boolean;
+  orden: number[];
   alPrimerFotograma: () => void;
   alAviso: (aviso: Aviso, fps: number, tiempo: number) => void;
   alFps: (fps: number, tiempo: number) => void;
@@ -67,6 +70,7 @@ export type MensajeAlTrabajador =
       reducido: boolean;
       tiempoFijo: number | null;
       adaptativo: boolean;
+      orden: number[];
     }
   | { tipo: "redimensionar"; ancho: number; alto: number; dpr: number }
   | { tipo: "puntero"; x: number; y: number }

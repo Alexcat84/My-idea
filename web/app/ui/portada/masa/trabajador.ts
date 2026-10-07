@@ -51,6 +51,7 @@ ambito.onmessage = async (ev) => {
           reducido: m.reducido,
           tiempoFijo: m.tiempoFijo,
           adaptativo: m.adaptativo,
+          orden: m.orden,
           alPrimerFotograma: () => enviar({ tipo: "primer-fotograma" }),
           alAviso: (aviso, fps, tiempo) => enviar({ tipo: "aviso", aviso, fps, tiempo }),
           alFps: (fps, tiempo) => enviar({ tipo: "fps", fps, tiempo }),

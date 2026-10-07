@@ -2,7 +2,9 @@
 
 /**
  * La masa del hero de la portada: un liquido oscuro inestable que fluye,
- * se vuelve una figura con su misma materia y regresa a masa.
+ * se vuelve una figura con su misma materia y regresa a masa. Las figuras son
+ * ideas hechas realidad (masa/catalogo.ts), en un orden al azar distinto en
+ * cada visita (decision del fundador, 8 oct 2026).
  *
  * Este componente no importa three.js ni crea contextos WebGL: decide el
  * nivel de calidad y monta el motor cuando la pagina ya pinto (evento load
@@ -11,12 +13,15 @@
  * mismo que pinta el shader, y el lienzo entra en fundido.
  *
  * Niveles: alto -> medio -> bajo -> particulas -> fija (ver masa/calidad.ts).
- * Para verificacion: ?masa=<nivel> fuerza un nivel sin adaptar y
- * ?masa-t=<segundos> congela el ciclo en ese instante.
+ * Para verificacion: ?masa=<nivel> fuerza un nivel sin adaptar,
+ * ?masa-t=<segundos> congela el ciclo en ese instante y
+ * ?masa-figura=<nombre> pone esa figura primera en el orden de la visita.
  */
 import { useEffect, useRef } from "react";
 import { montarLiquido, SinLiquido } from "./masa/anfitrion";
+import { FIGURAS } from "./masa/catalogo";
 import { esNivel, esNivelLiquido, nivelInicial, siguienteNivel, type Nivel } from "./masa/calidad";
+import { ordenDeVisita } from "./masa/ciclo";
 import type { ControlMasa, OpcionesMontaje } from "./masa/control";
 
 /** Pistas baratas del equipo; lo que depende de la GPU lo averigua el motor. */
@@ -45,6 +50,11 @@ export function HeroMasa() {
     const tFijoTexto = parametros.get("masa-t");
     const tiempoFijo = tFijoTexto !== null && Number.isFinite(Number(tFijoTexto)) ? Number(tFijoTexto) : null;
     const reducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // El orden de ESTA visita (lo comparten todos los niveles, asi un cambio de
+    // nivel no repite figuras).
+    const orden = ordenDeVisita(FIGURAS.length, Math.random);
+    const primera = (FIGURAS as readonly string[]).indexOf(parametros.get("masa-figura") ?? "");
+    if (primera >= 0) orden.splice(0, orden.length, primera, ...orden.filter((i) => i !== primera));
 
     let control: ControlMasa | null = null;
     let cancelado = false;
@@ -65,6 +75,7 @@ export function HeroMasa() {
         reducido,
         tiempoFijo,
         adaptativo: forzado === null && !reducido && tiempoFijo === null,
+        orden,
         alPrimerFotograma: () => {
           contenedor.dataset.listo = "1";
         },

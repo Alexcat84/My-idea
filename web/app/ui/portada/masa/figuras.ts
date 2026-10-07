@@ -1,75 +1,17 @@
 /**
- * Las cinco figuras del ciclo (foco, lente, brujula, escalera, casa),
- * dibujadas con los mismos trazos de las muestras aprobadas. Dos salidas:
- *  - campoFigura: un campo de distancia con signo, para que la misma masa
- *    liquida se transforme en la figura (motor three.js);
- *  - muestrearFigura: puntos sobre los trazos, para el respaldo de particulas.
+ * Las figuras de la masa: ideas hechas realidad (decision del fundador, 8 oct
+ * 2026; el catalogo vive en catalogo.ts). Cada figura llega PRECALCULADA: el
+ * horno (scripts/portada/hornear_figuras.ts) la dibuja, calcula aqui su campo de
+ * distancia con signo (campoDesdeMascara) y lo guarda cuantizado a 16 bits en
+ * public/portada/figuras/<nombre>.bin. El navegador no dibuja ni calcula: baja
+ * el campo de la figura que va a formar (cargarFigura) y lo usa tal cual:
+ *  - el motor three.js lo sube como textura y la masa se transforma en ella;
+ *  - el respaldo de particulas saca de el puntos dentro del trazo (puntosDeCampo).
  *
- * Diferencia con las muestras: cada figura se centra por su caja y se
- * escala para que su lado mayor mida TAMANO_FIGURA, asi todas quedan
- * centradas exactas y al mismo 80 % del lado menor.
+ * Cada figura se centra por su caja y se escala para que su lado mayor mida
+ * TAMANO_FIGURA: todas quedan centradas y al mismo 80 % del lado menor.
  */
-import { FIGURAS, type NombreFigura } from "./ciclo";
 import { RADIO_LIMITE, TAMANO_FIGURA } from "./encuadre";
-
-type Pincel = CanvasRenderingContext2D | OffscreenCanvasRenderingContext2D;
-
-const LADO = 512;
-
-const TRAZOS: Record<NombreFigura, (g: Pincel) => void> = {
-  foco(g) {
-    g.beginPath(); g.arc(256, 200, 108, Math.PI * 0.78, Math.PI * 2.22); g.stroke();
-    g.beginPath(); g.moveTo(190, 283); g.quadraticCurveTo(210, 318, 212, 350);
-    g.moveTo(322, 283); g.quadraticCurveTo(302, 318, 300, 350); g.stroke();
-    g.beginPath(); g.moveTo(212, 362); g.lineTo(300, 362);
-    g.moveTo(218, 392); g.lineTo(294, 392); g.moveTo(232, 420); g.lineTo(280, 420); g.stroke();
-    g.lineWidth = 10;
-    g.beginPath(); g.moveTo(228, 300); g.lineTo(240, 230); g.lineTo(256, 262); g.lineTo(272, 230); g.lineTo(284, 300); g.stroke();
-    g.lineWidth = 12;
-    const rayos: ReadonlyArray<readonly [number, number, number, number]> = [
-      [256, 58, 256, 30], [150, 100, 128, 78], [362, 100, 384, 78], [110, 200, 80, 200], [402, 200, 432, 200],
-    ];
-    for (const [x0, y0, x1, y1] of rayos) {
-      g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
-    }
-  },
-  lente(g) {
-    g.lineWidth = 18; g.beginPath(); g.arc(222, 214, 118, 0, Math.PI * 2); g.stroke();
-    g.lineWidth = 10; g.beginPath(); g.arc(222, 214, 78, Math.PI * 1.1, Math.PI * 1.45); g.stroke();
-    g.lineWidth = 34; g.beginPath(); g.moveTo(312, 304); g.lineTo(416, 408); g.stroke();
-  },
-  brujula(g) {
-    g.lineWidth = 16; g.beginPath(); g.arc(256, 256, 170, 0, Math.PI * 2); g.stroke();
-    g.lineWidth = 10;
-    for (let a = 0; a < 8; a++) {
-      const ang = (a * Math.PI) / 4;
-      const r1 = a % 2 ? 150 : 138;
-      g.beginPath(); g.moveTo(256 + Math.cos(ang) * r1, 256 + Math.sin(ang) * r1);
-      g.lineTo(256 + Math.cos(ang) * 160, 256 + Math.sin(ang) * 160); g.stroke();
-    }
-    g.beginPath(); g.moveTo(256, 118); g.lineTo(288, 256); g.lineTo(224, 256); g.closePath(); g.fill();
-    g.lineWidth = 12;
-    g.beginPath(); g.moveTo(256, 394); g.lineTo(288, 256); g.moveTo(256, 394); g.lineTo(224, 256); g.stroke();
-    g.beginPath(); g.arc(256, 256, 12, 0, Math.PI * 2); g.fill();
-  },
-  escalera(g) {
-    g.lineWidth = 16; g.beginPath();
-    g.moveTo(92, 420); g.lineTo(92, 356); g.lineTo(176, 356); g.lineTo(176, 288);
-    g.lineTo(260, 288); g.lineTo(260, 220); g.lineTo(344, 220); g.lineTo(344, 152); g.lineTo(424, 152);
-    g.stroke();
-    g.beginPath(); g.moveTo(80, 430); g.lineTo(432, 430); g.stroke();
-    g.lineWidth = 10; g.beginPath(); g.moveTo(410, 150); g.lineTo(410, 70); g.stroke();
-    g.beginPath(); g.moveTo(410, 72); g.lineTo(462, 90); g.lineTo(410, 108); g.closePath(); g.fill();
-  },
-  casa(g) {
-    g.lineWidth = 16;
-    g.beginPath(); g.moveTo(118, 262); g.lineTo(256, 128); g.lineTo(394, 262); g.stroke();
-    g.beginPath(); g.moveTo(152, 236); g.lineTo(152, 420); g.lineTo(360, 420); g.lineTo(360, 236); g.stroke();
-    g.beginPath(); g.moveTo(228, 420); g.lineTo(228, 330); g.lineTo(284, 330); g.lineTo(284, 420); g.stroke();
-    g.lineWidth = 10; g.beginPath(); g.rect(304, 278, 36, 36); g.stroke();
-    g.lineWidth = 14; g.beginPath(); g.moveTo(322, 200); g.lineTo(322, 150); g.lineTo(350, 150); g.lineTo(350, 226); g.stroke();
-  },
-};
 
 /** PRNG sembrado (mulberry32): la misma figura sale igual en cada visita. */
 export function azarSembrado(semilla: number): () => number {
@@ -138,48 +80,6 @@ export function normalizacion(pixeles: ArrayLike<number>): { cx: number; cy: num
 }
 
 /**
- * Dibuja la figura en un lienzo de `lado` px (los trazos estan pensados
- * para 512) y devuelve su mascara: 1 donde hay trazo.
- */
-function rasterizar(nombre: NombreFigura, lado: number): Uint8Array {
-  // En un worker no hay document: OffscreenCanvas cuando existe.
-  let g: Pincel | null;
-  if (typeof OffscreenCanvas !== "undefined") {
-    g = new OffscreenCanvas(lado, lado).getContext("2d", { willReadFrequently: true });
-  } else {
-    const lienzo = document.createElement("canvas");
-    lienzo.width = lado;
-    lienzo.height = lado;
-    g = lienzo.getContext("2d", { willReadFrequently: true });
-  }
-  const mascara = new Uint8Array(lado * lado);
-  if (!g) return mascara;
-  g.scale(lado / LADO, lado / LADO);
-  g.strokeStyle = "#fff";
-  g.fillStyle = "#fff";
-  g.lineCap = "round";
-  g.lineJoin = "round";
-  g.lineWidth = 16;
-  TRAZOS[nombre](g);
-  const datos = g.getImageData(0, 0, lado, lado).data;
-  for (let i = 0; i < lado * lado; i++) mascara[i] = datos[i * 4 + 3] > 128 ? 1 : 0;
-  return mascara;
-}
-
-function encendidosDe(mascara: Uint8Array, lado: number): number[] {
-  const encendidos: number[] = [];
-  for (let y = 0; y < lado; y++) {
-    for (let x = 0; x < lado; x++) if (mascara[y * lado + x]) encendidos.push(x, y);
-  }
-  return encendidos;
-}
-
-/** Dibuja la figura y devuelve `n` puntos de mundo sobre sus trazos. */
-export function muestrearFigura(nombre: NombreFigura, n: number, semilla: number): Float32Array {
-  return normalizarPuntos(encendidosDe(rasterizar(nombre, LADO), LADO), n, azarSembrado(semilla));
-}
-
-/**
  * Transformada de distancia euclidea exacta (Felzenszwalb y Huttenlocher),
  * al cuadrado y en pixeles: para cada pixel, la distancia al pixel mas
  * cercano donde `mascara` vale `objetivo`.
@@ -242,24 +142,27 @@ export function distanciaConSigno(mascara: Uint8Array, ancho: number, alto: numb
   return d;
 }
 
-/** Lado del lienzo con que se calcula el campo de cada figura. */
+/** Lado del lienzo con que el horno dibuja cada figura. */
 export const LADO_RASTER_CAMPO = 384;
-/** Lado (en texeles) del campo que se sube a la GPU. */
-export const LADO_CAMPO = 256;
+/** Lado (en texeles) del campo precalculado que se sube a la GPU. */
+export const LADO_CAMPO = 128;
 /** El campo cubre el cuadrado de mundo [-EXTENSION_CAMPO, EXTENSION_CAMPO]^2. */
 export const EXTENSION_CAMPO = RADIO_LIMITE;
+/** El campo guardado se recorta a [-RANGO_CAMPO, RANGO_CAMPO] (unidades de mundo):
+ * cubre la diagonal del cuadrado (1.8 * raiz de 2 = 2.55). */
+export const RANGO_CAMPO = 2.6;
 
 /**
- * Campo de distancia con signo de la figura, en unidades de mundo, sobre
- * una grilla LADO_CAMPO x LADO_CAMPO que cubre [-EXTENSION_CAMPO, +]^2.
- * Fila 0 = y minima (como lee la textura en WebGL). Mismo centrado y
- * escala que las particulas: la figura queda al 80 % del lado menor.
+ * Campo de distancia con signo de una figura ya dibujada (`mascara`, 1 donde
+ * hay trazo, en un lienzo de `r` x `r`), en unidades de mundo, sobre una grilla
+ * `lado` x `lado` que cubre [-EXTENSION_CAMPO, +]^2. Fila 0 = y minima (como lee
+ * la textura en WebGL). Centrada por su caja y con el lado mayor en
+ * TAMANO_FIGURA: la figura queda al 80 % del lado menor. Lo usa el horno.
  */
-export function campoFigura(nombre: NombreFigura): Float32Array {
-  const r = LADO_RASTER_CAMPO;
-  const mascara = rasterizar(nombre, r);
-  const campo = new Float32Array(LADO_CAMPO * LADO_CAMPO);
-  const encendidos = encendidosDe(mascara, r);
+export function campoDesdeMascara(mascara: Uint8Array, r: number, lado = LADO_CAMPO): Float32Array {
+  const campo = new Float32Array(lado * lado);
+  const encendidos: number[] = [];
+  for (let y = 0; y < r; y++) for (let x = 0; x < r; x++) if (mascara[y * r + x]) encendidos.push(x, y);
   if (encendidos.length === 0) return campo.fill(EXTENSION_CAMPO);
   const { cx, cy, escala } = normalizacion(encendidos);
   const dpx = distanciaConSigno(mascara, r, r);
@@ -277,18 +180,17 @@ export function campoFigura(nombre: NombreFigura): Float32Array {
     const b = dpx[y1 * r + x0] * (1 - fx) + dpx[y1 * r + x1] * fx;
     return a * (1 - fy) + b * fy + Math.hypot(px - 0.5 - x, py - 0.5 - y);
   };
-  const paso = (2 * EXTENSION_CAMPO) / LADO_CAMPO;
-  for (let j = 0; j < LADO_CAMPO; j++) {
+  const paso = (2 * EXTENSION_CAMPO) / lado;
+  for (let j = 0; j < lado; j++) {
     const yMundo = -EXTENSION_CAMPO + (j + 0.5) * paso;
-    for (let i = 0; i < LADO_CAMPO; i++) {
+    for (let i = 0; i < lado; i++) {
       const xMundo = -EXTENSION_CAMPO + (i + 0.5) * paso;
-      campo[j * LADO_CAMPO + i] = muestra(xMundo / escala + cx, -yMundo / escala + cy) * escala;
+      campo[j * lado + i] = muestra(xMundo / escala + cx, -yMundo / escala + cy) * escala;
     }
   }
-  // La mascara binaria deja escalones de medio pixel en las curvas; dos
-  // pasadas de un filtro binomial [1 2 1] los alisan sin mover el trazo.
-  suavizar(campo, LADO_CAMPO);
-  suavizar(campo, LADO_CAMPO);
+  // La mascara binaria deja escalones de medio pixel en las curvas; una pasada
+  // de un filtro binomial [1 2 1] los alisa sin mover el trazo.
+  suavizar(campo, lado);
   return campo;
 }
 
@@ -313,30 +215,73 @@ function suavizar(campo: Float32Array, lado: number): void {
   }
 }
 
-/** Calcula los cinco campos cediendo el hilo entre uno y otro. */
-export async function calcularCampos(
-  alListo: (indice: number, campo: Float32Array) => void,
-  cancelado: () => boolean,
-): Promise<void> {
-  for (let i = 0; i < FIGURAS.length; i++) {
-    if (cancelado()) return;
-    alListo(i, campoFigura(FIGURAS[i]));
-    await new Promise<void>((resolver) => setTimeout(resolver, 0));
+/** Campo -> 16 bits: [-RANGO_CAMPO, RANGO_CAMPO] lineal sobre [0, 65535]. */
+export function codificarCampo(campo: Float32Array): Uint16Array {
+  const salida = new Uint16Array(campo.length);
+  for (let i = 0; i < campo.length; i++) {
+    const d = Math.min(Math.max(campo[i], -RANGO_CAMPO), RANGO_CAMPO);
+    salida[i] = Math.round((d / RANGO_CAMPO / 2 + 0.5) * 65535);
   }
+  return salida;
+}
+
+/** 16 bits -> campo, el inverso de codificarCampo. */
+export function decodificarCampo(datos: Uint16Array): Float32Array {
+  const campo = new Float32Array(datos.length);
+  for (let i = 0; i < datos.length; i++) campo[i] = ((datos[i] / 65535) * 2 - 1) * RANGO_CAMPO;
+  return campo;
 }
 
 /**
- * Muestrea las cinco figuras cediendo el hilo entre una y otra, para no
- * crear una tarea larga en el arranque. La primera llega en cuanto esta.
+ * `n` puntos de mundo DENTRO del trazo (campo < 0), para el respaldo de
+ * particulas: se recorre una permutacion de los texeles del trazo (sin grumos
+ * ni huecos por azar), cada punto con un temblor dentro de su texel.
  */
-export async function muestrearTodas(
-  n: number,
-  alListo: (indice: number, puntos: Float32Array) => void,
-  cancelado: () => boolean,
-): Promise<void> {
-  for (let i = 0; i < FIGURAS.length; i++) {
-    if (cancelado()) return;
-    alListo(i, muestrearFigura(FIGURAS[i], n, 1000 + i));
-    await new Promise<void>((resolver) => setTimeout(resolver, 0));
+export function puntosDeCampo(campo: Float32Array, lado: number, n: number, azar: () => number, grosorZ = 0.05): Float32Array {
+  const salida = new Float32Array(n * 3);
+  const dentro: number[] = [];
+  for (let k = 0; k < lado * lado; k++) if (campo[k] < 0) dentro.push(k);
+  if (dentro.length === 0) return salida;
+  for (let i = dentro.length - 1; i > 0; i--) {
+    const j = Math.floor(azar() * (i + 1));
+    const tmp = dentro[i];
+    dentro[i] = dentro[j];
+    dentro[j] = tmp;
   }
+  const paso = (2 * EXTENSION_CAMPO) / lado;
+  for (let p = 0; p < n; p++) {
+    const k = dentro[p % dentro.length];
+    const i = k % lado;
+    const j = Math.floor(k / lado);
+    salida[p * 3] = -EXTENSION_CAMPO + (i + azar()) * paso;
+    salida[p * 3 + 1] = -EXTENSION_CAMPO + (j + azar()) * paso;
+    salida[p * 3 + 2] = (azar() - 0.5) * grosorZ;
+  }
+  return salida;
+}
+
+/** Donde se sirven los campos precalculados. */
+export const RUTA_FIGURAS = "/portada/figuras";
+
+const cargas = new Map<string, Promise<Float32Array>>();
+
+/**
+ * Baja (una sola vez por visita) el campo precalculado de una figura. Un fallo
+ * de red no se recuerda: el siguiente pedido lo intenta de nuevo.
+ */
+export function cargarFigura(nombre: string): Promise<Float32Array> {
+  const previa = cargas.get(nombre);
+  if (previa) return previa;
+  const carga = fetch(`${RUTA_FIGURAS}/${nombre}.bin`)
+    .then((res) => {
+      if (!res.ok) throw new Error(`figura ${nombre}: ${res.status}`);
+      return res.arrayBuffer();
+    })
+    .then((b) => {
+      if (b.byteLength !== LADO_CAMPO * LADO_CAMPO * 2) throw new Error(`figura ${nombre}: tamano ${b.byteLength}`);
+      return decodificarCampo(new Uint16Array(b));
+    });
+  cargas.set(nombre, carga);
+  carga.catch(() => cargas.delete(nombre));
+  return carga;
 }

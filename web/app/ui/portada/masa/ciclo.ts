@@ -10,7 +10,9 @@
  *   regresa   -> la figura se funde de vuelta en la masa.
  * `mezcla` es cuanto de figura hay (0 masa, 1 figura). El respaldo de
  * particulas (equipos debiles) usa el mismo ciclo con particulas.
- * Cada ciclo forma la figura siguiente: foco, lente, brujula, escalera, casa.
+ * Cada ciclo forma la figura siguiente del ORDEN DE LA VISITA: una permutacion
+ * al azar del catalogo (catalogo.ts), distinta en cada visita (decision del
+ * fundador, 8 oct 2026: ideas hechas realidad, ya no las cinco etapas).
  *
  * Es puro y sin estado para que el mismo instante se pueda reproducir
  * (capturas, pruebas, cambio de nivel de calidad sin saltos).
@@ -24,9 +26,6 @@ export const FASES = {
 } as const;
 
 export const DURACION_CICLO = FASES.reposo + FASES.disgrega + FASES.forma + FASES.regresa;
-
-export const FIGURAS = ["foco", "lente", "brujula", "escalera", "casa"] as const;
-export type NombreFigura = (typeof FIGURAS)[number];
 
 export interface EstadoCiclo {
   /** Respaldo de particulas: 0 = sin masa, 1 = masa completa. */
@@ -62,10 +61,26 @@ export function estadoEn(t: number): EstadoCiclo {
   return estadoEnCiclo(tc);
 }
 
-/** Indice de la figura que forma el ciclo en curso. */
-export function figuraEn(t: number): number {
-  const ciclo = Math.floor(Math.max(t, 0) / DURACION_CICLO);
-  return ciclo % FIGURAS.length;
+/** Numero del ciclo en curso (0, 1, 2...). */
+export function cicloEn(t: number): number {
+  return Math.floor(Math.max(t, 0) / DURACION_CICLO);
+}
+
+/** Indice (en el catalogo) de la figura que forma el ciclo en curso. */
+export function figuraEn(t: number, orden: readonly number[]): number {
+  return orden[cicloEn(t) % orden.length];
+}
+
+/** El orden de una visita: permutacion de Fisher-Yates de 0..total-1. */
+export function ordenDeVisita(total: number, azar: () => number): number[] {
+  const orden = Array.from({ length: total }, (_, i) => i);
+  for (let i = total - 1; i > 0; i--) {
+    const j = Math.floor(azar() * (i + 1));
+    const tmp = orden[i];
+    orden[i] = orden[j];
+    orden[j] = tmp;
+  }
+  return orden;
 }
 
 /**

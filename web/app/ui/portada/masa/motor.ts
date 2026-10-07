@@ -4,7 +4,8 @@
  * Una sola materia: la masa liquida y las figuras son la misma superficie.
  * El shader interpola entre la piel de la masa y el campo de distancia de
  * la figura del ciclo (uMorf), asi el liquido fluye, se estira y se vuelve
- * foco, lente, brujula, escalera o casa, y despues regresa a masa.
+ * una idea hecha realidad (una cafeteria, un cohete, una guitarra...: el
+ * catalogo, en el orden al azar de la visita) y despues regresa a masa.
  *
  * Por fotograma:
  *  1. la materia se calcula por raymarching en un render target a
@@ -47,10 +48,11 @@ import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { AJUSTES, MedidorFps, type NivelLiquido } from "./calidad";
-import { estadoEn, figuraEn, giroEn, MOMENTOS } from "./ciclo";
+import { FIGURAS } from "./catalogo";
+import { cicloEn, DURACION_CICLO, estadoEn, figuraEn, giroEn, MOMENTOS } from "./ciclo";
 import type { Aviso, ControlMotor, OpcionesMotor } from "./control";
 import { distanciaCamara, FOV_GRADOS, RADIO_MASA } from "./encuadre";
-import { calcularCampos, LADO_CAMPO } from "./figuras";
+import { cargarFigura, LADO_CAMPO } from "./figuras";
 import {
   FRAGMENTO_ACABADO,
   FRAGMENTO_COMPOSICION,
@@ -213,23 +215,37 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
   };
   ajustar();
 
-  /* ---------- figuras ---------- */
-  const figuras: Array<Uint16Array | null> = [null, null, null, null, null];
+  /* ---------- figuras: precalculadas, una por ciclo ---------- */
+  // Del catalogo solo se baja la figura del ciclo en curso y la del siguiente
+  // (32 KB cada una, ya calculadas por el horno): nada se dibuja ni se calcula
+  // aqui. Un fallo de red se reintenta pasado un rato, no en cada fotograma.
+  const figuras = new Map<number, Uint16Array>();
+  const pedidas = new Set<number>();
   let figuraCargada = -1;
   let destruido = false;
+  const pedir = (indice: number): Promise<void> => {
+    if (pedidas.has(indice)) return Promise.resolve();
+    pedidas.add(indice);
+    return cargarFigura(FIGURAS[indice]).then(
+      (c) => {
+        if (!destruido) figuras.set(indice, aMediaPrecision(c));
+      },
+      () => {
+        setTimeout(() => pedidas.delete(indice), 8000);
+      },
+    );
+  };
   const ponerFigura = (indice: number) => {
-    const datos = figuras[indice];
+    const datos = figuras.get(indice);
     if (!datos || indice === figuraCargada) return;
     (campo.image.data as Uint16Array).set(datos);
     campo.needsUpdate = true;
     figuraCargada = indice;
   };
-  // El medidor espera a que esten los cinco campos: se calculan en el mismo
-  // hilo y no son del costo del nivel que se esta midiendo.
+  // El medidor espera a la primera figura: su bajada no es del costo del nivel.
   let figurasListas = false;
-  const camposListos = calcularCampos((i, c) => {
-    figuras[i] = aMediaPrecision(c);
-  }, () => destruido).then(() => {
+  const tPrimera = o.reducido ? (o.tiempoFijo ?? MOMENTOS.reposo) : (o.tiempoFijo ?? o.tiempoInicial);
+  const primeraLista = pedir(figuraEn(tPrimera, o.orden)).then(() => {
     figurasListas = true;
   });
 
@@ -240,14 +256,23 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
   const giro = new Euler();
   const matrizGiro = new Matrix4();
   const rotInv = new Matrix3();
+  // Si la figura de un ciclo no llego a tiempo, ese ciclo la masa sigue siendo
+  // masa: nunca se transforma en un campo vacio ni salta a media forma.
+  let cicloSinFigura = -1;
   const pintar = (t: number) => {
     const e = estadoEn(t);
-    ponerFigura(figuraEn(t));
+    const indice = figuraEn(t, o.orden);
+    void pedir(indice);
+    void pedir(figuraEn(t + DURACION_CICLO, o.orden));
+    ponerFigura(indice);
+    const ciclo = cicloEn(t);
+    if (e.mezcla > 0 && figuraCargada !== indice) cicloSinFigura = ciclo;
+    const mezcla = cicloSinFigura === ciclo ? 0 : e.mezcla;
     puntero.sx += (puntero.x - puntero.sx) * 0.05;
     puntero.sy += (puntero.y - puntero.sy) * 0.05;
     // La masa da una vuelta completa por ciclo y se balancea; la vuelta
     // cierra justo al transformarse, asi la figura formada mira de frente.
-    const libre = 1 - e.mezcla;
+    const libre = 1 - mezcla;
     const tg = t * VELOCIDAD_MATERIA;
     giro.set(
       Math.cos(tg * 0.3) * 0.32 * libre + puntero.sy * 0.18,
@@ -258,7 +283,7 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     rotInv.setFromMatrix4(matrizGiro).transpose();
     uLiquido.uRotInv.value = rotInv;
     uLiquido.uTiempo.value = t;
-    uLiquido.uMorf.value = e.mezcla;
+    uLiquido.uMorf.value = mezcla;
     acabado.uniforms.uTiempo.value = t;
 
     renderer.setRenderTarget(rtLiquido);
@@ -374,7 +399,7 @@ export async function montarMotor(nivel: NivelLiquido, o: OpcionesMotor): Promis
     await renderer.compileAsync(escenaPasadas, camaraPlano);
     // Con movimiento reducido, o con el ciclo congelado en una figura, esa
     // figura tiene que estar lista antes del primer fotograma.
-    if (o.reducido || o.tiempoFijo !== null) await camposListos;
+    if (o.reducido || o.tiempoFijo !== null) await primeraLista;
     renderer.setRenderTarget(rtLiquido);
     renderer.render(escenaLiquido, camaraPlano);
     renderer.setRenderTarget(null);

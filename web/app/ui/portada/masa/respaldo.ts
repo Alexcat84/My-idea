@@ -2,13 +2,15 @@
  * Respaldo para equipos debiles: solo particulas (la muestra
  * particula-my-idea.html), en WebGL1 crudo y sin three.js, para que un
  * equipo que no sostiene el liquido tampoco pague la descarga de three.js.
- * Mismo ciclo, mismas figuras y mismo encuadre que el motor principal.
+ * Mismo ciclo, mismas figuras (precalculadas, en el orden de la visita) y
+ * mismo encuadre que el motor principal.
  */
 import { FPS_MINIMO_PARTICULAS, MedidorFps, PARTICULAS_RESPALDO } from "./calidad";
-import { estadoEn, figuraEn, MOMENTOS } from "./ciclo";
+import { FIGURAS } from "./catalogo";
+import { cicloEn, DURACION_CICLO, estadoEn, figuraEn, MOMENTOS } from "./ciclo";
 import type { ControlMasa, OpcionesMontaje } from "./control";
 import { distanciaCamara, FOV_GRADOS } from "./encuadre";
-import { azarSembrado, muestrearTodas } from "./figuras";
+import { azarSembrado, cargarFigura, LADO_CAMPO, puntosDeCampo } from "./figuras";
 import { FRAGMENTO_RESPALDO, UNIFORMES_RESPALDO, VERTICE_RESPALDO } from "./glsl";
 
 type Mat4 = Float32Array;
@@ -113,15 +115,27 @@ export async function montarRespaldo(o: OpcionesMontaje): Promise<ControlMasa> {
   gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
   gl.clearColor(0, 0, 0, 0);
 
-  const figuras: Array<Float32Array | null> = [null, null, null, null, null];
+  // Las figuras llegan precalculadas (una por ciclo, la del siguiente se pide
+  // antes) y sus puntos salen de su campo: nada se dibuja aqui.
+  const figuras = new Map<number, Float32Array>();
+  const pedidas = new Set<number>();
   let figuraCargada = -1;
   let destruido = false;
-  // El medidor espera a que esten las cinco figuras: su muestreo corre en
-  // el hilo principal y no es del costo del nivel que se esta midiendo.
+  const pedir = (indice: number): Promise<void> => {
+    if (pedidas.has(indice)) return Promise.resolve();
+    pedidas.add(indice);
+    return cargarFigura(FIGURAS[indice]).then(
+      (c) => {
+        if (!destruido) figuras.set(indice, puntosDeCampo(c, LADO_CAMPO, n, azarSembrado(1000 + indice)));
+      },
+      () => {
+        setTimeout(() => pedidas.delete(indice), 8000);
+      },
+    );
+  };
+  // El medidor espera a la primera figura: su bajada no es del costo del nivel.
   let figurasListas = false;
-  void muestrearTodas(n, (i, puntos) => {
-    figuras[i] = puntos;
-  }, () => destruido).then(() => {
+  void pedir(figuraEn(o.tiempoFijo ?? o.tiempoInicial, o.orden)).then(() => {
     figurasListas = true;
   });
 
@@ -142,23 +156,31 @@ export async function montarRespaldo(o: OpcionesMontaje): Promise<ControlMasa> {
   };
   ajustar();
 
+  // Si la figura de un ciclo no llego a tiempo, ese ciclo las particulas siguen
+  // siendo masa (como el motor principal).
+  let cicloSinFigura = -1;
   const pintar = (t: number) => {
-    const indice = figuraEn(t);
-    const puntos = figuras[indice];
+    const indice = figuraEn(t, o.orden);
+    void pedir(indice);
+    void pedir(figuraEn(t + DURACION_CICLO, o.orden));
+    const puntos = figuras.get(indice);
     if (puntos && indice !== figuraCargada && bufferDestino) {
       gl.bindBuffer(gl.ARRAY_BUFFER, bufferDestino);
       gl.bufferSubData(gl.ARRAY_BUFFER, 0, puntos);
       figuraCargada = indice;
     }
     const e = estadoEn(t);
-    const libre = 1 - e.mezcla;
+    const ciclo = cicloEn(t);
+    if (e.mezcla > 0 && figuraCargada !== indice) cicloSinFigura = ciclo;
+    const mezcla = cicloSinFigura === ciclo ? 0 : e.mezcla;
+    const libre = 1 - mezcla;
     gl.uniformMatrix4fv(
       ubicaciones.uModeloVista,
       false,
       modeloVista(Math.cos(t * 0.13) * 0.35 * libre, Math.sin(t * 0.17) * 0.9 * libre, Math.sin(t * 0.09) * 0.2 * libre, distancia),
     );
     gl.uniform1f(ubicaciones.uTiempo, t);
-    gl.uniform1f(ubicaciones.uMezcla, e.mezcla);
+    gl.uniform1f(ubicaciones.uMezcla, mezcla);
     gl.clear(gl.COLOR_BUFFER_BIT);
     gl.drawArrays(gl.POINTS, 0, n);
   };

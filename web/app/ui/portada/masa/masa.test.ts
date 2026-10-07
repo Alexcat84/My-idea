@@ -5,7 +5,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { MedidorFps, nivelInicial, siguienteNivel, type PistasEquipo } from "./calidad";
-import { DURACION_CICLO, estadoEn, estadoEnCiclo, FASES, figuraEn, giroEn, MOMENTOS, suavizar } from "./ciclo";
+import { DURACION_CICLO, estadoEn, estadoEnCiclo, FASES, giroEn, MOMENTOS, suavizar } from "./ciclo";
 import {
   distanciaCamara,
   ENVOLTURA_PIEL,
@@ -53,16 +53,6 @@ describe("ciclo", () => {
       expect(Math.abs(antes.liquido - despues.liquido)).toBeLessThan(1e-3);
       expect(Math.abs(antes.mezcla - despues.mezcla)).toBeLessThan(1e-3);
     }
-  });
-
-  it("forma las cinco figuras en su orden y vuelve a empezar", () => {
-    // ciclo k = floor(t / 9.8); figura = k mod 5
-    expect(figuraEn(0)).toBe(0); // foco
-    expect(figuraEn(9.8 * 1.5)).toBe(1); // lente
-    expect(figuraEn(9.8 * 2.5)).toBe(2); // brujula
-    expect(figuraEn(9.8 * 3.5)).toBe(3); // escalera
-    expect(figuraEn(9.8 * 4.5)).toBe(4); // casa
-    expect(figuraEn(9.8 * 5.5)).toBe(0); // foco otra vez
   });
 
   it("el giro da una vuelta por ciclo y deja la figura de frente", () => {
