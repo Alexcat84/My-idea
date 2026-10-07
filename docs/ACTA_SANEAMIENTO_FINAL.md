@@ -1928,3 +1928,31 @@ añadidos). Lo que quedó abierto arriba se cerró así:
   sostenía) y condiciones-resto-c27 (2).
 - **Residuo declarado: una etiqueta.** `V140-112`, la etiqueta del concepto del índice Cpk: el verificador no sostuvo
   ninguna de las dos propuestas porque una etiqueta corta pierde lo que distingue al Cpk del Cp. Se queda la vigente.
+
+### 15.15 Copia fiel (regla D2): diseño y regla de parada fijados antes de sortear (7 oct 2026)
+
+Decisión del fundador del 7 oct 2026: con la cuota que queda se corrige ya la copia fiel (ningún texto de nodo es copia
+ni traducción palabra por palabra de un pasaje de su libro), sin releer lo ya certificado para otros criterios.
+
+- **Orden:** primero los **pasos** de los 3.634 nodos vivos (lo que el cliente ve en el plan sin IA); después los
+  **resúmenes** y las **condiciones**. Los pasos que la casa declaró suyos (constancia CASA) no se leen: no vienen de
+  ningún libro.
+- **Contra su libro:** cada elemento se compara con el libro de su nodo; en los 54 nodos fusionados, con todos los
+  libros de `fuentes_internas`, y la frase se juzga contra el libro del que viene.
+- **Lector** (uno por lote, nodos agrupados por libro, semilla de lotes **20261027**): decide `copia` o `no_copia` y, si
+  es copia, reescribe la FORMA (palabras, orden, estructura) sin tocar el contenido: ningún matiz perdido, ninguna
+  condición ni plazo que caiga, nada añadido. Cada lote lleva una trampa sin marca: una traducción literal de un tramo
+  de su libro, preparada por un agente aparte. Si el lector no la caza, un segundo lector relee el lote.
+- **Verificador ciego** con dos trampas sin marca por paquete: una copia que no se corrigió (el texto nuevo es el viejo)
+  y una reescritura que cambia el sentido. Comprueba a la vez que el texto nuevo ya no es copia y que dice exactamente lo
+  mismo que el libro. Lo que no sostiene no entra y va a una pasada de reescritura con su motivo.
+- **Reglas de la casa:** sin voz de libro, sin procedencia, tuteo neutro, el glosario y las palabras reservadas; la
+  tanda no entra si sube cualquier guarda o baranda. Veredicto de la corrección: `COPIA`, con su cita (libro, líneas y
+  una frase de 15 palabras como mucho).
+- **Regla de parada:** al terminar, una muestra de **200 nodos con semilla 20261028** mide SOLO copia fiel y, de
+  control, contrarios e invenciones. Si la copia da como mucho **1 cada 20 nodos** (10 de 200) y contrarios e
+  invenciones dan **0**, se cierra declarando el residuo con su intervalo de Wilson al 95 %. Si no, se corrige lo hallado
+  y su vecindad (mismo libro y mismo campo), sin otra pasada completa.
+- **Voyage al final**, en una sola pasada con todo corregido.
+- Lo que no quepa antes de que se agote la cuota del jueves 8 queda al día en `docs/PROXIMOS_PASOS.md`, con prioridad a
+  que los pasos queden terminados.
