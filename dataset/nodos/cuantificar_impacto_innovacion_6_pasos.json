@@ -7,12 +7,12 @@
   "resumen_teorico": "Una innovación sin cuantificar no lleva a ninguna parte: sin números no sabes si funcionó. Por eso se cuenta antes y después del cambio: cuántas personas entraron y cuántas compraron, y por cuánto, antes de la innovación; cuántas entraron y cuántas compraron después; el valor promedio de una venta; y con todo eso, cuál fue la mejora. Esos números sustituyen la impresión por el valor preciso de la innovación, ya sea cambiar las palabras con que saludas a quien entra o cualquier otro cambio que pruebes en tu negocio.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_12.md, unidad Cap. 10, titulo textual The Business Development Process. Sale de la PIEZA R5 de la frontera publicada en esta misma vuelta (.gerber_v3/frontera_cap12.txt), L95 a L95, una sola linea de 4206 palabras del capitulo. POR QUE ES PROCEDIMIENTO, con D.27 y 9.1 delante: el libro pone su propio inventario de MEDIOS, y lo pone numerado (1) a (6) dentro de la misma frase, sin ningun adjetivo de adecuacion en el sitio del criterio (no dice mide lo razonable ni de forma apropiada: dice determinando cuantos, contando cuantos, determinando el valor). Es la prueba del manual al pie de la letra: una linea que tarda seis pasos en ejecutarse es un procedimiento nombrado en una linea. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. Cita pegada en .gerber_v3/cita_cap12_L95.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice cada cuanto se repite esta cuantificacion, ni quien de tu equipo la hace: cerrar ese hueco seria un PUENTE (15.4), asi que el nodo se queda con el verbo en segunda persona que usa el propio libro en todo el capitulo, sin inventar destinatario ni periodo. DISCUTIBLE DECLARADO (ver reporte de esta vuelta, marcado antes de saber si acierto): los pasos 2 a 4 estan anclados en el texto al ejemplo concreto de cambiar las palabras del saludo (change the words), mientras que los pasos 1 y 6 ya hablan de the Innovation en generico; elegi transcribir fiel a esa mezcla en vez de generalizar el ejemplo entero, porque generalizar los pasos 2 a 4 habria sido escribir yo una generalizacion que el parrafo no hace del todo explicita. LA CABEZA DE TRES QUE NO SE CABLEA, D.37 vs D.29: L21 de este mismo capitulo nombra tres actividades (Innovation, Quantification, Orchestration) una a una, que es el supuesto de D.37, pero hoy NINGUNA de las tres existe como nodo propio (este candidato es un metodo concreto dentro de Quantification, no Quantification como nodo entero), asi que D.37 no aplica todavia: si alguna vuelta futura hace nacer un nodo cabeza para Quantification o para las tres actividades, la arista se declara entonces citando L21, y no antes. CORRECCION DECLARADA DE LA VUELTA 76 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.3 del encargo de la 76), sin insertar nada. EL PASO 6 TRAIA UNA CLAUSULA PUENTE, Y LA CONDICION Y EL ENTREGABLE OTRA CADA UNO; SE RETIRAN SIN BORRAR EL RASTRO. El paso 6 decia: Determina cual fue la mejora que produjo tu innovacion, comparando los numeros de antes con los de despues. Hoy dice lo mismo sin la clausula comparando. LA CLAUSULA QUE SE RETIRA compara, y el libro no la pone: L95 dice (6) determining what the improvement was as a result of your Innovation, y These numbers enable you to determine the precise value of your Innovation, sin decir como. El entregable decia la mejora que produjo, comparando los conteos de antes del cambio con los conteos de despues, y hoy dice la mejora que produjo; la condicion decia si de verdad funciono en vez de suponerlo, y hoy dice si de verdad funciono: L87 dice Without Quantification, how would you know whether the Innovation worked?, sin el contraste. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 76 es 6 pasos, 5 TRANSCRIPCION y 1 PUENTE sobre el texto viejo, y 6 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v76ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
   "pasos_accionables": [
-    "Determina cuántas personas entraron por la puerta antes de poner en marcha la innovación.",
-    "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra.",
-    "Cuenta cuántas personas entraron por la puerta después de la innovación.",
-    "Cuenta cuántas personas compraron algo, después del cambio.",
+    "Antes de lanzar la innovación, lleva la cuenta de las personas que entran por la puerta.",
+    "Registra, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra, cuántas personas compraron y cuánto dinero sumaron esas compras.",
+    "Una vez hecho el cambio, vuelve a contar a las personas que entran por la puerta.",
+    "Registra cuántas personas compraron algo una vez hecho el cambio.",
     "Determina el valor promedio de una venta.",
-    "Determina cuál fue la mejora que produjo tu innovación."
+    "Calcula cuánto mejoraron los resultados gracias a la innovación."
   ],
   "entregable_esperado": "El valor preciso, en números, de tu innovación: la mejora que produjo.",
   "nodos_previos": [
@@ -225,6 +225,91 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "copia-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Determina cuántas personas entraron por la puerta antes de poner en marcha la innovación.",
+      "texto_nuevo": "Antes de lanzar la innovación, lleva la cuenta de las personas que entran por la puerta.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_12.md",
+        "lineas": "95",
+        "frase": "(1) determining how many people came in the door before the Innovation was put"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Determina cuántas personas compraron productos y cuál fue el valor en dinero de esos productos, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra.",
+      "texto_nuevo": "Registra, antes de la innovación, por ejemplo antes de cambiar las palabras con que saludas a quien entra, cuántas personas compraron y cuánto dinero sumaron esas compras.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_12.md",
+        "lineas": "95",
+        "frase": "(2) determining how many people bought products and what the dollar value of those"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta cuántas personas entraron por la puerta después de la innovación.",
+      "texto_nuevo": "Una vez hecho el cambio, vuelve a contar a las personas que entran por la puerta.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_12.md",
+        "lineas": "95",
+        "frase": "(3) counting the number of people who came in the door after you changed"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta cuántas personas compraron algo, después del cambio.",
+      "texto_nuevo": "Registra cuántas personas compraron algo una vez hecho el cambio.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_12.md",
+        "lineas": "95",
+        "frase": "(4) counting the number of people who purchased something"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-cuantificar_impacto_innovacion_6_pasos-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Determina cuál fue la mejora que produjo tu innovación.",
+      "texto_nuevo": "Calcula cuánto mejoraron los resultados gracias a la innovación.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_12.md",
+        "lineas": "95",
+        "frase": "(6) determining what the improvement was as a result of your Innovation"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Cuantifica el Impacto Real",

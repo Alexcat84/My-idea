@@ -7,18 +7,18 @@
   "resumen_teorico": "Si quieres que tu gente atienda a los clientes con orden y con trato humano, vale la pena revisar si tú se lo transmites con ese mismo orden y ese mismo trato: puede pasar que la manera de comunicar una idea pese tanto como la idea. Puedes probar a hacer de la contratación el primer canal para transmitirla, en cinco momentos: explicar la idea con un guion a todos los aspirantes reunidos, hablar después a solas con cada uno, llamar por teléfono a quien eliges, agradecer con una carta firmada a quien no queda y dedicar el primer día a enseñar cómo se apoyan entre sí los sistemas y las personas.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_18.md, unidad Cap. 16, titulo textual Your People Strategy. Sale de la PIEZA C3 de la frontera publicada en esta misma vuelta (.gerber_v7/frontera_cap18.txt), L247 a L272, 266 palabras, bajo el subtitulo Playing the Game. ES UN CASO, Y SE TRATA COMO TAL (manual seccion 3.5, EXTRACTOR.md 9): el proceso lo narra el Manager del hotel Venetia (as the Manager explained it to me), pero la doctrina no es del hotel: es un inventario propio del libro, numerado 1 a 5 en el propio texto (L249 a L257), con el quinto componente desplegado en siete actividades en vineta (L259 a L269). Sigo el mismo patron que documentar_trabajo_manual_operaciones (cap_11) y aplicar_ocho_reglas_juego_personas (esta misma vuelta): UN SOLO NODO con el inventario entero transcrito, no cinco nodos mas cabeza, porque cada componente es un paso del mismo procedimiento y no un capitulo aparte. LA SENAL BARATA DE QUE SE HIZO MAL (manual 3.5): el entregable no lleva ningun dato del caso; los pasos no nombran al hotel Venetia, al Manager ni al Boss, solo el procedimiento generico de contratar. NO ES DUPLICADO DE documentar_trabajo_manual_operaciones (cap_11, vuelta 1, vivo en dataset/nodos.jsonl): ese nodo procedimenta los tres contenidos que el Manual de Operaciones tiene que traer; aqui el Manual de Operaciones aparece solo como UN objeto que se entrega y se revisa dentro del primer dia de entrenamiento (pasos 10 y 11), sin repetir sus tres contenidos, que es exactamente la frontera que d110 (G7.2) establecio entre el nombre generico del objeto y su contenido especifico. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 12 pasos, 12 TRANSCRIPCION, 0 PUENTE, cita pegada en .gerber_v7/cita_cap18_L247_L272.txt (D.35). No invento destinatario ni responsable ni periodo: el libro no dice cuando se hace cada notificacion (salvo el primer dia de entrenamiento, que si trae su propio nombre) y este candidato no completa esa ausencia.",
   "pasos_accionables": [
-    "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio al ponerla en práctica con éxito, y los atributos que exige el puesto.",
-    "Reúnete con cada aspirante de forma individual para hablar de sus reacciones y sentimientos sobre la idea, su trasfondo y su experiencia, y pregunta por qué se cree apropiado para el papel que el puesto juega en implementar esa idea.",
-    "Notifica por teléfono al candidato elegido, otra vez con una presentación guionizada.",
-    "Notifica a los aspirantes no elegidos agradeciendo su interés, con una carta estándar firmada por quien entrevistó.",
-    "Dedica el primer día de entrenamiento a las siguientes actividades, tanto para ti como para el nuevo empleado.",
-    "Revisa con él la idea del negocio.",
-    "Resume el sistema con el que todo el negocio hace realidad esa idea.",
-    "Llévalo de recorrido por las instalaciones, resaltando a la gente trabajando y los sistemas funcionando para mostrar la interdependencia entre los sistemas y la gente.",
-    "Responde clara y completamente todas sus preguntas.",
-    "Entrégale su uniforme y su Manual de Operaciones.",
-    "Revisa con él su Manual de Operaciones, incluyendo el Objetivo Estratégico, la Estrategia Organizativa y el contrato de su propio puesto.",
-    "Completa con él los papeles de empleo."
+    "Prepara una presentación con guion para explicar la idea de tu negocio a todos los aspirantes a la vez, en una reunión de grupo: qué es la idea, la historia del negocio y cómo la ha llevado a la práctica con éxito, y qué cualidades pide el puesto.",
+    "Habla a solas con cada aspirante sobre cómo reacciona a la idea y lo que le hace sentir, sobre su trayectoria y su experiencia, y pídele que te diga por qué cree que encaja en el papel que el puesto tiene para llevar esa idea a cabo.",
+    "Llama por teléfono a quien elegiste para darle la noticia, también siguiendo un guion.",
+    "Escribe a quienes no quedaron para agradecerles el interés, con una carta tipo que firme la persona que los entrevistó.",
+    "Reserva el primer día de formación para estas actividades, que haces tú junto con la persona recién contratada.",
+    "Repasa junto a él cuál es la idea del negocio.",
+    "Explícale en pocas palabras cómo el negocio entero, con su sistema, convierte esa idea en realidad.",
+    "Enséñale las instalaciones y detente en la gente y en los sistemas mientras trabajan, para que vea cómo dependen unos de otros.",
+    "Contesta cada pregunta que tenga, con claridad y sin dejar nada a medias.",
+    "Dale el uniforme y el Manual de Operaciones que le corresponden.",
+    "Recorre con él su Manual de Operaciones, sin saltarte el Objetivo Estratégico, la Estrategia Organizativa ni el contrato de su puesto.",
+    "Rellena con él los papeles de su contratación."
   ],
   "entregable_esperado": "Un proceso de contratación con sus cinco componentes completos: la presentación guionizada en grupo, la reunión individual, la notificación al elegido, la notificación a los no elegidos, y el primer día de entrenamiento con sus siete actividades.",
   "nodos_previos": [
@@ -325,6 +325,210 @@
       },
       "decision": "lectura total de procedencia (w30r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio al ponerla en práctica con éxito, y los atributos que exige el puesto.",
+      "texto_nuevo": "Prepara una presentación con guion para explicar la idea de tu negocio a todos los aspirantes a la vez, en una reunión de grupo: qué es la idea, la historia del negocio y cómo la ha llevado a la práctica con éxito, y qué cualidades pide el puesto.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "249",
+        "frase": "A scripted presentation communicating the Boss's idea in a group meeting to all"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Reúnete con cada aspirante de forma individual para hablar de sus reacciones y sentimientos sobre la idea, su trasfondo y su experiencia, y pregunta por qué se cree apropiado para el papel que el puesto juega en implementar esa idea.",
+      "texto_nuevo": "Habla a solas con cada aspirante sobre cómo reacciona a la idea y lo que le hace sentir, sobre su trayectoria y su experiencia, y pídele que te diga por qué cree que encaja en el papel que el puesto tiene para llevar esa idea a cabo.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "251",
+        "frase": "Meeting with each applicant individually to discuss his reactions to and feelings about"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Notifica por teléfono al candidato elegido, otra vez con una presentación guionizada.",
+      "texto_nuevo": "Llama por teléfono a quien elegiste para darle la noticia, también siguiendo un guion.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "253",
+        "frase": "Notification of the successful candidate by telephone. Again, a scripted presentation."
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Notifica a los aspirantes no elegidos agradeciendo su interés, con una carta estándar firmada por quien entrevistó.",
+      "texto_nuevo": "Escribe a quienes no quedaron para agradecerles el interés, con una carta tipo que firme la persona que los entrevistó.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "255",
+        "frase": "Notification of the unsuccessful applicants, thanking each for his interest. A standard letter"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Dedica el primer día de entrenamiento a las siguientes actividades, tanto para ti como para el nuevo empleado.",
+      "texto_nuevo": "Reserva el primer día de formación para estas actividades, que haces tú junto con la persona recién contratada.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "257",
+        "frase": "First day of training to include the following activities for both the Boss"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa con él la idea del negocio.",
+      "texto_nuevo": "Repasa junto a él cuál es la idea del negocio.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "259",
+        "frase": "Reviewing the Boss's idea"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Resume el sistema con el que todo el negocio hace realidad esa idea.",
+      "texto_nuevo": "Explícale en pocas palabras cómo el negocio entero, con su sistema, convierte esa idea en realidad.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "261",
+        "frase": "Summarizing the system through which the entire business brings the idea to reality"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Llévalo de recorrido por las instalaciones, resaltando a la gente trabajando y los sistemas funcionando para mostrar la interdependencia entre los sistemas y la gente.",
+      "texto_nuevo": "Enséñale las instalaciones y detente en la gente y en los sistemas mientras trabajan, para que vea cómo dependen unos de otros.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "263",
+        "frase": "Taking the new employee on a tour of the facilities, highlighting people at work"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Responde clara y completamente todas sus preguntas.",
+      "texto_nuevo": "Contesta cada pregunta que tenga, con claridad y sin dejar nada a medias.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "265",
+        "frase": "Answering clearly and fully all the employee's questions"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-9",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Entrégale su uniforme y su Manual de Operaciones.",
+      "texto_nuevo": "Dale el uniforme y el Manual de Operaciones que le corresponden.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "267",
+        "frase": "Issuing the employee his uniform and his Operations Manual"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-10",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa con él su Manual de Operaciones, incluyendo el Objetivo Estratégico, la Estrategia Organizativa y el contrato de su propio puesto.",
+      "texto_nuevo": "Recorre con él su Manual de Operaciones, sin saltarte el Objetivo Estratégico, la Estrategia Organizativa ni el contrato de su puesto.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "269",
+        "frase": "Reviewing the Operations Manual, including the Strategic Objective, the Organizational Strategy"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 10,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-11",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Completa con él los papeles de empleo.",
+      "texto_nuevo": "Rellena con él los papeles de su contratación.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_18.md",
+        "lineas": "271",
+        "frase": "Completing the employment papers"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 11,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Comunica Tu Idea al Contratar",

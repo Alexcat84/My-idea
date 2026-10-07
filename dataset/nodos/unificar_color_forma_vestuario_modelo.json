@@ -8,13 +8,13 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_11.md, unidad Cap. 9, titulo textual Working On Your Business, Not In It. Sale de la PIEZA P5 de la frontera publicada en esta misma vuelta, L212 a L241, 583 palabras. ES LA PARTE 6 DE LA SERIE NUMERADA cuya cabeza es fingir_prototipo_cinco_mil_replicas. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: el enunciado de la regla trae adjetivo de adecuacion (un codigo UNIFORME), pero el libro pone detras su propio inventario de OBJETOS DE TRABAJO y los nombra uno a uno, que es exactamente la cara positiva de la vara: ocho sitios para el color (paredes, suelos, techo, vehiculos, facturas, ropa de la gente, expositores, rotulos) y cuatro soportes para la forma (tarjeta, rotulos, logotipo, expositores de mercancia), mas el verbo del criterio, determinar cientificamente, que el propio libro escribe. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap11_P5.txt. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: como se determina cientificamente un color, con que ensayo, con que muestra ni quien lo hace. El libro dice determinados cientificamente y no dice el metodo, y escribirlo seria exactamente el puente que D.30 llama completar un inventario delgado. Tampoco escribo el codigo de vestuario aparte del color: el libro nombra la ropa de la gente como uno de los ocho sitios del color y no despliega mas. LA ATRIBUCION, con lo que de ella se puede sostener y no mas (manual principios 5 y 8): la cifra de Cheskin que el libro reproduce es CUALITATIVA (far fewer, by a significant margin) y el libro no la fecha, asi que la fecha de corte que se puede firmar es la de la edicion citada y se dice asi, no se inventa la del ensayo. Una tasa sin banda es media cifra, y esta no tiene ni tasa. LA ARISTA DE CABEZA A PARTE queda escrita en el reporte de esta vuelta con su paso citado, el paso 10 de la cabeza, y se cablea el dia de la insercion.",
   "pasos_accionables": [
     "Ten presente que los colores y las formas con que se topa la gente al comprar la empujan a actuar, y que cada tipo de cliente reacciona a su manera ante un color o una forma concretos.",
-    "Determina científicamente los colores que le enseñas a tu cliente.",
-    "Usa esos colores por todo tu modelo, en todos estos sitios: las paredes, los suelos, el techo, los vehículos, las facturas, la ropa de tu gente, los expositores y los rótulos.",
-    "Piensa el modelo como el envase de tu único producto, que es tu negocio.",
-    "Elige igual las formas, porque hay formas que funcionan y formas que no, y ponlas en la tarjeta de visita, los rótulos, el logotipo y los expositores de mercancía.",
+    "Elige con criterio científico los colores que va a ver tu cliente.",
+    "Repite esos colores en cada rincón del modelo: paredes, suelos, techo, vehículos, facturas, ropa de tu gente, expositores y rótulos.",
+    "Trata el modelo como el empaque del único producto que vendes: tu negocio.",
+    "Aplica el mismo criterio a las formas, porque unas funcionan y otras no, en tu tarjeta de visita, tus rótulos, tu logotipo y tus expositores de mercancía.",
     "Prueba varias formas antes de fijar la tuya: puede pasar que una venda bastante menos que otra, como un triángulo frente a un círculo, y que una tercera, como un escudo, supere a las dos con holgura.",
-    "Cuenta con que la forma de tu rótulo, la de tu logotipo y el tipo de letra de tus tarjetas van a tener un impacto significativo en las ventas, quieras pensarlo o no.",
-    "Empaqueta tu prototipo con el mismo cuidado con el que se empaqueta cualquier caja de cereales."
+    "Asume que el tipo de letra de tus tarjetas, la forma de tu logotipo y la de tu rótulo pesan mucho en las ventas, lo pienses o no.",
+    "Cuida el empaque de tu prototipo tanto como cualquier fabricante cuida una caja de cereales."
   ],
   "entregable_esperado": "Los colores determinados científicamente y aplicados en los ocho sitios de la lista, y las formas elegidas para la tarjeta de visita, los rótulos, el logotipo y los expositores, con el modelo tratado como el envase de tu único producto.",
   "nodos_previos": [
@@ -319,6 +319,108 @@
       "decision": "medida final, vecindad: reescritura sin atribucion que conserva el alcance del libro (experiencia o caso unico como posibilidad); verificada a ciegas (paq_w01-02, trampas cazadas)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Determina científicamente los colores que le enseñas a tu cliente.",
+      "texto_nuevo": "Elige con criterio científico los colores que va a ver tu cliente.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "229",
+        "frase": "The colors you show your customer must be scientifically determined and then used throughout"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Usa esos colores por todo tu modelo, en todos estos sitios: las paredes, los suelos, el techo, los vehículos, las facturas, la ropa de tu gente, los expositores y los rótulos.",
+      "texto_nuevo": "Repite esos colores en cada rincón del modelo: paredes, suelos, techo, vehículos, facturas, ropa de tu gente, expositores y rótulos.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "229",
+        "frase": "on the walls, the floors, the ceiling, the vehicles, the invoices, your people's clothes"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Piensa el modelo como el envase de tu único producto, que es tu negocio.",
+      "texto_nuevo": "Trata el modelo como el empaque del único producto que vendes: tu negocio.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "231",
+        "frase": "The model must be thought of as a package for your one and only product"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Elige igual las formas, porque hay formas que funcionan y formas que no, y ponlas en la tarjeta de visita, los rótulos, el logotipo y los expositores de mercancía.",
+      "texto_nuevo": "Aplica el mismo criterio a las formas, porque unas funcionan y otras no, en tu tarjeta de visita, tus rótulos, tu logotipo y tus expositores de mercancía.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "233",
+        "frase": "Just as with colors, there are shapes that work and shapes that don't"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con que la forma de tu rótulo, la de tu logotipo y el tipo de letra de tus tarjetas van a tener un impacto significativo en las ventas, quieras pensarlo o no.",
+      "texto_nuevo": "Asume que el tipo de letra de tus tarjetas, la forma de tu logotipo y la de tu rótulo pesan mucho en las ventas, lo pienses o no.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "239",
+        "frase": "The shape of your sign, your logo, the type style used on your business cards"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-unificar_color_forma_vestuario_modelo-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Empaqueta tu prototipo con el mismo cuidado con el que se empaqueta cualquier caja de cereales.",
+      "texto_nuevo": "Cuida el empaque de tu prototipo tanto como cualquier fabricante cuida una caja de cereales.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "241",
+        "frase": "Your Prototype must be packaged as carefully as any box of cereal."
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Unifica tu Imagen en Todo",

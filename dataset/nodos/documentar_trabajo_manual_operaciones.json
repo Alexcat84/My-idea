@@ -8,15 +8,15 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_11.md, unidad Cap. 9, titulo textual Working On Your Business, Not In It. Sale de la PIEZA P4 de la frontera publicada en esta misma vuelta, L152 a L173, 265 palabras. ES LA PARTE 4 DE LA SERIE NUMERADA cuya cabeza es fingir_prototipo_cinco_mil_replicas. POR QUE ES PROCEDIMIENTO, con D.27 delante: el libro no se queda en el mandato de documentar, sino que pone el inventario de lo que el manual TIENE QUE CONTENER y lo nombra pieza por pieza en una sola linea: designa el proposito del trabajo, especifica los pasos que hay que dar mientras se hace, y resume los estandares asociados al proceso y al resultado. Tres objetos de trabajo nombrados por el libro, no por mi, y por eso los pasos 8, 9 y 10 van separados: son tres contenidos distintos y fundirlos en uno perderia la cuenta que el libro da. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap11_P4.txt. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: quien escribe el manual, cada cuanto se revisa, en que formato vive, ni que se hace cuando un paso documentado deja de valer. El texto pone el contenido y no pone ni responsable ni periodo, que son dos de las tres especies de puente que D.30 tiene tabuladas. LAS DOS CITAS DE TOFFLER que hay dentro de esta pieza (L159 y L161) no entran como pasos ni como atribuciones: son apoyo del argumento y no traen cifra, y una cita de otro autor dentro del libro no es un medio que alguien ejecute. LA ARISTA DE CABEZA A PARTE queda escrita en el reporte de esta vuelta con su paso citado, el paso 8 de la cabeza, y se cablea el dia de la insercion.",
   "pasos_accionables": [
     "Escribe la documentación para que diga esto: así es como lo hacemos aquí.",
-    "Cuenta con lo que pasa cuando no la escribes: sin documentación, todo el trabajo rutinario se convierte en excepciones.",
-    "Dale a tu gente, con ella, la estructura que necesita y el relato escrito de cómo se hace el trabajo de la manera más eficiente y eficaz.",
-    "Comunica con ella, a los nuevos igual que a los veteranos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
-    "Escríbela clara, porque la claridad es lo que la estructura necesita para significar algo para tu gente.",
+    "Ten presente que, si no lo dejas por escrito, cualquier tarea de rutina acaba tratándose como un caso aparte.",
+    "Apóyate en ella para que tu gente tenga por escrito tanto la estructura que le hace falta como la manera más eficiente y eficaz de sacar adelante el trabajo.",
+    "Haz que tanto quien acaba de llegar como quien lleva años contigo entienda, gracias a ella, que el lugar donde eligió trabajar sigue una lógica y que los resultados salen de una técnica concreta.",
+    "Cuida que sea clara: sin claridad, la estructura no le dice nada a tu gente.",
     "Reduce con ella la estructura a medios concretos en vez de a fines generales, hasta la tarea literal y simplificada que el técnico que hay en cada uno necesita entender para hacer el trabajo que tiene delante.",
     "Guarda la documentación en el Manual de Operaciones y trátalo como lo que es: la guía de cómo se hacen las cosas en tu empresa.",
-    "Haz que ese manual designe el propósito del trabajo.",
-    "Haz que especifique los pasos que hay que dar mientras se hace ese trabajo.",
-    "Haz que resuma los estándares asociados tanto al proceso como al resultado."
+    "Pon en ese manual para qué sirve cada trabajo.",
+    "Detalla en él, uno por uno, los pasos que lleva hacer ese trabajo.",
+    "Anota en él, de forma resumida, los estándares que valen para el proceso y los que valen para el resultado."
   ],
   "entregable_esperado": "El Manual de Operaciones escrito como la guía de cómo se hace aquí, con el propósito del trabajo designado, los pasos especificados y los estándares del proceso y del resultado resumidos.",
   "nodos_previos": [
@@ -345,6 +345,125 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con lo que pasa cuando no la escribes: sin documentación, todo el trabajo rutinario se convierte en excepciones.",
+      "texto_nuevo": "Ten presente que, si no lo dejas por escrito, cualquier tarea de rutina acaba tratándose como un caso aparte.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "155-157",
+        "frase": "Without documentation, all routinized work turns into exceptions."
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Dale a tu gente, con ella, la estructura que necesita y el relato escrito de cómo se hace el trabajo de la manera más eficiente y eficaz.",
+      "texto_nuevo": "Apóyate en ella para que tu gente tenga por escrito tanto la estructura que le hace falta como la manera más eficiente y eficaz de sacar adelante el trabajo.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "159",
+        "frase": "Documentation provides your people with the structure they need and with a written account"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Comunica con ella, a los nuevos igual que a los veteranos, que hay una lógica en el mundo en el que han elegido trabajar y que hay una tecnología con la que se producen los resultados.",
+      "texto_nuevo": "Haz que tanto quien acaba de llegar como quien lleva años contigo entienda, gracias a ella, que el lugar donde eligió trabajar sigue una lógica y que los resultados salen de una técnica concreta.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "159",
+        "frase": "It communicates to the new employees, as well as to the old, that there is"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Escríbela clara, porque la claridad es lo que la estructura necesita para significar algo para tu gente.",
+      "texto_nuevo": "Cuida que sea clara: sin claridad, la estructura no le dice nada a tu gente.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "163-167",
+        "frase": "Documentation provides the clarity structure needs if it is to be meaningful to your people."
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Haz que ese manual designe el propósito del trabajo.",
+      "texto_nuevo": "Pon en ese manual para qué sirve cada trabajo.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "171",
+        "frase": "It designates the purpose of the work, specifies the steps needed to be taken"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Haz que especifique los pasos que hay que dar mientras se hace ese trabajo.",
+      "texto_nuevo": "Detalla en él, uno por uno, los pasos que lleva hacer ese trabajo.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "171",
+        "frase": "specifies the steps needed to be taken while doing that work"
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-documentar_trabajo_manual_operaciones-pasos_accionables-9",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Haz que resuma los estándares asociados tanto al proceso como al resultado.",
+      "texto_nuevo": "Anota en él, de forma resumida, los estándares que valen para el proceso y los que valen para el resultado.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_11.md",
+        "lineas": "171",
+        "frase": "summarizes the standards associated with both the process and the result."
+      },
+      "decision": "copia fiel (regla D2, ola k11): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Documenta tu Manual de Operaciones",
