@@ -10,6 +10,9 @@
  * nombran y se explican, nunca se atribuyen, y si tienen nombre neutro se usa ese.
  * Y el mismo dia, por la regla "ninguna referencia de origen llega a la IA": los ejemplos ya no nombran a ningun autor
  * de la lista canonica, porque esta orden viaja en toda llamada (guarda: lib/origenIA.test.ts).
+ * Y el 7 oct 2026, por decision del fundador (hallazgo C7 de docs/auditoria_final/informes/auditoria_prompts.md): sin
+ * ejemplos de metodos con nombre, porque viajaban en toda llamada y le ofrecian a la IA metodos que el material de esa
+ * llamada no traia. Un metodo se nombra solo si viene en el material.
  */
 export const REGLA_SIN_FUENTES =
   "SIN FUENTES: la persona jamás debe saber ni poder intuir de dónde sale lo que dices. No nombres el título de un " +
@@ -18,7 +21,6 @@ export const REGLA_SIN_FUENTES =
   "expertos, la literatura o los datos ('los estudios muestran', 'la investigación sugiere', 'los expertos " +
   "recomiendan', 'según estudios'), ni uses etiquetas de procedencia como 'Sugerencia de My Idea', ni insinúes un " +
   "origen de ningún otro modo, aunque el material que recibes lo haga: lo que dices lo dices tú, directamente y con " +
-  "tus palabras: todo lo que dices es consejo tuyo. Un método se nombra y se explica (los cinco porqués, el ciclo " +
-  "PDCA, el diagrama de Ishikawa), pero nunca lo atribuyas a una persona ni a un libro (nada de 'según tal autor', " +
-  "'de acuerdo con', 'como propone'), y si el método tiene un nombre neutro, usa ese y no el que lleva el apellido " +
-  "de una persona (el ciclo PDCA, las cinco fuerzas competitivas).";
+  "tus palabras: todo lo que dices es consejo tuyo. Un método se nombra solo si viene en el material que recibes, y " +
+  "se explica sin atribuirlo a nadie, ni a una persona ni a un libro (nada de 'según tal autor', 'de acuerdo con', " +
+  "'como propone'); si tiene un nombre neutro, usa ese y no el que lleva el apellido de una persona.";

@@ -200,10 +200,23 @@ describe("procedencia: nada interno llega al navegador", () => {
 // ---------------------------------------------------------------- 3. la regla en toda llamada a la IA
 
 describe("procedencia: la IA no menciona ni insinua el origen", () => {
-  it("la regla prohibe libros, autores, estudios, investigaciones, expertos y etiquetas de procedencia; deja nombrar el metodo, con su nombre neutro si lo tiene, y nunca atribuirlo", () => {
-    for (const rx of [/libro/, /autor/, /estudio/, /investigaci/, /experto/, /procedencia/, /insin/, /ciclo PDCA/, /nombre neutro/, /nunca lo atribuyas/])
+  it("la regla prohibe libros, autores, estudios, investigaciones, expertos y etiquetas de procedencia", () => {
+    for (const rx of [/libro/, /autor/, /estudio/, /investigaci/, /experto/, /procedencia/, /insin/])
       expect(REGLA_SIN_FUENTES, String(rx)).toMatch(rx);
     expect(REGLA_SIN_FUENTES).not.toMatch(/sí puedes usarlo \(el ciclo de Deming/);
+  });
+
+  // Regla D5 (docs/REGLAS_DE_LA_CASA.md). Desde el 7 oct 2026 (decision del fundador, hallazgo C7 de la auditoria de
+  // prompts) la regla ya no pone ejemplos de metodos con nombre: viajaba en toda llamada y le ofrecia a la IA metodos
+  // que el material de esa llamada no traia. Lo que se verifica es lo mismo de antes, sin los ejemplos: un metodo se
+  // nombra solo si viene en el material, se explica sin atribuirlo a nadie y con su nombre neutro si lo tiene.
+  it("D5: un metodo se nombra solo si viene en el material, se explica sin atribuirlo a nadie y con su nombre neutro si lo tiene", () => {
+    expect(REGLA_SIN_FUENTES).toMatch(/Un método se nombra solo si viene en el material que recibes/);
+    expect(REGLA_SIN_FUENTES).toMatch(/se explica sin atribuirlo a nadie/);
+    expect(REGLA_SIN_FUENTES).toMatch(/si tiene un nombre neutro, usa ese/);
+    expect(REGLA_SIN_FUENTES).toMatch(/no el que lleva el apellido de una persona/);
+    for (const ejemplo of [/PDCA/, /Ishikawa/, /cinco porqués/, /cinco fuerzas/])
+      expect(REGLA_SIN_FUENTES, `la regla ya no pone el ejemplo ${ejemplo}`).not.toMatch(ejemplo);
   });
 
   it("toda llamada lleva la regla, en espanol y en cualquier otro idioma, sin tocar el prompt cacheado", () => {

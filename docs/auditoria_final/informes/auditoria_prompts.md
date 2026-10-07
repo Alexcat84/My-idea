@@ -141,3 +141,36 @@ que se puede quitar sin poner palabras nuevas. La parte que añade texto de cada
 - **C6:** "(y cómo conseguirlos)" es un título fijo que también usa el código del reporte, y el ejemplo de $850/$170.
 - **C7:** quitar los ejemplos de métodos de `REGLA_SIN_FUENTES` rompe la guarda `lib/procedencia.test.ts`, que fija la
   regla D5 del fundador (el método se nombra con su nombre neutro, por ejemplo "el ciclo PDCA"). No se toca sin su visto.
+
+### Visto del fundador (7 oct 2026): aplicados
+
+El fundador aprobó B2, B4, B5, B7, B8, B9, B10, C1, C2, C3, C5 y C7 con el ajuste propuesto, y C6 solo en parte. Quedan
+**aplicados el 7 oct 2026 por decisión del fundador**. Los SYSTEM_* del motor se editaron en `engine/prototipo_motor.py`
+y se sincronizaron a `web/lib/assets/prompts.json` con `scripts/sync_assets_web.py` (manifest al día); el enlazador, en
+`web/lib/prompts.ts`, y la regla fija, en `web/lib/reglaSinFuentes.ts`. La caché del prompt se invalida una vez.
+
+| # | Qué se aplicó | Dónde |
+|---|---|---|
+| B2 | "Un ítem por cada número que nombran los conceptos con es_viabilidad_economica; no añadas métricas que el material no nombre" | SYSTEM_PLAN, regla 4-bis |
+| B4 | El cierre añade: "Tampoco inventes leyes, normas, trámites, plazos, precios o porcentajes de referencia, tasas de éxito, resultados prometidos ni nombres de herramientas o empresas que no estén en el material o en lo que dijo la persona" | SYSTEM_PLAN, cierre |
+| B5 | El perfil se anota "con lo que la persona dijo, en sus palabras; no deduzcas causas, cifras ni logros" (ya no "resúmela") | SYSTEM_INTERPRETE_MULTI, perfil_update |
+| B7 | Fuera "Eres el estratega" y "qué harías distinto": "qué trabajarías distinto usando solo lo que dicen los candidatos y lo que contó la persona; sin canales, modelos de venta, cifras ni plazos nuevos". Ejemplo de título neutro: "Probar primero con quienes ya te compran". Se conserva "Sin cifras que no estén en lo que recibiste" (sección D) | SYSTEM_CAMINOS |
+| B8 | La detección, "solo si el texto de la respuesta la nombra o se lee en ella sin suponer nada; si no, cadena vacía" (el validador ya la deja en null) | SYSTEM_ENLACE_PROTECCION |
+| B9 | La severidad, "solo si el plan o la persona dan base para ella; si no la dan, null" (el validador ya acepta null campo por campo) | SYSTEM_ENLACE_PROTECCION |
+| B10 | Las áreas son "NOMBRES de temas de la lista de puertas"; lo que asume son "preguntas abiertas, nunca afirmaciones de mercado, normas o cifras" | SYSTEM_ORGANIZADOR |
+| C1 | El ejemplo de la regla 15 pasa a "busca cuántos auditores certificados hay en tu zona; ese número te dirá si hay espacio" (fuera el registro oficial) | SYSTEM_PLAN, regla 15 |
+| C2 | Tras el ejemplo de la regla 8: "Usa solo avances que estado_vivo_previo diga con esas palabras" | SYSTEM_PLAN, regla 8 |
+| C3 | "para una tanda y divide entre las piezas que salieron" (fuera "3 piezas") | SYSTEM_PLAN, regla 3 |
+| C5 | "ofrecer lo adyacente que trae alguno de los nodos que recibes" (ya no "lo adyacente que SÍ cubres"); los beneficios de los ejemplos ya habían salido el 6 oct | SYSTEM_INTERPRETE_MULTI, confesión de dominio |
+| C6, en parte | El ejemplo de $850/$170 va marcado: "Ejemplo, con cifras ficticias solo de forma (usa siempre las que recibes)". **La ayuda de cómo conseguir los datos se queda tal como está** ("(y cómo conseguirlos)" y la explicación de cada dato faltante): no inventa nada y alimenta la calculadora, así que el fundador no la quita | SYSTEM_REPORTE |
+| C7 | Sin los ejemplos de métodos: "Un método se nombra solo si viene en el material que recibes, y se explica sin atribuirlo a nadie, ni a una persona ni a un libro (…); si tiene un nombre neutro, usa ese y no el que lleva el apellido de una persona" | REGLA_SIN_FUENTES |
+
+C8 y lo aplicado el 6 oct no se tocan.
+
+**Guardas (prueba en rojo primero, después el cambio):**
+- `web/lib/prompts.test.ts`, bloque "auditoria de prompts (7 oct 2026)": una prueba por hallazgo que exige el texto
+  nuevo y, donde aplica, que el viejo no vuelva. Las 11 fallaron antes del cambio y pasan después.
+- `web/lib/procedencia.test.ts`, guarda de la regla D5, actualizada por mandato del fundador para que siga verificando
+  lo mismo sin los ejemplos: que el método se nombre solo si viene en el material, que se explique sin atribuirlo a
+  nadie, que se use su nombre neutro si lo tiene, que la regla ya no traiga ejemplos de métodos y (la prueba de al lado,
+  sin cambios) que vaya en toda llamada a la IA. `docs/REGLAS_DE_LA_CASA.md`, D5, anota la precisión.

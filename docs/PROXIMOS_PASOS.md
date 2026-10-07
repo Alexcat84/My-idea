@@ -57,8 +57,10 @@ propio o con una decisión del fundador.
 
 1. ~~**Procedencia, el residuo.**~~ **Decidida el 7 oct (acta 15.11): se acepta el residuo declarado** de la
    medida 6 (de 0,09 a 2,8 % por nodo). No hay segunda lectura total.
-2. **Los ajustes de prompts que añaden texto.** Están en `docs/auditoria_final/informes/auditoria_prompts.md`, sección
-   F: B2 (resto), B4, B5, B7, B8, B9, B10, C1, C2, C3, C5 (resto), C6 y C7. C7 toca la regla D5 y su guarda.
+2. ~~**Los ajustes de prompts que añaden texto.**~~ **Decididos el 7 oct:** aprobados B2, B4, B5, B7, B8, B9, B10,
+   C1, C2, C3, C5 y C7 con el ajuste propuesto, y C6 solo en parte (el ejemplo de $850/$170 se marca como cifras
+   ficticias; la ayuda de cómo conseguir los datos se queda). Aplicados, con su guarda: `docs/auditoria_final/informes/
+   auditoria_prompts.md`, sección F.
 3. **Páginas legales:**
    - la dirección postal del comerciante;
    - la revisión profesional de Privacidad, Términos y Cookies, en español y francés. Cuando el profesional cambie un
