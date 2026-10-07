@@ -1493,3 +1493,52 @@ palabras nuevas.
   - `pedir_ayuda_grupo_apoyo`, paso 0;
   - `disenar_entorno_rendir_mejor`, paso 4;
   - `admitir_pronto_mal_desempenio_cuatro_razones`, paso 0.
+
+## 15. El encargo del fundador del 6 oct 2026
+
+Prioridad: el dataset correcto (cero contrarios, cero invenciones, cero procedencia). En paralelo, las páginas legales
+y de cuenta. La copia fiel no es prioridad: lo literal del libro no llega literal a la persona.
+
+### 15.1 Puntos 1 a 3 y 6 (cerrados)
+
+- **Punto 1:** la calculadora y el estimador de esfuerzo son métodos validados (REGLAS M1), sellados en
+  `docs/metodos_validados.json` con su guarda (`engine/test_metodos_validados.py`). Para resellar hace falta el visto
+  del fundador en el mensaje del commit.
+- **Punto 2:** los 5 elementos de procedencia que quedaban se reescribieron como consejo con su matiz ("suele", "tiende
+  a", "es fácil"), sin endurecerlos ni atribuirlos. Verificados a ciegas: 5 de 5, trampa cazada (tanda
+  `procedencia-matiz`).
+- **Punto 3, barrido de procedencia en todo el catálogo:**
+  - Búsqueda mecánica de atribuciones blandas: 365 elementos, 60 confirmados.
+  - Lectura dirigida del mundo 11 fuera de la vecindad: 2.416 elementos, 17 de 17 trampas, 30 confirmados.
+  - Corregidos: 77 en 58 nodos (tanda `barrido-procedencia`) y 13 reescritos con su matiz (tanda
+    `barrido-procedencia-2`, 13 de 13 verificados a ciegas).
+- **Punto 6:** páginas públicas `/privacidad`, `/terminos`, `/cookies` (español y francés, con fecha),
+  `/eliminar-cuenta` (sin app ni sesión) y `/preguntas-frecuentes`, con la estructura de iching-app. Siguen pendientes
+  dos cosas del fundador: la revisión profesional y la dirección postal del comerciante.
+
+### 15.2 Auditoría de preguntas (punto 4)
+
+En curso; el resultado se escribe aquí al cerrar.
+
+### 15.3 Medida 4, solo procedencia: diseño fijado antes de sortear (6 oct 2026, 23:35)
+
+- **Semilla: 20261006**, escrita aquí antes de sortear. Muestra con `scripts/auditoria_final/muestra.py 20261006`:
+  200 nodos vivos con el reparto de la sección 3. Puede repetir nodos de muestras anteriores; mide el catálogo de hoy,
+  después de los puntos 2 y 3.
+- **Qué mide:** solo procedencia (D1). Es atribuir lo que se dice a una persona (con nombre o sin él), a un libro, a
+  "los estudios", "los datos", "una estimación", "los expertos" o "se dice que". Un nombre de método con apellido no
+  es procedencia (13.1).
+- **Qué se lee:** todos los textos de cara de cada nodo, uno por elemento. Son la etiqueta, el resumen, cada paso,
+  cada condición, el entregable y la pregunta base.
+- **Lotes y trampas:** 20 lotes de 10 nodos. Cada lote lleva un elemento trampa sin marca: un texto real de un nodo
+  del mismo espacio, fuera de la muestra, con una atribución blanda plantada. Las trampas son de las formas que se
+  encontraron en las medidas y barridos.
+- **Lectura:**
+  - Un lector Opus ciego por lote, con las instrucciones de la relectura de procedencia (14.1).
+  - Segundo lector si no caza la trampa.
+  - Árbitro de cada marca.
+- **Veredicto:**
+  - "SANEADO en procedencia" si da 0 nodos.
+  - Si no, nodos con procedencia confirmada sobre 200, con su intervalo de Wilson al 95 %.
+  - Los 5 elementos del residuo declarado (14.3) cuentan si salen en la muestra.
+  - Lo que aparezca se corrige por el método de la casa. No hay otra pasada.
