@@ -1688,7 +1688,9 @@ Máquina en `auditoria-final-claves/medida5/medida5.py`.
   - "(Caso 2)", una remisión a la numeración de casos del libro.
 - **Corrección:**
   - Verificación ciega contra el libro, con la trampa cazada: 7 se sostienen (tanda `medida5-procedencia`).
-  - 3 endurecían o dejaban una traducción literal y van a reescritura con su matiz.
+  - 3 endurecían o dejaban una traducción literal. Se reescribieron con su matiz y se verificaron a ciegas: 3 de 3,
+    trampa cazada (tanda `medida5-procedencia-2`).
+  - **Las 10 de la muestra quedan corregidas.**
 
 **Lectura del resultado:**
 - El barrido 2 redujo el residuo del 9 % al 5 %. Los intervalos se solapan, así que la bajada no es concluyente con
