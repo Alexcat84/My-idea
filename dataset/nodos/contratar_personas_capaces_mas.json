@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Contratar personas capaces de más de lo que el puesto pide hoy",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Al formar equipos es difícil que falten problemas grandes para el talento, y puede pasar que alguien que parecía excesivo para su puesto brille, impulse iniciativas propias y acabe liderando más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+  "resumen_teorico": "En el trabajo de conocimiento, sumar a alguien que parece capaz de más de lo que el puesto exige ahora quiere decir que más adelante podrá ayudarte con problemas mayores. Al armar equipos rara vez faltan retos grandes para el talento, y puede ocurrir que quien parecía sobrado para su puesto destaque, lance iniciativas propias y termine liderando más. El puesto y el presupuesto marcan el tope: no buscas a un primer ejecutivo para vender en primera línea. Una de las maneras más inteligentes de multiplicar lo que logra tu equipo es dar poder a los mejores hasta llevar sus capacidades al límite.",
   "notas_extraccion": "Es la octava tactica de apostar con cabeza y la que trae su propio limite escrito, lo cual es raro en este capitulo: el libro pone el caso en que NO se aplica, el primer ejecutivo para un puesto de comercial, y ademas lo ata al presupuesto. Ese limite es lo que impide que el nodo se lea como contrata siempre por encima. La condicion del trabajo de conocimiento tambien la pone el libro y va transcrita, porque fuera de ella el consejo no se sostiene. El caso del director va dentro y no a nodo propio (manual seccion 3.5). Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto por encima es demasiado, ni que se le promete a esa persona al contratarla, ni que pasa si los problemas grandes no llegan.",
   "pasos_accionables": [
     "Sospecha de la frase, tuya o de otro directivo, «solo me hace falta alguien que resuelva esto ahora; no necesito que además sepa hacer lo otro».",
@@ -22,7 +22,7 @@
     "entregar_problema_dificil_reporte"
   ],
   "condiciones_activacion": [
-    "Cuando te oigas decir que solo necesitas a alguien que se ocupe de esto de ahora y no a alguien que además pueda hacer aquello."
+    "Cuando te descubras pensando que te basta con alguien que cubra lo que hace falta ahora mismo, y que no necesitas que además sepa hacer otras cosas."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -436,6 +436,39 @@
       },
       "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando te oigas decir que solo necesitas a alguien que se ocupe de esto de ahora y no a alguien que además pueda hacer aquello.",
+      "texto_nuevo": "Cuando te descubras pensando que te basta con alguien que cubra lo que hace falta ahora mismo, y que no necesitas que además sepa hacer otras cosas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "199",
+        "frase": "I only need someone to take care of X right now."
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contratar_personas_capaces_mas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "En el trabajo de conocimiento, contratar a quien parece dar más de lo que el puesto pide hoy significa que puede ayudarte con problemas mayores mañana. Al formar equipos es difícil que falten problemas grandes para el talento, y puede pasar que alguien que parecía excesivo para su puesto brille, impulse iniciativas propias y acabe liderando más. El límite lo ponen el puesto y el presupuesto: no buscas un primer ejecutivo para vender en primera línea. Dar poder a los mejores hasta estirar sus capacidades es una de las formas más inteligentes de multiplicar el impacto de tu equipo.",
+      "texto_nuevo": "En el trabajo de conocimiento, sumar a alguien que parece capaz de más de lo que el puesto exige ahora quiere decir que más adelante podrá ayudarte con problemas mayores. Al armar equipos rara vez faltan retos grandes para el talento, y puede ocurrir que quien parecía sobrado para su puesto destaque, lance iniciativas propias y termine liderando más. El puesto y el presupuesto marcan el tope: no buscas a un primer ejecutivo para vender en primera línea. Una de las maneras más inteligentes de multiplicar lo que logra tu equipo es dar poder a los mejores hasta llevar sus capacidades al límite.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "199-207",
+        "frase": "if you're dealing with knowledge work, hiring someone who seems to offer"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

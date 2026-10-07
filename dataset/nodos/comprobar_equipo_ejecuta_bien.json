@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Comprobar con estas señales si tu equipo ejecuta bien",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "Ejecutar bien es elegir una dirección razonable, moverse rápido para aprender qué funciona y qué no, y ajustar hasta llegar al resultado; la velocidad importa: un corredor rápido puede equivocarse de giro y aun así ganar a uno lento que conoce el camino más corto. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, un proceso de decisión eficiente en el que todos confían, rapidez, compromiso tras decidir, dueños con fecha y aprendizaje de cada fallo. Los errores más frustrantes son los que no te enseñan nada porque no está claro si falló la estrategia o la ejecución.",
+  "resumen_teorico": "Ejecutar bien consiste en escoger un rumbo sensato, avanzar deprisa para ver qué sirve y qué no, y corregir hasta lograr lo que buscas. La rapidez cuenta: quien corre veloz puede tomar algún giro errado y aun así ganarle a alguien lento que se sabe el atajo. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, una forma eficiente de decidir en la que todos confían, rapidez, compromiso tras decidir, cada tarea con dueño y fecha, y aprendizaje de cada tropiezo. Ningún error frustra tanto como el que no enseña nada porque no sabes si falló la estrategia o la ejecución.",
   "notas_extraccion": "Es una lista de comprobacion y no una tactica, y entra como nodo porque cada senal es observable y se puede contestar con un si o un no sobre un equipo concreto. El inventario es entero del libro, nombrado senal a senal, que es la condicion de D.27. El nodo se queda con las senales y no ensancha a que hacer cuando una falla, porque el libro no lo dice ahi. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas senales hay que cumplir, ni quien hace la comprobacion, ni cada cuanto.",
   "pasos_accionables": [
     "Revisa si las listas de proyectos o tareas están ordenadas por importancia, de mayor a menor, y si lo primero de la lista se lleva más tiempo y atención.",
@@ -348,6 +348,22 @@
       },
       "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-comprobar_equipo_ejecuta_bien-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ejecutar bien es elegir una dirección razonable, moverse rápido para aprender qué funciona y qué no, y ajustar hasta llegar al resultado; la velocidad importa: un corredor rápido puede equivocarse de giro y aun así ganar a uno lento que conoce el camino más corto. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, un proceso de decisión eficiente en el que todos confían, rapidez, compromiso tras decidir, dueños con fecha y aprendizaje de cada fallo. Los errores más frustrantes son los que no te enseñan nada porque no está claro si falló la estrategia o la ejecución.",
+      "texto_nuevo": "Ejecutar bien consiste en escoger un rumbo sensato, avanzar deprisa para ver qué sirve y qué no, y corregir hasta lograr lo que buscas. La rapidez cuenta: quien corre veloz puede tomar algún giro errado y aun así ganarle a alguien lento que se sabe el atajo. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, una forma eficiente de decidir en la que todos confían, rapidez, compromiso tras decidir, cada tarea con dueño y fecha, y aprendizaje de cada tropiezo. Ningún error frustra tanto como el que no enseña nada porque no sabes si falló la estrategia o la ejecución.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "153-157",
+        "frase": "Executing well means that you pick a reasonable direction, move quickly to learn"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

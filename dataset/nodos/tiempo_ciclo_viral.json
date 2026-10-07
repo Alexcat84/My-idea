@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tiempo de Ciclo Viral (Viral Cycle Time)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Es el tiempo que tarda un usuario en completar el ciclo viral completo: desde que recibe una invitación hasta que se convierte en un nuevo usuario que a su vez invita a otros. Dos productos con el mismo coeficiente viral pero diferentes tiempos de ciclo tendrán resultados de crecimiento dramáticamente distintos: cuanto más corto el ciclo, más rápido el crecimiento compuesto. Reducir la fricción en cada paso del embudo y crear urgencia son las palancas principales para acortarlo.",
+  "resumen_teorico": "El tiempo de ciclo viral es lo que tarda una persona en recorrer el ciclo entero: le llega una invitación, se vuelve usuaria y entonces invita a otras. Aunque dos productos tengan idéntico coeficiente viral, el que cierra ese ciclo en menos tiempo obtiene un crecimiento radicalmente distinto, porque el efecto compuesto avanza más rápido mientras más breve es cada vuelta. Para acortarlo, tus palancas principales son crear urgencia y quitar fricción en cada paso del embudo.",
   "pasos_accionables": [
     "Medir el tiempo promedio desde el envío de una invitación hasta la conversión del invitado",
     "Mapear cada paso del embudo de invitación a registro",
@@ -45,6 +45,22 @@
       "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-tiempo_ciclo_viral-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Es el tiempo que tarda un usuario en completar el ciclo viral completo: desde que recibe una invitación hasta que se convierte en un nuevo usuario que a su vez invita a otros. Dos productos con el mismo coeficiente viral pero diferentes tiempos de ciclo tendrán resultados de crecimiento dramáticamente distintos: cuanto más corto el ciclo, más rápido el crecimiento compuesto. Reducir la fricción en cada paso del embudo y crear urgencia son las palancas principales para acortarlo.",
+      "texto_nuevo": "El tiempo de ciclo viral es lo que tarda una persona en recorrer el ciclo entero: le llega una invitación, se vuelve usuaria y entonces invita a otras. Aunque dos productos tengan idéntico coeficiente viral, el que cierra ese ciclo en menos tiempo obtiene un crecimiento radicalmente distinto, porque el efecto compuesto avanza más rápido mientras más breve es cada vuelta. Para acortarlo, tus palancas principales son crear urgencia y quitar fricción en cada paso del embudo.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "2141-2145",
+        "frase": "Two viral loops with the same viral coefficient but different viral cycle times"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

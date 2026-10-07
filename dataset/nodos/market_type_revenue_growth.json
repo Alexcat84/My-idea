@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tipo de Mercado y Curvas de Crecimiento de Ingresos",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Cada uno de los cuatro tipos de mercado (nuevo, existente, re-segmentado, clonado) tiene una curva de crecimiento de ventas distinta, determinada por la dificultad de pasar de vender a earlyvangelists a vender a clientes mainstream. Entender el tipo de mercado te ayuda a estimar de forma realista cómo crecerán tus ingresos con el tiempo. En mercados nuevos, el éxito inicial con earlyvangelists no garantiza una escalabilidad rápida de ingresos, y estimar su tamaño requiere usar proxies y mercados adyacentes comparables. En mercados existentes, además de la cuota capturable a incumbentes, conviene considerar contratos a largo plazo y costos hundidos como barreras de cambio (lock-ins) que frenan tu crecimiento.",
+  "resumen_teorico": "El tipo de mercado en el que estás (nuevo, existente, re-segmentado o clonado) marca la forma de tu curva de ventas, y cada uno tiene la suya: lo que la define es cuánto cuesta saltar de los earlyvangelists a los clientes mainstream. Conocer tu tipo de mercado te permite proyectar con realismo cómo van a crecer tus ingresos con el tiempo. En un mercado nuevo, vender bien a los earlyvangelists no asegura que los ingresos escalen rápido, y para calcular su tamaño tendrás que apoyarte en proxies y en mercados adyacentes comparables. En un mercado existente, además de la cuota que puedas quitarles a los incumbentes, toma en cuenta los contratos a largo plazo y los costos hundidos, barreras de cambio (lock-ins) que frenan tu crecimiento.",
   "pasos_accionables": [
     "Determina el tipo de mercado en el que opera tu empresa emergente (nuevo, existente, resegmentado o clonado)",
     "Si es mercado existente, analiza a las empresas establecidas y estima qué porcentaje de cuota de mercado puedes capturar por año",
@@ -177,6 +177,22 @@
       "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-market_type_revenue_growth-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cada uno de los cuatro tipos de mercado (nuevo, existente, re-segmentado, clonado) tiene una curva de crecimiento de ventas distinta, determinada por la dificultad de pasar de vender a earlyvangelists a vender a clientes mainstream. Entender el tipo de mercado te ayuda a estimar de forma realista cómo crecerán tus ingresos con el tiempo. En mercados nuevos, el éxito inicial con earlyvangelists no garantiza una escalabilidad rápida de ingresos, y estimar su tamaño requiere usar proxies y mercados adyacentes comparables. En mercados existentes, además de la cuota capturable a incumbentes, conviene considerar contratos a largo plazo y costos hundidos como barreras de cambio (lock-ins) que frenan tu crecimiento.",
+      "texto_nuevo": "El tipo de mercado en el que estás (nuevo, existente, re-segmentado o clonado) marca la forma de tu curva de ventas, y cada uno tiene la suya: lo que la define es cuánto cuesta saltar de los earlyvangelists a los clientes mainstream. Conocer tu tipo de mercado te permite proyectar con realismo cómo van a crecer tus ingresos con el tiempo. En un mercado nuevo, vender bien a los earlyvangelists no asegura que los ingresos escalen rápido, y para calcular su tamaño tendrás que apoyarte en proxies y en mercados adyacentes comparables. En un mercado existente, además de la cuota que puedas quitarles a los incumbentes, toma en cuenta los contratos a largo plazo y los costos hundidos, barreras de cambio (lock-ins) que frenan tu crecimiento.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2700",
+        "frase": "Each of the four market types has a distinctive sales-growth curve shaped"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

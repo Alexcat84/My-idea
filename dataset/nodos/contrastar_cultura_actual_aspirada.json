@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Contrastar por escrito la cultura que tu equipo tiene con la que quieres que tenga",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "La cultura de un equipo es como su personalidad: existe aunque no pienses en ella, y si el ambiente es hostil, las cosas tardan o hay drama constante, merece la pena examinar por qué y qué puedes hacer. La clave es encontrar el cruce entre lo que tu equipo hace bien y lo que esperas que valore, y para eso escribes por separado cómo es hoy, cómo quieres que sea y cuánto dista una cosa de otra. Según lo que esté en tu control, puede que algunas aspiraciones sean alcanzables y otras poco realistas. Con los valores claros ya puedes armar un plan para que florezcan.",
+  "resumen_teorico": "Todo equipo tiene una cultura, igual que tiene un carácter, la mires o no. Si se respira hostilidad, cuesta sacar el trabajo o los dramas no paran, vale la pena preguntarte de dónde viene y qué está en tus manos. Busca dónde coinciden las virtudes reales de tu equipo y lo que te gustaría que apreciara: escribe, en apartados distintos, cómo funciona hoy, cómo quisieras que funcionara y qué distancia hay entre ambas cosas. Según cuánto dependa de ti, quizá algunas aspiraciones estén a tu alcance y otras no sean realistas. Con los valores claros, podrás trazar un plan para hacerlos crecer.",
   "notas_extraccion": "Es la puerta de entrada del trabajo de cultura y el unico nodo del capitulo cuyo entregable es un papel escrito. El libro pone su inventario entero: tres bloques con nombre impreso y dieciseis preguntas nombradas una a una, mas la caja de tiempo, una hora, y el instrumento, un boligrafo. Los tres bloques se quedan dentro de un solo nodo y no se parten en tres, siguiendo el precedente de la vuelta 12 con las tres subsecciones impresas de equilibrar el corto y el largo plazo, sostenido por la ACTA 12. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se repite el ejercicio, ni con quien se comparte el papel, ni que se hace con los huecos una vez listados mas alla de pasar al plan de juego.",
   "pasos_accionables": [
     "Asume que tu equipo tiene una cultura, igual que tiene una personalidad, aunque no le prestes atención; y si te disgusta su forma de trabajar, conviene que analices a qué puede deberse y qué está en tu mano hacer.",
@@ -27,7 +27,7 @@
     "comunicar_valores_diez_formas"
   ],
   "condiciones_activacion": [
-    "Cuando no estás satisfecho con cómo trabaja en conjunto tu equipo, porque el ambiente resulta hostil en vez de servicial, las cosas tardan mucho en salir o hay drama constante, y tienes una hora libre."
+    "Cuando te disgusta la forma en que tu equipo colabora, porque en lugar de ayudarse se respira hostilidad, sacar cualquier cosa adelante lleva demasiado o el drama no para, y te queda una hora libre."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -546,6 +546,39 @@
       },
       "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contrastar_cultura_actual_aspirada-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando no estás satisfecho con cómo trabaja en conjunto tu equipo, porque el ambiente resulta hostil en vez de servicial, las cosas tardan mucho en salir o hay drama constante, y tienes una hora libre.",
+      "texto_nuevo": "Cuando te disgusta la forma en que tu equipo colabora, porque en lugar de ayudarse se respira hostilidad, sacar cualquier cosa adelante lleva demasiado o el drama no para, y te queda una hora libre.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_11.md",
+        "lineas": "33-35",
+        "frase": "If you're not satisfied with how your team works together—maybe the vibe feels"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-contrastar_cultura_actual_aspirada-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La cultura de un equipo es como su personalidad: existe aunque no pienses en ella, y si el ambiente es hostil, las cosas tardan o hay drama constante, merece la pena examinar por qué y qué puedes hacer. La clave es encontrar el cruce entre lo que tu equipo hace bien y lo que esperas que valore, y para eso escribes por separado cómo es hoy, cómo quieres que sea y cuánto dista una cosa de otra. Según lo que esté en tu control, puede que algunas aspiraciones sean alcanzables y otras poco realistas. Con los valores claros ya puedes armar un plan para que florezcan.",
+      "texto_nuevo": "Todo equipo tiene una cultura, igual que tiene un carácter, la mires o no. Si se respira hostilidad, cuesta sacar el trabajo o los dramas no paran, vale la pena preguntarte de dónde viene y qué está en tus manos. Busca dónde coinciden las virtudes reales de tu equipo y lo que te gustaría que apreciara: escribe, en apartados distintos, cómo funciona hoy, cómo quisieras que funcionara y qué distancia hay entre ambas cosas. Según cuánto dependa de ti, quizá algunas aspiraciones estén a tu alcance y otras no sean realistas. Con los valores claros, podrás trazar un plan para hacerlos crecer.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_11.md",
+        "lineas": "33-79",
+        "frase": "Your team's culture is like its personality. It exists whether or not"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

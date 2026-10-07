@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Gestionar bien a las personas de tu equipo",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "Las personas son el quién del trabajo de un directivo, y el resultado del equipo depende de que estén preparadas para tener éxito, tengan las habilidades adecuadas y estén motivadas. Sin las personas adecuadas o sin un entorno donde puedan prosperar, los problemas llegan: basta con que alguien mida mal, que otro no atienda bien a los clientes o que tú planifiques mal. Por eso gestionar bien a las personas pide cuatro frentes a la vez: relaciones de confianza, conocer fuerzas y debilidades, incluidas las tuyas, decidir bien quién hace qué y entrenar a cada uno para que dé lo mejor de sí.",
+  "resumen_teorico": "En el trabajo de dirigir, las personas son el quién, y lo que consigue tu equipo depende de tres cosas: que cada uno tenga lo necesario para que le vaya bien, las capacidades que su tarea pide y ganas. Si eliges mal a quién sumar o el ambiente no deja crecer a nadie, vienen los tropiezos: basta un error de medida, alguien que trata mal a los clientes o una mala planificación tuya. Por eso cuidar a tu gente exige cuatro frentes juntos: ganarte su confianza, saber en qué destaca y en qué flaquea cada uno, tú incluido, repartir bien las tareas y entrenar a cada quien para que rinda al máximo.",
   "notas_extraccion": "Es el desarrollo del segundo de los tres cubos del capitulo, las personas, que el libro llama el quien. El cubo entra con tres preguntas de diagnostico nombradas por el libro y se resuelve con cuatro frentes que el libro enumera en una sola frase encabezada por para gestionar bien a las personas debes. El ultimo paso trae el ejemplo del puesto de limonada con el que el capitulo entero razona, y lo trae con los tres fallos que el libro nombra, uno de un empleado, otro de otro, y el tercero del propio directivo: el libro se incluye a si mismo en la lista de lo que puede fallar, y por eso el tercero esta escrito. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se desarrolla una relacion de confianza, con que instrumento se miden las fuerzas y las debilidades, ni cuando una decision sobre quien hace que es buena: eso lo desarrollan otros capitulos del libro que esta vuelta no abre.",
   "pasos_accionables": [
     "Empieza por preguntarte tres cosas sobre tu equipo: si cada persona está en condiciones de triunfar, si cuenta con las habilidades que hacen falta y si tiene ganas de hacer un gran trabajo.",
@@ -26,7 +26,7 @@
     "conocer_fuerzas_valores_sesgos_propios"
   ],
   "condiciones_activacion": [
-    "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo."
+    "Cuando miras cómo está tu gente y falla al menos una de estas tres cosas: alguien no cuenta con lo necesario para que le vaya bien, le faltan las capacidades que su tarea pide o no tiene ganas de hacer un trabajo excelente."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -293,6 +293,39 @@
       },
       "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-gestionar_personas_equipo-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando revisas cómo están las personas de tu equipo y la respuesta a alguna de las tres preguntas es que no: que no están preparados para tener éxito, que no tienen las habilidades adecuadas o que no están motivados para hacer un gran trabajo.",
+      "texto_nuevo": "Cuando miras cómo está tu gente y falla al menos una de estas tres cosas: alguien no cuenta con lo necesario para que le vaya bien, le faltan las capacidades que su tarea pide o no tiene ganas de hacer un trabajo excelente.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_02.md",
+        "lineas": "135",
+        "frase": "Are the members of your team set up to succeed? Do they"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-gestionar_personas_equipo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las personas son el quién del trabajo de un directivo, y el resultado del equipo depende de que estén preparadas para tener éxito, tengan las habilidades adecuadas y estén motivadas. Sin las personas adecuadas o sin un entorno donde puedan prosperar, los problemas llegan: basta con que alguien mida mal, que otro no atienda bien a los clientes o que tú planifiques mal. Por eso gestionar bien a las personas pide cuatro frentes a la vez: relaciones de confianza, conocer fuerzas y debilidades, incluidas las tuyas, decidir bien quién hace qué y entrenar a cada uno para que dé lo mejor de sí.",
+      "texto_nuevo": "En el trabajo de dirigir, las personas son el quién, y lo que consigue tu equipo depende de tres cosas: que cada uno tenga lo necesario para que le vaya bien, las capacidades que su tarea pide y ganas. Si eliges mal a quién sumar o el ambiente no deja crecer a nadie, vienen los tropiezos: basta un error de medida, alguien que trata mal a los clientes o una mala planificación tuya. Por eso cuidar a tu gente exige cuatro frentes juntos: ganarte su confianza, saber en qué destaca y en qué flaquea cada uno, tú incluido, repartir bien las tareas y entrenar a cada quien para que rinda al máximo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_02.md",
+        "lineas": "135-137",
+        "frase": "If you don't have the right people for the job, or you don't"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

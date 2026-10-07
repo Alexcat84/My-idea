@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Resistir dar la solución y clasificar la decisión del equipo según su urgencia",
   "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
-  "resumen_teorico": "La inmensa mayoría de las situaciones no exigen una decisión inmediata, pero se sigue aplicando el modelo de crisis. Cuando los asuntos no se anticipan, el equipo no tiene tiempo para pensar, decide el jefe deprisa, eso no forma al equipo y el círculo se repite. Para intentar cambiarlo, abre un espacio, aunque sea de segundos, para que el equipo reaccione, y anticipa las decisiones que se acercan. Ajusta la participación a la urgencia: si urge, decides y luego el equipo critica; si hay algo de margen, pides su opinión; si puede esperar, exiges sus aportes y cuidas la disidencia.",
+  "resumen_teorico": "Casi nunca una situación pide decidir en el acto, y aun así sigue mandando el modelo de crisis. Si no te adelantas a los asuntos, el ciclo se repite: el equipo se queda sin tiempo para pensarlos, el jefe resuelve con prisa y nadie del equipo se forma. Para intentar romperlo, deja un margen, aunque dure unos segundos, para que el equipo reaccione, y adelántate a las decisiones que vienen. Gradúa su participación según la urgencia: si urge, decides tú y después lo someten a crítica; si hay algo de margen, consultas su opinión; si puede esperar, exiges que aporten y cuidas a quien disiente.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_08.md, unidad Cap. 12, titulo textual Up Scope! FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los pasos 1 y 2 salen de la linea 107 (151 palabras) y los pasos 3, 4 y 5 salen de las lineas 117, 119 y 121, todas dentro de la pieza P1 de la frontera de cap_08 publicada en esta vuelta, que reune LINEAS NO CONTIGUAS (L107, L115 a L121) porque las dos partes desarrollan el mismo mecanismo nombrado por su propio rotulo en la linea 103, Mechanism: Resist the Urge to Provide Solutions. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el libro pone su propio inventario de ETAPAS de decision, nombradas una a una segun su urgencia (linea 115, here are a few ways to try to get your team thinking for themselves): urgente, razonablemente pronto, y puede retrasarse (lineas 117, 119 y 121), cada una con su propia accion, sin adjetivo de adecuacion en el sitio del criterio: la clasificacion es de tiempo disponible, no de que tan bien se decide. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): el ataque de torpedo entero contra el submarino enemigo (lineas 9 a 101) es la escena naval especifica de la que Marquet generaliza el mecanismo, con jerga naval propia de esa maniobra (set, shoot, detect, acquire) que no es un procedimiento de negocio replicable, y la anecdota del simulador de entrenamiento donde el equipo condujo en linea recta treinta minutos (linea 109) tampoco se mina, por ser el fracaso propio de esa sesion y no una etapa del mecanismo. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: la pieza junta dos tramos no contiguos del capitulo (L107 y L115 a L121) porque los dos desarrollan el mismo mecanismo de la linea 103; si el auditor lee que son dos mecanismos distintos (uno de dar espacio para decidir, otro de clasificar por urgencia), esto se parte en dos candidatos. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la reflexion sobre por que las organizaciones caen en un espiral reactivo cuando nadie anticipa las decisiones (linea 113) no se escribe como paso porque es diagnostico, no accion; y el detalle naval completo del ataque (torpedo Mk 48 ADCAP, procedimientos de disparo) no entra porque es el dato del caso, no la etapa generica del mecanismo.",
   "pasos_accionables": [
     "Resiste el impulso de dar tú la solución: date tiempo, aunque sean solo unos minutos o segundos, para que el equipo entero reaccione y piense antes de decidir.",
@@ -285,6 +285,22 @@
       },
       "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-resistir_dar_solucion_clasificar_decision_urgencia-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La inmensa mayoría de las situaciones no exigen una decisión inmediata, pero se sigue aplicando el modelo de crisis. Cuando los asuntos no se anticipan, el equipo no tiene tiempo para pensar, decide el jefe deprisa, eso no forma al equipo y el círculo se repite. Para intentar cambiarlo, abre un espacio, aunque sea de segundos, para que el equipo reaccione, y anticipa las decisiones que se acercan. Ajusta la participación a la urgencia: si urge, decides y luego el equipo critica; si hay algo de margen, pides su opinión; si puede esperar, exiges sus aportes y cuidas la disidencia.",
+      "texto_nuevo": "Casi nunca una situación pide decidir en el acto, y aun así sigue mandando el modelo de crisis. Si no te adelantas a los asuntos, el ciclo se repite: el equipo se queda sin tiempo para pensarlos, el jefe resuelve con prisa y nadie del equipo se forma. Para intentar romperlo, deja un margen, aunque dure unos segundos, para que el equipo reaccione, y adelántate a las decisiones que vienen. Gradúa su participación según la urgencia: si urge, decides tú y después lo someten a crítica; si hay algo de margen, consultas su opinión; si puede esperar, exiges que aporten y cuidas a quien disiente.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "fichero": "fuentes/marquet_turn_the_ship/cap_08.md",
+        "lineas": "107-121",
+        "frase": "Yet, the vast majority of situations do not require immediate decisions."
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

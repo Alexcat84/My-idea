@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Sentarse en una reunión rutinaria que ya existe y leerla por sus señales de gente en vez de por su asunto técnico",
   "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
-  "resumen_teorico": "Una reunión rutinaria puede servirte para observar a la gente y no solo el asunto técnico. Un capitán recién llegado, en un repaso de mantenimiento, hizo justo eso: los asistentes entraban tarde, el capitán al mando esperaba fuera hasta que lo invitaban, la reunión empezaba tarde y todos esperaban a algún otro; quien exponía iba serio y directo, pero frustrado y a la defensiva, y los demás se aburrían. La falta de puntualidad puede parecer un detalle pequeño, pero a bordo de un submarino nuclear las cosas pequeñas como esa indican problemas mucho mayores.",
+  "resumen_teorico": "Puedes usar una reunión rutinaria para fijarte en las personas y no solo en el tema técnico. Es lo que hizo un capitán recién llegado durante un repaso de mantenimiento: notó que la gente llegaba con retraso, que el capitán al mando se quedaba fuera hasta que lo invitaban a pasar, que la sesión arrancaba tarde y que cada uno esperaba a otro; el que exponía se mostraba formal y franco, aunque frustrado y defensivo, mientras el resto se aburría. Llegar tarde puede parecer poca cosa, pero en un submarino nuclear esos pequeños detalles delatan problemas mucho mayores.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_03.md, unidad Cap. 5, titulo textual Call to Action. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: el paso 1 sale de la primera frase de la linea 17, que en la frontera publicada en esta vuelta es la PIEZA R3 y esta clasificada RESIDUO por su cuerpo, que describe para que sirve el camarote de oficiales; lo que tomo de ella es solo la frase que nombra la reunion, que es la activacion. Los pasos 3 a 6 y el 9 salen de la linea 19, PIEZA P3 primera mitad. Los pasos 2, 7 y 8 salen de la linea 21, PIEZA P3 segunda mitad. Todo es de la misma unidad y del mismo libro. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el libro pone SU PROPIO inventario de OBJETOS DE OBSERVACION, nombrados uno a uno y en el mismo parrafo (la llegada tarde, el jefe que se queda fuera hasta que estan todos, la reunion que empieza tarde, cada uno esperando a otro, el ponente a la defensiva, los demas aburridos), y pone ademas escrita la REGLA DE LECTURA con que esos objetos se interpretan. No hay adjetivo de adecuacion en el sitio del criterio. LOS PASOS DICEN MIRA Y NO ANOTA, y es deliberado: el texto dice que observo y que miro alrededor, y no dice que escribiera nada. Escribir anota habria sido un puente de la especie medio. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: cuantas reuniones hay que observar, cada cuanto, a quien se le cuenta lo observado, ni que se hace con lo que se vio. El texto no lo dice. DISCUTIBLE MARCADO ANTES DE SABER SI ACIERTO, y va en el reporte de esta vuelta: la activacion la saco de una pieza que yo mismo clasifique RESIDUO en la frontera. Sostengo las dos cosas, que la pieza es residuo por su cuerpo y que su primera frase nombra la reunion; pero quien lea que un nodo no debe apoyarse en una pieza no minada tiene donde agarrarse, y por eso la frontera dentro del nodo va escrita arriba y no callada.",
   "pasos_accionables": [
     "Asiste a una reunión rutinaria de repaso de la organización, por ejemplo una reunión de jefes de departamento para repasar los asuntos de mantenimiento.",
@@ -369,6 +369,22 @@
       },
       "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-observar_reunion_rutinaria_senales_plantilla-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una reunión rutinaria puede servirte para observar a la gente y no solo el asunto técnico. Un capitán recién llegado, en un repaso de mantenimiento, hizo justo eso: los asistentes entraban tarde, el capitán al mando esperaba fuera hasta que lo invitaban, la reunión empezaba tarde y todos esperaban a algún otro; quien exponía iba serio y directo, pero frustrado y a la defensiva, y los demás se aburrían. La falta de puntualidad puede parecer un detalle pequeño, pero a bordo de un submarino nuclear las cosas pequeñas como esa indican problemas mucho mayores.",
+      "texto_nuevo": "Puedes usar una reunión rutinaria para fijarte en las personas y no solo en el tema técnico. Es lo que hizo un capitán recién llegado durante un repaso de mantenimiento: notó que la gente llegaba con retraso, que el capitán al mando se quedaba fuera hasta que lo invitaban a pasar, que la sesión arrancaba tarde y que cada uno esperaba a otro; el que exponía se mostraba formal y franco, aunque frustrado y defensivo, mientras el resto se aburría. Llegar tarde puede parecer poca cosa, pero en un submarino nuclear esos pequeños detalles delatan problemas mucho mayores.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+        "lineas": "19-21",
+        "frase": "the attendees wandered in late, and the captain stayed away until everyone"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

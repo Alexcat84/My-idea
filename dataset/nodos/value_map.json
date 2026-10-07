@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Value Map (Mapa de Valor)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Describe las características de una propuesta de valor específica de forma estructurada y detallada, desglosándola en Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Es el lado de 'crear valor' del Value Proposition Canvas, y debe diseñarse en función del Customer Profile.",
+  "resumen_teorico": "Es el lado de 'crear valor' del Value Proposition Canvas: allí ordenas con estructura y detalle los rasgos de una propuesta de valor concreta, repartidos en tres piezas: Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Lo diseñas siempre a partir de lo que muestra el Customer Profile.",
   "pasos_accionables": [
     "Listar todos los productos y servicios de la propuesta de valor",
     "Definir cómo cada aliviador de dolor alivia un dolor específico del cliente",
@@ -116,6 +116,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-value_map-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Describe las características de una propuesta de valor específica de forma estructurada y detallada, desglosándola en Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Es el lado de 'crear valor' del Value Proposition Canvas, y debe diseñarse en función del Customer Profile.",
+      "texto_nuevo": "Es el lado de 'crear valor' del Value Proposition Canvas: allí ordenas con estructura y detalle los rasgos de una propuesta de valor concreta, repartidos en tres piezas: Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Lo diseñas siempre a partir de lo que muestra el Customer Profile.",
+      "cita": {
+        "libro": "Value Proposition Design",
+        "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+        "lineas": "706",
+        "frase": "The Value (Proposition) Map describes the features of a specific value proposition"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Critical Path (Camino Crítico)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Framework para enumerar los hitos absolutamente necesarios para alcanzar el traction goal con el menor número de pasos posible. Sirve principalmente como filtro para decidir qué NO hacer: toda actividad debe evaluarse contra el Critical Path, y si no está en el camino, no debe realizarse. Requiere reevaluación constante tras cada hito porque las suposiciones iniciales suelen ser incorrectas.",
+  "resumen_teorico": "Es un marco para listar solo los hitos imprescindibles que te llevan a tu meta de tracción con la menor cantidad de pasos. Su uso principal es de filtro, para saber qué NO hacer: compara cada actividad con tu camino crítico y, si queda fuera de él, descártala. Revísalo una y otra vez después de cada hito, porque lo que supusiste al principio suele resultar equivocado.",
   "pasos_accionables": [
     "Enumera los hitos estrictamente necesarios para alcanzar tu meta de tracción",
     "Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios",
@@ -100,6 +100,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-critical_path-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Framework para enumerar los hitos absolutamente necesarios para alcanzar el traction goal con el menor número de pasos posible. Sirve principalmente como filtro para decidir qué NO hacer: toda actividad debe evaluarse contra el Critical Path, y si no está en el camino, no debe realizarse. Requiere reevaluación constante tras cada hito porque las suposiciones iniciales suelen ser incorrectas.",
+      "texto_nuevo": "Es un marco para listar solo los hitos imprescindibles que te llevan a tu meta de tracción con la menor cantidad de pasos. Su uso principal es de filtro, para saber qué NO hacer: compara cada actividad con tu camino crítico y, si queda fuera de él, descártala. Revísalo una y otra vez después de cada hito, porque lo que supusiste al principio suele resultar equivocado.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "685-699",
+        "frase": "Critical Path is a framework to help you decide what not to do"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

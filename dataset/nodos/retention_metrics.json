@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Métricas de Retención",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Los programas de retención dependen de mirar de cerca el comportamiento del cliente para saber quién se queda, quién se va y por qué; no se trata de rastrearlo todo, sino los comportamientos más importantes que quieres mejorar. En canales digitales se puede rastrear el comportamiento individual de cada usuario (su fecha de inicio, su fuente, su actividad, su abandono, sus clics) sin violar su privacidad, y eso permite personalizar los esfuerzos de retención con datos reales en vez de suposiciones. Los indicadores se organizan por cohortes, grupos de clientes que entraron el mismo mes, para poder comparar su comportamiento entre sí y detectar señales tempranas de abandono (churn). Al lado del comportamiento se miden las quejas, los tickets de soporte y las respuestas a los correos, se estima la vida promedio del cliente y, si es posible más adelante, su valor de vida (lifetime value), y se cierra midiendo lo que la retención devuelve: los referidos que genera cada cliente y el resultado de cada promoción o campaña.",
+  "resumen_teorico": "Para retener clientes necesitas observar con atención cómo se comportan: quiénes siguen contigo, quiénes se van y por qué motivo. No hace falta medirlo todo; enfócate en los comportamientos clave que te interesa mejorar. En los canales digitales puedes seguir a cada usuario por separado (cuándo empezó, de dónde llegó, cuánta actividad tiene, cuándo abandona, en qué hace clic) sin invadir su privacidad, y con eso personalizas tus esfuerzos de retención a partir de datos reales y no de suposiciones. Agrupa tus indicadores por cohortes, es decir, por clientes que entraron el mismo mes, para comparar cómo se comporta cada grupo frente a los demás y notar a tiempo las primeras señales de abandono (churn). Junto al comportamiento, mide las quejas, los tickets de soporte y las respuestas a tus correos, estima cuánto dura en promedio un cliente y, si más adelante puedes, su valor de vida (lifetime value). Termina midiendo lo que la retención te devuelve: los referidos que trae cada cliente y el resultado de cada promoción o campaña.",
   "pasos_accionables": [
     "Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento",
     "Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente",
@@ -153,6 +153,22 @@
       },
       "decision": "copia fiel (regla D2, ola k12): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-retention_metrics-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los programas de retención dependen de mirar de cerca el comportamiento del cliente para saber quién se queda, quién se va y por qué; no se trata de rastrearlo todo, sino los comportamientos más importantes que quieres mejorar. En canales digitales se puede rastrear el comportamiento individual de cada usuario (su fecha de inicio, su fuente, su actividad, su abandono, sus clics) sin violar su privacidad, y eso permite personalizar los esfuerzos de retención con datos reales en vez de suposiciones. Los indicadores se organizan por cohortes, grupos de clientes que entraron el mismo mes, para poder comparar su comportamiento entre sí y detectar señales tempranas de abandono (churn). Al lado del comportamiento se miden las quejas, los tickets de soporte y las respuestas a los correos, se estima la vida promedio del cliente y, si es posible más adelante, su valor de vida (lifetime value), y se cierra midiendo lo que la retención devuelve: los referidos que genera cada cliente y el resultado de cada promoción o campaña.",
+      "texto_nuevo": "Para retener clientes necesitas observar con atención cómo se comportan: quiénes siguen contigo, quiénes se van y por qué motivo. No hace falta medirlo todo; enfócate en los comportamientos clave que te interesa mejorar. En los canales digitales puedes seguir a cada usuario por separado (cuándo empezó, de dónde llegó, cuánta actividad tiene, cuándo abandona, en qué hace clic) sin invadir su privacidad, y con eso personalizas tus esfuerzos de retención a partir de datos reales y no de suposiciones. Agrupa tus indicadores por cohortes, es decir, por clientes que entraron el mismo mes, para comparar cómo se comporta cada grupo frente a los demás y notar a tiempo las primeras señales de abandono (churn). Junto al comportamiento, mide las quejas, los tickets de soporte y las respuestas a tus correos, estima cuánto dura en promedio un cliente y, si más adelante puedes, su valor de vida (lifetime value). Termina midiendo lo que la retención te devuelve: los referidos que trae cada cliente y el resultado de cada promoción o campaña.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "6687",
+        "frase": "Retention programs live or die by a close monitoring of customer behavior"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

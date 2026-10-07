@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseñar Pruebas para Validar tus Suposiciones",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Una hipótesis es solo una palabra elegante para 'suposición'. Para convertir tus suposiciones en hechos, sal a la calle y pruébalas frente a clientes reales con pruebas simples, cortas y objetivas de pasa o no pasa (pass/fail). No busques precisión absoluta, busca una señal fuerte: por ejemplo, que 5 de 12 clientes te digan 'lo necesito ya'.",
+  "resumen_teorico": "Llamar hipótesis a algo no lo vuelve más que una suposición con nombre elegante. Si quieres que tus suposiciones se conviertan en hechos, sal de tu oficina y ponlas a prueba con clientes reales mediante pruebas sencillas, breves y objetivas que solo den pasa o no pasa (pass/fail). No persigas una precisión total; persigue una señal clara, como que 5 de 12 clientes te digan 'lo necesito ya'.",
   "pasos_accionables": [
     "Pregúntate qué necesitas saber para poder avanzar",
     "Define la prueba más simple posible para conseguir esa respuesta",
@@ -45,6 +45,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que la mayoría de las veces basta con una maqueta, demo o prototipo, no que nunca haga falta programar.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-diseno_experimentos_hipotesis-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una hipótesis es solo una palabra elegante para 'suposición'. Para convertir tus suposiciones en hechos, sal a la calle y pruébalas frente a clientes reales con pruebas simples, cortas y objetivas de pasa o no pasa (pass/fail). No busques precisión absoluta, busca una señal fuerte: por ejemplo, que 5 de 12 clientes te digan 'lo necesito ya'.",
+      "texto_nuevo": "Llamar hipótesis a algo no lo vuelve más que una suposición con nombre elegante. Si quieres que tus suposiciones se conviertan en hechos, sal de tu oficina y ponlas a prueba con clientes reales mediante pruebas sencillas, breves y objetivas que solo den pasa o no pasa (pass/fail). No persigas una precisión total; persigue una señal clara, como que 5 de 12 clientes te digan 'lo necesito ya'.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1138-1140",
+        "frase": "Initially, hypothesis is just a fancy word for \"guess.\" To turn hypotheses"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

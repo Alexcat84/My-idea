@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Bullseye Framework (Diana de Tracción)",
   "fuente": "Traction - Gabriel Weinberg",
-  "resumen_teorico": "Bullseye es un proceso de tres pasos para que encuentres el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, si uno de los canales probados dio resultados prometedores, concentras todo tu esfuerzo en él, tu canal núcleo, para exprimir su máximo potencial; si ninguno promete, repites el proceso. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+  "resumen_teorico": "Con Bullseye eliges, en tres etapas, cuál de los 19 canales posibles es el más prometedor para conseguir clientes. En el anillo exterior haces una lluvia de ideas que cubra los 19 canales, sin dejar fuera ninguno solo porque te resulte poco familiar. En el anillo medio te quedas con los pocos que más prometen para tu caso y los pones a prueba al mismo tiempo con experimentos rápidos y de bajo costo; dejas de añadir canales en cuanto notas que el entusiasmo baja de forma clara, algo que suele ocurrir alrededor del tercero. En el anillo interior, o bullseye, apuestas todo tu esfuerzo al canal que haya mostrado resultados prometedores en las pruebas, que pasa a ser tu canal núcleo, y lo exprimes al máximo; si ninguno destaca, vuelves a empezar. El método parte de que la principal causa de que una startup fracase es una distribución deficiente, más que el producto, y te protege de la tendencia a quedarte solo con los canales que ya conoces.",
   "pasos_accionables": [
     "Lista los 19 canales de tracción posibles y piensa para cada uno al menos una idea concreta de cómo podría funcionar en tu negocio, sin descartar ninguno de entrada.",
     "Selecciona los pocos canales más prometedores según tu contexto, industria y modelo de negocio, y deja de sumar cuando el entusiasmo caiga claramente, lo que suele pasar hacia el tercer canal.",
@@ -345,6 +345,22 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-bullseye_framework-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Bullseye es un proceso de tres pasos para que encuentres el canal de adquisición de clientes más prometedor entre 19 posibles. Primero, en el anillo exterior, generas ideas para cada uno de los 19 canales sin descartar ninguno por familiaridad. Segundo, en el anillo medio, ejecutas experimentos baratos y rápidos en paralelo sobre los pocos canales más prometedores según tu contexto, dejando de sumar cuando el entusiasmo cae claramente, lo que suele pasar hacia el tercer canal. Tercero, en el anillo interior o bullseye, si uno de los canales probados dio resultados prometedores, concentras todo tu esfuerzo en él, tu canal núcleo, para exprimir su máximo potencial; si ninguno promete, repites el proceso. El método existe porque la mala distribución, no el producto, es la causa número uno de fracaso de startups, y evita el sesgo de quedarte solo con los canales que ya conoces.",
+      "texto_nuevo": "Con Bullseye eliges, en tres etapas, cuál de los 19 canales posibles es el más prometedor para conseguir clientes. En el anillo exterior haces una lluvia de ideas que cubra los 19 canales, sin dejar fuera ninguno solo porque te resulte poco familiar. En el anillo medio te quedas con los pocos que más prometen para tu caso y los pones a prueba al mismo tiempo con experimentos rápidos y de bajo costo; dejas de añadir canales en cuanto notas que el entusiasmo baja de forma clara, algo que suele ocurrir alrededor del tercero. En el anillo interior, o bullseye, apuestas todo tu esfuerzo al canal que haya mostrado resultados prometedores en las pruebas, que pasa a ser tu canal núcleo, y lo exprimes al máximo; si ninguno destaca, vuelves a empezar. El método parte de que la principal causa de que una startup fracase es una distribución deficiente, más que el producto, y te protege de la tendencia a quedarte solo con los canales que ya conoces.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "381-438",
+        "frase": "Stop promoting ideas where there is an obvious drop-off in excitement."
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

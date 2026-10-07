@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Abrir una discusión compleja escribiendo cada uno sus notas adhesivas en silencio",
   "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
-  "resumen_teorico": "En una discusión abierta cada uno decide si habla y cuándo: con gente introvertida puede costar que diga lo que piensa, la más extrovertida puede acaparar la conversación, y la antigüedad o la confianza pesan en quién se atreve. Una manera de contrarrestarlo es abrir con notas adhesivas: cada persona escribe lo que piensa durante diez a quince minutos en silencio, luego pega sus notas en la pizarra y explica su razonamiento, y las ideas parecidas se agrupan para que la sala discuta junta esos grupos. Poner las ideas propias en papel antes de compartirlas baja la barrera para participar.",
+  "resumen_teorico": "Cuando una conversación de grupo no tiene estructura, hablar o callar queda a criterio de cada uno: a las personas reservadas puede costarles soltar sus ideas, las más extrovertidas pueden quedarse con la palabra y la antigüedad o la confianza influyen en quién se anima. Una salida es arrancar con notas adhesivas: durante diez a quince minutos todos escriben en silencio lo que piensan; después cada uno coloca sus notas en la pizarra y cuenta por qué las escribió; al final se juntan las parecidas y la sala debate esos montones. Escribir antes de hablar hace más fácil que todos participen.",
   "notas_extraccion": "Es la tactica mas desarrollada del capitulo y la unica del bloque de participacion que trae una caja de tiempo con numero. Su mecanismo es el mismo que el libro explica en la reunion generativa, separar el pensar a solas del hablar en grupo, pero aqui aparece como procedimiento con sus objetos, notas adhesivas y pizarra, y con su secuencia escrita, escribir, pegar, explicar, agrupar y discutir. Va a nodo propio y no dentro de la tactica de cambiar el formato porque tiene pasos propios que la cabeza no tiene, que es la prueba del manual para separar. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas notas escribe cada uno, quien agrupa, ni que se hace con los grupos despues de discutirlos.",
   "pasos_accionables": [
     "Abre la conversación sobre el tema complejo repartiendo a cada persona un bloc de notas adhesivas y pidiéndole que apunte en él lo que piensa del asunto, antes de empezar a discutir.",
@@ -20,7 +20,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o cómo sería el éxito dentro de tres años."
+    "En el momento previo a abrir una conversación sobre un asunto enredado, como qué metas de mercadotecnia te conviene fijar o qué significaría que te fuera bien de aquí a tres años."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -318,6 +318,39 @@
       },
       "decision": "copia fiel (regla D2, ola k03): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-abrir_discusion_notas_adhesivas-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Justo antes de lanzarte a una discusión sobre un tema complejo, por ejemplo cuáles deberían ser tus metas de mercadotecnia o cómo sería el éxito dentro de tres años.",
+      "texto_nuevo": "En el momento previo a abrir una conversación sobre un asunto enredado, como qué metas de mercadotecnia te conviene fijar o qué significaría que te fuera bien de aquí a tres años.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "237",
+        "frase": "Before launching into a discussion about a complex topic (for example, what our"
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-abrir_discusion_notas_adhesivas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "En una discusión abierta cada uno decide si habla y cuándo: con gente introvertida puede costar que diga lo que piensa, la más extrovertida puede acaparar la conversación, y la antigüedad o la confianza pesan en quién se atreve. Una manera de contrarrestarlo es abrir con notas adhesivas: cada persona escribe lo que piensa durante diez a quince minutos en silencio, luego pega sus notas en la pizarra y explica su razonamiento, y las ideas parecidas se agrupan para que la sala discuta junta esos grupos. Poner las ideas propias en papel antes de compartirlas baja la barrera para participar.",
+      "texto_nuevo": "Cuando una conversación de grupo no tiene estructura, hablar o callar queda a criterio de cada uno: a las personas reservadas puede costarles soltar sus ideas, las más extrovertidas pueden quedarse con la palabra y la antigüedad o la confianza influyen en quién se anima. Una salida es arrancar con notas adhesivas: durante diez a quince minutos todos escriben en silencio lo que piensan; después cada uno coloca sus notas en la pizarra y cuenta por qué las escribió; al final se juntan las parecidas y la sala debate esos montones. Escribir antes de hablar hace más fácil que todos participen.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "233-241",
+        "frase": "An unstructured group discussion means that participants choose if and when they speak."
+      },
+      "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
