@@ -22,6 +22,8 @@ import { REGLA_SIN_FUENTES } from "./reglaSinFuentes";
 import { avisosNodo, JURISDICCION, VIGENCIA_NODOS } from "./engine/avisos";
 import { cargarGrafo } from "./engine/graph";
 import { normal, titulosCanonicos, titulosEn } from "./testFixtures/fuentesCanonicas";
+// Las pautas viven en lib/pautasProcedencia.ts: una sola fuente con guardas_contenido.json y la forja (7 oct 2026).
+import { ATRIBUCION_GENERICA as ATRIBUCION, METODO_SIN_NEUTRO, PERSONAS_COMO_FUENTE as PERSONAS, PREFIJO_PROCEDENCIA as PREFIJO } from "./pautasProcedencia";
 
 const WEB = path.resolve(__dirname, "..");
 const RAIZ = path.resolve(WEB, "..");
@@ -264,11 +266,11 @@ describe("procedencia: los avisos no revelan el origen", () => {
 
 // ---------------------------------------------------------------- 5. etiquetas de procedencia
 
-/** La instruccion a la IA cita las frases prohibidas como ejemplo: no es texto de cara al cliente. */
-const ES_INSTRUCCION = (donde: string) => donde.replace(/\\/g, "/").endsWith("web/lib/reglaSinFuentes.ts");
+/** La instruccion a la IA cita las frases prohibidas como ejemplo, y la definicion de las pautas las lleva como patron
+ * y como fixture: no son texto de cara al cliente. */
+const ES_INSTRUCCION = (donde: string) => ["web/lib/reglaSinFuentes.ts", "web/lib/pautasProcedencia.ts"].some((f) => donde.replace(/\\/g, "/").endsWith(f));
 
-/** El prefijo de procedencia en los once idiomas (fundador, 30 sep 2026: el texto visible queda limpio). */
-const PREFIJO = /sugerencia de my idea|suggestion (?:from|de|by) my idea|my idea suggest|sugest[aã]o (?:da|de|do) my idea|vorschlag (?:von|aus) my idea|suggerimento (?:di|da) my idea|my idea(?:の提案|の提案|建议|의 제안| का सुझाव)|اقتراح my idea/i;
+/** El prefijo de procedencia en los once idiomas: PREFIJO_PROCEDENCIA en lib/pautasProcedencia.ts. */
 
 describe("procedencia: ninguna etiqueta de procedencia", () => {
   it("ningun texto de cara al cliente lleva el prefijo de procedencia, en ningun idioma", () => {
@@ -280,27 +282,9 @@ describe("procedencia: ninguna etiqueta de procedencia", () => {
 // ---------------------------------------------------------------- 6. atribuciones genericas
 
 /**
- * Atribuir un consejo a estudios, investigaciones, expertos o la literatura insinua un origen (D1). Se dice
- * directamente. Los patrones no muerden las instrucciones al usuario ("busca en la literatura", "segun los datos
- * obtenidos", "no se ha probado con usuarios"): solo la atribucion de un hecho.
+ * Atribuir un consejo a estudios, investigaciones, expertos o la literatura insinua un origen (D1). Los patrones, en
+ * los once idiomas, son ATRIBUCION_GENERICA en lib/pautasProcedencia.ts.
  */
-const VERBO_ES = "(?:muestra|muestran|demuestra|demuestran|demostr[oó]|demostraron|indica|indican|revela|revelan|sugiere|sugieren|confirma|confirman|ha mostrado|han mostrado|ha demostrado|han demostrado|encontr[oó]|encontraron|señala|señalan)";
-const ATRIBUCION: RegExp[] = [
-  // espanol
-  new RegExp(`\\b(?:un|el|los|varios|algunos|diversos|numerosos|muchos) estudios? ${VERBO_ES}`, "i"),
-  new RegExp(`\\b(?:la|las) investigaci(?:ón|on|ones) ${VERBO_ES}`, "i"),
-  new RegExp(`\\b(?:la evidencia|la ciencia) ${VERBO_ES}`, "i"),
-  /\bseg[uú]n (?:los |las |la |el |diversos |varios |algunos )?(?:expertos|especialistas|estudios|investigaciones|investigaci[oó]n|la literatura|investigadores|autores|analistas|estudios citados)/i,
-  /\blos (?:expertos|especialistas|investigadores|analistas) (?:recomiendan|coinciden|sugieren|dicen|afirman|advierten|han encontrado|encontraron)/i,
-  /\b(?:est[aá]|ha sido|se ha) (?:demostrado|comprobado) que/i,
-  // los otros diez idiomas de la interfaz
-  /\b(?:studies|research|evidence) (?:shows?|suggests?|has shown|have shown|proves?|indicates?)\b|\bexperts (?:recommend|agree|say)\b|\baccording to (?:studies|research|experts)\b/i,
-  /\b(?:les études|la recherche) (?:montrent|montre|suggèrent|suggère)\b|\bselon (?:les experts|des études|les études)\b/i,
-  /\b(?:estudos|a pesquisa) (?:mostram|mostra|sugerem|sugere)\b|\bsegundo (?:especialistas|estudos|os especialistas)\b/i,
-  /\b(?:studien|die forschung) (?:zeigen|zeigt|belegen|belegt)\b|\blaut (?:studien|experten)\b|\bexperten empfehlen\b/i,
-  /\b(?:gli studi|la ricerca) (?:mostrano|mostra|dimostrano|dimostra|suggeriscono)\b|\bsecondo (?:gli esperti|gli studi|studi)\b/i,
-  /研究によると|研究では|専門家によると|研究表明|研究显示|专家建议|据研究|연구에 따르면|전문가들은|تُظهر الدراسات|تظهر الدراسات|وفقًا للدراسات|يقول الخبراء|अध्ययनों से पता|विशेषज्ञों के अनुसार|शोध बताता/,
-];
 
 describe("procedencia: ninguna atribucion generica", () => {
   it("ningun texto de cara al cliente atribuye lo que dice a estudios, investigaciones, expertos o la literatura", () => {
@@ -318,11 +302,8 @@ describe("procedencia: ninguna atribucion generica", () => {
  * es material interno para la IA y no entra. Una persona de la lista solo puede aparecer dentro de un nombre de metodo
  * sin alternativa neutra corriente.
  */
-const PERSONAS = /\b(Deming|Shewhart|Juran|Crosby|Taguchi|Heinrich|Drucker|Christensen|Geoffrey Moore|Jacobs|Goodall|Eames|Porter|Feigenbaum|Osterwalder|Fulton Suri|Kotter|Covey|Maslow|Eisenhower)\b/;
-// Decision del fundador (1 oct 2026, punto 1): un nombre de metodo con apellido NO es atribucion. En lo que ve el
-// cliente se prefiere el nombre neutro cuando existe (ciclo PDCA, trilogia de la calidad, las cuatro etapas del proceso
-// creativo); si no existe, el nombre se queda. Estos son los que no tienen nombre neutro corriente.
-const METODO_SIN_NEUTRO = /diagramas? de Eames|(?:los )?14 puntos de Deming/gi;
+// PERSONAS_COMO_FUENTE y METODO_SIN_NEUTRO (los nombres de metodo con apellido sin nombre neutro corriente, decision
+// del fundador del 1 oct 2026, punto 1) viven en lib/pautasProcedencia.ts.
 const CAMPOS_VISIBLES = new Set(["etiqueta_arbol", "resumen_teorico", "entregable_esperado", "pasos_accionables", "condiciones_activacion"]);
 
 function personaEn(t: string): string | null {

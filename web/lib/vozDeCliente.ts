@@ -20,7 +20,9 @@ export const CAMPOS_DE_CLIENTE = [
   "entregable_esperado",
 ] as const;
 
-const REGLAS = new Set(["vozDeLibro", "marcasInternas"]);
+/** Las reglas de voz que se aplican a los campos de un nodo (van a guardas_contenido.json para la forja). */
+export const REGLAS_VOZ_DE_NODO = ["vozDeLibro", "marcasInternas"] as const;
+const REGLAS = new Set<string>(REGLAS_VOZ_DE_NODO);
 
 /**
  * Lo adjudicado a mano: un texto vivo que usa la palabra en su sentido propio

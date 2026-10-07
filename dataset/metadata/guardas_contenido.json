@@ -1,7 +1,7 @@
 {
- "version": "1.0.0",
- "fecha": "2026-09-28",
- "nota": "Generado desde web/lib/guardasContenido.ts (npx tsx scripts/exportar_guardas.ts desde web/). No se edita a mano: web/lib/guardasContenido.test.ts exige que coincida con el codigo. Patrones en sintaxis ECMAScript (en Python, el modulo regex, no re, por \\p{L} y los lookbehind).",
+ "version": "1.1.0",
+ "fecha": "2026-10-07",
+ "nota": "Generado desde web/lib/guardasContenido.ts (npx tsx scripts/exportar_guardas.ts desde web/). No se edita a mano: web/lib/guardasContenido.test.ts exige que coincida con el codigo. Patrones en sintaxis ECMAScript (en Python, el modulo regex, no re, por \\p{L} y los lookbehind). Ojo con \\b: en JS solo ve ASCII y en Python ve Unicode; las pautas de procedencia se escribieron y se prueban con el de su origen (prefijo, atribucion y persona en JS; nombre propio en Python), y cada pauta trae sus fixtures caza y no_caza para comprobar el motor que las use. En procedencia, los exentos se quitan del texto antes de buscar, y no_aplica_en dice en que campos no se aplica un patron.",
  "voz": [
   {
    "id": "raya",
@@ -1064,6 +1064,10 @@
   "condiciones_activacion",
   "entregable_esperado"
  ],
+ "reglas_voz_de_nodo": [
+  "vozDeLibro",
+  "marcasInternas"
+ ],
  "adjudicados": {
   "reglas_de_origen_fta_2.pasos_accionables": "\"el capítulo de ROOs del FTA\" es el capítulo de reglas de origen de un tratado comercial, no el de un libro",
   "definicion_calidad_segun_agente.resumen_teorico": "\"el autor\" es uno de los agentes que juzgan la calidad de un producto impreso (la planta, el consumidor, el impresor o el autor), no una cita a una fuente"
@@ -1188,6 +1192,214 @@
    "aparece": "\"Mercadeo\"",
    "queda": "\"Mercadotecnia\"",
    "porque": "misma fila que marketing"
+  }
+ ],
+ "procedencia": [
+  {
+   "id": "prefijoProcedencia",
+   "origen": "D1 (fundador, 30 sep 2026): ninguna etiqueta de procedencia; D4 (1 oct 2026): ningún texto lleva \"Sugerencia de My Idea\"",
+   "que": "el prefijo o la etiqueta de procedencia (\"Sugerencia de My Idea\"), en los once idiomas",
+   "se_cumple_en": "web/lib/procedencia.test.ts (sección 5)",
+   "textos": "todo texto de cara al cliente: interfaz, etiquetas, preguntas, prompts y los campos de los nodos",
+   "campos_de_nodo": [
+    "etiqueta_arbol",
+    "resumen_teorico",
+    "entregable_esperado",
+    "pasos_accionables",
+    "condiciones_activacion"
+   ],
+   "patrones": [
+    {
+     "patron": "sugerencia de my idea|suggestion (?:from|de|by) my idea|my idea suggest|sugest[aã]o (?:da|de|do) my idea|vorschlag (?:von|aus) my idea|suggerimento (?:di|da) my idea|my idea(?:の提案|の提案|建议|의 제안| का सुझाव)|اقتراح my idea",
+     "flags": "i"
+    }
+   ],
+   "caza": [
+    "Sugerencia de My Idea: guarda el comprobante",
+    "Suggestion from My Idea: keep the receipt",
+    "Vorschlag von My Idea: bewahre den Beleg auf"
+   ],
+   "no_caza": [
+    "Guarda el comprobante de cada venta",
+    "My Idea te ayuda a ordenar tu plan"
+   ]
+  },
+  {
+   "id": "atribucionGenerica",
+   "origen": "D1 (fundador, 30 sep 2026) y D5 (1 oct 2026): \"los estudios muestran\" y similares se reescriben diciendo el consejo directamente",
+   "que": "atribuir lo que se dice a estudios, investigaciones, expertos, la evidencia o la literatura, en los once idiomas; no muerde las instrucciones al usuario ni las negaciones",
+   "se_cumple_en": "web/lib/procedencia.test.ts (sección 6)",
+   "textos": "todo texto de cara al cliente: interfaz, etiquetas, preguntas, prompts y los campos de los nodos",
+   "campos_de_nodo": [
+    "etiqueta_arbol",
+    "resumen_teorico",
+    "entregable_esperado",
+    "pasos_accionables",
+    "condiciones_activacion"
+   ],
+   "patrones": [
+    {
+     "patron": "\\b(?:un|el|los|varios|algunos|diversos|numerosos|muchos) estudios? (?:muestra|muestran|demuestra|demuestran|demostr[oó]|demostraron|indica|indican|revela|revelan|sugiere|sugieren|confirma|confirman|ha mostrado|han mostrado|ha demostrado|han demostrado|encontr[oó]|encontraron|señala|señalan)",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:la|las) investigaci(?:ón|on|ones) (?:muestra|muestran|demuestra|demuestran|demostr[oó]|demostraron|indica|indican|revela|revelan|sugiere|sugieren|confirma|confirman|ha mostrado|han mostrado|ha demostrado|han demostrado|encontr[oó]|encontraron|señala|señalan)",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:la evidencia|la ciencia) (?:muestra|muestran|demuestra|demuestran|demostr[oó]|demostraron|indica|indican|revela|revelan|sugiere|sugieren|confirma|confirman|ha mostrado|han mostrado|ha demostrado|han demostrado|encontr[oó]|encontraron|señala|señalan)",
+     "flags": "i"
+    },
+    {
+     "patron": "\\bseg[uú]n (?:los |las |la |el |diversos |varios |algunos )?(?:expertos|especialistas|estudios|investigaciones|investigaci[oó]n|la literatura|investigadores|autores|analistas|estudios citados)",
+     "flags": "i"
+    },
+    {
+     "patron": "\\blos (?:expertos|especialistas|investigadores|analistas) (?:recomiendan|coinciden|sugieren|dicen|afirman|advierten|han encontrado|encontraron)",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:est[aá]|ha sido|se ha) (?:demostrado|comprobado) que",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:studies|research|evidence) (?:shows?|suggests?|has shown|have shown|proves?|indicates?)\\b|\\bexperts (?:recommend|agree|say)\\b|\\baccording to (?:studies|research|experts)\\b",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:les études|la recherche) (?:montrent|montre|suggèrent|suggère)\\b|\\bselon (?:les experts|des études|les études)\\b",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:estudos|a pesquisa) (?:mostram|mostra|sugerem|sugere)\\b|\\bsegundo (?:especialistas|estudos|os especialistas)\\b",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:studien|die forschung) (?:zeigen|zeigt|belegen|belegt)\\b|\\blaut (?:studien|experten)\\b|\\bexperten empfehlen\\b",
+     "flags": "i"
+    },
+    {
+     "patron": "\\b(?:gli studi|la ricerca) (?:mostrano|mostra|dimostrano|dimostra|suggeriscono)\\b|\\bsecondo (?:gli esperti|gli studi|studi)\\b",
+     "flags": "i"
+    },
+    {
+     "patron": "研究によると|研究では|専門家によると|研究表明|研究显示|专家建议|据研究|연구에 따르면|전문가들은|تُظهر الدراسات|تظهر الدراسات|وفقًا للدراسات|يقول الخبراء|अध्ययनों से पता|विशेषज्ञों के अनुसार|शोध बताता",
+     "flags": ""
+    }
+   ],
+   "caza": [
+    "Los estudios muestran que escribir ayuda.",
+    "La investigación sugiere que funciona.",
+    "según diversos estudios (Rasmussen)",
+    "Studies show it works.",
+    "Selon les experts, c'est utile."
+   ],
+   "no_caza": [
+    "Investigar la literatura sobre antropología cultural del país",
+    "Confirmar el objetivo según los datos obtenidos",
+    "Una estrategia que no se ha probado con usuarios reales",
+    "aunque todavía no está probado que lo logren"
+   ]
+  },
+  {
+   "id": "metodoConPersona",
+   "origen": "D5 (fundador, 1 oct 2026): un método se nombra y se explica, nunca se atribuye, y con su nombre neutro si lo tiene; un nombre de método con apellido sin alternativa neutra corriente se queda",
+   "que": "una persona de la lista como fuente, o un método con persona que tiene nombre neutro (\"ciclo de Deming\" en vez de \"ciclo PDCA\")",
+   "se_cumple_en": "web/lib/procedencia.test.ts (sección 7)",
+   "textos": "los campos visibles de un nodo: etiqueta_arbol, resumen_teorico, entregable_esperado, pasos_accionables, condiciones_activacion",
+   "campos_de_nodo": [
+    "etiqueta_arbol",
+    "resumen_teorico",
+    "entregable_esperado",
+    "pasos_accionables",
+    "condiciones_activacion"
+   ],
+   "patrones": [
+    {
+     "patron": "\\b(Deming|Shewhart|Juran|Crosby|Taguchi|Heinrich|Drucker|Christensen|Geoffrey Moore|Jacobs|Goodall|Eames|Porter|Feigenbaum|Osterwalder|Fulton Suri|Kotter|Covey|Maslow|Eisenhower)\\b",
+     "flags": ""
+    }
+   ],
+   "exentos": [
+    {
+     "patron": "diagramas? de Eames|(?:los )?14 puntos de Deming",
+     "flags": "gi"
+    }
+   ],
+   "caza": [
+    "Como decía Drucker, no hay nada tan inútil",
+    "El ciclo de Deming tiene cuatro pasos",
+    "Deja el Triángulo de Heinrich"
+   ],
+   "no_caza": [
+    "Usa el diagrama de Eames para ver la intersección",
+    "Aplica el ciclo PDCA",
+    "Ordena tus causas con un diagrama de Pareto",
+    "Repasa los 14 puntos de Deming con tu equipo"
+   ]
+  },
+  {
+   "id": "nombrePropio",
+   "origen": "D1 y D5; medida 4 de procedencia (acta 15.3, 6 oct 2026): ninguna persona u organización con nombre como fuente",
+   "que": "las formas de autoría con nombre propio: autoría (\"popularizada por X\"), \"basado en el modelo de X\", \"según X Y\", \"el filósofo X\", \"como dijo X\" y las referencias \"(ver X)\"",
+   "se_cumple_en": "engine/test_procedencia_nombres.py",
+   "textos": "los campos de cara de los nodos vivos (etiqueta, resumen, entregable, pasos y condiciones) y la pregunta base",
+   "campos_de_nodo": [
+    "etiqueta_arbol",
+    "resumen_teorico",
+    "entregable_esperado",
+    "pasos_accionables",
+    "condiciones_activacion",
+    "pregunta"
+   ],
+   "patrones": [
+    {
+     "id": "autoria",
+     "flags": "",
+     "patron": "(?i:\\b(popularizad|desarrollad|propuest|cread|acuñad|ideado|ideada|formulad|introducid|difundid|planteado|planteada)[oa]s?\\s+por)\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+"
+    },
+    {
+     "id": "basado_en",
+     "flags": "",
+     "patron": "(?i:\\bbasad[oa]s?\\s+en\\s+(el|la|los|las)\\s+(modelo|trabajo|concepto|teor[ií]a|idea|enfoque|propuesta|an[eé]cdota)s?\\s+de)\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+"
+    },
+    {
+     "id": "segun_nombre",
+     "flags": "",
+     "patron": "(?i:\\bseg[uú]n)\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+",
+     "no_aplica_en": [
+      "etiqueta_arbol"
+     ],
+     "porque": "las etiquetas van en mayúscula de rótulo (C30): \"Calidad Según Quien Juzga\" no nombra a nadie"
+    },
+    {
+     "id": "oficio_nombre",
+     "flags": "",
+     "patron": "(?i:\\b(el|la)\\s+(fil[oó]sof[oa]|psic[oó]log[oa]|soci[oó]log[oa]|economista|autora?|investigador[a]?|profesor[a]?|dise[nñ]ador[a]?|consultor[a]?))\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+"
+    },
+    {
+     "id": "dijo_nombre",
+     "flags": "",
+     "patron": "(?i:\\bcomo\\s+(dijo|dec[ií]a|escribi[oó]|afirm[oó]|explic[oó]|aconsejaba))\\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+"
+    },
+    {
+     "id": "referencia",
+     "flags": "",
+     "patron": "\\(\\s*(?i:ver|v[eé]ase|cf\\.?)\\s+[A-Z]"
+    }
+   ],
+   "caza": [
+    "Popularizada por Janine Benyus, la biomímesis propone",
+    "Basado en el modelo de Stewart Brand, todo sistema",
+    "El filósofo Don Ihde llama 'falacia del diseñador'",
+    "documentar la categorización (ver NIST SP 800-60).",
+    "como dijo George Box: 'todos los modelos'"
+   ],
+   "no_caza": [
+    "Aplica el ciclo PDCA a tu proceso",
+    "Usa el diagrama de Ishikawa para ordenar causas",
+    "Si vendes en Estados Unidos, revisa la norma"
+   ]
   }
  ],
  "referencias": {
