@@ -7,11 +7,11 @@
   "resumen_teorico": "Múltiples proveedores generan competencia, que puede traer mejor calidad, menores costos, mejor servicio y menor riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
   "pasos_accionables": [
     "Evaluar ventajas de competencia (múltiples proveedores) versus profundidad de relación (fuente única)",
-    "Analizar reputación, pruebas de calificación de diseño, encuestas de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
-    "Decidir estrategia de reducción de base de proveedores si se busca partnership",
-    "Documentar la decisión según criticidad del componente/commodity"
+    "Analizar reputación, pruebas de calificación de diseño, inspecciones de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
+    "Decidir estrategia de reducción de base de proveedores si se busca una alianza",
+    "Documentar la decisión según criticidad del componente o insumo genérico"
   ],
-  "entregable_esperado": "Estrategia de sourcing documentada (fuente única vs múltiple) por categoría de compra",
+  "entregable_esperado": "Estrategia de abastecimiento documentada (fuente única vs múltiple) por categoría de compra",
   "nodos_previos": [
     "seleccion_hacer_o_comprar"
   ],
@@ -88,6 +88,73 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la competencia puede traer esos beneficios ('can result in'); el nodo los da por seguros.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-seleccion_fuente_unica_multiple-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar reputación, pruebas de calificación de diseño, encuestas de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
+      "texto_nuevo": "Analizar reputación, pruebas de calificación de diseño, inspecciones de instalaciones del proveedor e información de bancos de datos y otras fuentes sobre su calidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "encuestas de instalaciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_fuente_unica_multiple-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir estrategia de reducción de base de proveedores si se busca partnership",
+      "texto_nuevo": "Decidir estrategia de reducción de base de proveedores si se busca una alianza",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "partnership"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_fuente_unica_multiple-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar la decisión según criticidad del componente/commodity",
+      "texto_nuevo": "Documentar la decisión según criticidad del componente o insumo genérico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "componente/commodity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_fuente_unica_multiple-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estrategia de sourcing documentada (fuente única vs múltiple) por categoría de compra",
+      "texto_nuevo": "Estrategia de abastecimiento documentada (fuente única vs múltiple) por categoría de compra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Determinar si la fábrica/operación debe tener enfoque de producto, enfoque funcional o una mezcla de ambos, según la capacidad y la experiencia que necesitas para responder a la demanda de tus clientes.",
     "Evaluar exceso de capacidad vs. utilización total para decidir el nivel de flexibilidad deseado.",
-    "Elegir el método de almacenamiento (SKU, job lot o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, job lot agiliza el picking y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
-    "Diseñar el master production schedule considerando capacidad de planta, balance de carga, calidad y mantenimiento."
+    "Elegir el método de almacenamiento (SKU, lote de trabajo o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, el lote de trabajo agiliza la preparación de pedidos y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
+    "Diseñar el programa maestro de producción considerando capacidad de planta, balance de carga, calidad y mantenimiento."
   ],
   "entregable_esperado": "Plan de producción y almacenamiento con el enfoque (producto/funcional) y método de almacenaje definidos, junto con un cronograma maestro de producción.",
   "nodos_previos": [
@@ -99,6 +99,41 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da rotación ni diversidad como criterio; describe lo que ofrece cada método.; Mismo defecto: el criterio de elección del método de almacenamiento es inventado.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-driver_produccion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elegir el método de almacenamiento (SKU, job lot o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, job lot agiliza el picking y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
+      "texto_nuevo": "Elegir el método de almacenamiento (SKU, lote de trabajo o crossdocking) sopesando lo que ofrece cada uno: SKU es eficiente y fácil de entender, el lote de trabajo agiliza la preparación de pedidos y el empaque pero suele ocupar más espacio, y crossdocking no almacena el producto.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "job lot",
+          "picking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-driver_produccion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar el master production schedule considerando capacidad de planta, balance de carga, calidad y mantenimiento.",
+      "texto_nuevo": "Diseñar el programa maestro de producción considerando capacidad de planta, balance de carga, calidad y mantenimiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "master production schedule"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

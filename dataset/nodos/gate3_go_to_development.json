@@ -6,13 +6,13 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Es el último punto donde el proyecto puede ser eliminado antes de comprometer un gasto fuerte, por eso se le llama 'money gate'. Revisa la calidad de ejecución de la etapa Build Business Case, aplica nuevamente los criterios must-meet/should-meet con mayor rigor, y evalúa formalmente los resultados del análisis financiero. Si es Go, se aprueba el plan de desarrollo y se asigna el equipo completo del proyecto.",
   "pasos_accionables": [
-    "Revisar que se hicieron todas las tareas de Build Business Case, con buena calidad de ejecución y resultados positivos",
-    "Reaplicar los criterios must-meet y should-meet con mayor rigor y datos sólidos",
+    "Revisar que se hicieron todas las tareas de la etapa de construcción del caso de negocio, con buena calidad de ejecución y resultados positivos",
+    "Reaplicar los criterios obligatorios y deseables con mayor rigor y datos sólidos",
     "Evaluar el análisis financiero formal del proyecto",
-    "Aprobar el Development Plan y los planes preliminares de operaciones y marketing",
+    "Aprobar el plan de desarrollo y los planes preliminares de operaciones y marketing",
     "Asignar el equipo completo del proyecto con líder empoderado y recursos formales"
   ],
-  "entregable_esperado": "Aprobación formal del Development Plan con equipo, presupuesto y cronograma asignados",
+  "entregable_esperado": "Aprobación formal del plan de desarrollo con equipo, presupuesto y cronograma asignados",
   "nodos_previos": [
     "etapa_build_business_case"
   ],
@@ -43,6 +43,73 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro comprueba que las tareas se hicieron, con buena calidad y resultados positivos; el paso solo pide la calidad.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gate3_go_to_development-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar que se hicieron todas las tareas de Build Business Case, con buena calidad de ejecución y resultados positivos",
+      "texto_nuevo": "Revisar que se hicieron todas las tareas de la etapa de construcción del caso de negocio, con buena calidad de ejecución y resultados positivos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de Build Business Case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gate3_go_to_development-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reaplicar los criterios must-meet y should-meet con mayor rigor y datos sólidos",
+      "texto_nuevo": "Reaplicar los criterios obligatorios y deseables con mayor rigor y datos sólidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "must-meet y should-meet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gate3_go_to_development-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprobar el Development Plan y los planes preliminares de operaciones y marketing",
+      "texto_nuevo": "Aprobar el plan de desarrollo y los planes preliminares de operaciones y marketing",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Development Plan"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gate3_go_to_development-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprobación formal del Development Plan con equipo, presupuesto y cronograma asignados",
+      "texto_nuevo": "Aprobación formal del plan de desarrollo con equipo, presupuesto y cronograma asignados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Development Plan"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

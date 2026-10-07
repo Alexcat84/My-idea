@@ -6,12 +6,12 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Cambiar a fuentes de energía más limpias (gas natural, biogás, energía renovable) puede reducir drásticamente emisiones de gases de efecto invernadero y costos operativos. Las empresas pueden usar sus propios residuos como fuente energética, instalar energía renovable en sitio, o comprar Certificados de Energía Renovable (RECs) para reducir su huella de carbono.",
   "pasos_accionables": [
-    "Analizar el mix energético actual y las fuentes disponibles en la región.",
+    "Analizar la matriz energética actual y las fuentes disponibles en la región.",
     "Evaluar la posibilidad de convertir residuos propios en energía (biogás).",
     "Considerar instalación de energía renovable en sitio (solar, eólica).",
-    "Explorar la compra de Certificados de Energía Renovable (RECs) o programas de energía verde de la utility local."
+    "Explorar la compra de Certificados de Energía Renovable (RECs) o programas de energía verde de la compañía eléctrica local."
   ],
-  "entregable_esperado": "Plan de transición energética con análisis costo-beneficio y, si aplica, contrato de RECs o instalación renovable.",
+  "entregable_esperado": "Plan de transición energética con análisis costo-beneficio y, si corresponde, contrato de RECs o instalación renovable.",
   "nodos_previos": [
     "programas_5s_verdes"
   ],
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Usa Energías Más Limpias",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-energia_fuentes_limpias-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar el mix energético actual y las fuentes disponibles en la región.",
+      "texto_nuevo": "Analizar la matriz energética actual y las fuentes disponibles en la región.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mix energético"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-energia_fuentes_limpias-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Explorar la compra de Certificados de Energía Renovable (RECs) o programas de energía verde de la utility local.",
+      "texto_nuevo": "Explorar la compra de Certificados de Energía Renovable (RECs) o programas de energía verde de la compañía eléctrica local.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "utility local"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-energia_fuentes_limpias-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de transición energética con análisis costo-beneficio y, si aplica, contrato de RECs o instalación renovable.",
+      "texto_nuevo": "Plan de transición energética con análisis costo-beneficio y, si corresponde, contrato de RECs o instalación renovable.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

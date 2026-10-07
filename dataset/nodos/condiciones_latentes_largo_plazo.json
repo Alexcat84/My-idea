@@ -24,7 +24,7 @@
     "Cuando se evalúan riesgos de sistemas con largo historial operativo",
     "Cuando se planifica una auditoría de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original."
   ],
-  "etiqueta_arbol": "Vigila Riesgos Dormidos Años",
+  "etiqueta_arbol": "Vigila Riesgos Dormidos por Años",
   "ids_alias": [
     "caso_descarrilamiento_nakina"
   ],
@@ -112,6 +112,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que lo habitual es que las debilidades sean potencialmente, o incluso realmente, evidentes; el nodo afirma que se notan.; Mismo defecto: 'potentially, or even actually, evident' pasa a una afirmación sin matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-condiciones_latentes_largo_plazo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila Riesgos Dormidos Años",
+      "texto_nuevo": "Vigila Riesgos Dormidos por Años",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Dormidos Años"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

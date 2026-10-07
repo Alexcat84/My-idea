@@ -9,7 +9,7 @@
     "Identificar el resultado adverso (outcome) y las defensas que fallaron",
     "Determinar qué fallas activas y condiciones latentes permitieron el fallo de cada defensa",
     "Rastrear qué condiciones locales del lugar de trabajo propiciaron los actos inseguros",
-    "Identificar qué factores organizacionales upstream generaron esas condiciones locales"
+    "Identificar qué factores organizacionales de origen generaron esas condiciones locales"
   ],
   "entregable_esperado": "Diagrama causal de tres niveles (organización-lugar de trabajo-individuo) aplicado al incidente analizado",
   "nodos_previos": [
@@ -62,6 +62,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que los actos inseguros no son condición necesaria: a veces las defensas fallan solo por condiciones latentes.; Misma excepción perdida.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-modelo_accidente_organizacional-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar qué factores organizacionales upstream generaron esas condiciones locales",
+      "texto_nuevo": "Identificar qué factores organizacionales de origen generaron esas condiciones locales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "upstream"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

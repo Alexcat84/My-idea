@@ -6,7 +6,7 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Las IA generativas producen texto estadísticamente probable, no necesariamente verdadero. Esto genera 'alucinaciones': datos, citas o estudios inventados que suenan completamente plausibles, incluso para el propio creador del contenido replicado por la IA. Para un emprendedor, esto implica un riesgo crítico si se usa IA para investigación de mercado, reportes a inversionistas, contenido legal o técnico sin verificación humana posterior.",
   "pasos_accionables": [
-    "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.",
+    "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (presentaciones para inversionistas, reportes, contratos) sin verificación humana en fuente original.",
     "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
     "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
     "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.",
@@ -112,6 +112,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-gestion_alucinaciones_ia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (pitch decks, reportes, contratos) sin verificación humana en fuente original.",
+      "texto_nuevo": "Establecer como política interna que ningún dato, cifra o cita generado por IA se use en documentos externos (presentaciones para inversionistas, reportes, contratos) sin verificación humana en fuente original.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pitch decks"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -7,8 +7,8 @@
   "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
   "pasos_accionables": [
     "Arma el paquete completo con su protección antes de decidir el contenedor.",
-    "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
-    "Pregunta a tu courier cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
+    "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable de la empresa de mensajería), usa un empaque de la empresa de mensajería (sobre o pak) o colócalo dentro de una caja exterior más grande.",
+    "Pregunta a tu empresa de mensajería cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
     "Ajusta tu inventario de empaque para tener ambos formatos disponibles según ese umbral."
   ],
   "entregable_esperado": "Un criterio escrito de tamaño final armado y su formato correspondiente, sobre o caja, para tu catálogo.",
@@ -103,6 +103,40 @@
       },
       "decision": "medida 4 de procedencia: procedencia confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-elegir_sobre_o_caja_tamano-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
+      "texto_nuevo": "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable de la empresa de mensajería), usa un empaque de la empresa de mensajería (sobre o pak) o colócalo dentro de una caja exterior más grande.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-elegir_sobre_o_caja_tamano-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a tu courier cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
+      "texto_nuevo": "Pregunta a tu empresa de mensajería cuál es su tamaño mínimo aceptado para caja y cuál para sobre o bolsa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

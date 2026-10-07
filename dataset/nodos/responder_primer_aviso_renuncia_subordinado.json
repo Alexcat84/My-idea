@@ -21,7 +21,7 @@
     "gestionar_retencion_subordinado_valioso_renuncia"
   ],
   "condiciones_activacion": [
-    "Cuando un subordinado valioso y estimado se te acerca y te anuncia, de pasada, que ha decidido dejar la empresa."
+    "Cuando un subordinado valioso, estimado y leal, que no se va por más dinero o mejores beneficios sino porque siente que no se valora su trabajo, se te acerca y te anuncia, de pasada, que ha decidido dejar la empresa."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -278,6 +278,23 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "condiciones-resto-responder_primer_aviso_renuncia_subordinado-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un subordinado valioso y estimado se te acerca y te anuncia, de pasada, que ha decidido dejar la empresa.",
+      "texto_nuevo": "Cuando un subordinado valioso, estimado y leal, que no se va por más dinero o mejores beneficios sino porque siente que no se valora su trabajo, se te acerca y te anuncia, de pasada, que ha decidido dejar la empresa.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_15.md",
+        "lineas": "107",
+        "frase": "not about someone whose motives are more money and better perks"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c10): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Escucha el Primer Aviso de Renuncia",

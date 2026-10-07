@@ -19,7 +19,7 @@
   "condiciones_activacion": [
     "Cuando tu producto o servicio arrastra las mismas fallas de una versión a otra"
   ],
-  "etiqueta_arbol": "Elimina Fallas Heredadas",
+  "etiqueta_arbol": "Elimina las Fallas Heredadas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -111,6 +111,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el liderazgo de mercado puede perderse al perpetuar fallas; el nodo lo da como hecho que les ocurre a muchos negocios.; El libro matiza con 'seemingly' que solo la intervención de la dirección rompe el atasco; el nodo lo da por seguro.; Mismo defecto que la marca 0: el 'can be lost' pasa a hecho.; Mismo defecto que la marca 1: se cae el 'seemingly'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-carryover_fallas_producto-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elimina Fallas Heredadas",
+      "texto_nuevo": "Elimina las Fallas Heredadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Elimina Fallas Heredadas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

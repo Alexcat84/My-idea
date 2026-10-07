@@ -10,9 +10,9 @@
     "Identificar oportunidades de relocalización de centros de distribución cerca de mercados clave.",
     "Definir radios operativos (clusters) para minimizar distancias de entrega.",
     "Usar software de optimización logística para decidir ubicaciones considerando distancia, peso, volumen y emisiones.",
-    "Evaluar el uso de transporte ferroviario a granel hacia hubs regionales en lugar de camiones de larga distancia."
+    "Evaluar el uso de transporte ferroviario a granel hacia centros regionales de distribución en lugar de camiones de larga distancia."
   ],
-  "entregable_esperado": "Análisis de red logística con propuesta de relocalización o clustering y estimación de ahorro en combustible y emisiones.",
+  "entregable_esperado": "Análisis de red logística con propuesta de relocalización o agrupamiento y estimación de ahorro en combustible y emisiones.",
   "nodos_previos": [
     "optimizacion_almacenes_distribucion"
   ],
@@ -43,6 +43,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que acortar distancias puede reducir el combustible; 'significativamente' y el efecto seguro son añadidos.; Mismo defecto: endurece 'can reduce' y añade 'significativamente'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-relocalizacion_clustering_logistico-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el uso de transporte ferroviario a granel hacia hubs regionales en lugar de camiones de larga distancia.",
+      "texto_nuevo": "Evaluar el uso de transporte ferroviario a granel hacia centros regionales de distribución en lugar de camiones de larga distancia.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hubs regionales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-relocalizacion_clustering_logistico-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Análisis de red logística con propuesta de relocalización o clustering y estimación de ahorro en combustible y emisiones.",
+      "texto_nuevo": "Análisis de red logística con propuesta de relocalización o agrupamiento y estimación de ahorro en combustible y emisiones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "clustering"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

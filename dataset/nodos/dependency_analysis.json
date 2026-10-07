@@ -9,7 +9,7 @@
     "Identificar factores externos necesarios para el éxito (tecnología, regulación, comportamiento)",
     "Definir cuándo deben ocurrir estos cambios",
     "Establecer planes alternativos si la dependencia no se cumple",
-    "Definir benchmarks para medir el progreso de la dependencia"
+    "Definir indicadores de referencia para medir el progreso de la dependencia"
   ],
   "entregable_esperado": "Lista de dependencias externas críticas con hitos y planes de contingencia",
   "nodos_previos": [
@@ -42,6 +42,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dependency_analysis-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir benchmarks para medir el progreso de la dependencia",
+      "texto_nuevo": "Definir indicadores de referencia para medir el progreso de la dependencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarks"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

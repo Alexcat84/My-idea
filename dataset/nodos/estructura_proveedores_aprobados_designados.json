@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identificar qué productos o insumos son críticos para la calidad y consistencia de la marca",
     "Decidir si actuarás como proveedor aprobado o designado para cada categoría de producto",
-    "Evalúa el riesgo legal de tying con un abogado especializado en franquicias",
+    "Evalúa el riesgo legal de venta atada con un abogado especializado en franquicias",
     "Define una política de precios competitivos frente al mercado para evitar fricción con franquiciados",
-    "Documenta la política de proveedores en el manual de operaciones y en el FDD"
+    "Documenta la política de proveedores en el manual de operaciones y en el documento de divulgación de la franquicia (FDD)"
   ],
   "entregable_esperado": "Documento de política de proveedores, revisado legalmente, que especifique categorías aprobadas o designadas y la justificación de cada una",
   "nodos_previos": [
@@ -39,5 +39,41 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-estructura_proveedores_aprobados_designados-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa el riesgo legal de tying con un abogado especializado en franquicias",
+      "texto_nuevo": "Evalúa el riesgo legal de venta atada con un abogado especializado en franquicias",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tying"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estructura_proveedores_aprobados_designados-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documenta la política de proveedores en el manual de operaciones y en el FDD",
+      "texto_nuevo": "Documenta la política de proveedores en el manual de operaciones y en el documento de divulgación de la franquicia (FDD)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el FDD"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

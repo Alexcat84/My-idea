@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Decidir cómo se probarán las mejoras",
     "Preparar un plan de prueba para cada mejora, identificando las limitaciones de la prueba y cómo tratarlas",
-    "Conducir la prueba y medir resultados",
+    "Realizar la prueba y medir resultados",
     "Ajustar las mejoras si los resultados no son satisfactorios, y volver a probar, medir y ajustar hasta confirmar que el proceso funcionará en condiciones reales de operación",
     "Confirmar control estadístico mediante cartas de control y, si el proceso no lo está, mejorarlo más hasta que lo esté",
     "Realizar el análisis de capacidad del proceso"
@@ -96,6 +96,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que, si el proceso no está en control estadístico, hay que mejorarlo más hasta que lo esté.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-establecimiento_capacidad_proceso-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conducir la prueba y medir resultados",
+      "texto_nuevo": "Realizar la prueba y medir resultados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Conducir la prueba"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

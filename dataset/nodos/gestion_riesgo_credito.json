@@ -10,11 +10,11 @@
     "Diseñar términos de pago atractivos para esos segmentos",
     "Utilizar herramientas de mitigación de riesgo: seguros de crédito, garantías, avales",
     "Estructurar acuerdos especiales para clientes grandes o estratégicos",
-    "Definir políticas de crédito basadas en el análisis de cuentas por cobrar (DSO, deuda incobrable)",
+    "Definir políticas de crédito basadas en el análisis de cuentas por cobrar (días promedio de cobro, deuda incobrable)",
     "Establecer criterios de aceptación de riesgo según condiciones económicas",
     "Implementar procesos de aprobación de ventas basados en análisis de crédito",
     "Gestionar cobranzas activas de cuentas vencidas",
-    "Ofrecer múltiples formas de pago (EFT, cartas de crédito internacionales, etc.)"
+    "Ofrecer múltiples formas de pago (transferencias electrónicas, cartas de crédito internacionales, etc.)"
   ],
   "entregable_esperado": "Programas de crédito diferenciados por segmento con mecanismos de mitigación de riesgo",
   "nodos_previos": [
@@ -47,6 +47,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro habla de garantías sobre activos del cliente y de avales del gobierno solo para préstamos a exportaciones.; Mismo defecto: los avales gubernamentales del libro se limitan a préstamos para exportaciones.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gestion_riesgo_credito-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir políticas de crédito basadas en el análisis de cuentas por cobrar (DSO, deuda incobrable)",
+      "texto_nuevo": "Definir políticas de crédito basadas en el análisis de cuentas por cobrar (días promedio de cobro, deuda incobrable)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "DSO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_riesgo_credito-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofrecer múltiples formas de pago (EFT, cartas de crédito internacionales, etc.)",
+      "texto_nuevo": "Ofrecer múltiples formas de pago (transferencias electrónicas, cartas de crédito internacionales, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "EFT"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

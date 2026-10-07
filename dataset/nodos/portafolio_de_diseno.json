@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Establecer un sistema de documentación continua desde el inicio del proyecto (fotos, videos, prototipos).",
     "Archivar sistemáticamente bocetos, presentaciones y prototipos físicos.",
-    "Usar el portafolio resultante para comunicar el proceso y su impacto a stakeholders."
+    "Usar el portafolio resultante para comunicar el proceso y su impacto a las personas involucradas."
   ],
   "entregable_esperado": "Un portafolio documentado (físico o digital) del proceso completo de diseño del proyecto.",
   "nodos_previos": [
@@ -22,5 +22,24 @@
   "etiqueta_arbol": "Documenta tu Proceso de Diseño",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-portafolio_de_diseno-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el portafolio resultante para comunicar el proceso y su impacto a stakeholders.",
+      "texto_nuevo": "Usar el portafolio resultante para comunicar el proceso y su impacto a las personas involucradas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stakeholders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Si exportas mercancía comercial desde Estados Unidos, casi siempre necesitas incluir una declaración de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaración avisa que la mercancía fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la sección 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente en su momento; verifica la regulación vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
-    "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o trading companies que podrían revender tu producto al exterior",
-    "Incluye la misma declaración en el bill of lading o air waybill",
-    "Verifica si tu envío califica para alguna excepción según la Parte 758.6 del EAR",
+    "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o empresas comercializadoras que podrían revender tu producto al exterior",
+    "Incluye la misma declaración en el conocimiento de embarque o la guía aérea",
+    "Verifica si tu envío puede acogerse a alguna excepción según la Parte 758.6 del Reglamento de Administración de Exportaciones (EAR)",
     "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio del gobierno de Estados Unidos sobre la declaración adecuada"
   ],
-  "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaración antidesviación correctamente incluida.",
+  "entregable_esperado": "Documentos de embarque (factura comercial y conocimiento de embarque) con la declaración antidesviación correctamente incluida.",
   "nodos_previos": [
     "export_administration_regulations"
   ],
@@ -231,6 +231,74 @@
       "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): certeza_endurecida; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
+    },
+    {
+      "id": "voz-clausula_antidesviacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o trading companies que podrían revender tu producto al exterior",
+      "texto_nuevo": "Incluye la declaración mínima de control de destino en todas tus facturas comerciales, también en las de clientes nacionales o empresas comercializadoras que podrían revender tu producto al exterior",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "trading companies"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_antidesviacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluye la misma declaración en el bill of lading o air waybill",
+      "texto_nuevo": "Incluye la misma declaración en el conocimiento de embarque o la guía aérea",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bill of lading o air waybill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_antidesviacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verifica si tu envío califica para alguna excepción según la Parte 758.6 del EAR",
+      "texto_nuevo": "Verifica si tu envío puede acogerse a alguna excepción según la Parte 758.6 del Reglamento de Administración de Exportaciones (EAR)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "califica para",
+          "del EAR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_antidesviacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentos de embarque (factura comercial y bill of lading) con la declaración antidesviación correctamente incluida.",
+      "texto_nuevo": "Documentos de embarque (factura comercial y conocimiento de embarque) con la declaración antidesviación correctamente incluida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bill of lading"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Determinar si el objetivo es crear nuevas características (planeación) o reducir fallas existentes (mejora)",
     "Si es planeación: iniciar con la 'voz del cliente' y diseño de producto",
     "Si es mejora: iniciar con diagnóstico de causas de fallas en procesos actuales",
-    "Asignar la metodología correspondiente (quality by design vs breakthrough improvement)"
+    "Asignar la metodología correspondiente (calidad desde el diseño vs mejora radical)"
   ],
   "entregable_esperado": "Clasificación clara del tipo de proyecto (diseño vs mejora) antes de iniciar la metodología",
   "nodos_previos": [
@@ -41,6 +41,24 @@
         "evidencia": "F12-022: Tiene razon B: el nodo clasifica iniciativas de calidad (disenar nuevas caracteristicas o reducir fallas en procesos existentes) dentro de una organizacion que ya produce y vende, lo que es gestion operativa y mejora de lo que ya funciona; no es ideacion, y aunque elegir metodologia parece planificar, es un triaje previo dentro de la gestion de calidad de un negocio en marcha. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-diferencia_planeacion_mejora-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asignar la metodología correspondiente (quality by design vs breakthrough improvement)",
+      "texto_nuevo": "Asignar la metodología correspondiente (calidad desde el diseño vs mejora radical)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "quality by design",
+          "breakthrough improvement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Establecer límites y mecanismos reguladores en las variables críticas",
     "Documentar en una hoja de control de proceso (control plan)"
   ],
-  "entregable_esperado": "Control plan con límites y mecanismos de regulación de variables de proceso",
+  "entregable_esperado": "Plan de control con límites y mecanismos de regulación de variables de proceso",
   "nodos_previos": [
     "analisis_flujo_proceso",
     "key_process_product_characteristics"
@@ -24,7 +24,7 @@
     "Cuando se busca reducir variabilidad del proceso",
     "Cuando se implementa un programa Six Sigma"
   ],
-  "etiqueta_arbol": "Correlaciona Proceso y Resultado",
+  "etiqueta_arbol": "Correlaciona tu Proceso y su Resultado",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -45,6 +45,38 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el diseño de experimentos a contar con personas dedicadas a diseñarlos y analizarlos y con formación; el paso lo omite. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-control_proceso_variables-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Correlaciona Proceso y Resultado",
+      "texto_nuevo": "Correlaciona tu Proceso y su Resultado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Correlaciona Proceso y Resultado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_proceso_variables-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Control plan con límites y mecanismos de regulación de variables de proceso",
+      "texto_nuevo": "Plan de control con límites y mecanismos de regulación de variables de proceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Control plan"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

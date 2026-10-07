@@ -10,7 +10,7 @@
     "Compara el valor económico real entre las distintas propuestas que recibas, usando como referencia el porcentaje de propiedad totalmente diluida.",
     "Negocia sobre qué tipo de acción se va a ejercer el warrant, preferente o común, y revisa las protecciones contra dilución.",
     "Negocia el precio de ejercicio (strike price) tratando de anclarlo a la valuación de tu próxima ronda si esperas que suba bastante.",
-    "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
+    "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto encaja más en rondas posteriores, no en las primeras.",
     "Fija el plazo para ejercer los warrants (en la deuda de riesgo suelen pedir entre 7 y 10 años; más corto te conviene a ti) y procura que venzan si tu negocio se fusiona con otro, salvo que se ejerzan justo antes.",
     "Pide que el pago de los warrants quede separado del resto, para evitar problemas contables (Original Issue Discount, OID)."
   ],
@@ -79,6 +79,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los warrants son una pieza común y que hay bancos que dan préstamos sin warrants a cambio de covenants.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-warrant_pricing_venture_debt-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto aplica más en rondas posteriores, no en las primeras.",
+      "texto_nuevo": "Evalúa si te conviene usar warrants en lugar de un descuento simple; normalmente esto encaja más en rondas posteriores, no en las primeras.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "esto aplica más"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

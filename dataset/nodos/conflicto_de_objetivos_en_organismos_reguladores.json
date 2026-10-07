@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar si el organismo regulador o el área de seguridad interna depende financiera o jerárquicamente de las áreas que audita",
     "Separar funciones de fomento comercial/operacional de las funciones de control de seguridad",
-    "Establecer canales de reporte independientes para el personal de seguridad",
+    "Establecer canales de notificación independientes para el personal de seguridad",
     "Revisar decisiones históricas de tolerancia a incumplimientos para detectar sesgos de conflicto de interés"
   ],
   "entregable_esperado": "Diagnóstico de independencia estructural de la función de seguridad y propuesta de separación de roles",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Vigila Conflictos en tu Regulador",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-conflicto_de_objetivos_en_organismos_reguladores-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer canales de reporte independientes para el personal de seguridad",
+      "texto_nuevo": "Establecer canales de notificación independientes para el personal de seguridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }
