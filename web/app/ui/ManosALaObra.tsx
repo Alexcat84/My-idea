@@ -19,6 +19,7 @@ import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
 import { BotonHeroe } from "./BotonHeroe";
 import { DetalleActividad } from "./DetalleActividad";
+import { useMinFechaHecho } from "./InicioProyecto";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
 import { RitualReplantear } from "./RitualReplantear";
@@ -402,6 +403,8 @@ function FilaItem({
   // defecto (ley vigente). La fecha se ajusta DESPUÉS con "cambiar".
   const [editandoFecha, setEditandoFecha] = useState(false);
   const hoyInput = fechaInputLocal(new Date());
+  // No antes de que naciera el proyecto (decisión del fundador, 8 oct 2026).
+  const minHecho = useMinFechaHecho();
 
   function marcarHecho(completedAt?: string | null) {
     setEditandoFecha(false);
@@ -507,9 +510,12 @@ function FilaItem({
           <span className="text-[12.5px] text-dim">{t.fila.cambiarLaFecha}</span>
           <input
             type="date"
+            min={minHecho}
             max={hoyInput}
             defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
-            onChange={(e) => e.target.value && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })}
+            onChange={(e) =>
+              e.target.value && !(minHecho && e.target.value < minHecho) && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })
+            }
             disabled={ocupado}
             aria-label={t.fila.ariaCambiarFecha}
             className="rounded-[9px] border border-hairline bg-surface-2 px-2.5 py-1.5 text-[12.5px] text-ink outline-none focus:border-done/60 disabled:opacity-50"

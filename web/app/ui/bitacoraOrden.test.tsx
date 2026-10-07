@@ -67,11 +67,24 @@ describe("pantalla: una lista continua, lo más reciente primero", () => {
     expect(creciente(posiciones(html, ["18:00", "09:00"]))).toBe(true);
   });
 
-  it("'el día en que empezó todo' sigue marcando el día más antiguo (al final)", () => {
-    const html = pantalla(ASCENDENTE);
+  // Decisión del fundador (8 oct 2026): "el día en que empezó todo" es el día de
+  // la CHISPA (la creación de la idea), NUNCA el día más antiguo de la lista. Una
+  // entrada vieja con fecha anterior a la chispa no se reescribe y no se lleva la
+  // etiqueta. Fixture: la chispa el 30 de diciembre (A marcada como chispa); C (15
+  // nov) y E (5 dic) son más antiguas que la chispa.
+  //   → la etiqueta sale UNA vez, entre "30 de diciembre de 2025" y el texto de A;
+  //   → no aparece tras "15 de noviembre de 2025" (el día más antiguo).
+  it("'el día en que empezó todo' marca el día de la CHISPA, no el más antiguo", () => {
+    const chispa: EntradaBitacora = { ...A, peso: "hito", chispa: true };
+    const html = pantalla([C, E, chispa, B, D]);
     const primer = BITACORA.es.pagina.primerDia;
     expect(veces(html, primer)).toBe(1);
-    expect(creciente(posiciones(html, ["15 de noviembre de 2025", primer, C.texto]))).toBe(true);
+    expect(creciente(posiciones(html, ["30 de diciembre de 2025", primer, A.texto]))).toBe(true);
+    expect(html.indexOf(primer)).toBeLessThan(html.indexOf("15 de noviembre de 2025"));
+  });
+
+  it("sin chispa en la lista (p. ej. la bitácora de un mundo) no hay 'primer día'", () => {
+    expect(veces(pantalla(ASCENDENTE), BITACORA.es.pagina.primerDia)).toBe(0);
   });
 
   it("sin encabezados de mes (ni en español ni en inglés)", () => {

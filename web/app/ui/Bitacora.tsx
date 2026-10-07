@@ -46,8 +46,10 @@ type Fila =
 
 /** Aplana las entradas (de UN mes, ya de la más reciente a la más antigua) en
  * filas con encabezado por día; la hora solo en los días con 2+ entradas (regla
- * del historial, igual que el documento). `diaInicial` es el día MÁS ANTIGUO de
- * toda la bitácora: el único que lleva "el día en que empezó todo". */
+ * del historial, igual que el documento). `diaInicial` es el día de la CHISPA
+ * (la creación de la idea), el único que lleva "el día en que empezó todo"; nunca
+ * el día más antiguo de la lista (decisión del fundador, 8 oct 2026). Sin chispa
+ * en la lista (la bitácora de un mundo) queda vacío y no se marca ningún día. */
 function aFilas(entradas: EntradaBitacora[], t: TextosPagina, diaInicial: string): Fila[] {
   const conteo = new Map<string, number>();
   const cierreEnDia = new Set<string>();
@@ -138,8 +140,8 @@ export function LineaBitacora({
   const idioma = useIdioma();
   const t = elegir(BITACORA, idioma).pagina;
   const cronologicas = ordenCronologico(entradas);
-  const masAntigua = cronologicas[0];
-  const diaInicial = masAntigua ? fechaInputLocal(new Date(masAntigua.fecha)) : "";
+  const chispa = cronologicas.find((e) => e.chispa);
+  const diaInicial = chispa ? fechaInputLocal(new Date(chispa.fecha)) : "";
   const cerrada = entradas.some((e) => e.peso === "cierre");
   // De la más reciente a la más antigua, en una sola lista.
   const filas = aFilas([...cronologicas].reverse(), t, diaInicial);

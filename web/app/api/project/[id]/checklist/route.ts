@@ -24,6 +24,7 @@ import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { BANDA, CHECKLIST_ESTADO, esActivo, type Banda, type ChecklistEstado, type FechaBaseOrigen } from "@/lib/dbContract";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
+import { anteriorAlInicio } from "@/lib/inicioProyecto";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -312,6 +313,11 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {
     return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
+  }
+  // Decisión del fundador (8 oct 2026): nada se marca hecho antes de que naciera
+  // el proyecto. Vale al escribir; las entradas viejas no se reescriben.
+  if (typeof body.completed_at === "string" && anteriorAlInicio(body.completed_at, proyecto.created_at)) {
+    return NextResponse.json({ error: t.completedAtAntesDelInicio }, { status: 400 });
   }
 
   // Se lee el estado previo cuando lo necesita la replanificación (preservar

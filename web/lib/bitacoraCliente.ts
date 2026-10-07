@@ -92,6 +92,10 @@ export interface EntradaBitacora {
    * dominio): visible SOLO en la bitácora global con etiqueta neutra, ausente de
    * todas las específicas. Nunca se inventa pertenencia. Ver `bitacoraDeEspacio`. */
   dominio: string | null;
+  /** La CHISPA: la entrada de la creación de la idea. Su día es "el día en que
+   * empezó todo" (decisión del fundador, 8 oct 2026), nunca el día más antiguo de
+   * la lista: una entrada vieja anterior a la chispa no se lleva la etiqueta. */
+  chispa?: boolean;
 }
 
 const esCore = (d: string | null | undefined) => !d || d === "core";
@@ -150,7 +154,7 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
   const cita = (m: unknown) => (typeof m === "string" && m.trim() ? interpolar(t.motivoCita, { motivo: m.replace(/\s+/g, " ").trim() }) : t.punto);
 
   // ── Hitos derivados de timestamps existentes ──────────────────────────────
-  push(d.creadaAt, t.chispa, "hito", t.chispaTitulo);
+  if (d.creadaAt) E.push({ fecha: d.creadaAt, texto: t.chispa, peso: "hito", titulo: t.chispaTitulo, dominio: "core", chispa: true });
 
   // AUD-09 B10: el MÁS ANTIGUO de cada clase (los datos llegan sin orden): así
   // "Recibiste tu plan" dice la misma fecha que "Tu Plan · ciclo 1" de Tu avance.

@@ -207,3 +207,26 @@ describe("los chips de protección (P4): las dos direcciones, sin silencio", () 
     expect(html).not.toContain("Protege:");
   });
 });
+
+// Decisión del fundador (8 oct 2026): no se marca hecha con fecha ANTERIOR al
+// inicio del proyecto. El selector "cuándo lo hiciste" no ofrece días previos:
+// con el proyecto nacido el 2026-03-10 (mediodía local), su `min` es "2026-03-10".
+describe("fecha de realización: no antes de que naciera el proyecto", () => {
+  it("con el inicio del proyecto en contexto, el selector lleva min = día de inicio", async () => {
+    const { InicioProyectoProvider } = await import("./InicioProyecto");
+    const html = renderToStaticMarkup(
+      createElement(
+        InicioProyectoProvider,
+        { creadoAt: new Date(2026, 2, 10, 12).toISOString() },
+        createElement(DetalleActividad, {
+          item: { ...base, estado: "hecho", completed_at: new Date(2026, 2, 20, 12).toISOString() },
+          tituloEtapa: "t",
+          ocupado: false,
+          onCambio: () => {},
+          onCerrar: () => {},
+        }),
+      ),
+    );
+    expect(html).toMatch(/type="date"[^>]*min="2026-03-10"/);
+  });
+});

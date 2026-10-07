@@ -147,6 +147,26 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(item.completed_at).toBe("2026-03-15T12:00:00.000Z");
   });
 
+  // Decisión del fundador (8 oct 2026): nada hecho antes de que naciera el proyecto.
+  // Proyecto creado el 2026-03-10T15:00Z: el 1 de marzo es anterior (400) y el
+  // mediodía del 10 de marzo no (200). El ítem no cambia cuando se rechaza.
+  it("400 si completed_at es anterior al inicio del proyecto, y el ítem no cambia", async () => {
+    sembrarItem();
+    estadoFalso.projects["p1"].created_at = "2026-03-10T15:00:00.000Z";
+    const res = await PATCH(req({ item_id: "it1", estado: "hecho", completed_at: "2026-03-01T12:00:00.000Z" }), PARAMS);
+    expect(res.status).toBe(400);
+    const item = estadoFalso.checklistItems.find((i) => i.id === "it1")!;
+    expect(item.estado).toBe("pendiente");
+    expect(item.completed_at).toBeNull();
+  });
+
+  it("acepta completed_at del mismo día en que nació el proyecto", async () => {
+    sembrarItem();
+    estadoFalso.projects["p1"].created_at = "2026-03-10T15:00:00.000Z";
+    const res = await PATCH(req({ item_id: "it1", estado: "hecho", completed_at: "2026-03-10T12:00:00.000Z" }), PARAMS);
+    expect(res.status).toBe(200);
+  });
+
   it("400 si completed_at es futuro", async () => {
     sembrarItem();
     const futuro = new Date(Date.now() + 5 * 24 * 3600 * 1000).toISOString();
