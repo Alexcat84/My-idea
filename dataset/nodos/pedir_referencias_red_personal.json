@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Pedir referencias a tus redes profesional y personal",
   "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
-  "resumen_teorico": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos que sean jugadores A, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+  "resumen_teorico": "La gente que ves a diario es el mejor semillero de talento que vas a tener, porque quien tiene talento conoce a otros que también lo tienen y casi siempre te da sus nombres con gusto. Para dar con candidatos que sean jugadores A, ningún camino rinde tanto como pedir recomendaciones a tu red personal y profesional, aunque pueda asustarte y parecer que te quitará mucho tiempo. Aquí innovar cuenta bastante menos que tener un proceso y ser disciplinado: con una pregunta sencilla a los diez nombres que tienes de partida puedes conseguir fácilmente muchos más y entrar en otras redes.",
   "notas_extraccion": "Es el punto 1 del recuadro How to Source y el metodo que el libro pone por delante de todos los demas. Los lideres del sector entrevistados no hablaban con una sola voz en todos los temas, pero en el de abastecerse de talento nuevo por referencias fueron casi unanimes. La razon de fondo que da el libro: la gente que interactua contigo todos los dias es la fuente de talento mas poderosa que vas a encontrar nunca, y la gente talentosa conoce a gente talentosa y casi siempre esta encantada de pasar los nombres de unos a otros. La advertencia con la que el capitulo lo presenta: este enfoque puede dar miedo y llevar tiempo, y es aun asi la forma mas eficaz que existe de encontrar jugadores A potenciales, y es un caso donde la innovacion importa mucho menos que el proceso y la disciplina. El caso que el libro pone con su nombre es el de Patrick Ryan, que hizo crecer Aon Corporation desde una empresa naciente en 1964 hasta una compañia de 13.000 millones de dolares: dice que no es mas listo que el de al lado y que lo unico que ha hecho distinto de la mayoria es estar constantemente a la caza de gente talentosa para su empresa. Se fijo el objetivo de reclutar personalmente a treinta personas al año para Aon y pidio a sus directivos que hicieran lo mismo. Cuando conoce a alguien nuevo le hace siempre la misma pregunta simple y poderosa, captura los nombres en una lista, se ocupa de llamar a unos pocos nuevos cada semana y mantiene el contacto con los mas prometedores. Asi llego a Greg Case, al que ficho pese a que la gente decia que a sus cuarenta y dos años no tenia experiencia de consejero delegado, y a su asesor juridico Cameron Findlay.",
   "pasos_accionables": [
     "Apunta a las diez personas de más talento que conoces; lo más seguro es que te salgan sus nombres sin tener que pensarlo.",
@@ -24,7 +24,7 @@
     "crear_sistema_captura_seguimiento_candidatos"
   ],
   "condiciones_activacion": [
-    "Siempre, y no solo cuando hay una plaza abierta. De todas las maneras de conseguir candidatos, la primera es pedir referencias a tus redes personal y profesional."
+    "Siempre, haya o no una plaza vacante. Pedir que tus redes personal y profesional te recomienden gente es la mejor vía para conseguir candidatos, por encima de cualquier otra."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -434,6 +434,39 @@
       },
       "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-pedir_referencias_red_personal-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Siempre, y no solo cuando hay una plaza abierta. De todas las maneras de conseguir candidatos, la primera es pedir referencias a tus redes personal y profesional.",
+      "texto_nuevo": "Siempre, haya o no una plaza vacante. Pedir que tus redes personal y profesional te recomienden gente es la mejor vía para conseguir candidatos, por encima de cualquier otra.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "301",
+        "frase": "Of all the ways to source candidates, the number one method"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-pedir_referencias_red_personal-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos que sean jugadores A, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+      "texto_nuevo": "La gente que ves a diario es el mejor semillero de talento que vas a tener, porque quien tiene talento conoce a otros que también lo tienen y casi siempre te da sus nombres con gusto. Para dar con candidatos que sean jugadores A, ningún camino rinde tanto como pedir recomendaciones a tu red personal y profesional, aunque pueda asustarte y parecer que te quitará mucho tiempo. Aquí innovar cuenta bastante menos que tener un proceso y ser disciplinado: con una pregunta sencilla a los diez nombres que tienes de partida puedes conseguir fácilmente muchos más y entrar en otras redes.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "301-317",
+        "frase": "People you interact with every day are the most powerful sources"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

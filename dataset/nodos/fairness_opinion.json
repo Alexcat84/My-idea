@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La carta que certifica que una venta fue justa (fairness opinion)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Una fairness opinion es una carta formal que la persona que te asesora en el banco entrega confirmando que la venta de tu empresa es justa para todos. Te sirve como protección adicional si algún inversionista, acreedor o pretendiente descontento después se opone o incluso demanda, pero es cara (pregunta el precio en tu mercado) y en la mayoría de ventas tecnológicas solo tiene sentido si tu estructura de capital es compleja o hay conflictos de interés entre tus accionistas; es mucho más común en una empresa que cotiza en bolsa o en una empresa privada con muchos inversionistas diversos. Tu mejor protección suele ser llevar un proceso de venta transparente y bien documentado, no la carta en sí.",
+  "resumen_teorico": "Cuando vendes tu empresa, quien te asesora desde el banco puede emitir una fairness opinion: una carta formal que certifica que la operación es justa para todos. Funciona como un seguro extra por si más adelante algún inversionista, acreedor o pretendiente inconforme quiere oponerse a la venta o hasta demandarte. Su precio es alto (consulta cuánto cuesta en tu mercado), y en la mayoría de las ventas de empresas tecnológicas solo se justifica cuando tu reparto de capital es complicado o tus accionistas tienen intereses en conflicto; la verás con mucha más frecuencia en empresas que cotizan en bolsa o en empresas privadas con muchos inversionistas diversos. Por lo general, lo que mejor te protege no es esa carta, sino un proceso de venta transparente y bien documentado.",
   "pasos_accionables": [
     "Revisa qué tan compleja es la estructura de capital de tu empresa antes de pedir esta carta",
     "Pregúntate si hay conflictos de interés entre tus accionistas",
@@ -87,6 +87,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v17): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-fairness_opinion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una fairness opinion es una carta formal que la persona que te asesora en el banco entrega confirmando que la venta de tu empresa es justa para todos. Te sirve como protección adicional si algún inversionista, acreedor o pretendiente descontento después se opone o incluso demanda, pero es cara (pregunta el precio en tu mercado) y en la mayoría de ventas tecnológicas solo tiene sentido si tu estructura de capital es compleja o hay conflictos de interés entre tus accionistas; es mucho más común en una empresa que cotiza en bolsa o en una empresa privada con muchos inversionistas diversos. Tu mejor protección suele ser llevar un proceso de venta transparente y bien documentado, no la carta en sí.",
+      "texto_nuevo": "Cuando vendes tu empresa, quien te asesora desde el banco puede emitir una fairness opinion: una carta formal que certifica que la operación es justa para todos. Funciona como un seguro extra por si más adelante algún inversionista, acreedor o pretendiente inconforme quiere oponerse a la venta o hasta demandarte. Su precio es alto (consulta cuánto cuesta en tu mercado), y en la mayoría de las ventas de empresas tecnológicas solo se justifica cuando tu reparto de capital es complicado o tus accionistas tienen intereses en conflicto; la verás con mucha más frecuencia en empresas que cotizan en bolsa o en empresas privadas con muchos inversionistas diversos. Por lo general, lo que mejor te protege no es esa carta, sino un proceso de venta transparente y bien documentado.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4453",
+        "frase": "A fairness opinion is a formal letter from the banker to the board"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

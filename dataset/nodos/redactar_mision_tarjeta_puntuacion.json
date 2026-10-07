@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Redactar la misión del puesto en la tarjeta de puntuación",
   "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
-  "resumen_teorico": "La misión es el resumen del propósito central del puesto: reduce el trabajo a su esencia para que todo el mundo entienda por qué hace falta contratar a alguien. Va corta y en lenguaje llano, sin jerga, y sabes que es buena cuando candidatos, reclutadores y tu propio equipo entienden qué buscas sin tener que preguntar. Detrás de las frases infladas probablemente hay alguien que no sabía cuál era el trabajo de verdad. Una misión clara también te ayuda a no contratar a un generalista brillante cuando el puesto pide un especialista, y se revisa cada vez que el puesto se vuelve a cubrir.",
+  "resumen_teorico": "La misión condensa para qué existe el puesto: lo deja en lo esencial para que cualquiera comprenda por qué hay que contratar a alguien. Escríbela breve, en palabras sencillas y sin jerga; está bien hecha si un candidato, un reclutador o alguien de tu equipo capta lo que buscas sin necesidad de preguntar. Si una misión está llena de frases rimbombantes, lo probable es que quien la redactó no supiera en qué consistía de verdad el trabajo. Tenerla clara evita además que contrates a un generalista brillante cuando necesitas un especialista, y revísala cada vez que vuelvas a cubrir el puesto.",
   "notas_extraccion": "La mision es el resumen ejecutivo del proposito central del puesto, y es la primera de las tres partes de la tarjeta de puntuacion. El contraejemplo que el libro pone para enseñar que es la jerga: la mision de este papel es maximizar el valor para el accionista apalancando los activos nucleares de la division NPC mientras se minimizan las deficiencias y ofuscaciones de comunicacion. Los autores dicen que es una exageracion, pero no por mucho, y apuestan a que en cualquier empresa se encuentran frases sin sentido parecidas, escritas por alguien que no tenia ni idea de cual era el trabajo de verdad. La advertencia que el capitulo cuelga de la mision es la del atleta polivalente: las declaraciones de mision te ayudan a evitar una de las trampas mas comunes de la contratacion, que es contratar al generalista brillante en vez del especialista, porque los requisitos de un puesto rara vez son generales. Los casos que el libro pone con su nombre son el de Nick Chabraja, consejero delegado de General Dynamics, que se equivoco poniendo a un excelente desarrollador de negocio donde hacia falta un hombre de operaciones y tardo un par de años en corregirlo, y el de Alec Gores, del Gores Group, que mira a su equipo como a un equipo de futbol americano y no intenta que el quarterback juegue de center. Arthur Rock lo dijo de Intel: primero Bob Noyce el inventor y promotor, luego Gordon Moore el tecnologo, y luego Andy Grove el que empuja.",
   "pasos_accionables": [
     "Resume en un texto breve, de entre una y cinco frases, la razón de ser del puesto.",
@@ -21,7 +21,7 @@
     "definir_resultados_tarjeta_puntuacion"
   ],
   "condiciones_activacion": [
-    "Cuando empiezas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y va antes que los resultados y que las competencias, porque las competencias se derivan directamente de los dos primeros elementos de la tarjeta y es la misión la que define la esencia del trabajo."
+    "Cuando arrancas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y lo haces antes de fijar resultados y competencias: la misión marca qué es esencial en el trabajo, y de ella y de los resultados salen directamente las competencias."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -311,6 +311,39 @@
       },
       "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-redactar_mision_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando empiezas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y va antes que los resultados y que las competencias, porque las competencias se derivan directamente de los dos primeros elementos de la tarjeta y es la misión la que define la esencia del trabajo.",
+      "texto_nuevo": "Cuando arrancas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y lo haces antes de fijar resultados y competencias: la misión marca qué es esencial en el trabajo, y de ella y de los resultados salen directamente las competencias.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "85",
+        "frase": "Competencies flow directly from the first two elements of the scorecard."
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-redactar_mision_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La misión es el resumen del propósito central del puesto: reduce el trabajo a su esencia para que todo el mundo entienda por qué hace falta contratar a alguien. Va corta y en lenguaje llano, sin jerga, y sabes que es buena cuando candidatos, reclutadores y tu propio equipo entienden qué buscas sin tener que preguntar. Detrás de las frases infladas probablemente hay alguien que no sabía cuál era el trabajo de verdad. Una misión clara también te ayuda a no contratar a un generalista brillante cuando el puesto pide un especialista, y se revisa cada vez que el puesto se vuelve a cubrir.",
+      "texto_nuevo": "La misión condensa para qué existe el puesto: lo deja en lo esencial para que cualquiera comprenda por qué hay que contratar a alguien. Escríbela breve, en palabras sencillas y sin jerga; está bien hecha si un candidato, un reclutador o alguien de tu equipo capta lo que buscas sin necesidad de preguntar. Si una misión está llena de frases rimbombantes, lo probable es que quien la redactó no supiera en qué consistía de verdad el trabajo. Tenerla clara evita además que contrates a un generalista brillante cuando necesitas un especialista, y revísala cada vez que vuelvas a cubrir el puesto.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "33-39",
+        "frase": "The mission is an executive summary of the job's core purpose."
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

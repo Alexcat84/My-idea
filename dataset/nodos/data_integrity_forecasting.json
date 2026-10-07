@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Integridad de Datos y Responsabilidad en las Proyecciones",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los pronósticos de ventas y ganancias de productos realmente nuevos pueden fallar por márgenes enormes. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+  "resumen_teorico": "Al elegir en qué proyectos invertir, lo difícil no es dar con la herramienta adecuada para evaluarlos, sino conseguir datos íntegros y de calidad. Con productos realmente nuevos, las proyecciones de ventas y ganancias pueden errar por márgenes enormes. Para que tus datos sean más fiables, deja claro qué información debe entregar cada equipo, haz que cada equipo de proyecto responda por sus propias proyecciones (comparándolas con lo que pasó después del lanzamiento) y valida los supuestos financieros con ciclos de construir, probar y recoger retroalimentación (espirales) con clientes reales antes de comprometer grandes recursos.",
   "pasos_accionables": [
     "Definir con claridad qué información se necesita en cada punto de revisión (plantillas de entregables)",
     "Exigir a los equipos de proyecto que presenten y se responsabilicen por sus proyecciones de ventas, costos y fecha de lanzamiento",
@@ -115,6 +115,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-data_integrity_forecasting-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El mayor desafío en la selección de proyectos no es la herramienta de evaluación sino la calidad (integridad) de los datos usados. Los pronósticos de ventas y ganancias de productos realmente nuevos pueden fallar por márgenes enormes. Mejorar la integridad de datos requiere expectativas claras sobre qué información deben entregar los equipos, responsabilizar a los equipos de proyecto por sus propias proyecciones (comparándolas después del lanzamiento), y validar los supuestos financieros mediante iteraciones de construcción-prueba-retroalimentación (spirals) con clientes reales antes de comprometer grandes recursos.",
+      "texto_nuevo": "Al elegir en qué proyectos invertir, lo difícil no es dar con la herramienta adecuada para evaluarlos, sino conseguir datos íntegros y de calidad. Con productos realmente nuevos, las proyecciones de ventas y ganancias pueden errar por márgenes enormes. Para que tus datos sean más fiables, deja claro qué información debe entregar cada equipo, haz que cada equipo de proyecto responda por sus propias proyecciones (comparándolas con lo que pasó después del lanzamiento) y valida los supuestos financieros con ciclos de construir, probar y recoger retroalimentación (espirales) con clientes reales antes de comprometer grandes recursos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6283",
+        "frase": "The greatest challenge in project selection and portfolio management is not the selection tool"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

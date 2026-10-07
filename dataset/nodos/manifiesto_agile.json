@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Manifiesto Ágil y Principios de Desarrollo Ágil",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Conjunto de valores y principios creados en 2001 por desarrolladores de software para responder a las limitaciones de los modelos tradicionales de cascada (waterfall). Prioriza individuos e interacciones sobre procesos, software funcionando sobre documentación exhaustiva, colaboración con el cliente sobre negociación de contratos, y respuesta al cambio sobre seguir un plan rígido. Es la base filosófica del desarrollo ágil por sprints.",
+  "resumen_teorico": "Nace en 2001, cuando un grupo de desarrolladores de software reunió valores y principios para superar las limitaciones de los modelos clásicos de cascada (waterfall). Pone cuatro cosas por delante de otras cuatro: las personas y cómo interactúan, antes que los procesos; el software que funciona, antes que una documentación exhaustiva; colaborar con el cliente, antes que negociar contratos; y responder al cambio, antes que ceñirse a un plan rígido. Sobre esa base filosófica se apoya el desarrollo ágil por sprints.",
   "pasos_accionables": [
     "Adoptar los cuatro valores del manifiesto ágil como principios rectores del equipo",
     "Dividir el desarrollo en sprints cortos (2 a 4 semanas)",
@@ -70,6 +70,22 @@
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-manifiesto_agile-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Conjunto de valores y principios creados en 2001 por desarrolladores de software para responder a las limitaciones de los modelos tradicionales de cascada (waterfall). Prioriza individuos e interacciones sobre procesos, software funcionando sobre documentación exhaustiva, colaboración con el cliente sobre negociación de contratos, y respuesta al cambio sobre seguir un plan rígido. Es la base filosófica del desarrollo ágil por sprints.",
+      "texto_nuevo": "Nace en 2001, cuando un grupo de desarrolladores de software reunió valores y principios para superar las limitaciones de los modelos clásicos de cascada (waterfall). Pone cuatro cosas por delante de otras cuatro: las personas y cómo interactúan, antes que los procesos; el software que funciona, antes que una documentación exhaustiva; colaborar con el cliente, antes que negociar contratos; y responder al cambio, antes que ceñirse a un plan rígido. Sobre esa base filosófica se apoya el desarrollo ágil por sprints.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4262-4270",
+        "frase": "The Agile Manifesto emphasizes: individuals and interactions over processes and tools;"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

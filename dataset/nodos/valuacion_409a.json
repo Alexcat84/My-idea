@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Valoración oficial de las opciones sobre acciones (409A)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor): la valuación se da por correcta salvo que la autoridad fiscal (IRS) demuestre lo contrario. Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Con esta práctica, en empresas en etapa temprana a menudo las acciones comunes se valoran entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+  "resumen_teorico": "En Estados Unidos, una regla fiscal llamada 409A te obliga a fijar a valor justo de mercado las opciones sobre acciones que entregas a tus empleados. Tienes dos caminos. Si encargas el cálculo a una firma de valuación profesional, ganas un respaldo (safe harbor): la cifra se presume buena y la carga de probar el error queda en la autoridad fiscal (IRS). Sin esa firma, la carga cambia de lado y te toca a ti probar que el valor es correcto. Esta práctica movió las cifras: antes las acciones comunes se fijaban en el 10% del precio de las preferentes, y hoy, en empresas en etapa temprana, es frecuente verlas entre el 20% y el 30%. Para tus empleados eso significa ganancias menores cuando llegue un evento de liquidez. Todo esto te afecta solo si tu empresa está constituida en ese país (por ejemplo, en Delaware para levantar capital allí).",
   "pasos_accionables": [
     "Contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
     "Consigue la valoración antes de otorgar nuevas opciones sobre acciones a tus empleados",
@@ -171,6 +171,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 0,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-valuacion_409a-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor): la valuación se da por correcta salvo que la autoridad fiscal (IRS) demuestre lo contrario. Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Con esta práctica, en empresas en etapa temprana a menudo las acciones comunes se valoran entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Esto solo aplica si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí).",
+      "texto_nuevo": "En Estados Unidos, una regla fiscal llamada 409A te obliga a fijar a valor justo de mercado las opciones sobre acciones que entregas a tus empleados. Tienes dos caminos. Si encargas el cálculo a una firma de valuación profesional, ganas un respaldo (safe harbor): la cifra se presume buena y la carga de probar el error queda en la autoridad fiscal (IRS). Sin esa firma, la carga cambia de lado y te toca a ti probar que el valor es correcto. Esta práctica movió las cifras: antes las acciones comunes se fijaban en el 10% del precio de las preferentes, y hoy, en empresas en etapa temprana, es frecuente verlas entre el 20% y el 30%. Para tus empleados eso significa ganancias menores cuando llegue un evento de liquidez. Todo esto te afecta solo si tu empresa está constituida en ese país (por ejemplo, en Delaware para levantar capital allí).",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4679-4689",
+        "frase": "Section 409A says that all stock options given to employees"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

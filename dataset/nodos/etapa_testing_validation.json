@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Etapa 4 - Testing and Validation",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para comprobar si el negocio sigue siendo viable. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque.",
+  "resumen_teorico": "En esta etapa compruebas si todo tu proyecto se sostiene: que el producto funcione, que tu forma de producir u operar aguante, que el cliente lo acepte y que los números del negocio cierren. Para eso haces pruebas técnicas internas (alfa) en condiciones controladas, pruebas de campo con usuarios reales, una producción piloto o limitada y un test de mercado simulado o un soft launch a pequeña escala. Además, rehaces tu análisis financiero con datos reales de ingresos y costos para ver si el negocio sigue siendo viable. Si los resultados salen negativos, es normal que debas regresar a etapas anteriores del proyecto y ajustar el producto o el enfoque.",
   "pasos_accionables": [
     "Ejecuta pruebas técnicas internas (alfa) en condiciones controladas",
     "Realiza pruebas de campo con usuarios reales para verificar funcionamiento e intención de compra",
@@ -74,6 +74,22 @@
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-etapa_testing_validation-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Esta etapa valida la viabilidad completa de tu proyecto: el producto, el proceso de producción u operaciones, la aceptación del cliente y la economía del negocio. Incluye pruebas técnicas internas (alfa) bajo condiciones controladas, pruebas de campo con usuarios reales, producción piloto o limitada, y un test de mercado simulado o soft launch a escala reducida. También implica actualizar el análisis financiero con datos reales de ingresos y costos para comprobar si el negocio sigue siendo viable. Es normal que si los resultados son negativos tengas que volver a etapas anteriores del proyecto para ajustar el producto o el enfoque.",
+      "texto_nuevo": "En esta etapa compruebas si todo tu proyecto se sostiene: que el producto funcione, que tu forma de producir u operar aguante, que el cliente lo acepte y que los números del negocio cierren. Para eso haces pruebas técnicas internas (alfa) en condiciones controladas, pruebas de campo con usuarios reales, una producción piloto o limitada y un test de mercado simulado o un soft launch a pequeña escala. Además, rehaces tu análisis financiero con datos reales de ingresos y costos para ver si el negocio sigue siendo viable. Si los resultados salen negativos, es normal que debas regresar a etapas anteriores del proyecto y ajustar el producto o el enfoque.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "3205-3215",
+        "frase": "This stage tests and validates the entire viability of the project: the product itself"
+      },
+      "decision": "copia fiel (regla D2, ola k28): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

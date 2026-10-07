@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Motor de Idea-a-Lanzamiento Adaptativo (Vector III)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Generar grandes ideas es solo la mitad de la batalla; la otra mitad es cruzar el 'valle de la muerte' (la brecha entre la concepción y la comercialización). Se requiere un sistema robusto pero rápido para llevar los conceptos al mercado. Los sistemas tradicionales de 'Stage-Gate' son a menudo demasiado rígidos, lineales y lentos para proyectos innovadores; se necesita incorporar métodos Ágiles (del mundo IT) para hacerlos más iterativos, adaptativos y veloces.",
+  "resumen_teorico": "Quedarte en las grandes ideas te deja solo a mitad del camino: la otra mitad consiste en atravesar el 'valle de la muerte', el tramo que separa concebir algo de comercializarlo. Para recorrerlo necesitas un sistema sólido que, a la vez, mueva tus conceptos al mercado con rapidez. Los esquemas clásicos de 'Stage-Gate' muchas veces resultan demasiado rígidos, lineales y lentos cuando el proyecto es innovador, así que necesitas sumarles métodos Ágiles, nacidos en el mundo de la tecnología informática, para volverlos más iterativos, adaptativos y veloces.",
   "pasos_accionables": [
     "Evaluar si el proceso actual de desarrollo (Stage-Gate) es demasiado rígido para proyectos de alta incertidumbre.",
     "Incorporar metodologías Ágiles (sprints, iteraciones) al proceso de desarrollo de producto existente.",
@@ -60,6 +60,22 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c21): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-motor_idea_a_lanzamiento_agil-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Generar grandes ideas es solo la mitad de la batalla; la otra mitad es cruzar el 'valle de la muerte' (la brecha entre la concepción y la comercialización). Se requiere un sistema robusto pero rápido para llevar los conceptos al mercado. Los sistemas tradicionales de 'Stage-Gate' son a menudo demasiado rígidos, lineales y lentos para proyectos innovadores; se necesita incorporar métodos Ágiles (del mundo IT) para hacerlos más iterativos, adaptativos y veloces.",
+      "texto_nuevo": "Quedarte en las grandes ideas te deja solo a mitad del camino: la otra mitad consiste en atravesar el 'valle de la muerte', el tramo que separa concebir algo de comercializarlo. Para recorrerlo necesitas un sistema sólido que, a la vez, mueva tus conceptos al mercado con rapidez. Los esquemas clásicos de 'Stage-Gate' muchas veces resultan demasiado rígidos, lineales y lentos cuando el proyecto es innovador, así que necesitas sumarles métodos Ágiles, nacidos en el mundo de la tecnología informática, para volverlos más iterativos, adaptativos y veloces.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "482",
+        "frase": "Generating great ideas is half the battle. The other half is getting"
+      },
+      "decision": "copia fiel (regla D2, ola k28): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

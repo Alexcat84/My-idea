@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de la comisión por cancelación (breakup fee) al vender tu empresa",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando el comprador sea un competidor y sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+  "resumen_teorico": "Al vender tu empresa, el comprador puede pedirte una comisión por cancelación (breakup fee): un pago a tu cargo si el trato no llega a cerrarse o si al final le vendes a otro. En las ventas privadas de empresas con capital de riesgo casi no aparece; donde sí abunda es cuando una empresa que cotiza en bolsa compra a otra que también cotiza. Por lo general te conviene oponerte a esa petición y proponerle al comprador que se apoye en la cláusula de exclusividad (no-shop). Pedirle tú una comisión al comprador solo tiene sentido en contadas situaciones: si es un competidor y temes que entre al proceso a sacar información sin ánimo real de comprar (una 'expedición de pesca'), o si entrar en el trato te expone a riesgos importantes con tus clientes o tus empleados.",
   "pasos_accionables": [
     "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
     "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
@@ -134,6 +134,22 @@
       "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-breakup_fee_evaluation-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La comisión por cancelación (breakup fee) es un pago que tú, como vendedor, tendrías que hacer si el trato no se cierra o si terminas vendiendo a otro comprador. Es poco común en negociaciones privadas respaldadas por capital de riesgo, pero sí es habitual en compras entre empresas que cotizan en bolsa. Por lo general conviene resistir esta petición del comprador y pedirle que confíe en la cláusula de exclusividad (no-shop). Solo en casos puntuales tiene sentido que seas tú quien pida una comisión por cancelación al comprador: cuando el comprador sea un competidor y sospeches que solo está explorando información sin intención real de cerrar (una 'expedición de pesca'), o cuando asumas riesgos importantes con tus clientes o empleados al entrar en el proceso.",
+      "texto_nuevo": "Al vender tu empresa, el comprador puede pedirte una comisión por cancelación (breakup fee): un pago a tu cargo si el trato no llega a cerrarse o si al final le vendes a otro. En las ventas privadas de empresas con capital de riesgo casi no aparece; donde sí abunda es cuando una empresa que cotiza en bolsa compra a otra que también cotiza. Por lo general te conviene oponerte a esa petición y proponerle al comprador que se apoye en la cláusula de exclusividad (no-shop). Pedirle tú una comisión al comprador solo tiene sentido en contadas situaciones: si es un competidor y temes que entre al proceso a sacar información sin ánimo real de comprar (una 'expedición de pesca'), o si entrar en el trato te expone a riesgos importantes con tus clientes o tus empleados.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4329-4338",
+        "frase": "Breakup fees are rare in private company venture capital–backed deals but prevalent"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

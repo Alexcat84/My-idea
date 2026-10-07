@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Gestión del Portafolio y Foco de Recursos",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Uno de los mayores errores de gestión senior es sobrecargar el pipeline de desarrollo con demasiados proyectos aprobados para los recursos disponibles. Esto lleva a proyectos subrecursados, personal fragmentado en múltiples tareas (multitasking ineficiente), retrasos generalizados y decline en la calidad (se recortan estudios de mercado, pruebas de campo abreviadas). La solución es enfocar recursos en menos proyectos pero de mayor potencial ('betting practices'), logrando balance y mix adecuado en el portafolio.",
+  "resumen_teorico": "Llenar tu cartera de desarrollo con más proyectos aprobados de los que tus recursos pueden sostener es uno de los peores errores de quien dirige. Cada proyecto queda corto de recursos, tu gente se reparte entre demasiadas tareas a la vez y pierde eficiencia, todo se retrasa y la calidad cae: terminas saltándote estudios de mercado y acortando las pruebas de campo. La salida es concentrar tus recursos en menos proyectos, los de mayor potencial ('betting practices'), para que tu cartera tenga el balance y la mezcla adecuados.",
   "pasos_accionables": [
     "Auditar el número de proyectos activos versus la capacidad real de recursos",
     "Aplicar criterios estrictos de seguir o cancelar para reducir el número de proyectos en la cartera de desarrollo",
@@ -97,6 +97,22 @@
       "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-gestion_portafolio_foco-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Uno de los mayores errores de gestión senior es sobrecargar el pipeline de desarrollo con demasiados proyectos aprobados para los recursos disponibles. Esto lleva a proyectos subrecursados, personal fragmentado en múltiples tareas (multitasking ineficiente), retrasos generalizados y decline en la calidad (se recortan estudios de mercado, pruebas de campo abreviadas). La solución es enfocar recursos en menos proyectos pero de mayor potencial ('betting practices'), logrando balance y mix adecuado en el portafolio.",
+      "texto_nuevo": "Llenar tu cartera de desarrollo con más proyectos aprobados de los que tus recursos pueden sostener es uno de los peores errores de quien dirige. Cada proyecto queda corto de recursos, tu gente se reparte entre demasiadas tareas a la vez y pierde eficiencia, todo se retrasa y la calidad cae: terminas saltándote estudios de mercado y acortando las pruebas de campo. La salida es concentrar tus recursos en menos proyectos, los de mayor potencial ('betting practices'), para que tu cartera tenga el balance y la mezcla adecuados.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1366",
+        "frase": "One of the greatest sins in product development is a senior-management issue, namely"
+      },
+      "decision": "copia fiel (regla D2, ola k27): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Embudo de Atrición de Nuevos Productos (Odds 7 a 1)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "De cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+  "resumen_teorico": "Para que un solo producto nuevo tenga éxito real necesitas partir de 7 ideas: de ellas, solo 4 pasan a desarrollo y 1.5 llegan a lanzarse. Y de la inversión en desarrollo de productos, alrededor del 46% va a parar a iniciativas que fracasan o terminan canceladas. Conocer cómo se van cayendo las ideas por el camino te ayuda a ajustar tus expectativas y a montar desde el principio filtros (gates) más rigurosos.",
   "pasos_accionables": [
     "Mapear cuántas ideas de producto entran a la cartera de desarrollo anualmente.",
     "Medir cuántas de esas ideas pasan a fase de desarrollo, luego a lanzamiento, y finalmente logran éxito comercial.",
@@ -126,6 +126,22 @@
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-embudo_atricion_nuevos_productos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "De cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+      "texto_nuevo": "Para que un solo producto nuevo tenga éxito real necesitas partir de 7 ideas: de ellas, solo 4 pasan a desarrollo y 1.5 llegan a lanzarse. Y de la inversión en desarrollo de productos, alrededor del 46% va a parar a iniciativas que fracasan o terminan canceladas. Conocer cómo se van cayendo las ideas por el camino te ayuda a ajustar tus expectativas y a montar desde el principio filtros (gates) más rigurosos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1050-1052",
+        "frase": "For every 7 new-product ideas, about 4 enter development, 1.5 are launched"
+      },
+      "decision": "copia fiel (regla D2, ola k28): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
