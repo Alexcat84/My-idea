@@ -1755,3 +1755,29 @@ Mide cuánta procedencia queda en el catálogo después de la lectura total (15.
   - "SANEADO en procedencia" si da 0 nodos.
   - Si no, nodos sobre 200 con su Wilson al 95 %.
   - Lo que aparezca se corrige por el método de la casa.
+
+### 15.10 Resultado de la medida 6 (7 oct 2026): 1 de 200, NO da 0
+
+Máquina en `auditoria-final-claves/medida6/medida6.py`, semilla 20261023, muestra en
+`docs/auditoria_final/muestra_20261023.json`.
+- **Lectura:** el primer lector cazó 20 de 20 trampas; no hizo falta segundo lector.
+- **Arbitraje:** 13 marcas reales; el árbitro confirmó 1 y descartó 12.
+
+| Clase | Hallazgos | Por nodo | Wilson 95 % | Medida 5 (antes de la lectura total) | Resultado |
+|---|---|---|---|---|---|
+| Procedencia (D1) | 1 en 1 nodo | 0,5 % | 0,09 a 2,8 % | 5 % (2,7 a 9,0 %) | **NO PASA** (no es 0) |
+
+- **Lo que queda:** "Ejemplos documentados incluyen…" en un resumen. Es una insinuación de fuente sin nombre, del tipo
+  "los datos muestran".
+- **Lo que el árbitro descartó** fueron casos que ilustran sin respaldar: "como hizo una directiva", "como en un caso
+  de discos de freno", un método con nombre propio (el Sistema de Producción Toyota, igual que el ciclo PDCA), "hay
+  quien es de mañana" (que describe la diversidad que el texto afirma) y pasivas sin agente ("el orden propuesto").
+- **Corrección:** verificación ciega contra el libro con la trampa cazada; se sostiene. Tanda `medida6-procedencia`:
+  1 corrección en 1 nodo. **La muestra queda corregida.**
+
+**Lectura del resultado:**
+- La lectura total bajó el residuo del 5 % al 0,5 %. Esta vez los intervalos no se solapan (2,7 a 9,0 % frente a
+  0,09 a 2,8 %), así que la bajada sí es concluyente con 200 nodos.
+- El techo al 95 % es del 2,8 % por nodo: como mucho unos 100 de los 3.634 nodos vivos con alguna procedencia sutil, y
+  lo más probable es que sean unos 20.
+- Llegar a 0 en la muestra pediría otra lectura total del catálogo, que es la decisión 1 de `docs/PROXIMOS_PASOS.md`.

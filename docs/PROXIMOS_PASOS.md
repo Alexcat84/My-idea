@@ -45,6 +45,9 @@ propio o con una decisión del fundador.
   - **Lectura total** (6 y 7 oct): los 3.634 nodos vivos, 368 lotes con su trampa (368 de 368 cazadas). Se aplicaron
     458 correcciones en 393 nodos, cada una con árbitro y verificación ciega contra el libro (acta 15.8). No es una
     medida: falta la medida 6 para saber cuánto queda.
+  - **Medida 6** (7 oct, semilla 20261023, después de la lectura total): 1 de 200 nodos, un 0,5 % (de 0,09 a 2,8 %).
+    Baja de forma concluyente desde el 5 %, pero no es 0. El hallazgo ("ejemplos documentados") quedó corregido (acta
+    15.10).
 - **Preguntas:** ninguna con falla confirmada sin corregir. En 2 de 85 lotes ningún lector cazó su trampa (las dos
   eran contrarias).
 
@@ -53,8 +56,12 @@ propio o con una decisión del fundador.
 1. **Procedencia, el residuo.**
    - (a) ~~medir otra vez con semilla nueva~~: hecho el 7 oct (medida 5, 5 %);
    - (b) ~~leer el catálogo entero solo para procedencia~~: hecho el 6 y 7 oct (acta 15.8, 458 correcciones).
-   - Lo que sigue, sin decisión pendiente: la **medida 6**, con semilla nueva y el mismo método de las medidas 4 y 5,
-     para saber cuánta procedencia queda después de la lectura total.
+   - ~~medida 6~~: hecha el 7 oct, 1 de 200 (0,5 %, techo 2,8 % al 95 %; acta 15.10).
+   - Lo que queda por decidir:
+     - (c) aceptar el residuo declarado (entre 3 y 100 nodos de 3.634, lo más probable unos 20);
+     - (d) una segunda lectura total, unos 370 lotes, para buscar 0 en la muestra.
+   - Mi recomendación es (c). La segunda lectura costaría lo mismo que la primera para un residuo diez veces menor, y
+     las formas que quedan ya son muy blandas.
 2. **Los ajustes de prompts que añaden texto.** Están en `docs/auditoria_final/informes/auditoria_prompts.md`, sección
    F: B2 (resto), B4, B5, B7, B8, B9, B10, C1, C2, C3, C5 (resto), C6 y C7. C7 toca la regla D5 y su guarda.
 3. **Páginas legales:**
