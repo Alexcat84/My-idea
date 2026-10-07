@@ -6,10 +6,10 @@
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
   "resumen_teorico": "Vigilar tu sistema y el entorno donde opera te permite detectar cambios que afecten tu seguridad y privacidad: actualizaciones de hardware o software, cambios de personas, cambios de ubicación, ataques externos, entre otros. Evalúa tus controles de forma continua siguiendo la estrategia que ya definiste, y usa esos resultados para decidir cómo responder a los riesgos. Mantén informada a la persona que toma decisiones contigo sobre cómo está tu seguridad.",
   "pasos_accionables": [
-    "Vigila tu sistema y su entorno de operación para detectar cambios relevantes (tarea M-1).",
-    "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste (tarea M-2).",
-    "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
-    "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad (tarea M-5)."
+    "Vigila tu sistema y su entorno de operación para detectar cambios relevantes.",
+    "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste.",
+    "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M).",
+    "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad."
   ],
   "entregable_esperado": "Un reporte periódico sobre el estado de tu seguridad y privacidad, junto con un registro actualizado de cambios y respuestas de riesgo.",
   "nodos_previos": [
@@ -43,6 +43,74 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone tres insumos para decidir la respuesta (M-3); el paso omite las evaluaciones de riesgo.; Mismo defecto: falta el insumo de las evaluaciones de riesgo.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-monitoreo_continuo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M) (tarea M-3).",
+      "texto_nuevo": "Decide y aplica respuestas de riesgo a partir de lo que encuentres al vigilar, de tus evaluaciones de riesgo y de lo pendiente en tu plan de acción y cronograma (POA&M).",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (tarea M-3)"
+        ]
+      },
+      "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "lectura-total-monitoreo_continuo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Vigila tu sistema y su entorno de operación para detectar cambios relevantes (tarea M-1).",
+      "texto_nuevo": "Vigila tu sistema y su entorno de operación para detectar cambios relevantes.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (tarea M-1)"
+        ]
+      },
+      "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "lectura-total-monitoreo_continuo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste (tarea M-2).",
+      "texto_nuevo": "Evalúa tus controles de forma continua, según la estrategia de vigilancia que definiste.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (tarea M-2)"
+        ]
+      },
+      "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "lectura-total-monitoreo_continuo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad (tarea M-5).",
+      "texto_nuevo": "Cuéntale de forma continua a quien decide contigo cómo está tu seguridad y privacidad.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (tarea M-5)"
+        ]
+      },
+      "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }

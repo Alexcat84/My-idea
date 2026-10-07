@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Big Data e IA Predictiva en la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Basado en el caso de Microsoft, este concepto describe cómo centralizar datos en la nube (data lake), aplicar machine learning y visualizar resultados en dashboards permite pasar de una gestión reactiva a una predictiva. Esto habilita anticipar devoluciones de productos, mantenimiento predictivo en fábricas, y mayor capacidad de respuesta ante disrupciones. Requiere un cambio cultural hacia una organización basada en datos ('learn it all') y equipos de ciencia de datos que trabajen junto a expertos de dominio.",
+  "resumen_teorico": "Centralizar datos en la nube (data lake), aplicar machine learning y visualizar resultados en dashboards puede permitirte pasar de una gestión reactiva a una predictiva. Esto puede ayudarte a anticipar devoluciones de productos, hacer mantenimiento predictivo en fábricas y responder mejor ante disrupciones. Requiere un cambio cultural hacia una forma de trabajar basada en datos y en aprender siempre, y equipos de ciencia de datos que trabajen junto a expertos de dominio.",
   "pasos_accionables": [
     "Centralizar los datos transaccionales de la cadena de suministro en una infraestructura en la nube",
     "Construir modelos de machine learning para pronóstico de demanda y detección de anomalías",
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración del libro incluye la claridad que refuerza el propósito del equipo y fija las metas correctas.; Mismo defecto: falta un elemento de la lista del libro.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-big_data_ia_cadena_suministro-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Basado en el caso de Microsoft, este concepto describe cómo centralizar datos en la nube (data lake), aplicar machine learning y visualizar resultados en dashboards permite pasar de una gestión reactiva a una predictiva. Esto habilita anticipar devoluciones de productos, mantenimiento predictivo en fábricas, y mayor capacidad de respuesta ante disrupciones. Requiere un cambio cultural hacia una organización basada en datos ('learn it all') y equipos de ciencia de datos que trabajen junto a expertos de dominio.",
+      "texto_nuevo": "Centralizar datos en la nube (data lake), aplicar machine learning y visualizar resultados en dashboards puede permitirte pasar de una gestión reactiva a una predictiva. Esto puede ayudarte a anticipar devoluciones de productos, hacer mantenimiento predictivo en fábricas y responder mejor ante disrupciones. Requiere un cambio cultural hacia una forma de trabajar basada en datos y en aprender siempre, y equipos de ciencia de datos que trabajen junto a expertos de dominio.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Basado en el caso de Microsoft, este concepto describe cómo ",
+          " ('learn it all')"
+        ]
+      },
+      "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }
