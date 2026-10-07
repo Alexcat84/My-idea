@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir sobre o caja según el tamaño final del paquete",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
+  "resumen_teorico": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
   "pasos_accionables": [
     "Arma el paquete completo con su protección antes de decidir el contenedor.",
     "Mide el paquete ya armado: si mide menos de 7 x 4 x 2 pulgadas (el tamaño mínimo aceptable del courier), usa un empaque del courier (sobre o pak) o colócalo dentro de una caja exterior más grande.",
@@ -87,6 +87,22 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo da la regla del tamaño mínimo; el ahorro por no comprar de más en un formato es un resultado que no afirma.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "medida4-procedencia-elegir_sobre_o_caja_tamano-resumen_teorico",
+      "fecha": "2026-10-06",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica que usan los couriers es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
+      "texto_nuevo": "Cuando el envío es pequeño, va dentro de una caja exterior más grande o en un empaque del courier. La regla práctica es simple: si el paquete completo, ya armado con su protección, mide menos que el tamaño mínimo que acepta el courier (por ejemplo, 7 x 4 x 2 pulgadas), se usa un empaque del courier o se mete dentro de una caja exterior más grande. Esta decisión se toma sobre el tamaño final del paquete armado, no sobre el tamaño del producto solo, porque el envoltorio y el relleno también ocupan espacio.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "La regla práctica que usan los couriers es simple"
+        ]
+      },
+      "decision": "medida 4 de procedencia: procedencia confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ],
   "fuentes_internas": [
