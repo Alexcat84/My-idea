@@ -7,10 +7,10 @@
   "resumen_teorico": "En ingeniería se puede dedicar una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Esa idea se puede llevar a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_09.md, unidad Cap. 6, Guidance. Sale de las lineas 65 a 71, bajo el rotulo de seccion MANAGEMENT FIX-IT WEEKS, dentro de la seccion SOLICITING IMPROMPTU GUIDANCE. ES LA PIEZA P6 DE LA FRONTERA DE ESTA VUELTA. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la linea 69 dice literalmente Here is how it worked, y detras va la mecanica entera con sus ETAPAS nombradas una a una, que es inventario en el sentido literal de D.27. La linea 71 aniade las tres ultimas: sistema publico para votar prioridades, alguien asignado a leerlas y agrupar duplicados, y reparto de averias entre jefes cancelando lo demas. No hay adjetivo de adecuacion en el sitio del criterio: el texto no dice un sistema adecuado, dice como era el sistema. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. P1 y P2 salen de la linea 67; P3 y P4 de la 69; P5, P6, P7 y P8 de la 71. EL CASO DE GOOGLE VA DENTRO Y NO ES LA CASA: el texto lo cuenta en pasado, At some point, a team at Google decided, pero lo que sigue no es la cronica de aquel equipo sino la mecanica en abstracto, con sus objetos de trabajo nombrados. Es la misma forma que esta casa ya adjudico a favor en cap_07, con los tres retratos en pasado bajo rotulo imperativo. NO ESCRIBO EL PERIODO: el texto dice regular management fix-it weeks y no dice cada cuanto, asi que el P3 dice lo que el texto dice y ningun paso pone una cadencia. NO ESCRIBO RESPONSABLE de crear el sistema: el P6 si nombra un responsable, pero es el que el texto nombra, Somebody was assigned the job of reading through them all. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cada cuanto se corre la semana, cuantas averias se reparten por jefe, que se hace con las que no se arreglan, ni quien decide que una averia esta cerrada.",
   "pasos_accionables": [
-    "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
-    "Cuenta con esta diferencia: una semana de arreglo de averías es algo así como lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+    "Toma como punto de partida una costumbre frecuente en los equipos de ingeniería: durante una semana dejan a un lado las funciones nuevas y se dedican a corregir fallos del producto que ya existe, siguiendo una lista con prioridades preparada antes.",
+    "Ten presente la diferencia: la semana de arreglo de averías viene a ser lo opuesto de una semana de ideas nuevas. No sirve para dedicarse a proyectos nuevos y emocionantes, sino para resolver por fin los problemas viejos y molestos que llevan meses incomodando a la gente.",
     "Aplica la misma idea a la gestión: también ahí es una buena práctica, con este nombre o con otro.",
-    "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño parezcan caer siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+    "Monta un sistema en el que cualquiera pueda anotar los problemas de gestión que le molestan. Son averías de gestión cosas como que las notas de gastos tarden demasiado en aprobarse, que las evaluaciones de desempeño parezcan caer siempre en el peor momento del año, que la última encuesta a empleados costara demasiado de rellenar o que el sistema de ascensos parezca injusto.",
     "Haz público ese sistema de registro, para que la gente pueda votar y fijar así las prioridades.",
     "Asigna a alguien el trabajo de leer todas las averías registradas y agrupar las duplicadas.",
     "Reparte las averías entre los jefes durante la semana de arreglo.",
@@ -402,6 +402,57 @@
       },
       "decision": "lectura total de procedencia (w30): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-correr_semana_arreglo_averias_gestion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
+      "texto_nuevo": "Toma como punto de partida una costumbre frecuente en los equipos de ingeniería: durante una semana dejan a un lado las funciones nuevas y se dedican a corregir fallos del producto que ya existe, siguiendo una lista con prioridades preparada antes.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_09.md",
+        "lineas": "67",
+        "frase": "Everyone will stop working on new features for a week and fix bugs"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-correr_semana_arreglo_averias_gestion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con esta diferencia: una semana de arreglo de averías es algo así como lo contrario de una semana de ideas nuevas. En vez de una ocasión de trabajar en cosas nuevas y emocionantes, es una ocasión de arreglar problemas viejos y molestos que llevan meses fastidiando a la gente.",
+      "texto_nuevo": "Ten presente la diferencia: la semana de arreglo de averías viene a ser lo opuesto de una semana de ideas nuevas. No sirve para dedicarse a proyectos nuevos y emocionantes, sino para resolver por fin los problemas viejos y molestos que llevan meses incomodando a la gente.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_09.md",
+        "lineas": "67",
+        "frase": "A bug fix-it week is sort of the opposite of a Hack Week"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-correr_semana_arreglo_averias_gestion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Crea un sistema donde la gente pueda registrar problemas molestos de gestión. Cuentan como avería de gestión, por ejemplo, que se tarde demasiado en aprobar las notas de gastos, que las evaluaciones de desempeño parezcan caer siempre en la peor época del año, que la última encuesta a empleados se tardara demasiado en rellenar, o que el sistema de promoción parezca injusto.",
+      "texto_nuevo": "Monta un sistema en el que cualquiera pueda anotar los problemas de gestión que le molestan. Son averías de gestión cosas como que las notas de gastos tarden demasiado en aprobarse, que las evaluaciones de desempeño parezcan caer siempre en el peor momento del año, que la última encuesta a empleados costara demasiado de rellenar o que el sistema de ascensos parezca injusto.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_09.md",
+        "lineas": "69",
+        "frase": "a system was created where people could log annoying management issues"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Dedica una Semana a Arreglar",

@@ -6,8 +6,8 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y encargar las pruebas y el mantenimiento de los rociadores a un trabajador calificado o a un contratista de rociadores. Deja un espacio libre de al menos 18 pulgadas bajo los rociadores y protege con guardas metálicas los cabezales expuestos a posible daño físico.",
   "pasos_accionables": [
-    "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
-    "Encarga las pruebas y el mantenimiento de los rociadores automáticos a un trabajador calificado o a un contratista de rociadores",
+    "Haz certificar tu alarma contra incendios, comprueba que funcione bien y pruébala una vez al año",
+    "Deja en manos de un trabajador calificado o de un contratista de rociadores las pruebas y el mantenimiento de tus rociadores automáticos",
     "Revisa cada cierto tiempo las válvulas de control y los manómetros del sistema de rociadores",
     "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio"
   ],
@@ -140,6 +140,40 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c08): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-sistemas_de_extincion_de_incendios-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
+      "texto_nuevo": "Haz certificar tu alarma contra incendios, comprueba que funcione bien y pruébala una vez al año",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "581",
+        "frase": "Fire alarm system has been certified, is in proper working condition, and is"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-sistemas_de_extincion_de_incendios-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Encarga las pruebas y el mantenimiento de los rociadores automáticos a un trabajador calificado o a un contratista de rociadores",
+      "texto_nuevo": "Deja en manos de un trabajador calificado o de un contratista de rociadores las pruebas y el mantenimiento de tus rociadores automáticos",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "583",
+        "frase": "Testing and maintenance of automatic sprinkler systems is performed by a qualified worker"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

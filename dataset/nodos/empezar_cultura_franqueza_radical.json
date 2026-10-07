@@ -7,12 +7,12 @@
   "resumen_teorico": "Es frecuente que, al hablar de poner en marcha una cultura de franqueza radical, la gente esté de acuerdo con la idea y se ponga nerviosa a la hora de practicarla. Sigue un orden: primero se explica la idea y se pide a la gente que sea franca contigo, de modo que recibes guía antes de repartirla y demuestras que aguantas lo que luego vas a dar. Después, al empezar a darla, el elogio va antes que la crítica, y la crítica solo llega cuando entiendes dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_05.md, unidad Cap. 2, Get, Give, and Encourage Guidance. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'start by getting', corrida con grep contra las quince unidades del libro. Es la cabeza de la ultima parte de la unidad, y se extrae como nodo propio porque el texto no se limita a nombrar los tres trabajos: los pone en un orden y dice por que ese orden y no otro, que es empezar recibiendo y no repartiendo. Las tres piezas que enumera son ademas los titulos de las tres secciones que vienen justo detras, asi que cada una tiene su propio procedimiento desplegado en el mismo capitulo. El texto NO dice cuantas piezas son, asi que la cuenta la pone quien lee la enumeracion y no el libro: las aristas de esta cabeza a sus partes van bajo D.29 con razon escrita, y no bajo D.37. Lo que el texto NO dice, y por eso no esta escrito aqui, es cuanto se tarda en pasar de una fase a la siguiente, ni que hacer si nadie te critica cuando lo pides, que es lo que despliega el procedimiento de pedir critica. CORRECCION DECLARADA EN LA VUELTA 25, EN LA RELECTURA ANCHA DE LA FILA cap_05: el paso 1 decia lo que el texto observa CADA VEZ que habla de esto, y la linea 215 de fuentes/scott_radical_candor/cap_05.md abre con OFTEN WHEN I talk to people about developing a culture of Radical Candor. A menudo no es cada vez. Es la misma especie de puente que el auditor cazo en cap_14 con la palabra teamwork: no es un paso inventado, es el texto reforzado, y el metodo que lo produce es el mismo. Se cuenta como 1 PUENTE en la fila cap_05 y va marcado como discutible en el reporte de la vuelta 25.",
   "pasos_accionables": [
-    "Cuenta con lo que suele pasar cuando se habla de esto: la gente está de acuerdo con la idea y se pone nerviosa ante la idea de ponerla en práctica.",
+    "Ten presente que, cuando planteas esto, lo habitual es que la gente apruebe la idea pero sienta nervios al pensar en aplicarla.",
     "Empieza explicando la idea.",
     "Y después pide a tu gente que sea radicalmente franca contigo.",
     "Dicho de otra manera: empieza recibiendo guía, no repartiéndola.",
     "Cuando empieces a darla, empieza por el elogio y no por la crítica.",
-    "Cuando pases a la crítica, asegúrate de entender dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa."
+    "Antes de criticar, ten claro dónde está el límite arriesgado que separa la franqueza radical de la agresión odiosa."
   ],
   "entregable_esperado": "El arranque hecho en su orden: la idea explicada, la crítica pedida antes que dada, el elogio dado antes que la crítica, y la frontera peligrosa entendida antes de empezar a criticar.",
   "nodos_previos": [
@@ -233,6 +233,40 @@
         "motivo": "Pedir crítica es la primera fase del arranque, y el destino ordena lo que sigue (elogio antes que crítica, la frontera entendida), así que resuelve qué hacer después de haberla pedido."
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026, docs/ACTA_SANEAMIENTO_FINAL.md seccion 4): alcanzabilidad 100 %% desde las puertas de cada mundo; se teje la arista verificada."
+    },
+    {
+      "id": "copia-empezar_cultura_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con lo que suele pasar cuando se habla de esto: la gente está de acuerdo con la idea y se pone nerviosa ante la idea de ponerla en práctica.",
+      "texto_nuevo": "Ten presente que, cuando planteas esto, lo habitual es que la gente apruebe la idea pero sienta nervios al pensar en aplicarla.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_05.md",
+        "lineas": "215",
+        "frase": "OFTEN WHEN I talk to people about developing a culture of"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-empezar_cultura_franqueza_radical-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando pases a la crítica, asegúrate de entender dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+      "texto_nuevo": "Antes de criticar, ten claro dónde está el límite arriesgado que separa la franqueza radical de la agresión odiosa.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_05.md",
+        "lineas": "215",
+        "frase": "When you move on to criticism, make sure you understand where"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Empieza Pidiendo Franqueza Primero",

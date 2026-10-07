@@ -10,7 +10,7 @@
     "Instalar guardas de seguridad que cubran husillo, tuerca y bridas, alineadas correctamente.",
     "Ajustar los apoyos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
     "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas, y comprobar que sus rpm máximas sean compatibles con las del motor.",
-    "Proveer colectores de polvo y extractores mecánicos en las esmeriladoras usadas en operaciones que producen mucho polvo, y EPP adecuado para operaciones de esmerilado."
+    "Coloca colectores de polvo y extractores mecánicos en las esmeriladoras que generan grandes cantidades de polvo, y entrega a quien esmerila el EPP adecuado para esa tarea."
   ],
   "entregable_esperado": "Esmeriladoras con guardas instaladas correctamente, registro de inspecciones de ruedas y EPP asignado a operadores.",
   "nodos_previos": [
@@ -125,6 +125,23 @@
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-machine_guarding_abrasive_wheels-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Proveer colectores de polvo y extractores mecánicos en las esmeriladoras usadas en operaciones que producen mucho polvo, y EPP adecuado para operaciones de esmerilado.",
+      "texto_nuevo": "Coloca colectores de polvo y extractores mecánicos en las esmeriladoras que generan grandes cantidades de polvo, y entrega a quien esmerila el EPP adecuado para esa tarea.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1025",
+        "frase": "Dust collectors and powered exhausts are provided on grinders used in operations"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

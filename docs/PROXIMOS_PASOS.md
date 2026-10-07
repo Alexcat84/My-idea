@@ -5,11 +5,12 @@ Una suscripción normal no aguanta oleadas de veinte agentes. Aquí queda lo que
 propio o con una decisión del fundador.
 
 **Estado:** reescrito entero el 7 oct 2026 con lo hecho en el encargo del 6 oct, y puesto al día la noche del 7 oct con
-las decisiones del fundador de ese día. El detalle de cada cosa hecha está en `docs/ACTA_SANEAMIENTO_FINAL.md`, sección 15.
+las decisiones del fundador de ese día: la copia fiel (regla D2, sección 8) y el i18n al día (sección 2, decisión 8). El detalle de cada cosa hecha está en `docs/ACTA_SANEAMIENTO_FINAL.md`, sección 15.
 
 **Lo que sigue, en este orden, con suscripción normal** (cada punto tiene su sección abajo):
 1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
-2. **Re-embebido con Voyage** (sección 4): una sola pasada, al final del saneamiento, menos de 0,05 USD.
+2. **Re-embebido con Voyage** (sección 4): una sola pasada, al final, con la copia fiel incluida, menos de 0,05 USD.
+   Se pide la clave al fundador en ese momento.
 3. **Despliegue**, con el índice nuevo.
 4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
 5. **Lanzamiento en Google Play** (sección 8).
@@ -85,6 +86,10 @@ de cierre hecha.
    - la dirección postal del comerciante;
    - la revisión profesional de Privacidad, Términos y Cookies, en español y francés. Cuando el profesional cambie un
      texto se edita el `.md` en `docs/legal/` y se corre `python scripts/sync_legal_web.py`.
+   - **Las traducciones a los otros nueve idiomas** (en, pt, de, it, ja, zh, ko, ar, hi, desde el 7 oct) guardan la
+     huella del español del que salieron (`docs/legal/<idioma>/huellas.json`). Si el profesional cambia el español,
+     `engine/test_legal_huellas.py` falla hasta retraducirlas: se retraduce el documento cambiado, se pasa la revisión
+     de naturalidad del segundo modelo y se corre `python scripts/legal_huellas.py <idioma>` y `sync_legal_web.py`.
    - Para el profesional, anotado: el registro de la aceptación se guarda sin IP ni navegador (lo mínimo); se borra con
      la cuenta; los Términos dicen "al usar la app aceptas" también para el invitado; la cookie `myidea_idioma`
      (preferencia de idioma, un año) no es estrictamente necesaria; la versión vigente de los textos se llama
@@ -104,6 +109,15 @@ de cierre hecha.
    defecto; los pasos que dicen "la frase del libro" o "el texto dice", que desde hoy caen en su aduana; y que los nodos
    de la forja van sin tildes. Además, su aduana exige el glosario sin condiciones ("marketing" no entra), más estricta
    que el catálogo de hoy.
+
+8. **I18N al día (7 oct, main df709c18e):** legales, preguntas frecuentes y eliminar cuenta en los once idiomas, y
+   94 evidentes de naturalidad aplicados en diez idiomas. **Lo discutible está en `docs/i18n/DISCUTIBLES_I18N_AL_DIA.md`**
+   (140 de interfaz, 43 de ayuda, 52 legales) con siete decisiones transversales: el término árabe de créditos (رصيد
+   del glosario o نقاط de la interfaz); el registro formal en los legales de alemán, coreano y japonés; Privacidad §2
+   dice "español o francés" pero la base solo guarda es/fr (migración 050); falta la nota de prevalencia en el francés;
+   Términos §11 dice que la referencia es el francés; la frase repetida de Privacidad §10 en español; y la frase de
+   entrada de la nota de prevalencia. Las que tocan el español o el francés esperan a la revisión profesional (cambiar
+   el texto sube la versión y pide aceptar de nuevo).
 
 ## 3. Qué gasta cada cosa, y en qué orden
 
@@ -129,7 +143,7 @@ cambiaron el texto de **3.187 nodos vivos**, según la prueba en seco del cierre
 2. Prueba en seco, que no llama a nadie:
 
    ```
-   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json docs/saneamiento/tandas/voz-*.json
+   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json docs/saneamiento/tandas/voz-*.json docs/saneamiento/tandas/copia-*.json
    ```
 
    Si después de esta fecha entra otra tanda que cambie texto de nodos, se añade a la línea.
@@ -216,9 +230,13 @@ rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412
 
 ## 8. Más adelante
 
-- **Copia fiel.** La copia literal del libro no es prioridad, porque al cliente no le llega tal cual. **Solo llega tal
-  cual en el plan sin IA**, que pinta los pasos del nodo sin reescribirlos. Por eso, cuando se retome, se empieza por
-  los pasos de los nodos que más salen en ese plan.
+- **Copia fiel (regla D2), en curso desde el 7 oct (acta 15.15).** Decisión del fundador: se corrige ya, primero los
+  PASOS de los 3.634 nodos vivos y después los RESÚMENES y las CONDICIONES; se cambia la forma, nunca el contenido.
+  Máquina: `auditoria-final-claves/copia/copia.py` (`estado`, `verificacion <ola>`, `tanda <ola>`, `reescritura <ola>`;
+  instrucciones en `auditoria-final/copia/`). Resúmenes y condiciones van en lotes con los mismos nodos (R### y C###),
+  un lector para los dos. Regla de parada fijada: muestra de 200 nodos con semilla 20261028 (copia, y como control
+  contrarios e invenciones); se cierra si la copia da como mucho 1 cada 20 nodos y contrarios e invenciones 0. Lo que
+  falte al agotarse la cuota queda dicho en el acta 15.15.
 - **Valoración con pulgares:** que la persona marque si un paso, una pregunta o un plan le sirvió. Son datos para la
   mejora continua, nunca un juicio público.
 - **Mundos sugeridos:** proponer a la persona el mundo que más encaja con lo que contó, sin venderlo como necesario

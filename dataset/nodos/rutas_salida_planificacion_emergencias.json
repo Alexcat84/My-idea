@@ -7,7 +7,7 @@
   "resumen_teorico": "Diseña tus rutas de salida para que el camino de escape sea obvio, directo y esté libre de obstáculos, con puertas que se abran sin necesidad de llave, herramienta, conocimiento ni esfuerzo especial mientras el lugar esté ocupado. Evita usar puertas giratorias, corredizas o elevadizas como salidas obligatorias; si una salida tiene hardware de pánico, que abra con una fuerza de 15 libras (6,8 kilogramos) o menos en la dirección de salida, y da a los cuartos fríos un mecanismo de liberación interior que funcione aunque estén cerrados desde afuera. Cuando planifiques tus emergencias, piensa también en poner barreras y advertencias para que nadie salga directo al tráfico de vehículos.",
   "pasos_accionables": [
     "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
-    "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
+    "Comprueba que, mientras haya gente en el lugar, cualquiera pueda abrir las puertas sin llave, sin herramientas y sin saber nada especial, y que tengan las bisagras a un costado",
     "Revisa que no uses puertas giratorias, corredizas o elevadizas como salidas obligatorias",
     "Instala dispositivos antipánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
     "Asegura mecanismos de liberación interna en los cuartos fríos, incluso si están bloqueados desde afuera",
@@ -124,6 +124,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-rutas_salida_planificacion_emergencias-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
+      "texto_nuevo": "Comprueba que, mientras haya gente en el lugar, cualquiera pueda abrir las puertas sin llave, sin herramientas y sin saber nada especial, y que tengan las bisagras a un costado",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "415-417",
+        "frase": "Exit doors can be opened from the direction of exit travel without the use"
+      },
+      "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
