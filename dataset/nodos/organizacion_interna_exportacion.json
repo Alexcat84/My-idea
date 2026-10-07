@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Si las ventas de exportación han crecido significativamente y requieren gestión especializada",
-    "Si la empresa detecta ineficiencias al mezclar ventas domésticas e internacionales"
+    "Si la empresa necesita concentrar las habilidades especializadas de exportación y enfocar su esfuerzo de marketing internacional"
   ],
   "etiqueta_arbol": "Organiza tu Área de Exportación",
   "fuentes_internas": [
@@ -76,6 +76,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la división internacional como una opción que la empresa puede elegir más adelante; el paso la convierte en algo que planificar.; Mismo defecto: convierte una opción posterior en un paso a planificar.; Mismo defecto: da por prevista una división que el libro deja como opción posterior.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-ba-organizacion_interna_exportacion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si la empresa detecta ineficiencias al mezclar ventas domésticas e internacionales",
+      "texto_nuevo": "Si la empresa necesita concentrar las habilidades especializadas de exportación y enfocar su esfuerzo de marketing internacional",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1897",
+        "frase": "segmentation is sometimes a less efficient use of company resources"
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): contrario; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ]
 }

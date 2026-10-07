@@ -16,7 +16,7 @@
   "condiciones_activacion": [
     "Si el emprendedor busca financiamiento semilla rápido sin negociar valuación completa",
     "Si los inversionistas ángeles o aceleradoras prefieren estructurar la inversión como préstamo temporal",
-    "Cuando se necesita evitar los costos legales elevados de una ronda de equity preferente",
+    "Cuando se quiere ahorrar costos legales frente a una ronda de equity preferente, sabiendo que hoy esa diferencia pesa poco",
     "Cuando la empresa busca financiamiento temprano (pre-semilla o semilla) y quiere evitar fijar valuación"
   ],
   "node_id": "convertible_debt_fundamentos",
@@ -80,6 +80,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro enumera los argumentos a favor sin decir cuál impulsa más su uso.; El libro recomienda proponer las tasas federales un poco más altas, pero no dice que el rango típico de 5% a 12% esté cerca de ellas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-ba-convertible_debt_fundamentos-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se necesita evitar los costos legales elevados de una ronda de equity preferente",
+      "texto_nuevo": "Cuando se quiere ahorrar costos legales frente a una ronda de equity preferente, sabiendo que hoy esa diferencia pesa poco",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2147",
+        "frase": "the legal fees argument is less persuasive these days"
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ]
 }

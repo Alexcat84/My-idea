@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Cuando estas preparando documentos de embarque para una exportación comercial desde Estados Unidos",
-    "En cada envio sujeto a las EAR",
+    "En casi todos los envíos sujetos a las EAR, salvo las excepciones de la Parte 758.6",
     "Cuando preparas la factura comercial y el bill of lading o air waybill de un envio que sale de Estados Unidos"
   ],
   "etiqueta_arbol": "Declara el Control de Destino",
@@ -214,6 +214,23 @@
       "decision": "reescritura final de las correcciones FUERA (pase dirigido, muestra de cierre y barridos)",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-ba-clausula_antidesviacion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En cada envio sujeto a las EAR",
+      "texto_nuevo": "En casi todos los envíos sujetos a las EAR, salvo las excepciones de la Parte 758.6",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2843-2845",
+        "frase": "for nearly all commercial shipments leaving the United States must display a statement"
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): certeza_endurecida; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ]
 }

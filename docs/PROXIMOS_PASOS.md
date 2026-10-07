@@ -169,8 +169,8 @@ catálogo.
 
 - **Retraducción a los diez idiomas** de cada etiqueta corregida, con su huella de vigencia. La guarda de vigencia de
   etiquetas avisa cuál quedó atrasada.
-- **Condiciones de los nodos de clase B y A.** Las de los nodos-frontera de otro país (clase C) se leyeron y
-  corrigieron el 7 oct (acta 15.5). Las de clase B y A quedan, y se leen con la misma máquina cambiando la clase.
+- ~~**Condiciones de los nodos de clase B y A.**~~ Leídas y corregidas el 7 oct (acta 15.12): 22 correcciones en 22
+  nodos. Con las de clase C (acta 15.5), las condiciones de los 239 nodos de `jurisdiccion.json` quedan leídas.
 - **A mejora continua, con su ficha:** la ortografía y los calcos del resumen, las condiciones y el título.
 
 ## 8. Más adelante

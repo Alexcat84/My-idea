@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Cuando el tratado de libre comercio aplicable permite autocertificación (ej. TLC EE.UU.-Corea)",
-    "Si el exportador desea evitar trámites con terceros certificadores"
+    "Si el exportador desea evitar trámites con terceros certificadores y el tratado aplicable lo permite"
   ],
   "etiqueta_arbol": "Certifica tú Mismo el Origen",
   "correcciones": [
@@ -156,6 +156,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo da el formato de fecha en su ejemplo; no dice que lo fije el modelo y no la norma.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-ba-autocertificacion_del_exportador-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el exportador desea evitar trámites con terceros certificadores",
+      "texto_nuevo": "Si el exportador desea evitar trámites con terceros certificadores y el tratado aplicable lo permite",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5123",
+        "frase": "Documenting the origin varies, depending on the FTA."
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ],
   "fuentes_internas": [

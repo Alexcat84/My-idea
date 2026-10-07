@@ -21,7 +21,7 @@
     "infection_control_plan"
   ],
   "condiciones_activacion": [
-    "Si los trabajadores están expuestos a condiciones de calor extremo, interior o exterior"
+    "Si los trabajadores están expuestos a algún factor de riesgo de calor en ambientes cálidos o calurosos, interiores o exteriores"
   ],
   "etiqueta_arbol": "Previene Enfermedades por Calor",
   "fuentes_internas": [
@@ -127,6 +127,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de quienes regresan de una licencia prolongada; sin 'prolongada' el plan cambia a quién aplica.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-ba-prevencion_enfermedades_por_calor-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si los trabajadores están expuestos a condiciones de calor extremo, interior o exterior",
+      "texto_nuevo": "Si los trabajadores están expuestos a algún factor de riesgo de calor en ambientes cálidos o calurosos, interiores o exteriores",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "823-837",
+        "frase": "Are any of these job-related risk factors for heat exposure present in your workplace?"
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ]
 }

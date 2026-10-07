@@ -1814,3 +1814,25 @@ primero del plan que no espera a nadie.
   - Árbitro E1B y verificador ciego contra el libro de toda corrección que traiga palabras nuevas, con una trampa
     por paquete.
 - **Lo que sale:** una tanda `condiciones-ba` con lo que se sostiene. Lo que no se sostiene se queda como está.
+
+**Resultado (7 oct 2026):**
+
+| Paso | Resultado |
+|---|---|
+| Lectura | 20 lectores, 20 de 20 trampas cazadas; 39 marcas en 24 condiciones |
+| Árbitro | 2 paquetes: 22 condiciones corregidas (15 de matiz, 5 contrarias, 1 invención dura y 1 certeza endurecida); 2 rechazadas |
+| Modo | 4 quitan y 18 devuelven el sentido del libro |
+| Verificación ciega contra el libro | las 18 que traían palabras nuevas se sostienen, con la trampa cazada |
+| **Aplicadas** | **22 correcciones en 22 nodos** (tanda `condiciones-ba`) |
+
+- Una pega que paró la guarda: tres citas apuntaban a ficheros de `txt/` y la tanda solo sabía normalizar `books/`.
+  `aplicar_correcciones.py` rechazó la tanda entera ("cita sin libro") y no escribió nada. Se corrigió la tanda, que
+  ahora toma el libro del campo `fuente` del nodo.
+- El re-embebido no crece: los 22 nodos ya estaban entre los 2.808 de la línea de `docs/PROXIMOS_PASOS.md`, que
+  incluye `condiciones-*.json`.
+- **Con esto, las condiciones de los 239 nodos de `jurisdiccion.json` (clases A, B y C) quedan leídas contra el
+  libro.**
+
+**Errata declarada de 15.10:** el campo `decision` de la tanda `medida6-procedencia` dice "medida 5 de procedencia"
+por un resto del script copiado. Es la medida 6; el campo `auditoria` sí es el correcto (15.9). Es metadato interno y
+no cambia nada de lo aplicado; el script ya está corregido.

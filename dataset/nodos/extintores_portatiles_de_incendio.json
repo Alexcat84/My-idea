@@ -20,7 +20,7 @@
     "sistemas_de_extincion_de_incendios"
   ],
   "condiciones_activacion": [
-    "Si el negocio cuenta con extintores portátiles y designa trabajadores para usarlos"
+    "Si el negocio cuenta con extintores portátiles"
   ],
   "etiqueta_arbol": "Gestiona tus Extintores",
   "correcciones": [
@@ -73,6 +73,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide extintores en número suficiente además de accesibles; el resumen pierde la cantidad.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-ba-extintores_portatiles_de_incendio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el negocio cuenta con extintores portátiles y designa trabajadores para usarlos",
+      "texto_nuevo": "Si el negocio cuenta con extintores portátiles",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "543",
+        "frase": "Fire extinguishers are visually inspected monthly, and the inspection is recorded."
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo quitar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ],
   "fuentes_internas": [

@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Si el producto a exportar incluye una invención tecnológica o de proceso susceptible de patentarse",
-    "Si la empresa planea divulgar su invención a inversionistas o socios antes de exportar"
+    "Si la empresa planea divulgar su invención a inversionistas o socios antes de solicitar la patente"
   ],
   "etiqueta_arbol": "Patenta tu Idea por País",
   "fuentes_internas": [
@@ -93,6 +93,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo redactar; doble lectura ciega, arbitro y verificador ciego): El libro dice que en general es país por país y que en algunas regiones una oficina regional acepta solicitudes con efecto en sus estados miembros; el nodo pierde esa vía.; El libro enumera seis materias no patentables en muchos países; el nodo deja dos como si fueran toda la lista.; Mismo defecto que la marca 0: se cae el 'en general' y la vía de la oficina regional.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-ba-proteccion_patentes_internacional-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la empresa planea divulgar su invención a inversionistas o socios antes de exportar",
+      "texto_nuevo": "Si la empresa planea divulgar su invención a inversionistas o socios antes de solicitar la patente",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3065-3067",
+        "frase": "disclose your invention to a potential investor or a business partner prior to filing"
+      },
+      "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
     }
   ]
 }
