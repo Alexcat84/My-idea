@@ -1666,3 +1666,32 @@ veredicto de la medida 4: mide el catálogo de hoy, después del barrido 2 y de 
   - "SANEADO en procedencia" si da 0 nodos.
   - Si no, nodos sobre 200 con su Wilson al 95 %.
   - Lo que aparezca se corrige por el método de la casa.
+
+### 15.7 Resultado de la medida 5 (7 oct 2026): NO da 0, pero baja a la mitad
+
+Máquina en `auditoria-final-claves/medida5/medida5.py`.
+- **Lectura:** el primer lector cazó 20 de 20 trampas, también las de nombre propio inventado.
+- **Arbitraje:** 11 marcas reales; el árbitro confirmó 10.
+
+| Clase | Hallazgos | Por nodo | Wilson 95 % | Medida 4 (antes del barrido 2) | Resultado |
+|---|---|---|---|---|---|
+| Procedencia (D1) | 10 en 10 nodos | 5 % | 2,7 a 9,0 % | 9 % (5,8 a 13,8 %) | **NO PASA** |
+
+- **Lo que queda** son formas que ninguna búsqueda mecánica ve:
+  - "los mejores administradores a menudo…", "los mejores pensadores de diseño…";
+  - "hay quien…";
+  - "la experiencia con la certificación enseña…";
+  - un autor nombrado sin verbo de autoría ("Aristóteles entendía…", "del enfoque de Papanek…", "ejemplificada por
+    guías turísticos como …");
+  - una cita entre comillas sin fuente;
+  - "Los couriers coinciden";
+  - "(Caso 2)", una remisión a la numeración de casos del libro.
+- **Corrección:**
+  - Verificación ciega contra el libro, con la trampa cazada: 7 se sostienen (tanda `medida5-procedencia`).
+  - 3 endurecían o dejaban una traducción literal y van a reescritura con su matiz.
+
+**Lectura del resultado:**
+- El barrido 2 redujo el residuo del 9 % al 5 %. Los intervalos se solapan, así que la bajada no es concluyente con
+  200 nodos.
+- Lo que queda pide lectura humana o de agente, no búsqueda: unos 350 lotes para leer el catálogo entero (decisión 1 de
+  `docs/PROXIMOS_PASOS.md`).
