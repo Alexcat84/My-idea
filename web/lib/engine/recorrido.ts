@@ -443,7 +443,14 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
 
   // Construccion 4 (28 sep 2026): la prioridad manda tambien al re-elegir puerta.
   async function puntuarPrioridadDeSesion(): Promise<Puntuador | null> {
-    const r = await puntuadorDePrioridad(client, estado.prioridadDeclarada?.texto, idiomaSalida, acumulado, graph);
+    const r = await puntuadorDePrioridad(
+      client,
+      estado.prioridadDeclarada?.texto,
+      idiomaSalida,
+      acumulado,
+      graph,
+      contextoDeSesion(estado)
+    );
     acumulado = r.acumulado;
     return r.puntuar;
   }

@@ -32,16 +32,19 @@ export function violaPrioridad(destino: string, atienden: string[], pasoPrevio: 
 }
 
 /** El puntuador de la prioridad declarada. El indice esta en español: en una idea en otro idioma, la prioridad se
- * traduce antes (la misma consulta que la brujula). null si no hay prioridad o la brujula no esta disponible. */
+ * traduce antes (la misma consulta que la brujula). null si no hay prioridad o la brujula no esta disponible.
+ * `contexto`: el contexto completo de la sesion (Principio 1, 28 sep 2026), obligatorio como en toda llamada a la IA
+ * (guarda lib/contextoEnTodaLlamada.test.ts); null solo si la sesion es anterior a la memoria. */
 export async function puntuadorDePrioridad(
   client: Anthropic,
   prioridadTexto: string | null | undefined,
   idiomaSalida: string | null,
   acumulado: UsoAcumulado,
-  graph: Record<string, NodoConDominio>
+  graph: Record<string, NodoConDominio>,
+  contexto: string | null
 ): Promise<{ puntuar: Puntuador | null; acumulado: UsoAcumulado }> {
   const texto = (prioridadTexto ?? "").trim();
   if (!texto) return { puntuar: null, acumulado };
-  const t = await consultaAlEspanol(client, texto, idiomaSalida, acumulado);
+  const t = await consultaAlEspanol(client, texto, idiomaSalida, acumulado, contexto);
   return { puntuar: await puntuadorContra(t.consulta, graph), acumulado: t.acumulado };
 }

@@ -38,7 +38,7 @@ import {
 } from "./graph";
 import { tokensCosecha } from "./tokens";
 import { LOCALE_BASE, type Locale } from "../i18n/config";
-import { textoFichaActual, type FichaContexto } from "./memoria";
+import { contextoDeSesion, type FichaContexto } from "./memoria";
 import { puntuadorDePrioridad, queAtienden, violaPrioridad } from "./prioridad";
 
 export interface PrioridadDeclarada {
@@ -408,6 +408,10 @@ export async function interpretarMultiSalto(
     return entradaNivel1;
   });
 
+  // Principio 1 (28 sep 2026): el contexto completo de la sesion (la foto estable y la ficha actual) para las
+  // llamadas sueltas del turno: la traduccion de la consulta y la de la prioridad.
+  const contextoSesion = contextoDeSesion({ contextoProyecto, ficha: fichaActual });
+
   // i18n F5, remedio de F1: el índice está en español; en una idea escrita en
   // otro idioma, la brújula busca con la respuesta traducida al español.
   const traducida = await consultaAlEspanol(
@@ -415,7 +419,7 @@ export async function interpretarMultiSalto(
     consultaParaBrujula(respuestaUsuario || textoOriginal, prioridadDeclaradaActual),
     idiomaSalida,
     acumulado,
-    [contextoProyecto, fichaActual ? textoFichaActual(fichaActual) : null].filter(Boolean).join("\n\n") || null
+    contextoSesion
   );
   acumulado = traducida.acumulado;
   if (traducida.fallo && registrarEvento) {
@@ -441,7 +445,7 @@ export async function interpretarMultiSalto(
   // CONSTRUCCION 4 (28 sep 2026): quien de los candidatos (siguientes de nivel 1 y 2, y saltos) atiende la prioridad.
   let atiendenPrioridad: string[] = [];
   if (prioridadDeclaradaActual?.texto?.trim()) {
-    const p = await puntuadorDePrioridad(client, prioridadDeclaradaActual.texto, idiomaSalida, acumulado, graph);
+    const p = await puntuadorDePrioridad(client, prioridadDeclaradaActual.texto, idiomaSalida, acumulado, graph, contextoSesion);
     acumulado = p.acumulado;
     if (!p.puntuar) {
       registrarEvento?.({ tipo: "prioridad_sin_medir", nodo_actual: actualId });

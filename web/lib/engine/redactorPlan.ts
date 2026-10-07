@@ -78,7 +78,7 @@ export async function generarTextoPlan(
       stream.on("text", filtro.onChunk);
       const mensajeFinal = await stream.finalMessage();
       filtro.finalizar();
-      acumuladoVivo = registrarUso(acumuladoVivo, MODEL, mensajeFinal.usage, "plan", mensajeFinal.stop_reason ?? null);
+      acumuladoVivo = registrarUso(acumuladoVivo, MODEL, mensajeFinal.usage, "plan", mensajeFinal.stop_reason ?? null, Boolean(opts.contexto));
       if (mensajeFinal.stop_reason === "max_tokens") {
         ultimoError = new RespuestaCortadaError("plan", maxTokens);
         console.error(`[plan] intento ${intento + 1}/${backoffs.length} salio cortado por tope de tokens (${maxTokens})`);

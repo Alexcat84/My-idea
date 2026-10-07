@@ -77,6 +77,9 @@ export interface RegistroLlamada {
   cache_write_1h: number;
   usd: number;
   stop_reason: string | null;
+  /** si la llamada llevo el contexto del proyecto (memoria y ficha); la prueba de coherencia lo exige salvo en su
+   * lista blanca (los organizadores). Ausente en registros anteriores, que cuentan como sin contexto. */
+  con_contexto?: boolean;
 }
 
 export interface UsoAcumulado {
@@ -142,7 +145,9 @@ export function registrarUso(
     cache_creation?: { ephemeral_5m_input_tokens?: number | null; ephemeral_1h_input_tokens?: number | null } | null;
   },
   componente?: string | null,
-  stopReason: string | null = null
+  stopReason: string | null = null,
+  /** si la llamada llevo el contexto del proyecto; sin decirlo, cuenta como sin contexto */
+  conContexto = false
 ): UsoAcumulado {
   const previo = acumulado.uso[model] ?? { in: 0, out: 0, llamadas: 0, cache_read: 0, cache_write: 0 };
   const cacheRead = usage.cache_read_input_tokens ?? 0;
@@ -175,6 +180,7 @@ export function registrarUso(
     cache_write_1h: cacheWrite1h,
     usd: costo,
     stop_reason: stopReason,
+    con_contexto: conContexto,
   };
   return {
     uso: { ...acumulado.uso, [model]: nuevoUso },
@@ -273,7 +279,7 @@ export async function llamarClaude(
       system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
       messages: [{ role: "user", content }] as Anthropic.MessageParam[],
     });
-    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null);
+    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null, Boolean(opts.contexto));
     // Una respuesta cortada por tope de tokens no se guarda nunca: un
     // reintento con el doble de tope, y si sigue cortada, error con aviso.
     if (msg.stop_reason === "max_tokens") {
@@ -363,6 +369,12 @@ export async function llamarClaudeConversacion(
         : [bloqueTurno],
   };
 
+  // La llamada lleva el contexto si su bloque de 1 hora viaja en lo que se envia: en este turno (el primero) o al
+  // principio del historial (los siguientes). Se registra por llamada para la prueba de coherencia.
+  const conContexto = [...historialSinMarca, nuevoTurno].some(
+    (m) => m.role === "user" && Array.isArray(m.content) && m.content.some((b) => b.cache_control?.ttl === "1h")
+  );
+
   let maxTokens = opts.maxTokens ?? 600;
   let nuevoAcumulado = acumulado;
   let msg: Anthropic.Message;
@@ -373,7 +385,7 @@ export async function llamarClaudeConversacion(
       system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
       messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],
     });
-    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null);
+    nuevoAcumulado = registrarUso(nuevoAcumulado, model, msg.usage, opts.componente, msg.stop_reason ?? null, conContexto);
     // Misma regla que llamarClaude: nunca se guarda una respuesta cortada.
     if (msg.stop_reason === "max_tokens") {
       if (intento === 0) {

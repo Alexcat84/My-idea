@@ -24,6 +24,7 @@ import {
   costoAcumuladoUsd,
   costoLlamadaUsd,
   llamarClaude,
+  llamarClaudeConversacion,
   registrarUso,
   usoVacio,
 } from "./costmeter";
@@ -116,5 +117,48 @@ describe("orden para el cache: fijo, contexto del proyecto, turno", () => {
     const { create, client } = clienteSecuencia([{ stop: "end_turn", texto: "ok" }]);
     await llamarClaude(client, "P", "TURNO", "claude-haiku-4-5", usoVacio());
     expect((create.mock.calls[0][0] as { messages: Array<{ content: unknown }> }).messages[0].content).toBe("TURNO");
+  });
+});
+
+// Prueba de coherencia, condicion de contexto (estado_memoria_contexto.md, encargo del fundador): cada llamada deja
+// dicho si llevo el contexto del proyecto, para exigirlo en la corrida con la lista blanca de los organizadores.
+describe("cada llamada registra si llevo el contexto del proyecto", () => {
+  it("registrarUso lo anota; sin decirlo, cuenta como sin contexto (falla ruidoso, no se da por bueno)", () => {
+    expect(registrarUso(usoVacio(), "claude-haiku-4-5", USAGE_A_MANO, "turnos", "end_turn", true).llamadas![0].con_contexto).toBe(true);
+    expect(registrarUso(usoVacio(), "claude-haiku-4-5", USAGE_A_MANO, "organizador", "end_turn").llamadas![0].con_contexto).toBe(false);
+  });
+
+  it("llamarClaude: con contexto si lo lleva, sin contexto si no", async () => {
+    const con = clienteSecuencia([{ stop: "end_turn", texto: "ok" }]);
+    const r1 = await llamarClaude(con.client, "P", "T", "claude-haiku-4-5", usoVacio(), { contexto: "CONTEXTO", componente: "x" });
+    expect(r1.acumulado.llamadas![0].con_contexto).toBe(true);
+    const sin = clienteSecuencia([{ stop: "end_turn", texto: "ok" }]);
+    const r2 = await llamarClaude(sin.client, "P", "T", "claude-haiku-4-5", usoVacio(), { componente: "x" });
+    expect(r2.acumulado.llamadas![0].con_contexto).toBe(false);
+  });
+
+  it("el reintento por tope de tokens tambien lo registra", async () => {
+    const { client } = clienteSecuencia([
+      { stop: "max_tokens", texto: "cort" },
+      { stop: "end_turn", texto: "ok" },
+    ]);
+    const r = await llamarClaude(client, "P", "T", "claude-haiku-4-5", usoVacio(), { contexto: "CONTEXTO", maxTokens: 100 });
+    expect(r.acumulado.llamadas!.map((l) => l.con_contexto)).toEqual([true, true]);
+  });
+
+  it("llamarClaudeConversacion: el contexto entra en el primer turno y sigue viajando en el historial", async () => {
+    const { client } = clienteSecuencia([
+      { stop: "end_turn", texto: "uno" },
+      { stop: "end_turn", texto: "dos" },
+      { stop: "end_turn", texto: "tres" },
+    ]);
+    const r1 = await llamarClaudeConversacion(client, "P", [], "T1", "claude-haiku-4-5", usoVacio(), { contexto: "CONTEXTO" });
+    expect(r1.acumulado.llamadas![0].con_contexto).toBe(true);
+    // segundo turno sin pasar el contexto otra vez: sigue en el historial, la llamada lo lleva
+    const r2 = await llamarClaudeConversacion(client, "P", r1.historialMensajes, "T2", "claude-haiku-4-5", r1.acumulado);
+    expect(r2.acumulado.llamadas![1].con_contexto).toBe(true);
+    // una conversacion que nunca lo tuvo no lo lleva
+    const r3 = await llamarClaudeConversacion(client, "P", [], "T", "claude-haiku-4-5", usoVacio());
+    expect(r3.acumulado.llamadas![0].con_contexto).toBe(false);
   });
 });

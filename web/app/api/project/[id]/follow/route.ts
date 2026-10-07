@@ -222,13 +222,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
 
   const client = createAnthropicClient();
   const memoria = aperturaDeSesion(proyecto);
+  // Principio 1 (28 sep 2026): la memoria del proyecto, en cada llamada a la IA de esta apertura.
+  const contexto = contextoDeSesion(memoria);
   // Construccion 4 (28 sep 2026): la prioridad que la persona ya declaro manda tambien en la puerta.
   const prioridad = await puntuadorDePrioridad(
     client,
     memoria.ficha.prioridad_declarada?.texto,
     idiomaDelProyecto(proyecto),
     usoVacio(),
-    graph
+    graph,
+    contexto
   );
   const acumulado = prioridad.acumulado;
 
@@ -244,7 +247,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     acumulado,
     dominiosPuerta,
     // Principio 1 (28 sep 2026): la memoria del proyecto.
-    contextoDeSesion(memoria),
+    contexto,
     prioridad.puntuar
   );
 

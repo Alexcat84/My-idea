@@ -57,4 +57,13 @@ describe("generarTextoPlan: nunca entrega un plan cortado", () => {
       { type: "text", text: JSON.stringify(PAYLOAD) },
     ]);
   });
+
+  it("cada intento registra si llevo el contexto (condicion de contexto de la prueba de coherencia)", async () => {
+    const stream = vi.fn(() => streamFalso("ok", "end_turn"));
+    const client = { messages: { stream } } as unknown as Anthropic;
+    const con = await generarTextoPlan(client, PREP, usoVacio(), () => undefined, () => undefined, null, { backoffsMs: [0], contexto: "MEMORIA" });
+    expect(con.acumulado.llamadas![0].con_contexto).toBe(true);
+    const sin = await generarTextoPlan(client, PREP, usoVacio(), () => undefined, () => undefined, null, { backoffsMs: [0] });
+    expect(sin.acumulado.llamadas![0].con_contexto).toBe(false);
+  });
 });

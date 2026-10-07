@@ -7,24 +7,43 @@
  * oferta del plan del mundo, sin comprarlo. Responde por ellas un actor (Haiku) fiel a su retrato. Al final:
  *  - un juez ciego (Sonnet) lee cada pregunta mostrada, con su base si salio del adaptador, mezclada con las trampas
  *    plantadas de antemano, y la cuenta va contra el umbral del fundador (dictaminar);
- *  - mundo tras mundo: el contexto con que abrio cada mundo trae lo que la persona conto en el anterior;
+ *  - mundo tras mundo, DESDE EL NUCLEO: el contexto con que abrio cada espacio trae TODAS las respuestas del anterior;
+ *    el primer mundo abre ademas con estado vivo y con la ficha con el papel; los de proteccion, con snapshotNucleo;
+ *  - la memoria (projects.memoria), tras el nucleo y tras cada mundo: la ficha tiene el papel y el jefe del retrato,
+ *    y el hilo son las respuestas dadas, en orden, creciendo solo al final;
+ *  - cada llamada de la app llevo el contexto del proyecto, salvo la lista blanca explicita (los organizadores);
+ *  - el cache: ahorro mayor que 0, lecturas en las sesiones con 2 o mas turnos del interprete, al menos una escritura
+ *    de 1 hora por persona y el turno del interprete mas barato que antes;
  *  - el coste de cada sesion (sessions.costo_usd), el ahorro del cache por llamada y lo que gasto el propio arnes.
+ * Condicion de salida: dictamen && continuidad && ficha && hilo && contexto && cache (lib/coherencia/condiciones.ts;
+ * las condiciones nuevas, propuestas en docs/auditoria_final/informes/estado_memoria_contexto.md).
  *
  * Uso (desde web/, con el .env raiz y VUELO_BASE_URL en el entorno del shell):
  *   npx tsx scripts/coherencia.ts                  # dice lo que haria y cuanto costaria; no gasta nada
  *   npx tsx scripts/coherencia.ts --confirmo-gasto # corre
- * Sale con codigo 1 si no cumple el umbral o si algo falla.
+ * Sale con codigo 1 si no cumple alguna condicion o si algo falla.
  */
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import Anthropic from "@anthropic-ai/sdk";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
 import { costoAcumuladoUsd, llamarClaude, MODEL, MODEL_HAIKU, usoVacio, type RegistroLlamada, type UsoAcumulado } from "../lib/costmeter";
+import { memoriaDe, type EntradaHilo, type MemoriaProyecto } from "../lib/engine/memoria";
+import {
+  condicionDeSalida,
+  juntar,
+  verificarCache,
+  verificarContextoPorLlamada,
+  verificarContinuidad,
+  verificarFicha,
+  verificarHilo,
+  type SesionMedida,
+  type Veredicto,
+} from "../lib/coherencia/condiciones";
 import {
   PERSONAS,
   ahorroCache,
-  arrastraLoAnterior,
   construirLote,
   contar,
   dictaminar,
@@ -132,9 +151,21 @@ interface FilaSesion {
   costo_usd: number | null;
   created_at: string;
   estado_recorrido: {
-    recorrido?: { contextoProyecto?: string | null; fallbackEvents?: Array<Record<string, unknown>>; dominioSesion?: string };
+    recorrido?: {
+      contextoProyecto?: string | null;
+      snapshotNucleo?: string | null;
+      fallbackEvents?: Array<Record<string, unknown>>;
+      dominioSesion?: string;
+    };
     acumulado?: { llamadas?: RegistroLlamada[] };
   } | null;
+}
+
+/** La memoria del proyecto tal como esta en la base (projects.memoria). Falla ruidoso si no se puede leer. */
+async function leerMemoria(admin: SupabaseClient, projectId: string): Promise<MemoriaProyecto> {
+  const { data, error } = await admin.from("projects").select("memoria").eq("id", projectId).limit(1);
+  if (error || !data?.length) throw new Error(`no se pudo leer projects.memoria de ${projectId}: ${error?.message ?? "sin fila"}`);
+  return memoriaDe((data as Array<{ memoria: unknown }>)[0].memoria);
 }
 
 async function main() {
@@ -167,18 +198,34 @@ async function main() {
   const informe: Record<string, unknown>[] = [];
   const todasMetricas: Metricas[] = [];
   const llamadasApp: RegistroLlamada[] = [];
-  const continuidad: Array<{ persona: string; de: string; a: string; arrastra: boolean }> = [];
+  const continuidad: Veredicto[] = [];
+  const fichas: Veredicto[] = [];
+  const hilos: Veredicto[] = [];
+  const sesionesMedidas: SesionMedida[] = [];
 
   for (const p of PERSONAS) {
     console.log(`\n== ${p.id} ==`);
     const historial: Turno[] = [];
     const inicioNucleo = await postJson(cookie, "/api/session/start", { texto: p.idea });
     const projectId = String(inicioNucleo.project_id);
+    // la memoria tras el nucleo y tras cada mundo: la ficha con el papel y el jefe, el hilo con las respuestas dadas
+    let hiloAntes: EntradaHilo[] | null = null;
+    const comprobarMemoria = async (momento: string) => {
+      const m = await leerMemoria(admin, projectId);
+      const dadas = historial.filter((t) => t.respuesta !== null).map((t) => ({ sesion: t.sesion, respuesta: t.respuesta! }));
+      const vf = verificarFicha(m.ficha, p, momento);
+      const vh = verificarHilo(hiloAntes, m.hilo, dadas, `${p.id}, ${momento}`);
+      fichas.push(vf);
+      hilos.push(vh);
+      hiloAntes = m.hilo;
+      if (!vf.ok || !vh.ok) console.warn(`  memoria ${momento}: ${[...vf.motivos, ...vh.motivos].join(" | ")}`);
+    };
     const nucleo = await conducir(cookie, client, p, "core", inicioNucleo, historial, arnes, MAX_TURNOS_NUCLEO);
     historial.push(...nucleo.turnos);
     if (nucleo.fin !== "listo_para_plan") throw new Error(`${p.id}: el nucleo termino en '${nucleo.fin}', sin plan no hay mundos`);
     await plan(cookie, nucleo.sesion);
     console.log(`  nucleo: ${nucleo.turnos.length} turnos y su plan`);
+    await comprobarMemoria("tras core");
 
     const sesionesMundo: Array<{ mundo: string; sesion: string; turnos: Turno[] }> = [];
     for (const mundo of mundos) {
@@ -187,6 +234,7 @@ async function main() {
       historial.push(...m.turnos);
       sesionesMundo.push({ mundo, sesion: m.sesion, turnos: m.turnos });
       console.log(`  ${mundo}: ${m.turnos.length} turnos, fin ${m.fin}`);
+      await comprobarMemoria(`tras ${mundo}`);
     }
 
     // lo guardado: eventos del adaptador, contexto de apertura, costes y llamadas
@@ -201,17 +249,28 @@ async function main() {
       for (const e of f.estado_recorrido?.recorrido?.fallbackEvents ?? []) {
         if (e.tipo === "adaptacion_pregunta" && typeof e.a === "string" && typeof e.de === "string") baseDe.set(e.a, e.de);
       }
-      llamadasApp.push(...(f.estado_recorrido?.acumulado?.llamadas ?? []));
+      const llamadas = f.estado_recorrido?.acumulado?.llamadas ?? [];
+      llamadasApp.push(...llamadas);
+      sesionesMedidas.push({ persona: p.id, sesion: f.id, llamadas });
     }
 
-    let anterior: { mundo: string; turnos: Turno[] } | null = null;
-    for (const s of sesionesMundo) {
-      if (anterior) {
-        const ctx = porId.get(s.sesion)?.estado_recorrido?.recorrido?.contextoProyecto ?? null;
-        const respuestas = anterior.turnos.map((t) => t.respuesta ?? "").filter(Boolean);
-        continuidad.push({ persona: p.id, de: anterior.mundo, a: s.mundo, arrastra: arrastraLoAnterior(ctx, respuestas) });
-      }
-      anterior = s;
+    // continuidad DESDE EL NUCLEO: cada espacio abre con todas las respuestas del anterior
+    const espacios = [{ mundo: "core", sesion: nucleo.sesion, turnos: nucleo.turnos }, ...sesionesMundo];
+    for (let i = 1; i < espacios.length; i++) {
+      const anterior = espacios[i - 1];
+      const s = espacios[i];
+      const recorrido = porId.get(s.sesion)?.estado_recorrido?.recorrido;
+      continuidad.push(
+        verificarContinuidad({
+          persona: p,
+          de: anterior.mundo,
+          a: s.mundo,
+          contexto: recorrido?.contextoProyecto ?? null,
+          respuestasAnterior: anterior.turnos.map((t) => t.respuesta ?? "").filter(Boolean),
+          primerMundo: i === 1,
+          snapshotNucleo: recorrido?.snapshotNucleo ?? null,
+        })
+      );
     }
 
     const reales: PreguntaReal[] = historial.map((t) => ({ sesion: t.sesion, espacio: t.espacio, pregunta: t.pregunta, base: baseDe.get(t.pregunta) ?? null }));
@@ -236,21 +295,28 @@ async function main() {
 
   const total = sumarMetricas(todasMetricas);
   const dictamen = dictaminar(total);
-  const continuidadOk = continuidad.every((c) => c.arrastra);
   const cache = ahorroCache(llamadasApp);
-  const turnosLlamadas = llamadasApp.filter((l) => l.componente === "turnos");
+  const condiciones = {
+    dictamen,
+    continuidad: juntar(continuidad),
+    ficha: juntar(fichas),
+    hilo: juntar(hilos),
+    contexto: verificarContextoPorLlamada(llamadasApp),
+    cache: verificarCache(sesionesMedidas, PERSONAS.map((p) => p.id), ANTES.turno_interprete_usd),
+  };
+  const salida = condicionDeSalida(condiciones);
   const fin = new Date().toISOString();
   const resumen = {
     ventana: { inicio, fin },
-    dictamen,
-    continuidad_mundo_tras_mundo: { ok: continuidadOk, fallos: continuidad.filter((c) => !c.arrastra) },
+    salida,
+    condiciones,
     metricas: total,
     coste: {
       app_usd: informe.flatMap((i) => i.sesiones as Array<{ costo_usd: number }>).reduce((a, s) => a + s.costo_usd, 0),
       arnes_usd: costoAcumuladoUsd(arnes.uso),
       cache: cache,
       turno_interprete_antes_usd: ANTES.turno_interprete_usd,
-      turno_interprete_ahora_usd: turnosLlamadas.length ? turnosLlamadas.reduce((a, l) => a + l.usd, 0) / turnosLlamadas.length : null,
+      turno_interprete_ahora_usd: condiciones.cache.turnoAhoraUsd,
     },
   };
 
@@ -260,9 +326,17 @@ async function main() {
   const lineas = [
     `# Prueba de coherencia, ${inicio}`,
     "",
-    `**Dictamen:** ${dictamen.cumple && continuidadOk ? "CUMPLE" : "NO CUMPLE"}`,
-    ...dictamen.motivos.map((m) => `- ${m}`),
-    ...(continuidadOk ? [] : [`- mundo tras mundo: ${continuidad.filter((c) => !c.arrastra).length} apertura(s) sin lo del espacio anterior`]),
+    `**Dictamen:** ${salida.cumple ? "CUMPLE" : "NO CUMPLE"}`,
+    ...salida.motivos.map((m) => `- ${m}`),
+    "",
+    "| Condicion | Cumple |",
+    "|---|---|",
+    `| Juez ciego (umbral del fundador) | ${dictamen.cumple ? "si" : "no"} |`,
+    `| Continuidad desde el nucleo, con todas las respuestas | ${condiciones.continuidad.ok ? "si" : "no"} |`,
+    `| Ficha con el papel y el jefe del retrato | ${condiciones.ficha.ok ? "si" : "no"} |`,
+    `| Hilo: las respuestas dadas, en orden, creciendo al final | ${condiciones.hilo.ok ? "si" : "no"} |`,
+    `| Contexto en cada llamada (${condiciones.contexto.conContexto} de ${condiciones.contexto.total}; lista blanca: organizadores) | ${condiciones.contexto.ok ? "si" : "no"} |`,
+    `| Cache (ahorro, lecturas, escritura de 1 h por persona, turno mas barato) | ${condiciones.cache.ok ? "si" : "no"} |`,
     "",
     `Ventana: ${inicio} a ${fin}`,
     "",
@@ -286,7 +360,7 @@ async function main() {
   ];
   writeFileSync(path.join(dir, "informe.md"), lineas.join("\n") + "\n");
   console.log(`\n${lineas.slice(0, 4).join("\n")}\nInforme: ${dir}`);
-  process.exit(dictamen.cumple && continuidadOk ? 0 : 1);
+  process.exit(salida.cumple ? 0 : 1);
 }
 
 main().catch((e) => {
