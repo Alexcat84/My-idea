@@ -8,9 +8,9 @@
   "notas_extraccion": "Es el cuarto paso del recuadro How to Create a Scorecard y el que cierra el documento. El propio capitulo da la señal de que la parte de comunicar funciono: sabes que tienes una buena mision cuando los candidatos, los reclutadores e incluso otros miembros de tu equipo entienden que estas buscando sin tener que hacer preguntas aclaratorias. Este es el paso mas escueto de los cuatro en el libro, y lo que trae es exactamente su inventario: cuatro objetos nombrados, el plan de negocio, las tarjetas de puntuacion de los puestos que se relacionan con este, los pares y los reclutadores.",
   "pasos_accionables": [
     "Pon a prueba la tarjeta de puntuación comparándola con el plan de negocio.",
-    "Compárala también con las tarjetas de puntuación de las personas que van a relacionarse con el puesto.",
+    "Cruza también la tarjeta con las de quienes van a trabajar en contacto con ese puesto.",
     "Comprueba que hay coherencia y alineación.",
-    "Comparte después la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores."
+    "Después, haz llegar la tarjeta a quien deba conocerla, sin olvidar a los pares y a los reclutadores."
   ],
   "entregable_esperado": "La tarjeta de puntuación contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineación comprobadas, y ya compartida con las partes a las que corresponda.",
   "nodos_previos": [
@@ -249,6 +249,40 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "copia-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Compárala también con las tarjetas de puntuación de las personas que van a relacionarse con el puesto.",
+      "texto_nuevo": "Cruza también la tarjeta con las de quienes van a trabajar en contacto con ese puesto.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "277-277",
+        "frase": "Pressure-test your scorecard by comparing it with the business plan"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Comparte después la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Después, haz llegar la tarjeta a quien deba conocerla, sin olvidar a los pares y a los reclutadores.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "277-277",
+        "frase": "Then share the scorecard with relevant parties, including peers and recruiters"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Alinea y Comunica la Tarjeta",

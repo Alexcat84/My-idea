@@ -7,9 +7,9 @@
   "resumen_teorico": "Cuando alguien no dice la verdad, lo que más lo delata es la incoherencia entre lo que afirma y cómo lo afirma, que se ve o se oye; una ventaja de hacer la entrevista en persona es poder vigilar los cambios del cuerpo. Frenar en el momento en que la señal aparece, con curiosidad, te permite averiguar cuánto hubo de verdad en un logro que alguien presenta como muy bueno, porque probablemente hay más historia de la que te quiere contar. No se trata de buscar trapos sucios, sino de conocer a la persona con el detalle y el patrón general para decidir bien a quién contratar.",
   "notas_extraccion": "La quinta tactica maestra es la unica que depende de un canal que las demas no usan: el cuerpo del candidato mientras habla. Ha crecido una ciencia entera dedicada a detectar cuando la gente miente, y segun el libro su mayor indicador resulta ser la incoherencia, ver u oir que lo que se afirma no cuadra con como se esta afirmando. Lo que la vuelve procedimiento no es la teoria sino que el libro pone la señal concreta, la afirmacion positiva acompañada de removerse en la silla, mirar abajo y taparse la boca, y pone el acto, frenar y ponerse curioso alli mismo. Es la unica tactica que exige la entrevista presencial, y esa exigencia es su condicion de activacion. El parrafo cierra con una advertencia que enmarca la tactica entera y que no se convierte en paso porque no ejecuta nada: la idea no es reunir trapos sucios, eso nunca es el objetivo de la entrevista cronologica, y quien se comporte como un reportero de investigacion o, peor, como un columnista de cotilleos, tiene que replantearse seriamente su enfoque; hay que pensarse mas bien como un biografo entrevistando a su sujeto, buscando a la vez el detalle y el patron amplio, los hechos y la textura, porque asi es como se toma una decision informada sobre a quien.",
   "pasos_accionables": [
-    "Haz la entrevista en persona, que es lo que te permite vigilar los cambios de lenguaje corporal y las demás incoherencias.",
-    "Vigila las incoherencias entre lo que se dice y cómo se dice, porque son el mayor indicador de que alguien está mintiendo. Por ejemplo, alguien afirma que en aquel puesto lo hicieron muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca: eso es una señal de alto.",
-    "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Probablemente hay más historia de la que la persona quiere que sepas."
+    "Entrevista cara a cara: así puedes observar los cambios en el lenguaje corporal y cualquier otra incoherencia.",
+    "Atiende a los desajustes entre lo que alguien dice y la manera en que lo dice, que son la pista más fuerte de una mentira. Si un candidato asegura que en ese puesto les fue de maravilla mientras se revuelve en la silla, baja la vista y se lleva la mano a la boca, tienes delante una señal de alto.",
+    "Al detectarla, frena en seco, muestra curiosidad y comprueba qué tan bien le fue en realidad. Lo más probable es que detrás haya más de lo que te quiere contar."
   ],
   "entregable_esperado": "La historia que hay detrás de cada afirmación que no cuadraba, sacada en el momento en que la incoherencia apareció y no después.",
   "nodos_previos": [
@@ -220,6 +220,57 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c24): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-frenar_incoherencias_entrevista-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Haz la entrevista en persona, que es lo que te permite vigilar los cambios de lenguaje corporal y las demás incoherencias.",
+      "texto_nuevo": "Entrevista cara a cara: así puedes observar los cambios en el lenguaje corporal y cualquier otra incoherencia.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "89-89",
+        "frase": "One of the advantages of conducting the Who Interview in person"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-frenar_incoherencias_entrevista-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Vigila las incoherencias entre lo que se dice y cómo se dice, porque son el mayor indicador de que alguien está mintiendo. Por ejemplo, alguien afirma que en aquel puesto lo hicieron muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca: eso es una señal de alto.",
+      "texto_nuevo": "Atiende a los desajustes entre lo que alguien dice y la manera en que lo dice, que son la pista más fuerte de una mentira. Si un candidato asegura que en ese puesto les fue de maravilla mientras se revuelve en la silla, baja la vista y se lleva la mano a la boca, tienes delante una señal de alto.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "89-89",
+        "frase": "The biggest indicator, as it turns out, is when you see or hear inconsistencies"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-frenar_incoherencias_entrevista-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Probablemente hay más historia de la que la persona quiere que sepas.",
+      "texto_nuevo": "Al detectarla, frena en seco, muestra curiosidad y comprueba qué tan bien le fue en realidad. Lo más probable es que detrás haya más de lo que te quiere contar.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "89-89",
+        "frase": "When you see that, slam on the brakes, get curious"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Persigue las Incoherencias en la Entrevista",

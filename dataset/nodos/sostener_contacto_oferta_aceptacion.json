@@ -7,8 +7,8 @@
   "resumen_teorico": "Entre la oferta y el sí, el candidato sigue en juego: da por hecho que tiene una contraoferta de su empleador actual y otras opciones abiertas. Puede que necesite tiempo, pero lo probable es que el cortejo haya sido largo, y apartarte ahora puede sentirse como un desprecio; el silencio es tu peor enemigo. Mantén el contacto con regularidad para localizar sus preocupaciones con las cinco áreas de la venta y atenderlas: encaje, familia, libertad, fortuna y diversión. Alguna vez pasarte de ardiente enfriará a alguien, pero se vende de menos mucho más a menudo que de más.",
   "notas_extraccion": "Es la tercera de las cinco olas y la que el libro señala como el error mas comun: el jefe se aparta justo despues de hacer la oferta, sobre la idea equivocada de que el futuro contratado necesita tiempo para pensarlo. Los ocho actos de esta ola son los que el libro escribe seguidos en imperativo, y estan atados uno a uno a las cinco efes: encaje, familia, libertad, fortuna y diversion aparecen los cinco en la lista de lo que hay que atender mientras se espera la respuesta. El caso del libro, con su dueño delante y fuera de los pasos, es George Buckley: el consejo de administracion de 3M lo recluto para consejero delegado y el les habria puesto un noventa y cinco por ciento en su escrutinio de candidatos, pero no un cien, porque tenian el pez en el sedal y meterlo en la red fue uno de los problemas. Tras unas negociaciones improductivas estuvo inclinado a rechazar el puesto, por culpa de los abogados intermediarios que negociaban en nombre de 3M y a los que le importaba poco el como persona o 3M como empresa. Buckley le dijo al consejo que se sentia como un no-persona en esas conversaciones, como si estuvieran comprando un frigorifico en vez de a una persona, y que no habian hecho la conexion humana. El presidente del comite de busqueda intervino, saco la negociacion del fuego y Buckley se incorporo igualmente; otro candidato podria haberse ido y haberles obligado a repetir el proceso entero.",
   "pasos_accionables": [
-    "No te apartes ahora. Muchos jefes se retiran en este punto creyendo que el futuro contratado necesita tiempo para pensarlo. Puede que lo necesite, pero esto habrá sido probablemente un cortejo largo, y apartarse demasiado ahora puede parecerse mucho a un desprecio.",
-    "En vez de dejar a la persona sin noticias tuyas, da por supuesto que ha recibido una contraoferta atractiva de su empleador actual y que está considerando otras opciones al mismo tiempo. Son de los mejores, al fin y al cabo. El silencio es tu peor enemigo en esta fase.",
+    "Evita retirarte en esta fase. Hay muchos jefes que se apartan pensando que la persona a la que van a contratar necesita tiempo para decidir. Puede que sí, pero lo más probable es que hayas pasado por un cortejo largo, y alejarte demasiado justo ahora puede sentirse casi como un desplante.",
+    "No la dejes sin saber de ti: piensa que su empresa actual ya le ha hecho una contraoferta tentadora y que tiene otras puertas abiertas a la vez, porque es de las mejores. En esta etapa, callarte es lo peor que puedes hacer.",
     "Mantén el contacto con ella con regularidad.",
     "Localiza con precisión sus preocupaciones usando las cinco áreas de la venta como guía.",
     "Enséñale cuánto va a encajar en la empresa y cuánto va a aportar a la empresa.",
@@ -16,7 +16,7 @@
     "Comprométete a darle libertad y autonomía para hacer su trabajo.",
     "Atiende las preocupaciones económicas.",
     "Hazla partícipe de la diversión que ya disfrutan tus empleados.",
-    "No te frenes por miedo a pasarte. De vez en cuando enfriarás a un candidato por ser un pretendiente demasiado ardiente, pero los jefes venden de menos mucho más a menudo que de más."
+    "Sigue vendiendo sin miedo a pasarte. Alguna vez espantarás a un candidato por cortejarlo con demasiado ardor, pero es mucho más frecuente que los jefes vendan de menos que de más."
   ],
   "entregable_esperado": "La aceptación del candidato, conseguida sin haberlo dejado en silencio ni un tramo del camino.",
   "nodos_previos": [
@@ -474,6 +474,57 @@
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-sostener_contacto_oferta_aceptacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No te apartes ahora. Muchos jefes se retiran en este punto creyendo que el futuro contratado necesita tiempo para pensarlo. Puede que lo necesite, pero esto habrá sido probablemente un cortejo largo, y apartarse demasiado ahora puede parecerse mucho a un desprecio.",
+      "texto_nuevo": "Evita retirarte en esta fase. Hay muchos jefes que se apartan pensando que la persona a la que van a contratar necesita tiempo para decidir. Puede que sí, pero lo más probable es que hayas pasado por un cortejo largo, y alejarte demasiado justo ahora puede sentirse casi como un desplante.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_06.md",
+        "lineas": "171-171",
+        "frase": "Too often, managers back away at this point"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-sostener_contacto_oferta_aceptacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En vez de dejar a la persona sin noticias tuyas, da por supuesto que ha recibido una contraoferta atractiva de su empleador actual y que está considerando otras opciones al mismo tiempo. Son de los mejores, al fin y al cabo. El silencio es tu peor enemigo en esta fase.",
+      "texto_nuevo": "No la dejes sin saber de ti: piensa que su empresa actual ya le ha hecho una contraoferta tentadora y que tiene otras puertas abiertas a la vez, porque es de las mejores. En esta etapa, callarte es lo peor que puedes hacer.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_06.md",
+        "lineas": "177-177",
+        "frase": "Instead of putting people in the deep freeze, assume they have received"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-sostener_contacto_oferta_aceptacion-pasos_accionables-9",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No te frenes por miedo a pasarte. De vez en cuando enfriarás a un candidato por ser un pretendiente demasiado ardiente, pero los jefes venden de menos mucho más a menudo que de más.",
+      "texto_nuevo": "Sigue vendiendo sin miedo a pasarte. Alguna vez espantarás a un candidato por cortejarlo con demasiado ardor, pero es mucho más frecuente que los jefes vendan de menos que de más.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_06.md",
+        "lineas": "179-179",
+        "frase": "Occasionally you will turn a candidate off by being too ardent a suitor"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Mantén el Contacto tras la Oferta",

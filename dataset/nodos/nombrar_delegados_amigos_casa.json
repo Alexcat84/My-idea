@@ -8,11 +8,11 @@
   "notas_extraccion": "Es el punto 3 del recuadro How to Source. La metafora con la que el libro lo presenta viene del lejano Oeste: cuando el sheriff se preparaba para salir al monte a cazar a una banda de villanos, reunia a un puñado de ciudadanos principales del pueblo, los nombraba agentes temporales y la partida salia cabalgando hacia el atardecer. La aplicacion de los autores es que extender el alcance de tu busqueda nombrando delegados entre las personas mas influyentes de tu red sigue siendo una buena idea. El caso nombrado es BSMB, un fondo de compras apalancadas de varios miles de millones con sede en Nueva York, que ha construido a proposito una red extensa de delegados para abastecer a las empresas de su cartera: su consejero delegado John Howard la describe como un grupo de directivos senior con toda clase de pericia a los que pueden llamar en cualquier momento cuando necesitan jugadores A de un sector concreto, y el incentivo que usan es particular del negocio e ingenioso, porque los delegados pueden invertir en sus fondos sin comisiones. El otro caso es WHI Capital Partners, que ha construido a la vez red y varios consejos asesores y que, segun su socio director Eric Cohen, no ha usado ni un reclutador para contratar a los cinco consejeros delegados y los diez directivos de alto nivel de su cartera. Su comparacion: es como el cortejo, porque si te presentan a alguien al azar en un bar hay una posibilidad de que salga bien, pero la tasa de exito es mas alta si te presenta un amigo o un familiar. CORRECCION DECLARADA (26 sep 2026, politica marco contra pais, regla de la cifra): el campo pasos_accionables, paso 2 se sustituyo por decision del fundador; el texto anterior queda literal en bitacora/VEREDICTOS.jsonl.",
   "pasos_accionables": [
     "Elige a unos cuantos amigos de la casa entre las personas más influyentes de tu red y nómbralos delegados de tu búsqueda.",
-    "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del puesto si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
-    "Si tu empresa está empezando, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+    "Dales una recompensa, que puede ir desde algo barato como un vale regalo hasta algo caro como una prima en efectivo importante. Una empresa, por ejemplo, paga primas en efectivo cuando contrata a alguien que trajo el delegado, con un monto que depende del nivel del puesto (pregunta lo que se paga en tu mercado), y otras regalan vales, aparatos electrónicos y otros artículos de valor.",
+    "Si tu empresa apenas arranca, piensa en armar un consejo asesor que cumpla esa misma función: sus asesores no intervienen en el gobierno de la compañía ni cargan con responsabilidad fiduciaria, existen para darte consejo y abrirte puertas con presentaciones, y a cambio reciben una participación pequeña o un pago modesto en efectivo.",
     "Asegúrate de que los delegados informen con regularidad.",
-    "Comprueba y vuelve a comprobar que el incentivo que has elegido basta para que gente ocupada participe.",
-    "Recuerda que quieres que las recomendaciones vengan de jugadores A, porque solo un jugador A sabe reconocer a otro."
+    "Revisa una y otra vez si el incentivo que escogiste alcanza para que personas con poco tiempo se animen a participar.",
+    "Ten presente que buscas recomendaciones hechas por jugadores A, porque reconocer a uno exige serlo."
   ],
   "entregable_esperado": "Una red de delegados y, si procede, un consejo asesor, informando con regularidad y trayendo fuentes de talento nuevas y más rápidas.",
   "nodos_previos": [
@@ -344,6 +344,74 @@
       },
       "decision": "lectura total de procedencia (w30r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del puesto si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "texto_nuevo": "Dales una recompensa, que puede ir desde algo barato como un vale regalo hasta algo caro como una prima en efectivo importante. Una empresa, por ejemplo, paga primas en efectivo cuando contrata a alguien que trajo el delegado, con un monto que depende del nivel del puesto (pregunta lo que se paga en tu mercado), y otras regalan vales, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_04.md",
+        "lineas": "13",
+        "frase": "It could be as inexpensive as a gift certificate or as"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-nombrar_delegados_amigos_casa-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si tu empresa está empezando, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+      "texto_nuevo": "Si tu empresa apenas arranca, piensa en armar un consejo asesor que cumpla esa misma función: sus asesores no intervienen en el gobierno de la compañía ni cargan con responsabilidad fiduciaria, existen para darte consejo y abrirte puertas con presentaciones, y a cambio reciben una participación pequeña o un pago modesto en efectivo.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "363",
+        "frase": "Many early-stage companies set up an advisory board to serve the"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-nombrar_delegados_amigos_casa-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Comprueba y vuelve a comprobar que el incentivo que has elegido basta para que gente ocupada participe.",
+      "texto_nuevo": "Revisa una y otra vez si el incentivo que escogiste alcanza para que personas con poco tiempo se animen a participar.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "369",
+        "frase": "whatever incentive you choose, check and double-check that it’s sufficient so"
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-nombrar_delegados_amigos_casa-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Recuerda que quieres que las recomendaciones vengan de jugadores A, porque solo un jugador A sabe reconocer a otro.",
+      "texto_nuevo": "Ten presente que buscas recomendaciones hechas por jugadores A, porque reconocer a uno exige serlo.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_03.md",
+        "lineas": "371",
+        "frase": "Remember, you want your recommendations to come from A Players."
+      },
+      "decision": "copia fiel (regla D2, ola k14): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Nombra Delegados de Confianza",
