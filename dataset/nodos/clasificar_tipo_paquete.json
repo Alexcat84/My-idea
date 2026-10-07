@@ -9,7 +9,7 @@
     "Mide las tres dimensiones, calcula el volumen y pesa tu paquete ya armado.",
     "Compara esas medidas contra las categorías: es plano si su volumen es de 13.000 cm³ o más, su lado más corto mide 200 mm o menos y el siguiente es al menos cuatro veces mayor; es alargado si su lado más largo mide 900 mm o más y cada uno de los otros dos mide el 20 % o menos de ese lado; es pequeño si su lado más largo mide 350 mm o menos, su volumen es menor de 13.000 cm³ y pesa 4,5 kg o menos; si no es ninguno, es estándar. Si es plano y alargado a la vez, trátalo como alargado.",
     "Marca si el contenido es frágil o si puede derramarse.",
-    "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
+    "Anota la categoría en tu lista de verificación de empaque antes de elegir caja y relleno."
   ],
   "entregable_esperado": "Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.",
   "nodos_previos": [
@@ -131,6 +131,23 @@
       },
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (contrario; modo quitar; doble lectura ciega, arbitro): Las categorías se definen sobre el paquete ya armado (dimensiones exteriores), así que la clasificación no puede ir antes de empacar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-clasificar_tipo_paquete-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno.",
+      "texto_nuevo": "Anota la categoría en tu lista de verificación de empaque antes de elegir caja y relleno.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

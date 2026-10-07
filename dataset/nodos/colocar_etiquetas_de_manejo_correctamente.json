@@ -12,7 +12,7 @@
     "Agrega una etiqueta de 'frágil' o similar si tu contenido lo necesita, sabiendo que no garantiza el trato.",
     "Refuerza el acolchado interno en vez de confiar solo en la etiqueta de manejo."
   ],
-  "entregable_esperado": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan al courier.",
+  "entregable_esperado": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan a la empresa de mensajería.",
   "nodos_previos": [
     "elegir_caja_correcta",
     "empacar_flores_plantas_sin_agua"
@@ -180,6 +180,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-colocar_etiquetas_de_manejo_correctamente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan al courier.",
+      "texto_nuevo": "Una caja con la etiqueta correcta, visible y sin marcas viejas que confundan a la empresa de mensajería.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "al courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

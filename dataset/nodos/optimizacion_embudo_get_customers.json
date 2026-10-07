@@ -6,11 +6,11 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Proceso continuo de 'test, medir, ajustar' enfocado en mejorar volumen, costo y conversión en cada etapa del embudo (adquisición, activación, compra). Requiere pruebas controladas tipo A/B, foco en pocas variables a la vez, y mantener siempre en mente el valor de vida del cliente (LTV) comparado con el costo de adquisición (CAQ), asegurando que LTV > CAQ.",
   "pasos_accionables": [
-    "Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando",
-    "Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multilado, marketplace)",
+    "Asegurar que existan productos mínimos viables (MVP) de alta fidelidad, plan de adquisición/activación y tablero de indicadores funcionando",
+    "Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (comercio electrónico, mercado multilado, mercado en línea)",
     "Ejecutar pruebas A/B controladas cambiando no más de dos variables a la vez",
-    "Calcular LTV con un horizonte razonable, no demasiado largo, y compararlo con CAQ",
-    "Iterar continuamente: testear, medir, ajustar y volver a testear"
+    "Calcular el valor de vida del cliente (LTV) con un horizonte razonable, no demasiado largo, y compararlo con CAQ",
+    "Iterar continuamente: probar, medir, ajustar y volver a probar"
   ],
   "entregable_esperado": "Plan de optimización activo con métricas de volumen, costo y conversión mejorando iterativamente, y validación de que LTV supera al CAQ",
   "nodos_previos": [
@@ -77,6 +77,76 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pide tener siempre presente el valor de vida del cliente; el momento 'antes de escalar inversión en adquisición' no aparece en el libro y acota el consejo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-optimizacion_embudo_get_customers-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegurar que existan MVP de alta fidelidad, plan de adquisición/activación y dashboard funcionando",
+      "texto_nuevo": "Asegurar que existan productos mínimos viables (MVP) de alta fidelidad, plan de adquisición/activación y tablero de indicadores funcionando",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "existan MVP",
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_embudo_get_customers-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (e-commerce, mercado multilado, marketplace)",
+      "texto_nuevo": "Definir métricas específicas a optimizar (volumen, costo, conversión) según el tipo de negocio web (comercio electrónico, mercado multilado, mercado en línea)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "e-commerce",
+          "marketplace"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_embudo_get_customers-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular LTV con un horizonte razonable, no demasiado largo, y compararlo con CAQ",
+      "texto_nuevo": "Calcular el valor de vida del cliente (LTV) con un horizonte razonable, no demasiado largo, y compararlo con CAQ",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Calcular LTV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_embudo_get_customers-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Iterar continuamente: testear, medir, ajustar y volver a testear",
+      "texto_nuevo": "Iterar continuamente: probar, medir, ajustar y volver a probar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

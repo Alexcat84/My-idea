@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar si la empresa usa contabilidad de caja o de devengo",
     "Revisar que los costos estén correctamente asociados a las ventas del período",
-    "Distinguir entre utilidad reportada y flujo de caja real disponible",
+    "Distinguir entre utilidad contable y flujo de caja real disponible",
     "Consultar al contador sobre depreciaciones y gastos diferidos relevantes"
   ],
   "entregable_esperado": "Comprensión clara de por qué la utilidad del período no equivale al efectivo disponible",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Empareja Costos con tus Ventas",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-principio_correspondencia_contable-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Distinguir entre utilidad reportada y flujo de caja real disponible",
+      "texto_nuevo": "Distinguir entre utilidad contable y flujo de caja real disponible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "utilidad reportada"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

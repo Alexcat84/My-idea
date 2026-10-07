@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Mapea qué datos compartes actualmente con tus proveedores y clientes",
     "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
-    "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
+    "Implementa un sistema (EDI, ERP o tablero de control) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
     "Usa esos datos para ajustar tus programaciones semanales de producción, inventario y transporte",
     "Genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada"
   ],
@@ -116,6 +116,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-information_driver_supply_chain-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
+      "texto_nuevo": "Implementa un sistema (EDI, ERP o tablero de control) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

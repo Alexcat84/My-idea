@@ -7,13 +7,13 @@
   "resumen_teorico": "El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.",
   "pasos_accionables": [
     "Recolectar los datos crudos y ordenarlos de menor a mayor",
-    "Decidir qué tipo de boxplot vas a construir según tu objetivo",
+    "Decidir qué tipo de diagrama de caja vas a construir según tu objetivo",
     "Calcular la mediana, los cuartiles y los valores máximo y mínimo",
     "Dibujar la caja delimitada por los cuartiles con la mediana marcada dentro",
     "Extender los bigotes hacia los valores extremos y etiquetar los ejes",
-    "Comparar los boxplots de los distintos grupos para tomar tu decisión"
+    "Comparar los diagramas de caja de los distintos grupos para tomar tu decisión"
   ],
-  "entregable_esperado": "Boxplot construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores",
+  "entregable_esperado": "Diagrama de caja construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores",
   "nodos_previos": [
     "concepto_variacion_estadistica",
     "estadistica_basica_calidad"
@@ -55,6 +55,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no menciona el teléfono; solo describe el boxplot como una forma simple de resumir datos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-boxplot_resumen_datos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir qué tipo de boxplot vas a construir según tu objetivo",
+      "texto_nuevo": "Decidir qué tipo de diagrama de caja vas a construir según tu objetivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "boxplot"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-boxplot_resumen_datos-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comparar los boxplots de los distintos grupos para tomar tu decisión",
+      "texto_nuevo": "Comparar los diagramas de caja de los distintos grupos para tomar tu decisión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los boxplots"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-boxplot_resumen_datos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Boxplot construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores",
+      "texto_nuevo": "Diagrama de caja construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Boxplot construido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

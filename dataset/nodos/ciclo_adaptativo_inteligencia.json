@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking).",
   "pasos_accionables": [
-    "Recopilar datos internos: capacidad de procesos, COPQ, cultura organizacional, lealtad de empleados",
-    "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking competitivo",
+    "Recopilar datos internos: capacidad de procesos, costo de la mala calidad, cultura organizacional, lealtad de empleados",
+    "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, comparación con la competencia",
     "Interpretar y evaluar la información recolectada",
-    "Referir la información destilada a funciones empoderadas para tomar acción",
+    "Referir la información destilada a funciones empoderadas para actuar",
     "Repetir el ciclo de forma periódica y continua"
   ],
-  "entregable_esperado": "Reporte periódico de inteligencia organizacional (interno y externo) con hallazgos accionables",
+  "entregable_esperado": "Informe periódico de inteligencia organizacional (interno y externo) con hallazgos accionables",
   "nodos_previos": [
     "consejo_calidad_informacion"
   ],
@@ -24,7 +24,7 @@
     "Cuando se requiere monitoreo continuo del entorno para sostener ventaja competitiva",
     "Si la organización carece de un sistema estructurado de detección de amenazas y oportunidades"
   ],
-  "etiqueta_arbol": "Detecta y Adapta tu Entorno",
+  "etiqueta_arbol": "Detecta los Cambios de tu Entorno",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -75,6 +75,87 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El paso deja solo las tendencias tecnológicas de una lista de cuatro.; Mismo defecto: se caen las tendencias científicas, sociales y gubernamentales.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-ciclo_adaptativo_inteligencia-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Detecta y Adapta tu Entorno",
+      "texto_nuevo": "Detecta los Cambios de tu Entorno",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v02)",
+        "evidencia": "'Adapta tu Entorno' promete modificar el entorno, cuando el concepto trata de detectar sus cambios y pasarlos a quien actúa; la nueva etiqueta dice solo eso."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_adaptativo_inteligencia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recopilar datos internos: capacidad de procesos, COPQ, cultura organizacional, lealtad de empleados",
+      "texto_nuevo": "Recopilar datos internos: capacidad de procesos, costo de la mala calidad, cultura organizacional, lealtad de empleados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COPQ"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_adaptativo_inteligencia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, benchmarking competitivo",
+      "texto_nuevo": "Recopilar datos externos: necesidades del cliente, tendencias científicas, tecnológicas, sociales y gubernamentales, comparación con la competencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking competitivo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_adaptativo_inteligencia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Referir la información destilada a funciones empoderadas para tomar acción",
+      "texto_nuevo": "Referir la información destilada a funciones empoderadas para actuar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tomar acción"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_adaptativo_inteligencia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte periódico de inteligencia organizacional (interno y externo) con hallazgos accionables",
+      "texto_nuevo": "Informe periódico de inteligencia organizacional (interno y externo) con hallazgos accionables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte periódico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

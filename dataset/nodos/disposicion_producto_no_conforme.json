@@ -6,11 +6,11 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Al detectar un lote no conforme sigues un proceso formal: lo reportas, lo pones en cuarentena, evalúas su aptitud para el uso y decides entre no enviarlo (seleccionar, reparar, reclasificar o desechar, según su economía) o enviarlo con un waiver (del diseñador, cliente, responsable de calidad, junta de revisión de material o, en casos críticos, quien dirige la empresa).",
   "pasos_accionables": [
-    "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
+    "Marcar el lote como 'retenido' y enviarlo a área de cuarentena.",
     "Asignar un investigador para recopilar información de aptitud para el uso.",
-    "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar bajo waiver.",
-    "Documentar la decisión mediante el sistema formal (p. ej. material review board).",
-    "Registrar y monitorear el porcentaje de lotes enviados bajo waiver."
+    "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar con una dispensa.",
+    "Documentar la decisión mediante el sistema formal (p. ej. junta de revisión de material).",
+    "Registrar y monitorear el porcentaje de lotes enviados con dispensa."
   ],
   "entregable_esperado": "Registro de disposición de lote no conforme con decisión final documentada y trazable.",
   "nodos_previos": [
@@ -60,6 +60,74 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): En el libro el investigador reúne información para la decisión de aptitud para el uso, no investiga la causa.; Falta el waiver de la alta dirección, reservado a casos críticos.; Falta la selección entre las opciones de no envío y que se elige estudiando la economía de cada una.; Misma investigación de causa que el libro no pone.; Mismo waiver de la alta dirección omitido. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-disposicion_producto_no_conforme-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Marcar el lote como 'hold' y enviarlo a área de cuarentena.",
+      "texto_nuevo": "Marcar el lote como 'retenido' y enviarlo a área de cuarentena.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'hold'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-disposicion_producto_no_conforme-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar bajo waiver.",
+      "texto_nuevo": "Decidir la disposición final: seleccionar, reparar, reclasificar o desechar (eligiendo según la economía de cada opción) o enviar con una dispensa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bajo waiver"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-disposicion_producto_no_conforme-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar la decisión mediante el sistema formal (p. ej. material review board).",
+      "texto_nuevo": "Documentar la decisión mediante el sistema formal (p. ej. junta de revisión de material).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "material review board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-disposicion_producto_no_conforme-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar y monitorear el porcentaje de lotes enviados bajo waiver.",
+      "texto_nuevo": "Registrar y monitorear el porcentaje de lotes enviados con dispensa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bajo waiver"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

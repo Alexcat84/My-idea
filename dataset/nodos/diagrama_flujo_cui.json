@@ -6,9 +6,9 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Crear un diagrama de flujo de datos que muestre cómo el CUI entra, se mueve dentro y sale del negocio, junto con el inventario de los sistemas y componentes que tiene el negocio, ayuda a los profesionales a entender el alcance de aplicabilidad de los requisitos de seguridad de SP 800-171 a los sistemas del negocio.",
   "pasos_accionables": [
-    "Identificar todos los puntos de entrada de CUI a la organización (correos, portales, contratos)",
+    "Identificar todos los puntos de entrada de información no clasificada controlada (CUI) a la organización (correos, portales, contratos)",
     "Mapear cómo el CUI se mueve entre sistemas internos (bases de datos, servidores, dispositivos)",
-    "Identificar los puntos de salida del CUI (entregables, reportes, backups externos)",
+    "Identificar los puntos de salida del CUI (entregables, reportes, copias de seguridad externas)",
     "Crear un diagrama visual del flujo completo de CUI"
   ],
   "entregable_esperado": "Diagrama visual completo del flujo de CUI dentro de la organización",
@@ -72,6 +72,40 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-diagrama_flujo_cui-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar todos los puntos de entrada de CUI a la organización (correos, portales, contratos)",
+      "texto_nuevo": "Identificar todos los puntos de entrada de información no clasificada controlada (CUI) a la organización (correos, portales, contratos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diagrama_flujo_cui-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar los puntos de salida del CUI (entregables, reportes, backups externos)",
+      "texto_nuevo": "Identificar los puntos de salida del CUI (entregables, reportes, copias de seguridad externas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "backups externos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se asigna una nueva tarea a un trabajador",
-    "Al introducir cambios en procesos, materiales o equipos"
+    "Al introducir cambios en instalaciones, equipos, procesos, materiales u organización del trabajo que puedan aumentar los peligros"
   ],
   "etiqueta_arbol": "Entrena para Identificar Peligros",
   "fuentes_internas": [
@@ -78,6 +78,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye también los peligros generales del trabajo, no solo los del propio puesto.; Misma omisión de los peligros generales del trabajo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-capacitacion_identificacion_peligros-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al introducir cambios en procesos, materiales o equipos",
+      "texto_nuevo": "Al introducir cambios en instalaciones, equipos, procesos, materiales u organización del trabajo que puedan aumentar los peligros",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "879",
+        "frase": "a change in facilities, equipment, processes, materials, or work organization could increase hazards"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

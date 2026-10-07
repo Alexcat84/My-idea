@@ -24,10 +24,29 @@
   ],
   "condiciones_activacion": [
     "Cuando se está en la fase de descubrimiento de necesidades con un cliente potencial.",
-    "Cuando el ciclo de venta es corto y de bajo valor, donde detectar problemas basta para cerrar."
+    "Cuando el ciclo de venta es corto y de bajo valor."
   ],
   "etiqueta_arbol": "Indaga los Problemas del Cliente",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-preguntas_problema_2-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el ciclo de venta es corto y de bajo valor, donde detectar problemas basta para cerrar.",
+      "texto_nuevo": "Cuando el ciclo de venta es corto y de bajo valor.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "1312",
+        "frase": "In small sales you can be very successful if you uncover problems"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c03): certeza_endurecida; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -7,8 +7,8 @@
   "resumen_teorico": "Hay cinco riesgos que aparecen una y otra vez en los proyectos, tan repetidos que puedes darlos por descontados, aunque no son tus únicos riesgos: calcular mal el plazo por subestimar el tamaño real del trabajo, el alcance que crece porque lo que el cliente quiere cambia mientras construyes, perder a alguien clave del que dependes, no cerrar nunca el acuerdo de qué se va a construir (una ambigüedad que esconde un desacuerdo y, cuando estalla, casi siempre mata el proyecto entero), y rendir menos de lo esperado. Lo revelador es que cuatro de estos cinco casi no dependen de cuánto te esfuerces ni de qué tan listo seas: escapan casi por completo a tu control. Por eso no se combaten trabajando más, sino apartando una reserva para cuando aparezcan.",
   "pasos_accionables": [
     "Revisa tu plan contra las cinco formas típicas de morir y anota cuál te amenaza más.",
-    "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
-    "Anticipa que el alcance crecerá: reserva margen en vez de asumir cero cambios.",
+    "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (para cuándo lo quieren).",
+    "Anticipa que el alcance crecerá: reserva margen en vez de suponer cero cambios.",
     "Identifica de quién dependes tanto que perderlo te frenaría, y de qué acuerdo sin cerrar dependes."
   ],
   "entregable_esperado": "Tu plan revisado contra las cinco formas típicas de fracaso, con la que más te amenaza marcada y con margen reservado.",
@@ -24,7 +24,7 @@
     "cuando tu plazo salió de cuándo lo quieren, no de cuánto trabajo es",
     "cuando das por hecho que lo que el cliente pide hoy será lo mismo al final"
   ],
-  "etiqueta_arbol": "Cómo Mueren los Proyectos",
+  "etiqueta_arbol": "Anticipa Cómo Mueren tus Proyectos",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
   ],
@@ -73,6 +73,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta los cinco como riesgos comunes que explican casi toda la desviación del plan; solo la ruptura de la especificación hunde el proyecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-las_formas_en_que_los_proyectos_mueren-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cómo Mueren los Proyectos",
+      "texto_nuevo": "Anticipa Cómo Mueren tus Proyectos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cómo Mueren los Proyectos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-las_formas_en_que_los_proyectos_mueren-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (cuándo lo quieren para).",
+      "texto_nuevo": "Pregúntate si tu plazo salió de medir el trabajo o de un deseo (para cuándo lo quieren).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cuándo lo quieren para"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-las_formas_en_que_los_proyectos_mueren-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anticipa que el alcance crecerá: reserva margen en vez de asumir cero cambios.",
+      "texto_nuevo": "Anticipa que el alcance crecerá: reserva margen en vez de suponer cero cambios.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "asumir"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

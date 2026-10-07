@@ -26,7 +26,7 @@
     "entrenamiento_supervisores_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando la organización ha completado las etapas de medición y acción correctiva y está lista para instalar un estándar de trabajo permanente",
+    "Cuando la organización ya tiene en marcha la medición y la acción correctiva y está lista para instalar un estándar de trabajo permanente",
     "Si se busca lanzar un programa de calidad con compromiso visible de toda la fuerza laboral"
   ],
   "etiqueta_arbol": "Prepara el Cero Defectos",
@@ -50,6 +50,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro admite nombrar un representante o solo mantener informado al sindicato; 'desde el inicio' no está.; Mismo endurecimiento.",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-planificacion_cero_defectos-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la organización ha completado las etapas de medición y acción correctiva y está lista para instalar un estándar de trabajo permanente",
+      "texto_nuevo": "Cuando la organización ya tiene en marcha la medición y la acción correctiva y está lista para instalar un estándar de trabajo permanente",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2867",
+        "frase": "establish four levels of constant activity"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -28,7 +28,7 @@
     "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
     "Si existe riesgo de haber creado inadvertidamente una franquicia no declarada"
   ],
-  "etiqueta_arbol": "Evita Franquicias sin Saberlo",
+  "etiqueta_arbol": "Evita Crear Franquicias sin Saberlo",
   "ids_alias": [
     "estructuras_combinadas_franquicia"
   ],
@@ -106,6 +106,20 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-prevenir_franquicias_inadvertidas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Evita Franquicias sin Saberlo",
+      "texto_nuevo": "Evita Crear Franquicias sin Saberlo",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v02)",
+        "evidencia": "El concepto es el riesgo de crear una franquicia sin darte cuenta; la etiqueta decía evitar franquicias, y añadir el verbo crear la vuelve fiel sin cambiar nada más."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

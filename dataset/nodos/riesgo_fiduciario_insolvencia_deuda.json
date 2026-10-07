@@ -7,11 +7,11 @@
   "resumen_teorico": "Levantar una ronda de deuda convertible hace que la empresa sea técnicamente insolvente (los pasivos de deuda superan los activos), lo que puede activar deberes fiduciarios de la junta directiva hacia los acreedores (no solo accionistas) según la ley estatal. Este período de insolvencia dura hasta que la deuda se convierte en equity, ampliando la ventana de exposición legal para directores en caso de fracaso; en muchos estados, los acreedores pueden demandarlos personalmente.",
   "pasos_accionables": [
     "Consultar con un abogado corporativo sobre las leyes estatales de responsabilidad fiduciaria hacia acreedores",
-    "Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity",
+    "Minimizar el tiempo entre la emisión de deuda convertible y su conversión en acciones",
     "Mantener registros claros de decisiones de la junta durante el período de insolvencia técnica",
-    "Pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo"
+    "Pregunta a tu abogado si un seguro D&O (de responsabilidad civil para consejeros y directivos) podría cubrir este período de riesgo"
   ],
-  "entregable_esperado": "Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada",
+  "entregable_esperado": "Evaluación legal documentada del riesgo fiduciario y, si corresponde, póliza de responsabilidad civil para consejeros y directivos (D&O) actualizada",
   "nodos_previos": [
     "original_issue_discount_oid"
   ],
@@ -110,6 +110,57 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-riesgo_fiduciario_insolvencia_deuda-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Minimizar el tiempo entre la emisión de deuda convertible y su conversión a equity",
+      "texto_nuevo": "Minimizar el tiempo entre la emisión de deuda convertible y su conversión en acciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-riesgo_fiduciario_insolvencia_deuda-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a tu abogado si un seguro D&O (directors and officers) podría cubrir este período de riesgo",
+      "texto_nuevo": "Pregunta a tu abogado si un seguro D&O (de responsabilidad civil para consejeros y directivos) podría cubrir este período de riesgo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(directors and officers)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-riesgo_fiduciario_insolvencia_deuda-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluación legal documentada del riesgo fiduciario y, si aplica, póliza D&O actualizada",
+      "texto_nuevo": "Evaluación legal documentada del riesgo fiduciario y, si corresponde, póliza de responsabilidad civil para consejeros y directivos (D&O) actualizada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica",
+          "póliza D&O"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

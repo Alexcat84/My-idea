@@ -6,7 +6,7 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "El franquiciador debe verificar el cumplimiento de estándares de marca y el reporte correcto de ingresos (vía mystery shopping, reportes en tiempo real, etc.), pero haciéndolo con total transparencia hacia los franquiciados para no generar un ambiente de 'Gran Hermano'. La verificación oculta destruye la confianza; la verificación transparente protege a todos los franquiciados del sistema, incluidos los honestos.",
   "pasos_accionables": [
-    "Definir mecanismos de verificación (mystery shopping, POS remoto, reportes)",
+    "Definir mecanismos de verificación (cliente misterioso, sistema de punto de venta remoto, reportes)",
     "Comunicar abiertamente a los franquiciados qué se verifica y por qué",
     "Evitar el uso de tecnología de monitoreo de forma intrusiva o unilateral",
     "Explicar cómo la verificación protege los fondos de publicidad y regalías compartidas"
@@ -20,8 +20,42 @@
     "Cuando se necesita monitorear cumplimiento de estándares o reporte de ingresos",
     "Si existe riesgo de sub-reporte de regalías por parte de franquiciados"
   ],
-  "etiqueta_arbol": "Confía pero Verifica Siempre",
+  "etiqueta_arbol": "Confía, pero Verifica Siempre",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-equilibrio_confianza_verificacion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Confía pero Verifica Siempre",
+      "texto_nuevo": "Confía, pero Verifica Siempre",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v02)",
+        "evidencia": "Falta la coma que precede a 'pero' adversativo entre dos oraciones; añadirla no toca ninguna palabra ni el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-equilibrio_confianza_verificacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir mecanismos de verificación (mystery shopping, POS remoto, reportes)",
+      "texto_nuevo": "Definir mecanismos de verificación (cliente misterioso, sistema de punto de venta remoto, reportes)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mystery shopping",
+          "POS remoto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

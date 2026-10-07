@@ -9,7 +9,7 @@
     "Documentar supuestos, restricciones, prioridades y compensaciones de riesgo.",
     "Definir explícitamente el nivel de tolerancia al riesgo de la organización.",
     "Tomar decisiones estratégicas sobre cómo gestionar el riesgo de ciberseguridad y privacidad.",
-    "Comunicar la estrategia a liderazgo y responsables de sistemas."
+    "Comunicar la estrategia a quienes dirigen y a los responsables de sistemas."
   ],
   "entregable_esperado": "Un documento de estrategia de riesgo que incluya nivel de tolerancia definido y criterios de decisión para inversión en controles.",
   "nodos_previos": [
@@ -111,6 +111,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro añade que la tolerancia puede estar influida por la de los directivos; el resumen lo omite.; El libro dice que la tolerancia se basa generalmente en la cultura; 'depende' lo vuelve tajante.; Mismo defecto que la marca 0: falta la influencia de quienes dirigen.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-estrategia_gestion_riesgo_tolerancia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunicar la estrategia a liderazgo y responsables de sistemas.",
+      "texto_nuevo": "Comunicar la estrategia a quienes dirigen y a los responsables de sistemas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a liderazgo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

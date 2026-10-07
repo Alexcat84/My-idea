@@ -7,10 +7,10 @@
   "resumen_teorico": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar o los paquetes de equity menores que hacen falta para atraerlas.",
   "pasos_accionables": [
     "Estimar el número de contrataciones clave necesarias antes de la siguiente ronda de financiamiento.",
-    "Definir el tamaño del option pool al crearlo o refrescarlo en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
-    "Revisar y refrescar el pool en cada ronda subsecuente según necesidades de contratación."
+    "Definir el tamaño de la reserva de opciones al crearla o refrescarla en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
+    "Revisar y refrescar la reserva de opciones en cada ronda subsecuente según necesidades de contratación."
   ],
-  "entregable_esperado": "Cap table actualizado con el porcentaje de option pool reservado y su cronograma de asignación.",
+  "entregable_esperado": "Tabla de capitalización actualizada con el porcentaje de la reserva de opciones y su cronograma de asignación.",
   "nodos_previos": [
     "seesaw_salario_equity",
     "employee_pool_esop"
@@ -85,6 +85,58 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro atribuye la caída a que quedan menos contrataciones clave y/o a que hacen falta paquetes menores para atraerlas; se cae la segunda causa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-creacion_option_pool-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el tamaño del option pool al crearlo o refrescarlo en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
+      "texto_nuevo": "Definir el tamaño de la reserva de opciones al crearla o refrescarla en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "option pool",
+          "crearlo o refrescarlo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-creacion_option_pool-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar y refrescar el pool en cada ronda subsecuente según necesidades de contratación.",
+      "texto_nuevo": "Revisar y refrescar la reserva de opciones en cada ronda subsecuente según necesidades de contratación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el pool"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-creacion_option_pool-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cap table actualizado con el porcentaje de option pool reservado y su cronograma de asignación.",
+      "texto_nuevo": "Tabla de capitalización actualizada con el porcentaje de la reserva de opciones y su cronograma de asignación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cap table actualizado",
+          "option pool reservado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -8,9 +8,9 @@
     "Define con claridad qué monto de inversión hace que alguien cuente como inversionista principal, y limita este derecho solo a quienes califiquen",
     "Establece el múltiplo de pro rata que vas a permitir (por ejemplo, 1x su porcentaje actual) y verifica que no incluya un pro rata super excesivo",
     "Acuerda cómo vas a reasignar entre otros inversionistas elegibles las acciones que alguien no suscriba",
-    "Negocia que el derecho aplique solo a quienes participen en rondas siguientes, y que termine automáticamente si llegas a una oferta pública inicial calificada"
+    "Negocia que el derecho se aplique solo a quienes participen en rondas siguientes, y que termine automáticamente si llegas a una oferta pública inicial calificada"
   ],
-  "entregable_esperado": "Tener la cláusula de derecho de primera negativa y pro rata redactada en tu term sheet, con la definición clara de quién es inversionista principal y la confirmación de que no hay un múltiplo excesivo (pro rata super)",
+  "entregable_esperado": "Tener la cláusula de derecho de primera negativa y pro rata redactada en tu hoja de términos, con la definición clara de quién es inversionista principal y la confirmación de que no hay un múltiplo excesivo (pro rata super)",
   "condiciones_activacion": [
     "Cuando estás estructurando una ronda de financiamiento con varios inversionistas",
     "Cuando tienes inversionistas pequeños que no deberían tener este derecho",
@@ -43,6 +43,39 @@
         "evidencia": "Q072-014: Tiene razon el lector A: el nodo consiste en diseñar y redactar una clausula del term sheet (quien es inversionista principal, multiplo de pro rata, reasignacion, extincion en la OPI), es decir, diseñar la estructura de financiacion y conseguir recursos, que es planificacion; no es operar, implementar ni controlar un negocio en marcha, asi que ejecucion no se sostiene. Condiciones y dominio core estan bien, en eso coinciden ambos. (arbitro)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "voz-right_of_first_refusal_pro_rata-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negocia que el derecho aplique solo a quienes participen en rondas siguientes, y que termine automáticamente si llegas a una oferta pública inicial calificada",
+      "texto_nuevo": "Negocia que el derecho se aplique solo a quienes participen en rondas siguientes, y que termine automáticamente si llegas a una oferta pública inicial calificada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el derecho aplique solo a"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-right_of_first_refusal_pro_rata-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tener la cláusula de derecho de primera negativa y pro rata redactada en tu term sheet, con la definición clara de quién es inversionista principal y la confirmación de que no hay un múltiplo excesivo (pro rata super)",
+      "texto_nuevo": "Tener la cláusula de derecho de primera negativa y pro rata redactada en tu hoja de términos, con la definición clara de quién es inversionista principal y la confirmación de que no hay un múltiplo excesivo (pro rata super)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

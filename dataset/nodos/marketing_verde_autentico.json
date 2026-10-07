@@ -21,7 +21,7 @@
     "validacion_certificaciones_terceros"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa planea lanzar una campaña de marketing verde",
+    "Cuando la empresa planea lanzar una campaña de marketing verde con una marca que ya existe",
     "Si existe riesgo de ser percibido como greenwashing"
   ],
   "etiqueta_arbol": "Alinea tu Mensaje Verde",
@@ -44,6 +44,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que se arriesgan a ser percibidos como inauténticos, no que lo sean con seguridad.; El libro exceptúa el caso de lanzar una marca enteramente nueva.; Misma excepción perdida de la marca nueva.; Mismo endurecimiento del riesgo a certeza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-marketing_verde_autentico-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la empresa planea lanzar una campaña de marketing verde",
+      "texto_nuevo": "Cuando la empresa planea lanzar una campaña de marketing verde con una marca que ya existe",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "5346",
+        "frase": "Unless you're launching an entirely new brand"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

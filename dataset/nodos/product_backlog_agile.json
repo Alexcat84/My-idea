@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "El backlog de producto es el equivalente ágil de la especificación de requisitos tradicional, pero en lugar de detallar especificaciones técnicas fijas, contiene necesidades, deseos y preferencias del cliente priorizadas. Es un documento vivo que se actualiza y reprioriza continuamente con nuevo aprendizaje. Algunas empresas usan 'user stories' con 'story points' (ej. tallas de camiseta S/M/L/XL) para estimar el esfuerzo requerido.",
   "pasos_accionables": [
-    "Recopilar necesidades, deseos y preferencias del cliente (VoC) en lugar de especificaciones técnicas rígidas",
+    "Recopilar necesidades, deseos y preferencias del cliente en lugar de especificaciones técnicas rígidas",
     "Priorizar los ítems del backlog, definir su secuencia óptima y atacar primero los más importantes",
     "Traducir los ítems de mayor prioridad en un sprint backlog al inicio de cada sprint",
-    "Actualizar y reprioritizar el backlog constantemente conforme se obtiene nueva información",
-    "Opcional: usar user stories con story points para estimar esfuerzo"
+    "Actualizar y repriorizar el backlog constantemente conforme se obtiene nueva información",
+    "Opcional: usar historias de usuario con puntos de historia para estimar esfuerzo"
   ],
   "entregable_esperado": "Documento de backlog priorizado y vivo, con ítems traducibles a tareas concretas por sprint",
   "nodos_previos": [
@@ -25,7 +25,7 @@
     "Si los requisitos del cliente son ambiguos o cambiantes y no se pueden fijar de antemano",
     "Cuando se requiere flexibilidad en el diseño manteniendo alineación con necesidades reales del usuario"
   ],
-  "etiqueta_arbol": "Adapta Requisitos Continuamente",
+  "etiqueta_arbol": "Adapta tus Requisitos Continuamente",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
   ],
@@ -46,6 +46,73 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro prioriza, fija la secuencia óptima y ataca primero lo más importante, sin fijar criterios como la urgencia.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-product_backlog_agile-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adapta Requisitos Continuamente",
+      "texto_nuevo": "Adapta tus Requisitos Continuamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Adapta Requisitos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_backlog_agile-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recopilar necesidades, deseos y preferencias del cliente (VoC) en lugar de especificaciones técnicas rígidas",
+      "texto_nuevo": "Recopilar necesidades, deseos y preferencias del cliente en lugar de especificaciones técnicas rígidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(VoC)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_backlog_agile-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualizar y reprioritizar el backlog constantemente conforme se obtiene nueva información",
+      "texto_nuevo": "Actualizar y repriorizar el backlog constantemente conforme se obtiene nueva información",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reprioritizar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_backlog_agile-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Opcional: usar user stories con story points para estimar esfuerzo",
+      "texto_nuevo": "Opcional: usar historias de usuario con puntos de historia para estimar esfuerzo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "user stories con story points"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

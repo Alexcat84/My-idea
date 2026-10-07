@@ -6,7 +6,7 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "Como primera aproximación, el tamaño de tu envío y la distancia que debe recorrer indican qué modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre correo, tierra, ferrocarril, aire o mar. Esta relación es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar más por un modo más rápido o más puntual, incluso si el criterio de costo puro sugeriría otra cosa. Es una relación teórica, así que sirve como método de razonamiento, no como tabla fija.",
   "pasos_accionables": [
-    "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
+    "Ubica el tamaño típico de tus envíos (paquete individual, palé, carga grande) y la distancia que recorren.",
     "Pregunta a tus posibles transportistas qué modo usan normalmente para ese tamaño y esa distancia.",
     "Si el pedido es urgente, pregunta el costo de subir a un modo más rápido y compáralo con el costo de hacer esperar al cliente.",
     "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea más caro.",
@@ -172,6 +172,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro): La matriz del libro asigna también mar a casos intermedios (pallet o 20 toneladas a muy larga distancia).; Mismo defecto; además la matriz da correo para paquetes a media y larga distancia.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-elegir_modo_transporte_volumen_distancia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
+      "texto_nuevo": "Ubica el tamaño típico de tus envíos (paquete individual, palé, carga grande) y la distancia que recorren.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pallet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

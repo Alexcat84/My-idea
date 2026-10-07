@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Antes de invertir en pulir una característica, pregúntate si contribuye directamente al aprendizaje que buscas, y usa esa pregunta para resistir la presión del equipo de completar todas las funcionalidades 'ideales' antes de lanzar.",
     "No asumas que el estándar de calidad de la industria, ni los requerimientos heredados de un cliente anterior, son lo que el mercado amplio valora; pruébalo empíricamente contra las necesidades reales de tus clientes.",
-    "Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.",
+    "Lanza al mercado real, lo antes posible, versiones simplificadas o improvisadas de las funciones complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.",
     "Distingue entre defectos que dificultan el aprendizaje (inaceptables) y baja fidelidad estética (aceptable si permite aprender).",
     "Capturar y priorizar el aprendizaje obtenido de los primeros clientes reales",
-    "Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
-    "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas"
+    "Usa la retroalimentación del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
+    "Iterar rápidamente el producto con base en la retroalimentación de mercado, no en suposiciones internas"
   ],
   "entregable_esperado": "Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobreinversión prematura.",
   "nodos_previos": [
@@ -62,6 +62,58 @@
         "evidencia": "O078-016.entregable: sobreinversión (Según la norma ortográfica, el prefijo sobre- se escribe unido y sin guion.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "voz-principio_calidad_mvp-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lanza al mercado real, lo antes posible, versiones simplificadas o 'hacky' de las features complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.",
+      "texto_nuevo": "Lanza al mercado real, lo antes posible, versiones simplificadas o improvisadas de las funciones complejas, aceptando que fallarán en algunos aspectos, y mide la reacción real de los clientes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'hacky'",
+          "features complejas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-principio_calidad_mvp-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
+      "texto_nuevo": "Usa la retroalimentación del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback del cliente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-principio_calidad_mvp-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas",
+      "texto_nuevo": "Iterar rápidamente el producto con base en la retroalimentación de mercado, no en suposiciones internas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback de mercado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

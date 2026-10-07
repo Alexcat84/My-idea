@@ -10,7 +10,7 @@
     "Construir un gráfico de control para identificar si el proceso está en control estadístico.",
     "Separar las causas especiales (ej. averías) de la variación normal del sistema.",
     "Calcular el límite superior de tiempo esperado bajo control estadístico.",
-    "Ajustar los niveles de inventario o buffer con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes."
+    "Ajustar los niveles de inventario o reserva con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes."
   ],
   "entregable_esperado": "Un gráfico de control de tiempos de proceso con límites calculados estadísticamente y una política de inventario ajustada que documente el ahorro esperado.",
   "nodos_previos": [
@@ -61,6 +61,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El límite deja fuera las averías; el libro advierte que cubrirlas con inventario es costoso y propone reponer rápido.; Mismo defecto: se pierde la reposición rápida ante averías en lugar de inventario extra.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-control_estadistico_de_inventario_en_transito-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajustar los niveles de inventario o buffer con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes.",
+      "texto_nuevo": "Ajustar los niveles de inventario o reserva con base en ese límite, cubrir las averías con un envío rápido de reposición en lugar de inventario extra, y monitorear ahorros resultantes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "buffer"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "El tiempo es un principio organizador poderoso para entender la actividad humana en dominios guiados por eventos (donde el ritmo de trabajo no está bajo control total de los operadores). Una línea de tiempo de baja resolución o mal construida oculta los procesos subyacentes que pueden ser responsables de los 'errores'. Es necesario reconstruir con precisión qué sabían los operadores en cada momento (por ejemplo, las millas de recorrido que creían que les faltaban, no la distancia radial) para entender correctamente la carga de trabajo y las presiones de tiempo que enfrentaban, evitando conclusiones erróneas basadas en el conocimiento retrospectivo del investigador.",
   "pasos_accionables": [
-    "Reunir todos los datos temporales disponibles (grabaciones, registros, radar, logs)",
+    "Reunir todos los datos temporales disponibles (grabaciones, registros, radar, bitácoras)",
     "Verificar que los datos usados reflejen lo que el operador sabía en tiempo real, no una métrica retrospectiva engañosa",
     "Definir explícitamente y justificar el punto de inicio de la secuencia de eventos",
     "Cruzar comunicaciones (por ejemplo, instrucciones de control) con la evolución del proceso para inferir la carga de trabajo real"
@@ -59,6 +59,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro habla de procesos subyacentes que pueden ser responsables de los errores; el nodo los da por responsables.; Misma marca: el 'may be responsible' del libro pasa a certeza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-construccion_linea_tiempo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reunir todos los datos temporales disponibles (grabaciones, registros, radar, logs)",
+      "texto_nuevo": "Reunir todos los datos temporales disponibles (grabaciones, registros, radar, bitácoras)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "logs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

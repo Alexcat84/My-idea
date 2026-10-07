@@ -8,13 +8,13 @@
   "pasos_accionables": [
     "Mapear el proceso en detalle mediante diagramas de flujo",
     "Medir el desempeño base (Ys) usando análisis Pareto",
-    "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
+    "Realizar un análisis de modos y efectos de falla (FMEA) para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
     "Evaluar la capacidad del sistema de medición (Gage R&R) y, si no es capaz, corregirlo antes de seguir",
     "Determinar si el proceso está en control estadístico; si no lo está, eliminar las causas especiales de variación antes de medir su capacidad a corto plazo",
     "Confirmar o modificar el objetivo del proyecto según los datos obtenidos",
     "Generar una lista priorizada de teorías de causa raíz usando diagramas causa-efecto"
   ],
-  "entregable_esperado": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+  "entregable_esperado": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, análisis de modos y efectos de falla (FMEA) completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
   "nodos_previos": [
     "dmaic_fase_define"
   ],
@@ -129,6 +129,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista de entregables pierde el diagrama de flujo, las variables clave de entrada y salida y el diagrama causa-efecto que el libro incluye.; Mismo defecto: se caen tres entregables de la lista del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-dmaic_fase_measure-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar un FMEA para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
+      "texto_nuevo": "Realizar un análisis de modos y efectos de falla (FMEA) para listar los defectos potenciales del proceso (Ys), sus efectos y sus causas potenciales (Xs), y calificar la severidad de cada efecto, la probabilidad de que ocurra y la de detectarlo si ocurre",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmaic_fase_measure-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, FMEA completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+      "texto_nuevo": "Métricas de línea base, diagrama de flujo del proceso, variables clave de entrada y de salida del proceso, diagrama causa-efecto, plan de recolección de datos con su muestreo, análisis de modos y efectos de falla (FMEA) completado, capacidad del sistema de medición validada, capacidad del proceso medida, objetivo del proyecto confirmado o modificado y lista de teorías de causa priorizada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FMEA completado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

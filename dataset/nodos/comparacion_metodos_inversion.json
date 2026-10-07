@@ -6,12 +6,12 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Los tres métodos principales de evaluación de inversiones -payback, NPV e IRR- pueden llevar a decisiones distintas según cuál se use. El payback prioriza la rapidez de recuperación, IRR prioriza el porcentaje de retorno, y NPV prioriza el valor total generado considerando tiempo y escala. Cuando entran en conflicto, NPV debe prevalecer como criterio de decisión final.",
   "pasos_accionables": [
-    "Calcular payback, NPV e IRR para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
+    "Calcular el periodo de recuperación, el valor actual neto (VAN) y la tasa interna de retorno (TIR) para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
     "Identificar si los tres métodos coinciden en su recomendación",
-    "Si hay conflicto, dar prioridad a la decisión indicada por NPV",
+    "Si hay conflicto, dar prioridad a la decisión indicada por el valor actual neto (VAN)",
     "Documentar por qué se eligió un método sobre otro para efectos de comunicación"
   ],
-  "entregable_esperado": "Tabla comparativa de payback, NPV e IRR para cada alternativa de inversión con la decisión final justificada",
+  "entregable_esperado": "Tabla comparativa de periodo de recuperación, valor actual neto (VAN) y tasa interna de retorno (TIR) para cada alternativa de inversión con la decisión final justificada",
   "nodos_previos": [
     "metodo_valor_presente_neto",
     "tasa_interna_retorno_irr",
@@ -44,6 +44,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro llama paso más importante a revisar las estimaciones de flujo de caja y a menudo probarlas con flujos menores.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-comparacion_metodos_inversion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular payback, NPV e IRR para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
+      "texto_nuevo": "Calcular el periodo de recuperación, el valor actual neto (VAN) y la tasa interna de retorno (TIR) para cada proyecto alternativo, revisando antes las estimaciones de flujo de caja; a menudo conviene comprobar si la inversión sigue teniendo sentido con flujos del 80 % o 90 % de lo proyectado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "payback, NPV e IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-comparacion_metodos_inversion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si hay conflicto, dar prioridad a la decisión indicada por NPV",
+      "texto_nuevo": "Si hay conflicto, dar prioridad a la decisión indicada por el valor actual neto (VAN)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-comparacion_metodos_inversion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tabla comparativa de payback, NPV e IRR para cada alternativa de inversión con la decisión final justificada",
+      "texto_nuevo": "Tabla comparativa de periodo de recuperación, valor actual neto (VAN) y tasa interna de retorno (TIR) para cada alternativa de inversión con la decisión final justificada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "payback, NPV e IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

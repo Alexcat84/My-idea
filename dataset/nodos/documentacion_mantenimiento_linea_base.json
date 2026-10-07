@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Auditar si existen procedimientos formales de traspaso de trabajo entre turnos o áreas (línea/base).",
     "Cuando una tarea de línea pase a manos de personal de base, comprobar que el paquete de trabajo incluya las tarjetas de tarea paso a paso, el trabajo de restitución con su firma y las advertencias del manual de mantenimiento.",
-    "Crear hojas de traspaso (stage sheets) por escrito en lugar de brief verbales."
+    "Crear hojas de traspaso (stage sheets) por escrito en lugar de instrucciones verbales."
   ],
   "entregable_esperado": "Procedimiento formal de traspaso de trabajo con hojas de etapa documentadas.",
   "nodos_previos": [
@@ -89,6 +89,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 1,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-documentacion_mantenimiento_linea_base-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear hojas de traspaso (stage sheets) por escrito en lugar de brief verbales.",
+      "texto_nuevo": "Crear hojas de traspaso (stage sheets) por escrito en lugar de instrucciones verbales.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "brief verbales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

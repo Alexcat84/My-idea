@@ -7,10 +7,10 @@
   "resumen_teorico": "Conjunto de tácticas y herramientas web diseñadas para convertir visitantes en clientes activos, incluyendo demos interactivas, pruebas gratuitas, contacto directo, animaciones y páginas de aterrizaje personalizadas según la fuente de tráfico. El objetivo es guiar al usuario hacia una acción concreta (llamada a la acción) de forma medible y experimental.",
   "pasos_accionables": [
     "Diseña un demo funcional de menos de un minuto que termine en una llamada a la acción clara",
-    "Ofrece pruebas gratuitas limitadas en funcionalidad o duración, seguidas de emails de seguimiento",
-    "Implementa opciones de contacto directo (chat, formularios, click-to-call) para sitios de comercio o suscripción",
+    "Ofrece pruebas gratuitas limitadas en funcionalidad o duración, seguidas de correos de seguimiento",
+    "Implementa opciones de contacto directo (chat, formularios, botón de llamada) para sitios de comercio o suscripción",
     "Usa animaciones o videos de bienvenida de forma moderada para no saturar al usuario",
-    "Crea páginas de aterrizaje específicas según la fuente del tráfico (ej: 'Bienvenido, amigos de Yahoo')"
+    "Crea páginas de aterrizaje específicas según la fuente del tráfico (ej.: 'Bienvenidos, amigos de Yahoo')"
   ],
   "entregable_esperado": "Un conjunto de experimentos de activación implementados en el sitio web con métricas de conversión definidas",
   "nodos_previos": [
@@ -34,5 +34,56 @@
   "etiqueta_arbol": "Convierte Visitantes en Clientes",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-herramientas_de_activacion_web-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofrece pruebas gratuitas limitadas en funcionalidad o duración, seguidas de emails de seguimiento",
+      "texto_nuevo": "Ofrece pruebas gratuitas limitadas en funcionalidad o duración, seguidas de correos de seguimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-herramientas_de_activacion_web-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementa opciones de contacto directo (chat, formularios, click-to-call) para sitios de comercio o suscripción",
+      "texto_nuevo": "Implementa opciones de contacto directo (chat, formularios, botón de llamada) para sitios de comercio o suscripción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "click-to-call"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-herramientas_de_activacion_web-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea páginas de aterrizaje específicas según la fuente del tráfico (ej: 'Bienvenido, amigos de Yahoo')",
+      "texto_nuevo": "Crea páginas de aterrizaje específicas según la fuente del tráfico (ej.: 'Bienvenidos, amigos de Yahoo')",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v02)",
+        "evidencia": "Falta el punto de la abreviatura 'ej.' y hay una errata de concordancia ('Bienvenido' con 'amigos'); se corrigen ambas sin tocar el ejemplo."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Sustituir histogramas de desempeño diario por cartas de control apropiadas",
     "Asegurar que la herramienta usada distinga entre variación del sistema y variación atribuible al operador",
-    "Capacitar a los operadores para que no ajusten el proceso en base a cada punto individual sin evidencia de causa especial",
+    "Capacitar a los operadores para que no ajusten el proceso con base en cada punto individual sin evidencia de causa especial",
     "Evaluar si el ajuste manual del proceso está aumentando la variabilidad en lugar de reducirla"
   ],
   "entregable_esperado": "Reemplazo de herramientas de reporte (histogramas simples) por cartas de control con límites estadísticamente calculados",
@@ -42,6 +42,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el operador no ajustaba a partir del histograma, sino arriba o abajo después de cada lingote; el nodo atribuye el sobreajuste al histograma.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-mal_uso_histograma_vs_carta_control-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Capacitar a los operadores para que no ajusten el proceso en base a cada punto individual sin evidencia de causa especial",
+      "texto_nuevo": "Capacitar a los operadores para que no ajusten el proceso con base en cada punto individual sin evidencia de causa especial",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en base a"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

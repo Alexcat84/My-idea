@@ -10,7 +10,7 @@
     "Identificar un ángulo de diferenciación que el competidor líder no pueda replicar sin cambiar su modelo de negocio",
     "Redactar la propuesta única de venta (USP) basada en ese ángulo"
   ],
-  "entregable_esperado": "Declaración de USP y story de marca validada con la prueba de sustitución",
+  "entregable_esperado": "Declaración de USP e historia de marca validada con la prueba de sustitución",
   "nodos_previos": [
     "mensaje_marketing_franquicia",
     "analisis_competencia_franquicias",
@@ -28,5 +28,23 @@
   "etiqueta_arbol": "Cuenta tu Historia Única",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-historia_marca_diferenciacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Declaración de USP y story de marca validada con la prueba de sustitución",
+      "texto_nuevo": "Declaración de USP e historia de marca validada con la prueba de sustitución",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "y story de marca"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

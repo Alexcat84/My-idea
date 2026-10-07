@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar procesos que requieren permisos ambientales (pintura, acabado de metales, manejo de residuos peligrosos)",
     "Aplicar los 7 desperdicios del lean manufacturing con un lente ambiental adicional",
-    "Realizar auditorías de scrap para identificar materiales reciclables o reutilizables",
+    "Realizar auditorías de material desechado para identificar materiales reciclables o reutilizables",
     "Cuantificar costos de cumplimiento regulatorio asociados a descargas químicas"
   ],
   "entregable_esperado": "Un inventario de fuentes de desperdicio ambiental priorizadas por impacto económico y de cumplimiento",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Elimina Desperdicio, Piensa en Verde",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-eliminacion_desperdicio_lean_green-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar auditorías de scrap para identificar materiales reciclables o reutilizables",
+      "texto_nuevo": "Realizar auditorías de material desechado para identificar materiales reciclables o reutilizables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "scrap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Trabaja con cada franquiciado desde el primer día para planear el crecimiento de su negocio",
     "Ayúdalo a desarrollar un plan de negocio anual enfocado en gestión y balance financiero",
-    "Asesóralo en la transición de operador único a propietario multi-unidad",
+    "Asesóralo en la transición de operador único a propietario multiunidad",
     "Haz que quien te ayuda a dar seguimiento en el terreno actúe como facilitador de crecimiento, no solo como fiscalizador"
   ],
-  "entregable_esperado": "Un programa de desarrollo para franquiciados multi-unidad con planes de crecimiento anuales",
+  "entregable_esperado": "Un programa de desarrollo para franquiciados multiunidad con planes de crecimiento anuales",
   "nodos_previos": [
     "relacion_franquiciador_franquiciado"
   ],
@@ -42,6 +42,35 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro lo condiciona a hacer las cosas bien y dice que el crecimiento podría acelerarse; no habla de tendencia segura ni de crecimiento exponencial.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-efecto_palo_hockey-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asesóralo en la transición de operador único a propietario multi-unidad",
+      "texto_nuevo": "Asesóralo en la transición de operador único a propietario multiunidad",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v02)",
+        "evidencia": "El prefijo 'multi' se escribe unido a la palabra que modifica; quitar el guion no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-efecto_palo_hockey-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un programa de desarrollo para franquiciados multi-unidad con planes de crecimiento anuales",
+      "texto_nuevo": "Un programa de desarrollo para franquiciados multiunidad con planes de crecimiento anuales",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v02)",
+        "evidencia": "El prefijo 'multi' se escribe unido a la palabra que modifica; quitar el guion no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

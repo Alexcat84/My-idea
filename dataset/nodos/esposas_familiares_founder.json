@@ -19,7 +19,7 @@
     "capital_financiero_cushion"
   ],
   "condiciones_activacion": [
-    "Si el fundador tiene pareja e hijos y estos no están completamente alineados con el proyecto"
+    "Si el fundador tiene pareja o hijos y estos no están completamente alineados con el proyecto"
   ],
   "etiqueta_arbol": "Alinea a tu Familia y Empresa",
   "fuentes_internas": [
@@ -41,6 +41,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la falta de apoyo genera estrés y hace más difícil la situación del startup, no que haga fracasar la relación.; Mismo defecto: efecto añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-esposas_familiares_founder-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el fundador tiene pareja e hijos y estos no están completamente alineados con el proyecto",
+      "texto_nuevo": "Si el fundador tiene pareja o hijos y estos no están completamente alineados con el proyecto",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "505",
+        "frase": "the family handcuffs often tighten as spouses or children enter the picture"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

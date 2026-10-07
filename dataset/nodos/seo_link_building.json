@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica de dónde podrían venirte enlaces: prensa, blogs, páginas de tu producto que la gente comparta, widgets",
     "Crea contenido que la gente quiera compartir: infografías, investigaciones propias, presentaciones",
-    "Contacta bloggers y periodistas que escriban sobre tu industria",
+    "Contacta blogueros y periodistas que escriban sobre tu industria",
     "Revisa tus enlaces y los de tu competencia con una herramienta como Open Site Explorer",
     "No compres enlaces ni uses trucos parecidos, evítalo por completo"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Consigue Enlaces Hacia tu Sitio",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-seo_link_building-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contacta bloggers y periodistas que escriban sobre tu industria",
+      "texto_nuevo": "Contacta blogueros y periodistas que escriban sobre tu industria",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bloggers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

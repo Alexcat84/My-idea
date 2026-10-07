@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La interpretación correcta de los gráficos de control requiere identificar puntos fuera de los límites y patrones no aleatorios. Valores de R fuera de límites indican cambios en la uniformidad del proceso (personal, material, desgaste de maquinaria). Valores de X-bar fuera de límites indican un cambio general que afecta a todas las piezas desde el primer subgrupo fuera de límites. Hay ocho pruebas para detectar patrones no aleatorios usando zonas de 1σ.",
   "pasos_accionables": [
-    "Revisar primero el gráfico R o s antes que el X-bar",
+    "Revisar primero el gráfico R o s antes que el de X barra",
     "Identificar puntos individuales fuera de los límites de control",
     "Aplicar las ocho pruebas de Nelson para detectar patrones no aleatorios",
     "Investigar el registro de datos, la operación del proceso y la experiencia del trabajador para hallar la causa",
@@ -44,6 +44,23 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que el cambio afecta a todas las piezas desde el primer subgrupo fuera de límites; además se retira la cita al autor por la regla dura de la casa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-interpretacion_graficos_variables-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar primero el gráfico R o s antes que el X-bar",
+      "texto_nuevo": "Revisar primero el gráfico R o s antes que el de X barra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el X-bar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

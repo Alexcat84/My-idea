@@ -7,7 +7,7 @@
   "resumen_teorico": "Existen arquetipos comunes de negociadores (el Matón, el Buena Onda, el Tecnócrata, el Débil, el Cascarrabias, y el Sereno-Firme-Inteligente). Reconocer el estilo natural de la contraparte permite adaptar la propia estrategia: no reaccionar con agresividad al matón, mantenerse firme y directo con el 'buena onda', tener paciencia con el tecnócrata, y ser cauteloso de no sobre-negociar contra el débil.",
   "pasos_accionables": [
     "Observar y clasificar el estilo de negociación de la contraparte en las primeras interacciones",
-    "Adaptar la propia respuesta según el arquetipo identificado (ej. calma ante un matón, firmeza ante un 'nice guy')",
+    "Adaptar la propia respuesta según el arquetipo identificado (ej. calma ante un matón, firmeza ante un 'buena onda')",
     "Ser consciente de tu propio estilo natural y cómo puede emerger bajo presión",
     "Favorecer la transparencia y calma en negociaciones con valor reputacional a largo plazo"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Reconoce el Estilo de tu Contraparte",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-estilos_de_negociacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adaptar la propia respuesta según el arquetipo identificado (ej. calma ante un matón, firmeza ante un 'nice guy')",
+      "texto_nuevo": "Adaptar la propia respuesta según el arquetipo identificado (ej. calma ante un matón, firmeza ante un 'buena onda')",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'nice guy'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

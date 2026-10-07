@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Identificar un grupo de clientes activos y entusiastas dispuestos a apoyar la incorporación de nuevos miembros",
     "Crear un 'comité de bienvenida' formal con capacitación breve sobre qué comunicar",
-    "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
-    "Recoger feedback del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso"
+    "Programar, justo después de la compra, una presentación por correo electrónico entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
+    "Recoger comentarios del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso"
   ],
   "entregable_esperado": "Programa formalizado de bienvenida entre pares (comité de clientes veteranos) con guion o lineamientos básicos",
   "nodos_previos": [
@@ -29,7 +29,7 @@
     "Cuando el negocio tiene un componente de comunidad o membresía",
     "Cuando existen clientes leales dispuestos a embajadorizar la marca"
   ],
-  "etiqueta_arbol": "Deja que un Cliente Reciba",
+  "etiqueta_arbol": "Delega la Bienvenida a un Cliente",
   "correcciones": [
     {
       "id": "fidelidad-t8-021",
@@ -96,6 +96,54 @@
       },
       "decision": "lectura total de procedencia (w45): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-welcome_call_cliente_veterano-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Deja que un Cliente Reciba",
+      "texto_nuevo": "Delega la Bienvenida a un Cliente",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v02)",
+        "evidencia": "'Reciba' sin complemento hace creer que el cliente recibe algo, cuando el concepto es que un cliente veterano da la bienvenida al nuevo; la etiqueta nueva dice justo eso."
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-welcome_call_cliente_veterano-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Programar, justo después de la compra, una presentación por email entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
+      "texto_nuevo": "Programar, justo después de la compra, una presentación por correo electrónico entre el cliente veterano y el nuevo cliente, seguida de una llamada de unos veinte minutos para conocerse, en la que el veterano refuerce los beneficios y se ofrezca como recurso para cualquier duda",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "por email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-welcome_call_cliente_veterano-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recoger feedback del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso",
+      "texto_nuevo": "Recoger comentarios del nuevo cliente sobre la experiencia de bienvenida para iterar el proceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

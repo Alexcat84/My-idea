@@ -6,14 +6,14 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Dentro de organizaciones establecidas, la innovación genera miedo racional en los equipos existentes porque amenaza sus relaciones con clientes, ingresos y poder. Ocultar la innovación (skunkworks) genera desconfianza y política interna a largo plazo. La solución es crear un 'sandbox' (caja de arena): un espacio delimitado donde equipos pueden experimentar libremente con split-tests reales, sin necesidad de aprobación previa, pero con reglas claras que limitan el impacto (tiempo, número de clientes, páginas o segmentos afectados) y que exigen métricas accionables estandarizadas. Esto permite proteger tanto al equipo innovador como a la organización matriz.",
   "pasos_accionables": [
-    "Definir el alcance inicial del sandbox (ej: solo la página de precios, ciertos clientes o territorios).",
+    "Definir el alcance inicial del espacio de pruebas (ej: solo la página de precios, ciertos clientes o territorios).",
     "Asignar un equipo que lleve cada experimento completo de principio a fin; siempre que sea posible, que sea multifuncional y con un líder claro.",
     "Establecer reglas: duración máxima del experimento, porcentaje máximo de clientes afectados.",
     "Definir un reporte estándar de 5 a 10 métricas accionables que todo experimento debe usar.",
-    "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que reporte resultados con contabilidad de innovación.",
+    "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que informe resultados con contabilidad de innovación.",
     "Monitorear reacciones de clientes (soporte, redes sociales) durante el experimento y abortarlo si hay daño catastrófico."
   ],
-  "entregable_esperado": "Un sandbox de innovación definido con reglas claras, equipo asignado y sistema de métricas accionables para experimentar sin arriesgar el negocio principal.",
+  "entregable_esperado": "Un espacio de pruebas de innovación definido con reglas claras, equipo asignado y sistema de métricas accionables para experimentar sin arriesgar el negocio principal.",
   "nodos_previos": [
     "contabilidad_innovacion",
     "cycle_time",
@@ -30,7 +30,7 @@
     "Si hay miedo de que la innovación canibalice el negocio existente.",
     "Si se necesita validar ideas nuevas sin arriesgar toda la operación."
   ],
-  "etiqueta_arbol": "Crea un Sandbox Seguro",
+  "etiqueta_arbol": "Crea un Espacio de Pruebas Seguro",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
   ],
@@ -85,6 +85,72 @@
       "decision": "lectura total de procedencia (w42): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-sandbox_de_innovacion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea un Sandbox Seguro",
+      "texto_nuevo": "Crea un Espacio de Pruebas Seguro",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sandbox"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sandbox_de_innovacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el alcance inicial del sandbox (ej: solo la página de precios, ciertos clientes o territorios).",
+      "texto_nuevo": "Definir el alcance inicial del espacio de pruebas (ej: solo la página de precios, ciertos clientes o territorios).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del sandbox"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sandbox_de_innovacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que reporte resultados con contabilidad de innovación.",
+      "texto_nuevo": "Permitir que el equipo construya, lance y mida sin aprobación previa, pero exigir que informe resultados con contabilidad de innovación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte resultados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sandbox_de_innovacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sandbox de innovación definido con reglas claras, equipo asignado y sistema de métricas accionables para experimentar sin arriesgar el negocio principal.",
+      "texto_nuevo": "Un espacio de pruebas de innovación definido con reglas claras, equipo asignado y sistema de métricas accionables para experimentar sin arriesgar el negocio principal.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Un sandbox de innovación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

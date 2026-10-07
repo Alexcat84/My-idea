@@ -6,9 +6,9 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Stage-Gate no se limita a productos físicos nuevos; se aplica también a servicios, desarrollos de procesos, fusiones y adquisiciones, proyectos internos de TI, alianzas, investigación fundamental, plataformas, exploración y proyectos de capital. Los principios (etapas con entregables, gates con criterios Go/Kill) son los mismos, pero los detalles se personalizan según el tipo de proyecto.",
   "pasos_accionables": [
-    "Identificar el tipo de proyecto (producto físico, servicio, proceso interno, M&A, etc.)",
+    "Identificar el tipo de proyecto (producto físico, servicio, proceso interno, fusiones y adquisiciones, etc.)",
     "Adaptar las etapas y entregables específicos al contexto de ese tipo de proyecto",
-    "Mantener los principios generales: etapas con deliverables, gates con criterios Go/Kill claros",
+    "Mantener los principios generales: etapas con entregables, gates con criterios Go/Kill claros",
     "Personalizar los criterios de decisión según el 'cliente' (interno o externo) del proyecto"
   ],
   "entregable_esperado": "Versión personalizada del modelo Stage-Gate adaptada al tipo específico de proyecto de la organización.",
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Adapta Stage-Gate a tu Proyecto",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-stage_gate_tipos_proyectos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar el tipo de proyecto (producto físico, servicio, proceso interno, M&A, etc.)",
+      "texto_nuevo": "Identificar el tipo de proyecto (producto físico, servicio, proceso interno, fusiones y adquisiciones, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "M&A"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-stage_gate_tipos_proyectos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantener los principios generales: etapas con deliverables, gates con criterios Go/Kill claros",
+      "texto_nuevo": "Mantener los principios generales: etapas con entregables, gates con criterios Go/Kill claros",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "deliverables"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

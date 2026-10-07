@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Agile-Stage-Gate genera gran visibilidad visual del progreso de tareas dentro y entre proyectos mediante tableros visuales (físicos o virtuales). Esto permite al dueño del portafolio pasar de una gestión reactiva (basada en revisiones mensuales) a una proactiva, interviniendo en tiempo real cuando se detectan problemas o tendencias negativas.",
   "pasos_accionables": [
-    "Implementar tableros visuales (Kanban/Scrum boards) para cada proyecto",
+    "Implementar tableros visuales (tableros Kanban/Scrum) para cada proyecto",
     "Usar herramientas de software que permitan ver el portafolio completo en tiempo real",
     "Establecer analíticas para detectar retrasos, uso de capacidad y flujo de actividades",
     "Definir protocolos de intervención temprana cuando se detecten tendencias problemáticas",
-    "Capacitar al portfolio owner para revisar el estado de todos los proyectos regularmente"
+    "Capacitar al responsable del portafolio para revisar el estado de todos los proyectos regularmente"
   ],
   "entregable_esperado": "Sistema de tableros visuales (físico o digital) con visibilidad en tiempo real de todos los proyectos del portafolio",
   "nodos_previos": [
@@ -27,7 +27,7 @@
     "Cuando se gestionan múltiples proyectos simultáneos bajo Agile-Stage-Gate",
     "Cuando la dirección necesita mayor visibilidad y capacidad de intervención temprana"
   ],
-  "etiqueta_arbol": "Visualiza tu Pipeline Completo",
+  "etiqueta_arbol": "Visualiza tu Portafolio Completo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
   ],
@@ -57,6 +57,56 @@
         "motivo": "Los tableros visuales del pipeline de Agile-Stage-Gate no preparan la division del trabajo entre humanos e IA. Los temas no tienen que ver."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "voz-gestion_visual_del_pipeline_de_desarrollo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Visualiza tu Pipeline Completo",
+      "texto_nuevo": "Visualiza tu Portafolio Completo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Pipeline"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_visual_del_pipeline_de_desarrollo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar tableros visuales (Kanban/Scrum boards) para cada proyecto",
+      "texto_nuevo": "Implementar tableros visuales (tableros Kanban/Scrum) para cada proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Scrum boards"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_visual_del_pipeline_de_desarrollo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Capacitar al portfolio owner para revisar el estado de todos los proyectos regularmente",
+      "texto_nuevo": "Capacitar al responsable del portafolio para revisar el estado de todos los proyectos regularmente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "portfolio owner"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
