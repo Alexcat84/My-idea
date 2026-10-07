@@ -201,7 +201,8 @@ async function main() {
 
   // 02 Claridad (organizer real por la UI)
   await app.fill("#idea", IDEA);
-  await app.getByRole("button", { name: /organizar|continuar|empezar|listo/i }).first().click();
+  // "Aceptar y generar" mientras falte la aceptación de los textos legales (corrección del fundador, 7 oct 2026).
+  await app.getByRole("button", { name: /aceptar y generar|organizar|continuar|empezar|listo/i }).first().click();
   await app.getByText("Esto entendí de tu idea", { exact: false }).waitFor({ timeout: 120000 });
   await capturarApp(app, "02_claridad");
   await capturarCanon(canon, "03_claridad.html", "02_claridad_canon.png", "Claridad desktop", true);

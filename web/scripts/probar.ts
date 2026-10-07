@@ -12,7 +12,7 @@
 // Costo real: cada opcion del menu hace llamadas reales a Anthropic
 // (Haiku/Sonnet) y, en la entrevista completa, a Voyage AI.
 import readline from "node:readline/promises";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, postJson } from "./_shared/http";
+import { aceptarTextosLegales, autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, postJson } from "./_shared/http";
 
 cargarEnvRaiz();
 
@@ -135,6 +135,7 @@ async function menuPrincipal(cookie: string) {
 async function main() {
   console.log(`Conectando a ${BASE_URL} y autenticando...`);
   const cookie = await autenticarComoDevUser();
+  await aceptarTextosLegales(cookie);
   console.log("Listo.");
   await menuPrincipal(cookie);
   rl.close();

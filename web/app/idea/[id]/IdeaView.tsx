@@ -57,6 +57,9 @@ import { interpolar } from "@/lib/i18n/interpolar";
 import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
 import { IDEA_VIEW } from "@/lib/i18n/mensajes/ideaView";
 import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
+import { LineaConsentimiento } from "@/app/ui/LineaConsentimiento";
+import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
+import { useConsentimiento } from "@/lib/legal/useConsentimiento";
 
 // i18n F2: la nota de los nodos silenciosos (t.notaSilencioso) y el mensaje de
 // respaldo del cierre (t.cierreRespaldo) viven en el catálogo de la vista.
@@ -208,6 +211,12 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [detalle, setDetalle] = useState<DetalleIdea | null>(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  // Corrección del fundador (7 oct 2026): si el servidor rechaza La Exploración porque falta la aceptación vigente de
+  // los Términos y la Privacidad (428), se pinta la línea y "Aceptar y seguir" junto al error; al guardarla, vuelve a
+  // `volverA` y arranca. Nada tapa la página.
+  const consentimiento = useConsentimiento(idioma, { consultarAlMontar: false });
+  const [volverTrasAceptar, setVolverTrasAceptar] = useState<string | null>(null);
+  const [guardandoAceptacion, setGuardandoAceptacion] = useState(false);
   // AUD-09 M31: el chip del saldo se vuelve a pedir cuando esta vista cambia el
   // saldo (al empezar una sesión aparta; al entregarse el plan cobra).
   const [versionSaldo, setVersionSaldo] = useState(0);
@@ -379,6 +388,23 @@ export function IdeaView({ projectId }: { projectId: string }) {
     const r = await leerRechazo(res, idioma);
     setError(r.mensaje);
     if (r.tipo === "segundo_factor") void irAlDesafio(volverA);
+    if (r.tipo === "consentimiento") {
+      consentimiento.pedirDeNuevo(r.motivo);
+      setVolverTrasAceptar(volverA);
+    }
+  }
+
+  /** Guarda la aceptación y, solo si el servidor la confirmó, vuelve a donde iba (el arranque se repite allí). */
+  async function aceptarYVolver() {
+    if (!volverTrasAceptar || guardandoAceptacion) return;
+    setGuardandoAceptacion(true);
+    const r = await consentimiento.aceptar();
+    if (!r.ok) {
+      setGuardandoAceptacion(false);
+      setError(r.error);
+      return;
+    }
+    window.location.assign(volverTrasAceptar);
   }
 
   /** Canon 12: "Explorar otro ángulo" tras un cierre de camino core: relanza
@@ -1151,6 +1177,20 @@ export function IdeaView({ projectId }: { projectId: string }) {
         {error && (
           <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-2">
             <p className="text-sm text-warn">{error}</p>
+            {consentimiento.requiere && volverTrasAceptar && (
+              <>
+                <button
+                  onClick={aceptarYVolver}
+                  disabled={guardandoAceptacion}
+                  className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10 disabled:opacity-40"
+                >
+                  {guardandoAceptacion
+                    ? elegir(CONSENTIMIENTO, idioma).envio.guardando
+                    : elegir(CONSENTIMIENTO, idioma).envio.aceptarYSeguir}
+                </button>
+                <LineaConsentimiento motivo={consentimiento.motivo} className="basis-full" />
+              </>
+            )}
             {/* Reintenta SOLO la redaccion sobre la misma sesion: la entrevista
                 ya esta persistida y no se repite. */}
             {planFallido && !generandoPlan && (

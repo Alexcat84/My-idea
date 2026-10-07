@@ -23,6 +23,10 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
 import { NUEVA_IDEA } from "@/lib/i18n/mensajes/nuevaIdea";
+import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
+import { STATUS_SIN_ACEPTACION } from "@/lib/legal/consentimiento";
+import { useConsentimiento } from "@/lib/legal/useConsentimiento";
+import { LineaConsentimiento } from "../ui/LineaConsentimiento";
 
 type Fase =
   | { fase: "captura"; error?: string }
@@ -34,7 +38,12 @@ export default function NuevaIdea() {
   const idioma = useIdioma();
   const t = elegir(NUEVA_IDEA, idioma);
   const tc = elegir(CLARIDAD, idioma);
+  const tl = elegir(CONSENTIMIENTO, idioma).envio;
   const router = useRouter();
+  // Corrección del fundador (7 oct 2026): la aceptación de los Términos y la Privacidad se pide AQUÍ, en el primer
+  // envío de datos, con una línea junto al botón ("Aceptar y generar"). Nada tapa la página.
+  const consentimiento = useConsentimiento(idioma);
+  const [guardandoAceptacion, setGuardandoAceptacion] = useState(false);
   const [texto, setTexto] = useState("");
   const [estado, setEstado] = useState<Fase>({ fase: "captura" });
   const [nodos, setNodos] = useState<NodoArbol[]>([]);
@@ -63,6 +72,17 @@ export default function NuevaIdea() {
       setEstado({ fase: "captura", error: mensajeIdeaLarga(idioma) });
       return;
     }
+    // Consentimiento ANTES de enviar nada a la IA: si falta, se guarda primero; si guardarlo falla, no se envía nada
+    // y la idea se queda en el campo (fallar ruidoso). El servidor lo exige igual (428), por si esto se saltara.
+    if (consentimiento.requiere) {
+      setGuardandoAceptacion(true);
+      const aceptada = await consentimiento.aceptar();
+      setGuardandoAceptacion(false);
+      if (!aceptada.ok) {
+        setEstado({ fase: "captura", error: aceptada.error });
+        return;
+      }
+    }
     setEstado({ fase: "generando" });
     setNodos([]);
     try {
@@ -78,7 +98,10 @@ export default function NuevaIdea() {
       }
       if (!res.ok || !res.body) {
         // AUD-09 H03: el rechazo con razón (fusible, texto largo) se dice tal cual.
-        setEstado({ fase: "captura", error: (await leerRechazo(res, idioma)).mensaje });
+        const rechazo = await leerRechazo(res, idioma);
+        // 428: el servidor no tiene registrada la aceptación vigente; vuelve la línea y el botón de aceptar.
+        if (res.status === STATUS_SIN_ACEPTACION && rechazo.tipo === "consentimiento") consentimiento.pedirDeNuevo(rechazo.motivo);
+        setEstado({ fase: "captura", error: rechazo.mensaje });
         return;
       }
       // AUD-09 H08: la espera termina SIEMPRE con salida. Lo que decide es si
@@ -257,7 +280,7 @@ export default function NuevaIdea() {
           {/* tu texto sigue en el campo: reintentar es un clic, sin re-teclear */}
           <button
             onClick={enviar}
-            disabled={!texto.trim()}
+            disabled={!texto.trim() || guardandoAceptacion}
             className="rounded-[8px] border border-accent/50 px-3.5 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/10 disabled:opacity-40"
           >
             {t.intentarDeNuevo}
@@ -268,12 +291,13 @@ export default function NuevaIdea() {
         <p className="text-xs text-dim">{t.sinPlantillas}</p>
         <button
           onClick={enviar}
-          disabled={!texto.trim()}
-          className="rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
+          disabled={!texto.trim() || guardandoAceptacion}
+          className="shrink-0 rounded-[10px] border border-accent/40 bg-accent/10 px-6 py-3 font-medium text-accent hover:bg-accent/20 disabled:opacity-40"
         >
-          {t.continuar}
+          {guardandoAceptacion ? tl.guardando : consentimiento.requiere ? tl.aceptarYGenerar : t.continuar}
         </button>
       </div>
+      {consentimiento.requiere && <LineaConsentimiento motivo={consentimiento.motivo} className="mt-3 text-end" />}
     </main>
   );
 }

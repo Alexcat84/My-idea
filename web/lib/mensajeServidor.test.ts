@@ -32,6 +32,15 @@ describe("leerRechazo: el mensaje del servidor llega a la pantalla", () => {
     expect(r.mensaje).toBe(MENSAJE_TEXTO_LARGO);
     expect(r.mensaje).toContain(String(MAX_LARGO_TEXTO_USUARIO));
   });
+  // Corrección del fundador (7 oct 2026): sin la aceptación vigente de los Términos y la Privacidad, las rutas que
+  // envían la idea responden 428. La pantalla no lo trata como un error cualquiera: pinta la línea y el botón de
+  // aceptar, con el motivo (primera aceptación o versión nueva). Prueba en rojo primero.
+  it("428 sin aceptación de los textos legales: pide aceptar, con su mensaje y su motivo", async () => {
+    const r = await leerRechazo(
+      respuesta(428, { consentimiento_requerido: true, motivo: "nueva_version", version: "2026-10-08", error: "Acepta la versión nueva." })
+    );
+    expect(r).toEqual({ tipo: "consentimiento", mensaje: "Acepta la versión nueva.", motivo: "nueva_version" });
+  });
   it("sin razón (500 sin cuerpo, 400 técnico): el genérico", async () => {
     expect((await leerRechazo(respuesta(500, undefined))).mensaje).toBe(ERROR_GENERICO);
     expect((await leerRechazo(respuesta(400, { error: "cuerpo invalido" }))).mensaje).toBe(ERROR_GENERICO);

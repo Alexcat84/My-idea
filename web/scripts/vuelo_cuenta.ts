@@ -25,7 +25,7 @@ import { createServerClient } from "@supabase/ssr";
 import { authenticator } from "@otplib/preset-default";
 import { hashEmailCode } from "../lib/dosFactores";
 import { cortesiaYaDadaAlCorreo, huellaDeEmail } from "../lib/cuentas";
-import { BASE_URL, cargarEnvRaiz } from "./_shared/http";
+import { aceptarTextosLegales, BASE_URL, cargarEnvRaiz } from "./_shared/http";
 
 cargarEnvRaiz();
 const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
@@ -97,6 +97,9 @@ async function main() {
   try {
     // ── A. Estado virgen ────────────────────────────────────────────────
     const s1 = await autenticarCon(emailV, password);
+    // La cuenta acepta la versión vigente de los textos legales (sin ella, el arranque responde 428 antes que el 402
+    // que miran las secciones D y F; corrección del fundador, 7 oct 2026). Una vez por cuenta basta.
+    await aceptarTextosLegales(s1);
     const estadoA = await getSeguridad(s1);
     check("A. sin 2FA al nacer", estadoA.habilitado === false && estadoA.desafioSuperado === true, estadoA);
 

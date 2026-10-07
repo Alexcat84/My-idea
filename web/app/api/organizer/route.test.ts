@@ -109,6 +109,12 @@ const supabaseFalso = {
 
 const messagesCreateFalso = vi.fn();
 
+// Consentimiento (corrección del fundador, 7 oct 2026): estas pruebas miran lo que pasa DESPUÉS de la guarda; la
+// identidad ya aceptó la versión vigente. La guarda tiene su propia prueba (lib/legal/envioSinAceptacion.test.ts).
+vi.mock("@/lib/legal/aceptacionServidor", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("@/lib/legal/aceptacionServidor")>()),
+  exigirAceptacionVigente: async () => null,
+}));
 vi.mock("@/lib/supabase/server", () => ({
   createClient: vi.fn(async () => supabaseFalso),
 }));

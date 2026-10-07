@@ -13,13 +13,14 @@ import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { bienvenidaTrasLogin, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
+import { aceptacionDelCuerpo, guardarAceptacion } from "@/lib/legal/aceptacionServidor";
 import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
   const idioma = idiomaDeRequest(request);
   const t = elegir(SERVIDOR_CUENTA, idioma);
-  let body: { email?: unknown; password?: unknown };
+  let body: { email?: unknown; password?: unknown; acepta_legal?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -84,6 +85,19 @@ export async function POST(request: Request) {
   // pantalla lo muestre (y el próximo ingreso lo reintenta).
   const { pendientes } = real ? await bienvenidaTrasLogin(real, anonId) : { pendientes: 0 };
   const adopcion_pendiente = pendientes > 0;
+
+  // Consentimiento al entrar (corrección del fundador, 7 oct 2026): la línea "Al continuar, aceptas los Términos y
+  // la Política de Privacidad" va junto al botón de entrar; si la pantalla manda la aceptación de la versión vigente,
+  // queda guardada en la cuenta (después de la adopción, que ya trasladó la del invitado). Si guardarla falla, la
+  // entrada sigue y se dice en el registro: la guarda del envío de datos la volverá a pedir antes de enviar nada.
+  const idiomaAceptado = aceptacionDelCuerpo(body.acepta_legal);
+  if (real && idiomaAceptado) {
+    try {
+      await guardarAceptacion(real.id, idiomaAceptado);
+    } catch (e) {
+      console.error("[entrar] no se pudo guardar la aceptacion de los textos legales; se pedira al enviar datos:", e);
+    }
+  }
 
   // Centro de cuenta: con 2FA, el login sigue con el desafío.
   if (real) {

@@ -27,6 +27,7 @@ import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type Org
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { exigirAceptacionVigente } from "@/lib/legal/aceptacionServidor";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -57,6 +58,12 @@ export async function POST(request: Request) {
   if (!user) {
     return NextResponse.json({ error: r.noAutenticado }, { status: 401 });
   }
+
+  // Consentimiento (corrección del fundador, 7 oct 2026): la idea no se envía a la IA sin la aceptación vigente de
+  // los Términos y la Privacidad registrada para esta identidad (invitada o cuenta). Antes de crear nada, de contar
+  // el límite diario y de tocar la IA; si el registro no se puede leer, tampoco se envía (503).
+  const sinAceptacion = await exigirAceptacionVigente(user.id, idioma);
+  if (sinAceptacion) return sinAceptacion;
 
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);

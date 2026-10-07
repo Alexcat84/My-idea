@@ -35,7 +35,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
+import { aceptarTextosLegales, autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
 import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
 import { empaquetarFechas } from "../lib/empaquetado";
 import { PRECIOS } from "../lib/precios";
@@ -2999,7 +2999,8 @@ async function main() {
   faseSanidadVerificadorHuerfanos();
 
   const cookie = await autenticarComoDevUser();
-  log("Autenticado como dev user.");
+  await aceptarTextosLegales(cookie);
+  log("Autenticado como dev user (con la aceptación vigente de los textos legales).");
 
   const costos: Record<string, number> = {};
   let saltosVerificados = 0;

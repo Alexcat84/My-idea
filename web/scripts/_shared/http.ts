@@ -6,6 +6,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { existsSync } from "node:fs";
 import path from "node:path";
+import { VERSION_LEGAL } from "../../lib/legal/version";
 
 export const ROOT = path.resolve(import.meta.dirname, "..", "..", "..");
 
@@ -57,6 +58,18 @@ export async function autenticarComoDevUser(): Promise<string> {
     throw new Error(`fallo el login del dev user (${DEV_EMAIL}): ${error?.message}`);
   }
   return [...jar.entries()].map(([k, v]) => `${k}=${v}`).join("; ");
+}
+
+/** Consentimiento (corrección del fundador, 7 oct 2026): el organizador y el arranque de La Exploración rechazan con
+ * 428 sin la aceptación vigente de los Términos y la Privacidad. El arnés hace lo que hace una persona en la pantalla:
+ * acepta la versión vigente por la ruta real antes de enviar su idea. Falla ruidoso si no se pudo guardar. */
+export async function aceptarTextosLegales(cookie: string): Promise<void> {
+  const res = await fetch(`${BASE_URL}/api/cuenta/consentimiento`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({ version: VERSION_LEGAL, idioma_texto: "es" }),
+  });
+  if (!res.ok) throw new Error(`no se pudo aceptar los textos legales (${res.status}): ${await res.text()}`);
 }
 
 export interface EventoSSE {

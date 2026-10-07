@@ -7,6 +7,11 @@
 -- vuelve a pedir la aceptación cuando la versión vigente no coincide con la última aceptada. La identidad
 -- invisible (el invitado anónimo de proxy.ts) jamás escribe aquí: la web sigue abierta, sin muro.
 --
+-- CORRECCIÓN DEL FUNDADOR (7 oct 2026, después de aplicada; sin SQL nuevo): el modal se retiró. La aceptación
+-- se pide en el primer envío de datos y la guarda TODA identidad que envía datos, también la invisible (su fila de
+-- auth.users: esta tabla ya la admite); la adopción (web/lib/cuentas.ts) copia esas filas a la cuenta. El texto
+-- de arriba y el COMMENT de la tabla ("Solo cuentas reales") quedan como estaban en la base: son historia.
+--
 -- Columnas:
 --   · version       la versión aceptada (p. ej. '2026-10-07'); UNIQUE con user_id: aceptar dos veces la misma
 --                   versión no duplica (la ruta trata el 23505 como hecho).

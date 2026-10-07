@@ -22,8 +22,9 @@ Al usar la app aceptas estos términos y la Política de privacidad.
 
 - Para usar las funciones que consumen créditos necesitas una cuenta. Puedes escribir tu idea y
   recibir tu Claridad sin cuenta, con una identidad invisible que pasa a tu cuenta cuando la creas.
-- Con tu cuenta, te pedimos que aceptes estos términos y la Política de privacidad, y de nuevo cada
-  vez que cambien; guardamos la versión que aceptaste y su fecha.
+- Te pedimos que aceptes estos términos y la Política de privacidad la primera vez que envías tu
+  idea, también sin cuenta, y de nuevo cada vez que cambien; guardamos la versión que aceptaste y su
+  fecha, y si creas tu cuenta ese registro pasa a ella.
 - Eres responsable de mantener segura tu contraseña. Puedes activar la verificación en dos pasos.
 - Durante la beta, el acceso puede estar limitado a personas invitadas.
 - Puedes borrar tu cuenta cuando quieras desde el centro de cuenta.

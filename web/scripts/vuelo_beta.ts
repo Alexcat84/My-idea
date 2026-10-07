@@ -23,7 +23,7 @@
 // Uso: con `pnpm dev` en :3000,  npx tsx scripts/vuelo_beta.ts
 import { createClient } from "@supabase/supabase-js";
 import { createServerClient } from "@supabase/ssr";
-import { BASE_URL, cargarEnvRaiz, consumirSSE } from "./_shared/http";
+import { aceptarTextosLegales, BASE_URL, cargarEnvRaiz, consumirSSE } from "./_shared/http";
 
 cargarEnvRaiz();
 const admin = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
@@ -57,6 +57,9 @@ async function crearUsuario(email: string): Promise<{ id: string; cookie: string
   const { data, error } = await admin.auth.admin.createUser({ email, password, email_confirm: true });
   if (error) throw error;
   const cookie = await autenticarCon(email, password);
+  // Como una persona en la pantalla: acepta la versión vigente de los textos legales antes de enviar su idea
+  // (sin ella, el organizador y el arranque responden 428; corrección del fundador, 7 oct 2026).
+  await aceptarTextosLegales(cookie);
   return { id: data.user.id, cookie, password };
 }
 

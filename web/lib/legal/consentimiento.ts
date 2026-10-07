@@ -1,16 +1,18 @@
 /**
- * Consentimiento legal versionado (decisión del fundador, 7 oct 2026; la idea viene de The Original I Ching:
- * auth/complete-legal, LegalConsentModal y user_legal_acceptances). Las cuentas REALES aceptan los Términos y la
- * Privacidad por versión, y la app vuelve a pedirlo cuando la versión cambia. Se guarda en aceptaciones_legales
- * (migración 050) por /api/cuenta/consentimiento; el modal es app/ui/ConsentimientoLegal.tsx.
+ * Consentimiento legal versionado (decisión del fundador, 7 oct 2026; corregida el mismo día: el modal se retiró).
+ * Navegar es libre y nada tapa la página. La aceptación de los Términos y la Privacidad se pide en el PRIMER ENVÍO DE
+ * DATOS: al escribir la idea y pulsar generar la evaluación gratuita, una línea junto al botón ("Al continuar,
+ * aceptas...") y el botón "Aceptar y generar" (app/ui/LineaConsentimiento.tsx). Se pide a TODA identidad que envía
+ * datos: la invisible (el usuario anónimo de proxy.ts, una fila de auth.users) también la guarda, y la adopción la
+ * pasa a la cuenta al crearla (lib/cuentas.ts), sin volver a preguntar. Si la versión cambia, se vuelve a pedir en el
+ * siguiente envío o al entrar con la cuenta (la línea del login), nunca al cargar una página.
  *
- * Lo que manda en My Idea: la web es ABIERTA. La identidad invisible (proxy.ts) nunca ve el modal, y el modal nunca
- * es un muro para usar la app sin cuenta: quien no acepta puede salir de su cuenta y seguir como visitante, o ir al
- * centro de cuenta a borrarla (allí el modal no aparece).
+ * Se guarda en aceptaciones_legales (migración 050) por /api/cuenta/consentimiento, y la cumple el SERVIDOR: las rutas
+ * que envían la idea rechazan sin aceptación vigente (lib/legal/aceptacionServidor.ts, exigirAceptacionVigente).
  *
  * La versión tiene UNA fuente: docs/legal/version.json, publicada en ./version.ts por scripts/sync_legal_web.py
  * (guarda: engine/test_version_legal.py, que falla si los textos cambian sin subir la versión). Este módulo es
- * seguro para el cliente: no importa los textos legales enteros.
+ * seguro para el cliente: no importa los textos legales enteros ni nada del servidor.
  */
 import { ACEPTACION_IDIOMA_TEXTO, type IdiomaTextoLegal, type MotivoAceptacion } from "@/lib/dbContract";
 import { idiomaLegal } from "./paginas";
@@ -25,21 +27,15 @@ export interface EstadoConsentimiento {
   motivo: MotivoAceptacion | null;
 }
 
-/** ¿Hay que pedirle la aceptación? Solo a una cuenta real cuya última versión aceptada no es la vigente. */
-export function estadoConsentimiento(esCuentaReal: boolean, ultimaVersion: string | null): EstadoConsentimiento {
-  if (!esCuentaReal || ultimaVersion === VERSION_LEGAL) return { requiere: false, motivo: null };
+/** ¿Hay que pedirle la aceptación antes de enviar sus datos? A toda identidad (invitada o con cuenta) cuya última
+ * versión aceptada no es la vigente. */
+export function estadoConsentimiento(ultimaVersion: string | null): EstadoConsentimiento {
+  if (ultimaVersion === VERSION_LEGAL) return { requiere: false, motivo: null };
   return { requiere: true, motivo: ultimaVersion === null ? "primera_aceptacion" : "nueva_version" };
 }
 
-/** Las rutas donde el modal no aparece nunca: las páginas legales y de ayuda (hay que poder leer lo que se acepta),
- * el login y los regresos de auth (el doble factor va antes), y el centro de cuenta, para que quien no acepta pueda
- * borrar su cuenta sin aceptar nada. */
-const RUTAS_SIN_CONSENTIMIENTO = ["/terminos", "/privacidad", "/cookies", "/eliminar-cuenta", "/preguntas-frecuentes",
-  "/login", "/auth", "/cuenta"];
-
-export function rutaSinConsentimiento(pathname: string): boolean {
-  return RUTAS_SIN_CONSENTIMIENTO.some((r) => pathname === r || pathname.startsWith(r + "/"));
-}
+/** La marca del rechazo del servidor cuando falta la aceptación vigente (status 428): la pantalla pinta la línea. */
+export const STATUS_SIN_ACEPTACION = 428;
 
 /** El idioma del texto legal que lee quien usa la interfaz en `idioma` (los textos existen en es y fr). */
 export function idiomaTextoLegal(idioma: string): IdiomaTextoLegal {

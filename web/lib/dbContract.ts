@@ -151,7 +151,8 @@ export const METODO_2FA = ["totp", "email"] as const;
 export type Metodo2FA = (typeof METODO_2FA)[number];
 
 /** aceptaciones_legales.motivo (migración 050, consentimiento legal del 7 oct 2026): la primera aceptación de una
- * cuenta real o la de una versión nueva de los Términos y la Privacidad. Lo decide el servidor, nunca el navegador. */
+ * identidad (la invisible o una cuenta; corrección del fundador del mismo día) o la de una versión nueva de los
+ * Términos y la Privacidad. Lo decide el servidor, nunca el navegador. */
 export const ACEPTACION_MOTIVO = ["primera_aceptacion", "nueva_version"] as const;
 export type MotivoAceptacion = (typeof ACEPTACION_MOTIVO)[number];
 

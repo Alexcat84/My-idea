@@ -15,6 +15,7 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { LOGIN } from "@/lib/i18n/mensajes/acceso";
 import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
 import { rico } from "@/lib/i18n/rico";
+import { idiomaTextoLegal, VERSION_LEGAL } from "@/lib/legal/consentimiento";
 import { destinoPostLogin } from "@/lib/nextSeguro";
 import { LARGO_MINIMO, validarPassword } from "@/lib/password";
 import { interpolar } from "@/lib/i18n/interpolar";
@@ -59,6 +60,7 @@ function LoginForm() {
   const [codigo, setCodigo] = useState("");
   const [codigoRescate, setCodigoRescate] = useState("");
   const [enviando, setEnviando] = useState(false);
+  const aceptaLegal = { version: VERSION_LEGAL, idioma_texto: idiomaTextoLegal(idioma) };
 
   // Método email del 2FA: al entrar al desafío se envía el código UNA vez.
   const emailDesafioEnviado = useRef(false);
@@ -91,7 +93,9 @@ function LoginForm() {
       const res = await fetch("/api/auth/entrar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        // La línea junto al botón ("Al continuar, aceptas..."): la aceptación de la versión vigente viaja con la
+        // entrada y el servidor la guarda en la cuenta (corrección del fundador, 7 oct 2026).
+        body: JSON.stringify({ email, password, acepta_legal: aceptaLegal }),
       });
       const data = await res.json();
       if (data.invitado === false) {
@@ -140,7 +144,7 @@ function LoginForm() {
         headers: { "Content-Type": "application/json" },
         // El destino viaja para reanudar tras confirmar el correo (si vino
         // de la frontera de una idea); destino es /ideas si no hay next.
-        body: JSON.stringify({ email, password, next: destino }),
+        body: JSON.stringify({ email, password, next: destino, acepta_legal: aceptaLegal }),
       });
       const data = await res.json();
       if (data.invitado === false) {
@@ -437,7 +441,6 @@ function LoginForm() {
       {modo === "crear" && (
         <p className="text-xs text-dim">{interpolar(t.reglasContrasena, { n: LARGO_MINIMO })}</p>
       )}
-      {modo === "crear" && <p className="text-xs text-dim">{elegir(CONSENTIMIENTO, idioma).login.aviso}</p>}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
       {estado.sinConfirmar && (
         <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-start text-sm text-accent hover:opacity-80">
@@ -445,6 +448,8 @@ function LoginForm() {
         </button>
       )}
 
+      {/* Corrección del fundador (7 oct 2026): al entrar o crear la cuenta, una línea junto al botón, no un modal. */}
+      <LineaLogin />
       <button
         type="submit"
         disabled={enviando}
@@ -475,8 +480,30 @@ function LoginForm() {
   );
 }
 
-/** Los enlaces a los Términos y la Privacidad (decisión del fundador, 7 oct 2026): se leen sin cuenta. Tras entrar,
- * una cuenta real los acepta por versión en el modal del layout (app/ui/ConsentimientoLegal.tsx). */
+/** La línea del consentimiento junto al botón de entrar o crear la cuenta (corrección del fundador, 7 oct 2026): "Al
+ * continuar, aceptas los Términos y la Política de Privacidad". La aceptación viaja con la entrada (`acepta_legal`)
+ * y el servidor la guarda. Los enlaces abren en otra pestaña para no perder lo escrito en el formulario. */
+function LineaLogin() {
+  const t = elegir(CONSENTIMIENTO, useIdioma()).login;
+  return (
+    <p className="text-xs text-dim">
+      {rico(t.linea, {
+        terminos: (c) => (
+          <a href="/terminos" target="_blank" rel="noopener" className="text-accent underline underline-offset-2">
+            {c}
+          </a>
+        ),
+        privacidad: (c) => (
+          <a href="/privacidad" target="_blank" rel="noopener" className="text-accent underline underline-offset-2">
+            {c}
+          </a>
+        ),
+      })}
+    </p>
+  );
+}
+
+/** Los enlaces a los Términos y la Privacidad (decisión del fundador, 7 oct 2026): se leen sin cuenta. */
 function EnlacesLegales() {
   const t = elegir(CONSENTIMIENTO, useIdioma()).login;
   return (
