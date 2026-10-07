@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Seleccionar las herramientas adecuadas según lo que necesites lograr en tu diseño (por ejemplo, agrupar necesidades, analizar fallas o comparar con la competencia).",
     "Aplicar diagramas de afinidad o lluvia de ideas para agrupar necesidades o causas.",
-    "Usar FMEA para priorizar riesgos (se atacan primero los de mayor número de prioridad de riesgo) y el análisis de árbol de fallas para ver qué eventos deben ocurrir juntos o por separado para que se dé la falla.",
+    "Usar el análisis de modos de falla y efectos (AMEF) para priorizar riesgos (se atacan primero los de mayor número de prioridad de riesgo) y el análisis de árbol de fallas para ver qué eventos deben ocurrir juntos o por separado para que se dé la falla.",
     "Emplear hojas de cálculo de necesidades del cliente y de diseño de producto para vincular necesidades con características."
   ],
   "entregable_esperado": "Selección documentada de las herramientas aplicadas en el proyecto de diseño.",
@@ -76,6 +76,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Depende de un reparto por fases que el libro no hace.; El libro no divide el uso de las herramientas por fases del proyecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-herramientas_de_diseno_de_calidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar FMEA para priorizar riesgos (se atacan primero los de mayor número de prioridad de riesgo) y el análisis de árbol de fallas para ver qué eventos deben ocurrir juntos o por separado para que se dé la falla.",
+      "texto_nuevo": "Usar el análisis de modos de falla y efectos (AMEF) para priorizar riesgos (se atacan primero los de mayor número de prioridad de riesgo) y el análisis de árbol de fallas para ver qué eventos deben ocurrir juntos o por separado para que se dé la falla.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Usar FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

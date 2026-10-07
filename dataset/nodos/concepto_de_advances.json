@@ -7,11 +7,11 @@
   "resumen_teorico": "Vender una franquicia no ocurre en una sola llamada; es una serie de pequeños compromisos (advances) que acercan al candidato a la decisión final. Cada llamada debe tener un objetivo específico de avance, como que el prospecto revise materiales, complete el CIRF, programe una llamada de revisión del FDD, involucre a su cónyuge, investigue el mercado local, o programe el Discovery Day.",
   "pasos_accionables": [
     "Definir un objetivo de avance específico para cada llamada o interacción",
-    "Pedir compromisos concretos y medibles al prospecto (ej. completar CIRF, investigar mercado)",
+    "Pedir compromisos concretos y medibles al prospecto (ej. completar el formulario de solicitud de información, investigar mercado)",
     "Registrar el avance logrado en cada interacción para dar seguimiento",
     "Escalar progresivamente el nivel de compromiso hasta llegar al cierre"
   ],
-  "entregable_esperado": "Lista de posibles advances mapeados a cada etapa del proceso de venta, con seguimiento por prospecto",
+  "entregable_esperado": "Lista de posibles avances asignados a cada etapa del proceso de venta, con seguimiento por prospecto",
   "nodos_previos": [
     "gestion_seguimiento_prospectos",
     "proceso_llamada_inicial_venta"
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Avanza con Pequeños Compromisos",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-concepto_de_advances-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir compromisos concretos y medibles al prospecto (ej. completar CIRF, investigar mercado)",
+      "texto_nuevo": "Pedir compromisos concretos y medibles al prospecto (ej. completar el formulario de solicitud de información, investigar mercado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "completar CIRF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-concepto_de_advances-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de posibles advances mapeados a cada etapa del proceso de venta, con seguimiento por prospecto",
+      "texto_nuevo": "Lista de posibles avances asignados a cada etapa del proceso de venta, con seguimiento por prospecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "advances",
+          "mapeados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

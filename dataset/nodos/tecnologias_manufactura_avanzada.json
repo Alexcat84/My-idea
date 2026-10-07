@@ -7,7 +7,7 @@
   "resumen_teorico": "Tecnologías como CAD/CAM, prototipado rápido, máquinas CNC, robótica y manufactura digital permiten optimizar diseño y producción reduciendo desperdicio material y energético. La 'inteligencia energética' combina TI con métricas de energía para monitorear consumo en tiempo real e identificar ineficiencias, logrando reducciones promedio de 15% en uso energético.",
   "pasos_accionables": [
     "Evaluar la incorporación de software de diseño y manufactura digital (CAD/CAM).",
-    "Implementar sistemas de monitoreo energético basado en TI ('energy intelligence').",
+    "Implementar sistemas de monitoreo energético basado en TI ('inteligencia energética').",
     "Identificar procesos que puedan automatizarse para reducir tiempo ocioso de maquinaria.",
     "Calcular el retorno de inversión de sistemas que reduzcan consumo en procesos intermitentes."
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Adopta Manufactura Avanzada Inteligente",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-tecnologias_manufactura_avanzada-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar sistemas de monitoreo energético basado en TI ('energy intelligence').",
+      "texto_nuevo": "Implementar sistemas de monitoreo energético basado en TI ('inteligencia energética').",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "energy intelligence"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

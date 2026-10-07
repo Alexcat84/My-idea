@@ -9,9 +9,9 @@
     "Diseñar procedimientos de reinstalación con secuencias claramente numeradas y verificables",
     "Implementar listas de verificación específicas para pasos de reensamblaje, obligatorias y con firma paso a paso",
     "Aumentar la supervisión y doble verificación durante la fase de instalación, no solo desensamblaje, con inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio",
-    "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores"
+    "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas y sujetadores"
   ],
-  "entregable_esperado": "Procedimiento de reinstalación con checklist de verificación por pasos críticos",
+  "entregable_esperado": "Procedimiento de reinstalación con lista de verificación por pasos críticos",
   "nodos_previos": [
     "riesgo_actividades_mantenimiento",
     "fallas_activas_condiciones_latentes"
@@ -103,6 +103,37 @@
       },
       "decision": "lectura total de procedencia (w34r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-vulnerabilidad_instalacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas, sujetadores",
+      "texto_nuevo": "Analizar históricos de fallas de mantenimiento para confirmar predominancia de errores de instalación, incluidas las omisiones en cubiertas y sujetadores",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v16)",
+        "evidencia": "Errata: la enumeración queda trunca sin conjunción; añadir 'y' la cierra sin cambiar los elementos enumerados."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vulnerabilidad_instalacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Procedimiento de reinstalación con checklist de verificación por pasos críticos",
+      "texto_nuevo": "Procedimiento de reinstalación con lista de verificación por pasos críticos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist de verificación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

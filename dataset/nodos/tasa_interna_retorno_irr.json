@@ -6,11 +6,11 @@
   "resumen_teorico": "La Tasa Interna de Retorno (IRR) es la tasa de descuento que hace que el Valor Presente Neto (NPV) de un proyecto sea igual a cero. Es útil para comparar de forma rápida y sencilla el retorno de un proyecto contra la tasa mínima requerida (hurdle rate) de la empresa. Sin embargo, tiene limitaciones importantes: no cuantifica la contribución en valor absoluto (dólares) que el proyecto agrega a la empresa, ni considera directamente la duración del retorno ni la escala de la inversión, por lo que conviene usarla junto con el NPV, especialmente cuando se comparan proyectos de distinto tamaño o duración. Si los dos métodos apuntan a decisiones distintas, el NPV es la mejor guía.",
   "pasos_accionables": [
     "Proyectar los flujos de efectivo futuros de la inversión",
-    "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
+    "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el valor presente neto (VPN) sea igual a cero",
     "Comparar esa tasa con el hurdle rate (tasa de retorno requerida) de la empresa",
-    "Usar el IRR en conjunto con el NPV, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV"
+    "Usar la tasa interna de retorno (TIR) en conjunto con el valor presente neto (VPN), sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el VPN"
   ],
-  "entregable_esperado": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra el hurdle rate de la empresa",
+  "entregable_esperado": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra la tasa mínima de retorno requerida de la empresa",
   "condiciones_activacion": [
     "Cuando se necesita presentar de forma sencilla la rentabilidad de un proyecto a inversionistas o bancos",
     "Cuando se comparan proyectos con diferente escala o duración, usar en combinación con NPV"
@@ -79,6 +79,57 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): El libro dice que cuando lo que está en juego es grande puede tener sentido usar ambos; no prohíbe usar el IRR solo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-tasa_interna_retorno_irr-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el NPV sea igual a cero",
+      "texto_nuevo": "Encontrar, con una calculadora financiera o herramienta en línea, la tasa de descuento que hace que el valor presente neto (VPN) sea igual a cero",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tasa_interna_retorno_irr-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el IRR en conjunto con el NPV, sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el NPV",
+      "texto_nuevo": "Usar la tasa interna de retorno (TIR) en conjunto con el valor presente neto (VPN), sobre todo cuando los montos son grandes o los proyectos tienen duraciones distintas, y tomar siempre la decisión de inversión con el VPN",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el IRR",
+          "el NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tasa_interna_retorno_irr-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra el hurdle rate de la empresa",
+      "texto_nuevo": "Cálculo de la Tasa Interna de Retorno del proyecto, comparado explícitamente contra la tasa mínima de retorno requerida de la empresa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hurdle rate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

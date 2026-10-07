@@ -6,9 +6,9 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Es una versión más completa y pulida del MVP usado en customer discovery, diseñada específicamente para probar tácticas de adquisición y activación con más usuarios. No incluye todas las funcionalidades finales, pero no debe sentirse como un producto de segunda clase. Debe estar instrumentado para capturar datos de comportamiento de clientes y producto continuamente.",
   "pasos_accionables": [
-    "Partir del MVP de baja fidelidad usado en customer discovery",
+    "Partir del MVP de baja fidelidad usado en el descubrimiento de clientes",
     "Pulir funcionalidades limitadas pero completas (ej. solo una categoría de producto)",
-    "Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual",
+    "Evitar mostrar demasiado contenido 'próximamente' que desincentive la compra actual",
     "Instrumentar el MVP para capturar datos de comportamiento de usuario en tiempo real",
     "Iterar continuamente mediante desarrollo ágil y despliegue continuo"
   ],
@@ -32,5 +32,41 @@
   "etiqueta_arbol": "Construye un Prototipo Más Pulido",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-mvp_alta_fidelidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Partir del MVP de baja fidelidad usado en customer discovery",
+      "texto_nuevo": "Partir del MVP de baja fidelidad usado en el descubrimiento de clientes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "customer discovery"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mvp_alta_fidelidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar mostrar demasiado contenido 'coming soon' que desincentive la compra actual",
+      "texto_nuevo": "Evitar mostrar demasiado contenido 'próximamente' que desincentive la compra actual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'coming soon'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

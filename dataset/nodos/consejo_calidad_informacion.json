@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Estructura organizacional prerequisito para la sostenibilidad ágil, que actúa como 'voz del mercado'. Muchas organizaciones tienen abundancia de datos pero carecen de información útil y confiable, generando desconfianza entre departamentos y decisiones deficientes. Este consejo, junto con un sistema de calidad de datos, es quizá el prerrequisito más crucial, porque todo lo demás depende de datos oportunos y confiables.",
   "pasos_accionables": [
-    "Establecer un Consejo de Calidad de Información o de Big Data",
+    "Establecer un Consejo de Calidad de Información o de Datos Masivos",
     "Definir estándares comunes de datos entre departamentos",
     "Identificar y eliminar silos de datos aislados o no publicados",
     "Implementar un sistema de calidad de datos que garantice confiabilidad"
@@ -58,6 +58,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no dice nada de que el consejo garantice la calidad de los datos, así que es un resultado inventado, no una cautela endurecida.; El libro solo dice que el consejo actúa, entre otras cosas, como voz del mercado; no promete que garantice la calidad de los datos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-consejo_calidad_informacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un Consejo de Calidad de Información o de Big Data",
+      "texto_nuevo": "Establecer un Consejo de Calidad de Información o de Datos Masivos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Big Data"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

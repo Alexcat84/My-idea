@@ -6,12 +6,12 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "La verdadera maestría no proviene de la repetición simple sino de la práctica deliberada: retroalimentación constante, dificultad creciente y mentoría estructurada. Tradicionalmente esto requiere coaches humanos escasos. La IA puede actuar como un mentor disponible las 24 horas, ofreciendo retroalimentación instantánea, simulaciones realistas (como pitches ante un 'inversor IA') y seguimiento del progreso, acelerando la curva de aprendizaje de founders y equipos. Hoy lo logra solo de forma limitada: todavía alucina y no conecta bien conceptos complejos.",
   "pasos_accionables": [
-    "Diseñar simuladores o prompts de IA que actúen como mentor o evaluador experto en habilidades clave (ventas, pitching, negociación).",
+    "Diseñar simuladores o instrucciones de IA que actúen como mentor o evaluador experto en habilidades clave (ventas, presentación ante inversionistas, negociación).",
     "Crear un ciclo por etapas: instrucción inicial con IA, práctica simulada con retroalimentación inmediata, evaluación del desempeño al terminar la práctica, y sesión de cierre tipo mentoría.",
     "Aumentar progresivamente la dificultad de los escenarios simulados conforme el usuario mejora.",
     "Registrar métricas de desempeño entre sesiones para medir la mejora real, no solo la cantidad de práctica."
   ],
-  "entregable_esperado": "Sistema o rutina de entrenamiento con IA (ej. simulador de pitch, simulador de ventas) implementado para el equipo fundador o comercial.",
+  "entregable_esperado": "Sistema o rutina de entrenamiento con IA (ej. simulador de presentación ante inversionistas, simulador de ventas) implementado para el equipo fundador o comercial.",
   "nodos_previos": [
     "construccion_experticia_era_ia"
   ],
@@ -75,6 +75,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que los buenos coaches son escasos y expertos, no que sean costosos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-practica_deliberada_asistida_ia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar simuladores o prompts de IA que actúen como mentor o evaluador experto en habilidades clave (ventas, pitching, negociación).",
+      "texto_nuevo": "Diseñar simuladores o instrucciones de IA que actúen como mentor o evaluador experto en habilidades clave (ventas, presentación ante inversionistas, negociación).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "prompts",
+          "pitching"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-practica_deliberada_asistida_ia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema o rutina de entrenamiento con IA (ej. simulador de pitch, simulador de ventas) implementado para el equipo fundador o comercial.",
+      "texto_nuevo": "Sistema o rutina de entrenamiento con IA (ej. simulador de presentación ante inversionistas, simulador de ventas) implementado para el equipo fundador o comercial.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "simulador de pitch"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

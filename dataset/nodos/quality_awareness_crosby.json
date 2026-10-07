@@ -20,7 +20,7 @@
     "zero_defects_concepto"
   ],
   "condiciones_activacion": [
-    "Cuando empiezas a comunicar el programa de calidad a todo tu equipo",
+    "Cuando ya mediste tus problemas de calidad y lo que te cuestan, y empiezas a compartirlo con todo tu equipo",
     "Cuando las personas que trabajan contigo no entienden para qué sirve el programa"
   ],
   "etiqueta_arbol": "Comunica la Calidad con Datos",
@@ -44,6 +44,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el tercer elemento del libro: no intentar engañar a las personas.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-quality_awareness_crosby-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando empiezas a comunicar el programa de calidad a todo tu equipo",
+      "texto_nuevo": "Cuando ya mediste tus problemas de calidad y lo que te cuestan, y empiezas a compartirlo con todo tu equipo",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1621-1623, 2701-2703",
+        "frase": "you should have a good idea of the types and expense of the problems"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

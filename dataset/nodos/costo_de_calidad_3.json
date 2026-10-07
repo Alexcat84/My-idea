@@ -7,7 +7,7 @@
   "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
   "pasos_accionables": [
     "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
-    "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
+    "Identifica y suma todos los componentes: material desechado, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
     "Calcula el costo de calidad total como porcentaje de tus ventas y compáralo con el estándar de referencia del 2.5% al 4%",
     "Usa las cifras para priorizar acciones correctivas enfocadas en prevención más que en inspección",
     "Establece una meta de reducción progresiva del costo de calidad",
@@ -160,6 +160,23 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (invencion_dura, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro excluye del servicio el mantenimiento regular.; El libro no pide incluir el tiempo ni el salario de quien dirige; habla de la carga indirecta y la supervisión del retrabajo.; Misma excepción del mantenimiento regular, señalada por el otro lector.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-costo_de_calidad_3-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica y suma todos los componentes: scrap, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
+      "texto_nuevo": "Identifica y suma todos los componentes: material desechado, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "scrap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

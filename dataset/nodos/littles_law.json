@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará; si el WIP se mantiene constante, también lo hará el lead time.",
   "pasos_accionables": [
-    "Medir el WIP actual del proceso",
+    "Medir el trabajo en curso (WIP) actual del proceso",
     "Medir el throughput (tasa de producción)",
-    "Calcular el lead time usando la fórmula WIP = TP x LT",
-    "Identificar oportunidades para reducir WIP y así reducir lead time",
+    "Calcular el tiempo de entrega (lead time) usando la fórmula WIP = TP x LT",
+    "Identificar oportunidades para reducir el trabajo en curso y así reducir el tiempo de entrega",
     "Monitorear la relación de forma continua"
   ],
-  "entregable_esperado": "Cálculo de lead time basado en Ley de Little con plan de reducción de WIP",
+  "entregable_esperado": "Cálculo del tiempo de entrega basado en Ley de Little con plan de reducción del trabajo en curso",
   "nodos_previos": [
     "inventory_analysis_lean"
   ],
@@ -23,7 +23,7 @@
     "Cuando se necesita reducir el tiempo de entrega al cliente",
     "Al analizar la relación entre inventario y velocidad de proceso"
   ],
-  "etiqueta_arbol": "Menos Trabajo en Curso, Menos Espera",
+  "etiqueta_arbol": "Reduce Trabajo en Curso y Espera",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -43,6 +43,91 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que si el WIP varía también varía el lead time; 'proporcionalmente' es un cuánto añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-littles_law-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Menos Trabajo en Curso, Menos Espera",
+      "texto_nuevo": "Reduce Trabajo en Curso y Espera",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Menos Trabajo en Curso, Menos Espera"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-littles_law-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir el WIP actual del proceso",
+      "texto_nuevo": "Medir el trabajo en curso (WIP) actual del proceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el WIP actual"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-littles_law-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el lead time usando la fórmula WIP = TP x LT",
+      "texto_nuevo": "Calcular el tiempo de entrega (lead time) usando la fórmula WIP = TP x LT",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el lead time"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-littles_law-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar oportunidades para reducir WIP y así reducir lead time",
+      "texto_nuevo": "Identificar oportunidades para reducir el trabajo en curso y así reducir el tiempo de entrega",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reducir WIP",
+          "reducir lead time"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-littles_law-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cálculo de lead time basado en Ley de Little con plan de reducción de WIP",
+      "texto_nuevo": "Cálculo del tiempo de entrega basado en Ley de Little con plan de reducción del trabajo en curso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "lead time",
+          "WIP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

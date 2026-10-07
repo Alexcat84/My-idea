@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad con periodos anteriores y, a veces, con competidores, de forma objetiva y proporcional a la oportunidad de error. Ten en cuenta que no es un marcador aceptado por todos: al juntarlo todo en una sola cifra, el índice no te deja ver por separado los defectos críticos y mayores. Si eso te importa, puedes seguirlos aparte además del índice.",
   "pasos_accionables": [
-    "Definir categorías de seriedad de defectos relevantes para el producto",
+    "Definir categorías de gravedad de defectos relevantes para el producto",
     "Asignar peso (demérito) a cada categoría de defecto",
     "Registrar número de defectos por categoría durante inspección/auditoría",
     "Calcular deméritos totales y dividir entre unidades inspeccionadas",
@@ -77,6 +77,23 @@
       },
       "decision": "lectura total de procedencia (w24rr): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-clasificacion_de_seriedad_de_defectos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir categorías de seriedad de defectos relevantes para el producto",
+      "texto_nuevo": "Definir categorías de gravedad de defectos relevantes para el producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "seriedad de defectos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

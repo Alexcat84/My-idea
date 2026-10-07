@@ -6,13 +6,13 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Contrasta el Old View (poder en manos del jefe/staff, reglas y cumplimiento, burocracia, estandarización) con el New View (poder en manos del experto, guiado por contexto e insight, coordinación mutua, diversidad e innovación). La responsabilidad de la seguridad de un proceso o tecnología recae primordialmente en la línea (gerentes y supervisores) que trabajan con ella diariamente, no solo en el staff de seguridad.",
   "pasos_accionables": [
-    "Mapear el poder de decisión actual: ¿está en manos de jefes/staff o de expertos operativos?",
+    "Mapear el poder de decisión actual: ¿está en manos de jefes/áreas de apoyo o de expertos operativos?",
     "Fomentar la involucración activa de gerentes de línea en el trabajo diario (no solo en 'seguridad' como tema aislado)",
     "Dar espacio de discreción a los trabajadores para hacer lo correcto, con diseños tolerantes al error",
     "Establecer mecanismos de coordinación mutua en lugar de solo procesos rígidos",
-    "Combinar experiencia operativa (detalle del trabajo) con visión sistémica (staff) para detectar riesgos invisibles a los expertos"
+    "Combinar experiencia operativa (detalle del trabajo) con visión sistémica (áreas de apoyo) para detectar riesgos invisibles a los expertos"
   ],
-  "entregable_esperado": "Modelo organizacional de seguridad que defina roles complementarios entre línea y staff según principios New View",
+  "entregable_esperado": "Modelo organizacional de seguridad que defina roles complementarios entre línea y áreas de apoyo según los principios de la Nueva Visión",
   "nodos_previos": [
     "responsabilidad_hacia_abajo_vs_rendicion_de_cuentas"
   ],
@@ -38,6 +38,57 @@
         "motivo": "Conservar la experticia humana frente a la IA y el New View de seguridad solo comparten la palabra experto; el salto desorienta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-nueva_vision_organizacion_linea_seguridad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear el poder de decisión actual: ¿está en manos de jefes/staff o de expertos operativos?",
+      "texto_nuevo": "Mapear el poder de decisión actual: ¿está en manos de jefes/áreas de apoyo o de expertos operativos?",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "jefes/staff"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-nueva_vision_organizacion_linea_seguridad-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Combinar experiencia operativa (detalle del trabajo) con visión sistémica (staff) para detectar riesgos invisibles a los expertos",
+      "texto_nuevo": "Combinar experiencia operativa (detalle del trabajo) con visión sistémica (áreas de apoyo) para detectar riesgos invisibles a los expertos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(staff)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-nueva_vision_organizacion_linea_seguridad-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modelo organizacional de seguridad que defina roles complementarios entre línea y staff según principios New View",
+      "texto_nuevo": "Modelo organizacional de seguridad que defina roles complementarios entre línea y áreas de apoyo según los principios de la Nueva Visión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "staff",
+          "principios New View"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

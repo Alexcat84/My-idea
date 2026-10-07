@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Si existen huecos en pisos, tragaluces o drenajes de piso en la instalación"
   ],
-  "etiqueta_arbol": "Protege Aberturas de Piso y Pared",
+  "etiqueta_arbol": "Protege las Aberturas del Piso",
   "correcciones": [
     {
       "id": "fidelidad-t1-02",
@@ -89,6 +89,20 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la protección en todos los lados y exceptúa escaleras y entradas de escaleras de mano; se caen ambas cosas.; Mismo defecto.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-pisos_aberturas_paredes_seguridad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Protege Aberturas de Piso y Pared",
+      "texto_nuevo": "Protege las Aberturas del Piso",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v16)",
+        "evidencia": "El concepto trata solo de aberturas en pisos; la etiqueta prometía también las de pared, y la corrección se ciñe a lo que el concepto cubre."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

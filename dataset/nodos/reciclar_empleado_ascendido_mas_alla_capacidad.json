@@ -205,9 +205,23 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "voz-reciclar_empleado_ascendido_mas_alla_capacidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Devuelve a su Puesto Anterior",
+      "texto_nuevo": "Devuelve al Ascendido al Puesto Anterior",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v16)",
+        "evidencia": "La etiqueta no dice a quién se devuelve y deja oculto el concepto (el ascendido que no rinde); se nombra a esa persona y se conserva 'Puesto Anterior'."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
-  "etiqueta_arbol": "Devuelve a su Puesto Anterior",
+  "etiqueta_arbol": "Devuelve al Ascendido al Puesto Anterior",
   "fuentes_internas": [
     "High Output Management - Andrew S. Grove"
   ]

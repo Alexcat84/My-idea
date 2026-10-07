@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos suelen expresarse como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.",
   "pasos_accionables": [
-    "Determinar cuál de las cinco clases de medida aplica al problema de calidad",
+    "Determinar cuál de las cinco clases de medida se aplica al problema de calidad",
     "Definir numerador y denominador apropiados si se trata de medidas de defectos",
     "Para características de producto, evaluar si se requiere inventar una nueva unidad de medida o sensor",
     "Validar que la unidad de medida refleje adecuadamente la especificación del producto o servicio"
@@ -41,6 +41,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que las medidas de defectos suelen tomar forma de fracción.; Mismo endurecimiento del 'usually'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-clases_de_medidas_de_calidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar cuál de las cinco clases de medida aplica al problema de calidad",
+      "texto_nuevo": "Determinar cuál de las cinco clases de medida se aplica al problema de calidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "medida aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

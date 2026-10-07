@@ -6,13 +6,13 @@
   "fuente": "Traction - Gabriel Weinberg",
   "resumen_teorico": "El Quality Score es una calificación que Google asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
   "pasos_accionables": [
-    "Revisar el CTR de cada keyword y anuncio regularmente",
-    "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
-    "Usar Dynamic Keyword Insertion para aumentar relevancia automáticamente",
-    "Adaptar el copy del anuncio específicamente a cada grupo de keywords",
-    "Monitorear el Quality Score general de la cuenta como indicador de salud de la campaña"
+    "Revisar la tasa de clics (CTR) de cada palabra clave y anuncio regularmente",
+    "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna un nivel de calidad bajo (el promedio ronda el 2%)",
+    "Usar la inserción dinámica de palabras clave para aumentar relevancia automáticamente",
+    "Adaptar el texto del anuncio específicamente a cada grupo de palabras clave",
+    "Monitorear el puntaje de calidad general de la cuenta como indicador de salud de la campaña"
   ],
-  "entregable_esperado": "Un reporte de Quality Score por ad group con acciones correctivas para los anuncios de bajo desempeño.",
+  "entregable_esperado": "Un reporte del puntaje de calidad por grupo de anuncios con acciones correctivas para los anuncios de bajo desempeño.",
   "nodos_previos": [
     "sem_estrategia_ejecucion"
   ],
@@ -57,6 +57,110 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro describe el Quality Score solo como calificación de Google.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el CTR de cada keyword y anuncio regularmente",
+      "texto_nuevo": "Revisar la tasa de clics (CTR) de cada palabra clave y anuncio regularmente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada keyword",
+          "el CTR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
+      "texto_nuevo": "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna un nivel de calidad bajo (el promedio ronda el 2%)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Quality Score"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar Dynamic Keyword Insertion para aumentar relevancia automáticamente",
+      "texto_nuevo": "Usar la inserción dinámica de palabras clave para aumentar relevancia automáticamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Dynamic Keyword Insertion"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adaptar el copy del anuncio específicamente a cada grupo de keywords",
+      "texto_nuevo": "Adaptar el texto del anuncio específicamente a cada grupo de palabras clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "copy",
+          "keywords"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorear el Quality Score general de la cuenta como indicador de salud de la campaña",
+      "texto_nuevo": "Monitorear el puntaje de calidad general de la cuenta como indicador de salud de la campaña",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Quality Score"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-quality_score_optimizacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un reporte de Quality Score por ad group con acciones correctivas para los anuncios de bajo desempeño.",
+      "texto_nuevo": "Un reporte del puntaje de calidad por grupo de anuncios con acciones correctivas para los anuncios de bajo desempeño.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Quality Score",
+          "ad group"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

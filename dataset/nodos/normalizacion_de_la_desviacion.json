@@ -10,9 +10,9 @@
     "Identifica el lenguaje que usas para minimizar riesgos crecientes en tu negocio",
     "Revisa si tus criterios de riesgo aceptable se han relajado sin que lo decidieras conscientemente, por ejemplo si el desempeño puntual (llegar a tiempo) se ha vuelto la norma a costa de márgenes de seguridad",
     "Establece puntos de control periódicos en tu calendario para cuestionar la aceptación acumulada de desviaciones",
-    "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
+    "Evalúa si estás ignorando tus propias señales de alerta o la retroalimentación sobre calidad",
     "Busca una revisión externa, como un mentor o asesor, que contrarreste tu normalización interna",
-    "Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'",
+    "Identificar señales de riesgo que fueron descartadas o no comunicadas como 'malas noticias'",
     "Fomentar una cultura donde las pequeñas desviaciones sean visibles y cuestionadas, no normalizadas"
   ],
   "entregable_esperado": "Informe personal de auditoría que identifique patrones de desviación normalizada y recomendaciones concretas para revertirlos.",
@@ -34,7 +34,7 @@
     "Cuando se investigan accidentes que parecen surgir de la 'nada' tras un largo periodo de operación exitosa",
     "Cuando la organización ha experimentado presión sostenida de producción o puntualidad"
   ],
-  "etiqueta_arbol": "Cuidado con Normalizar el Riesgo",
+  "etiqueta_arbol": "Evita Normalizar el Riesgo",
   "ids_alias": [
     "regulador_fallas_sistemicas",
     "drift_hacia_el_fallo_2"
@@ -131,6 +131,56 @@
       },
       "decision": "lectura total de procedencia (w33): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-normalizacion_de_la_desviacion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con Normalizar el Riesgo",
+      "texto_nuevo": "Evita Normalizar el Riesgo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-normalizacion_de_la_desviacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa si estás ignorando tus propias señales de alerta o el feedback sobre calidad",
+      "texto_nuevo": "Evalúa si estás ignorando tus propias señales de alerta o la retroalimentación sobre calidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-normalizacion_de_la_desviacion-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar señales de riesgo que fueron descartadas o no reportadas como 'malas noticias'",
+      "texto_nuevo": "Identificar señales de riesgo que fueron descartadas o no comunicadas como 'malas noticias'",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no reportadas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

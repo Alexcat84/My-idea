@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando el cierre de jornada consiste en preguntarle al superior qué más necesita, la responsabilidad del trabajo pasa sin notarlo a él: es él quien repasa lo pendiente y quien se siente dueño de que salga. Si en cambio informas tú del estado de tu trabajo, de cuándo se verá el siguiente resultado y de lo que quedó sin hacer con su plan para reponerlo, la propiedad psicológica de la tarea se queda contigo. El superior sigue enterado, pero quien responde por tu trabajo eres tú, y así el liderazgo se reparte en todos los niveles.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_04.md, unidad Cap. 6, titulo textual Whatever They Tell Me to Do!. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los cinco pasos salen todos de la linea 35, que es la PIEZA P1 de la frontera publicada en esta vuelta para cap_04, 145 palabras, la unica pieza de todo el capitulo clasificada NODO. Los cinco pasos vienen de un solo parrafo del libro y por eso se funden en un candidato y no en cinco, por la repeticion interna de P.19: son las cuatro frases del mismo guion citado mas la frase que fija a quien pertenece la responsabilidad. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el parrafo pone su propio guion, palabra por palabra, del reporte que el jefe de departamento tiene que dar, y ese guion nombra tres etapas una a una (el estado de un trabajo en curso, el proximo hito, y lo que quedo sin hacer con su plan de reponerlo), que son etapas de un reporte y no metas. No hay adjetivo de adecuacion en el sitio del criterio. EL CASO ENTRA COMO CONTEXTO Y NO COMO NODO PROPIO (manual 3.5): el dialogo previo con el segundo al mando y con el navegante, piezas residuo de las lineas 31 y 33 de la misma frontera, se queda fuera porque el guion generalizable esta entero en la linea 35 y el entregable no lleva ningun dato del caso, ni el nombre del segundo al mando, ni el del navegante, ni el del marinero cuya entrevista de calificacion quedo pendiente. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la linea 41 generaliza el diagnostico de la estructura de lider a seguidores y la linea 47 compara este mismo capitulo con otros ejemplos del libro (la reunion rutinaria, el reparto de mensajes, la formacion), pero ninguna de las dos numera el cierre de jornada como una de varias partes con su cuenta, asi que esto no cablea ninguna arista D.37; y la busqueda de madre por lectura (seccion 11 de EXTRACTOR.md) no encuentra en los nodos ya minados de cap_03 ningun paso que nombre este cierre de jornada, asi que el nodo entra sin arista declarada, hermano de los de cap_03 bajo el mismo diagnostico de lider a seguidores, y su veredicto frente a ellos es SANO. CORRECCION DECLARADA DE LA VUELTA 78 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.3 del encargo de la 78), sin insertar nada. LOS PASOS 2 Y 4 TRAIAN UNA CLAUSULA PUENTE CADA UNO Y SE REESCRIBEN SIN BORRAR EL RASTRO. El paso 2 decia: Reporta primero el estado de un trabajo en curso con signo positivo, nombrando el propio trabajo. Hoy dice lo mismo sin con signo positivo. LA CLAUSULA QUE SE RETIRA la pone el extractor y no el libro: el coming along fine de L35 es el ejemplo del guion, y L35 no pide que el estado que se reporta sea bueno. El paso 4 decia: Si algo quedo sin hacer, dilo sin disculpa vacia y da el plan de cuando se hara. Hoy dice: Si algo quedo sin hacer, dilo y da el plan de cuando se hara. LA CLAUSULA QUE SE RETIRA, sin disculpa vacia, tampoco la pone el libro: L35 da lo pendiente y su plan de reponerlo, y ninguna linea del capitulo habla de disculpas. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 78 es 5 pasos, 3 TRANSCRIPCION y 2 PUENTE sobre el texto viejo, y 5 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v78ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
   "pasos_accionables": [
-    "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: repórtale tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
+    "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: infórmale de tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
     "Informa primero el estado de un trabajo en curso, nombrando el propio trabajo; por ejemplo, que las cartas de navegación para la salida de la semana que viene van bien.",
     "Di cuándo se verá el resultado o el próximo hito de ese trabajo; siguiendo el ejemplo, que mañana podrás enseñarle el plan aproximado al capitán.",
     "Si algo quedó sin hacer, dilo y da el plan de cuándo se hará; por ejemplo, que no pudiste ver a un suboficial para su entrevista de calificación, pero que lo recuperarás mañana.",
@@ -284,6 +284,23 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "voz-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: repórtale tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
+      "texto_nuevo": "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: infórmale de tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "repórtale"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Informa sin Ceder tu Trabajo",

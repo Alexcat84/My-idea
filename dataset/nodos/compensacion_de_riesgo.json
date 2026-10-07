@@ -20,7 +20,7 @@
   "condiciones_activacion": [
     "Cuando se introduce nueva tecnología de seguridad y se observa un cambio de comportamiento operativo hacia mayor riesgo."
   ],
-  "etiqueta_arbol": "Cuidado con la Falsa Seguridad",
+  "etiqueta_arbol": "Desconfía de la Falsa Seguridad",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
   ],
@@ -68,6 +68,22 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-compensacion_de_riesgo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con la Falsa Seguridad",
+      "texto_nuevo": "Desconfía de la Falsa Seguridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Los incentivos de ventas por cuotas mensuales o trimestrales generan compras forzadas al final de cada periodo, empujando producto sin demanda real hacia la cadena. Del mismo modo, incentivos internos en conflicto (ej. minimizar costos de transporte a costa del servicio al cliente) generan ineficiencias sistémicas.",
   "pasos_accionables": [
-    "Usar costeo basado en actividades (ABC) para cuantificar el costo real del forward buying por incentivos de fin de periodo",
+    "Usar costeo basado en actividades (ABC) para cuantificar el costo real de las compras anticipadas por incentivos de fin de periodo",
     "Identificar incentivos internos que generen conflictos entre departamentos",
     "Experimentar con nuevos esquemas de incentivos alineados a la eficiencia de toda la cadena, no solo a metas individuales"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Revisa tus Incentivos de Desempeño",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-alineacion_incentivos_desempeno-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar costeo basado en actividades (ABC) para cuantificar el costo real del forward buying por incentivos de fin de periodo",
+      "texto_nuevo": "Usar costeo basado en actividades (ABC) para cuantificar el costo real de las compras anticipadas por incentivos de fin de periodo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forward buying"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

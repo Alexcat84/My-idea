@@ -7,7 +7,7 @@
   "resumen_teorico": "Tener múltiples fundadores en la junta directiva puede parecer beneficioso (aliados, mayor afinidad) pero genera confusión de roles, especialmente si un fundador subordinado (no-CEO) también es director y por ende 'superior' al CEO en ese contexto. A medida que se levantan rondas de financiamiento, los asientos de junta se vuelven un juego de suma cero entre fundadores.",
   "pasos_accionables": [
     "Antes de formar la junta oficial, decidir qué fundador(es) ocuparán los asientos disponibles",
-    "Evitar poner en la junta a un fundador que reporta directamente al CEO fundador",
+    "Evitar poner en la junta a un fundador que depende directamente del CEO fundador",
     "Considerar roles alternativos para cofundadores no directores: sesiones separadas, términos de un año, rol de 'observador'",
     "Negociar la reducción de asientos de fundadores en rondas sucesivas de forma anticipada, no reactiva"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Cuida los Roles en tu Junta",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-fundadores_en_junta_directiva-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar poner en la junta a un fundador que reporta directamente al CEO fundador",
+      "texto_nuevo": "Evitar poner en la junta a un fundador que depende directamente del CEO fundador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporta directamente al"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -37,8 +37,26 @@
   "ids_alias": [
     "distribucion_normal_probabilidad_2"
   ],
-  "etiqueta_arbol": "Calcula Probabilidades con Normal",
+  "etiqueta_arbol": "Calcula Probabilidades con la Distribución Normal",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-distribucion_normal_probabilidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula Probabilidades con Normal",
+      "texto_nuevo": "Calcula Probabilidades con la Distribución Normal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "con Normal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

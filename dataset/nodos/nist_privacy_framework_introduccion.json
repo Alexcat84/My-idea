@@ -7,8 +7,8 @@
   "resumen_teorico": "El NIST Privacy Framework es una herramienta voluntaria que puede ayudar a las organizaciones a crear o mejorar un programa de privacidad. La gestión efectiva del riesgo de privacidad puede ayudar a generar confianza en productos y servicios, a comunicar mejor las prácticas de privacidad y a cumplir obligaciones legales. Es importante entender que la ciberseguridad, aunque necesaria, no puede abordar todos los riesgos de privacidad.",
   "pasos_accionables": [
     "Reconocer que privacidad y ciberseguridad son disciplinas relacionadas pero distintas",
-    "Familiarizarse con el modelo 'Ready, Set, Go' del framework",
-    "Identificar las cinco áreas de gestión de riesgo de privacidad: Identify, Govern, Control, Communicate, Protect"
+    "Familiarizarse con el modelo 'Ready, Set, Go' del marco",
+    "Identificar las cinco áreas de gestión de riesgo de privacidad: Identificar, Gobernar, Controlar, Comunicar, Proteger"
   ],
   "entregable_esperado": "Comprensión inicial del propósito y estructura del NIST Privacy Framework para justificar su adopción en la organización",
   "nodos_previos": [
@@ -71,6 +71,40 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c06): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-nist_privacy_framework_introduccion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Familiarizarse con el modelo 'Ready, Set, Go' del framework",
+      "texto_nuevo": "Familiarizarse con el modelo 'Ready, Set, Go' del marco",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "framework"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-nist_privacy_framework_introduccion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar las cinco áreas de gestión de riesgo de privacidad: Identify, Govern, Control, Communicate, Protect",
+      "texto_nuevo": "Identificar las cinco áreas de gestión de riesgo de privacidad: Identificar, Gobernar, Controlar, Comunicar, Proteger",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Identify, Govern, Control, Communicate, Protect"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

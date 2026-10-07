@@ -11,7 +11,7 @@
     "Diseñar el producto para fácil desensamble y recuperación de materiales de alta calidad",
     "Comunicar al cliente el valor de 'usar sin poseer' como ventaja (actualización constante, sin residuos)"
   ],
-  "entregable_esperado": "Modelo de negocio de eco-leasing documentado con flujo de recuperación de materiales y cálculo de rentabilidad para el fabricante",
+  "entregable_esperado": "Modelo de negocio de arrendamiento ecológico documentado con flujo de recuperación de materiales y cálculo de rentabilidad para el fabricante",
   "nodos_previos": [
     "metabolismo_biologico_y_tecnico"
   ],
@@ -73,6 +73,22 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c09): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-productos_de_servicio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modelo de negocio de eco-leasing documentado con flujo de recuperación de materiales y cálculo de rentabilidad para el fabricante",
+      "texto_nuevo": "Modelo de negocio de arrendamiento ecológico documentado con flujo de recuperación de materiales y cálculo de rentabilidad para el fabricante",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "eco-leasing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

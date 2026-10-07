@@ -7,8 +7,8 @@
   "resumen_teorico": "El COPQ (Cost of Poor Quality), también llamado COP3, agrupa los costos que desaparecerían si no existieran fallos, como retrabajo, reclamos y garantías. Los costos de calidad se clasifican en prevención, evaluación, fallas internas y fallas externas; en sentido estricto el COPQ son solo las fallas, y la evaluación y la prevención se ven como inversiones para lograr la calidad. Las fallas son la mayor parte del total y la prevención una parte pequeña. En manufactura promedia 15% de ingresos (rango 5-35%) y en servicios promedia 30% de gastos operativos (rango 25-40%), y en la mayoría de los negocios puede superar la utilidad anual; con un programa sistemático de reducción puede bajar a niveles aún menores. Además de lo reportado, existen costos ocultos, ventas perdidas, rediseño, tiempo de inactividad, que pueden multiplicar por tres o cuatro el costo visible. Siempre es más barato hacer las cosas bien desde la primera vez que corregirlas después, y reducirlo raramente exige inversión de capital.",
   "pasos_accionables": [
     "Identifica y categoriza todos los costos de fallos internos, externos, evaluación y prevención en tu negocio, incluyendo costos ocultos como ventas perdidas o tiempo de inactividad",
-    "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
-    "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
+    "Calcula el costo total de la mala calidad (COPQ) con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
+    "Compara tu COPQ contra puntos de comparación de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
     "Identifica los pocos procesos o productos que concentran la mayor parte del costo",
     "Usa el resultado para decidir si invertir en mejora de calidad en vez de recortar costos que dañen el servicio",
     "Establece una meta de reducción anual y repite el cálculo periódicamente para verificar la tendencia"
@@ -289,6 +289,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que hay pocos datos creíbles para comparar y que cada empresa define el COPQ distinto.; Mismo matiz que la marca 0.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-costo_de_mala_calidad_copq-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula el COPQ total con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
+      "texto_nuevo": "Calcula el costo total de la mala calidad (COPQ) con tus propios registros contables, como porcentaje de tus ventas o costos operativos, para evitar sesgos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el COPQ total"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-costo_de_mala_calidad_copq-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compara tu COPQ contra benchmarks de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
+      "texto_nuevo": "Compara tu COPQ contra puntos de comparación de la industria para dimensionar la oportunidad real, tomándolos solo como referencia aproximada: hay pocos datos confiables y cada empresa define el COPQ a su manera",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarks"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

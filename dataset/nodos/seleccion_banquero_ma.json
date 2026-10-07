@@ -6,14 +6,14 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Elegir el banquero adecuado es subjetivo pero debe guiarse por criterios clave: referencias confiables, experiencia específica en la industria, conexiones frescas con compradores potenciales, historial comprobado de cierres de deals, compromiso personal del banquero senior asignado, y compatibilidad cultural/estilo de trabajo con la empresa.",
   "pasos_accionables": [
-    "Solicitar referencias a través de la red de confianza (board, inversionistas, colegas)",
-    "Verificar experiencia específica en el subsector de la industria (no solo 'tech' genérico)",
-    "Evaluar la frescura y calidad de las conexiones del banquero con compradores potenciales y sus equipos de corporate development",
-    "Pedir ejemplos concretos de deals cerrados exitosamente",
+    "Solicitar referencias a través de la red de confianza (junta directiva, inversionistas, colegas)",
+    "Verificar experiencia específica en el subsector de la industria (no solo 'tecnología' genérica)",
+    "Evaluar la frescura y calidad de las conexiones del banquero con compradores potenciales y sus equipos de desarrollo corporativo",
+    "Pedir ejemplos concretos de operaciones cerradas exitosamente",
     "Exigir compromiso personal del banquero senior en todas las reuniones clave",
     "Evaluar la compatibilidad cultural y de herramientas de trabajo (virtual vs presencial)"
   ],
-  "entregable_esperado": "Lista corta de banqueros candidatos evaluados según los 6 criterios, con uno seleccionado para negociar el engagement letter",
+  "entregable_esperado": "Lista corta de banqueros candidatos evaluados según los 6 criterios, con uno seleccionado para negociar la carta de contratación",
   "nodos_previos": [
     "decision_hire_investment_banker"
   ],
@@ -27,5 +27,91 @@
   "etiqueta_arbol": "Elige Bien a Tu Asesor",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-seleccion_banquero_ma-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solicitar referencias a través de la red de confianza (board, inversionistas, colegas)",
+      "texto_nuevo": "Solicitar referencias a través de la red de confianza (junta directiva, inversionistas, colegas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_banquero_ma-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar experiencia específica en el subsector de la industria (no solo 'tech' genérico)",
+      "texto_nuevo": "Verificar experiencia específica en el subsector de la industria (no solo 'tecnología' genérica)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'tech' genérico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_banquero_ma-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar la frescura y calidad de las conexiones del banquero con compradores potenciales y sus equipos de corporate development",
+      "texto_nuevo": "Evaluar la frescura y calidad de las conexiones del banquero con compradores potenciales y sus equipos de desarrollo corporativo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "corporate development"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_banquero_ma-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir ejemplos concretos de deals cerrados exitosamente",
+      "texto_nuevo": "Pedir ejemplos concretos de operaciones cerradas exitosamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "deals"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_banquero_ma-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista corta de banqueros candidatos evaluados según los 6 criterios, con uno seleccionado para negociar el engagement letter",
+      "texto_nuevo": "Lista corta de banqueros candidatos evaluados según los 6 criterios, con uno seleccionado para negociar la carta de contratación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el engagement letter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar el nivel de involucramiento emocional típico del cliente al comprar el producto/servicio",
     "Diseñar una celebración proporcional (ni insuficiente ni excesiva) para esa categoría de producto",
-    "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)",
+    "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (afirmación, adopción, etc.)",
     "Alinea la intensidad emocional de la celebración con la naturaleza de tu producto o servicio (evita sobreactuar si es algo de bajo involucramiento)"
   ],
   "entregable_esperado": "Una guía de 'niveles de celebración' según tipo de producto/servicio, el momento de la compra y el cliente.",
@@ -22,7 +22,7 @@
     "Cuando el producto es de bajo involucramiento emocional (ej. seguros, servicios técnicos) y se corre riesgo de sobreactuar",
     "Si se detecta que celebraciones pasadas generaron incomodidad en el cliente"
   ],
-  "etiqueta_arbol": "No Celebres Antes de Tiempo",
+  "etiqueta_arbol": "Ajusta tu Celebración a tu Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
   ],
@@ -42,6 +42,37 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro ajusta la celebración al producto o servicio, al momento y al cliente; el ticket promedio como criterio no está.; Mismo defecto: el criterio del ticket promedio es añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-calibracion_intensidad_celebracion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No Celebres Antes de Tiempo",
+      "texto_nuevo": "Ajusta tu Celebración a tu Cliente",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v16)",
+        "evidencia": "'Antes de tiempo' promete no festejar prematuramente, pero el concepto trata de ajustar la magnitud de la celebración al cliente; la nueva etiqueta dice eso, en segunda persona y con cinco palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calibracion_intensidad_celebracion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (Affirm, Adopt, etc.)",
+      "texto_nuevo": "Reservar elementos sorpresa adicionales para fases posteriores del ciclo de vida del cliente (afirmación, adopción, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(Affirm, Adopt, etc.)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

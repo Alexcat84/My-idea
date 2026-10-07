@@ -19,7 +19,7 @@
     "actitud_de_experimentacion_organizacional"
   ],
   "condiciones_activacion": [
-    "Si tu proyecto es de gran envergadura, alto costo o larga duración",
+    "Si tu proyecto es de gran envergadura, alto costo y larga duración",
     "Si necesitas invertir dinero en equipo de producción antes de lanzar"
   ],
   "etiqueta_arbol": "Separa tus Pruebas Finales",
@@ -72,6 +72,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo quitar; doble lectura ciega, arbitro): El libro coloca la decisión de pasar a pruebas justo al final del desarrollo; lo que se separa son las etapas, no el momento de decidir respecto del cierre del desarrollo.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-etapa_pruebas_necesaria-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu proyecto es de gran envergadura, alto costo o larga duración",
+      "texto_nuevo": "Si tu proyecto es de gran envergadura, alto costo y larga duración",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "4692-4694",
+        "frase": "for larger, more expensive, and longer projects, however, the recommendation is that the Testing stage"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c18): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

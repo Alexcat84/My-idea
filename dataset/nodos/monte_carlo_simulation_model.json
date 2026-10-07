@@ -9,8 +9,8 @@
     "Definir tres estimaciones (optimista, pesimista, probable) para cada variable financiera clave",
     "Construir una curva de distribución de probabilidad para cada variable",
     "Ejecutar miles de escenarios simulados mediante software especializado",
-    "Analizar la distribución resultante de NPV para estimar el NPV esperado y su riesgo",
-    "Usar el NPV esperado dividido por costos restantes para rankear proyectos"
+    "Analizar la distribución resultante del valor actual neto (VAN) para estimar el VAN esperado y su riesgo",
+    "Usar el valor actual neto esperado dividido por costos restantes para ordenar proyectos"
   ],
   "entregable_esperado": "Distribución de probabilidad de NPV con valor esperado, usada como insumo en decisiones de gate",
   "nodos_previos": [
@@ -44,6 +44,41 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala dos límites del modelo (no contempla detener el proyecto, admite escenarios casi imposibles) que el resumen omite.; Mismo defecto: se caen las dos limitaciones que el libro advierte.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-monte_carlo_simulation_model-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar la distribución resultante de NPV para estimar el NPV esperado y su riesgo",
+      "texto_nuevo": "Analizar la distribución resultante del valor actual neto (VAN) para estimar el VAN esperado y su riesgo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-monte_carlo_simulation_model-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el NPV esperado dividido por costos restantes para rankear proyectos",
+      "texto_nuevo": "Usar el valor actual neto esperado dividido por costos restantes para ordenar proyectos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV",
+          "rankear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

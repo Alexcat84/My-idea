@@ -29,9 +29,9 @@
     "liderazgo_gerencial_seguridad"
   ],
   "condiciones_activacion": [
-    "Al menos una vez al año o al completar un ciclo del programa",
+    "Al establecer el programa y luego al menos una vez al año o al completar un ciclo del programa",
     "Cuando ocurre un incidente grave, daño significativo a la propiedad o aumento de quejas de seguridad",
-    "Cuando hay un cambio significativo en procesos, equipos o personas clave"
+    "Cuando hay un cambio significativo en procesos, equipos, instalaciones, materiales, personas clave o prácticas de trabajo"
   ],
   "etiqueta_arbol": "Revisa y Mejora tu Programa",
   "ids_alias": [
@@ -170,6 +170,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye instalaciones, materiales y prácticas de trabajo entre los cambios que pueden pedir cambiar el programa.; Misma omisión de instalaciones y materiales.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-evaluacion_mejora_programa-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al menos una vez al año o al completar un ciclo del programa",
+      "texto_nuevo": "Al establecer el programa y luego al menos una vez al año o al completar un ciclo del programa",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "883, 943",
+        "frase": "it should be evaluated initially to verify that it is being implemented as intended"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-evaluacion_mejora_programa-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando hay un cambio significativo en procesos, equipos o personas clave",
+      "texto_nuevo": "Cuando hay un cambio significativo en procesos, equipos, instalaciones, materiales, personas clave o prácticas de trabajo",
+      "cita": {
+        "libro": "OSHA3885",
+        "fichero": "books/Especificos/Health and Safety/OSHA3885.md",
+        "lineas": "973, 977",
+        "frase": "changes in equipment, facilities, materials, key personnel, or work practices"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Usar IA para preparar materiales de entrenamiento personalizados según el rol",
     "Delegar la explicación de conceptos básicos a la IA para liberar tiempo del líder/mentor",
-    "Reservar el tiempo humano para actividades de aprendizaje activo: resolución de problemas y feedback directo",
-    "Monitorear el progreso del colaborador usando insights generados por la IA sobre sus áreas débiles"
+    "Reservar el tiempo humano para actividades de aprendizaje activo: resolución de problemas y retroalimentación directa",
+    "Monitorear el progreso del colaborador usando hallazgos generados por la IA sobre sus áreas débiles"
   ],
-  "entregable_esperado": "Un programa de onboarding/capacitación híbrido (IA + mentoring humano) documentado para el equipo",
+  "entregable_esperado": "Un programa de incorporación/capacitación híbrido (IA + mentoría humana) documentado para el equipo",
   "nodos_previos": [
     "construccion_experticia_era_ia"
   ],
@@ -22,7 +22,7 @@
     "Cuando la startup necesita escalar la capacitación de nuevos empleados con recursos limitados",
     "Cuando el líder no tiene tiempo suficiente para mentoría individual constante"
   ],
-  "etiqueta_arbol": "Deja que la IA Entrene",
+  "etiqueta_arbol": "Capacita a Tu Equipo con IA",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
   ],
@@ -42,6 +42,71 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro habla de potencial ('have the potential', 'could be a big boost'); el nodo da el efecto por hecho.; El libro presenta la IA como socia y no reemplazo, a cargo de parte del contenido, con una persona que la verifica porque todavía alucina.; Mismo límite perdido: coach limitado que todavía se equivoca y necesita una persona que lo guíe.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-ai_como_coach_personalizado-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Deja que la IA Entrene",
+      "texto_nuevo": "Capacita a Tu Equipo con IA",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v16)",
+        "evidencia": "Sin objeto, 'que la IA entrene' se lee como entrenar a la IA o como delegarle toda la formación, cuando el concepto es capacitar al equipo apoyándose en tutores de IA; la nueva etiqueta dice eso."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ai_como_coach_personalizado-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reservar el tiempo humano para actividades de aprendizaje activo: resolución de problemas y feedback directo",
+      "texto_nuevo": "Reservar el tiempo humano para actividades de aprendizaje activo: resolución de problemas y retroalimentación directa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback directo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ai_como_coach_personalizado-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorear el progreso del colaborador usando insights generados por la IA sobre sus áreas débiles",
+      "texto_nuevo": "Monitorear el progreso del colaborador usando hallazgos generados por la IA sobre sus áreas débiles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ai_como_coach_personalizado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un programa de onboarding/capacitación híbrido (IA + mentoring humano) documentado para el equipo",
+      "texto_nuevo": "Un programa de incorporación/capacitación híbrido (IA + mentoría humana) documentado para el equipo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "onboarding",
+          "mentoring humano"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

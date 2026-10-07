@@ -20,7 +20,7 @@
     "funcion_respond_plan_incidentes"
   ],
   "condiciones_activacion": [
-    "Cuando ya existen salvaguardas básicas de protección implementadas",
+    "Cuando necesitas encontrar y analizar posibles ataques a tu negocio, junto con tus medidas de protección",
     "Si el negocio no tiene forma de detectar actividad sospechosa en su red"
   ],
   "etiqueta_arbol": "Detecta Ataques a Tiempo",
@@ -75,6 +75,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-csf_funcion_detect-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ya existen salvaguardas básicas de protección implementadas",
+      "texto_nuevo": "Cuando necesitas encontrar y analizar posibles ataques a tu negocio, junto con tus medidas de protección",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "25, 175",
+        "frase": "These Functions, when considered together, provide a comprehensive view of managing cybersecurity risk."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

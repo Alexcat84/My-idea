@@ -22,7 +22,7 @@
     "la_historia_de_la_empresa"
   ],
   "condiciones_activacion": [
-    "Al terminar la fase de validación de clientes, antes de iniciar la fase de creación de clientes"
+    "Durante la validación de clientes, cuando ya tienes tus primeras órdenes y suficiente información de clientes, antes de iniciar la fase de creación de clientes"
   ],
   "etiqueta_arbol": "Posiciona tu Empresa, No tu Producto",
   "fuentes_internas": [
@@ -78,6 +78,23 @@
       "decision": "lectura total de procedencia (w41): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "condiciones-resto-posicionamiento_de_empresa-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Al terminar la fase de validación de clientes, antes de iniciar la fase de creación de clientes",
+      "texto_nuevo": "Durante la validación de clientes, cuando ya tienes tus primeras órdenes y suficiente información de clientes, antes de iniciar la fase de creación de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2053, 12385-12394",
+        "frase": "Phase 3 happens once you have a couple of orders under your belt"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c18): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "Existen tres tipos básicos de organización para gestionar el trabajo: organización funcional (departamentos por especialidad, con eficiencia interna pero barreras entre áreas), organización por procesos (responsabilidad asignada a un dueño de proceso, con enfoque en cliente pero riesgo de diluir expertise funcional) y organización matricial (híbrido que combina ambos enfoques, requiriendo acuerdos negociados entre gerentes funcionales y dueños de procesos). Un enfoque emergente es la organización en red y los sistemas sociotécnicos (STS), que integran el sistema técnico y el social.",
   "pasos_accionables": [
     "Evaluar ventajas y desventajas de la estructura funcional actual (eficiencia vs. silos)",
-    "Determinar si los procesos cross-funcionales requieren un dueño de proceso dedicado",
+    "Determinar si los procesos interfuncionales requieren un dueño de proceso dedicado",
     "Diseñar mecanismos matriciales de resolución de conflictos entre gerentes funcionales y dueños de proceso",
-    "Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores",
+    "Considerar la incorporación de equipos autodirigidos y roles de facilitador para supervisores",
     "Evaluar el nivel de involucramiento de empleados en equipos permanentes y ad hoc"
   ],
-  "entregable_esperado": "Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de reporte y mecanismos de resolución de conflictos definidos",
+  "entregable_esperado": "Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de mando y mecanismos de resolución de conflictos definidos",
   "nodos_previos": [
     "practicas_gerenciales_no_delegables"
   ],
@@ -27,5 +27,57 @@
   "etiqueta_arbol": "Elige tu Estructura Organizacional",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-estructura_organizacional_funcional_proceso-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si los procesos cross-funcionales requieren un dueño de proceso dedicado",
+      "texto_nuevo": "Determinar si los procesos interfuncionales requieren un dueño de proceso dedicado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cross-funcionales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estructura_organizacional_funcional_proceso-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar la incorporación de equipos autodirigidos y roles de 'coach' para supervisores",
+      "texto_nuevo": "Considerar la incorporación de equipos autodirigidos y roles de facilitador para supervisores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'coach'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estructura_organizacional_funcional_proceso-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de reporte y mecanismos de resolución de conflictos definidos",
+      "texto_nuevo": "Diagrama de estructura organizacional seleccionada (funcional, por proceso o matricial) con roles, líneas de mando y mecanismos de resolución de conflictos definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "líneas de reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

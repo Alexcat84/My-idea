@@ -6,12 +6,12 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Protocolo de seguimiento estandarizado para nuevos leads de internet: siete intentos de contacto (tres llamadas, cuatro emails) en siete días hábiles antes de cerrar el archivo del prospecto. Establece timetables claros con el candidato para evitar tanto el acoso como el abandono prematuro del seguimiento.",
   "pasos_accionables": [
-    "Establecer un protocolo de 3 llamadas y 4 emails en 7 días hábiles para nuevos leads",
+    "Establecer un protocolo de 3 llamadas y 4 correos en 7 días hábiles para nuevos clientes potenciales",
     "Cerrar el archivo del prospecto si no hay respuesta tras los 7 contactos",
-    "Acordar explícitamente timetables con el candidato (ej. proceso de 12 semanas)",
+    "Acordar explícitamente calendarios con el candidato (ej. proceso de 12 semanas)",
     "Programar llamadas de seguimiento en vez de dejarlas abiertas"
   ],
-  "entregable_esperado": "Protocolo documentado de cadencia de seguimiento con timetables claros",
+  "entregable_esperado": "Protocolo documentado de cadencia de seguimiento con calendarios claros",
   "nodos_previos": [
     "proceso_llamada_inicial_venta",
     "clasificacion_abc_prospectos"
@@ -40,6 +40,57 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c09): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cadencia_seguimiento_prospectos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un protocolo de 3 llamadas y 4 emails en 7 días hábiles para nuevos leads",
+      "texto_nuevo": "Establecer un protocolo de 3 llamadas y 4 correos en 7 días hábiles para nuevos clientes potenciales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails",
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cadencia_seguimiento_prospectos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acordar explícitamente timetables con el candidato (ej. proceso de 12 semanas)",
+      "texto_nuevo": "Acordar explícitamente calendarios con el candidato (ej. proceso de 12 semanas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "timetables"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cadencia_seguimiento_prospectos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Protocolo documentado de cadencia de seguimiento con timetables claros",
+      "texto_nuevo": "Protocolo documentado de cadencia de seguimiento con calendarios claros",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "timetables"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

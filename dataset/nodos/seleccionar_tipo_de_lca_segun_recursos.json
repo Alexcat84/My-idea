@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Si la empresa tiene presupuesto limitado para su primer LCA",
     "Si se necesita tomar decisiones rápidas de diseño de producto",
-    "Si la empresa es grande y planea usar el LCA como diferenciador de marketing"
+    "Si la empresa es grande o planea usar el LCA como diferenciador de marketing"
   ],
   "etiqueta_arbol": "Elige tu Nivel de Análisis",
   "fuentes_internas": [
@@ -75,6 +75,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-seleccionar_tipo_de_lca_segun_recursos-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la empresa es grande y planea usar el LCA como diferenciador de marketing",
+      "texto_nuevo": "Si la empresa es grande o planea usar el LCA como diferenciador de marketing",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "1924",
+        "frase": "usually undertaken only by large companies and/or businesses that plan to market"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c18): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

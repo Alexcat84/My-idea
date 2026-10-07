@@ -6,12 +6,12 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "El cerebro humano está diseñado para encontrar patrones y significado incluso donde no existen (apofenia), y para confirmar creencias previas (sesgo de confirmación). Esto es útil para el reconocimiento facial o la supervivencia, pero puede llevar a conclusiones erróneas al diseñar futuros o interpretar datos de usuarios. La apofenia también ayuda a llegar a una epifanía, y las dos pueden sentirse parecidas; por eso diferenciar entre una 'epifanía' real (un insight fundamentado) y una 'apofenia' (una conexión ilusoria) es crítico para no construir soluciones sobre bases falsas.",
   "pasos_accionables": [
-    "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
+    "Antes de aceptar un hallazgo como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
     "Buscar activamente evidencia que contradiga la hipótesis favorita del equipo, no solo la que la confirma.",
     "Distingue explícitamente entre correlación y causalidad al analizar datos de usuarios o mercado.",
-    "Somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
+    "Somete los hallazgos a validación externa (otro equipo o experto) antes de tomarlos como base de diseño."
   ],
-  "entregable_esperado": "Un documento de insights de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
+  "entregable_esperado": "Un documento de hallazgos de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
   "nodos_previos": [
     "usuarios_extremos_edge_cases",
     "tecnica_cambio_de_perspectiva_escala"
@@ -28,7 +28,7 @@
     "Cuando se está diseñando para escenarios futuros inciertos y se depende de intuiciones.",
     "Antes de presentar insights de investigación como hechos definitivos a stakeholders."
   ],
-  "etiqueta_arbol": "Cuidado con Ver Patrones Falsos",
+  "etiqueta_arbol": "Desconfía de los Patrones Falsos",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
   ],
@@ -160,6 +160,72 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-reconocer_sesgo_de_apofenia-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con Ver Patrones Falsos",
+      "texto_nuevo": "Desconfía de los Patrones Falsos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con Ver"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reconocer_sesgo_de_apofenia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Antes de aceptar un insight como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
+      "texto_nuevo": "Antes de aceptar un hallazgo como válido, preguntarse si hay evidencia sólida detrás o si es una narrativa que 'se siente bien'.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insight"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reconocer_sesgo_de_apofenia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Somete los insights a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "texto_nuevo": "Somete los hallazgos a validación externa (otro equipo o experto) antes de tomarlos como base de diseño.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reconocer_sesgo_de_apofenia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un documento de insights de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
+      "texto_nuevo": "Un documento de hallazgos de investigación clasificados en 'validados con evidencia' vs 'hipótesis a probar', evitando confundir patrones ilusorios con verdades del usuario.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

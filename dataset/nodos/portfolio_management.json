@@ -9,11 +9,11 @@
     "Evaluar si existen demasiados proyectos para los recursos disponibles",
     "Revisar el balance del portafolio (proyectos pequeños vs de alto valor)",
     "Implementar revisiones periódicas de todo el portafolio de forma holística",
-    "Tomar decisiones Go/Kill continuas sobre proyectos individuales",
+    "Tomar decisiones continuas de seguir o cancelar sobre proyectos individuales",
     "Eliminar proyectos débiles o que ya no cumplen con la estrategia (aproximadamente un tercio suele requerir cancelación)",
     "Reasignar los recursos liberados a los proyectos de mayor valor"
   ],
-  "entregable_esperado": "Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.",
+  "entregable_esperado": "Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de seguir o cancelar documentadas.",
   "nodos_previos": [
     "mrg_event",
     "innovacion_abierta",
@@ -75,6 +75,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La definición del libro incluye que los proyectos existentes pueden acelerarse, cancelarse o despriorizarse; el resumen lo pierde.; Mismo defecto en la misma definición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-portfolio_management-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tomar decisiones Go/Kill continuas sobre proyectos individuales",
+      "texto_nuevo": "Tomar decisiones continuas de seguir o cancelar sobre proyectos individuales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-portfolio_management-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de Go/Kill documentadas.",
+      "texto_nuevo": "Portafolio de proyectos priorizado y balanceado, con recursos asignados según valor estratégico y decisiones explícitas de seguir o cancelar documentadas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

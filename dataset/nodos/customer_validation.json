@@ -52,7 +52,7 @@
     "priorizar_elementos_a_validar"
   ],
   "condiciones_activacion": [
-    "Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución",
+    "Si ya terminaste el descubrimiento de clientes y confirmaste el problema, la solución, que hay suficientes clientes, cuánto pagarían y que el ingreso debería dar un negocio rentable",
     "Si necesitas comprobar que puedes escalar antes de invertir fuerte en crecimiento"
   ],
   "etiqueta_arbol": "Valida tu Modelo con Clientes",
@@ -152,6 +152,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los pedidos a precio completo son la única prueba aceptable de que la venta se repite; el paso pierde ese límite.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-customer_validation-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si ya terminaste el descubrimiento de clientes y confirmaste el problema y la solución",
+      "texto_nuevo": "Si ya terminaste el descubrimiento de clientes y confirmaste el problema, la solución, que hay suficientes clientes, cuánto pagarían y que el ingreso debería dar un negocio rentable",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "1747-1763",
+        "frase": "determined that a sizable volume of customers exists for the product"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

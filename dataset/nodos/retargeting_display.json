@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Instalar píxeles de retargeting (por ejemplo, Google AdWords o AdRoll) en el sitio",
     "Segmentar audiencias según comportamiento (ej. visitó pero no compró)",
-    "Diseñar anuncios personalizados según la etapa del funnel de cada segmento",
+    "Diseñar anuncios personalizados según la etapa del embudo de cada segmento",
     "Evaluar redes de display generales (Google Display Network) vs nicho (por ejemplo, BuySellAds)",
     "Analizar competidores con herramientas como MixRank o Adbeat antes de elegir red",
-    "Medir el balance entre efectividad y percepción de invasión de privacidad del usuario"
+    "Medir el equilibrio entre efectividad y percepción de invasión de privacidad del usuario"
   ],
   "entregable_esperado": "Una campaña de retargeting activa con al menos un segmento de audiencia definido y anuncios personalizados por etapa de conversión.",
   "nodos_previos": [
@@ -61,6 +61,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro solo sugiere el retargeting y la red de contenido como opción tras una campaña SEM exitosa, y dice que la publicidad display tiene sentido en cualquier fase; la norma para ambos canales es añadida.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-retargeting_display-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar anuncios personalizados según la etapa del funnel de cada segmento",
+      "texto_nuevo": "Diseñar anuncios personalizados según la etapa del embudo de cada segmento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "funnel"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-retargeting_display-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir el balance entre efectividad y percepción de invasión de privacidad del usuario",
+      "texto_nuevo": "Medir el equilibrio entre efectividad y percepción de invasión de privacidad del usuario",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el balance entre"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Implementa mejoras pequeñas sin pedir permiso previo y documenta los resultados",
     "Comparte recursos externos (libros, guías) que respalden tu propuesta desde fuera de la cadena de mando",
     "Calcula el Costo de Adquisición de Cliente (CAC) exacto por canal.",
-    "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
+    "Calcular el tiempo promedio necesario para recuperar esa inversión (punto de equilibrio).",
     "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
     "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
   ],
@@ -27,7 +27,7 @@
     "Cuando detectas problemas de experiencia de cliente pero quien decide no los prioriza",
     "Cuando necesitas justificar presupuesto para iniciativas de retención de clientes"
   ],
-  "etiqueta_arbol": "Convence a Tu Dirección del Cliente",
+  "etiqueta_arbol": "Defiende al Cliente ante Quien Decide",
   "correcciones": [
     {
       "id": "fidelidad-t8-061",
@@ -91,6 +91,37 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración omite la vía de hacer llegar la idea desde fuera de la empresa con material que la respalde, que el libro presenta primero.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-persuasion_directivos_prioridad_cliente-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Convence a Tu Dirección del Cliente",
+      "texto_nuevo": "Defiende al Cliente ante Quien Decide",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v16)",
+        "evidencia": "La etiqueta se lee como convencer a la dirección (el domicilio) del cliente y no dice que se trata de convencer a quien decide de cuidar la experiencia del cliente; la nueva nombra justo eso sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-persuasion_directivos_prioridad_cliente-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
+      "texto_nuevo": "Calcular el tiempo promedio necesario para recuperar esa inversión (punto de equilibrio).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "breakeven point"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

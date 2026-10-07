@@ -19,7 +19,7 @@
     "Cuando se negocia el término económico central de una ronda de inversión con acciones preferentes",
     "Si el fundador necesita entender el impacto real en su retorno económico ante un evento de salida",
     "Cuando se planea un evento de liquidez o venta de la empresa",
-    "Si existe riesgo de dilución en eventos de salida"
+    "Si existe la posibilidad de que la empresa se venda por menos de lo que invirtieron los inversionistas"
   ],
   "node_id": "preferencia_de_liquidacion",
   "nodos_previos": [
@@ -106,6 +106,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que los inversionistas piden estos términos para reducir riesgos y alinear incentivos; la lista de causas y la regla de endurecimiento son añadidas.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-preferencia_de_liquidacion-condiciones_activacion-3",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si existe riesgo de dilución en eventos de salida",
+      "texto_nuevo": "Si existe la posibilidad de que la empresa se venda por menos de lo que invirtieron los inversionistas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "925",
+        "frase": "especially important in cases in which a company is sold for less than"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

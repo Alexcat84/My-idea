@@ -10,9 +10,9 @@
     "Calcular una métrica de valor (NPV, Productivity Index, Project Attractiveness Score) para cada proyecto.",
     "Ordenar los proyectos de mayor a menor valor dentro de cada cubeta.",
     "Trazar la línea de corte según el límite de recursos disponible en esa cubeta.",
-    "Marcar como 'Go' los proyectos sobre la línea y 'Hold/Kill' los que quedan debajo."
+    "Marcar como 'Seguir' los proyectos sobre la línea y 'Pausar/Cancelar' los que quedan debajo."
   ],
-  "entregable_esperado": "Listas priorizadas de proyectos 'Go' por cubeta, con los recursos correctamente asignados sin exceder el presupuesto de cada categoría.",
+  "entregable_esperado": "Listas priorizadas de proyectos 'Seguir' por cubeta, con los recursos correctamente asignados sin exceder el presupuesto de cada categoría.",
   "nodos_previos": [
     "determinacion_tamano_cubetas"
   ],
@@ -30,5 +30,41 @@
   "etiqueta_arbol": "Ordena tus Proyectos por Valor",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-categorizacion_ranking_proyectos_cubetas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Marcar como 'Go' los proyectos sobre la línea y 'Hold/Kill' los que quedan debajo.",
+      "texto_nuevo": "Marcar como 'Seguir' los proyectos sobre la línea y 'Pausar/Cancelar' los que quedan debajo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Go'",
+          "'Hold/Kill'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-categorizacion_ranking_proyectos_cubetas-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Listas priorizadas de proyectos 'Go' por cubeta, con los recursos correctamente asignados sin exceder el presupuesto de cada categoría.",
+      "texto_nuevo": "Listas priorizadas de proyectos 'Seguir' por cubeta, con los recursos correctamente asignados sin exceder el presupuesto de cada categoría.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Go'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

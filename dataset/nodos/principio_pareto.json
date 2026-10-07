@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Recopilar datos de todas las fuentes de problemas o costos de mala calidad",
     "Construir un diagrama de Pareto para identificar las causas de mayor impacto",
-    "Priorizar los proyectos que atacan las causas 'vitales pocas'"
+    "Priorizar los proyectos que atacan las pocas causas vitales"
   ],
   "entregable_esperado": "Diagrama de Pareto con las causas priorizadas y su impacto relativo",
   "nodos_previos": [
@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Cuando existen múltiples problemas o proyectos candidatos y se necesita priorizar por impacto"
   ],
-  "etiqueta_arbol": "Prioriza con el Principio Pareto",
+  "etiqueta_arbol": "Prioriza con el Principio de Pareto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -43,6 +43,37 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo quitar; doble lectura ciega, arbitro): El libro da máxima prioridad a los pocos vitales pero dice que ambos tipos pueden avanzar a la vez con personas distintas; el 'antes que' sugiere posponer los muchos útiles.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-principio_pareto-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prioriza con el Principio Pareto",
+      "texto_nuevo": "Prioriza con el Principio de Pareto",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v16)",
+        "evidencia": "Falta la preposición: el nombre en español es 'principio de Pareto'; se añade solo esa palabra."
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-principio_pareto-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Priorizar los proyectos que atacan las causas 'vitales pocas'",
+      "texto_nuevo": "Priorizar los proyectos que atacan las pocas causas vitales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'vitales pocas'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

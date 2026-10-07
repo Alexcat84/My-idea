@@ -9,7 +9,7 @@
     "Dividir el desembolso inicial entre el flujo de efectivo anual esperado",
     "Comparar el período resultante con la vida útil del proyecto",
     "Usar el resultado solo para comparar o rechazar proyectos rápidamente",
-    "Complementar con NPV o IRR si el resultado inicial es prometedor"
+    "Complementar con el VAN (valor actual neto) o la TIR (tasa interna de retorno) si el resultado inicial es prometedor"
   ],
   "entregable_esperado": "Cálculo del período de recuperación de la inversión en años o meses",
   "nodos_previos": [
@@ -43,6 +43,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice 'probably the simplest'; el nodo quita la cautela.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-metodo_payback-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Complementar con NPV o IRR si el resultado inicial es prometedor",
+      "texto_nuevo": "Complementar con el VAN (valor actual neto) o la TIR (tasa interna de retorno) si el resultado inicial es prometedor",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV o IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -9,11 +9,11 @@
     "Redactar un programa escrito específico para el lugar de trabajo según 29 CFR 1910.134",
     "Asegurar que los respiradores sean aprobados por NIOSH para la aplicación específica",
     "Realizar evaluación médica antes del primer uso o prueba de ajuste",
-    "Realizar fit-test antes del primer uso y al menos anualmente para respiradores ajustados",
+    "Realizar prueba de ajuste antes del primer uso y al menos anualmente para respiradores ajustados",
     "Capacitar a los trabajadores al menos anualmente sobre uso, limitaciones y mantenimiento",
     "Establecer procedimientos de almacenamiento, limpieza e inspección regular"
   ],
-  "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
+  "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de pruebas de ajuste, evaluaciones médicas y capacitaciones.",
   "nodos_previos": [
     "personal_protective_equipment",
     "permit_required_confined_spaces",
@@ -138,6 +138,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige la prueba de ajuste antes del primer uso y al menos una vez al año; el resumen deja solo la anual.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-programa_proteccion_respiratoria-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar fit-test antes del primer uso y al menos anualmente para respiradores ajustados",
+      "texto_nuevo": "Realizar prueba de ajuste antes del primer uso y al menos anualmente para respiradores ajustados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fit-test"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-programa_proteccion_respiratoria-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
+      "texto_nuevo": "Documento de programa de protección respiratoria implementado, con registros de pruebas de ajuste, evaluaciones médicas y capacitaciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fit-test"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

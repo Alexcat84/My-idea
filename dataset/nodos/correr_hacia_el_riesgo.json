@@ -23,12 +23,31 @@
     "deja_de_ignorar_el_riesgo"
   ],
   "condiciones_activacion": [
-    "cuando una idea te parece cómoda y sin peros, y por eso mismo te entusiasma poco",
+    "cuando una idea te parece cómoda y sin peros",
     "cuando eliges el camino conocido solo porque lo incierto te da miedo",
     "cuando compites contra alguien que se atreve a lo que tú no"
   ],
   "etiqueta_arbol": "Corre Hacia el Riesgo",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-correr_hacia_el_riesgo-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "cuando una idea te parece cómoda y sin peros, y por eso mismo te entusiasma poco",
+      "texto_nuevo": "cuando una idea te parece cómoda y sin peros",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "12",
+        "frase": "thanked your lucky stars to be given an easy project for a change"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

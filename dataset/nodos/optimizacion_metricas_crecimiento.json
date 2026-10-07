@@ -7,13 +7,13 @@
   "resumen_teorico": "Existen dos vías para crecer clientes: lograr que compren más (upsell) o que refieran a otros. Debes monitorear métricas clave como dólares incrementales por cliente, take rate de ofertas adicionales, tamaño promedio de orden y tasa de opt-outs, ajustando constantemente mediante pruebas A/B. El tamaño de orden puede crecer con suscripciones más largas o bonos, y el crecimiento vía referidos requiere programas específicos que aprovechen a los clientes existentes. Siempre balancea estas tácticas con la satisfacción del cliente: si tus ofertas de crecimiento elevan la tasa de opt-out un 25 % o más, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta. Mantén además el contacto mediante encuestas o llamadas de agradecimiento con ofertas sutiles.",
   "pasos_accionables": [
     "Mide los dólares incrementales promedio por cliente recurrente (meta: +15%)",
-    "Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
-    "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos más profundos en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
-    "Monitorea la tasa de opt-outs; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
+    "Calcula la tasa de aceptación de ofertas de venta adicional (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
+    "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos mayores en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
+    "Monitorea la tasa de bajas; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
     "Realiza encuestas de satisfacción y llamadas de seguimiento que incluyan ofertas sutiles",
     "Diseña e implementa un programa de referidos para atraer nuevos clientes a través de los existentes"
   ],
-  "entregable_esperado": "Dashboard de métricas de crecimiento con ofertas de upsell y referidos optimizadas y tasa de opt-out controlada.",
+  "entregable_esperado": "Tablero de métricas de crecimiento con ofertas de venta adicional y referidos optimizadas y tasa de bajas controlada.",
   "nodos_previos": [
     "analisis_de_cohortes",
     "keep_customers_strategy",
@@ -107,6 +107,76 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Ante la alarma del opt-out el libro fija un umbral del 25 % y manda frenar, suavizar o llamar para averiguar qué gustó; las llamadas con ofertas son otra práctica aparte.; Mismo defecto: se pierden frenar y averiguar, y el remedio pasa a ser llamadas con ofertas, que el libro trata aparte.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-optimizacion_metricas_crecimiento-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula el take rate de ofertas de upsell (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
+      "texto_nuevo": "Calcula la tasa de aceptación de ofertas de venta adicional (meta: doble dígito) y testea ofertas más generosas o urgentes con pruebas A/B",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el take rate",
+          "upsell"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_metricas_crecimiento-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos más profundos en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
+      "texto_nuevo": "Aumenta el tamaño promedio de orden probando con pruebas A/B ofertas como suscripciones más largas, bonos o descuentos mayores en la venta adicional, y acepta un margen más estrecho en esos ingresos extra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "descuentos más profundos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_metricas_crecimiento-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorea la tasa de opt-outs; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
+      "texto_nuevo": "Monitorea la tasa de bajas; si tus ofertas de crecimiento la elevan un 25% o más sobre tu tasa habitual, frena, suaviza el enfoque de venta o llama a algunos clientes para saber qué les gustó y qué no, y ajusta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "opt-outs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_metricas_crecimiento-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dashboard de métricas de crecimiento con ofertas de upsell y referidos optimizadas y tasa de opt-out controlada.",
+      "texto_nuevo": "Tablero de métricas de crecimiento con ofertas de venta adicional y referidos optimizadas y tasa de bajas controlada.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Dashboard",
+          "upsell",
+          "opt-out"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

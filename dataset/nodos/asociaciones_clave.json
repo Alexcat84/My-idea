@@ -7,7 +7,7 @@
   "resumen_teorico": "Describe la red de proveedores y socios que hacen funcionar el modelo de negocio. Cuatro tipos: alianzas estratégicas entre no competidores, coopetencia (alianzas entre competidores), joint ventures y relaciones comprador-proveedor. Motivaciones: optimización/economía de escala, reducción de riesgo, y adquisición de recursos o actividades.",
   "pasos_accionables": [
     "Identificar qué recursos o actividades se pueden obtener de terceros en vez de desarrollarlos internamente",
-    "Clasificar las alianzas necesarias según su tipo (estratégica, coopetencia, joint venture, proveedor)",
+    "Clasificar las alianzas necesarias según su tipo (estratégica, coopetencia, empresa conjunta, proveedor)",
     "Definir la motivación de cada asociación (costo, riesgo, o acceso a recursos)",
     "Formalizar acuerdos con los socios clave identificados"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Elige tus Socios Clave",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-asociaciones_clave-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar las alianzas necesarias según su tipo (estratégica, coopetencia, joint venture, proveedor)",
+      "texto_nuevo": "Clasificar las alianzas necesarias según su tipo (estratégica, coopetencia, empresa conjunta, proveedor)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "joint venture"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }
