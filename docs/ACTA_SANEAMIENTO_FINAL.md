@@ -1516,9 +1516,34 @@ y de cuenta. La copia fiel no es prioridad: lo literal del libro no llega litera
   `/eliminar-cuenta` (sin app ni sesión) y `/preguntas-frecuentes`, con la estructura de iching-app. Siguen pendientes
   dos cosas del fundador: la revisión profesional y la dirección postal del comerciante.
 
-### 15.2 Auditoría de preguntas (punto 4)
+### 15.2 Auditoría de preguntas (punto 4): CERRADA
 
-En curso; el resultado se escribe aquí al cerrar.
+Método de 14.2. Cada pregunta se leyó contra su propio nodo saneado. Fueron 3.374 preguntas: las bases de los nodos
+vivos y las de entrada de las puertas.
+- **Lotes:** 85, de unas 40 preguntas. Cada uno llevaba una trampa sin marca (contraria, inventa o lógica que no
+  encaja), plantada antes.
+- **Lectura:** dos lectores Opus independientes por lote, y un árbitro para cada pregunta marcada.
+- **Reemplazos:** las que fallan se reemplazan por corrección declarada (`scripts/fidelidad/corregir_preguntas.py`,
+  cita contra el nodo), con verificación ciega y una trampa sin marca por paquete. Máquina en
+  `auditoria-final-claves/preguntas/` (auditoria.py, hacer_vq.py, hacer_tanda.py).
+
+- **Detección:**
+  - El lector A cazó 82 de 85 trampas y el B, 83 de 85.
+  - En dos lotes (37 y 49) ninguno de los dos cazó la trampa. Las dos eran contrarias. Es el punto débil de la
+    lectura: una pregunta contraria a su nodo es más difícil de ver que una que inventa o que no encaja.
+- **Arbitraje:** de 182 preguntas marcadas, el árbitro confirma 171 y rechaza 11.
+- **Corregidas: 171 preguntas en 171 nodos**, en las tandas `preguntas-auditoria-01` a `-04`:
+  - 146 de lógica: preguntaba por otra cosa, presuponía algo falso o no servía para elegir entre los candidatos;
+  - 15 contrarias a su nodo;
+  - 10 que inventaban.
+  - Todas tienen verificación ciega, en 6 paquetes con 6 de 6 trampas cazadas. Los reemplazos que no se sostuvieron
+    se reescribieron hasta sostenerse, en tres rondas. Uno (`P004-24`, el M&OP) necesitó cuatro intentos.
+- **Residuo:**
+  - No queda ninguna pregunta con falla confirmada sin corregir.
+  - El residuo posible es lo que ningún lector vio: 2 de 85 lotes con su trampa no cazada por ninguno. Las
+    contrarias son las que más se escapan.
+- **Las versiones neutrales** (A2 de la corrida final) todavía no existen. Se generan con la API y se auditan igual
+  antes de usarse.
 
 ### 15.3 Medida 4, solo procedencia: diseño fijado antes de sortear (6 oct 2026, 23:35)
 

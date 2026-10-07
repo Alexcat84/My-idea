@@ -1,0 +1,182 @@
+[
+ {
+  "id": "auditoria-preguntas-evitar_terminos_enganosos_garantia-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "evitar_terminos_enganosos_garantia",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "Si alguien quisiera comprar tu idea o proyecto en el futuro, ¿qué promesas sobre cómo funciona o qué hace tu proyecto te gustaría dejar bien documentadas por escrito para que no haya malentendidos entre tú y el comprador?",
+  "texto_nuevo": "Si le das a tu cliente una garantía escrita sobre tu producto, ¿qué coberturas y promesas de servicio estás seguro de poder cumplir, y cuáles te convendría dejar bien definidas por escrito para no prometer algo que tu producto no cubre?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Pregunta por promesas a quien compraría la idea o el proyecto, mientras el nodo trata de no engañar en la garantía escrita que se da a los clientes sobre un producto."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-evaluacion_vp_ventas-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "evaluacion_vp_ventas",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "Cuéntame de una vez que tuviste que crear un proceso de ventas completamente nuevo, sin un modelo previo que seguir. ¿Cómo lo hiciste? ¿Qué pasos seguiste para estar seguro de que funcionaría antes de implementarlo con todo tu equipo?",
+  "texto_nuevo": "Antes de entrevistar a quien va a liderar tus ventas, ¿qué te pesa más: entender cómo compra y decide tu cliente para saber qué proceso de ventas necesitas, o preguntarte si tú tienes la experiencia como directivo para evaluar y dirigir a alguien de ese nivel?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Le hace a la persona la pregunta de entrevista que el nodo destina al candidato a VP de Ventas, presupone que ella diseñó un proceso y tiene equipo, y su respuesta no ayuda a elegir entre los candidatos."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-conversion_venta_empresa-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "conversion_venta_empresa",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "Si alguien llegara a comprar tu idea o proyecto antes de que hagas una ronda formal de inversión, ¿qué te gustaría que pasara con el dinero que hayas tomado prestado hasta ahora: que te lo devuelvan, que recibas algo extra por el tiempo que esperaste, o que se convierta en algo diferente?",
+  "texto_nuevo": "Si alguien comprara tu empresa antes de una ronda formal de inversión, además de dejar escrito qué pasa con la deuda convertible de tus inversionistas, ¿ya pensaste qué pasaría con las opciones sobre acciones de tu equipo, si las tienes, o por ahora solo te ocupa la deuda?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Invierte los papeles: trata al fundador que recibió la deuda convertible como el acreedor al que se le devuelve el dinero o se le paga un extra."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-definir_meta_a_5_anos_antes_de_franquiciar-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "definir_meta_a_5_anos_antes_de_franquiciar",
+  "campo": "pregunta",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Imaginemos que en 5 años ya lograste exactamente lo que querías con tu idea. ¿Cómo se vería eso? ¿Cuántas personas estarían usando o comprando lo que ofreces, en cuántos lugares estaría presente, y qué rol tendrías tú en eso que creaste?",
+  "texto_nuevo": "Pensando en dónde quieres estar en 5 años (seguir en el negocio, venderlo o vivir de lo que te deja) y en cuánto riesgo estás dispuesto a correr, ¿estás por decidir si franquiciar y quieres tener claras las preguntas antes de dar ese paso, o ya te inclinas por crecer combinando franquicias con unidades propias?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Centra la meta a 5 años en clientes y lugares, cuando el nodo dice que son preguntas personales y no proyecciones de mercado."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta contraria se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-mission_and_operations_planning-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "mission_and_operations_planning",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "¿En algún momento has pensado en vender, fusionar o entregar esta idea a otra organización, o ese no es un escenario que consideres en tu horizonte?",
+  "texto_nuevo": "Este proceso nace de adaptar la planificación comercial de ventas y operaciones a cadenas de suministro armadas para una emergencia. ¿Tu proyecto se parece más a esa operación de respuesta, o es una empresa que algún día podrías vender y en la que te tocaría poner de acuerdo sobre esa venta a quienes la dirigen contigo y a tu equipo?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "logica"
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-comunicacion_honesta_en_crisis_al_equipo-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "comunicacion_honesta_en_crisis_al_equipo",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "Cuando miras tu idea desde una perspectiva comercial, ¿tienes diferentes tipos de soluciones o productos que ofreces, o es principalmente una sola cosa? Y si es así, ¿notás que algunos requieren conversaciones más largas o complicadas para cerrar que otros?",
+  "texto_nuevo": "Cuando le cuentes a tu equipo la situación real y le pidas el esfuerzo extra, ¿te preocupa cómo dejar que cada persona decida por sí misma si sigue o se va, sin empujarla a una decisión tan grande, o todavía estás armando lo que les vas a decir?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "El nodo trata de la comunicación honesta con el equipo en una crisis, y la pregunta indaga tipos de productos y ciclos de venta, sin relación."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-original_issue_discount_oid-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "original_issue_discount_oid",
+  "campo": "pregunta",
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Ahora que entiendes cómo funciona este descuento fiscal en la deuda convertible, ¿estás pensando en usar este instrumento para tu próxima ronda de capital, o prefieres explorar otras formas más simples de levantar dinero sin tener que fijar una valuación todavía?",
+  "texto_nuevo": "Ahora que sabes que unos warrants sin precio propio pueden generar un impuesto oculto en la deuda convertible, ¿qué necesitas resolver primero: cuidar bien los términos si vas a usar deuda convertible, explorar en su lugar un acuerdo de capital futuro, o tener clara la tabla de quién es dueño de qué parte de tu empresa antes de sumar inversionistas?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Llama descuento fiscal a lo que el nodo presenta como un impuesto oculto que conviene evitar."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta contraria se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-abordar_cinco_efes_venta-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "abordar_cinco_efes_venta",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "De las cinco cosas que más te importan en un cambio de trabajo (que el puesto encaje con lo que buscas, que tu familia esté bien con el cambio, poder decidir cómo haces las cosas, la estabilidad y el dinero, y el ambiente del equipo), ¿cuál es la que en este momento te preocupa más o la que sientes que necesitas entender mejor antes de decir que sí?",
+  "texto_nuevo": "Pensando en el candidato que quieres contratar, ¿qué crees que más le preocupa ahora: que el puesto encaje con sus metas y valores, que su familia lleve bien el cambio, tener libertad para decidir, o la estabilidad de tu empresa y lo que podría ganar con los años? ¿O ya le hiciste la oferta y lo que falta es seguir en contacto con él hasta que firme?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "El nodo trata de cómo vendes el puesto atendiendo las cinco preocupaciones del candidato, y la pregunta pone a la persona en el lugar del candidato."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ },
+ {
+  "id": "auditoria-preguntas-equipos_multifuncionales_dfe-pregunta",
+  "fecha": "2026-10-06",
+  "node_id": "equipos_multifuncionales_dfe",
+  "campo": "pregunta",
+  "veredicto": "LOGICA",
+  "texto_anterior": "Cuando tu equipo se sienta en la mesa a trabajar en esto, ¿qué les falta para que todos hablemos el mismo idioma y sepamos hacia dónde vamos con lo sostenible?",
+  "texto_nuevo": "Antes de rediseñar tu producto con enfoque sostenible, ¿a quiénes con mirada técnica, creativa, de marketing o de cadena de suministro puedes consultar, aunque trabajes solo, y quién te va a señalar con franqueza los problemas antes de lanzarlo?",
+  "cita": {
+   "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+   "evidencia": "Da por hecho que la persona tiene un equipo sentado a la mesa, cuando el nodo parte de que puede trabajar sola, y pregunta por un idioma común en vez de por sumar miradas de otras áreas y una revisión franca."
+  },
+  "verificacion": {
+   "paquete": "vq04",
+   "veredicto": "sostiene",
+   "trampa": "cazada"
+  },
+  "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+ }
+]
