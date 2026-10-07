@@ -7,8 +7,8 @@
   "resumen_teorico": "El pago por adelantado es el método más seguro para el exportador, ya que elimina el riesgo de cobro y otorga uso inmediato del dinero. Puede realizarse mediante transferencia bancaria (rápida) o cheque (con posible demora de hasta 6 semanas). También se usan tarjetas de crédito para bienes de bajo valor y servicios de escrow para transacciones pequeñas que requieren garantías mutuas. Sin embargo, este método puede generar problemas de flujo de caja al comprador y no es común en muchos mercados, por lo que insistir únicamente en este método puede hacer perder ventas frente a competidores más flexibles.",
   "pasos_accionables": [
     "Evaluar si el comprador acepta pago por adelantado como condición de venta",
-    "Elegir el mecanismo de transferencia (wire transfer preferido sobre cheque)",
-    "Considerar el uso de servicios de escrow para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
+    "Elegir el mecanismo de transferencia (transferencia bancaria preferida sobre cheque)",
+    "Considerar el uso de servicios de depósito en garantía para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
     "Verificar la validez de transacciones con tarjeta de crédito y obtener las autorizaciones correspondientes antes de enviar mercancía"
   ],
   "entregable_esperado": "Confirmación de pago recibido antes del envío de la mercancía",
@@ -22,7 +22,7 @@
     "Cuando el comprador es nuevo o de riesgo desconocido y el exportador desea máxima seguridad",
     "Cuando se trata de transacciones de bajo valor con consumidores finales"
   ],
-  "etiqueta_arbol": "Cobra por Adelantado",
+  "etiqueta_arbol": "Cobra tus Ventas por Adelantado",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
   ],
@@ -60,6 +60,56 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide verificar la validez y también obtener las autorizaciones antes de enviar; el paso omite las autorizaciones.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-cash_in_advance-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cobra por Adelantado",
+      "texto_nuevo": "Cobra tus Ventas por Adelantado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cobra por Adelantado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cash_in_advance-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elegir el mecanismo de transferencia (wire transfer preferido sobre cheque)",
+      "texto_nuevo": "Elegir el mecanismo de transferencia (transferencia bancaria preferida sobre cheque)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "wire transfer preferido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cash_in_advance-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar el uso de servicios de escrow para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
+      "texto_nuevo": "Considerar el uso de servicios de depósito en garantía para transacciones pequeñas con importadores que exigen garantía de que la mercancía se enviará a cambio del pago adelantado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "servicios de escrow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

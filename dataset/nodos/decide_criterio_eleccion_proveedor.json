@@ -12,7 +12,7 @@
     "Si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.",
     "Guarda esa lista para usarla cuando compares cotizaciones, no la improvises después."
   ],
-  "entregable_esperado": "Una lista escrita de criterios de compra y, si aplica, la justificación de proveedor único.",
+  "entregable_esperado": "Una lista escrita de criterios de compra y, si corresponde, la justificación de proveedor único.",
   "nodos_previos": [
     "domina_lo_que_compras",
     "plantilla_fija_cotizaciones",
@@ -122,6 +122,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-decide_criterio_eleccion_proveedor-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista escrita de criterios de compra y, si aplica, la justificación de proveedor único.",
+      "texto_nuevo": "Una lista escrita de criterios de compra y, si corresponde, la justificación de proveedor único.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -6,14 +6,14 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Enfoque radical para evaluar la viabilidad financiera de tu startup usando un puñado de métricas clave organizadas según el Business Model Canvas (propuesta de valor, relaciones con clientes, tipo de mercado, estructura de costos, canal y flujos de ingresos), en lugar de hojas de cálculo de cinco años con cientos de líneas. Las dos métricas más importantes son los meses de efectivo que quedan en el banco y la velocidad con que se está quemando ese dinero, el burn rate. Adaptas las métricas al tipo de canal de venta, físico, digital directo o mercado multi-lado, para calcular ingresos netos, costos y cash burn trimestral, proyectando cuánto efectivo quedará antes de agotar los fondos y así decidir si conviene pivotar o seguir adelante.",
   "pasos_accionables": [
-    "Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado",
+    "Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multilateral",
     "Calcula las unidades vendidas por periodo y el precio de venta promedio validado con clientes",
     "Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto",
-    "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo",
+    "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el ritmo de consumo de efectivo por periodo",
     "Construye una hoja de cálculo por periodos, del largo que tenga sentido para tu negocio (más espaciados cuanto más largo sea tu ciclo de venta), que muestre el efectivo restante en banco después de cada periodo",
-    "Acuerda con tus inversionistas cuál burn rate es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos"
+    "Acuerda con tus inversionistas qué ritmo de consumo de efectivo es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos"
   ],
-  "entregable_esperado": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
+  "entregable_esperado": "Hoja de cálculo de métricas clave con proyección trimestral de consumo de efectivo y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
   "nodos_previos": [
     "fit_value_proposition",
     "customer_validation",
@@ -127,6 +127,74 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide usar el periodo que más sentido tenga para el negocio, más espaciado cuanto más largo el ciclo de venta, y el trimestral es solo el de su ejemplo.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-metrics_that_matter_framework-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multi-lado",
+      "texto_nuevo": "Identifica el tipo de canal de venta de tu producto: físico, digital directo o mercado multilateral",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mercado multi-lado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metrics_that_matter_framework-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el burn rate por periodo",
+      "texto_nuevo": "Resta los costos de ventas, producto y operativos al ingreso neto para calcular el ritmo de consumo de efectivo por periodo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "burn rate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metrics_that_matter_framework-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerda con tus inversionistas cuál burn rate es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos",
+      "texto_nuevo": "Acuerda con tus inversionistas qué ritmo de consumo de efectivo es aceptable y cuántos pivotes más puedes costear antes de quedarte sin fondos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cuál burn rate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metrics_that_matter_framework-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hoja de cálculo de 'Metrics that Matter' con proyección trimestral de cash burn y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
+      "texto_nuevo": "Hoja de cálculo de métricas clave con proyección trimestral de consumo de efectivo y efectivo remanente para al menos 12 meses, mostrando si el negocio es escalable y rentable.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Metrics that Matter'",
+          "cash burn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

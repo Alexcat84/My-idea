@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, saldo no conciliado de fondos para márgenes, ganancias desproporcionadas al riesgo percibido, cuenta por cobrar falsa, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional.",
   "pasos_accionables": [
-    "Establecer un registro centralizado de anomalías o señales de alerta reportadas por distintas áreas.",
+    "Establecer un registro centralizado de anomalías o señales de alerta informadas por distintas áreas.",
     "Definir umbrales o combinaciones de señales que disparen automáticamente una revisión de riesgo.",
     "Asignar responsabilidad clara de seguimiento a cada señal de alerta hasta su cierre."
   ],
@@ -81,6 +81,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista omite dos indicadores del libro: el saldo no conciliado de fondos para márgenes y la cuenta por cobrar falsa.; Misma omisión.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-senales_alerta_no_atendidas-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un registro centralizado de anomalías o señales de alerta reportadas por distintas áreas.",
+      "texto_nuevo": "Establecer un registro centralizado de anomalías o señales de alerta informadas por distintas áreas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportadas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

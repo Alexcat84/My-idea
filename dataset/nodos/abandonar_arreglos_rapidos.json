@@ -7,9 +7,9 @@
   "resumen_teorico": "Tras un accidente o fallo, la presión por mostrar resultados puede empujar a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda suele detener el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos, si no quitas ninguno, tienden a reducir la transparencia y a aumentar el incumplimiento, y la tecnología añadida probablemente cree nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
   "pasos_accionables": [
     "Resistir la presión de ofrecer una solución rápida inmediatamente después de un incidente",
-    "Identificar si la respuesta ha sido una quick fix falsa: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
+    "Identificar si la respuesta ha sido un arreglo rápido falso: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
     "Cuestionar si esa solución atribuye la falla solo a individuos en lugar de mirar la causa raíz sistémica",
-    "Realizar un análisis profundo de factores organizacionales antes de proponer countermeasures",
+    "Realizar un análisis profundo de factores organizacionales antes de proponer contramedidas",
     "Preservar el capital de aprendizaje del incidente evitando culpar a los involucrados"
   ],
   "entregable_esperado": "Protocolo o informe de investigación de incidentes que excluya sanciones y soluciones superficiales y priorice el análisis de causas organizacionales profundas.",
@@ -73,6 +73,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la presión puede ser enorme según la visibilidad del caso y puede llevar a medidas de Vieja Vista; el nodo lo da por seguro.; El libro dice que reprender suele detener el aprendizaje (typically); el nodo lo afirma sin matiz.; Misma marca que la 0: el 'can lead' del libro pasa a certeza.; Misma marca que la 1: se pierde el 'typically' del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-abandonar_arreglos_rapidos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar si la respuesta ha sido una quick fix falsa: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
+      "texto_nuevo": "Identificar si la respuesta ha sido un arreglo rápido falso: reprimenda, reentrenamiento, procedimiento o tecnología nueva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "una quick fix falsa"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-abandonar_arreglos_rapidos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar un análisis profundo de factores organizacionales antes de proponer countermeasures",
+      "texto_nuevo": "Realizar un análisis profundo de factores organizacionales antes de proponer contramedidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "countermeasures"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

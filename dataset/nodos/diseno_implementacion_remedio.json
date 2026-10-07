@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Verifica que la solución cumple con lo que buscabas lograr y que todos los involucrados están de acuerdo en ello.",
     "Determina los recursos necesarios (personas, dinero, tiempo, materiales).",
-    "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o relaciones de reporte debes modificar, para evitar sorpresas que saboteen la solución.",
+    "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o líneas de mando debes modificar, para evitar sorpresas que saboteen la solución.",
     "Evalúa si necesitas capacitarte tú o capacitar a quien te ayuda.",
     "Aplica técnicas de prueba de errores para evitar, prevenir o reducir los errores involuntarios que puedan ocurrir aun con la solución.",
     "Implementa la solución siguiendo un plan claro si es algo complejo."
@@ -109,6 +109,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye políticas y relaciones de reporte y advierte que las sorpresas pueden sabotear la solución.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_implementacion_remedio-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o relaciones de reporte debes modificar, para evitar sorpresas que saboteen la solución.",
+      "texto_nuevo": "Especifica qué políticas, procedimientos, formas de trabajar, sistemas o líneas de mando debes modificar, para evitar sorpresas que saboteen la solución.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "relaciones de reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

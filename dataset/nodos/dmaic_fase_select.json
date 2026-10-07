@@ -7,12 +7,12 @@
   "resumen_teorico": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente, la eficacia de los empleados y el cumplimiento de requisitos regulatorios u otros. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
   "pasos_accionables": [
     "Recopilar nominaciones de proyectos desde clientes, reportes y empleados",
-    "Evaluar los proyectos usando COPQ y otros criterios estratégicos",
+    "Evaluar los proyectos usando el costo de la mala calidad (COPQ) y otros criterios estratégicos",
     "Priorizar y seleccionar los proyectos con mayor impacto",
-    "Redactar el problema y objetivo del proyecto en un team charter",
+    "Redactar el problema y objetivo del proyecto en un acta de constitución del equipo",
     "Asignar personal capacitado, definir prioridad del proyecto y dar seguimiento a su avance"
   ],
-  "entregable_esperado": "Team charter aprobado con problema, objetivo y equipo de proyecto definidos",
+  "entregable_esperado": "Acta de constitución del equipo aprobada con problema, objetivo y equipo de proyecto definidos",
   "nodos_previos": [
     "roadmap_despliegue_lean_six_sigma",
     "roles_equipo_proyecto_six_sigma",
@@ -75,6 +75,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro cierra la fase de selección con el monitoreo del avance del proyecto, y el paso lo pierde.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-dmaic_fase_select-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar los proyectos usando COPQ y otros criterios estratégicos",
+      "texto_nuevo": "Evaluar los proyectos usando el costo de la mala calidad (COPQ) y otros criterios estratégicos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "usando COPQ"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmaic_fase_select-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Redactar el problema y objetivo del proyecto en un team charter",
+      "texto_nuevo": "Redactar el problema y objetivo del proyecto en un acta de constitución del equipo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "team charter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmaic_fase_select-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Team charter aprobado con problema, objetivo y equipo de proyecto definidos",
+      "texto_nuevo": "Acta de constitución del equipo aprobada con problema, objetivo y equipo de proyecto definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Team charter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

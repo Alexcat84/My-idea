@@ -7,7 +7,7 @@
   "resumen_teorico": "La ecologización de terrenos y paisajes genera beneficios ambientales y económicos, reduciendo el uso de pesticidas, agua y mano de obra mediante plantas nativas y xeriscaping. Además, permite crear espacios verdes corporativos que benefician a empleados, comunidad y biodiversidad, incluyendo huertos orgánicos corporativos.",
   "pasos_accionables": [
     "Reemplazar pavimento tradicional por superficies porosas que absorban agua de lluvia",
-    "Usar plantas nativas y principios de xeriscape para reducir necesidad de riego",
+    "Usar plantas nativas y principios de xerojardinería para reducir necesidad de riego",
     "Evitar el uso excesivo de fertilizantes",
     "Plantar árboles para sombra, captura de carbono y hábitat",
     "Considerar la creación de huertos corporativos orgánicos",
@@ -23,8 +23,43 @@
   "condiciones_activacion": [
     "Si la empresa tiene terrenos exteriores, campos de golf, resorts o instalaciones con áreas verdes"
   ],
-  "etiqueta_arbol": "Verdea tus Espacios Exteriores",
+  "etiqueta_arbol": "Haz Ecológicos tus Espacios Exteriores",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-jardines_terrenos_verdes-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verdea tus Espacios Exteriores",
+      "texto_nuevo": "Haz Ecológicos tus Espacios Exteriores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Verdea"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-jardines_terrenos_verdes-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar plantas nativas y principios de xeriscape para reducir necesidad de riego",
+      "texto_nuevo": "Usar plantas nativas y principios de xerojardinería para reducir necesidad de riego",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "xeriscape"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

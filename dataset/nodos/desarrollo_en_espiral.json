@@ -6,14 +6,14 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. Cada ciclo se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final.",
   "pasos_accionables": [
-    "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
+    "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, prototipo de concepto), no la versión final",
     "Probar la versión con clientes reales para medir interés, preferencia e intención de compra",
-    "Recoger feedback directo sobre qué debe cambiarse o corregirse",
-    "Revisar el diseño, propuesta de valor y beneficios en base al feedback",
+    "Recoger retroalimentación directa sobre qué debe cambiarse o corregirse",
+    "Revisar el diseño, propuesta de valor y beneficios con base en la retroalimentación",
     "Repetir el ciclo varias veces, manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
-    "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
+    "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta la prueba completa del producto"
   ],
-  "entregable_esperado": "Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
+  "entregable_esperado": "Una serie documentada de prototipos iterativos, con registros de retroalimentación de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
   "nodos_previos": [
     "sistema_triple_a_stage_gate",
     "backlog_evolutivo_y_cronograma_flexible",
@@ -227,6 +227,91 @@
       },
       "decision": "lectura total de procedencia (w44r): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-desarrollo_en_espiral-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
+      "texto_nuevo": "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, prototipo de concepto), no la versión final",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "protocept"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollo_en_espiral-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recoger feedback directo sobre qué debe cambiarse o corregirse",
+      "texto_nuevo": "Recoger retroalimentación directa sobre qué debe cambiarse o corregirse",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollo_en_espiral-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el diseño, propuesta de valor y beneficios en base al feedback",
+      "texto_nuevo": "Revisar el diseño, propuesta de valor y beneficios con base en la retroalimentación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en base al",
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollo_en_espiral-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto",
+      "texto_nuevo": "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta la prueba completa del producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testeo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollo_en_espiral-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
+      "texto_nuevo": "Una serie documentada de prototipos iterativos, con registros de retroalimentación de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

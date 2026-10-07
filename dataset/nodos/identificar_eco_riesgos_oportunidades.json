@@ -7,7 +7,7 @@
   "resumen_teorico": "Proceso analítico y disciplinado para incorporar consideraciones ambientales en la estrategia empresarial, distinguiendo entre reconocer la importancia de los temas de sostenibilidad y realmente integrarlos de forma sistemática en la toma de decisiones. Implica identificar qué problemas ambientales son evidentes (como el cambio climático) y cuáles son menos obvios pero relevantes según la naturaleza del negocio, regulaciones o expectativas de stakeholders.",
   "pasos_accionables": [
     "Mapear los problemas ambientales evidentes y no evidentes relevantes para el sector.",
-    "Evaluar cuáles están impulsados por ley, stakeholders o competencia de mercado.",
+    "Evaluar cuáles están impulsados por ley, por quienes tienen interés en tu negocio o por competencia de mercado.",
     "Aplicar un marco analítico riguroso en lugar de asumir que toda iniciativa ambiental es rentable.",
     "Establecer prioridades basadas en el impacto potencial sobre la estrategia de negocio."
   ],
@@ -20,8 +20,43 @@
     "Al iniciar el desarrollo de una estrategia de sostenibilidad corporativa.",
     "Cuando la empresa no ha definido claramente qué temas ambientales son prioritarios para su negocio."
   ],
-  "etiqueta_arbol": "Detecta Riesgos Ambientales",
+  "etiqueta_arbol": "Detecta tus Riesgos Ambientales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-identificar_eco_riesgos_oportunidades-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Detecta Riesgos Ambientales",
+      "texto_nuevo": "Detecta tus Riesgos Ambientales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Detecta Riesgos Ambientales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificar_eco_riesgos_oportunidades-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar cuáles están impulsados por ley, stakeholders o competencia de mercado.",
+      "texto_nuevo": "Evaluar cuáles están impulsados por ley, por quienes tienen interés en tu negocio o por competencia de mercado.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stakeholders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

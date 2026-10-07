@@ -6,10 +6,10 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Las tecnologías que terminan cambiando todo un mercado suelen verse peor que las actuales al principio, por eso no parecen una amenaza (por ejemplo, las primeras cámaras digitales). Pero a menudo mejoran rápido y pueden voltear el tablero. No descartes una tecnología nueva solo porque su primera versión es inferior: tienes que seguirle el rastro y pensar qué tan probable es que mejore, qué tanto te afectaría y cuánto tiempo le tomaría madurar.",
   "pasos_accionables": [
-    "Identifica tecnologías nuevas que hoy rinden menos pero traen algo distinto a la mesa",
+    "Identifica tecnologías nuevas que hoy rinden menos pero aportan algo distinto",
     "Calcula qué tan probable es que esa tecnología mejore, en cuánto tiempo y qué impacto podría tener en tu negocio",
     "Decide si es una amenaza para tu negocio o una oportunidad que puedes aprovechar",
-    "Pregúntate '¿y entonces qué hago?': qué acción concreta vas a tomar frente a esa tecnología"
+    "Pregúntate '¿y entonces qué hago?': qué medida concreta vas a tomar frente a esa tecnología"
   ],
   "entregable_esperado": "Una lista de las tecnologías nuevas que estás vigilando, con qué tan probable y grave sería su impacto en tu negocio, y qué vas a hacer con cada una (actuar ya o solo seguir de cerca)",
   "nodos_previos": [
@@ -59,6 +59,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide evaluar también el impacto potencial de cada tecnología y ningún paso lo recoge.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-evaluacion_tecnologias_disruptivas-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica tecnologías nuevas que hoy rinden menos pero traen algo distinto a la mesa",
+      "texto_nuevo": "Identifica tecnologías nuevas que hoy rinden menos pero aportan algo distinto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "traen algo distinto a la mesa"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-evaluacion_tecnologias_disruptivas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate '¿y entonces qué hago?': qué acción concreta vas a tomar frente a esa tecnología",
+      "texto_nuevo": "Pregúntate '¿y entonces qué hago?': qué medida concreta vas a tomar frente a esa tecnología",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "qué acción concreta vas a tomar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

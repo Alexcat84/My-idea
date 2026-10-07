@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir claramente el rol que debe asumir la IA (profesor, cliente simulado, inversionista, experto en una industria)",
     "Especificar el formato de interacción: turnos, retroalimentación, nivel de dificultad adaptativo",
-    "Incluir criterios de evaluación específicos (ej: 'usa la ciencia de la negociación para dar feedback')",
+    "Incluir criterios de evaluación específicos (ej: 'usa la ciencia de la negociación para dar retroalimentación')",
     "Iterar el prompt basándose en los resultados obtenidos, refinando instrucciones ambiguas"
   ],
   "entregable_esperado": "Biblioteca de prompts reutilizables para simulaciones de ventas, negociación con inversionistas, o validación de propuestas de valor",
@@ -73,6 +73,23 @@
       },
       "decision": "lectura total de procedencia (w40): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-disenar_prompts_efectivos_para_ia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir criterios de evaluación específicos (ej: 'usa la ciencia de la negociación para dar feedback')",
+      "texto_nuevo": "Incluir criterios de evaluación específicos (ej: 'usa la ciencia de la negociación para dar retroalimentación')",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

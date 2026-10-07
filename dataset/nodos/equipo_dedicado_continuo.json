@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Definir un equipo central que permanezca en el proyecto de inicio a fin",
     "Incorporar nuevos miembros especializados (manufactura, ventas) según avance el proyecto sin reemplazar al núcleo",
-    "Buscar perfiles de equipo con expertise específico pero capacidades generalistas",
-    "Mantener la responsabilidad y ownership del equipo hasta la revisión post-lanzamiento"
+    "Buscar perfiles de equipo con experiencia específica pero capacidades generalistas",
+    "Mantener la responsabilidad y el compromiso del equipo hasta la revisión post-lanzamiento"
   ],
   "entregable_esperado": "Organigrama del equipo de proyecto con roles definidos y compromiso de permanencia hasta el cierre post-lanzamiento.",
   "nodos_previos": [
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Mantén tu Equipo Unido",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-equipo_dedicado_continuo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar perfiles de equipo con expertise específico pero capacidades generalistas",
+      "texto_nuevo": "Buscar perfiles de equipo con experiencia específica pero capacidades generalistas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "expertise específico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-equipo_dedicado_continuo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantener la responsabilidad y ownership del equipo hasta la revisión post-lanzamiento",
+      "texto_nuevo": "Mantener la responsabilidad y el compromiso del equipo hasta la revisión post-lanzamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ownership"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

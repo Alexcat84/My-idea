@@ -6,15 +6,15 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Es el proceso sistemático de mejorar cada paso del embudo de adquisición de clientes (acquire y activate). Dado que en algunos sitios web hasta el 98% de los visitantes nunca regresan, es crítico optimizar constantemente. El proceso consiste en revisar qué programas funcionan mejor, cuáles decepcionan, cuáles traen mejores clientes (LTV), y testear variaciones de ofertas, incentivos y mensajes.",
   "pasos_accionables": [
-    "Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)",
+    "Revisar resultados de cada programa de captación implementado (SEO, anuncios, referidos, etc.)",
     "Empezar por los programas gratuitos, que si funcionan son los más fáciles de escalar, e identificar el programa más productivo para escalarlo primero",
-    "Diseñar tests pass/fail para los programas más decepcionantes",
-    "Identificar comportamiento de clientes de alto LTV y buscar más similares",
+    "Diseñar pruebas de aprobado o reprobado para los programas más decepcionantes",
+    "Identificar comportamiento de clientes de alto valor de vida (LTV) y buscar más similares",
     "Probar variedad de ofertas, incentivos, descuentos y límites de tiempo",
-    "Revisar diariamente las 10-12 métricas clave con el 'data chief'",
+    "Revisar diariamente las 10-12 métricas clave con el responsable de datos",
     "No optimizar demasiados programas a la vez para evitar resultados confusos"
   ],
-  "entregable_esperado": "Plan de optimización secuencial del funnel 'get' con métricas diarias monitoreadas y dashboard de seguimiento",
+  "entregable_esperado": "Plan de optimización secuencial del embudo de captación con métricas diarias monitoreadas y tablero de seguimiento",
   "nodos_previos": [
     "ab_testing_optimizacion",
     "customer_jobs",
@@ -67,6 +67,92 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide empezar por los programas gratuitos porque, si funcionan, son los más fáciles de escalar; el paso pierde ese orden.; Mismo defecto que la marca 0.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-funnel_get_customers_optimizacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar resultados de cada programa 'get' implementado (SEO, ads, referidos, etc.)",
+      "texto_nuevo": "Revisar resultados de cada programa de captación implementado (SEO, anuncios, referidos, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "programa 'get'",
+          "ads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-funnel_get_customers_optimizacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar tests pass/fail para los programas más decepcionantes",
+      "texto_nuevo": "Diseñar pruebas de aprobado o reprobado para los programas más decepcionantes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tests pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-funnel_get_customers_optimizacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar comportamiento de clientes de alto LTV y buscar más similares",
+      "texto_nuevo": "Identificar comportamiento de clientes de alto valor de vida (LTV) y buscar más similares",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "alto LTV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-funnel_get_customers_optimizacion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar diariamente las 10-12 métricas clave con el 'data chief'",
+      "texto_nuevo": "Revisar diariamente las 10-12 métricas clave con el responsable de datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'data chief'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-funnel_get_customers_optimizacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de optimización secuencial del funnel 'get' con métricas diarias monitoreadas y dashboard de seguimiento",
+      "texto_nuevo": "Plan de optimización secuencial del embudo de captación con métricas diarias monitoreadas y tablero de seguimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "funnel 'get'",
+          "dashboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

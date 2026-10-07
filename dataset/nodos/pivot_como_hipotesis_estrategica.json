@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Formular explícitamente la nueva hipótesis estratégica que resulta del pivote (sobre producto, modelo de negocio o motor de crecimiento)",
     "Evitar basar la estrategia únicamente en analogías con empresas exitosas sin validar si las condiciones son comparables",
-    "Diseñar un nuevo MVP específico para probar la hipótesis del pivote",
+    "Diseñar un nuevo producto mínimo viable (MVP) específico para probar la hipótesis del pivote",
     "Aceptar que el pivote es una práctica recurrente y permanente en el crecimiento de la empresa, no un evento único",
     "Mantener las herramientas de aprendizaje validado y agilidad aun después de pivotar con éxito"
   ],
-  "entregable_esperado": "Documento de nueva hipótesis estratégica post-pivote junto con el diseño de un MVP para validarla",
+  "entregable_esperado": "Documento de nueva hipótesis estratégica pospivote junto con el diseño de un producto mínimo viable (MVP) para validarla",
   "nodos_previos": [
     "catalogo_pivotes",
     "reunion_pivotar_o_perseverar"
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Convierte tu Pivote en Hipótesis",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-pivot_como_hipotesis_estrategica-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar un nuevo MVP específico para probar la hipótesis del pivote",
+      "texto_nuevo": "Diseñar un nuevo producto mínimo viable (MVP) específico para probar la hipótesis del pivote",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "nuevo MVP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pivot_como_hipotesis_estrategica-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de nueva hipótesis estratégica post-pivote junto con el diseño de un MVP para validarla",
+      "texto_nuevo": "Documento de nueva hipótesis estratégica pospivote junto con el diseño de un producto mínimo viable (MVP) para validarla",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "post-pivote",
+          "un MVP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

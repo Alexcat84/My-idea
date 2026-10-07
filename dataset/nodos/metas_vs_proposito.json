@@ -6,12 +6,12 @@
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
   "resumen_teorico": "Las metas son objetivos medibles (puntos, likes, ventas) mientras que el propósito es la razón profunda detrás de la acción (diversión, conexión, impacto). Cuando confundimos metas con propósito, corremos el riesgo de optimizar el indicador en vez del valor real que representa (la Ley de Goodhart: 'cuando una medida se convierte en objetivo, deja de ser una buena medida'). Esto puede generar foco estrechado, comportamiento no ético, toma de riesgo excesiva, menor cooperación y pérdida de motivación intrínseca.",
   "pasos_accionables": [
-    "Lista explícitamente las métricas/KPIs actuales de tu proyecto",
+    "Lista explícitamente las métricas e indicadores clave actuales de tu proyecto",
     "Para cada métrica, pregúntate: ¿esta métrica realmente representa el valor/propósito que queremos lograr?",
-    "Identifica si alguna métrica podría ser 'hackeada' (como el AI de Q*bert) sin cumplir el propósito real",
+    "Identifica si alguna métrica podría ser 'hackeada' (como la IA de Q*bert) sin cumplir el propósito real",
     "Ajusta o complementa las métricas con más metas explícitas, incluidas antimetas (lo que te comprometes a no hacer), para que se contrapesen entre sí"
   ],
-  "entregable_esperado": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de 'gaming the metric'",
+  "entregable_esperado": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de manipular la métrica",
   "nodos_previos": [
     "disenio_en_turbulencia"
   ],
@@ -76,6 +76,56 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-metas_vs_proposito-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista explícitamente las métricas/KPIs actuales de tu proyecto",
+      "texto_nuevo": "Lista explícitamente las métricas e indicadores clave actuales de tu proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "métricas/KPIs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metas_vs_proposito-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica si alguna métrica podría ser 'hackeada' (como el AI de Q*bert) sin cumplir el propósito real",
+      "texto_nuevo": "Identifica si alguna métrica podría ser 'hackeada' (como la IA de Q*bert) sin cumplir el propósito real",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el AI de Q*bert"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metas_vs_proposito-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de 'gaming the metric'",
+      "texto_nuevo": "Una tabla de métricas actuales junto con el propósito que cada una debería representar, señalando discrepancias o riesgos de manipular la métrica",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'gaming the metric'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

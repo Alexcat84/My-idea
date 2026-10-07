@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "El no-shop impide que el vendedor busque otras ofertas durante un período tras firmar el LOI, generalmente unilateral a favor del comprador. Es clave negociar una duración razonable (45-60 días) para no quedar atado indefinidamente si el comprador decide abandonar el proceso.",
   "pasos_accionables": [
-    "Negociar una duración de no-shop entre 45 y 60 días.",
+    "Negociar una duración de exclusividad entre 45 y 60 días.",
     "Incluir cláusula de terminación automática si el comprador abandona el proceso.",
-    "Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.",
-    "Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop."
+    "Evitar sobrenegociar en el momento de solicitud de extensión de la exclusividad.",
+    "Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de exclusividad."
   ],
-  "entregable_esperado": "Cláusula de no-shop con duración y condiciones de salida claramente definidas en el LOI.",
+  "entregable_esperado": "Cláusula de exclusividad con duración y condiciones de salida claramente definidas en la carta de intención.",
   "nodos_previos": [
     "condiciones_de_cierre_adquisicion",
     "no_shop_agreement"
@@ -27,5 +27,76 @@
   "etiqueta_arbol": "Negocia tu Cláusula de Exclusividad",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-clausula_no_shop_adquisicion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar una duración de no-shop entre 45 y 60 días.",
+      "texto_nuevo": "Negociar una duración de exclusividad entre 45 y 60 días.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no-shop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_no_shop_adquisicion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar sobre-negociar en el momento de solicitud de extensión del no-shop.",
+      "texto_nuevo": "Evitar sobrenegociar en el momento de solicitud de extensión de la exclusividad.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sobre-negociar",
+          "no-shop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_no_shop_adquisicion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de no-shop.",
+      "texto_nuevo": "Considerar excepciones (carve-outs) como rondas de financiamiento durante el período de exclusividad.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no-shop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clausula_no_shop_adquisicion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de no-shop con duración y condiciones de salida claramente definidas en el LOI.",
+      "texto_nuevo": "Cláusula de exclusividad con duración y condiciones de salida claramente definidas en la carta de intención.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no-shop",
+          "en el LOI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

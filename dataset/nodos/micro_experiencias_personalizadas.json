@@ -9,8 +9,8 @@
     "Implementar un sistema (CRM) donde todo el equipo registre preferencias e intereses del cliente",
     "Revisar diariamente esta información antes de cada interacción con el cliente",
     "Diseñar pequeños gestos personalizados y sorpresivos de bajo costo",
-    "Hacer seguimiento post-interacción (llamada, encuesta) para reforzar la relación",
-    "Medir el impacto en métricas como NPS y recompra"
+    "Hacer seguimiento tras la interacción (llamada, encuesta) para reforzar la relación",
+    "Medir el impacto en métricas como el índice de recomendación (NPS) y recompra"
   ],
   "entregable_esperado": "Sistema de captura de preferencias de cliente y protocolo de gestos personalizados implementado",
   "nodos_previos": [
@@ -23,8 +23,58 @@
   "condiciones_activacion": [
     "Cuando el negocio tiene interacciones recurrentes con clientes y quiere diferenciarse mediante personalización"
   ],
-  "etiqueta_arbol": "Crea Micro-Experiencias Memorables",
+  "etiqueta_arbol": "Crea Pequeñas Experiencias Memorables",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-micro_experiencias_personalizadas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea Micro-Experiencias Memorables",
+      "texto_nuevo": "Crea Pequeñas Experiencias Memorables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Micro-Experiencias"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-micro_experiencias_personalizadas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hacer seguimiento post-interacción (llamada, encuesta) para reforzar la relación",
+      "texto_nuevo": "Hacer seguimiento tras la interacción (llamada, encuesta) para reforzar la relación",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v12)",
+        "evidencia": "El prefijo 'post' no se separa con guion y la forma soldada es forzada; 'tras la interacción' dice lo mismo sin añadir matiz."
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-micro_experiencias_personalizadas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir el impacto en métricas como NPS y recompra",
+      "texto_nuevo": "Medir el impacto en métricas como el índice de recomendación (NPS) y recompra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "como NPS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

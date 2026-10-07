@@ -7,7 +7,7 @@
   "resumen_teorico": "El uso de sistemas automatizados (gauging mecánico, pruebas electrónicas, visión artificial, etc.) para reducir costos de inspección, error humano y monotonía. Permite inspección 100% en niveles de defectos de partes por millón; con visión artificial se detectan prácticamente todos los defectos, frente al 80-90% que suele detectar la inspección humana.",
   "pasos_accionables": [
     "Identificar las pruebas que dominan el presupuesto de inspección y personal",
-    "Calcular la economía de automatizar dichas pruebas (ROI)",
+    "Calcular la rentabilidad de automatizar dichas pruebas (ROI)",
     "Realizar pruebas piloto en candidatos con buen retorno de inversión",
     "Extender la automatización gradualmente según experiencia",
     "Garantizar precisión y calibración del equipo automatizado (repetibilidad)"
@@ -55,6 +55,23 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro atribuye la detección prácticamente total a la visión artificial, no a toda inspección automatizada, y dice que la humana suele detectar del 80 al 90%.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-inspeccion_automatizada-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular la economía de automatizar dichas pruebas (ROI)",
+      "texto_nuevo": "Calcular la rentabilidad de automatizar dichas pruebas (ROI)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "la economía de automatizar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

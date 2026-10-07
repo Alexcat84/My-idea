@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones y que el producto no conforme puede devolverse para su reemplazo. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
   "pasos_accionables": [
-    "No comuniques el AQL como si fuera un nivel de defectos aceptable",
+    "No comuniques el nivel de calidad aceptable (AQL) como si fuera un nivel de defectos aceptable",
     "Deja establecido en el contrato que todo el producto debe cumplir las especificaciones",
     "Considera la métrica DPM (defectos por millón), que es la unidad de medida en muchas industrias",
     "Define con tu proveedor el proceso para devolver el producto que no cumple"
@@ -76,6 +76,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Misma omisión.; Se cae la segunda parte de la cláusula: el producto no conforme puede devolverse para su reemplazo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-establecimiento_de_niveles_de_calidad_aql_dpm-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No comuniques el AQL como si fuera un nivel de defectos aceptable",
+      "texto_nuevo": "No comuniques el nivel de calidad aceptable (AQL) como si fuera un nivel de defectos aceptable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el AQL"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

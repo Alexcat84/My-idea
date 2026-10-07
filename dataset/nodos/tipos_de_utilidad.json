@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Existen tres niveles de utilidad en el estado de resultados: Utilidad Bruta (ingresos menos COGS, mide rentabilidad básica del producto/servicio), Utilidad Operativa o EBIT (utilidad bruta menos gastos operativos, mide eficiencia operativa del negocio sin efecto de estructura financiera o impuestos), y Utilidad Neta (todo lo demás restado, es la línea final real). Cada una responde preguntas distintas sobre la salud del negocio.",
   "pasos_accionables": [
-    "Calcular utilidad bruta = Ingresos - COGS y comparar contra benchmarks de industria",
+    "Calcular utilidad bruta = Ingresos - Costo de ventas y comparar contra referencias de la industria",
     "Calcular EBIT = Utilidad bruta - Gastos operativos (incluye depreciación/amortización)",
     "Calcular utilidad neta = EBIT - Intereses - Impuestos - Cargos únicos",
     "Analizar tendencias de cada tipo de utilidad por separado para diagnosticar dónde está el problema si existe"
@@ -27,5 +27,25 @@
   "etiqueta_arbol": "Distingue tus Tres Utilidades",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-tipos_de_utilidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular utilidad bruta = Ingresos - COGS y comparar contra benchmarks de industria",
+      "texto_nuevo": "Calcular utilidad bruta = Ingresos - Costo de ventas y comparar contra referencias de la industria",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS",
+          "benchmarks de industria"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

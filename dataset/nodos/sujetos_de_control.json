@@ -10,7 +10,7 @@
     "Definir los objetivos del proceso de trabajo",
     "Identificar a los clientes del proceso y traducir su voz en características de producto (KPC)",
     "Identificar características de control de proceso (KCC) relacionadas",
-    "Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)"
+    "Seleccionar los sujetos de control finales basados en las fuentes disponibles (análisis de modo y efecto de falla, regulaciones, diseño de experimentos)"
   ],
   "entregable_esperado": "Lista de sujetos de control (KPCs y KCCs) documentada para el proceso",
   "nodos_previos": [
@@ -60,6 +60,24 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye identificar a los clientes del proceso.; Mismo paso omitido.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-sujetos_de_control-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar los sujetos de control finales basados en las fuentes disponibles (FMEA, regulaciones, DOE)",
+      "texto_nuevo": "Seleccionar los sujetos de control finales basados en las fuentes disponibles (análisis de modo y efecto de falla, regulaciones, diseño de experimentos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FMEA",
+          "DOE"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

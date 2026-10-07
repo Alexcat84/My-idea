@@ -7,12 +7,12 @@
   "resumen_teorico": "Método financiero simple que calcula el NPV de cada proyecto (ingresos futuros descontados menos costos de desarrollo y comercialización) para tomar decisiones Go/Kill en gates y priorizar proyectos en revisiones de portafolio. Se complementa con el IRR (tasa interna de retorno) y el Payback Period (periodo de recuperación) para capturar rentabilidad y riesgo. Supone proyecciones exactas (a menudo poco fiables en gates tempranos) y que solo cuentan metas financieras; suele ignorar probabilidades de éxito y riesgo.",
   "pasos_accionables": [
     "Calcular el flujo de caja proyectado año a año para cada proyecto",
-    "Aplicar una tasa de descuento ajustada al riesgo (hurdle rate) para obtener el NPV",
-    "Calcular también el IRR y el Payback Period como métricas complementarias",
-    "Ordenar los proyectos de mayor a menor NPV",
-    "Trazar una línea de corte según el límite de recursos disponibles; los proyectos por encima son Go, los de abajo Hold/Kill"
+    "Aplicar una tasa de descuento ajustada al riesgo (hurdle rate) para obtener el valor presente neto (VPN)",
+    "Calcular también la tasa interna de retorno (TIR) y el periodo de recuperación como métricas complementarias",
+    "Ordenar los proyectos de mayor a menor valor presente neto (VPN)",
+    "Trazar una línea de corte según el límite de recursos disponibles; los proyectos por encima siguen adelante, los de abajo quedan en pausa o cancelados"
   ],
-  "entregable_esperado": "Una hoja de cálculo con NPV, IRR y Payback Period de cada proyecto, y una lista priorizada de proyectos Go/Hold",
+  "entregable_esperado": "Una hoja de cálculo con valor presente neto (VPN), tasa interna de retorno (TIR) y periodo de recuperación de cada proyecto, y una lista priorizada de proyectos que siguen adelante o quedan en pausa",
   "nodos_previos": [
     "gestion_portafolio_dos_niveles",
     "metodo_strategic_buckets"
@@ -63,6 +63,91 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera más limitaciones del NPV (solo metas financieras, ignora probabilidades de éxito y riesgo, todo o nada); el resumen deja solo la de las proyecciones.; Misma omisión: se caen que solo importan las metas financieras y que en general ignora probabilidades de éxito y riesgo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-ranking_proyectos_por_npv-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar una tasa de descuento ajustada al riesgo (hurdle rate) para obtener el NPV",
+      "texto_nuevo": "Aplicar una tasa de descuento ajustada al riesgo (hurdle rate) para obtener el valor presente neto (VPN)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ranking_proyectos_por_npv-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular también el IRR y el Payback Period como métricas complementarias",
+      "texto_nuevo": "Calcular también la tasa interna de retorno (TIR) y el periodo de recuperación como métricas complementarias",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el IRR y el Payback Period"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ranking_proyectos_por_npv-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ordenar los proyectos de mayor a menor NPV",
+      "texto_nuevo": "Ordenar los proyectos de mayor a menor valor presente neto (VPN)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mayor a menor NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ranking_proyectos_por_npv-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trazar una línea de corte según el límite de recursos disponibles; los proyectos por encima son Go, los de abajo Hold/Kill",
+      "texto_nuevo": "Trazar una línea de corte según el límite de recursos disponibles; los proyectos por encima siguen adelante, los de abajo quedan en pausa o cancelados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "son Go, los de abajo Hold/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ranking_proyectos_por_npv-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una hoja de cálculo con NPV, IRR y Payback Period de cada proyecto, y una lista priorizada de proyectos Go/Hold",
+      "texto_nuevo": "Una hoja de cálculo con valor presente neto (VPN), tasa interna de retorno (TIR) y periodo de recuperación de cada proyecto, y una lista priorizada de proyectos que siguen adelante o quedan en pausa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV, IRR y Payback Period",
+          "Go/Hold"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

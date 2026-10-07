@@ -7,9 +7,9 @@
   "resumen_teorico": "El Sight Draft permite al exportador retener el título de la mercancía hasta que el pago se realice y el documento de embarque sea endosado; aun así, ningún banco respalda el pago y, si el comprador no paga, la mercancía queda a tu cargo; el riesgo crece en envío aéreo, pues el air waybill no requiere presentación para reclamarla. El Time Draft otorga crédito al comprador, estableciendo que el pago vence en un plazo fijado tras aceptar el draft y recibir la mercancía. La Letter of Credit es uno de los instrumentos más seguros, garantizando el pago si se cumplen los términos.",
   "pasos_accionables": [
     "Evaluar el riesgo del comprador y del mercado para elegir el método de pago adecuado",
-    "Usar el Sight Draft con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar el air waybill",
-    "Ofrecer Time Draft si se desea otorgar crédito comercial al comprador",
-    "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una Letter of Credit irrevocable y confirmada, un Sight Draft o incluso el pago por adelantado"
+    "Usar la letra a la vista con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar la guía aérea",
+    "Ofrecer una letra a plazo si se desea otorgar crédito comercial al comprador",
+    "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una carta de crédito irrevocable y confirmada, una letra a la vista o incluso el pago por adelantado"
   ],
   "entregable_esperado": "Método de pago seleccionado y formalizado en el contrato de venta con el comprador extranjero",
   "nodos_previos": [
@@ -80,6 +80,59 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro, si el riesgo es demasiado alto, propone en lugar del crédito un giro a la vista, una carta de crédito irrevocable y confirmada o el pago por adelantado; el paso pierde la confirmación y las alternativas y añade a los compradores nuevos.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-metodos_de_pago_internacional-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el Sight Draft con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar el air waybill",
+      "texto_nuevo": "Usar la letra a la vista con más cautela en embarques aéreos, donde el riesgo aumenta porque el comprador puede reclamar la mercancía sin presentar la guía aérea",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sight Draft",
+          "air waybill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodos_de_pago_internacional-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofrecer Time Draft si se desea otorgar crédito comercial al comprador",
+      "texto_nuevo": "Ofrecer una letra a plazo si se desea otorgar crédito comercial al comprador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Time Draft"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodos_de_pago_internacional-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una Letter of Credit irrevocable y confirmada, un Sight Draft o incluso el pago por adelantado",
+      "texto_nuevo": "Si el riesgo del comprador es alto, en lugar de darle crédito, considerar proponer una carta de crédito irrevocable y confirmada, una letra a la vista o incluso el pago por adelantado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Letter of Credit",
+          "un Sight Draft"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

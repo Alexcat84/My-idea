@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Tercera fase donde se ejecutan los proyectos de demostración piloto en algunas unidades de negocio antes de implementarlos en toda la organización. Cada proyecto requiere un charter, un equipo y un lanzamiento efectivo, con revisión de progreso y mantenimiento de resultados. Típicamente dura menos de un año y concluye con un breakthrough en el desempeño actual.",
   "pasos_accionables": [
-    "Lanzar los proyectos piloto definidos en la fase Prepare",
-    "Asignar equipos y charters a cada proyecto",
+    "Lanzar los proyectos piloto definidos en la fase de preparación",
+    "Asignar equipos y actas de constitución a cada proyecto",
     "Revisar el progreso de los proyectos regularmente",
-    "Mantener las ganancias obtenidas y documentar lecciones aprendidas"
+    "Mantener las mejoras obtenidas y documentar lecciones aprendidas"
   ],
   "entregable_esperado": "Resultados documentados de proyectos piloto con lecciones aprendidas y evaluación de expansión",
   "nodos_previos": [
@@ -24,5 +24,58 @@
   "etiqueta_arbol": "Lanza tus Proyectos Piloto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-launch_phase_roadmap-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lanzar los proyectos piloto definidos en la fase Prepare",
+      "texto_nuevo": "Lanzar los proyectos piloto definidos en la fase de preparación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fase Prepare"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-launch_phase_roadmap-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asignar equipos y charters a cada proyecto",
+      "texto_nuevo": "Asignar equipos y actas de constitución a cada proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "charters"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-launch_phase_roadmap-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantener las ganancias obtenidas y documentar lecciones aprendidas",
+      "texto_nuevo": "Mantener las mejoras obtenidas y documentar lecciones aprendidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "las ganancias obtenidas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

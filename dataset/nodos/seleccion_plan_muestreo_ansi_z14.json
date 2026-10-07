@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "ANSI/ASQC Z1.4 es un sistema de muestreo por atributos basado en AQL que permite seleccionar un plan de muestreo a partir de: el AQL, el tamaño de lote, el tipo de muestreo (simple/doble/múltiple) y el nivel de inspección (I, II o III, siendo II el normal). El estándar incluye procedimientos de cambio entre inspección normal, estricta (si la calidad se deteriora) y reducida (si el historial del proveedor es bueno), permitiendo balancear costo de inspección con protección de calidad requerida.",
   "pasos_accionables": [
-    "Determinar el AQL, tamaño de lote y nivel de inspección requeridos",
+    "Determinar el nivel de calidad aceptable (AQL), tamaño de lote y nivel de inspección requeridos",
     "Consultar la tabla de letras de código de tamaño de muestra según lote y nivel de inspección",
     "Leer el plan de muestreo correspondiente (tamaño de muestra, número de aceptación y rechazo) en la tabla maestra",
     "Implementar reglas de cambio a inspección estricta si dos de cinco lotes consecutivos son rechazados",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Aplica el Plan de Muestreo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-seleccion_plan_muestreo_ansi_z14-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar el AQL, tamaño de lote y nivel de inspección requeridos",
+      "texto_nuevo": "Determinar el nivel de calidad aceptable (AQL), tamaño de lote y nivel de inspección requeridos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el AQL"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

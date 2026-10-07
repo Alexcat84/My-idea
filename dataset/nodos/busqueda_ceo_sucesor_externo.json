@@ -8,9 +8,9 @@
     "Evaluar si algún miembro del equipo ejecutivo interno tiene el perfil de liderazgo general necesario antes de buscar afuera",
     "Definir con claridad qué cambios estratégicos, culturales o de equipo se esperan del nuevo CEO antes de iniciar la búsqueda",
     "Iniciar una búsqueda externa mediante firmas de reclutamiento especializadas, explorando también la red de contactos propia y de los inversionistas",
-    "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo expertise técnico, y con reputación comprobada",
+    "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo conocimiento técnico, y con reputación comprobada",
     "Involucrar al fundador en el proceso de selección (entrevistas junto con miembros clave del consejo) para intentar ganar su apoyo a la transición, definiendo cuánto decide, porque si sus motivaciones chocan con las de los inversionistas puede traer riesgos y demoras",
-    "Negociar el rol futuro del fundador (chairman, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como chairman puede chocar con la autoridad del nuevo CEO"
+    "Negociar el rol futuro del fundador (presidente del consejo, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como presidente del consejo puede chocar con la autoridad del nuevo CEO"
   ],
   "entregable_esperado": "Perfil de candidato CEO definido, lista corta de candidatos externos evaluados por el consejo y el fundador, y acuerdo sobre el rol futuro del fundador tras la sucesión",
   "condiciones_activacion": [
@@ -32,7 +32,7 @@
     "founder_ceo_succession_process",
     "involucramiento_fundador_busqueda_ceo"
   ],
-  "etiqueta_arbol": "Busca un CEO Externo",
+  "etiqueta_arbol": "Busca un Director General Externo",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
   ],
@@ -70,6 +70,56 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro no trae el rol de asesor entre los destinos del fundador reemplazado.; Se cae que dejarlo como chairman puede estorbar al nuevo CEO, que puede exigir que lo deje.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-busqueda_ceo_sucesor_externo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca un CEO Externo",
+      "texto_nuevo": "Busca un Director General Externo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CEO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-busqueda_ceo_sucesor_externo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo expertise técnico, y con reputación comprobada",
+      "texto_nuevo": "Buscar candidatos con experiencia en gestión multifuncional y operaciones, no solo conocimiento técnico, y con reputación comprobada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "expertise técnico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-busqueda_ceo_sucesor_externo-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar el rol futuro del fundador (chairman, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como chairman puede chocar con la autoridad del nuevo CEO",
+      "texto_nuevo": "Negociar el rol futuro del fundador (presidente del consejo, CTO u otro puesto ejecutivo) como parte de la contratación del nuevo CEO, sabiendo que mantenerlo como presidente del consejo puede chocar con la autoridad del nuevo CEO",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "chairman"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

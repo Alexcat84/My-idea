@@ -10,10 +10,10 @@
     "Grabar o realizar una llamada/video conjunta inmediatamente después del cierre de venta",
     "Reiterar en el traspaso las expectativas, necesidades y objetivos que el cliente compartió durante la venta",
     "Compartir datos de contacto directos del nuevo responsable en el mismo momento del traspaso",
-    "Mostrar evidencia social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente",
+    "Mostrar prueba social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente",
     "Rediseña el traspaso (handoff) entre quien vende y quien da soporte, para que no se pierda información ni calidez"
   ],
-  "entregable_esperado": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o checklist replicable",
+  "entregable_esperado": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o lista de verificación replicable",
   "nodos_previos": [
     "desconexion_ventas_experiencia"
   ],
@@ -24,7 +24,7 @@
     "Cuando existen roles distintos entre quien vende y quien ejecuta/da servicio",
     "Si tus clientes sienten que pierden la conexión o las expectativas acordadas al pasar del vendedor al equipo que les da el servicio"
   ],
-  "etiqueta_arbol": "Cuida la Entrega del Cliente",
+  "etiqueta_arbol": "Cuida el Traspaso de tu Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
   ],
@@ -68,6 +68,53 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "voz-handoff_transicion_ventas_cuentas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuida la Entrega del Cliente",
+      "texto_nuevo": "Cuida el Traspaso de tu Cliente",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v12)",
+        "evidencia": "Entrega del cliente se lee como un envío al cliente, cuando el concepto es pasar al cliente del vendedor a quien ejecuta el trabajo; traspaso dice eso mismo y la etiqueta sigue con verbo, tuteo y cinco palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-handoff_transicion_ventas_cuentas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mostrar evidencia social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente",
+      "texto_nuevo": "Mostrar prueba social (ej: muro de firmas, testimonios) que refuerce la decisión del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "evidencia social"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-handoff_transicion_ventas_cuentas-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o checklist replicable",
+      "texto_nuevo": "Un protocolo estandarizado de traspaso vendedor-cuenta con guion o lista de verificación replicable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
