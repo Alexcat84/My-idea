@@ -6,11 +6,11 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002 que busca fortalecer la transparencia financiera y la gobernanza corporativa tras escándalos de fraude contable. Exige controles internos robustos, certificación de estados financieros por CEOs/CFOs y que los comités de auditoría establezcan canales de denuncia confidenciales y protegidos. Aunque aplica directamente a empresas públicas, también influye en cómo bancos y auditores tratan a empresas privadas en crecimiento. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
-    "Familiarízate con los requisitos clave de SOX (controles internos, certificación de CFO/CEO)",
+    "Familiarízate con los requisitos clave de SOX (controles internos, certificación del director financiero y del director general)",
     "Evalúa el costo estimado de cumplimiento si planeas crecer o salir a bolsa",
     "Implementa políticas de control interno aunque seas una empresa privada, como buena práctica",
     "Reúnete con al menos una persona experta en finanzas independiente para revisar tus cuentas con ojo crítico",
-    "Crea canales confidenciales para reportar irregularidades financieras"
+    "Crea canales confidenciales para denunciar irregularidades financieras"
   ],
   "entregable_esperado": "Un marco de control interno financiero documentado, alineado con los principios de SOX, útil para auditorías bancarias o futuras rondas de inversión.",
   "nodos_previos": [
@@ -122,6 +122,40 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo quitar; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-cumplimiento_sarbanes_oxley-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Familiarízate con los requisitos clave de SOX (controles internos, certificación de CFO/CEO)",
+      "texto_nuevo": "Familiarízate con los requisitos clave de SOX (controles internos, certificación del director financiero y del director general)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "certificación de CFO/CEO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cumplimiento_sarbanes_oxley-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea canales confidenciales para reportar irregularidades financieras",
+      "texto_nuevo": "Crea canales confidenciales para denunciar irregularidades financieras",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportar irregularidades"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

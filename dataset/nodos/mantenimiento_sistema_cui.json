@@ -10,8 +10,8 @@
     "Determinar un cronograma regular de mantenimiento, verificar su cumplimiento y registrar el mantenimiento programado y las reparaciones de emergencia",
     "Habilitar actualizaciones automáticas donde sea apropiado",
     "Planificar actualizaciones para hardware o software que llegará a fin de vida útil",
-    "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
-    "Evitar que salga de las instalaciones equipo de mantenimiento con CUI: sanitizarlo, destruirlo o retenerlo dentro de las instalaciones."
+    "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar la autenticación multifactor (MFA) en la sesión y terminar completamente la conexión al finalizar",
+    "Evitar que salga de las instalaciones equipo de mantenimiento con información no clasificada controlada (CUI): borrarlo de forma segura, destruirlo o retenerlo dentro de las instalaciones."
   ],
   "entregable_esperado": "Plan de mantenimiento documentado con cronograma, herramientas autorizadas y procedimientos para mantenimiento remoto seguro",
   "nodos_previos": [
@@ -139,6 +139,41 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-mantenimiento_sistema_cui-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar MFA en la sesión y terminar completamente la conexión al finalizar",
+      "texto_nuevo": "Para mantenimiento remoto, establecer la sesión con un proveedor autorizado, asegurar la autenticación multifactor (MFA) en la sesión y terminar completamente la conexión al finalizar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "asegurar MFA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mantenimiento_sistema_cui-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar que salga de las instalaciones equipo de mantenimiento con CUI: sanitizarlo, destruirlo o retenerlo dentro de las instalaciones.",
+      "texto_nuevo": "Evitar que salga de las instalaciones equipo de mantenimiento con información no clasificada controlada (CUI): borrarlo de forma segura, destruirlo o retenerlo dentro de las instalaciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "con CUI",
+          "sanitizarlo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

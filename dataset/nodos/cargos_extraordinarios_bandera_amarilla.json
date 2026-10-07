@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Los cargos extraordinarios, write-offs o de reestructuración son gastos no recurrentes que requieren estimaciones contables discrecionales. Son una fuente común de sesgo financiero: si se sobreestiman, su reversión infla utilidades futuras; si se subestiman, se necesitan cargos adicionales que distorsionan periodos posteriores. Empresas que reportan estos cargos año tras año pierden credibilidad en el término 'extraordinario'.",
   "pasos_accionables": [
-    "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'restructuring' o 'write-off'",
+    "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'reestructuración' o 'baja contable'",
     "Preguntar la justificación y metodología detrás del monto estimado",
     "Verificar si estos cargos se repiten en años consecutivos",
     "Ajustar el análisis de rentabilidad excluyendo o normalizando estos cargos, salvo los que se repiten año tras año, que no son extraordinarios"
@@ -104,6 +104,24 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-cargos_extraordinarios_bandera_amarilla-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'restructuring' o 'write-off'",
+      "texto_nuevo": "Revisar el estado de resultados en busca de líneas etiquetadas 'cargo único', 'reestructuración' o 'baja contable'",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'restructuring'",
+          "'write-off'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

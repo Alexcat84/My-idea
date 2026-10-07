@@ -9,10 +9,10 @@
     "Revisa tus equipos para explorar oportunidades de reducción energética durante el mantenimiento rutinario",
     "Capacita a quienes operan tus equipos para identificar ineficiencias energéticas y para mantener los equipos, y aplícalo al mantenimiento autónomo",
     "Incorpora las mejores prácticas de eficiencia energética en tus operaciones diarias",
-    "Crea un checklist visible o boletín para dar seguimiento a tus acciones de mantenimiento",
+    "Crea una lista de verificación visible o boletín para dar seguimiento a tus acciones de mantenimiento",
     "Documenta lo aprendido para repetir las prácticas de manera consistente"
   ],
-  "entregable_esperado": "Programa de TPM implementado con métricas de energía, checklist visible y capacitación documentada.",
+  "entregable_esperado": "Programa de TPM implementado con métricas de energía, lista de verificación visible y capacitación documentada.",
   "nodos_previos": [
     "auditoria_energetica_sistematica",
     "green_six_sigma"
@@ -101,6 +101,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide capacitar a los empleados que operan los equipos en detectar ineficiencias y en mantener el equipo; el paso lo reduce a que aprendas tú.; Mismo defecto: se pierde la capacitación de quienes operan los equipos.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-mantenimiento_productivo_total_verde-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea un checklist visible o boletín para dar seguimiento a tus acciones de mantenimiento",
+      "texto_nuevo": "Crea una lista de verificación visible o boletín para dar seguimiento a tus acciones de mantenimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mantenimiento_productivo_total_verde-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Programa de TPM implementado con métricas de energía, checklist visible y capacitación documentada.",
+      "texto_nuevo": "Programa de TPM implementado con métricas de energía, lista de verificación visible y capacitación documentada.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist visible"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

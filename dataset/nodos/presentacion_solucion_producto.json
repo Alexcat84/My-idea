@@ -13,7 +13,7 @@
     "Cerrar con la visión del producto a 18 meses",
     "Ensayar la presentación (máximo 20 minutos) antes de usarla con clientes reales"
   ],
-  "entregable_esperado": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP cuando sea posible y espacios estructurados para feedback del cliente",
+  "entregable_esperado": "Presentación de solución de máximo 20 minutos, con demo/prototipo/producto mínimo viable cuando sea posible y espacios estructurados para comentarios del cliente",
   "nodos_previos": [
     "mapa_flujo_trabajo_cliente",
     "pivote_o_proceder",
@@ -47,6 +47,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro pide la demo o el prototipo cuando sea posible y el entregable lo exige sin condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-presentacion_solucion_producto-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presentación de solución de máximo 20 minutos, con demo/prototipo/MVP cuando sea posible y espacios estructurados para feedback del cliente",
+      "texto_nuevo": "Presentación de solución de máximo 20 minutos, con demo/prototipo/producto mínimo viable cuando sea posible y espacios estructurados para comentarios del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback",
+          "MVP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

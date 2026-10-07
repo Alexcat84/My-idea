@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Elige un motor específico de tu crecimiento que quieras mejorar (por ejemplo, cuántos usuarios se activan)",
     "Formula una hipótesis clara sobre qué cambio va a mejorar esa métrica",
-    "Diseña y corre experimentos enfocados solo en esa hipótesis",
+    "Diseña y realiza experimentos enfocados solo en esa hipótesis",
     "Mide si el cambio realmente mejoró la métrica que buscabas",
     "Descarta los cambios que no den una mejora medible, aunque te parezcan bonitos o te haya costado hacerlos"
   ],
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Afina tu Motor de Crecimiento",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-afinar_motor_crecimiento-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña y corre experimentos enfocados solo en esa hipótesis",
+      "texto_nuevo": "Diseña y realiza experimentos enfocados solo en esa hipótesis",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "corre experimentos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

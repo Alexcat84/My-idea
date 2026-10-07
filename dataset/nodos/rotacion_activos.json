@@ -6,8 +6,8 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Mide cuántos dólares de venta genera la empresa por cada dólar invertido en activos fijos (PPE) o en activos totales. Es un indicador de eficiencia en el uso de los recursos de la empresa para generar ingresos, y es especialmente relevante al comparar tendencias internas y con competidores.",
   "pasos_accionables": [
-    "Calcular ingresos totales divididos entre PPE final para obtener PPE turnover",
-    "Calcular ingresos totales divididos entre activos totales para obtener total asset turnover",
+    "Calcular ingresos totales divididos entre PPE final para obtener la rotación de activos fijos",
+    "Calcular ingresos totales divididos entre activos totales para obtener la rotación de activos totales",
     "Comparar resultados con la trayectoria histórica de la empresa y con competidores del sector",
     "Considerar el efecto de arrendamientos operativos en la comparabilidad de estos ratios"
   ],
@@ -24,5 +24,41 @@
   "etiqueta_arbol": "Mide el Uso de Activos",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-rotacion_activos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular ingresos totales divididos entre PPE final para obtener PPE turnover",
+      "texto_nuevo": "Calcular ingresos totales divididos entre PPE final para obtener la rotación de activos fijos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "PPE turnover"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rotacion_activos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular ingresos totales divididos entre activos totales para obtener total asset turnover",
+      "texto_nuevo": "Calcular ingresos totales divididos entre activos totales para obtener la rotación de activos totales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "total asset turnover"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

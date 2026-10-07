@@ -11,7 +11,7 @@
     "Analizar cuántas alternativas y niveles de incertidumbre existían realmente en el momento",
     "Cuestionar si un buen proceso pudo llevar a un mal resultado o viceversa"
   ],
-  "entregable_esperado": "Checklist de verificación de sesgos cognitivos aplicado antes de finalizar cualquier informe de incidente",
+  "entregable_esperado": "Lista de comprobación de sesgos cognitivos aplicada antes de finalizar cualquier informe de incidente",
   "nodos_previos": [
     "reacciones_al_fallo"
   ],
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la ilusión como una suposición habitual aparte, no como efecto de los dos sesgos.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-sesgo_retrospectivo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de verificación de sesgos cognitivos aplicado antes de finalizar cualquier informe de incidente",
+      "texto_nuevo": "Lista de comprobación de sesgos cognitivos aplicada antes de finalizar cualquier informe de incidente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist de verificación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

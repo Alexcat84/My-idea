@@ -7,7 +7,7 @@
   "resumen_teorico": "El IDA es una metodología que modela cualitativa y cuantitativamente las influencias organizacionales, en distintos niveles (factor influyente, PIF, implementación y política), sobre un resultado adverso. Permite tanto el análisis retrospectivo de accidentes como la estimación proactiva de la probabilidad de eventos futuros, combinando juicio experto estructurado con cálculo de probabilidades condicionales.",
   "pasos_accionables": [
     "Reunir un grupo de expertos del dominio para desarrollar el diagrama de influencia mediante discusión estructurada",
-    "Identificar los factores en cada nivel: influyente, PIF, implementación y política",
+    "Identificar los factores en cada nivel: influyente, factores que influyen en el desempeño, implementación y política",
     "Asignar razones de influencia (buena/mala) a cada factor mediante escalas graduadas de evidencia",
     "Combinar las influencias de factores múltiples usando ponderación conjunta y probabilidad condicional",
     "Sumar las probabilidades incondicionales para obtener la probabilidad global del evento adverso ('top event')"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Modela las Influencias del Problema",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-ida_diagrama_influencia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar los factores en cada nivel: influyente, PIF, implementación y política",
+      "texto_nuevo": "Identificar los factores en cada nivel: influyente, factores que influyen en el desempeño, implementación y política",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "PIF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -7,11 +7,11 @@
   "resumen_teorico": "Las auditorías energéticas comprehensivas permiten comparar el uso de energía de una planta contra promedios de la industria y revelar oportunidades de ahorro que las inspecciones visuales pueden pasar por alto. Incluyen desde revisión de facturas hasta análisis histórico de uso energético y medición de procesos individuales como sistemas de calentamiento y equipos motorizados.",
   "pasos_accionables": [
     "Revisar facturas de servicios públicos históricas",
-    "Contactar servicios de auditoría gratuitos o de bajo costo ofrecidos por utilities o ONGs",
+    "Contactar servicios de auditoría gratuitos o de bajo costo ofrecidos por empresas de servicios públicos o ONGs",
     "Medir el uso energético de procesos individuales, priorizando sistemas de calentamiento y motores",
     "Comparar el desempeño de la planta contra promedios de la industria (benchmarking)"
   ],
-  "entregable_esperado": "Un reporte de auditoría energética con benchmarking y priorización de oportunidades de mejora",
+  "entregable_esperado": "Un reporte de auditoría energética con comparación frente a la industria y priorización de oportunidades de mejora",
   "nodos_previos": [
     "involucrar_empleados_ahorro_energetico",
     "manufactura_verde"
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Audita tu Consumo de Energía",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-auditoria_energetica_sistematica-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contactar servicios de auditoría gratuitos o de bajo costo ofrecidos por utilities o ONGs",
+      "texto_nuevo": "Contactar servicios de auditoría gratuitos o de bajo costo ofrecidos por empresas de servicios públicos o ONGs",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "utilities"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-auditoria_energetica_sistematica-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un reporte de auditoría energética con benchmarking y priorización de oportunidades de mejora",
+      "texto_nuevo": "Un reporte de auditoría energética con comparación frente a la industria y priorización de oportunidades de mejora",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

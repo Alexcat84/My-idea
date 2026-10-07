@@ -7,7 +7,7 @@
   "resumen_teorico": "El trabajo desde casa elimina emisiones de transporte y reduce el consumo de espacio, electricidad y climatización de oficinas. Además de beneficios ambientales, mejora la productividad, moral del empleado y flexibilidad laboral.",
   "pasos_accionables": [
     "Identificar puestos que puedan realizarse total o parcialmente desde casa",
-    "Establecer políticas claras de telecommuting",
+    "Establecer políticas claras de teletrabajo",
     "Proveer herramientas tecnológicas de colaboración remota",
     "Medir impacto en productividad y reducción de huella de carbono"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Apuesta por el Teletrabajo",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-teletrabajo_sostenible-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer políticas claras de telecommuting",
+      "texto_nuevo": "Establecer políticas claras de teletrabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "telecommuting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -16,7 +16,7 @@
     "Probar combinaciones de tecnologías (robots, manufactura aditiva, vehículos autónomos) en el modelo",
     "Repetir el proceso de simulación periódicamente para adaptarse a cambios del mercado global"
   ],
-  "entregable_esperado": "Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos",
+  "entregable_esperado": "Modelo de simulación validado con recomendación de diseño de red, distribución de planta o política de inventario respaldada por datos",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro",
     "ia_en_supply_chain"
@@ -127,6 +127,22 @@
         "motivo": "Presenta la simulacion en general, para que sirve y en que horizontes, y el nodo es el siguiente paso practico: como construir el modelo con sus cuatro entidades."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    },
+    {
+      "id": "voz-simulacion_de_operaciones_supply_chain-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modelo de simulación validado con recomendación de diseño de red, layout o política de inventario respaldada por datos",
+      "texto_nuevo": "Modelo de simulación validado con recomendación de diseño de red, distribución de planta o política de inventario respaldada por datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "layout"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

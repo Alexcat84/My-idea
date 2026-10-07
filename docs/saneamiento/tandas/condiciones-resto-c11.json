@@ -1,0 +1,110 @@
+[
+ {
+  "id": "condiciones-resto-aspectos_legales_eticos_benchmarking-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "aspectos_legales_eticos_benchmarking",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando compares tu negocio directamente con el de tus competidores",
+  "texto_nuevo": "Cuando compares tu negocio con el de otras organizaciones, sobre todo si son tus competidores",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17587-17598",
+   "frase": "all benchmarkers must be aware of the legal and ethical implications of their benchmarking activity"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-cliente_disena_producto-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "cliente_disena_producto",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, no aplica si vendes algo farmacéutico o aeroespacial)",
+  "texto_nuevo": "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, con algo farmacéutico o aeroespacial esto en general no funciona)",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "5099",
+   "frase": "pharmaceuticals or aerospace equipment—generally won't work"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-criterios_de_exito_gate-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "criterios_de_exito_gate",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando ya tienes experiencia con procesos de evaluación por etapas y puedes hacer estimaciones realistas",
+  "texto_nuevo": "Cuando ya tienes bastante experiencia con procesos de evaluación por etapas y un historial sólido de estimaciones realistas",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6204",
+   "frase": "considerable experience with gating systems and a solid track record of making realistic"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-distribucion_binomial-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "distribucion_binomial",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando la probabilidad de defecto no es suficientemente pequeña para usar Poisson",
+  "texto_nuevo": "Cuando no se cumplen las condiciones para usar Poisson, por ejemplo porque la probabilidad de defecto no es lo bastante pequeña o la muestra tiene menos de 16 unidades",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11994-12003",
+   "frase": "applies when the sample size is at least 16"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-entrenamiento_para_breakthrough-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "entrenamiento_para_breakthrough",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si la organización inicia un programa formal de Six Sigma o breakthrough",
+  "texto_nuevo": "Si la organización inicia un programa formal de Six Sigma o breakthrough, si tiene mucha rotación o si asigna responsabilidades nuevas a su gente",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7262",
+   "frase": "turnover may be high, or employees may be assigned new responsibilities"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-graficos_control_multivariados-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "graficos_control_multivariados",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el producto tiene múltiples características de calidad correlacionadas",
+  "texto_nuevo": "Cuando el producto tiene múltiples características de calidad",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20693",
+   "frase": "When there are two or more quality characteristics on a unit of product"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

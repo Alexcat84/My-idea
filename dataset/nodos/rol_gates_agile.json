@@ -9,7 +9,7 @@
     "Mantén los puntos de decisión para seguir o parar en los momentos clave del proyecto, aunque trabajes con métodos ágiles",
     "Usa cada punto de decisión para revisar también los recursos disponibles, no solo la calidad de lo entregado",
     "Evita separar los puntos de decisión de hardware y de software cuando ambas partes dependen entre sí",
-    "Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada sprint cambie"
+    "Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada ciclo de trabajo cambie"
   ],
   "entregable_esperado": "Un calendario con los puntos de decisión definidos, con criterios claros para seguir o parar el proyecto y para asignar recursos en cada uno.",
   "nodos_previos": [
@@ -44,6 +44,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rol_gates_agile-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada sprint cambie",
+      "texto_nuevo": "Define un cronograma general con hitos que se mantenga estable, aunque el detalle de cada ciclo de trabajo cambie",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada sprint"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

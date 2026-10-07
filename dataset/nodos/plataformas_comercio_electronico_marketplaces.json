@@ -6,12 +6,12 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Las empresas pueden vender exclusivamente a través de plataformas de terceros como eBay, Amazon o Alibaba, aprovechando sus sistemas de pago, logística y herramientas de gestión de ventas. También pueden combinar canales (distribuidores, sitio propio, marketplaces) y usar los datos de ventas para optimizar la estrategia de canal.",
   "pasos_accionables": [
-    "Evaluar marketplaces relevantes según mercado objetivo y tipo de producto",
+    "Evaluar plataformas de venta en línea relevantes según mercado objetivo y tipo de producto",
     "Registrar la empresa y productos en la(s) plataforma(s) seleccionada(s)",
     "Combinar canales de venta (propio + terceros + distribuidores) según estrategia",
     "Monitorear métricas de ventas por canal para optimizar inversión"
   ],
-  "entregable_esperado": "Estrategia de canales de venta online definida con al menos un marketplace activo",
+  "entregable_esperado": "Estrategia de canales de venta en línea definida con al menos una plataforma de venta activa",
   "nodos_previos": [
     "marco_legal_comercio_electronico_internacional",
     "tipos_sitio_web_exportacion",
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Vende en Plataformas Existentes",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-plataformas_comercio_electronico_marketplaces-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar marketplaces relevantes según mercado objetivo y tipo de producto",
+      "texto_nuevo": "Evaluar plataformas de venta en línea relevantes según mercado objetivo y tipo de producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "marketplaces"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plataformas_comercio_electronico_marketplaces-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estrategia de canales de venta online definida con al menos un marketplace activo",
+      "texto_nuevo": "Estrategia de canales de venta en línea definida con al menos una plataforma de venta activa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "online",
+          "marketplace"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

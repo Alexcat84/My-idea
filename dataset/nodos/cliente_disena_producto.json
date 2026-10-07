@@ -22,7 +22,7 @@
     "personalizacion_guiada_por_el_cliente"
   ],
   "condiciones_activacion": [
-    "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, no aplica si vendes algo farmacéutico o aeroespacial)",
+    "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, con algo farmacéutico o aeroespacial esto en general no funciona)",
     "Tienes una base de usuarios entusiastas dispuestos a co-crear contigo"
   ],
   "etiqueta_arbol": "Deja que el Cliente Diseñe",
@@ -61,6 +61,23 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "condiciones-resto-cliente_disena_producto-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, no aplica si vendes algo farmacéutico o aeroespacial)",
+      "texto_nuevo": "Tu producto no requiere conocimiento técnico o científico avanzado (por ejemplo, con algo farmacéutico o aeroespacial esto en general no funciona)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "5099",
+        "frase": "pharmaceuticals or aerospace equipment—generally won't work"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

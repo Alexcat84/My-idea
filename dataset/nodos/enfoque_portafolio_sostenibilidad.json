@@ -7,7 +7,7 @@
   "resumen_teorico": "Estrategia que combina o 'empaqueta' proyectos sostenibles de alto valor ecológico pero bajo ROI individual junto con otros de alto retorno financiero, generando un portafolio conjunto que sí cumple con las tasas mínimas de inversión (hurdle rates) de la empresa. Permite justificar iniciativas de alto valor intangible sin comprometer la disciplina financiera.",
   "pasos_accionables": [
     "Agrupar proyectos sostenibles individuales según su potencial de retorno.",
-    "Combinar proyectos de alto ROI con otros de alto valor ecológico pero bajo retorno.",
+    "Combinar proyectos de alto retorno de la inversión (ROI) con otros de alto valor ecológico pero bajo retorno.",
     "Calcular una tasa de retorno conjunta para el portafolio completo.",
     "Presentar el portafolio como una iniciativa unificada de sostenibilidad a nivel de división."
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Combina Proyectos Sostenibles y Rentables",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-enfoque_portafolio_sostenibilidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Combinar proyectos de alto ROI con otros de alto valor ecológico pero bajo retorno.",
+      "texto_nuevo": "Combinar proyectos de alto retorno de la inversión (ROI) con otros de alto valor ecológico pero bajo retorno.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "alto ROI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

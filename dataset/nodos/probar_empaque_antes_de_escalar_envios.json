@@ -7,12 +7,12 @@
   "resumen_teorico": "Antes de comprometerte a despachar cientos de pedidos con el mismo empaque, conviene comprobar que resiste el viaje real: cambios de temperatura, presión de altitud y manejo brusco pueden dañar tu producto aunque en la mesa se vea perfecto. Tu courier puede tener un laboratorio de empaque donde enviar una muestra armada exactamente como la mandarías al cliente y recibir un resultado en unos cinco a siete días hábiles, sin costo, si tienes una cuenta activa con él. Esto puede ayudarte a evitar daños en tu producto. La prueba también ayuda a predecir cómo se comportará tu empaque, y para algunos productos, como flores y plantas, el courier la exige antes de aceptar el envío. Pregunta a tu proveedor de envíos si ofrece este servicio y en qué consiste antes de escalar volumen.",
   "pasos_accionables": [
     "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
-    "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+    "Pregúntale a tu empresa de mensajería si tiene un servicio de prueba de empaque gratuito.",
     "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena, firmada y con el nombre de tu ejecutivo de cuenta, y el acolchado necesario, dentro de una caja exterior resistente marcada como sobreembalaje con paquete de prueba dentro, a la dirección que indica la solicitud.",
     "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
     "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
   ],
-  "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
+  "entregable_esperado": "Un informe de prueba de tu empresa de mensajería que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
   "nodos_previos": [
     "detectar_empaque_poco_rigido",
     "simular_riesgos_transito_antes_de_enviar",
@@ -252,6 +252,40 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-probar_empaque_antes_de_escalar_envios-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
+      "texto_nuevo": "Pregúntale a tu empresa de mensajería si tiene un servicio de prueba de empaque gratuito.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-probar_empaque_antes_de_escalar_envios-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
+      "texto_nuevo": "Un informe de prueba de tu empresa de mensajería que confirma si tu empaque actual resiste el transporte o qué debes cambiar.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte",
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

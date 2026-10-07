@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Investigar las causas raíz consultando directamente al personal operativo",
     "Realizar auditorías independientes periódicas por departamento",
-    "Documentar hallazgos en reportes formales de ingeniería de calidad",
+    "Documentar hallazgos en informes formales de ingeniería de calidad",
     "Definir planes de acción correctiva específicos por departamento responsable"
   ],
-  "entregable_esperado": "Reporte de acción correctiva con causas raíz identificadas y plan de solución por departamento.",
+  "entregable_esperado": "Informe de acción correctiva con causas raíz identificadas y plan de solución por departamento.",
   "nodos_previos": [
     "quality_awareness_crosby"
   ],
@@ -43,6 +43,39 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro solo invita a preguntar cuándo fue la última auditoría independiente de cada departamento; el nodo la vuelve un requisito periódico del paso.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-accion_correctiva_crosby-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar hallazgos en reportes formales de ingeniería de calidad",
+      "texto_nuevo": "Documentar hallazgos en informes formales de ingeniería de calidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-accion_correctiva_crosby-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de acción correctiva con causas raíz identificadas y plan de solución por departamento.",
+      "texto_nuevo": "Informe de acción correctiva con causas raíz identificadas y plan de solución por departamento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

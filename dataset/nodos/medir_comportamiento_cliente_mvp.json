@@ -11,9 +11,9 @@
     "Identifica qué características tienen los usuarios que regresan con más frecuencia",
     "Rastrea tasas de cancelación o inactividad como indicador de retención",
     "Calcula el porcentaje de usuarios que te refieren y cuántos referidos se activan",
-    "Compara todos los resultados contra tus criterios pass o fail definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado"
+    "Compara todos los resultados contra tus criterios de aprobación o rechazo definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado"
   ],
-  "entregable_esperado": "Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP, con conclusión sobre la validez del modelo",
+  "entregable_esperado": "Tablero o reporte con métricas de Compra, Interacción, Retención y Referencia del MVP, con conclusión sobre la validez del modelo",
   "nodos_previos": [
     "construir_mvp_baja_fidelidad",
     "hipotesis_propuesta_de_valor_producto",
@@ -78,6 +78,40 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que en esta fase los datos son direccionales: las cifras guían la conversación y la decisión de avanzar la toma el criterio de quien lidera, no las métricas por sí solas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-medir_comportamiento_cliente_mvp-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compara todos los resultados contra tus criterios pass o fail definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado",
+      "texto_nuevo": "Compara todos los resultados contra tus criterios de aprobación o rechazo definidos previamente, y busca una respuesta grande o masiva, no solo un aprobado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pass o fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-medir_comportamiento_cliente_mvp-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dashboard o reporte con métricas de Purchase, Engagement, Retention y Referral del MVP, con conclusión sobre la validez del modelo",
+      "texto_nuevo": "Tablero o reporte con métricas de Compra, Interacción, Retención y Referencia del MVP, con conclusión sobre la validez del modelo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Dashboard",
+          "Purchase, Engagement, Retention y Referral"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

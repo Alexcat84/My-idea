@@ -7,12 +7,12 @@
   "resumen_teorico": "En lugar de enfocarse únicamente en el centro de la curva de campana (el usuario 'promedio'), observar a usuarios extremos —quienes viven, piensan y consumen de forma diferente— revela insights que no aparecerían estudiando solo al mercado central. Ejemplos: coleccionistas obsesivos, niños o chefs profesionales al diseñar utensilios de cocina para el público general.",
   "pasos_accionables": [
     "Identificar usuarios en los márgenes: expertos extremos, principiantes totales, o personas con necesidades atípicas.",
-    "Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo., con entrevistas o inmersiones etnográficas",
+    "Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo, con entrevistas o inmersiones etnográficas",
     "Extraer patrones de sus comportamientos exagerados que iluminen problemas ocultos en el diseño para el usuario promedio.",
     "Evitar la ortodoxia de soluciones 'estándar' cuando los extremos sugieren necesidades diferenciadas.",
     "Documentar estos hallazgos como 'activos creativos' para futuras iteraciones."
   ],
-  "entregable_esperado": "Un perfil de usuarios extremos documentado con insights aplicables al diseño general del producto o servicio.",
+  "entregable_esperado": "Un perfil de usuarios extremos documentado con hallazgos aplicables al diseño general del producto o servicio.",
   "nodos_previos": [
     "convertir_necesidad_en_demanda",
     "prototipado_de_experiencias",
@@ -61,6 +61,37 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no incluye entre los usuarios extremos a quienes más o menos usan el producto.; Mismo añadido de un criterio de intensidad de uso.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-usuarios_extremos_edge_cases-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo., con entrevistas o inmersiones etnográficas",
+      "texto_nuevo": "Estudiar cómo estos usuarios extremos interactúan con el producto o problema, aunque no sean el mercado objetivo directo, con entrevistas o inmersiones etnográficas",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v11)",
+        "evidencia": "Errata: sobra el punto delante de la coma; quitarlo no toca el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-usuarios_extremos_edge_cases-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un perfil de usuarios extremos documentado con insights aplicables al diseño general del producto o servicio.",
+      "texto_nuevo": "Un perfil de usuarios extremos documentado con hallazgos aplicables al diseño general del producto o servicio.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

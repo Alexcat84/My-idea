@@ -7,11 +7,11 @@
   "resumen_teorico": "Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Algunos planes de muestreo usan además esta clasificación para fijar niveles de calidad aceptables (AQL) distintos según la criticidad del defecto, aunque todo producto debe cumplir las especificaciones.",
   "pasos_accionables": [
     "Listar todos los posibles defectos del producto o proceso",
-    "Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto",
+    "Asignar niveles de gravedad (crítico, mayor, menor) a cada defecto",
     "Comunicar la clasificación al proveedor para enfocar esfuerzos",
     "Vincular la clasificación a los planes de muestreo e inspección"
   ],
-  "entregable_esperado": "Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor",
+  "entregable_esperado": "Tabla de clasificación de defectos por nivel de gravedad, comunicada formalmente al proveedor",
   "nodos_previos": [
     "control_del_proceso_del_proveedor"
   ],
@@ -42,6 +42,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que algunos planes usan la clasificación para fijar el AQL; 'fundamental' y priorizar recursos endurecen y añaden.; Mismo defecto: además el DPM no se liga a la criticidad en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-clasificacion_de_seriedad_de_defectos_2-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asignar niveles de seriedad (crítico, mayor, menor) a cada defecto",
+      "texto_nuevo": "Asignar niveles de gravedad (crítico, mayor, menor) a cada defecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "niveles de seriedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clasificacion_de_seriedad_de_defectos_2-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor",
+      "texto_nuevo": "Tabla de clasificación de defectos por nivel de gravedad, comunicada formalmente al proveedor",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "nivel de seriedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v11): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
