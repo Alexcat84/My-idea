@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Todo pronóstico de demanda depende de cuatro variables: Oferta (número de proveedores y lead times), Demanda (crecimiento, estacionalidad, madurez del mercado), Características del producto (si es sustituible, complementario, nuevo o maduro) y Entorno competitivo (participación de mercado, promociones, guerras de precios). Cuanta más incertidumbre haya en estas variables, más difícil y menos preciso será el pronóstico.",
   "pasos_accionables": [
-    "Evaluar el número de proveedores y lead times de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los lead times combinados de todos los componentes del producto final",
+    "Evaluar el número de proveedores y plazos de entrega de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los plazos de entrega combinados de todos los componentes del producto final",
     "Analizar tendencia de crecimiento/declive y estacionalidad de la demanda de tu mercado",
     "Clasificar tu producto según madurez, sustitución y complementariedad, y pronosticar juntos los productos que compiten o se complementan entre sí",
     "Monitorear la participación de mercado propia y de competidores, incluyendo promociones planeadas"
@@ -91,6 +91,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde la indicación de pronosticar juntos los productos que compiten o se complementan.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-pronostico_de_demanda_variables-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el número de proveedores y lead times de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los lead times combinados de todos los componentes del producto final",
+      "texto_nuevo": "Evaluar el número de proveedores y plazos de entrega de tu cadena de suministro, y hacer que el pronóstico cubra un horizonte que abarque los plazos de entrega combinados de todos los componentes del producto final",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "lead times"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

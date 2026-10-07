@@ -6,10 +6,10 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Los defectos de calidad que no corriges ahora ralentizarán el trabajo después, con retrabajo, baja moral y quejas de clientes. El cordón andon (usado en despliegue continuo) detiene la producción ante un problema de calidad que no se puede corregir sobre la marcha, para obligar a investigarlo de inmediato: paras ahora para no tener que parar después. Esto aplica tanto a productos físicos como a negocios de servicio.",
   "pasos_accionables": [
-    "Implementar un mecanismo tipo 'andon cord' que detenga el trabajo ante un defecto crítico detectado",
-    "Investigar la causa raíz del problema antes de continuar con nuevas features",
+    "Implementar un mecanismo tipo 'cordón andon' que detenga el trabajo ante un defecto crítico detectado",
+    "Investigar la causa raíz del problema antes de continuar con nuevas funcionalidades",
     "Evitar acumular deuda técnica o de proceso que luego genere retrabajo masivo",
-    "Diferenciar entre defectos que se pueden ignorar en el MVP temprano (con early adopters) y los que bloquean el aprendizaje con el mercado masivo"
+    "Diferenciar entre defectos que se pueden ignorar en el MVP temprano (con primeros usuarios) y los que bloquean el aprendizaje con el mercado masivo"
   ],
   "entregable_esperado": "Un protocolo definido de 'parada de línea' ante defectos críticos, con responsables y tiempos de respuesta",
   "nodos_previos": [
@@ -44,6 +44,57 @@
       },
       "decision": "lectura total de procedencia (w45): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-no_sacrificar_calidad_por_velocidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar un mecanismo tipo 'andon cord' que detenga el trabajo ante un defecto crítico detectado",
+      "texto_nuevo": "Implementar un mecanismo tipo 'cordón andon' que detenga el trabajo ante un defecto crítico detectado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'andon cord'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-no_sacrificar_calidad_por_velocidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Investigar la causa raíz del problema antes de continuar con nuevas features",
+      "texto_nuevo": "Investigar la causa raíz del problema antes de continuar con nuevas funcionalidades",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-no_sacrificar_calidad_por_velocidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diferenciar entre defectos que se pueden ignorar en el MVP temprano (con early adopters) y los que bloquean el aprendizaje con el mercado masivo",
+      "texto_nuevo": "Diferenciar entre defectos que se pueden ignorar en el MVP temprano (con primeros usuarios) y los que bloquean el aprendizaje con el mercado masivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "early adopters"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

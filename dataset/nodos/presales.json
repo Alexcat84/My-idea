@@ -6,9 +6,9 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "A diferencia de las mock sales, en las presales el cliente sabe que la propuesta de valor aún no existe completamente pero hace un compromiso de compra real (ej. Kickstarter); el objetivo es explorar su interés, no es vender. Si no hay suficiente interés, la venta se cancela y se reembolsa al cliente.",
   "pasos_accionables": [
-    "Publica el proyecto en una plataforma de crowdfunding o crea tu propio proceso de preventa.",
+    "Publica el proyecto en una plataforma de financiamiento colectivo o crea tu propio proceso de preventa.",
     "Define una meta de financiamiento; los fondos solo se liberan si se alcanza.",
-    "En contexto B2B, recolecta cartas de intención o compromisos de compra no vinculantes.",
+    "En ventas entre empresas, recolecta cartas de intención o compromisos de compra no vinculantes.",
     "Analiza el nivel de fondos/compromisos alcanzados como indicador de interés real, recordando que una preventa exitosa es solo un indicador y no garantiza una base amplia de clientes ni un modelo de negocio escalable."
   ],
   "entregable_esperado": "Campaña de preventa con monto recaudado o compromisos firmados como evidencia de demanda.",
@@ -90,6 +90,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que el objetivo principal de estas preventas es explorar el interés del cliente, no vender, y el resumen lo omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-presales-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Publica el proyecto en una plataforma de crowdfunding o crea tu propio proceso de preventa.",
+      "texto_nuevo": "Publica el proyecto en una plataforma de financiamiento colectivo o crea tu propio proceso de preventa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "crowdfunding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-presales-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En contexto B2B, recolecta cartas de intención o compromisos de compra no vinculantes.",
+      "texto_nuevo": "En ventas entre empresas, recolecta cartas de intención o compromisos de compra no vinculantes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "En contexto B2B"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

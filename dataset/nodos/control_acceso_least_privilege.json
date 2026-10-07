@@ -6,11 +6,11 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "El Control de Acceso limita el acceso al sistema de información a usuarios autorizados, procesos actuando en su nombre, o dispositivos, y a los tipos de transacciones y funciones que estos usuarios están permitidos ejercer. El concepto fundamental de Mínimo Privilegio implica limitar los derechos de acceso solo a los usuarios que lo necesitan para cumplir sus tareas asignadas, incluyendo restringir privilegios administrativos solo a quienes los requieren.",
   "pasos_accionables": [
-    "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
-    "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
-    "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
+    "Implementar políticas que limiten el acceso a la información controlada no clasificada solo a individuos que lo requieren para su trabajo",
+    "Revisar información pública (sitio web de la empresa) para eliminar información controlada no clasificada expuesta",
+    "Proteger la información controlada no clasificada con bloqueos de dispositivo y terminación de sesión automática",
     "Identificar y restringir privilegios administrativos solo a quienes los necesitan, y restringir el uso de esas cuentas en tareas rutinarias que no los requieren",
-    "Reasignar o remover privilegios cuando un individuo ya no requiere acceso"
+    "Reasignar o retirar privilegios cuando un individuo ya no requiere acceso"
   ],
   "entregable_esperado": "Política de control de acceso documentada e implementada, con lista de usuarios y sus niveles de privilegio",
   "nodos_previos": [
@@ -90,6 +90,74 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-control_acceso_least_privilege-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar políticas que limiten el acceso a CUI solo a individuos que lo requieren para su trabajo",
+      "texto_nuevo": "Implementar políticas que limiten el acceso a la información controlada no clasificada solo a individuos que lo requieren para su trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "acceso a CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_acceso_least_privilege-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar información pública (sitio web de la empresa) para eliminar CUI expuesto",
+      "texto_nuevo": "Revisar información pública (sitio web de la empresa) para eliminar información controlada no clasificada expuesta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CUI expuesto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_acceso_least_privilege-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proteger CUI con bloqueos de dispositivo y terminación de sesión automática",
+      "texto_nuevo": "Proteger la información controlada no clasificada con bloqueos de dispositivo y terminación de sesión automática",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Proteger CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_acceso_least_privilege-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reasignar o remover privilegios cuando un individuo ya no requiere acceso",
+      "texto_nuevo": "Reasignar o retirar privilegios cuando un individuo ya no requiere acceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "remover"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

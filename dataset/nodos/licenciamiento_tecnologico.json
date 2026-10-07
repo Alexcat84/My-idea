@@ -11,7 +11,7 @@
     "Registra tus patentes y marcas en cada país objetivo, considerando PCT y Protocolo de Madrid para protección múltiple",
     "Negocia la compensación (regalía fija, variable o combinada) y el alcance geográfico del acuerdo, dentro de lo que permitan las leyes de competencia y de licencias de cada país",
     "Consigue asesoría legal especializada en tu país antes de firmar y considera también contar con asesoría en el país del licenciatario",
-    "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu IP"
+    "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu propiedad intelectual"
   ],
   "entregable_esperado": "Contrato de licenciamiento de tecnología firmado con términos claros de compensación, territorio y duración, respaldado por el registro de tu propiedad intelectual en el país del licenciatario.",
   "nodos_previos": [
@@ -27,7 +27,7 @@
     "Si existen barreras arancelarias o regulatorias que dificultan la exportación directa",
     "Si buscas entrar rápido a un mercado extranjero asumiendo menos riesgo financiero y legal"
   ],
-  "etiqueta_arbol": "Otorga Licencia de tu Marca",
+  "etiqueta_arbol": "Otorga Licencia de tu Propiedad Intelectual",
   "ids_alias": [
     "licenciamiento_tecnologia"
   ],
@@ -295,6 +295,37 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-licenciamiento_tecnologico-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Otorga Licencia de tu Marca",
+      "texto_nuevo": "Otorga Licencia de tu Propiedad Intelectual",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v08)",
+        "evidencia": "La etiqueta promete licenciar solo la marca, cuando el concepto es licenciar patentes, marcas, derechos de autor, secretos comerciales y demás propiedad intelectual; nombrar la propiedad intelectual recoge el concepto sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-licenciamiento_tecnologico-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu IP",
+      "texto_nuevo": "Redacta el contrato incluyendo control de calidad, territorio, duración y cláusulas de protección de tu propiedad intelectual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tu IP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

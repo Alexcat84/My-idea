@@ -13,8 +13,8 @@
     "Antes de fijar una métrica, define primero el objetivo cualitativo real que persigues",
     "Pregúntate qué comportamientos generará esa métrica en el equipo antes de implementarla",
     "Complementa métricas cuantitativas con evaluaciones cualitativas (ej: satisfacción del cliente, opinión de ingenieros sobre el producto)",
-    "Evita sacrificar el largo plazo (por ejemplo, la inversión en R&D) para cumplir números de corto plazo",
-    "Aplica el concepto de 'white box': entiende cómo se producen los números, no solo el resultado final"
+    "Evita sacrificar el largo plazo (por ejemplo, la inversión en investigación y desarrollo) para cumplir números de corto plazo",
+    "Aplica el concepto de 'caja blanca': entiende cómo se producen los números, no solo el resultado final"
   ],
   "entregable_esperado": "Un panel de métricas con señales tempranas y resultados finales balanceados, con la razón de cada uno anotada",
   "nodos_previos": [
@@ -48,6 +48,40 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El ejemplo del libro de largo plazo sacrificado es la inversión en R&D; la calidad se añade a la enumeración.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_metricas_lideres_rezagados-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita sacrificar el largo plazo (por ejemplo, la inversión en R&D) para cumplir números de corto plazo",
+      "texto_nuevo": "Evita sacrificar el largo plazo (por ejemplo, la inversión en investigación y desarrollo) para cumplir números de corto plazo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "R&D"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_metricas_lideres_rezagados-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica el concepto de 'white box': entiende cómo se producen los números, no solo el resultado final",
+      "texto_nuevo": "Aplica el concepto de 'caja blanca': entiende cómo se producen los números, no solo el resultado final",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'white box'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

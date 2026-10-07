@@ -20,11 +20,30 @@
     "necesidades_user_friendly"
   ],
   "condiciones_activacion": [
-    "Cuando existe resistencia al cambio sin justificación técnica clara",
+    "Cuando existe resistencia al cambio con razones de apariencia razonable, como el costo, que pueden ocultar la razón real",
     "Cuando productos técnicamente idénticos tienen diferencias de precio o percepción significativas"
   ],
   "etiqueta_arbol": "Atiende lo Emocional del Cliente",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-necesidades_psicologicas_cliente-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando existe resistencia al cambio sin justificación técnica clara",
+      "texto_nuevo": "Cuando existe resistencia al cambio con razones de apariencia razonable, como el costo, que pueden ocultar la razón real",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "855-858",
+        "frase": "reasons for the resistance will be on plausible grounds, such as the effect on costs"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c08): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

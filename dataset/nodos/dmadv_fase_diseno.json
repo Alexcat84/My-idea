@@ -6,11 +6,11 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La fase de diseño en la metodología DMADV (Define, Measure, Analyze, Design, Verify) construye sobre los requisitos del diseño de alto nivel para entregar un diseño funcional detallado y optimizado que cumple con los requisitos operativos de manufactura y servicio. Se realizan diseños detallados en subsistemas que eventualmente se integran en el sistema funcional completo. Se utilizan experimentos diseñados y simulaciones para determinar la mejor configuración de características y obtener ecuaciones matemáticas de predicción.",
   "pasos_accionables": [
-    "Realizar experimentos diseñados a diferentes niveles de complejidad (screening, response surface, mixture designs)",
+    "Realizar experimentos diseñados a diferentes niveles de complejidad (diseños de cribado, de superficie de respuesta y de mezclas)",
     "Actualizar el design scorecard con resultados de experimentos, benchmarking y estudios de capacidad de proceso",
     "Reevaluar el diseño del producto contra la capacidad de manufactura u operación",
     "Validar tolerancias para cada parámetro mediante experimentos diseñados y tolerancias estadísticas",
-    "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
+    "Documentar el conjunto de pruebas en un plan de prueba de verificación del diseño (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
     "Realizar una reunión de revisión de diseño al concluir la fase"
   ],
   "entregable_esperado": "Diseño funcional detallado con parámetros optimizados, modelos de predicción, tolerancias óptimas, documentación de diseño, procedimientos operativos estándar, resultados de análisis de confiabilidad y resultados de verificación del diseño (DVT), y scorecard de diseño actualizado",
@@ -45,6 +45,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exige cerrar la fase verificando el diseño con pruebas de prototipos, preproducción o corridas piloto; el paso solo documenta el plan.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-dmadv_fase_diseno-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar experimentos diseñados a diferentes niveles de complejidad (screening, response surface, mixture designs)",
+      "texto_nuevo": "Realizar experimentos diseñados a diferentes niveles de complejidad (diseños de cribado, de superficie de respuesta y de mezclas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "screening, response surface, mixture designs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmadv_fase_diseno-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar el conjunto de pruebas en un plan de Design Verification Test (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
+      "texto_nuevo": "Documentar el conjunto de pruebas en un plan de prueba de verificación del diseño (DVT) y ejecutarlo con prototipos, modelos de preproducción o corridas piloto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Design Verification Test"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Establecer equipos de proyecto (permanentes o ad hoc) para el cambio no rutinario",
     "Evitar que el exceso de enfoque en auditorías y control impida iniciativas de mejora"
   ],
-  "entregable_esperado": "Plan de balance entre actividades de control y actividades de cambio/mejora dentro de la Oficina",
+  "entregable_esperado": "Plan de equilibrio entre actividades de control y actividades de cambio/mejora dentro de la Oficina",
   "nodos_previos": [
     "oficina_calidad_y_excelencia"
   ],
@@ -25,5 +25,23 @@
   "etiqueta_arbol": "Coordina para Controlar o Cambiar",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-coordinacion_control_vs_cambio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de balance entre actividades de control y actividades de cambio/mejora dentro de la Oficina",
+      "texto_nuevo": "Plan de equilibrio entre actividades de control y actividades de cambio/mejora dentro de la Oficina",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Plan de balance"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

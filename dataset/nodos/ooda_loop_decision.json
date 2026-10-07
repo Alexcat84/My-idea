@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El ciclo OODA (Observar, Orientar, Decidir, Actuar), originado en el ámbito militar, es un proceso iterativo y no lineal centrado en la 'orientación' como núcleo de comprensión de la situación. En entornos bien entendidos se puede saltar la fase de 'decidir' y ciclar rápidamente entre observar-orientar-actuar (guía implícita). La guía explícita (decisión formal) solo se requiere ante cambios significativos. Es clave para operar con velocidad en cadenas de suministro y respuesta a crisis.",
   "pasos_accionables": [
-    "Establecer canales de observación continua (sensores, reportes, datos en tiempo real)",
+    "Establecer canales de observación continua (sensores, informes, datos en tiempo real)",
     "Entrenar al equipo para interpretar rápidamente la situación (orientar) según objetivos claros",
     "Definir cuándo se puede actuar directamente (guía implícita) y cuándo se requiere decisión formal",
     "Medir resultados de cada acción y retroalimentar el ciclo continuamente"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Decide Rápido con el Ciclo OODA",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-ooda_loop_decision-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer canales de observación continua (sensores, reportes, datos en tiempo real)",
+      "texto_nuevo": "Establecer canales de observación continua (sensores, informes, datos en tiempo real)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

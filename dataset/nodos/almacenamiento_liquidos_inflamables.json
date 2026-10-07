@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Usar contenedores y tanques aprobados para líquidos inflamables",
     "Instalar ventilación mecánica o por gravedad en cuartos de almacenamiento",
-    "Colocar señalización de 'NO SMOKING' en tanques y áreas de almacenamiento",
+    "Colocar señalización de 'PROHIBIDO FUMAR' en tanques y áreas de almacenamiento",
     "Establecer procedimientos de limpieza inmediata de derrames",
     "Usar métodos de conexión a tierra y de unión equipotencial al transferir líquidos inflamables"
   ],
@@ -60,6 +60,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Promete conformidad con la norma, cuando el libro la cita solo como recurso adicional y advierte que sus listas no sirven para evaluar cumplimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-almacenamiento_liquidos_inflamables-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Colocar señalización de 'NO SMOKING' en tanques y áreas de almacenamiento",
+      "texto_nuevo": "Colocar señalización de 'PROHIBIDO FUMAR' en tanques y áreas de almacenamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'NO SMOKING'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

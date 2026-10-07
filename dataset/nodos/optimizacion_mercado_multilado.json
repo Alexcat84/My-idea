@@ -7,11 +7,11 @@
   "resumen_teorico": "Los startups con mercados multi-laterales (ej: plataformas con usuarios y anunciantes) deben validar también el lado que genera ingresos (anunciantes/pagadores), que requiere procesos de adquisición completamente distintos al lado de usuarios gratuitos.",
   "pasos_accionables": [
     "Aprender las reglas del juego del lado pagador (requisitos de tráfico, formatos de anuncio)",
-    "Determinar el roadmap de ventas: tiempos, pasos de aprobación, tamaño de órdenes iniciales",
-    "Aplicar procesos de 'get customers' adaptados a este segundo lado del mercado",
+    "Determinar la hoja de ruta de ventas: tiempos, pasos de aprobación, tamaño de órdenes iniciales",
+    "Aplicar procesos de captación de clientes adaptados a este segundo lado del mercado",
     "Validar la hipótesis de ingresos con conversaciones reales, sin esperar ventas inmediatas"
   ],
-  "entregable_esperado": "Documento de validación del modelo de ingresos del lado pagador con roadmap de ventas",
+  "entregable_esperado": "Documento de validación del modelo de ingresos del lado pagador con hoja de ruta de ventas",
   "nodos_previos": [
     "valor_de_vida_del_cliente",
     "multi_sided_market_channel"
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Valida el Otro Lado del Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-optimizacion_mercado_multilado-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar el roadmap de ventas: tiempos, pasos de aprobación, tamaño de órdenes iniciales",
+      "texto_nuevo": "Determinar la hoja de ruta de ventas: tiempos, pasos de aprobación, tamaño de órdenes iniciales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el roadmap de ventas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_mercado_multilado-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar procesos de 'get customers' adaptados a este segundo lado del mercado",
+      "texto_nuevo": "Aplicar procesos de captación de clientes adaptados a este segundo lado del mercado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'get customers'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_mercado_multilado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de validación del modelo de ingresos del lado pagador con roadmap de ventas",
+      "texto_nuevo": "Documento de validación del modelo de ingresos del lado pagador con hoja de ruta de ventas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "roadmap de ventas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

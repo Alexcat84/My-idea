@@ -9,7 +9,7 @@
     "Suscribirse a fuentes de alertas de seguridad (CISA, NSA, FBI, ISACs, proveedores).",
     "Establecer una estrategia de monitoreo del sistema con procedimientos y herramientas definidas.",
     "Detectar ataques, indicios de posibles ataques, conexiones no autorizadas, uso no autorizado del sistema y actividades o condiciones inusuales o no autorizadas en tráfico entrante/saliente.",
-    "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+    "Establecer políticas de gestión y retención de información controlada no clasificada (CUI) conforme a leyes y regulaciones.",
     "Eliminar CUI de sistemas no federales una vez concluidos los contratos para reducir la superficie de ataque."
   ],
   "entregable_esperado": "Estrategia de monitoreo de seguridad y política de retención/eliminación de CUI documentadas.",
@@ -91,6 +91,23 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_system_information_integrity-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
+      "texto_nuevo": "Establecer políticas de gestión y retención de información controlada no clasificada (CUI) conforme a leyes y regulaciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "retención de CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -10,7 +10,7 @@
     "Para activos reactivos, permitir operación hasta falla",
     "Para activos preventivos, establecer calendario de mantenimiento basado en ciclos/tiempo",
     "Para activos predictivos, implementar monitoreo de condición (vibración, temperatura, lubricación)",
-    "Medir OEE (Overall Equipment Effectiveness) para evaluar mejora"
+    "Medir la eficiencia general de los equipos (OEE) para evaluar mejora"
   ],
   "entregable_esperado": "Plan de mantenimiento priorizado por categoría de criticidad con métricas OEE establecidas",
   "nodos_previos": [
@@ -76,6 +76,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone en la categoría reactiva también los equipos redundantes, los elementos pequeños y simples y los activos con baja tasa de falla.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-rcm_reliability_centered_maintenance-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir OEE (Overall Equipment Effectiveness) para evaluar mejora",
+      "texto_nuevo": "Medir la eficiencia general de los equipos (OEE) para evaluar mejora",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "OEE (Overall Equipment Effectiveness)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

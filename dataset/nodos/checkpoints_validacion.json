@@ -7,11 +7,11 @@
   "resumen_teorico": "Cada hipótesis del modelo de negocio debe tener un checkpoint de validación claro y medible, vinculado al modelo de negocio, que se probará durante la fase de customer validation. Estos checkpoints reemplazan métricas 'blandas' por metas cuantitativas específicas (ej. tasa de conversión, frecuencia de compra, duración de sesión).",
   "pasos_accionables": [
     "Definir métricas cuantitativas y medibles para cada hipótesis clave (ventas, retención, referidos)",
-    "Adaptar los checkpoints según el canal: físico/B2B vs web/mobile",
+    "Adaptar los puntos de validación según el canal: físico/B2B vs web/móvil",
     "Documentar ejemplos concretos como 'cerrar venta en tres reuniones' o 'un tercio de visitantes regresa en una semana'",
-    "Vincular cada checkpoint a un elemento específico del Business Model Canvas"
+    "Vincular cada punto de validación a un elemento específico del lienzo del modelo de negocio"
   ],
-  "entregable_esperado": "Lista de checkpoints de validación medibles y vinculados al modelo de negocio, listos para probarse en customer validation",
+  "entregable_esperado": "Lista de puntos de validación medibles y vinculados al modelo de negocio, listos para probarse en la validación de clientes",
   "nodos_previos": [
     "pivote_o_proceder",
     "fundadores_lideran_validacion",
@@ -27,5 +27,60 @@
   "etiqueta_arbol": "Define tus Puntos de Validación",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-checkpoints_validacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adaptar los checkpoints según el canal: físico/B2B vs web/mobile",
+      "texto_nuevo": "Adaptar los puntos de validación según el canal: físico/B2B vs web/móvil",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checkpoints",
+          "mobile"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-checkpoints_validacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vincular cada checkpoint a un elemento específico del Business Model Canvas",
+      "texto_nuevo": "Vincular cada punto de validación a un elemento específico del lienzo del modelo de negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checkpoint",
+          "Business Model Canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-checkpoints_validacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de checkpoints de validación medibles y vinculados al modelo de negocio, listos para probarse en customer validation",
+      "texto_nuevo": "Lista de puntos de validación medibles y vinculados al modelo de negocio, listos para probarse en la validación de clientes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checkpoints",
+          "customer validation"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

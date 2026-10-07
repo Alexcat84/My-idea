@@ -9,7 +9,7 @@
     "Documentar sistemáticamente las iniciativas y resultados de sostenibilidad",
     "Crear canales internos (wikis, boletines) para compartir mejores prácticas",
     "Participar en foros o redes intersectoriales para intercambiar experiencias",
-    "Fomentar el mentoring entre líderes de sostenibilidad experimentados y nuevos"
+    "Fomentar la mentoría entre líderes de sostenibilidad experimentados y nuevos"
   ],
   "entregable_esperado": "Repositorio de mejores prácticas y lecciones aprendidas accesible a toda la organización",
   "nodos_previos": [
@@ -23,8 +23,43 @@
     "Si la empresa ya cuenta con múltiples iniciativas exitosas y busca escalarlas o replicarlas",
     "Si se desea institucionalizar el aprendizaje organizacional en sostenibilidad"
   ],
-  "etiqueta_arbol": "Comparte Lecciones Aprendidas",
+  "etiqueta_arbol": "Comparte tus Lecciones Aprendidas",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-compartir_lecciones_aprendidas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comparte Lecciones Aprendidas",
+      "texto_nuevo": "Comparte tus Lecciones Aprendidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Comparte Lecciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compartir_lecciones_aprendidas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fomentar el mentoring entre líderes de sostenibilidad experimentados y nuevos",
+      "texto_nuevo": "Fomentar la mentoría entre líderes de sostenibilidad experimentados y nuevos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el mentoring"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

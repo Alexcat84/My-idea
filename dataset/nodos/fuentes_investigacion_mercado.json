@@ -12,7 +12,7 @@
     "Contacta a especialistas de USDA Foreign Agricultural Service si tu producto es agrícola",
     "Solicita informes personalizados de investigación de mercado (Customized Market Research)"
   ],
-  "entregable_esperado": "Carpeta de fuentes y reportes de investigación de mercado recopilados para los mercados que te interesan",
+  "entregable_esperado": "Carpeta de fuentes e informes de investigación de mercado recopilados para los mercados que te interesan",
   "nodos_previos": [
     "evaluacion_mercados_objetivo",
     "enfoque_paso_a_paso_investigacion_mercado"
@@ -41,6 +41,22 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "voz-fuentes_investigacion_mercado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Carpeta de fuentes y reportes de investigación de mercado recopilados para los mercados que te interesan",
+      "texto_nuevo": "Carpeta de fuentes e informes de investigación de mercado recopilados para los mercados que te interesan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fuentes y reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

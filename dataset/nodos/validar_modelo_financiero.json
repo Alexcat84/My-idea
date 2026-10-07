@@ -7,13 +7,13 @@
   "resumen_teorico": "Antes de escalar el gasto, el startup debe convertir las métricas clave (costo de producto, tamaño de mercado, costos de adquisición de clientes, LTV, costos de canal, ingresos promedio) en un modelo financiero validado que demuestre que el negocio puede ser rentable y escalable antes de quedarse sin efectivo. Los números siguen siendo estimaciones educadas, respaldadas, ojalá, por el aprendizaje extensivo de customer discovery y validation.",
   "pasos_accionables": [
     "Recopilar métricas de valor propuesto: costo de producto, tamaño de mercado, cuota de mercado alcanzable e impacto de los efectos de red en el cliente",
-    "Calcular costos de adquisición de clientes, tasas de conversión, Customer Lifetime Value (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
+    "Calcular costos de adquisición de clientes, tasas de conversión, valor del ciclo de vida del cliente (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
     "Determinar costos operativos básicos, costos de canal y márgenes",
     "Proyectar precio promedio de venta, ingresos totales alcanzables y número de clientes por año, según la curva de crecimiento de ingresos propia de tu tipo de mercado",
-    "Verificar el balance de caja disponible (runway)",
-    "Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas"
+    "Verificar el saldo de caja disponible (runway)",
+    "Convertir las métricas validadas en un estado de resultados, balance y flujo de caja multianual listo para inversionistas"
   ],
-  "entregable_esperado": "Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable",
+  "entregable_esperado": "Un modelo financiero completo con pruebas de aprobación o rechazo identificadas que demuestre la viabilidad de escalar el negocio de forma rentable",
   "nodos_previos": [
     "customer_validation",
     "fit_value_proposition",
@@ -98,6 +98,73 @@
       },
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que los números están validados, se espera, por el trabajo con clientes; el nodo lo vuelve una exigencia firme.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-validar_modelo_financiero-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular costos de adquisición de clientes, tasas de conversión, Customer Lifetime Value (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
+      "texto_nuevo": "Calcular costos de adquisición de clientes, tasas de conversión, valor del ciclo de vida del cliente (LTV) y costos de cambio de los clientes que la empresa podría tener que pagar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Customer Lifetime Value"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_financiero-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar el balance de caja disponible (runway)",
+      "texto_nuevo": "Verificar el saldo de caja disponible (runway)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "balance de caja"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_financiero-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Convertir las métricas validadas en un P&L, balance y flujo de caja multianual listo para inversionistas",
+      "texto_nuevo": "Convertir las métricas validadas en un estado de resultados, balance y flujo de caja multianual listo para inversionistas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un P&L"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_financiero-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un modelo financiero completo con pruebas pass/fail identificadas que demuestre la viabilidad de escalar el negocio de forma rentable",
+      "texto_nuevo": "Un modelo financiero completo con pruebas de aprobación o rechazo identificadas que demuestre la viabilidad de escalar el negocio de forma rentable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

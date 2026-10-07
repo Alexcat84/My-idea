@@ -9,7 +9,7 @@
     "Asignar números de lote o identificadores únicos a cada producción",
     "Documentar el orden cronológico de manufactura",
     "Vincular registros de inspección a los identificadores de lote",
-    "Establecer procedimientos de recall basados en trazabilidad"
+    "Establecer procedimientos de retiro de producto basados en trazabilidad"
   ],
   "entregable_esperado": "Sistema documentado de trazabilidad con registros de lote vinculados a inspecciones",
   "nodos_previos": [
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Rastrea tus Lotes de Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-trazabilidad_de_lotes-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer procedimientos de recall basados en trazabilidad",
+      "texto_nuevo": "Establecer procedimientos de retiro de producto basados en trazabilidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "recall"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

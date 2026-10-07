@@ -6,7 +6,7 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Caso aplicado de plan continuation en aviación: cuando no se cumplen criterios de velocidad, potencia del motor, posición, configuración o checklist antes de cierta altura, la aproximación se considera 'no estabilizada' y debería abortarse, pero frecuentemente no ocurre. Las tripulaciones parecen no interpretar la situación principalmente en términos de criterios formales, sino en términos de su capacidad percibida de completar la aproximación. Recordar a las tripulaciones los criterios parece servir de poco; ofrecer incentivos positivos (recompensas sin culpa) por ejecutar go-around parece una contramedida más prometedora, con un éxito modesto.",
   "pasos_accionables": [
-    "Revisar si existían criterios formales (soft/hard gates) para abortar la aproximación u operación",
+    "Revisar si existían criterios formales (puntos de control flexibles o estrictos) para abortar la aproximación u operación",
     "Identificar si esos criterios funcionaron como normas negociables en lugar de reglas de parada estrictas",
     "Evaluar políticas de incentivos: ¿se premia el abandono seguro de un plan o se penaliza (ej. bonos por puntualidad)?",
     "Diseñar mecanismos de recompensa sin culpa para decisiones de aborto seguro, comunicando que abortar no solo es legítimo sino deseado y dando a conocer ampliamente cada recompensa"
@@ -91,6 +91,23 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "voz-unstabilized_approach_go_around-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar si existían criterios formales (soft/hard gates) para abortar la aproximación u operación",
+      "texto_nuevo": "Revisar si existían criterios formales (puntos de control flexibles o estrictos) para abortar la aproximación u operación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "soft/hard gates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

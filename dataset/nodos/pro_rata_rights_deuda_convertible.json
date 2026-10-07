@@ -11,7 +11,7 @@
     "Negociar límites razonables (evitar múltiplos superiores a 1x)",
     "Modelar escenarios de dilución futura antes de aceptar estos términos"
   ],
-  "entregable_esperado": "Cláusula de pro rata rights negociada con límites claros documentados en el term sheet",
+  "entregable_esperado": "Cláusula de derechos pro rata negociada con límites claros documentados en la hoja de términos",
   "nodos_previos": [
     "terminos_adicionales_deuda_convertible"
   ],
@@ -59,6 +59,23 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-pro_rata_rights_deuda_convertible-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de pro rata rights negociada con límites claros documentados en el term sheet",
+      "texto_nuevo": "Cláusula de derechos pro rata negociada con límites claros documentados en la hoja de términos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pro rata rights",
+          "el term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

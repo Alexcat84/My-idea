@@ -9,9 +9,9 @@
     "Diseñar procesos de entrevista que evalúen explícitamente el ajuste cultural, no solo competencias técnicas",
     "Preparar al equipo fundador para comunicar sus normas informales a nuevos empleados",
     "Establecer mensajes claros sobre las dinámicas internas (ej: comunicación directa) al incorporar nuevos miembros",
-    "Priorizar el fit sobre credenciales impresionantes cuando existan señales de alerta en la entrevista"
+    "Priorizar el encaje cultural sobre credenciales impresionantes cuando existan señales de alerta en la entrevista"
   ],
-  "entregable_esperado": "Protocolo de entrevista que incluya evaluación de fit cultural y plan de onboarding para nuevos empleados",
+  "entregable_esperado": "Protocolo de entrevista que incluya evaluación de encaje cultural y plan de incorporación para nuevos empleados",
   "nodos_previos": [
     "fuentes_contratacion_ejecutivos"
   ],
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Prioriza el Encaje Cultural",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-evaluacion_fit_cultural-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Priorizar el fit sobre credenciales impresionantes cuando existan señales de alerta en la entrevista",
+      "texto_nuevo": "Priorizar el encaje cultural sobre credenciales impresionantes cuando existan señales de alerta en la entrevista",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el fit"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-evaluacion_fit_cultural-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Protocolo de entrevista que incluya evaluación de fit cultural y plan de onboarding para nuevos empleados",
+      "texto_nuevo": "Protocolo de entrevista que incluya evaluación de encaje cultural y plan de incorporación para nuevos empleados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fit cultural",
+          "onboarding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

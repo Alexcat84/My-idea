@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El control operativo se organiza en etapas clave: control de arranque (setup, decide si iniciar el proceso), control en marcha (running, decide si continuar operando), control de producto (evalúa conformidad del producto ya fabricado) y control de instalaciones (mantenimiento de equipos, apoyado en TPM y RCM). Cada etapa requiere criterios, verificación y asignación clara de responsabilidad.",
   "pasos_accionables": [
-    "Definir checklist de arranque (setup) con criterios de verificación previos al inicio",
+    "Definir lista de verificación de arranque (setup) con criterios de verificación previos al inicio",
     "Establecer el bucle de control en marcha para decisiones de continuar/detener",
     "Diseñar el control de producto terminado con responsables idealmente independientes de sesgos",
-    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
+    "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con lista de verificación, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
     "Auditar de forma independiente el cumplimiento del calendario de mantenimiento"
   ],
   "entregable_esperado": "Procedimientos documentados para cada etapa de control (arranque, marcha, producto, instalaciones)",
@@ -62,6 +62,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro para el control de instalaciones tiene ocho elementos y el paso solo trae cuatro.; Mismo defecto: se caen repuestos críticos, estandarizar tareas y frecuencia, eficiencia del personal y participación del operador.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-etapas_de_control_operativo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir checklist de arranque (setup) con criterios de verificación previos al inicio",
+      "texto_nuevo": "Definir lista de verificación de arranque (setup) con criterios de verificación previos al inicio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-etapas_de_control_operativo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con checklist, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
+      "texto_nuevo": "Implementar un programa de mantenimiento de instalaciones (TPM/RCM) con lista de verificación, calendario, un responsable claro de cumplirlo y capacitación de quienes lo realizan, y además mejorar la gestión de repuestos críticos, estandarizar las tareas y la frecuencia del mantenimiento preventivo de los equipos, optimizar la eficiencia del personal y la organización de mantenimiento, y aumentar la interacción de quien opera con el equipo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -1883,3 +1883,25 @@ sortear.
 - Cada tanda entra con el ciclo entero: aplicar, Gate 0, etiquetas, familias, sincronizar y las dos suites.
 - Los ficheros derivados del grafo se regeneran, nunca se fusionan a mano.
 - Se alternan con los commits de código.
+
+### 15.14 Saneamiento continuo: fallos de método declarados (7 oct 2026)
+
+Las cifras de cada ola están en sus tandas (`docs/saneamiento/tandas/voz-*.json` y `condiciones-resto-*.json`). Aquí
+queda lo que el método no hizo bien, para que nadie lo dé por cubierto.
+
+- **Lote de voz 035: la cobertura no está certificada.** Ni el lector a ni el segundo lector cazaron la trampa. Sus
+  marcas pasaron igual por el árbitro y por el verificador ciego (cada paquete con su trampa, cazada), así que lo
+  aplicado de ese lote está comprobado. Lo que no se puede afirmar es que esos 25 nodos estén limpios: pudo quedar un
+  defecto sin marcar. Queda para la pasada de cierre del saneamiento continuo, con un lector nuevo y su trampa.
+- **Lo que la verificación no sostiene no entra.** Cada ola guarda esos elementos en `no_sostienen_<ola>.json`
+  (fuera del repositorio, junto a las claves). Esta noche son 20 de voz y 0 de condiciones. Quedan para una pasada de
+  reescritura: el defecto que marcó el lector puede ser real aunque la corrección propuesta no sirviera.
+- **La lista de tildes mecánicas traía una palabra ambigua.** Tenía "cambiaria" → "cambiaría", que rompe el adjetivo
+  ("cobertura cambiaria"). Dañó un nodo (`gestion_riesgo_cambiario`, entregable), y los lectores de voz-v07 lo
+  devolvieron a su forma correcta. La guarda permanente de la lista lo habría vuelto a romper. La palabra sale de la
+  lista y entra a las ambiguas de su prueba (`engine/test_tildes_mecanicas.py`, en rojo primero). Las demás
+  "cambiaría" del grafo son verbo.
+- **La máquina de voz no contaba los nodos deprecados al buscar choques de etiqueta.** El grafo de la web los
+  conserva y su guarda de unicidad los cuenta. Así, voz-v07 le dio a `nueve_pasos_iniciar_programa` la etiqueta de su
+  gemelo deprecado y la suite web lo paró antes del commit. Suplemento voz-v07b con una etiqueta distinta y fiel, y
+  `voz.py` ahora mira todos los nodos.

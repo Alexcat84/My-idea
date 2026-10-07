@@ -7,7 +7,7 @@
   "resumen_teorico": "Históricamente, el diseño se usaba de forma táctica: se llamaba a los diseñadores al final del proceso de desarrollo para hacer más atractiva una idea ya definida por ingeniería o marketing. El design thinking mueve el rol del diseño 'río arriba' (upstream), involucrándolo desde el inicio del proceso estratégico, donde puede desafiar supuestos, redefinir el problema y generar disrupción real, en lugar de solo pulir un resultado ya decidido.",
   "pasos_accionables": [
     "Involucrar al equipo de diseño desde la fase de definición del problema, no solo en la fase de ejecución",
-    "Cuestionar el brief inicial del proyecto: ¿estamos resolviendo el problema correcto?",
+    "Cuestionar el encargo inicial del proyecto: ¿estamos resolviendo el problema correcto?",
     "Posicionar al diseño como parte de las decisiones de negocio en la sala de juntas, no solo en el estudio"
   ],
   "entregable_esperado": "Una redefinición documentada del problema de negocio (project brief) elaborada en conjunto entre diseño, negocio e ingeniería desde el inicio.",
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Lleva el Diseño Aguas Arriba",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-diseno_estrategico_vs_tactico-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuestionar el brief inicial del proyecto: ¿estamos resolviendo el problema correcto?",
+      "texto_nuevo": "Cuestionar el encargo inicial del proyecto: ¿estamos resolviendo el problema correcto?",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el brief inicial"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

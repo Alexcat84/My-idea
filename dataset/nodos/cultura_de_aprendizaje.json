@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Una cultura de aprendizaje es la voluntad y competencia de una organización para extraer las conclusiones correctas de su sistema de información de seguridad, y la disposición a implementar reformas importantes cuando se indica su necesidad. Es el subcomponente final que cierra el ciclo de la cultura de seguridad, transformando la información recolectada en acciones concretas de mejora del sistema.",
   "pasos_accionables": [
-    "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistemática de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
+    "Establecer mecanismos formales de análisis de datos del sistema de notificación de seguridad, incluida una forma sistemática de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
     "Definir procesos de decisión para implementar reformas basadas en hallazgos, comprometiendo tu tiempo y tus recursos explícitamente para IMPLEMENTAR las mejoras encontradas, no solo hablar de ellas",
     "Medir la efectividad de las reformas implementadas mediante seguimiento continuo",
     "Institucionalizar la revisión periódica de lecciones aprendidas"
@@ -70,6 +70,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 0
+    },
+    {
+      "id": "voz-cultura_de_aprendizaje-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer mecanismos formales de análisis de datos del sistema de reporte de seguridad, incluida una forma sistemática de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
+      "texto_nuevo": "Establecer mecanismos formales de análisis de datos del sistema de notificación de seguridad, incluida una forma sistemática de observar incidentes y condiciones de riesgo, y momentos regulares para analizar y diagnosticar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sistema de reporte de seguridad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
