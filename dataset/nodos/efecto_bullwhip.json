@@ -6,7 +6,7 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El efecto látigo (bullwhip) pasa cuando un cambio pequeño en lo que pide el cliente final se va agrandando a medida que sube por tu cadena de proveedores, y cada eslabón termina con una idea distinta de cuánta demanda real hay. Primero te quedas corto de inventario, después te sobra. Antes de gastar en resolverlo, tienes que medir qué tan grande es el efecto en tu caso y calcular cuánto te cuesta en producción, transporte, inventario y ventas que pierdes por no tener producto.",
   "pasos_accionables": [
-    "Mide qué tan grande es el efecto látigo en tu negocio comparando, durante un trimestre o un año, el volumen y la frecuencia de los pedidos que recibes de tus clientes con los que haces a tus proveedores",
+    "Elige un periodo, por ejemplo un trimestre o un año, y pon lado a lado cuánto y cada cuánto te piden tus clientes y cuánto y cada cuánto les pides tú a tus proveedores: así ves qué tan grande es el efecto látigo en tu negocio",
     "Calcula cuánto te está costando en producción y en programar tu operación",
     "Calcula cuánto te está costando en transporte, envíos y recepción de mercadería",
     "Averigua cuánto inventario necesitas para no quedarte sin producto y cuánto te cuesta mantenerlo",
@@ -121,6 +121,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da el procedimiento: comparar en un trimestre o un año el volumen y la frecuencia de pedidos recibidos contra los que haces a tus proveedores; el paso lo pierde.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-efecto_bullwhip-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Mide qué tan grande es el efecto látigo en tu negocio comparando, durante un trimestre o un año, el volumen y la frecuencia de los pedidos que recibes de tus clientes con los que haces a tus proveedores",
+      "texto_nuevo": "Elige un periodo, por ejemplo un trimestre o un año, y pon lado a lado cuánto y cada cuánto te piden tus clientes y cuánto y cada cuánto les pides tú a tus proveedores: así ves qué tan grande es el efecto látigo en tu negocio",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "C:SERSALEXDESKDOCUMENTSI HAVE AN IDEABOOKSGENERALOPERACIONES_Y_LOGISTICAssentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3763",
+        "frase": "The best place to start in any effort to promote collaboration is"
+      },
+      "decision": "copia fiel (regla D2, ola k04): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
