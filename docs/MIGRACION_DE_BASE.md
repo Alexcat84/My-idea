@@ -23,7 +23,7 @@ En la cuenta/organización de producción de Supabase: **New project**.
 - Anota el **ref** del proyecto (la parte de `https://<REF>.supabase.co`):
   aparece en varios pasos de abajo como `<REF-NUEVO>`.
 
-## Paso 2 · El esquema: las 49 migraciones, en orden
+## Paso 2 · El esquema: las 50 migraciones, en orden
 
 SQL Editor del proyecto nuevo → pegar y correr **una por una, en orden**,
 cada archivo de `supabase/migrations/`:
@@ -49,12 +49,18 @@ my_idea_036_mundos_compras_entrega.sql my_idea_046_idioma_del_proyecto.sql
 my_idea_037_sensores_del_panel.sql     my_idea_047_ciclo_replanteamiento.sql
 my_idea_038_siembra_beta_en_el_ledger.sql my_idea_048_mundo_primer_equipo.sql
 my_idea_039_plan_basico_del_mundo.sql  my_idea_049_memoria_contexto.sql
+                                       my_idea_050_consentimiento_legal.sql
 ```
 
 Al final, correr **`my_idea_check_migraciones.sql`** completo: deben salir
-TODAS las filas en ✓ OK (001–049; la lista se puso al día el 7 oct 2026: la 049, memoria del
-proyecto, se aplicó en producción el 28 sep 2026). Si alguna falla, no sigas: esa migración
-no entró.
+TODAS las filas en ✓ OK (001–050; la lista se puso al día el 7 oct 2026: la 049, memoria del
+proyecto, se aplicó en producción el 28 sep 2026; la 050, registro de la aceptación de los Términos
+y la Privacidad por versión, se aplicó en producción el 7 oct 2026). Si alguna falla, no
+sigas: esa migración no entró.
+
+| Migración | Qué crea | Verificador | Estado |
+|---|---|---|---|
+| `my_idea_050_consentimiento_legal.sql` | tabla `aceptaciones_legales` (una fila por cuenta real y versión aceptada: `version`, `huella_textos`, `idioma_texto`, `motivo`, `aceptada_at`), cascada con `auth.users`, RLS de solo lectura del dueño, escribe solo service_role | bloque 050 de `my_idea_check_migraciones.sql` | aplicada en producción el 7 oct 2026 |
 
 ## Paso 3 · Authentication (el clon de la config de staging)
 
@@ -150,7 +156,7 @@ lo necesites; no intentes un pg_dump a mano.
 
 ## Paso 7 · Verificación de cierre
 
-1. `my_idea_check_migraciones.sql` en el proyecto nuevo: 001–049 todas ✓.
+1. `my_idea_check_migraciones.sql` en el proyecto nuevo: 001–050 todas ✓.
 2. Smoke en `www.myideaproject.com` (la base NUEVA):
    - Landing carga; "Comenzar" → organizador funciona (identidad invisible).
    - Login por código: llega el correo con 6 dígitos, entra, chip **20**.

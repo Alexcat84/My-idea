@@ -703,5 +703,54 @@ FROM (
       WHERE table_schema='public' AND table_name='projects' AND column_name='memoria'
         AND data_type='jsonb' AND is_nullable='NO'
     )
+  UNION ALL
+  -- 050 . registro de la aceptacion de los textos legales por version (decision del fundador, 7 oct 2026).
+  -- ANTES de aplicar debe decir MISSING (to_regclass da NULL sin la tabla: la consulta no revienta); DESPUES, OK.
+  -- Comprueba las 7 columnas NOT NULL, la unicidad por version, los 3 CHECK, el borrado en cascada con la
+  -- cuenta, RLS encendido, la politica de lectura propia (y ninguna otra) y que ni anon ni authenticated escriben.
+  SELECT '050', 'aceptaciones_legales (version, huella, idioma, motivo; cascada; RLS solo-lectura del dueno)',
+    (SELECT count(*) FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='aceptaciones_legales'
+        AND column_name IN ('id','user_id','version','huella_textos','idioma_texto','motivo','aceptada_at')
+        AND is_nullable='NO') = 7
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'aceptaciones_legales_version_unica' AND connamespace = 'public'::regnamespace AND contype = 'u'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'aceptaciones_legales_idioma_texto_check' AND connamespace = 'public'::regnamespace
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'aceptaciones_legales_motivo_check' AND connamespace = 'public'::regnamespace
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conname = 'aceptaciones_legales_huella_check' AND connamespace = 'public'::regnamespace
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = to_regclass('public.aceptaciones_legales') AND contype = 'f' AND confdeltype = 'c'
+        AND confrelid = to_regclass('auth.users')
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_class
+      WHERE oid = to_regclass('public.aceptaciones_legales') AND relrowsecurity
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='aceptaciones_legales'
+        AND policyname='aceptaciones_legales_own_select' AND cmd='SELECT'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM pg_policies
+      WHERE schemaname='public' AND tablename='aceptaciones_legales' AND cmd <> 'SELECT'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_table_grants
+      WHERE table_schema='public' AND table_name='aceptaciones_legales'
+        AND grantee IN ('anon','authenticated') AND privilege_type IN ('INSERT','UPDATE','DELETE','TRUNCATE')
+    )
 ) checks
 ORDER BY num;
