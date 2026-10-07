@@ -33,7 +33,7 @@ from pathlib import Path
 from rapidfuzz import fuzz
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from etiquetas_de_cara import LISTAS as LISTAS_CURADURIA  # noqa: E402
+from etiquetas_de_cara import curar_nodos, lista_curada  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 NODOS_DIR = BASE / "dataset" / "nodos"
@@ -675,6 +675,19 @@ def step6_compile_master_graph():
     stats = compute_graph_stats(nodes)
     stats["enlaces_rotos_en_grafo"] = broken
 
+    # LA CURADURIA DE ETIQUETAS, ANTES DE ESCRIBIR (decision del fundador, 7 oct
+    # 2026). La curaduria no vive en los nodos, asi que compilar desde ellos la
+    # borraba, y el aviso del final llegaba con el grafo ya escrito: dos veces
+    # quedo el dataset con etiquetas de libro por correr este script dos veces.
+    # Se aplica con la funcion y las listas de etiquetas_de_cara, que siguen
+    # siendo la unica fuente. Una lista que nombra un nodo inexistente para
+    # todo, como para el script de etiquetas.
+    _, huerfanos = curar_nodos(nodes, lista_curada())
+    if huerfanos:
+        print(f"ERROR: la curaduria de etiquetas nombra {len(huerfanos)} node_id que no existen: "
+              f"{huerfanos[:5]}. No se escribe el grafo.")
+        sys.exit(1)
+
     master = {
         "version": "0.2.0",
         "total_nodos": len(nodes),
@@ -684,8 +697,11 @@ def step6_compile_master_graph():
         "stats": stats,
     }
 
-    with open(MASTER_GRAPH_PATH, "w", encoding="utf-8") as fh:
+    # El mismo formato que escribe etiquetas_de_cara (LF y salto final), para
+    # que recompilar y curar no difieran en un solo byte.
+    with open(MASTER_GRAPH_PATH, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(master, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
 
     return master, parse_errors
 
@@ -1557,19 +1573,15 @@ def step7_validate(master, parse_errors, nodos_dataset_al_empezar=None):
 # quejo. Es la clase mas peligrosa de averia: degrada la VOZ sin romper la
 # estructura, y el Gate solo mira la estructura.
 #
-# Aqui SOLO se avisa y se falla. Jamas se auto-aplica: eso creaeria una segunda
-# fuente de curaduria, y el remache del e-bis de integrar_packs la prohibe.
-# Quien recompila, reaplica.
-#
-# La lista de listas se IMPORTA de etiquetas_de_cara, que es quien la define.
+# Desde el 7 oct 2026 (decision del fundador) el paso 6 aplica la curaduria
+# antes de escribir, con curar_nodos y lista_curada de etiquetas_de_cara: la
+# fuente sigue siendo una, y el e-bis de integrar_packs queda idempotente. El
+# aviso se queda como red: si algo vuelve a dejar el grafo sin curaduria, grita
+# y falla. El aviso en si no escribe nada.
 # ---------------------------------------------------------------------------
 def etiquetas_curadas():
     """El mapa node_id -> etiqueta que la curaduria manda. La ultima lista gana."""
-    curadas = {}
-    for ruta in LISTAS_CURADURIA:
-        with open(ruta, encoding="utf-8") as fh:
-            curadas.update({k: v for k, v in json.load(fh).items() if not k.startswith("_")})
-    return curadas
+    return lista_curada()
 
 
 def curaduria_revertida(nodos):

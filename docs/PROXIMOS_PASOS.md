@@ -48,20 +48,15 @@ propio o con una decisión del fundador.
   - **Medida 6** (7 oct, semilla 20261023, después de la lectura total): 1 de 200 nodos, un 0,5 % (de 0,09 a 2,8 %).
     Baja de forma concluyente desde el 5 %, pero no es 0. El hallazgo ("ejemplos documentados") quedó corregido (acta
     15.10).
+  - **El fundador acepta el residuo declarado** (7 oct, acta 15.11): de 0,09 a 2,8 % por nodo, entre 3 y 100 nodos,
+    lo más probable unos 20. No hay segunda lectura total.
 - **Preguntas:** ninguna con falla confirmada sin corregir. En 2 de 85 lotes ningún lector cazó su trampa (las dos
   eran contrarias).
 
 ## 2. Decisiones que esperan al fundador
 
-1. **Procedencia, el residuo.**
-   - (a) ~~medir otra vez con semilla nueva~~: hecho el 7 oct (medida 5, 5 %);
-   - (b) ~~leer el catálogo entero solo para procedencia~~: hecho el 6 y 7 oct (acta 15.8, 458 correcciones).
-   - ~~medida 6~~: hecha el 7 oct, 1 de 200 (0,5 %, techo 2,8 % al 95 %; acta 15.10).
-   - Lo que queda por decidir:
-     - (c) aceptar el residuo declarado (entre 3 y 100 nodos de 3.634, lo más probable unos 20);
-     - (d) una segunda lectura total, unos 370 lotes, para buscar 0 en la muestra.
-   - Mi recomendación es (c). La segunda lectura costaría lo mismo que la primera para un residuo diez veces menor, y
-     las formas que quedan ya son muy blandas.
+1. ~~**Procedencia, el residuo.**~~ **Decidida el 7 oct (acta 15.11): se acepta el residuo declarado** de la
+   medida 6 (de 0,09 a 2,8 % por nodo). No hay segunda lectura total.
 2. **Los ajustes de prompts que añaden texto.** Están en `docs/auditoria_final/informes/auditoria_prompts.md`, sección
    F: B2 (resto), B4, B5, B7, B8, B9, B10, C1, C2, C3, C5 (resto), C6 y C7. C7 toca la regla D5 y su guarda.
 3. **Páginas legales:**
@@ -74,8 +69,8 @@ propio o con una decisión del fundador.
    - el nombre "Riesgos Bajo Control", que da a entender control;
    - "Tus cifras reales" en la compuerta de Tus Números;
    - las promesas viejas en los mockups de `docs/diseno-canon/`, que son errata para Design.
-6. **La licencia de IDEO.org** (CC BY-NC-ND 3.0) frente a la regla D1 y al uso comercial. Decide el fundador o un
-   abogado. No se retiró nada.
+6. ~~**La licencia de IDEO.org**~~ **Decidida el 7 oct (acta 15.11): los nodos se quedan.** Anotada en
+   `fuentes_canonicas.json` y en `docs/internos/INVENTARIO_FUENTES.md`.
 
 ## 3. Qué gasta cada cosa, y en qué orden
 

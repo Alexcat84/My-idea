@@ -14,12 +14,14 @@ y el Gate solo mira la estructura. Volvio a morder en la verificacion previa
 al tag de produccion, esta vez por la via de fuera (correr run_phase1 suelto
 para comprobar el Gate), que el paso e-bis de integrar_packs no cubre.
 
-Los dos escenarios que definen el arreglo:
+Los dos escenarios que definen el aviso:
   - run_phase1 SUELTO sobre una copia curada -> grita y falla (codigo != 0)
   - el flujo via integrar_packs, que reaplica justo despues -> limpio y callado
 
-Y lo que JAMAS hace: auto-aplicar. Eso creaeria una segunda fuente de
-curaduria, prohibida por el remache del e-bis.
+Y desde el 7 oct 2026 (decision del fundador, tras la segunda vez que correr el
+script dos veces dejo el dataset con etiquetas de libro): el paso 6 aplica la
+curaduria ANTES de escribir, con la funcion y las listas de etiquetas_de_cara,
+que siguen siendo la unica fuente. El aviso queda como red y sigue sin escribir.
 """
 import io
 import sys
@@ -98,6 +100,34 @@ def test_jamas_auto_aplica():
     for prohibido in ("write_text", "json.dump", 'open(', "etiqueta_arbol ="):
         assert prohibido not in cuerpo, f"el aviso escribe: '{prohibido}'"
     print("  ok: el aviso avisa; no toca un solo archivo")
+
+
+def test_recompilar_no_deja_el_grafo_sin_curaduria():
+    """DECISION DEL FUNDADOR (7 oct 2026), tras la SEGUNDA vez que pasa: correr
+    run_phase1 dos veces (la segunda solo para mirar el Gate) dejo el grafo del
+    dataset con 119 etiquetas de libro. El aviso salio, pero el grafo ya estaba
+    escrito sin curaduria: avisar despues de escribir no protege.
+
+    Ahora el paso 6 aplica la curaduria ANTES de escribir, con la funcion y las
+    listas de etiquetas_de_cara (la fuente sigue siendo una). El grafo que queda
+    en disco tras recompilar ya va curado, se corra una vez o diez."""
+    import json as _json
+    import tempfile
+    import run_phase1 as rp
+
+    original = rp.MASTER_GRAPH_PATH
+    with tempfile.TemporaryDirectory() as tmp:
+        rp.MASTER_GRAPH_PATH = Path(tmp) / "master_graph.json"
+        try:
+            master, _ = rp.step6_compile_master_graph()
+            en_disco = _json.loads(rp.MASTER_GRAPH_PATH.read_text(encoding="utf-8"))["nodos"]
+        finally:
+            rp.MASTER_GRAPH_PATH = original
+    assert curaduria_revertida(master["nodos"]) == [], (
+        f"el grafo compilado sale sin curaduria: {curaduria_revertida(master['nodos'])[:5]}")
+    assert curaduria_revertida(en_disco) == [], (
+        f"el grafo ESCRITO queda sin curaduria: {curaduria_revertida(en_disco)[:5]}")
+    print(f"  ok: recompilar deja el grafo curado ({len(etiquetas_curadas())} etiquetas)")
 
 
 def test_el_nodo_fantasma_con_nombre():
@@ -209,9 +239,10 @@ def main():
               test_via_integrar_packs_limpio_y_callado,
               test_copia_intacta_no_molesta,
               test_jamas_auto_aplica,
+              test_recompilar_no_deja_el_grafo_sin_curaduria,
               test_todo_activo_tiene_vector_en_el_indice):
         f()
-    print("OK: la curaduria revertida grita, falla y jamas se auto-aplica.")
+    print("OK: recompilar aplica la curaduria antes de escribir; si falta, el aviso grita y falla.")
 
 
 if __name__ == "__main__":

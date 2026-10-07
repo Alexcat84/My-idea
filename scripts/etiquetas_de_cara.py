@@ -55,33 +55,49 @@ def cargar(ruta: Path) -> dict:
         return json.load(f)
 
 
+def lista_curada(verbose: bool = False) -> dict:
+    """El mapa node_id -> etiqueta que manda la curaduria. La ultima lista gana."""
+    lista = {}
+    for ruta_lista in LISTAS:
+        parcial = {k: v for k, v in cargar(ruta_lista).items() if not k.startswith("_")}
+        if verbose:
+            print(f"{ruta_lista.name}: {len(parcial)} etiquetas")
+        lista.update(parcial)
+    return lista
+
+
+def curar_nodos(nodos: dict, lista: dict) -> tuple:
+    """Pone en `nodos` la etiqueta curada. Devuelve (cambios, huerfanos): los
+    huerfanos son ids de la lista que no estan en `nodos`, y con alguno el que
+    llama no debe escribir. La usan este script y el paso 6 de run_phase1
+    (decision del fundador, 7 oct 2026): la fuente sigue siendo una sola."""
+    cambios, huerfanos = [], []
+    for node_id, nueva in lista.items():
+        nodo = nodos.get(node_id)
+        if nodo is None:
+            huerfanos.append(node_id)
+            continue
+        vieja = nodo.get("etiqueta_arbol")
+        if vieja != nueva:
+            cambios.append((node_id, vieja, nueva))
+            nodo["etiqueta_arbol"] = nueva
+    return cambios, huerfanos
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--aplicar", action="store_true", help="escribe los cambios en disco")
     args = parser.parse_args()
 
-    lista = {}
-    for ruta_lista in LISTAS:
-        parcial = {k: v for k, v in cargar(ruta_lista).items() if not k.startswith("_")}
-        print(f"{ruta_lista.name}: {len(parcial)} etiquetas")
-        lista.update(parcial)
+    lista = lista_curada(verbose=True)
     print(f"total a aplicar: {len(lista)}\n")
 
     huerfanos = []
     cambios_por_grafo = []
     for ruta in GRAFOS:
         grafo = cargar(ruta)
-        nodos = grafo["nodos"]
-        cambios = []
-        for node_id, nueva in lista.items():
-            nodo = nodos.get(node_id)
-            if nodo is None:
-                huerfanos.append((ruta.name, node_id))
-                continue
-            vieja = nodo.get("etiqueta_arbol")
-            if vieja != nueva:
-                cambios.append((node_id, vieja, nueva))
-                nodo["etiqueta_arbol"] = nueva
+        cambios, faltan = curar_nodos(grafo["nodos"], lista)
+        huerfanos += [(ruta.name, node_id) for node_id in faltan]
         cambios_por_grafo.append((ruta, grafo, cambios))
 
     if huerfanos:

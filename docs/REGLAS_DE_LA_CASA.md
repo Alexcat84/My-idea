@@ -114,6 +114,7 @@ con la misma vara que el catálogo.
 | M16 | La fecha de una decisión es la de su commit | `docs/PENDIENTES.md:6-17` | 24 sep 2026 | lectura |
 | M17 | Un libro nuevo entra a `fuentes_canonicas.json` antes que su primer nodo; toda fusión corre `fuentes_internas.py` | AGENTS.md | 26 y 27 sep 2026 | `engine/test_fuentes_internas.py` |
 | M18 | Las migraciones las aplica el fundador; aplicada, va a main sola (solo SQL) con su verificador | Fundador | sep 2026 | `supabase/migrations/my_idea_check_migraciones.sql` |
+| M19 | Recompilar el grafo no deja nunca el grafo sin la curaduría de etiquetas: `run_phase1.py` la aplica antes de escribir, con la función y las listas de `etiquetas_de_cara.py` (una sola fuente), y si aun así faltara, grita y falla | Fundador, tras la segunda vez que correr el script dos veces dejó el dataset con etiquetas de libro | 7 oct 2026 | `engine/test_aviso_curaduria.py` (`test_recompilar_no_deja_el_grafo_sin_curaduria`) |
 
 **Choques y huecos que este índice deja a la vista, sin resolver aquí:**
 - ~~**El BANCO contradice C1:** varias secciones siguen diciendo que el plan cita libro y capítulo (§3, §5, §6, §7.1),

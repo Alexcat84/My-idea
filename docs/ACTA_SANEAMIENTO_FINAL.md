@@ -1781,3 +1781,20 @@ Máquina en `auditoria-final-claves/medida6/medida6.py`, semilla 20261023, muest
 - El techo al 95 % es del 2,8 % por nodo: como mucho unos 100 de los 3.634 nodos vivos con alguna procedencia sutil, y
   lo más probable es que sean unos 20.
 - Llegar a 0 en la muestra pediría otra lectura total del catálogo, que es la decisión 1 de `docs/PROXIMOS_PASOS.md`.
+
+### 15.11 Decisiones del fundador sobre la medida 6 (7 oct 2026)
+
+1. **Procedencia: se acepta el residuo declarado (opción c).** No se hace una segunda lectura total. El veredicto de
+   procedencia del catálogo queda así:
+   - 1 nodo con procedencia en una muestra de 200 (0,5 %), ya corregido;
+   - residuo estimado por nodo, con Wilson al 95 %: de 0,09 a 2,8 %. Sobre los 3.634 nodos vivos son entre 3 y 100
+     nodos, lo más probable unos 20;
+   - lo que queda son formas muy blandas, del tipo "ejemplos documentados", sin nombre propio ni verbo de autoría.
+   - Cuando un nodo aparezca con procedencia, se corrige por el método de la casa, sin medida nueva.
+2. **El recompilado no vuelve a dejar el grafo sin curaduría.** Fue la segunda vez que correr `run_phase1.py` dos
+   veces dejó el dataset con etiquetas de libro (15.10). El paso 6 aplica ahora la curaduría antes de escribir, con la
+   función y las listas de `etiquetas_de_cara.py`, que siguen siendo la única fuente. Prueba en rojo primero:
+   `test_recompilar_no_deja_el_grafo_sin_curaduria` en `engine/test_aviso_curaduria.py`. Dos corridas seguidas dejan
+   el grafo idéntico, byte a byte. Regla M19 de `docs/REGLAS_DE_LA_CASA.md`.
+3. **La licencia de IDEO.org:** decisión tomada, los 20 nodos se quedan. Anotada en `fuentes_canonicas.json` y en el
+   inventario interno de fuentes.
