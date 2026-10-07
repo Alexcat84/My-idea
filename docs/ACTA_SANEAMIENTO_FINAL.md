@@ -1836,3 +1836,50 @@ primero del plan que no espera a nadie.
 **Errata declarada de 15.10:** el campo `decision` de la tanda `medida6-procedencia` dice "medida 5 de procedencia"
 por un resto del script copiado. Es la medida 6; el campo `auditoria` sí es el correcto (15.9). Es metadato interno y
 no cambia nada de lo aplicado; el script ya está corregido.
+
+### 15.13 Saneamiento continuo del resto del dataset: diseño fijado antes de sortear (7 oct 2026)
+
+Instrucción del fundador del 7 oct 2026: el saneamiento del dataset corre en paralelo con el resto del trabajo, ola
+tras ola, y no se detiene. Sigue fuera la copia fiel. Dos corrientes, cada una con su semilla escrita aquí antes de
+sortear.
+
+**Corriente 1, condiciones del resto de nodos (semilla 20261025).**
+- Se leen contra su libro las condiciones de activación de los nodos vivos que no están en `jurisdiccion.json`. Las
+  de esos 239 nodos ya se leyeron (15.5 y 15.12).
+- Máquina: `auditoria-final-claves/condiciones_resto/condiciones_resto.py`.
+  - Lotes de 14 nodos, con un lector Opus por lote con las instrucciones del lector E1B, limitado a las condiciones.
+  - Una trampa sin marca por lote, en un nodo de `jurisdiccion.json` ya corregido.
+  - Si el lector no caza su trampa, un segundo lector relee el lote.
+  - Árbitro E1B por ola y verificador ciego contra el libro de toda corrección con palabras nuevas, con una trampa
+    por paquete.
+  - Una tanda `condiciones-resto-<ola>` por ola.
+
+**Corriente 2, la voz de lo que ve el cliente (semilla 20261026).**
+- Se leen los campos que el cliente ve crudos: `etiqueta_arbol`, `pasos_accionables` y `entregable_esperado`, de
+  todos los nodos vivos. Es la decisión del fundador del 30 sep 2026 (10.4).
+- Defectos, con las definiciones del lector de la medida 1:
+  - **etiqueta:** no es fiel a su nodo (promete otra cosa), o no le habla a la persona en segunda persona con un
+    verbo, o trae jerga cruda o inglés, o no tiene de 4 a 6 palabras;
+  - **ortografía:** una falta, incluidas tildes y signos de apertura;
+  - **calco del inglés:** una traducción literal que en español suena ajena, o un término en inglés sin traducir
+    cuando hay uno corriente.
+- No hace falta el libro: se juzga contra el propio nodo.
+- Las etiquetas que ya fija la curaduría (`etiquetas_de_cara_v1*.json`) no se leen: las revisó el fundador o el
+  auditor, y la curaduría manda sobre el nodo.
+- Máquina: `auditoria-final-claves/voz/voz.py`.
+  - Lotes de 25 nodos con un lector Opus.
+  - Una trampa sin marca por lote; el tipo rota entre ortografía, calco y etiqueta.
+  - Árbitro por ola.
+  - Verificador ciego que comprueba que la corrección arregla el defecto sin cambiar el sentido, con una trampa por
+    paquete que sí lo cambia.
+- Veredictos de la tanda `voz-<ola>`:
+  - `ORTOGRAFIA`;
+  - `VOZ` para calcos y forma de la etiqueta, con los fragmentos que salen;
+  - `COHERENCIA` para una etiqueta infiel a su nodo.
+- Toda etiqueta que cambie se retraduce a los diez idiomas, con su huella.
+
+**Cadencia.**
+- Solo la sesión principal hace commit.
+- Cada tanda entra con el ciclo entero: aplicar, Gate 0, etiquetas, familias, sincronizar y las dos suites.
+- Los ficheros derivados del grafo se regeneran, nunca se fusionan a mano.
+- Se alternan con los commits de código.
