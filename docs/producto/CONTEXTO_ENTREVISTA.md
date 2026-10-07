@@ -247,7 +247,7 @@ IA queda preparado para la corrida final.
 |---|---|---|
 | 1 | `fdd7f389` | Contabilidad del caché (escritura 1 h y 5 min, lectura) por llamada; `costo_usd` con sus tarifas; toda llamada mira el corte por tokens, reintenta con el doble y, si vuelve a cortarse, falla con aviso; regla única en el prefijo fijo |
 | 2 | `f183fc32` | Las tareas del checklist se guardan completas; solo se acortan al mostrarlas |
-| 3 | `d5fcb898` | Memoria del proyecto (`projects.memoria`, migración 049 **sin aplicar**): ficha e hilo; el intérprete actualiza la ficha en su misma llamada; cada sesión abre con la foto del proyecto |
+| 3 | `d5fcb898` | Memoria del proyecto (`projects.memoria`, migración 049, aplicada en producción el 28 sep 2026): ficha e hilo; el intérprete actualiza la ficha en su misma llamada; cada sesión abre con la foto del proyecto |
 | 4 | `b94a8328` | El contexto completo viaja a toda llamada a la IA con un proyecto detrás (el organizador, la primera de todas, solo tiene el texto de la idea, que ya recibe) |
 | 5 | `bcfb19ed` | El adaptador de preguntas y el generador que solo añade |
 | 6 | `ecd08a01` | La prioridad declarada, regla en código |

@@ -1615,7 +1615,8 @@ Máquina en `auditoria-final-claves/medida4/medida4.py`.
     de los árbitros.
   - La guarda de voz cazó un "Se ilustra con" que dejó una corrección; sale por quita pura (tanda
     `barrido2-procedencia-voz`).
-  - Queda 1 en una tercera reescritura: el hallazgo temprano de productividad de la IA (B15-045).
+  - La última, el hallazgo temprano de productividad de la IA (B15-045), se sostuvo al tercer intento (tanda
+    `barrido2-procedencia-3`, trampa cazada).
 - **Guarda nueva:** `engine/test_procedencia_nombres.py` (REGLAS D1). Ninguna persona u organización con nombre como
   fuente en los textos de cara del grafo: autoría, "basado en el modelo de", "según X", "el filósofo X", citas y
   referencias.

@@ -23,7 +23,7 @@ En la cuenta/organización de producción de Supabase: **New project**.
 - Anota el **ref** del proyecto (la parte de `https://<REF>.supabase.co`):
   aparece en varios pasos de abajo como `<REF-NUEVO>`.
 
-## Paso 2 · El esquema: las 29 migraciones, en orden
+## Paso 2 · El esquema: las 49 migraciones, en orden
 
 SQL Editor del proyecto nuevo → pegar y correr **una por una, en orden**,
 cada archivo de `supabase/migrations/`:
@@ -39,10 +39,21 @@ my_idea_007_tipo_oferta.sql    my_idea_017_mundos_nuevos.sql       my_idea_027_t
 my_idea_008_beta_allowlist.sql my_idea_018_sentido_del_tiempo.sql  my_idea_028_preview_mundos.sql
 my_idea_009_estado_recorrido.sql my_idea_019_mundo_riesgos.sql     my_idea_029_centro_de_cuenta.sql
 my_idea_010_estado_reporte.sql my_idea_020_creditos_ledger.sql
+my_idea_030_gestor_de_estados.sql      my_idea_040_actas_de_cierre.sql
+my_idea_031_calendario_google.sql      my_idea_041_proteccion_por_nodo.sql
+my_idea_032_modo_por_espacio.sql       my_idea_042_reserva_de_creditos.sql
+my_idea_033_scheduler_estimacion.sql   my_idea_043_totp_pendiente.sql
+my_idea_034_enlace_proteccion.sql      my_idea_044_borrado_real.sql
+my_idea_035_camino_del_riesgo.sql      my_idea_045_historial_creditos_anonimo.sql
+my_idea_036_mundos_compras_entrega.sql my_idea_046_idioma_del_proyecto.sql
+my_idea_037_sensores_del_panel.sql     my_idea_047_ciclo_replanteamiento.sql
+my_idea_038_siembra_beta_en_el_ledger.sql my_idea_048_mundo_primer_equipo.sql
+my_idea_039_plan_basico_del_mundo.sql  my_idea_049_memoria_contexto.sql
 ```
 
 Al final, correr **`my_idea_check_migraciones.sql`** completo: deben salir
-TODAS las filas en ✓ OK (001–029). Si alguna falla, no sigas: esa migración
+TODAS las filas en ✓ OK (001–049; la lista se puso al día el 7 oct 2026: la 049, memoria del
+proyecto, se aplicó en producción el 28 sep 2026). Si alguna falla, no sigas: esa migración
 no entró.
 
 ## Paso 3 · Authentication (el clon de la config de staging)
@@ -139,7 +150,7 @@ lo necesites; no intentes un pg_dump a mano.
 
 ## Paso 7 · Verificación de cierre
 
-1. `my_idea_check_migraciones.sql` en el proyecto nuevo: 001–029 todas ✓.
+1. `my_idea_check_migraciones.sql` en el proyecto nuevo: 001–049 todas ✓.
 2. Smoke en `www.myideaproject.com` (la base NUEVA):
    - Landing carga; "Comenzar" → organizador funciona (identidad invisible).
    - Login por código: llega el correo con 6 dígitos, entra, chip **20**.
