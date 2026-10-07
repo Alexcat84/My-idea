@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Definir el sujeto de control, unidad de medida, sensor y meta para cada punto crítico",
     "Diseñar el ciclo de retroalimentación (medir, comparar contra meta y ajustar solo cuando haga falta y hasta la meta acordada, sin sobrecontrolar)",
-    "Documentar procedimientos y checklists de control operativo",
+    "Documentar procedimientos y listas de verificación de control operativo",
     "Formar equipos multidisciplinarios (diseño-operación) para asegurar transferencia efectiva",
     "Capacitar a los operadores en el nuevo proceso antes del lanzamiento"
   ],
-  "entregable_esperado": "Plan de control de proceso documentado y evidencia de transferencia formal a operaciones (checklist, capacitación)",
+  "entregable_esperado": "Plan de control de proceso documentado y evidencia de transferencia formal a operaciones (lista de verificación, capacitación)",
   "nodos_previos": [
     "desarrollar_caracteristicas_proceso"
   ],
@@ -44,6 +44,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se cae que se ajusta solo cuando hace falta y hasta la meta acordada; ajustar de más es sobrecontrol.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-desarrollar_controles_transferir_operaciones-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar procedimientos y checklists de control operativo",
+      "texto_nuevo": "Documentar procedimientos y listas de verificación de control operativo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklists"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollar_controles_transferir_operaciones-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de control de proceso documentado y evidencia de transferencia formal a operaciones (checklist, capacitación)",
+      "texto_nuevo": "Plan de control de proceso documentado y evidencia de transferencia formal a operaciones (lista de verificación, capacitación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Planificar la transición a contabilidad de devengo cuando el negocio empiece a escalar",
     "Ajustar reportes financieros y procesos internos al nuevo método"
   ],
-  "entregable_esperado": "Decisión documentada sobre el método contable a usar y plan de transición si aplica",
+  "entregable_esperado": "Decisión documentada sobre el método contable a usar y plan de transición si corresponde",
   "nodos_previos": [
     "fundamentos_inteligencia_financiera",
     "principio_correspondencia_contable"
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Elige entre Caja o Devengo",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-contabilidad_caja_vs_devengo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decisión documentada sobre el método contable a usar y plan de transición si aplica",
+      "texto_nuevo": "Decisión documentada sobre el método contable a usar y plan de transición si corresponde",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

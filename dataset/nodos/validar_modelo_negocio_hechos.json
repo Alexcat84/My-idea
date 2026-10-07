@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Se trata de convertir las hipótesis originales del business model canvas (propuesta de valor, segmentos de clientes, canales, relaciones con clientes, estructura de costos, flujos de ingresos) en hechos comprobados mediante pruebas extensivas cara a cara con cientos o miles de clientes reales. El canvas actúa como un 'scorecard' que documenta la evolución del negocio a través de iteraciones y pivotes.",
   "pasos_accionables": [
-    "Reunir todas las snapshots semanales o por pivote del business model canvas",
-    "Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas",
-    "Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente",
-    "Identificar pruebas pass/fail para cada hipótesis",
+    "Reunir todas las versiones semanales o por pivote del lienzo del modelo de negocio",
+    "Revisar cada componente del lienzo y verificar que tenga respuestas fácticas, no hipotéticas",
+    "Usar la lista de verificación del modelo de negocio para recorrer cada casilla sistemáticamente",
+    "Identificar pruebas de aprobado o reprobado para cada hipótesis",
     "Determinar si los resultados son lo bastante convincentes y cumplen los objetivos de tráfico o financieros y, si no, iterar o pivotar y volver a probar"
   ],
-  "entregable_esperado": "Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas",
+  "entregable_esperado": "Lienzo del modelo de negocio actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas de aprobado o reprobado identificadas",
   "nodos_previos": [
     "war_room_pivot_proceed",
     "decision_pivotar_o_proceder",
@@ -64,6 +64,92 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro también manda iterar o pivotar cuando los resultados no son lo bastante convincentes; el paso solo conserva los objetivos.; Mismo defecto: se cae la condición de resultados no lo bastante convincentes.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-validar_modelo_negocio_hechos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reunir todas las snapshots semanales o por pivote del business model canvas",
+      "texto_nuevo": "Reunir todas las versiones semanales o por pivote del lienzo del modelo de negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "snapshots",
+          "business model canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_negocio_hechos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar cada componente del canvas y verificar que tenga respuestas fácticas, no hipotéticas",
+      "texto_nuevo": "Revisar cada componente del lienzo y verificar que tenga respuestas fácticas, no hipotéticas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_negocio_hechos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el checklist del modelo de negocio para recorrer cada casilla sistemáticamente",
+      "texto_nuevo": "Usar la lista de verificación del modelo de negocio para recorrer cada casilla sistemáticamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_negocio_hechos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar pruebas pass/fail para cada hipótesis",
+      "texto_nuevo": "Identificar pruebas de aprobado o reprobado para cada hipótesis",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-validar_modelo_negocio_hechos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Business Model Canvas actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas pass/fail identificadas",
+      "texto_nuevo": "Lienzo del modelo de negocio actualizado con cada componente respaldado por datos fácticos de clientes reales, con pruebas de aprobado o reprobado identificadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Model Canvas",
+          "pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

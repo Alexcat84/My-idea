@@ -6,7 +6,7 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Cuando el cliente no está en casa, la entrega falla; por lo general se hacen dos visitas más y, si la última también falla, el paquete termina en un centro de distribución lejano desde donde el cliente tiene que ir a recogerlo, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaivén y reduce el costo de la última milla, porque ya no tienes que entregar en cada domicilio. El impacto ambiental puede ser menor si el cliente recoge su pedido de camino a otro lugar, pero puede ser peor si hace un viaje exclusivo para eso. Puedes apoyarte en terceros, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
   "pasos_accionables": [
-    "Pregunta a couriers y negocios cercanos qué puntos de recogida tienen disponibles.",
+    "Pregunta a empresas de mensajería y negocios cercanos qué puntos de recogida tienen disponibles.",
     "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
     "Define un plazo realista para tener el pedido listo antes de anunciar la opción.",
     "Notifica al cliente con claridad dónde y cuándo puede recoger su pedido.",
@@ -255,6 +255,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ofrecer_puntos_recogida-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a couriers y negocios cercanos qué puntos de recogida tienen disponibles.",
+      "texto_nuevo": "Pregunta a empresas de mensajería y negocios cercanos qué puntos de recogida tienen disponibles.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "couriers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

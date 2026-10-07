@@ -6,7 +6,7 @@
   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
   "resumen_teorico": "La primera función del framework, Identificar, consiste en elaborar una lista completa de todo el equipo, software y datos que utiliza la empresa, incluyendo laptops, smartphones, tablets y dispositivos de punto de venta. El framework es voluntario y te da un esquema de buenas prácticas para decidir dónde enfocar tu tiempo y tu dinero en ciberseguridad.",
   "pasos_accionables": [
-    "Listar todos los dispositivos físicos (laptops, smartphones, tablets, POS)",
+    "Listar todos los dispositivos físicos (portátiles, teléfonos inteligentes, tabletas, terminales de punto de venta)",
     "Listar todo el software utilizado en la organización",
     "Listar todos los datos que utiliza la empresa",
     "Actualiza el inventario periódicamente"
@@ -94,6 +94,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-funcion_identify_inventario_activos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Listar todos los dispositivos físicos (laptops, smartphones, tablets, POS)",
+      "texto_nuevo": "Listar todos los dispositivos físicos (portátiles, teléfonos inteligentes, tabletas, terminales de punto de venta)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "laptops, smartphones, tablets, POS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

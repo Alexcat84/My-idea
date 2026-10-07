@@ -7,11 +7,11 @@
   "resumen_teorico": "Con herramientas digitales e internet puedes invitar a tus clientes o usuarios a diseñar directamente el producto, usando plataformas simples (por ejemplo, LEGO Digital Designer). Los consumidores, en conjunto, son 2.4 veces más eficientes que los propios productores generando innovaciones significativas, sobre todo en las primeras etapas de una categoría; cuando la categoría madura, esa ventaja se invierte.",
   "pasos_accionables": [
     "Evalúa si tu producto es apto para esto: tu cliente debe poder entender la tecnología que hay detrás",
-    "Desarrolla una herramienta digital simple de diseño (tipo CAD) que le permita a tus usuarios crear sus propios diseños",
+    "Desarrolla una herramienta digital simple de diseño (tipo CAD) que les permita a tus usuarios crear sus propios diseños",
     "Crea una galería o comunidad donde tus usuarios compartan lo que crearon y reciban comentarios de otros",
     "Revisa y analiza los diseños que te envían: ahí puedes encontrar ideas para nuevos productos"
   ],
-  "entregable_esperado": "Una plataforma de co-creación activa, con un repositorio de diseños hechos por tus usuarios, lista para que evalúes cuáles pueden convertirse en nuevas ideas de producto.",
+  "entregable_esperado": "Una plataforma de cocreación activa, con un repositorio de diseños hechos por tus usuarios, lista para que evalúes cuáles pueden convertirse en nuevas ideas de producto.",
   "nodos_previos": [
     "lead_user_analysis",
     "producto_unico_superior",
@@ -77,6 +77,35 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c11): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cliente_disena_producto-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desarrolla una herramienta digital simple de diseño (tipo CAD) que le permita a tus usuarios crear sus propios diseños",
+      "texto_nuevo": "Desarrolla una herramienta digital simple de diseño (tipo CAD) que les permita a tus usuarios crear sus propios diseños",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v13)",
+        "evidencia": "El pronombre que duplica a 'tus usuarios' debe ir en plural; solo cambia la concordancia."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cliente_disena_producto-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una plataforma de co-creación activa, con un repositorio de diseños hechos por tus usuarios, lista para que evalúes cuáles pueden convertirse en nuevas ideas de producto.",
+      "texto_nuevo": "Una plataforma de cocreación activa, con un repositorio de diseños hechos por tus usuarios, lista para que evalúes cuáles pueden convertirse en nuevas ideas de producto.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v13)",
+        "evidencia": "El prefijo 'co' se escribe unido a la palabra; solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): ortografia, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

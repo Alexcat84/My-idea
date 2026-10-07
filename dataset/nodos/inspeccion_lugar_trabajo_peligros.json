@@ -7,13 +7,13 @@
   "resumen_teorico": "Los peligros pueden surgir con el tiempo por cambios en procesos, avance de trabajos, desgaste de equipos o descuido en el mantenimiento. Revisa tu lugar de trabajo con regularidad para detectar condiciones peligrosas antes de que ocurra un incidente. Si puedes, involucra a otros trabajadores en la revisión y documenta lo que encuentres con fotos o video, usando listas de verificación por categoría de riesgo como orden y limpieza, riesgos eléctricos, incendios, ergonomía o zonas de acopio. Anticipa estas revisiones cuando lleguen equipos nuevos o cambien los procesos, y evalúa los cambios propuestos antes de implementarlos para prevenir riesgos desde el diseño.",
   "pasos_accionables": [
     "Programa inspecciones regulares de todas las operaciones, equipos y áreas de trabajo, incluyendo, si tu actividad los tiene, excavaciones, zonas de acopio, trabajo en altura y mantenimiento",
-    "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o reportan",
+    "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o señalan",
     "Documenta hallazgos con fotos o video para su corrección posterior",
     "Usa listas de verificación por categoría de riesgo como eléctrico, incendio o ergonomía",
     "Evalúa los cambios propuestos en operaciones, puestos o flujo de trabajo, los cambios importantes de organización y la introducción de nuevos equipos, materiales o procesos antes de implementarlos, pidiendo la opinión de quienes trabajan contigo sobre sus posibles peligros",
     "Anticipa inspecciones adicionales cuando lleguen nuevos oficios, equipos o cambien las condiciones del sitio"
   ],
-  "entregable_esperado": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
+  "entregable_esperado": "Informe de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
   "nodos_previos": [
     "identificacion_recopilacion_informacion_peligros"
   ],
@@ -234,6 +234,39 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inspeccion_lugar_trabajo_peligros-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o reportan",
+      "texto_nuevo": "Involucra a otros trabajadores en la inspección y habla con ellos sobre los peligros que ven o señalan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportan"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inspeccion_lugar_trabajo_peligros-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
+      "texto_nuevo": "Informe de inspección documentado con hallazgos, evidencia fotográfica y plan de corrección.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte de inspección"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

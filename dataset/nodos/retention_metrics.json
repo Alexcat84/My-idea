@@ -9,7 +9,7 @@
     "Registra la fecha de inicio y la fuente de cada cliente, y agrúpalos en cohortes por mes de ingreso para poder comparar su comportamiento",
     "Mide la actividad de cada cliente y de cada cohorte: visitas, páginas vistas, tiempo en el sitio o la aplicación, frecuencia y duración de cada visita, y el tiempo promedio que pasa entre una y la siguiente",
     "Monitorea el comportamiento dentro del sitio: qué clics hace cada cliente y cuáles no",
-    "Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos",
+    "Detecta el momento y la causa del abandono, y monitorea las quejas, las solicitudes de soporte y las tasas de respuesta a tus correos",
     "Estima la vida promedio del cliente y, si es posible más adelante, su valor de vida (lifetime value)",
     "Mide lo que tu retención produce: los referidos que genera cada cliente y el resultado de cada promoción o campaña de retención"
   ],
@@ -120,6 +120,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El entregable exige el valor de vida que el libro pide solo si es posible, más adelante.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-retention_metrics-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Detecta el momento y la causa del abandono, y monitorea las quejas, los tickets de soporte y las tasas de respuesta a tus correos",
+      "texto_nuevo": "Detecta el momento y la causa del abandono, y monitorea las quejas, las solicitudes de soporte y las tasas de respuesta a tus correos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los tickets"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

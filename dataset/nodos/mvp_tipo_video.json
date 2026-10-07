@@ -6,9 +6,9 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Técnica de MVP donde creas un video demostrativo del producto funcionando como esperas que funcione, dirigido a una comunidad específica de early adopters, sin necesidad de construir el producto completo. Te permite validar el interés y la demanda real (mediante señales de compromiso como registros) antes de invertir en desarrollo técnico complejo. Ejemplo: Dropbox validó su pregunta clave de fe con un video de 3 minutos que aumentó su lista de espera de forma notable.",
   "pasos_accionables": [
-    "Define la hipótesis de valor específica que quieres testear",
+    "Define la hipótesis de valor específica que quieres probar",
     "Crea un video simple que muestre el producto funcionando como lo imaginas",
-    "Dirige el video a una comunidad específica de early adopters relevante",
+    "Dirige el video a una comunidad específica de primeros usuarios relevante",
     "Mide señales de compromiso real (registros, lista de espera, clics) generadas por el video",
     "Usa los resultados para decidir si sigues adelante con el desarrollo"
   ],
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Muestra tu Idea en Video",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-mvp_tipo_video-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define la hipótesis de valor específica que quieres testear",
+      "texto_nuevo": "Define la hipótesis de valor específica que quieres probar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mvp_tipo_video-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dirige el video a una comunidad específica de early adopters relevante",
+      "texto_nuevo": "Dirige el video a una comunidad específica de primeros usuarios relevante",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "early adopters"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

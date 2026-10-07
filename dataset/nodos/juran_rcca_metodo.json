@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El RCCA (Root Cause Corrective Action) es un método de cuatro pasos para identificar y solucionar la causa raíz de problemas esporádicos: Definir el problema, Analizar y diagnosticar la causa, Mejorar/remediar la causa, y Controlar para mantener las ganancias. Es análogo al proceso médico de diagnóstico y tratamiento, y se enfoca en causas especiales (esporádicas), a diferencia de Six Sigma que aborda causas comunes (crónicas).",
   "pasos_accionables": [
-    "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora de avance en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
+    "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora radical en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
     "Analizar y diagnosticar: analizar síntomas, formular teorías, probarlas e identificar la causa raíz",
     "Mejorar: diseñar e implementar el remedio",
-    "Controlar: ajustar los controles para mantener las ganancias"
+    "Controlar: ajustar los controles para mantener las mejoras logradas"
   ],
   "entregable_esperado": "Causa raíz identificada, remedio implementado y controles ajustados para prevenir recurrencia",
   "nodos_previos": [
@@ -59,6 +59,40 @@
       },
       "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-juran_rcca_metodo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora de avance en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
+      "texto_nuevo": "Definir el problema: identificar si es esporádico o crónico (si es crónico, aplicar métodos de mejora radical en lugar de este), establecer quién es responsable de resolverlo si un plan de control no lo fija ya, y preparar un enunciado del problema",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mejora de avance"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-juran_rcca_metodo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Controlar: ajustar los controles para mantener las ganancias",
+      "texto_nuevo": "Controlar: ajustar los controles para mantener las mejoras logradas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "las ganancias"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

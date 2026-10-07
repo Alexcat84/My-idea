@@ -7,11 +7,11 @@
   "resumen_teorico": "La integración vertical (como el modelo Ford de principios del 1900) consiste en poseer la mayor parte de la cadena de suministro para lograr economías de escala, pero sacrifica flexibilidad y capacidad de respuesta al cliente. La integración virtual, dominante en la economía actual, consiste en que cada empresa se enfoca en sus core competencies y colabora con otras empresas especializadas (outsourcing y partnering) para cubrir el resto de la cadena, permitiendo mayor agilidad ante mercados cambiantes.",
   "pasos_accionables": [
     "Listar todas las actividades de tu cadena de suministro actual o planeada",
-    "Identificar cuáles son verdaderas core competencies de tu empresa",
-    "Evaluar qué actividades podrían outsourcearse a especialistas (logística, manufactura, distribución)",
-    "Diseñar una red de socios (virtual integration) en lugar de intentar poseer toda la cadena"
+    "Identificar cuáles son verdaderas competencias centrales de tu empresa",
+    "Evaluar qué actividades podrían subcontratarse a especialistas (logística, manufactura, distribución)",
+    "Diseñar una red de socios (integración virtual) en lugar de intentar poseer toda la cadena"
   ],
-  "entregable_esperado": "Lista de core competencies definidas y mapa de actividades a outsourcear vs. mantener in-house",
+  "entregable_esperado": "Lista de competencias centrales definidas y mapa de actividades a subcontratar vs. mantener dentro de la empresa",
   "nodos_previos": [
     "business_model_environment_mapping"
   ],
@@ -24,5 +24,76 @@
   "etiqueta_arbol": "Elige Integración Vertical o Virtual",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-vertical_vs_virtual_integracion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar cuáles son verdaderas core competencies de tu empresa",
+      "texto_nuevo": "Identificar cuáles son verdaderas competencias centrales de tu empresa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "core competencies"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vertical_vs_virtual_integracion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar qué actividades podrían outsourcearse a especialistas (logística, manufactura, distribución)",
+      "texto_nuevo": "Evaluar qué actividades podrían subcontratarse a especialistas (logística, manufactura, distribución)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outsourcearse"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vertical_vs_virtual_integracion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar una red de socios (virtual integration) en lugar de intentar poseer toda la cadena",
+      "texto_nuevo": "Diseñar una red de socios (integración virtual) en lugar de intentar poseer toda la cadena",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(virtual integration)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vertical_vs_virtual_integracion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de core competencies definidas y mapa de actividades a outsourcear vs. mantener in-house",
+      "texto_nuevo": "Lista de competencias centrales definidas y mapa de actividades a subcontratar vs. mantener dentro de la empresa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "core competencies",
+          "outsourcear",
+          "in-house"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

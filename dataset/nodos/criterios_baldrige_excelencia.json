@@ -7,7 +7,7 @@
   "resumen_teorico": "Marco de referencia integrado por siete categorías interconectadas (Liderazgo, Planeación Estratégica, Enfoque en Cliente y Mercado, Medición/Análisis/Gestión del Conocimiento, Enfoque en la Fuerza Laboral, Gestión de Procesos y Resultados) que cualquier organización puede usar para mejorar su desempeño general, independientemente de si busca ganar el premio. Contiene 18 criterios y 36 áreas a abordar, usados frecuentemente como herramienta de autoevaluación organizacional.",
   "pasos_accionables": [
     "Revisar las siete categorías del marco Baldrige y sus interconexiones",
-    "Seleccionar el método de evaluación adecuado (respuestas escritas, encuesta, aplicación formal, entrevista, grupo focal o evaluación colaborativa)",
+    "Seleccionar el método de evaluación adecuado (respuestas escritas, encuesta, solicitud formal, entrevista, grupo focal o evaluación colaborativa)",
     "Responder las preguntas de criterios para cada categoría relevante",
     "Identificar brechas y fortalezas organizacionales según los resultados obtenidos"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Evalúa tu Excelencia Total",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-criterios_baldrige_excelencia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar el método de evaluación adecuado (respuestas escritas, encuesta, aplicación formal, entrevista, grupo focal o evaluación colaborativa)",
+      "texto_nuevo": "Seleccionar el método de evaluación adecuado (respuestas escritas, encuesta, solicitud formal, entrevista, grupo focal o evaluación colaborativa)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "aplicación formal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

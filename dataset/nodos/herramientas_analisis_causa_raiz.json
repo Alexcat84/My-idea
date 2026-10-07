@@ -7,7 +7,7 @@
   "resumen_teorico": "Conjunto de herramientas visuales que permiten representar y comprender grandes volúmenes de datos cuantitativos para detectar patrones, variaciones y relaciones. Incluyen gráficos y cartas para resumir información, histogramas y box plots para mostrar variación, el análisis de Pareto para identificar los 'pocos vitales', diagramas de dispersión para explorar relaciones causa-efecto, y la estratificación para separar datos en categorías relevantes.",
   "pasos_accionables": [
     "Recolectar datos cuantitativos relevantes al problema de calidad.",
-    "Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, ranking).",
+    "Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, jerarquización).",
     "Construir el gráfico y analizar patrones o anomalías visibles.",
     "Usar el análisis de Pareto para priorizar los factores más significativos.",
     "Aplicar estratificación para descomponer los datos por categorías y encontrar focos del problema."
@@ -56,6 +56,23 @@
         "evidencia": "F05-017: Las herramientas gráficas (Pareto, histogramas, estratificación) se aplican a problemas de calidad de un proceso en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-herramientas_analisis_causa_raiz-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, ranking).",
+      "texto_nuevo": "Seleccionar la herramienta gráfica adecuada según el tipo de análisis requerido (variación, relación, jerarquización).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ranking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

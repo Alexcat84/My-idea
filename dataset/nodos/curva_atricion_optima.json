@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Cuando necesitas definir cómo medir si tu proceso de revisión por etapas está funcionando",
-    "Si cancelas proyectos tarde con frecuencia, después de la etapa 3, señal de que los evaluaste mal desde el principio"
+    "Si cancelas proyectos tarde con frecuencia, después de la etapa 3"
   ],
   "etiqueta_arbol": "Filtra Proyectos Temprano y Rápido",
   "fuentes_internas": [
@@ -45,6 +45,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da la otra alarma: si en los gates tempranos no se descarta casi nada, los gates no tienen dientes.; Mismo defecto: se pierde la alarma de gates tempranos que no descartan.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-curva_atricion_optima-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si cancelas proyectos tarde con frecuencia, después de la etapa 3, señal de que los evaluaste mal desde el principio",
+      "texto_nuevo": "Si cancelas proyectos tarde con frecuencia, después de la etapa 3",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "6731",
+        "frase": "computes the percentage of projects killed after Gate 3 ... as a negative metric"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

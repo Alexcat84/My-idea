@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Montar esmeriladoras de banco y pedestal de forma permanente.",
     "Instalar guardas de seguridad que cubran husillo, tuerca y bridas, alineadas correctamente.",
-    "Ajustar los descansos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
+    "Ajustar los apoyos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
     "Inspeccionar visualmente y realizar prueba de sonido (ring test) a las ruedas nuevas antes de montarlas, y comprobar que sus rpm máximas sean compatibles con las del motor.",
     "Proveer colectores de polvo y extractores mecánicos en las esmeriladoras usadas en operaciones que producen mucho polvo, y EPP adecuado para operaciones de esmerilado."
   ],
@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Cuando el negocio utiliza esmeriladoras de banco, pedestal o portátiles en sus operaciones."
   ],
-  "etiqueta_arbol": "Protege tus Ruedas Abrasivas",
+  "etiqueta_arbol": "Usa con Seguridad tus Ruedas Abrasivas",
   "fuentes_internas": [
     "SMALL_BUSINESS"
   ],
@@ -94,6 +94,37 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide colectores de polvo y extractores mecánicos; se caen los extractores.; Mismo defecto.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-machine_guarding_abrasive_wheels-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Protege tus Ruedas Abrasivas",
+      "texto_nuevo": "Usa con Seguridad tus Ruedas Abrasivas",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v13)",
+        "evidencia": "'Protege tus Ruedas' promete cuidar las ruedas, cuando el concepto protege a quien trabaja con ellas (montaje, holguras, inspección, polvo); 'Usa con Seguridad' recoge eso sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-machine_guarding_abrasive_wheels-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajustar los descansos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
+      "texto_nuevo": "Ajustar los apoyos de trabajo a no más de 1/8 de pulgada (unos 3 mm) de la rueda y la lengüeta ajustable a no más de 1/4 de pulgada (unos 6 mm).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "descansos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

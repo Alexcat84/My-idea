@@ -9,15 +9,15 @@
     "Configurar la logística del equipo (blog, comunicación)",
     "Redactar las hipótesis del modelo de negocio de 9 bloques",
     "Escribir una propuesta de venta única (Unique Selling Proposition) en formato 'Ayudamos a X a hacer Y haciendo Z' y comprobar con otras personas que se entienda; si no, darles una explicación más larga y pedirles que la resuman",
-    "Configurar dominio y hosting del sitio web",
-    "Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)",
+    "Configurar dominio y alojamiento del sitio web",
+    "Construir un sitio web de baja fidelidad (página de presentación, formularios de preventa)",
     "Dirigir tráfico de clientes potenciales al sitio para probar segmento y propuesta de valor",
-    "Conectar la interfaz de usuario con el código backend",
-    "Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas",
+    "Conectar la interfaz de usuario con el código del servidor",
+    "Probar el 'problema del cliente' recopilando datos mediante analítica web y encuestas",
     "Construir una versión de alta fidelidad para probar la 'solución', que todavía no es el producto completo sino el más pequeño posible con aspecto profesional",
-    "Pedir dinero mediante formularios de pre-orden o cobro real"
+    "Pedir dinero mediante formularios de preventa o cobro real"
   ],
-  "entregable_esperado": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, feedback de usuarios y un formulario de pre-orden o un sistema de cobro implementado",
+  "entregable_esperado": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, comentarios de usuarios y un formulario de preventa o un sistema de cobro implementado",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "fit_value_proposition",
@@ -102,6 +102,109 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aclara que alta fidelidad no es producto completo sino el más pequeño posible con aspecto profesional.",
       "indice": 8,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Configurar dominio y hosting del sitio web",
+      "texto_nuevo": "Configurar dominio y alojamiento del sitio web",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hosting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir un sitio web de baja fidelidad (splash page, formularios de pre-orden)",
+      "texto_nuevo": "Construir un sitio web de baja fidelidad (página de presentación, formularios de preventa)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "splash page",
+          "pre-orden"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conectar la interfaz de usuario con el código backend",
+      "texto_nuevo": "Conectar la interfaz de usuario con el código del servidor",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "código backend"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Probar el 'problema del cliente' recopilando datos mediante analytics y encuestas",
+      "texto_nuevo": "Probar el 'problema del cliente' recopilando datos mediante analítica web y encuestas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "analytics"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-pasos_accionables-9",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir dinero mediante formularios de pre-orden o cobro real",
+      "texto_nuevo": "Pedir dinero mediante formularios de preventa o cobro real",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pre-orden"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lean_launchpad_web_startup_process-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, feedback de usuarios y un formulario de pre-orden o un sistema de cobro implementado",
+      "texto_nuevo": "Sitio web funcional de alta fidelidad, aún el producto más pequeño posible, con métricas de tráfico, comentarios de usuarios y un formulario de preventa o un sistema de cobro implementado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback de usuarios",
+          "pre-orden"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

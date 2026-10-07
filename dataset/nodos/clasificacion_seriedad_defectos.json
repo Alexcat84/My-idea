@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Elabora una lista de características de calidad a partir de tus especificaciones",
     "Elabora una lista aparte de defectos o síntomas de no conformidad",
-    "Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas",
+    "Define categorías de gravedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas",
     "Aplica la clasificación para reducir lo que necesitas verificar y el tiempo de inspección",
     "Valida con casos piloto que muestren el beneficio a quienes se resistan al cambio"
   ],
-  "entregable_esperado": "Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico",
+  "entregable_esperado": "Tabla de clasificación de gravedad de características y defectos aplicada a un producto o proceso específico",
   "nodos_previos": [
     "establecer_diseno_final_producto"
   ],
@@ -27,5 +27,40 @@
   "etiqueta_arbol": "Separa Características y Defectos por Gravedad",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-clasificacion_seriedad_defectos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define categorías de seriedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas",
+      "texto_nuevo": "Define categorías de gravedad (crítico, mayor, menor) con quienes te ayuden en distintas áreas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "categorías de seriedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-clasificacion_seriedad_defectos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico",
+      "texto_nuevo": "Tabla de clasificación de gravedad de características y defectos aplicada a un producto o proceso específico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "seriedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

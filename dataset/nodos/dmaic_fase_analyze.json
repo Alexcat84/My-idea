@@ -6,12 +6,12 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El equipo analiza datos de desempeño pasados y actuales para confirmar relaciones causa-efecto mediante herramientas estadísticas como histogramas, box plots, correlación, regresión, pruebas de hipótesis y ANOVA. El objetivo es identificar los 'vital few' Xs (inputs) que determinan el desempeño del proceso (Ys).",
   "pasos_accionables": [
-    "Realizar análisis gráfico exploratorio (histogramas, box plots, Pareto)",
+    "Realizar análisis gráfico exploratorio (histogramas, diagramas de caja, Pareto)",
     "Aplicar correlación y regresión para variables continuas",
-    "Ejecutar pruebas de hipótesis (t-tests, ANOVA, chi-cuadrado) según el tipo de dato",
+    "Ejecutar pruebas de hipótesis (pruebas t, ANOVA, chi-cuadrado) según el tipo de dato",
     "Confirmar los determinantes vitales (vital few Xs) del desempeño del proceso"
   ],
-  "entregable_esperado": "Lista validada de inputs (Xs) que son causas raíz probadas del problema, respaldada por análisis estadístico",
+  "entregable_esperado": "Lista validada de entradas (Xs) que son causas raíz probadas del problema, respaldada por análisis estadístico",
   "nodos_previos": [
     "dmaic_fase_measure"
   ],
@@ -25,5 +25,57 @@
   "etiqueta_arbol": "Encuentra las Causas Raíz",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-dmaic_fase_analyze-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar análisis gráfico exploratorio (histogramas, box plots, Pareto)",
+      "texto_nuevo": "Realizar análisis gráfico exploratorio (histogramas, diagramas de caja, Pareto)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "box plots"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmaic_fase_analyze-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ejecutar pruebas de hipótesis (t-tests, ANOVA, chi-cuadrado) según el tipo de dato",
+      "texto_nuevo": "Ejecutar pruebas de hipótesis (pruebas t, ANOVA, chi-cuadrado) según el tipo de dato",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "t-tests"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-dmaic_fase_analyze-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista validada de inputs (Xs) que son causas raíz probadas del problema, respaldada por análisis estadístico",
+      "texto_nuevo": "Lista validada de entradas (Xs) que son causas raíz probadas del problema, respaldada por análisis estadístico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "inputs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

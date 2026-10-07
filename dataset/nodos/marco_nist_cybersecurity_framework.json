@@ -6,11 +6,11 @@
   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
   "resumen_teorico": "El NIST Cybersecurity Framework es una guía voluntaria desarrollada por el Instituto Nacional de Estándares y Tecnología (NIST) que ayuda a negocios de cualquier tamaño a entender, gestionar y reducir su riesgo de ciberseguridad. Se organiza en cinco funciones núcleo: Identificar, Proteger, Detectar, Responder y Recuperar, ofreciendo un mapa de mejores prácticas para decidir dónde enfocar tiempo y presupuesto en protección digital.",
   "pasos_accionables": [
-    "Revisar las cinco funciones del framework (Identify, Protect, Detect, Respond, Recover)",
+    "Revisar las cinco funciones del marco (Identificar, Proteger, Detectar, Responder, Recuperar)",
     "Determinar el estado actual de la empresa en cada función",
     "Visitar NIST.gov/CyberFramework para más recursos"
   ],
-  "entregable_esperado": "Documento resumen que identifique en qué función del framework se encuentra la empresa y qué área requiere más atención",
+  "entregable_esperado": "Documento resumen que identifique en qué función del marco se encuentra la empresa y qué área requiere más atención",
   "nodos_previos": [
     "seleccion_controles"
   ],
@@ -39,6 +39,40 @@
         "evidencia": "F08-002: No explora una idea de negocio: diagnostica la empresa por las cinco funciones para decidir donde poner tiempo y presupuesto de ciberseguridad, que es planificar. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-marco_nist_cybersecurity_framework-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar las cinco funciones del framework (Identify, Protect, Detect, Respond, Recover)",
+      "texto_nuevo": "Revisar las cinco funciones del marco (Identificar, Proteger, Detectar, Responder, Recuperar)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "framework",
+          "Identify, Protect, Detect, Respond, Recover"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-marco_nist_cybersecurity_framework-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento resumen que identifique en qué función del framework se encuentra la empresa y qué área requiere más atención",
+      "texto_nuevo": "Documento resumen que identifique en qué función del marco se encuentra la empresa y qué área requiere más atención",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "framework"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

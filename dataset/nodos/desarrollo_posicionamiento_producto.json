@@ -15,7 +15,7 @@
   "entregable_esperado": "Resumen de posicionamiento de producto (una página), validado con clientes reales y listo como referencia para todo el material de marketing posterior",
   "condiciones_activacion": [
     "Cuando ya se tienen suficientes entrevistas de clientes reales para basar el mensaje en hechos, no en suposiciones",
-    "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes"
+    "Cuando, dentro de la validación de clientes, ya se tienen los resultados de las pruebas con clientes y se prepara la fase de creación de clientes"
   ],
   "node_id": "desarrollo_posicionamiento_producto",
   "nodos_previos": [
@@ -105,6 +105,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Existe, pero es matiz: se pierde que el resumen no tiene que ser perfecto y seguirá refinándose; no es un opuesto.; Se pierde que el posicionamiento se seguirá refinando en la creación de clientes; el criterio de salida es un resumen revisado.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-desarrollo_posicionamiento_producto-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes",
+      "texto_nuevo": "Cuando, dentro de la validación de clientes, ya se tienen los resultados de las pruebas con clientes y se prepara la fase de creación de clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "12385-12388",
+        "frase": "Customer Validation, Phase Three: Develop Product and Company Positioning"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

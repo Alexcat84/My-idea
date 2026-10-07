@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "En lugar de dejar que todos tus proyectos avancen sin filtro como en un túnel, construye un embudo con puntos de decisión (gates) a lo largo del proceso. En cada gate evalúas tres cosas: si el proyecto esta listo para pasar a la siguiente etapa, si el racional de negocio justifica seguir invirtiendo (criterios Go/Kill y priorización, por ejemplo NPV), y que plan de acción y recursos necesita la siguiente fase. Usar criterios explícitos en formato de checklist o scorecard mejora la calidad de tus decisiones y evita que sigas invirtiendo tiempo y dinero en ideas débiles. Los gates te permiten matar proyectos a tiempo y concentrar tus recursos limitados en lo que realmente vale la pena.",
   "pasos_accionables": [
-    "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
-    "Establece criterios claros y visibles para cada gate: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
+    "Define los puntos de decisión en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
+    "Establece criterios claros y visibles para cada punto de decisión: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
     "Crea un checklist o scorecard simple que uses para evaluar cada gate con objetividad",
-    "Detente en cada punto de control y toma una decisión explícita: Go, Kill, Hold o Recycle; algunas empresas admiten una quinta salida, Conditional Go, con el riesgo de que la condición nunca se cumpla",
-    "Compromete recursos (tiempo, dinero) solo después de pasar el gate, no antes",
+    "Detente en cada punto de control y toma una decisión explícita: seguir, cancelar, pausar o rehacer; algunas empresas admiten una quinta salida, seguir con condiciones, con el riesgo de que la condición nunca se cumpla",
+    "Compromete recursos (tiempo, dinero) solo después de pasar el punto de decisión, no antes",
     "Anota la decisión tomada y el motivo antes de avanzar a la siguiente etapa",
     "En cada uno de esos puntos, pregúntate de verdad si sigues o si paras, no solo revises cómo va el proyecto",
     "No dejes que un proyecto avance a la siguiente etapa sin que hayas decidido conscientemente seguir",
@@ -20,11 +20,11 @@
     "Crea una lista de criterios eliminatorios para descartar de entrada los proyectos que no son viables",
     "Decide cómo vas a priorizar los proyectos que sí cumplen, dándole más peso a lo que más te importa",
     "Decide quién será la persona con experiencia y con poder sobre los recursos necesarios, responsable de aprobar cada etapa según lo que se compromete en ella",
-    "Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).",
-    "Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.",
-    "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate."
+    "Definir de antemano una lista estándar de entregables requeridos para cada punto de decisión (ej. plantillas de caso de negocio).",
+    "Establecer criterios de decisión claros: obligatorios, financieros para seguir o cancelar, y cualitativos deseables.",
+    "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al punto de decisión."
   ],
-  "entregable_esperado": "Un mapa de gates con checklist de criterios de decisión y entregables requeridos en cada punto de control",
+  "entregable_esperado": "Un mapa de puntos de decisión con lista de verificación de criterios de decisión y entregables requeridos en cada punto de control",
   "nodos_previos": [
     "calidad_de_ejecucion_proceso_innovacion",
     "diseno_como_plataforma_expansiva",
@@ -69,7 +69,7 @@
     "Si tus proyectos avanzan sin puntos de control claros",
     "Si los líderes de proyecto no saben qué se espera de ellos en cada etapa."
   ],
-  "etiqueta_arbol": "Filtra Proyectos con Decisiones Go/Kill",
+  "etiqueta_arbol": "Filtra Proyectos con Puntos de Decisión",
   "ids_alias": [
     "sistema_de_gates_go_kill",
     "gates_go_kill_decision_points",
@@ -236,6 +236,162 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que solo algunas empresas admiten el Conditional Go, la mayoría no, y con riesgo de que la condición no se cumpla.; Mismo defecto.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Filtra Proyectos con Decisiones Go/Kill",
+      "texto_nuevo": "Filtra Proyectos con Puntos de Decisión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Decisiones Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define los gates en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
+      "texto_nuevo": "Define los puntos de decisión en los puntos clave de tu proceso (tras la idea, tras la validación inicial, antes de desarrollar, antes de lanzar)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los gates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establece criterios claros y visibles para cada gate: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
+      "texto_nuevo": "Establece criterios claros y visibles para cada punto de decisión: si el proyecto está listo, si el negocio justifica seguir, y qué recursos necesita la siguiente etapa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Detente en cada punto de control y toma una decisión explícita: Go, Kill, Hold o Recycle; algunas empresas admiten una quinta salida, Conditional Go, con el riesgo de que la condición nunca se cumpla",
+      "texto_nuevo": "Detente en cada punto de control y toma una decisión explícita: seguir, cancelar, pausar o rehacer; algunas empresas admiten una quinta salida, seguir con condiciones, con el riesgo de que la condición nunca se cumpla",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Go, Kill, Hold o Recycle",
+          "Conditional Go"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compromete recursos (tiempo, dinero) solo después de pasar el gate, no antes",
+      "texto_nuevo": "Compromete recursos (tiempo, dinero) solo después de pasar el punto de decisión, no antes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-14",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir de antemano una lista estándar de entregables requeridos para cada gate (ej. plantillas de business case).",
+      "texto_nuevo": "Definir de antemano una lista estándar de entregables requeridos para cada punto de decisión (ej. plantillas de caso de negocio).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada gate",
+          "business case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 14,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-15",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer criterios de decisión claros: must-meet, go/kill financieros, y should-meet cualitativos.",
+      "texto_nuevo": "Establecer criterios de decisión claros: obligatorios, financieros para seguir o cancelar, y cualitativos deseables.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "must-meet",
+          "go/kill",
+          "should-meet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 15,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-pasos_accionables-16",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al gate.",
+      "texto_nuevo": "Comunicar estas expectativas al equipo de proyecto antes de que lleguen al punto de decisión.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "al gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 16,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sistema_gates_go_kill-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa de gates con checklist de criterios de decisión y entregables requeridos en cada punto de control",
+      "texto_nuevo": "Un mapa de puntos de decisión con lista de verificación de criterios de decisión y entregables requeridos en cada punto de control",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mapa de gates",
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

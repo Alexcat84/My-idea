@@ -6,14 +6,14 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Estrategia de construir sistemas de negocio combinando servicios de computación en la nube y aplicaciones de software ya existentes (APIs, SaaS), escribiendo código nuevo solo para las funciones únicas que generan valor diferencial. Ejemplo: Uber usa AWS, Google Maps, Braintree y Twilio, enfocando su desarrollo propio solo en ser la plataforma de conexión entre pasajeros y conductores.",
   "pasos_accionables": [
-    "Identificar las funciones core que generan el valor diferencial de tu negocio",
-    "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
+    "Identificar las funciones centrales que generan el valor diferencial de tu negocio",
+    "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, alojamiento web) pueden resolverse con servicios SaaS existentes",
     "Conectar estos servicios vía APIs en lugar de desarrollarlos internamente, y preferir APIs abiertas para facilitar integraciones futuras",
     "Enfocar el desarrollo propio exclusivamente en la capa de coordinación/colaboración que es tu propuesta de valor única",
     "Diseñar la arquitectura para que sea fácilmente escalable y sustituible por componente",
-    "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS)."
+    "Auditar las soluciones tecnológicas ya existentes en el mercado (nube, SaaS)."
   ],
-  "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
+  "entregable_esperado": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propio central",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro"
   ],
@@ -97,6 +97,73 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-arquitectura_tecnica_modular-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar las funciones core que generan el valor diferencial de tu negocio",
+      "texto_nuevo": "Identificar las funciones centrales que generan el valor diferencial de tu negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "funciones core"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-arquitectura_tecnica_modular-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, hosting) pueden resolverse con servicios SaaS existentes",
+      "texto_nuevo": "Mapear qué funciones de soporte (pagos, mapas, comunicaciones, alojamiento web) pueden resolverse con servicios SaaS existentes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hosting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-arquitectura_tecnica_modular-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Auditar las soluciones tecnológicas ya existentes en el mercado (cloud, SaaS).",
+      "texto_nuevo": "Auditar las soluciones tecnológicas ya existentes en el mercado (nube, SaaS).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(cloud"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-arquitectura_tecnica_modular-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propietario central",
+      "texto_nuevo": "Diagrama de arquitectura modular mostrando servicios de terceros integrados vía API y el componente propio central",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "componente propietario"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

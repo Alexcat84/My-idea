@@ -32,7 +32,7 @@
     "diagnostico_sintoma_vs_causa_ventas"
   ],
   "condiciones_activacion": [
-    "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solución",
+    "Cuando el cliente ya reconoce que tiene un problema serio que tú puedes resolver, pero aún no valora la solución",
     "Cuando has desarrollado el problema con preguntas de implicación y buscas transicionar hacia el cierre de forma positiva",
     "Cuando el cliente parece incomodo tras varias preguntas de implicación y necesitas reequilibrar la conversación",
     "Cuando buscas que el cliente valide internamente la solución antes de presentarla formalmente"
@@ -324,6 +324,23 @@
         "evidencia": "la correccion de voz-v04 le dio la misma etiqueta que su nodo gemelo preguntas_beneficio; esta dice lo mismo que el resumen (el cliente expresa el valor de resolver su problema) sin chocar"
       },
       "decision": "saneamiento continuo de la voz (ola v04, suplemento): etiqueta distinta de la de su gemelo, fiel al resumen del nodo",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-preguntas_need_payoff-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solución",
+      "texto_nuevo": "Cuando el cliente ya reconoce que tiene un problema serio que tú puedes resolver, pero aún no valora la solución",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "1790",
+        "frase": "Conversely, the best point is when you can meet the need."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

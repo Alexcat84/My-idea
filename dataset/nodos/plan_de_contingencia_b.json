@@ -28,7 +28,7 @@
     "Cuando el modelo de negocio actual muestra señales claras de inviabilidad futura",
     "Cuando existe un activo (tecnología, propiedad intelectual, equipo) que podría sobrevivir independientemente del negocio principal"
   ],
-  "etiqueta_arbol": "Pregúntate: Ya Pasó lo Peor",
+  "etiqueta_arbol": "Pregúntate Qué Harías Tras lo Peor",
   "correcciones": [
     {
       "id": "atribucion-133",
@@ -101,6 +101,20 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El negocio de cloud estaba en problemas, no en quiebra; el plan buscaba justamente separarlo sin quebrar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-plan_de_contingencia_b-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Pregúntate: Ya Pasó lo Peor",
+      "texto_nuevo": "Pregúntate Qué Harías Tras lo Peor",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v13)",
+        "evidencia": "'Ya pasó lo peor' afirma que lo peor quedó atrás, lo contrario del concepto (qué harías si lo peor ya hubiera ocurrido); la nueva etiqueta dice esa pregunta en seis palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

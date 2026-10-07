@@ -7,7 +7,7 @@
   "resumen_teorico": "Por defecto, la IA tiende a dar la respuesta 'promedio' más probable estadísticamente, lo que produce ideas genéricas y poco originales. Para obtener ideas verdaderamente novedosas es necesario empujar deliberadamente al modelo hacia respuestas de alta variación, por ejemplo asignándole personajes o escenarios inusuales (ej. 'cómo un superhéroe haría espresso') que fuerzan conexiones menos obvias. Para dar con buenas ideas novedosas probablemente hay que generar muchas malas, porque la mayoría de las ideas nuevas lo son; como los humanos son buenos filtrando baja calidad, generar muchas ideas 'raras' rápido y barato incrementa la probabilidad de encontrar algunas verdaderamente valiosas.",
   "pasos_accionables": [
     "Definir un rol o personaje inusual para la IA al pedir ideas (ej. 'eres un experto en resolver problemas de forma poco convencional')",
-    "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en el prompt",
+    "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en la instrucción",
     "Usar analogías o escenarios extremos (superhéroes, otras épocas, otras industrias) para forzar recombinaciones inesperadas",
     "Generar múltiples tandas con distintos marcos/personajes y comparar resultados",
     "Filtrar humanamente buscando la chispa de inspiración, no la solución final lista para usar"
@@ -71,6 +71,23 @@
       },
       "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
+    },
+    {
+      "id": "voz-prompting_alta_variacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en el prompt",
+      "texto_nuevo": "Pedir explícitamente ideas 'diferentes entre sí' y 'poco probables' en la instrucción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el prompt"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

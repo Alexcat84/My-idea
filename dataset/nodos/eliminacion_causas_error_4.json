@@ -6,14 +6,14 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "ECR es la forma en que cualquier persona que te ayuda en tu negocio te avisa, sin necesidad de proponer la solución, sobre algo que le impide hacer bien su trabajo: una herramienta que no funciona, poca luz, un proceso que no tiene sentido, etc. Puede activarse después de fijar la meta de cero errores o incluso antes, siempre que todos entiendan con claridad que la mejora es necesaria, trasladando la detección de obstáculos a quien está en el día a día. Cada aviso merece una respuesta rápida y un agradecimiento personal; si decides no actuar, esa decisión debe quedar justificada y revisada por alguien de más experiencia o confianza. Bien manejado, genera participación positiva sin volverse quejas destructivas, y sirve de base para reconocer periódicamente a quienes avisan.",
   "pasos_accionables": [
-    "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
+    "Crea un canal simple, con un formulario, para que quien te ayuda avise de causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
     "Envía un agradecimiento personal e inmediato a quien te avisa de un problema",
     "Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo",
     "Consigue lo necesario y actúa rápido para eliminar la causa",
     "Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla",
     "Confirma a cada persona la decisión tomada y, para estimular los avisos, considera un sorteo semanal al azar entre los avisos recibidos, tratando todos los avisos por igual"
   ],
-  "entregable_esperado": "Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.",
+  "entregable_esperado": "Sistema de eliminación de causas de error (ECR) funcionando: formulario, respuesta rápida, registro de causas señaladas y resueltas, y retroalimentación a quienes avisan.",
   "nodos_previos": [
     "cero_defectos",
     "accion_correctiva",
@@ -113,6 +113,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite hacerlo antes siempre que todos entiendan que la mejora es necesaria; el nodo pierde esa excepción.; Tras fijar Cero Defectos es el orden habitual del programa, así que no es inventado; lo que falla es que se pierde la excepción del libro (puede hacerse antes) y su única condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-eliminacion_causas_error_4-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea un canal simple, con un formulario, para que quien te ayuda reporte causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
+      "texto_nuevo": "Crea un canal simple, con un formulario, para que quien te ayuda avise de causas de error sin necesidad de proponer la solución, y ponlo en cada área de trabajo, a la vista de todos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte causas de error"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-eliminacion_causas_error_4-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.",
+      "texto_nuevo": "Sistema de eliminación de causas de error (ECR) funcionando: formulario, respuesta rápida, registro de causas señaladas y resueltas, y retroalimentación a quienes avisan.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sistema ECR",
+          "causas reportadas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

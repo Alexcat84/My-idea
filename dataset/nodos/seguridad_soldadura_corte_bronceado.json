@@ -12,9 +12,9 @@
     "Asignar vigías de fuego en áreas de riesgo de incendio",
     "Proveer equipo extintor de incendios de fácil acceso",
     "Limpiar contenedores usados de sustancias que puedan explotar, encenderse o producir vapores tóxicos antes de trabajo en caliente",
-    "Proveer PPE apropiado (protección ocular, ropa protectora) contra rayos de arco"
+    "Proveer equipo de protección personal apropiado (protección ocular, ropa protectora) contra rayos de arco"
   ],
-  "entregable_esperado": "Procedimiento de seguridad para soldadura implementado con registros de capacitación y checklist de cumplimiento.",
+  "entregable_esperado": "Procedimiento de seguridad para soldadura implementado con registros de capacitación y lista de verificación de cumplimiento.",
   "nodos_previos": [
     "participacion_trabajadores"
   ],
@@ -76,6 +76,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La enumeración pierde la ventilación adecuada de las áreas de soldadura y corte que el libro incluye.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-seguridad_soldadura_corte_bronceado-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proveer PPE apropiado (protección ocular, ropa protectora) contra rayos de arco",
+      "texto_nuevo": "Proveer equipo de protección personal apropiado (protección ocular, ropa protectora) contra rayos de arco",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "PPE"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seguridad_soldadura_corte_bronceado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Procedimiento de seguridad para soldadura implementado con registros de capacitación y checklist de cumplimiento.",
+      "texto_nuevo": "Procedimiento de seguridad para soldadura implementado con registros de capacitación y lista de verificación de cumplimiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

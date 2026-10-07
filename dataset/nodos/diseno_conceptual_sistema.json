@@ -7,14 +7,14 @@
   "resumen_teorico": "Es el esbozo de alto nivel de un sistema (o conjunto de sistemas) que expresa la estrategia para lograr las metas del negocio. Se construye primero desde los procesos de negocio, luego se agregan los flujos de datos (volumen, frecuencia, origen/destino) y se define qué operaciones serán automatizadas, manuales o mixtas, priorizando que la tecnología empodere a las personas en tareas de decisión y resolución de problemas.",
   "pasos_accionables": [
     "Generar varios diseños conceptuales distintos y, en cada uno, bocetar los procesos de negocio y las operaciones que se realizan",
-    "Definir los flujos de datos entrando y saliendo de cada operación (volumen, frecuencia, origen, destino)",
+    "Definir los flujos de datos que entran y salen de cada operación (volumen, frecuencia, origen, destino)",
     "Definir qué tipo de personas y cuántas se requieren para cada operación, y sus niveles de habilidad",
     "Decidir qué operaciones serán automatizadas, manuales o híbridas",
     "Evaluar la infraestructura tecnológica existente y buscar cómo construir sobre ella",
     "Crear diagramas esquemáticos simples (cubos, cilindros, flechas) para comunicar el diseño a audiencias amplias",
     "Recoger retroalimentación de usuarios, financiadores y constructores del sistema"
   ],
-  "entregable_esperado": "Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de stakeholders clave",
+  "entregable_esperado": "Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de los involucrados clave",
   "nodos_previos": [
     "creacion_estrategia_cadena_suministro",
     "arquitectura_tecnica_modular",
@@ -49,6 +49,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide generar varios diseños conceptuales distintos para luego elegir el mejor con la retroalimentación.; Mismo defecto: se pierden los diseños alternativos.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_conceptual_sistema-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir los flujos de datos entrando y saliendo de cada operación (volumen, frecuencia, origen, destino)",
+      "texto_nuevo": "Definir los flujos de datos que entran y salen de cada operación (volumen, frecuencia, origen, destino)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "entrando y saliendo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_conceptual_sistema-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de stakeholders clave",
+      "texto_nuevo": "Diagrama esquemático de alto nivel del sistema propuesto, validado con retroalimentación de los involucrados clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stakeholders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

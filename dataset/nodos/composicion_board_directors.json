@@ -5,14 +5,14 @@
   "fuente": "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso o por voto conjunto de ambas clases, donde decide la que tenga mayoría), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres fundador y director general, busca directores con más experiencia que sirvan de contrapeso si tiendes al exceso de optimismo o a perder el foco.",
   "pasos_accionables": [
-    "Definir el tamaño del board acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
+    "Definir el tamaño de la junta acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
     "Negociar el balance de asientos entre Directores Preferentes (inversionistas), Comunes (fundadores) y Mutuos, y quién tiene derecho a designar cada uno",
-    "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
-    "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, vesting de 2-4 años)",
-    "Evaluar los costos de largo plazo de incluir a más de un cofundador en el board frente a los beneficios inmediatos de tener aliados dentro de él",
-    "Ajustar la composición ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa"
+    "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión de la junta",
+    "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, periodo de consolidación de 2-4 años)",
+    "Evaluar los costos de largo plazo de incluir a más de un cofundador en la junta frente a los beneficios inmediatos de tener aliados dentro de ella",
+    "Ajustar la composición ideal de la junta (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa"
   ],
-  "entregable_esperado": "Estructura del board definida y documentada en el term sheet: número de asientos, tipo de cada uno (Preferente, Común, Mutuo), proceso de designación, y perfil de miembro independiente buscado",
+  "entregable_esperado": "Estructura de la junta definida y documentada en la hoja de términos: número de asientos, tipo de cada uno (Preferente, Común, Mutuo), proceso de designación, y perfil de miembro independiente buscado",
   "condiciones_activacion": [
     "Cuando la startup está formando o modificando su board de directores",
     "Al cerrar una ronda de financiamiento Serie A o posterior",
@@ -42,7 +42,7 @@
     "preferencia_de_liquidacion",
     "fundadores_en_junta_directiva"
   ],
-  "etiqueta_arbol": "Define Tu Board de Directores",
+  "etiqueta_arbol": "Define tu Junta de Directores",
   "fuentes_internas": [
     "Venture Deals - Brad Feld",
     "The Founder's Dilemmas - Wasserman, Noam"
@@ -97,6 +97,125 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Ninguno de los dos libros liga el observador a inversionistas menores: lo piden los VCs y otros inversionistas.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-composicion_board_directors-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define Tu Board de Directores",
+      "texto_nuevo": "Define tu Junta de Directores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el tamaño del board acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
+      "texto_nuevo": "Definir el tamaño de la junta acorde a la etapa de la empresa (3-5 asientos en etapa temprana, creciendo a 7-9 en etapa madura)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión del board",
+      "texto_nuevo": "Decidir si el CEO ocupa automáticamente un asiento Común, y si se otorgará un puesto de observador sin voto, con cautela, porque los observadores pueden no aportar e inclinar la discusión de la junta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, vesting de 2-4 años)",
+      "texto_nuevo": "Buscar un miembro independiente con experiencia relevante en la industria; establecer su compensación (0.25%-0.5% en opciones, periodo de consolidación de 2-4 años)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "vesting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar los costos de largo plazo de incluir a más de un cofundador en el board frente a los beneficios inmediatos de tener aliados dentro de él",
+      "texto_nuevo": "Evaluar los costos de largo plazo de incluir a más de un cofundador en la junta frente a los beneficios inmediatos de tener aliados dentro de ella",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el board",
+          "dentro de él"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajustar la composición ideal del board (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa",
+      "texto_nuevo": "Ajustar la composición ideal de la junta (tamaño, frecuencia de reuniones, experiencia de sus miembros) al perfil del CEO, buscando directores experimentados como contrapeso si el CEO fundador tiene poca experiencia previa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del board"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-composicion_board_directors-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estructura del board definida y documentada en el term sheet: número de asientos, tipo de cada uno (Preferente, Común, Mutuo), proceso de designación, y perfil de miembro independiente buscado",
+      "texto_nuevo": "Estructura de la junta definida y documentada en la hoja de términos: número de asientos, tipo de cada uno (Preferente, Común, Mutuo), proceso de designación, y perfil de miembro independiente buscado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Estructura del board",
+          "el term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

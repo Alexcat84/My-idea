@@ -7,7 +7,7 @@
   "resumen_teorico": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, probablemente no te estás esforzando lo suficiente, o puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable: haz lo posible por anticiparla y prevenirla, y construye además formas de detectarla y gestionarla rápido para minimizar la pérdida.",
   "pasos_accionables": [
     "Decide qué tasa de falla puedes costear comparando el costo de que algo falle contra el costo de prevenirlo.",
-    "Revisa si la ausencia de fallas reportadas significa que tu sistema es robusto o que hay fallas escondidas.",
+    "Revisa si la ausencia de fallas registradas significa que tu sistema es robusto o que hay fallas escondidas.",
     "Revisa cómo estás definiendo 'falla' para asegurarte de que las estás registrando de verdad.",
     "Construye formas de detectar y gestionar fallas rápido, en vez de perseguir eliminar todo el riesgo."
   ],
@@ -95,6 +95,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que si no fallamos probablemente no nos esforzamos lo suficiente; el nodo deja caer esa explicación.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-aceptacion_de_fallas_como_inevitables-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa si la ausencia de fallas reportadas significa que tu sistema es robusto o que hay fallas escondidas.",
+      "texto_nuevo": "Revisa si la ausencia de fallas registradas significa que tu sistema es robusto o que hay fallas escondidas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportadas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

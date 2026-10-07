@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identificar la línea de ventas/ingresos como punto de referencia (100%).",
     "Calcular el porcentaje que representa cada línea de costo respecto a las ventas.",
-    "Establecer metas de porcentaje-de-ventas para líneas clave (ej: gastos de venta no más del 12% de ventas)."
+    "Establecer metas de porcentaje sobre ventas para líneas clave (ej: gastos de venta no más del 12% de ventas)."
   ],
-  "entregable_esperado": "Un estado de resultados propio con análisis de porcentaje-de-ventas por línea de costo relevante.",
+  "entregable_esperado": "Un estado de resultados propio con análisis de porcentaje sobre ventas por línea de costo relevante.",
   "nodos_previos": [
     "pro_forma_vs_actuals",
     "fundamentos_inteligencia_financiera"
@@ -44,6 +44,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que así se puede saber por lo general (usually); el nodo lo vuelve certeza.; El libro pide vigilar el COGS o COS solo si es una fracción grande de las ventas y saber exactamente qué incluye; el nodo pierde la condición.; Mismo endurecimiento que la marca 0: 'usually' pasa a revelación segura.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-estructura_estado_resultados-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer metas de porcentaje-de-ventas para líneas clave (ej: gastos de venta no más del 12% de ventas).",
+      "texto_nuevo": "Establecer metas de porcentaje sobre ventas para líneas clave (ej: gastos de venta no más del 12% de ventas).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "porcentaje-de-ventas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estructura_estado_resultados-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un estado de resultados propio con análisis de porcentaje-de-ventas por línea de costo relevante.",
+      "texto_nuevo": "Un estado de resultados propio con análisis de porcentaje sobre ventas por línea de costo relevante.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "porcentaje-de-ventas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

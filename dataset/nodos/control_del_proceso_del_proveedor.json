@@ -7,16 +7,16 @@
   "resumen_teorico": "Un plan de control de proceso es un documento que el proveedor prepara resumiendo las actividades específicas que se llevarán a cabo durante la fabricación del producto, incluyendo técnicas de control estadístico de proceso (SPC) para prevenir defectos mediante la detección temprana de problemas. Junto a ese plan, la planificación conjunta con el proveedor abarca, entre otros elementos, tareas especiales, clasificación de seriedad de defectos y estandarización de estándares sensoriales y métodos de prueba entre proveedor y comprador.",
   "pasos_accionables": [
     "Solicitar al proveedor un plan escrito de control del proceso de manufactura",
-    "Incluir requisitos de SPC para detección temprana de defectos",
+    "Incluir requisitos de control estadístico de procesos (SPC) para detección temprana de defectos",
     "Definir tareas especiales y buenas prácticas de manufactura requeridas",
-    "Clasificar la seriedad de los defectos para priorizar esfuerzos",
+    "Clasificar la gravedad de los defectos para priorizar esfuerzos",
     "Establecer estándares sensoriales físicos cuando se requiera juicio humano",
     "Estandarizar métodos y condiciones de prueba entre proveedor y comprador",
     "Acordar el significado exacto de los requisitos de desempeño en las especificaciones",
     "Cuantificar requisitos de confiabilidad y mantenibilidad, evitando errores como aplicar la regla de multiplicación incorrectamente",
     "Establecer planes de muestreo, niveles de calidad (dejando claro que todo producto debe cumplir especificaciones), un sistema de trazabilidad de lotes y un sistema de respuesta oportuna a las señales de alarma por defectos"
   ],
-  "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
+  "entregable_esperado": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de control estadístico de procesos (SPC), clasificación de defectos y métodos de prueba estandarizados",
   "nodos_previos": [
     "planificacion_cadena_suministro",
     "design_for_six_sigma_dfss",
@@ -95,6 +95,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lista doce elementos estándar de la planificación conjunta; el resumen presenta unos pocos como si fueran todo su alcance.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-control_del_proceso_del_proveedor-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir requisitos de SPC para detección temprana de defectos",
+      "texto_nuevo": "Incluir requisitos de control estadístico de procesos (SPC) para detección temprana de defectos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "requisitos de SPC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_del_proceso_del_proveedor-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar la seriedad de los defectos para priorizar esfuerzos",
+      "texto_nuevo": "Clasificar la gravedad de los defectos para priorizar esfuerzos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "seriedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_del_proceso_del_proveedor-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de SPC, clasificación de defectos y métodos de prueba estandarizados",
+      "texto_nuevo": "Documento de plan de control de proceso aprobado por proveedor y comprador con criterios de control estadístico de procesos (SPC), clasificación de defectos y métodos de prueba estandarizados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "criterios de SPC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

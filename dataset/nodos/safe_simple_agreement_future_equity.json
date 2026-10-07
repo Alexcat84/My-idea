@@ -7,12 +7,12 @@
   "resumen_teorico": "El SAFE, creado por Y Combinator, es un instrumento sintético que combina características de equity y deuda sin ser técnicamente deuda: el inversionista compra efectivamente un warrant no valorado. Elimina problemas legales de insolvencia asociados a la deuda y features como intereses o fecha de vencimiento. Puede incluir cap, descuento y cláusula MFN (most favored nation), pero típicamente carece de derechos pro rata explícitos y de fecha de maduración. Esto último te quita el riesgo del vencimiento, pero si la empresa pasa apuros y no se comunica, le quita al inversionista un punto de apalancamiento para conversar.",
   "pasos_accionables": [
     "Evaluar si el SAFE es preferible a la deuda convertible para evitar riesgos de insolvencia técnica",
-    "Decidir si se incluye cap de valuación, descuento, o ambos (no ambos con warrants)",
-    "Determinar si se necesita añadir una cláusula MFN para proteger a inversionistas tempranos",
+    "Decidir si se incluye tope de valuación, descuento, o ambos (no ambos con warrants)",
+    "Determinar si se necesita añadir una cláusula de nación más favorecida para proteger a inversionistas tempranos",
     "Considerar agregar derechos pro rata explícitos si los inversionistas lo requieren, sabiendo que eso le resta simplicidad al documento estándar",
     "Involucrar a un abogado calificado para adaptar el documento estándar a las necesidades específicas"
   ],
-  "entregable_esperado": "Documento SAFE firmado con términos claros de cap/descuento y cláusulas adicionales negociadas",
+  "entregable_esperado": "Documento SAFE firmado con términos claros de tope de valoración/descuento y cláusulas adicionales negociadas",
   "nodos_previos": [
     "riesgo_fiduciario_insolvencia_deuda",
     "pro_rata_rights_deuda_convertible",
@@ -64,6 +64,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que agregar el pro rata resta a la idea de un documento simple y estándar; se cae ese costo.; Mismo costo perdido.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-safe_simple_agreement_future_equity-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir si se incluye cap de valuación, descuento, o ambos (no ambos con warrants)",
+      "texto_nuevo": "Decidir si se incluye tope de valuación, descuento, o ambos (no ambos con warrants)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cap de valuación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-safe_simple_agreement_future_equity-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si se necesita añadir una cláusula MFN para proteger a inversionistas tempranos",
+      "texto_nuevo": "Determinar si se necesita añadir una cláusula de nación más favorecida para proteger a inversionistas tempranos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "MFN"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-safe_simple_agreement_future_equity-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento SAFE firmado con términos claros de cap/descuento y cláusulas adicionales negociadas",
+      "texto_nuevo": "Documento SAFE firmado con términos claros de tope de valoración/descuento y cláusulas adicionales negociadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cap/descuento"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

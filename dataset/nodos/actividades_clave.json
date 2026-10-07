@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Determinar si el negocio requiere principalmente producción, resolución de problemas o gestión de plataforma",
     "Listar las actividades específicas necesarias para entregar la propuesta de valor",
-    "Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que soporta",
-    "Priorizar actividades core vs. actividades delegables a socios"
+    "Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que sostiene",
+    "Priorizar actividades esenciales vs. actividades delegables a socios"
   ],
   "entregable_esperado": "Lista de actividades clave categorizadas y vinculadas a otros bloques del modelo",
   "nodos_previos": [
@@ -33,5 +33,41 @@
   "etiqueta_arbol": "Define tus Actividades Clave",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-actividades_clave-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que soporta",
+      "texto_nuevo": "Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que sostiene",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "que soporta"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-actividades_clave-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Priorizar actividades core vs. actividades delegables a socios",
+      "texto_nuevo": "Priorizar actividades esenciales vs. actividades delegables a socios",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "actividades core"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

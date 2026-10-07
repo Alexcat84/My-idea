@@ -23,8 +23,26 @@
     "Cuando consideras lanzar una campaña o línea de productos verde.",
     "Si existe riesgo de greenwashing por falta de alineación real con la sostenibilidad."
   ],
-  "etiqueta_arbol": "Conecta Marketing con Sostenibilidad",
+  "etiqueta_arbol": "Conecta tu Mercadeo con la Sostenibilidad",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-identificacion_oportunidades_sostenibilidad_marketing-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conecta Marketing con Sostenibilidad",
+      "texto_nuevo": "Conecta tu Mercadeo con la Sostenibilidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Conecta Marketing con Sostenibilidad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

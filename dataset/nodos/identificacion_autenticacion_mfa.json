@@ -6,12 +6,12 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Consiste en verificar la identidad de un usuario, proceso o dispositivo como prerrequisito para permitir el acceso a recursos del sistema. La Autenticación Multifactor (MFA) es una mejora de seguridad clave que requiere que el usuario verifique su identidad combinando dos o más factores: algo que sabe (contraseña/PIN), algo que tiene (tarjeta inteligente/llave de seguridad) y algo que es (huella/rostro). Las contraseñas solas ya no son eficaces para proteger tus datos contra la mayoría de los atacantes.",
   "pasos_accionables": [
-    "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+    "Implementar autenticación multifactor (MFA) para acceso a cuentas privilegiadas y no privilegiadas",
     "Definir reglas de contraseñas para la organización",
     "Enviar contraseñas usando formas criptográficamente protegidas (correo encriptado, gestores de contraseñas)",
     "Mantener y actualizar una lista de contraseñas comprometidas o comunes para verificación"
   ],
-  "entregable_esperado": "Sistema de MFA implementado para el acceso a cuentas privilegiadas y no privilegiadas y política de gestión de contraseñas documentada",
+  "entregable_esperado": "Sistema de autenticación multifactor (MFA) implementado para el acceso a cuentas privilegiadas y no privilegiadas y política de gestión de contraseñas documentada",
   "nodos_previos": [
     "control_acceso_least_privilege",
     "gestion_configuracion_least_functionality"
@@ -91,6 +91,39 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-identificacion_autenticacion_mfa-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar MFA para acceso a cuentas privilegiadas y no privilegiadas",
+      "texto_nuevo": "Implementar autenticación multifactor (MFA) para acceso a cuentas privilegiadas y no privilegiadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Implementar MFA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-identificacion_autenticacion_mfa-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de MFA implementado para el acceso a cuentas privilegiadas y no privilegiadas y política de gestión de contraseñas documentada",
+      "texto_nuevo": "Sistema de autenticación multifactor (MFA) implementado para el acceso a cuentas privilegiadas y no privilegiadas y política de gestión de contraseñas documentada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sistema de MFA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

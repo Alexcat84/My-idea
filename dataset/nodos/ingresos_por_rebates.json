@@ -6,12 +6,12 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "El franquiciador puede negociar rebates (descuentos/comisiones) con proveedores que venden a franquiciados, siempre que se divulguen en el Item 8 del FDD. Esto puede generar fricción, ya que los franquiciados sienten que ellos generaron ese rebate con sus compras. Una buena práctica es reinvertir estos rebates en el fondo de marketing del sistema en vez de retenerlos completamente.",
   "pasos_accionables": [
-    "Negociar acuerdos de rebate con proveedores clave",
-    "Divulgar estos acuerdos en el Item 8 del FDD",
-    "Decidir política de distribución de rebates (retención, devolución pro rata, o fondo de marketing)",
+    "Negociar acuerdos de bonificación con proveedores clave",
+    "Divulgar estos acuerdos en el Ítem 8 del documento de divulgación de la franquicia (FDD)",
+    "Decidir política de distribución de bonificaciones (retención, devolución pro rata, o fondo de marketing)",
     "Comunicar transparentemente la política a los franquiciados"
   ],
-  "entregable_esperado": "Política escrita de manejo de rebates integrada en el FDD",
+  "entregable_esperado": "Política escrita de manejo de bonificaciones integrada en el documento de divulgación de la franquicia (FDD)",
   "nodos_previos": [
     "decision_royalties_vs_venta_producto"
   ],
@@ -22,8 +22,95 @@
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
     "Cuando existen acuerdos comerciales con proveedores que benefician al franquiciador"
   ],
-  "etiqueta_arbol": "Gestiona tus Rebates con Transparencia",
+  "etiqueta_arbol": "Gestiona tus Bonificaciones con Transparencia",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-ingresos_por_rebates-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Gestiona tus Rebates con Transparencia",
+      "texto_nuevo": "Gestiona tus Bonificaciones con Transparencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Rebates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ingresos_por_rebates-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar acuerdos de rebate con proveedores clave",
+      "texto_nuevo": "Negociar acuerdos de bonificación con proveedores clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "acuerdos de rebate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ingresos_por_rebates-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Divulgar estos acuerdos en el Item 8 del FDD",
+      "texto_nuevo": "Divulgar estos acuerdos en el Ítem 8 del documento de divulgación de la franquicia (FDD)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Item 8",
+          "del FDD"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ingresos_por_rebates-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir política de distribución de rebates (retención, devolución pro rata, o fondo de marketing)",
+      "texto_nuevo": "Decidir política de distribución de bonificaciones (retención, devolución pro rata, o fondo de marketing)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "distribución de rebates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ingresos_por_rebates-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Política escrita de manejo de rebates integrada en el FDD",
+      "texto_nuevo": "Política escrita de manejo de bonificaciones integrada en el documento de divulgación de la franquicia (FDD)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "manejo de rebates",
+          "en el FDD"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

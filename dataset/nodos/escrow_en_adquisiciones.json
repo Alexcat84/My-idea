@@ -6,13 +6,13 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "El escrow es una porción del precio de compra (típicamente 10-20%) que el comprador retiene por un período (12-24 meses) para cubrir posibles incumplimientos de las reps y warranties. Es habitual que sea el único remedio para dichos incumplimientos, con excepciones ('carve-outs') como fraude, capitalización, impuestos y propiedad intelectual. Los términos del escrow afectan directamente el valor efectivo que recibe el vendedor.",
   "pasos_accionables": [
-    "Definir en el LOI el porcentaje del precio de compra que irá a escrow.",
-    "Negociar la duración del escrow (lo habitual es entre 12 y 24 meses).",
-    "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
-    "Evaluar la forma del escrow (cash vs stock) y su riesgo si es en acciones volátiles.",
-    "Evitar aceptar cláusulas vagas como 'términos estándar de escrow'."
+    "Definir en la carta de intención el porcentaje del precio de compra que irá a depósito en garantía.",
+    "Negociar la duración del depósito en garantía (lo habitual es entre 12 y 24 meses).",
+    "Establecer las excepciones (fraude, impuestos, propiedad intelectual, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
+    "Evaluar la forma del depósito en garantía (efectivo o acciones) y su riesgo si es en acciones volátiles.",
+    "Evitar aceptar cláusulas vagas como 'términos estándar del depósito en garantía'."
   ],
-  "entregable_esperado": "Términos de escrow detallados y acordados en el LOI, incluyendo porcentaje, duración y carve-outs.",
+  "entregable_esperado": "Términos del depósito en garantía detallados y acordados en la carta de intención, incluyendo porcentaje, duración y excepciones.",
   "nodos_previos": [
     "reps_warranties_indemnizacion",
     "forma_de_contraprestacion_en_adquisicion"
@@ -61,6 +61,112 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro fija el tope de los carve-outs en el valor total de la operación; el paso lo deja abierto.; Mismo defecto: el tope queda sin la referencia que da el libro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir en el LOI el porcentaje del precio de compra que irá a escrow.",
+      "texto_nuevo": "Definir en la carta de intención el porcentaje del precio de compra que irá a depósito en garantía.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el LOI",
+          "a escrow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar la duración del escrow (lo habitual es entre 12 y 24 meses).",
+      "texto_nuevo": "Negociar la duración del depósito en garantía (lo habitual es entre 12 y 24 meses).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "duración del escrow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer los carve-outs (fraude, impuestos, IP, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
+      "texto_nuevo": "Establecer las excepciones (fraude, impuestos, propiedad intelectual, capitalización) y su tope máximo, que no debería superar el valor total de la operación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los carve-outs",
+          "IP,"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar la forma del escrow (cash vs stock) y su riesgo si es en acciones volátiles.",
+      "texto_nuevo": "Evaluar la forma del depósito en garantía (efectivo o acciones) y su riesgo si es en acciones volátiles.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forma del escrow",
+          "(cash vs stock)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar aceptar cláusulas vagas como 'términos estándar de escrow'.",
+      "texto_nuevo": "Evitar aceptar cláusulas vagas como 'términos estándar del depósito en garantía'.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "términos estándar de escrow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-escrow_en_adquisiciones-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Términos de escrow detallados y acordados en el LOI, incluyendo porcentaje, duración y carve-outs.",
+      "texto_nuevo": "Términos del depósito en garantía detallados y acordados en la carta de intención, incluyendo porcentaje, duración y excepciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Términos de escrow",
+          "en el LOI",
+          "carve-outs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

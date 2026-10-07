@@ -28,7 +28,7 @@
     "cuando no puedes explicar que rango de probabilidad quisiste decir con media",
     "cuando tu lista de riesgos aparenta rigor pero nadie podría verificar los números detrás"
   ],
-  "etiqueta_arbol": "Cuán Probable y Cuánto Dolería",
+  "etiqueta_arbol": "Precisa la Probabilidad y el Impacto",
   "correcciones": [
     {
       "id": "fidelidad-t5-037",
@@ -214,6 +214,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no dice que un riesgo probable de daño mínimo pueda esperar; solo pide atención aparte para los de cola larga.; Mismo defecto; el libro deja el reparto de severidad a la política de la organización. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-cuan_probable_y_cuanto_doleria-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuán Probable y Cuánto Dolería",
+      "texto_nuevo": "Precisa la Probabilidad y el Impacto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuán Probable y Cuánto Dolería"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

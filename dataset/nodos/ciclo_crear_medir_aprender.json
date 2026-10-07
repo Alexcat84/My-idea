@@ -7,12 +7,12 @@
   "resumen_teorico": "Es el núcleo del modelo Lean Startup: un ciclo iterativo en el que se construye un producto mínimo (Build), se mide la reacción de los clientes con datos cualitativos y cuantitativos (Measure), y se extrae aprendizaje validado (Learn) para decidir el siguiente paso. Aunque se ejecuta en ese orden, la planificación se hace al revés: primero se define qué se necesita aprender, luego qué métricas lo demostrarán, y finalmente qué producto mínimo permite obtener esa medición. El objetivo es minimizar el tiempo total de una vuelta completa del ciclo.",
   "pasos_accionables": [
     "Definir qué se necesita aprender antes de construir nada (partir del final del ciclo)",
-    "Determinar qué métricas de innovación accounting demostrarán ese aprendizaje",
+    "Determinar qué métricas de contabilidad de la innovación demostrarán ese aprendizaje",
     "Construir el producto mínimo necesario para generar esa medición",
     "Lanzar, medir resultados reales de clientes y extraer aprendizaje validado",
     "Repetir el ciclo ajustando la estrategia según lo aprendido"
   ],
-  "entregable_esperado": "Un ciclo completo documentado de Build-Measure-Learn con hipótesis, métricas definidas y aprendizaje validado registrado",
+  "entregable_esperado": "Un ciclo completo documentado de Construir-Medir-Aprender con hipótesis, métricas definidas y aprendizaje validado registrado",
   "nodos_previos": [
     "producto_minimo_viable",
     "hipotesis_valor_crecimiento",
@@ -43,6 +43,39 @@
         "evidencia": "Q023-030: El ciclo Crear-Medir-Aprender consiste en probar un producto minimo con clientes para obtener aprendizaje validado, que es validacion y no operacion de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "voz-ciclo_crear_medir_aprender-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar qué métricas de innovación accounting demostrarán ese aprendizaje",
+      "texto_nuevo": "Determinar qué métricas de contabilidad de la innovación demostrarán ese aprendizaje",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "innovación accounting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ciclo_crear_medir_aprender-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un ciclo completo documentado de Build-Measure-Learn con hipótesis, métricas definidas y aprendizaje validado registrado",
+      "texto_nuevo": "Un ciclo completo documentado de Construir-Medir-Aprender con hipótesis, métricas definidas y aprendizaje validado registrado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Build-Measure-Learn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Las decisiones de exit se complican cuando los cofundadores tienen diferentes tolerancias al riesgo o motivaciones (riqueza vs. control). Algunos preferirán tomar una oferta segura mientras otros querrán esperar por más valor. Splits de equity desiguales, establecidos tempranamente, pueden generar distintos niveles de deseo de salir. Incluso empleados clave no fundadores con paquetes de compensación no alineados pueden bloquear una adquisición.",
   "pasos_accionables": [
-    "Mapear las motivaciones individuales de cada cofundador (riqueza, control, balance vida-trabajo)",
-    "Evaluar cómo el equity split actual influye en el deseo de cada fundador de vender o esperar",
+    "Mapear las motivaciones individuales de cada cofundador (riqueza, control, equilibrio entre vida y trabajo)",
+    "Evaluar cómo el reparto de acciones actual influye en el deseo de cada fundador de vender o esperar",
     "Identificar empleados clave cuyos contratos de compensación podrían complicar una venta",
     "Facilitar conversaciones explícitas sobre tolerancia al riesgo antes de que llegue una oferta real",
     "Establecer mecanismos de decisión para resolver desacuerdos sobre la venta"
   ],
-  "entregable_esperado": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos del exit.",
+  "entregable_esperado": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos de la venta.",
   "nodos_previos": [
     "criterios_equity_split",
     "decision_de_vender_startup"
@@ -24,7 +24,7 @@
     "Cuando el equipo fundador enfrenta una oferta de adquisición y no hay consenso",
     "Si existen asimetrías significativas de equity entre cofundadores"
   ],
-  "etiqueta_arbol": "Alinea Motivaciones antes del Exit",
+  "etiqueta_arbol": "Alinea Motivaciones antes de Vender",
   "correcciones": [
     {
       "id": "fidelidad-t4-037",
@@ -70,6 +70,72 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-divergencia_de_motivaciones_en_exit-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Alinea Motivaciones antes del Exit",
+      "texto_nuevo": "Alinea Motivaciones antes de Vender",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del Exit"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-divergencia_de_motivaciones_en_exit-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear las motivaciones individuales de cada cofundador (riqueza, control, balance vida-trabajo)",
+      "texto_nuevo": "Mapear las motivaciones individuales de cada cofundador (riqueza, control, equilibrio entre vida y trabajo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "balance vida-trabajo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-divergencia_de_motivaciones_en_exit-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar cómo el equity split actual influye en el deseo de cada fundador de vender o esperar",
+      "texto_nuevo": "Evaluar cómo el reparto de acciones actual influye en el deseo de cada fundador de vender o esperar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity split"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-divergencia_de_motivaciones_en_exit-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos del exit.",
+      "texto_nuevo": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos de la venta.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del exit"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

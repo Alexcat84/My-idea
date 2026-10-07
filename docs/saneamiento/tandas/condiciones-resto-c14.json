@@ -1,0 +1,74 @@
+[
+ {
+  "id": "condiciones-resto-curva_atricion_optima-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "curva_atricion_optima",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si cancelas proyectos tarde con frecuencia, después de la etapa 3, señal de que los evaluaste mal desde el principio",
+  "texto_nuevo": "Si cancelas proyectos tarde con frecuencia, después de la etapa 3",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "6731",
+   "frase": "computes the percentage of projects killed after Gate 3 ... as a negative metric"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-desarrollo_posicionamiento_producto-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "desarrollo_posicionamiento_producto",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Cuando se ha completado la validación de clientes y se prepara la fase de creación de clientes",
+  "texto_nuevo": "Cuando, dentro de la validación de clientes, ya se tienen los resultados de las pruebas con clientes y se prepara la fase de creación de clientes",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "12385-12388",
+   "frase": "Customer Validation, Phase Three: Develop Product and Company Positioning"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-preguntas_need_payoff-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "preguntas_need_payoff",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solución",
+  "texto_nuevo": "Cuando el cliente ya reconoce que tiene un problema serio que tú puedes resolver, pero aún no valora la solución",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "books/General/ventas/SPIN Selling - Neil Rackham.txt",
+   "lineas": "1790",
+   "frase": "Conversely, the best point is when you can meet the need."
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-unique_link_tracking-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "unique_link_tracking",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Útil en industrias donde construir un MVP es difícil, como bienes industriales o dispositivos médicos",
+  "texto_nuevo": "Útil en cualquier sector, y sobre todo en industrias donde construir un MVP es difícil, como bienes industriales o dispositivos médicos",
+  "cita": {
+   "libro": "Value Proposition Design",
+   "fichero": "txt/Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
+   "lineas": "8253",
+   "frase": "This works anywhere but is particularly interesting in industries where building MVPs is difficult"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c14): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

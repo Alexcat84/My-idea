@@ -6,14 +6,14 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Retener a un cliente cuesta entre 5 y 10 veces menos que adquirir uno nuevo, pero ninguna táctica funciona si antes no cumples lo prometido con un gran producto y un gran servicio. Sobre esa base, conviene probar tácticas de bajo costo durante el customer discovery: programas de lealtad (su impacto tarda en medirse), llamadas de seguimiento, encuestas de satisfacción, boletines de producto y monitoreo de quejas. Donde sea posible, porque al principio hay pocos clientes, cada táctica debe evaluarse por su costo y retorno individual, con A/B testing de incentivos y mensajes. Identifica a tus clientes más leales mediante umbrales de gasto o compra, y diséñales un onboarding especial con beneficios exclusivos, comunicando el logro de ese nivel como un hito, no como una simple transacción. Organiza todo por cohortes para saber quién se queda, quién se va y por qué, y usa esos datos para justificar inversión en experiencia postventa frente a marketing de adquisición.",
   "pasos_accionables": [
-    "Diseña llamadas de seguimiento y encuestas de satisfacción, y mide la reducción de churn que generan",
+    "Diseña llamadas de seguimiento y encuestas de satisfacción, y mide la reducción de la pérdida de clientes que generan",
     "Define umbrales de gasto o compra que activen recompensas y detecten a tus clientes más leales",
     "Crea un paquete de bienvenida u onboarding especial con beneficios exclusivos para ese segmento y comunica el logro como un hito celebrado",
-    "Monitorea el costo y ROI de cada táctica de retención por separado, probando distintos incentivos y mensajes",
-    "Organiza tus métricas de retención por cohortes y calcula tu CAC frente al LTV",
+    "Monitorea el costo y el retorno de la inversión de cada táctica de retención por separado, probando distintos incentivos y mensajes",
+    "Organiza tus métricas de retención por cohortes y calcula tu costo de adquirir un cliente frente al valor que te deja a lo largo de su relación contigo",
     "Simula el impacto en utilidades de mejorar la retención unos puntos porcentuales para justificar invertir en postventa"
   ],
-  "entregable_esperado": "Un plan de hipótesis de retención con tácticas de bajo costo testeadas, programas activos con métricas de ROI y participación, y datos de cohortes documentados en el business model canvas",
+  "entregable_esperado": "Un plan de hipótesis de retención con tácticas de bajo costo probadas, programas activos con métricas de retorno de la inversión y participación, y datos de cohortes documentados en el lienzo del modelo de negocio",
   "nodos_previos": [
     "get_customers_funnel",
     "customer_discovery",
@@ -119,6 +119,76 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide medir costo y retorno de cada programa por separado solo donde sea posible, porque es pronto y hay pocos clientes; el resumen lo vuelve exigencia sin esa condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-keep_customers_strategy-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña llamadas de seguimiento y encuestas de satisfacción, y mide la reducción de churn que generan",
+      "texto_nuevo": "Diseña llamadas de seguimiento y encuestas de satisfacción, y mide la reducción de la pérdida de clientes que generan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reducción de churn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-keep_customers_strategy-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorea el costo y ROI de cada táctica de retención por separado, probando distintos incentivos y mensajes",
+      "texto_nuevo": "Monitorea el costo y el retorno de la inversión de cada táctica de retención por separado, probando distintos incentivos y mensajes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ROI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-keep_customers_strategy-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organiza tus métricas de retención por cohortes y calcula tu CAC frente al LTV",
+      "texto_nuevo": "Organiza tus métricas de retención por cohortes y calcula tu costo de adquirir un cliente frente al valor que te deja a lo largo de su relación contigo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CAC",
+          "LTV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-keep_customers_strategy-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de hipótesis de retención con tácticas de bajo costo testeadas, programas activos con métricas de ROI y participación, y datos de cohortes documentados en el business model canvas",
+      "texto_nuevo": "Un plan de hipótesis de retención con tácticas de bajo costo probadas, programas activos con métricas de retorno de la inversión y participación, y datos de cohortes documentados en el lienzo del modelo de negocio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testeadas",
+          "ROI",
+          "business model canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

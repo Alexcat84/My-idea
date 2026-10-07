@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Evaluar el nivel de riesgo percibido por el cliente al comprar tu producto/servicio",
     "Diseñar una política de devolución o garantía que elimine ese riesgo específico",
-    "Comunicar la garantía nuevamente en la fase Affirm, no solo en el punto de venta",
+    "Comunicar la garantía nuevamente en la fase de reafirmación, no solo en el punto de venta",
     "Medir tasas reales de devolución/abuso antes de asumir que la política será explotada",
     "Usar la garantía como mensaje de marketing de confianza, no solo como política legal"
   ],
-  "entregable_esperado": "Una política de garantía o devolución documentada y comunicada activamente post-compra",
+  "entregable_esperado": "Una política de garantía o devolución documentada y comunicada activamente poscompra",
   "nodos_previos": [
     "fase_affirm_buyers_remorse"
   ],
@@ -69,6 +69,37 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-garantia_devolucion_dinero-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunicar la garantía nuevamente en la fase Affirm, no solo en el punto de venta",
+      "texto_nuevo": "Comunicar la garantía nuevamente en la fase de reafirmación, no solo en el punto de venta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fase Affirm"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-garantia_devolucion_dinero-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una política de garantía o devolución documentada y comunicada activamente post-compra",
+      "texto_nuevo": "Una política de garantía o devolución documentada y comunicada activamente poscompra",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v13)",
+        "evidencia": "El prefijo pos(t)- se escribe unido a la palabra, sin guion; \"poscompra\" dice exactamente lo mismo."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

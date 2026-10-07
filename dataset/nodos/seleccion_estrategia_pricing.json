@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Determinar el tipo de mercado (nuevo, existente o resegmentado) para elegir el modelo de precio adecuado",
     "Comparar los precios de la competencia directa",
-    "Identificar si tu producto entrega valor único para aplicar value pricing, o si compite en un mercado existente para aplicar competitive pricing",
-    "Evaluar si tu modelo de negocio permite ingresos recurrentes (suscripción, razor/blade, leasing) o si conviene una estrategia de portfolio pricing con varios productos",
+    "Identificar si tu producto entrega valor único para aplicar precios basados en el valor, o si compite en un mercado existente para aplicar precios según la competencia",
+    "Evaluar si tu modelo de negocio permite ingresos recurrentes (suscripción, maquinilla y cuchillas, leasing) o si conviene una estrategia de precios por cartera con varios productos",
     "Si vendes B2B, calcular el Costo Total de Propiedad (TCO) y el Retorno de Inversión (ROI) esperado por el cliente",
-    "Validar el precio o la hipótesis de pricing con clientes reales antes de fijarlo definitivamente"
+    "Validar el precio o la hipótesis de precio con clientes reales antes de fijarlo definitivamente"
   ],
-  "entregable_esperado": "Hipótesis de modelo de pricing documentada y justificada según el tipo de mercado, la competencia y el valor entregado, lista para validar con clientes.",
+  "entregable_esperado": "Hipótesis de modelo de precios documentada y justificada según el tipo de mercado, la competencia y el valor entregado, lista para validar con clientes.",
   "nodos_previos": [
     "hipotesis_propuesta_de_valor_producto",
     "resegmentacion_mercado_nicho_bajo_costo",
@@ -69,6 +69,75 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Añade un sexto factor (compras repetidas) a los cinco que da el libro.; El libro presenta los modelos como opciones entre las que elegir; no dice que se puedan combinar.; Las compras repetidas no están entre los factores de un buen modelo de precio que enumera el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-seleccion_estrategia_pricing-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar si tu producto entrega valor único para aplicar value pricing, o si compite en un mercado existente para aplicar competitive pricing",
+      "texto_nuevo": "Identificar si tu producto entrega valor único para aplicar precios basados en el valor, o si compite en un mercado existente para aplicar precios según la competencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "value pricing",
+          "competitive pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_estrategia_pricing-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar si tu modelo de negocio permite ingresos recurrentes (suscripción, razor/blade, leasing) o si conviene una estrategia de portfolio pricing con varios productos",
+      "texto_nuevo": "Evaluar si tu modelo de negocio permite ingresos recurrentes (suscripción, maquinilla y cuchillas, leasing) o si conviene una estrategia de precios por cartera con varios productos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "razor/blade",
+          "portfolio pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_estrategia_pricing-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Validar el precio o la hipótesis de pricing con clientes reales antes de fijarlo definitivamente",
+      "texto_nuevo": "Validar el precio o la hipótesis de precio con clientes reales antes de fijarlo definitivamente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_estrategia_pricing-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hipótesis de modelo de pricing documentada y justificada según el tipo de mercado, la competencia y el valor entregado, lista para validar con clientes.",
+      "texto_nuevo": "Hipótesis de modelo de precios documentada y justificada según el tipo de mercado, la competencia y el valor entregado, lista para validar con clientes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

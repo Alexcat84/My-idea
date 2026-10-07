@@ -26,7 +26,7 @@
     "cuando confundes prever lo malo con ser negativo",
     "cuando cruzas los dedos en vez de planear para lo que puede fallar"
   ],
-  "etiqueta_arbol": "Gestionar el Riesgo Es de Adultos",
+  "etiqueta_arbol": "Gestiona el Riesgo como un Adulto",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
   ],
@@ -119,6 +119,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-gestionar_el_riesgo_es_de_adultos-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Gestionar el Riesgo Es de Adultos",
+      "texto_nuevo": "Gestiona el Riesgo como un Adulto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Gestionar",
+          "Es de Adultos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

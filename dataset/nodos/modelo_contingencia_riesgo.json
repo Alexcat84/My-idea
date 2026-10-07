@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "En vez de seguir una lista fija de actividades tipo SOP (procedimiento operativo estándar), el equipo del proyecto parte de un lienzo en blanco, identifica las incertidumbres clave, señala los supuestos críticos con consecuencias económicas, y determina qué información se necesita para validarlos. Esto define las actividades y entregables específicos de cada proyecto, evitando trabajo innecesario.",
   "pasos_accionables": [
-    "Identificar las incertidumbres y desconocidos clave del proyecto",
+    "Identificar las incertidumbres e incógnitas clave del proyecto",
     "Señalar los supuestos críticos que tienen consecuencias económicas",
     "Determinar qué información se necesita para validar o refutar esos supuestos",
     "Definir las actividades específicas del proyecto para cerrar esas brechas de conocimiento",
-    "Presentar el plan de acción personalizado en cada gate para aprobación de recursos"
+    "Presentar el plan de acción personalizado en cada punto de decisión para aprobación de recursos"
   ],
   "entregable_esperado": "Un plan de acción personalizado del proyecto (no genérico) que identifique supuestos críticos, incertidumbres y actividades específicas para cada etapa",
   "nodos_previos": [
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Parte del Riesgo, No del Guion",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-modelo_contingencia_riesgo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar las incertidumbres y desconocidos clave del proyecto",
+      "texto_nuevo": "Identificar las incertidumbres e incógnitas clave del proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "desconocidos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_contingencia_riesgo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presentar el plan de acción personalizado en cada gate para aprobación de recursos",
+      "texto_nuevo": "Presentar el plan de acción personalizado en cada punto de decisión para aprobación de recursos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

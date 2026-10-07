@@ -34,7 +34,7 @@
     "Cuando el fundador considera dejar el rol operativo de la empresa",
     "Cuando el consejo directivo debate entre candidatos internos y externos"
   ],
-  "etiqueta_arbol": "Elige a tu Próximo CEO",
+  "etiqueta_arbol": "Elige a tu Próximo Director General",
   "correcciones": [
     {
       "id": "fidelidad-t8-042",
@@ -337,6 +337,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-planificacion_sucesion_ceo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elige a tu Próximo CEO",
+      "texto_nuevo": "Elige a tu Próximo Director General",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CEO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

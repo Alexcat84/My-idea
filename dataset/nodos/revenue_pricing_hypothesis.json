@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Calcular número esperado de clientes desde hipótesis de mercado y canal",
     "Restar costos de canal para obtener ingreso neto real",
-    "Seleccionar modelo de pricing adecuado (valor, competitivo, volumen, portfolio, razor-blade, suscripción, leasing)",
-    "Calcular TCO (costo total de propiedad) para ventas B2B",
-    "Preparar un ROI hipotético para presentar a clientes corporativos"
+    "Seleccionar modelo de precios adecuado (valor, competitivo, volumen, cartera, afeitadora y repuestos, suscripción, leasing)",
+    "Calcular TCO (costo total de propiedad) para ventas entre empresas",
+    "Preparar un retorno de la inversión (ROI) hipotético para presentar a clientes corporativos"
   ],
   "entregable_esperado": "Estimación aproximada de ingresos con volumen y precio, y un cálculo rápido de si el negocio vale la pena, sin precisión contable todavía",
   "nodos_previos": [
@@ -48,6 +48,59 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide en esta etapa un cálculo aproximado, no un ejercicio contable, solo para decidir si pasar a validación.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-revenue_pricing_hypothesis-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar modelo de pricing adecuado (valor, competitivo, volumen, portfolio, razor-blade, suscripción, leasing)",
+      "texto_nuevo": "Seleccionar modelo de precios adecuado (valor, competitivo, volumen, cartera, afeitadora y repuestos, suscripción, leasing)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pricing",
+          "portfolio",
+          "razor-blade"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-revenue_pricing_hypothesis-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular TCO (costo total de propiedad) para ventas B2B",
+      "texto_nuevo": "Calcular TCO (costo total de propiedad) para ventas entre empresas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "B2B"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-revenue_pricing_hypothesis-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preparar un ROI hipotético para presentar a clientes corporativos",
+      "texto_nuevo": "Preparar un retorno de la inversión (ROI) hipotético para presentar a clientes corporativos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un ROI hipotético"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -23,8 +23,26 @@
     "Cuando empiezas a poner en marcha un programa de cumplimiento de seguridad.",
     "Cuando incorporas equipo, material o un proceso nuevo en tu negocio."
   ],
-  "etiqueta_arbol": "Revisa qué Normas OSHA Aplican",
+  "etiqueta_arbol": "Revisa qué Normas de Seguridad Aplican",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-revision_aplicabilidad_estandares_osha-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa qué Normas OSHA Aplican",
+      "texto_nuevo": "Revisa qué Normas de Seguridad Aplican",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "OSHA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

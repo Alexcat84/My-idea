@@ -30,7 +30,7 @@
     "cuando te censuras al pensar en riesgos porque suenan pesimistas o exagerados",
     "cuando no sabes distinguir cuáles riesgos merecen acción y cuáles puedes dejar pasar por ahora"
   ],
-  "etiqueta_arbol": "Lista de lo Que Puede Fallar",
+  "etiqueta_arbol": "Enumera lo Que Puede Fallar",
   "correcciones": [
     {
       "id": "fidelidad-t5-060",
@@ -144,6 +144,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-haz_tu_lista_de_lo_que_puede_fallar-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de lo Que Puede Fallar",
+      "texto_nuevo": "Enumera lo Que Puede Fallar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Lista de"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

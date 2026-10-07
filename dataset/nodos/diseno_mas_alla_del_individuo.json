@@ -7,11 +7,11 @@
   "resumen_teorico": "Entender al usuario individual no basta; el diseño contemporáneo requiere comprender cómo interactúan los grupos entre sí y cómo emergen efectos colectivos (smart mobs, economías virtuales, comunidades online). El todo es mayor que la suma de sus partes. Herramientas como el análisis de redes y la etnografía en video ayudan a captar estas dinámicas que las personas no pueden reportar con precisión por sí mismas (memoria falible, sesgo de autopercepción).",
   "pasos_accionables": [
     "Mapear las interacciones entre individuos y grupos usando análisis de redes",
-    "Usar etnografía en video para capturar comportamiento grupal real, no reportado",
-    "Considerar diferencias culturales al extrapolar insights entre contextos distintos",
+    "Usar etnografía en video para capturar comportamiento grupal real, no declarado",
+    "Considerar diferencias culturales al extrapolar hallazgos entre contextos distintos",
     "Evaluar el diseño no solo a nivel de usuario individual sino de sistema social completo"
   ],
-  "entregable_esperado": "Un diagrama de red o mapa de interacciones grupales que informe decisiones de diseño de espacio, sistema o servicio.",
+  "entregable_esperado": "Un diagrama de red o mapa de interacciones grupales que oriente decisiones de diseño de espacio, sistema o servicio.",
   "nodos_previos": [
     "empatia_capas_de_comprension"
   ],
@@ -26,5 +26,57 @@
   "etiqueta_arbol": "Piensa en Grupos No Individuos",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-diseno_mas_alla_del_individuo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar etnografía en video para capturar comportamiento grupal real, no reportado",
+      "texto_nuevo": "Usar etnografía en video para capturar comportamiento grupal real, no declarado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_mas_alla_del_individuo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar diferencias culturales al extrapolar insights entre contextos distintos",
+      "texto_nuevo": "Considerar diferencias culturales al extrapolar hallazgos entre contextos distintos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_mas_alla_del_individuo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un diagrama de red o mapa de interacciones grupales que informe decisiones de diseño de espacio, sistema o servicio.",
+      "texto_nuevo": "Un diagrama de red o mapa de interacciones grupales que oriente decisiones de diseño de espacio, sistema o servicio.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "informe"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

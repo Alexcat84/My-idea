@@ -7,16 +7,16 @@
   "resumen_teorico": "Construir comunidad implica invertir en las conexiones entre clientes, fomentando relaciones que ayuden a atraer más usuarios de forma orgánica. Requiere una misión clara que dé sentido de pertenencia, apertura para incorporar feedback de la comunidad en el producto, espacios para que los miembros se conecten entre sí (no solo con la empresa), y mantenimiento constante de la calidad para evitar la dilución con el crecimiento.",
   "pasos_accionables": [
     "Definir una misión clara y significativa que la comunidad pueda adoptar como propia",
-    "Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline",
-    "Crear espacios de meta-discusión donde los usuarios hablen sobre la comunidad misma",
-    "Reconocer y agradecer personalmente a los evangelistas tempranos (emails, regalos, eventos)",
+    "Aprovechar una audiencia existente (blog, redes) para dar retroalimentación previa al lanzamiento, incluidas comunidades complementarias existentes en línea y presenciales",
+    "Crear espacios de metadiscusión donde los usuarios hablen sobre la comunidad misma",
+    "Reconocer y agradecer personalmente a los primeros promotores (correos, regalos, eventos)",
     "Establecer guías de calidad claras y visibles desde el inicio",
     "Delegar cierta moderación a la propia comunidad (sistemas de karma/votación)",
-    "Combinar community building con otros canales como eventos offline y speaking",
+    "Combinar la construcción de comunidad con otros canales como eventos presenciales y charlas",
     "Evaluar si tu modelo de negocio se presta naturalmente a la construcción de comunidad (¿tu valor central conecta personas?).",
     "Fomentar la conexión cruzada entre miembros de la comunidad, no solo entre miembro-empresa."
   ],
-  "entregable_esperado": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos",
+  "entregable_esperado": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a los primeros promotores",
   "nodos_previos": [
     "meetups_bootstrapping_comunidad",
     "arquetipos_de_cliente",
@@ -51,5 +51,93 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-community_building_estrategia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprovechar una audiencia existente (blog, redes) para dar feedback previo al lanzamiento, incluidas comunidades complementarias existentes online y offline",
+      "texto_nuevo": "Aprovechar una audiencia existente (blog, redes) para dar retroalimentación previa al lanzamiento, incluidas comunidades complementarias existentes en línea y presenciales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback",
+          "online y offline"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-community_building_estrategia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crear espacios de meta-discusión donde los usuarios hablen sobre la comunidad misma",
+      "texto_nuevo": "Crear espacios de metadiscusión donde los usuarios hablen sobre la comunidad misma",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v13)",
+        "evidencia": "El prefijo 'meta' se escribe unido a la palabra; solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-community_building_estrategia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconocer y agradecer personalmente a los evangelistas tempranos (emails, regalos, eventos)",
+      "texto_nuevo": "Reconocer y agradecer personalmente a los primeros promotores (correos, regalos, eventos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails",
+          "evangelistas tempranos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-community_building_estrategia-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Combinar community building con otros canales como eventos offline y speaking",
+      "texto_nuevo": "Combinar la construcción de comunidad con otros canales como eventos presenciales y charlas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "community building",
+          "offline",
+          "speaking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-community_building_estrategia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a evangelistas tempranos",
+      "texto_nuevo": "Documento de misión de comunidad, guías de calidad definidas y un plan de reconocimiento a los primeros promotores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "evangelistas tempranos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

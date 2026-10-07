@@ -6,9 +6,9 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error: Military Standard 105D te obliga a fijar un nivel de calidad aceptable (AQL) sin usar ninguna cifra de costos, y las tablas Dodge-Romig solo minimizan el costo de inspección para una calidad prescrita; ninguno busca el menor costo total. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
   "pasos_accionables": [
-    "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
+    "Revisa los contratos y procedimientos actuales que te exigen usar un nivel de calidad aceptable (AQL) o planes de muestreo estándar.",
     "Calcula el costo total que tienes con el plan de muestreo actual y compáralo con el costo de la regla óptima: revisar todo o no revisar nada.",
-    "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar en base al costo total y la mejora continua.",
+    "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar con base en el costo total y la mejora continua.",
     "Cambia el criterio de aceptar o rechazar lotes por un control estadístico continuo del proceso de tu proveedor. Hazlo poco a poco"
   ],
   "entregable_esperado": "Un documento de política de calidad, propio, donde elimines el uso de planes de muestreo estándar y definas tus criterios según el análisis de costos y el control estadístico.",
@@ -68,6 +68,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe, pero atribuir a Dodge-Romig que ignora el costo de inspección es lo opuesto al libro.; El libro dice que Dodge-Romig sí minimiza el costo de inspección para la calidad prescrita; lo de fijar un AQL sin costos es de Military Standard 105D.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-eliminacion_planes_muestreo_estandar-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
+      "texto_nuevo": "Revisa los contratos y procedimientos actuales que te exigen usar un nivel de calidad aceptable (AQL) o planes de muestreo estándar.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "usar AQL"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-eliminacion_planes_muestreo_estandar-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar en base al costo total y la mejora continua.",
+      "texto_nuevo": "Negocia con tus proveedores y clientes para eliminar las cláusulas de AQL y acordar con base en el costo total y la mejora continua.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en base al"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -25,7 +25,7 @@
     "cuando el riesgo te agota porque lo vives como un enemigo a vencer",
     "cuando quieres arriesgar con valentía sin perder la tranquilidad"
   ],
-  "etiqueta_arbol": "El Riesgo Nunca Se Acaba",
+  "etiqueta_arbol": "Acepta que el Riesgo Nunca Acaba",
   "correcciones": [
     {
       "id": "fidelidad-t9-071",
@@ -93,6 +93,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-el_riesgo_nunca_se_acaba_se_administra-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "El Riesgo Nunca Se Acaba",
+      "texto_nuevo": "Acepta que el Riesgo Nunca Acaba",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "El Riesgo Nunca Se Acaba"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

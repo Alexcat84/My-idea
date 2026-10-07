@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir claramente cuál es el objetivo/resultado que el cliente busca al comprar tu producto, y no solo la entrega del producto",
     "Implementar un sistema de seguimiento (automatizado o manual) para saber cuándo el cliente alcanza ese objetivo",
-    "Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure",
+    "Clasificar cada relación con cliente en uno de los tres escenarios: misión cumplida, baño tibio o misión fallida",
     "Diseñar un momento de celebración específico para cuando el cliente logra su objetivo",
     "Reservar al menos 5% de las ganancias del proyecto para invertir en mejoras de experiencia del cliente",
     "Identificar el objetivo superficial que el cliente dice buscar",
@@ -18,7 +18,7 @@
     "Evitar que el equipo 'desacelere' el esfuerzo justo cuando el cliente cree haber terminado",
     "Recoger evidencia (testimonios, datos) del resultado logrado para usos futuros."
   ],
-  "entregable_esperado": "Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
+  "entregable_esperado": "Sistema de seguimiento de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
   "nodos_previos": [
     "welcome_call_cliente_veterano",
     "value_proposition_startup",
@@ -74,6 +74,41 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece 'es poco probable que vuelva a comprar o recomendar' a una certeza.; Mismo endurecimiento del grado de certeza del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-fase_accomplish_experiencia_cliente-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar cada relación con cliente en uno de los tres escenarios: Mission Accomplished, Lukewarm Bath o Mission Failure",
+      "texto_nuevo": "Clasificar cada relación con cliente en uno de los tres escenarios: misión cumplida, baño tibio o misión fallida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Mission Accomplished",
+          "Lukewarm Bath",
+          "Mission Failure"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fase_accomplish_experiencia_cliente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de tracking de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
+      "texto_nuevo": "Sistema de seguimiento de logros de clientes y protocolo de celebración definido para el momento en que se alcanza el objetivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tracking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

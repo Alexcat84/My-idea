@@ -7,13 +7,13 @@
   "resumen_teorico": "Tripod-Delta es una herramienta proactiva que mide 11 Tipos Generales de Falla (GFTs): Hardware, Diseño, Gestión de Mantenimiento, Procedimientos, Condiciones que Fuerzan el Error, Orden y Limpieza, Metas Incompatibles, Comunicaciones, Organización, Entrenamiento y Defensas. En lugar de medir accidentes directamente, mide las condiciones latentes que los producen, permitiendo intervención preventiva antes de que ocurra el daño.",
   "pasos_accionables": [
     "Conformar un equipo de especialistas de tarea (task specialists) por tipo de operación",
-    "Generar indicadores observables (sí/no) para cada uno de los 11 GFTs relevantes a la operación",
-    "Aplicar checklist de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
+    "Generar indicadores observables (sí/no) para cada uno de los 11 tipos generales de falla relevantes a la operación",
+    "Aplicar lista de verificación de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
     "Generar el Failure State Profile (perfil de fallas) mediante software",
-    "Identificar los 2-3 GFTs más críticos, planificar y ejecutar acciones remediales y mantener informado de su avance al personal que evalúa",
+    "Identificar los 2-3 tipos generales de falla más críticos, planificar y ejecutar acciones correctivas y mantener informado de su avance al personal que evalúa",
     "Repetir la medición y comparar tendencias en el tiempo"
   ],
-  "entregable_esperado": "Failure State Profile (gráfico de barras) con los GFTs priorizados y un plan de acción remedial para los 2-3 más críticos",
+  "entregable_esperado": "Perfil del estado de fallas (gráfico de barras) con los tipos generales de falla priorizados y un plan de acción correctivo para los 2-3 más críticos",
   "nodos_previos": [
     "enfoque_situacional_vs_personal",
     "ciclo_de_culpa_2"
@@ -80,6 +80,76 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c07): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_delta_general_failure_types-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar indicadores observables (sí/no) para cada uno de los 11 GFTs relevantes a la operación",
+      "texto_nuevo": "Generar indicadores observables (sí/no) para cada uno de los 11 tipos generales de falla relevantes a la operación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "GFTs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_delta_general_failure_types-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar checklist de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
+      "texto_nuevo": "Aplicar lista de verificación de 220 ítems (20 por GFT) de forma periódica (trimestral sugerido)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_delta_general_failure_types-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar los 2-3 GFTs más críticos, planificar y ejecutar acciones remediales y mantener informado de su avance al personal que evalúa",
+      "texto_nuevo": "Identificar los 2-3 tipos generales de falla más críticos, planificar y ejecutar acciones correctivas y mantener informado de su avance al personal que evalúa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "GFTs",
+          "acciones remediales"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_delta_general_failure_types-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Failure State Profile (gráfico de barras) con los GFTs priorizados y un plan de acción remedial para los 2-3 más críticos",
+      "texto_nuevo": "Perfil del estado de fallas (gráfico de barras) con los tipos generales de falla priorizados y un plan de acción correctivo para los 2-3 más críticos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Failure State Profile",
+          "GFTs",
+          "remedial"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

@@ -10,7 +10,7 @@
     "Adaptar el sitio web, videos y folletos para responder a las objeciones típicas de abogados, contadores y prestamistas",
     "Revisar cumplimiento regulatorio en los estados con requisitos de registro de franquicias"
   ],
-  "entregable_esperado": "Lista de stakeholders de influencia y checklist de materiales adaptados para cada uno",
+  "entregable_esperado": "Lista de influyentes y lista de verificación de materiales adaptados para cada uno",
   "nodos_previos": [
     "vender_concepto_franquicia",
     "tipos_de_clientes"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Identifica a los Influyentes Clave",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-multiples_compradores_influyentes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de stakeholders de influencia y checklist de materiales adaptados para cada uno",
+      "texto_nuevo": "Lista de influyentes y lista de verificación de materiales adaptados para cada uno",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stakeholders de influencia",
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

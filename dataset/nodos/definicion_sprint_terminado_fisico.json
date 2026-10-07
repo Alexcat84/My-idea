@@ -7,13 +7,13 @@
   "resumen_teorico": "A diferencia del software, donde un sprint terminado significa código funcional y potencialmente liberable, en productos físicos un sprint no siempre produce un incremento completo. Puede resultar en un dibujo de diseño, un prototipo rápido, un modelo de trabajo temprano o los resultados documentados de un estudio de mercado, por ejemplo en un reporte de una página archivado. Cada proyecto debe adaptar su propia checklist de definición de terminado según la naturaleza física del producto y la etapa en que se encuentre, ya sea ideación, concepto o desarrollo técnico. Poner un límite de tiempo a tareas de evaluación, como evaluar un concepto, puede ayudarte a evitar la sobreingeniería.",
   "pasos_accionables": [
     "Define qué entregable tangible marca el cierre de cada sprint: boceto, prototipo, modelo de trabajo o informe de estudio de mercado",
-    "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
+    "Crea una lista de verificación de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
     "Establece un formato estándar de documentación para cada entregable, por ejemplo un reporte de una página",
     "Fija un límite de horas para las tareas de evaluación o diseño y evita sobreingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
     "Valida el sprint terminado con un colega experto o con quien es dueño del producto antes de cerrarlo",
     "Comunica los criterios de terminado antes de iniciar cada sprint"
   ],
-  "entregable_esperado": "Checklist de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
+  "entregable_esperado": "Lista de verificación de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
   "nodos_previos": [
     "modelo_hibrido_agile_stage_gate",
     "product_backlog_fisico"
@@ -123,6 +123,39 @@
       },
       "decision": "lectura total de procedencia (w46): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-definicion_sprint_terminado_fisico-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
+      "texto_nuevo": "Crea una lista de verificación de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "una checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-definicion_sprint_terminado_fisico-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
+      "texto_nuevo": "Lista de verificación de definición de terminado documentada, con formato estándar, para cada tipo de sprint.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

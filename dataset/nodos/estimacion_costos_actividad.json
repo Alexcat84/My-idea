@@ -7,7 +7,7 @@
   "resumen_teorico": "Proporciona información sobre el costo de recursos necesarios para completar el trabajo del proyecto, incluyendo mano de obra, equipo, suministros, servicios, instalaciones y materiales. Puede determinarse mediante juicio de expertos o métodos cuantitativos como estimaciones paramétricas, análogas o de tres puntos.",
   "pasos_accionables": [
     "Identificar los recursos necesarios para cada paquete de trabajo",
-    "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, bottom-up)",
+    "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, ascendente)",
     "Calcular costos directos e indirectos, teniendo en cuenta también el costo de la calidad, el costo de financiamiento y las cotizaciones de proveedores",
     "Documentar reservas de contingencia",
     "Registrar supuestos, restricciones y nivel de confianza"
@@ -62,6 +62,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de recursos del libro incluye servicios e instalaciones, que el resumen omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-estimacion_costos_actividad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, bottom-up)",
+      "texto_nuevo": "Seleccionar el método de estimación apropiado (paramétrico, análogo, tres puntos, ascendente)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bottom-up"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

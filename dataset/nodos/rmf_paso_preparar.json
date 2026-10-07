@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
   "resumen_teorico": "El paso Preparar asegura que la organización esté lista para ejecutar el RMF de manera práctica, eficiente y rentable. Incluye designar responsables, crear una estrategia de gestión de riesgo, implementar una estrategia de monitoreo continuo, determinar el alcance del sistema a proteger y evaluar regularmente los riesgos a nivel organizacional y de sistema. Es el paso por el que conviene empezar toda implementación inicial del RMF.",
   "pasos_accionables": [
-    "Designar a un individuo o equipo responsable de ejecutar el RMF, que puede ser interno o externo a la organización (Tarea P-1).",
+    "Designar a un individuo o equipo responsable de ejecutar el marco de gestión de riesgos (RMF), que puede ser interno o externo a la organización (Tarea P-1).",
     "Crear una estrategia de gestión de riesgo que exprese la tolerancia al riesgo (Tarea P-2).",
     "Determinar el alcance de protección del sistema (Tarea P-11).",
     "Implementar una estrategia de monitoreo continuo (Tarea P-7).",
@@ -80,6 +80,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración omite la quinta tarea fundacional del paso: evaluar regularmente los riesgos a nivel de organización y de sistema.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-rmf_paso_preparar-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Designar a un individuo o equipo responsable de ejecutar el RMF, que puede ser interno o externo a la organización (Tarea P-1).",
+      "texto_nuevo": "Designar a un individuo o equipo responsable de ejecutar el marco de gestión de riesgos (RMF), que puede ser interno o externo a la organización (Tarea P-1).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ejecutar el RMF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

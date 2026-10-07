@@ -25,8 +25,26 @@
     "cuando ignoras un riesgo nuevo porque no estaba en tu plan",
     "cuando lo emergente se te vuelve emergencia por no tratarlo a tiempo"
   ],
-  "etiqueta_arbol": "Qué Hacer con un Riesgo Nuevo",
+  "etiqueta_arbol": "Atiende cada Riesgo Nuevo que Surja",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-que_hacer_con_un_riesgo_nuevo-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Qué Hacer con un Riesgo Nuevo",
+      "texto_nuevo": "Atiende cada Riesgo Nuevo que Surja",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Qué Hacer con un"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

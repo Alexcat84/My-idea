@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Toda mejora fuera del cuello de botella (constraint) es desperdicio; la mejora debe enfocarse en la restricción del sistema. Proceso de cinco pasos: identificar, explotar, subordinar, elevar y repetir con la nueva restricción.",
   "pasos_accionables": [
-    "Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput",
+    "Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el flujo de producción",
     "Decidir cómo explotar al máximo la restricción actual",
     "Subordinar todos los demás procesos a esta decisión",
     "Elevar el desempeño de la restricción mediante inversión o mejora",
     "Repetir el ciclo identificando la nueva restricción"
   ],
-  "entregable_esperado": "Restricción del sistema identificada con plan de acción de las 5 etapas de TOC",
+  "entregable_esperado": "Restricción del sistema identificada con plan de acción de las 5 etapas de la teoría de restricciones",
   "nodos_previos": [
     "mapeo_flujo_valor",
     "takt_time",
@@ -30,7 +30,7 @@
     "Cuando el throughput del sistema está limitado por un recurso específico",
     "Al priorizar dónde invertir esfuerzos de mejora"
   ],
-  "etiqueta_arbol": "Prioriza la Mejora del Cuello",
+  "etiqueta_arbol": "Mejora Primero tu Cuello de Botella",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -50,6 +50,53 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-constraint_management-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Prioriza la Mejora del Cuello",
+      "texto_nuevo": "Mejora Primero tu Cuello de Botella",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v13)",
+        "evidencia": "Cuello sin de botella no nombra el concepto y promete algo ininteligible; la nueva etiqueta dice que la mejora va primero al cuello de botella, que es lo que sostiene el concepto, en seis palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-constraint_management-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el throughput",
+      "texto_nuevo": "Identificar la restricción (equipo, mano de obra, información o proveedor) que limita el flujo de producción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "throughput"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-constraint_management-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Restricción del sistema identificada con plan de acción de las 5 etapas de TOC",
+      "texto_nuevo": "Restricción del sistema identificada con plan de acción de las 5 etapas de la teoría de restricciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de TOC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

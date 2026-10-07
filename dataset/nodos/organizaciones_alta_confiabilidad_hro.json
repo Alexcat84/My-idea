@@ -6,12 +6,12 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Concepto de organizaciones (como portaaviones nucleares o centros de control de tráfico aéreo) que operan tecnologías complejas y peligrosas con tasas de error extremadamente bajas. Se caracterizan por una 'inquietud crónica' (chronic unease), fuerte dependencia de procedimientos operativos estándar (SOP) bajo condiciones normales, pero con capacidad de pasar a una estructura descentralizada basada en habilidad técnica durante períodos de alta demanda.",
   "pasos_accionables": [
-    "Evaluar el nivel de dependencia de SOPs en la organización actual",
+    "Evaluar el nivel de dependencia de procedimientos operativos estándar en la organización actual",
     "Identificar mecanismos de investigación inmediata de errores ('hot washups')",
     "Fomentar una actitud de vigilancia constante (chronic unease) sin caer en la complacencia",
     "Diseñar mecanismos de transición de autoridad jerárquica a autoridad técnica en los períodos de alta demanda operativa, sabiendo que esa transición depende de una cultura jerárquica fuerte y disciplinada previa y de invertir en tus supervisores de primera línea"
   ],
-  "entregable_esperado": "Diagnóstico organizacional de madurez hacia el modelo HRO",
+  "entregable_esperado": "Diagnóstico organizacional de madurez hacia el modelo de organización de alta confiabilidad",
   "nodos_previos": [
     "cultura_flexible"
   ],
@@ -42,6 +42,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona el éxito de la descentralización a una cultura jerárquica fuerte y disciplinada previa y a invertir en supervisores de primera línea.; El libro sitúa el cambio de autoridad en los picos de operación intensa, no solo en emergencias.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-organizaciones_alta_confiabilidad_hro-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el nivel de dependencia de SOPs en la organización actual",
+      "texto_nuevo": "Evaluar el nivel de dependencia de procedimientos operativos estándar en la organización actual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "SOPs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-organizaciones_alta_confiabilidad_hro-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagnóstico organizacional de madurez hacia el modelo HRO",
+      "texto_nuevo": "Diagnóstico organizacional de madurez hacia el modelo de organización de alta confiabilidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "HRO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

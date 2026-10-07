@@ -6,12 +6,12 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "El Value Stream Mapping (VSM) tradicional se enriquece integrando datos ambientales y energéticos, permitiendo identificar no solo ineficiencias productivas sino también las materias primas usadas en productos y procesos, las fuentes de contaminación y los flujos de información hacia entes regulatorios. Esto ayuda a priorizar oportunidades de mejora en el proceso completo.",
   "pasos_accionables": [
-    "Mapear los procesos de producción registrando inputs (materiales, energía, agua) y outputs (scrap, emisiones, residuos peligrosos)",
+    "Mapear los procesos de producción registrando entradas (materiales, energía, agua) y salidas (desperdicio, emisiones, residuos peligrosos)",
     "Usar iconos para señalar en cada proceso las oportunidades de eficiencia energética y ambiental, y colores para diferenciar flujos de recursos y flujos de desperdicio",
     "Registrar la cantidad de residuos que genera cada proceso, incluyendo costos de compra de materiales, gestión y disposición de residuos",
     "Analizar la diferencia entre materiales utilizados y materiales que terminan en el producto final"
   ],
-  "entregable_esperado": "Un mapa de flujo de valor (VSM) con datos ambientales integrados y oportunidades de mejora identificadas (EHS)",
+  "entregable_esperado": "Un mapa de flujo de valor (VSM) con datos ambientales integrados y oportunidades de mejora identificadas (ambiente, salud y seguridad)",
   "nodos_previos": [
     "eliminacion_desperdicio_lean_green",
     "auditoria_energetica_sistematica"
@@ -77,6 +77,41 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): En el libro los iconos señalan las oportunidades de eficiencia energética y ambiental de cada proceso y los colores separan flujos; se pierde lo primero. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-value_stream_mapping_ambiental-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear los procesos de producción registrando inputs (materiales, energía, agua) y outputs (scrap, emisiones, residuos peligrosos)",
+      "texto_nuevo": "Mapear los procesos de producción registrando entradas (materiales, energía, agua) y salidas (desperdicio, emisiones, residuos peligrosos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "inputs",
+          "outputs",
+          "scrap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-value_stream_mapping_ambiental-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa de flujo de valor (VSM) con datos ambientales integrados y oportunidades de mejora identificadas (EHS)",
+      "texto_nuevo": "Un mapa de flujo de valor (VSM) con datos ambientales integrados y oportunidades de mejora identificadas (ambiente, salud y seguridad)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(EHS)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

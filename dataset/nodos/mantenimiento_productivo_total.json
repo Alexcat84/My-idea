@@ -11,7 +11,7 @@
     "Implementar mejoras incrementales de mantenimiento preventivo y correctivo",
     "Medir la efectividad global del equipo (OEE)"
   ],
-  "entregable_esperado": "Programa de TPM/RCM implementado con métricas de OEE",
+  "entregable_esperado": "Programa de mantenimiento productivo total (TPM) o mantenimiento centrado en la confiabilidad (RCM) implementado con métricas de OEE",
   "nodos_previos": [
     "feedback_supervisores_trabajadores",
     "autocontrol_y_controlabilidad"
@@ -24,8 +24,40 @@
     "Cuando el equipo presenta fallas frecuentes o pérdidas de capacidad",
     "Cuando se busca maximizar el tiempo de actividad del proceso"
   ],
-  "etiqueta_arbol": "Cuida tus Equipos entre Todos",
+  "etiqueta_arbol": "Cuida tus Máquinas entre Todos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-mantenimiento_productivo_total-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuida tus Equipos entre Todos",
+      "texto_nuevo": "Cuida tus Máquinas entre Todos",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v13)",
+        "evidencia": "Con 'entre Todos', 'tus Equipos' se lee como grupos de personas y promete gestión de gente; el concepto es el mantenimiento de la maquinaria entre todos, que 'Máquinas' conserva."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mantenimiento_productivo_total-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Programa de TPM/RCM implementado con métricas de OEE",
+      "texto_nuevo": "Programa de mantenimiento productivo total (TPM) o mantenimiento centrado en la confiabilidad (RCM) implementado con métricas de OEE",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Programa de TPM/RCM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisar la lista completa de condiciones de cierre propuestas por el comprador.",
     "Cuestionar condiciones inusualmente restrictivas o específicas desde el inicio.",
-    "Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.",
+    "Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en la auditoría previa a la compra.",
     "Leer la complejidad de las condiciones como un indicio de la actitud del comprador y de cómo será la negociación."
   ],
   "entregable_esperado": "Lista de condiciones de cierre negociada y con plan de resolución temprana.",
@@ -25,7 +25,7 @@
   "condiciones_activacion": [
     "Cuando se está finalizando la negociación de un LOI de adquisición."
   ],
-  "etiqueta_arbol": "Define tus Condiciones de Cierre",
+  "etiqueta_arbol": "Revisa las Condiciones de Cierre",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
   ],
@@ -62,6 +62,37 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro lo trata como un dato más sobre la actitud del comprador, no como revelación de su flexibilidad real.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-condiciones_de_cierre_adquisicion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Define tus Condiciones de Cierre",
+      "texto_nuevo": "Revisa las Condiciones de Cierre",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v13)",
+        "evidencia": "Las condiciones de cierre las pone el comprador, no la persona; 'Revisa las' quita esa promesa falsa y conserva el objeto del concepto."
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-condiciones_de_cierre_adquisicion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en el due diligence.",
+      "texto_nuevo": "Resolver condiciones complejas (ej. liquidación de subsidiarias) temprano en la auditoría previa a la compra.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el due diligence"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

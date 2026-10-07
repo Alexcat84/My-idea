@@ -7,11 +7,11 @@
   "resumen_teorico": "Un almacén aduanero es un espacio donde bienes dutiable pueden almacenarse, manipularse o manufacturarse sin pagar aranceles hasta retirarlos para consumo; si los exportas, se cancela la obligación de pagarlos. Permite controlar el flujo de efectivo de los aranceles y almacenar muchos bienes sujetos a cuota. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Evaluar si el flujo de importación se beneficiaría de diferir el pago de aranceles",
-    "Contactar a la oficina de U.S. Customs and Border Protection más cercana",
-    "Verificar restricciones de cuota que puedan aplicar a la mercancía",
-    "Formalizar el bono requerido para operar bajo el almacén aduanero"
+    "Contactar a la oficina de Aduanas y Protección Fronteriza de EE. UU. más cercana",
+    "Verificar restricciones de cuota que puedan aplicarse a la mercancía",
+    "Formalizar la fianza requerida para operar bajo el almacén aduanero"
   ],
-  "entregable_esperado": "Acuerdo o bono formalizado con un almacén aduanero para diferir pagos de aranceles",
+  "entregable_esperado": "Acuerdo o fianza formalizada con un almacén aduanero para diferir pagos de aranceles",
   "nodos_previos": [
     "foreign_trade_zones"
   ],
@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Si la empresa importa mercancía dutiable y busca flexibilidad en el pago de aranceles antes de reexportar o vender localmente"
   ],
-  "etiqueta_arbol": "Usa Almacenes Aduaneros",
+  "etiqueta_arbol": "Usa los Almacenes Aduaneros",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
   ],
@@ -58,6 +58,89 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que el arancel se cobra al retirar para consumo y que exportar cancela la obligación de pagarlo; el nodo lo reduce a 'hasta su retiro'.; El libro dice que muchos bienes sujetos a cuota pueden almacenarse, no todos; el nodo endurece.; La definición del libro incluye las operaciones de manufactura, que el nodo omite.; Mismo defecto que la marca 0: se pierde que exportar cancela el arancel.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-customs_bonded_warehouses-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa Almacenes Aduaneros",
+      "texto_nuevo": "Usa los Almacenes Aduaneros",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Usa Almacenes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customs_bonded_warehouses-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contactar a la oficina de U.S. Customs and Border Protection más cercana",
+      "texto_nuevo": "Contactar a la oficina de Aduanas y Protección Fronteriza de EE. UU. más cercana",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "U.S. Customs and Border Protection"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customs_bonded_warehouses-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar restricciones de cuota que puedan aplicar a la mercancía",
+      "texto_nuevo": "Verificar restricciones de cuota que puedan aplicarse a la mercancía",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "puedan aplicar a la mercancía"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customs_bonded_warehouses-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Formalizar el bono requerido para operar bajo el almacén aduanero",
+      "texto_nuevo": "Formalizar la fianza requerida para operar bajo el almacén aduanero",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el bono requerido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customs_bonded_warehouses-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerdo o bono formalizado con un almacén aduanero para diferir pagos de aranceles",
+      "texto_nuevo": "Acuerdo o fianza formalizada con un almacén aduanero para diferir pagos de aranceles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bono formalizado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Envía información detallada de tu negocio y tus productos al candidato",
     "Pide su historial, sus referencias comerciales y bancarias, cómo introduce productos nuevos en su territorio y si puede cumplir tus requisitos especiales",
-    "Consigue al menos dos reportes de crédito de fuentes distintas",
+    "Consigue al menos dos informes de crédito de fuentes distintas",
     "Busca las herramientas de evaluación de empresas que existan en tu mercado",
     "Visita las instalaciones del candidato o reúnete con él en ferias comerciales, y conoce a su fuerza de ventas para evaluar su fortaleza en el mercado",
     "Evalúa qué tanto conoce la industria y el mercado donde va a representarte"
   ],
-  "entregable_esperado": "Un informe propio de verificación sobre cada candidato a representante o distribuidor, con sus referencias, sus reportes de crédito y tu evaluación de su capacidad comercial.",
+  "entregable_esperado": "Un informe propio de verificación sobre cada candidato a representante o distribuidor, con sus referencias, sus informes de crédito y tu evaluación de su capacidad comercial.",
   "nodos_previos": [
     "seleccion_canales_distribucion"
   ],
@@ -94,6 +94,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide además conocer a la fuerza de ventas de cada candidato y evaluar su fortaleza en el mercado, y ningún paso lo recoge. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-contacto_evaluacion_representantes_extranjeros-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue al menos dos reportes de crédito de fuentes distintas",
+      "texto_nuevo": "Consigue al menos dos informes de crédito de fuentes distintas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-contacto_evaluacion_representantes_extranjeros-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un informe propio de verificación sobre cada candidato a representante o distribuidor, con sus referencias, sus reportes de crédito y tu evaluación de su capacidad comercial.",
+      "texto_nuevo": "Un informe propio de verificación sobre cada candidato a representante o distribuidor, con sus referencias, sus informes de crédito y tu evaluación de su capacidad comercial.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
