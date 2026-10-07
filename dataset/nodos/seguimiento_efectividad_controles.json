@@ -13,7 +13,7 @@
     "Modificar controles ineficaces o implementar medidas adicionales si es necesario",
     "Ejecutar mantenimiento preventivo rutinario de equipos y controles"
   ],
-  "entregable_esperado": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si aplica",
+  "entregable_esperado": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si corresponde",
   "nodos_previos": [
     "implementacion_controles",
     "plan_control_peligros"
@@ -126,6 +126,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la participación de los trabajadores ayuda a sostener el programa; 'es clave' lo endurece.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-seguimiento_efectividad_controles-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si aplica",
+      "texto_nuevo": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si corresponde",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

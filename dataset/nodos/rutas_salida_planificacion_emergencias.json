@@ -9,11 +9,11 @@
     "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
     "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
     "Revisa que no uses puertas giratorias, corredizas o elevadizas como salidas obligatorias",
-    "Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
+    "Instala dispositivos antipánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
     "Asegura mecanismos de liberación interna en los cuartos fríos, incluso si están bloqueados desde afuera",
     "Coloca barreras y señalización donde las salidas den directo a zonas de tráfico vehicular"
   ],
-  "entregable_esperado": "Tu checklist de rutas de salida y emergencias completado, con las deficiencias en puertas y accesos de salida ya corregidas.",
+  "entregable_esperado": "Tu lista de verificación de rutas de salida y emergencias completada, con las deficiencias en puertas y accesos de salida ya corregidas.",
   "nodos_previos": [
     "autoinspeccion_lugar_de_trabajo",
     "caracterizacion_priorizacion_peligros"
@@ -90,6 +90,40 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La condición incluye que la puerta no exija conocimiento ni esfuerzo especial, no solo llave o herramienta.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-rutas_salida_planificacion_emergencias-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
+      "texto_nuevo": "Instala dispositivos antipánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hardware de pánico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rutas_salida_planificacion_emergencias-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tu checklist de rutas de salida y emergencias completado, con las deficiencias en puertas y accesos de salida ya corregidas.",
+      "texto_nuevo": "Tu lista de verificación de rutas de salida y emergencias completada, con las deficiencias en puertas y accesos de salida ya corregidas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist",
+          "completado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

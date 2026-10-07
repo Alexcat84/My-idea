@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Define el valor de venta que quieres alcanzar y en cuánto tiempo, por ejemplo $10M en 5 años",
     "Resta el valor actual de tu negocio para saber cuánto crecimiento en valoración necesitas",
-    "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánto EBIT necesitas generar",
-    "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
+    "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánta ganancia operativa (EBIT) necesitas generar",
+    "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y bonificaciones de proveedores si las hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
     "Divide el EBIT que necesitas entre lo que te deja cada franquiciado para saber cuántas franquicias tienes que vender",
     "Reparte esas ventas en un cronograma de 5 años, empezando con crecimiento gradual al inicio"
   ],
@@ -96,6 +96,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro multiplica esos ingresos por una aproximación del margen neto y advierte que no hay cifras confiables para estimarlo; el paso pierde esa cautela.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-ingenieria_inversa_metas-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánto EBIT necesitas generar",
+      "texto_nuevo": "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánta ganancia operativa (EBIT) necesitas generar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cuánto EBIT necesitas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ingenieria_inversa_metas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
+      "texto_nuevo": "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y bonificaciones de proveedores si las hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "rebates de proveedores si los hay"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

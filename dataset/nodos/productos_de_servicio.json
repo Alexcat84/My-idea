@@ -20,7 +20,7 @@
     "fase_de_eliminacion_de_no_comercializables"
   ],
   "condiciones_activacion": [
-    "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
+    "Si el usuario fabrica productos que contienen nutrientes técnicos valiosos, como alfombras, autos, electrodomésticos o electrónicos",
     "Si se busca retener materiales valiosos en lugar de perderlos tras la venta"
   ],
   "etiqueta_arbol": "Vende Servicio, No Producto",
@@ -57,6 +57,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro une al modelo la responsabilidad permanente del fabricante sobre los materiales peligrosos del producto.; Mismo defecto que la marca 0.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-productos_de_servicio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
+      "texto_nuevo": "Si el usuario fabrica productos que contienen nutrientes técnicos valiosos, como alfombras, autos, electrodomésticos o electrónicos",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "666, 676",
+        "frase": "products containing valuable technical nutrients—cars, televisions, carpeting, computers, and refrigerators, for example"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c09): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

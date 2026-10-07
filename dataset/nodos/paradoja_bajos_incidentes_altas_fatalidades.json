@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Comparar las tendencias de reporte de incidentes menores con las tasas de accidentes graves/fatales en la organización",
     "Eliminar barreras al reporte (incentivos negativos, pruebas de drogas post-incidente automáticas)",
-    "Promover activamente el reporte de cuasi-accidentes como fuente de aprendizaje",
+    "Promover activamente el reporte de cuasiaccidentes como fuente de aprendizaje",
     "Comunicar a la dirección que bajos números de incidentes no equivalen a bajo riesgo real"
   ],
   "entregable_esperado": "Análisis comparativo interno de tendencias de reporte vs. severidad de eventos, presentado a dirección",
@@ -22,7 +22,7 @@
     "Si la organización presume seguridad basada solo en bajas tasas de incidentes reportados",
     "Si se ha premiado a unidades o sitios por 'cero incidentes'"
   ],
-  "etiqueta_arbol": "Cuidado con Pocos Incidentes Reportados",
+  "etiqueta_arbol": "Desconfía de Pocos Incidentes Notificados",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
   ],
@@ -42,6 +42,38 @@
       },
       "decision": "lectura total de procedencia (w33rr): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-paradoja_bajos_incidentes_altas_fatalidades-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con Pocos Incidentes Reportados",
+      "texto_nuevo": "Desconfía de Pocos Incidentes Notificados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con",
+          "Reportados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-paradoja_bajos_incidentes_altas_fatalidades-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Promover activamente el reporte de cuasi-accidentes como fuente de aprendizaje",
+      "texto_nuevo": "Promover activamente el reporte de cuasiaccidentes como fuente de aprendizaje",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v09)",
+        "evidencia": "El prefijo 'cuasi' se escribe unido a la palabra; solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

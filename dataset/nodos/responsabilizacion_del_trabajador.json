@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Revisa quién recibe las sanciones o llamadas de atención por seguridad en tu negocio: ¿los trabajadores o tú y quienes organizan el trabajo?",
     "Pregúntate si tus políticas de seguridad culpan siempre a las personas por fallos que en realidad vienen de cómo organizaste el trabajo.",
-    "Evalúa si le das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad."
+    "Evalúa si les das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad."
   ],
-  "entregable_esperado": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si le exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
+  "entregable_esperado": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si les exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
   "nodos_previos": [
     "participacion_trabajadores"
   ],
@@ -54,6 +54,35 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa el dato en las sanciones de los inspectores y solo en algunos lugares e industrias; el nodo lo generaliza como señal universal.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-responsabilizacion_del_trabajador-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalúa si le das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad.",
+      "texto_nuevo": "Evalúa si les das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v09)",
+        "evidencia": "El pronombre 'le' no concuerda con 'tus trabajadores' (la misma frase dice luego 'les exiges'); corregir la concordancia no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-responsabilizacion_del_trabajador-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si le exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
+      "texto_nuevo": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si les exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v09)",
+        "evidencia": "El pronombre 'le' no concuerda con 'tus trabajadores' (la misma frase dice luego 'les das'); corregir la concordancia no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

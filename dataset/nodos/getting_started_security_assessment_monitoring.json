@@ -7,7 +7,7 @@
   "resumen_teorico": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
   "pasos_accionables": [
     "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
-    "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+    "Desarrollar un Plan de Acción y Cronograma (POAM) detallando debilidades, responsables, recursos y fechas de mitigación.",
     "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
     "Considerar herramientas comerciales o proveedores externos que pueden apoyar el monitoreo continuo."
   ],
@@ -72,6 +72,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_security_assessment_monitoring-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+      "texto_nuevo": "Desarrollar un Plan de Acción y Cronograma (POAM) detallando debilidades, responsables, recursos y fechas de mitigación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un POAM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

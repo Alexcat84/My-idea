@@ -374,7 +374,7 @@
       "resumen_teorico": "Cada persona y especie experimenta el mundo a través de una 'burbuja sensorial' limitada (Umwelt), y confundimos nuestra percepción parcial con la realidad completa. Para diseñar mejor el futuro, el diseñador debe reconocer activamente los límites de su propio conocimiento y percepción, cultivando curiosidad por lo que no sabe o no puede sentir, en lugar de rellenar los vacíos con supuestos.",
       "pasos_accionables": [
         "Antes de definir un problema, listar explícitamente qué perspectivas, sentidos o experiencias NO están representadas en tu equipo o investigación.",
-        "Buscar activamente usuarios, expertos o fuentes con 'burbujas sensoriales' distintas a las tuyas (discapacidad, cultura, edad, especie si aplica).",
+        "Buscar activamente usuarios, expertos o fuentes con 'burbujas sensoriales' distintas a las tuyas (discapacidad, cultura, edad, especie si corresponde).",
         "Evitar rellenar vacíos de información con suposiciones; en cambio, documentar la incertidumbre como parte del hallazgo.",
         "Iterar el diseño incorporando estas perspectivas ausentes detectadas."
       ],
@@ -3397,7 +3397,7 @@
       "resumen_teorico": "La licencia de marca (trademark license) elimina el elemento de soporte/control de la definición de franquicia, siendo apropiada para productos (ej. imagen de una celebridad) más que para sistemas de negocio completos. Es un modelo de alto riesgo legal porque es fácil cruzar accidentalmente la línea hacia 'soporte o control significativo' (según criterios de la FTC como aprobación de sitio, diseño, promociones, entrenamiento), convirtiéndose en franquicia ilegal no declarada.",
       "pasos_accionables": [
         "Determinar si el activo a licenciar es un producto/imagen o un sistema de negocio completo",
-        "Revisar los criterios de la FTC sobre 'soporte o control significativo'",
+        "Revisar los criterios de la Comisión Federal de Comercio (FTC) de Estados Unidos sobre 'soporte o control significativo'",
         "Evaluar el riesgo de daño reputacional por falta de control sobre el uso de la marca",
         "Consultar con abogado especializado para no cruzar la línea hacia definición de franquicia"
       ],
@@ -3501,12 +3501,12 @@
       "titulo_concepto": "Términos de Amortización: Draw Period e Interest-Only Period",
       "resumen_teorico": "Los términos de amortización son más críticos que el precio para alinear la deuda con la estrategia de capital de la empresa. El 'draw period' es el tiempo durante el cual se pueden solicitar desembolsos; el 'interest-only (I/O) period' es el tiempo en que solo se pagan intereses sin amortizar principal, impactando directamente el cash burn y el runway. Negociar estos periodos (típicamente 6-12 meses) es esencial para maximizar el tiempo antes de que el pago de principal comience.",
       "pasos_accionables": [
-        "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
-        "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
-        "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+        "Solicitar un período de disposición diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+        "Negociar el período de solo intereses (I/O) más largo posible, ya que impacta directamente los meses de efectivo que te quedan, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+        "Explorar extensiones condicionales del período de solo intereses ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
         "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
       ],
-      "entregable_esperado": "Cronograma de amortización del préstamo con draw period, I/O period y pagos mensuales de principal calculados.",
+      "entregable_esperado": "Cronograma de amortización del préstamo con período de disposición, período de solo intereses y pagos mensuales de principal calculados.",
       "nodos_previos": [
         "warrant_pricing_venture_debt"
       ],
@@ -7471,13 +7471,13 @@
       "titulo_concepto": "Auditoría de Proceso (Monitor Process Audit)",
       "resumen_teorico": "La auditoría de proceso es una verificación sistemática, mediante checklist, de que las especificaciones son correctas y de que las operaciones de manufactura las cumplen: registros, calibración de equipos, procedimientos de limpieza, requisitos de seguridad y control de proceso. Las discrepancias se clasifican en críticas, mayores o menores, y requieren acción correctiva documentada dentro de plazos definidos (inmediato para críticas, cinco días hábiles para mayores/menores).",
       "pasos_accionables": [
-        "Diseñar un checklist de auditoría que cubra especificaciones, registros, calibración, procedimientos y seguridad",
+        "Diseñar una lista de verificación de auditoría que cubra especificaciones, registros, calibración, procedimientos y seguridad",
         "Clasificar cada hallazgo como crítico, mayor o menor",
         "Documentar por escrito las discrepancias encontradas",
         "Definir plazos de corrección según severidad (inmediato para críticas, 5 días hábiles para mayores y menores)",
         "Dar seguimiento a la implementación de la acción correctiva"
       ],
-      "entregable_esperado": "Checklist de auditoría de proceso aplicado y reporte de discrepancias con plan de acción correctiva documentado",
+      "entregable_esperado": "Lista de verificación de auditoría de proceso aplicada y reporte de discrepancias con plan de acción correctiva documentado",
       "nodos_previos": [
         "planificacion_inicial_calidad"
       ],
@@ -7893,12 +7893,12 @@
       "titulo_concepto": "Auditorías Formales de Proveedores",
       "resumen_teorico": "Tener un código de conducta no garantiza cumplimiento; se requieren mecanismos de verificación como auditorías anunciadas y no anunciadas. Conviene investigar el desempeño existente del proveedor, construir sobre marcos ya existentes (ej. Carbon Disclosure Project), solicitar información adicional solo cuando sea necesaria, ser selectivo sobre a quién auditar, y usar visitas in-situ para proveedores críticos.",
       "pasos_accionables": [
-        "Recopilar reportes existentes de sostenibilidad del proveedor antes de pedir nueva información",
-        "Usar marcos estandarizados de la industria (ej. CDP) para reducir carga de reporte",
+        "Recopilar informes existentes de sostenibilidad del proveedor antes de pedir nueva información",
+        "Usar marcos estandarizados de la industria (ej. CDP) para reducir la carga de informes",
         "Priorizar auditorías en proveedores de mayor impacto en costos, continuidad, reputación o calidad del producto",
-        "Realizar visitas in-situ anunciadas y no anunciadas a proveedores críticos"
+        "Realizar visitas in situ anunciadas y no anunciadas a proveedores críticos"
       ],
-      "entregable_esperado": "Programa de auditorías con calendario, criterios de selección y reportes de cumplimiento",
+      "entregable_esperado": "Programa de auditorías con calendario, criterios de selección e informes de cumplimiento",
       "nodos_previos": [
         "codigo_conducta_proveedores",
         "seguimiento_cumplimiento_cadena_suministro"
@@ -11029,7 +11029,7 @@
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
-        "Después de la primera llamada con prospectos clasificados como A o B"
+        "Cuando entra un lead nuevo de internet y todavía no logras hablar con él, o al cerrar la primera llamada con un prospecto A o B para acordar los tiempos"
       ],
       "etiqueta_arbol": "Sigue Siete Contactos en Siete Días"
     },
@@ -15200,7 +15200,7 @@
       "pasos_accionables": [
         "Planificar: seleccionar los sujetos de control y definir metas",
         "Ejecutar (Do): correr y monitorear el proceso",
-        "Verificar/Estudiar (Check/Study): sensar y comparar contra estándares",
+        "Verificar/Estudiar (Check/Study): medir y comparar contra estándares",
         "Actuar (Act): estimular al actuador y ejecutar acción correctiva",
         "Repetir el ciclo de forma continua para sostener el control"
       ],
@@ -17515,11 +17515,11 @@
       "resumen_teorico": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo en los puestos que puedan hacerse desde casa, aunque sea parte del tiempo, reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y puede aumentar la productividad.",
       "pasos_accionables": [
         "Evaluar la ubicación de oficinas priorizando acceso a transporte público",
-        "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)",
+        "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de estacionamiento gratuito)",
         "Establecer políticas claras de teletrabajo para roles compatibles",
         "Medir el impacto en productividad, satisfacción y reducción de emisiones"
       ],
-      "entregable_esperado": "Política de commuting y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
+      "entregable_esperado": "Política de traslados al trabajo y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
       "nodos_previos": [
         "metricas_impacto_ambiental"
       ],
@@ -17531,7 +17531,7 @@
         "Si la empresa quiere reducir su huella de carbono asociada a Scope 3 (commuting)",
         "Cuando existe flexibilidad organizacional para permitir trabajo remoto"
       ],
-      "etiqueta_arbol": "Fomenta el Teletrabajo Sostenible"
+      "etiqueta_arbol": "Reduce las Emisiones del Traslado Diario"
     },
     "como_ganan_dinero_los_vc": {
       "node_id": "como_ganan_dinero_los_vc",
@@ -20775,7 +20775,7 @@
       "titulo_concepto": "Consejo Asesor de Franquiciados (FAC)",
       "resumen_teorico": "El Franchise Advisory Council (FAC) es un mecanismo formal, generalmente establecido por el franquiciador, para facilitar el diálogo entre franquiciados y la marca, y entre franquiciados entre sí. No es un órgano de decisión ni negociación, sino un vehículo de participación e involucramiento. Su ausencia o mal manejo puede llevar a que los franquiciados formen asociaciones independientes (FA) para oponerse o negociar con el franquiciador, lo cual suele derivar en conflictos legales.",
       "pasos_accionables": [
-        "Crear un FAC con bylaws claros sobre comunicación, composición, confidencialidad, términos y propósito",
+        "Crear un consejo asesor de franquiciados con estatutos claros sobre comunicación, composición, confidencialidad, términos y propósito",
         "Definir si los miembros serán elegidos por franquiciados o designados por el franquiciador",
         "Establecer una agenda específica para cada reunión (2 a 4 veces por año)",
         "Comunicar las minutas de las reuniones a todos los franquiciados",
@@ -22033,9 +22033,9 @@
       "resumen_teorico": "Una versión básica es una pagina simple o un prototipo sin diseño cuidado que comunica tu propuesta de valor, describe el problema y pide una acción concreta. Te sirve para validar rápido si el problema que quieres resolver le urge de verdad a la gente, antes de gastar tiempo y dinero construyendo el producto real.",
       "pasos_accionables": [
         "Crea una página simple con tu propuesta de valor y sus beneficios",
-        "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un preorden; deja la más simple como la más visible, porque cuanto más pides, menos responde la gente",
+        "Incluye una acción clara para que la persona haga algo: registrarse, responder una encuesta, dejar un pedido anticipado; deja la más simple como la más visible, porque cuanto más pides, menos responde la gente",
         "Suma videos, encuestas o un blog si te ayudan a mostrar la idea",
-        "Prueba varias versiones si quieres testear distintas formas de contar el problema",
+        "Prueba varias versiones si quieres comparar distintas formas de contar el problema",
         "Publica lo antes posible sin preocuparte por que se vea perfecto"
       ],
       "entregable_esperado": "Una página o prototipo funcionando en línea, listo para recibir visitas y medir el interés real, con sus pruebas de pasa o no pasa definidas",
@@ -32269,7 +32269,7 @@
       "resumen_teorico": "La decisión de vender la empresa corresponde al consejo, CEO y fundadores, no al banquero. Sin embargo, una vez tomada la decisión de buscar un comprador, un banquero de inversión puede aportar valor significativo gestionando el proceso de M&A, maximizando el valor de salida al contactar un universo amplio de compradores, asumiendo carga operativa y actuando como intermediario en negociaciones delicadas. No siempre es necesario contratarlo, especialmente en ofertas preemptivas atractivas, ventas de bajo valor tipo liquidación o si el CEO tiene amplia experiencia vendiendo empresas y buena relación con los compradores lógicos.",
       "pasos_accionables": [
         "Confirmar que la decisión de vender ya fue tomada por el consejo, CEO y fundadores",
-        "Evaluar si existe una oferta preemptiva atractiva que no requiera optimización externa",
+        "Evaluar si existe una oferta anticipada atractiva que no requiera optimización externa",
         "Determinar si la venta es de bajo valor/liquidación, donde un banquero puede no ser rentable, o si el CEO tiene experiencia previa en ventas de empresas y buena relación con los compradores lógicos",
         "Estimar el valor esperado de salida para justificar el costo del banquero",
         "Considerar contratar un banquero para acceder a un universo amplio de compradores (50+) y reducir conflictos de interés"
@@ -58498,14 +58498,14 @@
       "titulo_concepto": "Fase de Entendimiento: Investigación del Entorno",
       "resumen_teorico": "Esta es la segunda fase del proceso de diseño de tu modelo de negocio. Consiste en sumergirte a fondo en el contexto donde va a evolucionar tu idea: escanear el entorno de mercado, estudiar a tus clientes potenciales, entrevistar expertos del dominio, revisar intentos previos y sus causas de fracaso, y recoger ideas y opiniones. Un factor crítico de éxito es cuestionar los supuestos establecidos de la industria y los patrones de modelo de negocio. El riesgo principal es caer en 'parálisis por análisis', sobre investigar sin conexión con tus objetivos, o sesgar la investigación porque ya te enamoraste de una idea. Para estructurar la investigación de clientes conviene apoyarte en el Mapa de Empatía del Cliente, y para evitar la parálisis, empezar a prototipar modelos de negocio de forma temprana, para obtener retroalimentación rápida en vez de seguir investigando indefinidamente.",
       "pasos_accionables": [
-        "Escanea el entorno de tu negocio: mercado, competidores y tendencias",
+        "Explora el entorno de tu negocio: mercado, competidores y tendencias",
         "Estudia a tus clientes potenciales usando el Mapa de Empatía",
         "Entrevista a expertos del dominio",
         "Investiga intentos previos similares y sus causas de fracaso",
         "Cuestiona los supuestos establecidos de la industria y los patrones de modelo de negocio",
         "Empieza a prototipar modelos de negocio temprano para obtener retroalimentación rápida y evitar la parálisis por análisis"
       ],
-      "entregable_esperado": "Un documento de insights de mercado y clientes con mapas de empatía, supuestos de industria cuestionados y análisis de competidores o patrones de industria.",
+      "entregable_esperado": "Un documento de hallazgos de mercado y clientes con mapas de empatía, supuestos de industria cuestionados y análisis de competidores o patrones de industria.",
       "nodos_previos": [
         "fase_mobilizar_modelo_negocio",
         "pensamiento_convergente_divergente",
@@ -60375,10 +60375,10 @@
       "titulo_concepto": "Uso de Foreign Trade Zones (FTZs) para Optimización Aduanera",
       "resumen_teorico": "Las FTZs son sitios domésticos de EE.UU. considerados fuera del territorio aduanero, útiles para actividades de almacenamiento, ensamblaje, manufactura y reexportación sin pago de aranceles hasta que los bienes entren al territorio aduanero de EE.UU. Por lo general no hay restricciones de cuota para actividad de exportación. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
       "pasos_accionables": [
-        "Identificar si la operación de la empresa se beneficiaría de usar una FTZ (materiales dutiable para reexportación)",
+        "Identificar si la operación de la empresa se beneficiaría de usar una zona de comercio exterior (materiales sujetos a aranceles para reexportación)",
         "Contactar al gerente de zona o a la oficina local del U.S. Commercial Service",
         "Evaluar el uso de la FTZ para almacenamiento, ensamblaje o manufactura",
-        "Consultar el Foreign-Trade Zones Board para procedimientos de aplicación"
+        "Consultar el Foreign-Trade Zones Board para procedimientos de solicitud"
       ],
       "entregable_esperado": "Evaluación de viabilidad de usar una FTZ y, si aplica, solicitud de uso de una zona específica",
       "nodos_previos": [
@@ -64449,13 +64449,13 @@
       "resumen_teorico": "Este sistema combina dos niveles de decisión: los gates evalúan cada proyecto de forma individual (seguir o matar), mientras que la revisión de portafolio compara y prioriza todos tus proyectos activos en conjunto, buscando el mix, balance y alineación correctos con tu estrategia de negocio. Hazlo 2-4 veces al año, revisando los proyectos que ya superaron cierta etapa. Usa criterios financieros y estratégicos comunes para rankear, y aplica un ejercicio de poda inicial para eliminar los proyectos más débiles antes de asignar recursos por Strategic Buckets, es decir, categorías como tipo de proyecto o línea de producto.",
       "pasos_accionables": [
         "Agenda revisiones de tu portafolio completo 2-4 veces al año",
-        "Reúne todos los proyectos que ya superaron cierta etapa o gate inicial",
+        "Reúne todos los proyectos que ya superaron cierta etapa o punto de decisión inicial",
         "Haz una poda inicial eliminando los proyectos más débiles del conjunto",
-        "Define Strategic Buckets según tipo de proyecto o línea de producto y asigna recursos a cada uno",
-        "Rankea los proyectos dentro de cada bucket con criterios financieros y estratégicos hasta el límite de recursos",
-        "Usa esa lista priorizada como apoyo en tus próximas decisiones de gate"
+        "Define bolsas estratégicas según tipo de proyecto o línea de producto y asigna recursos a cada una",
+        "Ordena los proyectos dentro de cada categoría con criterios financieros y estratégicos hasta el límite de recursos",
+        "Usa esa lista priorizada como apoyo en tus próximas decisiones en cada punto de control"
       ],
-      "entregable_esperado": "Sistema de gestión de portafolio con Strategic Buckets definidos, calendario de revisiones periódicas y lista de proyectos priorizados y podados por bucket.",
+      "entregable_esperado": "Sistema de gestión de portafolio con categorías estratégicas definidas, calendario de revisiones periódicas y lista de proyectos priorizados y podados por categoría.",
       "nodos_previos": [
         "asignacion_recursos_en_gates",
         "pruning_portafolio",
@@ -64607,7 +64607,7 @@
         "Si el franquiciador está redactando o revisando su manual de operaciones",
         "Si existe riesgo de que el franquiciador esté ejerciendo control excesivo sobre operaciones diarias no relacionadas con la marca"
       ],
-      "etiqueta_arbol": "Evita la Responsabilidad Vicaria"
+      "etiqueta_arbol": "Evita Responder por tus Franquiciados"
     },
     "gestion_riesgo_cadena_suministro": {
       "node_id": "gestion_riesgo_cadena_suministro",
@@ -65435,7 +65435,7 @@
       "resumen_teorico": "Evalúa periódicamente si los requisitos de seguridad son efectivos, desarrollando un Plan de Acción y Cronograma (POAM) para corregir deficiencias, y estableciendo monitoreo continuo del sistema para respaldar decisiones de gestión de riesgo.",
       "pasos_accionables": [
         "Realizar auditorías o autoevaluaciones (o contratar terceros) de los requisitos de seguridad.",
-        "Desarrollar un POAM detallando debilidades, responsables, recursos y fechas de mitigación.",
+        "Desarrollar un Plan de Acción y Cronograma (POAM) detallando debilidades, responsables, recursos y fechas de mitigación.",
         "Establecer un programa de monitoreo continuo con frecuencia adecuada según el tipo de requisito.",
         "Considerar herramientas comerciales o proveedores externos que pueden apoyar el monitoreo continuo."
       ],
@@ -65485,12 +65485,12 @@
       "titulo_concepto": "Protección de Comunicaciones y Límites del Sistema",
       "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
       "pasos_accionables": [
-        "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+        "Monitorear y controlar comunicaciones en interfaces gestionadas (pasarelas, enrutadores, cortafuegos).",
         "Separar redes internas de las públicas mediante subredes.",
         "Permitir conexiones externas solo a través de interfaces gestionadas.",
         "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
         "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
-        "Cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+        "Cifrar la información controlada no clasificada en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
         "Almacenar de forma segura las claves de cifrado."
       ],
       "entregable_esperado": "Arquitectura de red segmentada con controles de tráfico documentados y mecanismos de cifrado implementados.",
@@ -66491,7 +66491,7 @@
         "Establecer rutinas de revisión donde se cuestione activamente si una idea está realmente resuelta o solo parece resuelta",
         "Diseñar hábitos de trabajo que impliquen esfuerzo voluntario repetido en vez de pasividad contemplativa, buscando además el tipo de esfuerzo que tu tarea necesita, porque repetirlo no basta"
       ],
-      "entregable_esperado": "Un protocolo personal de trabajo creativo que incluya checkpoints de autoevaluación crítica antes de dar por completada una idea o solución.",
+      "entregable_esperado": "Un protocolo personal de trabajo creativo que incluya puntos de control de autoevaluación crítica antes de dar por completada una idea o solución.",
       "nodos_previos": [
         "distincion_esfuerzo_energia",
         "esfuerzo_y_energia_intelectual",
@@ -68179,7 +68179,7 @@
         "Cuando empiezas a meter IA en las decisiones de tu negocio",
         "Cuando notas que estás dependiendo demasiado de lo que la IA te da sin revisarlo"
       ],
-      "etiqueta_arbol": "Sé el Humano en el Circuito"
+      "etiqueta_arbol": "Mantén tu Juicio al Usar IA"
     },
     "humor_como_herramienta_creativa": {
       "node_id": "humor_como_herramienta_creativa",
@@ -70716,8 +70716,8 @@
       "pasos_accionables": [
         "Define el valor de venta que quieres alcanzar y en cuánto tiempo, por ejemplo $10M en 5 años",
         "Resta el valor actual de tu negocio para saber cuánto crecimiento en valoración necesitas",
-        "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánto EBIT necesitas generar",
-        "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y rebates de proveedores si los hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
+        "Divide ese crecimiento entre un múltiplo de ganancias conservador de tu sector para saber cuánta ganancia operativa (EBIT) necesitas generar",
+        "Calcula cuánto te deja en promedio cada franquiciado en regalías, ventas de producto (restando su costo) y bonificaciones de proveedores si las hay, y multiplícalo por una aproximación de tu margen neto, sabiendo que no hay cifras confiables para estimarlo",
         "Divide el EBIT que necesitas entre lo que te deja cada franquiciado para saber cuántas franquicias tienes que vender",
         "Reparte esas ventas en un cronograma de 5 años, empezando con crecimiento gradual al inicio"
       ],
@@ -70970,11 +70970,11 @@
       "resumen_teorico": "Juego colaborativo que usa la metáfora de un barco frenado por anclas para identificar los dolores (pains) más extremos que impiden a los clientes completar sus trabajos (jobs to be done). Cuanto más abajo se coloca el ancla, más extremo es el dolor.",
       "pasos_accionables": [
         "Prepara un póster grande con un barco flotando en el mar.",
-        "Invita a los clientes a identificar problemas, obstáculos y riesgos, cada uno en un post-it.",
-        "Pide que coloquen cada post-it como ancla, ubicando más abajo los dolores más extremos.",
-        "Compara los resultados con tu entendimiento previo de los pains del cliente."
+        "Invita a los clientes a identificar problemas, obstáculos y riesgos, cada uno en una nota adhesiva.",
+        "Pide que coloquen cada nota adhesiva como ancla, ubicando más abajo los dolores más extremos.",
+        "Compara los resultados con tu entendimiento previo de los dolores del cliente."
       ],
-      "entregable_esperado": "Mapa visual de pains priorizados según su intensidad, validado con clientes.",
+      "entregable_esperado": "Mapa visual de dolores priorizados según su intensidad, validado con clientes.",
       "nodos_previos": [
         "value_proposition_canvas",
         "product_box_game"
@@ -75563,7 +75563,7 @@
         "Cuando se detecte que los límites de una carta de control fueron fijados arbitrariamente o por juicio",
         "Cuando el desempeño se mida contra la capacidad máxima del fabricante del equipo en vez del desempeño estadístico real"
       ],
-      "etiqueta_arbol": "No Fijes Límites a Juicio"
+      "etiqueta_arbol": "Calcula tus Límites con Datos"
     },
     "limites_de_especificacion_vs_limites_de_control": {
       "node_id": "limites_de_especificacion_vs_limites_de_control",
@@ -75852,7 +75852,7 @@
         "Si quieres la versión rápida en lugar de un marco formal para conocer tus puntos fuertes, apunta lo primero que se te venga a la cabeza al hacerte las cuatro preguntas que siguen.",
         "Primera: ¿cómo me describirían en tres palabras las personas que mejor me conocen y me quieren, familia, pareja, amigos cercanos? Un ejemplo de respuesta: atenta, entusiasta, empeñada.",
         "Segunda: ¿qué tres cualidades tengo de las que me sienta más orgulloso? Por ejemplo: curiosa, reflexiva, optimista.",
-        "Tercera: cuando miro atrás a algo que hice y salió bien, ¿a qué rasgos personales les doy el crédito? Por ejemplo: visión, determinación, humildad.",
+        "Tercera: cuando miro atrás a algo que hice y salió bien, ¿a qué rasgos personales atribuyo el mérito? Por ejemplo: visión, determinación, humildad.",
         "Cuarta: ¿cuáles son las tres opiniones positivas más comunes que he recibido de mi jefe o de mis pares? Por ejemplo: con principios, aprende rápido, piensa a largo plazo.",
         "Cuenta con que lo más probable es que tus respuestas se agrupen en unos pocos temas; en el ejemplo, soñar a lo grande, aprender rápido y mantenerse animada.",
         "Y sean cuales sean, recuérdalos y tenlos en mucha estima, porque vas a apoyarte en ellos una y otra vez."
@@ -78772,7 +78772,7 @@
         "Identificar los indicadores que afectan cronograma, costo y calidad en la operación (ausentismo, escasez de partes, entrenamiento, etc.)",
         "Determinar qué factores tienen impacto múltiple (dual o triple) sobre las tres dimensiones",
         "Establecer gráficos de tendencia (charts) para cada indicador y revisarlos periódicamente",
-        "Usar las tendencias para predecir problemas antes de que se materialicen, no solo para reportarlos después",
+        "Usar las tendencias para predecir problemas antes de que se materialicen, no solo para informar de ellos después",
         "Basar las decisiones de asignación de tiempo del supervisor en las áreas de mayor riesgo detectadas"
       ],
       "entregable_esperado": "Sistema de indicadores y gráficos de tendencia para cronograma, costo y calidad, revisado periódicamente por el supervisor.",
@@ -80970,7 +80970,7 @@
       ],
       "entregable_esperado": "Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas",
       "condiciones_activacion": [
-        "Al preparar reuniones de dirección o junta directiva",
+        "Al preparar las primeras reuniones de dirección o junta directiva",
         "Si los inversionistas piden métricas financieras tradicionales de forma prematura",
         "Si no hay claridad sobre qué medir para saber si el proyecto avanza"
       ],
@@ -85584,12 +85584,12 @@
       "titulo_concepto": "Obtención de Datos de Factores Humanos",
       "resumen_teorico": "El 'error humano' no trata solo de humanos, sino de cómo las herramientas, tareas y entorno de trabajo influyen sistemáticamente en el desempeño. Hay dos fuentes directas de datos: los debriefings de los participantes y los registros de parámetros de desempeño (grabadoras de voz, sistemas de monitoreo, videos). Ambas fuentes tienen limitaciones: la memoria humana no es una grabación fiel y tiende a estructurar los eventos de forma más lineal de lo que realmente fueron; los registros son solo ventanas parciales que apuntan a un mundo más amplio de tareas, metas y presiones organizacionales.",
       "pasos_accionables": [
-        "Identificar todas las fuentes posibles de datos: debriefings, grabaciones de voz, registros de eventos, lecturas de máquina",
+        "Identificar todas las fuentes posibles de datos: entrevistas posteriores con los participantes, grabaciones de voz, registros de eventos, lecturas de máquina",
         "Reconocer las limitaciones de la memoria humana antes de entrevistar participantes",
         "Cruzar y verificar datos entre distintas fuentes para reconstruir el contexto",
         "Distinguir entre dato factual y dato inferido o analizado; un dato inferido puede presentarse como factual si puedes mostrar qué hiciste y por qué concluiste lo que concluiste"
       ],
-      "entregable_esperado": "Un inventario de fuentes de datos disponibles y un plan de recolección que combine debriefings y registros",
+      "entregable_esperado": "Un inventario de fuentes de datos disponibles y un plan de recolección que combine entrevistas posteriores con los participantes y registros",
       "nodos_previos": [
         "foco_proximal_reacciones_falla"
       ],
@@ -87270,7 +87270,7 @@
       "pasos_accionables": [
         "Comparar las tendencias de reporte de incidentes menores con las tasas de accidentes graves/fatales en la organización",
         "Eliminar barreras al reporte (incentivos negativos, pruebas de drogas post-incidente automáticas)",
-        "Promover activamente el reporte de cuasi-accidentes como fuente de aprendizaje",
+        "Promover activamente el reporte de cuasiaccidentes como fuente de aprendizaje",
         "Comunicar a la dirección que bajos números de incidentes no equivalen a bajo riesgo real"
       ],
       "entregable_esperado": "Análisis comparativo interno de tendencias de reporte vs. severidad de eventos, presentado a dirección",
@@ -87284,7 +87284,7 @@
         "Si la organización presume seguridad basada solo en bajas tasas de incidentes reportados",
         "Si se ha premiado a unidades o sitios por 'cero incidentes'"
       ],
-      "etiqueta_arbol": "Cuidado con Pocos Incidentes Reportados"
+      "etiqueta_arbol": "Desconfía de Pocos Incidentes Notificados"
     },
     "paradoja_exito_emprendedor": {
       "node_id": "paradoja_exito_emprendedor",
@@ -88126,7 +88126,7 @@
         "Cuando te encuentras en el Pozo y te lo estás callando, aguantando el tipo y fingiendo que lo tienes todo bajo control."
       ],
       "ids_alias": [],
-      "etiqueta_arbol": "Busca Apoyo Auténtico"
+      "etiqueta_arbol": "Busca Apoyo en Vez de Fingir"
     },
     "pedir_critica_anonima_curso_entrenamiento_dictado": {
       "node_id": "pedir_critica_anonima_curso_entrenamiento_dictado",
@@ -94644,7 +94644,7 @@
         "Cuando estás diseñando o ajustando tu propio proceso o guion de ventas.",
         "Cuando tus ventas son de tamaño mediano o grande, no ventas pequeñas de bajo costo."
       ],
-      "etiqueta_arbol": "Previene, no Manejes Objeciones",
+      "etiqueta_arbol": "Prevén, no Manejes Objeciones",
       "ids_alias": [
         "prevencion_de_objeciones"
       ]
@@ -96907,7 +96907,7 @@
         "fase_de_eliminacion_de_no_comercializables"
       ],
       "condiciones_activacion": [
-        "Si el usuario fabrica productos durables como alfombras, autos, electrodomésticos o electrónicos",
+        "Si el usuario fabrica productos que contienen nutrientes técnicos valiosos, como alfombras, autos, electrodomésticos o electrónicos",
         "Si se busca retener materiales valiosos en lugar de perderlos tras la venta"
       ],
       "etiqueta_arbol": "Vende Servicio, No Producto"
@@ -97526,11 +97526,11 @@
       "resumen_teorico": "En muchos lugares la ley prohíbe que tomes represalias contra alguien que reporta un peligro o una lesión o enfermedad laboral, presenta una queja, pide una inspección de seguridad, participa en ella o participa o testifica en un procedimiento relacionado con una inspección. Represalia incluye despido, bajarlo de puesto, intimidarlo o reducirle el salario, entre otras acciones adversas. Suele existir un plazo corto, contado en días calendario, para presentar la queja ante la autoridad correspondiente, así que conviene revisar cuál es ese plazo en tu mercado.",
       "pasos_accionables": [
         "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
-        "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
+        "Cuéntales a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
         "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)); verifica el plazo vigente en tu país",
-        "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
+        "No adoptes ninguna medida adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
       ],
-      "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda reportar sin miedo",
+      "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda denunciar sin miedo",
       "nodos_previos": [
         "programas_cooperativos_osha",
         "participacion_trabajadores"
@@ -99363,7 +99363,7 @@
         "Plantear el problema práctico a resolver",
         "Definir la hipótesis nula (H0) y la alternativa (Ha)",
         "Elegir un valor de alfa (comúnmente 0.01, 0.05 o 0.10)",
-        "Seleccionar el estadístico de prueba apropiado (t-test, etc.)",
+        "Seleccionar el estadístico de prueba apropiado (prueba t, etc.)",
         "Determinar la región de rechazo",
         "Recolectar datos, calcular el estadístico y compararlo con la región de rechazo",
         "Sacar la conclusión práctica del proceso"
@@ -99532,7 +99532,7 @@
         "Identificar los atributos de calidad que requieren pruebas destructivas.",
         "Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.",
         "Verificar que el proceso esté en control estadístico antes de confiar en la calidad del producto.",
-        "Eliminar la práctica de screening de lotes rechazados, ya que no aporta valor en pruebas destructivas."
+        "Eliminar la práctica de inspección total de lotes rechazados, ya que no aporta valor en pruebas destructivas."
       ],
       "entregable_esperado": "Sistema de control estadístico de proceso implementado que garantice la calidad sin depender de pruebas destructivas al 100%.",
       "nodos_previos": [
@@ -100799,13 +100799,13 @@
       "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Metodología por Etapas",
       "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Suele bastar una estimación aproximada; comunicar resultados hacia afuera exige rigor y compartir la metodología. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
       "pasos_accionables": [
-        "Antes de empezar, aclarar qué preguntas quieres responder o qué decisiones necesitas apoyar con el LCA, y definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
-        "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
+        "Antes de empezar, aclarar qué preguntas quieres responder o qué decisiones necesitas apoyar con el análisis de ciclo de vida, y definir el alcance y límites del sistema a analizar (de la cuna a la tumba, de la cuna a la puerta, etc.)",
+        "Identificar todas las entradas y salidas relevantes en cada etapa del ciclo de vida del producto",
         "Decidir si generar datos primarios propios, más costosos, o usar datos públicos promedio del sector",
         "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
         "Evitar comparar resultados con competidores salvo que los productos de ambos estén verificados por la misma agencia certificadora de terceros"
       ],
-      "entregable_esperado": "Un informe de LCA con límites del sistema definidos, supuestos documentados y resultados cuantificados de impacto ambiental por etapa del ciclo de vida.",
+      "entregable_esperado": "Un informe de análisis de ciclo de vida con límites del sistema definidos, supuestos documentados y resultados cuantificados de impacto ambiental por etapa del ciclo de vida.",
       "nodos_previos": [
         "medir_huella_carbono_corporativa",
         "medir_residuos_empresa"
@@ -104202,10 +104202,10 @@
       "titulo_concepto": "Bloque de Relaciones con Clientes",
       "resumen_teorico": "Describe el tipo de relación que una empresa establece con cada Segmento de Clientes, motivada por adquisición, retención o venta adicional (upselling). Categorías: asistencia personal, asistencia personal dedicada, autoservicio, servicios automatizados, comunidades y co-creación.",
       "pasos_accionables": [
-        "Definir la motivación principal por segmento: ¿adquisición, retención o upselling?",
-        "Seleccionar el tipo o los tipos de relación adecuados, que pueden convivir en un mismo segmento (personal, dedicada, autoservicio, automatizada, comunidad, co-creación)",
+        "Definir la motivación principal por segmento: ¿adquisición, retención o venta adicional?",
+        "Seleccionar el tipo o los tipos de relación adecuados, que pueden convivir en un mismo segmento (personal, dedicada, autoservicio, automatizada, comunidad, cocreación)",
         "Evaluar el costo de mantener cada tipo de relación",
-        "Diseñar mecanismos de co-creación o comunidad si aplica al modelo (ej. reviews, foros)"
+        "Diseñar mecanismos de cocreación o comunidad si aplica al modelo (ej. reseñas, foros)"
       ],
       "entregable_esperado": "Definición del tipo de relación por segmento de cliente y su costo estimado",
       "nodos_previos": [
@@ -106353,9 +106353,9 @@
       "pasos_accionables": [
         "Revisa quién recibe las sanciones o llamadas de atención por seguridad en tu negocio: ¿los trabajadores o tú y quienes organizan el trabajo?",
         "Pregúntate si tus políticas de seguridad culpan siempre a las personas por fallos que en realidad vienen de cómo organizaste el trabajo.",
-        "Evalúa si le das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad."
+        "Evalúa si les das a tus trabajadores la autoridad necesaria para tomar decisiones de seguridad, en la misma medida en que les exiges responsabilidad."
       ],
-      "entregable_esperado": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si le exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
+      "entregable_esperado": "Un diagnóstico honesto de cómo repartes la responsabilidad de la seguridad en tu negocio, identificando si les exiges más a tus trabajadores de lo que les das en autoridad o recursos.",
       "nodos_previos": [
         "participacion_trabajadores"
       ],
@@ -106781,7 +106781,7 @@
       "resumen_teorico": "El ROA mide qué porcentaje de cada dólar invertido en activos de la empresa se convierte en ganancia. Se calcula dividiendo la ganancia neta entre el total de activos. A diferencia de los márgenes de rentabilidad, un ROA demasiado alto puede ser señal de alerta: podría indicar que la empresa no está reinvirtiendo en su base de activos para el futuro, o incluso que está manipulando el balance para reducir artificialmente los activos reportados (como hizo Enron).",
       "pasos_accionables": [
         "Calcular: Ganancia Neta / Total de Activos",
-        "Comparar el ROA con el promedio de la industria (varía mucho entre manufactura, servicios y retail)",
+        "Comparar el ROA con el promedio de la industria (varía mucho entre manufactura, servicios y comercio minorista)",
         "Si el ROA es excesivamente alto, investigar si se está invirtiendo lo suficiente en activos futuros",
         "Verificar la integridad del balance general si el ROA parece sospechosamente alto"
       ],
@@ -107736,7 +107736,7 @@
         "Una vez que los inversores han entrado al consejo de administración.",
         "Cuando se busca prevenir conflictos abruptos en una futura sucesión de CEO."
       ],
-      "etiqueta_arbol": "Evalúa Regularmente al Fundador-CEO"
+      "etiqueta_arbol": "Evalúa Regularmente al Director General Fundador"
     },
     "revolucion_relaciones_proveedores": {
       "node_id": "revolucion_relaciones_proveedores",
@@ -109404,11 +109404,11 @@
         "Verifica que las puertas de salida no estén bloqueadas, cerradas con llave u obstruidas",
         "Confirma que las puertas se abran sin necesidad de llave, herramienta o conocimiento especial mientras el lugar está ocupado, y con bisagra lateral",
         "Revisa que no uses puertas giratorias, corredizas o elevadizas como salidas obligatorias",
-        "Instala hardware de pánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
+        "Instala dispositivos antipánico en las puertas de salida que lo requieran, que abran con poca fuerza, según el estándar de tu país",
         "Asegura mecanismos de liberación interna en los cuartos fríos, incluso si están bloqueados desde afuera",
         "Coloca barreras y señalización donde las salidas den directo a zonas de tráfico vehicular"
       ],
-      "entregable_esperado": "Tu checklist de rutas de salida y emergencias completado, con las deficiencias en puertas y accesos de salida ya corregidas.",
+      "entregable_esperado": "Tu lista de verificación de rutas de salida y emergencias completada, con las deficiencias en puertas y accesos de salida ya corregidas.",
       "nodos_previos": [
         "autoinspeccion_lugar_de_trabajo",
         "caracterizacion_priorizacion_peligros"
@@ -110656,7 +110656,7 @@
         "Modificar controles ineficaces o implementar medidas adicionales si es necesario",
         "Ejecutar mantenimiento preventivo rutinario de equipos y controles"
       ],
-      "entregable_esperado": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si aplica",
+      "entregable_esperado": "Reporte de verificación de efectividad de controles con recomendaciones de ajuste o acciones correctivas si corresponde",
       "nodos_previos": [
         "implementacion_controles",
         "plan_control_peligros"
@@ -111105,7 +111105,7 @@
       "pasos_accionables": [
         "Identifica cuál es el primer contacto real que tienes con tu cliente después de que compra",
         "Elige a propósito las formas de comunicación que vas a usar; no necesitas usar las seis",
-        "Prepara un contenido específico para cada forma que elijas, por ejemplo un email cálido o una llamada de seguimiento",
+        "Prepara un contenido específico para cada forma que elijas, por ejemplo un correo electrónico cálido o una llamada de seguimiento",
         "Ponle una nota del uno al diez a la experiencia que hoy le das a tu cliente en este momento",
         "Elige una mejora concreta para aplicar de inmediato y decide cómo vas a medir si funcionó"
       ],
@@ -112217,7 +112217,7 @@
       "resumen_teorico": "El diseño de proceso debe comenzar con un diagrama de flujo de alto nivel que describa el flujo general, desde el cual se identifican subprocesos y actividades principales para diseño detallado. Debe cumplir criterios como entregar las metas de calidad del producto, ser eficiente en recursos y no exigir inversiones mayores a las planificadas.",
       "pasos_accionables": [
         "Elaborar un diagrama de flujo de proceso de alto nivel",
-        "Verificar que el diseño incorpore contramedidas de análisis de criticidad, FMEA y árbol de fallas",
+        "Verificar que el diseño incorpore contramedidas de análisis de criticidad, análisis de modo y efecto de falla y árbol de fallas",
         "Evaluar el impacto de anatomías de proceso radicalmente distintas (unidades dedicadas vs funciones especializadas)",
         "Documentar para cada actividad: entradas, salidas, metas, tiempo de ciclo, costo y descripción de conversión",
         "Revisar el flujo para eliminar fuentes de error y redundancias, reducir traspasos y tiempos de ciclo, reemplazar tareas con salidas defectuosas y corregir la secuencia"
@@ -114983,9 +114983,9 @@
       "resumen_teorico": "Antes de contar en público tus logros verdes, asegúrate de no tener vacíos evidentes en tus prácticas o en tu portafolio ambiental. Si te posicionas como líder verde, vas a recibir más atención de ONGs, consumidores y críticos. El caso de Ford muestra cómo una iniciativa verde aislada puede volverse motivo de burla si siguen existiendo problemas ambientales de fondo, como vender vehículos que contaminan mucho.",
       "pasos_accionables": [
         "Identifica los mayores riesgos y desafíos ambientales de tu negocio",
-        "Revisa las políticas y programas de sostenibilidad que ya tienes, si realmente los cumples, cómo se comparan tus logros con las mejores prácticas y con los de la competencia, y qué y cómo has reportado sobre tu estrategia y desempeño",
+        "Revisa las políticas y programas de sostenibilidad que ya tienes, si realmente los cumples, cómo se comparan tus logros con las mejores prácticas y con los de la competencia, y qué y cómo has informado sobre tu estrategia y desempeño",
         "Evalúa el impacto ecológico de tus productos frente a la competencia",
-        "Detecta los 'esqueletos en el armario' ambientales antes de comunicar nada"
+        "Detecta los 'trapos sucios' ambientales antes de comunicar nada"
       ],
       "entregable_esperado": "Un documento donde anotas, antes de lanzar cualquier comunicación verde, los riesgos y vacíos ambientales que encontraste en tu negocio",
       "nodos_previos": [
@@ -116624,13 +116624,13 @@
       "titulo_concepto": "SWOT aplicado al Business Model Canvas",
       "resumen_teorico": "Combinación del análisis clásico de Fortalezas, Debilidades, Oportunidades y Amenazas (SWOT) con los nueve bloques del Business Model Canvas. En lugar de un SWOT genérico y vago, se aplica de forma estructurada tanto al modelo completo como a cada bloque del canvas (Segmentos, Propuesta de Valor, Canales, Relaciones, Ingresos, Recursos, Actividades, Socios, Costos), generando una evaluación enfocada que sirve de base para la innovación del modelo.",
       "pasos_accionables": [
-        "Tomar cada uno de los 9 bloques del Business Model Canvas",
+        "Tomar cada uno de los 9 bloques del lienzo del modelo de negocio",
         "Preguntar fortalezas y debilidades internas para cada bloque",
         "Preguntar oportunidades y amenazas externas para cada bloque",
         "Documentar cómo una debilidad en un bloque impacta a otros bloques",
         "Usar los resultados como insumo para prototipos de nuevos modelos de negocio"
       ],
-      "entregable_esperado": "Matriz SWOT detallada por cada bloque del Business Model Canvas con hallazgos priorizados",
+      "entregable_esperado": "Matriz FODA detallada por cada bloque del lienzo del modelo de negocio con hallazgos priorizados",
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "business_model_environment_mapping"
@@ -120158,7 +120158,7 @@
       "resumen_teorico": "Sustituir el transporte aéreo por opciones terrestres, ferroviarias o marítimas de menor impacto ambiental puede generar ahorros sustanciales de costos y emisiones, especialmente cuando la urgencia de entrega no es crítica. Además, reducir la velocidad de cruceros y vehículos disminuye el consumo de combustible y las emisiones de CO2.",
       "pasos_accionables": [
         "Evaluar qué envíos actualmente realizados por vía aérea podrían cambiarse a transporte terrestre, ferroviario o marítimo.",
-        "Analizar el impacto de cambiar de servicio 'next-day' a 'two-day' o 'three-day' en costos y emisiones.",
+        "Analizar el impacto de cambiar de servicio de entrega al día siguiente a entrega en dos o tres días en costos y emisiones.",
         "Considerar mejoras de aislamiento térmico para productos sensibles a temperatura que permitan tiempos de tránsito más largos.",
         "Evaluar la reducción de velocidad de cruceros/vehículos como estrategia de ahorro de combustible."
       ],
@@ -120245,7 +120245,7 @@
         "Cuando el contexto cambie (mercado, tecnología, usuario), evalúa si tu narrativa de negocio sigue vigente.",
         "Practica comunicar los cambios de dirección (pivotes) como evolución natural, no como fracaso."
       ],
-      "entregable_esperado": "Criterios de decisión (pivot/persevere) documentados antes de cada ciclo de validación, junto con un registro de hipótesis descartadas y por qué.",
+      "entregable_esperado": "Criterios de decisión (pivotar o perseverar) documentados antes de cada ciclo de validación, junto con un registro de hipótesis descartadas y por qué.",
       "nodos_previos": [
         "reconocer_el_sesgo_narrativo"
       ],
@@ -122200,10 +122200,10 @@
       "titulo_concepto": "Valor Presente de una Franquicia (PVF)",
       "resumen_teorico": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo, aunque moderándolas según el flujo de caja previsto.",
       "pasos_accionables": [
-        "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
+        "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (cuota de franquicia, regalías, fondo publicitario, bonificaciones), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
         "Estimar el impacto en el valor de empresa de cada franquiciado adicional",
-        "Usar el PVF para evaluar decisiones de inversión en marketing, brokers y personal",
-        "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de brokers)"
+        "Usar el PVF para evaluar decisiones de inversión en marketing, intermediarios y personal",
+        "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de intermediarios)"
       ],
       "entregable_esperado": "Modelo financiero de PVF que estime el valor de vida de un franquiciado típico",
       "nodos_previos": [
@@ -122455,14 +122455,14 @@
       "titulo_concepto": "Value Proposition Canvas",
       "resumen_teorico": "Herramienta con dos lados: el Perfil del Cliente (Customer Profile) que clarifica el entendimiento del cliente, y el Mapa de Valor (Value Map) que describe cómo se pretende crear valor para ese cliente. Se logra Fit (encaje) cuando el mapa de valor satisface el perfil del cliente. Es un plug-in que hace zoom en dos bloques del Business Model Canvas: Segmentos de Clientes y Propuesta de Valor.",
       "pasos_accionables": [
-        "Descargar el template del Value Proposition Canvas",
-        "Dibujar el círculo del Customer Profile a la derecha, especificando en él los jobs, pains y gains del cliente",
-        "Dibujar el cuadrado del Value Map a la izquierda, documentando en él cómo tu producto/servicio alivia pains y crea gains",
-        "Trabajar ambos lados iterativamente hasta encontrar Fit",
+        "Descargar la plantilla del Value Proposition Canvas",
+        "Dibujar el círculo del Perfil del Cliente a la derecha, especificando en él los trabajos, frustraciones y alegrías del cliente",
+        "Dibujar el cuadrado del Mapa de Valor a la izquierda, documentando en él cómo tu producto/servicio alivia frustraciones y crea alegrías",
+        "Trabajar ambos lados iterativamente hasta encontrar el encaje",
         "Comunicar ambos documentos a toda la organización para crear entendimiento compartido.",
-        "Usar los documentos como scoreboard durante conversaciones reales con clientes."
+        "Usar los documentos como marcador durante conversaciones reales con clientes."
       ],
-      "entregable_esperado": "Canvas completo con Customer Profile y Value Map mapeados para un segmento específico",
+      "entregable_esperado": "Canvas completo con Perfil del Cliente y Mapa de Valor mapeados para un segmento específico",
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "empathy_map",
@@ -123745,14 +123745,14 @@
       "titulo_concepto": "Acuerdos de Equity Dinámicos (Dynamic Equity Agreements)",
       "resumen_teorico": "En lugar de fijar el equity y el reparto entre cofundadores de forma estática desde el inicio -uno de los errores más comunes, porque asume que el compromiso, los roles y las contribuciones de cada fundador permanecerán constantes-, conviene incorporar mecanismos dinámicos que se ajusten conforme cambian las circunstancias reales del equipo. El vesting (adquisición gradual de acciones por tiempo o por hitos cumplidos; el esquema por tiempo más común usa un cliff de 1 año seguido de vesting mensual, por ejemplo hasta completar 4 años) es la pieza central de estos acuerdos dinámicos: si un cofundador abandona el proyecto antes de tiempo, su equity no adquirida puede reclamarse y redistribuirse en vez de quedar 'atrapada' e ineficientemente inmovilizada. Esto evita que el equipo quede 'esposado', necesitando equity fresca para atraer nuevos cofundadores, empleados o inversionistas que llenen los vacíos de capital humano, social o financiero que deja quien se va. Un acuerdo de equity dinámico también puede usar términos de recompra (buyout) predefinidos y planificar revisiones periódicas del split conforme evoluciona la startup, en vez de dejarlo fijo para siempre. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
       "pasos_accionables": [
-        "Establecer un cronograma de vesting con cliff (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para el equity de cada fundador",
+        "Establecer un cronograma de vesting con un periodo mínimo inicial (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para la participación accionaria de cada fundador",
         "Documentar legalmente el vesting mediante las elecciones fiscales apropiadas (por ejemplo, la Sección 83(b) del código fiscal en Estados Unidos)",
-        "Definir con claridad qué sucede con el equity no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
-        "Crear mecanismos para reclamar y redistribuir la equity de fundadores que dejan de contribuir, evitando que quede inmovilizada",
-        "Usar la equity recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
-        "Planificar revisiones periódicas del split de equity conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una"
+        "Definir con claridad qué sucede con la participación no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
+        "Crear mecanismos para reclamar y redistribuir la participación de fundadores que dejan de contribuir, evitando que quede inmovilizada",
+        "Usar la participación recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
+        "Planificar revisiones periódicas del reparto de la participación conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una"
       ],
-      "entregable_esperado": "Acuerdo legal de equity dinámico, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del split",
+      "entregable_esperado": "Acuerdo legal de participación accionaria dinámica, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del reparto",
       "condiciones_activacion": [
         "Al formalizar el split de equity entre cofundadores o firmar el acuerdo de fundadores",
         "Cuando existe riesgo de que un cofundador abandone el proyecto tempranamente",
@@ -125339,7 +125339,7 @@
         "conducir_etapas_modelo_ideal_decision"
       ],
       "condiciones_activacion": [
-        "Cuando va a empezar un proceso de decisión y todavía nadie ha dicho qué se decide, quién decide, a quién se consulta, quién puede vetarlo y a quién hay que contárselo después."
+        "Cuando va a empezar un proceso de decisión y todavía nadie ha dicho qué se decide, para cuándo, quién decide, a quién se consulta, quién puede vetarlo y a quién hay que contárselo después."
       ],
       "ids_alias": [],
       "etiqueta_arbol": "Zanja las Seis Preguntas Antes"

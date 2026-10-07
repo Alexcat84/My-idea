@@ -6,12 +6,12 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
   "pasos_accionables": [
-    "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+    "Monitorear y controlar comunicaciones en interfaces gestionadas (pasarelas, enrutadores, cortafuegos).",
     "Separar redes internas de las públicas mediante subredes.",
     "Permitir conexiones externas solo a través de interfaces gestionadas.",
     "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
     "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
-    "Cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+    "Cifrar la información controlada no clasificada en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
     "Almacenar de forma segura las claves de cifrado."
   ],
   "entregable_esperado": "Arquitectura de red segmentada con controles de tráfico documentados y mecanismos de cifrado implementados.",
@@ -106,6 +106,42 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_system_communication_protection-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
+      "texto_nuevo": "Monitorear y controlar comunicaciones en interfaces gestionadas (pasarelas, enrutadores, cortafuegos).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gateways",
+          "routers",
+          "firewalls"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_system_communication_protection-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+      "texto_nuevo": "Cifrar la información controlada no clasificada en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cifrar CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

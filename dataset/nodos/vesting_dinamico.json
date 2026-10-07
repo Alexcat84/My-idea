@@ -5,14 +5,14 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "En lugar de fijar el equity y el reparto entre cofundadores de forma estática desde el inicio -uno de los errores más comunes, porque asume que el compromiso, los roles y las contribuciones de cada fundador permanecerán constantes-, conviene incorporar mecanismos dinámicos que se ajusten conforme cambian las circunstancias reales del equipo. El vesting (adquisición gradual de acciones por tiempo o por hitos cumplidos; el esquema por tiempo más común usa un cliff de 1 año seguido de vesting mensual, por ejemplo hasta completar 4 años) es la pieza central de estos acuerdos dinámicos: si un cofundador abandona el proyecto antes de tiempo, su equity no adquirida puede reclamarse y redistribuirse en vez de quedar 'atrapada' e ineficientemente inmovilizada. Esto evita que el equipo quede 'esposado', necesitando equity fresca para atraer nuevos cofundadores, empleados o inversionistas que llenen los vacíos de capital humano, social o financiero que deja quien se va. Un acuerdo de equity dinámico también puede usar términos de recompra (buyout) predefinidos y planificar revisiones periódicas del split conforme evoluciona la startup, en vez de dejarlo fijo para siempre. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
-    "Establecer un cronograma de vesting con cliff (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para el equity de cada fundador",
+    "Establecer un cronograma de vesting con un periodo mínimo inicial (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para la participación accionaria de cada fundador",
     "Documentar legalmente el vesting mediante las elecciones fiscales apropiadas (por ejemplo, la Sección 83(b) del código fiscal en Estados Unidos)",
-    "Definir con claridad qué sucede con el equity no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
-    "Crear mecanismos para reclamar y redistribuir la equity de fundadores que dejan de contribuir, evitando que quede inmovilizada",
-    "Usar la equity recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
-    "Planificar revisiones periódicas del split de equity conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una"
+    "Definir con claridad qué sucede con la participación no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
+    "Crear mecanismos para reclamar y redistribuir la participación de fundadores que dejan de contribuir, evitando que quede inmovilizada",
+    "Usar la participación recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
+    "Planificar revisiones periódicas del reparto de la participación conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una"
   ],
-  "entregable_esperado": "Acuerdo legal de equity dinámico, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del split",
+  "entregable_esperado": "Acuerdo legal de participación accionaria dinámica, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del reparto",
   "condiciones_activacion": [
     "Al formalizar el split de equity entre cofundadores o firmar el acuerdo de fundadores",
     "Cuando existe riesgo de que un cofundador abandone el proyecto tempranamente",
@@ -92,6 +92,109 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta la recompra como uno de los enfoques que un acuerdo dinámico puede usar, no como parte obligada de un acuerdo completo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-vesting_dinamico-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un cronograma de vesting con cliff (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para el equity de cada fundador",
+      "texto_nuevo": "Establecer un cronograma de vesting con un periodo mínimo inicial (por ejemplo, 1 año) y adquisición gradual (por ejemplo, 4 años en total) para la participación accionaria de cada fundador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "con cliff",
+          "el equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vesting_dinamico-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir con claridad qué sucede con el equity no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
+      "texto_nuevo": "Definir con claridad qué sucede con la participación no adquirida si un cofundador abandona el proyecto antes de tiempo, incluyendo términos de recompra (buyout) predefinidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el equity no adquirida"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vesting_dinamico-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear mecanismos para reclamar y redistribuir la equity de fundadores que dejan de contribuir, evitando que quede inmovilizada",
+      "texto_nuevo": "Crear mecanismos para reclamar y redistribuir la participación de fundadores que dejan de contribuir, evitando que quede inmovilizada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "la equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vesting_dinamico-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar la equity recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
+      "texto_nuevo": "Usar la participación recuperada de quien se va para atraer a futuros cofundadores, empleados o inversionistas que cubran vacíos de capital humano, social o financiero",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "la equity recuperada"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vesting_dinamico-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planificar revisiones periódicas del split de equity conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una",
+      "texto_nuevo": "Planificar revisiones periódicas del reparto de la participación conforme evoluciona la startup, usando un marco estructurado que divida el desarrollo en fases y pondere la importancia de cada una",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "split de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-vesting_dinamico-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerdo legal de equity dinámico, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del split",
+      "texto_nuevo": "Acuerdo legal de participación accionaria dinámica, con cronograma de vesting, cláusulas de recuperación y recompra ante salida de cofundadores, y un plan de revisión periódica del reparto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity dinámico",
+          "del split"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

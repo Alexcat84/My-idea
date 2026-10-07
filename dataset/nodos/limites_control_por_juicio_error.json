@@ -22,8 +22,24 @@
     "Cuando se detecte que los límites de una carta de control fueron fijados arbitrariamente o por juicio",
     "Cuando el desempeño se mida contra la capacidad máxima del fabricante del equipo en vez del desempeño estadístico real"
   ],
-  "etiqueta_arbol": "No Fijes Límites a Juicio",
+  "etiqueta_arbol": "Calcula tus Límites con Datos",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-limites_control_por_juicio_error-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No Fijes Límites a Juicio",
+      "texto_nuevo": "Calcula tus Límites con Datos",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v09)",
+        "evidencia": "'Fijar límites a' algo significa restringirlo, así que la etiqueta se lee como 'no le pongas límites al juicio', lo contrario del concepto; la nueva dice lo que pide el resumen: límites calculados con los datos del proceso."
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

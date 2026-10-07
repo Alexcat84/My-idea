@@ -6,10 +6,10 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo, aunque moderándolas según el flujo de caja previsto.",
   "pasos_accionables": [
-    "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
+    "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (cuota de franquicia, regalías, fondo publicitario, bonificaciones), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
     "Estimar el impacto en el valor de empresa de cada franquiciado adicional",
-    "Usar el PVF para evaluar decisiones de inversión en marketing, brokers y personal",
-    "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de brokers)"
+    "Usar el PVF para evaluar decisiones de inversión en marketing, intermediarios y personal",
+    "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de intermediarios)"
   ],
   "entregable_esperado": "Modelo financiero de PVF que estime el valor de vida de un franquiciado típico",
   "nodos_previos": [
@@ -72,6 +72,58 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro matiza que el franquiciante debe moderar esas decisiones según el flujo de caja previsto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-valor_presente_franquicia_pvf-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
+      "texto_nuevo": "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (cuota de franquicia, regalías, fondo publicitario, bonificaciones), restando los gastos incrementales y descontándolo a un costo de capital adecuado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fee",
+          "rebates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valor_presente_franquicia_pvf-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el PVF para evaluar decisiones de inversión en marketing, brokers y personal",
+      "texto_nuevo": "Usar el PVF para evaluar decisiones de inversión en marketing, intermediarios y personal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "brokers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valor_presente_franquicia_pvf-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de brokers)",
+      "texto_nuevo": "Evitar decisiones basadas solo en retorno de corto plazo (ej. comisiones de intermediarios)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "brokers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

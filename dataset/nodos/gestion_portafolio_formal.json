@@ -7,13 +7,13 @@
   "resumen_teorico": "Este sistema combina dos niveles de decisión: los gates evalúan cada proyecto de forma individual (seguir o matar), mientras que la revisión de portafolio compara y prioriza todos tus proyectos activos en conjunto, buscando el mix, balance y alineación correctos con tu estrategia de negocio. Hazlo 2-4 veces al año, revisando los proyectos que ya superaron cierta etapa. Usa criterios financieros y estratégicos comunes para rankear, y aplica un ejercicio de poda inicial para eliminar los proyectos más débiles antes de asignar recursos por Strategic Buckets, es decir, categorías como tipo de proyecto o línea de producto.",
   "pasos_accionables": [
     "Agenda revisiones de tu portafolio completo 2-4 veces al año",
-    "Reúne todos los proyectos que ya superaron cierta etapa o gate inicial",
+    "Reúne todos los proyectos que ya superaron cierta etapa o punto de decisión inicial",
     "Haz una poda inicial eliminando los proyectos más débiles del conjunto",
-    "Define Strategic Buckets según tipo de proyecto o línea de producto y asigna recursos a cada uno",
-    "Rankea los proyectos dentro de cada bucket con criterios financieros y estratégicos hasta el límite de recursos",
-    "Usa esa lista priorizada como apoyo en tus próximas decisiones de gate"
+    "Define bolsas estratégicas según tipo de proyecto o línea de producto y asigna recursos a cada una",
+    "Ordena los proyectos dentro de cada categoría con criterios financieros y estratégicos hasta el límite de recursos",
+    "Usa esa lista priorizada como apoyo en tus próximas decisiones en cada punto de control"
   ],
-  "entregable_esperado": "Sistema de gestión de portafolio con Strategic Buckets definidos, calendario de revisiones periódicas y lista de proyectos priorizados y podados por bucket.",
+  "entregable_esperado": "Sistema de gestión de portafolio con categorías estratégicas definidas, calendario de revisiones periódicas y lista de proyectos priorizados y podados por categoría.",
   "nodos_previos": [
     "asignacion_recursos_en_gates",
     "pruning_portafolio",
@@ -42,5 +42,94 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-gestion_portafolio_formal-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reúne todos los proyectos que ya superaron cierta etapa o gate inicial",
+      "texto_nuevo": "Reúne todos los proyectos que ya superaron cierta etapa o punto de decisión inicial",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_portafolio_formal-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define Strategic Buckets según tipo de proyecto o línea de producto y asigna recursos a cada uno",
+      "texto_nuevo": "Define bolsas estratégicas según tipo de proyecto o línea de producto y asigna recursos a cada una",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Strategic Buckets",
+          "cada uno"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_portafolio_formal-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rankea los proyectos dentro de cada bucket con criterios financieros y estratégicos hasta el límite de recursos",
+      "texto_nuevo": "Ordena los proyectos dentro de cada categoría con criterios financieros y estratégicos hasta el límite de recursos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Rankea",
+          "bucket"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_portafolio_formal-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa esa lista priorizada como apoyo en tus próximas decisiones de gate",
+      "texto_nuevo": "Usa esa lista priorizada como apoyo en tus próximas decisiones en cada punto de control",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "decisiones de gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_portafolio_formal-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de gestión de portafolio con Strategic Buckets definidos, calendario de revisiones periódicas y lista de proyectos priorizados y podados por bucket.",
+      "texto_nuevo": "Sistema de gestión de portafolio con categorías estratégicas definidas, calendario de revisiones periódicas y lista de proyectos priorizados y podados por categoría.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Strategic Buckets definidos",
+          "por bucket"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

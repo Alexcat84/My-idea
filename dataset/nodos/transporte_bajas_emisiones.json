@@ -7,7 +7,7 @@
   "resumen_teorico": "Sustituir el transporte aéreo por opciones terrestres, ferroviarias o marítimas de menor impacto ambiental puede generar ahorros sustanciales de costos y emisiones, especialmente cuando la urgencia de entrega no es crítica. Además, reducir la velocidad de cruceros y vehículos disminuye el consumo de combustible y las emisiones de CO2.",
   "pasos_accionables": [
     "Evaluar qué envíos actualmente realizados por vía aérea podrían cambiarse a transporte terrestre, ferroviario o marítimo.",
-    "Analizar el impacto de cambiar de servicio 'next-day' a 'two-day' o 'three-day' en costos y emisiones.",
+    "Analizar el impacto de cambiar de servicio de entrega al día siguiente a entrega en dos o tres días en costos y emisiones.",
     "Considerar mejoras de aislamiento térmico para productos sensibles a temperatura que permitan tiempos de tránsito más largos.",
     "Evaluar la reducción de velocidad de cruceros/vehículos como estrategia de ahorro de combustible."
   ],
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Elige Transporte de Menor Impacto",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-transporte_bajas_emisiones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar el impacto de cambiar de servicio 'next-day' a 'two-day' o 'three-day' en costos y emisiones.",
+      "texto_nuevo": "Analizar el impacto de cambiar de servicio de entrega al día siguiente a entrega en dos o tres días en costos y emisiones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'next-day' a 'two-day' o 'three-day'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

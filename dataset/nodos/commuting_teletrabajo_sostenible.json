@@ -7,11 +7,11 @@
   "resumen_teorico": "Para muchas empresas, el traslado diario de empleados (commuting) resulta ser una fuente indirecta significativa de emisiones. Estrategias como subsidiar transporte público, desincentivar el estacionamiento gratuito, promover el carpooling y habilitar el teletrabajo en los puestos que puedan hacerse desde casa, aunque sea parte del tiempo, reducen emisiones; el teletrabajo, además, reduce el uso de espacio y energía de la oficina, contribuye a la moral del equipo y puede aumentar la productividad.",
   "pasos_accionables": [
     "Evaluar la ubicación de oficinas priorizando acceso a transporte público",
-    "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)",
+    "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de estacionamiento gratuito)",
     "Establecer políticas claras de teletrabajo para roles compatibles",
     "Medir el impacto en productividad, satisfacción y reducción de emisiones"
   ],
-  "entregable_esperado": "Política de commuting y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
+  "entregable_esperado": "Política de traslados al trabajo y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
   "nodos_previos": [
     "metricas_impacto_ambiental"
   ],
@@ -23,7 +23,7 @@
     "Si la empresa quiere reducir su huella de carbono asociada a Scope 3 (commuting)",
     "Cuando existe flexibilidad organizacional para permitir trabajo remoto"
   ],
-  "etiqueta_arbol": "Fomenta el Teletrabajo Sostenible",
+  "etiqueta_arbol": "Reduce las Emisiones del Traslado Diario",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
   ],
@@ -75,6 +75,53 @@
       },
       "decision": "lectura total de procedencia (w28): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-commuting_teletrabajo_sostenible-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Fomenta el Teletrabajo Sostenible",
+      "texto_nuevo": "Reduce las Emisiones del Traslado Diario",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v09)",
+        "evidencia": "El concepto trata de reducir las emisiones del traslado diario con varias estrategias (transporte público, estacionamiento, coche compartido, teletrabajo) y la etiqueta solo promete teletrabajo; la nueva nombra el concepto entero sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-commuting_teletrabajo_sostenible-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de parking gratuito)",
+      "texto_nuevo": "Diseñar incentivos para transporte sostenible (subsidio de pases, eliminación de estacionamiento gratuito)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "parking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-commuting_teletrabajo_sostenible-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Política de commuting y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
+      "texto_nuevo": "Política de traslados al trabajo y teletrabajo documentada con métricas de adopción y reducción estimada de emisiones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "commuting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

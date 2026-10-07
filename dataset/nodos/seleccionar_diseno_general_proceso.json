@@ -7,7 +7,7 @@
   "resumen_teorico": "El diseño de proceso debe comenzar con un diagrama de flujo de alto nivel que describa el flujo general, desde el cual se identifican subprocesos y actividades principales para diseño detallado. Debe cumplir criterios como entregar las metas de calidad del producto, ser eficiente en recursos y no exigir inversiones mayores a las planificadas.",
   "pasos_accionables": [
     "Elaborar un diagrama de flujo de proceso de alto nivel",
-    "Verificar que el diseño incorpore contramedidas de análisis de criticidad, FMEA y árbol de fallas",
+    "Verificar que el diseño incorpore contramedidas de análisis de criticidad, análisis de modo y efecto de falla y árbol de fallas",
     "Evaluar el impacto de anatomías de proceso radicalmente distintas (unidades dedicadas vs funciones especializadas)",
     "Documentar para cada actividad: entradas, salidas, metas, tiempo de ciclo, costo y descripción de conversión",
     "Revisar el flujo para eliminar fuentes de error y redundancias, reducir traspasos y tiempos de ciclo, reemplazar tareas con salidas defectuosas y corregir la secuencia"
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La revisión del libro incluye además reducir traspasos, reemplazar tareas con salidas defectuosas y corregir la secuencia.; Mismo defecto: el paso deja fuera la mitad de la lista de mejoras.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-seleccionar_diseno_general_proceso-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar que el diseño incorpore contramedidas de análisis de criticidad, FMEA y árbol de fallas",
+      "texto_nuevo": "Verificar que el diseño incorpore contramedidas de análisis de criticidad, análisis de modo y efecto de falla y árbol de fallas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Los términos de amortización son más críticos que el precio para alinear la deuda con la estrategia de capital de la empresa. El 'draw period' es el tiempo durante el cual se pueden solicitar desembolsos; el 'interest-only (I/O) period' es el tiempo en que solo se pagan intereses sin amortizar principal, impactando directamente el cash burn y el runway. Negociar estos periodos (típicamente 6-12 meses) es esencial para maximizar el tiempo antes de que el pago de principal comience.",
   "pasos_accionables": [
-    "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
-    "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
-    "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+    "Solicitar un período de disposición diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+    "Negociar el período de solo intereses (I/O) más largo posible, ya que impacta directamente los meses de efectivo que te quedan, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+    "Explorar extensiones condicionales del período de solo intereses ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
     "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
   ],
-  "entregable_esperado": "Cronograma de amortización del préstamo con draw period, I/O period y pagos mensuales de principal calculados.",
+  "entregable_esperado": "Cronograma de amortización del préstamo con período de disposición, período de solo intereses y pagos mensuales de principal calculados.",
   "nodos_previos": [
     "warrant_pricing_venture_debt"
   ],
@@ -93,6 +93,75 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la condición de que sea antes de la siguiente ronda de capital.; Se cae el límite del libro: el desembolso diferido va antes de necesitar levantar más capital.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-amortizacion_y_periodo_de_gracia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solicitar un draw period diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+      "texto_nuevo": "Solicitar un período de disposición diferido de 6-12 meses posterior al cierre del préstamo, pero antes de necesitar levantar más capital, sabiendo que no todos los préstamos lo permiten y que algunos prevén una comisión por el compromiso no usado.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "draw period"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-amortizacion_y_periodo_de_gracia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar el período de interés-solo (I/O) más largo posible, ya que impacta directamente el runway de efectivo, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+      "texto_nuevo": "Negociar el período de solo intereses (I/O) más largo posible, ya que impacta directamente los meses de efectivo que te quedan, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "interés-solo",
+          "runway de efectivo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-amortizacion_y_periodo_de_gracia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Explorar extensiones condicionales del I/O period ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+      "texto_nuevo": "Explorar extensiones condicionales del período de solo intereses ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "I/O period"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-amortizacion_y_periodo_de_gracia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cronograma de amortización del préstamo con draw period, I/O period y pagos mensuales de principal calculados.",
+      "texto_nuevo": "Cronograma de amortización del préstamo con período de disposición, período de solo intereses y pagos mensuales de principal calculados.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "draw period",
+          "I/O period"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

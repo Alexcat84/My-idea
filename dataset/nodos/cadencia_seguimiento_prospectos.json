@@ -18,10 +18,29 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Después de la primera llamada con prospectos clasificados como A o B"
+    "Cuando entra un lead nuevo de internet y todavía no logras hablar con él, o al cerrar la primera llamada con un prospecto A o B para acordar los tiempos"
   ],
   "etiqueta_arbol": "Sigue Siete Contactos en Siete Días",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-cadencia_seguimiento_prospectos-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de la primera llamada con prospectos clasificados como A o B",
+      "texto_nuevo": "Cuando entra un lead nuevo de internet y todavía no logras hablar con él, o al cerrar la primera llamada con un prospecto A o B para acordar los tiempos",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "4446-4448, 4493",
+        "frase": "attempt to contact a new internet lead seven times in seven business days"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c09): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

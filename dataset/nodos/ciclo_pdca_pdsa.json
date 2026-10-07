@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Planificar: seleccionar los sujetos de control y definir metas",
     "Ejecutar (Do): correr y monitorear el proceso",
-    "Verificar/Estudiar (Check/Study): sensar y comparar contra estándares",
+    "Verificar/Estudiar (Check/Study): medir y comparar contra estándares",
     "Actuar (Act): estimular al actuador y ejecutar acción correctiva",
     "Repetir el ciclo de forma continua para sostener el control"
   ],
@@ -40,6 +40,23 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U8-009 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "voz-ciclo_pdca_pdsa-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar/Estudiar (Check/Study): sensar y comparar contra estándares",
+      "texto_nuevo": "Verificar/Estudiar (Check/Study): medir y comparar contra estándares",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sensar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

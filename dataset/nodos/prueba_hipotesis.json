@@ -9,7 +9,7 @@
     "Plantear el problema práctico a resolver",
     "Definir la hipótesis nula (H0) y la alternativa (Ha)",
     "Elegir un valor de alfa (comúnmente 0.01, 0.05 o 0.10)",
-    "Seleccionar el estadístico de prueba apropiado (t-test, etc.)",
+    "Seleccionar el estadístico de prueba apropiado (prueba t, etc.)",
     "Determinar la región de rechazo",
     "Recolectar datos, calcular el estadístico y compararlo con la región de rechazo",
     "Sacar la conclusión práctica del proceso"
@@ -44,6 +44,23 @@
         "motivo": "Disenar prompts para simulaciones con IA no lleva de forma natural a la prueba de hipotesis estadistica; son temas distintos."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-prueba_hipotesis-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar el estadístico de prueba apropiado (t-test, etc.)",
+      "texto_nuevo": "Seleccionar el estadístico de prueba apropiado (prueba t, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "t-test"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
