@@ -9,7 +9,7 @@
     "Define en qué nivel de la organización entrarás (ejecutivo o personal operativo)",
     "Determina cuántas personas del mapa organizacional deben decir 'sí'",
     "Establece el orden de contacto y el guion para cada persona",
-    "Identifica qué paso podría hacer fracasar toda la venta y quiénes son los posibles saboteadores"
+    "Detecta el paso que podría tumbar la venta entera y a las personas que podrían sabotearla"
   ],
   "entregable_esperado": "Una estrategia de ventas documentada con guiones y orden de contacto definidos",
   "nodos_previos": [
@@ -59,6 +59,23 @@
       "decision": "saneamiento continuo de la voz (ola v14): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-estrategia_de_ventas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identifica qué paso podría hacer fracasar toda la venta y quiénes son los posibles saboteadores",
+      "texto_nuevo": "Detecta el paso que podría tumbar la venta entera y a las personas que podrían sabotearla",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "23050",
+        "frase": "What step can derail the entire sale? Who are the potential saboteur?"
+      },
+      "decision": "copia fiel (regla D2, ola k12): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
