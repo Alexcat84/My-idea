@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Teoría de la Manzana Podrida (Bad Apple Theory)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Es la formulación clásica de la Vieja Visión del error humano: los sistemas complejos funcionarían bien de no ser por el comportamiento errático de algunas personas poco confiables, las 'manzanas podridas'. Bajo esta teoría se asume que el error humano causa más de dos tercios de los accidentes y que los fallos son sorpresas inesperadas que no pertenecen al sistema, sino que son introducidas por la falta de fiabilidad de las personas. Esto lleva a soluciones centradas en el individuo, como sanciones, despidos, campañas de actitud, más reglas y procedimientos o reemplazar personas por tecnología, sin modificar las condiciones que generaron el comportamiento problemático.",
+  "resumen_teorico": "Es la versión clásica de la Vieja Visión del error humano, que pone la culpa en unas pocas 'manzanas podridas': según ella, cualquier sistema complejo marcharía sin problemas si no fuera por algunas personas poco fiables que actúan de forma errática. Quien piensa así da por hecho que el error humano está detrás de más de dos tercios de los accidentes, y ve cada fallo como una sorpresa inesperada, ajena al sistema, que entra en él solo porque la gente no es confiable. De ahí salen remedios que apuntan al individuo, como sancionar, despedir, lanzar campañas sobre la actitud, sumar reglas y procedimientos o cambiar personas por tecnología, mientras las condiciones que provocaron esa conducta siguen intactas.",
   "pasos_accionables": [
     "Revisa si al analizar un incidente terminas señalando a una persona específica como causa raíz sin mirar las condiciones que rodearon el hecho.",
     "Cuestiona la creencia de que sancionar o apartar a la persona 'responsable' resuelve el problema de fondo.",
@@ -54,6 +54,22 @@
         "evidencia": "F01-018: Revisar como se analizan los incidentes y si las sanciones funcionaron es gestion de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "copia-bad_apple_theory-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Es la formulación clásica de la Vieja Visión del error humano: los sistemas complejos funcionarían bien de no ser por el comportamiento errático de algunas personas poco confiables, las 'manzanas podridas'. Bajo esta teoría se asume que el error humano causa más de dos tercios de los accidentes y que los fallos son sorpresas inesperadas que no pertenecen al sistema, sino que son introducidas por la falta de fiabilidad de las personas. Esto lleva a soluciones centradas en el individuo, como sanciones, despidos, campañas de actitud, más reglas y procedimientos o reemplazar personas por tecnología, sin modificar las condiciones que generaron el comportamiento problemático.",
+      "texto_nuevo": "Es la versión clásica de la Vieja Visión del error humano, que pone la culpa en unas pocas 'manzanas podridas': según ella, cualquier sistema complejo marcharía sin problemas si no fuera por algunas personas poco fiables que actúan de forma errática. Quien piensa así da por hecho que el error humano está detrás de más de dos tercios de los accidentes, y ve cada fallo como una sorpresa inesperada, ajena al sistema, que entra en él solo porque la gente no es confiable. De ahí salen remedios que apuntan al individuo, como sancionar, despedir, lanzar campañas sobre la actitud, sumar reglas y procedimientos o cambiar personas por tecnología, mientras las condiciones que provocaron esa conducta siguen intactas.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "245-251",
+        "frase": "Complex systems would be fine, were it not for the erratic behavior"
+      },
+      "decision": "copia fiel (regla D2, ola k24): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Optimización de Rutas y Eco-Routing",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Las tecnologías de eco-routing permiten planificar no solo la ruta más rápida sino la más eficiente en combustible, considerando pendientes, semáforos y límites de velocidad. Además, emparejar el tipo correcto de vehículo con la ruta adecuada (alta capacidad para rutas cortas, alta eficiencia para rutas largas) optimiza el consumo de combustible y reduce emisiones significativamente.",
+  "resumen_teorico": "Con las herramientas de eco-routing puedes trazar el recorrido que gasta menos combustible, no solo el que llega antes, porque toman en cuenta las pendientes, los semáforos y los límites de velocidad. A eso súmale asignar a cada ruta el vehículo que le corresponde: los de mucha capacidad para trayectos cortos y los más eficientes para trayectos largos. Así aprovechas mejor el combustible y bajas tus emisiones de forma notable.",
   "pasos_accionables": [
     "Implementar tecnología de enrutamiento ecológico que calcule la ruta más eficiente en combustible, no solo la más rápida.",
     "Eliminar giros innecesarios (ej. giros a la izquierda) que incrementan tiempo de motor encendido.",
@@ -41,6 +41,22 @@
       "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-optimizacion_rutas_ecoruteo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las tecnologías de eco-routing permiten planificar no solo la ruta más rápida sino la más eficiente en combustible, considerando pendientes, semáforos y límites de velocidad. Además, emparejar el tipo correcto de vehículo con la ruta adecuada (alta capacidad para rutas cortas, alta eficiencia para rutas largas) optimiza el consumo de combustible y reduce emisiones significativamente.",
+      "texto_nuevo": "Con las herramientas de eco-routing puedes trazar el recorrido que gasta menos combustible, no solo el que llega antes, porque toman en cuenta las pendientes, los semáforos y los límites de velocidad. A eso súmale asignar a cada ruta el vehículo que le corresponde: los de mucha capacidad para trayectos cortos y los más eficientes para trayectos largos. Así aprovechas mejor el combustible y bajas tus emisiones de forma notable.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "4864-4866",
+        "frase": "New eco-routing technologies enable drivers to plan not only the fastest"
+      },
+      "decision": "copia fiel (regla D2, ola k24): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

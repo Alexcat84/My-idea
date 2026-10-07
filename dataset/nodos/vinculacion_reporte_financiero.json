@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Vinculación de Sostenibilidad con Reportes Financieros",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Existe un interés creciente del mercado en la relación entre resultados de sostenibilidad y desempeño financiero. Empresas como SAP han alineado la publicación de sus resultados de sostenibilidad con sus resultados financieros, incluso monetizando el valor de sus actividades sostenibles, lo cual atrae la atención de inversionistas.",
+  "resumen_teorico": "A los mercados les interesa cada vez más saber cómo se conectan los logros en sostenibilidad con los números del negocio. Algunas compañías, como SAP, ya dan a conocer sus resultados de sostenibilidad al mismo tiempo que los financieros y hasta les ponen un valor en dinero a sus acciones sostenibles, algo que capta la mirada de los inversionistas.",
   "pasos_accionables": [
     "Sincronizar la publicación de resultados de sostenibilidad con el calendario de reportes financieros",
     "Monetizar cuando sea posible el valor de las iniciativas sostenibles",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Vincula Sostenibilidad con tus Finanzas",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-vinculacion_reporte_financiero-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Existe un interés creciente del mercado en la relación entre resultados de sostenibilidad y desempeño financiero. Empresas como SAP han alineado la publicación de sus resultados de sostenibilidad con sus resultados financieros, incluso monetizando el valor de sus actividades sostenibles, lo cual atrae la atención de inversionistas.",
+      "texto_nuevo": "A los mercados les interesa cada vez más saber cómo se conectan los logros en sostenibilidad con los números del negocio. Algunas compañías, como SAP, ya dan a conocer sus resultados de sostenibilidad al mismo tiempo que los financieros y hasta les ponen un valor en dinero a sus acciones sostenibles, algo que capta la mirada de los inversionistas.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "7275",
+        "frase": "There is growing marketplace interest in the link between sustainability results"
+      },
+      "decision": "copia fiel (regla D2, ola k24): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

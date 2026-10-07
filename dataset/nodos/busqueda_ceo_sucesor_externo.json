@@ -3,7 +3,7 @@
   "dominio": "core",
   "titulo_concepto": "Búsqueda de un CEO Sucesor Externo",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "A diferencia de las grandes empresas, donde la mayoría de los CEOs nuevos provienen de dentro de la organización, en las startups el nuevo CEO casi siempre viene de fuera del equipo ejecutivo existente. Esto ocurre porque el nuevo CEO es contratado para hacer cambios importantes -profesionalizar la cultura, ajustar la estrategia original, o reemplazar a cofundadores o empleados tempranos de bajo desempeño- que el fundador no pudo o no quiso hacer, y porque el equipo ejecutivo pequeño de una startup rara vez ofrece candidatos internos con el perfil de liderazgo general necesario.",
+  "resumen_teorico": "En una empresa grande, quien llega a dirigir suele salir de la propia casa; en una startup pasa casi siempre lo contrario y el nuevo CEO viene de fuera del equipo directivo que ya existe. La razón es doble. Por un lado, lo traes para que haga cambios de fondo que tú como fundador no pudiste o no quisiste hacer: volver profesional la cultura, ajustar la estrategia con la que arrancaste o reemplazar a cofundadores o primeros empleados que no rinden. Por otro, un equipo directivo tan pequeño rara vez tiene dentro a alguien con el perfil de liderazgo general que hace falta.",
   "pasos_accionables": [
     "Evaluar si algún miembro del equipo ejecutivo interno tiene el perfil de liderazgo general necesario antes de buscar afuera",
     "Definir con claridad qué cambios estratégicos, culturales o de equipo se esperan del nuevo CEO antes de iniciar la búsqueda",
@@ -120,6 +120,22 @@
       "decision": "saneamiento continuo de la voz (ola v12): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-busqueda_ceo_sucesor_externo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "A diferencia de las grandes empresas, donde la mayoría de los CEOs nuevos provienen de dentro de la organización, en las startups el nuevo CEO casi siempre viene de fuera del equipo ejecutivo existente. Esto ocurre porque el nuevo CEO es contratado para hacer cambios importantes -profesionalizar la cultura, ajustar la estrategia original, o reemplazar a cofundadores o empleados tempranos de bajo desempeño- que el fundador no pudo o no quiso hacer, y porque el equipo ejecutivo pequeño de una startup rara vez ofrece candidatos internos con el perfil de liderazgo general necesario.",
+      "texto_nuevo": "En una empresa grande, quien llega a dirigir suele salir de la propia casa; en una startup pasa casi siempre lo contrario y el nuevo CEO viene de fuera del equipo directivo que ya existe. La razón es doble. Por un lado, lo traes para que haga cambios de fondo que tú como fundador no pudiste o no quisiste hacer: volver profesional la cultura, ajustar la estrategia con la que arrancaste o reemplazar a cofundadores o primeros empleados que no rinden. Por otro, un equipo directivo tan pequeño rara vez tiene dentro a alguien con el perfil de liderazgo general que hace falta.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "3192-3194",
+        "frase": "In startups, however, the new CEO almost always comes from outside the existing"
+      },
+      "decision": "copia fiel (regla D2, ola k24): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

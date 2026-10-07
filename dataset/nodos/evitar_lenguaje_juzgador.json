@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Evitar el Lenguaje Juzgador en Investigaciones",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "Decir que alguien 'falló' en hacer algo o 'debería haber' actuado distinto es juzgar desde afuera y en retrospectiva, no explica el comportamiento. Frases como 'fallo en reconocer' no explican cómo y por qué la persona interpretó la situación de esa manera, y no ayudan a que otros eviten el mismo problema. Para entender un error hay que mirar la situación desde adentro, como se veía en ese momento, en lugar de juzgarla desde afuera con el resultado ya conocido.",
+  "resumen_teorico": "Cuando dices que alguien 'falló' o que 'debería haber' actuado de otra manera, lo juzgas desde fuera y mirando hacia atrás, pero no explicas lo que hizo. Una etiqueta como 'fallo en reconocer' deja sin responder cómo y por qué esa persona leyó la situación como la leyó, y a nadie más le sirve para no caer en lo mismo. Si quieres entender un error, ponte dentro de la situación y mírala tal como se veía en ese momento, en vez de juzgarla desde fuera con el desenlace ya conocido.",
   "pasos_accionables": [
     "Revisa tus informes de incidentes y elimina frases como 'fallo en', 'debería haber' o 'no logró'",
     "Reformula las conclusiones describiendo cómo tenía sentido esa acción desde la perspectiva de quien la hizo en ese momento",
@@ -43,6 +43,22 @@
       "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-evitar_lenguaje_juzgador-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Decir que alguien 'falló' en hacer algo o 'debería haber' actuado distinto es juzgar desde afuera y en retrospectiva, no explica el comportamiento. Frases como 'fallo en reconocer' no explican cómo y por qué la persona interpretó la situación de esa manera, y no ayudan a que otros eviten el mismo problema. Para entender un error hay que mirar la situación desde adentro, como se veía en ese momento, en lugar de juzgarla desde afuera con el resultado ya conocido.",
+      "texto_nuevo": "Cuando dices que alguien 'falló' o que 'debería haber' actuado de otra manera, lo juzgas desde fuera y mirando hacia atrás, pero no explicas lo que hizo. Una etiqueta como 'fallo en reconocer' deja sin responder cómo y por qué esa persona leyó la situación como la leyó, y a nadie más le sirve para no caer en lo mismo. Si quieres entender un error, ponte dentro de la situación y mírala tal como se veía en ese momento, en vez de juzgarla desde fuera con el desenlace ya conocido.",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "882-885",
+        "frase": "Saying what people failed to do has no role in understanding"
+      },
+      "decision": "copia fiel (regla D2, ola k24): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
