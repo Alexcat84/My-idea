@@ -83,13 +83,13 @@ propio o con una decisión del fundador.
 ## 4. Re-embebido con Voyage (una sola pasada)
 
 Decisión del fundador: Voyage corre una sola vez, al final, con todos los nodos corregidos. Las tandas de la auditoría
-cambiaron el texto de **2.720 nodos vivos**, según la prueba en seco del 7 oct.
+cambiaron el texto de **2.723 nodos vivos**, según la prueba en seco del 7 oct (tras la tanda de condiciones).
 
 1. Pon `VOYAGE_API_KEY` en el `.env` raíz. La quitas al terminar.
 2. Prueba en seco, que no llama a nadie:
 
    ```
-   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json
+   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json
    ```
 
    Si después de esta fecha entra otra tanda que cambie texto de nodos, se añade a la línea.
