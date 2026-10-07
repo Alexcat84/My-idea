@@ -53,7 +53,10 @@ def validar(c, cache):
     if any(p in n for p in PROHIBIDOS):
         f.append("guion largo o medio")
     cita = c.get("cita") or {}
-    if v in POR_LIBRO and not all(cita.get(k) for k in ("fichero", "lineas", "frase")):
+    contra_nodo = all(cita.get(k) for k in ("instrumento", "evidencia"))
+    # CONTRARIO e INVENCION se citan con el libro, o contra el propio nodo cuando los encontro la auditoria de
+    # preguntas (6 oct 2026), que lee cada pregunta contra su nodo saneado.
+    if v in POR_LIBRO and not contra_nodo and not all(cita.get(k) for k in ("fichero", "lineas", "frase")):
         f.append("cita de libro incompleta (fichero, lineas, frase)")
     if v in POR_NODO and not all(cita.get(k) for k in ("instrumento", "evidencia")):
         f.append("cita contra el nodo incompleta (instrumento, evidencia)")

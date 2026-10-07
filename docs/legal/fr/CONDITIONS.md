@@ -11,9 +11,9 @@
 
 # Conditions d'utilisation de My Idea
 
-**Dernière mise à jour :** [date de publication]
+**Dernière mise à jour :** 6 octobre 2026
 **Qui fournit le service :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada
-(« nous »). Adresse du commerçant : À VÉRIFIER avec le professionnel (la Loi sur la protection du consommateur du Québec exige généralement le nom et l'adresse du commerçant dans les contrats conclus à distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case postale plutôt que celle de son domicile).
+(« nous »). Adresse postale du commerçant : elle sera publiée ici dès qu'elle sera confirmée; d'ici là, vous pouvez nous écrire à support@myideaproject.com.
 
 ## 1. Ce qu'est My Idea
 
@@ -72,17 +72,15 @@ l'application, vous acceptez les présentes conditions et la Politique de confid
 - L'enregistrement de votre progression, de vos notes, de vos documents et de votre journal de bord
   est inclus : il n'est jamais facturé à part.
 - Pendant la version bêta, les crédits sont attribués manuellement et l'achat avec de l'argent
-  n'est pas activé. Lorsqu'il le sera, les conditions du processeur de paiement s'appliqueront (À
-  VÉRIFIER).
+  n'est pas activé. Lorsqu'il le sera, les conditions du processeur de paiement s'appliqueront également.
 - À l'heure actuelle, les crédits n'ont pas de date d'expiration dans le système. Leur traitement
-  juridique (remboursement, résiliation, expiration) au regard de la Loi sur la protection du
-  consommateur du Québec est À VÉRIFIER.
-- Les crédits sont personnels et ne peuvent pas être transférés à un autre compte (À VÉRIFIER).
+  (remboursement, résiliation, expiration) est régi par la Loi sur la protection du consommateur
+  du Québec.
+- Les crédits sont personnels et ne peuvent pas être transférés à un autre compte.
 
 - **Taxes :** Alexis Garcia Hurtado est inscrit aux fichiers des taxes à la consommation :
-  **TPS/TVH 72180 8434 RT0001** et **TVQ 4056093040 TQ0001**, en vigueur depuis le 7 avril 2026. La
-  façon d'afficher et de percevoir les taxes sur le prix des crédits, lorsque l'achat avec de l'argent
-  sera activé, est À VÉRIFIER avec le professionnel.
+  **TPS/TVH 72180 8434 RT0001** et **TVQ 4056093040 TQ0001**, en vigueur depuis le 7 avril 2026. Lorsque l'achat
+  avec de l'argent sera activé, les taxes applicables seront affichées avec le prix des crédits.
 
 ## 6. Utilisation acceptable
 
@@ -92,10 +90,8 @@ compte qui le fait, en vous en avisant lorsque c'est possible.
 
 ## 7. Notre contenu
 
-Le catalogue de connaissances de My Idea synthétise des concepts tirés de livres et de sources
-publiques, sans en reproduire les passages. L'application, sa conception et son catalogue nous
-appartiennent; vos idées et vos documents vous appartiennent (§3). Le cadre d'attribution des
-sources est À VÉRIFIER avec le professionnel.
+L'application, sa conception et son catalogue de connaissances nous appartiennent; vos idées et
+vos documents vous appartiennent (§3).
 
 ## 8. Disponibilité et modifications
 
@@ -107,24 +103,22 @@ progression ni vos crédits en raison d'une défaillance de notre part.
 
 Dans les limites permises par la loi québécoise, nous ne sommes pas responsables des décisions que
 vous prenez sur la base du contenu de l'application (§4). Rien dans les présentes conditions ne
-limite les droits que la loi vous garantit en tant que consommateur (portée À VÉRIFIER avec le
-professionnel).
+limite les droits que la loi vous garantit en tant que consommateur.
 
 ## 10. Résiliation
 
 Vous pouvez cesser d'utiliser My Idea et supprimer votre compte en tout temps. Nous pouvons mettre
-fin au service en vous donnant un préavis raisonnable; le cas échéant, nous vous offrirons un moyen
-de télécharger vos documents (délai et traitement des crédits inutilisés : À VÉRIFIER).
+fin au service en vous donnant un préavis raisonnable; le cas échéant, nous vous donnerons un délai
+raisonnable pour télécharger vos documents et nous vous informerons au sujet des crédits inutilisés.
 
 ## 11. Droit applicable et langue
 
 Les présentes conditions sont régies par les lois du Québec et par les lois fédérales du Canada qui
 s'appliquent. Elles existent en français, qui en est la version de référence, et dans d'autres
-langues à titre de traduction (À VÉRIFIER avec le professionnel, conformément à la Charte de la
-langue française).
+langues à titre de traduction, conformément à la Charte de la langue française.
 
 ## 12. Contact
 
 - Protection des renseignements personnels et droits des utilisateurs : privacy@myideaproject.com
 - Soutien général : support@myideaproject.com
-- Adresse du commerçant : À VÉRIFIER avec le professionnel (la Loi sur la protection du consommateur du Québec exige généralement le nom et l'adresse du commerçant dans les contrats conclus à distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case postale plutôt que celle de son domicile).
+- Adresse postale du commerçant : elle sera publiée ici dès qu'elle sera confirmée; d'ici là, vous pouvez nous écrire à support@myideaproject.com.

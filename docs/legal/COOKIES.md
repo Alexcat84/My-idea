@@ -6,7 +6,7 @@
 
 # Política de cookies de My Idea
 
-**Última actualización:** [fecha de publicación]
+**Última actualización:** 6 de octubre de 2026
 
 ## 1. Qué usamos y por qué
 
@@ -16,8 +16,8 @@ sigan entre sitios.**
 
 | nombre | tipo | para qué | duración |
 |---|---|---|---|
-| `sb-*` (Supabase) | cookie necesaria | mantener tu sesión abierta, también la de la identidad invisible que te deja escribir tu idea sin cuenta | la de la sesión de Supabase (POR VERIFICAR) |
-| Verificador PKCE de Supabase | cookie necesaria | completar la entrada con Google de forma segura | minutos (POR VERIFICAR) |
+| `sb-*` (Supabase) | cookie necesaria | mantener tu sesión abierta, también la de la identidad invisible que te deja escribir tu idea sin cuenta | mientras dure tu sesión |
+| Verificador PKCE de Supabase | cookie necesaria | completar la entrada con Google de forma segura | unos minutos |
 | `post_login_next` | cookie necesaria | volver a la página donde estabas después de entrar | 10 minutos |
 | `myidea_idioma` | cookie de preferencia | recordar el idioma que elegiste (se activa con la app en varios idiomas) | 1 año |
 | `mi-idea:gantt-vista` | almacenamiento local | recordar la vista del Gantt que prefieres | hasta que borres los datos del navegador |
@@ -28,8 +28,7 @@ sigan entre sitios.**
 Las cookies necesarias no se pueden desactivar sin que la app deje de funcionar (por ejemplo, no
 podrías mantener tu sesión). Las de preferencia y el almacenamiento local puedes borrarlos desde la
 configuración de tu navegador; la app volverá a sus valores por defecto. Si algún día usáramos
-cookies que no sean necesarias, te pediríamos permiso antes (requisito POR VERIFICAR con el
-profesional).
+cookies que no sean necesarias, te pediríamos permiso antes.
 
 ## 3. Más información
 

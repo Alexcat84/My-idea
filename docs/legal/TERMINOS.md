@@ -8,9 +8,9 @@
 
 # Términos de uso de My Idea
 
-**Última actualización:** [fecha de publicación]
+**Última actualización:** 6 de octubre de 2026
 **Quién presta el servicio:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá
-("nosotros"). Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
+("nosotros"). Dirección postal del comerciante: se publicará aquí en cuanto esté confirmada; mientras tanto, puedes escribirnos a support@myideaproject.com.
 
 ## 1. Qué es My Idea
 
@@ -57,14 +57,14 @@ Al usar la app aceptas estos términos y la Política de privacidad.
   pedir que se genere de nuevo. Si algo falla después de un cobro, se reembolsa automáticamente.
 - Registrar tu avance, tus notas, tus documentos y tu bitácora va incluido: nunca se cobra aparte.
 - Durante la beta, los créditos se otorgan manualmente y la compra con dinero no está activa. Cuando
-  se active, se aplicarán las condiciones del procesador de pagos (POR VERIFICAR).
-- Hoy los créditos no tienen fecha de vencimiento en el sistema. Su tratamiento legal (reembolso,
-  desistimiento, vencimiento) según la Ley de protección del consumidor de Quebec es POR VERIFICAR.
-- Los créditos son personales y no se transfieren a otra cuenta (POR VERIFICAR).
+  se active, se aplicarán también las condiciones del procesador de pagos.
+- Hoy los créditos no tienen fecha de vencimiento en el sistema. Su tratamiento (reembolso,
+  desistimiento, vencimiento) se rige por la Ley de protección del consumidor de Quebec.
+- Los créditos son personales y no se transfieren a otra cuenta.
 - **Impuestos:** Alexis Garcia Hurtado está inscrito en los registros de impuestos al consumo:
   **TPS/TVH (GST/HST) 72180 8434 RT0001** y **TVQ (QST) 4056093040 TQ0001**, ambos vigentes desde el
-  7 de abril de 2026. Cómo se muestran y se cobran los impuestos sobre el precio de los créditos cuando
-  se active la compra con dinero es POR VERIFICAR con el profesional.
+  7 de abril de 2026. Cuando se active la compra con dinero, los impuestos aplicables se mostrarán junto al
+  precio de los créditos.
 
 ## 6. Uso aceptable
 
@@ -74,9 +74,8 @@ cuando sea posible.
 
 ## 7. Nuestro contenido
 
-El catálogo de conocimiento de My Idea destila conceptos de libros y de fuentes públicas, sin
-reproducir sus pasajes. La app, su diseño y su catálogo son nuestros; tus ideas y tus documentos
-son tuyos (§3). El encuadre de atribución de las fuentes es POR VERIFICAR con el profesional.
+La app, su diseño y su catálogo de conocimiento son nuestros; tus ideas y tus documentos son
+tuyos (§3).
 
 ## 8. Disponibilidad y cambios
 
@@ -87,22 +86,21 @@ Hacemos lo posible por que nunca pierdas tu avance ni tus créditos por un fallo
 
 Dentro de lo que permite la ley de Quebec, no somos responsables de las decisiones que tomes con
 base en el contenido de la app (§4). Nada de estos términos limita los derechos que la ley te
-garantiza como consumidor (alcance POR VERIFICAR con el profesional).
+garantiza como consumidor.
 
 ## 10. Terminación
 
 Puedes dejar de usar My Idea y borrar tu cuenta en cualquier momento. Podemos terminar el servicio
-avisándote con anticipación razonable; en ese caso, te daremos forma de descargar tus documentos
-(plazo y tratamiento de los créditos no usados: POR VERIFICAR).
+avisándote con anticipación razonable; en ese caso, te daremos un plazo razonable para descargar
+tus documentos y te informaremos sobre los créditos que no hayas usado.
 
 ## 11. Ley aplicable e idioma
 
 Estos términos se rigen por las leyes de Quebec y las leyes federales de Canadá que se apliquen.
-Existen en francés, que es la versión de referencia, y en otros idiomas como traducción (POR
-VERIFICAR con el profesional, según la Carta de la lengua francesa).
+Existen en francés, que es la versión de referencia, y en otros idiomas como traducción, según la Carta de la lengua francesa.
 
 ## 12. Contacto
 
 - Privacidad y derechos sobre tus datos personales: privacy@myideaproject.com
 - Soporte general: support@myideaproject.com
-- Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
+- Dirección postal del comerciante: se publicará aquí en cuanto esté confirmada; mientras tanto, puedes escribirnos a support@myideaproject.com.

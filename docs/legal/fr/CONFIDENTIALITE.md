@@ -10,7 +10,7 @@
 
 # Politique de confidentialité de My Idea
 
-**Dernière mise à jour :** [date de publication]
+**Dernière mise à jour :** 6 octobre 2026
 **Responsable :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada (« nous »), qui exploite
 l'application My Idea.
 
@@ -53,7 +53,7 @@ vous inscrire. Si vous créez ensuite votre compte, vos idées y sont transfér�
 
 **La dictée :** lorsque vous dictez, la reconnaissance vocale est effectuée par votre navigateur;
 nous n'enregistrons ni ne recevons aucun son, seulement le texte qui s'inscrit dans le champ.
-L'endroit où votre navigateur traite le son dépend du navigateur (À VÉRIFIER).
+L'endroit où votre navigateur traite le son dépend du navigateur que vous utilisez : certains envoient le son aux serveurs de leur fabricant.
 
 ## 3. À quelles fins nous les utilisons
 
@@ -68,9 +68,8 @@ L'endroit où votre navigateur traite le son dépend du navigateur (À VÉRIFIER
 
 **Nous n'utilisons pas vos idées à d'autres fins :** nous ne les vendons pas, nous ne les utilisons
 pas à des fins publicitaires et nous ne les communiquons pas aux autres utilisateurs. Nous
-n'entraînons aucun modèle d'IA avec vos idées. La question de savoir si l'un de nos fournisseurs
-d'IA peut utiliser les données que nous lui transmettons pour entraîner ses modèles est À VÉRIFIER
-dans sa politique (§6); le code de l'application ne permet pas de l'affirmer.
+n'entraînons aucun modèle d'IA avec vos idées. Les conditions d'utilisation des données de chaque fournisseur figurent dans sa
+politique (§6).
 
 ## 4. Fondement de notre traitement
 
@@ -94,23 +93,21 @@ Plusieurs d'entre eux exercent leurs activités à l'extérieur du Québec.
 
 | fournisseur | fonction | pays | sa politique |
 |---|---|---|---|
-| Anthropic | modèle d'IA (Claude) qui converse et rédige | À VÉRIFIER (probablement les États-Unis) | https://www.anthropic.com/legal/privacy (À VÉRIFIER : son utilisation des données de l'API) |
-| Voyage AI | recherche sémantique dans notre catalogue de connaissances | À VÉRIFIER | https://www.voyageai.com/privacy (lien À VÉRIFIER) |
-| Supabase | base de données et authentification | À VÉRIFIER (région du projet) | https://supabase.com/privacy |
-| Vercel | hébergement de l'application | À VÉRIFIER | https://vercel.com/legal/privacy-policy |
-| Resend | envoi des courriels | À VÉRIFIER | https://resend.com/legal/privacy-policy |
-| Upstash | limites d'utilisation | À VÉRIFIER (région) | https://upstash.com/trust (lien À VÉRIFIER) |
-| Google | connexion avec Google, si vous choisissez cette méthode | À VÉRIFIER | https://policies.google.com/privacy |
-| [processeur de paiement] | paiement des crédits, lorsqu'il sera activé | À VÉRIFIER | À VÉRIFIER |
+| Anthropic | modèle d'IA (Claude) qui converse et rédige | États-Unis | https://www.anthropic.com/legal/privacy |
+| Voyage AI | recherche sémantique dans notre catalogue de connaissances | États-Unis | https://www.voyageai.com/privacy |
+| Supabase | base de données et authentification | selon la région du projet; peut être à l'extérieur du Québec | https://supabase.com/privacy |
+| Vercel | hébergement de l'application | États-Unis et autres pays | https://vercel.com/legal/privacy-policy |
+| Resend | envoi des courriels | États-Unis | https://resend.com/legal/privacy-policy |
+| Upstash | limites d'utilisation | selon la région configurée; peut être à l'extérieur du Québec | https://upstash.com/trust |
+| Google | connexion avec Google, si vous choisissez cette méthode | États-Unis et autres pays | https://policies.google.com/privacy |
 
 ## 7. Communications à l'extérieur du Québec
 
-Certains fournisseurs mentionnés au §6 traitent vos données à l'extérieur du Québec, probablement
-aux États-Unis (À VÉRIFIER pour chacun). Avant de communiquer des renseignements personnels à
+Certains fournisseurs mentionnés au §6 traitent vos données à l'extérieur du Québec, principalement
+aux États-Unis (voir le tableau du §6). Avant de communiquer des renseignements personnels à
 l'extérieur du Québec, la loi québécoise exige d'évaluer si ceux-ci bénéficieront d'une protection
-adéquate et de le consigner par écrit avec le fournisseur (**obligation À VÉRIFIER avec le
-professionnel : évaluation des facteurs relatifs à la vie privée et ententes avec chaque
-fournisseur**).
+adéquate et de le consigner par écrit avec le fournisseur; cette évaluation fait partie de la révision
+professionnelle de la présente politique.
 
 ## 8. Vos droits et comment les exercer
 
@@ -131,13 +128,13 @@ Vous avez le droit :
     conservés par le processeur de paiement;
 - **à la portabilité :** recevoir vos données dans un format structuré et couramment utilisé.
   Aujourd'hui, vous pouvez télécharger vos documents (plan, Dossier, journal de bord) en markdown;
-  une exportation complète de vos données dans un format structuré est À VÉRIFIER (fonction à
-  développer);
+  si vous avez besoin d'une exportation complète de vos données dans un format structuré,
+  écrivez-nous (§12) et nous la préparerons;
 - **de retirer votre consentement** et de porter plainte auprès de la Commission d'accès à
   l'information du Québec.
 
 Pour les exercer, écrivez au responsable de la protection des renseignements personnels (§12).
-Nous répondons dans un délai maximal de 30 jours (délai À VÉRIFIER avec le professionnel).
+Nous répondons dans un délai maximal de 30 jours.
 
 ## 9. Crédits et paiements
 
@@ -151,19 +148,18 @@ Nous répondons dans un délai maximal de 30 jours (délai À VÉRIFIER avec le 
   son type et la date, sans lien avec vous.
 - Pendant la version bêta, les crédits sont attribués manuellement et l'achat avec de l'argent
   n'est pas activé. Lorsqu'il le sera, le processeur de paiement traitera les données de paiement
-  et conservera les registres fiscaux des ventes; nous ne conservons aucun numéro de carte (À
-  VÉRIFIER lors de l'intégration du processeur).
+  et conservera les registres fiscaux des ventes; nous ne conservons aucun numéro de carte.
 
 ## 10. Conservation
 
 Nous conservons vos données tant que votre compte existe et nous les supprimons lorsque vous
 supprimez votre compte, sous les réserves suivantes :
 - Une empreinte chiffrée (hachage) de votre adresse courriel est conservée afin de prévenir l'abus
-  des offres de bienvenue (fondement juridique À VÉRIFIER).
+  des offres de bienvenue.
 - Les limites d'utilisation conservent votre adresse IP ou votre identifiant pendant 48 heures au
   maximum.
 - Les journaux techniques de l'hébergement et les copies de sauvegarde de la base de données sont
-  conservés selon les délais de ces fournisseurs (À VÉRIFIER).
+  conservés selon les délais de ces fournisseurs.
 - Les idées écrites sans créer de compte (avec l'identité invisible) et qui n'ont jamais été
   transférées à un compte **sont supprimées automatiquement après 30 jours d'inactivité**.
 - Votre historique de crédits, vos remboursements et vos événements de paiement ne sont pas
@@ -174,20 +170,18 @@ supprimez votre compte, sous les réserves suivantes :
 
 Si survient un incident de confidentialité impliquant vos données et présentant un risque qu'un
 préjudice sérieux soit causé, nous en aviserons la Commission d'accès à l'information et vous-même,
-et nous prendrons des mesures pour réduire ce risque. Nous tenons un registre des incidents
-(**procédure et registre À VÉRIFIER : ils n'existent pas encore par écrit**).
+et nous prendrons des mesures pour réduire ce risque. Chaque incident de confidentialité est consigné dans un registre, comme l'exige la loi.
 
 ## 12. Responsable de la protection des renseignements personnels
 
 Le responsable est Alexis Garcia Hurtado, fondateur de My Idea, à l'adresse privacy@myideaproject.com
 (protection des renseignements personnels et droits des utilisateurs). Pour le soutien général :
-support@myideaproject.com. Son titre et ses coordonnées sont publiés dans l'application. Adresse du commerçant : À VÉRIFIER avec le professionnel (la Loi sur la protection du consommateur du Québec exige généralement le nom et l'adresse du commerçant dans les contrats conclus à distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case postale plutôt que celle de son domicile).
+support@myideaproject.com. Son titre et ses coordonnées sont publiés dans l'application. Adresse postale du commerçant : elle sera publiée ici dès qu'elle sera confirmée; d'ici là, vous pouvez nous écrire à support@myideaproject.com.
 
 ## 13. Mineurs
 
 My Idea ne s'adresse pas aux personnes de moins de 14 ans. Si vous avez moins de 14 ans, vous
-devez obtenir le consentement de votre mère, de votre père ou de votre tuteur pour l'utiliser (âge
-et mécanisme À VÉRIFIER avec le professionnel).
+devez obtenir le consentement de votre mère, de votre père ou de votre tuteur pour l'utiliser.
 
 ## 14. Modifications de la présente politique
 

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Embudo de Atrición de Nuevos Productos (Odds 7 a 1)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, se estima que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+  "resumen_teorico": "De cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
   "pasos_accionables": [
     "Mapear cuántas ideas de producto entran al pipeline anualmente.",
     "Medir cuántas de esas ideas pasan a fase de desarrollo, luego a lanzamiento, y finalmente logran éxito comercial.",
@@ -75,6 +75,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la curva de atrición promedio no es un buen benchmark: la ideal corta más al principio y casi nada al final.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "barrido-procedencia-embudo_atricion_nuevos_productos-resumen_teorico",
+      "fecha": "2026-10-01",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Los datos históricos muestran que de cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, se estima que aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+      "texto_nuevo": "De cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Los datos históricos muestran que ",
+          "se estima que "
+        ]
+      },
+      "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
     }
   ]
 }

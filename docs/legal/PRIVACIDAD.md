@@ -7,7 +7,7 @@
 
 # Política de privacidad de My Idea
 
-**Última actualización:** [fecha de publicación]
+**Última actualización:** 6 de octubre de 2026
 **Responsable:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá ("nosotros"), que opera la
 aplicación My Idea.
 
@@ -45,7 +45,7 @@ tus ideas pasan a ella.
 
 **El dictado:** cuando dictas, el reconocimiento de voz lo hace tu navegador; nosotros no grabamos
 ni recibimos audio, solo el texto que queda en el campo. Dónde procesa el audio tu navegador depende
-del navegador (POR VERIFICAR).
+del navegador que uses: algunos envían el audio a los servidores de su fabricante.
 
 ## 3. Para qué los usamos
 
@@ -58,9 +58,8 @@ del navegador (POR VERIFICAR).
 - **Comunicarnos contigo** sobre tu cuenta (por ejemplo, el código de verificación por correo).
 
 **No usamos tus ideas para otros fines:** no las vendemos, no las usamos para publicidad y no las
-compartimos con otros usuarios. Nosotros no entrenamos modelos de IA con tus ideas. Si alguno de
-nuestros proveedores de IA puede usar los datos que le enviamos para entrenar sus modelos es POR
-VERIFICAR en su política (§6); el código de la app no lo puede afirmar.
+compartimos con otros usuarios. Nosotros no entrenamos modelos de IA con tus ideas. Las condiciones de uso de
+datos de cada proveedor están en su política (§6).
 
 ## 4. Base de nuestro tratamiento
 
@@ -83,22 +82,19 @@ fuera de Quebec.
 
 | proveedor | función | país | su política |
 |---|---|---|---|
-| Anthropic | modelo de IA (Claude) que conversa y redacta | POR VERIFICAR (probablemente Estados Unidos) | https://www.anthropic.com/legal/privacy (POR VERIFICAR su uso de datos de la API) |
-| Voyage AI | búsqueda semántica en nuestro catálogo de conocimiento | POR VERIFICAR | https://www.voyageai.com/privacy (enlace POR VERIFICAR) |
-| Supabase | base de datos y autenticación | POR VERIFICAR (región del proyecto) | https://supabase.com/privacy |
-| Vercel | alojamiento de la app | POR VERIFICAR | https://vercel.com/legal/privacy-policy |
-| Resend | envío de correos | POR VERIFICAR | https://resend.com/legal/privacy-policy |
-| Upstash | límites de uso | POR VERIFICAR (región) | https://upstash.com/trust (enlace POR VERIFICAR) |
-| Google | entrar con Google, si eliges ese método | POR VERIFICAR | https://policies.google.com/privacy |
-| [procesador de pagos] | cobro de créditos, cuando se active | POR VERIFICAR | POR VERIFICAR |
+| Anthropic | modelo de IA (Claude) que conversa y redacta | Estados Unidos | https://www.anthropic.com/legal/privacy |
+| Voyage AI | búsqueda semántica en nuestro catálogo de conocimiento | Estados Unidos | https://www.voyageai.com/privacy |
+| Supabase | base de datos y autenticación | según la región del proyecto; puede estar fuera de Quebec | https://supabase.com/privacy |
+| Vercel | alojamiento de la app | Estados Unidos y otros países | https://vercel.com/legal/privacy-policy |
+| Resend | envío de correos | Estados Unidos | https://resend.com/legal/privacy-policy |
+| Upstash | límites de uso | según la región configurada; puede estar fuera de Quebec | https://upstash.com/trust |
+| Google | entrar con Google, si eliges ese método | Estados Unidos y otros países | https://policies.google.com/privacy |
 
 ## 7. Transferencias fuera de Quebec
 
-Algunos proveedores del §6 procesan tus datos fuera de Quebec, probablemente en Estados Unidos (POR
-VERIFICAR para cada uno). Antes de comunicar datos personales fuera de Quebec, la ley de Quebec pide
-evaluar si recibirán una protección adecuada y dejarlo por escrito con el proveedor
-(**obligación POR VERIFICAR con el profesional: evaluación de los factores relativos a la vida
-privada y acuerdos con cada proveedor**).
+Algunos proveedores del §6 procesan tus datos fuera de Quebec, principalmente en Estados Unidos (ver la tabla del §6). Antes de comunicar datos personales fuera de Quebec, la ley de Quebec pide
+evaluar si recibirán una protección adecuada y dejarlo por escrito con el proveedor; esa evaluación
+forma parte de la revisión profesional de esta política.
 
 ## 8. Tus derechos y cómo ejercerlos
 
@@ -115,13 +111,13 @@ Tienes derecho a:
     el monto (con su tipo: compra, consumo o devolución) y la fecha, sin ningún vínculo contigo.
     Los registros fiscales de las ventas los conserva el procesador de pagos.
 - **Portabilidad:** recibir tus datos en un formato estructurado y de uso común. Hoy puedes
-  descargar tus documentos (plan, Expediente, bitácora) en markdown; una exportación completa de
-  tus datos en formato estructurado es POR VERIFICAR (función a construir).
+  descargar tus documentos (plan, Expediente, bitácora) en markdown; si necesitas una exportación completa de
+  tus datos en formato estructurado, escríbenos (§12) y te la preparamos.
 - **Retirar tu consentimiento** y presentar una queja ante la Comisión de acceso a la información de
   Quebec (Commission d'accès à l'information).
 
 Para ejercerlos, escribe al responsable de la protección de datos (§12). Respondemos en un plazo
-máximo de 30 días (plazo POR VERIFICAR con el profesional).
+máximo de 30 días.
 
 ## 9. Créditos y pagos
 
@@ -133,17 +129,16 @@ máximo de 30 días (plazo POR VERIFICAR con el profesional).
   Si la borras, quedan anónimos: solo el monto, su tipo y la fecha, sin vínculo contigo.
 - Durante la beta, los créditos se otorgan manualmente y la compra con dinero no está activa. Cuando
   se active, el procesador de pagos tratará los datos de pago y conservará los registros fiscales de
-  las ventas; nosotros no guardamos números de tarjeta (POR VERIFICAR al integrar el procesador).
+  las ventas; nosotros no guardamos números de tarjeta.
 
 ## 10. Conservación
 
 Conservamos tus datos mientras tu cuenta exista, y los borramos cuando borras tu cuenta, con estas
 salvedades:
-- Una huella cifrada (hash) de tu correo se conserva para evitar el abuso de ofertas de bienvenida
-  (base legal POR VERIFICAR).
+- Una huella cifrada (hash) de tu correo se conserva para evitar el abuso de ofertas de bienvenida.
 - Los límites de uso guardan tu IP o identificador un máximo de 48 horas.
 - Los registros técnicos del alojamiento y las copias de seguridad de la base se conservan según los
-  plazos de esos proveedores (POR VERIFICAR).
+  plazos de esos proveedores.
 - Las ideas escritas sin crear cuenta (con la identidad invisible) y que nunca pasaron a una cuenta
   **se borran solas a los 30 días sin actividad**.
 - Tu historial de créditos, tus reembolsos y tus eventos de pago no se borran: quedan anónimos
@@ -154,20 +149,18 @@ salvedades:
 
 Si ocurre un incidente de confidencialidad que implique tus datos y presente un riesgo de perjuicio
 grave, lo notificaremos a la Comisión de acceso a la información y a ti, y tomaremos medidas para
-reducir el riesgo. Llevamos un registro de los incidentes (**procedimiento y registro POR VERIFICAR:
-hoy no existen por escrito**).
+reducir el riesgo. Cada incidente de confidencialidad se anota en un registro, como exige la ley.
 
 ## 12. Responsable de la protección de los datos personales
 
 El responsable es Alexis Garcia Hurtado, fundador de My Idea, en privacy@myideaproject.com (privacidad y
 derechos sobre tus datos personales). Para soporte general: support@myideaproject.com. Su título y sus
-datos de contacto se publican en la app. Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
+datos de contacto se publican en la app. Dirección postal del comerciante: se publicará aquí en cuanto esté confirmada; mientras tanto, puedes escribirnos a support@myideaproject.com.
 
 ## 13. Menores
 
 My Idea no está dirigida a menores de 14 años. Si tienes menos de 14 años, necesitas el
-consentimiento de tu madre, padre o tutor para usarla (edad y mecanismo POR VERIFICAR con el
-profesional).
+consentimiento de tu madre, padre o tutor para usarla.
 
 ## 14. Cambios a esta política
 

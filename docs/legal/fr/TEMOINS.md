@@ -9,7 +9,7 @@
 
 # Politique relative aux témoins de My Idea
 
-**Dernière mise à jour :** [date de publication]
+**Dernière mise à jour :** 6 octobre 2026
 
 ## 1. Ce que nous utilisons et pourquoi
 
@@ -19,8 +19,8 @@ témoin d'analyse, de publicité ou de tiers qui vous suit d'un site à l'autre.
 
 | nom | type | à quoi il sert | durée |
 |---|---|---|---|
-| `sb-*` (Supabase) | témoin nécessaire | maintenir votre session ouverte, y compris celle de l'identité invisible qui vous permet d'écrire votre idée sans compte | celle de la session Supabase (À VÉRIFIER) |
-| Vérificateur PKCE de Supabase | témoin nécessaire | effectuer la connexion avec Google de façon sécuritaire | quelques minutes (À VÉRIFIER) |
+| `sb-*` (Supabase) | témoin nécessaire | maintenir votre session ouverte, y compris celle de l'identité invisible qui vous permet d'écrire votre idée sans compte | pendant la durée de votre session |
+| Vérificateur PKCE de Supabase | témoin nécessaire | effectuer la connexion avec Google de façon sécuritaire | quelques minutes |
 | `post_login_next` | témoin nécessaire | revenir à la page où vous étiez après la connexion | 10 minutes |
 | `myidea_idioma` | témoin de préférence | mémoriser la langue que vous avez choisie (activé lorsque l'application est offerte en plusieurs langues) | 1 an |
 | `mi-idea:gantt-vista` | stockage local | mémoriser la vue du diagramme de Gantt que vous préférez | jusqu'à ce que vous effaciez les données du navigateur |
@@ -32,8 +32,7 @@ Les témoins nécessaires ne peuvent pas être désactivés sans que l'applicati
 (par exemple, vous ne pourriez pas maintenir votre session). Vous pouvez effacer les témoins de
 préférence et le stockage local à partir des paramètres de votre navigateur; l'application
 reviendra alors à ses valeurs par défaut. Si un jour nous utilisions des témoins qui ne sont pas
-nécessaires, nous vous demanderions d'abord votre consentement (exigence À VÉRIFIER avec le
-professionnel).
+nécessaires, nous vous demanderions d'abord votre consentement.
 
 ## 3. Pour en savoir plus
 

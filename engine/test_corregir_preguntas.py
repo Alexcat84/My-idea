@@ -72,6 +72,13 @@ def test_rechazos():
     assert _rechaza(_corr(veredicto="LOGICA", cita={"fichero": "x", "lineas": "1", "frase": "y"}))  # logica: instrumento
 
 
+def test_contraria_contra_el_nodo_se_cita_con_instrumento():
+    # auditoria de preguntas (6 oct 2026): la pregunta se lee contra su propio nodo, no contra el libro
+    cache, reg = _entorno()
+    c = _corr(veredicto="INVENCION", cita={"instrumento": "auditoria de preguntas", "evidencia": "el nodo no da cifra"})
+    assert cp.aplicar([c], cache, reg) == 1
+
+
 def test_logica_se_cita_con_instrumento_contra_el_nodo():
     cache, reg = _entorno()
     c = _corr(veredicto="LOGICA", cita={"instrumento": "auditoria de preguntas", "evidencia": "pregunta por otro tema"})
