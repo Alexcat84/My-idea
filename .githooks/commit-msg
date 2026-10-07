@@ -1,0 +1,14 @@
+#!/bin/sh
+# METODOS VALIDADOS (decision del fundador, 6 oct 2026; docs/REGLAS_DE_LA_CASA.md, M1).
+# La calculadora y el estimador de esfuerzo no cambian sin el visto del fundador. La guarda
+# engine/test_metodos_validados.py falla si cambian sin resellar docs/metodos_validados.json;
+# este hook exige que todo commit que reselle el registro diga "VISTO DEL FUNDADOR" en su mensaje.
+if git diff --cached --name-only | grep -q '^docs/metodos_validados.json$'; then
+  if ! grep -q 'VISTO DEL FUNDADOR' "$1"; then
+    echo ""
+    echo "  COMMIT ABORTADO: este commit resella docs/metodos_validados.json (calculadora o estimador)"
+    echo "  y su mensaje no dice VISTO DEL FUNDADOR. Sin visto del fundador, no entra."
+    exit 1
+  fi
+fi
+exit 0

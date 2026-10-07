@@ -90,6 +90,7 @@ con la misma vara que el catálogo.
 | P21 | Si cae el contador de ritmo, la app falla cerrada: no cobra y suelta la reserva | Fundador | 25 sep 2026 | `upstashCaido.test.ts` |
 | P22 | Confidencialidad de la mecánica: nunca conteos, nodos ni grafo ante el usuario | BANCO | jul 2026 | lectura |
 | P23 | Ninguna llamada a la API real hasta la corrida final; la coherencia y el vuelo se corren una vez, juntos | Fundador | 28 sep 2026 | `docs/producto/CORRIDA_FINAL.md` |
+| M1 | **Métodos validados: la calculadora y el estimador de esfuerzo.** La calculadora (`engine/calculadora.py` y `web/lib/calculadora.ts`) y el estimador de esfuerzo (`SYSTEM_ESTIMACION_BANDA`, `web/lib/engine/estimacion.ts` y las bandas S/M/L/XL de `rangoBanda.ts`) son métodos validados: **sus resultados cuentan como material permitido en todos los prompts** (no son invención). **Ningún cambio a sus fórmulas, criterios, rangos o pruebas se hace sin el visto del fundador** | Fundador | 6 oct 2026 | `engine/test_metodos_validados.py` (huella de cada pieza contra el registro sellado `docs/metodos_validados.json`), `scripts/metodos_validados.py --visto` (único modo de resellar), `.githooks/commit-msg` (un commit que resella exige "VISTO DEL FUNDADOR" en el mensaje) |
 
 ## C. Método (pruebas, commits, auditorías y lectura)
 
