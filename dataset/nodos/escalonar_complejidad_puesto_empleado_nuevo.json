@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Escalonar la complejidad del puesto de un empleado nuevo, partiendo de un puesto poco complejo, incierto y ambiguo y subiéndola a medida que gana experiencia compartida con la organización",
   "fuente": "High Output Management - Andrew S. Grove",
-  "resumen_teorico": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso las empresas con culturas fuertes suelen preferir la promoción interna.",
+  "resumen_teorico": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso la promoción interna puede encajar mejor en una empresa con una cultura fuerte.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_11.md, unidad interna Cap. 10, titulo textual Modes of Control. Sale de la PIEZA P26 de la frontera de esta vuelta (.v57ext/frontera.py, .v57ext/frontera.txt), tramo L63 a L63, 210 palabras, un solo renglon. POR QUE ES PROCEDIMIENTO, y por que no es solo un caso: el parrafo abre con Let's apply our model to the work of a new employee, que anuncia una aplicacion GENERALIZADA del cuadro de elegir_modo_control_motivacion_factor_cua (el nodo anterior de esta misma tanda) y no el relato de una persona real y nombrada: no hay nombre propio, no hay empresa nombrada, y el sujeto es el pronombre generico he a lo largo de todo el tramo. El libro mismo generaliza al cierre (This is why promotion from within tends to be the approach favored by corporations with strong corporate cultures. Bring young people in...), en imperativo dirigido al lector y no en pasado narrativo. Por eso este tramo no cae en el mismo cesto que P3 a P5, P18, P29 a P34 de este mismo capitulo, que la frontera etiqueta CASO porque narran un hecho concreto con dato del caso. DE DONDE SALE CADA PASO, uno a uno, todos de L63: paso 1 (What is his motivation? It is very much based on self-interest); paso 2 (So you should give him a clearly structured job with a low CUA factor); paso 3 (If he does well, he will begin to feel more at home, worry less about himself, and start to care more about his team); paso 4 (The employee can then be promoted into a more complex, uncertain, ambiguous job. (These tend to pay more.)); paso 5 (As time passes, he will continue to gain an increasing amount of shared experience with other members of the organization and will be ready to tackle more and more complex, ambiguous, and uncertain tasks); paso 6 (This is why promotion from within tends to be the approach favored by corporations with strong corporate cultures); paso 7 (Bring young people in at relatively low-level, well-defined jobs with low CUA factors); paso 8 (and over time they will share experiences with their peers, supervisors, and subordinates and will learn the values, objectives, and methods of the organization); paso 9 (They will gradually accept, even flourish in, the complex world of multiple bosses and peer decision-making). NOTA DE TRANSCRIPCION: el original imprime andmethods sin espacio entre and y methods en la frase and will learn the values, objectives, andmethods of the organization; lo cito como and methods porque es una errata tipografica evidente del propio fichero fuente y el paso 8 lo escribe con el espacio que el sentido exige, sin que eso cambie una sola palabra del contenido. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: no escribo la metafora del barco (He learns that if he is on a boat and wants to get ahead, it is better for him to help row than to run to the bow), porque es una ilustracion figurada de que el empleado empieza a cuidar del equipo y no una instruccion ejecutable por el mando (no se puede literalmente subir a nadie a un barco); el paso 3 recoge el mismo contenido (empieza a cuidar mas de su equipo) sin la imagen. No escribo el caso del directivo senior contratado de fuera, que es la PIEZA P27 inmediatamente siguiente (L65) y que la frontera adjudica CERO nodos porque ahi el libro no da procedimiento, solo cruza los dedos (All we can do is cross our fingers and hope she quickly forgets self-interest); menciono ese contraste aqui solo como advertencia y no como paso. ARISTA DECLARADA POR LECTURA, para cablearla el dia de la insercion (D.39 mide la puerta cerrada para grove_high_output en esta vuelta): D.29 desde elegir_modo_control_motivacion_factor_cua, el candidato anterior de esta misma tanda: aquel da el criterio general (motivacion contra factor CUA) y este es su aplicacion a un caso de uso concreto, la incorporacion de personal nuevo; comparten la grafia factor CUA a proposito (regla de id 4). DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO, y es el mas serio de los que traigo hoy: el parrafo se anuncia como aplicacion de un modelo (Let's apply our model to the work of a new employee) y un lector estricto de manual 3.5 puede leer esto como un CASO HIPOTETICO del propio autor y no como doctrina nueva, en cuyo caso el contenido entero vive dentro del resumen de elegir_modo_control_motivacion_factor_cua y no en un nodo propio. Lo sostengo como nodo separado porque su condicion de activacion (incorporar personal nuevo y planear su trayectoria de puesto) es distinta de la de aquel (elegir el modo de control de una conducta ya en curso), y porque el texto generaliza en imperativo (Bring young people in) y no narra un hecho pasado de una persona nombrada, que es la marca que el propio banco usa para distinguir CASO de doctrina generalizada. Si cae, cae DENTRO de mi marcado, y su arreglo es fundir sus nueve pasos dentro del resumen del nodo anterior sin escribir un id nuevo.",
   "pasos_accionables": [
     "Cuando incorpores a un empleado nuevo, cuenta con que su motivación será sobre todo de interés propio.",
@@ -12,7 +12,7 @@
     "Cuenta con que si le va bien, empezará a sentirse más a gusto, a preocuparse menos por sí mismo y a cuidar más de su equipo.",
     "Promuévelo después a un puesto más complejo, incierto y ambiguo, que además suele pagar más.",
     "Cuenta con que, a medida que pase el tiempo, irá ganando una cantidad creciente de experiencia compartida con el resto de la organización y estará listo para tareas cada vez más complejas, ambiguas e inciertas.",
-    "Reconoce que esta es la razón por la que la promoción interna suele ser el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+    "Reconoce que esta es la razón por la que la promoción interna puede convenir más cuando la cultura de la empresa es fuerte.",
     "Trae gente joven a puestos de nivel relativamente bajo y bien definidos, poco complejos, inciertos y ambiguos.",
     "Cuenta con que, con el tiempo, compartirán experiencias con sus compañeros, jefes y subordinados y aprenderán los valores, los objetivos y los métodos de la organización.",
     "Cuenta con que irán aceptando el mundo complejo de múltiples jefes y de las decisiones entre pares, e incluso llegarán a prosperar en él."
@@ -330,6 +330,39 @@
       "motivos": [
         "regionalismo"
       ]
+    },
+    {
+      "id": "lectura-total-escalonar_complejidad_puesto_empleado_nuevo-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Reconoce que esta es la razón por la que la promoción interna suele ser el enfoque que favorecen las empresas con culturas corporativas fuertes.",
+      "texto_nuevo": "Reconoce que esta es la razón por la que la promoción interna puede convenir más cuando la cultura de la empresa es fuerte.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "suele ser el enfoque que favorecen las empresas con culturas corporativas fuertes"
+        ]
+      },
+      "decision": "lectura total de procedencia (w32): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "lectura-total-escalonar_complejidad_puesto_empleado_nuevo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso las empresas con culturas fuertes suelen preferir la promoción interna.",
+      "texto_nuevo": "Quien acaba de llegar se mueve sobre todo por interés propio, y por eso conviene darle un puesto claro, estructurado y poco complejo, incierto y ambiguo. Si le va bien, se siente en casa, se preocupa menos por sí mismo y más por su grupo; entonces ya puede con un puesto más complejo, incierto y ambiguo. La experiencia compartida con compañeros, jefes y subordinados le enseña los valores, objetivos y métodos de la organización, y eso lo prepara para jefes múltiples y decisiones entre pares. Por eso la promoción interna puede encajar mejor en una empresa con una cultura fuerte.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "las empresas con culturas fuertes suelen preferir la promoción interna"
+        ]
+      },
+      "decision": "lectura total de procedencia (w32): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ],
   "etiqueta_arbol": "Escalona la Complejidad del Puesto",
