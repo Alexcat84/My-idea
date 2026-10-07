@@ -7,18 +7,18 @@
   "resumen_teorico": "Fabricar contra pronóstico son dos procesos a la vez, cada uno con su reloj: la fábrica convierte materia prima en producto terminado y el vendedor convierte un cliente posible en pedido. Lo ideal es que pedido y producto lleguen juntos al muelle; si no casan, sobra producto o falta. Que fabricación y ventas preparen cada uno su pronóstico hace que cada cual responda de lo suyo. Como ninguno de los dos flujos es predecible del todo, se mete holgura a propósito en el inventario, idealmente en el de menor valor, donde da más flexibilidad por el mismo coste.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P14 de la frontera publicada en la vuelta 2 del frente, L111 a L121, 453 palabras, y de ningun otro tramo. Es el tramo mas largo de los que dan nodo en mi tanda. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro nombra los dos flujos y describe las etapas de cada uno, nombra el punto de encuentro (the shipping dock), pone una decision de organizacion con su alternativa descartada y su motivo (no a un solo mando, si a los dos departamentos), nombra el remedio contra la impredecibilidad (slack) y dice DONDE se pone (inventory) y EN QUE ETAPA (the lowest-value stage). Inventario de MEDIOS y de ETAPAS. DE DONDE SALE CADA PASO, uno a uno: pasos 1 a 4 de L111 y del pie de figura de L117 (consists of two simultaneous processes, each with a separate time cycle; A manufacturing flow must occur in which the raw material moves through various production steps and finally enters the finished goods warehouse; Simultaneously, a salesman finds a prospect and sells to that prospect, who eventually places an order with the manufacturer; The order for the product and the product itself should arrive at the shipping dock at the same time); pasos 5 y 6 de L113 (you might be tempted to give all forecasting responsibility to a single manager who can be made accountable for it. But this usually does not work very well. What works better is to ask both the manufacturing and the sales departments to prepare a forecast, so that people are responsible for performing against their own predictions); paso 7 de L115 (we try to match the two parallel flows with as much precision as possible. If there is no match, we end up with a customer order that we cannot satisfy or with a finished product for which we have no customer); pasos 8 a 11 de L119 (The ideal is rarely found in the real world; customer orders do not develop in time or the customer changes his mind; manufacturing could miss deadlines, or make mistakes, or encounter unforeseen problems; Because neither the sales flow nor the manufacturing flow is completely predictable, we should deliberately build a reasonable amount of slack into the system. And inventory is the most obvious place for it; the more inventory we have, the more change we can cope with and still satisfy orders. But inventory costs money to build and keep, and therefore should be controlled carefully; Ideally, inventory should be kept at the lowest-value stage, as we have learned before, like raw eggs kept at the breakfast factory. Also, the lower the value, the more production flexibility we obtain for a given inventory cost); paso 12 de L121 (It is a good idea to use stagger charts in both the manufacturing and sales forecasts; By repeatedly observing the variance of one forecast from another, you will continually pin down the causes of inaccuracy and improve your ability to forecast both orders and the availability of product). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 12 pasos, 12 TRANSCRIPCION, 0 PUENTE. EL PASO 11 CITA ALGO QUE YA VIVE EN EL GRAFO Y LO DIGO YO ANTES QUE NADIE: guardar el inventario en la etapa de menor valor viene con la coletilla del propio libro as we have learned before, o sea que el texto se esta remitiendo a su capitulo anterior, que en este repo es cap_02 y ya dio nodo en la vuelta 1. NO lo saco a nodo propio, porque seria el gemelo de su donante (P.19 y EXTRACTOR.md 11), y en cambio lo declaro como ARISTA por lectura en el reporte de esta vuelta, que es lo que 11 manda cuando el candidato despliega algo que el libro ya nombro. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuanta holgura es una cantidad razonable, porque el libro dice a reasonable amount y ese es un adjetivo de adecuacion; poner una cifra ahi seria inventarla entera y ademas contradiria la restriccion 2 de 9.1. NO escribo cada cuanto se casan los flujos ni quien los casa. NO escribo que hacer cuando no casan mas alla de lo que el libro dice que pasa. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: doce pasos son muchos, y un lector estricto puede decir que aqui hay dos procedimientos, casar los dos flujos por un lado y dimensionar la holgura de inventario por otro. Lo sostengo como uno porque el propio libro encadena lo segundo a lo primero con su because (because neither flow is completely predictable), o sea que la holgura no es un tema aparte sino la consecuencia de que los dos flujos no casen del todo. Si cae, cae DENTRO de mi marcado.",
   "pasos_accionables": [
-    "Trata la entrega de un producto fabricado contra pronóstico como dos procesos simultáneos, cada uno con su propio ciclo de tiempo.",
-    "Sigue el flujo de fabricación: la materia prima pasa por las distintas etapas de producción y acaba entrando en el almacén de producto terminado.",
-    "Sigue a la vez el flujo de ventas: el vendedor encuentra un cliente posible, le vende, y ese cliente acaba poniendo un pedido al fabricante.",
-    "Ponte como ideal que el pedido del producto y el producto mismo lleguen al muelle de expedición al mismo tiempo.",
+    "Ve la entrega de lo que fabricas contra pronóstico como dos procesos que corren a la vez, cada cual con su propio ciclo.",
+    "Sigue la ruta de fabricación: la materia prima recorre una tras otra las etapas de producción hasta llegar al almacén de producto terminado.",
+    "Sigue al mismo tiempo la ruta de ventas: un vendedor da con un posible cliente, cierra la venta y, con el tiempo, ese cliente le hace un pedido al fabricante.",
+    "Aspira a que pedido y producto coincidan en el muelle de expedición en el mismo momento.",
     "No entregues todo el pronóstico a un solo mando al que hacer responsable de él, aunque la complejidad del asunto te tiente a hacerlo, porque eso no suele funcionar bien.",
-    "Pide en su lugar que fabricación y ventas preparen cada uno su propio pronóstico, de manera que cada cual responda de cumplir sus propias predicciones.",
-    "Casa los dos flujos paralelos con toda la precisión que puedas, porque si no casan acabas o con un pedido de cliente que no puedes satisfacer o con un producto terminado para el que no tienes cliente.",
-    "Cuenta con que el ideal casi nunca se da en el mundo real: lo más frecuente es que los pedidos no lleguen a tiempo o que el cliente cambie de idea, y por el otro lado fabricación puede fallar plazos, cometer errores o encontrarse con problemas imprevistos.",
-    "Mete a propósito una cantidad razonable de holgura en el sistema, precisamente porque ninguno de los dos flujos es completamente predecible.",
-    "Pon esa holgura en el inventario, que es el sitio más evidente, y contrólalo con cuidado, porque cuanto más inventario tengas más cambios podrás absorber sin dejar de servir pedidos, pero construirlo y mantenerlo cuesta dinero.",
-    "Guarda ese inventario, idealmente, en la etapa de menor valor, como los huevos crudos en una cocina que sirve desayunos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario.",
-    "Usa gráficos escalonados en los dos pronósticos, el de fabricación y el de ventas, y observa una y otra vez la desviación de un pronóstico respecto de otro para ir acotando las causas de inexactitud y mejorar tu capacidad de pronosticar tanto los pedidos como la disponibilidad de producto."
+    "Pide más bien a fabricación y a ventas que cada área haga su propio pronóstico; así cada una responde de cumplir lo que predijo.",
+    "Haz coincidir lo más exactamente posible las dos rutas paralelas: si fallan, te quedas con un pedido que no puedes atender o con producto terminado sin nadie que lo compre.",
+    "Asume que ese ideal rara vez se cumple: muchas veces los pedidos se retrasan o el cliente cambia de opinión, y del lado de fabricación también puede haber plazos incumplidos, errores o problemas que nadie vio venir.",
+    "Deja adrede una holgura razonable en el sistema, ya que no puedes predecir del todo ni una ruta ni la otra.",
+    "Coloca esa holgura en el inventario, el lugar más obvio, y vigílalo de cerca: con más inventario absorbes más cambios y sigues atendiendo pedidos, pero fabricarlo y guardarlo cuesta dinero.",
+    "Apunta a guardar ese inventario en la etapa de menos valor, como hace con los huevos crudos una cocina de desayunos: cuanto menos vale lo guardado, más flexibilidad de producción te da el mismo gasto en inventario.",
+    "Lleva gráficos escalonados tanto para el pronóstico de fabricación como para el de ventas, y compara una y otra vez cuánto se aparta un pronóstico de otro: así vas cerrando el cerco a las causas de error y pronosticas mejor los pedidos y la disponibilidad de producto."
   ],
   "entregable_esperado": "Los dos pronósticos preparados por separado, uno por fabricación y otro por ventas, los dos gráficos escalonados en marcha, y la holgura fijada en forma de inventario guardado en la etapa de menor valor.",
   "nodos_previos": [
@@ -356,6 +356,193 @@
       "motivos": [
         "matiz"
       ]
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Trata la entrega de un producto fabricado contra pronóstico como dos procesos simultáneos, cada uno con su propio ciclo de tiempo.",
+      "texto_nuevo": "Ve la entrega de lo que fabricas contra pronóstico como dos procesos que corren a la vez, cada cual con su propio ciclo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "111",
+        "frase": "Delivering a product that was built to forecast to a customer consists"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Sigue el flujo de fabricación: la materia prima pasa por las distintas etapas de producción y acaba entrando en el almacén de producto terminado.",
+      "texto_nuevo": "Sigue la ruta de fabricación: la materia prima recorre una tras otra las etapas de producción hasta llegar al almacén de producto terminado.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "111",
+        "frase": "A manufacturing flow must occur in which the raw material moves"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Sigue a la vez el flujo de ventas: el vendedor encuentra un cliente posible, le vende, y ese cliente acaba poniendo un pedido al fabricante.",
+      "texto_nuevo": "Sigue al mismo tiempo la ruta de ventas: un vendedor da con un posible cliente, cierra la venta y, con el tiempo, ese cliente le hace un pedido al fabricante.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "111",
+        "frase": "Simultaneously, a salesman finds a prospect and sells to that prospect"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ponte como ideal que el pedido del producto y el producto mismo lleguen al muelle de expedición al mismo tiempo.",
+      "texto_nuevo": "Aspira a que pedido y producto coincidan en el muelle de expedición en el mismo momento.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "111",
+        "frase": "Ideally, the order for the product and the product itself should arrive"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Pide en su lugar que fabricación y ventas preparen cada uno su propio pronóstico, de manera que cada cual responda de cumplir sus propias predicciones.",
+      "texto_nuevo": "Pide más bien a fabricación y a ventas que cada área haga su propio pronóstico; así cada una responde de cumplir lo que predijo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "113",
+        "frase": "What works better is to ask both the manufacturing and the sales departments"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Casa los dos flujos paralelos con toda la precisión que puedas, porque si no casan acabas o con un pedido de cliente que no puedes satisfacer o con un producto terminado para el que no tienes cliente.",
+      "texto_nuevo": "Haz coincidir lo más exactamente posible las dos rutas paralelas: si fallan, te quedas con un pedido que no puedes atender o con producto terminado sin nadie que lo compre.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "115",
+        "frase": "At Intel we try to match the two parallel flows with as much precision"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con que el ideal casi nunca se da en el mundo real: lo más frecuente es que los pedidos no lleguen a tiempo o que el cliente cambie de idea, y por el otro lado fabricación puede fallar plazos, cometer errores o encontrarse con problemas imprevistos.",
+      "texto_nuevo": "Asume que ese ideal rara vez se cumple: muchas veces los pedidos se retrasan o el cliente cambia de opinión, y del lado de fabricación también puede haber plazos incumplidos, errores o problemas que nadie vio venir.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "119",
+        "frase": "The ideal is rarely found in the real world. More often"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Mete a propósito una cantidad razonable de holgura en el sistema, precisamente porque ninguno de los dos flujos es completamente predecible.",
+      "texto_nuevo": "Deja adrede una holgura razonable en el sistema, ya que no puedes predecir del todo ni una ruta ni la otra.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "119",
+        "frase": "Because neither the sales flow nor the manufacturing flow is completely predictable"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 8,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-9",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Pon esa holgura en el inventario, que es el sitio más evidente, y contrólalo con cuidado, porque cuanto más inventario tengas más cambios podrás absorber sin dejar de servir pedidos, pero construirlo y mantenerlo cuesta dinero.",
+      "texto_nuevo": "Coloca esa holgura en el inventario, el lugar más obvio, y vigílalo de cerca: con más inventario absorbes más cambios y sigues atendiendo pedidos, pero fabricarlo y guardarlo cuesta dinero.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "119",
+        "frase": "And inventory is the most obvious place for it"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-10",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Guarda ese inventario, idealmente, en la etapa de menor valor, como los huevos crudos en una cocina que sirve desayunos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario.",
+      "texto_nuevo": "Apunta a guardar ese inventario en la etapa de menos valor, como hace con los huevos crudos una cocina de desayunos: cuanto menos vale lo guardado, más flexibilidad de producción te da el mismo gasto en inventario.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "119",
+        "frase": "Ideally, inventory should be kept at the lowest-value stage"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 10,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-casar_flujo_fabricacion_flujo_ventas-pasos_accionables-11",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Usa gráficos escalonados en los dos pronósticos, el de fabricación y el de ventas, y observa una y otra vez la desviación de un pronóstico respecto de otro para ir acotando las causas de inexactitud y mejorar tu capacidad de pronosticar tanto los pedidos como la disponibilidad de producto.",
+      "texto_nuevo": "Lleva gráficos escalonados tanto para el pronóstico de fabricación como para el de ventas, y compara una y otra vez cuánto se aparta un pronóstico de otro: así vas cerrando el cerco a las causas de error y pronosticas mejor los pedidos y la disponibilidad de producto.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "121",
+        "frase": "It is a good idea to use stagger charts in both"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 11,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Casa tu Fábrica con tus Ventas",

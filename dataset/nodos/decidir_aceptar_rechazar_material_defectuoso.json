@@ -7,14 +7,14 @@
   "resumen_teorico": "Rechazar material al recibirlo abre dos salidas: devolverlo, arriesgando parar la fábrica, o usarlo igual y aceptar más rechazos en producción, que puede salir más barato. Por lo general es una decisión económica, y solo la toma bien un grupo equilibrado, que suele reunir a calidad, fabricación e ingeniería de diseño y puede pesar todas las consecuencias. Tiene un límite: si el defecto puede causar al cliente un fallo completo no lo aceptes nunca, porque sus consecuencias no se pueden evaluar. Cambiar en fábrica lo que falla probablemente encarece; si falla en uso, cuesta mucho más que dinero.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P17 de la frontera publicada en la vuelta 2 del frente, L135 a L137, 242 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro dice cuantas salidas hay (a couple of choices), las nombra las dos, pone la consecuencia medible de la segunda (a higher reject rate), pone el termino de comparacion (shutting down the factory altogether), nombra QUIEN decide y ADEMAS de que tres areas sale ese quien, y pone la excepcion con su nombre (reliability) y su caso. Inventario de MEDIOS, de OBJETOS DE TRABAJO y hasta de participantes. DE DONDE SALE CADA PASO, uno a uno: pasos 1 a 3 de L135 (When material is rejected at incoming inspection, a couple of choices present themselves. We can send it back to the vendor as unacceptable, or we can waive our specifications and use the substandard material anyway. The latter would result in a higher reject rate in our production process than if we had used thoroughly acceptable material, but that might be less expensive than shutting down the factory altogether until our vendor provides better material); pasos 4, 5 y 6 de L135 (Such decisions can only be made properly by a balanced group of managers, which typically consists of representatives from the quality assurance, manufacturing, and design engineering departments. This group can weigh all the consequences of rejecting or accepting substandard raw material); pasos 7 y 8 de L137 (While in most instances the decision to accept or reject defective material at a given inspection point is an economic one, one should never let substandard material proceed when its defects could cause a complete failure, a reliability problem, for our customer; because we can never assess the consequences of an unreliable product, we cannot make compromises when it comes to reliability; Think of a component going into the making of a cardiac pacemaker. If some of the components do not work upon receipt by the manufacturer, he can replace them while the unit is still in the factory. This will probably increase costs. But if the component fails later, after the pacemaker has been implanted, the cost of the failure is much more than a financial one). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. EL RESPONSABLE DE ESTE NODO NO ES UN PUENTE Y LO DIGO PORQUE PARECE UNO: el responsable fue una de las tres especies de puente del lote 1, y aqui los pasos 4 y 5 nombran quien decide. No es puente porque lo nombra EL LIBRO, con sus tres departamentos escritos uno a uno (quality assurance, manufacturing, and design engineering). La especie puente es el responsable que el extractor rellena cuando el libro no pone ninguno. EL MARCAPASOS ENTRA COMO EJEMPLO NOMBRADO DENTRO DEL PASO y no como casa propia (manual 3.5), porque lo que el libro ensena con el es la regla de la fiabilidad, no un procedimiento de marcapasos. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuanto de mayor es esa tasa de rechazo, porque el libro dice higher y no pone cifra. NO escribo como se pesa el coste de parar la fabrica ni con que formula. NO escribo cada cuanto se reune ese grupo ni quien lo convoca. NO escribo que hacer con el proveedor despues, porque el libro no lo dice y cerrar ese bucle seria puente de la especie destinatario. TRADUCCION DECLARADA: quality esta en la lista negra de EXTRACTOR.md 15.1, asi que quality assurance va como aseguramiento de la calidad y el termino ingles viaja en denominaciones. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 7 y 8 podrian ser nodo propio, porque la excepcion de fiabilidad tiene su propia condicion de activacion (un defecto que pueda causar fallo completo al cliente) y su propia regla (ninguna componenda). Lo dejo dentro porque el libro la escribe como la EXCEPCION de esta misma decision, con su While in most instances delante, y separarla dejaria el nodo principal diciendo que la decision es economica sin decir donde deja de serlo, que es media regla. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 63 de la linea serial, la de insercion, en la relectura de fidelidad entera que D.30 y D.58 mandan hacer sobre los candidatos que entran, y ANTES de su insercion. EL ENTREGABLE TRAIA UN PUENTE DE SOPORTE Y SE REESCRIBE SIN BORRAR EL RASTRO: decia con las consecuencias de las dos salidas pesadas por escrito y hoy dice con las consecuencias de las dos salidas pesadas por ese grupo. L135 dice This group can weigh all the consequences of rejecting or accepting substandard raw material, y ahi se acaba: el grupo pesa, y el libro no dice ni que se escriba ni donde. Los 8 pasos, releidos uno a uno contra L135 y L137: 8 TRANSCRIPCION, 0 PUENTE.",
   "pasos_accionables": [
-    "Cuando rechaces material en la inspección de recepción, pon encima de la mesa las dos salidas que se te presentan: devolverlo al proveedor como inaceptable, o renunciar a tu especificación y usar ese material aunque no llegue.",
-    "Si vas por la segunda, cuenta con que tu proceso de producción va a dar una tasa de rechazo mayor que si hubieras usado material plenamente aceptable.",
-    "Compara ese coste con el de cerrar la fábrica entera hasta que tu proveedor entregue material mejor, porque puede salirte más barato el primero.",
+    "Si en la recepción descubres material que no cumple, ten claras tus dos opciones: mandárselo de vuelta al proveedor por inaceptable, o pasar por alto tu especificación y usarlo de todas formas.",
+    "Si eliges usarlo, prevé que en producción rechazarás más piezas de las que rechazarías con material que cumpliera del todo.",
+    "Pon ese coste frente al de parar toda la fábrica mientras tu proveedor no te mande material mejor: el primero puede resultarte más económico.",
     "No tomes esa decisión en solitario: llévala a un grupo equilibrado de mandos, que es el único sitio donde puede tomarse bien.",
-    "Forma ese grupo, como se forma normalmente, con representantes de aseguramiento de la calidad, de fabricación y de ingeniería de diseño.",
-    "Deja que ese grupo pese todas las consecuencias de rechazar o de aceptar la materia prima que no llega a especificación.",
-    "Trata la decisión como económica en la mayoría de los casos, pero no dejes pasar nunca material defectuoso cuando su defecto pueda causar a tu cliente un fallo completo, o sea, un problema de fiabilidad.",
-    "No hagas ninguna componenda en materia de fiabilidad, porque nunca se pueden evaluar las consecuencias de un producto no fiable: en un componente que va dentro de un marcapasos, si no funciona al recibirlo se puede sustituir en fábrica con un coste probablemente mayor, pero si falla después de implantado el coste del fallo ya no es solo económico."
+    "Arma ese grupo con su composición habitual, que junta a representantes de aseguramiento de la calidad, fabricación e ingeniería de diseño.",
+    "Encárgale a ese grupo sopesar cada consecuencia de aceptar la materia prima que no cumple la especificación, y cada consecuencia de rechazarla.",
+    "En la mayoría de los casos, decide con criterio económico; la excepción es el material defectuoso cuyo defecto pueda provocarle a tu cliente un fallo completo, es decir, un problema de fiabilidad: ese no lo dejes pasar jamás.",
+    "En fiabilidad no transijas nunca, porque las consecuencias de un producto poco fiable jamás se pueden medir. Piensa en una pieza de un marcapasos: si no funciona cuando la recibes, puedes cambiarla en fábrica, y eso probablemente encarece; si falla ya implantada, el coste del fallo va mucho más allá del dinero."
   ],
   "entregable_esperado": "La decisión tomada por un grupo con las tres áreas representadas, con las consecuencias de las dos salidas pesadas por ese grupo, y la excepción de fiabilidad comprobada antes de aceptar nada.",
   "nodos_previos": [
@@ -292,6 +292,125 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando rechaces material en la inspección de recepción, pon encima de la mesa las dos salidas que se te presentan: devolverlo al proveedor como inaceptable, o renunciar a tu especificación y usar ese material aunque no llegue.",
+      "texto_nuevo": "Si en la recepción descubres material que no cumple, ten claras tus dos opciones: mandárselo de vuelta al proveedor por inaceptable, o pasar por alto tu especificación y usarlo de todas formas.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135",
+        "frase": "When material is rejected at incoming inspection, a couple of choices present themselves."
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si vas por la segunda, cuenta con que tu proceso de producción va a dar una tasa de rechazo mayor que si hubieras usado material plenamente aceptable.",
+      "texto_nuevo": "Si eliges usarlo, prevé que en producción rechazarás más piezas de las que rechazarías con material que cumpliera del todo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135",
+        "frase": "The latter would result in a higher reject rate in our production process"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Compara ese coste con el de cerrar la fábrica entera hasta que tu proveedor entregue material mejor, porque puede salirte más barato el primero.",
+      "texto_nuevo": "Pon ese coste frente al de parar toda la fábrica mientras tu proveedor no te mande material mejor: el primero puede resultarte más económico.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135",
+        "frase": "but that might be less expensive than shutting down the factory altogether"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Forma ese grupo, como se forma normalmente, con representantes de aseguramiento de la calidad, de fabricación y de ingeniería de diseño.",
+      "texto_nuevo": "Arma ese grupo con su composición habitual, que junta a representantes de aseguramiento de la calidad, fabricación e ingeniería de diseño.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135",
+        "frase": "which typically consists of representatives from the quality assurance, manufacturing, and design engineering"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Deja que ese grupo pese todas las consecuencias de rechazar o de aceptar la materia prima que no llega a especificación.",
+      "texto_nuevo": "Encárgale a ese grupo sopesar cada consecuencia de aceptar la materia prima que no cumple la especificación, y cada consecuencia de rechazarla.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135",
+        "frase": "This group can weigh all the consequences of rejecting or accepting substandard raw"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Trata la decisión como económica en la mayoría de los casos, pero no dejes pasar nunca material defectuoso cuando su defecto pueda causar a tu cliente un fallo completo, o sea, un problema de fiabilidad.",
+      "texto_nuevo": "En la mayoría de los casos, decide con criterio económico; la excepción es el material defectuoso cuyo defecto pueda provocarle a tu cliente un fallo completo, es decir, un problema de fiabilidad: ese no lo dejes pasar jamás.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "137",
+        "frase": "While in most instances the decision to accept or reject defective material"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No hagas ninguna componenda en materia de fiabilidad, porque nunca se pueden evaluar las consecuencias de un producto no fiable: en un componente que va dentro de un marcapasos, si no funciona al recibirlo se puede sustituir en fábrica con un coste probablemente mayor, pero si falla después de implantado el coste del fallo ya no es solo económico.",
+      "texto_nuevo": "En fiabilidad no transijas nunca, porque las consecuencias de un producto poco fiable jamás se pueden medir. Piensa en una pieza de un marcapasos: si no funciona cuando la recibes, puedes cambiarla en fábrica, y eso probablemente encarece; si falla ya implantada, el coste del fallo va mucho más allá del dinero.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "137",
+        "frase": "because we can never assess the consequences of an unreliable product"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Decide Aceptar o Rechazar Material",

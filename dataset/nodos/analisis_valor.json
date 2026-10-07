@@ -7,7 +7,7 @@
   "resumen_teorico": "Calcula el costo incremental de características específicas del producto y el costo de satisfacer necesidades particulares del cliente, comparando diseños alternativos. Ayuda a evitar sobrecargar el producto con funciones secundarias a expensas de la funcionalidad fundamental.",
   "pasos_accionables": [
     "Elaborar una hoja de cálculo que relacione costos con necesidades del cliente por prioridad",
-    "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas, o incluso no atenderlas si el producto es muy sensible al precio",
+    "Ubica las necesidades de baja prioridad que te cuestan mucho y busca otras maneras de cubrirlas; si tu producto es muy sensible al precio, considera incluso dejarlas sin atender",
     "Verificar que las necesidades de alta prioridad reciban recursos suficientes",
     "Evitar el uso de recursos en funciones de bajo valor en detrimento de las funciones esenciales"
   ],
@@ -56,6 +56,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade la opción de no atender esas necesidades si el producto es muy sensible al precio.; Mismo defecto: se cae esa segunda salida.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-analisis_valor-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identificar necesidades de baja prioridad con alto costo asociado y buscar alternativas, o incluso no atenderlas si el producto es muy sensible al precio",
+      "texto_nuevo": "Ubica las necesidades de baja prioridad que te cuestan mucho y busca otras maneras de cubrirlas; si tu producto es muy sensible al precio, considera incluso dejarlas sin atender",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4321",
+        "frase": "If the cost for meeting low-priority needs is high, the team must explore"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

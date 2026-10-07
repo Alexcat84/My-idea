@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica qué partes de tu negocio son el corazón que no debes soltar",
     "Para cada actividad que consideres soltar, revisa qué tan bien la haces hoy, cuánta capacidad tienes, cuánto cuesta y si cumples los plazos",
-    "Antes de decidir, quizá convenga estudiar esa actividad como un proyecto de mejora de calidad, hacer los cambios internos necesarios y comparar el resultado en calidad y costos con lo que ofrecen los proveedores de afuera, confirmando que haya un proveedor capaz y que puedas vigilar bien el contrato",
+    "Valora, antes de decidir, tratar primero esa actividad como un proyecto de mejora de calidad: haz dentro los ajustes que hagan falta, mide lo que logras en calidad y costos frente a lo que te ofrecen los proveedores externos, y asegúrate de que exista uno capaz de hacerla y de que podrás supervisar bien su contrato.",
     "Piensa cómo afecta esto el ánimo y la lealtad de las personas que trabajan contigo"
   ],
   "entregable_esperado": "Tu decisión de hacerlo tú mismo o subcontratarlo, con la lista de lo que es el corazón de tu negocio y lo que sí puedes soltar",
@@ -121,6 +121,23 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c22): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-seleccion_hacer_o_comprar-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Antes de decidir, quizá convenga estudiar esa actividad como un proyecto de mejora de calidad, hacer los cambios internos necesarios y comparar el resultado en calidad y costos con lo que ofrecen los proveedores de afuera, confirmando que haya un proveedor capaz y que puedas vigilar bien el contrato",
+      "texto_nuevo": "Valora, antes de decidir, tratar primero esa actividad como un proyecto de mejora de calidad: haz dentro los ajustes que hagan falta, mide lo que logras en calidad y costos frente a lo que te ofrecen los proveedores externos, y asegúrate de que exista uno capaz de hacerla y de que podrás supervisar bien su contrato.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23641-23646",
+        "frase": "Perhaps we should first study the entire activity to be outsourced as"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

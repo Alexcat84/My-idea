@@ -10,7 +10,7 @@
     "Definir una unidad de medida para cada necesidad o característica identificada",
     "Seleccionar o diseñar un sensor (instrumento, método o juicio humano) que evalúe esa unidad; si juzgan personas, comprobar que la unidad y el sensor se correlacionan con la opinión de un grupo de clientes",
     "Para abstracciones, descomponer la característica en componentes observables y medibles",
-    "Validar que la unidad de medida sea entendible, una base acordada para decidir, de interpretación uniforme, económica y, si se cumple lo demás, compatible con los sensores existentes"
+    "Comprueba que la unidad de medida cumpla cinco condiciones: que cualquiera la entienda, que sirva como base común y aceptada para tomar decisiones, que todos la interpreten igual, que aplicarla no resulte costoso y, siempre que lo demás también se cumpla, que funcione con los sensores que ya tienes"
   ],
   "entregable_esperado": "Lista de necesidades del cliente con su unidad de medida y sensor correspondiente definidos",
   "nodos_previos": [
@@ -94,6 +94,23 @@
       },
       "decision": "lectura total de procedencia (w24): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-unidades_medida_sensores-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Validar que la unidad de medida sea entendible, una base acordada para decidir, de interpretación uniforme, económica y, si se cumple lo demás, compatible con los sensores existentes",
+      "texto_nuevo": "Comprueba que la unidad de medida cumpla cinco condiciones: que cualquiera la entienda, que sirva como base común y aceptada para tomar decisiones, que todos la interpreten igual, que aplicarla no resulte costoso y, siempre que lo demás también se cumpla, que funcione con los sensores que ya tienes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3947-3957",
+        "frase": "An ideal unit of measure Is understandable Provides an agreed upon basis"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

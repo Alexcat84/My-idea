@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir criterios que incluyan los requisitos críticos de calidad del cliente; puedes sumar criterios de negocio",
     "Ponderar los criterios según importancia",
-    "Calificar cada alternativa como mejor (+), peor (-) o igual (s) respecto a la solución de referencia",
+    "Compara cada alternativa con la solución de referencia y márcala como mejor (+), peor (-) o igual (s)",
     "Comparar el número de positivos, negativos e iguales entre alternativas",
     "Evaluar si puedes crear una nueva alternativa híbrida que combine las mejores características"
   ],
@@ -108,6 +108,23 @@
       "decision": "saneamiento continuo de la voz (ola v08): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-matriz_pugh-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Calificar cada alternativa como mejor (+), peor (-) o igual (s) respecto a la solución de referencia",
+      "texto_nuevo": "Compara cada alternativa con la solución de referencia y márcala como mejor (+), peor (-) o igual (s)",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18554",
+        "frase": "Rate each alternative as better (+), worse (−), or same (s)"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

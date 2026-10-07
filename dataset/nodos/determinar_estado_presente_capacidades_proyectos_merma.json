@@ -8,12 +8,12 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P12 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50892), tramo L35 a L35, 158 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone SUS PROPIOS OBJETOS DE TRABAJO uno a uno (present capabilities, the projects you have in the works, the same terms or currency, timing, the pipeline, la pregunta de si todo se completa, y el factor de perdida) y ademas da el ejemplo de conversion de moneda. Inventario de OBJETOS, no de fines. DE DONDE SALE CADA PASO, uno a uno, todos de L35: paso 1 (You do this by listing your present capabilities and the projects you have in the works); paso 2 (As you account for them, be sure to use the same terms, or currency, in which you stated demand); paso 3 (For instance, if your demand is listed in terms of completed product designs, your work-in-process should be listed as partially completed product designs); paso 4 (You also need to look at timing; namely, when will these projects come out of your pipeline?); paso 5 (You must ask yourself, will every project now moving through be completed?); paso 6 (Chances are, no, some will get scrapped or aborted, and you have to factor this into your forecasted output); paso 7 (while it is impossible to be precise in every case, it is prudent to factor in some percentage of loss for managerial projects as well). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LA CIFRA VA A atribuciones Y NO A UN PASO, que es lo que el manual principios 5 y 8 mandan: el 80 por ciento de material terminado en fabricacion de semiconductores es una cifra del autor sobre su industria (Statistically, in semiconductor manufacturing, only some 80 percent of the material started actually gets finished) y NO es el porcentaje que el lector tiene que aplicar a sus proyectos, asi que el paso 7 dice descuenta un porcentaje de perdida, sin numero, que es exactamente lo que el libro manda para los proyectos de gestion. LA FECHA DE CORTE ES LA DEL LIBRO, 1983, y no la de hoy. LOS SITIOS DE TENTACION EN LOS QUE NO ESCRIBI: NO escribo cuanto porcentaje de perdida se descuenta en gestion, porque el libro dice some percentage y ponerle cifra seria inventarla. NO escribo con que herramienta se lista ni en que formato. NO escribo cada cuanto se rehace el estado presente. NO escribo quien lo hace. EL PASO 3 ES EL EJEMPLO DEL LIBRO Y LO DECLARO, porque es el unico paso que lleva un dato concreto: lo conservo porque es el MEDIO con el que el libro explica que es la misma moneda, y sin el, el paso 2 se queda en un adjetivo. Si el fundador lo lee como dato de ejemplo metido en doctrina, cae DENTRO de mi marcado. ARISTA QUE ANUNCIO Y NO CABLEO HOY: parte de la cabeza planificar_tres_pasos_demanda_estado_brecha (P5), caso de D.37, cableada el dia de la insercion porque esta vuelta NO INSERTA. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 3, por lo que acabo de declarar.",
   "pasos_accionables": [
     "Lista tus capacidades presentes y los proyectos que tienes en marcha.",
-    "Exprésalos en los mismos términos, en la misma moneda, en la que has declarado la demanda.",
-    "Si la demanda está en diseños de producto terminados, pon el trabajo en curso como diseños de producto parcialmente terminados.",
-    "Mira el plazo, es decir, cuándo está previsto que termine cada uno de esos proyectos en curso.",
+    "Mídelos con la misma vara que usaste para la demanda: iguales términos, igual moneda.",
+    "Si declaraste la demanda en diseños de producto acabados, cuenta lo que está en marcha como diseños a medio acabar.",
+    "Revisa los tiempos: para cuándo está prevista la salida de cada proyecto que tienes en curso.",
     "Pregúntate si todos los proyectos que están avanzando ahora van a completarse.",
-    "Cuenta con que la respuesta probablemente sea que no, con que algunos se descarten o se aborten, y mete ese hecho en tu producción prevista.",
-    "Aunque no se pueda ser preciso en cada caso, descuenta también un porcentaje de pérdida en los proyectos de gestión."
+    "Asume que lo más probable es que no, que algunos acaben descartados o abortados, y tenlo en cuenta en la producción que prevés.",
+    "Descuenta además un porcentaje de pérdida en los proyectos de gestión, aunque no puedas afinar la cifra caso por caso."
   ],
   "entregable_esperado": "Tu estado presente escrito: la lista de capacidades y de proyectos en curso, expresados en la misma moneda que la demanda, con el momento en que está previsto que termine cada uno y con un porcentaje de pérdida ya descontado de la producción prevista.",
   "nodos_previos": [
@@ -263,6 +263,91 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "copia-determinar_estado_presente_capacidades_proyectos_merma-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Exprésalos en los mismos términos, en la misma moneda, en la que has declarado la demanda.",
+      "texto_nuevo": "Mídelos con la misma vara que usaste para la demanda: iguales términos, igual moneda.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_07.md",
+        "lineas": "35",
+        "frase": "be sure to use the same terms, or currency, in which you stated demand"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-determinar_estado_presente_capacidades_proyectos_merma-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si la demanda está en diseños de producto terminados, pon el trabajo en curso como diseños de producto parcialmente terminados.",
+      "texto_nuevo": "Si declaraste la demanda en diseños de producto acabados, cuenta lo que está en marcha como diseños a medio acabar.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_07.md",
+        "lineas": "35",
+        "frase": "For instance, if your demand is listed in terms of completed product designs"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-determinar_estado_presente_capacidades_proyectos_merma-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Mira el plazo, es decir, cuándo está previsto que termine cada uno de esos proyectos en curso.",
+      "texto_nuevo": "Revisa los tiempos: para cuándo está prevista la salida de cada proyecto que tienes en curso.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_07.md",
+        "lineas": "35",
+        "frase": "You also need to look at timing; namely, when will these projects"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-determinar_estado_presente_capacidades_proyectos_merma-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con que la respuesta probablemente sea que no, con que algunos se descarten o se aborten, y mete ese hecho en tu producción prevista.",
+      "texto_nuevo": "Asume que lo más probable es que no, que algunos acaben descartados o abortados, y tenlo en cuenta en la producción que prevés.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_07.md",
+        "lineas": "35",
+        "frase": "Chances are, no, some will get scrapped or aborted"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-determinar_estado_presente_capacidades_proyectos_merma-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Aunque no se pueda ser preciso en cada caso, descuenta también un porcentaje de pérdida en los proyectos de gestión.",
+      "texto_nuevo": "Descuenta además un porcentaje de pérdida en los proyectos de gestión, aunque no puedas afinar la cifra caso por caso.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_07.md",
+        "lineas": "35",
+        "frase": "Similarly, while it is impossible to be precise in every case"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Determina tu Estado Presente",

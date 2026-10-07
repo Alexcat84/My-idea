@@ -7,11 +7,11 @@
   "resumen_teorico": "El material gana valor a medida que avanza por el flujo: lo cocido vale más que lo crudo, lo montado más que sus partes y lo que llega al cliente más todavía, porque carga también la imagen del negocio. Por eso un fallo cuesta más cuanto más tarde se encuentra. La regla es detectarlo y arreglarlo en la etapa de menor valor posible: rechazar el material malo cuando llega, descartar al candidato antes de pagarle el viaje, cazar el defecto en la prueba de cada pieza y no en la del producto final. Así cada error se paga al precio más bajo posible.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P11 de la frontera publicada en la vuelta 1 del frente, L71 a L75, 263 palabras. FRONTERA DENTRO DEL NODO: pasos 1 y 2 de L73; pasos 3, 4, 5 y 6 de L75. L71 es el rotulo de la seccion (Adding Value). POR QUE ES PROCEDIMIENTO: la regla esta escrita por el libro como regla (A common rule we should always try to heed is to detect and fix any problem in a production process at the lowest-value stage possible) y el libro pone su propio inventario de ETAPAS con las que ordenarlas, y despues la aplica el mismo tres veces, cada vez nombrando las dos etapas que se comparan. Escribir los pasos es transcribir ese inventario. POR QUE LOS TRES EJEMPLOS SON PASOS Y NO ADORNO, que es mi discutible de este nodo: el manual 3.5 dice que el caso no es la casa, y aqui los casos NO tienen casa propia: son la misma regla aplicada, con las dos etapas nombradas cada vez, y son lo que dice al lector como se reconoce una etapa de menor valor en su propio trabajo. El entregable de este nodo NO lleva ni un dato de ningun caso, que es la senal barata que el manual da para saber si un caso se colo en el sitio del procedimiento. Si un lector estricto los retira, el nodo se queda en tres pasos y sigue en pie: cae DENTRO de mi marcado. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo como se calcula el valor de cada etapa, porque el libro ordena por valor sin poner ni una cifra; NO escribo quien hace el rechazo ni con que registro, que seria puente de la especie responsable y de la especie destinatario. VECINOS QUE DECLARO SIN QUE NINGUNA SENAL TENGA QUE LEVANTARLOS (EXTRACTOR.md 11, la jerarquia la busca la lectura): el paso 6 de este nodo nombra la prueba unitaria, que es el paso 4 de clasificar_trabajo_proceso_montaje_prueba, y el paso 4 nombra la inspeccion del material que entra, que es el paso 1 de dimensionar_inventario_materia_prima_reposicion. Los tres salen de la misma unidad y de la misma vuelta, asi que la arista no puede cablearse aqui: este frente NO inserta (D.45). Quedan escritas en el reporte de la vuelta con su razon, para el dia de la insercion.",
   "pasos_accionables": [
-    "Ordena las etapas de tu flujo por el valor que el material lleva encima en cada una, contando con que el material se vuelve más valioso a medida que avanza por el proceso: un huevo cocido vale más que uno crudo, un desayuno montado vale más que sus partes, y el desayuno puesto delante del cliente vale más todavía.",
-    "Cuenta dentro de ese valor el valor percibido que el cliente asocia al establecimiento cuando entra en el estacionamiento y ve el rótulo, que es el que lleva encima la última etapa.",
-    "Detecta y arregla cualquier problema del proceso en la etapa de menor valor posible, que es la regla común que hay que procurar atender siempre.",
-    "Aplícalo al material que entra: encuentra y rechaza el huevo podrido cuando lo está entregando el proveedor, en vez de permitir que lo encuentre el cliente.",
-    "Aplícalo a la contratación: si vas a descartar a un candidato, intenta decidirlo en la entrevista del campus en vez de en el transcurso de la visita a la planta, y ahorra el coste del viaje y el tiempo del candidato y de los entrevistadores.",
+    "Ordena las etapas de tu flujo según el valor que acumula el material en cada una, sabiendo que gana valor conforme avanza: un huevo cocido vale más que uno crudo, el desayuno ya montado más que sus ingredientes por separado y, servido delante del cliente, más aún.",
+    "Incluye en ese valor el que el cliente percibe del local cuando ve el rótulo y entra en el estacionamiento, que es el que carga la última etapa.",
+    "Procura siempre cumplir esta regla común: encuentra y corrige cualquier problema del proceso en la etapa de menor valor que puedas.",
+    "Llévalo al material que recibes: localiza y devuelve el huevo podrido en el momento en que te lo entrega el proveedor, y no dejes que sea el cliente quien lo descubra.",
+    "Llévalo a la contratación: si un candidato no te sirve, trata de saberlo ya en la entrevista del campus y no durante su visita a la planta, y te ahorras el coste del viaje además del tiempo del candidato y de quienes lo entrevistan.",
     "Aplícalo al trabajo de ingeniería: busca el fallo de funcionamiento en la prueba unitaria de las piezas que componen el producto, en vez de en la prueba del producto final."
   ],
   "entregable_esperado": "Las etapas de tu flujo ordenadas por el valor que el material lleva encima en cada una, y la comprobación puesta en la etapa de menor valor en la que el problema ya se puede ver.",
@@ -254,6 +254,91 @@
       "motivos": [
         "matiz"
       ]
+    },
+    {
+      "id": "copia-detectar_arreglar_fallo_etapa_menor_valor-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ordena las etapas de tu flujo por el valor que el material lleva encima en cada una, contando con que el material se vuelve más valioso a medida que avanza por el proceso: un huevo cocido vale más que uno crudo, un desayuno montado vale más que sus partes, y el desayuno puesto delante del cliente vale más todavía.",
+      "texto_nuevo": "Ordena las etapas de tu flujo según el valor que acumula el material en cada una, sabiendo que gana valor conforme avanza: un huevo cocido vale más que uno crudo, el desayuno ya montado más que sus ingredientes por separado y, servido delante del cliente, más aún.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "73",
+        "frase": "the material becomes more valuable as it moves through the process"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-detectar_arreglar_fallo_etapa_menor_valor-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta dentro de ese valor el valor percibido que el cliente asocia al establecimiento cuando entra en el estacionamiento y ve el rótulo, que es el que lleva encima la última etapa.",
+      "texto_nuevo": "Incluye en ese valor el que el cliente percibe del local cuando ve el rótulo y entra en el estacionamiento, que es el que carga la última etapa.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "73",
+        "frase": "The last carries the perceived value the customer associates with the establishment"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-detectar_arreglar_fallo_etapa_menor_valor-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Detecta y arregla cualquier problema del proceso en la etapa de menor valor posible, que es la regla común que hay que procurar atender siempre.",
+      "texto_nuevo": "Procura siempre cumplir esta regla común: encuentra y corrige cualquier problema del proceso en la etapa de menor valor que puedas.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "75",
+        "frase": "A common rule we should always try to heed is to detect"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-detectar_arreglar_fallo_etapa_menor_valor-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Aplícalo al material que entra: encuentra y rechaza el huevo podrido cuando lo está entregando el proveedor, en vez de permitir que lo encuentre el cliente.",
+      "texto_nuevo": "Llévalo al material que recibes: localiza y devuelve el huevo podrido en el momento en que te lo entrega el proveedor, y no dejes que sea el cliente quien lo descubra.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "75",
+        "frase": "Thus, we should find and reject the rotten egg as it is"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-detectar_arreglar_fallo_etapa_menor_valor-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Aplícalo a la contratación: si vas a descartar a un candidato, intenta decidirlo en la entrevista del campus en vez de en el transcurso de la visita a la planta, y ahorra el coste del viaje y el tiempo del candidato y de los entrevistadores.",
+      "texto_nuevo": "Llévalo a la contratación: si un candidato no te sirve, trata de saberlo ya en la entrevista del campus y no durante su visita a la planta, y te ahorras el coste del viaje además del tiempo del candidato y de quienes lo entrevistan.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "75",
+        "frase": "if we can decide that we do not want a college candidate"
+      },
+      "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Arregla Fallos lo Antes Posible",
