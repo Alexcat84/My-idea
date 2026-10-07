@@ -1,0 +1,38 @@
+[
+ {
+  "id": "condiciones-resto-innovacion_abierta_externa-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "innovacion_abierta_externa",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si la empresa tiene capacidades internas limitadas para resolver un reto de diseño sostenible",
+  "texto_nuevo": "Si la empresa enfrenta un reto de diseño sostenible, sean cuales sean sus capacidades internas",
+  "cita": {
+   "libro": "The Green to Gold Business Play - Daniel C. Esty",
+   "fichero": "books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+   "lineas": "3777",
+   "frase": "No matter who you are, most of the smartest people work for someone else."
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c27): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ },
+ {
+  "id": "condiciones-resto-open_account-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "open_account",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el comprador tiene un historial de pago largo y favorable, o ha sido verificado como solvente",
+  "texto_nuevo": "Cuando el comprador cumple al menos una de estas: es una empresa consolidada, lleva mucho tiempo pagando bien, o revisaste a fondo su solvencia",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4121",
+   "frase": "if the buyer is well established, has a long and favorable payment record"
+  },
+  "decision": "condiciones del resto de nodos (saneamiento continuo, ola c27): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

@@ -26,7 +26,7 @@
     "reduccion_tiempo_de_mercado_velocidad"
   ],
   "condiciones_activacion": [
-    "Cuando tu producto está entrando en su etapa final de desarrollo o pruebas",
+    "Cuando tu producto está en sus primeras etapas de desarrollo, sin esperar a que se acerque el lanzamiento",
     "Si notas que estás dejando el lanzamiento como algo para pensar al final"
   ],
   "etiqueta_arbol": "Lanza tu Producto al Mercado",
@@ -108,6 +108,23 @@
       },
       "decision": "lectura total de procedencia (w42): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "condiciones-resto-plan_de_lanzamiento_al_mercado-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando tu producto está entrando en su etapa final de desarrollo o pruebas",
+      "texto_nuevo": "Cuando tu producto está en sus primeras etapas de desarrollo, sin esperar a que se acerque el lanzamiento",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "1762",
+        "frase": "must begin early in the new-product project"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

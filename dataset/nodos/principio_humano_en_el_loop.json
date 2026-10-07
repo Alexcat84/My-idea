@@ -22,7 +22,7 @@
     "Cuando usas IA para generar algo que le llega directo a un cliente o afecta una operación importante de tu negocio",
     "Cuando notas o sospechas que la IA te está inventando información"
   ],
-  "etiqueta_arbol": "Sé el Humano en el Loop",
+  "etiqueta_arbol": "Revisa lo que Dice la IA",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
   ],
@@ -75,6 +75,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro pide revisar las alucinaciones en general; no prioriza áreas ni enumera dinero, temas legales o salud.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-principio_humano_en_el_loop-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sé el Humano en el Loop",
+      "texto_nuevo": "Revisa lo que Dice la IA",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sé el Humano en el Loop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v21): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

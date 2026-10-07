@@ -33,7 +33,7 @@
     "inversion_proporcional"
   ],
   "condiciones_activacion": [
-    "Cuando ocurre un error o falla técnica/operativa repetible",
+    "Cuando ocurre cualquier falla: un error técnico u operativo, un resultado de negocio que no se logra o un cambio inesperado en el comportamiento de tus clientes",
     "Cuando el equipo tiende a culpar a personas en lugar de procesos",
     "Cuando se busca prevenir la recurrencia de un problema sistémico",
     "Cuando la organización necesita balancear velocidad de ejecución con calidad de forma incremental"
@@ -158,6 +158,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-five_whys_inversion_proporcional-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ocurre un error o falla técnica/operativa repetible",
+      "texto_nuevo": "Cuando ocurre cualquier falla: un error técnico u operativo, un resultado de negocio que no se logra o un cambio inesperado en el comportamiento de tus clientes",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "2719, 2732",
+        "frase": "whenever they encounter any kind of failure, including technical faults, failures to achieve business results"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

@@ -7,7 +7,7 @@
   "resumen_teorico": "Una vez definidas las cubetas y sus tamaños, los proyectos activos (que ya pasaron el Gate 2) se clasifican en la cubeta correspondiente. Luego se ordenan de mayor a menor valor (usando NPV u otras métricas) dentro de cada cubeta hasta que se agota el recurso asignado, trazando una 'línea de corte'. Los proyectos por encima de la línea siguen adelante; los de abajo se detienen o cancelan. Es clave no comparar proyectos entre cubetas distintas (evitar comparar 'peras con manzanas').",
   "pasos_accionables": [
     "Listar todos los proyectos activos con su cubeta asignada.",
-    "Calcular una métrica de valor (NPV, Productivity Index, Project Attractiveness Score) para cada proyecto.",
+    "Calcular una métrica de valor (valor presente neto, índice de productividad, calificación de atractivo del proyecto) para cada proyecto.",
     "Ordenar los proyectos de mayor a menor valor dentro de cada cubeta.",
     "Trazar la línea de corte según el límite de recursos disponible en esa cubeta.",
     "Marcar como 'Seguir' los proyectos sobre la línea y 'Pausar/Cancelar' los que quedan debajo."
@@ -64,6 +64,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-categorizacion_ranking_proyectos_cubetas-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular una métrica de valor (NPV, Productivity Index, Project Attractiveness Score) para cada proyecto.",
+      "texto_nuevo": "Calcular una métrica de valor (valor presente neto, índice de productividad, calificación de atractivo del proyecto) para cada proyecto.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV, Productivity Index, Project Attractiveness Score"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v21): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

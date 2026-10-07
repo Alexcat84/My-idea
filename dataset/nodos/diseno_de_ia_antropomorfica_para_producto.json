@@ -7,7 +7,7 @@
   "resumen_teorico": "Casos como Replika muestran que los usuarios tienden a atribuir personalidad, emociones e incluso relaciones afectivas a sistemas de IA conversacional, incluso sabiendo que no son sentientes. Esta tendencia humana a antropomorfizar puede convertirse en una ventaja competitiva (mayor engagement y retención) si se diseña deliberadamente, pero también conlleva riesgos éticos y de reputación si se manipula el engagement de forma similar a las redes sociales, o si se retiran funcionalidades a las que los usuarios se han apegado emocionalmente (como ocurrió con Replika y el rechazo de usuarios al remover el modo erótico, una función que no estaba en su diseño original y surgió del propio modelo).",
   "pasos_accionables": [
     "Si el producto incluye IA conversacional, definir de forma consciente el nivel de personalidad y calidez que se le dará, alineado con la marca y las expectativas del usuario.",
-    "Evaluar el riesgo reputacional y ético de optimizar la IA para 'engagement' emocional sin transparencia hacia el usuario.",
+    "Evaluar el riesgo reputacional y ético de optimizar la IA para la implicación emocional sin transparencia hacia el usuario.",
     "Anticipar y comunicar cambios de personalidad o funcionalidad de la IA a usuarios que hayan desarrollado apego (en Replika, retirar una función provocó una rebelión de usuarios).",
     "Establecer límites éticos claros sobre qué tipo de vínculos emocionales el producto fomentará con los usuarios."
   ],
@@ -89,6 +89,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-diseno_de_ia_antropomorfica_para_producto-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el riesgo reputacional y ético de optimizar la IA para 'engagement' emocional sin transparencia hacia el usuario.",
+      "texto_nuevo": "Evaluar el riesgo reputacional y ético de optimizar la IA para la implicación emocional sin transparencia hacia el usuario.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'engagement' emocional"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v21): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -19,7 +19,7 @@
     "disposicion_producto_no_conforme"
   ],
   "condiciones_activacion": [
-    "Cuando se decide enviar un producto no conforme como apto para uso y existe riesgo de pérdida de confianza."
+    "Cuando se decide enviar un producto no conforme como apto para uso."
   ],
   "etiqueta_arbol": "Decide qué Comunicar sobre Fallas",
   "fuentes_internas": [
@@ -41,6 +41,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no atribuye desconfianza del cliente a la falta de comunicación; dice que el cliente tiene derecho y necesidad de saber.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-decision_comunicacion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se decide enviar un producto no conforme como apto para uso y existe riesgo de pérdida de confianza.",
+      "texto_nuevo": "Cuando se decide enviar un producto no conforme como apto para uso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24435-24437",
+        "frase": "When nonconforming products are sent out as fit for use, the need"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

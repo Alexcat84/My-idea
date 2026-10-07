@@ -1905,3 +1905,26 @@ queda lo que el método no hizo bien, para que nadie lo dé por cubierto.
   conserva y su guarda de unicidad los cuenta. Así, voz-v07 le dio a `nueve_pasos_iniciar_programa` la etiqueta de su
   gemelo deprecado y la suite web lo paró antes del commit. Suplemento voz-v07b con una etiqueta distinta y fiel, y
   `voz.py` ahora mira todos los nodos.
+
+#### 15.14 (cierre) La pasada de cierre del saneamiento continuo (7 oct 2026, noche)
+
+Las dos corrientes están leídas enteras: 146 lotes de voz y 243 de condiciones, cada uno con su trampa cazada por su
+lector o por el segundo. Cifras totales en las tandas: **voz, 3.524 correcciones en 1.798 nodos** (3.295 de voz, 162
+de ortografía, 67 de coherencia); **condiciones del resto, 196 correcciones en 189 nodos** (36 contrarios, 160
+añadidos). Lo que quedó abierto arriba se cerró así:
+
+- **Lote de voz 035, certificado.** `voz.py releer 035` lo rearmó como lote `035r` con el texto vigente de los mismos
+  25 nodos y una trampa de otro tipo (ortografía, antes calco). Un lector nuevo la cazó y marcó un defecto, que pasó por
+  árbitro y verificador ciego (tanda voz-v20).
+- **Dos nodos del lote de condiciones 190, leídos.** Su lector no pudo abrir las carpetas de sus libros (el sistema de
+  permisos negó el acceso) y los dejó sin juzgar, dicho en su salida. `condiciones_resto.py releer 190` los rearmó como
+  lote `190r` con su trampa; el lector nuevo abrió los libros, cazó la trampa y no halló defecto.
+- **Lo que la verificación no sostuvo, reescrito.** 48 de voz y 2 de condiciones, de todas las olas. Casi todos eran
+  arreglos fieles que chocaban con una baranda de la casa (23 añadían "puntuación" o "del 1 al 10", 2 formas de
+  organigrama) o etiquetas que no tenían de 4 a 6 palabras (10). Un reescritor recibió el texto vigente, la propuesta
+  retenida y el motivo (`voz.py reescritura`, `condiciones_resto.py reescritura` y `reescritos`; instrucciones
+  `INSTRUCCIONES_REESCRITOR.md` y `INSTRUCCIONES_E1B_REESCRITOR.md`) y su salida pasó por el verificador ciego con
+  trampa como cualquier ola: voz-v21 (46 correcciones; el reescritor dejó 1 como estaba porque el defecto no se
+  sostenía) y condiciones-resto-c27 (2).
+- **Residuo declarado: una etiqueta.** `V140-112`, la etiqueta del concepto del índice Cpk: el verificador no sostuvo
+  ninguna de las dos propuestas porque una etiqueta corta pierde lo que distingue al Cpk del Cp. Se queda la vigente.

@@ -30,7 +30,7 @@
   "condiciones_activacion": [
     "Cuando sospechas que tus números internos de calidad no reflejan lo que realmente vive el cliente",
     "Cuando necesitas confirmar que tu inspección habitual esta funcionando",
-    "Cuando tu producto es delicado y quieres una segunda capa de control"
+    "Cuando tu producto es crítico y quieres una segunda capa de control"
   ],
   "etiqueta_arbol": "Compara tu Producto contra la Realidad",
   "ids_alias": [
@@ -272,6 +272,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro orienta la elección: comparar con la necesidad del usuario es lo ideal pero difícil y costoso, y comparar con especificaciones es útil y económico en productos simples y estables.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-auditoria_de_producto-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tu producto es delicado y quieres una segunda capa de control",
+      "texto_nuevo": "Cuando tu producto es crítico y quieres una segunda capa de control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10332",
+        "frase": "the more critical the product, the greater the need for some redundancy"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

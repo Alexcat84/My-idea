@@ -22,7 +22,7 @@
     "Cuando se necesita predecir vida útil o tasa de fallos de un componente",
     "Cuando los datos no se ajustan claramente a normal o exponencial"
   ],
-  "etiqueta_arbol": "Predice tu Vida Útil",
+  "etiqueta_arbol": "Predice la Vida Útil del Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -72,6 +72,20 @@
       },
       "decision": "saneamiento continuo de la voz (ola v02): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-distribucion_weibull-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Predice tu Vida Útil",
+      "texto_nuevo": "Predice la Vida Útil del Producto",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v21)",
+        "evidencia": "'Predice tu Vida Útil' parece hablar de la vida de la persona; la nueva, de seis palabras, nombra la vida útil del producto, que es lo que predice el concepto."
+      },
+      "decision": "saneamiento continuo de la voz (ola v21): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

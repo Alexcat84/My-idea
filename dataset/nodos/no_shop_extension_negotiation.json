@@ -24,7 +24,7 @@
   ],
   "condiciones_activacion": [
     "Cuando el periodo de no-shop está por vencer y el comprador solicita una extensión",
-    "Cuando el vendedor busca maximizar el apalancamiento residual antes del cierre"
+    "Cuando el vendedor busca aprovechar, sin pedir de más, el apalancamiento residual antes del cierre"
   ],
   "etiqueta_arbol": "Negocia la Extensión del Acuerdo",
   "correcciones": [
@@ -188,6 +188,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-no_shop_extension_negotiation-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando el vendedor busca maximizar el apalancamiento residual antes del cierre",
+      "texto_nuevo": "Cuando el vendedor busca aprovechar, sin pedir de más, el apalancamiento residual antes del cierre",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4307",
+        "frase": "The seller should be careful not to overreach at this moment"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

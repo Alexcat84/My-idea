@@ -21,7 +21,7 @@
     "csf_funcion_govern"
   ],
   "condiciones_activacion": [
-    "Cuando el negocio ya implementó las seis funciones básicas y quiere formalizar su madurez de ciberseguridad",
+    "Cuando el negocio quiere formalizar su madurez de ciberseguridad",
     "Si se necesita comunicar el estado de ciberseguridad a inversionistas, socios o reguladores"
   ],
   "etiqueta_arbol": "Define tu Perfil de Ciberseguridad",
@@ -248,6 +248,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-csf_perfiles_organizacionales-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando el negocio ya implementó las seis funciones básicas y quiere formalizar su madurez de ciberseguridad",
+      "texto_nuevo": "Cuando el negocio quiere formalizar su madurez de ciberseguridad",
+      "cita": {
+        "libro": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1300.txt",
+        "lineas": "313-317",
+        "frase": "Using Organizational Profiles to Implement the Cybersecurity Framework"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

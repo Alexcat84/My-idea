@@ -20,7 +20,7 @@
     "consignment"
   ],
   "condiciones_activacion": [
-    "Cuando el comprador tiene un historial de pago largo y favorable, o ha sido verificado como solvente",
+    "Cuando el comprador cumple al menos una de estas: es una empresa consolidada, lleva mucho tiempo pagando bien, o revisaste a fondo su solvencia",
     "Cuando la competencia obliga a ofrecer términos de crédito flexibles para no perder la venta"
   ],
   "etiqueta_arbol": "Vende Fiando al Comprador",
@@ -92,6 +92,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-open_account-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el comprador tiene un historial de pago largo y favorable, o ha sido verificado como solvente",
+      "texto_nuevo": "Cuando el comprador cumple al menos una de estas: es una empresa consolidada, lleva mucho tiempo pagando bien, o revisaste a fondo su solvencia",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4121",
+        "frase": "if the buyer is well established, has a long and favorable payment record"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c27): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

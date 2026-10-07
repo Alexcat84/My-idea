@@ -13,7 +13,8 @@ las decisiones del fundador de ese día. El detalle de cada cosa hecha está en 
 3. **Despliegue**, con el índice nuevo.
 4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
 5. **Lanzamiento en Google Play** (sección 8).
-Mientras tanto, el saneamiento continuo (sección 7) puede seguir a ritmo lento, una ola pequeña cada vez.
+El saneamiento continuo (sección 7) quedó completo la noche del 7 oct: las dos corrientes leídas enteras y su pasada
+de cierre hecha.
 
 ## 1. Dónde quedó todo
 
@@ -50,7 +51,7 @@ Mientras tanto, el saneamiento continuo (sección 7) puede seguir a ritmo lento,
 - **Reglas a la forja:** `guardas_contenido.json` 1.1.0 con las pautas de procedencia desde una sola fuente; la aduana de
   `forja-nodos` usa esa copia versionada y su BANCO hereda las 57 reglas de contenido y método (forja-nodos 1a70e45d).
 - **Condiciones de las clases B y A** de `jurisdiccion.json`: leídas contra el libro, 22 correcciones (acta 15.12).
-- **Saneamiento continuo** en marcha (acta 15.13; sección 7).
+- **Saneamiento continuo** completo (acta 15.13 y 15.14; sección 7).
 
 **El veredicto del dataset, sin adornos:**
 - **Contrarios e invenciones duras:** 0 en la muestra de la medida 3, con un residuo por nodo de 0 a 1,9 % al 95 %
@@ -121,8 +122,8 @@ Mientras tanto, el saneamiento continuo (sección 7) puede seguir a ritmo lento,
 ## 4. Re-embebido con Voyage (una sola pasada)
 
 Decisión del fundador: Voyage corre una sola vez, al final, con todos los nodos corregidos. Las tandas de la auditoría
-cambiaron el texto de **2.896 nodos vivos**, según la prueba en seco de la noche del 7 oct (con las primeras tandas del
-saneamiento continuo). Como el saneamiento sigue, la prueba en seco del día da el número de verdad.
+cambiaron el texto de **3.187 nodos vivos**, según la prueba en seco del cierre del saneamiento continuo (noche del
+7 oct). Si entra otra tanda, la prueba en seco del día da el número de verdad.
 
 1. Pon `VOYAGE_API_KEY` en el `.env` raíz. La quitas al terminar.
 2. Prueba en seco, que no llama a nadie:
@@ -198,7 +199,7 @@ rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412
 - ~~**Condiciones de los nodos de clase B y A.**~~ Leídas y corregidas el 7 oct (acta 15.12): 22 correcciones en 22
   nodos. Con las de clase C (acta 15.5), las condiciones de los 239 nodos de `jurisdiccion.json` quedan leídas.
 - **A mejora continua, con su ficha:** la ortografía y los calcos del resumen y el título.
-- **Saneamiento continuo (acta 15.13), en marcha desde la noche del 7 oct.** Dos corrientes:
+- **Saneamiento continuo (acta 15.13 y 15.14), completo la noche del 7 oct.** Dos corrientes:
   - condiciones del resto de nodos contra el libro: `auditoria-final-claves/condiciones_resto/condiciones_resto.py`,
     243 lotes;
   - la voz de lo que el cliente ve crudo (etiqueta, ortografía y calcos en etiqueta, pasos y entregable):
@@ -207,9 +208,11 @@ rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412
     (`confirmados <ola>` en condiciones), `verificacion <ola>`, verificadores, `tanda <ola>`, aplicar, el ciclo entero
     (Gate 0, etiquetas, familias, sincronizar), retraducir las etiquetas que cambien
     (`npx tsx scripts/i18n/etiquetasRiel.ts exportar|aplicar`) y las dos suites antes del commit.
-  - Con suscripción normal se sigue a ritmo lento, una ola pequeña cada vez. Por dónde va y lo que queda:
-    `python condiciones_resto.py estado` y `python voz.py estado`.
-  - Lo que la verificación no sostiene queda en `no_sostienen_<ola>.json`, para reescribirlo después.
+  - Resultado: voz, 3.524 correcciones en 1.798 nodos; condiciones, 196 en 189 nodos. Lo que la verificación no
+    sostuvo se reescribió y volvió a verificarse (voz-v21, condiciones-resto-c27); queda una sola etiqueta como estaba
+    (acta 15.14, cierre).
+  - Si hace falta otra pasada: `releer <lote>` rearma un lote con trampa nueva, `reescritura <ola>` manda lo retenido
+    a un reescritor, y `estado` dice por dónde va cada corriente.
 
 ## 8. Más adelante
 

@@ -24,7 +24,7 @@
     "metodos_exportacion_directa_indirecta_2"
   ],
   "condiciones_activacion": [
-    "Si la empresa es nueva en exportación y no puede comprometer personal ni fondos a actividades complejas",
+    "Si la empresa es nueva en exportación o no puede comprometer personal ni fondos a actividades complejas",
     "Si la empresa busca entrar rápido a un mercado sin desarrollar infraestructura propia"
   ],
   "etiqueta_arbol": "Usa Intermediarios de Exportación",
@@ -122,6 +122,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-uso_intermediarios_exportacion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la empresa es nueva en exportación y no puede comprometer personal ni fondos a actividades complejas",
+      "texto_nuevo": "Si la empresa es nueva en exportación o no puede comprometer personal ni fondos a actividades complejas",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1821",
+        "frase": "new to exporting or are unable to commit staff and funds"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c25): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
