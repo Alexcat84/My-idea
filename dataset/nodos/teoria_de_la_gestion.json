@@ -20,8 +20,8 @@
     "constancia_de_proposito"
   ],
   "condiciones_activacion": [
-    "Cuando la organización actúa por buena voluntad e intuición sin un plan coherente",
-    "Cuando existe dispersión de esfuerzos sin resultados"
+    "Cuando la organización actúa por buena voluntad sin un plan coherente",
+    "Cuando existe dispersión de esfuerzos"
   ],
   "etiqueta_arbol": "Construye tu Teoría de Gestión",
   "fuentes_internas": [
@@ -56,6 +56,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que los esfuerzos sin guía pueden hacer mucho daño; 'generan solo caos' lo endurece.; Mismo defecto de grado.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-teoria_de_la_gestion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando la organización actúa por buena voluntad e intuición sin un plan coherente",
+      "texto_nuevo": "Cuando la organización actúa por buena voluntad sin un plan coherente",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "373-395",
+        "frase": "The theory in hand need not be elaborate. It may be only a hunch"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-teoria_de_la_gestion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando existe dispersión de esfuerzos sin resultados",
+      "texto_nuevo": "Cuando existe dispersión de esfuerzos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "384",
+        "frase": "Result: dissipation of knowledge and effort; results, far from optimum."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): certeza_endurecida; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

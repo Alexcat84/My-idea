@@ -18,7 +18,7 @@
     "perdida_control_junta_directiva"
   ],
   "condiciones_activacion": [
-    "Si el board tiene igual número de fundadores e inversionistas",
+    "Si el board tiene igual número de fundadores e inversionistas y ningún director independiente que desempate",
     "Si se prevé desacuerdo estratégico entre fundadores e inversionistas"
   ],
   "etiqueta_arbol": "Rompe el Bloqueo de tu Junta",
@@ -91,6 +91,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-board_gridlock_y_directores_independientes-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el board tiene igual número de fundadores e inversionistas",
+      "texto_nuevo": "Si el board tiene igual número de fundadores e inversionistas y ningún director independiente que desempate",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "2932-2934",
+        "frase": "Many startup boards are evenly split with no independent tiebreaker, despite the obvious risk"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

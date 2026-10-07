@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Cuando estés evaluando subcontratar algo que hoy haces internamente",
-    "Cuando busques bajar costos o mejorar la calidad usando a alguien de afuera"
+    "Cuando busques bajar costos, ganar tiempo o mejorar la calidad usando a alguien de afuera"
   ],
   "etiqueta_arbol": "Decide Hacer o Comprar",
   "correcciones": [
@@ -104,6 +104,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro lo propone con cautela ('Perhaps we should first study'); el paso lo da como obligado.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-seleccion_hacer_o_comprar-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando busques bajar costos o mejorar la calidad usando a alguien de afuera",
+      "texto_nuevo": "Cuando busques bajar costos, ganar tiempo o mejorar la calidad usando a alguien de afuera",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23633",
+        "frase": "Outsourcing is undertaken to reduce costs (the primary impetus), reduce cycle time, or improve quality"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c22): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

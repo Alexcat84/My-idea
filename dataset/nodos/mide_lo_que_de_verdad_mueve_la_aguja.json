@@ -22,9 +22,9 @@
     "calibra_tu_propio_ojo"
   ],
   "condiciones_activacion": [
-    "cuando tienes muchas incertidumbres y no sabes cuál atacar primero",
-    "cuando pasas tiempo afinando datos que quizá no cambian nada",
-    "cuando una decisión depende de varios supuestos y quieres saber cuál pesa más"
+    "cuando tienes que decidir qué piezas de tu proyecto entregar primero",
+    "cuando das por hecho que todas las piezas de tu proyecto valen lo mismo",
+    "cuando el plazo o el presupuesto aprietan y buscas qué recortar"
   ],
   "etiqueta_arbol": "Mide lo que Más Valor Aporta",
   "correcciones": [
@@ -175,6 +175,57 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v01): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-mide_lo_que_de_verdad_mueve_la_aguja-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "cuando tienes muchas incertidumbres y no sabes cuál atacar primero",
+      "texto_nuevo": "cuando tienes que decidir qué piezas de tu proyecto entregar primero",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1488-1490",
+        "frase": "high value/cost ratios, and those would be candidates for early delivery"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): invencion_dura; modo redactar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-mide_lo_que_de_verdad_mueve_la_aguja-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "cuando pasas tiempo afinando datos que quizá no cambian nada",
+      "texto_nuevo": "cuando das por hecho que todas las piezas de tu proyecto valen lo mismo",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1260",
+        "frase": "The first is the assumption that all parts of the product are equally important."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): invencion_dura; modo redactar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-mide_lo_que_de_verdad_mueve_la_aguja-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "cuando una decisión depende de varios supuestos y quieres saber cuál pesa más",
+      "texto_nuevo": "cuando el plazo o el presupuesto aprietan y buscas qué recortar",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "1494",
+        "frase": "probably the easiest and best way to relax constraints on time and budget"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): invencion_dura; modo redactar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

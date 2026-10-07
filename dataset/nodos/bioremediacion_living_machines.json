@@ -18,10 +18,29 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si el proyecto involucra el manejo de aguas residuales o desechos orgánicos.",
-    "Cuando se busca reemplazar procesos industriales tóxicos por alternativas naturales."
+    "Cuando se busca reemplazar el tratamiento químico convencional de aguas residuales por alternativas naturales."
   ],
   "etiqueta_arbol": "Usa la Naturaleza para Purificar",
   "fuentes_internas": [
     "Cradle to Cradle - Michael Braungart"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-bioremediacion_living_machines-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se busca reemplazar procesos industriales tóxicos por alternativas naturales.",
+      "texto_nuevo": "Cuando se busca reemplazar el tratamiento químico convencional de aguas residuales por alternativas naturales.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "743",
+        "frase": "to replace the conventional harsh chemical treatment of sewage"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c22): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

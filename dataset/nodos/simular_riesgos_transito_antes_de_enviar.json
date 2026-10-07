@@ -22,7 +22,7 @@
   ],
   "condiciones_activacion": [
     "Cambiaste el diseno de tu caja o el material de relleno y no sabes si sigue protegiendo igual.",
-    "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se daña.",
+    "Has tenido quejas de productos rotos.",
     "Vas a lanzar un producto nuevo por primera vez y no tienes historial de daños para guiarte."
   ],
   "etiqueta_arbol": "Simula golpes de transporte en casa",
@@ -306,6 +306,23 @@
       },
       "decision": "lectura total de procedencia (w24): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "condiciones-resto-simular_riesgos_transito_antes_de_enviar-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Has tenido quejas de productos rotos y quieres encontrar en cual momento del viaje se daña.",
+      "texto_nuevo": "Has tenido quejas de productos rotos.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "15-31",
+        "frase": "designed to utilize general simulation of actual transport hazards"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -23,7 +23,7 @@
     "change_log"
   ],
   "condiciones_activacion": [
-    "Cuando surge la necesidad de modificar alcance, cronograma, costo o algún documento del proyecto",
+    "Cuando surge la necesidad de modificar cualquier aspecto del proyecto o del producto: alcance, calidad, requisitos, costo, cronograma o algún documento",
     "Durante la ejecución o monitoreo del proyecto"
   ],
   "etiqueta_arbol": "Formaliza tu Solicitud de Cambio",
@@ -74,6 +74,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista de impactos del libro incluye los requisitos, que el paso omite.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-solicitud_cambio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando surge la necesidad de modificar alcance, cronograma, costo o algún documento del proyecto",
+      "texto_nuevo": "Cuando surge la necesidad de modificar cualquier aspecto del proyecto o del producto: alcance, calidad, requisitos, costo, cronograma o algún documento",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "3990-4012",
+        "frase": "A Change Request is used to change any aspect of the project."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c22): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

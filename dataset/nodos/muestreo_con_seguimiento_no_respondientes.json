@@ -18,7 +18,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Si la tasa de respuesta de una encuesta de satisfacción de clientes es baja (ej. 50%).",
+    "Si no responden todos los clientes a una encuesta de satisfacción, sea la respuesta baja (ej. 50%) o incluso alta (ej. 90%).",
     "Si se requiere validar la voz del cliente con rigor estadístico antes de tomar decisiones de producto."
   ],
   "etiqueta_arbol": "Busca a Quien no Responde",
@@ -146,6 +146,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "condiciones-resto-muestreo_con_seguimiento_no_respondientes-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la tasa de respuesta de una encuesta de satisfacción de clientes es baja (ej. 50%).",
+      "texto_nuevo": "Si no responden todos los clientes a una encuesta de satisfacción, sea la respuesta baja (ej. 50%) o incluso alta (ej. 90%).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "5007-5009",
+        "frase": "every statistician knows the perils of drawing conclusions from incomplete returns, even if 90 percent"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c22): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -20,7 +20,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando, tras la primera conversación en la que un subordinado valioso te anunció que quería renunciar, tienes que buscarle una salida que lo retenga en la empresa."
+    "Cuando, tras la primera conversación en la que un subordinado valioso y leal te anunció que quería renunciar porque siente que no se valora su trabajo, y no por más dinero, tienes que buscarle una salida que lo retenga en la empresa."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -274,6 +274,23 @@
       "motivos": [
         "ortografia"
       ]
+    },
+    {
+      "id": "condiciones-resto-gestionar_retencion_subordinado_valioso_renuncia-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando, tras la primera conversación en la que un subordinado valioso te anunció que quería renunciar, tienes que buscarle una salida que lo retenga en la empresa.",
+      "texto_nuevo": "Cuando, tras la primera conversación en la que un subordinado valioso y leal te anunció que quería renunciar porque siente que no se valora su trabajo, y no por más dinero, tienes que buscarle una salida que lo retenga en la empresa.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_15.md",
+        "lineas": "107",
+        "frase": "not about someone whose motives are more money and better perks"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c23): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Retén a tu Mejor Gente",
