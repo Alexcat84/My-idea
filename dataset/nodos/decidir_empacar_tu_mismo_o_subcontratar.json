@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Calcula cuánto tiempo y espacio te toma empacar cada pedido tú mismo en una semana normal.",
     "Compara ese costo contra las tarifas de un operador logístico local.",
-    "Pregunta a tus clientes qué tan importante es la marca del courier en su decisión de comprarte.",
+    "Pregunta a tus clientes qué tan importante es la marca de la empresa de mensajería en su decisión de comprarte.",
     "Prueba subcontratar solo una parte de tus pedidos antes de mover todo el volumen.",
     "Decide según quién te da más control sobre la experiencia del cliente sin romper tu margen."
   ],
-  "entregable_esperado": "Una decisión escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opción.",
+  "entregable_esperado": "Una decisión escrita sobre preparación y envío de pedidos propios o tercerizados con el costo por pedido de cada opción.",
   "nodos_previos": [
     "vender_sin_stock_con_drop_shipping"
   ],
@@ -183,6 +183,39 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-decidir_empacar_tu_mismo_o_subcontratar-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a tus clientes qué tan importante es la marca del courier en su decisión de comprarte.",
+      "texto_nuevo": "Pregunta a tus clientes qué tan importante es la marca de la empresa de mensajería en su decisión de comprarte.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-decidir_empacar_tu_mismo_o_subcontratar-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una decisión escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opción.",
+      "texto_nuevo": "Una decisión escrita sobre preparación y envío de pedidos propios o tercerizados con el costo por pedido de cada opción.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fulfilment propio o tercerizado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

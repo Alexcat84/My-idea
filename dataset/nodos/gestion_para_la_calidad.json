@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir la calidad tanto en términos de características del producto como en términos de ausencia de fallos",
     "Extender la responsabilidad de la calidad a toda la jerarquía organizacional, no solo al departamento de calidad",
-    "Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)",
+    "Adaptar el concepto de 'apto para su propósito' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)",
     "Establecer métodos universales aplicables a cualquier industria o función"
   ],
   "entregable_esperado": "Marco organizacional documentado que defina cómo se gestionará la calidad a nivel de toda la empresa",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Diseña Calidad en Todo",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-gestion_para_la_calidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adaptar el concepto de 'fit for purpose' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)",
+      "texto_nuevo": "Adaptar el concepto de 'apto para su propósito' considerando a todos los afectados por el producto (compradores, usuarios, reguladores, proveedores)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'fit for purpose'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un proyecto puede fallar por hacer a la ligera, o no hacer, el 'homework' inicial: estudio de mercado, evaluación técnica y análisis financiero antes de desarrollar. Cuando estas tareas se hacen mal, las decisiones se basan en supuestos en vez de hechos. No escuchar la voz del cliente (VoC) puede ser una de las principales causas de fracaso de un producto nuevo. Reducir esta etapa para acelerar el time-to-market es contraproducente: alarga el ciclo total y daña las tasas de éxito.",
   "pasos_accionables": [
-    "Realizar investigación de mercado y VoC antes de comenzar el desarrollo formal",
-    "Ampliar la base de clientes consultados, incluyendo clientes de los clientes (value chain)",
+    "Realizar investigación de mercado y de la voz del cliente antes de comenzar el desarrollo formal",
+    "Ampliar la base de clientes consultados, incluyendo clientes de los clientes (cadena de valor)",
     "Ejecutar evaluación técnica y de viabilidad antes de aprobar el proyecto",
-    "Construir el Business Case con datos duros, no solo supuestos",
+    "Construir el caso de negocio con datos duros, no solo supuestos",
     "Validar iterativamente el concepto con clientes reales antes de llegar a fases avanzadas"
   ],
-  "entregable_esperado": "Business Case documentado con estudio de mercado, evaluación técnica y análisis financiero completos",
+  "entregable_esperado": "Caso de negocio documentado con estudio de mercado, evaluación técnica y análisis financiero completos",
   "nodos_previos": [
     "producto_unico_superior"
   ],
@@ -77,6 +77,73 @@
       },
       "decision": "lectura total de procedencia (w45): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-voice_of_customer_homework-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar investigación de mercado y VoC antes de comenzar el desarrollo formal",
+      "texto_nuevo": "Realizar investigación de mercado y de la voz del cliente antes de comenzar el desarrollo formal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VoC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-voice_of_customer_homework-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ampliar la base de clientes consultados, incluyendo clientes de los clientes (value chain)",
+      "texto_nuevo": "Ampliar la base de clientes consultados, incluyendo clientes de los clientes (cadena de valor)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "value chain"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-voice_of_customer_homework-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construir el Business Case con datos duros, no solo supuestos",
+      "texto_nuevo": "Construir el caso de negocio con datos duros, no solo supuestos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-voice_of_customer_homework-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Business Case documentado con estudio de mercado, evaluación técnica y análisis financiero completos",
+      "texto_nuevo": "Caso de negocio documentado con estudio de mercado, evaluación técnica y análisis financiero completos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

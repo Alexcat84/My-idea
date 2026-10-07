@@ -11,7 +11,7 @@
     "Revisar la lista antes de cada llamada de ventas como parte de la preparación",
     "Usar estas preguntas para minimizar preguntas de situación irrelevantes",
     "Identificar de antemano los problemas típicos que el producto/servicio resuelve",
-    "Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas",
+    "Formular preguntas directas sobre insatisfacciones relacionadas con esos problemas",
     "Escuchar activamente las respuestas para detectar problemas no mencionados explícitamente"
   ],
   "entregable_esperado": "Lista escrita de problemas potenciales del cliente con preguntas de problema asociadas, lista para usar antes de la llamada",
@@ -30,5 +30,24 @@
   "etiqueta_arbol": "Anticipa Problemas Antes de Llamar",
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-preparacion_preguntas_problema_precall-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Formular preguntas directas sobre insatisfacciones relacionadas a esos problemas",
+      "texto_nuevo": "Formular preguntas directas sobre insatisfacciones relacionadas con esos problemas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "relacionadas a"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

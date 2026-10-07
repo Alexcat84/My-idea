@@ -6,10 +6,10 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Una vez que un producto califica bajo las Reglas de Origen de un FTA, el exportador debe certificar dicho origen mediante un Certificado de Origen (COO) específico del FTA o mediante una declaración de información en formato libre, según lo requiera el comprador, bróker o autoridad aduanera. Los envíos de bajo valor no necesitan COO; la factura comercial puede indicar que el bien califica. En general, la mayoría de los tratados exigen, si el comprador o la aduana del país del comprador lo solicitan, información del importador, exportador, productor, descripción del bien, clasificación HS y el criterio de preferencia que explica cómo el bien califica. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Verificar con el comprador o agente aduanal si el FTA requiere un formato específico de COO",
+    "Verificar con el comprador o agente aduanal si el tratado de libre comercio requiere un formato específico de certificado de origen",
     "Completar la información requerida: nombre/dirección de importador, exportador y productor",
-    "Incluir descripción detallada del bien y su clasificación HS a 6 dígitos o más",
-    "Indicar el criterio de preferencia según el cual el bien origina (código o explicación textual)",
+    "Incluir descripción detallada del bien y su clasificación del Sistema Armonizado a 6 dígitos o más",
+    "Indicar el criterio de preferencia según el cual el bien es originario (código o explicación textual)",
     "Firmar el certificado por una persona con autoridad legal y acceso a los registros de respaldo",
     "Conservar la documentación de respaldo sobre cómo calificó el producto en caso de auditoría aduanera; la mayoría de los tratados exigen guardarla hasta 5 años"
   ],
@@ -112,6 +112,58 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro condiciona esos datos a que el comprador o la aduana del país del comprador los soliciten, y lo dice en general.; El libro dice que, en general, la mayoría de los tratados piden esos datos; el nodo lo vuelve obligación sin matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-certificacion_origen_producto-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar con el comprador o agente aduanal si el FTA requiere un formato específico de COO",
+      "texto_nuevo": "Verificar con el comprador o agente aduanal si el tratado de libre comercio requiere un formato específico de certificado de origen",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FTA",
+          "COO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-certificacion_origen_producto-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir descripción detallada del bien y su clasificación HS a 6 dígitos o más",
+      "texto_nuevo": "Incluir descripción detallada del bien y su clasificación del Sistema Armonizado a 6 dígitos o más",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "clasificación HS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-certificacion_origen_producto-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Indicar el criterio de preferencia según el cual el bien origina (código o explicación textual)",
+      "texto_nuevo": "Indicar el criterio de preferencia según el cual el bien es originario (código o explicación textual)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el bien origina"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

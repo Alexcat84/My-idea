@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Determina si tu proyecto está en modo búsqueda (hipótesis no probadas) o en modo ejecución (modelo conocido)",
     "Lista explícitamente las hipótesis de tu modelo de negocio: mercado, cliente, producto, canal y precio, marcadas como no probadas",
-    "Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales",
+    "Aplica el proceso de desarrollo de clientes para salir a probar cada hipótesis con clientes reales",
     "Evita montar estructuras o roles de ejecución antes de validar el modelo",
     "Itera y pivota según la evidencia recogida hasta encontrar un modelo repetible y escalable",
     "Adopta una mentalidad de aprendizaje y experimentación en vez de miedo al fracaso",
     "Abandonar la idea de escribir un plan de negocio detallado al inicio",
-    "Usa el Business Model Canvas como marcador de tus hipótesis y complétalo con el Value Proposition Canvas como herramienta de planificación flexible"
+    "Usa el lienzo del modelo de negocio como marcador de tus hipótesis y complétalo con el lienzo de la propuesta de valor como herramienta de planificación flexible"
   ],
   "entregable_esperado": "Un lienzo de hipótesis de modelo de negocio marcado explícitamente como no probado, junto con evidencia de que el modelo es repetible y escalable o una decisión clara de pivote.",
   "nodos_previos": [
@@ -300,6 +300,41 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 7,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-search_for_business_model-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica el proceso de Customer Development para salir a probar cada hipótesis con clientes reales",
+      "texto_nuevo": "Aplica el proceso de desarrollo de clientes para salir a probar cada hipótesis con clientes reales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Customer Development"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-search_for_business_model-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el Business Model Canvas como marcador de tus hipótesis y complétalo con el Value Proposition Canvas como herramienta de planificación flexible",
+      "texto_nuevo": "Usa el lienzo del modelo de negocio como marcador de tus hipótesis y complétalo con el lienzo de la propuesta de valor como herramienta de planificación flexible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Model Canvas",
+          "Value Proposition Canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

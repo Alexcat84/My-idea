@@ -7,11 +7,11 @@
   "resumen_teorico": "Consolidar envíos y aprovechar los viajes de retorno vacíos (backhauls) reduce significativamente el desperdicio de combustible y costos, ya que un camión que regresa vacío desperdicia la mitad del costo de entrega. Consolidar puede exigir más tiempo y clasificación. Programas como 'Empty Miles Service' conectan empresas con capacidad de carga sobrante para optimizar el uso de la flota.",
   "pasos_accionables": [
     "Analizar patrones de envío para identificar oportunidades de consolidación de pedidos.",
-    "Evaluar la participación en programas de backhaul compartido (ej. Empty Miles Service).",
+    "Evaluar la participación en programas de viajes de retorno compartidos (ej. Empty Miles Service).",
     "Priorizar la carga máxima en peso y volumen simultáneamente, no solo volumen.",
     "Medir la reducción de rutas y el ahorro de combustible resultante de la consolidación."
   ],
-  "entregable_esperado": "Plan de consolidación de envíos y aprovechamiento de backhauls con métricas de reducción de rutas, combustible y emisiones.",
+  "entregable_esperado": "Plan de consolidación de envíos y aprovechamiento de viajes de retorno con métricas de reducción de rutas, combustible y emisiones.",
   "nodos_previos": [
     "empaque_ecoeficiente"
   ],
@@ -40,6 +40,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que consolidar envíos puede exigir más tiempo y clasificación; el resumen solo da el beneficio.; Mismo defecto: se cae el costo de consolidar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-consolidacion_cargas_backhaul-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar la participación en programas de backhaul compartido (ej. Empty Miles Service).",
+      "texto_nuevo": "Evaluar la participación en programas de viajes de retorno compartidos (ej. Empty Miles Service).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "backhaul compartido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-consolidacion_cargas_backhaul-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de consolidación de envíos y aprovechamiento de backhauls con métricas de reducción de rutas, combustible y emisiones.",
+      "texto_nuevo": "Plan de consolidación de envíos y aprovechamiento de viajes de retorno con métricas de reducción de rutas, combustible y emisiones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "backhauls"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

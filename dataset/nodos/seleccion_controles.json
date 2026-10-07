@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
   "resumen_teorico": "Tras categorizar el sistema, se selecciona un conjunto inicial de controles (baseline) para proteger la confidencialidad, integridad y disponibilidad, usando catálogos como NIST SP 800-53. Luego, estos controles se adaptan (tailoring) a los requisitos específicos de seguridad y privacidad de la organización, guiados por evaluaciones de riesgo. Los controles seleccionados y adaptados se documentan en un plan de seguridad y/o privacidad.",
   "pasos_accionables": [
-    "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios.",
+    "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de una línea base predefinida o elegir controles propios.",
     "Adaptar (tailor) los controles a los riesgos y necesidades específicas de tu proyecto.",
     "Documentar los controles seleccionados y adaptados en un plan de seguridad/privacidad.",
     "Desarrollar e implementar una estrategia de monitoreo de la efectividad de los controles a nivel de sistema."
@@ -126,6 +126,23 @@
       "decision": "lectura total de procedencia (w38): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-seleccion_controles-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de un baseline predefinido o elegir controles propios.",
+      "texto_nuevo": "Seleccionar los controles apropiados según la categorización del sistema, decidiendo si partir de una línea base predefinida o elegir controles propios.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un baseline predefinido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

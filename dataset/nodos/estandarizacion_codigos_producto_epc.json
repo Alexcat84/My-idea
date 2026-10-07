@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar los costos actuales de traducción de números de parte entre socios comerciales",
     "Adoptar códigos EPC para la comunicación externa manteniendo códigos internos si se desea",
-    "Conectar la empresa a un 'data pool' del GDSN a través de GS1",
+    "Conectar la empresa a un repositorio de datos del GDSN a través de GS1",
     "Clasificar los productos usando estándares como UNSPSC o GPC para análisis jerárquico"
   ],
   "entregable_esperado": "Catálogo de productos con códigos EPC/GPC asignados y conexión activa a la red GDSN",
@@ -65,6 +65,23 @@
         "motivo": "arista entre dos mundos (quality -> entrega): el acoplamiento mundo a mundo esta prohibido (AUD-08) y ninguna sesion la puede recorrer (AUD-09 M16: una sesion de mundo pasa por su mundo y el nucleo, nunca por otro mundo)"
       },
       "decision": "Auditoria final del dataset (encargo del fundador del 28 sep 2026): las murallas de dominio no admiten aristas entre mundos; la arista muerta sale de las dos vistas."
+    },
+    {
+      "id": "voz-estandarizacion_codigos_producto_epc-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conectar la empresa a un 'data pool' del GDSN a través de GS1",
+      "texto_nuevo": "Conectar la empresa a un repositorio de datos del GDSN a través de GS1",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'data pool'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

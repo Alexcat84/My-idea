@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando te devuelven un producto, la peor decisión es dejarlo acumulado sin decidir qué hacer con él. Las devoluciones llegan por motivos distintos: no le quedó bien al cliente, hubo un error al empacar, llegó dañado, tiene un defecto de fábrica o simplemente terminó su vida útil. Cada motivo pide un destino distinto: revenderlo como nuevo, venderlo por otro canal o en una tienda outlet, venderlo a un comerciante, repararlo, donarlo, reciclarlo, devolverlo al proveedor o desecharlo. Decidir rápido evita que el espacio y el dinero queden atrapados en mercancía que no genera ingresos mientras nadie decide qué hacer con ella. Tener un criterio previo, aunque sea simple, para clasificar cada devolución en el momento en que llega te ahorra indecisión y una bodega llena de cosas sin destino claro.",
   "pasos_accionables": [
     "Anota los tres o cuatro motivos de devolución más comunes en tu negocio.",
-    "Define para cada motivo un destino por defecto: revender, vender por otro canal, en outlet o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
+    "Define para cada motivo un destino por defecto: revender, vender por otro canal, en una tienda de saldos o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
     "Al recibir una devolución, revísala y asígnale destino cuanto antes, para que no se acumule.",
     "Separa físicamente lo que ya tiene destino decidido de lo que sigue en evaluación.",
     "Revisa cada mes si algún motivo de devolución se repite demasiado y ataca la causa raíz."
@@ -124,6 +124,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-flujo_decision_devoluciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define para cada motivo un destino por defecto: revender, vender por otro canal, en outlet o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
+      "texto_nuevo": "Define para cada motivo un destino por defecto: revender, vender por otro canal, en una tienda de saldos o a un comerciante, reparar, donar, reciclar, devolver al proveedor o desechar.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en outlet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

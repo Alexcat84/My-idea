@@ -11,7 +11,7 @@
     "Asignar a personas las tareas de excepción y resolución de problemas complejos.",
     "Diseñar el sistema para que la IA alerte a humanos ante anomalías o excepciones relevantes.",
     "Recompensar a los empleados que identifiquen y automaticen con IA las tareas aburridas",
-    "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+    "Clasificar cada tarea en Solo yo, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
     "Revisar periódicamente la clasificación conforme mejora la IA o cambian las prioridades del negocio"
   ],
   "entregable_esperado": "Matriz de asignación de tareas indicando cuáles son automatizables por IA y cuáles requieren intervención humana.",
@@ -194,6 +194,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 5,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-division_trabajo_humano_ia-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar cada tarea en Just Me, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+      "texto_nuevo": "Clasificar cada tarea en Solo yo, Delegada o Automatizada según riesgo, importancia personal y capacidad actual de la IA",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Just Me"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

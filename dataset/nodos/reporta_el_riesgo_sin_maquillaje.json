@@ -6,7 +6,7 @@
   "fuente": "Edwards et al., Managing Project Risks",
   "resumen_teorico": "El riesgo se maneja bien solo si se comunica con la verdad, aunque incomode. La tentación de maquillar (a un socio, a un cliente, a un banco, o a ti mismo) es fuerte, porque una mala noticia asusta; pero el optimismo de vitrina puede hacer que se entienda mal la situación y que nadie reaccione. Reportar sin maquillaje significa decir dónde estás parado de verdad: qué riesgos crecieron, cuáles se materializaron, qué margen te queda. Quien te escucha tiene que poder confiar en lo que le dices, y eso pide transparencia. Para el emprendedor solo, el primer reporte es el que se hace a sí mismo: un riesgo que no se reconoce no se puede manejar.",
   "pasos_accionables": [
-    "Al reportar avance, di también qué riesgos crecieron o se volvieron problema, no solo lo bueno.",
+    "Al informar el avance, di también qué riesgos crecieron o se volvieron problema, no solo lo bueno.",
     "Acompaña cada mala noticia con el plan que tienes para enfrentarla.",
     "Con socios, clientes o banco, prefiere la verdad incómoda a la calma falsa.",
     "Sé honesto contigo primero: no te escondas tus propios riesgos para no preocuparte."
@@ -25,7 +25,7 @@
     "cuando reportas solo lo bueno y callas los riesgos que crecen",
     "cuando te mientes a ti mismo sobre el estado real de tu proyecto"
   ],
-  "etiqueta_arbol": "Reporta el Riesgo Sin Maquillaje",
+  "etiqueta_arbol": "Informa el Riesgo Sin Maquillaje",
   "fuentes_internas": [
     "Edwards et al., Managing Project Risks"
   ],
@@ -45,6 +45,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que suavizar el mensaje puede llevar a entender mal la situación y a no reaccionar; el nodo lo vuelve certeza y añade 'hasta que ya es tarde'.; El libro pide transparencia y que la audiencia pueda confiar en la fuente, pero no afirma que reconocer un riesgo genere más confianza.; Los superlativos 'el más importante' y 'la forma más rápida' no están; el libro solo pone la congruencia con uno mismo antes.; Mismo efecto inventado: más confianza por reconocer el riesgo.; Mismos superlativos endurecidos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-reporta_el_riesgo_sin_maquillaje-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporta el Riesgo Sin Maquillaje",
+      "texto_nuevo": "Informa el Riesgo Sin Maquillaje",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporta"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reporta_el_riesgo_sin_maquillaje-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al reportar avance, di también qué riesgos crecieron o se volvieron problema, no solo lo bueno.",
+      "texto_nuevo": "Al informar el avance, di también qué riesgos crecieron o se volvieron problema, no solo lo bueno.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
