@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseño para Alterar Comportamientos (Valores en lugar de Abstracciones)",
   "fuente": "Change by Design, Revised and U - Tim Brown",
-  "resumen_teorico": "El caso del Departamento de Energía de EE.UU. (Shift Focus con IDEO) reveló que la gente no se preocupa por conceptos abstractos como 'eficiencia energética', sino por valores concretos que sí les importan: comodidad, estilo, comunidad. Diseñar para el cambio de comportamiento requiere conectar la solución con los valores reales de las personas, no con la lógica técnica del problema.",
+  "resumen_teorico": "Al diseñar para que la gente cambie un hábito, puede pasar que conceptos abstractos como la eficiencia energética le importen poco, y que lo que de verdad la mueva sean cosas concretas que valora, como la comodidad, el estilo o el sentido de comunidad. Por eso conviene investigar en el terreno qué valora la gente y conectar la solución con eso, en lugar de partir de la lógica técnica del problema.",
   "pasos_accionables": [
     "Realiza investigación de campo para descubrir qué valores reales motivan el comportamiento actual de las personas",
     "Evita asumir que la gente actúa racionalmente según la lógica técnica del problema (ej: eficiencia)",
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Apela a Valores, no Abstracciones",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "barrido2-procedencia-2-diseno_de_comportamiento_sostenible-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El caso del Departamento de Energía de EE.UU. (Shift Focus con IDEO) reveló que la gente no se preocupa por conceptos abstractos como 'eficiencia energética', sino por valores concretos que sí les importan: comodidad, estilo, comunidad. Diseñar para el cambio de comportamiento requiere conectar la solución con los valores reales de las personas, no con la lógica técnica del problema.",
+      "texto_nuevo": "Al diseñar para que la gente cambie un hábito, puede pasar que conceptos abstractos como la eficiencia energética le importen poco, y que lo que de verdad la mueva sean cosas concretas que valora, como la comodidad, el estilo o el sentido de comunidad. Por eso conviene investigar en el terreno qué valora la gente y conectar la solución con eso, en lugar de partir de la lógica técnica del problema.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "El caso del Departamento de Energía de EE.UU. (Shift Focus con IDEO) reveló que ",
+          "la gente no se preocupa por conceptos abstractos"
+        ]
+      },
+      "decision": "barrido 2: sale la atribucion y queda el consejo con el alcance que da el libro; reescrito con su matiz y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    }
   ]
 }

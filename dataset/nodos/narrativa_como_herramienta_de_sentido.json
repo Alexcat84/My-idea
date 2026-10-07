@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Narrativa como Herramienta de Sentido (Efecto Heider-Simmel)",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Los humanos atribuimos automáticamente motivaciones, personalidades e intenciones incluso a formas geométricas simples en movimiento (estudio de Heider y Simmel, 1944). Esto demuestra que estamos programados para crear historias que den sentido a estímulos ambiguos. Pensar en historias es muy útil para desenredar asuntos complejos, pero siempre distorsiona: al centrarte en personajes, conflicto y causas, ocultas el contexto y las conexiones. También representa un riesgo: las personas pueden aferrarse a una historia incluso cuando deja de ser útil o verdadera (como el caso de Hiroo Onoda).",
+  "resumen_teorico": "Es fácil que la mente vea intenciones, carácter y motivos donde no los hay; puede pasar incluso con unas figuras simples que solo se mueven. Esa inclinación sugiere lo mucho que tendemos a armar historias para darle sentido a lo que es ambiguo. Pensar en historias ayuda bastante a desenredar asuntos complejos, pero deforma la mirada: al poner la atención en personajes, conflicto y causas, quedan en la sombra el contexto y las conexiones. También tiene un riesgo: una persona o un grupo puede seguir aferrado a un relato aunque ya no le sirva o haya dejado de ser cierto.",
   "pasos_accionables": [
     "Al presentar un concepto de diseño o prototipo, envolverlo en una narrativa con personajes, conflicto y resolución para facilitar la comprensión y la conexión emocional, sin olvidar que toda historia distorsiona.",
     "Revisar periódicamente si la 'historia' que el equipo o los usuarios se cuentan sobre el problema sigue siendo válida o se ha vuelto una narrativa defensiva que impide el cambio.",
@@ -122,6 +122,25 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "barrido2-procedencia-2-narrativa_como_herramienta_de_sentido-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Los humanos atribuimos automáticamente motivaciones, personalidades e intenciones incluso a formas geométricas simples en movimiento (estudio de Heider y Simmel, 1944). Esto demuestra que estamos programados para crear historias que den sentido a estímulos ambiguos. Pensar en historias es muy útil para desenredar asuntos complejos, pero siempre distorsiona: al centrarte en personajes, conflicto y causas, ocultas el contexto y las conexiones. También representa un riesgo: las personas pueden aferrarse a una historia incluso cuando deja de ser útil o verdadera (como el caso de Hiroo Onoda).",
+      "texto_nuevo": "Es fácil que la mente vea intenciones, carácter y motivos donde no los hay; puede pasar incluso con unas figuras simples que solo se mueven. Esa inclinación sugiere lo mucho que tendemos a armar historias para darle sentido a lo que es ambiguo. Pensar en historias ayuda bastante a desenredar asuntos complejos, pero deforma la mirada: al poner la atención en personajes, conflicto y causas, quedan en la sombra el contexto y las conexiones. También tiene un riesgo: una persona o un grupo puede seguir aferrado a un relato aunque ya no le sirva o haya dejado de ser cierto.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (estudio de Heider y Simmel, 1944)",
+          "Los humanos atribuimos automáticamente",
+          "Esto demuestra que estamos programados para crear historias",
+          " (como el caso de Hiroo Onoda)"
+        ]
+      },
+      "decision": "barrido 2: sale la atribucion y queda el consejo con el alcance que da el libro; reescrito con su matiz y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ],
   "fuentes_internas": [

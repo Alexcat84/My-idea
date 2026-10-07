@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diagrama Causa-Efecto (Ishikawa)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Desarrollado por Kaoru Ishikawa, organiza y muestra las interrelaciones entre las diversas teorías sobre la causa raíz de un problema (efecto). Ayuda al equipo a estructurar su pensamiento y avanzar sistemáticamente hacia la identificación de causas raíz reales.",
+  "resumen_teorico": "Este diagrama reúne en un solo dibujo las distintas sospechas sobre por qué ocurre un problema (el efecto) y deja ver cómo se conectan entre sí. Al repasar las posibles causas con orden, el equipo aclara lo que piensa y puede avanzar con más método hasta dar con las causas raíz que de verdad están detrás.",
   "pasos_accionables": [
     "Definir claramente el efecto (Y) a explicar y colocarlo en una caja a la derecha",
     "Usar brainstorming o enfoque racional para identificar posibles causas (Xs)",
@@ -50,6 +50,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pone no menos de 2 y normalmente no más de 5, a unos 70°; el nodo lo fija como regla.; Mismo defecto que la marca 0.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "barrido2-procedencia-2-diagrama_causa_efecto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Desarrollado por Kaoru Ishikawa, organiza y muestra las interrelaciones entre las diversas teorías sobre la causa raíz de un problema (efecto). Ayuda al equipo a estructurar su pensamiento y avanzar sistemáticamente hacia la identificación de causas raíz reales.",
+      "texto_nuevo": "Este diagrama reúne en un solo dibujo las distintas sospechas sobre por qué ocurre un problema (el efecto) y deja ver cómo se conectan entre sí. Al repasar las posibles causas con orden, el equipo aclara lo que piensa y puede avanzar con más método hasta dar con las causas raíz que de verdad están detrás.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Desarrollado por Kaoru Ishikawa, ",
+          "organiza y muestra las interrelaciones entre las diversas teorías sobre la causa raíz de un problema (efecto)"
+        ]
+      },
+      "decision": "barrido 2: sale la atribucion y queda el consejo con el alcance que da el libro; reescrito con su matiz y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }
