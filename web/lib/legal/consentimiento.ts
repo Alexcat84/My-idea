@@ -15,7 +15,6 @@
  * seguro para el cliente: no importa los textos legales enteros ni nada del servidor.
  */
 import { ACEPTACION_IDIOMA_TEXTO, type IdiomaTextoLegal, type MotivoAceptacion } from "@/lib/dbContract";
-import { idiomaLegal } from "./paginas";
 
 export { HUELLA_LEGAL, VERSION_LEGAL } from "./version";
 import { VERSION_LEGAL } from "./version";
@@ -37,9 +36,13 @@ export function estadoConsentimiento(ultimaVersion: string | null): EstadoConsen
 /** La marca del rechazo del servidor cuando falta la aceptación vigente (status 428): la pantalla pinta la línea. */
 export const STATUS_SIN_ACEPTACION = 428;
 
-/** El idioma del texto legal que lee quien usa la interfaz en `idioma` (los textos existen en es y fr). */
+/** El idioma del texto VINCULANTE que acepta quien usa la interfaz en `idioma`: el francés para el francés y el
+ * español para todos los demás. Desde el 7 oct 2026 (I18N AL DÍA) las páginas legales se leen también en las otras
+ * traducciones, pero son de cortesía: en caso de discrepancia prevalece el español (y el francés en Quebec), la huella
+ * de la versión solo cubre es y fr (scripts/sync_legal_web.py) y la columna aceptaciones_legales.idioma_texto solo
+ * admite 'es' y 'fr' (migración 050). Guardar el idioma de la traducción leída pediría una migración nueva. */
 export function idiomaTextoLegal(idioma: string): IdiomaTextoLegal {
-  return idiomaLegal(idioma);
+  return idioma === "fr" ? "fr" : "es";
 }
 
 export function esIdiomaTextoLegal(x: unknown): x is IdiomaTextoLegal {

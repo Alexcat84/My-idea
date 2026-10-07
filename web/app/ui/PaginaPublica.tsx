@@ -1,11 +1,13 @@
 /**
  * Marco de las páginas públicas legales y de ayuda (encargo del fundador del 6 oct 2026, punto 6): Privacidad,
  * Términos, Cookies, Eliminar tu cuenta y Preguntas frecuentes. Se leen sin cuenta y sin iniciar sesión (proxy.ts,
- * RUTAS_PUBLICAS). Estructura tomada de The Original I Ching (MarketingDocShell).
+ * RUTAS_PUBLICAS). Estructura tomada de The Original I Ching (MarketingDocShell). En los once idiomas (I18N AL DÍA,
+ * 7 oct 2026): el pie sale del catálogo lib/i18n/mensajes/paginasAyuda.ts.
  */
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { NAV, type IdiomaPagina } from "@/lib/legal/paginas";
+import type { ActiveLocale } from "@/lib/i18n/config";
+import { navPublica } from "@/lib/legal/paginas";
 
 const ENLACES = [
   ["/privacidad", "privacidad"],
@@ -15,8 +17,8 @@ const ENLACES = [
   ["/preguntas-frecuentes", "preguntas"],
 ] as const;
 
-export function PaginaPublica({ idioma, children }: { idioma: IdiomaPagina; children: ReactNode }) {
-  const t = NAV[idioma];
+export function PaginaPublica({ idioma, children }: { idioma: ActiveLocale; children: ReactNode }) {
+  const t = navPublica(idioma);
   return (
     <main style={{ background: "var(--bg, #fff)", color: "var(--ink, #1a1a1a)", minHeight: "100vh" }}>
       <div style={{ maxWidth: 760, margin: "0 auto", padding: "32px 20px 64px" }}>

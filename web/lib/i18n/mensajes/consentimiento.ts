@@ -3,7 +3,8 @@
  * al botón en el primer envío de datos (app/ui/LineaConsentimiento.tsx, en /nueva y en La Exploración), la línea y
  * los enlaces de /login, el aviso de cookies del pie (app/ui/AvisoCookies.tsx) y los mensajes del servidor
  * (/api/cuenta/consentimiento y la guarda de lib/legal/aceptacionServidor.ts). Lo ve toda identidad que envía datos,
- * también la invisible. Los textos legales existen en español y francés; los enlaces llevan a esas páginas.
+ * también la invisible. Los enlaces llevan a las páginas legales, que se leen en el idioma de la persona si su
+ * traducción está publicada y, si no, en español.
  */
 import type { PorIdioma } from "../config";
 

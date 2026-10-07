@@ -127,9 +127,12 @@ describe("la versión tiene una sola fuente: docs/legal/version.json", () => {
     expect(HUELLA_LEGAL).toBe(reg.versiones.find((v) => v.version === reg.vigente)?.huella);
   });
 
-  it("los textos legales existen en español y francés: cualquier otro idioma lee el español", () => {
+  it("se acepta el texto vinculante: el francés para el francés y el español para todos los demás", () => {
+    // Las traducciones de cortesía (I18N AL DÍA, 7 oct 2026) se leen en la página, pero lo que se acepta y se guarda es
+    // la versión que prevalece: aceptaciones_legales.idioma_texto solo admite 'es' y 'fr' (migración 050).
     expect(idiomaTextoLegal("fr")).toBe("fr");
     expect(idiomaTextoLegal("es")).toBe("es");
+    expect(idiomaTextoLegal("en")).toBe("es");
     expect(idiomaTextoLegal("ja")).toBe("es");
   });
 });

@@ -1,10 +1,14 @@
 """Paginas legales publicadas (encargo del fundador del 6 oct 2026, punto 6).
 
-La unica fuente de los textos legales son docs/legal/*.md (espanol) y docs/legal/fr/*.md (frances). La web los recibe
-generados en web/lib/legal/textos.ts por scripts/sync_legal_web.py, sin la cabecera de borrador. Esta guarda falla si
-la copia web quedo atrasada, si un texto publicado conserva una marca pendiente o la cabecera de borrador, o si nombra
-libros (regla D1: ningun origen llega al cliente). Prueba en rojo primero.
+La unica fuente de los textos legales son docs/legal/*.md (espanol) y sus traducciones en docs/legal/<idioma>/ (los
+once idiomas desde el 7 oct 2026, encargo I18N AL DIA; el frances con sus propios nombres de fichero). La web los
+recibe generados en web/lib/legal/textos.ts por scripts/sync_legal_web.py, sin la cabecera de borrador. Esta guarda
+falla si la copia web quedo atrasada, si un texto publicado conserva una marca pendiente o la cabecera de borrador, si
+nombra libros (regla D1: ningun origen llega al cliente), o si una traduccion nueva no abre con su nota de prevalencia
+(una cita "> ..." justo despues del titulo: en caso de discrepancia prevalece el espanol, y el frances en Quebec).
+Prueba en rojo primero. La vigencia de cada traduccion frente al espanol la guarda engine/test_legal_huellas.py.
 """
+import re
 import sys
 from pathlib import Path
 
@@ -23,10 +27,28 @@ def test_ningun_texto_publicado_conserva_marcas_ni_cabecera():
     for doc, por_idioma in sl.textos().items():
         for idioma, texto in por_idioma.items():
             plano = texto.replace("\n", " ")
-            for prohibido in ("POR VERIFICAR", "VÉRIFIER", "BORRADOR", "ÉBAUCHE", "[fecha", "[date"):
+            for prohibido in ("POR VERIFICAR", "VÉRIFIER", "BORRADOR", "ÉBAUCHE", "[fecha", "[date", "TO VERIFY", "DRAFT"):
                 assert prohibido not in plano, (doc, idioma, prohibido)
             assert "libro" not in plano.lower() and "livre" not in plano.lower(), (doc, idioma, "nombra libros")
+            assert not re.search(r"\b(books?|livros?|libri|buch|bücher)\b", plano, re.I), (doc, idioma, "nombra libros")
             assert plano.lstrip().startswith("# "), (doc, idioma, "debe empezar por su titulo")
+
+
+def test_el_ingles_se_publica_en_los_tres_documentos():
+    todos = sl.textos()
+    assert todos["privacidad"]["en"].startswith("# My Idea Privacy Policy"), todos["privacidad"].get("en", "")[:60]
+    assert todos["terminos"]["en"].startswith("# My Idea Terms of Use")
+    assert todos["cookies"]["en"].startswith("# My Idea Cookie Policy")
+
+
+def test_cada_traduccion_nueva_abre_con_su_nota_de_prevalencia():
+    """El espanol es la base y el frances ya existia sin nota (anadirsela cambia la version vigente): las demas, si."""
+    for doc, por_idioma in sl.textos().items():
+        for idioma, texto in por_idioma.items():
+            if idioma in ("es", "fr"):
+                continue
+            lineas = [l for l in texto.splitlines() if l.strip()]
+            assert lineas[0].startswith("# ") and lineas[1].startswith("> "), (doc, idioma, lineas[:2])
 
 
 def test_la_cabecera_de_borrador_se_quita():

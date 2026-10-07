@@ -69,6 +69,16 @@ def test_la_huella_muerde_si_un_texto_cambia():
     assert sl.huella_de(base) != sl.huella_de(solo_es)
 
 
+def test_la_huella_cubre_solo_el_espanol_y_el_frances():
+    """Las otras traducciones (I18N AL DIA, 7 oct 2026) son de cortesia: en caso de discrepancia prevalece el espanol
+    (y el frances en Quebec). Publicar o corregir una traduccion no cambia lo que se acepta, asi que no sube la
+    version ni obliga a nadie a volver a aceptar. Su vigencia frente al espanol la guarda test_legal_huellas.py."""
+    todos = sl.textos()
+    assert set(todos["privacidad"]) - {"es", "fr"}, "debe haber al menos una traduccion mas que es y fr (el ingles)"
+    solo_vinculantes = {doc: {i: todos[doc][i] for i in ("es", "fr")} for doc in _registro()["documentos"]}
+    assert sl.huella_legal() == sl.huella_de(solo_vinculantes)
+
+
 def test_la_web_lee_la_version_vigente():
     reg = _registro()
     vigente = next(v for v in reg["versiones"] if v["version"] == reg["vigente"])
