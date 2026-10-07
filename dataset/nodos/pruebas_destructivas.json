@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Manejo de Pruebas Destructivas mediante Control Estadístico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no tiene sentido hacer screening de un lote rechazado, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+  "resumen_teorico": "Hay pruebas de calidad que acaban con la unidad revisada, como medir cuánto dura una lámpara o qué proporción de lana tiene una tela. Ahí, revisar pieza por pieza un lote rechazado (screening) no sirve: al final no te quedaría producto que mandar a la línea. Tu única salida real es poner bajo control estadístico el proceso con que fabricas, para que todo salga bien a la primera y ya no necesites probar cada unidad.",
   "pasos_accionables": [
     "Identificar los atributos de calidad que requieren pruebas destructivas.",
     "Implementar cartas de control (X-barra y R) sobre el proceso de fabricación en lugar de pruebas al producto terminado.",
@@ -73,6 +73,22 @@
       "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-pruebas_destructivas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando la prueba de calidad destruye la muestra (ej. vida útil de una lámpara, contenido de lana en tela), no tiene sentido hacer screening de un lote rechazado, ya que no queda producto para enviar a producción. La única solución viable es lograr el control estadístico del proceso de fabricación para 'hacerlo bien desde la primera vez', eliminando la necesidad de probar cada unidad.",
+      "texto_nuevo": "Hay pruebas de calidad que acaban con la unidad revisada, como medir cuánto dura una lámpara o qué proporción de lana tiene una tela. Ahí, revisar pieza por pieza un lote rechazado (screening) no sirve: al final no te quedaría producto que mandar a la línea. Tu única salida real es poner bajo control estadístico el proceso con que fabricas, para que todo salga bien a la primera y ya no necesites probar cada unidad.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9456-9458",
+        "frase": "Screening a rejected lot would have no meaning, as nothing would be"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Desplegar el marco de la franqueza radical como recordatorio, con su regla de uso y sus dos prohibiciones",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Si crees que puede haber confusión sobre lo que significa la franqueza radical, no hace falta que busques otra definición: una forma de ayudar a que todos entiendan que la idea no es comportarse como un imbécil es tener el marco a la vista. Haz copias, ponlas en la nevera, sobre tu mesa o donde te sirvan de recordatorio, y compártelas con tus colegas. Úsalo como brújula para llevar cada conversación concreta a un sitio mejor, no como test de personalidad para juzgarte a ti ni a otros, y no escribas nombres en las casillas: todos caemos en cada cuadrante varias veces al día.",
+  "resumen_teorico": "Si crees que quizá no todos entienden lo mismo por franqueza radical, no necesitas inventar otra definición: tener el marco siempre visible ayuda a que quede claro que no se trata de portarse como un imbécil. Saca copias y colócalas en la nevera, encima de tu escritorio o en cualquier lugar donde te lo recuerden, y repártelas entre tus colegas. Tómalo como una brújula que orienta cada conversación hacia un lugar mejor, nunca como un test de personalidad para juzgarte a ti o a los demás, y no pongas nombres en los cuadros: todos pasamos por cada cuadrante varias veces en un mismo día.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_01.md, unidad Preface, Preface to the Revised Edition: Radical Candor on Radical Candor. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'make photocopies', corrida con grep contra las quince unidades del libro. Nace de un problema que la propia autora constata: el termino se habia empezado a usar como licencia para comportarse mal, confundiendolo con la agresion odiosa y con la insinceridad manipuladora. Su remedio no es una definicion mejor sino un objeto fisico a la vista, y por eso es procedimiento y no postura: el libro pone su propio inventario de medios uno a uno, que son recortar, fotocopiar, colocar y repartir, mas una regla de uso y dos prohibiciones expresas. Junto a las dos prohibiciones el texto pone una observacion, y aqui va como observacion y no como razon, porque el libro no la presenta como tal: todos caemos en cada cuadrante varias veces al dia. Lo que el texto NO dice, y por eso no esta escrito aqui, es cada cuanto se repasan las copias, quien las mantiene, que hacer cuando una conversacion cae en un cuadrante malo, ni si hay que hacer esto antes o despues de leer el resto del libro.",
   "pasos_accionables": [
     "Usa el marco de la franqueza radical para ayudar a que todos entiendan que la idea no es comportarse como un imbécil.",
@@ -28,7 +28,7 @@
     "medir_guia_propia_pegatinas_marco"
   ],
   "condiciones_activacion": [
-    "Cuando estás desplegando la franqueza radical en tu equipo y crees que puede haber confusión sobre lo que significa."
+    "Cuando llevas la franqueza radical a tu equipo y sospechas que quizá no todos entienden lo mismo por ella."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -205,6 +205,39 @@
       "motivos": [
         "coherencia"
       ]
+    },
+    {
+      "id": "copia-desplegar_marco_franqueza_radical-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando estás desplegando la franqueza radical en tu equipo y crees que puede haber confusión sobre lo que significa.",
+      "texto_nuevo": "Cuando llevas la franqueza radical a tu equipo y sospechas que quizá no todos entienden lo mismo por ella.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_01.md",
+        "lineas": "35",
+        "frase": "So if you are rolling out Radical Candor, and you think there might"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-desplegar_marco_franqueza_radical-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si crees que puede haber confusión sobre lo que significa la franqueza radical, no hace falta que busques otra definición: una forma de ayudar a que todos entiendan que la idea no es comportarse como un imbécil es tener el marco a la vista. Haz copias, ponlas en la nevera, sobre tu mesa o donde te sirvan de recordatorio, y compártelas con tus colegas. Úsalo como brújula para llevar cada conversación concreta a un sitio mejor, no como test de personalidad para juzgarte a ti ni a otros, y no escribas nombres en las casillas: todos caemos en cada cuadrante varias veces al día.",
+      "texto_nuevo": "Si crees que quizá no todos entienden lo mismo por franqueza radical, no necesitas inventar otra definición: tener el marco siempre visible ayuda a que quede claro que no se trata de portarse como un imbécil. Saca copias y colócalas en la nevera, encima de tu escritorio o en cualquier lugar donde te lo recuerden, y repártelas entre tus colegas. Tómalo como una brújula que orienta cada conversación hacia un lugar mejor, nunca como un test de personalidad para juzgarte a ti o a los demás, y no pongas nombres en los cuadros: todos pasamos por cada cuadrante varias veces en un mismo día.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_01.md",
+        "lineas": "35-37",
+        "frase": "So if you are rolling out Radical Candor, and you think there might"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Recuerda el Marco de Franqueza",

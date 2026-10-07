@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Calidad (Examen Planeado de Conformidad)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, instruir con cuidado al equipo y darle tiempo para escribir un reporte adecuado, no revelar expectativas de hallazgos y recordar que estos señalan a la primera línea, pero la causa real está detrás.",
+  "resumen_teorico": "Bien hecha, una auditoría revisa con un plan una función de tu negocio, ya sea comprobando que el proceso cumple sus procedimientos o analizando críticamente lo que ese proceso entrega. Eso sí, solo atrapa a quien trabaja con descuido o sin ganas, nunca a quien hace trampa a propósito. Para que funcione, define qué vas a revisar y con qué criterio, elige auditores sin interés en el resultado, prepáralos bien y dales tiempo para redactar un buen informe, no les adelantes lo que esperas encontrar y recuerda que los hallazgos apuntan a la primera línea, mientras la causa de fondo está detrás.",
   "pasos_accionables": [
     "Definir con precisión qué función se auditará y contra qué criterios",
     "Seleccionar auditores imparciales, idealmente de otras áreas, sin exigir que todos sean especialistas en la función auditada, porque traen sus propios sesgos",
@@ -106,6 +106,22 @@
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-auditoria_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una auditoría bien realizada es un examen planeado de una función, verificando conformidad con procedimientos o mediante análisis crítico del resultado del proceso. Las auditorías solo detectan a los descuidados o desmotivados, no a los fraudulentos deliberados. Requiere reglas claras: especificar qué se audita y contra qué criterio, seleccionar auditores sin interés en el resultado, instruir con cuidado al equipo y darle tiempo para escribir un reporte adecuado, no revelar expectativas de hallazgos y recordar que estos señalan a la primera línea, pero la causa real está detrás.",
+      "texto_nuevo": "Bien hecha, una auditoría revisa con un plan una función de tu negocio, ya sea comprobando que el proceso cumple sus procedimientos o analizando críticamente lo que ese proceso entrega. Eso sí, solo atrapa a quien trabaja con descuido o sin ganas, nunca a quien hace trampa a propósito. Para que funcione, define qué vas a revisar y con qué criterio, elige auditores sin interés en el resultado, prepáralos bien y dales tiempo para redactar un buen informe, no les adelantes lo que esperas encontrar y recuerda que los hallazgos apuntan a la primera línea, mientras la causa de fondo está detrás.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "819-831",
+        "frase": "It is a planned examination of a function, carried out either"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

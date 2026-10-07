@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Paso 4: Costo de la Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+  "resumen_teorico": "El costo de calidad es todo lo que gastas por hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, repartidos en tres grupos: prevención, evaluación y fallas. Mídelo con total honestidad, sin achicar ninguna cifra, y de preferencia pide que lo calcule quien te lleva las cuentas, así el número sale libre de sesgos. Esa cifra no te dice en términos absolutos qué tan bien vas; te marca en qué puntos te conviene actuar, y mientras más alta salga, más urgente es corregir. Como referencia, no debería superar del 2.5% al 4% de las ventas; si pasas del 2.5%, todo lo que logres recortar se suma directo a tu rendimiento sobre ventas. Usa esos números para darle prioridad a la prevención por encima de la inspección y conviértelos en una medición que repites con regularidad.",
   "pasos_accionables": [
     "Dale a quien te lleva las cuentas información detallada sobre qué constituye el costo de calidad",
     "Identifica y suma todos los componentes: material desechado, retrabajo, garantía, servicio (salvo el mantenimiento regular), inspección, pruebas, auditorías, mano de obra de control de calidad, cambios de ingeniería, cambios en órdenes de compra, corrección de software, atención al consumidor, equipo de aceptación y cualquier otro costo de hacer las cosas mal, ordenados en prevención, evaluación y fallas, sin minimizar cifras",
@@ -177,6 +177,22 @@
       "decision": "saneamiento continuo de la voz (ola v16): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-costo_de_calidad_3-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El costo de calidad agrupa todos los gastos que produce hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, ordenados en tres categorías: prevención, evaluación y fallas. Debes medirlo con total honestidad, sin minimizar cifras, y conviene que lo calcule quien te lleva las cuentas para que el número quede sin sesgos. No es una medida absoluta de qué tan bien te va, sino una señal de dónde te conviene actuar: cuanto mayor sea, más urgente es corregir. Como referencia, no debería superar el 2.5% al 4% de las ventas; si estás por encima del 2.5%, lo que logres reducir aumenta directamente tu rendimiento sobre ventas. Las cifras sirven para priorizar la prevención sobre la inspección y deben convertirse en una medición recurrente.",
+      "texto_nuevo": "El costo de calidad es todo lo que gastas por hacer las cosas mal: scrap, retrabajo, garantías, servicio, inspección, auditorías y cambios de ingeniería, repartidos en tres grupos: prevención, evaluación y fallas. Mídelo con total honestidad, sin achicar ninguna cifra, y de preferencia pide que lo calcule quien te lleva las cuentas, así el número sale libre de sesgos. Esa cifra no te dice en términos absolutos qué tan bien vas; te marca en qué puntos te conviene actuar, y mientras más alta salga, más urgente es corregir. Como referencia, no debería superar del 2.5% al 4% de las ventas; si pasas del 2.5%, todo lo que logres recortar se suma directo a tu rendimiento sobre ventas. Usa esos números para darle prioridad a la prevención por encima de la inspección y conviértelos en una medición que repites con regularidad.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1617",
+        "frase": "The cost of quality is not an absolute performance measurement"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

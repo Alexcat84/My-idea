@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Auditoría de Calidad en Recepción y Aceptación de Proveedores",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, que la supervisión no revierta los rechazos salvo en casos muy inusuales, que expeditadores, compras y control de producción queden fuera del área de trabajo y que los proveedores tomen conciencia de calidad. Incluye un protocolo de siete pasos para que el auditor externo aporte resultados positivos sin dañar la operación visitada.",
+  "resumen_teorico": "Es una forma ordenada de revisar cómo recibes y aceptas los materiales de tus proveedores. Comprueba que cada inspección se haga según lo que dice la orden de compra y no según registros viejos; que un lote rechazado vuelva al proveedor en lugar de corregirlo tú; que quien supervisa no anule un rechazo, salvo en casos muy excepcionales; que quienes apuran pedidos, quienes compran y quienes controlan la producción no entren al área de trabajo, y que tus proveedores tomen conciencia de la calidad. Trae además un protocolo de siete pasos para que quien audita desde fuera deje resultados útiles sin perjudicar la operación que visita.",
   "pasos_accionables": [
     "Reunirse con el gerente de calidad para revisar la situación general y objetivos",
     "Reunirse con el gerente general para explicar el plan de auditoría y comprometer la entrega de un informe antes de partir",
@@ -145,6 +145,22 @@
       },
       "decision": "copia fiel (regla D2, ola k08): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-auditoria_calidad_proveedores-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Procedimiento estructurado para auditar la operación de aceptación de materiales de proveedores, asegurando que las inspecciones se realicen contra los términos de la orden de compra (no contra registros históricos), que los lotes rechazados se devuelvan al proveedor en vez de corregirse internamente, que la supervisión no revierta los rechazos salvo en casos muy inusuales, que expeditadores, compras y control de producción queden fuera del área de trabajo y que los proveedores tomen conciencia de calidad. Incluye un protocolo de siete pasos para que el auditor externo aporte resultados positivos sin dañar la operación visitada.",
+      "texto_nuevo": "Es una forma ordenada de revisar cómo recibes y aceptas los materiales de tus proveedores. Comprueba que cada inspección se haga según lo que dice la orden de compra y no según registros viejos; que un lote rechazado vuelva al proveedor en lugar de corregirlo tú; que quien supervisa no anule un rechazo, salvo en casos muy excepcionales; que quienes apuran pedidos, quienes compran y quienes controlan la producción no entren al área de trabajo, y que tus proveedores tomen conciencia de la calidad. Trae además un protocolo de siete pasos para que quien audita desde fuera deje resultados útiles sin perjudicar la operación que visita.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "2965-2973",
+        "frase": "Inspections and tests on vendor-supplied items should be conducted to the terms"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

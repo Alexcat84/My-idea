@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Reservar en el calendario el tiempo de ejecutar, que suele ser solitario y por eso a menudo se queda sin apuntar",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas a menudo se queda fuera de él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+  "resumen_teorico": "Lo habitual es ejecutar en solitario, mientras que el calendario sirve casi siempre para lo que haces con otros: fijar reuniones y similares. Por eso el trabajo a solas a menudo ni se anota. Como jefe, te corresponde vigilar que la colaboración no absorba tanto de tu tiempo ni del de tu equipo que no quede margen para ejecutar. Así que reserva en tu agenda bloques para llevar a cabo el plan ya decidido y aceptado, y procura que ese espacio exista tanto para ti como para tu gente.",
   "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 385 a 387, bajo el rotulo Block time to execute, y es la TERCERA de las tres partes que la linea 373 enumera dentro del paso EXECUTE de la rueda de hacer cosas. Su madre es minimizar_impuesto_colaboracion_equipo, que la nombra en su paso 4, y la arista va bajo D.37. ES LA PIEZA MAS DELGADA DE TODO EL CAPITULO Y LO DIGO ANTES QUE NADIE: cuatro pasos de un solo parrafo de tres frases. La escribo igual porque el libro la cuenta como una de las tres, con su rotulo propio, y porque tiene su causa nombrada (el calendario solo recoge lo colaborativo) y su acto (bloquear el tiempo). D.30 avisa de que un parrafo pobre no produce un nodo pobre sino un nodo inventado, asi que aqui hice lo contrario de completar: me quede en los cuatro actos que las tres frases dicen, y el nodo se queda corto a proposito. LO QUE HABRIA SIDO PUENTE Y NO ESCRIBI: cuanto tiempo se bloquea, con que frecuencia, y si se bloquea tambien el de cada persona del equipo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. Los cuatro de la linea 387.",
   "pasos_accionables": [
     "Cuenta con que ejecutar suele ser una tarea solitaria.",
@@ -23,7 +23,7 @@
     "aprender_resultados_vencer_dos_presiones"
   ],
   "condiciones_activacion": [
-    "Cuando las tareas colaborativas se están comiendo tu calendario o el de tu equipo y no queda hueco para ejecutar el plan que ya se decidió y se aceptó."
+    "Cuando el trabajo en conjunto llena tanto tu agenda o la de tu equipo que no hay manera de sacar tiempo para llevar a cabo el plan ya decidido y aceptado."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -207,6 +207,39 @@
       },
       "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-reservar_calendario_tiempo_ejecutar-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando las tareas colaborativas se están comiendo tu calendario o el de tu equipo y no queda hueco para ejecutar el plan que ya se decidió y se aceptó.",
+      "texto_nuevo": "Cuando el trabajo en conjunto llena tanto tu agenda o la de tu equipo que no hay manera de sacar tiempo para llevar a cabo el plan ya decidido y aceptado.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_07.md",
+        "lineas": "387",
+        "frase": "One of your jobs as a manager is to make sure that collaborative"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-reservar_calendario_tiempo_ejecutar-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas a menudo se queda fuera de él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+      "texto_nuevo": "Lo habitual es ejecutar en solitario, mientras que el calendario sirve casi siempre para lo que haces con otros: fijar reuniones y similares. Por eso el trabajo a solas a menudo ni se anota. Como jefe, te corresponde vigilar que la colaboración no absorba tanto de tu tiempo ni del de tu equipo que no quede margen para ejecutar. Así que reserva en tu agenda bloques para llevar a cabo el plan ya decidido y aceptado, y procura que ese espacio exista tanto para ti como para tu gente.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_07.md",
+        "lineas": "387",
+        "frase": "Often, execution is a solitary task. We use calendars mostly"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Acción Correctiva (Paso 6)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección, auditoría o autoevaluación. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
+  "resumen_teorico": "Cuando tu gente se anima a contar con franqueza sus problemas, aparecen cosas que corregir, y no solo los defectos que ya atrapan la inspección, la auditoría o la autoevaluación. Lleva esos problemas a las reuniones de supervisión de cada nivel, y el que no tenga solución en el nivel donde surgió, súbelo de manera formal al siguiente.",
   "pasos_accionables": [
     "Establecer reuniones regulares de supervisión para tratar problemas de calidad",
     "Escalar problemas no resueltos al siguiente nivel jerárquico",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro nombra tres fuentes de defectos detectados (inspección, auditoría o autoevaluación) y el resumen deja solo una.; Mismo defecto: la enumeración de tres fuentes queda reducida a la inspección.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-accion_correctiva_4-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "A medida que los empleados hablan abiertamente de sus problemas, surgen oportunidades de corrección más allá de los defectos detectados por inspección, auditoría o autoevaluación. Estos problemas deben tratarse en reuniones de supervisión en cada nivel, y escalarse formalmente si no pueden resolverse en el nivel inicial.",
+      "texto_nuevo": "Cuando tu gente se anima a contar con franqueza sus problemas, aparecen cosas que corregir, y no solo los defectos que ya atrapan la inspección, la auditoría o la autoevaluación. Lleva esos problemas a las reuniones de supervisión de cada nivel, y el que no tenga solución en el nivel donde surgió, súbelo de manera formal al siguiente.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "1629",
+        "frase": "As people are encouraged to talk about their problems, opportunities for correction come"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

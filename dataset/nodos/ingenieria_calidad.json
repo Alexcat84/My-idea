@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ingeniería de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "La ingeniería de calidad es la parte de tu trabajo donde decides qué se inspecciona, quién revisa qué y qué datos necesitas recoger para que el control de calidad funcione de verdad. Tienes que coordinar con quien diseña el producto y con quien lo fabrica para definir cómo se inspecciona, se prueba y se controla durante toda su vida.",
+  "resumen_teorico": "La ingeniería de calidad es la parte de tu trabajo en la que planificas el control: quién revisa cada cosa, qué se inspecciona y qué datos hace falta reunir para que ese control funcione de verdad. Con quien diseña el producto y con quien lo fabrica acuerdas, para todo su ciclo de vida, cómo vas a revisarlo, ponerlo a prueba y mantenerlo bajo control.",
   "pasos_accionables": [
     "Define junto con quien diseña las características de desempeño del producto nuevo",
     "Coordina con quien fabrica el método de producción y los puntos donde hay que controlar",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Planifica tu Control de Calidad",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-ingenieria_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La ingeniería de calidad es la parte de tu trabajo donde decides qué se inspecciona, quién revisa qué y qué datos necesitas recoger para que el control de calidad funcione de verdad. Tienes que coordinar con quien diseña el producto y con quien lo fabrica para definir cómo se inspecciona, se prueba y se controla durante toda su vida.",
+      "texto_nuevo": "La ingeniería de calidad es la parte de tu trabajo en la que planificas el control: quién revisa cada cosa, qué se inspecciona y qué datos hace falta reunir para que ese control funcione de verdad. Con quien diseña el producto y con quien lo fabrica acuerdas, para todo su ciclo de vida, cómo vas a revisarlo, ponerlo a prueba y mantenerlo bajo control.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "791-793",
+        "frase": "Quality engineers should collaborate with design engineering concerning a new product's performance characteristics"
+      },
+      "decision": "copia fiel (regla D2, ola k22): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }
