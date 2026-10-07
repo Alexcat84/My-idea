@@ -7,12 +7,12 @@
   "resumen_teorico": "Reducir el exceso de empaque (cuidando lo frágil o peligroso) y mejorar el 'load factor' (porcentaje de capacidad utilizada de un vehículo o contenedor) disminuye costos de combustible y emisiones. Estrategias incluyen eliminar elementos innecesarios en el envío, rediseñar empaques para optimizar el apilamiento, cambiar a materiales reutilizables/reciclables, usar software de planificación de carga y consolidar cargas por volumen y peso.",
   "pasos_accionables": [
     "Auditar el contenido de los envíos para eliminar elementos innecesarios (manuales, cables duplicados, cajas extra).",
-    "Rediseñar el empaque para mejorar el apilamiento y aumentar el 'load factor' por pallet o contenedor.",
+    "Rediseñar el empaque para mejorar el apilamiento y aumentar el factor de carga por pallet o contenedor.",
     "Evaluar la transición a empaques reutilizables o reciclables (pallets plásticos, contenedores retornables).",
     "Implementar software de planificación de carga que considere tamaño, peso, apilabilidad y normativas.",
     "Calcular el impacto de la optimización en costos de combustible y emisiones por unidad enviada."
   ],
-  "entregable_esperado": "Rediseño de empaque y protocolo de carga con métricas de mejora en 'load factor' y reducción de costos de envío.",
+  "entregable_esperado": "Rediseño de empaque y protocolo de carga con métricas de mejora en el factor de carga y reducción de costos de envío.",
   "nodos_previos": [
     "gestion_logistica_verde"
   ],
@@ -43,6 +43,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que lo frágil o peligroso a veces necesita mucho empaque y que recortarlo falló; el nodo no pone ese límite.; El libro incluye consolidar cargas llenando volumen y peso, palanca central del 'load factor' que el nodo omite.; Mismo defecto que la marca 0: se pierde el límite de proteger lo frágil o peligroso.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-empaque_ecoeficiente-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rediseñar el empaque para mejorar el apilamiento y aumentar el 'load factor' por pallet o contenedor.",
+      "texto_nuevo": "Rediseñar el empaque para mejorar el apilamiento y aumentar el factor de carga por pallet o contenedor.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'load factor'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-empaque_ecoeficiente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rediseño de empaque y protocolo de carga con métricas de mejora en 'load factor' y reducción de costos de envío.",
+      "texto_nuevo": "Rediseño de empaque y protocolo de carga con métricas de mejora en el factor de carga y reducción de costos de envío.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'load factor'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

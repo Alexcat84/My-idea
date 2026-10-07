@@ -7,12 +7,12 @@
   "resumen_teorico": "Un freight forwarder es un agente especializado en el envío de mercancía a destinos internacionales. Conoce las regulaciones de importación extranjeras, las normativas de exportación de EE.UU., métodos de envío y documentación necesaria. Asiste en cotizaciones de precios, recomienda métodos de empaque, reserva espacio en transporte y revisa documentación antes del embarque. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar necesidades de envío (volumen, tipo de carga, destino)",
-    "Buscar freight forwarders licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
+    "Buscar agentes de carga licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
     "Solicitar cotización que incluya fletes, tasas portuarias, tasas consulares, costos de documentación especial, seguros y honorarios",
-    "Delegar preparación de documentación y filing electrónico en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
-    "Coordinar con freight forwarder la reserva de espacio en el medio de transporte (booking contract)"
+    "Delegar preparación de documentación y presentación electrónica en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+    "Coordinar con el agente de carga la reserva de espacio en el medio de transporte (booking contract)"
   ],
-  "entregable_esperado": "Contrato o acuerdo de servicio con un freight forwarder seleccionado",
+  "entregable_esperado": "Contrato o acuerdo de servicio con un agente de carga seleccionado",
   "nodos_previos": [
     "plataformas_comercio_electronico_marketplaces"
   ],
@@ -79,6 +79,73 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja delegar la documentación pero advierte que el exportador sigue siendo el responsable último de su exactitud; el paso pierde ese límite.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-seleccion_agente_carga_internacional-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar freight forwarders licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
+      "texto_nuevo": "Buscar agentes de carga licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_agente_carga_internacional-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Delegar preparación de documentación y filing electrónico en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "texto_nuevo": "Delegar preparación de documentación y presentación electrónica en AES, sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "filing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_agente_carga_internacional-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Coordinar con freight forwarder la reserva de espacio en el medio de transporte (booking contract)",
+      "texto_nuevo": "Coordinar con el agente de carga la reserva de espacio en el medio de transporte (booking contract)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "con freight forwarder"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_agente_carga_internacional-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contrato o acuerdo de servicio con un freight forwarder seleccionado",
+      "texto_nuevo": "Contrato o acuerdo de servicio con un agente de carga seleccionado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarder"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

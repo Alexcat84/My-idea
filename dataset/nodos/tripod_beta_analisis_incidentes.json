@@ -6,14 +6,14 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Tripod-Beta es una herramienta computarizada para realizar análisis de incidentes en paralelo con la investigación del evento. Trabaja retrocediendo desde la pérdida hasta identificar las defensas fallidas, los fallos activos y latentes, y las condiciones previas (preconditions) asociadas a Tipos Generales de Fallo (GFTs). Es compatible con Tripod-Delta y el Hazard and Effects Management Process (HEMP) de Shell.",
   "pasos_accionables": [
-    "Definir el evento de pérdida (target dañado) como punto de partida del análisis",
+    "Definir el evento de pérdida (elemento dañado) como punto de partida del análisis",
     "Retroceder para identificar la defensa que falló y el peligro que alcanzó al objetivo",
     "Determinar si el fallo de la defensa fue activo o latente",
     "Identificar las precondiciones en el lugar de trabajo asociadas al fallo activo",
     "Vincular las precondiciones con los Tipos Generales de Fallo (GFTs) latentes correspondientes",
-    "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el reporte de accidente para edición final"
+    "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el informe de accidente para edición final"
   ],
-  "entregable_esperado": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, y reporte de accidente generado",
+  "entregable_esperado": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, e informe de accidente generado",
   "nodos_previos": [
     "meda_analisis_error_mantenimiento"
   ],
@@ -78,6 +78,56 @@
       },
       "decision": "quita pura (guarda engine/test_procedencia_nombres.py): sale la organizacion de origen del metodo, sin palabras nuevas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-tripod_beta_analisis_incidentes-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el evento de pérdida (target dañado) como punto de partida del análisis",
+      "texto_nuevo": "Definir el evento de pérdida (elemento dañado) como punto de partida del análisis",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "target dañado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_beta_analisis_incidentes-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el reporte de accidente para edición final",
+      "texto_nuevo": "Generar el árbol de incidente, comprobar que su lógica se ajuste a la teoría Tripod y a HEMP, resolver las anomalías y luego generar el informe de accidente para edición final",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte de accidente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tripod_beta_analisis_incidentes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, y reporte de accidente generado",
+      "texto_nuevo": "Árbol de incidente (incident tree) completo con causas activas y latentes identificadas, e informe de accidente generado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "y reporte de accidente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

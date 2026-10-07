@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Preparar un pronóstico de flujo de caja, a veces de hasta 12 meses.",
     "Elaborar un presupuesto anual con actualizaciones mensuales.",
-    "Compartir proactivamente los planes de negocio y forecasts con el banquero.",
+    "Compartir proactivamente los planes de negocio y pronósticos con el banquero.",
     "Comunicar problemas financieros con anticipación, sin ocultarlos.",
     "Invitar al banquero a conocer la operación y el proceso de planificación."
   ],
-  "entregable_esperado": "Paquete financiero completo (estados financieros + forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+  "entregable_esperado": "Paquete financiero completo (estados financieros + pronóstico de flujo de caja + presupuesto anual) listo para presentar al banco.",
   "nodos_previos": [
     "ciclo_de_conversion_de_efectivo",
     "gestion_riesgo_credito",
@@ -79,6 +79,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el pronóstico a veces llega a doce meses; el nodo fija el plazo.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gestion_relacion_bancaria-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compartir proactivamente los planes de negocio y forecasts con el banquero.",
+      "texto_nuevo": "Compartir proactivamente los planes de negocio y pronósticos con el banquero.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forecasts"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_relacion_bancaria-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paquete financiero completo (estados financieros + forecast de cash flow + presupuesto anual) listo para presentar al banco.",
+      "texto_nuevo": "Paquete financiero completo (estados financieros + pronóstico de flujo de caja + presupuesto anual) listo para presentar al banco.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forecast de cash flow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

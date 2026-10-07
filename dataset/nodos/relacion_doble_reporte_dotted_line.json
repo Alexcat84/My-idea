@@ -7,11 +7,11 @@
   "resumen_teorico": "Estructura organizacional en la que un especialista (por ejemplo, un estadístico o comptroller local) reporta simultáneamente a dos autoridades: una funcional/técnica (ej. líder de metodología estadística o VP/CFO) y otra operativa/administrativa (ej. jefe de división o gerente de planta). Esta relación asegura que la experticia técnica se mantenga alineada globalmente mientras se atienden las necesidades locales del día a día, evitando que la presión operativa comprometa la calidad de las prácticas técnicas.",
   "pasos_accionables": [
     "Identificar roles técnicos críticos que requieran doble supervisión (estadística, calidad, finanzas, legal, seguridad)",
-    "Definir claramente qué aspectos reporta el especialista a cada autoridad (día a día vs. metodología/formación)",
+    "Definir claramente qué aspectos informa el especialista a cada autoridad (día a día vs. metodología/formación)",
     "Comunicar la estructura a ambas partes para evitar conflictos de autoridad",
     "Usar esta estructura para prevenir que se recompense a alguien por justificar malas prácticas estadísticas propuestas por su división"
   ],
-  "entregable_esperado": "Documento de gobernanza que defina las líneas de reporte dual y las responsabilidades específicas de cada una",
+  "entregable_esperado": "Documento de gobernanza que defina las dos líneas de dependencia jerárquica y las responsabilidades específicas de cada una",
   "nodos_previos": [
     "organizacion_liderazgo_estadistico"
   ],
@@ -41,6 +41,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro habla solo de malas prácticas estadísticas propuestas por la división; 'u operativas' lo añade el nodo.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-relacion_doble_reporte_dotted_line-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir claramente qué aspectos reporta el especialista a cada autoridad (día a día vs. metodología/formación)",
+      "texto_nuevo": "Definir claramente qué aspectos informa el especialista a cada autoridad (día a día vs. metodología/formación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporta"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-relacion_doble_reporte_dotted_line-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de gobernanza que defina las líneas de reporte dual y las responsabilidades específicas de cada una",
+      "texto_nuevo": "Documento de gobernanza que defina las dos líneas de dependencia jerárquica y las responsabilidades específicas de cada una",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "líneas de reporte dual"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

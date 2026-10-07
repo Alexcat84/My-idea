@@ -7,14 +7,14 @@
   "resumen_teorico": "Consiste en transformar procesos técnicos y complejos (como implementaciones de software) en experiencias visuales y lúdicas, por ejemplo mediante un rompecabezas físico donde cada pieza representa un paso completado. Esto reduce el estrés del cliente, aumenta la comprensión de procesos técnicos y genera un artefacto memorable (souvenir) al finalizar, reforzando la satisfacción y el sentido de logro compartido.",
   "pasos_accionables": [
     "Documentar y simplificar el proceso interno en pasos discretos y nombrados de forma simple",
-    "Diseñar un elemento visual o lúdico (rompecabezas, checklist ilustrado, barra de progreso) que represente cada paso",
-    "Entregar el elemento físico o digital al inicio del proceso, junto con el kickoff",
-    "Actualizar y comunicar el avance con cada hito completado usando imágenes en emails o mensajes",
+    "Diseñar un elemento visual o lúdico (rompecabezas, lista de verificación ilustrada, barra de progreso) que represente cada paso",
+    "Entregar el elemento físico o digital al inicio del proceso, junto con la reunión de arranque",
+    "Actualizar y comunicar el avance con cada hito completado usando imágenes en correos o mensajes",
     "Celebrar la finalización con un evento o pieza final que sirva como recuerdo tangible",
     "Enviar solo la información necesaria para el paso actual, evitando saturar al cliente con todo el proceso de una vez.",
     "Anticipar el siguiente paso en cada comunicación para generar expectativa."
   ],
-  "entregable_esperado": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación u onboarding",
+  "entregable_esperado": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación o incorporación de clientes",
   "nodos_previos": [
     "fase_acclimate_experiencia_cliente",
     "conversacion_emocional_postcompra",
@@ -40,5 +40,74 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-gamificacion_onboarding_visual-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar un elemento visual o lúdico (rompecabezas, checklist ilustrado, barra de progreso) que represente cada paso",
+      "texto_nuevo": "Diseñar un elemento visual o lúdico (rompecabezas, lista de verificación ilustrada, barra de progreso) que represente cada paso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist ilustrado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gamificacion_onboarding_visual-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entregar el elemento físico o digital al inicio del proceso, junto con el kickoff",
+      "texto_nuevo": "Entregar el elemento físico o digital al inicio del proceso, junto con la reunión de arranque",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el kickoff"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gamificacion_onboarding_visual-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualizar y comunicar el avance con cada hito completado usando imágenes en emails o mensajes",
+      "texto_nuevo": "Actualizar y comunicar el avance con cada hito completado usando imágenes en correos o mensajes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gamificacion_onboarding_visual-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación u onboarding",
+      "texto_nuevo": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación o incorporación de clientes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "u onboarding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

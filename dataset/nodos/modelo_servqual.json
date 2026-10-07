@@ -11,7 +11,7 @@
     "Comparar expectativas vs. percepciones por dimensión",
     "Priorizar mejoras en las dimensiones con mayor brecha"
   ],
-  "entregable_esperado": "Reporte de brechas de calidad percibida por dimensión SERVQUAL",
+  "entregable_esperado": "Informe de brechas de calidad percibida por dimensión SERVQUAL",
   "nodos_previos": [
     "medicion_capacidad_servicio"
   ],
@@ -101,6 +101,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-modelo_servqual-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de brechas de calidad percibida por dimensión SERVQUAL",
+      "texto_nuevo": "Informe de brechas de calidad percibida por dimensión SERVQUAL",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

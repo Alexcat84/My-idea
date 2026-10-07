@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Redactar el alcance del proyecto (producto y mercados a atender)",
     "Definir los resultados esperados (metas de ventas, desempeño, etc.)",
-    "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), benchmarking o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
+    "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), comparación con referentes o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
     "Verificar que la meta cumpla los cinco criterios SMART",
-    "Evitar sobre-especificar restricciones que limiten alternativas de diseño"
+    "Evitar sobreespecificar restricciones que limiten alternativas de diseño"
   ],
-  "entregable_esperado": "Documento de goal statement validado con los cinco criterios SMART cumplidos",
+  "entregable_esperado": "Documento de declaración de metas validado con los cinco criterios SMART cumplidos",
   "nodos_previos": [
     "establecer_proyecto_y_metas_diseno"
   ],
@@ -44,6 +44,54 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Con base en el mercado, el libro pide igualar o superar a la competencia prevista al terminar el proyecto.; Mismo defecto: falta la advertencia sobre el mal uso de la base histórica.; Se pierde la advertencia de vigilar que la base histórica perpetúe un desempeño crónicamente derrochador.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-goal_statement_smart-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), benchmarking o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
+      "texto_nuevo": "Seleccionar la base para las metas: tecnología, mercado (igualar o superar a la competencia prevista al terminar el proyecto), comparación con referentes o historia (vigilando que no perpetúe un desempeño crónicamente derrochador)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-goal_statement_smart-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evitar sobre-especificar restricciones que limiten alternativas de diseño",
+      "texto_nuevo": "Evitar sobreespecificar restricciones que limiten alternativas de diseño",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v05)",
+        "evidencia": "El prefijo 'sobre' se escribe unido a la palabra, sin guion; la palabra es la misma."
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-goal_statement_smart-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de goal statement validado con los cinco criterios SMART cumplidos",
+      "texto_nuevo": "Documento de declaración de metas validado con los cinco criterios SMART cumplidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "goal statement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

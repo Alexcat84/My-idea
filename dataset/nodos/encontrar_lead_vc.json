@@ -12,7 +12,7 @@
     "Tratar a los VCs en modo 'no lento' como un no definitivo y dejar de invertir tiempo en ellos",
     "Intentar generar competencia entre varios VCs interesados sin revelar con quién más se habla"
   ],
-  "entregable_esperado": "Mapa claro de inversionistas en conversación clasificados por nivel de interés, con un lead VC identificado o en proceso de cierre",
+  "entregable_esperado": "Mapa claro de inversionistas en conversación clasificados por nivel de interés, con un inversionista líder identificado o en proceso de cierre",
   "nodos_previos": [
     "encontrar_vc_adecuado",
     "presentacion_inversionistas",
@@ -70,6 +70,22 @@
         "motivo": "Los blueprints de contratacion de empleados no preparan la identificacion de un VC lider en una ronda. Los temas no tienen que ver."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "voz-encontrar_lead_vc-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapa claro de inversionistas en conversación clasificados por nivel de interés, con un lead VC identificado o en proceso de cierre",
+      "texto_nuevo": "Mapa claro de inversionistas en conversación clasificados por nivel de interés, con un inversionista líder identificado o en proceso de cierre",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "lead VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

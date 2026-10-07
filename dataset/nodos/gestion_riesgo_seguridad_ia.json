@@ -6,8 +6,8 @@
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Es una debilidad conocida de estos sistemas: actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude, y puede que estos ataques deliberados no se puedan evitar del todo.",
   "pasos_accionables": [
-    "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, emails)",
-    "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+    "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, correos)",
+    "Realizar pruebas de penetración (red teaming) intentando los trucos comunes para que la IA rompa sus reglas antes de lanzar el producto",
     "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
     "Monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación"
   ],
@@ -170,6 +170,40 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-gestion_riesgo_seguridad_ia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, emails)",
+      "texto_nuevo": "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, correos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_riesgo_seguridad_ia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+      "texto_nuevo": "Realizar pruebas de penetración (red teaming) intentando los trucos comunes para que la IA rompa sus reglas antes de lanzar el producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "jailbreaks comunes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

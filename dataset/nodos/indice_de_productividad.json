@@ -7,12 +7,12 @@
   "resumen_teorico": "Refinamiento del ranking por NPV que maximiza el valor del portafolio considerando recursos limitados. Se calcula dividiendo el NPV entre el recurso restrictivo (por ejemplo, costo de desarrollo restante), obteniendo un 'bang for the buck'. Esto favorece proyectos eficientes y casi terminados sobre proyectos grandes pero costosos en recursos, generando una cartera de mayor valor total dado un presupuesto fijo. No se usa en las primeras compuertas, donde mataría todo salvo lo seguro.",
   "pasos_accionables": [
     "Identificar el recurso restrictivo (presupuesto de I+D, capital, personas)",
-    "Calcular el Índice de Productividad = NPV / Costo de desarrollo restante (go-forward costs, no sunk costs)",
+    "Calcular el Índice de Productividad = valor presente neto / Costo de desarrollo restante (costos por incurrir, no costos hundidos)",
     "Reordenar los proyectos de mayor a menor Índice de Productividad",
     "Sumar acumulativamente los recursos consumidos hasta agotar el presupuesto disponible",
-    "Seleccionar como Go los proyectos hasta el límite de recursos"
+    "Seleccionar como aprobados los proyectos hasta el límite de recursos"
   ],
-  "entregable_esperado": "Lista reordenada de proyectos por Índice de Productividad con la selección óptima de proyectos Go dado el presupuesto",
+  "entregable_esperado": "Lista reordenada de proyectos por Índice de Productividad con la selección óptima de proyectos aprobados dado el presupuesto",
   "nodos_previos": [
     "ranking_proyectos_por_npv",
     "monte_carlo_simulation_model"
@@ -43,6 +43,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro limita el análisis financiero con el Índice de Productividad: no en las primeras compuertas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-indice_de_productividad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el Índice de Productividad = NPV / Costo de desarrollo restante (go-forward costs, no sunk costs)",
+      "texto_nuevo": "Calcular el Índice de Productividad = valor presente neto / Costo de desarrollo restante (costos por incurrir, no costos hundidos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV",
+          "(go-forward costs, no sunk costs)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-indice_de_productividad-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar como Go los proyectos hasta el límite de recursos",
+      "texto_nuevo": "Seleccionar como aprobados los proyectos hasta el límite de recursos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "como Go"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-indice_de_productividad-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista reordenada de proyectos por Índice de Productividad con la selección óptima de proyectos Go dado el presupuesto",
+      "texto_nuevo": "Lista reordenada de proyectos por Índice de Productividad con la selección óptima de proyectos aprobados dado el presupuesto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "proyectos Go"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

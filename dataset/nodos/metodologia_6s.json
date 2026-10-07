@@ -6,14 +6,14 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El 6S es una técnica japonesa de lean manufacturing para organizar tu lugar de trabajo, prevenir defectos y accidentes, y mejorar el flujo de trabajo. Es simple de implementar y debe aplicarse antes de poner en marcha otras soluciones de mejora de procesos, ya que sirve como base. Reduce el tiempo perdido buscando herramientas, documentación u otros insumos necesarios para producir bienes o servicios. Consta de seis pasos: clasificar lo necesario, ordenarlo para fácil acceso, limpiar el área, estandarizar la limpieza como hábito, sostener la disciplina creando las condiciones de tiempo, recursos e incentivos necesarias, y asegurar la seguridad en cada operación.",
   "pasos_accionables": [
-    "Sort: elimina de tu área de trabajo todo lo que no necesites",
-    "Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente",
-    "Shine: limpia tu espacio y mantenlo libre de suciedad",
-    "Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito",
-    "Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo",
-    "Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo"
+    "Clasificar: elimina de tu área de trabajo todo lo que no necesites",
+    "Ordenar: organiza tus herramientas y materiales para acceder y devolverlos fácilmente",
+    "Limpiar: limpia tu espacio y mantenlo libre de suciedad",
+    "Estandarizar: crea procedimientos que conviertan la limpieza y el orden en un hábito",
+    "Sostener: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo",
+    "Seguridad: revisa e integra prácticas seguras en cada etapa de tu trabajo"
   ],
-  "entregable_esperado": "Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido",
+  "entregable_esperado": "Área de trabajo organizada según los 6 principios 6S, con lista de verificación de auditoría periódica establecida",
   "nodos_previos": [
     "introduccion_lean",
     "error_proofing_servicio"
@@ -91,6 +91,125 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sort: elimina de tu área de trabajo todo lo que no necesites",
+      "texto_nuevo": "Clasificar: elimina de tu área de trabajo todo lo que no necesites",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sort:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Set in order: organiza tus herramientas y materiales para acceder y devolverlos fácilmente",
+      "texto_nuevo": "Ordenar: organiza tus herramientas y materiales para acceder y devolverlos fácilmente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Set in order:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Shine: limpia tu espacio y mantenlo libre de suciedad",
+      "texto_nuevo": "Limpiar: limpia tu espacio y mantenlo libre de suciedad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Shine:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Standardize: crea procedimientos que conviertan la limpieza y el orden en un hábito",
+      "texto_nuevo": "Estandarizar: crea procedimientos que conviertan la limpieza y el orden en un hábito",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Standardize:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sustain: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo",
+      "texto_nuevo": "Sostener: reserva tiempo, recursos e incentivos para sostener la disciplina en el tiempo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sustain:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Safety: revisa e integra prácticas seguras en cada etapa de tu trabajo",
+      "texto_nuevo": "Seguridad: revisa e integra prácticas seguras en cada etapa de tu trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Safety:"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodologia_6s-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Área de trabajo organizada según los 6 principios 6S, con checklist de auditoría periódica establecido",
+      "texto_nuevo": "Área de trabajo organizada según los 6 principios 6S, con lista de verificación de auditoría periódica establecida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist",
+          "establecido"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

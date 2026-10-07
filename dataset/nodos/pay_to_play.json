@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Provisión que obliga a los inversionistas existentes a participar proporcionalmente (pro rata) en futuras rondas calificadas (Qualified Financing) para mantener sus derechos como acciones preferentes; si no participan, sus acciones pasan a comunes y pierden privilegios como la liquidación preferente. Puede no ser apropiada si tus inversionistas, como un fondo semilla, no suelen invertir en rondas posteriores.",
   "pasos_accionables": [
-    "Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.",
-    "Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.",
+    "Definir qué constituye una ronda de financiamiento calificada que gatilla la cláusula.",
+    "Establecer el porcentaje pro rata mínimo requerido para mantener la condición preferente.",
     "Negociar si la conversión a común es total o parcial según el nivel de participación, y evitar versiones que permitan al inversionista forzar una recapitalización de la empresa si otros inversionistas no participan.",
     "Permitir la asignación de derechos a fondos afiliados del inversionista."
   ],
-  "entregable_esperado": "Cláusula pay-to-play definida en el term sheet con mecánica de conversión clara.",
+  "entregable_esperado": "Cláusula de participación obligatoria definida en la hoja de términos con mecánica de conversión clara.",
   "nodos_previos": [
     "antidilucion_provisiones",
     "term_sheet_negociacion",
@@ -27,7 +27,7 @@
     "Cuando se busca incentivar a inversionistas existentes a seguir invirtiendo en rondas futuras",
     "Si existe riesgo de que inversionistas no participen en rondas posteriores necesarias"
   ],
-  "etiqueta_arbol": "Participa o Pierde tus Derechos",
+  "etiqueta_arbol": "Obliga a tus Inversionistas a Participar",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
   ],
@@ -64,6 +64,71 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte evitar la versión que permite al inversionista forzar una recapitalización si otros no participan.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-pay_to_play-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Participa o Pierde tus Derechos",
+      "texto_nuevo": "Obliga a tus Inversionistas a Participar",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v05)",
+        "evidencia": "La etiqueta le habla a la persona como si fuera la inversionista obligada, cuando el concepto es una cláusula que obliga a sus inversionistas a participar; la nueva etiqueta dice eso, en segunda persona y con 6 palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pay_to_play-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir qué constituye una 'Qualified Financing' que gatilla la cláusula.",
+      "texto_nuevo": "Definir qué constituye una ronda de financiamiento calificada que gatilla la cláusula.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Qualified Financing'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pay_to_play-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer el porcentaje pro rata mínimo requerido para mantener status preferente.",
+      "texto_nuevo": "Establecer el porcentaje pro rata mínimo requerido para mantener la condición preferente.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "status preferente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pay_to_play-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula pay-to-play definida en el term sheet con mecánica de conversión clara.",
+      "texto_nuevo": "Cláusula de participación obligatoria definida en la hoja de términos con mecánica de conversión clara.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pay-to-play",
+          "el term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Realizar revisiones de diseño formales en distintas etapas del desarrollo con especialistas externos al equipo",
     "Conformar equipos multifuncionales que incluyan a todos los interesados en el resultado del diseño",
     "Establecer reglas básicas de negociación estructurada entre clientes y proveedores antes de las reuniones",
-    "Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA"
+    "Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y de modo y efecto de falla (AMEF)"
   ],
   "entregable_esperado": "Diseño de producto optimizado con documentación de revisiones, decisiones de equipo multifuncional y resultados de negociaciones estructuradas",
   "nodos_previos": [
@@ -24,7 +24,7 @@
     "Cuando el diseño preliminar del producto está completo y se necesita ajustar antes de finalizarlo",
     "Si existen conflictos entre necesidades del cliente y restricciones del proveedor"
   ],
-  "etiqueta_arbol": "Afina las Metas de tu Producto",
+  "etiqueta_arbol": "Afina el Diseño de tu Producto",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
   ],
@@ -44,6 +44,37 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice igualar o superar a la competencia; el nodo exige superarla.; Mismo defecto: endurece 'meeting or beating' a superar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-optimizacion_caracteristicas_diseno-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Afina las Metas de tu Producto",
+      "texto_nuevo": "Afina el Diseño de tu Producto",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v05)",
+        "evidencia": "El concepto trata de optimizar el diseño preliminar del producto, no sus metas; 'el Diseño' recupera el objeto real con la misma forma de etiqueta."
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-optimizacion_caracteristicas_diseno-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y FMEA",
+      "texto_nuevo": "Aplicar herramientas de optimización como análisis competitivo, de vendibilidad, de valor, crítico y de modo y efecto de falla (AMEF)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

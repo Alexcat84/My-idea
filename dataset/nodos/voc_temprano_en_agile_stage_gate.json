@@ -6,13 +6,13 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Existe la creencia errónea de que las metodologías ágiles eliminan la necesidad de investigación de mercado y voz del cliente (VoC) temprana, bajo el argumento de que 'las cosas cambiarán de todos modos'. Esta idea puede convertirse en excusa para la pereza intelectual y saltarse la debida diligencia. En realidad, el VoC temprano sigue siendo esencial para construir el backlog de producto y fundamentar el proyecto, aunque no necesita ser exhaustivo ni perfecto, ya que se validará de forma iterativa durante los sprints con clientes reales. Tú mismo debes garantizar que esta tarea no se omita, evitando tanto la parálisis por análisis como la falta de fundamento de mercado.",
   "pasos_accionables": [
-    "Realizar investigación de mercado y VoC antes de entrar en la etapa de desarrollo, aunque sea liviana",
+    "Realizar investigación de mercado y de la voz del cliente antes de entrar en la etapa de desarrollo, aunque sea liviana",
     "Usar esta información como base tentativa para construir tu backlog de producto inicial",
     "Hacer una evaluación técnica temprana para conocer riesgos y opciones tecnológicas",
     "Comprometerte a no saltarte el análisis previo solo porque 'el producto cambiará'",
     "Planificar validar y refinar estas suposiciones iniciales mediante iteraciones de sprint con clientes reales"
   ],
-  "entregable_esperado": "Reporte de VoC temprano y evaluación técnica inicial que alimenta el backlog de producto, con plan de validación iterativa posterior.",
+  "entregable_esperado": "Reporte de la voz del cliente temprana y evaluación técnica inicial que alimenta el backlog de producto, con plan de validación iterativa posterior.",
   "nodos_previos": [
     "scorecard_descubrimiento_cliente",
     "estrategia_de_innovacion_arenas",
@@ -45,5 +45,40 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-voc_temprano_en_agile_stage_gate-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar investigación de mercado y VoC antes de entrar en la etapa de desarrollo, aunque sea liviana",
+      "texto_nuevo": "Realizar investigación de mercado y de la voz del cliente antes de entrar en la etapa de desarrollo, aunque sea liviana",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VoC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-voc_temprano_en_agile_stage_gate-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de VoC temprano y evaluación técnica inicial que alimenta el backlog de producto, con plan de validación iterativa posterior.",
+      "texto_nuevo": "Reporte de la voz del cliente temprana y evaluación técnica inicial que alimenta el backlog de producto, con plan de validación iterativa posterior.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VoC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

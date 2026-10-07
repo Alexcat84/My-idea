@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Usar MixRank o Adbeat para identificar qué anuncios corren tus competidores y en qué sitios",
     "Analizar con Alexa o Quantcast el perfil de audiencia de esos sitios",
-    "Determinar si esa audiencia es un buen fit para tu producto",
-    "Diseñar tests A/B basados en las ideas observadas en anuncios de competidores"
+    "Determinar si esa audiencia encaja bien con tu producto",
+    "Diseñar pruebas A/B basadas en las ideas observadas en anuncios de competidores"
   ],
   "entregable_esperado": "El inventario de los anuncios y los sitios que corre tu competencia, con el perfil de audiencia de cada sitio y tu veredicto de encaje, y la lista de pruebas A/B que sacas de esos anuncios",
   "nodos_previos": [
@@ -69,6 +69,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que sirven para entender qué anuncios funcionan en tu industria; 'la única' y 'gratis' son añadidos.; Mismo defecto: 'única' y 'gratis' no están en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-inteligencia_de_anuncios_de_la_competencia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si esa audiencia es un buen fit para tu producto",
+      "texto_nuevo": "Determinar si esa audiencia encaja bien con tu producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un buen fit"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inteligencia_de_anuncios_de_la_competencia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar tests A/B basados en las ideas observadas en anuncios de competidores",
+      "texto_nuevo": "Diseñar pruebas A/B basadas en las ideas observadas en anuncios de competidores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tests A/B"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

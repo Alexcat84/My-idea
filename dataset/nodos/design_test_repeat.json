@@ -7,7 +7,7 @@
   "resumen_teorico": "La búsqueda de propuestas de valor que satisfagan jobs, pains y gains del cliente es un proceso iterativo y no secuencial entre diseñar prototipos y probarlos. El objetivo es testear ideas lo más rápido posible para aprender, mejorar el diseño y volver a probar.",
   "pasos_accionables": [
     "Prototipar rápidamente una idea de propuesta de valor.",
-    "Testear el prototipo con clientes reales.",
+    "Probar el prototipo con clientes reales.",
     "Aprender de los resultados y rediseñar.",
     "Repetir el ciclo continuamente."
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Diseña, Prueba y Repite",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-design_test_repeat-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Testear el prototipo con clientes reales.",
+      "texto_nuevo": "Probar el prototipo con clientes reales.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

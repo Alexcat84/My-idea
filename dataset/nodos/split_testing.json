@@ -6,9 +6,9 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Técnica para comparar el desempeño de dos o más opciones (propuestas de valor, precios, textos) enviando tráfico similar a cada variante y midiendo cuál genera mejor tasa de conversión en el CTA.",
   "pasos_accionables": [
-    "Define las variaciones a testear (precio, copy, features, packaging).",
-    "Divide el tráfico equitativamente entre las opciones (control vs. challenge).",
-    "Mide la tasa de conversión del CTA para cada variante.",
+    "Define las variaciones a probar (precio, texto, funciones, empaque).",
+    "Divide el tráfico equitativamente entre las opciones (control vs. variante).",
+    "Mide la tasa de conversión del llamado a la acción para cada variante.",
     "Asegura significancia estadística superior al 95% antes de concluir."
   ],
   "entregable_esperado": "Resultados comparativos de conversión entre variantes con significancia estadística.",
@@ -60,6 +60,60 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-split_testing-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define las variaciones a testear (precio, copy, features, packaging).",
+      "texto_nuevo": "Define las variaciones a probar (precio, texto, funciones, empaque).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testear",
+          "copy",
+          "features",
+          "packaging"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-split_testing-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Divide el tráfico equitativamente entre las opciones (control vs. challenge).",
+      "texto_nuevo": "Divide el tráfico equitativamente entre las opciones (control vs. variante).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "challenge"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-split_testing-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide la tasa de conversión del CTA para cada variante.",
+      "texto_nuevo": "Mide la tasa de conversión del llamado a la acción para cada variante.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CTA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

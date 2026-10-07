@@ -6,10 +6,10 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Toda empresa tiene elementos operativos obligatorios (emails de confirmación, contratos, facturas, mensajes de voicemail) que suelen tratarse como trámites aburridos. Transformar estos elementos requeridos en experiencias memorables y alineadas con la voz de marca puede contrarrestar el remordimiento del comprador y generar boca a boca positivo. El caso de CD Baby, que convirtió un email transaccional en una narrativa divertida, demuestra cómo la creatividad en lo obligatorio genera diferenciación viral.",
   "pasos_accionables": [
-    "Listar todos los elementos 'requeridos' de la operación (confirmaciones, facturas, auto-respuestas, contratos)",
+    "Listar todos los elementos 'requeridos' de la operación (confirmaciones, facturas, autorrespuestas, contratos)",
     "Evaluar cuáles de estos elementos actualmente son genéricos o fríos",
     "Reescribir al menos uno de estos elementos con la voz y personalidad de la marca",
-    "Probar el nuevo mensaje con un grupo pequeño de clientes y medir reacciones (comentarios, shares)",
+    "Probar el nuevo mensaje con un grupo pequeño de clientes y medir reacciones (comentarios, veces que lo comparten)",
     "Escalar el elemento rediseñado a todos los puntos de contacto equivalentes"
   ],
   "entregable_esperado": "Al menos un elemento operativo obligatorio rediseñado con voz de marca distintiva y memorable",
@@ -38,6 +38,38 @@
         "motivo": "Convertir los mensajes obligatorios en experiencias de marca no guarda relacion con la independencia de la funcion de calidad."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-hacer_remarcable_lo_requerido-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Listar todos los elementos 'requeridos' de la operación (confirmaciones, facturas, auto-respuestas, contratos)",
+      "texto_nuevo": "Listar todos los elementos 'requeridos' de la operación (confirmaciones, facturas, autorrespuestas, contratos)",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v05)",
+        "evidencia": "El prefijo 'auto' va unido y la r inicial se duplica: 'autorrespuestas'; es la misma palabra bien escrita."
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-hacer_remarcable_lo_requerido-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Probar el nuevo mensaje con un grupo pequeño de clientes y medir reacciones (comentarios, shares)",
+      "texto_nuevo": "Probar el nuevo mensaje con un grupo pequeño de clientes y medir reacciones (comentarios, veces que lo comparten)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "shares"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

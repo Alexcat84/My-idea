@@ -7,7 +7,7 @@
   "resumen_teorico": "Los intervalos de confianza son útiles para resumir resultados de estudios enumerativos (evidencia legal, por ejemplo), pero no tienen significado operacional para la predicción o planificación futura, y los niveles de significancia no dan ninguna medida del grado de creencia para planificar. El grado de creencia necesario para planificar (por ejemplo, si el Método 2 es mejor que el Método 1 en el futuro) no puede cuantificarse mediante probabilidades estadísticas convencionales; requiere patrones repetidos y repetibles, sin fallas inexplicadas en un rango de condiciones ambientales, y conocimiento del área técnica (subject matter knowledge).",
   "pasos_accionables": [
     "Distinguir claramente entre estudios enumerativos (resumen de datos pasados) y estudios analíticos (predicción futura)",
-    "No usar p-values ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
+    "No usar valores p ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
     "Buscar patrones repetidos y consistentes bajo diferentes condiciones ambientales antes de generalizar",
     "Combinar el análisis estadístico con conocimiento técnico del proceso (química, ingeniería, etc.)"
   ],
@@ -71,6 +71,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: falta la condición de repetirse sin fallas inexplicadas en un rango de condiciones.; Se cae la condición del libro: el patrón debe repetirse sin fallas inexplicadas en un rango de condiciones ambientales.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-limitaciones_intervalos_confianza-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No usar p-values ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
+      "texto_nuevo": "No usar valores p ni intervalos de confianza como base para decisiones de planificación futura, porque no dan ningún grado de creencia para predecir",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "p-values"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

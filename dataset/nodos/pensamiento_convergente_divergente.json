@@ -7,14 +7,14 @@
   "resumen_teorico": "El design thinking se experimenta como una danza entre cuatro estados mentales: el intercambio rítmico entre pensamiento divergente (multiplicar opciones, crear posibilidades) y pensamiento convergente (elegir entre alternativas existentes, eliminar opciones) y el movimiento entre análisis y síntesis. La cultura occidental tiende a favorecer la convergencia rápida, pero la innovación requiere primero divergir ampliamente antes de converger. Cada iteración del proceso es menos amplia y más detallada que la anterior. Si te conformas con la primera buena idea y no exploras muchas opciones, lo probable es que tu solución sea incremental o fácil de copiar, y los plazos ayudan a poner un límite productivo a esa exploración. Detrás hay un contraste: la actitud de decisión asume que generar alternativas es fácil y elegir entre ellas es difícil, mientras que la actitud de diseño asume que diseñar una alternativa sobresaliente es difícil pero que, una vez lograda, elegirla es trivial. Innovar pide actitud de diseño: exploración iterativa, prototipado y tolerancia a la ambigüedad, representada visualmente en el Design Squiggle.",
   "pasos_accionables": [
     "Antes de buscar la solución, dedicar tiempo y energía explícitos a generar deliberadamente múltiples alternativas sin juzgarlas (fase divergente).",
-    "Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.",
+    "Fijar una fecha límite clara para la fase de divergencia, evitando la parálisis por análisis.",
     "Usar la metáfora del embudo: abrir posibilidades ampliamente y luego estrechar hacia soluciones concretas.",
     "Permitir la 'polinización cruzada' entre ideas distintas antes de converger en una.",
     "Alternar conscientemente entre fases de generación de ideas y fases de selección o eliminación de ideas, de forma no lineal entre investigación de mercado, prototipado y generación.",
     "Aceptar que descartar ideas prometedoras ('matar a los hijos favoritos') es parte necesaria del proceso, y evitar adoptar la primera solución razonable.",
     "Aceptar la ambigüedad y la incertidumbre como parte natural del proceso creativo."
   ],
-  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
+  "entregable_esperado": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un conjunto documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
   "nodos_previos": [
     "usuarios_extremos_edge_cases",
     "analisis_y_sintesis",
@@ -83,6 +83,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que sin explorar muchas opciones tus ideas probablemente serán incrementales o fáciles de copiar; el nodo lo convierte en el criterio que las separa.; El libro presenta divergencia y convergencia junto a análisis y síntesis como semillas por igual; no hace a una la más fundamental.; Misma jerarquía inventada que la marca 0.; Mismo endurecimiento que la marca 1: 'likely to be' pasa a ley.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-pensamiento_convergente_divergente-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fijar un deadline claro para la fase de divergencia, evitando la parálisis por análisis.",
+      "texto_nuevo": "Fijar una fecha límite clara para la fase de divergencia, evitando la parálisis por análisis.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un deadline claro"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pensamiento_convergente_divergente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un set documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
+      "texto_nuevo": "Un mapa o registro de iteraciones mostrando ciclos de divergencia y convergencia a lo largo del proyecto, con un conjunto documentado de múltiples alternativas de solución evaluadas antes de cada decisión final",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "set documentado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [
