@@ -7,7 +7,7 @@
   "resumen_teorico": "La gestión de procesos clave de trabajo debe incluir mediciones sistemáticas. La productividad se define como la relación entre el output y los recursos de entrada, y debe calcularse usando únicamente el output aceptable (utilizable por el cliente), no el output total. La selección y reporte periódico de estas unidades de medida comunica al personal que la calidad es prioritaria, sentando las bases para la mejora continua.",
   "pasos_accionables": [
     "Definir las unidades de medida relevantes para cada actividad de manufactura",
-    "Calcular productividad usando solo el output aceptable, no el total",
+    "Calcular productividad usando solo la producción aceptable, no la total",
     "Establecer un sistema de recolección y reporte periódico de datos",
     "Aplicar técnicas estadísticas (como cartas de control) para analizar los datos"
   ],
@@ -42,6 +42,23 @@
         "motivo": "Clasificar el tipo de mercado para decidir en que destacar no continua en medir la productividad con el output aceptable en manufactura."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "voz-medicion_de_calidad_en_manufactura-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular productividad usando solo el output aceptable, no el total",
+      "texto_nuevo": "Calcular productividad usando solo la producción aceptable, no la total",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "output aceptable"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

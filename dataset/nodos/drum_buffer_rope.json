@@ -7,11 +7,11 @@
   "resumen_teorico": "Modelo que sincroniza toda la cadena de suministro como una sola entidad, alineada al ritmo real de la demanda del mercado (el 'tambor'). Cada empresa gestiona la incertidumbre mediante buffers de inventario o capacidad productiva, y comparten datos de demanda (la 'cuerda') que los mantiene sincronizados, minimizando el efecto látigo (bullwhip effect).",
   "pasos_accionables": [
     "Identificar la demanda del mercado como el 'tambor' que marca el ritmo de toda la cadena",
-    "Determinar buffers de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
-    "Compartir datos de demanda real (ventas POS) entre los participantes de la cadena para reducir la incertidumbre",
+    "Determinar colchones de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
+    "Compartir datos de demanda real (ventas en el punto de venta) entre los participantes de la cadena para reducir la incertidumbre",
     "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización"
   ],
-  "entregable_esperado": "Diagrama de flujo de inventario sincronizado con buffers definidos y acuerdo de intercambio de datos de demanda",
+  "entregable_esperado": "Diagrama de flujo de inventario sincronizado con colchones definidos y acuerdo de intercambio de datos de demanda",
   "nodos_previos": [
     "cinco_pasos_enfoque_restricciones",
     "alineacion_incentivos_desempeno",
@@ -75,6 +75,56 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-drum_buffer_rope-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar buffers de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
+      "texto_nuevo": "Determinar colchones de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "buffers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-drum_buffer_rope-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compartir datos de demanda real (ventas POS) entre los participantes de la cadena para reducir la incertidumbre",
+      "texto_nuevo": "Compartir datos de demanda real (ventas en el punto de venta) entre los participantes de la cadena para reducir la incertidumbre",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ventas POS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-drum_buffer_rope-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagrama de flujo de inventario sincronizado con buffers definidos y acuerdo de intercambio de datos de demanda",
+      "texto_nuevo": "Diagrama de flujo de inventario sincronizado con colchones definidos y acuerdo de intercambio de datos de demanda",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "buffers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

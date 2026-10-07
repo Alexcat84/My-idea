@@ -1421,9 +1421,9 @@
         "Reemplazar iluminación incandescente/fluorescente por LED, sabiendo que en algunos casos la fluorescente con balastos electrónicos puede ser la mejor opción",
         "Instalar sensores de ocupación para apagado automático",
         "Instalar fotosensores que ajusten luz según disponibilidad de luz natural",
-        "Calcular ROI de la retrofit de iluminación"
+        "Calcular ROI de la modernización de la iluminación"
       ],
-      "entregable_esperado": "Proyecto de retrofit de iluminación con ahorro proyectado y periodo de retorno",
+      "entregable_esperado": "Proyecto de modernización de la iluminación con ahorro proyectado y periodo de retorno",
       "nodos_previos": [
         "mejora_envolvente_edificio",
         "benchmark_auditoria_energetica",
@@ -2234,9 +2234,9 @@
       "resumen_teorico": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
       "pasos_accionables": [
         "Identificar si el sector de la organización tiene requisitos regulatorios de salud/seguridad/ambiente",
-        "Determinar si existen estándares industria-específicos previos a ISO 9000 aplicables",
-        "Mapear los requisitos regulatorios propios contra el estándar genérico ISO 9001",
-        "Implementar los requisitos adicionales necesarios (p. ej. cGMP, GMP)"
+        "Determinar si existen estándares específicos de la industria previos a ISO 9000 aplicables",
+        "Comparar los requisitos regulatorios propios con el estándar genérico ISO 9001",
+        "Implementar los requisitos adicionales necesarios (p. ej. buenas prácticas de manufactura)"
       ],
       "entregable_esperado": "Matriz de cumplimiento que relacione requisitos regulatorios sectoriales con el sistema de gestión de calidad ISO 9001 vigente",
       "nodos_previos": [
@@ -3637,7 +3637,7 @@
         "Evaluar el centrado del histograma respecto al objetivo del proceso",
         "Evaluar el ancho de la distribución respecto a los límites de especificación",
         "Evaluar la forma de la distribución e investigar picos múltiples como indicio de mezcla de poblaciones o procesos distintos",
-        "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si alguna"
+        "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si es que conviene alguna"
       ],
       "entregable_esperado": "Histograma con límites de especificación e informe de capacidad de proceso indicando si cumple especificaciones y qué acciones tomar",
       "nodos_previos": [
@@ -4550,7 +4550,7 @@
         "Cuando ya se cuenta con datos normalizados y se requiere identificar las causas de las diferencias de desempeño",
         "Cuando se busca determinar qué prácticas explican el éxito de los mejores desempeños"
       ],
-      "etiqueta_arbol": "Identifica las Mejores Prácticas"
+      "etiqueta_arbol": "Analiza tus Brechas con los Mejores"
     },
     "analisis_licitaciones_no_ganadas": {
       "node_id": "analisis_licitaciones_no_ganadas",
@@ -4787,7 +4787,7 @@
       "titulo_concepto": "Análisis de Correlación y Regresión",
       "resumen_teorico": "El análisis de regresión modela la relación entre variables independientes y dependientes, permitiendo predicción y pronóstico. El análisis de correlación estudia la fuerza de la relación lineal entre variables sin asumir causalidad explícita. El coeficiente de determinación (R²) mide la proporción de variación explicada por el modelo, mientras que el coeficiente de correlación (r) mide la fuerza y dirección de la relación lineal.",
       "pasos_accionables": [
-        "Graficar un scatter plot de la variable dependiente contra la independiente",
+        "Graficar un diagrama de dispersión de la variable dependiente contra la independiente",
         "Ajustar un modelo de regresión lineal (Y = b0 + b1X)",
         "Calcular el coeficiente de determinación R² para evaluar el ajuste del modelo",
         "Calcular el coeficiente de correlación r para medir la fuerza de la relación",
@@ -6887,9 +6887,9 @@
       "titulo_concepto": "Diferencia entre Asset Deal y Stock Deal",
       "resumen_teorico": "En un asset deal, el comprador adquiere solo activos específicos y evita ciertas responsabilidades, dejando una entidad remanente (cascarón corporativo) que el vendedor debe liquidar con el tiempo. En un stock deal, el comprador adquiere la totalidad de la empresa, que desaparece completamente en la estructura del comprador. Los vendedores generalmente prefieren stock deals; los compradores prefieren asset deals, especialmente en épocas económicas inciertas.",
       "pasos_accionables": [
-        "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar un asset deal, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, si hay acreedores impagos y la venta de activos no es en su mejor interés, los directivos y consejeros pueden asumir responsabilidad personal",
-        "Negociar por un stock deal siempre que sea posible, ya que puede configurarse para dar al comprador una protección funcionalmente equivalente con muchas menos complicaciones para el vendedor",
-        "Evaluar el costo y tiempo de liquidar la entidad remanente si se acepta un asset deal",
+        "Determinar si la empresa tiene múltiples subsidiarias, contratos complejos, empleados con compromisos de indemnización por despido, accionistas descontentos o riesgo de insolvencia antes de aceptar una compra de activos, porque en esos casos puede ser muy perjudicial; cerca de la insolvencia, si hay acreedores impagos y la venta de activos no es en su mejor interés, los directivos y consejeros pueden asumir responsabilidad personal",
+        "Negociar por una compra de acciones siempre que sea posible, ya que puede configurarse para dar al comprador una protección funcionalmente equivalente con muchas menos complicaciones para el vendedor",
+        "Evaluar el costo y tiempo de liquidar la entidad remanente si se acepta una compra de activos",
         "Consultar con asesores fiscales el impacto de cada estructura en la carga impositiva"
       ],
       "entregable_esperado": "Decisión informada sobre la estructura de transacción (activos vs acciones) con implicaciones fiscales y legales entendidas",
@@ -6973,13 +6973,13 @@
       "titulo_concepto": "Tratamiento de Stock Options en una Adquisición",
       "resumen_teorico": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados, y acelerar el vesting de todos puede generar fricciones internas entre quienes llevan más y menos tiempo en la empresa.",
       "pasos_accionables": [
-        "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de M&A.",
-        "Negociar explícitamente en el LOI qué pasará con las opciones vested y unvested.",
-        "Considerar el impacto del strike price (barter element) en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
+        "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de fusión o adquisición.",
+        "Negociar explícitamente en la carta de intención qué pasará con las opciones consolidadas y no consolidadas.",
+        "Considerar el impacto del precio de ejercicio en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
         "Comunicar con transparencia a los empleados el tratamiento de sus opciones antes del cierre.",
-        "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de vesting."
+        "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de consolidación."
       ],
-      "entregable_esperado": "Cláusula clara en el LOI sobre tratamiento de stock options y plan de comunicación a empleados.",
+      "entregable_esperado": "Cláusula clara en la carta de intención sobre tratamiento de opciones sobre acciones y plan de comunicación a empleados.",
       "nodos_previos": [
         "forma_de_contraprestacion_en_adquisicion",
         "employee_pool_esop",
@@ -8257,7 +8257,7 @@
         "Investigar los estándares de mercado actuales para umbrales de IPO antes de negociar fuerte en este punto.",
         "Evitar conceder distintos umbrales a distintas series de preferentes para prevenir vetos en el IPO."
       ],
-      "entregable_esperado": "Términos de conversión automática equalizados entre todas las rondas de inversión, documentados en el term sheet.",
+      "entregable_esperado": "Términos de conversión automática igualados entre todas las rondas de inversión, documentados en la hoja de términos.",
       "nodos_previos": [
         "conversion_rights"
       ],
@@ -8406,7 +8406,7 @@
       "titulo_concepto": "Autorización del Sistema para Operar",
       "resumen_teorico": "Un funcionario senior de la organización (Authorizing Official) determina si el riesgo de seguridad y privacidad derivado de la operación del sistema es aceptable, basándose en un paquete de autorización que incluye planes de seguridad/privacidad, informes de evaluación y el POA&M. El resultado es una decisión formal que autoriza o no la operación del sistema.",
       "pasos_accionables": [
-        "Ensamblar el paquete de autorización y enviarlo al funcionario autorizante (Tarea R-1).",
+        "Reunir el paquete de autorización y enviarlo al funcionario autorizante (Tarea R-1).",
         "El funcionario autorizante analiza la información y determina el riesgo residual (Tarea R-2).",
         "Emitir una decisión de autorización que indique si el sistema puede operar (Tarea R-4).",
         "Asegurar que proveedores externos entreguen la información necesaria para la decisión de riesgo."
@@ -9731,7 +9731,7 @@
       "titulo_concepto": "Lo que tu experiencia en una empresa grande no te preparó para saber (puntos ciegos al fundar)",
       "resumen_teorico": "Si trabajaste mucho tiempo en una empresa grande, es probable que tengas puntos ciegos al fundar tu propio negocio: no conoces las opciones de financiamiento, preparas un plan de negocio demasiado detallado en vez de enfocarte en el equipo y en unos pocos hitos clave, no sabes cómo manejar una junta directiva liderada por inversionistas de capital de riesgo (VCs) y no conoces el ritmo de un crecimiento acelerado, donde priorizar pesa mucho más. Lo que aprendiste en ese entorno no siempre te sirve tal cual para lo que un negocio propio te va a exigir.",
       "pasos_accionables": [
-        "Revisa qué de tu experiencia corporativa previa podría no aplicar directamente a tu situación actual",
+        "Revisa qué de tu experiencia corporativa previa podría no aplicarse directamente a tu situación actual",
         "Investiga por tu cuenta las distintas formas de financiarte (capital de riesgo, inversionistas ángeles, deuda, o crecer sin inversión externa) antes de presentarte ante nadie",
         "Rediseña tu presentación para inversionistas poniendo el foco en tu equipo y en un puñado de hitos clave, no en cubrir cada detalle operativo",
         "Busca la guía de otras personas que ya hayan pasado por el proceso de levantar capital"
@@ -9871,13 +9871,13 @@
       "titulo_concepto": "Usar redes de intermediarios (brokers) para conseguir prospectos",
       "resumen_teorico": "Los brokers de franquicia (también llamados redes de referidos) te consiguen prospectos ya filtrados por una comisión que en general pagas solo al cerrar la venta, aunque algunos cobran por aceptarte (pregunta el precio en tu mercado). El costo es variable y los prospectos suelen llegar con mejor calidad, pero cada uno sale más caro que uno propio, estar en la red no te garantiza ventas ni más prospectos, alguien que no controlas puede representar mal tu marca, y esto no reemplaza que tú mismo trabajes tus ventas.",
       "pasos_accionables": [
-        "Evalúa tu presupuesto de marketing, tus metas de crecimiento, la cobertura geográfica que buscas y tu disposición a vigilar de cerca a la red para decidir si te conviene usar brokers",
-        "Elige las redes de brokers con el mismo cuidado con el que contratarías a alguien para vender por ti",
-        "Evita brokers que te pidan un porcentaje de regalías o cualquier pago continuo, más allá de la comisión por cierre",
-        "Vigila de cerca cómo los brokers hablan de tu marca frente a los prospectos, dales capacitación y retroalimentación continua y asegúrate de que cada prospecto quede plenamente informado desde tu lado",
-        "Si dependes mucho de los brokers, asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red"
+        "Evalúa tu presupuesto de marketing, tus metas de crecimiento, la cobertura geográfica que buscas y tu disposición a vigilar de cerca a la red para decidir si te conviene usar intermediarios",
+        "Elige las redes de intermediarios con el mismo cuidado con el que contratarías a alguien para vender por ti",
+        "Evita intermediarios que te pidan un porcentaje de regalías o cualquier pago continuo, más allá de la comisión por cierre",
+        "Vigila de cerca cómo los intermediarios hablan de tu marca frente a los prospectos, dales capacitación y retroalimentación continua y asegúrate de que cada prospecto quede plenamente informado desde tu lado",
+        "Si dependes mucho de los intermediarios, asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red"
       ],
-      "entregable_esperado": "Un acuerdo firmado con una o varias redes de brokers, junto con una forma de vigilarlos y mantenerlos al tanto de tu marca",
+      "entregable_esperado": "Un acuerdo firmado con una o varias redes de intermediarios, junto con una forma de vigilarlos y mantenerlos al tanto de tu marca",
       "nodos_previos": [
         "mix_medios_marketing_franquicia"
       ],
@@ -10225,11 +10225,11 @@
       "pasos_accionables": [
         "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
         "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
-        "Revisar si existen incentivos que fomenten el subreporte de incidentes",
+        "Revisar si existen incentivos que fomenten el subregistro de incidentes",
         "Evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
         "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
       ],
-      "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
+      "entregable_esperado": "Informe de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
       "nodos_previos": [
         "escape_trampa_proveedor_pasivo",
         "diseno_departamento_seguridad_efectivo"
@@ -12513,7 +12513,7 @@
       "titulo_concepto": "Capacitación de Trabajadores en Identificación y Control de Peligros",
       "resumen_teorico": "Brindar a los trabajadores comprensión sobre reconocimiento y control de peligros, involucrándolos activamente, ayuda a eliminar riesgos antes de que ocurra un incidente. Incluye capacitación en análisis de peligros de tarea (JHA) y uso correcto de EPP.",
       "pasos_accionables": [
-        "Capacitar en técnicas de identificación de peligros como el JHA",
+        "Capacitar en técnicas de identificación de peligros como el análisis de peligros de la tarea (JHA)",
         "Enseñar a reconocer peligros específicos de su puesto y generales",
         "Instruir sobre jerarquía de controles y su importancia",
         "Entrenar en uso correcto de prácticas administrativas y EPP",
@@ -12908,8 +12908,8 @@
         "Recolectar datos de desempeño del proceso en el tiempo",
         "Calcular la línea central (promedio) y los límites de control estadísticos",
         "Graficar los puntos y clasificar si caen dentro o fuera de los límites",
-        "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
-        "Si están fuera: investigar causa especial y tomar acción correctiva",
+        "Si están dentro: asumir causas comunes, no emprender acciones individuales; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+        "Si están fuera: investigar causa especial y emprender una acción correctiva",
         "Justificar el uso de la carta según impacto en cliente, seguridad o ambiente, economía, o necesidad de precisión adicional para el control"
       ],
       "entregable_esperado": "Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación",
@@ -13295,11 +13295,11 @@
       "resumen_teorico": "Un pivote es un cambio estructurado, no un simple cambio cualquiera, diseñado para probar una nueva hipótesis fundamental sobre tu producto, modelo de negocio o motor de crecimiento. El catálogo incluye zoom in (una función se vuelve todo el producto), zoom out (el producto pasa a ser una función de algo mayor), segmento de cliente (mismo problema, cliente distinto), necesidad del cliente (mismo cliente, problema distinto), plataforma, arquitectura de negocio, captura de valor, motor de crecimiento, canal y tecnología. Para elegir el tipo correcto, analiza el feedback recurrente de tus clientes y detecta qué parte de tu producto genera valor real antes de rediseñar tus hipótesis de salto de fe.",
       "pasos_accionables": [
         "Identificar cuál hipótesis del modelo de negocio no se está validando (cliente, problema, canal, monetización, tecnología, etc.)",
-        "Analizar el feedback recurrente de tus clientes para detectar qué parte del producto genera valor real",
+        "Analizar los comentarios recurrentes de tus clientes para detectar qué parte del producto genera valor real",
         "Clasificar el tipo de pivote necesario entre los posibles (zoom-in, zoom-out, segmento, necesidad, plataforma, arquitectura, captura de valor, motor de crecimiento, canal, tecnología)",
         "Determinar qué elementos de tu producto y aprendizaje actual puedes reutilizar, sin descartar todo",
         "Redefinir las hipótesis de salto de fe para tu nuevo producto o modelo",
-        "Diseñar un nuevo MVP que pruebe la nueva hipótesis estratégica y establece métricas de línea base"
+        "Diseñar un nuevo MVP que pruebe la nueva hipótesis estratégica y establecer métricas de línea base"
       ],
       "entregable_esperado": "Una definición clara del tipo de pivote a ejecutar, un plan de qué activos existentes conservas y reutilizas, y un nuevo MVP con hipótesis de salto de fe redefinidas y métricas de línea base.",
       "nodos_previos": [
@@ -14500,7 +14500,7 @@
         "Si no existe capacidad interna para evaluar impacto ambiental de un producto",
         "Si se busca simplificar la selección de proveedores sostenibles"
       ],
-      "etiqueta_arbol": "Elige Compras con Eco-etiquetas"
+      "etiqueta_arbol": "Elige Compras con Ecoetiquetas"
     },
     "certificado_de_origen_coo": {
       "node_id": "certificado_de_origen_coo",
@@ -17444,7 +17444,7 @@
       "resumen_teorico": "La función Communicate se centra en desarrollar políticas de comunicación interna y externa sobre las actividades de procesamiento de datos. Incluye aumentar la transparencia mediante avisos claros y accesibles, alertas y señales que informen a los individuos sobre el procesamiento de sus datos y sus opciones, incorporar la privacidad en encuestas o grupos focales de diseño de producto, y preparar un plan de respuesta ante brechas de datos (notificaciones, monitoreo de crédito, congelamientos).",
       "pasos_accionables": [
         "Redactar políticas de comunicación interna y externa sobre procesamiento de datos",
-        "Crear avisos y reportes claros y accesibles para los usuarios",
+        "Crear avisos e informes claros y accesibles para los usuarios",
         "Implementar alertas o señales que informen sobre el procesamiento de datos",
         "Incluir preguntas de privacidad en encuestas o grupos focales de diseño",
         "Desarrollar un plan de respuesta a brechas de datos con notificaciones y remedios"
@@ -17587,7 +17587,7 @@
         "cuando nunca comparaste tus predicciones con lo que después pasó",
         "cuando adoptas una forma de gestionar riesgo sin poder decir si funciona"
       ],
-      "etiqueta_arbol": "¿Cómo Sabes Que tu Método Sirve?"
+      "etiqueta_arbol": "Comprueba si tu Método Sirve"
     },
     "company_building": {
       "node_id": "company_building",
@@ -18587,12 +18587,12 @@
       "titulo_concepto": "Compromiso con Línea de Tiempo de Compra",
       "resumen_teorico": "Técnica de cierre de ventas que consiste en establecer explícitamente con el prospecto un cronograma de acciones (ej. piloto de 2 semanas) y solicitar un compromiso binario (sí/no) sobre la compra al finalizar dicho periodo. Esto evita ambigüedad, permite enfocar el tiempo del equipo de ventas en deals que probablemente cierren y descarta rápidamente a los que no están listos para comprar.",
       "pasos_accionables": [
-        "Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)",
+        "Definir un plan de acción claro para el prospecto (ej. piloto de X semanas)",
         "Comunicar explícitamente el cronograma y las condiciones de decisión",
         "Solicitar un compromiso de respuesta sí/no al finalizar el plazo",
         "Documentar y dar seguimiento a la fecha comprometida",
         "Descartar o reclasificar a los prospectos que no confirman compromiso",
-        "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+        "Establecer un cronograma claro de compra y pedir compromiso explícito (sí/no) al prospecto",
         "Documentar el acuerdo de cierre por escrito con el cliente"
       ],
       "entregable_esperado": "Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto",
@@ -18705,7 +18705,7 @@
         "Usar este registro para que inversionistas y cofundadores vean tu avance de cerca, sin esperar a las reuniones semanales o de directorio",
         "Solicitar retroalimentación activa de asesores e inversionistas basada en este registro"
       ],
-      "entregable_esperado": "Bitácora viva y compartida del proceso de Customer Discovery, accesible a inversionistas y cofundadores, que sirve de base para retroalimentación y decisiones.",
+      "entregable_esperado": "Bitácora viva y compartida del proceso de descubrimiento de clientes, accesible a inversionistas y cofundadores, que sirve de base para retroalimentación y decisiones.",
       "nodos_previos": [
         "preservar_efectivo_buscar_modelo"
       ],
@@ -18823,7 +18823,7 @@
       "resumen_teorico": "Requiere un plan escrito que garantice que los trabajadores comprendan los riesgos de los químicos en el lugar de trabajo, incluyendo inventario de químicos peligrosos, Hojas de Datos de Seguridad (SDS) accesibles, etiquetado adecuado, y capacitación antes de la asignación inicial y cuando se introduzcan nuevos peligros.",
       "pasos_accionables": [
         "Elaborar inventario completo de químicos peligrosos en el lugar de trabajo",
-        "Mantener SDS actualizadas y accesibles para todos los trabajadores",
+        "Mantener hojas de datos de seguridad actualizadas y accesibles para todos los trabajadores",
         "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
         "Capacitar a los trabajadores antes de su asignación inicial y ante nuevos riesgos",
         "Revisar y actualizar periódicamente el programa de comunicación de riesgos"
@@ -19372,7 +19372,7 @@
         "Cuando se requiere verificar cumplimiento de sistemas de calidad",
         "Cuando se busca certificación bajo normas ISO"
       ],
-      "etiqueta_arbol": "Audita Tu Calidad"
+      "etiqueta_arbol": "Audita la Calidad de tu Negocio"
     },
     "concepto_de_crecimiento_regenerativo": {
       "node_id": "concepto_de_crecimiento_regenerativo",
@@ -20426,11 +20426,11 @@
       "titulo_concepto": "Acuerdo de Confidencialidad (NDA) en Procesos de Adquisición",
       "resumen_teorico": "A diferencia de las rondas de inversión, en procesos de M&A los NDAs son prácticamente obligatorios, ya que ambas partes comparten información sensible durante el due diligence. Un NDA débil o unilateral puede ser señal de que el comprador busca información competitiva más que cerrar un trato genuino.",
       "pasos_accionables": [
-        "Exigir un NDA bidireccional y robusto antes de compartir información sensible.",
+        "Exigir un acuerdo de confidencialidad (NDA) bidireccional y robusto antes de compartir información sensible.",
         "Evaluar si el NDA es unilateral como señal de alerta sobre las intenciones reales del comprador.",
         "Asegurar que el NDA cubra el escenario de que la transacción no se cierre."
       ],
-      "entregable_esperado": "NDA firmado y bidireccional antes de iniciar el due diligence detallado.",
+      "entregable_esperado": "NDA firmado y bidireccional antes de iniciar la revisión detallada de la empresa.",
       "nodos_previos": [
         "forma_de_contraprestacion_en_adquisicion",
         "carta_de_intencion_loi"
@@ -20667,13 +20667,13 @@
       "titulo_concepto": "Conocer los límites de peso y tamaño del courier",
       "resumen_teorico": "Cada courier fija un peso máximo y unas dimensiones máximas por paquete, además de un método para calcular el peso volumétrico: el volumen del paquete en centímetros dividido entre 5000. El costo se cobra por el mayor entre el peso real, ese peso volumétrico y el peso mínimo facturable, así que una caja demasiado grande para su contenido puede salir más cara aunque pese poco. También existen recargos por manejo adicional cuando el paquete va en un contenedor exterior de metal o madera, cuando es un objeto cilíndrico que no va del todo dentro de cartón corrugado, o cuando su lado más largo, su segundo lado o su peso real superan ciertos umbrales, y un cargo aparte cuando la suma de largo más perímetro supera cierto umbral. Confirma estos números directamente con tu courier en lugar de asumirlos.",
       "pasos_accionables": [
-        "Pregunta a tu courier cuál es el peso máximo y las dimensiones máximas que acepta, y desde qué peso y medidas cobra recargos.",
-        "Pide el divisor que usa tu courier para calcular el peso volumétrico de tus paquetes.",
+        "Pregunta a tu empresa de mensajería cuál es el peso máximo y las dimensiones máximas que acepta, y desde qué peso y medidas cobra recargos.",
+        "Pide el divisor que usa tu empresa de mensajería para calcular el peso volumétrico de tus paquetes.",
         "Calcula el peso volumétrico de tu paquete típico y compáralo contra su peso real.",
         "Usa el mayor entre peso real, peso volumétrico y peso mínimo facturable para estimar el costo real de cada envío.",
         "Ajusta el tamaño de tu caja para acercarte al contenido y evitar pagar de más, dejando al menos 5 a 6 cm entre el contenido y las paredes para el material de protección."
       ],
-      "entregable_esperado": "Una tabla propia con peso, medidas y peso volumétrico de tus paquetes típicos, comparada contra los límites de tu courier.",
+      "entregable_esperado": "Una tabla propia con peso, medidas y peso volumétrico de tus paquetes típicos, comparada contra los límites de tu empresa de mensajería.",
       "nodos_previos": [
         "revisar_necesidades_de_empaque",
         "elegir_caja_correcta",
@@ -20687,7 +20687,7 @@
         "Estas eligiendo entre dos couriers y quieres saber cual acepta mejor tus medidas.",
         "Tu producto es pesado, voluminoso o tiene una forma irregular, como una llanta o un cilindro."
       ],
-      "etiqueta_arbol": "Conoce los límites de tu courier"
+      "etiqueta_arbol": "Conoce los Límites de tu Paquetería"
     },
     "conocimiento_detallado_y_justicia": {
       "node_id": "conocimiento_detallado_y_justicia",
@@ -23991,13 +23991,13 @@
       "titulo_concepto": "Conversación Explícita sobre Emociones Post-Compra",
       "resumen_teorico": "En lugar de ignorar o evitar el remordimiento del comprador, puedes abrir explícitamente un espacio para que tu cliente hable sobre sus dudas y miedos tras la compra. Al normalizar estas emociones y ofrecer estrategias para manejarlas, construyes confianza y refuerzas la relación en lugar de dejar que la duda erosione silenciosamente su compromiso.",
       "pasos_accionables": [
-        "Programar una llamada o check-in dedicado exclusivamente a preguntar cómo se siente el cliente tras la compra",
+        "Programar una llamada o conversación de seguimiento dedicada exclusivamente a preguntar cómo se siente el cliente tras la compra",
         "Preparar preguntas abiertas sobre dudas, miedos o inseguridades del cliente",
         "Entrenar al equipo para validar las emociones como normales, no como problemas",
         "Ofrecer ejemplos o historias de otros clientes que superaron dudas similares",
         "Documentar y reutilizar esta conversación como referencia en momentos futuros de duda"
       ],
-      "entregable_esperado": "Un guion o protocolo de check-in emocional post-compra implementado en el proceso de onboarding",
+      "entregable_esperado": "Un guion o protocolo de seguimiento emocional poscompra implementado en el proceso de bienvenida",
       "nodos_previos": [
         "fase_affirm_buyers_remorse"
       ],
@@ -24009,7 +24009,7 @@
         "Cuando la compra es de alto valor percibido o compromiso extendido en el tiempo",
         "Si el negocio opera con relaciones de servicio continuo (coaching, consultoría, suscripciones)"
       ],
-      "etiqueta_arbol": "Habla de Emociones Post-Compra"
+      "etiqueta_arbol": "Habla de Emociones Poscompra"
     },
     "conversar_historia_vida_descubrir_motivadores": {
       "node_id": "conversar_historia_vida_descubrir_motivadores",
@@ -25799,11 +25799,11 @@
       "titulo_concepto": "Minimización de Costos de Transacción en Acuerdos",
       "resumen_teorico": "Los costos de transacción son los costos en tiempo y dinero asociados a crear una relación entre dos partes (abogados, reuniones, due diligence). Un buen contrato minimiza tanto los costos de transacción actuales como los futuros. Negociar detalladamente una carta de intención (LOI) antes de firmarla puede ahorrarte muchas horas de negociación posterior en los documentos definitivos.",
       "pasos_accionables": [
-        "Negociar detalladamente la LOI antes de firmarla para reducir ambigüedad futura",
-        "Comparar los costos de transacción de la deuda convertible y de una ronda de equity antes de elegir estructura, sabiendo que hoy la diferencia suele ser pequeña",
+        "Negociar detalladamente la carta de intención (LOI) antes de firmarla para reducir ambigüedad futura",
+        "Comparar los costos de transacción de la deuda convertible y de una ronda de capital antes de elegir estructura, sabiendo que hoy la diferencia suele ser pequeña",
         "Usar documentos estándar de la industria para reducir tiempo de negociación legal"
       ],
-      "entregable_esperado": "LOI o term sheet detallado que minimice renegociaciones futuras",
+      "entregable_esperado": "LOI o hoja de términos detallada que minimice renegociaciones futuras",
       "nodos_previos": [
         "por_que_existen_los_term_sheets"
       ],
@@ -25901,8 +25901,8 @@
       "resumen_teorico": "La publicidad pagada en redes sociales funciona mejor cuando amplifica contenido que ya tiene tracción orgánica. La estrategia consiste en crear menos contenido pero de alta calidad y compartibilidad, y solo invertir dinero en promocionarlo cuando ya muestra señales de interés genuino ('la chispa') por parte de la audiencia, en vez de forzar un mensaje que a nadie le importa.",
       "pasos_accionables": [
         "Crear una pieza de contenido de alta calidad relacionada con la misión o propósito del producto",
-        "Publicarla orgánicamente y medir el nivel de engagement inicial",
-        "Si el contenido muestra tracción orgánica, invertir presupuesto en amplificarlo con ads",
+        "Publicarla orgánicamente y medir el nivel de interacción inicial",
+        "Si el contenido muestra tracción orgánica, invertir presupuesto en amplificarlo con anuncios",
         "Evitar gastar en contenido sin validación previa de interés orgánico"
       ],
       "entregable_esperado": "Pieza de contenido validada orgánicamente lista para amplificación paga",
@@ -26282,7 +26282,7 @@
         "Elige la solución según tus medios: puede ser tan simple como una hoja de cálculo o tan compleja como un sistema de seguimiento de candidatos integrado con tu calendario.",
         "Si vas con fichas de cartulina, anota junto al nombre unos cuantos retazos de lo que aprendiste, como el nombre de la pareja, una afición o un tema de conversación, y revisita las fichas de forma rutinaria para hacer seguimiento.",
         "Si vas con hoja de cálculo, aprovecha que te deja ordenar por nombre y por fecha, y genera tu lista semanal de llamadas anotando una fecha de seguimiento junto a cada nombre.",
-        "Si usas un sistema de seguimiento comprado, elige uno que permita a todos los empleados del negocio aportar nombres e información útil a la base de datos de candidatos jugadores A potenciales de la empresa.",
+        "Si usas un sistema de seguimiento comprado, elige uno que permita a todos los empleados del negocio aportar nombres e información útil a la base de datos de candidatos potenciales de primer nivel de la empresa.",
         "No te dejes adormecer por la tecnología: el sistema de seguimiento más avanzado del mundo no te sirve de nada si no lo usas de forma sistemática."
       ],
       "entregable_esperado": "Un sistema que guarda el nombre y los datos de contacto de todas las personas que captas y que reserva tiempo semanal en tu calendario para hacerles seguimiento.",
@@ -27052,11 +27052,11 @@
       "titulo_concepto": "Critical Path (Camino Crítico)",
       "resumen_teorico": "Framework para enumerar los hitos absolutamente necesarios para alcanzar el traction goal con el menor número de pasos posible. Sirve principalmente como filtro para decidir qué NO hacer: toda actividad debe evaluarse contra el Critical Path, y si no está en el camino, no debe realizarse. Requiere reevaluación constante tras cada hito porque las suposiciones iniciales suelen ser incorrectas.",
       "pasos_accionables": [
-        "Enumera los hitos estrictamente necesarios para alcanzar tu traction goal",
+        "Enumera los hitos estrictamente necesarios para alcanzar tu meta de tracción",
         "Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios",
-        "Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla",
-        "Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real",
-        "Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos"
+        "Evalúa cada actividad propuesta contra el camino crítico antes de ejecutarla",
+        "Reevalúa el camino crítico después de completar cada hito, ya que las suposiciones cambian con retroalimentación real",
+        "Comunica el camino crítico al equipo para alinear prioridades y evitar desperdicio de recursos"
       ],
       "entregable_esperado": "Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido",
       "nodos_previos": [
@@ -27355,11 +27355,11 @@
       "pasos_accionables": [
         "Evaluar si el volumen y la predictibilidad de la demanda, y las economías de escala en el transporte de entrada y de salida, justifican crossdocking",
         "Sincronizar horarios de llegada de camiones entrantes con la salida de camiones salientes",
-        "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
+        "Diseñar la disposición física del centro de distribución para minimizar tiempos de manipulación",
         "Establecer sistemas de coordinación en tiempo real entre proveedores y transportistas",
         "Medir reducción de inventario en almacenamiento y costos de manipulación"
       ],
-      "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución",
+      "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y disposición física del centro de distribución",
       "nodos_previos": [
         "programacion_entregas_delivery_scheduling"
       ],
@@ -28901,10 +28901,10 @@
       "pasos_accionables": [
         "Diseñar políticas de reporte de incidentes que no penalicen la honestidad",
         "Establecer procesos de apoyo psicológico y profesional para 'segundas víctimas'",
-        "Balancear la necesidad de accountability con la protección al aprendizaje organizacional",
-        "En lugar de fijar categorías de conducta sancionable, construir la justicia en la respuesta a cada incidente: preguntar qué es responsable y no quién, implicar a quienes conocen los detalles del trabajo, explorar la justicia restaurativa, pasar a una accountability orientada al futuro y apoyar a las segundas víctimas"
+        "Balancear la necesidad de rendición de cuentas con la protección al aprendizaje organizacional",
+        "En lugar de fijar categorías de conducta sancionable, construir la justicia en la respuesta a cada incidente: preguntar qué es responsable y no quién, implicar a quienes conocen los detalles del trabajo, explorar la justicia restaurativa, pasar a una rendición de cuentas orientada al futuro y apoyar a las segundas víctimas"
       ],
-      "entregable_esperado": "Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de accountability",
+      "entregable_esperado": "Política de cultura justa documentada, incluyendo protocolos de apoyo a segundas víctimas y criterios de rendición de cuentas",
       "nodos_previos": [
         "safety_i_safety_ii",
         "investigacion_new_view"
@@ -29608,7 +29608,7 @@
       "titulo_concepto": "Customer Creation",
       "resumen_teorico": "Tercer paso del Customer Development, donde la empresa comienza a ejecutar formalmente, invirtiendo fuertemente en crear demanda de usuario final y dirigirla hacia el canal de ventas. Las actividades varían según el tipo de mercado: mercados existentes, nuevos mercados o re-segmentación de un mercado existente.",
       "pasos_accionables": [
-        "Definir el tipo de mercado (existente, nuevo, o re-segmentado) para la estrategia",
+        "Definir el tipo de mercado (existente, nuevo, o resegmentado) para la estrategia",
         "Escalar la inversión en marketing y ventas una vez validada la adquisición de clientes",
         "Identificar con experimentos de segmentación de bajo costo los segmentos de clientes en los que invertir",
         "Controlar el ritmo de quema de caja (burn rate) mientras se escala"
@@ -29945,12 +29945,12 @@
       "pasos_accionables": [
         "Identifica tus hipótesis clave sobre el problema, el cliente y la solución",
         "Sal a entrevistar clientes potenciales de forma repetida durante semanas o meses",
-        "Evita las encuestas de foco tradicionales o las listas exhaustivas de funciones (features)",
+        "Evita los grupos focales tradicionales o las listas exhaustivas de funciones (features)",
         "Anota lo que aprendes y compáralo con lo que pensabas al principio",
-        "Lidera tú mismo estas conversaciones, no las delegues en personal junior",
+        "Lidera tú mismo estas conversaciones, no las delegues en personal con menos experiencia",
         "Documenta lo que aprendes de cada conversación en el momento (blog, CRM)",
         "Consigue experiencia de primera mano sobre cada parte de tu modelo de negocio",
-        "Prepárate para recibir feedback impredecible y a veces doloroso"
+        "Prepárate para recibir comentarios impredecibles y a veces dolorosos"
       ],
       "entregable_esperado": "Un registro de tus entrevistas con clientes reales, con lo que confirmaste o descartaste de tus ideas iniciales sobre el problema y el cliente",
       "nodos_previos": [
@@ -30088,11 +30088,11 @@
       "resumen_teorico": "Describen los resultados y beneficios que el cliente quiere lograr. Se clasifican en cuatro tipos: requeridos (básicos e indispensables), esperados (básicos aunque no imprescindibles), deseados (que irían más allá de lo esperado) e inesperados (sorpresas que exceden expectativas y deseos). Cada gain tiene una relevancia (esencial o agradable de tener) y debe describirse de forma concreta.",
       "pasos_accionables": [
         "Preguntar qué ahorros, resultados o beneficios harían feliz al cliente",
-        "Clasificar gains en requeridos, esperados, deseados e inesperados",
-        "Hacer cada gain concreto y medible",
-        "Rankear gains según su relevancia (esencial vs agradable de tener)"
+        "Clasificar ganancias en requeridas, esperadas, deseadas e inesperadas",
+        "Hacer cada ganancia concreta y medible",
+        "Ordenar ganancias según su relevancia (esencial vs agradable de tener)"
       ],
-      "entregable_esperado": "Lista de post-its con gains concretos y priorizados por relevancia",
+      "entregable_esperado": "Lista de post-its con ganancias concretas y priorizadas por relevancia",
       "nodos_previos": [
         "customer_pains",
         "customer_jobs",
@@ -30116,10 +30116,10 @@
       "pasos_accionables": [
         "Investigar segmentos de clientes actuales pero también periféricos o no atendidos",
         "Emplear métodos etnográficos/observacionales (no solo encuestas) para entender comportamiento real",
-        "Usar los insights para informar decisiones en propuesta de valor, canales, relaciones e ingresos",
+        "Usar los hallazgos para orientar decisiones en propuesta de valor, canales, relaciones e ingresos",
         "Cuestionar constantemente: ¿esta propuesta de valor resuelve un problema real del cliente?"
       ],
-      "entregable_esperado": "Documento de insights de clientes que fundamente decisiones de diseño del modelo de negocio",
+      "entregable_esperado": "Documento de hallazgos sobre clientes que fundamente decisiones de diseño del modelo de negocio",
       "nodos_previos": [
         "analisis_y_sintesis"
       ],
@@ -30173,11 +30173,11 @@
       "pasos_accionables": [
         "Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante",
         "Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo",
-        "Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio",
-        "Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
+        "Identifica todos los puntos de contacto donde el cliente interactúa con la marca o el servicio",
+        "Evalúa cada punto de contacto con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
         "Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central"
       ],
-      "entregable_esperado": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
+      "entregable_esperado": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus puntos de contacto, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
       "nodos_previos": [
         "prototipado_rapido",
         "voz_del_cliente_voc",
@@ -33440,10 +33440,10 @@
       "titulo_concepto": "Definición del Sistema de Calidad del Proveedor",
       "resumen_teorico": "En ciertos casos es necesario especificar no solo qué debe cumplir el producto, sino cómo debe operar el proveedor internamente (controles de proceso, condiciones sanitarias, SPC, etc.). Esto puede incluir referencias a normas como ISO 9000 o TS-16949 como requisito contractual.",
       "pasos_accionables": [
-        "Determinar si se requieren controles de proceso específicos en el proveedor (ej. SPC, condiciones sanitarias)",
+        "Determinar si se requieren controles de proceso específicos en el proveedor (ej. control estadístico de procesos, condiciones sanitarias)",
         "Referenciar normas de sistemas de calidad reconocidas (ISO 9000, TS-16949) en el contrato",
         "Solicitar al proveedor un plan de confiabilidad o análisis de modos de falla (FMECA) si el producto es complejo",
-        "Verificar que el proveedor tenga expertise real, no solo documentación copiada"
+        "Verificar que el proveedor tenga experiencia real, no solo documentación copiada"
       ],
       "entregable_esperado": "Cláusula contractual de sistema de calidad del proveedor con normas de referencia y evidencias requeridas",
       "nodos_previos": [
@@ -35211,7 +35211,7 @@
       "resumen_teorico": "Etapa del proceso Quality by Design donde, una vez comprendidas las necesidades del cliente, se diseñan las características técnicas del producto o servicio. Incluye seis actividades principales: agrupar necesidades relacionadas, determinar métodos de identificación de características (benchmarking, investigación básica, experimentos de mercado, creatividad), seleccionar características de alto nivel, desarrollar características detalladas, optimizarlas y publicar el diseño final.",
       "pasos_accionables": [
         "Agrupar las necesidades del cliente relacionadas por funcionalidad similar",
-        "Seleccionar métodos de identificación de características (benchmarking, investigación, experimentos de mercado, creatividad)",
+        "Seleccionar métodos de identificación de características (comparación con referentes, investigación, experimentos de mercado, creatividad)",
         "Aplicar técnicas creativas (cambio de palabras clave, asociación aleatoria, ponerse en el lugar del otro) para generar alternativas",
         "Verificar cumplimiento de estándares, regulaciones y políticas aplicables",
         "Seleccionar características de alto nivel usando criterios explícitos de diseño",
@@ -35796,7 +35796,7 @@
       "pasos_accionables": [
         "Evaluar la solvencia del comprador extranjero antes de descontar la letra",
         "Negociar con el banco el descuento de letras a plazo",
-        "Considerar la aceptación bancaria para transacciones de gran denominación"
+        "Considerar la aceptación bancaria para transacciones de gran monto"
       ],
       "entregable_esperado": "Mecanismo de conversión de cuentas por cobrar a efectivo implementado",
       "nodos_previos": [
@@ -36572,7 +36572,7 @@
       "titulo_concepto": "Despliegue Continuo (Continuous Deployment)",
       "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. IMVU realizaba en promedio cincuenta cambios diarios a su producto usando esta técnica, y Wealthfront, en un sector regulado como los servicios financieros, más de una docena de lanzamientos diarios.",
       "pasos_accionables": [
-        "Establecer un pipeline de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
+        "Establecer una cadena de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
         "Liberar cada cambio individual al producto en cuanto esté listo, sin esperar a acumular un lote grande",
         "Monitorear el impacto de cada despliegue en tiempo real",
         "Implementar mecanismos de reversión automática si se detecta un problema, avisar al equipo y bloquear nuevos cambios hasta encontrar y corregir la causa raíz"
@@ -36599,7 +36599,7 @@
       "resumen_teorico": "Las metas estratégicas son solo una lista de deseos hasta que se descomponen en proyectos específicos asignados a individuos o equipos con los recursos necesarios. El proceso involucra división y asignación de metas a niveles inferiores, quienes proponen proyectos y recursos, en un diálogo bidireccional hasta llegar a un acuerdo final sobre qué proyectos ejecutar.",
       "pasos_accionables": [
         "Dividir las metas estratégicas del consejo en submetas por nivel organizacional",
-        "Solicitar a los niveles de acción que seleccionen proyectos de breakthrough que cumplan las metas",
+        "Solicitar a los niveles de acción que seleccionen proyectos de mejora radical que cumplan las metas",
         "Negociar y revisar propuestas de recursos entre niveles hasta llegar a acuerdo",
         "Formalizar qué proyectos se ejecutarán, con qué recursos y bajo qué responsables"
       ],
@@ -37692,7 +37692,7 @@
       "titulo_concepto": "Diagrama de Afinidad",
       "resumen_teorico": "El diagrama de afinidad toma un gran número de ideas, generalmente obtenidas por brainstorming o de clientes/empleados, y las organiza en grupos significativos según su relación natural. Es útil cuando se necesita estructurar información cualitativa dispersa en categorías manejables.",
       "pasos_accionables": [
-        "Generar ideas mediante brainstorming con un límite de tiempo, una por tarjeta o nota adhesiva, y aclararlas eliminando duplicados",
+        "Generar ideas mediante una lluvia de ideas con un límite de tiempo, una por tarjeta o nota adhesiva, y aclararlas eliminando duplicados",
         "Desplegar todas las ideas sin ordenar en una superficie visible",
         "Agrupar las ideas en categorías de 'temas similares' sin hablar, basándose en percepción individual",
         "Permitir mover o duplicar tarjetas hasta llegar a consenso (idealmente 5 a 10 grupos)",
@@ -40184,7 +40184,7 @@
         "Incluir revisiones éticas como parte del proceso de prototipado e iteración",
         "Diseñar con conciencia del impacto en comunidades y sistemas más amplios, no solo en el usuario individual"
       ],
-      "entregable_esperado": "Un checklist o revisión ética documentada de las consecuencias intencionales y no intencionales de la solución antes de su lanzamiento.",
+      "entregable_esperado": "Una lista de verificación o revisión ética documentada de las consecuencias intencionales y no intencionales de la solución antes de su lanzamiento.",
       "nodos_previos": [
         "design_thinking_fundamentos",
         "buyin_customer_development",
@@ -40360,10 +40360,10 @@
       "pasos_accionables": [
         "Analizar qué trabajo cognitivo desaparece al introducir una nueva interfaz o herramienta",
         "Evaluar si la reducción de pasos manuales reduce también la comprensión del operador sobre el sistema",
-        "Comparar representaciones analógicas vs digitales en términos de compatibilidad de visualización",
+        "Comparar representaciones analógicas vs. digitales en términos de compatibilidad de visualización",
         "Documentar qué 'trampas de error' elimina el nuevo diseño y qué nuevas vulnerabilidades introduce"
       ],
-      "entregable_esperado": "Análisis comparativo de diseño de interfaz que identifique trade-offs cognitivos entre la opción antigua y la nueva",
+      "entregable_esperado": "Análisis comparativo de diseño de interfaz que identifique las ganancias y costos cognitivos entre la opción antigua y la nueva",
       "nodos_previos": [
         "construccion_timeline_resolucion"
       ],
@@ -40719,7 +40719,7 @@
       "resumen_teorico": "Determinar la cantidad y profundidad de capacitación implica balancear costos (tiempo y dinero para franquiciado y franquiciante) contra riesgos (complejidad del sistema, potencial de errores y daño a la marca). Un buen programa requiere un currículo maestro formal con agenda diaria, referencias al manual de operaciones, duración de módulos y métodos de evaluación.",
       "pasos_accionables": [
         "Evaluar la complejidad del sistema y el perfil del franquiciado objetivo",
-        "Revisar los FDD de franquicias comparables para benchmarking de duración y contenido, como punto de partida y sin copiarlos tal cual",
+        "Revisar los documentos de divulgación (FDD) de franquicias comparables para comparar duración y contenido, como punto de partida y sin copiarlos tal cual",
         "Aplicar la prueba de las 'llaves de la tienda' para estimar el nivel de entrenamiento necesario",
         "Desarrollar un currículo maestro con agenda, referencias al manual operativo y métodos de evaluación",
         "Medir resultados de las pruebas de franquiciados y ajustar el programa iterativamente"
@@ -42694,11 +42694,11 @@
       "resumen_teorico": "Modelo que sincroniza toda la cadena de suministro como una sola entidad, alineada al ritmo real de la demanda del mercado (el 'tambor'). Cada empresa gestiona la incertidumbre mediante buffers de inventario o capacidad productiva, y comparten datos de demanda (la 'cuerda') que los mantiene sincronizados, minimizando el efecto látigo (bullwhip effect).",
       "pasos_accionables": [
         "Identificar la demanda del mercado como el 'tambor' que marca el ritmo de toda la cadena",
-        "Determinar buffers de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
-        "Compartir datos de demanda real (ventas POS) entre los participantes de la cadena para reducir la incertidumbre",
+        "Determinar colchones de inventario o capacidad en cada eslabón, lo que resulte más económico, según el nivel de incertidumbre y el nivel de servicio que exige el mercado",
+        "Compartir datos de demanda real (ventas en el punto de venta) entre los participantes de la cadena para reducir la incertidumbre",
         "Monitorear la reducción de las olas de demanda (bullwhip effect) tras la sincronización"
       ],
-      "entregable_esperado": "Diagrama de flujo de inventario sincronizado con buffers definidos y acuerdo de intercambio de datos de demanda",
+      "entregable_esperado": "Diagrama de flujo de inventario sincronizado con colchones definidos y acuerdo de intercambio de datos de demanda",
       "nodos_previos": [
         "cinco_pasos_enfoque_restricciones",
         "alineacion_incentivos_desempeno",
@@ -43004,7 +43004,7 @@
         "Evaluar el potencial de reducción de costos operativos mediante eficiencia energética y de recursos",
         "Mapear el valor intangible ligado a prácticas ambientales: reputación y marca, conexión emocional con los clientes, productividad del equipo y atracción y retención de talento"
       ],
-      "entregable_esperado": "Un diagnóstico inicial de las cuatro fuentes de valor de Eco-Advantage (riesgo, costo, ingresos, intangibles) aplicado al negocio propio",
+      "entregable_esperado": "Un diagnóstico inicial de las cuatro fuentes de valor de la ventaja ecológica (riesgo, costo, ingresos, intangibles) aplicado al negocio propio",
       "nodos_previos": [
         "triple_bottom_line"
       ],
@@ -44239,13 +44239,13 @@
         "Incluir nombres y direcciones de vendedor y comprador.",
         "Detallar número de referencia y fecha de consulta del comprador.",
         "Listar productos solicitados con descripción breve y precio en USD.",
-        "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
+        "Especificar volumen cúbico total y dimensiones del embalaje para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
         "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
         "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
         "Incluir declaración de veracidad y país de origen de los bienes.",
         "Marcar claramente el documento como 'Pro Forma Invoice'."
       ],
-      "entregable_esperado": "Documento de pro forma invoice completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
+      "entregable_esperado": "Documento de factura proforma completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
       "nodos_previos": [
         "fijacion_precio_exportacion",
         "incoterms_reglas_comerciales_internacionales",
@@ -45890,13 +45890,13 @@
       "titulo_concepto": "Email Marketing para Retención y Revenue",
       "resumen_teorico": "El email es uno de los canales más efectivos para traer de vuelta a usuarios inactivos y generar ingresos adicionales. Las estrategias incluyen recordatorios personalizados, reportes periódicos de valor entregado, campañas de upsell, retargeting de carritos abandonados y emails de 'sorpresa y deleite' que refuerzan la relación emocional con el cliente.",
       "pasos_accionables": [
-        "Define triggers de inactividad (ej. sin login en 2 semanas) para emails de reactivación",
+        "Define disparadores de inactividad (ej. sin iniciar sesión en 2 semanas) para correos de reactivación",
         "Envía reportes periódicos de valor entregado (uso, ahorro, logros)",
-        "Crea secuencias de upsell explicando features premium no utilizadas",
-        "Implementa retargeting por email para carritos abandonados con ofertas especiales",
-        "Envía emails de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente"
+        "Crea secuencias de venta adicional explicando funciones premium no utilizadas",
+        "Implementa recordatorios por correo para carritos abandonados con ofertas especiales",
+        "Envía correos de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente"
       ],
-      "entregable_esperado": "Sistema de emails de retención y revenue con al menos una campaña de reactivación y una de upsell activas",
+      "entregable_esperado": "Sistema de correos de retención e ingresos con al menos una campaña de reactivación y una de venta adicional activas",
       "nodos_previos": [
         "email_marketing_activacion",
         "email_marketing_para_captacion"
@@ -46273,7 +46273,7 @@
       "titulo_concepto": "Mapa de Empatía (Empathy Map)",
       "resumen_teorico": "Herramienta para construir un perfil profundo de un segmento de clientes más allá de datos demográficos, explorando qué ve, oye, piensa/siente, dice/hace, sus dolores y ganancias. Permite diseñar mejores propuestas de valor, canales y relaciones con clientes.",
       "pasos_accionables": [
-        "Hacer brainstorming de todos los posibles segmentos de clientes",
+        "Hacer una lluvia de ideas de todos los posibles segmentos de clientes",
         "Seleccionar tres candidatos prometedores y elegir uno para el primer perfil",
         "Darle nombre y características demográficas al cliente",
         "Responder las 6 preguntas: qué ve, qué oye, qué piensa/siente, qué dice/hace, cuál es su dolor, qué gana",
@@ -47079,7 +47079,7 @@
         "Identificar necesidades no declaradas (latentes) más allá de lo que dicen los datos de mercado.",
         "Traducir estas observaciones emocionales y funcionales en oportunidades de negocio."
       ],
-      "entregable_esperado": "Un mapa de 'insights' de usuario que reemplace o complemente el análisis tradicional de datos de mercado.",
+      "entregable_esperado": "Un mapa de hallazgos de usuario que reemplace o complemente el análisis tradicional de datos de mercado.",
       "nodos_previos": [
         "analisis_y_sintesis"
       ],
@@ -47618,7 +47618,7 @@
       "pasos_accionables": [
         "Verificar las credenciales y experiencia real de quienes imparten capacitación estadística",
         "Diferenciar entre estudios enumerativos y estudios analíticos antes de aplicar técnicas",
-        "Evitar depender de mega-cursos masivos de estadística sin supervisión experta",
+        "Evitar depender de megacursos masivos de estadística sin supervisión experta",
         "Priorizar el aprendizaje bajo la tutela de un maestro con experiencia práctica"
       ],
       "entregable_esperado": "Un plan de capacitación estadística validado por un experto con experiencia demostrable en aplicación práctica",
@@ -50072,7 +50072,7 @@
       "pasos_accionables": [
         "Aceptar que el proceso no será lineal ni predecible, y comunicar esto a tus clientes",
         "Dedicar tiempo explícito a la fase de inspiración antes de saltar a soluciones",
-        "Permitir que los insights lleguen en cualquier momento y estar preparado para capturarlos",
+        "Permitir que los hallazgos lleguen en cualquier momento y estar preparado para capturarlos",
         "Reconocer en qué espacio te encuentras, inspiración, ideación o implementación, para ajustar tu estrategia de trabajo",
         "Prototipar desde el día uno para autocorregir el rumbo tempranamente",
         "Estar dispuesto a replantear supuestos básicos cuando surjan hallazgos inesperados durante las pruebas de prototipos"
@@ -51964,10 +51964,10 @@
       "resumen_teorico": "Un prerrequisito para la generación efectiva de ideas es contar con una estrategia de innovación de producto que defina 'arenas estratégicas' - focos de esfuerzo de I+D donde se buscarán ideas. Estas arenas deben ser atractivas (mercados grandes, en crecimiento, competencia débil, buenas oportunidades para desarrollar productos nuevos) y alineadas con las competencias core de la empresa. Delimitar estos campos de búsqueda hace la búsqueda de ideas más enfocada y efectiva.",
       "pasos_accionables": [
         "Identificar mercados atractivos: grandes, en crecimiento, con competencia débil y con buenas oportunidades para desarrollar productos nuevos",
-        "Evaluar las competencias core de la empresa en tecnología, marketing y producción",
-        "Seleccionar arenas estratégicas ('oasis arenas') donde ambos factores convergen",
+        "Evaluar las competencias centrales de la empresa en tecnología, marketing y producción",
+        "Seleccionar arenas estratégicas (los 'oasis') donde ambos factores convergen",
         "Definir explícitamente qué está dentro y fuera del alcance de búsqueda de ideas",
-        "Usar esta estrategia como primer filtro de validación en las reuniones de gate"
+        "Usar esta estrategia como primer filtro de validación en las reuniones de decisión"
       ],
       "entregable_esperado": "Documento de estrategia de innovación con arenas estratégicas claramente definidas y priorizadas",
       "nodos_previos": [
@@ -51984,7 +51984,7 @@
         "Cuando la empresa carece de ideas de producto de gran impacto (blockbuster)",
         "Cuando hay dispersión o falta de foco en la búsqueda de nuevas ideas"
       ],
-      "etiqueta_arbol": "Define tus Arenas Estratégicas"
+      "etiqueta_arbol": "Define Dónde Buscar Ideas Nuevas"
     },
     "estrategia_de_tragedia_vs_estrategia_de_cambio": {
       "node_id": "estrategia_de_tragedia_vs_estrategia_de_cambio",
@@ -52053,7 +52053,7 @@
         "Priorizar iniciativas con mayor potencial de ventaja competitiva sostenida",
         "Buscar oportunidades de innovación que resuelvan problemas ambientales de los clientes"
       ],
-      "entregable_esperado": "Un plan estratégico de Eco-Advantage con iniciativas priorizadas según su impacto en riesgo, costo, ingreso y marca, con proyecciones de retorno",
+      "entregable_esperado": "Un plan estratégico de ventaja ecológica con iniciativas priorizadas según su impacto en riesgo, costo, ingreso y marca, con proyecciones de retorno",
       "nodos_previos": [
         "vision_alineacion_sostenibilidad",
         "issue_spotting_sostenibilidad"
@@ -52570,7 +52570,7 @@
       "pasos_accionables": [
         "Evaluar oportunidades de virtualización para optimizar utilización de servidores",
         "Implementar sistemas de recuperación de calor residual de centros de datos",
-        "Establecer programa de reciclaje de e-waste con proveedores certificados",
+        "Establecer programa de reciclaje de residuos electrónicos con proveedores certificados",
         "Reducir empaques y consolidar envíos de equipos con proveedores",
         "Explorar oportunidades de ingresos mediante software de sostenibilidad y analítica"
       ],
@@ -53043,13 +53043,13 @@
       "titulo_concepto": "Estructura Organizacional Global de la Oficina de Calidad",
       "resumen_teorico": "Cuando tu negocio opera en varios países o divisiones, necesitas decidir como se organiza la función de calidad a nivel global. Se trata de equilibrar centralización y descentralización, y elegir si el reporte es directo o matricial entre las divisiones globales y las plantas locales. Un ejemplo de organización multinacional ubica a un responsable máximo de calidad (Chief Quality Officer) reportando a nivel de operaciones (COO), con una línea vertical por división (Global División Quality) y una coordinación horizontal por función (Global Functional Quality) en áreas como Customer Quality, Supplier Quality, Lean Six Sigma, Audit y Project Management.",
       "pasos_accionables": [
-        "Definir el nivel jerárquico de quien lidera calidad (Chief Quality Officer) y a quién le reporta directamente",
+        "Definir el nivel jerárquico de quien lidera calidad (Chief Quality Officer) y de quién depende directamente",
         "Establecer si la estructura será centralizada, descentralizada o matricial",
-        "Diseñar las funciones globales (Customer Quality, Supplier Quality, Lean Six Sigma, Audit, Project Management)",
+        "Diseñar las funciones globales (calidad hacia el cliente, calidad de proveedores, Lean Six Sigma, auditoría, gestión de proyectos)",
         "Definir reglas de escalamiento y responsabilidades entre planta, división y función global",
-        "Documentar el organigrama y las relaciones de reporte directo e indirecto"
+        "Documentar el organigrama y las relaciones de dependencia directa e indirecta"
       ],
-      "entregable_esperado": "Organigrama de la Oficina de Calidad con roles, líneas de reporte y responsabilidades funcionales definidas",
+      "entregable_esperado": "Organigrama de la Oficina de Calidad con roles, líneas de dependencia y responsabilidades funcionales definidas",
       "nodos_previos": [
         "oficina_calidad_y_excelencia"
       ],
@@ -53506,7 +53506,7 @@
         "Si la empresa carece de un flujo constante de nuevas ideas de producto",
         "Al iniciar el proceso de innovación desde cero"
       ],
-      "etiqueta_arbol": "Genera Ideas Proactivamente"
+      "etiqueta_arbol": "Genera Ideas de Forma Proactiva"
     },
     "etapa_investigacion_ventas": {
       "node_id": "etapa_investigacion_ventas",
@@ -54329,7 +54329,7 @@
       "resumen_teorico": "Evaluar el desempeño individual en proyectos de equipo es complejo porque los resultados son colectivos. Se requieren métricas a nivel de gerencia como número de proyectos iniciados/completados/abortados, valor generado y porcentaje de subordinados activos en equipos de proyecto.",
       "pasos_accionables": [
         "Definir métricas de desempeño para proyectos: iniciados, en progreso, completados, abortados",
-        "Medir el valor generado en términos de mejora en el desempeño del producto, reducción de costos y ROI",
+        "Medir el valor generado en términos de mejora en el desempeño del producto, reducción de costos y retorno de la inversión",
         "Calcular el porcentaje de empleados activos en equipos de mejora",
         "Juzgar la contribución individual dentro del equipo con información de todas las fuentes disponibles, sabiendo que no hay un método exacto para separarla del resultado colectivo"
       ],
@@ -54408,7 +54408,7 @@
         "Si puedes, llevar contigo o consultar a alguien con mirada distinta a la tuya (por ejemplo alguien que entienda de producción o de diseño) para no evaluar solo desde un ángulo",
         "Dar más peso a lo que más te importa a ti en esa compra al momento de valorar lo que ves",
         "Anotar los hechos concretos sobre sus instalaciones, tu juicio sobre qué tan eficaces son sus operaciones, cuánta ayuda necesitaría para cumplir tus requisitos y tu propia impresión de si te entregaría un buen producto si le das el contrato",
-        "Revisar si el proveedor ya tiene una certificación reconocida en tu mercado, para no repetir evaluaciones que ya alguien mas hizo"
+        "Revisar si el proveedor ya tiene una certificación reconocida en tu mercado, para no repetir evaluaciones que ya alguien más hizo"
       ],
       "entregable_esperado": "Un informe simple con tu evaluación del proveedor y tu recomendación de si aprobarlo o no",
       "nodos_previos": [
@@ -55052,7 +55052,7 @@
       "pasos_accionables": [
         "Analiza si tu mercado objetivo está en crecimiento o consolidación y cómo afecta tu negocio",
         "Identifica competidores actuales y futuros y define tu diferenciación frente a franquiciados y consumidores",
-        "Calcula el capital necesario para implementar el programa, incluyendo documentación legal, manual de operaciones, marketing y venta de franquicias, y para apoyar a tus franquiciados, sin depender de los fees de venta de franquicias",
+        "Calcula el capital necesario para implementar el programa, incluyendo documentación legal, manual de operaciones, marketing y venta de franquicias, y para apoyar a tus franquiciados, sin depender de las cuotas de venta de franquicias",
         "Autoevalúa tu temperamento y habilidades de gestión como futuro franquiciador y busca apoyo externo si detectas brechas",
         "Considera empezar tu expansión a nivel local o regional antes de aspirar a nivel nacional",
         "Documenta los riesgos identificados y las mitigaciones planeadas"
@@ -58538,7 +58538,7 @@
       "resumen_teorico": "Etapa post-implementación donde se evalúa y ajusta continuamente el modelo de negocio frente a la evolución del entorno. Incluye establecer gobernanza de modelos de negocio, gestionar un portafolio de modelos (algunos generando caja, otros en experimentación para el futuro) y mantener una mentalidad de principiante para evitar volverse víctima del propio éxito.",
       "pasos_accionables": [
         "Asignar responsable(s) de la evolución a largo plazo del modelo de negocio",
-        "Organizar workshops regulares con equipos multifuncionales para evaluar el modelo",
+        "Organizar talleres regulares con equipos multifuncionales para evaluar el modelo",
         "Establecer una autoridad de 'gobernanza de modelos de negocio' que gestione sinergias y conflictos",
         "Desarrollar un portafolio de modelos de negocio donde el negocio actual financia experimentos futuros",
         "Revisar periódicamente el modelo con mentalidad de principiante"
@@ -58618,7 +58618,7 @@
       "resumen_teorico": "Esta es la primera fase para diseñar tu modelo de negocio: pones sobre la mesa el objetivo, pruebas tus primeras ideas, planificas y armas tu equipo. El peligro más grande es que te enamores demasiado de tu idea inicial y eso te cierre la puerta a explorar otras posibilidades. Si trabajas dentro de una empresa ya establecida, además necesitas ganarte la legitimidad del proyecto, manejar los intereses de quienes ya tienen algo en juego, formar un equipo con gente de distintas áreas y guiar a quienes van a tomar la decisión final.",
       "pasos_accionables": [
         "Define con claridad el objetivo, el alcance y el porqué de tu proyecto",
-        "Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de expertise",
+        "Arma un equipo con gente de experiencias distintas, incluyendo diferentes niveles jerárquicos y áreas de especialidad",
         "Usa el Lienzo de Modelo de Negocio (Business Model Canvas) como lenguaje común para hablar del proyecto",
         "Pon a prueba tu idea continuamente con personas de trayectorias distintas y, además, puedes considerar hacer un ejercicio (conocido como kill/thrill): dedica 20 minutos a buscar por qué podría fracasar y otros 20 a por qué podría funcionar",
         "Si estás dentro de una empresa ya establecida, consigue el respaldo visible de quienes mandan y maneja los intereses de quienes podrían sentirse afectados",
@@ -59883,11 +59883,11 @@
       "titulo_concepto": "Los Tres Tipos de Fit (Problem-Solution, Product-Market, Business Model)",
       "resumen_teorico": "Existen tres niveles progresivos de evidencia que validan una propuesta de valor: problem-solution fit (evidencia de que a los clientes les importan los jobs/pains/gains que abordas), product-market fit (evidencia de que quieren tu propuesta de valor específica), y business model fit (evidencia de que el modelo de negocio es escalable y rentable).",
       "pasos_accionables": [
-        "Validar que los jobs, pains y gains identificados realmente importan a los clientes.",
-        "Testear si los clientes quieren tu propuesta de valor concreta.",
+        "Validar que los trabajos, frustraciones y alegrías identificados realmente importan a los clientes.",
+        "Probar si los clientes quieren tu propuesta de valor concreta.",
         "Evaluar si el modelo de negocio asociado es escalable y rentable."
       ],
-      "entregable_esperado": "Evidencia documentada de cuál de los tres tipos de encaje has alcanzado, empezando por el problem-solution fit.",
+      "entregable_esperado": "Evidencia documentada de cuál de los tres tipos de encaje has alcanzado, empezando por el encaje problema-solución.",
       "nodos_previos": [
         "value_proposition_canvas",
         "presales",
@@ -60002,13 +60002,13 @@
       "titulo_concepto": "Las Cinco Trampas de los Datos",
       "resumen_teorico": "Cinco errores comunes al interpretar datos de experimentos: el falso positivo (ver cosas que no están), el falso negativo (no ver cosas que sí están), la 'trampa del máximo local' (optimizar sobre una oportunidad pequeña ignorando una mayor), la 'trampa del máximo agotado' (sobreestimar el tamaño de una oportunidad), y la trampa de los datos incorrectos (buscar en el lugar equivocado).",
       "pasos_accionables": [
-        "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
+        "Revisar si los datos positivos podrían ser un falso positivo probando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
         "Verificar que el experimento sea adecuado para detectar la señal buscada (evitar falso negativo)",
         "Cuestionar si los resultados positivos podrían estar limitando el potencial real del negocio (máximo local)",
-        "Confirmar que la muestra testeada no es en realidad toda la población disponible (máximo agotado)",
+        "Confirmar que la muestra estudiada no es en realidad toda la población disponible (máximo agotado)",
         "Antes de abandonar una idea, verificar que no se está buscando en el segmento de datos equivocado"
       ],
-      "entregable_esperado": "Checklist de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
+      "entregable_esperado": "Lista de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
       "nodos_previos": [
         "learning_card",
         "desarrollo_en_espiral"
@@ -63456,11 +63456,11 @@
       "titulo_concepto": "Gestión Estratégica de Portafolio y Buckets (Vector II)",
       "resumen_teorico": "Las empresas tienden a gravitar hacia portafolios conservadores y de bajo riesgo, usando erróneamente herramientas financieras tradicionales (NPV, ROI) diseñadas para proyectos pequeños. Esto mata los proyectos audaces. La solución es una gestión de portafolio deliberada, asignando recursos en 'cubetas estratégicas' (strategic buckets), reservando explícitamente una porción del presupuesto para proyectos de alto riesgo y alto rendimiento potencial.",
       "pasos_accionables": [
-        "Auditar las herramientas de decisión Go/Kill actuales; verificar si dependen exclusivamente de NPV/ROI tradicional.",
-        "Definir 'cubetas estratégicas' de inversión (ej. Core, Adyacente, Transformacional).",
+        "Auditar las herramientas actuales de decisión de seguir o cancelar; verificar si dependen exclusivamente de VAN/ROI tradicional.",
+        "Definir 'cubetas estratégicas' de inversión (ej. Núcleo, Adyacente, Transformacional).",
         "Asignar un porcentaje fijo de presupuesto obligatorio a proyectos de alto riesgo/alta recompensa para evitar que los recursos fluyan solo hacia proyectos fáciles."
       ],
-      "entregable_esperado": "Un modelo de asignación de 'Strategic Buckets' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
+      "entregable_esperado": "Un modelo de asignación de 'cubetas estratégicas' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
       "nodos_previos": [
         "estrategia_de_innovacion_producto",
         "diamante_de_innovacion",
@@ -65803,13 +65803,13 @@
       "titulo_concepto": "Integración de Gates, Revisiones de Portafolio y Roadmaps",
       "resumen_teorico": "Un sistema de gobernanza de innovación robusto integra tres sistemas de decisión complementarios: el Roadmap estratégico (visión de largo plazo con proyectos futuros tentativos), el sistema Stage-Gate (decisiones Go/Kill en tiempo real sobre proyectos activos) y las Revisiones de Portafolio (evaluación periódica de todos los proyectos activos y en espera). Estos tres sistemas se retroalimentan en un ciclo cerrado: el roadmap alimenta proyectos al Stage-Gate, el Stage-Gate filtra proyectos malos y actualiza el roadmap, y las revisiones de portafolio ajustan prioridades en ambos sistemas.",
       "pasos_accionables": [
-        "Desarrollar un roadmap estratégico de producto/tecnología con marcadores de proyectos futuros",
-        "Introducir proyectos del roadmap al sistema Stage-Gate cuando el timing sea adecuado, comenzando en Gate 1",
+        "Desarrollar una hoja de ruta estratégica de producto/tecnología con marcadores de proyectos futuros",
+        "Introducir proyectos de la hoja de ruta al sistema Stage-Gate cuando el momento sea adecuado, comenzando en Gate 1",
         "Incluir proyectos en el portafolio formal una vez pasen Gate 2, cuando haya suficiente compromiso de recursos",
-        "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto el roadmap como las prioridades de gates",
+        "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto la hoja de ruta como las prioridades de gates",
         "Asegurar retroalimentación bidireccional entre los tres sistemas"
       ],
-      "entregable_esperado": "Esquema de gobernanza documentado que muestre cómo interactúan el roadmap, el sistema de gates y las revisiones de portafolio",
+      "entregable_esperado": "Esquema de gobernanza documentado que muestre cómo interactúan la hoja de ruta, el sistema de gates y las revisiones de portafolio",
       "nodos_previos": [
         "scorecard_de_seleccion_de_proyectos",
         "expected_commercial_value_ecv",
@@ -65946,7 +65946,7 @@
       "titulo_concepto": "Gráficos de Control para Datos de Atributos (p, np, c, u)",
       "resumen_teorico": "Los gráficos de atributos se usan cuando los datos son de conteo o categóricos (pasa/no pasa) en lugar de mediciones numéricas continuas. El gráfico p rastrea la proporción de unidades no conformes; np rastrea el número de unidades no conformes (requiere tamaño de muestra constante o casi constante); c rastrea el número de no conformidades (defectos); y u rastrea no conformidades por unidad, análogo al np pero para defectos (también con un número de unidades aproximadamente constante).",
       "pasos_accionables": [
-        "Determinar si se cuenta unidades defectuosas o número de defectos",
+        "Determinar si se cuentan unidades defectuosas o número de defectos",
         "Seleccionar el tipo de gráfico apropiado (p, np, c o u) según el tipo de conteo y tamaño de muestra",
         "Calcular límites de control considerando el tamaño promedio de muestra",
         "Graficar los datos y aplicar las mismas reglas de interpretación que en gráficos de variables",
@@ -66464,11 +66464,11 @@
       "resumen_teorico": "Puede estar surgiendo un nuevo tipo de ventaja competitiva: es posible que personas o equipos excepcionalmente hábiles trabajando con sistemas de IA (adoptando prácticas 'Cyborg') logren mejoras de rendimiento órdenes de magnitud mayores que el usuario promedio. Esta habilidad, aunque difícil de definir con precisión, puede convertirse en un diferenciador clave para founders y equipos que buscan maximizar el retorno de sus herramientas de IA.",
       "pasos_accionables": [
         "Detectar dentro del equipo a las personas que muestran facilidad natural para lograr mejores resultados con IA.",
-        "Documentar y compartir internamente los prompts y flujos de trabajo que producen los mejores resultados.",
+        "Documentar y compartir internamente las instrucciones y flujos de trabajo que producen los mejores resultados.",
         "Fomentar la experimentación estructurada con IA como parte del desarrollo profesional del equipo.",
         "Considerar esta habilidad como criterio de contratación o promoción en roles que dependen fuertemente de IA."
       ],
-      "entregable_esperado": "Biblioteca interna de prompts y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
+      "entregable_esperado": "Biblioteca interna de instrucciones y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
       "nodos_previos": [
         "practica_deliberada_asistida_ia"
       ],
@@ -66626,7 +66626,7 @@
         "Cuando alguien ha oído tu opinión y aun así no cambia nada, porque no ve el problema que le describes o no sabe qué hacer con lo que le has dicho."
       ],
       "ids_alias": [],
-      "etiqueta_arbol": "Haz tu Opinión Accionable"
+      "etiqueta_arbol": "Da Opiniones que Lleven a Actuar"
     },
     "hacer_remarcable_lo_requerido": {
       "node_id": "hacer_remarcable_lo_requerido",
@@ -67139,10 +67139,10 @@
       "pasos_accionables": [
         "Crear un sitio web que comunique claramente la visión y el problema que resuelve el producto, que invite a los interesados a contactar a la empresa o los lleve al canal físico y que no les dé razones para no comprar (como el precio o los requisitos de instalación)",
         "Establecer presencia en redes sociales (Facebook, Twitter) para generar boca a boca",
-        "Diseñar campañas de email personalizadas y multi-etapa",
+        "Diseñar campañas de correo electrónico personalizadas y multietapa",
         "Balancear estrategias de push (venta directa) y pull (atracción orgánica)"
       ],
-      "entregable_esperado": "Presencia online mínima viable (sitio web, redes sociales, campañas de email) que apoye el canal físico de ventas",
+      "entregable_esperado": "Presencia en línea mínima viable (sitio web, redes sociales, campañas de email) que apoye el canal físico de ventas",
       "nodos_previos": [
         "plan_de_materiales_colaterales",
         "aceleracion_de_gates"
@@ -67404,13 +67404,13 @@
       "titulo_concepto": "Blueprints de Contratación (Commitment vs Bureaucracy)",
       "resumen_teorico": "Existen distintos 'blueprints' o modelos de relación con empleados que combinan tres dimensiones: reclutamiento, recompensas y control. El blueprint de 'compromiso' (commitment) recluta por encaje cultural, paga poco (los empleados trabajan por amor a la visión) y usa control informal. El blueprint de 'burocracia' recluta por experiencia y habilidades funcionales, paga salarios altos, y usa jerarquía formal de control. Mantenerse consistente con el blueprint elegido es crítico: desviarte en las tres dimensiones puede aumentar mucho tu riesgo de fracasar.",
       "pasos_accionables": [
-        "Definir explícitamente qué blueprint de contratación se usará según la etapa y motivación del startup",
-        "Si se prioriza visión y bajo costo: usar blueprint de compromiso (reclutar por fit, control informal), sabiendo que contratar poco y barato hace que el startup crezca más despacio",
-        "Si se prioriza velocidad y salida rentable: usar blueprint de burocracia (reclutar por experiencia, control jerárquico), que exige pagar salarios altos y por eso requiere financiamiento externo",
+        "Definir explícitamente qué modelo de contratación se usará según la etapa y motivación de la empresa emergente",
+        "Si se prioriza visión y bajo costo: usar modelo de compromiso (reclutar por encaje cultural, control informal), sabiendo que contratar poco y barato hace que la empresa emergente crezca más despacio",
+        "Si se prioriza velocidad y salida rentable: usar modelo de burocracia (reclutar por experiencia, control jerárquico), que exige pagar salarios altos y por eso requiere financiamiento externo",
         "Evitar mezclar inconsistentemente las tres dimensiones (reclutamiento, recompensa, control)",
-        "Revisar tus decisiones de contratación cuando cambien la motivación o la etapa del startup, manteniéndote fiel al blueprint elegido"
+        "Revisar tus decisiones de contratación cuando cambien la motivación o la etapa de la empresa emergente, manteniéndote fiel al modelo elegido"
       ],
-      "entregable_esperado": "Definición documentada del blueprint de contratación elegido, con criterios claros de reclutamiento, compensación y control",
+      "entregable_esperado": "Definición documentada del modelo de contratación elegido, con criterios claros de reclutamiento, compensación y control",
       "nodos_previos": [
         "three_rs_equilibrium",
         "vesting_dinamico"
@@ -67688,9 +67688,9 @@
       "titulo_concepto": "Hoja de Ruta de Ventas (Sales Roadmap)",
       "resumen_teorico": "Documento que detalla cada paso desde el primer contacto con un prospecto hasta la firma del contrato, incluyendo cómo varían estos pasos según la empresa, comprador o cargo. Se apoya en mapas de organización e influencia y mapas de acceso al cliente para evitar contratar una fuerza de ventas antes de saber cómo vender.",
       "pasos_accionables": [
-        "Actualiza los mapas de organización e influencia creados en Customer Discovery con hallazgos reales",
+        "Actualiza los mapas de organización e influencia creados en el descubrimiento de clientes con hallazgos reales",
         "Identifica cuántas personas deben decir 'sí' para cerrar una venta",
-        "Determina el orden correcto de contacto con los distintos stakeholders (ejecutivos, técnicos, usuarios)",
+        "Determina el orden correcto de contacto con las distintas personas involucradas (ejecutivos, técnicos, usuarios)",
         "Crea un mapa de acceso al cliente que muestre cómo conseguir la primera reunión",
         "Diseña un plan de implementación que liste todos los pasos pendientes tras el 'sí' verbal hasta el cobro efectivo y quién dará seguimiento a cada uno"
       ],
@@ -68988,7 +68988,7 @@
         "Si buscas oportunidades de innovación en un sistema o producto que ya existe.",
         "Si necesitas traducir lo que observaste en el campo en oportunidades concretas de diseño."
       ],
-      "etiqueta_arbol": "Encuentra las Brechas"
+      "etiqueta_arbol": "Encuentra Brechas entre Personas y Cosas"
     },
     "identificar_caracteristicas_metas_proceso": {
       "node_id": "identificar_caracteristicas_metas_proceso",
@@ -70519,12 +70519,12 @@
       "titulo_concepto": "Derechos de Información (Information Rights)",
       "resumen_teorico": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar con una oferta pública inicial calificada (Qualified IPO). Suelen aceptarse tal cual; solo varía el mínimo de acciones para conservarlos.",
       "pasos_accionables": [
-        "Establecer la periodicidad de entrega de reportes financieros (mensual/trimestral/anual).",
+        "Establecer la periodicidad de entrega de informes financieros (mensual/trimestral/anual).",
         "Definir el nivel de detalle: presupuesto, estados auditados, comparativos.",
         "Acordar derechos de inspección y visita a las instalaciones.",
-        "Establecer la terminación de estos derechos ante un Qualified IPO."
+        "Establecer la terminación de estos derechos ante una oferta pública inicial calificada."
       ],
-      "entregable_esperado": "Cláusula de information rights incorporada al Investor Rights Agreement.",
+      "entregable_esperado": "Cláusula de derechos de información incorporada al acuerdo de derechos de los inversionistas.",
       "nodos_previos": [
         "term_sheet_negociacion",
         "conditions_precedent_financing"
@@ -72257,7 +72257,7 @@
         "Visita, observa o entrevista a expertos de ese contexto análogo.",
         "Extrae el principio subyacente (no la superficie) y adáptalo a tu situación."
       ],
-      "entregable_esperado": "Un insight o práctica concreta 'importada' de un dominio análogo, lista para prototipar en tu contexto.",
+      "entregable_esperado": "Una idea o práctica concreta 'importada' de un dominio análogo, lista para prototipar en tu contexto.",
       "nodos_previos": [
         "metaforas_para_pensar",
         "biomimicry_conexiones_naturales",
@@ -72691,7 +72691,7 @@
         "Elige de 5 a 10 datos que vas a empezar a registrar de inmediato, clasificados por categorías (básica, profesional, historial laboral, personal, preferencias, antecedentes, familia, servicio militar, actividad de compra y otras notas clave)",
         "Elige otros 5 a 10 datos que empezarás a registrar cuando ya lleves de 6 a 12 meses investigando",
         "Revisa LinkedIn, Facebook, el sitio web de la empresa y Google para completar esos datos en tu CRM",
-        "Guarda las URLs de los perfiles sociales en el CRM para facilitar futuras búsquedas",
+        "Guarda las URL de los perfiles sociales en el CRM para facilitar futuras búsquedas",
         "Usa encuestas breves, pertinentes (preguntas que el cliente entienda que necesitas saber) y eficientes (con una herramienta en línea) cuando te falte un mismo dato en todo tu CRM, y coordínalas con todo tu equipo para no estar pidiéndole datos al cliente a cada rato",
         "Aplica la técnica de contar tú algo primero para animar a que te cuenten, cuando necesites preguntar directamente",
         "Practica la escucha enfocada para captar datos que surjan espontáneamente en las conversaciones",
@@ -73973,7 +73973,7 @@
         "cuando calificas riesgos con puntajes que luego sumas o multiplicas",
         "cuando un tablero de riesgo te da calma pero no sabrías defender sus números"
       ],
-      "etiqueta_arbol": "La Matriz de Colores Te Engaña"
+      "etiqueta_arbol": "Desconfía de la Matriz de Colores"
     },
     "landing_page_mvp": {
       "node_id": "landing_page_mvp",
@@ -73984,10 +73984,10 @@
       "pasos_accionables": [
         "Usa el mapa de valor para redactar el titular y texto de la página.",
         "Genera tráfico dirigido con anuncios o redes sociales hacia el segmento objetivo.",
-        "Diseña un CTA claro y limitado para optimizar el aprendizaje.",
-        "Da seguimiento (outreach) a quienes ejecutaron el CTA para entender su motivación."
+        "Diseña una llamada a la acción clara y limitada para optimizar el aprendizaje.",
+        "Da seguimiento (outreach) a quienes respondieron a la llamada a la acción para entender su motivación."
       ],
-      "entregable_esperado": "Una landing page publicada con tráfico medible y tasa de conversión registrada.",
+      "entregable_esperado": "Una página de aterrizaje publicada con tráfico medible y tasa de conversión registrada.",
       "nodos_previos": [
         "call_to_action_cta"
       ],
@@ -74229,7 +74229,7 @@
       "pasos_accionables": [
         "Envía tráfico/clientes fríos (no conocidos) a tu producto de forma constante, aunque sea en volumen bajo.",
         "Mide en qué punto del embudo se pierden los clientes (activación, uso, retención, pago).",
-        "Usa estos datos para priorizar el roadmap de producto, enfocándote en 'tapar' las fugas más grandes primero."
+        "Usa estos datos para priorizar la hoja de ruta del producto, enfocándote en 'tapar' las fugas más grandes primero."
       ],
       "entregable_esperado": "Análisis de embudo de conversión con clientes fríos identificando los puntos de mayor abandono (fugas) del producto.",
       "nodos_previos": [
@@ -74731,12 +74731,12 @@
       "titulo_concepto": "Negociación de Carta de Intención (LOI)",
       "resumen_teorico": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación suele ser la primera muestra real del estilo de negociación del comprador.",
       "pasos_accionables": [
-        "Contar con asesoría legal experimentada antes de firmar cualquier LOI",
-        "Analizar cuidadosamente la cláusula de no-shop antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
-        "Observar el estilo de negociación del comprador durante la LOI como indicador de la relación futura",
+        "Contar con asesoría legal experimentada antes de firmar cualquier carta de intención",
+        "Analizar cuidadosamente la cláusula de exclusividad de negociación antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
+        "Observar el estilo de negociación del comprador en la carta de intención como indicador de la relación futura",
         "No asumir que el precio inicial mencionado es el precio final de cierre"
       ],
-      "entregable_esperado": "LOI revisada por asesores legales con cláusulas de no-shop y precio comprendidas a profundidad",
+      "entregable_esperado": "Carta de intención revisada por asesores legales con cláusulas de exclusividad de negociación y precio comprendidas a profundidad",
       "nodos_previos": [
         "board_control_etapas_tardias"
       ],
@@ -76040,7 +76040,7 @@
         "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo; solo quien está expuesto al riesgo pone y quita su candado, y guarda su llave mientras está puesto.",
         "Establece un procedimiento alterno seguro para equipos que no puedan ser bloqueados/etiquetados."
       ],
-      "entregable_esperado": "Procedimiento LOTO documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
+      "entregable_esperado": "Procedimiento de bloqueo y etiquetado documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
       "nodos_previos": [
         "machinery_equipment_safety",
         "infection_control_plan"
@@ -77045,7 +77045,7 @@
       "titulo_concepto": "Manual de Calidad y Sistema de Control de Calidad",
       "resumen_teorico": "El manual de calidad recopila los procedimientos (planes de uso repetitivo) para gestionar la calidad, aportando legitimidad, accesibilidad y estabilidad frente a rotación de personal. Su contenido típico incluye el ciclo de retroalimentación, capacidad de procesos, mantenimiento y calibración, relación con proveedores, sistema de información, entrenamiento y auditoría. Los líderes pueden influir en que sea adecuado participando en su definición, aprobándolo formalmente y auditando periódicamente su vigencia y cumplimiento.",
       "pasos_accionables": [
-        "Redactar los procedimientos core: retroalimentación, capacidad de proceso, calibración, proveedores, información, entrenamiento y auditoría",
+        "Redactar los procedimientos esenciales: retroalimentación, capacidad de proceso, calibración, proveedores, información, entrenamiento y auditoría",
         "Obtener la firma y aprobación oficial del gerente general para dar legitimidad al manual",
         "Involucrar a la fuerza laboral en la preparación de los procedimientos para asegurar su cumplimiento",
         "Establecer un cronograma de auditoría periódica de vigencia y conformidad del manual"
@@ -77252,13 +77252,13 @@
       "titulo_concepto": "Mapa de Influencia (Influence Map)",
       "resumen_teorico": "Herramienta que identifica a los actores clave dentro de una organización que deben ser convencidos y el orden en que deben ser abordados para cerrar una venta compleja. Por ejemplo, puede que necesites primero el apoyo de los ejecutivos operativos, luego el de los ejecutivos técnicos (IT), después el de los usuarios finales y al final el del personal técnico.",
       "pasos_accionables": [
-        "Identifica los distintos grupos de poder e influencia dentro de la cuenta objetivo (ejecutivos, IT, usuarios)",
-        "Determina cuál grupo debe ser contactado primero para generar momentum",
+        "Identifica los distintos grupos de poder e influencia dentro de la cuenta objetivo (ejecutivos, sistemas, usuarios)",
+        "Determina cuál grupo debe ser contactado primero para generar impulso",
         "Usa el apoyo de un grupo como palanca para convencer al siguiente",
         "Identifica posibles saboteadores que puedan bloquear la venta en cada etapa",
         "No te saltes etapas del proceso de convencimiento aunque parezca más rápido"
       ],
-      "entregable_esperado": "Un mapa visual de influencia con el orden de contacto y los roles de cada stakeholder",
+      "entregable_esperado": "Un mapa visual de influencia con el orden de contacto y los roles de cada actor clave",
       "nodos_previos": [
         "hoja_de_ruta_de_ventas",
         "influence_map_organizacional"
@@ -78742,7 +78742,7 @@
       "resumen_teorico": "La gestión de procesos clave de trabajo debe incluir mediciones sistemáticas. La productividad se define como la relación entre el output y los recursos de entrada, y debe calcularse usando únicamente el output aceptable (utilizable por el cliente), no el output total. La selección y reporte periódico de estas unidades de medida comunica al personal que la calidad es prioritaria, sentando las bases para la mejora continua.",
       "pasos_accionables": [
         "Definir las unidades de medida relevantes para cada actividad de manufactura",
-        "Calcular productividad usando solo el output aceptable, no el total",
+        "Calcular productividad usando solo la producción aceptable, no la total",
         "Establecer un sistema de recolección y reporte periódico de datos",
         "Aplicar técnicas estadísticas (como cartas de control) para analizar los datos"
       ],
@@ -78904,7 +78904,7 @@
       "pasos_accionables": [
         "Reconocer que las áreas de servicio también generan costos de no calidad",
         "Definir una base de medición: cambios causados por desviación no planificada de procedimientos",
-        "Implementar el programa 'Make Certain' para servicio y áreas administrativas",
+        "Implementar el programa 'Asegúrate' para servicio y áreas administrativas",
         "Solicitar a cada departamento que identifique su propio método de conteo de errores",
         "Registrar y graficar el progreso de estas mediciones"
       ],
@@ -79541,7 +79541,7 @@
         "Cuando necesitas sostener la mejora de calidad mas allá de un proyecto puntual",
         "Cuando un problema de calidad tiene causas que vienen de otra parte de tu negocio"
       ],
-      "etiqueta_arbol": "Mejora Continua en tus Operaciones",
+      "etiqueta_arbol": "Mejora tus Operaciones de Forma Continua",
       "ids_alias": [
         "enfoque_mejora_continua_operaciones"
       ]
@@ -79872,11 +79872,11 @@
       "pasos_accionables": [
         "Mapea a todos los 'compradores' influyentes del proceso (asesores, familia, reguladores) antes de diseñar el mensaje",
         "Diseña materiales que resistan el escrutinio legal y financiero de terceros como abogados o prestamistas",
-        "Redacta el copy combinando datos objetivos de la oferta con narrativa emocional sobre identidad y estilo de vida",
+        "Redacta el texto publicitario combinando datos objetivos de la oferta con narrativa emocional sobre identidad y estilo de vida",
         "Revisa cada fotografía y video desde la perspectiva del franquiciado, no del consumidor final, para evitar imágenes que lo asusten",
         "Invierte en materiales de alta calidad (web, folletos, papelería) que transmitan seriedad y profesionalismo"
       ],
-      "entregable_esperado": "Materiales de marketing (sitio web, videos, colaterales) con guía de estilo que integra mensaje racional y emocional, revisados con checklist para múltiples audiencias.",
+      "entregable_esperado": "Materiales de marketing (sitio web, videos, material promocional) con guía de estilo que integra mensaje racional y emocional, revisados con lista de verificación para múltiples audiencias.",
       "nodos_previos": [
         "las_cuatro_ventas_franquicia",
         "valor_presente_franquicia_pvf",
@@ -81090,8 +81090,8 @@
       "titulo_concepto": "Métricas de Servicio al Cliente: Build-to-Stock vs Build-to-Order",
       "resumen_teorico": "Existen dos modelos operativos con métricas de servicio distintas. Build-to-Stock (BTS) aplica a productos commodity que deben estar disponibles de inmediato (medido por fill rate de orden completa y de línea de producto, entregas a tiempo, pedidos pendientes y devoluciones). Build-to-Order (BTO) aplica a productos personalizados por pedido (medido por tiempo de respuesta cotizado, tasa de cumplimiento y de entrega a tiempo, atrasos y garantías). Elegir y medir el modelo correcto es esencial para alinear expectativas del cliente con la operación.",
       "pasos_accionables": [
-        "Determinar si tu producto/servicio opera bajo modelo BTS o BTO",
-        "Si es BTS, medir el order fill rate y el line-item fill rate",
+        "Determinar si tu producto/servicio opera bajo modelo de fabricar para inventario (BTS) o contra pedido (BTO)",
+        "Si es BTS, medir la tasa de pedidos completos y la tasa de líneas de pedido completas",
         "Si es BTO, medir el tiempo de respuesta cotizado y la tasa de cumplimiento a tiempo",
         "Alinear el tiempo de respuesta prometido con la propuesta de valor y estrategia competitiva"
       ],
@@ -81108,7 +81108,7 @@
         "Cuando el usuario gestiona inventario o pedidos personalizados",
         "Si hay quejas de clientes por tiempos de entrega o disponibilidad"
       ],
-      "etiqueta_arbol": "Compara Fabricar Contra Pedido o Stock"
+      "etiqueta_arbol": "Compara Fabricar Contra Pedido o Inventario"
     },
     "metrics_that_matter_framework": {
       "node_id": "metrics_that_matter_framework",
@@ -81728,7 +81728,7 @@
       "resumen_teorico": "El compromiso de los empleados es fundamental para que la sostenibilidad se convierta en una ventaja competitiva real. Casos como el programa WRAP de Dow Chemical o BluePlanet de Blue Coat muestran cómo la participación de empleados en todas las áreas genera ahorros significativos y proyectos de alto valor. Además, la reputación de sostenibilidad de una empresa influye fuertemente en la atracción y retención de talento, especialmente entre 'trabajadores del conocimiento' que buscan alinear sus valores personales con su empleo.",
       "pasos_accionables": [
         "Hacer que la sostenibilidad sea relevante y comprensible para los empleados mediante historias y ejemplos concretos.",
-        "Involucrar a stakeholders internos clave, especialmente mandos medios, en el diseño de la estrategia de compromiso.",
+        "Involucrar a las personas clave de la empresa, especialmente mandos medios, en el diseño de la estrategia de compromiso.",
         "Evaluar las actitudes de los empleados hacia la sostenibilidad mediante encuestas y entrevistas.",
         "Crear equipos multifuncionales para desarrollar y supervisar iniciativas de sostenibilidad.",
         "Comunicar historias de éxito internas para generar impulso cultural."
@@ -82187,7 +82187,7 @@
       "pasos_accionables": [
         "Definir la Estrategia: identificar objetivos estratégicos y cómo impulsan el modelo de negocio (nuevos segmentos, canales, actividades clave)",
         "Evaluar la Estructura organizacional necesaria: ¿el modelo requiere una organización centralizada, descentralizada, integrada o independiente (spin-off)?",
-        "Diseñar los Procesos requeridos: ¿se necesitan procesos lean y automatizados, o procesos de calidad rigurosos?",
+        "Diseñar los Procesos requeridos: ¿se necesitan procesos esbeltos y automatizados, o procesos de calidad rigurosos?",
         "Configurar el sistema de Recompensas: alinear incentivos con los comportamientos que el modelo de negocio demanda (ej. fuerza de ventas directa vs. satisfacción del cliente)",
         "Definir el perfil de Personas necesario: identificar habilidades y mentalidad requeridas (ej. emprendedores, pensadores libres pero confiables)"
       ],
@@ -83473,7 +83473,7 @@
         "Evaluar tu nivel de compromiso real con la seguridad: ¿buscas ser modelo o solo cumplir mínimos exigidos?",
         "Revisar la calidad de tu sistema de información de seguridad: cómo recolectas, difundes y actúas sobre los datos",
         "Identificar si caes en la paradoja posicional, culpar al personal de línea en vez de mirar el sistema completo",
-        "Identificar el fenómeno del tic, tratar las medidas de seguridad como un checklist en vez de un proceso vivo",
+        "Identificar el fenómeno del tic, tratar las medidas de seguridad como una lista de verificación en vez de un proceso vivo",
         "Armar un plan para fortalecer cada uno de los tres motores: compromiso, competencia y cognición"
       ],
       "entregable_esperado": "Un diagnóstico de los tres motores de seguridad, compromiso, competencia y cognición, con un plan de acción para fortalecer cada uno",
@@ -83532,10 +83532,10 @@
         "Elegir ubicaciones de oficina con buen acceso a transporte público",
         "Subsidiar pases de autobús o metro para empleados",
         "Eliminar o reducir el subsidio de estacionamiento gratuito",
-        "Ofrecer estacionamiento gratis o espacios preferenciales para carpooling o van pools",
-        "Implementar shuttles compartidos hacia/desde el trabajo"
+        "Ofrecer estacionamiento gratis o espacios preferenciales para autos compartidos o camionetas compartidas",
+        "Implementar transporte colectivo hacia/desde el trabajo"
       ],
-      "entregable_esperado": "Política de commuting sostenible con incentivos definidos y métricas de adopción",
+      "entregable_esperado": "Política de desplazamiento sostenible al trabajo con incentivos definidos y métricas de adopción",
       "nodos_previos": [
         "metricas_impacto_ambiental",
         "commuting_teletrabajo_sostenible"
@@ -83948,11 +83948,11 @@
       "resumen_teorico": "Un MVP es una representación o prototipo de una propuesta de valor diseñado específicamente para probar la validez de una o más hipótesis, de la forma más rápida, barata y eficiente posible. Existen múltiples niveles de sofisticación: desde data sheets y brochures (bajo esfuerzo) hasta prototipos funcionales y Wizard of Oz (alto esfuerzo), pasando por landing pages, videos y product boxes.",
       "pasos_accionables": [
         "Identifica la hipótesis específica que necesitas validar antes de elegir el tipo de MVP.",
-        "Comienza con el MVP más barato posible (data sheet, brochure, storyboard).",
+        "Comienza con el MVP más barato posible (ficha técnica, folleto, guion gráfico).",
         "Escala la sofisticación del MVP con pruebas más elaboradas y fiables si hace falta.",
-        "Usa herramientas accesibles (ej. smartphone) antes de invertir en producción profesional."
+        "Usa herramientas accesibles (ej. teléfono inteligente) antes de invertir en producción profesional."
       ],
-      "entregable_esperado": "Un prototipo tangible (documento, video, landing page o maqueta) listo para ser mostrado a clientes potenciales.",
+      "entregable_esperado": "Un prototipo tangible (documento, video, página de aterrizaje o maqueta) listo para ser mostrado a clientes potenciales.",
       "nodos_previos": [
         "value_proposition_startup",
         "value_map",
@@ -86032,11 +86032,11 @@
         "Crear rituales grupales (presentaciones, bienvenida) en cada interacción para generar cohesión.",
         "Organizar eventos sociales recurrentes que fortalezcan el vínculo comunitario.",
         "Medir tasas de conversión de prueba a membresía y retención a largo plazo.",
-        "Crear un momento de iniciación público o semi-público donde el nuevo cliente sea presentado a la comunidad existente, acorde con el estilo de tu clientela, porque lo que encaja con un grupo puede no encajar con otro",
-        "Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'creed', apodos, insignias)",
+        "Crear un momento de iniciación público o semipúblico donde el nuevo cliente sea presentado a la comunidad existente, acorde con el estilo de tu clientela, porque lo que encaja con un grupo puede no encajar con otro",
+        "Desarrollar un vocabulario o identidad compartida para los miembros/clientes (ej. 'credo', apodos, insignias)",
         "Facilitar la conexión entre clientes nuevos y clientes veteranos (mentoría, foros, eventos)"
       ],
-      "entregable_esperado": "Programa de onboarding con etapas definidas de introducción, mentoría personalizada, lenguaje de marca y calendario de eventos comunitarios.",
+      "entregable_esperado": "Programa de incorporación con etapas definidas de introducción, mentoría personalizada, lenguaje de marca y calendario de eventos comunitarios.",
       "nodos_previos": [
         "fase_acclimate_experiencia_cliente"
       ],
@@ -86084,7 +86084,7 @@
       "pasos_accionables": [
         "Evaluar exhaustivamente la solvencia y el historial de pago del comprador, y los riesgos políticos y económicos del país, antes de ofrecer cuenta abierta",
         "Definir términos de pago claros (plazo, moneda) en el contrato",
-        "Considerar contratar seguro de crédito a la exportación o factoring para mitigar riesgo de impago",
+        "Considerar contratar seguro de crédito a la exportación o factoraje para mitigar riesgo de impago",
         "Monitorear continuamente los patrones de pago del comprador"
       ],
       "entregable_esperado": "Contrato con términos de cuenta abierta definidos y, opcionalmente, póliza de seguro de crédito contratada",
@@ -86174,7 +86174,7 @@
       "titulo_concepto": "Operacionalización de Etiquetas Psicológicas ('Human Error')",
       "resumen_teorico": "Términos como 'pérdida de conciencia situacional', 'complacencia' o 'incumplimiento de procedimientos' son solo etiquetas que renombran el 'error humano' sin explicarlo. Para generar un análisis creíble hay que operacionalizar estas etiquetas: descomponerlas en componentes específicos, medibles u observables, y buscar evidencia de ellos en los hechos, conectándolos con el resultado.",
       "pasos_accionables": [
-        "Identificar la etiqueta psicológica que se está usando (ej: pérdida de CRM)",
+        "Identificar la etiqueta psicológica que se está usando (ej: pérdida de gestión de recursos de la tripulación)",
         "Buscar en la literatura de factores humanos una definición operacional del concepto",
         "Descomponer la etiqueta en componentes observables (ej: entendimiento compartido de la situación, meta y estrategia)",
         "Buscar evidencia concreta de esos componentes en los datos del evento (ej: turnos de habla desiguales, respuestas ausentes)",
@@ -86259,9 +86259,9 @@
       "titulo_concepto": "Organización de Almacenes y Centros de Distribución para Máxima Eficiencia",
       "resumen_teorico": "La optimización de procesos logísticos internos (métodos de almacenamiento (put-away), estrategias de picking, automatización y uso de energías limpias en instalaciones) puede generar simultáneamente beneficios ambientales y económicos: menor necesidad de espacio construido, menor consumo energético, reducción de errores y aumento de productividad. Empresas como London Drugs y Zappos han logrado ahorros sustanciales aplicando estas prácticas.",
       "pasos_accionables": [
-        "Rediseñar métodos de put-away para maximizar el uso vertical y horizontal del espacio de almacenamiento.",
-        "Implementar un Warehouse Management System con códigos de barra o RFID para trazabilidad.",
-        "Optimizar estrategias de picking almacenando productos de alta rotación cerca del punto de recolección.",
+        "Rediseñar métodos de ubicación de mercancía para maximizar el uso vertical y horizontal del espacio de almacenamiento.",
+        "Implementar un sistema de gestión de almacenes con códigos de barra o RFID para trazabilidad.",
+        "Optimizar estrategias de preparación de pedidos almacenando productos de alta rotación cerca del punto de recolección.",
         "Evaluar la incorporación de equipos alimentados por energía limpia (montacargas de hidrógeno, paneles solares, LED), sabiendo que la inversión puede tardar en recuperarse.",
         "Automatizar procesos de clasificación y almacenamiento donde el volumen de operación lo justifique."
       ],
@@ -86579,7 +86579,7 @@
       "resumen_teorico": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software permite reunir información de proveedores y comparar su desempeño a lo largo del tiempo o entre cadenas de valor, y el de análisis de ciclo de vida permite conocer el impacto de productos y procesos sin recolectar información directamente del proveedor. Una manera posible de ordenar dónde puede ayudarte la tecnología, que no es la única, es en cuatro frentes: tableros verdes pensados para cada rol, activos sostenibles o eficientes, seguimiento de residuos y transporte o logística sostenible.",
       "pasos_accionables": [
         "Evaluar herramientas de software de análisis de ciclo de vida disponibles en el mercado",
-        "Implementar dashboards para monitorear desempeño ambiental de proveedores por rol",
+        "Implementar tableros para monitorear desempeño ambiental de proveedores por rol",
         "Establecer sistemas de seguimiento y análisis de residuos",
         "Optimizar rutas de transporte y logística con criterios de sostenibilidad",
         "Desarrollar capacidades internas (in-house) para el uso efectivo de estas herramientas"
@@ -86661,7 +86661,7 @@
         "No impongas procesos rígidos desde el inicio; déjalos crecer a partir de resolver problemas reales",
         "Detecta cuándo un problema necesita que inviertas en prevenirlo en vez de seguir avanzando rápido, con una inversión proporcional: pequeña si el síntoma es menor y mayor solo si el problema es grande",
         "Une el desempeño de quien guía con el de quien entra nuevo, para asegurar calidad al incorporar gente",
-        "Evita dividir la diferencia al decidir tus procesos: eso empuja a tomar posiciones extremas"
+        "Evita quedarte en el punto medio al decidir tus procesos: eso empuja a tomar posiciones extremas"
       ],
       "entregable_esperado": "Un proceso de incorporación o de trabajo documentado que haya salido de mejorar poco a poco, no uno que impusiste desde el día uno",
       "nodos_previos": [
@@ -86880,7 +86880,7 @@
       "resumen_teorico": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales, que en general requieren formas nuevas; los cambios pequeños y similares a menudo se coordinan con procedimientos bien planeados. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
       "pasos_accionables": [
         "Identificar los tipos de cambio no rutinario que la organización necesita abordar",
-        "Formar equipos de proyecto o steering committees según la naturaleza permanente o temporal del cambio",
+        "Formar equipos de proyecto o comités directivos según la naturaleza permanente o temporal del cambio",
         "Definir claramente el alcance y la misión del equipo paralelo y, si es temporal, que se disuelve al cumplir su misión",
         "Asegurar patrocinio ejecutivo para dar autoridad y recursos a estos equipos"
       ],
@@ -87453,7 +87453,7 @@
       "titulo_concepto": "Participación de los Trabajadores en el Programa de Seguridad",
       "resumen_teorico": "Tus trabajadores, incluidos subcontratistas y temporales, a menudo son quienes más saben de los peligros de su propio trabajo. Por eso debes hacerlos participar activamente en todas las fases del programa: diseño, reporte, investigación de incidentes y evaluación de mejoras, sin que teman represalias. Elimina las barreras de idioma, habilidad, educación o miedo a represalias, y revisa que los incentivos que uses no terminen desalentando el reporte. Mantén canales de comunicación abiertos, da retroalimentación frecuente sobre lo que haces con cada reporte, y protege legalmente a quien reporta según la norma de tu país (en Estados Unidos, esto está amparado por la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act).",
       "pasos_accionables": [
-        "Crea un proceso simple para que te reporten lesiones, enfermedades, casi accidentes, peligros y otras inquietudes de seguridad y salud, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
+        "Crea un proceso simple para que te informen de lesiones, enfermedades, casi accidentes, peligros y otras inquietudes de seguridad y salud, incluyendo la opción de hacerlo de forma anónima, y faculta a todos para detener o pedir que se detenga temporalmente cualquier tarea que crean insegura",
         "Da retroalimentación frecuente sobre lo que haces con cada reporte que recibes",
         "Comparte con tus trabajadores la información de seguridad, como las hojas de datos de seguridad (SDS), los datos de lesiones, quitando si hace falta lo que identifique a las personas, y las inspecciones",
         "Involucra a tus trabajadores en el diseño de metas, análisis de peligros, inspecciones, capacitación y desarrollo de soluciones",
@@ -87889,7 +87889,7 @@
         "Diferenciar entre acciones preferentes y comunes al estructurar inversión.",
         "Calcular el valor nominal (par value) vs capital adicional pagado por cada ronda de inversión.",
         "Rastrear utilidades retenidas como indicador de reinversión vs distribución de dividendos.",
-        "Entender que emitir acciones preferentes a VCs típicamente da derechos de pago preferente."
+        "Entender que emitir acciones preferentes a fondos de capital de riesgo típicamente da derechos de pago preferente."
       ],
       "entregable_esperado": "Cap table (tabla de capitalización) que distinga tipos de acciones y su valor en el balance.",
       "nodos_previos": [
@@ -88434,7 +88434,7 @@
         "Identificar escenarios de emergencia previsibles según el tipo de instalación, material manejado y ubicación",
         "Listar tareas no rutinarias como mantenimiento infrecuente o arranques y paradas de equipo",
         "Desarrollar planes o procedimientos de respuesta específicos para cada escenario identificado",
-        "Revisar el JHA o JSA con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
+        "Revisar el análisis de peligros de la tarea con los trabajadores antes de iniciar cualquier tarea no rutinaria y avisar a los demás sobre la naturaleza del trabajo, el horario y las precauciones necesarias",
         "Desarrollar o modificar los planes para controlar los peligros que puedan surgir en situaciones de emergencia, conseguir el equipo necesario, asignar responsables y hacer simulacros para comprobar que protegen de forma adecuada"
       ],
       "entregable_esperado": "Listado de escenarios de emergencia y tareas no rutinarias con planes o procedimientos de respuesta asociados",
@@ -88719,7 +88719,7 @@
       "pasos_accionables": [
         "Antes de analizar un problema, pregúntate qué necesitas revelar: ¿un porqué (historia) o un cómo (patrón)?",
         "Si buscas entender consecuencias futuras, usa una historia especulativa",
-        "Si buscas overlaps que puedan revelar nuevas posibilidades, prueba a pensar con metáforas",
+        "Si buscas coincidencias que puedan revelar nuevas posibilidades, prueba a pensar con metáforas",
         "Si buscas ver qué sucede debajo de la superficie, usa mapeo espacial",
         "Alterna conscientemente entre modos si te sientes atascado en uno solo"
       ],
@@ -88801,13 +88801,13 @@
       "titulo_concepto": "Pensamiento Visual (Visual Thinking) para Modelos de Negocio",
       "resumen_teorico": "Uso de herramientas visuales (dibujos, diagramas, Post-it notes) para construir y discutir el significado de un modelo de negocio. Al ser el modelo de negocio un sistema de elementos interrelacionados, visualizarlo convierte supuestos tácitos en información explícita, facilita el diálogo, mejora la comprensión conjunta, permite explorar ideas quitando o añadiendo elementos para ver su efecto en el conjunto, y potencia la comunicación tanto interna como externa. Se apoya en técnicas como Post-it notes y dibujos sobre el Business Model Canvas.",
       "pasos_accionables": [
-        "Mapear el modelo de negocio actual o propuesto usando Post-it notes, un elemento por nota",
+        "Mapear el modelo de negocio actual o propuesto usando notas Post-it, un elemento por nota",
         "Usar marcadores gruesos y pocas palabras por nota para forzar síntesis",
         "Reemplazar notas de texto por dibujos simples que representen cada elemento",
         "Definir una narrativa (storyline) sobre qué bloque presentar primero",
         "Presentar el modelo como una historia visual, un elemento a la vez, para venderlo interna o externamente"
       ],
-      "entregable_esperado": "Canvas o storyboard visual del modelo de negocio con dibujos y Post-its que pueda usarse para explicar el modelo a stakeholders",
+      "entregable_esperado": "Canvas o guion gráfico visual del modelo de negocio con dibujos y Post-its que pueda usarse para explicar el modelo a los involucrados",
       "nodos_previos": [
         "lienzo_modelo_negocio",
         "reglas_brainstorming",
@@ -89725,10 +89725,10 @@
       "resumen_teorico": "Un pivote es el abandono de una estrategia original de negocio (que ha sido invalidada empíricamente) para adoptar una nueva dirección basada en lo aprendido de los clientes. Implica el costo emocional y práctico de desechar parte del trabajo previo (código, diseño, planificación), aunque no hace falta tirarlo todo (es común reaprovechar lo construido y lo aprendido), y es preferible a seguir ejecutando un plan que 'no lleva a ningún lado'. Después de pivotar, la productividad de tu equipo puede mejorar mucho, no porque trabaje más duro sino porque queda alineado con las necesidades reales del cliente.",
       "pasos_accionables": [
         "Aceptar la evidencia empírica aunque contradiga meses de trabajo e inversión previa (sunk cost)",
-        "Formular una nueva hipótesis de valor basada en los insights obtenidos de clientes",
+        "Formular una nueva hipótesis de valor basada en los aprendizajes obtenidos de clientes",
         "Redirigir el desarrollo de producto hacia la nueva hipótesis, incluso si implica desechar código o funcionalidades ya construidas",
         "Validar la nueva dirección con nuevos experimentos y medir si las métricas empiezan a moverse",
-        "Comunicar el pivote y su justificación basada en datos a inversores, empleados y stakeholders",
+        "Comunicar el pivote y su justificación basada en datos a inversores, empleados y demás involucrados",
         "Decide con rapidez y sin miedo al fracaso si toca pivotar",
         "Distingue con claridad entre un ajuste menor y un cambio sustancial",
         "Usa un lienzo de modelo de negocio para ubicar qué parte necesita el cambio",
@@ -89943,8 +89943,8 @@
       "titulo_concepto": "Plan de Acción a Corto, Mediano y Largo Plazo",
       "resumen_teorico": "Metodología para estructurar la implementación de sostenibilidad en tres horizontes temporales: un plan a un año enfocado en 'quick wins' fáciles de lograr y con alta visibilidad interna; un plan a tres años que incorpora iniciativas que requieren mayor inversión o construcción de capacidades, como rediseño de procesos de manufactura o edificios más verdes; y un plan a cinco años orientado a transformar la industria o línea de negocio mediante rediseño profundo de productos y estrategia.",
       "pasos_accionables": [
-        "Identificar 'quick wins' de bajo costo y alta visibilidad para el plan de un año",
-        "Realizar proyectos piloto para iniciativas de alto ROI potencial pero incertidumbre significativa",
+        "Identificar logros rápidos de bajo costo y alta visibilidad para el plan de un año",
+        "Realizar proyectos piloto para iniciativas de alto retorno potencial de la inversión pero incertidumbre significativa",
         "Expandir a nivel de toda la empresa los pilotos exitosos en el plan de tres años",
         "Incluir en el plan de tres años la responsabilidad de cada función de negocio en desarrollar su propia agenda de sostenibilidad, alineada con la estrategia general del negocio",
         "Reservar para el plan de largo plazo (cinco años) las iniciativas de rediseño profundo de producto o transformación de industria"
@@ -92427,13 +92427,13 @@
       "titulo_concepto": "Publicidad Pay-Per-Click (PPC) para Venta de Franquicias",
       "resumen_teorico": "La publicidad PPC en buscadores como Google y Bing permite obtener visibilidad inmediata en la primera página de resultados, aunque suele tener menor rendimiento que el SEO orgánico (solo el 6% de los clics van a anuncios pagados frente al 94% de resultados orgánicos). Requiere gestión activa de palabras clave, pujas, landing pages y prevención de fraude de clics. El posicionamiento depende de tus pujas, de las pujas de la competencia, del contenido del anuncio, de la tasa de clics y de otros factores, lo que exige pruebas y ajustes constantes.",
       "pasos_accionables": [
-        "Configurar una cuenta de PPC con presupuesto definido y palabras clave objetivo.",
-        "Diseñar landing pages específicas y optimizadas para captura de leads.",
+        "Configurar una cuenta de publicidad de pago por clic (PPC) con presupuesto definido y palabras clave objetivo.",
+        "Diseñar páginas de aterrizaje específicas y optimizadas para captura de clientes potenciales.",
         "Implementar campañas de remarketing para dar seguimiento a visitantes previos.",
-        "Monitorear tasas de clics, posiciones y costo por lead de forma continua.",
-        "Ajustar pujas, descartar keywords ineficientes y agregar keywords negativas."
+        "Monitorear tasas de clics, posiciones y costo por cliente potencial de forma continua.",
+        "Ajustar pujas, descartar palabras clave ineficientes y agregar palabras clave negativas."
       ],
-      "entregable_esperado": "Campaña PPC activa y optimizada con landing pages, seguimiento de métricas y ajustes periódicos documentados.",
+      "entregable_esperado": "Campaña PPC activa y optimizada con páginas de aterrizaje, seguimiento de métricas y ajustes periódicos documentados.",
       "nodos_previos": [
         "seo_para_captacion_de_franquiciados"
       ],
@@ -92453,13 +92453,13 @@
       "titulo_concepto": "PR No Convencional: Publicity Stunts",
       "resumen_teorico": "Los stunts publicitarios son acciones diseñadas deliberadamente para generar cobertura mediática mediante sorpresa, humor o controversia. A diferencia del PR tradicional, este canal está menos saturado porque pocas empresas se enfocan en acciones de este tipo, aunque su éxito es impredecible y no toda idea funciona. Ejemplos: renombrar un pueblo (Half.com), bloque de hielo en conferencia de competidor (WePay), videos virales (Blendtec, Dollar Shave Club).",
       "pasos_accionables": [
-        "Brainstormear ideas disruptivas y visualmente memorables relacionadas con el producto o lanzamiento",
-        "Evaluar el stunt por su potencial de generar historia emocional y compartible",
-        "Ejecutar el stunt cerca del lanzamiento para maximizar impacto mediático",
+        "Hacer una lluvia de ideas disruptivas y visualmente memorables relacionadas con el producto o lanzamiento",
+        "Evaluar la acción publicitaria por su potencial de generar historia emocional y compartible",
+        "Ejecutar la acción publicitaria cerca del lanzamiento para maximizar impacto mediático",
         "Documentar en video/foto para amplificar en redes sociales y prensa",
-        "Medir impacto en signups, menciones de prensa y crecimiento de base de usuarios"
+        "Medir impacto en registros, menciones de prensa y crecimiento de base de usuarios"
       ],
-      "entregable_esperado": "Plan de stunt de lanzamiento con presupuesto, cronograma y métricas de éxito esperadas",
+      "entregable_esperado": "Plan de la acción publicitaria de lanzamiento con presupuesto, cronograma y métricas de éxito esperadas",
       "nodos_previos": [
         "publicidad_tradicional_pr"
       ],
@@ -92470,7 +92470,7 @@
         "Cuando el mercado está saturado de publicidad tradicional",
         "Cuando se busca un lanzamiento de alto impacto con presupuesto limitado"
       ],
-      "etiqueta_arbol": "Sorprende con Publicity Stunts"
+      "etiqueta_arbol": "Sorprende con Acciones Publicitarias Llamativas"
     },
     "practica_de_observacion_atenta": {
       "node_id": "practica_de_observacion_atenta",
@@ -93573,7 +93573,7 @@
       "titulo_concepto": "Cómo preparar la conversación de despido a un ejecutivo",
       "resumen_teorico": "Cuando decides despedir a un ejecutivo, prepara la conversación con cuidado: ten claras las razones y usa un lenguaje decisivo ('he decidido' en vez de 'creo que'). Ten el paquete de indemnización aprobado y listo antes de sentarte con esa persona. Va a recordar esta conversación por mucho tiempo, así que ensaya lo que vas a decir.",
       "pasos_accionables": [
-        "Revisa las evaluaciones de desempeño previas para verificar que tu mensaje sea consistente con lo que ya le dijiste antes",
+        "Revisa las evaluaciones de desempeño previas para verificar que tu mensaje sea coherente con lo que ya le dijiste antes",
         "Escribe y ensaya lo que vas a decir en la conversación",
         "Ten claras las razones, sin suavizarlas, y usa un lenguaje decisivo y sin ambigüedad",
         "Ten el paquete de indemnización completamente aprobado antes de la reunión",
@@ -95373,11 +95373,11 @@
       "titulo_concepto": "Priorización y Listas de 'No Hacer' en Hipercrecimiento",
       "resumen_teorico": "En un startup en hipercrecimiento, la priorización es más crítica que en un negocio estable porque los recursos son escasos y los errores tienen consecuencias desproporcionadas. No basta con priorizar qué hacer; los equipos necesitan explícitamente listas de 'no hacer' para evitar dispersión en nuevos productos, segmentos o funcionalidades que consuman recursos preciosos y dañen la organización.",
       "pasos_accionables": [
-        "Crear una lista explícita de 'no hacer' junto con el roadmap de prioridades",
+        "Crear una lista explícita de 'no hacer' junto con la hoja de ruta de prioridades",
         "Evaluar cada nueva oportunidad (producto, cliente, mercado) contra el costo de oportunidad de recursos limitados",
         "Revisar periódicamente las prioridades del equipo para evitar dispersión ante la aparición de nuevas oportunidades atractivas"
       ],
-      "entregable_esperado": "Documento de prioridades con sección explícita de 'no-to-do list'",
+      "entregable_esperado": "Documento de prioridades con sección explícita de 'lista de no hacer'",
       "nodos_previos": [
         "gestion_junta_directiva_startup",
         "brecha_capital_humano_founder"
@@ -95871,15 +95871,15 @@
       "titulo_concepto": "Ciclo de Benchmarking de 7 Pasos",
       "resumen_teorico": "Proceso estructurado en tres fases para conducir un benchmarking efectivo: Fase 1 (análisis de posicionamiento y brechas frente a organizaciones de mejor desempeño), Fase 2 (aprendizaje profundo de las causas de las brechas identificadas) y Fase 3 (transformación mediante adopción/adaptación de prácticas líderes y ejecución de programas de mejora). Seguir un proceso estructurado y sistemático como este es esencial para que el benchmarking tenga éxito.",
       "pasos_accionables": [
-        "Determinar objetivos y alcance del estudio de benchmarking (planificación).",
+        "Determinar objetivos y alcance del estudio de evaluación comparativa (planificación).",
         "Identificar y definir todas las métricas (KPIs) a utilizar con definiciones claras.",
         "Acordar cronograma, hitos y plazos con los participantes y cumplirlos, asegurando los recursos necesarios y apoyando a los participantes durante todo el proceso.",
         "Diseñar y distribuir el instrumento de recolección de datos con validaciones incorporadas.",
         "Validar y normalizar los datos recibidos antes del análisis.",
-        "Analizar los datos de forma objetiva para determinar las brechas frente a los mejores y sus razones, y reportar los hallazgos de forma clara y efectiva a todos los participantes.",
+        "Analizar los datos de forma objetiva para determinar las brechas frente a los mejores y sus razones, e informar los hallazgos de forma clara y efectiva a todos los participantes.",
         "Facilitar el intercambio de mejores prácticas, separar en cada brecha lo controlable de lo no controlable, desarrollar programas de mejora basados en los hallazgos y evaluar después los resultados para replicarlos y repetir el ciclo."
       ],
-      "entregable_esperado": "Reporte final de benchmarking con análisis de brechas, prácticas líderes identificadas y plan de mejora derivado.",
+      "entregable_esperado": "Reporte final de evaluación comparativa con análisis de brechas, prácticas líderes identificadas y plan de mejora derivado.",
       "nodos_previos": [
         "consortium_benchmarking",
         "fuentes_datos_benchmarking",
@@ -96513,11 +96513,11 @@
       "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo, siempre que los cambios no afecten el plan general, el presupuesto ni el atractivo financiero del proyecto. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
       "pasos_accionables": [
         "Crea una lista inicial de requisitos priorizada, aceptando que no está completa al 100%",
-        "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
+        "Actualiza esa lista de forma continua con los comentarios de tus clientes y lo que aprendes en cada iteración técnica",
         "Congela antes algunas decisiones de hardware, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
         "Como regla práctica, fija tu presupuesto final hacia el final de la etapa de desarrollo, a medida que baja la incertidumbre"
       ],
-      "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada sprint, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
+      "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada ciclo de trabajo, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
       "nodos_previos": [
         "seleccion_proyectos_agile",
         "voc_temprano_en_agile_stage_gate"
@@ -96693,7 +96693,7 @@
       "pasos_accionables": [
         "Evaluar si tu producto podría transformarse en un modelo de acceso/servicio en lugar de venta de propiedad",
         "Identificar barreras de adopción específicas (confianza, disponibilidad, conveniencia, costo)",
-        "Diseñar un piloto de modelo Product-as-a-Service y medir métricas de uso y retención",
+        "Diseñar un piloto de modelo de producto como servicio y medir métricas de uso y retención",
         "Analizar el impacto en la cadena de suministro (ej: necesidad de mantenimiento, redistribución, recolección)",
         "Analizar si tu producto puede reformularse como acceso a un servicio en lugar de venta de un bien",
         "Identificar barreras de adopción del cliente (propiedad vs. renta, confianza, disponibilidad)",
@@ -97769,15 +97769,15 @@
       "titulo_concepto": "Programación de Entregas: Directas vs. Milk Run",
       "resumen_teorico": "Existen dos métodos principales de entrega: las entregas directas (de un origen a un destino, simples pero eficientes solo cuando el EOQ del receptor coincide con la carga de transporte completa) y las entregas milk run (de un origen a múltiples destinos o viceversa, más complejas de programar pero más eficientes en el uso del transporte y menor costo de recepción cuando las cantidades individuales son menores a una carga completa). La elección depende de la relación entre el EOQ de cada ubicación receptora y la capacidad del modo de transporte.",
       "pasos_accionables": [
-        "Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte",
+        "Evaluar si el lote económico de pedido de cada ubicación receptora coincide con cargas completas de transporte",
         "Si coincide, implementar entregas directas por su simplicidad",
-        "Si no coincide, diseñar rutas milk run combinando pedidos",
+        "Si no coincide, diseñar rutas de reparto con varias paradas combinando pedidos",
         "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando las restricciones se limitan a la capacidad del vehículo o al tiempo total de viaje",
         "Decidir entre entregas desde ubicaciones de producto único (si la demanda es alta y predecible y el cliente recibe a granel) o desde centros de distribución (si los proveedores están lejos de los clientes)",
         "Diseñar la secuencia de recogidas/entregas y validar con software de ruteo",
         "Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada"
       ],
-      "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
+      "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo o con varias paradas) y rutas optimizadas",
       "nodos_previos": [
         "gestion_pedidos_order_management",
         "gestion_inventario",
@@ -98141,7 +98141,7 @@
         "Revisar los objetivos del proyecto o fase definidos en el Acta de Constitución",
         "Documentar los criterios de finalización y evidencia de cumplimiento para alcance, calidad, cronograma y costo",
         "Registrar cualquier variación respecto a los objetivos originales",
-        "Incorporar información del Cierre de Contrato si aplica",
+        "Incorporar información del Cierre de Contrato si corresponde",
         "Obtener las aprobaciones formales de cierre"
       ],
       "entregable_esperado": "Informe de Cierre de Proyecto o Fase con desempeño final, variaciones y aprobaciones",
@@ -99048,7 +99048,7 @@
         "Cuando el producto/servicio depende de interacciones sociales complejas entre usuarios.",
         "Cuando existen dos o más hipótesis de diseño en competencia y se necesita evidencia real para decidir."
       ],
-      "etiqueta_arbol": "Prueba tu Prototipo en Real"
+      "etiqueta_arbol": "Prueba tu Prototipo con Usuarios Reales"
     },
     "prototipado_experiencial_servicios": {
       "node_id": "prototipado_experiencial_servicios",
@@ -100055,7 +100055,7 @@
         "Descubriste que un proveedor sabe algo de tu negocio que tú no le dijiste.",
         "Un familiar o empleado le prometió algo a un proveedor sin consultarte."
       ],
-      "etiqueta_arbol": "Un solo contacto con cada proveedor"
+      "etiqueta_arbol": "Fija un Solo Contacto por Proveedor"
     },
     "puntos_brillantes_antes_del_pivote": {
       "node_id": "puntos_brillantes_antes_del_pivote",
@@ -100970,7 +100970,7 @@
         "Reconoce también cuándo se da: cuando el candidato no tiene ningún problema evidente, parece bastante agradable, se ajusta a lo esperable en sus respuestas y tiene experiencia relevante, y al mismo tiempo no deslumbra en ninguna dimensión concreta, y ninguno de los entrevistadores está lo bastante convencido como para pelear por la contratación si la decisión se fuera hacia el no.",
         "Rechaza cualquier contratación tibia, porque toda contratación es ya de por sí una apuesta: no es probable que la persona contratada así fracase, pero tampoco es probable que aporte mucho.",
         "Si vas a apostar, apuesta por alguien que tenga detrás a un defensor apasionado.",
-        "Trata la opinión dividida con defensores firmes como lo que suele ser: si un candidato recibe opiniones mixtas pero todos los entrevistadores que dijeron contratar insisten en querer trabajar con esa persona, eso suele ser señal de que trae a la mesa algo muy valorado."
+        "Trata la opinión dividida con defensores firmes como lo que suele ser: si un candidato recibe opiniones mixtas pero todos los entrevistadores que dijeron contratar insisten en querer trabajar con esa persona, eso suele ser señal de que aporta algo muy valorado."
       ],
       "entregable_esperado": "Las contrataciones tibias rechazadas, y las apuestas puestas en quien tiene detrás a alguien que pelea por esa persona.",
       "nodos_previos": [
@@ -100993,7 +100993,7 @@
       "resumen_teorico": "Cuando un prospecto no cumple los requisitos financieros u otros criterios, tu le comunicas el rechazo de forma profesional y empática, poniendo por delante el éxito de la persona como franquiciado, y le ofreces alternativas cuando existan, como buscar un inversionista o esperar y ahorrar mas.",
       "pasos_accionables": [
         "Identifica la brecha específica, financiera u otra, que descalifica al prospecto",
-        "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado; si lo rechazas después del Discovery Day, no entres en las razones específicas",
+        "Comunica el rechazo poniendo por delante el éxito del futuro franquiciado; si lo rechazas después de la jornada de presentación de la franquicia, no entres en las razones específicas",
         "Sugiere alternativas viables si existen, como conseguir un inversionista o esperar",
         "Cierra la conversación rápido y sin dejar ambigüedad"
       ],
@@ -101470,9 +101470,9 @@
       "titulo_concepto": "Paso 12: Reconocimiento",
       "resumen_teorico": "El propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, que deben poder ayudar a elegir.",
       "pasos_accionables": [
-        "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre los problemas que te reporten, y trata todos los problemas reportados de manera equitativa",
+        "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre los problemas que te comuniquen, y trata todos los problemas comunicados de manera equitativa",
         "Define una frecuencia: reconocimiento individual cada trimestre, logros grupales cada mes, y sorteos de vez en cuando",
-        "Si trabajas con colaboradores o freelancers, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo, y adapta el reconocimiento a la forma de trabajar que tienes con tu gente",
+        "Si trabajas con colaboradores o profesionales independientes, decide junto con ellos cómo se elige el premio, en lugar de imponerlo tú solo, y adapta el reconocimiento a la forma de trabajar que tienes con tu gente",
         "Cuida que la entrega sea digna y visible, más que el valor económico del premio",
         "No uses bonos ni dinero como premio; prioriza la ceremonia y el aprecio genuino"
       ],
@@ -102944,7 +102944,7 @@
         "De forma continua, y con más motivo cuando te notes apegado a una tarea porque te da sensación de pericia, de control o de identidad."
       ],
       "ids_alias": [],
-      "etiqueta_arbol": "Busca Quién Te Reemplace"
+      "etiqueta_arbol": "Busca Quien Te Reemplace"
     },
     "reevolucion_industrial": {
       "node_id": "reevolucion_industrial",
@@ -103883,7 +103883,7 @@
       "resumen_teorico": "Paso final y cíclico del programa de catorce pasos. Enfatiza que la mejora de calidad nunca termina: cuando se alcanzan las metas llega un gran alivio y, si no tienes cuidado, el programa completo se detiene en ese momento. Es necesario formar un nuevo equipo, con nuevo liderazgo y nuevo coordinador, para reiniciar el ciclo con mayor innovación, asegurando así que las ganancias obtenidas se mantengan en el tiempo y evitando el estancamiento.",
       "pasos_accionables": [
         "Al alcanzar las metas, formar un nuevo equipo de calidad con nuevo líder y coordinador",
-        "Programar la repetición del programa a lo largo de un año completo con nuevas iniciativas (ej. ZD Día II, salón de la fama de calidad)",
+        "Programar la repetición del programa a lo largo de un año completo con nuevas iniciativas (ej. segundo Día de Cero Defectos, salón de la fama de calidad)",
         "Rotar a los miembros veteranos del equipo original, dejando alguno como asesor o 'padrino'",
         "Otorgar reconocimiento formal (promoción, carta de reconocimiento) a los líderes salientes",
         "Repetir el ciclo aproximadamente cada dieciocho meses, usando el proceso como herramienta de desarrollo gerencial"
@@ -105128,9 +105128,9 @@
       "titulo_concepto": "Plan de Gestión de Requisitos",
       "resumen_teorico": "Define cómo se recolectarán, analizarán, categorizarán, priorizarán, documentarán y gestionarán los requisitos a lo largo del proyecto, incluyendo la estructura de trazabilidad y los métodos de validación.",
       "pasos_accionables": [
-        "Definir técnicas de recolección de requisitos (entrevistas, brainstorming, observación)",
-        "Establecer categorías de requisitos (negocio, stakeholder, calidad, etc.)",
-        "Determinar el enfoque de priorización (must have, should have, nice to have)",
+        "Definir técnicas de recolección de requisitos (entrevistas, lluvia de ideas, observación)",
+        "Establecer categorías de requisitos (negocio, interesados, calidad, etc.)",
+        "Determinar el enfoque de priorización (imprescindible, importante, deseable)",
         "Definir métricas para medir el cumplimiento de cada requisito",
         "Establecer la estructura de trazabilidad, el proceso de validación, cómo se dará seguimiento e informe a los requisitos y cómo se controlan y autorizan sus cambios"
       ],
@@ -105360,15 +105360,15 @@
       "titulo_concepto": "Reservar media hora semanal para identificar y cultivar jugadores A",
       "resumen_teorico": "Ningún sistema para seguir candidatos sirve si no se usa con regularidad, y el paso que más importa de toda la búsqueda es reservar media hora fija cada semana para llamar a los mejores nombres de tu lista. La cita fija te mantiene constante porque te obliga a llamar. Basta con una conversación real por semana, breve, y con cerrarla pidiendo nombres nuevos: la mayoría de la gente estará encantada de charlar, y esa pregunta sencilla, repetida con disciplina, hace que tu red de candidatos crezca de forma exponencial aunque la necesidad de contratar suba y baje.",
       "pasos_accionables": [
-        "Reserva treinta minutos en tu calendario todas las semanas para identificar y cultivar jugadores A.",
+        "Reserva treinta minutos en tu calendario todas las semanas para identificar y cultivar talentos de primer nivel.",
         "Ponlo como reunión fija el lunes o el viernes, que es lo que te mantiene constante al obligarte a llamar al mejor talento que tienes en el radar.",
         "Llegada la hora, cierra la puerta de tu despacho o vete a una sala de reuniones.",
-        "Saca tu lista de jugadores A potenciales y ordénala por prioridad.",
+        "Saca tu lista de posibles talentos de primer nivel y ordénala por prioridad.",
         "Empieza a llamar hasta que tengas al menos una conversación real con alguien.",
         "La conversación no tiene por qué ser larga. Puedes abrir con algo sencillo: di quién te sugirió contactar con esa persona, que sabes que es muy buena en lo suyo, que siempre estás buscando gente con talento y que te gustaría conocerla, y que aunque esté perfectamente a gusto en su trabajo actual te encantaría presentarte y escuchar qué intereses tiene para su carrera.",
         "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oído, no olvides hacer la pregunta de seguimiento clave: ahora que sabes algo de mí, ¿quiénes son las personas más talentosas que conoces que podrían encajar bien en mi empresa?"
       ],
-      "entregable_esperado": "Al menos una conversación real por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Si lo haces bien, puedes llegar a conectar con cuarenta personas nuevas o más al año.",
+      "entregable_esperado": "Al menos una conversación real por semana con un posible talento de primer nivel, y los nombres nuevos que salen de la pregunta de cierre. Si lo haces bien, puedes llegar a conectar con cuarenta personas nuevas o más al año.",
       "nodos_previos": [
         "crear_sistema_captura_seguimiento_candidatos"
       ],
@@ -106081,7 +106081,7 @@
         "Capacitar a gerentes y supervisores para involucrarse en el trabajo diario, no solo en auditorías de seguridad",
         "Fomentar conversaciones sobre el trabajo en general, no únicamente sobre seguridad",
         "Evitar el enfoque paternalista de 'vigilar' la seguridad de los trabajadores",
-        "Establecer relaciones de confianza que permitan reportar problemas sin miedo"
+        "Establecer relaciones de confianza que permitan informar de problemas sin miedo"
       ],
       "entregable_esperado": "Un plan de involucramiento de supervisores en campo con indicadores cualitativos de confianza y comunicación",
       "nodos_previos": [
@@ -108018,7 +108018,7 @@
         "Evaluar si el nivel actual de contacto humano en mantenimiento sigue siendo necesario dado el avance tecnológico",
         "Priorizar el diseño de componentes que solo puedan instalarse correctamente (poka-yoke)",
         "Explorar la eliminación de la necesidad de contacto humano directo mediante sistemas de autodiagnóstico",
-        "Reportar a diseñadores y fabricantes la necesidad de considerar la falibilidad humana en el ciclo de vida del producto"
+        "Informar a diseñadores y fabricantes de la necesidad de considerar la falibilidad humana en el ciclo de vida del producto"
       ],
       "entregable_esperado": "Informe de análisis de riesgo comparando fallos técnicos vs errores humanos de mantenimiento, con recomendaciones de rediseño",
       "nodos_previos": [
@@ -108090,7 +108090,7 @@
       "resumen_teorico": "Riesgo no es desgracia garantizada ni simple azar: es el efecto que la incertidumbre puede tener sobre tus objetivos. Detrás de todo riesgo hay algo que no sabes con seguridad, y ese algo puede empujar tu proyecto hacia arriba o hacia abajo. Por eso conviene separar dos preguntas: qué tan probable es que pase algo que afecte tu proyecto, y si ese algo importa lo suficiente como para hacer algo al respecto. Si una incertidumbre no toca tus objetivos, no es un riesgo tuyo, es solo ruido. Nombrar el riesgo en estos términos lo saca del terreno de la mala suerte y lo pone en el terreno de lo que puedes anticipar y manejar.",
       "pasos_accionables": [
         "Toma una preocupación tuya y escríbela como una frase de causa y efecto: si pasa X, entonces mi proyecto sufre Y.",
-        "Pregunta de cada una: qué tan probable es, y me importa lo suficiente para actuar.",
+        "Pregunta de cada una: ¿qué tan probable es? y ¿me importa lo suficiente para actuar?",
         "Descarta las incertidumbres que no tocan tu objetivo: no son riesgos, son ruido.",
         "Quédate con las que sí afectan tu meta y ponles nombre claro."
       ],
@@ -109252,13 +109252,13 @@
       "titulo_concepto": "Rotación (Turnover) del Equipo Fundador",
       "resumen_teorico": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup y se niega a asumir un rol menor, y en un equipo que lleva mucho tiempo junto y cuyas rutinas frenan la creatividad, reemplazar a un miembro por alguien nuevo puede dar un 'diversity shock' que la reactive. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos: los altos son más altos, pero los bajos son mucho más bajos. Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
       "pasos_accionables": [
-        "Evaluar objetivamente si un cofundador está escalando con las necesidades del startup",
+        "Evaluar objetivamente si un cofundador crece al ritmo de las necesidades de la empresa emergente",
         "Revisar acuerdos legales previos (no competencia, no solicitación, PI) antes de cofundar con excompañeros",
         "Planificar una salida ordenada y con términos claros si un cofundador debe dejar el equipo",
         "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
-        "Documentar el impacto en equity y roles cuando ocurre una salida"
+        "Documentar el impacto en participación accionaria y roles cuando ocurre una salida"
       ],
-      "entregable_esperado": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
+      "entregable_esperado": "Plan de contingencia y cláusulas contractuales (consolidación gradual de acciones, recompra) para manejar salidas de fundadores",
       "nodos_previos": [
         "gestion_de_conflictos_cofundadores",
         "three_rs_equilibrium"
@@ -109274,7 +109274,7 @@
         "Si existe riesgo legal por acuerdos previos con empleadores",
         "Cuando el equipo necesita 'diversity shock' para reactivar la creatividad"
       ],
-      "etiqueta_arbol": "Cuando un Fundador se Va"
+      "etiqueta_arbol": "Maneja la Salida de un Fundador"
     },
     "run_chart_datos_temporales": {
       "node_id": "run_chart_datos_temporales",
@@ -110355,7 +110355,7 @@
       "pasos_accionables": [
         "Evaluar si la valoración obtenida en tu ronda semilla es sostenible con el desempeño real de tu negocio",
         "Anticipar el crecimiento necesario y cómo los términos actuales impactarán la negociación de tus rondas futuras",
-        "Preferir una estructura con un inversionista líder claro en vez de una ronda de fiesta con múltiples inversionistas sin compromiso",
+        "Preferir una estructura con un inversionista líder claro en vez de una ronda con múltiples inversionistas sin compromiso",
         "Comunica expectativas realistas a tus inversionistas semilla no sofisticados sobre el riesgo de rondas a la baja",
         "Evitar comprometerte con valoraciones infladas que generen presión de dilución futura"
       ],
@@ -110574,7 +110574,7 @@
       "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
       "resumen_teorico": "Uno de los principios básicos del negocio de valores es mantener estrictamente separados a quien ejecuta una operación (trading) y a quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
       "pasos_accionables": [
-        "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
+        "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separadas.",
         "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
         "Auditar periódicamente la existencia de 'roles duales' no documentados en la organización."
       ],
@@ -110965,11 +110965,11 @@
       "resumen_teorico": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida, robo o demora durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
       "pasos_accionables": [
         "Determinar según términos de venta quién es responsable del seguro de carga",
-        "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
+        "Contratar póliza propia o asegurar bajo la póliza del agente de carga",
         "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación",
         "Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago",
         "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito",
-        "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
+        "Consultar con aseguradoras internacionales o agentes de carga para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
       ],
       "entregable_esperado": "Pólizas de seguro de carga y/o crédito contratadas antes del embarque",
       "nodos_previos": [
@@ -111185,14 +111185,14 @@
       "titulo_concepto": "Selección de un Abogado Especializado en Venture Capital",
       "resumen_teorico": "Un abogado con experiencia comprobada en financiamientos de capital de riesgo es un activo invaluable: ayuda a negociar, enfoca al emprendedor en lo que realmente importa (economía y control del deal) y lo protege de tácticas de distracción de los inversionistas. Un mal abogado -o uno sin experiencia específica en VC- puede negociar mal, enfocarse en temas irrelevantes, encarecer el proceso y dañar la reputación del emprendedor frente a la comunidad inversora. No es necesario contratar firmas caras de prestigio: firmas pequeñas con experiencia específica en financiamiento de startups pueden ser igual o más efectivas. El estilo de trabajo y la conexión personal con el abogado importan tanto como su experiencia técnica.",
       "pasos_accionables": [
-        "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de VC, no en otras especialidades legales",
+        "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de capital de riesgo, no en otras especialidades legales",
         "Pedir referencias a otros emprendedores respetados en el ecosistema e investigar la reputación del abogado en la comunidad",
         "Evaluar no solo tarifas y experiencia, sino también el estilo de negociación y la conexión personal",
         "Preguntar al inversionista (antes y después del cierre) su opinión sobre el abogado elegido",
         "Negociar un tope (cap) de honorarios antes de iniciar el proceso",
-        "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en VC"
+        "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en capital de riesgo"
       ],
-      "entregable_esperado": "Abogado corporativo especializado en financiamiento de venture capital contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
+      "entregable_esperado": "Abogado corporativo especializado en financiamiento de capital de riesgo contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
       "condiciones_activacion": [
         "Antes de iniciar negociaciones formales de una ronda de inversión",
         "Si el emprendedor no tiene aún asesoría legal especializada en VC",
@@ -113276,8 +113276,8 @@
       "pasos_accionables": [
         "Revisar proyectos pasados fallidos de la organización contra esta lista de siete causas",
         "Identificar cuáles de las siete causas son más recurrentes en tu contexto",
-        "Diseñar checkpoints en el proceso de innovación que prevengan cada causa específica",
-        "Establecer políticas de 'no me-too': exigir que el producto sea diferenciado, único y superior a la competencia antes de aprobar proyectos"
+        "Diseñar puntos de control en el proceso de innovación que prevengan cada causa específica",
+        "Establecer políticas contra la imitación: exigir que el producto sea diferenciado, único y superior a la competencia antes de aprobar proyectos"
       ],
       "entregable_esperado": "Diagnóstico documentado de las causas de fracaso más probables para el proyecto actual, con medidas preventivas asociadas",
       "nodos_previos": [
@@ -114077,7 +114077,7 @@
       "titulo_concepto": "Sistema de Gestión de Aprendizaje (LMS) para Franquicias",
       "resumen_teorico": "Un Learning Management System (LMS) permite pre-entrenar franquiciados antes del entrenamiento presencial, reducir costos de capacitación, documentar competencias, y personalizar el acceso según el rol del usuario, siendo especialmente valioso para entrenar personal de alta rotación.",
       "pasos_accionables": [
-        "Seleccionar o desarrollar una plataforma LMS adecuada al tamaño del sistema",
+        "Seleccionar o desarrollar una plataforma de gestión del aprendizaje (LMS) adecuada al tamaño del sistema",
         "Diseñar currículos con prerrequisitos y pruebas de competencia",
         "Personalizar accesos según el rol (franquiciado, gerente, empleado operativo)",
         "Utilizar el LMS para documentar cumplimiento de entrenamiento y reducir riesgo de responsabilidad vicaria"
@@ -114869,7 +114869,7 @@
         "Definir un mecanismo para que estos proyectos se integren al proceso formal (Stage-Gate) cuando requieran comprometer recursos importantes.",
         "Designar un equipo que opere fuera de la estructura jerárquica habitual para proyectos críticos o secretos."
       ],
-      "entregable_esperado": "Una política formal de tiempo libre para innovación y/o un equipo skunk works definido con objetivos claros.",
+      "entregable_esperado": "Una política formal de tiempo libre para innovación y/o un equipo independiente de la estructura oficial, definido con objetivos claros.",
       "nodos_previos": [
         "cultura_de_innovacion",
         "stage_gate_td_tecnologia"
@@ -117697,8 +117697,8 @@
       "titulo_concepto": "Teoría de Juegos Aplicada a la Negociación",
       "resumen_teorico": "La teoría de juegos ayuda a entender las reglas invisibles que rigen cualquier negociación. Es crucial distinguir entre juegos de una sola ronda (winner-takes-all, como litigios o venta de empresa) y juegos multi-ronda (como la relación continua con un VC), ya que esto determina el comportamiento óptimo. En juegos multi-ronda, la reputación y la reciprocidad (tit-for-tat) generan equilibrio, mientras que en juegos de una sola ronda no hay incentivo para cooperar a largo plazo.",
       "pasos_accionables": [
-        "Identificar si la negociación actual es de una sola ronda o multi-ronda (relación continua)",
-        "Si es multi-ronda (ej. financiamiento con VC que estará en tu board), priorizar la reputación y evitar tácticas que generen represalias futuras",
+        "Identificar si la negociación actual es de una sola ronda o de varias rondas (relación continua)",
+        "Si es de varias rondas (ej. financiamiento con un inversionista de capital de riesgo que estará en tu consejo de administración), priorizar la reputación y evitar tácticas que generen represalias futuras",
         "Si es de una sola ronda (ej. litigio), enfocarse en maximizar el resultado inmediato; en la venta de la empresa, recordar que también hay una parte en la que todos ganan, porque el equipo suele seguir trabajando para el comprador",
         "Preguntar directamente a la contraparte cuáles son sus 3 términos más importantes antes de iniciar la negociación formal, y tener claros los tuyos para poder expresarlos"
       ],
@@ -118207,13 +118207,13 @@
       "titulo_concepto": "Test A/B de Precio",
       "resumen_teorico": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando cada variante a una cantidad similar de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
       "pasos_accionables": [
-        "Definir las variantes a testear (ej. precio de venta vs. modelo de renta)",
-        "Implementar el test en un canal real (sitio web, landing page)",
+        "Definir las variantes a probar (ej. precio de venta vs. modelo de renta)",
+        "Implementar la prueba en un canal real (sitio web, página de aterrizaje)",
         "Ejecutar múltiples rondas para afinar el precio óptimo",
         "Medir el porcentaje de usuarios que prefieren cada variante",
         "Seleccionar el precio o modelo validado con mayor conversión"
       ],
-      "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
+      "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios de la prueba.",
       "nodos_previos": [
         "biblioteca_experimentos_validacion",
         "get_out_building_test_sell",
@@ -118325,7 +118325,7 @@
         "Identifica los socios que podrían traerte tráfico y encajan con tu idea, buscando sitios que llegan al mismo tipo de clientes que quieres alcanzar",
         "Prepara un correo de presentación centrado en lo que el socio gana con la alianza",
         "Agenda reuniones exploratorias con los candidatos, cuando llegues a la fase de validación con clientes (Customer Validation)",
-        "Propón intercambios: contenido, listas de correo, anuncios, mini sitios, destacar al socio como socio de contenido u ofrecer funciones de un sitio en el otro; si el trato beneficia más a una parte, el dinero suele equilibrarlo, y ofrecer pago es la mejor forma de captar la atención del socio",
+        "Propón intercambios: contenido, listas de correo, anuncios, minisitios, destacar al socio como socio de contenido u ofrecer funciones de un sitio en el otro; si el trato beneficia más a una parte, el dinero suele equilibrarlo, y ofrecer pago es la mejor forma de captar la atención del socio",
         "Después de cada reunión, arma una ficha de resultados (report card) para estimar qué tan grande es la oportunidad",
         "Cierra acuerdos o compromisos firmes con los socios de tráfico",
         "Ordena tu lista de socios según cuáles son más críticos para ti"
@@ -118796,8 +118796,8 @@
       "titulo_concepto": "Tipos de Pasivos (Corrientes y Largo Plazo)",
       "resumen_teorico": "Los pasivos son obligaciones financieras de la empresa, divididos en corrientes (pagaderos en menos de un año: porción corriente de deuda largo plazo, préstamos de corto plazo, cuentas por pagar, gastos acumulados) y de largo plazo (préstamos, compensación diferida, impuestos diferidos). Entender esta clasificación es clave para evaluar la liquidez y estructura de financiamiento del negocio.",
       "pasos_accionables": [
-        "Clasificar todas las deudas de la empresa en corrientes vs largo plazo.",
-        "Separar la porción corriente de préstamos largo plazo que vence este año.",
+        "Clasificar todas las deudas de la empresa en corrientes y de largo plazo.",
+        "Separar la porción corriente de préstamos de largo plazo que vence este año.",
         "Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).",
         "Revisar periódicamente el peso relativo de cada categoría de pasivo."
       ],
@@ -119019,7 +119019,7 @@
         "Proyectar los efectos del producto/proceso actual a diez y hasta cien años",
         "Identificar qué recursos o poblaciones futuras heredarán los costos del diseño actual",
         "Incorporar el criterio de 'impacto intergeneracional' en la evaluación de decisiones de diseño",
-        "Documentar explícitamente los trade-offs temporales del proyecto"
+        "Documentar explícitamente las concesiones entre presente y futuro del proyecto"
       ],
       "entregable_esperado": "Análisis de impacto a largo plazo (horizonte multigeneracional) del producto o proceso evaluado",
       "nodos_previos": [
@@ -119282,9 +119282,9 @@
         "Dividir el trabajo de diseño/desarrollo en unidades mínimas viables en lugar de lotes completos",
         "Pasar cada unidad de trabajo al siguiente equipo o etapa apenas esté lista, sin esperar a completar todo el lote",
         "Medir el tiempo de ciclo (cycle time) de cada unidad pequeña en lugar de la eficiencia individual del especialista",
-        "Identificar y eliminar el WIP (Work in Progress) oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar"
+        "Identificar y eliminar el trabajo en curso oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar"
       ],
-      "entregable_esperado": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave del startup",
+      "entregable_esperado": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave de la empresa emergente",
       "nodos_previos": [
         "producto_minimo_viable",
         "asignacion_recursos_en_gates"
@@ -119563,7 +119563,7 @@
         "Alguien te dice que no vendas con pérdida porque ya está pagado.",
         "Necesitas espacio en tu bodega o local y no sabes qué justifica sacar primero."
       ],
-      "etiqueta_arbol": "Calcula el costo del stock muerto"
+      "etiqueta_arbol": "Calcula el Costo del Inventario Muerto"
     },
     "traffic_partners_hypothesis": {
       "node_id": "traffic_partners_hypothesis",
@@ -120499,7 +120499,7 @@
       "pasos_accionables": [
         "Diagnosticar cuál de las tres palancas explica la baja rentabilidad actual",
         "Si es ventas: analizar el embudo de ventas y nuevos mercados potenciales",
-        "Si es COGS: auditar el proceso productivo buscando ineficiencias",
+        "Si es costo de lo vendido: auditar el proceso productivo buscando ineficiencias",
         "Si es gastos operativos: evaluar impacto en moral antes de decidir recortes",
         "Priorizar soluciones de largo plazo (ventas y eficiencia) sobre recortes rápidos"
       ],
@@ -121332,9 +121332,9 @@
         "Observar sin interrumpir mientras exploran el producto",
         "Tomar notas de dónde navegaron y dónde no",
         "Realizar preguntas de seguimiento para entender el 'por qué' de su comportamiento",
-        "Testear alternativas hasta que el problema de navegación/confusión desaparezca"
+        "Probar alternativas hasta que el problema de navegación/confusión desaparezca"
       ],
-      "entregable_esperado": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a testear",
+      "entregable_esperado": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a probar",
       "nodos_previos": [
         "mvp_alta_fidelidad",
         "wizard_of_oz_testing"
@@ -122743,7 +122743,7 @@
         "Identificar causa raíz de cada variación",
         "Documentar respuesta planificada (correctiva o preventiva)"
       ],
-      "entregable_esperado": "Reporte de análisis de variaciones con causas raíz y acciones planificadas",
+      "entregable_esperado": "Informe de análisis de variaciones con causas raíz y acciones planificadas",
       "nodos_previos": [
         "project_performance_report"
       ],
@@ -122753,7 +122753,7 @@
       "condiciones_activacion": [
         "Si se detectan diferencias significativas entre lo planificado y lo real en el proyecto"
       ],
-      "etiqueta_arbol": "Analiza tus Variaciones"
+      "etiqueta_arbol": "Analiza las Variaciones de tu Proyecto"
     },
     "variar_frecuencia_inspeccion_nivel_calidad": {
       "node_id": "variar_frecuencia_inspeccion_nivel_calidad",
@@ -123637,7 +123637,7 @@
         "Comparar el TAM y SAM estimado con la retroalimentación real de clientes",
         "Revisar diagramas de flujo de trabajo antes y después del producto"
       ],
-      "entregable_esperado": "Documento de evaluación de Product/Market Fit con evidencia de demanda validada y actualización del Business Model Canvas",
+      "entregable_esperado": "Documento de evaluación del ajuste producto-mercado con evidencia de demanda validada y actualización del lienzo del modelo de negocio",
       "nodos_previos": [
         "identificar_consejo_asesores",
         "scorecard_descubrimiento_cliente",
@@ -123789,13 +123789,13 @@
       "resumen_teorico": "Metodología dual para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
       "pasos_accionables": [
         "Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
-        "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
+        "Formular teorías sobre las posibles causas, usando lluvia de ideas y diagramas causa-efecto",
         "Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado",
         "Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos",
         "Diseñar remedios para eliminar las causas",
         "Probar los remedios bajo condiciones operativas reales",
         "Gestionar la resistencia predecible al cambio",
-        "Establecer nuevos controles para sostener las ganancias"
+        "Establecer nuevos controles para sostener las mejoras"
       ],
       "entregable_esperado": "Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento",
       "nodos_previos": [
@@ -125061,9 +125061,9 @@
       "titulo_concepto": "Waterfall Development vs Agile Development",
       "resumen_teorico": "Waterfall Development es un proceso de ingeniería lineal y secuencial por etapas, donde todo el producto y sus características se especifican por adelantado y cada etapa se asigna a un equipo separado para mayor control. Es la antítesis del Agile Development, que es iterativo y flexible. Entender esta distinción es clave para elegir el enfoque de desarrollo de producto adecuado para un startup en búsqueda de su modelo de negocio.",
       "pasos_accionables": [
-        "Evaluar si el contexto del proyecto requiere certeza total de requisitos (waterfall) o iteración (agile).",
+        "Evaluar si el contexto del proyecto requiere certeza total de requisitos (en cascada) o iteración (ágil).",
         "Para startups en fase de búsqueda, usar metodologías ágiles que permitan pivotar: con desarrollo en cascada el producto queda sordo a lo que dicen los clientes, salvo durante el breve periodo en que se especifica.",
-        "Alinear el proceso de desarrollo de producto con el proceso de Customer Development."
+        "Alinear el proceso de desarrollo de producto con el proceso de desarrollo de clientes."
       ],
       "entregable_esperado": "Una decisión documentada sobre la metodología de desarrollo de producto a utilizar.",
       "nodos_previos": [
@@ -125150,7 +125150,7 @@
         "Identificar recursos requeridos y estimaciones de costo",
         "Definir requisitos de calidad y criterios de aceptación"
       ],
-      "entregable_esperado": "Diccionario completo del WBS con detalle de cada paquete de trabajo",
+      "entregable_esperado": "Diccionario completo de la estructura de desglose del trabajo con detalle de cada paquete de trabajo",
       "nodos_previos": [
         "work_breakdown_structure",
         "project_scope_statement",
@@ -125297,9 +125297,9 @@
       "pasos_accionables": [
         "Revisar paso a paso cada cifra del modelo de métricas base para descartar errores y luego crear una versión con supuestos pesimistas",
         "Crear una versión con supuestos optimistas",
-        "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, CPM, costo de adquisición)",
+        "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, costo por mil impresiones, costo de adquisición)",
         "Revalidar los supuestos críticos con validación de canal y clientes adicional",
-        "Usar los tres escenarios para informar la decisión de pivotar o proceder"
+        "Usar los tres escenarios para fundamentar la decisión de pivotar o proceder"
       ],
       "entregable_esperado": "Tres escenarios financieros (base, peor caso, mejor caso) con las variables críticas identificadas",
       "nodos_previos": [

@@ -6,13 +6,13 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Durante una fusión o adquisición, el destino de las opciones sobre acciones de los empleados puede variar: asunción automática por el comprador, sustitución por RSUs, vesting acelerado, o incluso 're-vesting' donde los empleados deben cumplir nuevamente un período de vesting. Estas decisiones afectan significativamente el valor percibido por los empleados, y acelerar el vesting de todos puede generar fricciones internas entre quienes llevan más y menos tiempo en la empresa.",
   "pasos_accionables": [
-    "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de M&A.",
-    "Negociar explícitamente en el LOI qué pasará con las opciones vested y unvested.",
-    "Considerar el impacto del strike price (barter element) en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
+    "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de fusión o adquisición.",
+    "Negociar explícitamente en la carta de intención qué pasará con las opciones consolidadas y no consolidadas.",
+    "Considerar el impacto del precio de ejercicio en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
     "Comunicar con transparencia a los empleados el tratamiento de sus opciones antes del cierre.",
-    "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de vesting."
+    "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de consolidación."
   ],
-  "entregable_esperado": "Cláusula clara en el LOI sobre tratamiento de stock options y plan de comunicación a empleados.",
+  "entregable_esperado": "Cláusula clara en la carta de intención sobre tratamiento de opciones sobre acciones y plan de comunicación a empleados.",
   "nodos_previos": [
     "forma_de_contraprestacion_en_adquisicion",
     "employee_pool_esop",
@@ -62,6 +62,92 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro aconseja recuperar en el precio de compra el valor del barter element en vez de contar las opciones por su valor bruto.; Mismo defecto, incluidas las opciones no consolidadas.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-asuncion_stock_options_adquisicion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de M&A.",
+      "texto_nuevo": "Revisar el plan de opciones existente y sus cláusulas de asunción/sustitución en caso de fusión o adquisición.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en caso de M&A"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-asuncion_stock_options_adquisicion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar explícitamente en el LOI qué pasará con las opciones vested y unvested.",
+      "texto_nuevo": "Negociar explícitamente en la carta de intención qué pasará con las opciones consolidadas y no consolidadas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el LOI",
+          "vested y unvested"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-asuncion_stock_options_adquisicion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar el impacto del strike price (barter element) en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
+      "texto_nuevo": "Considerar el impacto del precio de ejercicio en el valor neto de las opciones y buscar que ese descuento se reconozca en el precio de compra, en vez de contar las opciones, consolidadas o no, por su valor bruto.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "strike price (barter element)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-asuncion_stock_options_adquisicion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de vesting.",
+      "texto_nuevo": "Evaluar el riesgo de fricción interna si hay diferencias grandes entre empleados con distinto tiempo de consolidación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tiempo de vesting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-asuncion_stock_options_adquisicion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula clara en el LOI sobre tratamiento de stock options y plan de comunicación a empleados.",
+      "texto_nuevo": "Cláusula clara en la carta de intención sobre tratamiento de opciones sobre acciones y plan de comunicación a empleados.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el LOI",
+          "stock options"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

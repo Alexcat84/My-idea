@@ -6,8 +6,8 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Los pasivos son obligaciones financieras de la empresa, divididos en corrientes (pagaderos en menos de un año: porción corriente de deuda largo plazo, préstamos de corto plazo, cuentas por pagar, gastos acumulados) y de largo plazo (préstamos, compensación diferida, impuestos diferidos). Entender esta clasificación es clave para evaluar la liquidez y estructura de financiamiento del negocio.",
   "pasos_accionables": [
-    "Clasificar todas las deudas de la empresa en corrientes vs largo plazo.",
-    "Separar la porción corriente de préstamos largo plazo que vence este año.",
+    "Clasificar todas las deudas de la empresa en corrientes y de largo plazo.",
+    "Separar la porción corriente de préstamos de largo plazo que vence este año.",
     "Registrar cuentas por pagar a proveedores y gastos acumulados (como nómina).",
     "Revisar periódicamente el peso relativo de cada categoría de pasivo."
   ],
@@ -24,5 +24,37 @@
   "etiqueta_arbol": "Clasifica tus Deudas Reales",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-tipos_de_pasivos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasificar todas las deudas de la empresa en corrientes vs largo plazo.",
+      "texto_nuevo": "Clasificar todas las deudas de la empresa en corrientes y de largo plazo.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "Abreviatura 'vs' sin punto y preposición omitida; 'corrientes y de largo plazo' nombra las mismas dos categorías."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tipos_de_pasivos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Separar la porción corriente de préstamos largo plazo que vence este año.",
+      "texto_nuevo": "Separar la porción corriente de préstamos de largo plazo que vence este año.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "Errata por preposición omitida; añadir 'de' no altera el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

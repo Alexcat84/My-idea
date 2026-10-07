@@ -12,7 +12,7 @@
     "Identificar recursos requeridos y estimaciones de costo",
     "Definir requisitos de calidad y criterios de aceptación"
   ],
-  "entregable_esperado": "Diccionario completo del WBS con detalle de cada paquete de trabajo",
+  "entregable_esperado": "Diccionario completo de la estructura de desglose del trabajo con detalle de cada paquete de trabajo",
   "nodos_previos": [
     "work_breakdown_structure",
     "project_scope_statement",
@@ -29,5 +29,23 @@
   "etiqueta_arbol": "Detalla cada Paquete de Trabajo",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-wbs_dictionary-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diccionario completo del WBS con detalle de cada paquete de trabajo",
+      "texto_nuevo": "Diccionario completo de la estructura de desglose del trabajo con detalle de cada paquete de trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del WBS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

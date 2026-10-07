@@ -11,7 +11,7 @@
     "Evaluar el centrado del histograma respecto al objetivo del proceso",
     "Evaluar el ancho de la distribución respecto a los límites de especificación",
     "Evaluar la forma de la distribución e investigar picos múltiples como indicio de mezcla de poblaciones o procesos distintos",
-    "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si alguna"
+    "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si es que conviene alguna"
   ],
   "entregable_esperado": "Histograma con límites de especificación e informe de capacidad de proceso indicando si cumple especificaciones y qué acciones tomar",
   "nodos_previos": [
@@ -118,6 +118,23 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto en el paso: el libro no restringe la acción al proceso no capaz.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-analisis_capacidad_procesos-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si alguna",
+      "texto_nuevo": "Determinar si el proceso es capaz y qué acción sobre el proceso conviene, si es que conviene alguna",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si alguna"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

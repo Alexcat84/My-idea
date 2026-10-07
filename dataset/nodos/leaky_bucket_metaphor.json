@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Envía tráfico/clientes fríos (no conocidos) a tu producto de forma constante, aunque sea en volumen bajo.",
     "Mide en qué punto del embudo se pierden los clientes (activación, uso, retención, pago).",
-    "Usa estos datos para priorizar el roadmap de producto, enfocándote en 'tapar' las fugas más grandes primero."
+    "Usa estos datos para priorizar la hoja de ruta del producto, enfocándote en 'tapar' las fugas más grandes primero."
   ],
   "entregable_esperado": "Análisis de embudo de conversión con clientes fríos identificando los puntos de mayor abandono (fugas) del producto.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Tapa las Fugas de tu Balde",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-leaky_bucket_metaphor-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa estos datos para priorizar el roadmap de producto, enfocándote en 'tapar' las fugas más grandes primero.",
+      "texto_nuevo": "Usa estos datos para priorizar la hoja de ruta del producto, enfocándote en 'tapar' las fugas más grandes primero.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

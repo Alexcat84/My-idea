@@ -7,7 +7,7 @@
   "resumen_teorico": "Las metas estratégicas son solo una lista de deseos hasta que se descomponen en proyectos específicos asignados a individuos o equipos con los recursos necesarios. El proceso involucra división y asignación de metas a niveles inferiores, quienes proponen proyectos y recursos, en un diálogo bidireccional hasta llegar a un acuerdo final sobre qué proyectos ejecutar.",
   "pasos_accionables": [
     "Dividir las metas estratégicas del consejo en submetas por nivel organizacional",
-    "Solicitar a los niveles de acción que seleccionen proyectos de breakthrough que cumplan las metas",
+    "Solicitar a los niveles de acción que seleccionen proyectos de mejora radical que cumplan las metas",
     "Negociar y revisar propuestas de recursos entre niveles hasta llegar a acuerdo",
     "Formalizar qué proyectos se ejecutarán, con qué recursos y bajo qué responsables"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Convierte Metas en Proyectos Reales",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-despliegue_metas-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solicitar a los niveles de acción que seleccionen proyectos de breakthrough que cumplan las metas",
+      "texto_nuevo": "Solicitar a los niveles de acción que seleccionen proyectos de mejora radical que cumplan las metas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "breakthrough"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

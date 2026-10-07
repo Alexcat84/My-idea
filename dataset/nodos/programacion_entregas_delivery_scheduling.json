@@ -6,15 +6,15 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Existen dos métodos principales de entrega: las entregas directas (de un origen a un destino, simples pero eficientes solo cuando el EOQ del receptor coincide con la carga de transporte completa) y las entregas milk run (de un origen a múltiples destinos o viceversa, más complejas de programar pero más eficientes en el uso del transporte y menor costo de recepción cuando las cantidades individuales son menores a una carga completa). La elección depende de la relación entre el EOQ de cada ubicación receptora y la capacidad del modo de transporte.",
   "pasos_accionables": [
-    "Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte",
+    "Evaluar si el lote económico de pedido de cada ubicación receptora coincide con cargas completas de transporte",
     "Si coincide, implementar entregas directas por su simplicidad",
-    "Si no coincide, diseñar rutas milk run combinando pedidos",
+    "Si no coincide, diseñar rutas de reparto con varias paradas combinando pedidos",
     "Seleccionar técnica de ruteo: matriz de ahorros (savings matrix) para múltiples restricciones o técnica de asignación generalizada cuando las restricciones se limitan a la capacidad del vehículo o al tiempo total de viaje",
     "Decidir entre entregas desde ubicaciones de producto único (si la demanda es alta y predecible y el cliente recibe a granel) o desde centros de distribución (si los proveedores están lejos de los clientes)",
     "Diseñar la secuencia de recogidas/entregas y validar con software de ruteo",
     "Medir el ahorro en costo de transporte y recepción tras implementar la ruta consolidada"
   ],
-  "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
+  "entregable_esperado": "Plan de logística de entregas con método seleccionado (directo o con varias paradas) y rutas optimizadas",
   "nodos_previos": [
     "gestion_pedidos_order_management",
     "gestion_inventario",
@@ -145,6 +145,56 @@
       "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-programacion_entregas_delivery_scheduling-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar si el EOQ de cada ubicación receptora coincide con cargas completas de transporte",
+      "texto_nuevo": "Evaluar si el lote económico de pedido de cada ubicación receptora coincide con cargas completas de transporte",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "EOQ"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-programacion_entregas_delivery_scheduling-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si no coincide, diseñar rutas milk run combinando pedidos",
+      "texto_nuevo": "Si no coincide, diseñar rutas de reparto con varias paradas combinando pedidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "milk run"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-programacion_entregas_delivery_scheduling-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de logística de entregas con método seleccionado (directo/milk run) y rutas optimizadas",
+      "texto_nuevo": "Plan de logística de entregas con método seleccionado (directo o con varias paradas) y rutas optimizadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(directo/milk run)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

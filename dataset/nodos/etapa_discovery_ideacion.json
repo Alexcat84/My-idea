@@ -25,8 +25,26 @@
     "Si la empresa carece de un flujo constante de nuevas ideas de producto",
     "Al iniciar el proceso de innovación desde cero"
   ],
-  "etiqueta_arbol": "Genera Ideas Proactivamente",
+  "etiqueta_arbol": "Genera Ideas de Forma Proactiva",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-etapa_discovery_ideacion-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Genera Ideas Proactivamente",
+      "texto_nuevo": "Genera Ideas de Forma Proactiva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Proactivamente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

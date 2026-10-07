@@ -7,9 +7,9 @@
   "resumen_teorico": "En sectores donde el impacto del producto en salud, seguridad o medio ambiente puede ser severo (p. ej. dispositivos médicos, farmacéutica), o donde existían requisitos de calidad específicos de la industria previos a ISO 9000, se desarrollan extensiones regulatorias como las cGMP (cumplimiento farmacéutico) o normativas específicas (ISO/TC210 para dispositivos médicos). Estas adaptaciones tensionan la meta de no multiplicar estándares y solo han resultado eficaces en muy pocos sectores, con circunstancias especiales y reglas claras aplicadas con consistencia.",
   "pasos_accionables": [
     "Identificar si el sector de la organización tiene requisitos regulatorios de salud/seguridad/ambiente",
-    "Determinar si existen estándares industria-específicos previos a ISO 9000 aplicables",
-    "Mapear los requisitos regulatorios propios contra el estándar genérico ISO 9001",
-    "Implementar los requisitos adicionales necesarios (p. ej. cGMP, GMP)"
+    "Determinar si existen estándares específicos de la industria previos a ISO 9000 aplicables",
+    "Comparar los requisitos regulatorios propios con el estándar genérico ISO 9001",
+    "Implementar los requisitos adicionales necesarios (p. ej. buenas prácticas de manufactura)"
   ],
   "entregable_esperado": "Matriz de cumplimiento que relacione requisitos regulatorios sectoriales con el sistema de gestión de calidad ISO 9001 vigente",
   "nodos_previos": [
@@ -57,6 +57,57 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c10): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-adopciones_industria_especifica_iso9000-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si existen estándares industria-específicos previos a ISO 9000 aplicables",
+      "texto_nuevo": "Determinar si existen estándares específicos de la industria previos a ISO 9000 aplicables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "industria-específicos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-adopciones_industria_especifica_iso9000-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear los requisitos regulatorios propios contra el estándar genérico ISO 9001",
+      "texto_nuevo": "Comparar los requisitos regulatorios propios con el estándar genérico ISO 9001",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Mapear los requisitos regulatorios propios contra"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-adopciones_industria_especifica_iso9000-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar los requisitos adicionales necesarios (p. ej. cGMP, GMP)",
+      "texto_nuevo": "Implementar los requisitos adicionales necesarios (p. ej. buenas prácticas de manufactura)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(p. ej. cGMP, GMP)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

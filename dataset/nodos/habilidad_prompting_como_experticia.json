@@ -7,11 +7,11 @@
   "resumen_teorico": "Puede estar surgiendo un nuevo tipo de ventaja competitiva: es posible que personas o equipos excepcionalmente hábiles trabajando con sistemas de IA (adoptando prácticas 'Cyborg') logren mejoras de rendimiento órdenes de magnitud mayores que el usuario promedio. Esta habilidad, aunque difícil de definir con precisión, puede convertirse en un diferenciador clave para founders y equipos que buscan maximizar el retorno de sus herramientas de IA.",
   "pasos_accionables": [
     "Detectar dentro del equipo a las personas que muestran facilidad natural para lograr mejores resultados con IA.",
-    "Documentar y compartir internamente los prompts y flujos de trabajo que producen los mejores resultados.",
+    "Documentar y compartir internamente las instrucciones y flujos de trabajo que producen los mejores resultados.",
     "Fomentar la experimentación estructurada con IA como parte del desarrollo profesional del equipo.",
     "Considerar esta habilidad como criterio de contratación o promoción en roles que dependen fuertemente de IA."
   ],
-  "entregable_esperado": "Biblioteca interna de prompts y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
+  "entregable_esperado": "Biblioteca interna de instrucciones y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
   "nodos_previos": [
     "practica_deliberada_asistida_ia"
   ],
@@ -69,6 +69,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro describe la habilidad solo como adoptar prácticas Cyborg y tener un don para trabajar con LLM, y dice que el diseño de prompts no será útil para la mayoría; no nombra la iteración.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-habilidad_prompting_como_experticia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar y compartir internamente los prompts y flujos de trabajo que producen los mejores resultados.",
+      "texto_nuevo": "Documentar y compartir internamente las instrucciones y flujos de trabajo que producen los mejores resultados.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los prompts"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-habilidad_prompting_como_experticia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Biblioteca interna de prompts y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
+      "texto_nuevo": "Biblioteca interna de instrucciones y prácticas efectivas de trabajo con IA, curada por los 'expertos en IA' identificados en el equipo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "prompts"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

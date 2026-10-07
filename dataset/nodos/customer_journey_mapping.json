@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Observa directamente a clientes reales durante toda su experiencia de servicio, acompañándolos en todo su recorrido (shadowing) y sin limitarte al punto de contacto que asumiste como el más importante",
     "Documenta cada etapa del viaje, desde el primer contacto hasta el cierre, identificando en cada una los momentos emocionales clave (los 'momentos de verdad'), y levanta el mapa con la estrategia general y el detalle operativo al mismo tiempo",
-    "Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio",
-    "Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
+    "Identifica todos los puntos de contacto donde el cliente interactúa con la marca o el servicio",
+    "Evalúa cada punto de contacto con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
     "Prioriza las mejoras en los puntos de mayor impacto, no solo en el producto central"
   ],
-  "entregable_esperado": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
+  "entregable_esperado": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus puntos de contacto, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
   "nodos_previos": [
     "prototipado_rapido",
     "voz_del_cliente_voc",
@@ -48,5 +48,57 @@
   ],
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-customer_journey_mapping-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica todos los 'touchpoints' donde el cliente interactúa con la marca o el servicio",
+      "texto_nuevo": "Identifica todos los puntos de contacto donde el cliente interactúa con la marca o el servicio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'touchpoints'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_journey_mapping-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa cada touchpoint con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
+      "texto_nuevo": "Evalúa cada punto de contacto con dos varas distintas: si crea valor positivo o pierde al cliente, y si solo evita una mala experiencia o genera una experiencia memorable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "touchpoint"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_journey_mapping-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus touchpoints, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
+      "texto_nuevo": "Un mapa visual del viaje del cliente con todas sus etapas y todos sus puntos de contacto, los momentos emocionales clave identificados, cada punto evaluado por el valor que crea y por lo memorable que resulta, levantado con la estrategia general y el detalle operativo al mismo tiempo, y con las mejoras priorizadas por impacto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "touchpoints"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

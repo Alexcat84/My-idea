@@ -10,9 +10,9 @@
     "Observar sin interrumpir mientras exploran el producto",
     "Tomar notas de dónde navegaron y dónde no",
     "Realizar preguntas de seguimiento para entender el 'por qué' de su comportamiento",
-    "Testear alternativas hasta que el problema de navegación/confusión desaparezca"
+    "Probar alternativas hasta que el problema de navegación/confusión desaparezca"
   ],
-  "entregable_esperado": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a testear",
+  "entregable_esperado": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a probar",
   "nodos_previos": [
     "mvp_alta_fidelidad",
     "wizard_of_oz_testing"
@@ -28,5 +28,40 @@
   "etiqueta_arbol": "Prueba cómo Usan tu Producto",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-usability_testing_producto-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Testear alternativas hasta que el problema de navegación/confusión desaparezca",
+      "texto_nuevo": "Probar alternativas hasta que el problema de navegación/confusión desaparezca",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-usability_testing_producto-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a testear",
+      "texto_nuevo": "Informe de hallazgos de usabilidad con puntos de confusión identificados y plan de mejoras a probar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

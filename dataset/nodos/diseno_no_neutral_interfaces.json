@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Analizar qué trabajo cognitivo desaparece al introducir una nueva interfaz o herramienta",
     "Evaluar si la reducción de pasos manuales reduce también la comprensión del operador sobre el sistema",
-    "Comparar representaciones analógicas vs digitales en términos de compatibilidad de visualización",
+    "Comparar representaciones analógicas vs. digitales en términos de compatibilidad de visualización",
     "Documentar qué 'trampas de error' elimina el nuevo diseño y qué nuevas vulnerabilidades introduce"
   ],
-  "entregable_esperado": "Análisis comparativo de diseño de interfaz que identifique trade-offs cognitivos entre la opción antigua y la nueva",
+  "entregable_esperado": "Análisis comparativo de diseño de interfaz que identifique las ganancias y costos cognitivos entre la opción antigua y la nueva",
   "nodos_previos": [
     "construccion_timeline_resolucion"
   ],
@@ -43,6 +43,37 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es probable que tenga consecuencias sobre la memoria y la relación configuración/velocidad; el nodo lo da por seguro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_no_neutral_interfaces-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparar representaciones analógicas vs digitales en términos de compatibilidad de visualización",
+      "texto_nuevo": "Comparar representaciones analógicas vs. digitales en términos de compatibilidad de visualización",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "La abreviatura de 'versus' se escribe con punto; solo se añade el punto."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_no_neutral_interfaces-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Análisis comparativo de diseño de interfaz que identifique trade-offs cognitivos entre la opción antigua y la nueva",
+      "texto_nuevo": "Análisis comparativo de diseño de interfaz que identifique las ganancias y costos cognitivos entre la opción antigua y la nueva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "trade-offs cognitivos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

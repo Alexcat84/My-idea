@@ -6,13 +6,13 @@
   "fuente": "Traction - Gabriel Weinberg",
   "resumen_teorico": "El email es uno de los canales más efectivos para traer de vuelta a usuarios inactivos y generar ingresos adicionales. Las estrategias incluyen recordatorios personalizados, reportes periódicos de valor entregado, campañas de upsell, retargeting de carritos abandonados y emails de 'sorpresa y deleite' que refuerzan la relación emocional con el cliente.",
   "pasos_accionables": [
-    "Define triggers de inactividad (ej. sin login en 2 semanas) para emails de reactivación",
+    "Define disparadores de inactividad (ej. sin iniciar sesión en 2 semanas) para correos de reactivación",
     "Envía reportes periódicos de valor entregado (uso, ahorro, logros)",
-    "Crea secuencias de upsell explicando features premium no utilizadas",
-    "Implementa retargeting por email para carritos abandonados con ofertas especiales",
-    "Envía emails de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente"
+    "Crea secuencias de venta adicional explicando funciones premium no utilizadas",
+    "Implementa recordatorios por correo para carritos abandonados con ofertas especiales",
+    "Envía correos de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente"
   ],
-  "entregable_esperado": "Sistema de emails de retención y revenue con al menos una campaña de reactivación y una de upsell activas",
+  "entregable_esperado": "Sistema de correos de retención e ingresos con al menos una campaña de reactivación y una de venta adicional activas",
   "nodos_previos": [
     "email_marketing_activacion",
     "email_marketing_para_captacion"
@@ -27,5 +27,96 @@
   "etiqueta_arbol": "Recupera Clientes por Correo",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-email_marketing_retencion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define triggers de inactividad (ej. sin login en 2 semanas) para emails de reactivación",
+      "texto_nuevo": "Define disparadores de inactividad (ej. sin iniciar sesión en 2 semanas) para correos de reactivación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "triggers",
+          "sin login",
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_retencion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea secuencias de upsell explicando features premium no utilizadas",
+      "texto_nuevo": "Crea secuencias de venta adicional explicando funciones premium no utilizadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "upsell",
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_retencion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementa retargeting por email para carritos abandonados con ofertas especiales",
+      "texto_nuevo": "Implementa recordatorios por correo para carritos abandonados con ofertas especiales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "retargeting por email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_retencion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Envía emails de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente",
+      "texto_nuevo": "Envía correos de 'sorpresa y deleite' mostrando el progreso o beneficio obtenido por el cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-email_marketing_retencion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de emails de retención y revenue con al menos una campaña de reactivación y una de upsell activas",
+      "texto_nuevo": "Sistema de correos de retención e ingresos con al menos una campaña de reactivación y una de venta adicional activas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "emails",
+          "revenue",
+          "upsell"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

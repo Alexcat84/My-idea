@@ -6,13 +6,13 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup y se niega a asumir un rol menor, y en un equipo que lleva mucho tiempo junto y cuyas rutinas frenan la creatividad, reemplazar a un miembro por alguien nuevo puede dar un 'diversity shock' que la reactive. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos: los altos son más altos, pero los bajos son mucho más bajos. Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
   "pasos_accionables": [
-    "Evaluar objetivamente si un cofundador está escalando con las necesidades del startup",
+    "Evaluar objetivamente si un cofundador crece al ritmo de las necesidades de la empresa emergente",
     "Revisar acuerdos legales previos (no competencia, no solicitación, PI) antes de cofundar con excompañeros",
     "Planificar una salida ordenada y con términos claros si un cofundador debe dejar el equipo",
     "Conocer los acuerdos de no competencia, no solicitación y propiedad intelectual de cada cofundador y los problemas legales que pueden plantear",
-    "Documentar el impacto en equity y roles cuando ocurre una salida"
+    "Documentar el impacto en participación accionaria y roles cuando ocurre una salida"
   ],
-  "entregable_esperado": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
+  "entregable_esperado": "Plan de contingencia y cláusulas contractuales (consolidación gradual de acciones, recompra) para manejar salidas de fundadores",
   "nodos_previos": [
     "gestion_de_conflictos_cofundadores",
     "three_rs_equilibrium"
@@ -28,7 +28,7 @@
     "Si existe riesgo legal por acuerdos previos con empleadores",
     "Cuando el equipo necesita 'diversity shock' para reactivar la creatividad"
   ],
-  "etiqueta_arbol": "Cuando un Fundador se Va",
+  "etiqueta_arbol": "Maneja la Salida de un Fundador",
   "correcciones": [
     {
       "id": "fidelidad-t5-022",
@@ -126,6 +126,74 @@
       },
       "decision": "medida final, vecindad: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
+    },
+    {
+      "id": "voz-rotacion_equipo_fundador-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un Fundador se Va",
+      "texto_nuevo": "Maneja la Salida de un Fundador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuando",
+          "se Va"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rotacion_equipo_fundador-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar objetivamente si un cofundador está escalando con las necesidades del startup",
+      "texto_nuevo": "Evaluar objetivamente si un cofundador crece al ritmo de las necesidades de la empresa emergente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "está escalando con las necesidades",
+          "del startup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rotacion_equipo_fundador-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar el impacto en equity y roles cuando ocurre una salida",
+      "texto_nuevo": "Documentar el impacto en participación accionaria y roles cuando ocurre una salida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-rotacion_equipo_fundador-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de contingencia y cláusulas contractuales (vesting, buy-back) para manejar salidas de fundadores",
+      "texto_nuevo": "Plan de contingencia y cláusulas contractuales (consolidación gradual de acciones, recompra) para manejar salidas de fundadores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "vesting, buy-back"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

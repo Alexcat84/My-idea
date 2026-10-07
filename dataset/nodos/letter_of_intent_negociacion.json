@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "La carta de intención (LOI) es típicamente el primer paso formal de una adquisición, generalmente no vinculante excepto por cláusulas como el no-shop. A diferencia de un financiamiento donde todos pueden ganar expandiendo el pastel, la negociación de LOI es por un pastel fijo, por lo que el tono es más tenso. Esta negociación suele ser la primera muestra real del estilo de negociación del comprador.",
   "pasos_accionables": [
-    "Contar con asesoría legal experimentada antes de firmar cualquier LOI",
-    "Analizar cuidadosamente la cláusula de no-shop antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
-    "Observar el estilo de negociación del comprador durante la LOI como indicador de la relación futura",
+    "Contar con asesoría legal experimentada antes de firmar cualquier carta de intención",
+    "Analizar cuidadosamente la cláusula de exclusividad de negociación antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
+    "Observar el estilo de negociación del comprador en la carta de intención como indicador de la relación futura",
     "No asumir que el precio inicial mencionado es el precio final de cierre"
   ],
-  "entregable_esperado": "LOI revisada por asesores legales con cláusulas de no-shop y precio comprendidas a profundidad",
+  "entregable_esperado": "Carta de intención revisada por asesores legales con cláusulas de exclusividad de negociación y precio comprendidas a profundidad",
   "nodos_previos": [
     "board_control_etapas_tardias"
   ],
@@ -60,6 +60,74 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro aconseja negociar el no-shop, no solo analizarlo: limitar su duración a 45 a 60 días, excluir los financiamientos y pedir que termine solo si el comprador abandona; el paso pierde esas condiciones.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-letter_of_intent_negociacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contar con asesoría legal experimentada antes de firmar cualquier LOI",
+      "texto_nuevo": "Contar con asesoría legal experimentada antes de firmar cualquier carta de intención",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cualquier LOI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-letter_of_intent_negociacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar cuidadosamente la cláusula de no-shop antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
+      "texto_nuevo": "Analizar cuidadosamente la cláusula de exclusividad de negociación antes de comprometerse y negociar que dure un plazo razonable (45 a 60 días), que excluya eventos como los financiamientos y que termine sola si el comprador abandona el proceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "la cláusula de no-shop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-letter_of_intent_negociacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Observar el estilo de negociación del comprador durante la LOI como indicador de la relación futura",
+      "texto_nuevo": "Observar el estilo de negociación del comprador en la carta de intención como indicador de la relación futura",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "durante la LOI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-letter_of_intent_negociacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "LOI revisada por asesores legales con cláusulas de no-shop y precio comprendidas a profundidad",
+      "texto_nuevo": "Carta de intención revisada por asesores legales con cláusulas de exclusividad de negociación y precio comprendidas a profundidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "LOI revisada",
+          "cláusulas de no-shop"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

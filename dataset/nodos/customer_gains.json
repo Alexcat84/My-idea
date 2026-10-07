@@ -7,11 +7,11 @@
   "resumen_teorico": "Describen los resultados y beneficios que el cliente quiere lograr. Se clasifican en cuatro tipos: requeridos (básicos e indispensables), esperados (básicos aunque no imprescindibles), deseados (que irían más allá de lo esperado) e inesperados (sorpresas que exceden expectativas y deseos). Cada gain tiene una relevancia (esencial o agradable de tener) y debe describirse de forma concreta.",
   "pasos_accionables": [
     "Preguntar qué ahorros, resultados o beneficios harían feliz al cliente",
-    "Clasificar gains en requeridos, esperados, deseados e inesperados",
-    "Hacer cada gain concreto y medible",
-    "Rankear gains según su relevancia (esencial vs agradable de tener)"
+    "Clasificar ganancias en requeridas, esperadas, deseadas e inesperadas",
+    "Hacer cada ganancia concreta y medible",
+    "Ordenar ganancias según su relevancia (esencial vs agradable de tener)"
   ],
-  "entregable_esperado": "Lista de post-its con gains concretos y priorizados por relevancia",
+  "entregable_esperado": "Lista de post-its con ganancias concretas y priorizadas por relevancia",
   "nodos_previos": [
     "customer_pains",
     "customer_jobs",
@@ -27,5 +27,75 @@
   "etiqueta_arbol": "Encuentra las Ganancias del Cliente",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-customer_gains-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar gains en requeridos, esperados, deseados e inesperados",
+      "texto_nuevo": "Clasificar ganancias en requeridas, esperadas, deseadas e inesperadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gains"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_gains-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hacer cada gain concreto y medible",
+      "texto_nuevo": "Hacer cada ganancia concreta y medible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada gain"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_gains-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rankear gains según su relevancia (esencial vs agradable de tener)",
+      "texto_nuevo": "Ordenar ganancias según su relevancia (esencial vs agradable de tener)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Rankear",
+          "gains"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_gains-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de post-its con gains concretos y priorizados por relevancia",
+      "texto_nuevo": "Lista de post-its con ganancias concretas y priorizadas por relevancia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gains concretos y priorizados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -7,11 +7,11 @@
   "resumen_teorico": "Normalmente se piensa que el producto debe quedar totalmente definido antes de arrancar el proyecto. En productos físicos puedes trabajar distinto: mantén una lista priorizada y flexible de requisitos que va evolucionando con el tiempo, siempre que los cambios no afecten el plan general, el presupuesto ni el atractivo financiero del proyecto. Cuando apruebas el proyecto, tu producto puede estar solo entre 20% y 90% definido, y lo típico es 40-60%. A medida que avanzas y reduces la incertidumbre, tu cronograma y tu presupuesto se vuelven más estables; como regla práctica, puedes fijar el presupuesto final hacia el final de la etapa de desarrollo.",
   "pasos_accionables": [
     "Crea una lista inicial de requisitos priorizada, aceptando que no está completa al 100%",
-    "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
+    "Actualiza esa lista de forma continua con los comentarios de tus clientes y lo que aprendes en cada iteración técnica",
     "Congela antes algunas decisiones de hardware, porque fabricarlo toma tiempo, y deja el software flexible por más tiempo",
     "Como regla práctica, fija tu presupuesto final hacia el final de la etapa de desarrollo, a medida que baja la incertidumbre"
   ],
-  "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada sprint, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
+  "entregable_esperado": "Un documento vivo con tu lista de requisitos, que actualizas en cada ciclo de trabajo, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
   "nodos_previos": [
     "seleccion_proyectos_agile",
     "voc_temprano_en_agile_stage_gate"
@@ -94,6 +94,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro acepta los cambios de producto y alcance solo si no afectan el plan general, el presupuesto ni el atractivo financiero; el nodo quita ese límite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-product_backlog_fisico-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualiza esa lista de forma continua con el feedback de tus clientes y lo que aprendes en cada iteración técnica",
+      "texto_nuevo": "Actualiza esa lista de forma continua con los comentarios de tus clientes y lo que aprendes en cada iteración técnica",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-product_backlog_fisico-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un documento vivo con tu lista de requisitos, que actualizas en cada sprint, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
+      "texto_nuevo": "Un documento vivo con tu lista de requisitos, que actualizas en cada ciclo de trabajo, anotando qué porcentaje de definición tienes en cada punto de revisión (gate).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sprint"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un sistema de gobernanza de innovación robusto integra tres sistemas de decisión complementarios: el Roadmap estratégico (visión de largo plazo con proyectos futuros tentativos), el sistema Stage-Gate (decisiones Go/Kill en tiempo real sobre proyectos activos) y las Revisiones de Portafolio (evaluación periódica de todos los proyectos activos y en espera). Estos tres sistemas se retroalimentan en un ciclo cerrado: el roadmap alimenta proyectos al Stage-Gate, el Stage-Gate filtra proyectos malos y actualiza el roadmap, y las revisiones de portafolio ajustan prioridades en ambos sistemas.",
   "pasos_accionables": [
-    "Desarrollar un roadmap estratégico de producto/tecnología con marcadores de proyectos futuros",
-    "Introducir proyectos del roadmap al sistema Stage-Gate cuando el timing sea adecuado, comenzando en Gate 1",
+    "Desarrollar una hoja de ruta estratégica de producto/tecnología con marcadores de proyectos futuros",
+    "Introducir proyectos de la hoja de ruta al sistema Stage-Gate cuando el momento sea adecuado, comenzando en Gate 1",
     "Incluir proyectos en el portafolio formal una vez pasen Gate 2, cuando haya suficiente compromiso de recursos",
-    "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto el roadmap como las prioridades de gates",
+    "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto la hoja de ruta como las prioridades de gates",
     "Asegurar retroalimentación bidireccional entre los tres sistemas"
   ],
-  "entregable_esperado": "Esquema de gobernanza documentado que muestre cómo interactúan el roadmap, el sistema de gates y las revisiones de portafolio",
+  "entregable_esperado": "Esquema de gobernanza documentado que muestre cómo interactúan la hoja de ruta, el sistema de gates y las revisiones de portafolio",
   "nodos_previos": [
     "scorecard_de_seleccion_de_proyectos",
     "expected_commercial_value_ecv",
@@ -30,5 +30,75 @@
   "etiqueta_arbol": "Conecta tus Decisiones Estratégicas",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-governance_integration_gates_portfolio_roadmap-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desarrollar un roadmap estratégico de producto/tecnología con marcadores de proyectos futuros",
+      "texto_nuevo": "Desarrollar una hoja de ruta estratégica de producto/tecnología con marcadores de proyectos futuros",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un roadmap estratégico"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-governance_integration_gates_portfolio_roadmap-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Introducir proyectos del roadmap al sistema Stage-Gate cuando el timing sea adecuado, comenzando en Gate 1",
+      "texto_nuevo": "Introducir proyectos de la hoja de ruta al sistema Stage-Gate cuando el momento sea adecuado, comenzando en Gate 1",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del roadmap",
+          "el timing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-governance_integration_gates_portfolio_roadmap-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto el roadmap como las prioridades de gates",
+      "texto_nuevo": "Realizar revisiones periódicas de portafolio (trimestrales o semestrales) que actualicen tanto la hoja de ruta como las prioridades de gates",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-governance_integration_gates_portfolio_roadmap-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Esquema de gobernanza documentado que muestre cómo interactúan el roadmap, el sistema de gates y las revisiones de portafolio",
+      "texto_nuevo": "Esquema de gobernanza documentado que muestre cómo interactúan la hoja de ruta, el sistema de gates y las revisiones de portafolio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

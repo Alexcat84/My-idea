@@ -7,11 +7,11 @@
   "resumen_teorico": "Existen dos tipos de seguro relevantes para la exportación: el seguro de carga (marine cargo insurance), que protege contra daño, pérdida, robo o demora durante el tránsito, y el seguro de crédito, que protege contra el riesgo de no pago por parte del comprador debido a incumplimiento, causas políticas o crisis cambiarias. La responsabilidad de asegurar la carga depende de los términos de venta acordados.",
   "pasos_accionables": [
     "Determinar según términos de venta quién es responsable del seguro de carga",
-    "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
+    "Contratar póliza propia o asegurar bajo la póliza del agente de carga",
     "No asumir que el comprador ha contratado seguro adecuado si es su responsabilidad, y verificar documentación",
     "Evaluar contratación de seguro de crédito a la exportación para cubrir riesgo de impago",
     "Verificar requisitos de instituciones financieras del comprador sobre seguro de crédito",
-    "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
+    "Consultar con aseguradoras internacionales o agentes de carga para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP)."
   ],
   "entregable_esperado": "Pólizas de seguro de carga y/o crédito contratadas antes del embarque",
   "nodos_previos": [
@@ -58,6 +58,40 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye la demora en tránsito entre lo que cubre el seguro de carga y el nodo la omite de la lista, lo que recorta la cobertura que el emprendedor debería esperar.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-seguro_exportacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contratar póliza propia o asegurar bajo la póliza del freight forwarder",
+      "texto_nuevo": "Contratar póliza propia o asegurar bajo la póliza del agente de carga",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarder"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seguro_exportacion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consultar con aseguradoras internacionales o freight forwarders para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).",
+      "texto_nuevo": "Consultar con aseguradoras internacionales o agentes de carga para definir el nivel de cobertura (típicamente 110% del valor CIF/CIP).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "freight forwarders"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

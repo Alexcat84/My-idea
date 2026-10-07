@@ -11,7 +11,7 @@
     "Identificar causa raíz de cada variación",
     "Documentar respuesta planificada (correctiva o preventiva)"
   ],
-  "entregable_esperado": "Reporte de análisis de variaciones con causas raíz y acciones planificadas",
+  "entregable_esperado": "Informe de análisis de variaciones con causas raíz y acciones planificadas",
   "nodos_previos": [
     "project_performance_report"
   ],
@@ -21,8 +21,42 @@
   "condiciones_activacion": [
     "Si se detectan diferencias significativas entre lo planificado y lo real en el proyecto"
   ],
-  "etiqueta_arbol": "Analiza tus Variaciones",
+  "etiqueta_arbol": "Analiza las Variaciones de tu Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-variance_analysis-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analiza tus Variaciones",
+      "texto_nuevo": "Analiza las Variaciones de tu Proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tus Variaciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-variance_analysis-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de análisis de variaciones con causas raíz y acciones planificadas",
+      "texto_nuevo": "Informe de análisis de variaciones con causas raíz y acciones planificadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

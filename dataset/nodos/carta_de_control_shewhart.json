@@ -9,8 +9,8 @@
     "Recolectar datos de desempeño del proceso en el tiempo",
     "Calcular la línea central (promedio) y los límites de control estadísticos",
     "Graficar los puntos y clasificar si caen dentro o fuera de los límites",
-    "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
-    "Si están fuera: investigar causa especial y tomar acción correctiva",
+    "Si están dentro: asumir causas comunes, no emprender acciones individuales; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+    "Si están fuera: investigar causa especial y emprender una acción correctiva",
     "Justificar el uso de la carta según impacto en cliente, seguridad o ambiente, economía, o necesidad de precisión adicional para el control"
   ],
   "entregable_esperado": "Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación",
@@ -80,6 +80,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que un proceso en control puede mejorarse atacando variables menores si hay defectos o el cliente pide más uniformidad.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-carta_de_control_shewhart-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si están dentro: asumir causas comunes, no tomar acción individual; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+      "texto_nuevo": "Si están dentro: asumir causas comunes, no emprender acciones individuales; si aun así hay defectos o el cliente pide más uniformidad, atacar las variables menores con un proyecto de mejora",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no tomar acción individual"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-carta_de_control_shewhart-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si están fuera: investigar causa especial y tomar acción correctiva",
+      "texto_nuevo": "Si están fuera: investigar causa especial y emprender una acción correctiva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tomar acción correctiva"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

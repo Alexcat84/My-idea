@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Revisar paso a paso cada cifra del modelo de métricas base para descartar errores y luego crear una versión con supuestos pesimistas",
     "Crear una versión con supuestos optimistas",
-    "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, CPM, costo de adquisición)",
+    "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, costo por mil impresiones, costo de adquisición)",
     "Revalidar los supuestos críticos con validación de canal y clientes adicional",
-    "Usar los tres escenarios para informar la decisión de pivotar o proceder"
+    "Usar los tres escenarios para fundamentar la decisión de pivotar o proceder"
   ],
   "entregable_esperado": "Tres escenarios financieros (base, peor caso, mejor caso) con las variables críticas identificadas",
   "nodos_previos": [
@@ -44,6 +44,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro empieza por revalidar paso a paso cada número para descartar errores y solo después hace el peor caso.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-worst_case_best_case_analysis-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, CPM, costo de adquisición)",
+      "texto_nuevo": "Identificar qué variables tienen mayor impacto en el resultado (ej. atrición, costo por mil impresiones, costo de adquisición)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CPM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-worst_case_best_case_analysis-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar los tres escenarios para informar la decisión de pivotar o proceder",
+      "texto_nuevo": "Usar los tres escenarios para fundamentar la decisión de pivotar o proceder",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "informar la decisión"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

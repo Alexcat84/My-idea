@@ -6,7 +6,7 @@
   "fuente": "OSHA3885",
   "resumen_teorico": "Brindar a los trabajadores comprensión sobre reconocimiento y control de peligros, involucrándolos activamente, ayuda a eliminar riesgos antes de que ocurra un incidente. Incluye capacitación en análisis de peligros de tarea (JHA) y uso correcto de EPP.",
   "pasos_accionables": [
-    "Capacitar en técnicas de identificación de peligros como el JHA",
+    "Capacitar en técnicas de identificación de peligros como el análisis de peligros de la tarea (JHA)",
     "Enseñar a reconocer peligros específicos de su puesto y generales",
     "Instruir sobre jerarquía de controles y su importancia",
     "Entrenar en uso correcto de prácticas administrativas y EPP",
@@ -94,6 +94,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c02): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-capacitacion_identificacion_peligros-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Capacitar en técnicas de identificación de peligros como el JHA",
+      "texto_nuevo": "Capacitar en técnicas de identificación de peligros como el análisis de peligros de la tarea (JHA)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el JHA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

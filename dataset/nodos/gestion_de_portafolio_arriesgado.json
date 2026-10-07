@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Las empresas tienden a gravitar hacia portafolios conservadores y de bajo riesgo, usando erróneamente herramientas financieras tradicionales (NPV, ROI) diseñadas para proyectos pequeños. Esto mata los proyectos audaces. La solución es una gestión de portafolio deliberada, asignando recursos en 'cubetas estratégicas' (strategic buckets), reservando explícitamente una porción del presupuesto para proyectos de alto riesgo y alto rendimiento potencial.",
   "pasos_accionables": [
-    "Auditar las herramientas de decisión Go/Kill actuales; verificar si dependen exclusivamente de NPV/ROI tradicional.",
-    "Definir 'cubetas estratégicas' de inversión (ej. Core, Adyacente, Transformacional).",
+    "Auditar las herramientas actuales de decisión de seguir o cancelar; verificar si dependen exclusivamente de VAN/ROI tradicional.",
+    "Definir 'cubetas estratégicas' de inversión (ej. Núcleo, Adyacente, Transformacional).",
     "Asignar un porcentaje fijo de presupuesto obligatorio a proyectos de alto riesgo/alta recompensa para evitar que los recursos fluyan solo hacia proyectos fáciles."
   ],
-  "entregable_esperado": "Un modelo de asignación de 'Strategic Buckets' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
+  "entregable_esperado": "Un modelo de asignación de 'cubetas estratégicas' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
   "nodos_previos": [
     "estrategia_de_innovacion_producto",
     "diamante_de_innovacion",
@@ -44,6 +44,57 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R069-025 (ANADIDO, lector y verificador de acuerdo): Porcentaje concreto que el libro no da para este umbral. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R069-025"
+    },
+    {
+      "id": "voz-gestion_de_portafolio_arriesgado-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Auditar las herramientas de decisión Go/Kill actuales; verificar si dependen exclusivamente de NPV/ROI tradicional.",
+      "texto_nuevo": "Auditar las herramientas actuales de decisión de seguir o cancelar; verificar si dependen exclusivamente de VAN/ROI tradicional.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Go/Kill",
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_de_portafolio_arriesgado-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir 'cubetas estratégicas' de inversión (ej. Core, Adyacente, Transformacional).",
+      "texto_nuevo": "Definir 'cubetas estratégicas' de inversión (ej. Núcleo, Adyacente, Transformacional).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Core"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_de_portafolio_arriesgado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un modelo de asignación de 'Strategic Buckets' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
+      "texto_nuevo": "Un modelo de asignación de 'cubetas estratégicas' con porcentajes de inversión definidos por tipo de riesgo/innovación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Strategic Buckets'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

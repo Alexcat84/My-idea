@@ -6,7 +6,7 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Es una técnica de ingeniería de software mediante la cual el código escrito por los desarrolladores se despliega en producción tan pronto como está listo, permitiendo lanzar decenas de cambios pequeños al producto cada día. Esta práctica lleva al extremo el concepto de lotes pequeños, permitiendo obtener feedback casi instantáneo sobre cada cambio individual. IMVU realizaba en promedio cincuenta cambios diarios a su producto usando esta técnica, y Wealthfront, en un sector regulado como los servicios financieros, más de una docena de lanzamientos diarios.",
   "pasos_accionables": [
-    "Establecer un pipeline de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
+    "Establecer una cadena de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
     "Liberar cada cambio individual al producto en cuanto esté listo, sin esperar a acumular un lote grande",
     "Monitorear el impacto de cada despliegue en tiempo real",
     "Implementar mecanismos de reversión automática si se detecta un problema, avisar al equipo y bloquear nuevos cambios hasta encontrar y corregir la causa raíz"
@@ -60,6 +60,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): De las cuatro respuestas del libro solo queda retirar el cambio; faltan avisar y bloquear hasta corregir la causa raíz.; Misma parte del procedimiento perdida.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-despliegue_continuo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un pipeline de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
+      "texto_nuevo": "Establecer una cadena de pruebas automatizadas que verifique que cada cambio funciona correctamente antes de desplegarlo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un pipeline"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Etapa del proceso Quality by Design donde, una vez comprendidas las necesidades del cliente, se diseñan las características técnicas del producto o servicio. Incluye seis actividades principales: agrupar necesidades relacionadas, determinar métodos de identificación de características (benchmarking, investigación básica, experimentos de mercado, creatividad), seleccionar características de alto nivel, desarrollar características detalladas, optimizarlas y publicar el diseño final.",
   "pasos_accionables": [
     "Agrupar las necesidades del cliente relacionadas por funcionalidad similar",
-    "Seleccionar métodos de identificación de características (benchmarking, investigación, experimentos de mercado, creatividad)",
+    "Seleccionar métodos de identificación de características (comparación con referentes, investigación, experimentos de mercado, creatividad)",
     "Aplicar técnicas creativas (cambio de palabras clave, asociación aleatoria, ponerse en el lugar del otro) para generar alternativas",
     "Verificar cumplimiento de estándares, regulaciones y políticas aplicables",
     "Seleccionar características de alto nivel usando criterios explícitos de diseño",
@@ -77,6 +77,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro divide en componentes solo los productos grandes y muy complejos; el paso lo da como regla general.; Mismo defecto que la marca 0.; Se cae el diseño preliminar con especificaciones detalladas, que el libro llama paso necesario antes de optimizar.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-desarrollo_caracteristicas_producto-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar métodos de identificación de características (benchmarking, investigación, experimentos de mercado, creatividad)",
+      "texto_nuevo": "Seleccionar métodos de identificación de características (comparación con referentes, investigación, experimentos de mercado, creatividad)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

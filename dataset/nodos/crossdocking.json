@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Evaluar si el volumen y la predictibilidad de la demanda, y las economías de escala en el transporte de entrada y de salida, justifican crossdocking",
     "Sincronizar horarios de llegada de camiones entrantes con la salida de camiones salientes",
-    "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
+    "Diseñar la disposición física del centro de distribución para minimizar tiempos de manipulación",
     "Establecer sistemas de coordinación en tiempo real entre proveedores y transportistas",
     "Medir reducción de inventario en almacenamiento y costos de manipulación"
   ],
-  "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución",
+  "entregable_esperado": "Proceso documentado de crossdocking con horarios de sincronización y disposición física del centro de distribución",
   "nodos_previos": [
     "programacion_entregas_delivery_scheduling"
   ],
@@ -106,6 +106,39 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c10): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-crossdocking-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar el layout del centro de distribución para minimizar tiempos de manipulación",
+      "texto_nuevo": "Diseñar la disposición física del centro de distribución para minimizar tiempos de manipulación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el layout"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-crossdocking-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proceso documentado de crossdocking con horarios de sincronización y layout del centro de distribución",
+      "texto_nuevo": "Proceso documentado de crossdocking con horarios de sincronización y disposición física del centro de distribución",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "layout"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

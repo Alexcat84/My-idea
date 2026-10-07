@@ -7,7 +7,7 @@
   "resumen_teorico": "Etapa post-implementación donde se evalúa y ajusta continuamente el modelo de negocio frente a la evolución del entorno. Incluye establecer gobernanza de modelos de negocio, gestionar un portafolio de modelos (algunos generando caja, otros en experimentación para el futuro) y mantener una mentalidad de principiante para evitar volverse víctima del propio éxito.",
   "pasos_accionables": [
     "Asignar responsable(s) de la evolución a largo plazo del modelo de negocio",
-    "Organizar workshops regulares con equipos multifuncionales para evaluar el modelo",
+    "Organizar talleres regulares con equipos multifuncionales para evaluar el modelo",
     "Establecer una autoridad de 'gobernanza de modelos de negocio' que gestione sinergias y conflictos",
     "Desarrollar un portafolio de modelos de negocio donde el negocio actual financia experimentos futuros",
     "Revisar periódicamente el modelo con mentalidad de principiante"
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Gestiona tu Modelo Continuamente",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-fase_gestion_continua_modelo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organizar workshops regulares con equipos multifuncionales para evaluar el modelo",
+      "texto_nuevo": "Organizar talleres regulares con equipos multifuncionales para evaluar el modelo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "workshops"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

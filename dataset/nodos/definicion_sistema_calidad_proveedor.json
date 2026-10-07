@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "En ciertos casos es necesario especificar no solo qué debe cumplir el producto, sino cómo debe operar el proveedor internamente (controles de proceso, condiciones sanitarias, SPC, etc.). Esto puede incluir referencias a normas como ISO 9000 o TS-16949 como requisito contractual.",
   "pasos_accionables": [
-    "Determinar si se requieren controles de proceso específicos en el proveedor (ej. SPC, condiciones sanitarias)",
+    "Determinar si se requieren controles de proceso específicos en el proveedor (ej. control estadístico de procesos, condiciones sanitarias)",
     "Referenciar normas de sistemas de calidad reconocidas (ISO 9000, TS-16949) en el contrato",
     "Solicitar al proveedor un plan de confiabilidad o análisis de modos de falla (FMECA) si el producto es complejo",
-    "Verificar que el proveedor tenga expertise real, no solo documentación copiada"
+    "Verificar que el proveedor tenga experiencia real, no solo documentación copiada"
   ],
   "entregable_esperado": "Cláusula contractual de sistema de calidad del proveedor con normas de referencia y evidencias requeridas",
   "nodos_previos": [
@@ -41,6 +41,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 0
+    },
+    {
+      "id": "voz-definicion_sistema_calidad_proveedor-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar si se requieren controles de proceso específicos en el proveedor (ej. SPC, condiciones sanitarias)",
+      "texto_nuevo": "Determinar si se requieren controles de proceso específicos en el proveedor (ej. control estadístico de procesos, condiciones sanitarias)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "SPC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-definicion_sistema_calidad_proveedor-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar que el proveedor tenga expertise real, no solo documentación copiada",
+      "texto_nuevo": "Verificar que el proveedor tenga experiencia real, no solo documentación copiada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "expertise"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
     "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
-    "Revisar si existen incentivos que fomenten el subreporte de incidentes",
+    "Revisar si existen incentivos que fomenten el subregistro de incidentes",
     "Evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
     "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
   ],
-  "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
+  "entregable_esperado": "Informe de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
   "nodos_previos": [
     "escape_trampa_proveedor_pasivo",
     "diseno_departamento_seguridad_efectivo"
@@ -72,6 +72,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-burocracia_de_seguridad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar si existen incentivos que fomenten el subreporte de incidentes",
+      "texto_nuevo": "Revisar si existen incentivos que fomenten el subregistro de incidentes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "subreporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-burocracia_de_seguridad-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
+      "texto_nuevo": "Informe de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

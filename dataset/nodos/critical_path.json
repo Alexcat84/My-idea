@@ -6,11 +6,11 @@
   "fuente": "Traction - Gabriel Weinberg",
   "resumen_teorico": "Framework para enumerar los hitos absolutamente necesarios para alcanzar el traction goal con el menor número de pasos posible. Sirve principalmente como filtro para decidir qué NO hacer: toda actividad debe evaluarse contra el Critical Path, y si no está en el camino, no debe realizarse. Requiere reevaluación constante tras cada hito porque las suposiciones iniciales suelen ser incorrectas.",
   "pasos_accionables": [
-    "Enumera los hitos estrictamente necesarios para alcanzar tu traction goal",
+    "Enumera los hitos estrictamente necesarios para alcanzar tu meta de tracción",
     "Excluye actividades que no sean absolutamente necesarias, aunque sean solicitadas por usuarios",
-    "Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla",
-    "Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real",
-    "Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos"
+    "Evalúa cada actividad propuesta contra el camino crítico antes de ejecutarla",
+    "Reevalúa el camino crítico después de completar cada hito, ya que las suposiciones cambian con retroalimentación real",
+    "Comunica el camino crítico al equipo para alinear prioridades y evitar desperdicio de recursos"
   ],
   "entregable_esperado": "Lista priorizada y validada de hitos críticos con proceso de reevaluación periódica establecido",
   "nodos_previos": [
@@ -30,5 +30,76 @@
   "etiqueta_arbol": "Traza tu Camino Crítico",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-critical_path-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Enumera los hitos estrictamente necesarios para alcanzar tu traction goal",
+      "texto_nuevo": "Enumera los hitos estrictamente necesarios para alcanzar tu meta de tracción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "traction goal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-critical_path-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa cada actividad propuesta contra el Critical Path antes de ejecutarla",
+      "texto_nuevo": "Evalúa cada actividad propuesta contra el camino crítico antes de ejecutarla",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Critical Path"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-critical_path-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reevalúa el Critical Path después de completar cada hito, ya que las suposiciones cambian con feedback real",
+      "texto_nuevo": "Reevalúa el camino crítico después de completar cada hito, ya que las suposiciones cambian con retroalimentación real",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Critical Path",
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-critical_path-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunica el Critical Path al equipo para alinear prioridades y evitar desperdicio de recursos",
+      "texto_nuevo": "Comunica el camino crítico al equipo para alinear prioridades y evitar desperdicio de recursos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Critical Path"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

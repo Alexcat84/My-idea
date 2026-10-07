@@ -9,9 +9,9 @@
     "Dividir el trabajo de diseño/desarrollo en unidades mínimas viables en lugar de lotes completos",
     "Pasar cada unidad de trabajo al siguiente equipo o etapa apenas esté lista, sin esperar a completar todo el lote",
     "Medir el tiempo de ciclo (cycle time) de cada unidad pequeña en lugar de la eficiencia individual del especialista",
-    "Identificar y eliminar el WIP (Work in Progress) oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar"
+    "Identificar y eliminar el trabajo en curso oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar"
   ],
-  "entregable_esperado": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave del startup",
+  "entregable_esperado": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave de la empresa emergente",
   "nodos_previos": [
     "producto_minimo_viable",
     "asignacion_recursos_en_gates"
@@ -31,5 +31,40 @@
   "etiqueta_arbol": "Valida Antes de Avanzar",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-trabajo_en_lotes_pequenos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar y eliminar el WIP (Work in Progress) oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar",
+      "texto_nuevo": "Identificar y eliminar el trabajo en curso oculto: diseños incompletos, hipótesis no validadas, planes de negocio sin probar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "WIP (Work in Progress)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trabajo_en_lotes_pequenos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave del startup",
+      "texto_nuevo": "Un proceso de trabajo rediseñado con tamaños de lote reducidos y un flujo de una sola pieza (single-piece flow) documentado para al menos un proceso clave de la empresa emergente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del startup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

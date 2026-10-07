@@ -7,7 +7,7 @@
   "resumen_teorico": "La función Communicate se centra en desarrollar políticas de comunicación interna y externa sobre las actividades de procesamiento de datos. Incluye aumentar la transparencia mediante avisos claros y accesibles, alertas y señales que informen a los individuos sobre el procesamiento de sus datos y sus opciones, incorporar la privacidad en encuestas o grupos focales de diseño de producto, y preparar un plan de respuesta ante brechas de datos (notificaciones, monitoreo de crédito, congelamientos).",
   "pasos_accionables": [
     "Redactar políticas de comunicación interna y externa sobre procesamiento de datos",
-    "Crear avisos y reportes claros y accesibles para los usuarios",
+    "Crear avisos e informes claros y accesibles para los usuarios",
     "Implementar alertas o señales que informen sobre el procesamiento de datos",
     "Incluir preguntas de privacidad en encuestas o grupos focales de diseño",
     "Desarrollar un plan de respuesta a brechas de datos con notificaciones y remedios"
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Comunica tu Política de Privacidad",
   "fuentes_internas": [
     "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-communicate_transparencia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear avisos y reportes claros y accesibles para los usuarios",
+      "texto_nuevo": "Crear avisos e informes claros y accesibles para los usuarios",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "y reportes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

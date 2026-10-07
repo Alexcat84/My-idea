@@ -6,13 +6,13 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "En lugar de ignorar o evitar el remordimiento del comprador, puedes abrir explícitamente un espacio para que tu cliente hable sobre sus dudas y miedos tras la compra. Al normalizar estas emociones y ofrecer estrategias para manejarlas, construyes confianza y refuerzas la relación en lugar de dejar que la duda erosione silenciosamente su compromiso.",
   "pasos_accionables": [
-    "Programar una llamada o check-in dedicado exclusivamente a preguntar cómo se siente el cliente tras la compra",
+    "Programar una llamada o conversación de seguimiento dedicada exclusivamente a preguntar cómo se siente el cliente tras la compra",
     "Preparar preguntas abiertas sobre dudas, miedos o inseguridades del cliente",
     "Entrenar al equipo para validar las emociones como normales, no como problemas",
     "Ofrecer ejemplos o historias de otros clientes que superaron dudas similares",
     "Documentar y reutilizar esta conversación como referencia en momentos futuros de duda"
   ],
-  "entregable_esperado": "Un guion o protocolo de check-in emocional post-compra implementado en el proceso de onboarding",
+  "entregable_esperado": "Un guion o protocolo de seguimiento emocional poscompra implementado en el proceso de bienvenida",
   "nodos_previos": [
     "fase_affirm_buyers_remorse"
   ],
@@ -24,7 +24,7 @@
     "Cuando la compra es de alto valor percibido o compromiso extendido en el tiempo",
     "Si el negocio opera con relaciones de servicio continuo (coaching, consultoría, suscripciones)"
   ],
-  "etiqueta_arbol": "Habla de Emociones Post-Compra",
+  "etiqueta_arbol": "Habla de Emociones Poscompra",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
   ],
@@ -60,6 +60,55 @@
       },
       "decision": "lectura total de procedencia (w41): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-conversacion_emocional_postcompra-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Habla de Emociones Post-Compra",
+      "texto_nuevo": "Habla de Emociones Poscompra",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "El prefijo 'pos' se escribe unido y sin guion ('poscompra'); la etiqueta dice lo mismo y sigue teniendo cuatro palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-conversacion_emocional_postcompra-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Programar una llamada o check-in dedicado exclusivamente a preguntar cómo se siente el cliente tras la compra",
+      "texto_nuevo": "Programar una llamada o conversación de seguimiento dedicada exclusivamente a preguntar cómo se siente el cliente tras la compra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "check-in dedicado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-conversacion_emocional_postcompra-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un guion o protocolo de check-in emocional post-compra implementado en el proceso de onboarding",
+      "texto_nuevo": "Un guion o protocolo de seguimiento emocional poscompra implementado en el proceso de bienvenida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "check-in emocional",
+          "post-compra",
+          "onboarding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

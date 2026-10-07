@@ -24,7 +24,7 @@
     "Alguien te dice que no vendas con pérdida porque ya está pagado.",
     "Necesitas espacio en tu bodega o local y no sabes qué justifica sacar primero."
   ],
-  "etiqueta_arbol": "Calcula el costo del stock muerto",
+  "etiqueta_arbol": "Calcula el Costo del Inventario Muerto",
   "fuentes_internas": [
     "Max Muller, Essentials of Inventory Management"
   ],
@@ -91,6 +91,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera otras salidas además del descuento, como devolver al proveedor, subastar o donar.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-traduce_stock_muerto_numeros-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula el costo del stock muerto",
+      "texto_nuevo": "Calcula el Costo del Inventario Muerto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "stock"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

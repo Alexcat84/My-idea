@@ -7,13 +7,13 @@
   "resumen_teorico": "Metodología dual para resolver problemas de calidad. El viaje diagnóstico va de los síntomas a las teorías de causas, de las teorías a las pruebas, y de las pruebas al establecimiento de la(s) causa(s) raíz. El viaje remedial va de la(s) causa(s) raíz al diseño de remedios, de los remedios a su prueba en condiciones operativas, de los remedios probados al manejo de la resistencia al cambio, y de ahí al establecimiento de nuevos controles para sostener las mejoras.",
   "pasos_accionables": [
     "Analizar los síntomas del problema (evidencia observable), con un análisis de Pareto para descartar variables no relevantes (ej. turno de trabajo)",
-    "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
+    "Formular teorías sobre las posibles causas, usando lluvia de ideas y diagramas causa-efecto",
     "Probar las teorías más plausibles con datos, con un mecanismo de recolección que permita correlacionar cada teoría con el defecto observado",
     "Establecer la(s) causa(s) raíz confirmada(s), validando estadísticamente cuál teoría explica la mayoría de los casos",
     "Diseñar remedios para eliminar las causas",
     "Probar los remedios bajo condiciones operativas reales",
     "Gestionar la resistencia predecible al cambio",
-    "Establecer nuevos controles para sostener las ganancias"
+    "Establecer nuevos controles para sostener las mejoras"
   ],
   "entregable_esperado": "Documento de causa raíz validada y plan de remedio probado con controles de sostenimiento",
   "nodos_previos": [
@@ -85,6 +85,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 1
+    },
+    {
+      "id": "voz-viaje_diagnostico_remedial-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Formular teorías sobre las posibles causas, usando brainstorming y diagramas causa-efecto",
+      "texto_nuevo": "Formular teorías sobre las posibles causas, usando lluvia de ideas y diagramas causa-efecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "brainstorming"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-viaje_diagnostico_remedial-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer nuevos controles para sostener las ganancias",
+      "texto_nuevo": "Establecer nuevos controles para sostener las mejoras",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sostener las ganancias"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

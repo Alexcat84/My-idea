@@ -6,13 +6,13 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Técnica de experimentación para determinar el modelo de monetización óptimo (ej. venta vs alquiler) y el punto de precio ideal, mostrando cada variante a una cantidad similar de usuarios y midiendo la tasa de conversión o preferencia por cada opción.",
   "pasos_accionables": [
-    "Definir las variantes a testear (ej. precio de venta vs. modelo de renta)",
-    "Implementar el test en un canal real (sitio web, landing page)",
+    "Definir las variantes a probar (ej. precio de venta vs. modelo de renta)",
+    "Implementar la prueba en un canal real (sitio web, página de aterrizaje)",
     "Ejecutar múltiples rondas para afinar el precio óptimo",
     "Medir el porcentaje de usuarios que prefieren cada variante",
     "Seleccionar el precio o modelo validado con mayor conversión"
   ],
-  "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
+  "entregable_esperado": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios de la prueba.",
   "nodos_previos": [
     "biblioteca_experimentos_validacion",
     "get_out_building_test_sell",
@@ -61,6 +61,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Fija un mínimo de usuarios que el libro no da; solo relata la cifra de un caso.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-test_ab_precio-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir las variantes a testear (ej. precio de venta vs. modelo de renta)",
+      "texto_nuevo": "Definir las variantes a probar (ej. precio de venta vs. modelo de renta)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a testear"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-test_ab_precio-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar el test en un canal real (sitio web, landing page)",
+      "texto_nuevo": "Implementar la prueba en un canal real (sitio web, página de aterrizaje)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el test",
+          "landing page"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-test_ab_precio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios testeados.",
+      "texto_nuevo": "Un precio o modelo de monetización validado con datos de conversión reales de los usuarios de la prueba.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "usuarios testeados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

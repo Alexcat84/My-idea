@@ -6,13 +6,13 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Cinco errores comunes al interpretar datos de experimentos: el falso positivo (ver cosas que no están), el falso negativo (no ver cosas que sí están), la 'trampa del máximo local' (optimizar sobre una oportunidad pequeña ignorando una mayor), la 'trampa del máximo agotado' (sobreestimar el tamaño de una oportunidad), y la trampa de los datos incorrectos (buscar en el lugar equivocado).",
   "pasos_accionables": [
-    "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
+    "Revisar si los datos positivos podrían ser un falso positivo probando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
     "Verificar que el experimento sea adecuado para detectar la señal buscada (evitar falso negativo)",
     "Cuestionar si los resultados positivos podrían estar limitando el potencial real del negocio (máximo local)",
-    "Confirmar que la muestra testeada no es en realidad toda la población disponible (máximo agotado)",
+    "Confirmar que la muestra estudiada no es en realidad toda la población disponible (máximo agotado)",
     "Antes de abandonar una idea, verificar que no se está buscando en el segmento de datos equivocado"
   ],
-  "entregable_esperado": "Checklist de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
+  "entregable_esperado": "Lista de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
   "nodos_previos": [
     "learning_card",
     "desarrollo_en_espiral"
@@ -44,6 +44,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo remedio omitido.; Se cae el segundo remedio del libro contra el falso positivo: experimentos distintos para la misma hipótesis.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-five_data_traps-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar si los datos positivos podrían ser un falso positivo testeando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
+      "texto_nuevo": "Revisar si los datos positivos podrían ser un falso positivo probando el círculo antes del cuadrado y diseñando experimentos distintos para la misma hipótesis antes de tomar decisiones importantes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "testeando"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-five_data_traps-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Confirmar que la muestra testeada no es en realidad toda la población disponible (máximo agotado)",
+      "texto_nuevo": "Confirmar que la muestra estudiada no es en realidad toda la población disponible (máximo agotado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "muestra testeada"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-five_data_traps-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
+      "texto_nuevo": "Lista de revisión crítica de los resultados de cada experimento antes de tomar decisiones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

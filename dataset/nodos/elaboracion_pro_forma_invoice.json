@@ -9,13 +9,13 @@
     "Incluir nombres y direcciones de vendedor y comprador.",
     "Detallar número de referencia y fecha de consulta del comprador.",
     "Listar productos solicitados con descripción breve y precio en USD.",
-    "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
+    "Especificar volumen cúbico total y dimensiones del embalaje para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
     "Indicar descuentos comerciales, punto de entrega, términos de venta y pago.",
     "Agregar costos de seguro y flete, periodo de validez de la cotización, cargos totales a pagar por el comprador, fecha estimada de embarque y moneda de la venta.",
     "Incluir declaración de veracidad y país de origen de los bienes.",
     "Marcar claramente el documento como 'Pro Forma Invoice'."
   ],
-  "entregable_esperado": "Documento de pro forma invoice completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
+  "entregable_esperado": "Documento de factura proforma completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
   "nodos_previos": [
     "fijacion_precio_exportacion",
     "incoterms_reglas_comerciales_internacionales",
@@ -113,6 +113,37 @@
       "decision": "condiciones de los nodos de clase B y A (PROXIMOS_PASOS 7): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.12"
+    },
+    {
+      "id": "voz-elaboracion_pro_forma_invoice-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Especificar volumen cúbico total y dimensiones embalado para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
+      "texto_nuevo": "Especificar volumen cúbico total y dimensiones del embalaje para exportación, y peso bruto y neto de envío, en unidades métricas cuando corresponda.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "Errata: 'embalado' queda sin sustantivo al que concordar; 'dimensiones del embalaje' nombra las mismas medidas sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-elaboracion_pro_forma_invoice-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de pro forma invoice completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
+      "texto_nuevo": "Documento de factura proforma completo, listo para enviar al comprador extranjero o usar en trámites de importación/financiamiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pro forma invoice"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

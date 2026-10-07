@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Obligan a la empresa a entregar periódicamente información financiera a los inversionistas: presupuesto anual, estados financieros auditados anuales y no auditados trimestrales, comparación de presupuesto vs. resultados reales, y derechos de inspección/visita. Estos derechos suelen terminar con una oferta pública inicial calificada (Qualified IPO). Suelen aceptarse tal cual; solo varía el mínimo de acciones para conservarlos.",
   "pasos_accionables": [
-    "Establecer la periodicidad de entrega de reportes financieros (mensual/trimestral/anual).",
+    "Establecer la periodicidad de entrega de informes financieros (mensual/trimestral/anual).",
     "Definir el nivel de detalle: presupuesto, estados auditados, comparativos.",
     "Acordar derechos de inspección y visita a las instalaciones.",
-    "Establecer la terminación de estos derechos ante un Qualified IPO."
+    "Establecer la terminación de estos derechos ante una oferta pública inicial calificada."
   ],
-  "entregable_esperado": "Cláusula de information rights incorporada al Investor Rights Agreement.",
+  "entregable_esperado": "Cláusula de derechos de información incorporada al acuerdo de derechos de los inversionistas.",
   "nodos_previos": [
     "term_sheet_negociacion",
     "conditions_precedent_financing"
@@ -43,6 +43,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo matiz perdido.; Se pierde que es un término estándar que en general se acepta tal como viene y que solo varía el umbral de acciones.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-information_rights-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer la periodicidad de entrega de reportes financieros (mensual/trimestral/anual).",
+      "texto_nuevo": "Establecer la periodicidad de entrega de informes financieros (mensual/trimestral/anual).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes financieros"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-information_rights-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer la terminación de estos derechos ante un Qualified IPO.",
+      "texto_nuevo": "Establecer la terminación de estos derechos ante una oferta pública inicial calificada.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un Qualified IPO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-information_rights-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de information rights incorporada al Investor Rights Agreement.",
+      "texto_nuevo": "Cláusula de derechos de información incorporada al acuerdo de derechos de los inversionistas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "information rights",
+          "Investor Rights Agreement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,11 +6,11 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "A diferencia de las rondas de inversión, en procesos de M&A los NDAs son prácticamente obligatorios, ya que ambas partes comparten información sensible durante el due diligence. Un NDA débil o unilateral puede ser señal de que el comprador busca información competitiva más que cerrar un trato genuino.",
   "pasos_accionables": [
-    "Exigir un NDA bidireccional y robusto antes de compartir información sensible.",
+    "Exigir un acuerdo de confidencialidad (NDA) bidireccional y robusto antes de compartir información sensible.",
     "Evaluar si el NDA es unilateral como señal de alerta sobre las intenciones reales del comprador.",
     "Asegurar que el NDA cubra el escenario de que la transacción no se cierre."
   ],
-  "entregable_esperado": "NDA firmado y bidireccional antes de iniciar el due diligence detallado.",
+  "entregable_esperado": "NDA firmado y bidireccional antes de iniciar la revisión detallada de la empresa.",
   "nodos_previos": [
     "forma_de_contraprestacion_en_adquisicion",
     "carta_de_intencion_loi"
@@ -24,5 +24,40 @@
   "etiqueta_arbol": "Firma Confidencialidad Antes de Vender",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-confidencialidad_nda_adquisicion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Exigir un NDA bidireccional y robusto antes de compartir información sensible.",
+      "texto_nuevo": "Exigir un acuerdo de confidencialidad (NDA) bidireccional y robusto antes de compartir información sensible.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un NDA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-confidencialidad_nda_adquisicion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "NDA firmado y bidireccional antes de iniciar el due diligence detallado.",
+      "texto_nuevo": "NDA firmado y bidireccional antes de iniciar la revisión detallada de la empresa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "due diligence"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

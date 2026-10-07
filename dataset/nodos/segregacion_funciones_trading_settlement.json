@@ -6,7 +6,7 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Uno de los principios básicos del negocio de valores es mantener estrictamente separados a quien ejecuta una operación (trading) y a quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten.",
   "pasos_accionables": [
-    "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
+    "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separadas.",
     "Prohibir que una misma persona pueda autorizar y aprobar su propio trabajo.",
     "Auditar periódicamente la existencia de 'roles duales' no documentados en la organización."
   ],
@@ -96,6 +96,21 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro sitúa el principio en el negocio de valores y lo pide estricto; el nodo lo vuelve principio general de control interno.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-segregacion_funciones_trading_settlement-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separados.",
+      "texto_nuevo": "Mapear los roles críticos de una operación y verificar que ejecución y verificación estén separadas.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v15)",
+        "evidencia": "Errata de concordancia: 'ejecución y verificación' son femeninos y piden 'separadas'; el sentido queda igual."
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

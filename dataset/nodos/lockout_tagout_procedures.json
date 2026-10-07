@@ -13,7 +13,7 @@
     "Bloquea la maquinaria en la fuente de energía principal, nunca en interruptores de control, y marca con etiqueta quién hizo el bloqueo; solo quien está expuesto al riesgo pone y quita su candado, y guarda su llave mientras está puesto.",
     "Establece un procedimiento alterno seguro para equipos que no puedan ser bloqueados/etiquetados."
   ],
-  "entregable_esperado": "Procedimiento LOTO documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
+  "entregable_esperado": "Procedimiento de bloqueo y etiquetado documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
   "nodos_previos": [
     "machinery_equipment_safety",
     "infection_control_plan"
@@ -72,6 +72,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que solo el trabajador expuesto ponga y quite su candado y conserve su llave mientras está puesto.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-lockout_tagout_procedures-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Procedimiento LOTO documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
+      "texto_nuevo": "Procedimiento de bloqueo y etiquetado documentado, trabajadores autorizados capacitados y candados/etiquetas personales asignados a cada uno de ellos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "LOTO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,12 +6,12 @@
   "fuente": "Traction - Gabriel Weinberg",
   "resumen_teorico": "Técnica de cierre de ventas que consiste en establecer explícitamente con el prospecto un cronograma de acciones (ej. piloto de 2 semanas) y solicitar un compromiso binario (sí/no) sobre la compra al finalizar dicho periodo. Esto evita ambigüedad, permite enfocar el tiempo del equipo de ventas en deals que probablemente cierren y descarta rápidamente a los que no están listos para comprar.",
   "pasos_accionables": [
-    "Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)",
+    "Definir un plan de acción claro para el prospecto (ej. piloto de X semanas)",
     "Comunicar explícitamente el cronograma y las condiciones de decisión",
     "Solicitar un compromiso de respuesta sí/no al finalizar el plazo",
     "Documentar y dar seguimiento a la fecha comprometida",
     "Descartar o reclasificar a los prospectos que no confirman compromiso",
-    "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+    "Establecer un cronograma claro de compra y pedir compromiso explícito (sí/no) al prospecto",
     "Documentar el acuerdo de cierre por escrito con el cliente"
   ],
   "entregable_esperado": "Acuerdo o documento de compromiso con fecha y condiciones claras de decisión de compra por parte del prospecto",
@@ -116,6 +116,40 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c08): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compromiso_linea_tiempo_cliente-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir un plan de acción claro para el prospecto (ej. pilot de X semanas)",
+      "texto_nuevo": "Definir un plan de acción claro para el prospecto (ej. piloto de X semanas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pilot de"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-compromiso_linea_tiempo_cliente-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un timeline claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+      "texto_nuevo": "Establecer un cronograma claro de compra y pedir compromiso explícito (sí/no) al prospecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "timeline"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

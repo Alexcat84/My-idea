@@ -5,14 +5,14 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Un abogado con experiencia comprobada en financiamientos de capital de riesgo es un activo invaluable: ayuda a negociar, enfoca al emprendedor en lo que realmente importa (economía y control del deal) y lo protege de tácticas de distracción de los inversionistas. Un mal abogado -o uno sin experiencia específica en VC- puede negociar mal, enfocarse en temas irrelevantes, encarecer el proceso y dañar la reputación del emprendedor frente a la comunidad inversora. No es necesario contratar firmas caras de prestigio: firmas pequeñas con experiencia específica en financiamiento de startups pueden ser igual o más efectivas. El estilo de trabajo y la conexión personal con el abogado importan tanto como su experiencia técnica.",
   "pasos_accionables": [
-    "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de VC, no en otras especialidades legales",
+    "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de capital de riesgo, no en otras especialidades legales",
     "Pedir referencias a otros emprendedores respetados en el ecosistema e investigar la reputación del abogado en la comunidad",
     "Evaluar no solo tarifas y experiencia, sino también el estilo de negociación y la conexión personal",
     "Preguntar al inversionista (antes y después del cierre) su opinión sobre el abogado elegido",
     "Negociar un tope (cap) de honorarios antes de iniciar el proceso",
-    "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en VC"
+    "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en capital de riesgo"
   ],
-  "entregable_esperado": "Abogado corporativo especializado en financiamiento de venture capital contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
+  "entregable_esperado": "Abogado corporativo especializado en financiamiento de capital de riesgo contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
   "condiciones_activacion": [
     "Antes de iniciar negociaciones formales de una ronda de inversión",
     "Si el emprendedor no tiene aún asesoría legal especializada en VC",
@@ -32,5 +32,57 @@
   "etiqueta_arbol": "Elige Bien a Tu Abogado",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-seleccion_abogado_venture-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de VC, no en otras especialidades legales",
+      "texto_nuevo": "Buscar referencias de abogados con experiencia comprobada específicamente en financiamientos de capital de riesgo, no en otras especialidades legales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "financiamientos de VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_abogado_venture-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en VC",
+      "texto_nuevo": "Evitar usar abogados generalistas o de confianza personal sin experiencia comprobada en capital de riesgo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "experiencia comprobada en VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-seleccion_abogado_venture-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Abogado corporativo especializado en financiamiento de venture capital contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
+      "texto_nuevo": "Abogado corporativo especializado en financiamiento de capital de riesgo contratado, con acuerdo de honorarios definido y estilo de trabajo compatible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "venture capital"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }
