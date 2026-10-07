@@ -103,12 +103,14 @@ export async function POST(request: Request) {
   }
 
   // Consentimiento al crear la cuenta (corrección del fundador, 7 oct 2026): la línea "Al continuar, aceptas los
-  // Términos y la Política de Privacidad" va junto al botón; la aceptación de la versión vigente queda guardada en la
-  // cuenta nueva. Si falla, se dice en el registro y la guarda del envío de datos la volverá a pedir.
+  // Términos y la Política de Privacidad" va junto al botón. La aceptación NO va a la cuenta nueva: nadie ha probado
+  // todavía que el correo es suyo, y quedaría escrito que su dueño aceptó lo que aceptó otro (revisión de seguridad,
+  // 7 oct 2026). Va a la identidad invisible de ESTE navegador, cuya cookie es la prueba de posesión, y la adopción la
+  // traslada a la cuenta al confirmar el correo. Sin identidad invisible no se escribe nada: se pedirá al enviar datos.
   const idiomaAceptado = aceptacionDelCuerpo(body.acepta_legal);
-  if (idiomaAceptado && data.user?.id) {
+  if (idiomaAceptado && anonId) {
     try {
-      await guardarAceptacion(data.user.id, idiomaAceptado);
+      await guardarAceptacion(anonId, idiomaAceptado);
     } catch (e) {
       console.error("[registrar] no se pudo guardar la aceptacion de los textos legales; se pedira al enviar datos:", e);
     }

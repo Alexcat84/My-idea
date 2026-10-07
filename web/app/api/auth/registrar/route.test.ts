@@ -73,9 +73,11 @@ describe("POST /api/auth/registrar", () => {
 });
 
 // AL CREAR LA CUENTA (corrección del fundador, 7 oct 2026, punto 3): la línea "Al continuar, aceptas los Términos y
-// la Política de Privacidad" está junto al botón de crear la cuenta; si la pantalla manda la aceptación de la versión
-// vigente, se guarda en la cuenta nueva. Si el correo ya tenía cuenta, no se escribe nada (no se revela ni se toca una
-// cuenta ajena). Prueba en rojo primero.
+// la Política de Privacidad" está junto al botón de crear la cuenta. La aceptación NO se escribe en la cuenta nueva:
+// al registrarse nadie ha probado aún que el correo es suyo, y guardarla ahí dejaría constancia de que el dueño del
+// correo aceptó algo que aceptó otro (revisión de seguridad del commit, 7 oct 2026). Se guarda en la identidad
+// invisible de ESTE navegador (la cookie es la prueba de posesión), y la adopción la traslada a la cuenta al confirmar
+// el correo. Si el correo ya tenía cuenta, no se escribe nada. Prueba en rojo primero.
 describe("POST /api/auth/registrar guarda la aceptación de la línea del login", () => {
   function crearCon(acepta: unknown) {
     return POST(
@@ -90,10 +92,11 @@ describe("POST /api/auth/registrar guarda la aceptación de la línea del login"
     signUp.mockClear();
   });
 
-  it("una cuenta nueva con la versión vigente: la guarda", async () => {
+  it("una cuenta nueva con la versión vigente: la guarda en la identidad invisible, nunca en la cuenta sin confirmar", async () => {
     const res = await crearCon({ version: VERSION_LEGAL, idioma_texto: "es" });
     expect(res.status).toBe(200);
-    expect(guardarAceptacion).toHaveBeenCalledWith("real-1", "es");
+    expect(guardarAceptacion).toHaveBeenCalledWith("anon-1", "es");
+    expect(guardarAceptacion).not.toHaveBeenCalledWith("real-1", expect.anything());
   });
 
   it("un correo que ya tenía cuenta: no escribe nada", async () => {
