@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Buscar Reducciones de Emisiones en la Cadena de Suministro",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+  "resumen_teorico": "Con frecuencia, la huella de carbono directa de una empresa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
   "pasos_accionables": [
     "Realizar un análisis de ciclo de vida para identificar impactos en la cadena de valor.",
     "Identificar proveedores clave con mayor impacto de emisiones.",
@@ -42,6 +42,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que puede ser sensato empezar con un foco limitado, no que sea una estrategia efectiva.; Mismo defecto: endurece la cautela del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-reducciones_cadena_suministro-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Muchas empresas descubren que su huella de carbono directa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+      "texto_nuevo": "Con frecuencia, la huella de carbono directa de una empresa es pequeña comparada con la de sus proveedores. El caso de Stonyfield Farm ilustra esto: el 43% de su huella provenía de las vacas productoras de leche, lo que llevó a modificar la alimentación del ganado para reducir emisiones de metano en un 12%. Conviene trabajar con los proveedores (no contra ellos), y puede ser sensato enfocarse inicialmente en los proveedores más importantes, como hizo Ford con sus 35 principales proveedores globales. También pueden existir oportunidades importantes aguas abajo, en el uso del producto por parte del cliente.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Muchas empresas descubren que su huella de carbono directa es pequeña"
+        ]
+      },
+      "decision": "lectura total de procedencia (w28): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }
