@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Organizar una semana de arreglo de averías de gestión, con un registro público, una votación y un reparto entre jefes",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Hay organizaciones de ingeniería que a menudo dedican una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Un equipo decidió llevar esa idea a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
+  "resumen_teorico": "En ingeniería se puede dedicar una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Esa idea se puede llevar a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_09.md, unidad Cap. 6, Guidance. Sale de las lineas 65 a 71, bajo el rotulo de seccion MANAGEMENT FIX-IT WEEKS, dentro de la seccion SOLICITING IMPROMPTU GUIDANCE. ES LA PIEZA P6 DE LA FRONTERA DE ESTA VUELTA. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la linea 69 dice literalmente Here is how it worked, y detras va la mecanica entera con sus ETAPAS nombradas una a una, que es inventario en el sentido literal de D.27. La linea 71 aniade las tres ultimas: sistema publico para votar prioridades, alguien asignado a leerlas y agrupar duplicados, y reparto de averias entre jefes cancelando lo demas. No hay adjetivo de adecuacion en el sitio del criterio: el texto no dice un sistema adecuado, dice como era el sistema. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. P1 y P2 salen de la linea 67; P3 y P4 de la 69; P5, P6, P7 y P8 de la 71. EL CASO DE GOOGLE VA DENTRO Y NO ES LA CASA: el texto lo cuenta en pasado, At some point, a team at Google decided, pero lo que sigue no es la cronica de aquel equipo sino la mecanica en abstracto, con sus objetos de trabajo nombrados. Es la misma forma que esta casa ya adjudico a favor en cap_07, con los tres retratos en pasado bajo rotulo imperativo. NO ESCRIBO EL PERIODO: el texto dice regular management fix-it weeks y no dice cada cuanto, asi que el P3 dice lo que el texto dice y ningun paso pone una cadencia. NO ESCRIBO RESPONSABLE de crear el sistema: el P6 si nombra un responsable, pero es el que el texto nombra, Somebody was assigned the job of reading through them all. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cada cuanto se corre la semana, cuantas averias se reparten por jefe, que se hace con las que no se arreglan, ni quien decide que una averia esta cerrada.",
   "pasos_accionables": [
     "Parte de lo que las organizaciones de ingeniería hacen a menudo: parar de trabajar en funciones nuevas durante una semana y arreglar errores del producto actual, con una lista priorizada preparada de antemano.",
@@ -385,6 +385,23 @@
       "decision": "medida final, vecindad: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 14"
+    },
+    {
+      "id": "lectura-total-correr_semana_arreglo_averias_gestion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Hay organizaciones de ingeniería que a menudo dedican una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Un equipo decidió llevar esa idea a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
+      "texto_nuevo": "En ingeniería se puede dedicar una semana a arreglar errores del producto en vez de crear funciones nuevas, con una lista priorizada preparada de antemano: es la ocasión de resolver problemas viejos y molestos que llevan meses fastidiando a la gente. Esa idea se puede llevar a la gestión: un registro público donde cualquiera anota una avería de gestión, votos que fijan las prioridades, alguien que agrupa los duplicados y jefes que dejan casi todo lo demás para resolver lo que más molesta a la organización.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Hay organizaciones de ingeniería que a menudo dedican",
+          "Un equipo decidió llevar esa idea a la gestión"
+        ]
+      },
+      "decision": "lectura total de procedencia (w30): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ],
   "etiqueta_arbol": "Dedica una Semana a Arreglar",
