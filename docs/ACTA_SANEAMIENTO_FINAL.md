@@ -1798,3 +1798,19 @@ Máquina en `auditoria-final-claves/medida6/medida6.py`, semilla 20261023, muest
    el grafo idéntico, byte a byte. Regla M19 de `docs/REGLAS_DE_LA_CASA.md`.
 3. **La licencia de IDEO.org:** decisión tomada, los 20 nodos se quedan. Anotada en `fuentes_canonicas.json` y en el
    inventario interno de fuentes.
+
+### 15.12 Condiciones de los nodos de clase B y A: diseño fijado antes de sortear (7 oct 2026)
+
+Es lo que quedó sin leer en 15.5 (`docs/PROXIMOS_PASOS.md`, sección 7). Tras cerrar las decisiones de 15.11, es lo
+primero del plan que no espera a nadie.
+- **Qué se lee:** las condiciones de activación de los nodos vivos de clase B (123) y A (12) de `jurisdiccion.json`,
+  135 nodos y 258 condiciones, contra su libro.
+- **Semilla: 20261024**, escrita aquí antes de sortear.
+- **La misma máquina que la clase C:** `auditoria-final-claves/condiciones_ba/condiciones_ba.py`.
+  - 10 lotes, con dos lectores Opus por lote y las instrucciones del lector E1B, limitados a las condiciones con
+    `a_juzgar`.
+  - Una trampa sin marca por lote, plantada en una condición de un nodo de clase C (ya corregido), con las mismas
+    invenciones de 15.5.
+  - Árbitro E1B y verificador ciego contra el libro de toda corrección que traiga palabras nuevas, con una trampa
+    por paquete.
+- **Lo que sale:** una tanda `condiciones-ba` con lo que se sostiene. Lo que no se sostiene se queda como está.
