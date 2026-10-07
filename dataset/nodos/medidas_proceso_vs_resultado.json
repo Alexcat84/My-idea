@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Medidas de Proceso vs Medidas de Resultado en Seguridad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "La mayoría de las organizaciones miden la seguridad mediante indicadores de resultado negativo (fatalidades, lesiones con tiempo perdido), pero estos son poco confiables cuando los eventos son raros, ya que la variación entre periodos es más 'ruido' que 'señal'. La distribución de Poisson (ejemplo de las coces de caballo) ilustra que los resultados negativos solo revelan la cara negativa de la seguridad, no su presencia sostenida. Se necesitan medidas de proceso que evalúen la 'salud de seguridad' del sistema de forma regular, más allá de contar accidentes.",
+  "resumen_teorico": "La mayoría de las organizaciones miden la seguridad mediante indicadores de resultado negativo (fatalidades, lesiones con tiempo perdido), pero estos son poco confiables cuando los eventos son raros, ya que la variación entre periodos es más 'ruido' que 'señal'. La distribución de Poisson ilustra que los resultados negativos solo revelan la cara negativa de la seguridad, no su presencia sostenida. Se necesitan medidas de proceso que evalúen la 'salud de seguridad' del sistema de forma regular, más allá de contar accidentes.",
   "pasos_accionables": [
     "Auditar los indicadores de seguridad actuales de la organización: identificar si son de proceso o de resultado",
     "Reconocer las limitaciones de los indicadores de resultado cuando la tasa de accidentes es baja",
@@ -42,6 +42,22 @@
         "evidencia": "F12-005: Disenar y muestrear indicadores de seguridad de una organizacion en marcha es control operativo, no validacion con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "lectura-total-medidas_proceso_vs_resultado-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "La mayoría de las organizaciones miden la seguridad mediante indicadores de resultado negativo (fatalidades, lesiones con tiempo perdido), pero estos son poco confiables cuando los eventos son raros, ya que la variación entre periodos es más 'ruido' que 'señal'. La distribución de Poisson (ejemplo de las coces de caballo) ilustra que los resultados negativos solo revelan la cara negativa de la seguridad, no su presencia sostenida. Se necesitan medidas de proceso que evalúen la 'salud de seguridad' del sistema de forma regular, más allá de contar accidentes.",
+      "texto_nuevo": "La mayoría de las organizaciones miden la seguridad mediante indicadores de resultado negativo (fatalidades, lesiones con tiempo perdido), pero estos son poco confiables cuando los eventos son raros, ya que la variación entre periodos es más 'ruido' que 'señal'. La distribución de Poisson ilustra que los resultados negativos solo revelan la cara negativa de la seguridad, no su presencia sostenida. Se necesitan medidas de proceso que evalúen la 'salud de seguridad' del sistema de forma regular, más allá de contar accidentes.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (ejemplo de las coces de caballo)"
+        ]
+      },
+      "decision": "lectura total de procedencia (w33): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }
