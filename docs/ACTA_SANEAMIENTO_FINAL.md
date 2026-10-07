@@ -1741,8 +1741,9 @@ endurecen), las olas siguientes bajaron a entre 0 y 6 rechazos por ola.
 ### 15.9 Medida 6, solo procedencia, después de la lectura total: diseño fijado antes de sortear (7 oct 2026)
 
 Mide cuánta procedencia queda en el catálogo después de la lectura total (15.8). No reinterpreta las medidas 4 y 5.
-- **Semilla: 20261021**, escrita aquí antes de sortear. Muestra con `scripts/auditoria_final/muestra.py 20261021`:
-  200 nodos vivos con el reparto de la sección 3.
+- **Semilla: 20261023**, escrita aquí antes de sortear. Muestra con `scripts/auditoria_final/muestra.py 20261023`:
+  200 nodos vivos con el reparto de la sección 3. (La primera versión de esta sección escribió 20261021, que ya era la
+  semilla de la ciega de fases del mundo 11. Se cambió antes de sortear nada.)
 - **Igual que las medidas 4 y 5 (15.3 y 15.6):**
   - 20 lotes de 10 nodos, con todos los textos de cara;
   - una trampa sin marca por lote, con la misma lista de atribuciones blandas de la medida 5;
