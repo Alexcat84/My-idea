@@ -10,7 +10,7 @@
     "Clasificar cada característica en procedimientos, métodos, equipos y suministros, materiales, personas, entrenamiento, otros recursos o procesos de apoyo",
     "Organizar las características y metas en una hoja de cálculo de diseño de proceso",
     "Verificar que cada característica del producto sea alcanzada por al menos una característica del proceso y eliminar redundancias",
-    "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas y, si no lo son, mejorarlos dentro del diseño o reemplazarlos por otra vía"
+    "Comprueba que los grandes procesos de apoyo que comparte todo el negocio puedan alcanzar las metas que el nuevo proceso necesita de ellos; cuando no las alcancen, mejóralos como parte del diseño o consigue lo que aportan por otro camino"
   ],
   "entregable_esperado": "Hoja de cálculo de diseño de proceso con características, metas y verificación de cobertura completa de necesidades del producto",
   "nodos_previos": [
@@ -92,6 +92,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae lo que el libro manda si no son capaces: mejorarlos dentro del diseño o reemplazarlos.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-identificar_caracteristicas_metas_proceso-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Confirmar que los macroprocesos organizacionales de soporte sean capaces de cumplir las metas requeridas y, si no lo son, mejorarlos dentro del diseño o reemplazarlos por otra vía",
+      "texto_nuevo": "Comprueba que los grandes procesos de apoyo que comparte todo el negocio puedan alcanzar las metas que el nuevo proceso necesita de ellos; cuando no las alcancen, mejóralos como parte del diseño o consigue lo que aportan por otro camino",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4600",
+        "frase": "now is the time to verify that they are capable of meeting"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -9,11 +9,11 @@
     "Describe el proceso: qué entra, qué pasos sigue y cómo debería salir",
     "Define las condiciones de cada variable: cuál es el ajuste óptimo y en qué rango puede moverse",
     "Revisa que cada característica de calidad tenga una variable que puedas ajustar en el proceso",
-    "Decide si el error al medir es significativo: puedes averiguarlo con un estudio aparte sobre eso o, en algunos casos, dentro del mismo estudio",
-    "Decide si tu estudio se va a enfocar solo en la variación normal o también en errores y equivocaciones",
+    "Comprueba si tu error de medición es significativo, ya sea con un estudio dedicado solo a medirlo o, en algunos casos, como parte del mismo estudio de capacidad",
+    "Elige el alcance de tu estudio: solo la variación normal, o esa variación y además los errores y equivocaciones",
     "Planea usar gráficos de control para ver si el proceso se mantiene estable",
-    "Prepara un plan de recolección de datos con una muestra de tamaño adecuado, que registre los resultados junto con las condiciones del proceso y conserve el orden de las mediciones para ver tendencias",
-    "Define cómo vas a analizar los datos antes de empezar a recolectarlos, para asegurarte de que tendrás todos los datos necesarios: cálculos de capacidad sobre la variabilidad, análisis de los datos de atributos sobre las equivocaciones y análisis de los experimentos diseñados que incluyas en el estudio",
+    "Arma tu plan de recolección de datos con una muestra suficiente; anota cada resultado junto a las condiciones del proceso en que se obtuvo y guarda el orden de las mediciones para detectar tendencias",
+    "Antes de recolectar un solo dato, fija cómo los vas a analizar para no quedarte sin nada de lo que necesitarás: cálculos de capacidad para la variabilidad, análisis de los datos de atributos para las equivocaciones y análisis de cualquier experimento diseñado que metas en el estudio",
     "Reserva tiempo para revisar resultados parciales antes de calcular la capacidad final"
   ],
   "entregable_esperado": "Un plan escrito del estudio de capacidad, listo para ponerlo en marcha",
@@ -83,6 +83,74 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Mismo defecto: se caen la finalidad y los tres análisis del plan.; Se pierden la finalidad del plan de análisis (tener todos los datos necesarios antes de empezar) y los tres análisis que el libro dice que debe incluir.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-planificacion_estudio_capacidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Decide si el error al medir es significativo: puedes averiguarlo con un estudio aparte sobre eso o, en algunos casos, dentro del mismo estudio",
+      "texto_nuevo": "Comprueba si tu error de medición es significativo, ya sea con un estudio dedicado solo a medirlo o, en algunos casos, como parte del mismo estudio de capacidad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20767",
+        "frase": "Decide whether measurement error is significant. This can be determined from"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-planificacion_estudio_capacidad-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Decide si tu estudio se va a enfocar solo en la variación normal o también en errores y equivocaciones",
+      "texto_nuevo": "Elige el alcance de tu estudio: solo la variación normal, o esa variación y además los errores y equivocaciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20769",
+        "frase": "Decide whether the capability study will focus only on variability or"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-planificacion_estudio_capacidad-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Prepara un plan de recolección de datos con una muestra de tamaño adecuado, que registre los resultados junto con las condiciones del proceso y conserve el orden de las mediciones para ver tendencias",
+      "texto_nuevo": "Arma tu plan de recolección de datos con una muestra suficiente; anota cada resultado junto a las condiciones del proceso en que se obtuvo y guarda el orden de las mediciones para detectar tendencias",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20773",
+        "frase": "Prepare a data collection plan, including adequate sample size that documents"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-planificacion_estudio_capacidad-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Define cómo vas a analizar los datos antes de empezar a recolectarlos, para asegurarte de que tendrás todos los datos necesarios: cálculos de capacidad sobre la variabilidad, análisis de los datos de atributos sobre las equivocaciones y análisis de los experimentos diseñados que incluyas en el estudio",
+      "texto_nuevo": "Antes de recolectar un solo dato, fija cómo los vas a analizar para no quedarte sin nada de lo que necesitarás: cálculos de capacidad para la variabilidad, análisis de los datos de atributos para las equivocaciones y análisis de cualquier experimento diseñado que metas en el estudio",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20775",
+        "frase": "Plan which methods will be used to analyze data from the study"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de operar sin fallo un tiempo igual o mayor que el MTBF es solo del 37%.",
   "pasos_accionables": [
-    "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil); como normalmente no hay datos suficientes para comprobarlo, ten en cuenta que a menudo se cumple cuando las fallas tempranas se eliminaron antes de la entrega y el producto o sus piezas se reemplazan antes del desgaste",
+    "Comprueba que la tasa de fallo del producto sea constante (periodo de vida útil); lo normal es que te falten datos para confirmarlo, así que considera que a menudo es así cuando las fallas tempranas ya se quitaron antes de entregar el producto y cuando el producto o sus piezas se cambian antes de que llegue el desgaste",
     "Calcular el MTBF a partir de datos históricos de fallos",
     "Aplicar la fórmula R = e^(-t/μ) para el tiempo de interés, o la tabla de área exponencial",
     "Interpretar correctamente el resultado evitando la confusión con vida útil o vida de servicio",
@@ -118,6 +118,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 5,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-formula_exponencial_confiabilidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Verificar que la tasa de fallo del producto sea constante (periodo de vida útil); como normalmente no hay datos suficientes para comprobarlo, ten en cuenta que a menudo se cumple cuando las fallas tempranas se eliminaron antes de la entrega y el producto o sus piezas se reemplazan antes del desgaste",
+      "texto_nuevo": "Comprueba que la tasa de fallo del producto sea constante (periodo de vida útil); lo normal es que te falten datos para confirmarlo, así que considera que a menudo es así cuando las fallas tempranas ya se quitaron antes de entregar el producto y cuando el producto o sus piezas se cambian antes de que llegue el desgaste",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20175",
+        "frase": "In practice, sufficient data usually are not available to evaluate the assumption."
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

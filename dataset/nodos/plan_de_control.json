@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El plan de control se usa para sostener las ganancias obtenidas de un proyecto de mejora de calidad. Especifica las variables de control a monitorear, cómo medirlas y las acciones a tomar según criterios explícitos, asegurando el máximo uso del autocontrol.",
   "pasos_accionables": [
-    "Identificar las variables que afectan al remedio y al cliente directa o indirectamente",
-    "Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control",
+    "Detecta qué variables influyen, de forma directa o indirecta, tanto en el remedio aplicado como en tu cliente",
+    "Fija el estándar que disparará una acción; lo ideal es que ese estándar sea un límite de control sacado de una carta de control",
     "Definir cómo se medirá cada variable de control, especificando unidad de medida, sensor, frecuencia y tamaño de muestra",
-    "Establecer dónde, cuándo y cómo se registrarán las mediciones",
-    "Decidir quién analizará las mediciones y determinará si el proceso está fuera de control",
-    "Decidir quién actuará para diagnosticar y eliminar la causa asignable",
-    "Definir los pasos para regresar el proceso a control",
+    "Precisa el lugar, el momento y la forma en que quedarán registradas las mediciones",
+    "Elige quién se encargará de analizar las mediciones y de dictaminar cuándo el proceso queda fuera de control",
+    "Designa a la persona que intervendrá para diagnosticar la causa asignable y eliminarla",
+    "Traza los pasos con los que el proceso volverá a estar bajo control",
     "Revisar la matriz para verificar completitud y efectividad, y también su cobertura de variables críticas, velocidad de respuesta y máximo uso del autocontrol",
     "Capacitar a los dueños del proceso en el uso del plan de control.",
     "Auditar periódicamente la efectividad del plan de control."
@@ -73,6 +73,108 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la tercera verificación del libro: que el plan aproveche al máximo el autocontrol.; Mismo defecto: la revisión pierde la comprobación del máximo uso del autocontrol.",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identificar las variables que afectan al remedio y al cliente directa o indirectamente",
+      "texto_nuevo": "Detecta qué variables influyen, de forma directa o indirecta, tanto en el remedio aplicado como en tu cliente",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18178-18180",
+        "frase": "1. Identify variables that affect the remedy and the customer directly or indirectly."
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Establecer el estándar que activará una acción, idealmente un límite de control de una carta de control",
+      "texto_nuevo": "Fija el estándar que disparará una acción; lo ideal es que ese estándar sea un límite de control sacado de una carta de control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18182",
+        "frase": "2. Establish the standard that will trigger action. The best standard is a control limit"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Establecer dónde, cuándo y cómo se registrarán las mediciones",
+      "texto_nuevo": "Precisa el lugar, el momento y la forma en que quedarán registradas las mediciones",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18186",
+        "frase": "4. Establish where and when the measurements will be made and how they will"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Decidir quién analizará las mediciones y determinará si el proceso está fuera de control",
+      "texto_nuevo": "Elige quién se encargará de analizar las mediciones y de dictaminar cuándo el proceso queda fuera de control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18188",
+        "frase": "5. Decide who will analyze the ongoing measurement, that is, who will determine"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Decidir quién actuará para diagnosticar y eliminar la causa asignable",
+      "texto_nuevo": "Designa a la persona que intervendrá para diagnosticar la causa asignable y eliminarla",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18190",
+        "frase": "6. Decide who will act to diagnose and eliminate the assignable cause"
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-plan_de_control-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Definir los pasos para regresar el proceso a control",
+      "texto_nuevo": "Traza los pasos con los que el proceso volverá a estar bajo control",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "18192",
+        "frase": "7. Decide what steps can be taken to bring the process back into control."
+      },
+      "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
