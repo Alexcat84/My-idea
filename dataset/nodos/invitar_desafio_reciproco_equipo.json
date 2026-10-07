@@ -7,13 +7,13 @@
   "resumen_teorico": "La confianza con tu equipo no se completa cuando tú puedes criticar, sino cuando ellos pueden desafiarte a ti con la misma franqueza, hasta el punto de que quizá seas tú quien acabe molesto. Eso lleva tiempo y atención, sobre todo con quien acaba de llegar o te tiene por jefe, que puede guardarse sus opiniones, como le pasó a una recién llegada. Invítale de forma explícita, da su opinión por buena cuando no hay datos que decidan y déjale claro que discutir fuerte no cruza ninguna raya. A cambio aprendes mucho de ti y de cómo te ve la gente, y ese conocimiento mejora los resultados de todos.",
   "notas_extraccion": "El libro separa dos mitades de la dimension de desafiar directamente y dice cual es la dificil: desafiar a otros no es el problema, invitar a que te desafien a ti si. El caso de Russ y Elisse entra aqui como ejemplo nombrado y no como casa propia, siguiendo la regla de que el caso no es la casa: los dos medios concretos que el caso aporta, la regla de datos contra opiniones y la senial explicita de que no se ha cruzado ninguna raya, son del caso y van con su nombre pegado. Lo que el texto NO dice, y por eso no esta escrito aqui, es como se pide ese desafio la primera vez, ni que se hace cuando la persona sigue callada despues de invitarla, ni cada cuanto se repite la invitacion. Tambien queda fuera la generalizacion de la regla de Russ mas alla del caso: el texto la presenta como lo que Russ dijo en esa conversacion, tomandola de Jim Barksdale de Netscape con la receta al contrario, y no como una regla que el libro mande aplicar siempre. CORRECCION DECLARADA DENTRO DEL ACTO: el id con el que este candidato se escribio primero fue invitar_desafio_hacia_arriba, y la aduana lo tumbo por la regla 3 de docs/REGLAS_DE_ID.md, preposicion o articulo prohibido, hacia. Es el segundo de los seis candidatos de cap_04 que cae por esa misma regla. El id nuevo toma reciproco del propio texto, que llama a esto reciprocal challenge en la linea 139, y el viejo no se guarda como alias porque nunca vivio en el grafo.",
   "pasos_accionables": [
-    "Trata esto como lo que es, y no como un extra: la parte más difícil de construir la confianza con tu equipo no es criticar el trabajo de alguien ni cambiarle el papel, es invitar a la gente a desafiarte a ti.",
-    "Empújalos a retarte con tanta franqueza que tal vez seas tú quien termine incómodo o enojado: ahí está la medida.",
+    "Asúmelo como algo central y no como un añadido: para ganarte la confianza de tu equipo, criticar el trabajo de alguien o cambiarle de papel no es lo más duro; lo más duro es pedirle a la gente que te cuestione a ti.",
+    "Anímalos a cuestionarte de forma tan directa que quizá acabes siendo tú quien se moleste o se enoje: esa es la vara para medirlo.",
     "Cuenta con que esto lleva tiempo y atención, sobre todo con quien acaba de llegar y con quien te tiene por jefe.",
-    "Si notas que la otra persona empieza a ceder en plena discusión, ofrécele este criterio: cuando existen datos sobre qué funciona, mandan los datos; cuando lo único que hay son opiniones, gana la de ella.",
+    "Si ves que la otra persona está a punto de rendirse en medio de la discusión, plantéale esta regla: si hay datos de lo que funciona, que decidan los datos; si solo tienen opiniones, vale la suya.",
     "Acepta entonces los cambios que propone.",
-    "Cuando vuelva a discutir con más fuerza y le preocupe haberse pasado de la raya con su jefe, déjale claro que no se ha pasado. Un jefe lo hizo mandándole una escena de película en la que un cliente le suelta a su agente que la diferencia entre los dos es que el agente cree que se están peleando y el cliente cree que por fin están hablando.",
-    "Ten presente lo que ganas: descubres muchísimo de ti y de la imagen que los demás tienen de ti, y con eso tú y tu equipo logran mejores resultados."
+    "Si después discute con más fuerza todavía y teme haberse pasado de la raya con su jefe, hazle ver que no fue así. Un jefe lo resolvió enviándole un fragmento de película: un cliente discute con su agente y le dice que la diferencia entre ellos es que el agente cree que pelean y él cree que, por fin, están hablando.",
+    "Ten presente lo que te llevas: aprendes muchísimo sobre ti y sobre cómo te perciben, y ese saber les permite a ti y a tu equipo conseguir mejores resultados."
   ],
   "entregable_esperado": "Un desafío recíproco que no depende de quién manda: la otra persona discute contigo cada vez con más fuerza y sabe que no ha cruzado ninguna raya.",
   "nodos_previos": [
@@ -367,6 +367,91 @@
         "frase": "you'll find that you learn a great deal about yourself and how"
       },
       "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-invitar_desafio_reciproco_equipo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Trata esto como lo que es, y no como un extra: la parte más difícil de construir la confianza con tu equipo no es criticar el trabajo de alguien ni cambiarle el papel, es invitar a la gente a desafiarte a ti.",
+      "texto_nuevo": "Asúmelo como algo central y no como un añadido: para ganarte la confianza de tu equipo, criticar el trabajo de alguien o cambiarle de papel no es lo más duro; lo más duro es pedirle a la gente que te cuestione a ti.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_04.md",
+        "lineas": "133",
+        "frase": "But that's not the hardest part. The hardest part of building"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-invitar_desafio_reciproco_equipo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Empújalos a retarte con tanta franqueza que tal vez seas tú quien termine incómodo o enojado: ahí está la medida.",
+      "texto_nuevo": "Anímalos a cuestionarte de forma tan directa que quizá acabes siendo tú quien se moleste o se enoje: esa es la vara para medirlo.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_04.md",
+        "lineas": "133",
+        "frase": "You have to encourage them to challenge you directly enough"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-invitar_desafio_reciproco_equipo-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si notas que la otra persona empieza a ceder en plena discusión, ofrécele este criterio: cuando existen datos sobre qué funciona, mandan los datos; cuando lo único que hay son opiniones, gana la de ella.",
+      "texto_nuevo": "Si ves que la otra persona está a punto de rendirse en medio de la discusión, plantéale esta regla: si hay datos de lo que funciona, que decidan los datos; si solo tienen opiniones, vale la suya.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_04.md",
+        "lineas": "139",
+        "frase": "Sensing this, Russ said, If we have the data about what"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-invitar_desafio_reciproco_equipo-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando vuelva a discutir con más fuerza y le preocupe haberse pasado de la raya con su jefe, déjale claro que no se ha pasado. Un jefe lo hizo mandándole una escena de película en la que un cliente le suelta a su agente que la diferencia entre los dos es que el agente cree que se están peleando y el cliente cree que por fin están hablando.",
+      "texto_nuevo": "Si después discute con más fuerza todavía y teme haberse pasado de la raya con su jefe, hazle ver que no fue así. Un jefe lo resolvió enviándole un fragmento de película: un cliente discute con su agente y le dice que la diferencia entre ellos es que el agente cree que pelean y él cree que, por fin, están hablando.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_04.md",
+        "lineas": "141",
+        "frase": "Emboldened, the next time she argued her perspective she did so"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-invitar_desafio_reciproco_equipo-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ten presente lo que ganas: descubres muchísimo de ti y de la imagen que los demás tienen de ti, y con eso tú y tu equipo logran mejores resultados.",
+      "texto_nuevo": "Ten presente lo que te llevas: aprendes muchísimo sobre ti y sobre cómo te perciben, y ese saber les permite a ti y a tu equipo conseguir mejores resultados.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_04.md",
+        "lineas": "133",
+        "frase": "you'll find that you learn a great deal about yourself"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }

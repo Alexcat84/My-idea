@@ -8,12 +8,12 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P10 de la frontera publicada en la vuelta 1 del frente, L69, 237 palabras. Es un tramo de UNA sola linea del recorte, y los siete pasos salen todos de ella. POR QUE ES PROCEDIMIENTO: el libro pone su propio inventario de OBJETOS y de ETAPAS y hasta pone la formula (you will want to look at the eggs at the time of receipt, something called incoming or receiving inspection; The principle to be applied here is that you should have enough to cover your consumption rate for the length of time it takes to replace your raw material; you should also try to gauge the opportunity at risk: what would it cost if you had to shut your egg machine down for a day? How many customers would you lose? How much would it cost to lure them back?). El criterio NO es un adjetivo de adecuacion: no dice un inventario razonable, dice ritmo de consumo por tiempo de reposicion. POR QUE VA FUNDIDO EN UN SOLO NODO Y NO EN DOS (P.19, la repeticion interna): la inspeccion de recepcion y el inventario de materia prima parecen dos procedimientos, pero en el texto son uno: la inspeccion produce la devolucion, la devolucion produce el parado, y el inventario existe para cubrir ese parado. Partirlo dejaria un nodo sin su disparador y otro sin su motivo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuantos dias de inventario hay que tener, porque el libro da la formula y el ejemplo de un dia para un proveedor que entrega una vez al dia, y fijar un numero seria escribirlo yo; NO escribo a quien se devuelve el material ni con que documento, que seria puente de la especie destinatario; NO escribo quien hace la inspeccion, que seria puente de la especie responsable. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1 y el paso 2 podrian leerse como el mismo paso. Los separo porque el libro nombra los defectos en una frase aparte y porque el segundo trae la razon de mirar el tamano (which would affect how fast they cook), que no es evidente y es lo que distingue una inspeccion de recepcion de mirar si algo esta roto.",
   "pasos_accionables": [
     "Revisa el material justo cuando te llega: es la inspección de recepción, también llamada de entrada.",
-    "Al inspeccionar, fíjate en lo roto o podrido y también en lo que llega más grande o más pequeño de lo debido: el tamaño altera la velocidad a la que lo procesas.",
+    "Comprueba al inspeccionar dos cosas: el estado, que nada venga roto ni podrido, y el tamaño, porque lo que llega mayor o menor de lo debido cambia el ritmo al que lo procesas.",
     "Devuelve el material que no sea aceptable, contando con lo que eso te deja: sin material, y por tanto parado.",
     "Ten inventario de materia prima para no tener que parar por eso.",
-    "Calcula su tamaño así: que alcance para lo que consumes durante todo el plazo que tarda en llegar la reposición; si tu proveedor te entrega a diario, guarda el consumo de un día.",
-    "Como el inventario cuesta dinero, compara lo que te aporta tenerlo con lo que te cuesta mantenerlo.",
-    "Suma al coste del material y al del dinero la oportunidad que arriesgas, y mídela preguntándote tres cosas: qué te costaría un día con la máquina parada, cuántos clientes se te irían y qué te costaría recuperarlos."
+    "Dimensiónalo según el plazo de reposición: necesitas cubrir lo que gastas mientras llega el siguiente envío, de modo que, si te entregan a diario, guarda lo que consumes en un día.",
+    "Pon en una balanza lo que ganas teniendo inventario y lo que pagas por sostenerlo, ya que tenerlo no es gratis.",
+    "Mide también la oportunidad en riesgo, además de lo que cuestan el material y el dinero, con tres preguntas: cuánto perderías con la máquina detenida un día, cuántos clientes dejarían de venir y cuánto te saldría hacerlos volver."
   ],
   "entregable_esperado": "La inspección puesta en el momento de recibir el material, el inventario dimensionado por el ritmo de consumo y el tiempo de reposición, y la oportunidad en riesgo estimada con las tres preguntas del día de máquina parada.",
   "nodos_previos": [
@@ -291,6 +291,74 @@
         "frase": "you should have enough to cover your consumption rate for the length"
       },
       "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-dimensionar_inventario_materia_prima_reposicion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Al inspeccionar, fíjate en lo roto o podrido y también en lo que llega más grande o más pequeño de lo debido: el tamaño altera la velocidad a la que lo procesas.",
+      "texto_nuevo": "Comprueba al inspeccionar dos cosas: el estado, que nada venga roto ni podrido, y el tamaño, porque lo que llega mayor o menor de lo debido cambia el ritmo al que lo procesas.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "69",
+        "frase": "The eggs going into it could be cracked or rotten, or they could"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-dimensionar_inventario_materia_prima_reposicion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Calcula su tamaño así: que alcance para lo que consumes durante todo el plazo que tarda en llegar la reposición; si tu proveedor te entrega a diario, guarda el consumo de un día.",
+      "texto_nuevo": "Dimensiónalo según el plazo de reposición: necesitas cubrir lo que gastas mientras llega el siguiente envío, de modo que, si te entregan a diario, guarda lo que consumes en un día.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "69",
+        "frase": "you should have enough to cover your consumption rate for the length of"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-dimensionar_inventario_materia_prima_reposicion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Como el inventario cuesta dinero, compara lo que te aporta tenerlo con lo que te cuesta mantenerlo.",
+      "texto_nuevo": "Pon en una balanza lo que ganas teniendo inventario y lo que pagas por sostenerlo, ya que tenerlo no es gratis.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "69",
+        "frase": "inventory costs money, so you have to weigh the advantage of carrying"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-dimensionar_inventario_materia_prima_reposicion-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Suma al coste del material y al del dinero la oportunidad que arriesgas, y mídela preguntándote tres cosas: qué te costaría un día con la máquina parada, cuántos clientes se te irían y qué te costaría recuperarlos.",
+      "texto_nuevo": "Mide también la oportunidad en riesgo, además de lo que cuestan el material y el dinero, con tres preguntas: cuánto perderías con la máquina detenida un día, cuántos clientes dejarían de venir y cuánto te saldría hacerlos volver.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "69",
+        "frase": "Besides the cost of the raw material and the cost of money, you"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

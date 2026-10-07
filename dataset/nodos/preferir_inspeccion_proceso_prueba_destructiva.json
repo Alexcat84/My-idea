@@ -7,12 +7,12 @@
   "resumen_teorico": "En una operación continua, un parámetro que se sale de especificación sin avisar arruina todo el trabajo en curso, todo lo producido hasta que alguien lo nota y lo que dependía de ello en los pasos de al lado. Probar unidades sueltas detecta el fallo, pero cada unidad probada se tira. Medir el parámetro dentro del proceso permite comprobarlo fácilmente y a menudo sin destruir nada, y un aviso automático cuando varía un grado o dos evita pagar a alguien por leerlo. Por eso, siempre que se pueda, la prueba dentro del proceso gana a la que destruye producto.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P9 de la frontera publicada en la vuelta 1 del frente, L67, 202 palabras. Es un tramo de UNA sola linea del recorte, y los seis pasos salen todos de ella. POR QUE ES PROCEDIMIENTO: el inventario es de MEDIOS y de OBJETOS DE TRABAJO, nombrados uno a uno (performing a functional test is one way... you open an egg as it comes out of the machine and check its quality. But you will have to throw away the egg tested. A second way involves in-process inspection... insert a thermometer into the water... connect an electronic gadget to it that would set off bells anytime the temperature varied by a degree or two), y el criterio final es del libro y es imperativo suyo: whenever possible, you should choose in-process tests over those that destroy product. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cada cuanto se saca la unidad de la prueba funcional, porque el libro dice from time to time y el periodo lo pondria yo, que es la segunda especie de puente del lote 1; NO escribo el umbral del aviso mas alla del que el libro da (un grado o dos); NO escribo quien atiende el aviso, que seria puente de la especie responsable. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: este nodo y detectar_arreglar_fallo_etapa_menor_valor son vecinos de tema, porque los dos hablan de donde poner la comprobacion. Los separo porque este elige el TIPO de prueba (la que destruye producto contra la que no) y aquel elige la ETAPA (la de menor valor posible), y porque este vive en una operacion continua y aquel vale para cualquier flujo. Si el par se lee como gemelo, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 44 de la linea serial (deuda d004, cita grove PARA_ALEXIS 5.3.4, resuelta por D.53 del 17 sep 2026), y se escribe aqui para que la vuelta que inserte este candidato no dependa de que alguien se acuerde, que es la perdida que D.29 vino a cerrar. LA ACTA 32 seccion 3.3 del frente grove adjudico CONTINUA este par por la lectura vieja de que un par con arista declarada no puede ser SANO. D.53 decide lo contrario con su prueba por reduccion: UN SANO PUEDE LLEVAR ARISTA DECLARADA, Y DECLARARLA NO LO CONVIERTE EN CONTINUA, porque si lo hiciera D.37 seria imposible y toda cabeza de serie devoraria sus partes. RE ADJUDICADO: el veredicto de preferir_inspeccion_proceso_prueba_destructiva con clasificar_trabajo_proceso_montaje_prueba vuelve a SANO, que es lo que esta ficha publico, y la caida que dependia de la lectura vieja se retira citando D.53. LA ARISTA SIGUE EN PIE Y SE CABLEA AL INSERTAR: madre clasificar_trabajo_proceso_montaje_prueba paso 3, hijo preferir_inspeccion_proceso_prueba_destructiva. No se borra nada: la clase CONTINUA de la ACTA 32 queda escrita donde esta.",
   "pasos_accionables": [
-    "Calcula cuánto perderías si la máquina fallara sin que nadie lo notara: todo lo que esté en proceso y, además, todo lo producido entre el momento en que el parámetro salió de especificación y el momento en que detectaste el problema.",
-    "Suma también las pérdidas en los pasos vecinos que dependen de él: en una fábrica de desayunos que hierve huevos de forma continua y los acompaña con pan tostado, si el agua sale de su rango de temperatura especificado, el pan tostado también se tira entero, pues ya no tienes huevos con los que servirlo.",
-    "Valora la prueba funcional: abre de tanto en tanto una unidad recién salida de la máquina para revisar su calidad, sabiendo que esa unidad ya no sirve y va a la basura.",
-    "Valora la inspección dentro del proceso, que admite muchas formas: toma la medida del parámetro en el mismo proceso, por ejemplo con un termómetro metido en el agua de cocción de los huevos, para revisar la temperatura con facilidad y con frecuencia.",
-    "Si prefieres no pagarle a alguien para que la vigile, tienes la opción de automatizar la medición con un dispositivo que dé la alarma apenas el parámetro se mueva uno o dos grados.",
-    "Y elige, siempre que se pueda, la prueba dentro del proceso antes que la que destruye producto."
+    "Estima la pérdida que tendrías si la máquina se averiara sin que nadie se diera cuenta: el trabajo en curso completo, más todo lo que salió desde que el parámetro se fue de especificación hasta que descubriste el fallo.",
+    "Añade lo que se perdería en los pasos vecinos que dependen de él: si en una fábrica de desayunos que cuece huevos sin parar y los sirve con pan tostado la temperatura del agua se sale del rango especificado, también tiras todo el pan tostado, porque no quedan huevos que servir con él.",
+    "Considera la prueba funcional: cada cierto tiempo, toma una unidad que acaba de salir de la máquina y ábrela para ver su calidad, sabiendo que la pierdes y terminará en la basura.",
+    "Considera también la inspección dentro del proceso, que puede tomar muchas formas: mide el parámetro sin sacarlo del proceso, por ejemplo metiendo un termómetro en el agua donde se cuecen los huevos, y así controlas la temperatura con frecuencia y sin esfuerzo.",
+    "Contempla automatizar la medición, si no quieres pagarle a alguien para vigilarla, con un aparato que avise en cuanto el parámetro varíe uno o dos grados.",
+    "Opta por comprobar dentro del proceso, y no con pruebas que destruyen producto, en todos los casos en que sea posible."
   ],
   "entregable_esperado": "El coste de la avería silenciosa contado, y la vigilancia puesta dentro del proceso en vez de sobre el producto acabado, con su aviso automático cuando el parámetro se mueve.",
   "nodos_previos": [
@@ -341,6 +341,108 @@
       },
       "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Calcula cuánto perderías si la máquina fallara sin que nadie lo notara: todo lo que esté en proceso y, además, todo lo producido entre el momento en que el parámetro salió de especificación y el momento en que detectaste el problema.",
+      "texto_nuevo": "Estima la pérdida que tendrías si la máquina se averiara sin que nadie se diera cuenta: el trabajo en curso completo, más todo lo que salió desde que el parámetro se fue de especificación hasta que descubriste el fallo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "The entire work-in-process, all the eggs in the boiler, and the output of"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Suma también las pérdidas en los pasos vecinos que dependen de él: en una fábrica de desayunos que hierve huevos de forma continua y los acompaña con pan tostado, si el agua sale de su rango de temperatura especificado, el pan tostado también se tira entero, pues ya no tienes huevos con los que servirlo.",
+      "texto_nuevo": "Añade lo que se perdería en los pasos vecinos que dependen de él: si en una fábrica de desayunos que cuece huevos sin parar y los sirve con pan tostado la temperatura del agua se sale del rango especificado, también tiras todo el pan tostado, porque no quedan huevos que servir con él.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "All the toast is also wasted because you don't have any eggs"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Valora la prueba funcional: abre de tanto en tanto una unidad recién salida de la máquina para revisar su calidad, sabiendo que esa unidad ya no sirve y va a la basura.",
+      "texto_nuevo": "Considera la prueba funcional: cada cierto tiempo, toma una unidad que acaba de salir de la máquina y ábrela para ver su calidad, sabiendo que la pierdes y terminará en la basura.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "Performing a functional test is one way. From time to time you"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Valora la inspección dentro del proceso, que admite muchas formas: toma la medida del parámetro en el mismo proceso, por ejemplo con un termómetro metido en el agua de cocción de los huevos, para revisar la temperatura con facilidad y con frecuencia.",
+      "texto_nuevo": "Considera también la inspección dentro del proceso, que puede tomar muchas formas: mide el parámetro sin sacarlo del proceso, por ejemplo metiendo un termómetro en el agua donde se cuecen los huevos, y así controlas la temperatura con frecuencia y sin esfuerzo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "A second way involves in-process inspection, which can take many forms."
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si prefieres no pagarle a alguien para que la vigile, tienes la opción de automatizar la medición con un dispositivo que dé la alarma apenas el parámetro se mueva uno o dos grados.",
+      "texto_nuevo": "Contempla automatizar la medición, si no quieres pagarle a alguien para vigilarla, con un aparato que avise en cuanto el parámetro varíe uno o dos grados.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "To avoid having to pay someone to read the thermometer, you could"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-preferir_inspeccion_proceso_prueba_destructiva-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Y elige, siempre que se pueda, la prueba dentro del proceso antes que la que destruye producto.",
+      "texto_nuevo": "Opta por comprobar dentro del proceso, y no con pruebas que destruyen producto, en todos los casos en que sea posible.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "67-67",
+        "frase": "The point is that whenever possible, you should choose in-process tests"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

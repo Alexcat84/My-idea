@@ -9,13 +9,13 @@
   "pasos_accionables": [
     "Cuenta con que solo hay dos maneras de controlar la producción de cualquier fábrica: fabricar contra pedido y fabricar contra pronóstico.",
     "Si trabajas contra pedido, conoce primero lo que pide el cliente, luego encuéntrale sitio en tu programa de producción y fabrica allí su pieza.",
-    "Pon tu plazo junto al de tus competidores: si ellos entregan el mismo producto en cuatro semanas y a ti te toma cuatro meses, te quedarás con pocos clientes.",
+    "Compara tus plazos con los de la competencia: cuando a ti te cuesta cuatro meses lo que otros, con el mismo producto, entregan en cuatro semanas, pocos clientes se quedarán contigo.",
     "Cuando esa comparación te cierre la vía del pedido, pasa a fabricar contra pronóstico, que es actuar sobre una previsión de los pedidos futuros, aunque preferirías fabricar contra pedido.",
-    "Organiza tu operación sobre una apuesta bien razonada: que en un plazo dado llegarán pedidos de productos concretos.",
-    "Acepta el riesgo de inventario que trae esta vía: pones recursos al servicio de lo que calculas que hará falta más adelante, y si esos pedidos nunca llegan, o llegan pero para otro producto, te quedas con existencias que nadie quiere.",
-    "Ten claro que fabricar contra pronóstico es jugarte capital a cambio de atender con orden la demanda que esperas.",
-    "Ten en cuenta que ambas vías pueden darse a la vez en una misma operación: un negocio de desayunos cocina cada plato cuando el cliente lo pide, pero a sus proveedores, como el de los huevos, les compra según la demanda que prevé.",
-    "Lleva el pronóstico más allá de la fábrica: contrata recién titulados según lo que prevés necesitar y no solo cuando la necesidad aparece, ya que salen al mercado por temporadas muy marcadas; y ten presente que el software también suele crearse pensando en una necesidad prevista del mercado más que en un encargo puntual."
+    "Apuesta con fundamento a qué productos concretos van a recibir pedidos y en qué plazo, y monta tu operación alrededor de esa apuesta.",
+    "Asume el riesgo de inventario que trae esta vía: como dedicas recursos a una necesidad futura que solo has calculado, acabarás con existencias que nadie quiere si esos pedidos no llegan jamás o si llegan para un producto distinto.",
+    "Ten claro el trato que haces al producir según un pronóstico: pones en juego capital y, a cambio, puedes atender de forma ordenada la demanda que prevés.",
+    "Ten en cuenta que una misma operación puede combinar las dos vías a la vez: un negocio de desayunos prepara cada plato solo cuando llega la comanda, y en cambio compra a sus proveedores, el de huevos entre ellos, según lo que anticipa que le van a pedir.",
+    "Aplica el pronóstico también fuera de la fábrica: incorpora recién titulados en función de lo que anticipas que necesitarás, no solo cuando surge la vacante, porque llegan al mercado en temporadas muy concentradas; y recuerda que lo habitual es desarrollar software adelantándose a lo que el mercado va a necesitar, más que esperar a que alguien lo encargue."
   ],
   "entregable_esperado": "Decidido cuál de las dos vías usas para cada cosa que produces o compras, y, si es contra pronóstico, el riesgo de inventario reconocido y el plazo dentro del cual esperas que se materialicen los pedidos.",
   "nodos_previos": [
@@ -549,6 +549,108 @@
         "frase": "But if your competition in the sofa business makes the same product"
       },
       "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Pon tu plazo junto al de tus competidores: si ellos entregan el mismo producto en cuatro semanas y a ti te toma cuatro meses, te quedarás con pocos clientes.",
+      "texto_nuevo": "Compara tus plazos con los de la competencia: cuando a ti te cuesta cuatro meses lo que otros, con el mismo producto, entregan en cuatro semanas, pocos clientes se quedarán contigo.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "105",
+        "frase": "But if your competition in the sofa business makes the same product"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Organiza tu operación sobre una apuesta bien razonada: que en un plazo dado llegarán pedidos de productos concretos.",
+      "texto_nuevo": "Apuesta con fundamento a qué productos concretos van a recibir pedidos y en qué plazo, y monta tu operación alrededor de esa apuesta.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "105",
+        "frase": "the manufacturer sets up his activities around a reasoned speculation that orders will materialize"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Acepta el riesgo de inventario que trae esta vía: pones recursos al servicio de lo que calculas que hará falta más adelante, y si esos pedidos nunca llegan, o llegan pero para otro producto, te quedas con existencias que nadie quiere.",
+      "texto_nuevo": "Asume el riesgo de inventario que trae esta vía: como dedicas recursos a una necesidad futura que solo has calculado, acabarás con existencias que nadie quiere si esos pedidos no llegan jamás o si llegan para un producto distinto.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "107",
+        "frase": "An obvious disadvantage here is that the manufacturer takes an inventory risk."
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ten claro que fabricar contra pronóstico es jugarte capital a cambio de atender con orden la demanda que esperas.",
+      "texto_nuevo": "Ten claro el trato que haces al producir según un pronóstico: pones en juego capital y, a cambio, puedes atender de forma ordenada la demanda que prevés.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "107",
+        "frase": "To build to forecast, you risk capital to respond to anticipated future demand"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-7",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ten en cuenta que ambas vías pueden darse a la vez en una misma operación: un negocio de desayunos cocina cada plato cuando el cliente lo pide, pero a sus proveedores, como el de los huevos, les compra según la demanda que prevé.",
+      "texto_nuevo": "Ten en cuenta que una misma operación puede combinar las dos vías a la vez: un negocio de desayunos prepara cada plato solo cuando llega la comanda, y en cambio compra a sus proveedores, el de huevos entre ellos, según lo que anticipa que le van a pedir.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "109",
+        "frase": "Our breakfast factory makes its product to customer order, but buys from its suppliers"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k30-elegir_fabricar_pedido_pronostico-pasos_accionables-8",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Lleva el pronóstico más allá de la fábrica: contrata recién titulados según lo que prevés necesitar y no solo cuando la necesidad aparece, ya que salen al mercado por temporadas muy marcadas; y ten presente que el software también suele crearse pensando en una necesidad prevista del mercado más que en un encargo puntual.",
+      "texto_nuevo": "Aplica el pronóstico también fuera de la fábrica: incorpora recién titulados en función de lo que anticipas que necesitarás, no solo cuando surge la vacante, porque llegan al mercado en temporadas muy concentradas; y recuerda que lo habitual es desarrollar software adelantándose a lo que el mercado va a necesitar, más que esperar a que alguien lo encargue.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "109",
+        "frase": "most companies recruit new college graduates to fill anticipated needs"
+      },
+      "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 8,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
