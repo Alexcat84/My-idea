@@ -196,6 +196,8 @@ const es = {
     miIdea: "Mi idea",
     tuViaje: "Tu viaje",
     volverEntrevista: "Volver a la entrevista",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Volver",
     tuViajeCore: "Tu viaje principal · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Toca el círculo de una tarea para elegir su estado (hecha, en proceso, no aplica…).",
     sinChecklist: "Tu checklist nace del plan: genera tu plan y aquí aparecerán sus acciones.",
@@ -469,6 +471,8 @@ const en: typeof es = {
     miIdea: "My idea",
     tuViaje: "Your Journey",
     volverEntrevista: "Back to the interview",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Back",
     tuViajeCore: "Your main journey · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Tap a task's circle to choose its status (done, in progress, doesn't apply…).",
     sinChecklist: "Your checklist grows out of your plan: generate your plan and its actions will show up here.",
@@ -723,6 +727,8 @@ const fr: typeof es = {
     miIdea: "Mon idée",
     tuViaje: "Ton parcours",
     volverEntrevista: "Revenir à l'entretien",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Retour",
     tuViajeCore: "Ton parcours principal · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Touche le cercle d'une tâche pour choisir son statut (faite, en cours, ne s'applique pas…).",
     sinChecklist: "Ta liste d'actions naît du plan : génère ton plan et ses actions apparaîtront ici.",
@@ -970,6 +976,8 @@ const pt: typeof es = {
     miIdea: "Minha ideia",
     tuViaje: "Sua Jornada",
     volverEntrevista: "Voltar para a entrevista",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Voltar",
     tuViajeCore: "Sua jornada principal · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Toque no círculo de uma tarefa para escolher o status dela (feita, em andamento, não se aplica…).",
     sinChecklist: "Seu checklist nasce do plano: gere seu plano e as ações dele vão aparecer aqui.",
@@ -1217,6 +1225,8 @@ const de: typeof es = {
     miIdea: "Meine Idee",
     tuViaje: "Deine Reise",
     volverEntrevista: "Zurück zum Gespräch",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Zurück",
     tuViajeCore: "Deine Hauptreise · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Tippe auf den Kreis einer Aufgabe, um ihren Status zu wählen (erledigt, in Arbeit, trifft nicht zu…).",
     sinChecklist: "Deine Checkliste entsteht aus dem Plan: Erstelle deinen Plan, dann erscheinen hier seine Schritte.",
@@ -1464,6 +1474,8 @@ const it: typeof es = {
     miIdea: "La mia idea",
     tuViaje: "Il tuo viaggio",
     volverEntrevista: "Torna all'intervista",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← Indietro",
     tuViajeCore: "Il tuo viaggio principale · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "Tocca il cerchio di un'attività per sceglierne lo stato (fatta, in corso, non si applica…).",
     sinChecklist: "La tua checklist nasce dal piano: genera il tuo piano e qui compariranno le sue azioni.",
@@ -1711,6 +1723,8 @@ const ja: typeof es = {
     miIdea: "私のアイデア",
     tuViaje: "あなたの旅",
     volverEntrevista: "インタビューに戻る",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← 戻る",
     tuViajeCore: "メインの旅 · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "タスクの丸をタップすると、状態（完了、進行中、対象外…）を選べます。",
     sinChecklist: "チェックリストはプランから生まれます。プランを作ると、ここにアクションが表示されます。",
@@ -1958,6 +1972,8 @@ const zh: typeof es = {
     miIdea: "我的想法",
     tuViaje: "你的旅程",
     volverEntrevista: "返回访谈",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← 返回",
     tuViajeCore: "你的主旅程 · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "点击任务前的圆圈来选择状态（已完成、进行中、不适用…）。",
     sinChecklist: "你的清单来自你的计划：生成计划后，它的行动会出现在这里。",
@@ -2205,6 +2221,8 @@ const ko: typeof es = {
     miIdea: "내 아이디어",
     tuViaje: "나의 여정",
     volverEntrevista: "인터뷰로 돌아가기",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← 돌아가기",
     tuViajeCore: "나의 메인 여정 · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "할 일의 동그라미를 눌러 상태를 골라 주세요(완료, 진행 중, 해당 없음…).",
     sinChecklist: "체크리스트는 계획에서 나와요. 계획을 만들면 여기에 실행 항목이 나타나요.",
@@ -2452,6 +2470,8 @@ const ar: typeof es = {
     miIdea: "فكرتي",
     tuViaje: "رحلتكم",
     volverEntrevista: "العودة إلى المقابلة",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "→ رجوع",
     tuViajeCore: "رحلتكم الرئيسية · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "اضغطوا على دائرة المهمة لاختيار حالتها (منجزة، قيد التنفيذ، لا تنطبق…).",
     sinChecklist: "قائمة مهامكم تنبثق من الخطة: أنشئوا خطتكم وستظهر إجراءاتها هنا.",
@@ -2699,6 +2719,8 @@ const hi: typeof es = {
     miIdea: "मेरा विचार",
     tuViaje: "आपकी यात्रा",
     volverEntrevista: "बातचीत पर लौटें",
+    /** el botón de volver de las páginas propias de Profundizar, Replantear y Cerrar */
+    volverAlEspacio: "← वापस",
     tuViajeCore: "आपकी मुख्य यात्रा · <b>{{hechos}}/{{total}}</b>",
     pistaEstado: "किसी काम की स्थिति चुनने के लिए उसके गोले पर टैप करें (पूरा, प्रगति पर, लागू नहीं…)।",
     sinChecklist: "आपकी चेकलिस्ट योजना से बनती है: अपनी योजना बनाएँ, और उसके कदम यहाँ दिखेंगे।",

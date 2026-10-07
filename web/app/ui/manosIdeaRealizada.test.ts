@@ -13,8 +13,12 @@ describe("Manos a la Obra con la idea realizada", () => {
     expect(f).toMatch(/const nucleoCerrado = Boolean\(realizadaAt\)/);
   });
   it("el ciclo de profundización del núcleo (móvil y escritorio) y el acta se ocultan cerrada", () => {
-    expect(f).toMatch(/core && cCore\.total > 0 && !ritual && !nucleoCerrado/);
+    // (8 oct 2026: profundizar, replantear y cerrar abren su propio espacio; las
+    // tarjetas ya no esperan a que el ritual esté cerrado, porque abierto el
+    // ritual el hub ni se pinta. La ruta tampoco abre nada con la idea realizada:
+    // accionEspacioPropio.test.tsx.)
+    expect(f).toMatch(/core && cCore\.total > 0 && !nucleoCerrado && \(/);
     expect(f).toMatch(/\{!nucleoCerrado && \(\s*<div className="hidden lg:block">/);
-    expect(f).toMatch(/cCore\.total > 0 &&\s*!nucleoCerrado &&/);
+    expect(f).toMatch(/cCore\.total > 0 && !nucleoCerrado && \(\s*<TarjetaAcceso\s+icono="realizar"/);
   });
 });

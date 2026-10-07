@@ -13,7 +13,7 @@
  * del plan ("## Etapa N: título"); si el plan no los trae, se muestra
  * solo el número. Nada se anima sin un evento real detrás.
  */
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
@@ -272,7 +272,21 @@ interface Props {
   /** La etapa actual del recorrido (lib/etapaIdea.ts), la misma del paso a paso. */
   etapaIdea?: number;
   realizadaAt?: string | null; // Realizada
+  /** La acción abierta al llegar (la ruta &accion=): esa acción, sola, en su
+   * espacio. Si ya no aplica (idea realizada, mundo cerrado), queda el hub. */
+  accionInicial?: AccionEspacio | null;
+  /** La acción abierta cambió (o se cerró, null): el padre la escribe en la ruta. */
+  onAccion?: (accion: AccionEspacio | null) => void;
 }
+
+/** Las tres acciones del menú que abren SU PROPIO ESPACIO (decisión del
+ * fundador, 8 oct 2026): ninguna se despliega encima del hub. Viven en la ruta
+ * (&accion=) y traen su botón de volver. */
+export type TipoAccion = "profundizar" | "replantear" | "cerrar";
+export type AccionEspacio = { tipo: TipoAccion; dominio: string };
+const TIPOS_ACCION: readonly TipoAccion[] = ["profundizar", "replantear", "cerrar"];
+export const esTipoAccion = (v: string | null | undefined): v is TipoAccion =>
+  TIPOS_ACCION.includes(v as TipoAccion);
 
 /** Recuerda que el usuario ya usó el selector de estado (pista de primer uso). */
 const CLAVE_PISTA_ESTADO = "mi-idea:selector-estado-usado";
@@ -1742,15 +1756,30 @@ export function ManosALaObra({
   exploracionAt,
   etapaIdea,
   realizadaAt,
+  accionInicial,
+  onAccion,
 }: Props) {
   const idioma = useIdioma();
   const t = elegir(MANOS_A_LA_OBRA, idioma);
   // AUD-09 (tanda 5): con la idea realizada, el núcleo no ofrece un seguimiento
   // pagado ni un segundo cierre (el mundo ya lo hacía con !completado).
   const nucleoCerrado = Boolean(realizadaAt);
+  // La acción que trae la ruta, solo si todavía aplica: su espacio existe y no
+  // está cerrado (una idea realizada no se profundiza ni se cierra dos veces).
+  const accionDeRuta: AccionEspacio | null = (() => {
+    const a = accionInicial;
+    if (!a || !esTipoAccion(a.tipo)) return null;
+    if (soloDominio && soloDominio !== a.dominio) return null;
+    if (!grupoVigente(checklist, a.dominio)) return null;
+    if (a.dominio === ESPACIO_CORE) return nucleoCerrado ? null : a;
+    const m = mundos.find((x) => x.dominio === a.dominio);
+    return m && !m.completadoAt ? a : null;
+  })();
+  const deRuta = (tipo: TipoAccion, core: boolean) =>
+    accionDeRuta?.tipo === tipo && (accionDeRuta.dominio === ESPACIO_CORE) === core ? accionDeRuta.dominio : null;
   // Fase 4.0: el ritual SOLO se abre desde aqui ("Contar que paso"): una
   // sola puerta (docs/FLUJO_TRACKING.md §2). Ya no se puede abrir desde el plan.
-  const [ritual, setRitual] = useState(false);
+  const [ritual, setRitual] = useState(deRuta("profundizar", true) !== null);
   // Fase 4.3.2: el "Explorar actividad" abierto. Se guarda el ID (no el ítem):
   // el ítem VIVO se deriva del checklist al renderizar, así el cajón refleja
   // cada cambio (marcar hecho, mover fecha, nota) sin cerrarse ni recargar.
@@ -1759,12 +1788,12 @@ export function ManosALaObra({
     setDetalleItem({ id: item.id, tituloEtapa });
   // Fase 4.2: el ritual de un mundo (su dominio) y su cierre. Van aparte del
   // core a propósito: dos subproyectos abiertos a la vez no comparten estado.
-  const [ritualMundo, setRitualMundo] = useState<string | null>(null);
+  const [ritualMundo, setRitualMundo] = useState<string | null>(deRuta("profundizar", false));
   // Ciclo de replanteamiento, Fase 2: "Replantear mi camino", la otra entrada.
   // Núcleo y mundo por separado, como el ritual de profundizar.
-  const [replanteo, setReplanteo] = useState(false);
-  const [replanteoMundo, setReplanteoMundo] = useState<string | null>(null);
-  const [cerrandoMundo, setCerrandoMundo] = useState<string | null>(null);
+  const [replanteo, setReplanteo] = useState(deRuta("replantear", true) !== null);
+  const [replanteoMundo, setReplanteoMundo] = useState<string | null>(deRuta("replantear", false));
+  const [cerrandoMundo, setCerrandoMundo] = useState<string | null>(deRuta("cerrar", false));
   const [motivoMundo, setMotivoMundo] = useState("");
   const [guardandoMundo, setGuardandoMundo] = useState(false);
   const [ocupado, setOcupado] = useState(false);
@@ -1852,7 +1881,7 @@ export function ManosALaObra({
   // Fase 4.0 §8 — el porqué del cierre, en las palabras del usuario (opcional)
   const [cierreMotivo, setCierreMotivo] = useState("");
   // Fase 3.8 §5 — confirmación de "Marcar como realizada"
-  const [confirmandoRealizar, setConfirmandoRealizar] = useState(false);
+  const [confirmandoRealizar, setConfirmandoRealizar] = useState(deRuta("cerrar", true) !== null);
   const [realizando, setRealizando] = useState(false);
   // Pista de primer uso del selector de estado (solo hasta el primer cambio,
   // recordado en localStorage). SSR-safe: nace false y se enciende al montar.
@@ -1937,6 +1966,70 @@ export function ManosALaObra({
   const soloMundo = soloDominio && soloDominio !== ESPACIO_CORE ? soloDominio : null;
   const mostrarCore = !soloMundo;
   const mundosVisibles = mundosDelEspacio(mundos, soloDominio);
+
+  // La acción abierta (a lo más una): profundizar, replantear o cerrar, del
+  // núcleo o de un mundo. Abierta, ocupa la vista entera (su propio espacio).
+  const accionAbierta: AccionEspacio | null = ritual
+    ? { tipo: "profundizar", dominio: ESPACIO_CORE }
+    : ritualMundo
+      ? { tipo: "profundizar", dominio: ritualMundo }
+      : replanteo
+        ? { tipo: "replantear", dominio: ESPACIO_CORE }
+        : replanteoMundo
+          ? { tipo: "replantear", dominio: replanteoMundo }
+          : confirmandoRealizar
+            ? { tipo: "cerrar", dominio: ESPACIO_CORE }
+            : cerrandoMundo
+              ? { tipo: "cerrar", dominio: cerrandoMundo }
+              : null;
+  const claveAccion = accionAbierta ? `${accionAbierta.tipo}:${accionAbierta.dominio}` : "";
+  // Solo los CAMBIOS viajan a la ruta (y suben la vista al inicio): al montar,
+  // la ruta ya dice lo que hay.
+  const claveAnterior = useRef(claveAccion);
+  useEffect(() => {
+    if (claveAnterior.current === claveAccion) return;
+    claveAnterior.current = claveAccion;
+    onAccion?.(accionAbierta);
+    window.scrollTo({ top: 0 });
+    // accionAbierta se deriva de claveAccion: con ella basta.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [claveAccion]);
+  // Al llegar por la ruta a profundizar o replantear, el saldo se pregunta igual
+  // que al tocar la tarjeta (AUD-09 M22): si no alcanza, se vuelve al hub con
+  // el rechazo dicho, antes de que la persona escriba nada.
+  useEffect(() => {
+    const a = accionDeRuta;
+    // una ruta con una acción que ya no aplica se limpia (queda el hub)
+    if (accionInicial && !a) onAccion?.(null);
+    if (!a || a.tipo === "cerrar") return;
+    let vivo = true;
+    const ruta = a.tipo === "profundizar" ? "follow" : "replantear";
+    (async () => {
+      try {
+        const res = await fetch(`/api/project/${projectId}/${ruta}?dominio=${encodeURIComponent(a.dominio)}`);
+        if (!vivo || res.ok || res.status === 401) return;
+        const r = await leerRechazo(res, idioma);
+        if (!vivo) return;
+        cerrarAccion();
+        setError(r.mensaje);
+      } catch {
+        // sin conexión: queda abierta y el envío dirá lo que haga falta
+      }
+    })();
+    return () => {
+      vivo = false;
+    };
+    // una sola vez, al llegar
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  function cerrarAccion() {
+    setRitual(false);
+    setRitualMundo(null);
+    setReplanteo(false);
+    setReplanteoMundo(null);
+    setConfirmandoRealizar(false);
+    setCerrandoMundo(null);
+  }
 
   // Campaña "Espacios": la cara activa (Plan · Manos a la obra · Tu avance). La
   // cara "manos" es el comportamiento actual (aditivo). El core la muestra en su
@@ -2319,6 +2412,138 @@ export function ManosALaObra({
 
   const barraPct = cCore.total > 0 ? Math.round((cCore.hechos / cCore.total) * 100) : 0;
 
+  // Decisión del fundador (8 oct 2026): profundizar, replantear y cerrar abren
+  // SU PROPIO ESPACIO (ruta &accion= y "← Volver"), en escritorio y en móvil.
+  // Abierta una acción, el hub no se pinta: nada se despliega encima de él.
+  if (accionAbierta) {
+    const esCore = accionAbierta.dominio === ESPACIO_CORE;
+    const mundo = esCore ? null : mundos.find((m) => m.dominio === accionAbierta.dominio) ?? null;
+    const itemsMundo = mundo ? (grupoVigente(checklist, mundo.dominio)?.etapas.flatMap((e) => e.items) ?? []) : [];
+    const c = mundo ? conteo(itemsMundo) : cCore;
+    let contenido: ReactNode = null;
+    if (accionAbierta.tipo === "profundizar") {
+      contenido = (
+        <RitualContinuar
+          resumen={c}
+          mundo={mundo?.nombre}
+          enviando={enviandoFollow}
+          error={errorRitual}
+          onEnviar={(d, e) => enviarFollow(d, e, mundo ? mundo.dominio : ESPACIO_CORE)}
+          onCerrar={() => (mundo ? setRitualMundo(null) : setRitual(false))}
+        />
+      );
+    } else if (accionAbierta.tipo === "replantear") {
+      contenido = (
+        <RitualReplantear
+          projectId={projectId}
+          dominio={mundo ? mundo.dominio : ESPACIO_CORE}
+          mundo={mundo?.nombre}
+          items={mundo ? itemsMundo : itemsCore}
+          onListo={(sid, camino) => onReplanteamientoListo(sid, mundo ? mundo.dominio : ESPACIO_CORE, camino)}
+          onCerrar={() => (mundo ? setReplanteoMundo(null) : setReplanteo(false))}
+        />
+      );
+    } else if (mundo) {
+      /* Fase 4.2 §2 — el cierre del mundo: el acta en miniatura. Sobrio a
+         propósito (§2: un momento, no la fiesta): la Celebración grande, con su
+         constelación y su pulso, es del PROYECTO. */
+      contenido = (
+        <div className="rounded-panel border border-done/40 bg-surface p-5">
+          <p className="text-[14px] font-semibold leading-relaxed">
+            {interpolar(t.mundo.disteTerminado, { mundo: mundo.nombre })}
+          </p>
+          {/* El espejo del momento: sus números reales, sin juicio. */}
+          <p className="mt-2 text-[12.5px] text-dim">
+            {c.total > 0
+              ? interpolar(t.mundo.llevasPct, { hechos: c.hechos, total: c.total, pct: Math.round((c.hechos / c.total) * 100) })
+              : interpolar(t.mundo.llevas, { hechos: c.hechos, total: c.total })}
+          </p>
+          <label htmlFor={`motivo-${mundo.dominio}`} className="mt-3.5 block text-[12.5px] text-dim">
+            {rico(t.mundo.porQueCierras, { s: (x) => <span className="text-dim/70">{x}</span> })}
+          </label>
+          <div className="mt-1.5">
+            <CampoConVoz
+              id={`motivo-${mundo.dominio}`}
+              valor={motivoMundo}
+              onCambio={setMotivoMundo}
+              filas={2}
+              placeholder={t.mundo.placeholderMotivo}
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-3">
+            <button
+              onClick={() => cerrarMundo(mundo.dominio, "completar")}
+              disabled={guardandoMundo}
+              className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
+            >
+              {guardandoMundo ? t.cerrando : t.mundo.siTerminado}
+            </button>
+            <button
+              onClick={() => setCerrandoMundo(null)}
+              disabled={guardandoMundo}
+              className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
+            >
+              {t.todaviaNo}
+            </button>
+          </div>
+        </div>
+      );
+    } else {
+      /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
+         (a) el espejo del momento, con los números reales y SIN juicio;
+         (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir nada. */
+      contenido = (
+        <div className="rounded-panel border border-done/40 bg-surface p-5">
+          <p className="text-[14px] font-semibold leading-relaxed">
+            {t.cierre.cierraTuIdea}
+          </p>
+          <p className="mt-2 text-[12.5px] text-dim">
+            {cCore.total > 0
+              ? interpolar(t.cierre.llevasPct, { hechos: cCore.hechos, total: cCore.total, pct: Math.round((cCore.hechos / cCore.total) * 100) })
+              : interpolar(t.cierre.llevas, { hechos: cCore.hechos, total: cCore.total })}
+          </p>
+          <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
+            {rico(t.cierre.porQueCierras, { s: (x) => <span className="text-dim/70">{x}</span> })}
+          </label>
+          <div className="mt-1.5">
+            <CampoConVoz
+              id="cierre-motivo"
+              valor={cierreMotivo}
+              onCambio={setCierreMotivo}
+              filas={2}
+              placeholder={t.cierre.placeholderMotivo}
+            />
+          </div>
+          <div className="mt-3 flex items-center gap-3">
+            <button
+              onClick={marcarRealizada}
+              disabled={realizando}
+              className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
+            >
+              {realizando ? t.cerrando : t.cierre.siProyecto}
+            </button>
+            <button
+              onClick={() => setConfirmandoRealizar(false)}
+              disabled={realizando}
+              className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
+            >
+              {t.todaviaNo}
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="flex flex-col gap-6">
+        <button onClick={cerrarAccion} className="self-start text-sm text-dim hover:text-ink">
+          {t.nucleo.volverAlEspacio}
+        </button>
+        {error && <p className="text-sm text-warn">{error}</p>}
+        <div className="anima-plan-in mx-auto w-full max-w-2xl">{contenido}</div>
+      </div>
+    );
+  }
+
   return (
     <div className={"flex flex-col gap-6" + (soloMundo ? "" : " lg:grid lg:grid-cols-[1fr_300px] lg:items-start lg:gap-8")}>
       <div className="flex min-w-0 flex-col gap-7">
@@ -2405,32 +2630,12 @@ export function ManosALaObra({
           onDescargarIcs={() => descargarIcsDe(tareasConFecha, tituloPlan ?? t.nucleo.miIdea, mundos.length > 0 ? t.nucleo.tuViaje : undefined)}
         />
 
-        {/* ritual de continuación (3 tarjetas) */}
-        {ritual && (
-          <RitualContinuar
-            resumen={cCore}
-            enviando={enviandoFollow}
-            error={errorRitual}
-            onEnviar={enviarFollow}
-            onCerrar={() => setRitual(false)}
-          />
-        )}
-        {replanteo && (
-          <RitualReplantear
-            projectId={projectId}
-            dominio={ESPACIO_CORE}
-            items={itemsCore}
-            onListo={(sid, camino) => onReplanteamientoListo(sid, ESPACIO_CORE, camino)}
-            onCerrar={() => setReplanteo(false)}
-          />
-        )}
-
         {/* Fase 4.3.2 (Manos a la Obra a 380): "Contar qué pasó" ARRIBA en móvil.
             Antes vivía SOLO en el aside, que en móvil cae al fondo (~2.800px): la
             puerta principal al seguimiento quedaba enterrada. Esta tarjeta es
             lg:hidden (la del aside es hidden lg:block): la acción sale una vez en
             cada viewport, en su sitio. El azul dispara al motor a repensar. */}
-        {core && cCore.total > 0 && !ritual && !nucleoCerrado && !replanteo && (
+        {core && cCore.total > 0 && !nucleoCerrado && (
           <div className="flex flex-col gap-3 lg:hidden">
             <TarjetaAcceso
               icono="ciclo"
@@ -2806,34 +3011,6 @@ export function ManosALaObra({
                 </div>
               )}
 
-              {/* Fase 4.2 §1 — el ritual de 3 tarjetas, TAMBIÉN aquí: un mundo
-                  es un subproyecto y tiene su propio ciclo de seguimiento. En su
-                  hub vive en la cara "manos" (la ejecución). */}
-              {grupo && (!esHub || cara === "manos") && !completado && ritualMundo === mundo.dominio && (
-                <div className="mt-4">
-                  <RitualContinuar
-                    resumen={c}
-                    mundo={mundo.nombre}
-                    enviando={enviandoFollow}
-                    error={errorRitual}
-                    onEnviar={(d, e) => enviarFollow(d, e, mundo.dominio)}
-                    onCerrar={() => setRitualMundo(null)}
-                  />
-                </div>
-              )}
-              {grupo && (!esHub || cara === "manos") && !completado && replanteoMundo === mundo.dominio && (
-                <div className="mt-4">
-                  <RitualReplantear
-                    projectId={projectId}
-                    dominio={mundo.dominio}
-                    mundo={mundo.nombre}
-                    items={items}
-                    onListo={(sid, camino) => onReplanteamientoListo(sid, mundo.dominio, camino)}
-                    onCerrar={() => setReplanteoMundo(null)}
-                  />
-                </div>
-              )}
-
               {/* Fase 4.2 §2 — el cierre del mundo: el acta en miniatura. Sobrio
                   a propósito (§2: un momento, no la fiesta): la Celebración
                   grande, con su constelación y su pulso, es del PROYECTO. En su
@@ -2851,46 +3028,6 @@ export function ManosALaObra({
                       </button>
                       <span className="text-[12.5px] text-dim">{t.mundo.siVuelves}</span>
                     </>
-                  ) : cerrandoMundo === mundo.dominio ? (
-                    <div className="w-full">
-                      <p className="text-[14px] font-semibold leading-relaxed">
-                        {interpolar(t.mundo.disteTerminado, { mundo: mundo.nombre })}
-                      </p>
-                      {/* El espejo del momento: sus números reales, sin juicio. */}
-                      <p className="mt-2 text-[12.5px] text-dim">
-                        {c.total > 0
-                          ? interpolar(t.mundo.llevasPct, { hechos: c.hechos, total: c.total, pct: Math.round((c.hechos / c.total) * 100) })
-                          : interpolar(t.mundo.llevas, { hechos: c.hechos, total: c.total })}
-                      </p>
-                      <label htmlFor={`motivo-${mundo.dominio}`} className="mt-3.5 block text-[12.5px] text-dim">
-                        {rico(t.mundo.porQueCierras, { s: (c) => <span className="text-dim/70">{c}</span> })}
-                      </label>
-                      <div className="mt-1.5">
-                        <CampoConVoz
-                          id={`motivo-${mundo.dominio}`}
-                          valor={motivoMundo}
-                          onCambio={setMotivoMundo}
-                          filas={2}
-                          placeholder={t.mundo.placeholderMotivo}
-                        />
-                      </div>
-                      <div className="mt-3 flex items-center gap-3">
-                        <button
-                          onClick={() => cerrarMundo(mundo.dominio, "completar")}
-                          disabled={guardandoMundo}
-                          className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-                        >
-                          {guardandoMundo ? t.cerrando : t.mundo.siTerminado}
-                        </button>
-                        <button
-                          onClick={() => setCerrandoMundo(null)}
-                          disabled={guardandoMundo}
-                          className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
-                        >
-                          {t.todaviaNo}
-                        </button>
-                      </div>
-                    </div>
                   ) : (
                     /* "Todo separado" (T5, D6): las DOS acciones del mundo como
                        TARJETAS HERMANAS (copy scopeado), la tarjeta entera abre su
@@ -3027,61 +3164,17 @@ export function ManosALaObra({
           </p>
         )}
         {/* La acción "realizar" como TARJETA HERMANA — la tarjeta ENTERA abre el
-            acta de cierre (el mismo mini-ritual). Va AL FINAL del aside (recorrido
+            acta de cierre en su propio espacio. Va AL FINAL del aside (recorrido
             del fundador): cerrar la idea es el último paso, no uno del medio. */}
-        {cCore.total > 0 &&
-          !nucleoCerrado &&
-          (!confirmandoRealizar ? (
-            <TarjetaAcceso
-              icono="realizar"
-              titulo={t.tarjetas.realizarTitulo}
-              descripcion={t.tarjetas.realizarDesc}
-              onClick={() => setConfirmandoRealizar(true)}
-              tono="done"
-            />
-          ) : (
-            /* Fase 4.0 §8 — EL ACTA DE CIERRE: mini-ritual de dos elementos.
-               (a) el espejo del momento, con los números reales y SIN juicio;
-               (b) el porqué, OPCIONAL. Cero fricción: se cierra sin escribir nada. */
-            <div className="rounded-panel border border-done/40 bg-surface p-5">
-              <p className="text-[14px] font-semibold leading-relaxed">
-                {t.cierre.cierraTuIdea}
-              </p>
-              <p className="mt-2 text-[12.5px] text-dim">
-                {cCore.total > 0
-                  ? interpolar(t.cierre.llevasPct, { hechos: cCore.hechos, total: cCore.total, pct: Math.round((cCore.hechos / cCore.total) * 100) })
-                  : interpolar(t.cierre.llevas, { hechos: cCore.hechos, total: cCore.total })}
-              </p>
-              <label htmlFor="cierre-motivo" className="mt-3.5 block text-[12.5px] text-dim">
-                {rico(t.cierre.porQueCierras, { s: (c) => <span className="text-dim/70">{c}</span> })}
-              </label>
-              <div className="mt-1.5">
-                <CampoConVoz
-                  id="cierre-motivo"
-                  valor={cierreMotivo}
-                  onCambio={setCierreMotivo}
-                  filas={2}
-                  placeholder={t.cierre.placeholderMotivo}
-                />
-              </div>
-              <div className="mt-3 flex items-center gap-3">
-                <button
-                  onClick={marcarRealizada}
-                  disabled={realizando}
-                  className="rounded-[10px] bg-done px-4 py-2.5 text-[13px] font-semibold text-[#04120A] hover:opacity-90 disabled:opacity-50"
-                >
-                  {realizando ? t.cerrando : t.cierre.siProyecto}
-                </button>
-                <button
-                  onClick={() => setConfirmandoRealizar(false)}
-                  disabled={realizando}
-                  className="text-[13px] text-dim hover:text-ink disabled:opacity-50"
-                >
-                  {t.todaviaNo}
-                </button>
-              </div>
-            </div>
-          ))}
+        {cCore.total > 0 && !nucleoCerrado && (
+          <TarjetaAcceso
+            icono="realizar"
+            titulo={t.tarjetas.realizarTitulo}
+            descripcion={t.tarjetas.realizarDesc}
+            onClick={() => setConfirmandoRealizar(true)}
+            tono="done"
+          />
+        )}
         {cCore.total > 0 && (
           <div className="border-t border-hairline pt-5">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.ritmo.titulo}</p>

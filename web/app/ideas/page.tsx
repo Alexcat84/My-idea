@@ -159,7 +159,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                 // etapa 5 (checklist + mundos), no al documento del plan.
                 href={idea.etapa === 5 ? `/idea/${idea.id}?vista=manos` : `/idea/${idea.id}`}
                 className={
-                  "block rounded-panel border bg-surface px-5 py-5 sm:px-6 " +
+                  "block rounded-panel border bg-surface px-5 pb-6 pt-5 sm:px-6 " +
                   (idea.etapa === 5
                     ? "border-done/30 hover:border-done/60"
                     : "border-hairline hover:border-accent/55")
@@ -184,7 +184,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                     ))}
                   </span>
                 </div>
-                <p className="mt-2 text-xs text-dim">{idea.pista}</p>
+                <p className="mt-2 pe-14 text-xs text-dim">{idea.pista}</p>
               </Link>
             </li>
           ))}

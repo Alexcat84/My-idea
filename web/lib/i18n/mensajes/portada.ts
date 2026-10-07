@@ -103,6 +103,10 @@ const es = {
     cookies: "Cookies",
     preguntas: "Preguntas frecuentes",
     eliminarCuenta: "Eliminar cuenta",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "Lo que más nos preguntan, respondido en claro.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Información legal",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -201,6 +205,10 @@ const en: typeof es = {
     cookies: "Cookies",
     preguntas: "FAQ",
     eliminarCuenta: "Delete account",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "The questions we hear most, answered plainly.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Legal",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -291,6 +299,10 @@ const fr: typeof es = {
     cookies: "Témoins",
     preguntas: "Questions fréquentes",
     eliminarCuenta: "Supprimer le compte",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "Les questions qu'on nous pose le plus, avec des réponses claires.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Mentions légales",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -381,6 +393,10 @@ const pt: typeof es = {
     cookies: "Cookies",
     preguntas: "Perguntas frequentes",
     eliminarCuenta: "Excluir conta",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "O que mais nos perguntam, respondido com clareza.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Informações legais",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -471,6 +487,10 @@ const de: typeof es = {
     cookies: "Cookies",
     preguntas: "Häufige Fragen",
     eliminarCuenta: "Konto löschen",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "Was uns am häufigsten gefragt wird, klar beantwortet.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Rechtliches",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -561,6 +581,10 @@ const it: typeof es = {
     cookies: "Cookie",
     preguntas: "Domande frequenti",
     eliminarCuenta: "Elimina account",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "Le domande che ci fanno più spesso, con risposte chiare.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "Note legali",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -651,6 +675,10 @@ const ja: typeof es = {
     cookies: "Cookie",
     preguntas: "よくある質問",
     eliminarCuenta: "アカウント削除",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "よくいただく質問に、わかりやすくお答えします。",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "法的情報",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -741,6 +769,10 @@ const zh: typeof es = {
     cookies: "Cookie",
     preguntas: "常见问题",
     eliminarCuenta: "删除账户",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "大家最常问的问题，清楚作答。",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "法律信息",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -831,6 +863,10 @@ const ko: typeof es = {
     cookies: "쿠키",
     preguntas: "자주 묻는 질문",
     eliminarCuenta: "계정 삭제",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "가장 많이 받는 질문에 쉽게 답해 드립니다.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "법적 고지",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -921,6 +957,10 @@ const ar: typeof es = {
     cookies: "ملفات تعريف الارتباط",
     preguntas: "الأسئلة الشائعة",
     eliminarCuenta: "حذف الحساب",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "أكثر ما يسألنا عنه الناس، بإجابات واضحة.",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "معلومات قانونية",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -1011,6 +1051,10 @@ const hi: typeof es = {
     cookies: "कुकीज़",
     preguntas: "अक्सर पूछे जाने वाले प्रश्न",
     eliminarCuenta: "खाता हटाएँ",
+    /** la tarjeta de ayuda del pie */
+    preguntasDesc: "जो सबसे ज़्यादा पूछा जाता है, उसके साफ़ जवाब।",
+    /** etiqueta del grupo de enlaces legales */
+    legal: "कानूनी जानकारी",
     derechos: "© {{ano}} My Idea",
   },
 };

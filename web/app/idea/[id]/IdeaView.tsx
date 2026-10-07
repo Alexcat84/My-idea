@@ -22,7 +22,15 @@ import { Celebracion } from "../../ui/Celebracion";
 import { CampoConVoz } from "../../ui/CampoConVoz";
 import { BotonHeroe } from "../../ui/BotonHeroe";
 import { ArbolPensante, type NodoArbol } from "../../ui/ArbolPensante";
-import { ManosALaObra, grupoVigente, titulosDeEtapas, type ChecklistData, type PlanHistorial } from "../../ui/ManosALaObra";
+import {
+  ManosALaObra,
+  esTipoAccion,
+  grupoVigente,
+  titulosDeEtapas,
+  type AccionEspacio,
+  type ChecklistData,
+  type PlanHistorial,
+} from "../../ui/ManosALaObra";
 import { Claridad } from "../../ui/Claridad";
 import { Bitacora } from "../../ui/Bitacora";
 import { Descargas } from "../../ui/Descargas";
@@ -204,6 +212,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // solo pide: se enciende si el servidor dice que esta cuenta puede (punto 7c).
   const verOcultos = searchParams.get("ver") === "ocultos";
   const quiereCalendario = searchParams.get("vista") === "calendario";
+  // Profundizar, replantear y cerrar abren su propio espacio dentro de Manos a
+  // la Obra (o del hub del mundo): la ruta lo dice con &accion=.
+  const accionEnUrl = searchParams.get("accion");
   // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
   const quiereMundo = searchParams.get("vista") === "mundo";
   // La cara activa del espacio (Plan · Manos a la obra · Tu avance), deep-linkeable.
@@ -546,6 +557,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaMundo(false);
     setDominioEntrevista(dominio);
     setEsSeguimientoEntrevista(esSeguimiento);
+    if (accionEnUrl) escribirAccion(null);
     setSessionId(nueva);
     setPlanMd(null);
     const r = await generarPlan(nueva, undefined, { dominio, esSeguimiento });
@@ -569,6 +581,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setVistaMundo(false);
     setDominioEntrevista(dominio);
     setEsSeguimientoEntrevista(esSeguimiento);
+    if (accionEnUrl) escribirAccion(null);
     planPedidoRef.current = false;
     procesarTurno(data);
   }
@@ -597,6 +610,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
     setDominioEntrevista(dominio);
     setEsSeguimientoEntrevista(true);
     setSessionId(sid);
+    if (accionEnUrl) escribirAccion(null);
     planPedidoRef.current = false;
     const r = await generarPlan(sid, undefined, { dominio, esSeguimiento: true }, caminoId);
     if (r === "rechazado") {
@@ -866,6 +880,21 @@ export function IdeaView({ projectId }: { projectId: string }) {
     }
   }
 
+  /** Toda vista propia arranca arriba: no se abre a media página. */
+  function alInicio() {
+    window.scrollTo({ top: 0 });
+  }
+
+  /** La acción abierta en Manos (profundizar, replantear, cerrar) vive en la
+   * ruta. Se parte de la URL VIVA (no de un searchParams de render anterior)
+   * y solo se toca &accion=. */
+  function escribirAccion(accion: AccionEspacio | null) {
+    const q = new URLSearchParams(window.location.search);
+    if (accion) q.set("accion", accion.tipo);
+    else q.delete("accion");
+    router.replace(`/idea/${projectId}?${q.toString()}`, { scroll: false });
+  }
+
   function irAManos() {
     setVistaManos(true);
     setVistaMundo(false);
@@ -910,6 +939,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   // AUD-09 M14: la bitácora se lee por espacio; sin dominio es la del núcleo (lo
   // global es solo el Expediente, BANCO §7.1).
   function irABitacora(dominio: string = "core") {
+    alInicio();
     setOrigenBitacora(vistaManos || enObra ? "manos" : "plan");
     setVistaBitacora(true);
     // "Todo separado" (T4): la bitácora del espacio (filtro de servidor).
@@ -924,6 +954,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   function irADocumentos(dominio?: string) {
+    alInicio();
     // Volver debe devolver a donde estabas: a la Celebración si venías de
     // cerrar tu proyecto, a Manos a la Obra si venías del trabajo.
     setOrigenDocumentos(vistaCelebracion ? "celebracion" : "manos");
@@ -947,6 +978,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   function irAAnalisis(dominio?: string) {
+    alInicio();
     setVistaAnalisis(true);
     setVistaCelebracion(false);
     setVistaCalendario(false);
@@ -974,6 +1006,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   }
 
   function irACalendario(dominio?: string) {
+    alInicio();
     setVistaManos(false);
     setVistaAnalisis(false);
     setVistaCelebracion(false);
@@ -1266,7 +1299,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                 hay al menos un mundo activo; un proyecto solo-core conserva su
                 "Ver el plan"). "Tu viaje" (core) · cada mundo por su nombre de
                 cara · "+" (a la fila). Salta entre espacios en un clic. */}
-            {mundosParaObra.length > 0 ? (
+            {accionEnUrl ? null : mundosParaObra.length > 0 ? (
               <CambiadorEspacios
                 activo={vistaMundo && hubDominio ? hubDominio : "core"}
                 mundos={mundosParaObra.map((m) => ({ dominio: m.dominio, nombre: m.nombre }))}
@@ -1358,6 +1391,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
               exploracionAt={detalle.idea.exploracion_at ?? null}
               etapaIdea={etapaBase}
               realizadaAt={realizadaAt}
+              accionInicial={esTipoAccion(accionEnUrl) ? { tipo: accionEnUrl, dominio: espacioActivo } : null}
+              onAccion={escribirAccion}
             />
           </>
         ) : (vistaManos || vistaMundo) &&
