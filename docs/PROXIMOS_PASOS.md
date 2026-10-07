@@ -42,18 +42,19 @@ propio o con una decisión del fundador.
   - **Medida 5** (7 oct, semilla 20261008, después del barrido 2): 10 de 200 nodos, un 5 % (de 2,7 a 9,0 %). Es la
     mitad, pero no 0. Lo que queda son formas sin nombre ni verbo de autoría: "los mejores X", "hay quien", un autor
     nombrado de pasada, una cita sin fuente. Se corrigieron las 10 (acta 15.7).
+  - **Lectura total** (6 y 7 oct): los 3.634 nodos vivos, 368 lotes con su trampa (368 de 368 cazadas). Se aplicaron
+    458 correcciones en 393 nodos, cada una con árbitro y verificación ciega contra el libro (acta 15.8). No es una
+    medida: falta la medida 6 para saber cuánto queda.
 - **Preguntas:** ninguna con falla confirmada sin corregir. En 2 de 85 lotes ningún lector cazó su trampa (las dos
   eran contrarias).
 
 ## 2. Decisiones que esperan al fundador
 
-1. **Procedencia, el residuo.** Hay dos caminos:
+1. **Procedencia, el residuo.**
    - (a) ~~medir otra vez con semilla nueva~~: hecho el 7 oct (medida 5, 5 %);
-   - (b) leer el catálogo entero solo para procedencia: unos 40.000 elementos en unos 350 lotes de 115, cerca de 20
-     millones de tokens, que con suscripción normal son semanas.
-   - Recomendación: (b) por espacios, empezando por los que más dieron en las medidas 4 y 5 (calidad, entrega, diseño y
-     mundo 11). El lector es el de `auditoria-final/medida5/INSTRUCCIONES_LECTOR.md`, y se pide atención a "los
-     mejores X", "hay quien" y a los autores nombrados de pasada.
+   - (b) ~~leer el catálogo entero solo para procedencia~~: hecho el 6 y 7 oct (acta 15.8, 458 correcciones).
+   - Lo que sigue, sin decisión pendiente: la **medida 6**, con semilla nueva y el mismo método de las medidas 4 y 5,
+     para saber cuánta procedencia queda después de la lectura total.
 2. **Los ajustes de prompts que añaden texto.** Están en `docs/auditoria_final/informes/auditoria_prompts.md`, sección
    F: B2 (resto), B4, B5, B7, B8, B9, B10, C1, C2, C3, C5 (resto), C6 y C7. C7 toca la regla D5 y su guarda.
 3. **Páginas legales:**
@@ -87,13 +88,13 @@ propio o con una decisión del fundador.
 ## 4. Re-embebido con Voyage (una sola pasada)
 
 Decisión del fundador: Voyage corre una sola vez, al final, con todos los nodos corregidos. Las tandas de la auditoría
-cambiaron el texto de **2.723 nodos vivos**, según la prueba en seco del 7 oct (tras la tanda de condiciones).
+cambiaron el texto de **2.808 nodos vivos**, según la prueba en seco del 7 oct (tras la lectura total).
 
 1. Pon `VOYAGE_API_KEY` en el `.env` raíz. La quitas al terminar.
 2. Prueba en seco, que no llama a nadie:
 
    ```
-   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json
+   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json
    ```
 
    Si después de esta fecha entra otra tanda que cambie texto de nodos, se añade a la línea.

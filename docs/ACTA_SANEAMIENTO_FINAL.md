@@ -1697,3 +1697,43 @@ Máquina en `auditoria-final-claves/medida5/medida5.py`.
   200 nodos.
 - Lo que queda pide lectura humana o de agente, no búsqueda: unos 350 lotes para leer el catálogo entero (decisión 1 de
   `docs/PROXIMOS_PASOS.md`).
+
+### 15.8 Lectura total de procedencia (decisión 1 b de `docs/PROXIMOS_PASOS.md`, 6 y 7 oct 2026)
+
+Máquina en `auditoria-final-claves/lectura_total/lectura_total.py`, semilla 20261019. Instrucciones de los agentes en
+`auditoria-final/lectura_total/` (lector, árbitro y reescritor; el verificador es el de siempre,
+`remedio/INSTRUCCIONES_E1B_VERIFICADOR.md`).
+
+**Qué se leyó:** todos los nodos vivos de los once espacios, 3.634 nodos en 368 lotes de 10, con los mismos campos de
+cara que la medida 4. Fueron 40.536 elementos, cada uno leído por un lector. Cada lote llevaba una trampa sin marca (un
+elemento real con una atribución plantada).
+
+| Paso | Resultado |
+|---|---|
+| Lectura | 368 de 368 trampas cazadas; 503 marcas reales |
+| Árbitro | 458 confirmadas, 45 descartadas |
+| Verificación ciega contra el libro | 61 paquetes, 61 de 61 trampas cazadas |
+| Se sostienen a la primera | 404 |
+| Reescritas con la misma certeza y verificadas otra vez | 52 a la primera reescritura, 2 a la segunda |
+| **Aplicadas** | **458 correcciones en 393 nodos**, en 42 tandas `lectura-total-*` |
+
+Por campo: 309 resúmenes, 136 pasos, 7 condiciones, 4 entregables y 2 etiquetas. Las dos etiquetas cambiadas se
+tradujeron a los diez idiomas (guardia de vigencia de etiquetas).
+
+**Lo que la verificación no vio y pararon las guardas** (tres casos, ninguno llegó al catálogo):
+- una etiqueta de 9 palabras. Desde entonces la tanda rechaza sola toda etiqueta de más de 6;
+- "tu organización", que la guarda de residuo corporativo de `aplicar_correcciones.py` rechazó;
+- un dato al que se le quitó "estudios" pero que contaba en qué país y en qué década se observó. Lo paró la guarda de
+  jurisdicción. Desde entonces el reescritor, el árbitro y el verificador tienen escrito que contar dónde o cuándo se
+  observó algo también es procedencia.
+
+**Lo que se aprendió por el camino:** en la ola 30 el árbitro dejaba casos como tendencia ("suele") y calcaba listas
+del libro. La verificación rechazó 10 de 33. Con la instrucción afinada ("suele", "a menudo" y "en general" también
+endurecen), las olas siguientes bajaron a entre 0 y 6 rechazos por ola.
+
+**Lectura del resultado:**
+- Cada elemento del catálogo fue leído una vez buscando procedencia, y cada corrección pasó por árbitro, libro y
+  suites.
+- Esto **no es una medida**. Un solo lector por lote y una trampa de forma conocida no dicen cuánta procedencia sutil
+  queda. Para saberlo hace falta una medida 6 con semilla nueva, sobre una muestra que no se haya leído para corregir.
+- El alcance fue solo procedencia: contrarios e invenciones siguen con el estado de la sección 14.
