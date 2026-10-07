@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Revisa si el comprador te dio especificaciones de empaque y sigue esas primero",
     "Empaca en contenedores fuertes, bien sellados y, cuando sea posible, bien llenos",
-    "Distribuye el peso de forma uniforme, pon la mercancía en paletas y, cuando puedas, colócalas en contenedores",
-    "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
+    "Reparte el peso de manera pareja, acomoda la mercancía sobre paletas y mete esas paletas en contenedores siempre que se pueda",
+    "Protege la carga con flejes, sellos y película retráctil, elige materiales de empaque que aguanten la humedad y deja las cajas sin tu marca ni la descripción de lo que llevan",
     "Pregunta si tu madera o tus materiales necesitan algún tratamiento especial o si son peligrosos",
     "Si no tienes cómo hacerlo bien tú mismo, contrata a alguien que se especialice en empaque"
   ],
@@ -108,6 +108,40 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide poner la mercancía en paletas y, cuando sea posible, meterlas en contenedores; el paso vuelve opcionales las paletas y pierde los contenedores.; Mismo defecto señalado por el otro lector.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "copia-embalaje_exportacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Distribuye el peso de forma uniforme, pon la mercancía en paletas y, cuando puedas, colócalas en contenedores",
+      "texto_nuevo": "Reparte el peso de manera pareja, acomoda la mercancía sobre paletas y mete esas paletas en contenedores siempre que se pueda",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3501-3503",
+        "frase": "Make sure the weight is evenly distributed to provide proper bracing in the container"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-embalaje_exportacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Usa materiales resistentes a la humedad, no escribas el contenido ni tu marca por fuera y asegura la carga con flejes, sellos y película retráctil",
+      "texto_nuevo": "Protege la carga con flejes, sellos y película retráctil, elige materiales de empaque que aguanten la humedad y deja las cajas sin tu marca ni la descripción de lo que llevan",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3505-3511",
+        "frase": "Make packages and packing filler out of moisture-resistant material."
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

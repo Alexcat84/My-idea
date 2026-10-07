@@ -6,10 +6,10 @@
   "resumen_teorico": "Un prototipo de modelo de negocio no es necesariamente una versión reducida ni una miniatura del modelo final, sino una herramienta de exploración: una representación tangible y desechable -desde un boceto en una servilleta hasta un lienzo elaborado o una hoja de cálculo financiera- que sirve para cuestionar la estructura, las relaciones y la lógica del modelo antes de comprometerse con una versión definitiva. Construir varios prototipos en distintos niveles de detalle permite probar escenarios (añadir otro segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos) sin apego emocional a ninguno de ellos, manteniendo una actitud de exploración: disposición a probar ideas crudas, descartarlas rápidamente y aceptar la incertidumbre hasta que el modelo madure, en vez de tomar decisiones apresuradas.",
   "pasos_accionables": [
     "Generar un boceto rápido con la idea, la propuesta de valor y las principales fuentes de ingreso",
-    "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
-    "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
+    "Arma un lienzo completo con todos los bloques: razona cómo funcionaría el negocio, mira cómo se conectan los bloques entre sí, calcula cuánto mercado podría haber y comprueba los datos básicos",
+    "Con una hoja de cálculo, haz el caso de negocio de tu lienzo detallado: estima costos, ingresos y cuánto podrías ganar en distintos escenarios",
     "Manipular cada prototipo probando escenarios: eliminar un segmento de cliente, quitar un recurso costoso, cambiar una fuente de ingresos",
-    "Una vez decidido un modelo potencial y con un caso de negocio bien justificado, realizar una prueba de campo con clientes reales o potenciales para validar la propuesta de valor, los canales y los mecanismos de precio",
+    "Pon a prueba en el mercado la propuesta de valor, los canales y la forma de cobrar con clientes reales o potenciales, cuando ya hayas elegido un modelo posible y tengas un caso de negocio sólido que lo respalde",
     "Construir varios prototipos distintos antes de elegir cuál refinar y ejecutar, evitando apegarse emocionalmente a uno temprano"
   ],
   "entregable_esperado": "Conjunto de varios prototipos de modelo de negocio en distintos niveles de detalle (boceto, lienzo elaborado, caso de negocio), con anotaciones de pros y contras de cada uno, listos para evaluación comparativa",
@@ -157,6 +157,57 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): De los cinco puntos del lienzo elaborado se cae pensar la lógica del negocio.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-prototipado_modelos_negocio-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Desarrollar un lienzo de modelo de negocio elaborado, explorando todos sus bloques y sus relaciones, pensando la lógica del negocio, estimando el potencial de mercado, con una verificación básica de los hechos",
+      "texto_nuevo": "Arma un lienzo completo con todos los bloques: razona cómo funcionaría el negocio, mira cómo se conectan los bloques entre sí, calcula cuánto mercado podría haber y comprueba los datos básicos",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2479-2493",
+        "frase": "DEVELOP A MORE ELABORATE CANVAS TO EXPLORE ALL THE ELEMENTS NEEDED"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-prototipado_modelos_negocio-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Convertir el lienzo detallado en un caso de negocio (hoja de cálculo) para estimar costos, ingresos y ganancia potencial bajo distintos escenarios",
+      "texto_nuevo": "Con una hoja de cálculo, haz el caso de negocio de tu lienzo detallado: estima costos, ingresos y cuánto podrías ganar en distintos escenarios",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2497-2513",
+        "frase": "TURN THE DETAILED CANVAS INTO A SPREADSHEET TO ESTIMATE YOUR MODEL'S EARNING POTENTIAL"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-prototipado_modelos_negocio-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Una vez decidido un modelo potencial y con un caso de negocio bien justificado, realizar una prueba de campo con clientes reales o potenciales para validar la propuesta de valor, los canales y los mecanismos de precio",
+      "texto_nuevo": "Pon a prueba en el mercado la propuesta de valor, los canales y la forma de cobrar con clientes reales o potenciales, cuando ya hayas elegido un modelo posible y tengas un caso de negocio sólido que lo respalde",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "2517-2527",
+        "frase": "YOU'VE DECIDED ON A POTENTIAL NEW BUSINESS MODEL, AND NOW WANT TO FIELD-TEST"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

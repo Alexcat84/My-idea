@@ -9,7 +9,7 @@
     "Investigar los métodos de pago preferidos en cada mercado objetivo",
     "Establecer una cuenta de comerciante con un banco para procesar tarjetas de crédito",
     "Evaluar proveedores de pago P2P como PayPal para transacciones internacionales",
-    "Considerar servicios de depósito en garantía para reducir el riesgo de fraude en transacciones pequeñas con compradores que exigen garantía de envío a cambio del pago anticipado",
+    "Valora un servicio de depósito en garantía para bajar el riesgo de fraude cuando la venta sea pequeña y el comprador quiera asegurarse de que recibirá la mercancía a cambio de pagarte por adelantado",
     "Definir política de manejo de contracargos (chargebacks)"
   ],
   "entregable_esperado": "Sistema de pagos electrónicos configurado y adaptado a los métodos preferidos del mercado objetivo",
@@ -86,6 +86,23 @@
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-metodos_pago_electronico_internacional-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Considerar servicios de depósito en garantía para reducir el riesgo de fraude en transacciones pequeñas con compradores que exigen garantía de envío a cambio del pago anticipado",
+      "texto_nuevo": "Valora un servicio de depósito en garantía para bajar el riesgo de fraude cuando la venta sea pequeña y el comprador quiera asegurarse de que recibirá la mercancía a cambio de pagarte por adelantado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4027",
+        "frase": "Exporters may select escrow services as a mutually beneficial cash-in-advance option for small transactions"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

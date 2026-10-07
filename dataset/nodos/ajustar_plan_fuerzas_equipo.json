@@ -12,8 +12,8 @@
     "Cuando un proyecto pida algo que queda fuera de ese oficio central, piensa en acudir a otro equipo, por ejemplo cuando hace falta un video promocional pulido o un gran número de ilustraciones.",
     "No confundas poder con deber: aunque mucha gente de tu equipo pueda hacerlo, eso no significa que deba hacerlo tu equipo.",
     "Haz esta cuenta: si no es tu competencia central, probablemente tu equipo acabará gastando más tiempo para menos calidad de la que conseguiría un equipo especializado; puede ser el doble de tiempo para el ochenta por ciento de la calidad.",
-    "No mandes a la caballería de un ejército a una misión de espionaje, ni crees un plan que no case con aquello para lo que tu equipo está bien dotado.",
-    "Recuerda que suele haber docenas de maneras de ir de un punto a otro, por tierra, por mar o por aire, y que dentro de la tierra puedes elegir el camino de la selva o el de la montaña: no hay una respuesta correcta universal, y el plan más inteligente para tu equipo es el que reconoce sus fuerzas y sus debilidades relativas."
+    "No diseñes un plan que choque con aquello para lo que tu equipo está preparado, del mismo modo que no usarías la caballería de un ejército para espiar.",
+    "Ten en cuenta que lo normal es que existan decenas de rutas para llegar de un sitio a otro: por tierra, mar o aire, y si eliges tierra, por la selva o por la montaña. Ninguna respuesta vale para todos; el plan más acertado para tu equipo es el que asume sus fuerzas y sus debilidades relativas."
   ],
   "entregable_esperado": "Un plan que reconoce las fuerzas y las debilidades relativas de tu equipo, con el trabajo fuera de su oficio central encargado a quien sí lo tiene.",
   "nodos_previos": [
@@ -328,6 +328,40 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "copia-ajustar_plan_fuerzas_equipo-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No mandes a la caballería de un ejército a una misión de espionaje, ni crees un plan que no case con aquello para lo que tu equipo está bien dotado.",
+      "texto_nuevo": "No diseñes un plan que choque con aquello para lo que tu equipo está preparado, del mismo modo que no usarías la caballería de un ejército para espiar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "79",
+        "frase": "Just like you wouldn't send an army's cavalry on a spying mission"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-ajustar_plan_fuerzas_equipo-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Recuerda que suele haber docenas de maneras de ir de un punto a otro, por tierra, por mar o por aire, y que dentro de la tierra puedes elegir el camino de la selva o el de la montaña: no hay una respuesta correcta universal, y el plan más inteligente para tu equipo es el que reconoce sus fuerzas y sus debilidades relativas.",
+      "texto_nuevo": "Ten en cuenta que lo normal es que existan decenas de rutas para llegar de un sitio a otro: por tierra, mar o aire, y si eliges tierra, por la selva o por la montaña. Ninguna respuesta vale para todos; el plan más acertado para tu equipo es el que asume sus fuerzas y sus debilidades relativas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "79",
+        "frase": "There are usually dozens of ways to get from Point A to"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Ajusta el Plan a Tu Equipo",

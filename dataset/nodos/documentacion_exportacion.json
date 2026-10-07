@@ -10,7 +10,7 @@
     "Prepara la factura pro forma para cotizar al comprador antes del envío",
     "Emite la factura comercial una vez confirmada la venta, incluyendo los términos de venta y pago, y elabora la lista de empaque con el contenido, los pesos y las dimensiones",
     "Verifica el código del Sistema Armonizado (HS) para la clasificación aduanera y considera seriamente delegar la preparación en un agente de carga (freight forwarder) o un agente aduanal (customs broker), sabiendo que la exactitud de los documentos sigue siendo tu responsabilidad",
-    "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si el valor de las mercancías clasificadas bajo un mismo número de clasificación supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+    "Presenta por vía electrónica la declaración de exportación del embarcador (SED) cuando se dé cualquiera de estos casos: el envío requiere licencia de exportación, su destino es un país con restricciones de exportación, o lo que agrupas bajo un mismo número de clasificación vale más que el mínimo que fije tu país",
     "Revisa toda la documentación antes del embarque y confirma con tu banco los plazos de cobro si hay carta de crédito"
   ],
   "entregable_esperado": "Carpeta completa de documentos de exportación por embarque, validada antes del envío",
@@ -181,6 +181,23 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que un error puede impedir que la mercancía se exporte (no habla de retrasos); se perdía la consecuencia más grave.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-documentacion_exportacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Presenta la declaración de exportación del embarcador (SED) por la vía electrónica correspondiente si el valor de las mercancías clasificadas bajo un mismo número de clasificación supera el valor mínimo que se fije en tu país, si necesitas una licencia de exportación o si va a un país con restricciones de exportación",
+      "texto_nuevo": "Presenta por vía electrónica la declaración de exportación del embarcador (SED) cuando se dé cualquiera de estos casos: el envío requiere licencia de exportación, su destino es un país con restricciones de exportación, o lo que agrupas bajo un mismo número de clasificación vale más que el mínimo que fije tu país",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3613",
+        "frase": "SEDs are required for shipments when the value of the commodities, classified under"
+      },
+      "decision": "copia fiel (regla D2, ola k02): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
