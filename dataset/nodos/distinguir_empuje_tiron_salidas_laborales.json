@@ -8,9 +8,9 @@
   "notas_extraccion": "La tercera tactica maestra convierte la ultima pregunta de la entrevista cronologica en una medida. El principio es simple y esta escrito en el propio parrafo: a quien rinde bien lo atraen hacia oportunidades mayores, y a quien rinde mal lo empujan fuera de sus puestos. Lo que la vuelve procedimiento es que el libro pone su propio inventario de respuestas a cada lado, con las formulas literales con las que la gente cuenta una y otra cosa, y encima un corte numerico que no depende del juicio del entrevistador: el veinte por ciento de los empleos. Eso la hace ejecutable por cualquiera y comparable entre candidatos, y evita que una sola salida mala hunda a alguien o que una racha de salidas malas se explique una a una. En la lista de empujes el libro cuela ademas su propio guiño al caso del vicepresidente de ventas que abofeteo a su consejero delegado y perdio con ello tres millones de dolares, que es el ejemplar extremo de la categoria.",
   "pasos_accionables": [
     "Después de preguntar «¿por qué dejaste ese trabajo?», escucha en qué categoría cae la respuesta, porque solo hay dos.",
-    "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se redujo; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
-    "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el director general me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
-    "No contrates a nadie que haya sido empujado fuera del veinte por ciento o más de sus empleos."
+    "Clasifica como empuje cualquier respuesta parecida a estas: que la salida se pactó entre ambas partes; que ya tocaba irse; que la relación con su jefe no funcionaba; que a una compañera la promovieron y a él no; que su puesto fue perdiendo peso; o que no cumplió su meta y le avisaron que su posición peligraba.",
+    "Clasifica como tirón cualquier respuesta parecida a estas: que su cliente más grande lo fichó; que un exjefe lo llamó para un cargo de más nivel; que el director general le ofreció subir dos escalones de golpe; o que un excompañero de su mismo nivel, ya en la competencia, lo recomendó con su nuevo jefe.",
+    "Si el empuje explica el veinte por ciento o más de las salidas de un candidato, no lo contrates."
   ],
   "entregable_esperado": "Cada salida de empleo de la carrera del candidato clasificada como empuje o como tirón, y la proporción de empujes sobre el total de sus empleos.",
   "nodos_previos": [
@@ -264,6 +264,57 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "copia-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Marca como empuje las respuestas de este tipo: fue de mutuo acuerdo; era hora de que me fuera; mi jefe y yo no nos llevábamos bien; ascendieron a una compañera y a mí no; mi papel se redujo; no llegué a mi objetivo y me dijeron que estaba en la cuerda floja.",
+      "texto_nuevo": "Clasifica como empuje cualquier respuesta parecida a estas: que la salida se pactó entre ambas partes; que ya tocaba irse; que la relación con su jefe no funcionaba; que a una compañera la promovieron y a él no; que su puesto fue perdiendo peso; o que no cumplió su meta y le avisaron que su posición peligraba.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "77",
+        "frase": "Push. “It was mutual.” “It was time for me to leave.”"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Marca como tirón las respuestas de este otro tipo: mi mayor cliente me contrató; mi antiguo jefe me reclutó para un puesto mayor; el director general me pidió que aceptara una doble promoción; un antiguo par se fue a un competidor y me recomendó a su jefe.",
+      "texto_nuevo": "Clasifica como tirón cualquier respuesta parecida a estas: que su cliente más grande lo fichó; que un exjefe lo llamó para un cargo de más nivel; que el director general le ofreció subir dos escalones de golpe; o que un excompañero de su mismo nivel, ya en la competencia, lo recomendó con su nuevo jefe.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "79",
+        "frase": "Pull. “My biggest client hired me.” “My old boss recruited me"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-distinguir_empuje_tiron_salidas_laborales-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No contrates a nadie que haya sido empujado fuera del veinte por ciento o más de sus empleos.",
+      "texto_nuevo": "Si el empuje explica el veinte por ciento o más de las salidas de un candidato, no lo contrates.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "73",
+        "frase": "Do not hire anybody who has been pushed out of 20 percent"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Distingue Empuje de Tirón",

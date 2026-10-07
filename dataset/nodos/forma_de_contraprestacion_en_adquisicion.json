@@ -8,9 +8,9 @@
     "Determina si la oferta que te hacen es en efectivo, en acciones de una empresa pública o en acciones de una empresa privada",
     "Si te pagan en acciones, investiga toda la estructura de capital de quien te compra, incluyendo cuánto dinero ha levantado y qué preferencias de liquidación ya existen",
     "Verifica si las acciones que te ofrecen son comunes o preferentes, si son participantes, y en qué lugar quedan frente a otras preferencias de liquidación ya existentes",
-    "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up); si son de libre venta, si quedarás como persona con información privilegiada con restricciones para venderlas, y si no lo son, qué derechos de registro tendrás",
+    "Cuando te paguen con acciones de una empresa que cotiza en bolsa, averigua si podrás venderlas sin trabas, si ya están registradas o si quedarán bloqueadas un tiempo (lock-up). Si nada te impide venderlas, confirma si después de la operación te considerarán persona con información privilegiada y tendrás límites para hacerlo; si no puedes venderlas libremente, pregunta qué derechos de registro te van a dar.",
     "Pide una valoración independiente de lo que te ofrecen antes de aceptar, si no es efectivo",
-    "No confundas el precio que te anuncian con el valor real que vas a recibir, y no te comprometas con un precio al principio de la negociación hasta entender en qué forma te van a pagar"
+    "Recuerda que el precio anunciado y el valor que de verdad recibirás pueden ser distintos, y evita amarrarte a una cifra en las primeras conversaciones mientras no sepas con qué te van a pagar."
   ],
   "entregable_esperado": "Una valoración independiente de lo que te están ofreciendo (efectivo, acciones comunes o preferentes), ajustada según cómo está armado realmente el capital de quien te compra",
   "condiciones_activacion": [
@@ -120,6 +120,40 @@
       "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-forma_de_contraprestacion_en_adquisicion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si las acciones son de una empresa pública, verifica si se pueden vender libremente, si están registradas o si tienen un periodo en el que no puedes venderlas (lock-up); si son de libre venta, si quedarás como persona con información privilegiada con restricciones para venderlas, y si no lo son, qué derechos de registro tendrás",
+      "texto_nuevo": "Cuando te paguen con acciones de una empresa que cotiza en bolsa, averigua si podrás venderlas sin trabas, si ya están registradas o si quedarán bloqueadas un tiempo (lock-up). Si nada te impide venderlas, confirma si después de la operación te considerarán persona con información privilegiada y tendrás límites para hacerlo; si no puedes venderlas libremente, pregunta qué derechos de registro te van a dar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4124",
+        "frase": "If it's stock in a public company, you'll want to ask a variety"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-forma_de_contraprestacion_en_adquisicion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No confundas el precio que te anuncian con el valor real que vas a recibir, y no te comprometas con un precio al principio de la negociación hasta entender en qué forma te van a pagar",
+      "texto_nuevo": "Recuerda que el precio anunciado y el valor que de verdad recibirás pueden ser distintos, y evita amarrarte a una cifra en las primeras conversaciones mientras no sepas con qué te van a pagar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4126",
+        "frase": "It's important to realize that the value of your company and the price"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

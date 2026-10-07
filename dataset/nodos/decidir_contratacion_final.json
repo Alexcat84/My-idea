@@ -8,12 +8,12 @@
   "notas_extraccion": "Es el momento de la verdad del paso Select y el libro lo resuelve con una lista de cinco pasos y una regla de ramificacion, no con una deliberacion. La razon esta escrita en el propio parrafo: con todos esos datos delante la decision deberia ser facil, y lo es porque las tarjetas ya estan calificadas resultado a resultado y competencia a competencia con el marco de habilidad y voluntad, de modo que la decision final no vuelve a juzgar a la persona sino que lee lo que la calificacion dice. El recuadro del capitulo añade encima el sexto punto, repetir el analisis del perfil de habilidad y voluntad para comprobar que la diana sigue ahi despues de las llamadas de referencia, que es el unico sitio donde la informacion nueva puede haber movido la calificacion. La ramificacion de tres salidas es lo que impide la contratacion por cansancio: si no hay ninguna A no se elige a la menos mala, se vuelve al paso de abastecer el flujo. El capitulo cierra con el acertijo de las cinco ranas en un tronco, una decide saltar y quedan cinco, porque decidir hacer algo y hacerlo son dos cosas distintas; con eso el libro empalma con su cuarto paso, vender el puesto a la persona elegida, que es el capitulo siguiente.",
   "pasos_accionables": [
     "Saca las tarjetas de puntuación que has completado sobre cada candidato.",
-    "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues dando en la diana.",
-    "Asegúrate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificación global de A, B o C, dásela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificación final.",
-    "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de captar candidatos.",
+    "Comprueba de nuevo el perfil de habilidad y voluntad con un segundo análisis, y confirma que todavía das en el blanco.",
+    "Revisa que cada candidato tenga su calificación en la tarjeta y, al que le falte una nota global de A, B o C, pónsela ya. Ajusta lo necesario con lo que dejaron las entrevistas de referencia: repasa los datos, toma en cuenta lo que opinó y observó el equipo que entrevistó, y fija la calificación final.",
+    "Vuelve a empezar desde el segundo paso del método, el de captar candidatos, cuando ninguno tenga A.",
     "Si tienes una sola A, decide contratar a esa persona.",
-    "Si tienes varias A, ordénalas y decide contratar a la mejor de entre ellas.",
-    "No des el trabajo por terminado con la decisión tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el último paso, que es vender el puesto a la persona para que se una de verdad a tu equipo."
+    "Ordena a los candidatos con A cuando tengas varios y quédate con el mejor de ellos para contratarlo.",
+    "Sigue adelante después de decidir, porque el trabajo no acaba ahí: una cosa es decidir algo y otra hacerlo, y aún te queda el último paso, venderle el puesto a esa persona para que de verdad se sume a tu equipo."
   ],
   "entregable_esperado": "La decisión escrita de a quién contratar, con una calificación global de A, B o C dada a cada candidato y actualizada con lo que dijeron las referencias, o bien la decisión de volver al paso de captar candidatos.",
   "nodos_previos": [
@@ -306,6 +306,91 @@
       "motivos": [
         "invencion"
       ]
+    },
+    {
+      "id": "copia-decidir_contratacion_final-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Repite tu análisis del perfil de habilidad y voluntad, para asegurarte de que sigues dando en la diana.",
+      "texto_nuevo": "Comprueba de nuevo el perfil de habilidad y voluntad con un segundo análisis, y confirma que todavía das en el blanco.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "355",
+        "frase": "Repeat your analysis of the skill-will profile to ensure you still"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_contratacion_final-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asegúrate de haber calificado a todos los candidatos en la tarjeta. Si no le has dado a cada uno una calificación global de A, B o C, dásela ahora. Haz las actualizaciones que hagan falta a partir de las entrevistas de referencia: mira los datos, considera las opiniones y observaciones del equipo entrevistador, y pon una calificación final.",
+      "texto_nuevo": "Revisa que cada candidato tenga su calificación en la tarjeta y, al que le falte una nota global de A, B o C, pónsela ya. Ajusta lo necesario con lo que dejaron las entrevistas de referencia: repasa los datos, toma en cuenta lo que opinó y observó el equipo que entrevistó, y fija la calificación final.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "325",
+        "frase": "Make sure you have rated all of the candidates on the scorecard."
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_contratacion_final-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si no tienes ninguna A, reinicia tu proceso en el segundo paso del método, el de captar candidatos.",
+      "texto_nuevo": "Vuelve a empezar desde el segundo paso del método, el de captar candidatos, cuando ninguno tenga A.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "327",
+        "frase": "If you have no A's, then restart your process at the"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_contratacion_final-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si tienes varias A, ordénalas y decide contratar a la mejor de entre ellas.",
+      "texto_nuevo": "Ordena a los candidatos con A cuando tengas varios y quédate con el mejor de ellos para contratarlo.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "331",
+        "frase": "If you have multiple A's, then rank them and decide to"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_contratacion_final-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No des el trabajo por terminado con la decisión tomada. Decidir hacer algo y hacerlo son dos cosas distintas, y queda el último paso, que es vender el puesto a la persona para que se una de verdad a tu equipo.",
+      "texto_nuevo": "Sigue adelante después de decidir, porque el trabajo no acaba ahí: una cosa es decidir algo y otra hacerlo, y aún te queda el último paso, venderle el puesto a esa persona para que de verdad se sume a tu equipo.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "fichero": "fuentes/smart_who/cap_05.md",
+        "lineas": "335-339",
+        "frase": "But wait, you are not finished."
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Decide a Quién Contratar",

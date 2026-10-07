@@ -7,7 +7,7 @@
   "resumen_teorico": "Junto a cada evento, una línea en el documento de planificación nombra a la persona a cargo, para que quede claro, pase lo que pase, que alguien concreto responde de que salga bien. Así se va ampliando la autoridad de los mandos intermedios, y poner la atención en quién queda a cargo pesa más que intentar evaluar todas las maneras en que el evento podría torcerse. Es un mecanismo sencillo: una línea más en cada evento del plan, con un nombre al lado, en vez de dedicar el esfuerzo principal a prever cada fallo posible.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_06.md, unidad Cap. 8, titulo textual Change, in a Word. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los dos pasos salen de la misma linea 127, que es la PIEZA P2 de la frontera publicada en esta vuelta para cap_06, 144 palabras. POR QUE ES PROCEDIMIENTO Y NO CASO: el texto nombra su propio mecanismo por su nombre, the mechanism was to add a line, y da la accion concreta (anadir una linea con el jefe a cargo) mas el criterio de por que importa (senalar quien responde pesa mas que enumerar como podria fallar el evento), sin adjetivo de adecuacion en el sitio del criterio. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: el candidato tiene solo DOS pasos y ninguna lista de medios nombrados uno a uno, a diferencia del ejercicio del codigo genetico que sale del mismo capitulo; la restriccion 1 de D.27 exige inventario para el caso normativo de adjetivos de adecuacion, y aqui no hay ese problema porque no hay ningun adjetivo de adecuacion, pero tampoco hay inventario que transcribir, solo una accion y su razon. Lo sostengo como nodo porque la vara madre no exige inventario para narrativa de negocio, solo pide que el paso sea ejecutable y que el libro lo diga, y las dos condiciones se cumplen, pero el margen es estrecho y lo marco para que se relea primero. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la misma linea 127 cierra diciendo que estas iniciativas de jefe a cargo fueron decisivas para que Santa Fe ganara el premio a la mejor camara de suboficiales durante los siguientes siete anios; esa cifra es la vigencia del caso propio de Santa Fe y no una etapa del mecanismo, y no tiene fecha de corte verificable como cifra de autor, asi que no entra ni como paso ni como atribucion.",
   "pasos_accionables": [
-    "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+    "En el documento de planificación, suma a cada evento u operación una línea con el nombre de la persona que queda como jefe a cargo.",
     "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que pesa más."
   ],
   "entregable_esperado": "El documento de planificación con una línea que nombra al jefe a cargo junto a cada evento.",
@@ -226,6 +226,23 @@
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "copia-asignar_responsable_unico_evolucion_planificada-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento.",
+      "texto_nuevo": "En el documento de planificación, suma a cada evento u operación una línea con el nombre de la persona que queda como jefe a cargo.",
+      "cita": {
+        "libro": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+        "fichero": "fuentes/marquet_turn_the_ship/cap_06.md",
+        "lineas": "127",
+        "frase": "The mechanism was to add a line to our planning documents that listed"
+      },
+      "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Nombra un Responsable por Evento",
