@@ -32,7 +32,10 @@ import { createAdminClient } from "@/lib/supabase/admin";
 // nace al entrar a /nueva (CTA "Comenzar").
 // robots.txt y sitemap.xml (i18n F6): los pide todo rastreador; sin esto cada
 // visita de un buscador acuñaba una identidad invisible.
-const RUTAS_PUBLICAS = ["/login", "/auth", "/robots.txt", "/sitemap.xml"];
+// Paginas legales y de ayuda (encargo del fundador del 6 oct 2026): se leen sin cuenta ni identidad invisible; la de
+// eliminar la cuenta es requisito de Google Play (accesible sin la app y sin iniciar sesion).
+const RUTAS_PUBLICAS = ["/login", "/auth", "/robots.txt", "/sitemap.xml", "/privacidad", "/terminos", "/cookies",
+  "/eliminar-cuenta", "/preguntas-frecuentes"];
 const esRutaPublica = (pathname: string) =>
   pathname === "/" || RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 

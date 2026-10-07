@@ -93,6 +93,9 @@ const es = {
   pie: {
     privacidad: "Privacidad",
     terminos: "Términos",
+    cookies: "Cookies",
+    preguntas: "Preguntas frecuentes",
+    eliminarCuenta: "Eliminar cuenta",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -188,6 +191,9 @@ const en: typeof es = {
   pie: {
     privacidad: "Privacy",
     terminos: "Terms",
+    cookies: "Cookies",
+    preguntas: "FAQ",
+    eliminarCuenta: "Delete account",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -275,6 +281,9 @@ const fr: typeof es = {
   pie: {
     privacidad: "Confidentialité",
     terminos: "Conditions",
+    cookies: "Témoins",
+    preguntas: "Questions fréquentes",
+    eliminarCuenta: "Supprimer le compte",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -362,6 +371,9 @@ const pt: typeof es = {
   pie: {
     privacidad: "Privacidade",
     terminos: "Termos",
+    cookies: "Cookies",
+    preguntas: "Perguntas frequentes",
+    eliminarCuenta: "Excluir conta",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -449,6 +461,9 @@ const de: typeof es = {
   pie: {
     privacidad: "Datenschutz",
     terminos: "Nutzungsbedingungen",
+    cookies: "Cookies",
+    preguntas: "Häufige Fragen",
+    eliminarCuenta: "Konto löschen",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -536,6 +551,9 @@ const it: typeof es = {
   pie: {
     privacidad: "Privacy",
     terminos: "Termini",
+    cookies: "Cookie",
+    preguntas: "Domande frequenti",
+    eliminarCuenta: "Elimina account",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -623,6 +641,9 @@ const ja: typeof es = {
   pie: {
     privacidad: "プライバシー",
     terminos: "利用規約",
+    cookies: "Cookie",
+    preguntas: "よくある質問",
+    eliminarCuenta: "アカウント削除",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -710,6 +731,9 @@ const zh: typeof es = {
   pie: {
     privacidad: "隐私",
     terminos: "条款",
+    cookies: "Cookie",
+    preguntas: "常见问题",
+    eliminarCuenta: "删除账户",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -797,6 +821,9 @@ const ko: typeof es = {
   pie: {
     privacidad: "개인정보 처리방침",
     terminos: "이용약관",
+    cookies: "쿠키",
+    preguntas: "자주 묻는 질문",
+    eliminarCuenta: "계정 삭제",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -884,6 +911,9 @@ const ar: typeof es = {
   pie: {
     privacidad: "الخصوصية",
     terminos: "الشروط",
+    cookies: "ملفات تعريف الارتباط",
+    preguntas: "الأسئلة الشائعة",
+    eliminarCuenta: "حذف الحساب",
     derechos: "© {{ano}} My Idea",
   },
 };
@@ -971,6 +1001,9 @@ const hi: typeof es = {
   pie: {
     privacidad: "गोपनीयता",
     terminos: "शर्तें",
+    cookies: "कुकीज़",
+    preguntas: "अक्सर पूछे जाने वाले प्रश्न",
+    eliminarCuenta: "खाता हटाएँ",
     derechos: "© {{ano}} My Idea",
   },
 };

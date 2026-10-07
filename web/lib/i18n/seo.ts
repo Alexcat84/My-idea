@@ -16,7 +16,7 @@ export const SITIO_URL = "https://www.myideaproject.com";
 /** Las páginas que se ofrecen al buscador. Solo la portada: es la única pública
  * de verdad. /login existe pero está fuera de todo flujo (proxy.ts) y no tiene
  * contenido que indexar; lo demás pide sesión o la acuña. */
-export const PAGINAS_PUBLICAS = ["/"] as const;
+export const PAGINAS_PUBLICAS = ["/", "/privacidad", "/terminos", "/cookies", "/eliminar-cuenta", "/preguntas-frecuentes"] as const;
 
 /** Lo que robots.txt cierra: las rutas de sesión. /nueva va aquí sobre todo
  * porque ENTRAR ahí acuña una identidad invisible (proxy.ts): un rastreador no

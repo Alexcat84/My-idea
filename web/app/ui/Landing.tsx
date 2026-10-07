@@ -428,8 +428,11 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <a href="#acerca" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.acercaDe}</a>
             <a href="#como-funciona" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.comoFunciona}</a>
             <a href="#descargar" style={{ color: "#A6A7AD" }} className="lh5">{t.nav.app}</a>
-            <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.privacidad}</a>
-            <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.terminos}</a>
+            <a href="/privacidad" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.privacidad}</a>
+            <a href="/terminos" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.terminos}</a>
+            <a href="/cookies" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.cookies}</a>
+            <a href="/preguntas-frecuentes" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.preguntas}</a>
+            <a href="/eliminar-cuenta" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.eliminarCuenta}</a>
           </div>
           <SelectorIdioma haciaArriba style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
           <span style={{ fontSize: "14.5px", color: "#A6A7AD" }}>{interpolar(t.pie.derechos, { ano: new Date().getFullYear() })}</span>

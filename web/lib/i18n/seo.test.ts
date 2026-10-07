@@ -57,8 +57,9 @@ describe("SEO por idioma", () => {
     expect(a.languages).toEqual(hreflangDe("/"));
   });
 
-  it("solo la portada es pública para el buscador; las rutas de sesión quedan fuera", () => {
-    expect(PAGINAS_PUBLICAS).toEqual(["/"]);
+  it("la portada y las páginas legales y de ayuda son públicas para el buscador; las rutas de sesión quedan fuera", () => {
+    // páginas legales y de cuenta (encargo del fundador del 6 oct 2026): públicas, también para Google Play
+    expect(PAGINAS_PUBLICAS).toEqual(["/", "/privacidad", "/terminos", "/cookies", "/eliminar-cuenta", "/preguntas-frecuentes"]);
     for (const r of ["/login", "/auth/", "/nueva", "/ideas", "/idea/", "/cuenta", "/creditos", "/potenciadores", "/dev/", "/api/"])
       expect(RUTAS_PRIVADAS).toContain(r);
   });
@@ -72,12 +73,14 @@ describe("SEO por idioma", () => {
     expect(r.sitemap).toBe("https://www.myideaproject.com/sitemap.xml");
   });
 
-  it("sitemap: la portada en cada idioma y la sin parámetro, cada una con los doce alternos", () => {
+  it("sitemap: cada página pública en cada idioma y la sin parámetro, cada una con los doce alternos", () => {
     const s = sitemap();
-    // 11 variantes ?lang= + 1 x-default = 12 entradas para la única página pública.
-    expect(s).toHaveLength(12);
+    // 11 variantes ?lang= + 1 x-default = 12 entradas por cada página pública (6 páginas).
+    expect(s).toHaveLength(12 * PAGINAS_PUBLICAS.length);
     expect(s.map((e) => e.url)).toContain("https://www.myideaproject.com/");
     expect(s.map((e) => e.url)).toContain("https://www.myideaproject.com/?lang=zh");
-    for (const e of s) expect(e.alternates?.languages).toEqual(hreflangDe("/"));
+    expect(s.map((e) => e.url)).toContain("https://www.myideaproject.com/eliminar-cuenta");
+    for (const e of s.filter((x) => x.url.replace(/\?.*$/, "") === "https://www.myideaproject.com/"))
+      expect(e.alternates?.languages).toEqual(hreflangDe("/"));
   });
 });
