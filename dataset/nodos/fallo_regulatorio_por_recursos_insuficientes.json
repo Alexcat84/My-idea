@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Fallo Regulatorio por Recursos Insuficientes",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
+  "resumen_teorico": "Patrón recurrente en casos como NASA, Piper Alpha, Dryden y FAA, donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
   "pasos_accionables": [
     "Calcular la carga de trabajo real de los equipos de seguridad/calidad frente a su dotación actual",
     "Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes",
@@ -40,6 +40,22 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Remite a una norma o cifra de referencia (\"estándares del sector\") que el libro no da; el libro mide el ratio y su caída tras los recortes (L3993: \"NASA reduced its safety and quality control personnel by 71 per cent\"; \"about 2 per cent of NASA's 22 000 staff\"). Se reemplaza por lo que hace el libro. El dato no aparece en otros campos.",
       "indice": 1,
       "auditoria": "muestreo A19"
+    },
+    {
+      "id": "barrido2-procedencia-fallo_regulatorio_por_recursos_insuficientes-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
+      "texto_nuevo": "Patrón recurrente en casos como NASA, Piper Alpha, Dryden y FAA, donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "en los casos analizados (NASA, Piper Alpha, Dryden, FAA)"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ],
   "fuentes_internas": [

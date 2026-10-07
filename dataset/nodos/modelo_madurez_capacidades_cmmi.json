@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Modelo de Madurez de Capacidades (CMM/CMMI)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El CMM (y su evolución CMMI) es un modelo desarrollado por el SEI de Carnegie Mellon para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Se basa en observación empírica de organizaciones y permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
+  "resumen_teorico": "El CMM (y su evolución CMMI) es un modelo para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
   "pasos_accionables": [
     "Determinar el nivel de madurez actual de los procesos organizacionales",
     "Si quieres declarar formalmente un nivel de madurez, contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
@@ -44,6 +44,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro presenta la evaluación por un lead appraiser como opción que permite declarar un nivel CMM, no como paso obligatorio.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "barrido2-procedencia-modelo_madurez_capacidades_cmmi-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El CMM (y su evolución CMMI) es un modelo desarrollado por el SEI de Carnegie Mellon para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Se basa en observación empírica de organizaciones y permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
+      "texto_nuevo": "El CMM (y su evolución CMMI) es un modelo para evaluar objetivamente la capacidad de los procesos de desarrollo de software (y otros procesos organizacionales) mediante niveles de madurez: 1-Inicial, 2-Gestionado, 3-Definido, 4-Gestionado Cuantitativamente, 5-Optimizando. Permite mejorar procesos de forma sistemática, siendo ampliamente usado en gobierno, industria y desarrollo de software.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " desarrollado por el SEI de Carnegie Mellon",
+          "Se basa en observación empírica de organizaciones y permite"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }

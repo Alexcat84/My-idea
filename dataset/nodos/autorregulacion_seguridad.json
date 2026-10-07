@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Autorregulación en Seguridad Laboral",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El Informe Robens identificó que el exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y propuso fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.",
+  "resumen_teorico": "Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y el cambio busca fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.",
   "pasos_accionables": [
     "Revisar si la normativa aplicable es prescriptiva (medios) o basada en objetivos (resultados)",
     "Diseñar un sistema interno de gestión de seguridad que defina cómo se alcanzarán los objetivos exigidos por ley",
@@ -29,5 +29,24 @@
   "etiqueta_arbol": "Define tus Propias Reglas de Seguridad",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "barrido2-procedencia-autorregulacion_seguridad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El Informe Robens identificó que el exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y propuso fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.",
+      "texto_nuevo": "Cambio de paradigma legislativo desde reglas prescriptivas detalladas (Factories Act Model) hacia leyes basadas en objetivos de seguridad (HSW Act 1974), otorgando a las organizaciones libertad para determinar los medios con los que alcanzar los fines de seguridad exigidos. El exceso de leyes fragmentadas condicionaba a las personas a pensar la seguridad como un asunto de reglas externas, y el cambio busca fomentar la autorregulación mediante mejor organización de seguridad interna, iniciativa gerencial y participación de los trabajadores.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "El Informe Robens identificó que ",
+          "y propuso fomentar"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    }
   ]
 }

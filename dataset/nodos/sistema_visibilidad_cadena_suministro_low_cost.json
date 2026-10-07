@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Sistema de Visibilidad End-to-End con Componentes IT Simples",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts simples) en vez de comprar software costoso y complejo. La clave es identificar el patrón subyacente simple detrás de la aparente complejidad del problema (siguiendo la lógica de Sun Tzu: pocas notas, infinitas combinaciones) y usar esos componentes para crear una vista actualizada constantemente de inventario, producción y demanda, visible para todos los actores de la cadena.",
+  "resumen_teorico": "Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts simples) en vez de comprar software costoso y complejo. La clave es identificar el patrón subyacente simple detrás de la aparente complejidad del problema (pocas notas, infinitas combinaciones) y usar esos componentes para crear una vista actualizada constantemente de inventario, producción y demanda, visible para todos los actores de la cadena.",
   "pasos_accionables": [
     "Identificar el patrón simple detrás del problema complejo (ej: rastrear uso diario, actualizar pronósticos, mover inventario, agotar stock a tiempo)",
     "Inventariar qué componentes IT básicos ya tienen acceso todas las partes de la cadena (spreadsheets, email, bases de datos)",
@@ -73,6 +73,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El plazo del caso era de unos 90 días y solo los programas tomaron unas tres semanas; 'semanas, no meses' lo añade el nodo.; Mismo plazo añadido que el libro no da.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "barrido2-procedencia-sistema_visibilidad_cadena_suministro_low_cost-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts simples) en vez de comprar software costoso y complejo. La clave es identificar el patrón subyacente simple detrás de la aparente complejidad del problema (siguiendo la lógica de Sun Tzu: pocas notas, infinitas combinaciones) y usar esos componentes para crear una vista actualizada constantemente de inventario, producción y demanda, visible para todos los actores de la cadena.",
+      "texto_nuevo": "Ante restricciones de tiempo y presupuesto, es posible construir un sistema de visibilidad de cadena de suministro combinando componentes IT básicos y accesibles (hojas de cálculo, archivos de texto, email, páginas web, bases de datos relacionales, scripts simples) en vez de comprar software costoso y complejo. La clave es identificar el patrón subyacente simple detrás de la aparente complejidad del problema (pocas notas, infinitas combinaciones) y usar esos componentes para crear una vista actualizada constantemente de inventario, producción y demanda, visible para todos los actores de la cadena.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "siguiendo la lógica de Sun Tzu: "
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }

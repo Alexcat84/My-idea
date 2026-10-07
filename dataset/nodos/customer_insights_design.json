@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Diseño de Modelos de Negocio basados en Customer Insights",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Enfoque que sitúa la perspectiva del cliente en el centro del diseño del modelo de negocio, yendo más allá de preguntar qué quieren los clientes (frase de Henry Ford sobre 'un caballo más rápido') para entender profundamente su entorno, rutinas, preocupaciones y aspiraciones, incluso en segmentos periféricos no atendidos.",
+  "resumen_teorico": "Enfoque que sitúa la perspectiva del cliente en el centro del diseño del modelo de negocio, yendo más allá de preguntar qué quieren los clientes para entender profundamente su entorno, rutinas, preocupaciones y aspiraciones, incluso en segmentos periféricos no atendidos.",
   "pasos_accionables": [
     "Investigar segmentos de clientes actuales pero también periféricos o no atendidos",
     "Emplear métodos etnográficos/observacionales (no solo encuestas) para entender comportamiento real",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Diseña desde el Cliente",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "barrido2-procedencia-customer_insights_design-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Enfoque que sitúa la perspectiva del cliente en el centro del diseño del modelo de negocio, yendo más allá de preguntar qué quieren los clientes (frase de Henry Ford sobre 'un caballo más rápido') para entender profundamente su entorno, rutinas, preocupaciones y aspiraciones, incluso en segmentos periféricos no atendidos.",
+      "texto_nuevo": "Enfoque que sitúa la perspectiva del cliente en el centro del diseño del modelo de negocio, yendo más allá de preguntar qué quieren los clientes para entender profundamente su entorno, rutinas, preocupaciones y aspiraciones, incluso en segmentos periféricos no atendidos.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " (frase de Henry Ford sobre 'un caballo más rápido')"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    }
   ]
 }

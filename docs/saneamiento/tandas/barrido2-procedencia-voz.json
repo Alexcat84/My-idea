@@ -1,0 +1,20 @@
+[
+ {
+  "id": "barrido2-voz-diagnostico_efecto_latigo-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "diagnostico_efecto_latigo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "ATRIBUCION",
+  "texto_anterior": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Se ilustra con el 'beer game'. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+  "texto_nuevo": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+  "cita": {
+   "regla": "Regla dura D1 y de procedencia D5; voz de cliente (guarda lib/vozDeCliente.test.ts): el resto de la referencia al ejemplo del libro sale entero.",
+   "fragmentos": [
+    "Se ilustra con el 'beer game'."
+   ]
+  },
+  "decision": "quita pura: la correccion del barrido 2 dejo 'Se ilustra con el beer game', voz de libro que delata el ejemplo de origen; sale la frase entera, sin palabras nuevas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+ }
+]

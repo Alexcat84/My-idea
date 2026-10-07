@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Metodología SPIN Selling",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "SPIN es una estrategia de investigación (probing) basada en cuatro tipos de preguntas —Situación, Problema, Implicación y Necesidad de solución— descubierta tras analizar más de 35,000 llamadas de venta en 27 países. A diferencia de las técnicas tradicionales de cierre, manejo de objeciones y preguntas abiertas/cerradas (efectivas solo en ventas pequeñas de bajo valor), SPIN es la técnica que realmente distingue a los vendedores exitosos en ventas grandes y complejas de múltiples llamadas.",
+  "resumen_teorico": "SPIN es una estrategia de investigación (probing) basada en cuatro tipos de preguntas: Situación, Problema, Implicación y Necesidad de solución. A diferencia de las técnicas tradicionales de cierre, manejo de objeciones y preguntas abiertas/cerradas (efectivas solo en ventas pequeñas de bajo valor), SPIN es la técnica que realmente distingue a los vendedores exitosos en ventas grandes y complejas de múltiples llamadas.",
   "pasos_accionables": [
     "Diagnosticar si tu venta es 'pequeña' (una sola llamada, bajo valor) o 'grande' (ciclo largo, alto valor, decisión pública)",
     "Abandonar el enfoque en cierres agresivos y manejo de objeciones si vendes productos/servicios de alto valor",
@@ -65,6 +65,22 @@
       "decision": "procedencia: sale la atribucion generica; el consejo se dice directamente",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura D1 (30 sep 2026)"
+    },
+    {
+      "id": "barrido2-procedencia-metodologia_spin_selling-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "SPIN es una estrategia de investigación (probing) basada en cuatro tipos de preguntas —Situación, Problema, Implicación y Necesidad de solución— descubierta tras analizar más de 35,000 llamadas de venta en 27 países. A diferencia de las técnicas tradicionales de cierre, manejo de objeciones y preguntas abiertas/cerradas (efectivas solo en ventas pequeñas de bajo valor), SPIN es la técnica que realmente distingue a los vendedores exitosos en ventas grandes y complejas de múltiples llamadas.",
+      "texto_nuevo": "SPIN es una estrategia de investigación (probing) basada en cuatro tipos de preguntas: Situación, Problema, Implicación y Necesidad de solución. A diferencia de las técnicas tradicionales de cierre, manejo de objeciones y preguntas abiertas/cerradas (efectivas solo en ventas pequeñas de bajo valor), SPIN es la técnica que realmente distingue a los vendedores exitosos en ventas grandes y complejas de múltiples llamadas.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " descubierta tras analizar más de 35,000 llamadas de venta en 27 países"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }

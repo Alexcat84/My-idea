@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Diagnóstico del Efecto Látigo (Bullwhip Effect)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-  "resumen_teorico": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Fue ilustrado con el 'beer game' del MIT y documentado por Peter Senge. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+  "resumen_teorico": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
   "pasos_accionables": [
     "Comparar las órdenes recibidas en cada eslabón contra la demanda real del consumidor final",
     "Identificar si existe amplificación de la variabilidad de la demanda al subir en la cadena",
@@ -52,6 +52,38 @@
         "evidencia": "D-20: Diagnosticar el efecto látigo con el beer game comparando pedidos entre eslabones es análisis de cadena de suministro que solo necesita quien gestiona inventario con socios. (lector y verificador de acuerdo)"
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "barrido2-procedencia-diagnostico_efecto_latigo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Fue ilustrado con el 'beer game' del MIT y documentado por Peter Senge. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+      "texto_nuevo": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Se ilustra con el 'beer game'. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "Fue ilustrado con el 'beer game' del MIT y documentado por Peter Senge."
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "barrido2-voz-diagnostico_efecto_latigo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Se ilustra con el 'beer game'. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+      "texto_nuevo": "El efecto látigo describe cómo pequeños cambios en la demanda del consumidor final se amplifican en oscilaciones cada vez mayores conforme se transmiten hacia atrás en la cadena de suministro (minorista, distribuidor, fabricante), generando ciclos de escasez y luego exceso de inventario. Provoca sobrecostos en producción, inventario, transporte y mano de obra, además de pérdida de ventas.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5; voz de cliente (guarda lib/vozDeCliente.test.ts): el resto de la referencia al ejemplo del libro sale entero.",
+        "fragmentos": [
+          "Se ilustra con el 'beer game'."
+        ]
+      },
+      "decision": "quita pura: la correccion del barrido 2 dejo 'Se ilustra con el beer game', voz de libro que delata el ejemplo de origen; sale la frase entera, sin palabras nuevas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }

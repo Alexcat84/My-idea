@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Drift into Failure (Deriva hacia el fallo)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
-  "resumen_teorico": "El fallo no es el resultado inmediato de errores puntuales en la línea operativa, sino que se incuba durante un largo periodo mediante pequeños ajustes incrementales en cómo se negocia la seguridad frente a otras metas organizacionales. Esto se relaciona con la 'normalización de la desviación' de Diane Vaughan: prácticas antes vistas como inaceptables se vuelven normales gradualmente, a menudo como parte necesaria de la adaptación competitiva de la organización.",
+  "resumen_teorico": "El fallo no es el resultado inmediato de errores puntuales en la línea operativa, sino que se incuba durante un largo periodo mediante pequeños ajustes incrementales en cómo se negocia la seguridad frente a otras metas organizacionales. Esto se relaciona con la 'normalización de la desviación': prácticas antes vistas como inaceptables se vuelven normales gradualmente, a menudo como parte necesaria de la adaptación competitiva de la organización.",
   "pasos_accionables": [
     "Mapear la historia de decisiones incrementales que llevaron a la condición actual de riesgo",
     "Identificar prácticas que fueron 'normalizadas' con el tiempo sin evaluación crítica",
@@ -39,6 +39,22 @@
         "evidencia": "F14-001: Analiza la deriva del riesgo en una organizacion que ya opera; es gestion de seguridad operativa, no prueba con clientes o mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "barrido2-procedencia-deriva_hacia_el_fallo-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El fallo no es el resultado inmediato de errores puntuales en la línea operativa, sino que se incuba durante un largo periodo mediante pequeños ajustes incrementales en cómo se negocia la seguridad frente a otras metas organizacionales. Esto se relaciona con la 'normalización de la desviación' de Diane Vaughan: prácticas antes vistas como inaceptables se vuelven normales gradualmente, a menudo como parte necesaria de la adaptación competitiva de la organización.",
+      "texto_nuevo": "El fallo no es el resultado inmediato de errores puntuales en la línea operativa, sino que se incuba durante un largo periodo mediante pequeños ajustes incrementales en cómo se negocia la seguridad frente a otras metas organizacionales. Esto se relaciona con la 'normalización de la desviación': prácticas antes vistas como inaceptables se vuelven normales gradualmente, a menudo como parte necesaria de la adaptación competitiva de la organización.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          " de Diane Vaughan"
+        ]
+      },
+      "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
     }
   ]
 }
