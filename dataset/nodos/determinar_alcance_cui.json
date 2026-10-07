@@ -22,7 +22,7 @@
     "plan_seguridad_sistema_poam"
   ],
   "condiciones_activacion": [
-    "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten"
+    "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten, o que les dan protección"
   ],
   "etiqueta_arbol": "Define el Alcance de Datos",
   "fuentes_internas": [
@@ -76,6 +76,23 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide inventariar también cómo fluyen los datos hacia, dentro y fuera de esos sistemas.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "condiciones-frontera-determinar_alcance_cui-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten",
+      "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten, o que les dan protección",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "29, 245",
+        "frase": "or that provide protection for such components"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

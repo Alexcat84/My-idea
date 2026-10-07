@@ -23,7 +23,7 @@
     "cultura_de_optimismo"
   ],
   "condiciones_activacion": [
-    "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+    "Si fabricas productos electrónicos que se venden en Francia, donde desde 2021 los fabricantes deben puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
     "Si tu producto se puede romper o está pensado para volverse obsoleto.",
     "Si quieres diferenciarte por cuidar el ambiente o reducir la basura que generas."
   ],
@@ -122,6 +122,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro pregunta quién gobierna el puntaje y cuáles son los límites de la confianza, pero no aconseja publicarlo.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-indice_de_reparabilidad-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+      "texto_nuevo": "Si fabricas productos electrónicos que se venden en Francia, donde desde 2021 los fabricantes deben puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "4324",
+        "frase": "It requires electronics manufacturers to label their products with a repairability score"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

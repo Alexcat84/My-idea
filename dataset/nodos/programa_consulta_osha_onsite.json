@@ -19,8 +19,8 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Esto solo aplica si tu negocio opera en Estados Unidos",
-    "Si quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
-    "Si buscas evitar las inspecciones programadas de OSHA"
+    "Si tu negocio es pequeño o mediano y quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
+    "Si tu negocio es pequeño y buscas que se aplacen las inspecciones programadas de OSHA con la designación SHARP, que pide haber usado la consulta y mantener un programa de seguridad y salud ejemplar"
   ],
   "etiqueta_arbol": "Pide Consulta Gratis en Sitio",
   "fuentes_internas": [
@@ -75,6 +75,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera también que el consultor indica cómo corregir los peligros y capacita y educa a los trabajadores; el nodo omite esas partes.; El libro reserva SHARP a pequeños negocios, y el resumen, que habla de pequeños y medianos, lo deja abierto a ambos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-programa_consulta_osha_onsite-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
+      "texto_nuevo": "Si tu negocio es pequeño o mediano y quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1783",
+        "frase": "no-cost and confidential occupational safety and health services to small and medium- businesses"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "condiciones-frontera-programa_consulta_osha_onsite-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si buscas evitar las inspecciones programadas de OSHA",
+      "texto_nuevo": "Si tu negocio es pequeño y buscas que se aplacen las inspecciones programadas de OSHA con la designación SHARP, que pide haber usado la consulta y mantener un programa de seguridad y salud ejemplar",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1791",
+        "frase": "receives a deferral from OSHA or State Plan programmed inspections"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): certeza_endurecida, matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

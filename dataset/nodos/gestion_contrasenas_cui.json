@@ -20,7 +20,7 @@
     "mantenimiento_sistema_cui"
   ],
   "condiciones_activacion": [
-    "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura"
+    "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesita reglas para crear, compartir y renovar contraseñas de forma segura"
   ],
   "etiqueta_arbol": "Protege tus Contraseñas Correctamente",
   "correcciones": [
@@ -85,6 +85,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 0,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "condiciones-frontera-gestion_contrasenas_cui-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+      "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "29",
+        "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ],
   "fuentes_internas": [

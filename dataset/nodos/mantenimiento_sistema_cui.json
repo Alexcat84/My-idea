@@ -23,7 +23,7 @@
     "getting_started_media_protection"
   ],
   "condiciones_activacion": [
-    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y debes cumplir los requisitos de mantenimiento de SP 800-171",
     "Cuando los sistemas que procesan CUI requieren actualizaciones o reparaciones periódicas."
   ],
   "etiqueta_arbol": "Mantén Segura tu Información",
@@ -122,6 +122,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro se refiere al equipo de mantenimiento y admite una tercera vía, retenerlo dentro de la instalación, que el paso omite.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-mantenimiento_sistema_cui-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y debes cumplir los requisitos de mantenimiento de SP 800-171",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "29",
+        "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

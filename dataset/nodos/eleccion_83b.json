@@ -20,7 +20,7 @@
     "compensacion_service_providers"
   ],
   "condiciones_activacion": [
-    "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+    "Justo después de que tú, o cualquiera que preste servicios a tu empresa (empleados, asesores), reciban acciones con vesting en una empresa que tributa en Estados Unidos",
     "Antes de cualquier proceso de revisión para una inversión o venta de tu empresa, si tributa en Estados Unidos"
   ],
   "etiqueta_arbol": "Elige tu Impuesto a Tiempo",
@@ -168,6 +168,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La elección 83(b) solo aplica a acciones sujetas a vesting; el paso la extiende a cualquier accionista.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-frontera-eleccion_83b-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+      "texto_nuevo": "Justo después de que tú, o cualquiera que preste servicios a tu empresa (empleados, asesores), reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "4700-4702",
+        "frase": "Potential investors will ask whether all service providers have filed timely 83(b) elections"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ],
   "fuentes_internas": [

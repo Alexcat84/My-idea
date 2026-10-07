@@ -21,7 +21,7 @@
     "financiamiento_usda_agricola"
   ],
   "condiciones_activacion": [
-    "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+    "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar",
     "Requieres financiamiento rápido y de menor monto a través de Export Express",
     "Necesitas financiar instalaciones o equipo junto con capital de trabajo para exportación"
   ],
@@ -102,6 +102,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro exige para ese programa certificar la expansión de mercados de exportación o mostrar daño por importaciones; el resumen omite la condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-financiamiento_sba_exportacion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+      "texto_nuevo": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4325",
+        "frase": "SBA provides loan guarantees for export working capital and acquisition of plant and equipment"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): invencion_dura; modo quitar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

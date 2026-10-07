@@ -22,7 +22,7 @@
     "mix_ubicaciones_corporativas_franquicia"
   ],
   "condiciones_activacion": [
-    "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+    "Solo aplica si operas o piensas operar en Estados Unidos y tienes acuerdos con terceros (distribuidores, licenciatarios o agentes) que usan tu marca, o que no la usan en los estados donde la marca no es requisito, aunque no pienses vender franquicias",
     "Si la empresa tiene acuerdos de distribución, licencia o agencia con terceros que usan su marca",
     "Si se está evitando intencionalmente llamar 'franquicia' a una relación comercial para eludir regulaciones",
     "Al diseñar cualquier estructura alternativa a la franquicia tradicional",
@@ -89,6 +89,23 @@
       "decision": "auditoria final, etapa 1 del remedio (contrario; doble lectura ciega y arbitro): El defecto existe pero es el mismo contrario: el libro presenta la declaración escrita como algo que no protege, no como algo que evita la ambigüedad.; El libro muestra una condena de más de 6 millones aunque ambas partes habían acordado por escrito que no era franquicia: documentar la naturaleza no protege.; Mismo defecto.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-prevenir_franquicias_inadvertidas-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+      "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y tienes acuerdos con terceros (distribuidores, licenciatarios o agentes) que usan tu marca, o que no la usan en los estados donde la marca no es requisito, aunque no pienses vender franquicias",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "193",
+        "frase": "you can trigger franchise laws even without allowing someone to use your trademark"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

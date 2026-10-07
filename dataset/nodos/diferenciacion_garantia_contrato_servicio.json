@@ -19,7 +19,7 @@
     "contratos_de_servicio_garantia"
   ],
   "condiciones_activacion": [
-    "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+    "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos.",
     "Cuando ofreces planes de protección extendida o servicios postventa pagados además de la garantía."
   ],
   "etiqueta_arbol": "Distingue Garantía de Contrato",
@@ -173,6 +173,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro prohíbe excluir o limitar las garantías implícitas; el nodo deja fuera la limitación.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-diferenciacion_garantia_contrato_servicio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+      "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "315",
+        "frase": "does not apply to warranties on products sold for resale or for commercial purposes"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

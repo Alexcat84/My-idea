@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
     "Si el negocio no depende del reconocimiento de marca para su éxito",
-    "Si se busca evitar el cumplimiento de disclosure de franquicia a nivel local"
+    "Si se busca evitar el cumplimiento de las reglas federales de divulgación de franquicia en un lanzamiento local"
   ],
   "etiqueta_arbol": "Considera una Licencia sin Marca",
   "fuentes_internas": [
@@ -43,6 +43,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Endurece: el libro dice que a menudo terminan compitiendo en precio porque los consumidores pueden compararlos.; Mismo endurecimiento sobre la competencia en precio.; Mismo límite del ahorro legal perdido.; Se pierde que el ahorro legal vale para un lanzamiento local y que uno nacional puede costar más en honorarios.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-alternativa_business_opportunity_licensing-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se busca evitar el cumplimiento de disclosure de franquicia a nivel local",
+      "texto_nuevo": "Si se busca evitar el cumplimiento de las reglas federales de divulgación de franquicia en un lanzamiento local",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1162",
+        "frase": "the licensor does not have to comply with the FTC's franchise disclosure regulations"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

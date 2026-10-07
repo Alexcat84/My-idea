@@ -1,0 +1,992 @@
+[
+ {
+  "id": "condiciones-frontera-alternativa_agency_relationship-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "alternativa_agency_relationship",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos, vende servicios a través de representantes de ventas independientes y el servicio lo prestas tú, no el representante",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1214",
+   "frase": "fulfillment of the contract is provided by the corporation, and not by the agent"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-concientizacion_entrenamiento_cui-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "concientizacion_entrenamiento_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos, manejas información controlada no clasificada (CUI) y debes cumplir la familia Awareness and Training de SP 800-171",
+  "texto_nuevo": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos o de otra organización, como un contratista principal, manejas información controlada no clasificada (CUI) y debes cumplir la familia Awareness and Training de SP 800-171",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-cumplimiento_magnuson_moss-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "cumplimiento_magnuson_moss",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "315",
+   "frase": "The Act covers only warranties on consumer products."
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-decision_marca_comun_branding-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "decision_marca_comun_branding",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+  "texto_nuevo": "Solo aplica si piensas expandirte en Estados Unidos a través de terceros, ya sea con franquicia, licencia u oportunidad de negocio",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1313",
+   "frase": "If you choose to change your strategy to one that involves third parties"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-financiamiento_sba_exportacion-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "financiamiento_sba_exportacion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar pero no tienes garantías suficientes",
+  "texto_nuevo": "Si eres una pequeña empresa exportadora que opera en Estados Unidos y necesitas capital de trabajo para exportar",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4325",
+   "frase": "SBA provides loan guarantees for export working capital and acquisition of plant and equipment"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): invencion_dura; modo quitar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-gestion_configuracion_least_functionality-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "gestion_configuracion_least_functionality",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y debe establecer configuraciones base e inventarios de sus sistemas, deshabilitando funciones, puertos y servicios innecesarios",
+  "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y debe establecer configuraciones base e inventarios de sus sistemas, deshabilitando funciones, puertos y servicios innecesarios",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_personnel_security-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_personnel_security",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y contratas, despides o transfieres empleados con acceso a sistemas que procesan CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal o de otra organización, como un contratista principal, y contratas, despides o transfieres empleados con acceso a sistemas que procesan CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_supply_chain_risk_management-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_supply_chain_risk_management",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y dependes de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal o de otra organización, como un contratista principal, y dependes de proveedores externos para componentes o servicios críticos relacionados con CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-identificacion_autenticacion_mfa-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "identificacion_autenticacion_mfa",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como proveedor del gobierno federal y debes cumplir los requisitos de identificación y autenticación de SP 800-171",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como proveedor del gobierno federal o de otra organización, como un contratista principal, y debes cumplir los requisitos de identificación y autenticación de SP 800-171",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-plan_seguridad_sistema_poam-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "plan_seguridad_sistema_poam",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando vendes o prestas servicios a agencias federales de Estados Unidos, manejas información CUI y ya completaste la autoevaluación de requisitos de SP 800-171, y necesitas documentar su estado de implementación",
+  "texto_nuevo": "Cuando vendes o prestas servicios a agencias federales de Estados Unidos o a otra organización, como un contratista principal, manejas información CUI y ya completaste la autoevaluación de requisitos de SP 800-171, y necesitas documentar su estado de implementación",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "with the federal government, or possibly with other organizations like municipal governments, prime contractors"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-prohibicion_tie_in_sales-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "prohibicion_tie_in_sales",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el texto de tu garantía menciona el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico.",
+  "texto_nuevo": "Cuando el texto de tu garantía menciona o da a entender el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "344",
+   "frase": "provisions that state or imply that a consumer must buy or use an item"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-regla_divulgacion_garantia-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "regla_divulgacion_garantia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo de más de 15 dólares a clientes en Estados Unidos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "315, 328",
+   "frase": "apply to all written warranties on consumer products costing more than $15"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-alternativa_business_opportunity_licensing-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "alternativa_business_opportunity_licensing",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si se busca evitar el cumplimiento de disclosure de franquicia a nivel local",
+  "texto_nuevo": "Si se busca evitar el cumplimiento de las reglas federales de divulgación de franquicia en un lanzamiento local",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1162",
+   "frase": "the licensor does not have to comply with the FTC's franchise disclosure regulations"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-contratos_de_servicio_garantia-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "contratos_de_servicio_garantia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "315",
+   "frase": "The Act covers only warranties on consumer products."
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-cumplimiento_magnuson_moss-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "cumplimiento_magnuson_moss",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tu producto cuesta mas de 15 dolares y lo vendes a consumidores finales en Estados Unidos.",
+  "texto_nuevo": "Cuando tu producto cuesta más de 10 dólares (más de 15 para la divulgación y la disponibilidad previa) y lo vendes a consumidores finales en Estados Unidos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "328",
+   "frase": "applies to all written warranties on consumer products costing more than $10"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-determinar_alcance_cui-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "determinar_alcance_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten",
+  "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesitas limitar la inversión y el esfuerzo de cumplimiento solo a los sistemas que la procesan, almacenan o transmiten, o que les dan protección",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29, 245",
+   "frase": "or that provide protection for such components"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-eleccion_83b-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "eleccion_83b",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Justo después de que tú o tus primeros empleados reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+  "texto_nuevo": "Justo después de que tú, o cualquiera que preste servicios a tu empresa (empleados, asesores), reciban acciones con vesting en una empresa que tributa en Estados Unidos",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "txt/Venture Deals - Brad Feld.txt",
+   "lineas": "4700-4702",
+   "frase": "Potential investors will ask whether all service providers have filed timely 83(b) elections"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-financiamiento_usda_agricola-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "financiamiento_usda_agricola",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+  "texto_nuevo": "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado, o bienes y servicios para mejorar o establecer instalaciones agrícolas en mercados emergentes",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4365",
+   "frase": "manufactured goods and services exported from the United States to improve or establish agriculture-related facilities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-gestion_contrasenas_cui-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "gestion_contrasenas_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+  "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos o con otra organización, como un contratista principal, y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_physical_protection-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_physical_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tienes instalaciones físicas donde se procesa o almacena CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización como un contratista principal, y tienes instalaciones físicas donde se procesa o almacena CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_system_communication_protection-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_system_communication_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tus comunicaciones de red transmiten CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización como un contratista principal, y tus comunicaciones de red transmiten CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-indice_de_reparabilidad-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "indice_de_reparabilidad",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes en Francia productos electrónicos, donde desde 2021 debes puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+  "texto_nuevo": "Si fabricas productos electrónicos que se venden en Francia, donde desde 2021 los fabricantes deben puntuar su reparabilidad, o si tu producto es físico y dura mucho tiempo, como electrodomésticos, dispositivos o muebles.",
+  "cita": {
+   "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+   "fichero": "txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+   "lineas": "4324",
+   "frase": "It requires electronics manufacturers to label their products with a repairability score"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-prevenir_franquicias_inadvertidas-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "prevenir_franquicias_inadvertidas",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+  "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y tienes acuerdos con terceros (distribuidores, licenciatarios o agentes) que usan tu marca, o que no la usan en los estados donde la marca no es requisito, aunque no pienses vender franquicias",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "193",
+   "frase": "you can trigger franchise laws even without allowing someone to use your trademark"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-programas_estatales_locales_financiamiento_exportacion-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "programas_estatales_locales_financiamiento_exportacion",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Buscas financiamiento adicional o complementario al que ya tienes a nivel federal",
+  "texto_nuevo": "Buscas financiamiento para tus exportaciones",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4447",
+   "frase": "Several cities and states have funded and operate export financing programs"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): invencion_dura; modo redactar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-propuesta_valor_franquicia-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "propuesta_valor_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "CONTRARIO",
+  "texto_anterior": "Al finalizar el desarrollo del sistema de franquicia y antes de lanzar la campaña de reclutamiento de franquiciados",
+  "texto_nuevo": "Desde el plan inicial de tu franquicia y antes de lanzar la campaña de reclutamiento de franquiciados",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "5749, 1713-1715",
+   "frase": "Your journey should start with a strong plan that builds a differentiated value proposition"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): contrario; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-respuesta_incidentes_cui-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "respuesta_incidentes_cui",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si la organización tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad",
+  "texto_nuevo": "Si la organización tiene contratos con el gobierno federal de Estados Unidos, o con otra organización como un contratista principal, que exigen proteger CUI y aún no tiene un plan formal de respuesta ante incidentes de seguridad",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-antiboycott_regulations-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "antiboycott_regulations",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros países",
+  "texto_nuevo": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a países amigos de Estados Unidos o a empresas en listas negras",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2849-2851",
+   "frase": "refusing to do business with blacklisted companies and boycotted friendly countries"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-clasificacion_garantia_full_limited-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "clasificacion_garantia_full_limited",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando estás redactando el texto de la garantía escrita para tu producto.",
+  "texto_nuevo": "Cuando estás redactando el texto de la garantía escrita para un producto de consumo que cuesta más de $10.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "328, 559",
+   "frase": "applies to all written warranties on consumer products costing more than $10"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-control_acceso_least_privilege-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "control_acceso_least_privilege",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos, manejas información controlada no clasificada (CUI) y debes cumplir la familia Access Control de SP 800-171",
+  "texto_nuevo": "Cuando trabajas como contratista o proveedor del gobierno de Estados Unidos, o de otra organización como un contratista principal, manejas información controlada no clasificada (CUI) y debes cumplir la familia Access Control de SP 800-171",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-cumplimiento_sarbanes_oxley-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "cumplimiento_sarbanes_oxley",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tienes un plan a mediano plazo de convertirte en empresa pública que cotice en Estados Unidos",
+  "texto_nuevo": "Si tienes un plan de convertirte en empresa pública que cotice en Estados Unidos",
+  "cita": {
+   "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+   "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+   "lineas": "3699",
+   "frase": "If you are planning (or even dreaming) of taking your company public someday"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo quitar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-diagrama_flujo_cui-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "diagrama_flujo_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos, inicias la implementación de SP 800-171 y necesitas entender cómo entra, se mueve y sale el CUI de tus sistemas",
+  "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos o con otras organizaciones (gobiernos municipales, contratistas principales, universidades), inicias la implementación de SP 800-171 y necesitas entender cómo entra, se mueve y sale el CUI de tus sistemas",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-estructura_sp800171-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "estructura_sp800171",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando tu negocio tiene un contrato con el gobierno federal de Estados Unidos y debe implementar controles de seguridad para proteger CUI",
+  "texto_nuevo": "Cuando tu negocio tiene un contrato con el gobierno federal de Estados Unidos, o con otra organización como un contratista principal, y debe implementar controles de seguridad para proteger CUI",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-foreign_corrupt_practices_act-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "foreign_corrupt_practices_act",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si el usuario contrata agentes o distribuidores en el extranjero",
+  "texto_nuevo": "Si tu empresa es de Estados Unidos, o actúa en su territorio, y contratas agentes o distribuidores en el extranjero",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2863",
+   "frase": "it is unlawful for a U.S. person or company"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_planning-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_planning",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas documentar formalmente tus controles de seguridad para cumplir SP 800-171.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización como un contratista principal, y necesitas documentar formalmente tus controles de seguridad para cumplir SP 800-171.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_system_information_integrity-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_system_information_integrity",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización como un contratista principal, y necesitas detectar amenazas activas y gestionar el ciclo de vida de la CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-international_buyer_program-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "international_buyer_program",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte allí con compradores extranjeros",
+  "texto_nuevo": "Si tu empresa es de Estados Unidos, expones o piensas exponer en una feria comercial en ese país y quieres reunirte allí con compradores extranjeros",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2251",
+   "frase": "As a U.S. exhibitor at an IBP event, you will receive"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-programa_consulta_osha_onsite-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "programa_consulta_osha_onsite",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
+  "texto_nuevo": "Si tu negocio es pequeño o mediano y quieres ayuda gratuita para mejorar tu programa de seguridad y salud",
+  "cita": {
+   "libro": "SMALL_BUSINESS",
+   "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+   "lineas": "1783",
+   "frase": "no-cost and confidential occupational safety and health services to small and medium- businesses"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-programas_ex_im_bank-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "programas_ex_im_bank",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu comprador en el extranjero necesita financiamiento a mediano o largo plazo para bienes de capital",
+  "texto_nuevo": "Si tu comprador en el extranjero es solvente y necesita financiamiento a mediano o largo plazo para bienes de capital",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4317",
+   "frase": "to make export loans to creditworthy foreign buyers of U.S. goods and services"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-registro_estatal_franquicia-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "registro_estatal_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando el FDD está listo y se planea expandir la venta de franquicias a múltiples estados",
+  "texto_nuevo": "Cuando el FDD está listo y se planea vender franquicias en uno o varios estados",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2099-2111",
+   "frase": "If the franchisor is incorporated in the state"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-sbrefa_cumplimiento-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "sbrefa_cumplimiento",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Recibiste una citación de OSHA y quieres pedir reducción de la multa",
+  "texto_nuevo": "Tu negocio es pequeño, recibiste una citación de OSHA y quieres pedir reducción de la multa",
+  "cita": {
+   "libro": "SMALL_BUSINESS",
+   "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+   "lineas": "1985-1987",
+   "frase": "Have a penalty reduction policy for small businesses"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-asistencia_embajadas_consulados_comerciales-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "asistencia_embajadas_consulados_comerciales",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu negocio opera en Estados Unidos y enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales o problemas de cobro en el extranjero",
+  "texto_nuevo": "Tu negocio opera en Estados Unidos y enfrenta dificultades para penetrar un nuevo mercado, o un problema de cobro en el extranjero de monto importante que no se resolvió negociando con el cliente",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4159-4161",
+   "frase": "if negotiations fail and the sum involved is considered significant enough"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-comprender_definicion_legal_franquicia-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "comprender_definicion_legal_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+  "texto_nuevo": "Solo aplica si en Estados Unidos vendes o piensas vender franquicias, o acuerdos con terceros (licencias, distribución) que podrían serlo aunque no los llames así",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "1160",
+   "frase": "simply calling something a license or a business opportunity does not make it so"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-cumplimiento_ftc_rule_436-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "cumplimiento_ftc_rule_436",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando estás listo para comenzar a vender franquicias formalmente",
+  "texto_nuevo": "Cuando estás listo para comenzar a vender franquicias, o cuando un acuerdo que ofreces podría ser una franquicia aunque lo llames de otro modo",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "2262-2264",
+   "frase": "assumed if they called it something else, they were not violating franchise regulations"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-cumplir_leyes_estatales_franquicia-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "cumplir_leyes_estatales_franquicia",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando se identifica que el estado objetivo tiene leyes de registro o de oportunidad de negocio",
+  "texto_nuevo": "Cuando se identifica que el estado objetivo tiene leyes de registro, de oportunidad de negocio o de relación",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+   "lineas": "179-185",
+   "frase": "And there are relationship laws governing what can and cannot be done"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-diferenciacion_garantia_contrato_servicio-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "diferenciacion_garantia_contrato_servicio",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "315",
+   "frase": "does not apply to warranties on products sold for resale or for commercial purposes"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-evitar_terminos_enganosos_garantia-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "evitar_terminos_enganosos_garantia",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos y les das una garantía escrita.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "309-315",
+   "frase": "Only written warranties are covered."
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-foreign_trade_zones-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "foreign_trade_zones",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+  "texto_nuevo": "Si tu empresa opera en Estados Unidos y exporta, en especial si importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "2895",
+   "frase": "As an exporter, your company should also consider the customs privileges"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_media_protection-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_media_protection",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y manejas dispositivos de almacenamiento removibles o documentos físicos con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y manejas dispositivos de almacenamiento removibles o documentos físicos con CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_risk_assessment-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_risk_assessment",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y necesitas identificar y priorizar riesgos asociados a sistemas con CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y necesitas identificar y priorizar riesgos asociados a sistemas con CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-getting_started_system_services_acquisition-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "getting_started_system_services_acquisition",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y adquieres nuevos sistemas o contratas servicios externos que procesarán CUI.",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y adquieres o ya usas sistemas, o contratas o ya tienes servicios externos, que procesan CUI.",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "759",
+   "frase": "before acquisition and throughout the operational life of the system or service"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-mantenimiento_sistema_cui-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "mantenimiento_sistema_cui",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y debes cumplir los requisitos de mantenimiento de SP 800-171",
+  "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal, o de otra organización que te exige proteger CUI por contrato (como un contratista principal, un gobierno municipal o una universidad), y debes cumplir los requisitos de mantenimiento de SP 800-171",
+  "cita": {
+   "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+   "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+   "lineas": "29",
+   "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-programa_consulta_osha_onsite-condiciones_activacion-2",
+  "fecha": "2026-10-07",
+  "node_id": "programa_consulta_osha_onsite",
+  "campo": "condiciones_activacion",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si buscas evitar las inspecciones programadas de OSHA",
+  "texto_nuevo": "Si tu negocio es pequeño y buscas que se aplacen las inspecciones programadas de OSHA con la designación SHARP, que pide haber usado la consulta y mantener un programa de seguridad y salud ejemplar",
+  "cita": {
+   "libro": "SMALL_BUSINESS",
+   "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+   "lineas": "1791",
+   "frase": "receives a deferral from OSHA or State Plan programmed inspections"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): certeza_endurecida, matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-prohibicion_tie_in_sales-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "prohibicion_tie_in_sales",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos y ofreces una garantía sobre esos productos.",
+  "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos y ofreces una garantía escrita sobre esos productos.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "309-315",
+   "frase": "The Act covers only warranties on consumer products."
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-regla_disponibilidad_previa_venta-condiciones_activacion-1",
+  "fecha": "2026-10-07",
+  "node_id": "regla_disponibilidad_previa_venta",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Cuando ofreces una garantía escrita sobre lo que vendes, sin importar el canal.",
+  "texto_nuevo": "Cuando ofreces una garantía escrita sobre productos de consumo de más de 15 dólares, sin importar el canal.",
+  "cita": {
+   "libro": "Businessperson's Guide to Federal Warranty Law",
+   "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+   "lineas": "694",
+   "frase": "written warranties on consumer products costing more than $15 be available"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ },
+ {
+  "id": "condiciones-frontera-seguro_inversion_opic-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "seguro_inversion_opic",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
+  "texto_nuevo": "Tu empresa opera en Estados Unidos y planea una inversión directa en un país en desarrollo o un mercado emergente, como construir o equipar instalaciones allí",
+  "cita": {
+   "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+   "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+   "lineas": "4373",
+   "frase": "facilitates U.S. foreign direct investment in developing nations and emerging market economies"
+  },
+  "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+ }
+]

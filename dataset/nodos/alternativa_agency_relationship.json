@@ -18,7 +18,7 @@
     "alternativa_joint_venture"
   ],
   "condiciones_activacion": [
-    "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
+    "Si tu negocio opera en Estados Unidos, vende servicios a través de representantes de ventas independientes y el servicio lo prestas tú, no el representante",
     "Si se requiere evitar el elemento de fee de franquicia en la relación comercial"
   ],
   "etiqueta_arbol": "Considera una Relación de Agencia",
@@ -55,6 +55,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que en ese caso probablemente se activó el elemento de fee.; Mismo endurecimiento.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-alternativa_agency_relationship-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio opera en Estados Unidos y vende servicios a través de representantes de ventas independientes",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos, vende servicios a través de representantes de ventas independientes y el servicio lo prestas tú, no el representante",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1214",
+        "frase": "fulfillment of the contract is provided by the corporation, and not by the agent"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

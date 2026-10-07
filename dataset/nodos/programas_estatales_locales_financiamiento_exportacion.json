@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Tu negocio opera en Estados Unidos",
-    "Buscas financiamiento adicional o complementario al que ya tienes a nivel federal"
+    "Buscas financiamiento para tus exportaciones"
   ],
   "etiqueta_arbol": "Explora Financiamiento Estatal y Local",
   "fuentes_internas": [
@@ -75,6 +75,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro enumera préstamos y garantías de capital de trabajo; el nodo pierde las garantías.; Mismo defecto: se cae la garantía de capital de trabajo de la enumeración.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-programas_estatales_locales_financiamiento_exportacion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscas financiamiento adicional o complementario al que ya tienes a nivel federal",
+      "texto_nuevo": "Buscas financiamiento para tus exportaciones",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4447",
+        "frase": "Several cities and states have funded and operate export financing programs"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): invencion_dura; modo redactar; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

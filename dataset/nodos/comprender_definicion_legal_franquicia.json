@@ -20,7 +20,7 @@
     "cumplir_leyes_estatales_franquicia"
   ],
   "condiciones_activacion": [
-    "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+    "Solo aplica si en Estados Unidos vendes o piensas vender franquicias, o acuerdos con terceros (licencias, distribución) que podrían serlo aunque no los llames así",
     "Cuando estas diseñando un modelo de expansión que involucra a terceros operando bajo tu marca",
     "Cuando tienes dudas sobre si el acuerdo de licencia o distribución que estas armando podría clasificar legalmente como franquicia"
   ],
@@ -234,6 +234,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice más de $500 en los primeros seis meses de operación; $735, el ajuste de 2024 y el antes de abrir son añadidos.; La cifra de $735 y su ajuste de 2024 no están en el libro.; Se pierde la única exclusión (mercancía para reventa a precio mayorista genuino) y la advertencia de que sí cuentan exhibidores y material no revendible.; Se pierde que cuenta la suma de todos los pagos obligatorios (cuotas, regalías, publicidad, entrenamiento, equipo), lo que cambia el cálculo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-comprender_definicion_legal_franquicia-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+      "texto_nuevo": "Solo aplica si en Estados Unidos vendes o piensas vender franquicias, o acuerdos con terceros (licencias, distribución) que podrían serlo aunque no los llames así",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1160",
+        "frase": "simply calling something a license or a business opportunity does not make it so"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ],
   "fuentes_internas": [

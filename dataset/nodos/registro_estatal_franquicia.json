@@ -21,10 +21,29 @@
   ],
   "condiciones_activacion": [
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
-    "Cuando el FDD está listo y se planea expandir la venta de franquicias a múltiples estados"
+    "Cuando el FDD está listo y se planea vender franquicias en uno o varios estados"
   ],
   "etiqueta_arbol": "Cumple los Registros Estatales",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-frontera-registro_estatal_franquicia-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el FDD está listo y se planea expandir la venta de franquicias a múltiples estados",
+      "texto_nuevo": "Cuando el FDD está listo y se planea vender franquicias en uno o varios estados",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "2099-2111",
+        "frase": "If the franchisor is incorporated in the state"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    }
   ]
 }

@@ -18,8 +18,8 @@
     "protective_provisions"
   ],
   "condiciones_activacion": [
-    "Si vendes, o piensas vender, productos a clientes en Estados Unidos y ofreces una garantía sobre esos productos.",
-    "Cuando el texto de tu garantía menciona el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico."
+    "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos y ofreces una garantía escrita sobre esos productos.",
+    "Cuando el texto de tu garantía menciona o da a entender el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico."
   ],
   "etiqueta_arbol": "Evita Atar tu Garantía",
   "fuentes_internas": [
@@ -39,6 +39,40 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "condiciones-frontera-prohibicion_tie_in_sales-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el texto de tu garantía menciona el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico.",
+      "texto_nuevo": "Cuando el texto de tu garantía menciona o da a entender el uso obligatorio de repuestos, servicios o mantenimiento de un proveedor específico.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "344",
+        "frase": "provisions that state or imply that a consumer must buy or use an item"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "condiciones-frontera-prohibicion_tie_in_sales-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si vendes, o piensas vender, productos a clientes en Estados Unidos y ofreces una garantía sobre esos productos.",
+      "texto_nuevo": "Si vendes, o piensas vender, productos de consumo a clientes en Estados Unidos y ofreces una garantía escrita sobre esos productos.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "309-315",
+        "frase": "The Act covers only warranties on consumer products."
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

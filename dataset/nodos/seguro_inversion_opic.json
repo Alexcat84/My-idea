@@ -19,7 +19,7 @@
     "financiamiento_bancos_multilaterales_desarrollo"
   ],
   "condiciones_activacion": [
-    "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
+    "Tu empresa opera en Estados Unidos y planea una inversión directa en un país en desarrollo o un mercado emergente, como construir o equipar instalaciones allí",
     "Existe riesgo político significativo en el país destino de la inversión"
   ],
   "etiqueta_arbol": "Protege tu Inversión Externa",
@@ -57,6 +57,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro enumera tres instrumentos (seguro de riesgo político, garantías y préstamos directos); el paso omite los préstamos directos como opción.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-seguro_inversion_opic-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu empresa opera en Estados Unidos y planea construir o equipar instalaciones en un mercado emergente",
+      "texto_nuevo": "Tu empresa opera en Estados Unidos y planea una inversión directa en un país en desarrollo o un mercado emergente, como construir o equipar instalaciones allí",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4373",
+        "frase": "facilitates U.S. foreign direct investment in developing nations and emerging market economies"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

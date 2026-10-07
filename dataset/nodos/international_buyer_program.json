@@ -20,7 +20,7 @@
     "trade_fair_certification_program"
   ],
   "condiciones_activacion": [
-    "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte allí con compradores extranjeros"
+    "Si tu empresa es de Estados Unidos, expones o piensas exponer en una feria comercial en ese país y quieres reunirte allí con compradores extranjeros"
   ],
   "etiqueta_arbol": "Atrae Compradores en Ferias",
   "fuentes_internas": [
@@ -142,6 +142,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no promete reuniones agendadas en el IBP, solo oportunidades de reunión.; Mismo defecto: el resultado de reuniones ya agendadas es añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-international_buyer_program-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si expones o piensas exponer en una feria comercial en Estados Unidos y quieres reunirte allí con compradores extranjeros",
+      "texto_nuevo": "Si tu empresa es de Estados Unidos, expones o piensas exponer en una feria comercial en ese país y quieres reunirte allí con compradores extranjeros",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2251",
+        "frase": "As a U.S. exhibitor at an IBP event, you will receive"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

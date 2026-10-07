@@ -22,7 +22,7 @@
     "foreign_corrupt_practices_act"
   ],
   "condiciones_activacion": [
-    "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros países",
+    "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a países amigos de Estados Unidos o a empresas en listas negras",
     "Si tu negocio opera en Estados Unidos y hace negocios con países involucrados en boicots contra naciones amigas de Estados Unidos"
   ],
   "etiqueta_arbol": "Cumple las Reglas Antiboicot",
@@ -261,6 +261,23 @@
       },
       "decision": "procedencia (D1): sale la insinuacion de un origen ('esta fuente'), sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 12"
+    },
+    {
+      "id": "condiciones-frontera-antiboycott_regulations-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a terceros países",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y recibes solicitudes contractuales de socios o clientes extranjeros que exigen boicotear a países amigos de Estados Unidos o a empresas en listas negras",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2849-2851",
+        "frase": "refusing to do business with blacklisted companies and boycotted friendly countries"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

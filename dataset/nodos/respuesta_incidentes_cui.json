@@ -24,7 +24,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se implementan los requisitos de la familia Incident Response de SP 800-171",
-    "Si la organización tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad"
+    "Si la organización tiene contratos con el gobierno federal de Estados Unidos, o con otra organización como un contratista principal, que exigen proteger CUI y aún no tiene un plan formal de respuesta ante incidentes de seguridad"
   ],
   "etiqueta_arbol": "Prepárate para Responder Incidentes",
   "ids_alias": [
@@ -85,6 +85,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La lista del libro incluye regulaciones y acuerdos, que el nodo omite; la propuesta del lector se descarta porque cambia 'antes' por 'después'.; Mismo defecto; la propuesta también invierte 'antes' a 'después', contra el libro, y no se usa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-respuesta_incidentes_cui-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la organización tiene contratos con el gobierno federal de Estados Unidos que exigen proteger CUI y aun no tiene un plan formal de respuesta ante incidentes de seguridad",
+      "texto_nuevo": "Si la organización tiene contratos con el gobierno federal de Estados Unidos, o con otra organización como un contratista principal, que exigen proteger CUI y aún no tiene un plan formal de respuesta ante incidentes de seguridad",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "29",
+        "frase": "or possibly with other organizations like municipal governments, prime contractors, universities"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

@@ -1629,3 +1629,27 @@ Máquina en `auditoria-final-claves/medida4/medida4.py`.
   propio ni verbo de autoría. La prevalencia medida antes de corregir (9 %) es la cota para el resto del catálogo.
 - Lo que queda pendiente se decide con el fundador: si medir otra vez con semilla nueva después del barrido 2, o leer
   el catálogo entero solo para procedencia (unos 350 lotes; ver `docs/PROXIMOS_PASOS.md`).
+
+### 15.5 Punto 8: promesas no graves y condiciones de los nodos de otro país
+
+**Promesas:** los 28 hallazgos medios y bajos del informe de promesas públicas quedan corregidos en los 11 idiomas.
+- Hay guardas nuevas que impiden volver a cada promesa.
+- El precio del plan en la portada sale de `PRECIOS`.
+- Quedan para el visto: el nombre "Riesgos Bajo Control" y los mockups del canon (`promesas_publicas.md`, estado).
+
+**Condiciones de activación de los nodos-frontera de otro país** (clase C de `jurisdiccion.json`, 104 nodos vivos).
+Es el único campo de estos nodos que la etapa 1 no leyó contra el libro. Máquina en
+`auditoria-final-claves/condiciones/condiciones.py`.
+- **Lectura:** 8 lotes de 13 nodos, con dos lectores Opus por lote y las instrucciones del lector E1B, limitados a las
+  condiciones con `a_juzgar`.
+  - Cada lote llevaba un nodo trampa de clase B con una invención plantada en una condición.
+  - Cazaron 16 de 16 trampas.
+- **Marcas:** 103 defectos en 57 nodos.
+- **Arbitraje:** 4 árbitros (instrucciones E1B), sobre 61 elementos.
+  - Confirmados: 88 de matiz, 4 invenciones duras, 2 contrarios y 2 certezas endurecidas.
+  - Correcciones: 55 elementos, en modo devolver casi todos.
+- **Verificación ciega contra el libro:** de las 53 que traían palabras nuevas se sostienen 53, en 3 paquetes con 3 de
+  3 trampas cazadas.
+- **Aplicadas:** 55 correcciones en 52 nodos (tanda `condiciones-frontera`).
+- **Lo que no se leyó:** las condiciones de los nodos de clase B (123) y A (12). Un nodo B se reencuadra a lo
+  universal, así que sus condiciones no limitan a un país. Si se quiere, la misma máquina las lee cambiando la clase.

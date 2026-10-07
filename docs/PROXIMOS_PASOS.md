@@ -28,6 +28,10 @@ propio o con una decisión del fundador.
   - 7b: el extractor del juez de fidelidad, las condiciones nuevas de `coherencia.ts`, el contexto en `prioridad.ts`
     y la guarda de contexto en toda llamada.
   - 7c: `?ver=ocultos` comprueba quién eres (`FUNDADOR_EMAILS`).
+- **Punto 8:**
+  - las 28 promesas no graves, corregidas en 11 idiomas;
+  - las condiciones de los 104 nodos-frontera de otro país, leídas contra el libro: 55 correcciones verificadas a
+    ciegas.
 
 **El veredicto del dataset, sin adornos:**
 - **Contrarios e invenciones duras:** 0 en la muestra de la medida 3, con un residuo por nodo de 0 a 1,9 % al 95 %
@@ -54,7 +58,11 @@ propio o con una decisión del fundador.
      texto se edita el `.md` en `docs/legal/` y se corre `python scripts/sync_legal_web.py`.
 4. **`FUNDADOR_EMAILS`:** ponerla en Vercel y en el `.env` con el correo de la cuenta del fundador. Sin ella nadie ve
    los mundos ocultos, tampoco el fundador.
-5. **La licencia de IDEO.org** (CC BY-NC-ND 3.0) frente a la regla D1 y al uso comercial. Decide el fundador o un
+5. **Copy pendiente de visto:**
+   - el nombre "Riesgos Bajo Control", que da a entender control;
+   - "Tus cifras reales" en la compuerta de Tus Números;
+   - las promesas viejas en los mockups de `docs/diseno-canon/`, que son errata para Design.
+6. **La licencia de IDEO.org** (CC BY-NC-ND 3.0) frente a la regla D1 y al uso comercial. Decide el fundador o un
    abogado. No se retiró nada.
 
 ## 3. Qué gasta cada cosa, y en qué orden
@@ -154,8 +162,8 @@ catálogo.
 
 - **Retraducción a los diez idiomas** de cada etiqueta corregida, con su huella de vigencia. La guarda de vigencia de
   etiquetas avisa cuál quedó atrasada.
-- **Condiciones de los nodos-frontera de otro país** (ficha `condiciones-frontera-otro-pais`). Las condiciones de
-  activación de los nodos de normas de otro país, primero.
+- **Condiciones de los nodos de clase B y A.** Las de los nodos-frontera de otro país (clase C) se leyeron y
+  corrigieron el 7 oct (acta 15.5). Las de clase B y A quedan, y se leen con la misma máquina cambiando la clase.
 - **A mejora continua, con su ficha:** la ortografía y los calcos del resumen, las condiciones y el título.
 
 ## 8. Más adelante

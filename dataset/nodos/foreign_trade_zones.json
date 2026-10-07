@@ -19,7 +19,7 @@
     "customs_bonded_warehouses"
   ],
   "condiciones_activacion": [
-    "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación"
+    "Si tu empresa opera en Estados Unidos y exporta, en especial si importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación"
   ],
   "etiqueta_arbol": "Usa Zonas de Comercio Exterior",
   "fuentes_internas": [
@@ -72,6 +72,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que ordinariamente no se aplican cuotas a la exportación.; Mismo defecto: se quita el 'ordinariamente'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-frontera-foreign_trade_zones-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu empresa opera en Estados Unidos e importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+      "texto_nuevo": "Si tu empresa opera en Estados Unidos y exporta, en especial si importa materiales sujetos a aranceles para ensamblar o manufacturar productos destinados a reexportación",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2895",
+        "frase": "As an exporter, your company should also consider the customs privileges"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

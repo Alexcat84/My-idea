@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Si tu empresa es de Estados Unidos u opera allí y negocia con funcionarios de gobiernos extranjeros o partidos políticos",
-    "Si el usuario contrata agentes o distribuidores en el extranjero"
+    "Si tu empresa es de Estados Unidos, o actúa en su territorio, y contratas agentes o distribuidores en el extranjero"
   ],
   "etiqueta_arbol": "Evita Sobornos en el Extranjero",
   "fuentes_internas": [
@@ -136,6 +136,23 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-frontera-foreign_corrupt_practices_act-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el usuario contrata agentes o distribuidores en el extranjero",
+      "texto_nuevo": "Si tu empresa es de Estados Unidos, o actúa en su territorio, y contratas agentes o distribuidores en el extranjero",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "2863",
+        "frase": "it is unlawful for a U.S. person or company"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

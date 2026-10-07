@@ -32,7 +32,7 @@
   "condiciones_activacion": [
     "Si exportas desde Estados Unidos y necesitas reducir el riesgo comercial o político de una venta de exportación",
     "Si te falta capital de trabajo para producir o cumplir una orden de exportación",
-    "Si tu comprador en el extranjero necesita financiamiento a mediano o largo plazo para bienes de capital",
+    "Si tu comprador en el extranjero es solvente y necesita financiamiento a mediano o largo plazo para bienes de capital",
     "Si tu banco local es reacio a asumir el riesgo de cobro en mercados que no conoce"
   ],
   "etiqueta_arbol": "Asegura tu Crédito de Exportación",
@@ -275,6 +275,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La póliza respalda a bancos y prestamistas que financian a compradores extranjeros solventes; no es algo para lo que califique el exportador.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-frontera-programas_ex_im_bank-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu comprador en el extranjero necesita financiamiento a mediano o largo plazo para bienes de capital",
+      "texto_nuevo": "Si tu comprador en el extranjero es solvente y necesita financiamiento a mediano o largo plazo para bienes de capital",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4317",
+        "frase": "to make export loans to creditworthy foreign buyers of U.S. goods and services"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }

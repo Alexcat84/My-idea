@@ -23,7 +23,7 @@
   "condiciones_activacion": [
     "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
     "Cuando el franquiciador planea vender franquicias en múltiples estados",
-    "Cuando se identifica que el estado objetivo tiene leyes de registro o de oportunidad de negocio"
+    "Cuando se identifica que el estado objetivo tiene leyes de registro, de oportunidad de negocio o de relación"
   ],
   "etiqueta_arbol": "Cumple las Leyes Estatales",
   "fuentes_internas": [
@@ -95,6 +95,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice muchos estados (definición), ciertos estados (exenciones) y ocho estados (publicidad), no cada uno.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-frontera-cumplir_leyes_estatales_franquicia-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se identifica que el estado objetivo tiene leyes de registro o de oportunidad de negocio",
+      "texto_nuevo": "Cuando se identifica que el estado objetivo tiene leyes de registro, de oportunidad de negocio o de relación",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "179-185",
+        "frase": "And there are relationship laws governing what can and cannot be done"
+      },
+      "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
     }
   ]
 }
