@@ -13,7 +13,10 @@
 
 **Las guardas de contenido, como datos:** `dataset/metadata/guardas_contenido.json`, con versión. Se genera desde
 `web/lib/guardasContenido.ts` y `guardasContenido.test.ts` impide que diverjan. La forja lo copia para limpiar un pack
-con la misma vara que el catálogo.
+con la misma vara que el catálogo. Desde la versión 1.1.0 (7 oct 2026) trae también las pautas de procedencia
+(`web/lib/pautasProcedencia.ts`: prefijo y atribución genérica en once idiomas, método con persona y formas de nombre
+propio, cada una con sus fixtures), que son una sola fuente para `web/lib/procedencia.test.ts`,
+`engine/test_procedencia_nombres.py` y la aduana de la forja, y dice qué reglas de voz se aplican a un nodo.
 
 ## Reglas duras (fundador, 30 sep 2026): mandan sobre todas las demás
 

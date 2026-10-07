@@ -167,6 +167,14 @@ catálogo.
    - Primero pasan a `guardas_contenido.json` (prueba en rojo primero, versión nueva) y después se copian.
 4. **En la forja,** el gate rechaza un candidato que las incumpla. Su prueba va en rojo primero.
 
+**Avance del 7 oct 2026** (decisión del fundador: la forja hereda las reglas de contenido y de método de
+`docs/REGLAS_DE_LA_CASA.md`, y su aduana usa la copia versionada de `guardas_contenido.json`, con su prueba de versión):
+- Punto 3, hecho: `guardas_contenido.json` 1.1.0 trae las pautas de procedencia desde `web/lib/pautasProcedencia.ts`
+  (una sola fuente para las dos pruebas y la forja) y las reglas de voz que van a un nodo. Prueba en rojo primero.
+- Puntos 1, 2 y 4, hechos en `forja-nodos` (pendientes de commit allí): la copia en `config/guardas_contenido.json` con
+  su prueba de versión, la aduana que rechaza voz, glosario y procedencia (D.62 de su BANCO) y las reglas heredadas
+  (D.63: D1 a D6, C1 a C32 con la política C32 y R8, M1 a M19).
+
 ## 7. Resto de la etapa 2
 
 - **Retraducción a los diez idiomas** de cada etiqueta corregida, con su huella de vigencia. La guarda de vigencia de
