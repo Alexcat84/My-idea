@@ -2047,3 +2047,18 @@ Los pasos para retomar están en `docs/PROXIMOS_PASOS.md`, sección 8.
 
 **La copia fiel no queda certificada.** El residuo de copia en pasos baja con cada tanda de la vecindad, pero no se
 volvió a medir. La medida 7 vale para el estado anterior a h7, k29 y k30.
+
+### 15.18 Alto del fundador (8 oct 2026): el cierre del dataset queda para después
+
+El fundador detuvo los agentes del dataset. Cuando llegó el alto acababa de terminar la primera oleada de verificadores
+de la ola k31 (paquetes 01 a 20, todas las trampas cazadas). Esa oleada se terminó sin agentes: `tanda k31 parcial`
+aplica solo las propuestas de los paquetes ya verificados, 347 correcciones en 48 nodos, con 53 que no sostienen.
+
+Quedan para después:
+- los paquetes 21 a 96 de k31;
+- los 12 lotes V sin leer;
+- la reescritura r3;
+- la medida nueva.
+
+El orden y el aviso sobre los ids de la segunda tanda de k31 están en `docs/PROXIMOS_PASOS.md`, sección 8. La copia
+fiel sigue sin certificar.

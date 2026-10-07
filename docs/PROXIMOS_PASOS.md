@@ -266,12 +266,17 @@ rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412
   - **Máquina:** `auditoria-final-claves/copia/copia.py`. Las instrucciones de los agentes están en
     `auditoria-final/copia/`.
   - **Lo que queda, en este orden:**
-    1. **Verificar la ola k31 (ya leída, falta verificar).** Son 1.915 propuestas de 32 lotes de la vecindad, en 96
-       paquetes (`auditoria-final/copia/verif/paq_v_k31_01.json` a `_96.json`). Ningún verificador corrió todavía.
-       Esos lotes ya figuran en `verificados.json`, así que `verificacion` no los vuelve a empaquetar: se usan los
-       paquetes que ya existen. El encargo del verificador es el de siempre (`INSTRUCCIONES_VERIFICADOR.md`, salida
-       `verif_v_k31_NN.json`). Después: `python copia.py tanda k31`, aplicar, run_phase1, etiquetas, plan_readiness,
-       sync y commit.
+    1. **Terminar de verificar la ola k31.** La ola tiene 1.915 propuestas de 32 lotes de la vecindad, en 96
+       paquetes (`auditoria-final/copia/verif/paq_v_k31_01.json` a `_96.json`).
+       - El 8 oct 2026 se verificaron los paquetes 01 a 20, con todas sus trampas cazadas. Su tanda, construida con
+         `tanda k31 parcial`, está aplicada en `copia-k31.json`: 347 correcciones en 48 nodos y 53 que no sostienen.
+       - Faltan los paquetes 21 a 96. Esos lotes ya figuran en `verificados.json`, así que se usan los paquetes que
+         ya existen. El encargo del verificador es el de siempre: `INSTRUCCIONES_VERIFICADOR.md`, con salida
+         `verif_v_k31_NN.json`.
+       - **OJO al construir la segunda tanda:** `tanda k31` reescribe `copia-k31.json`, y sus ids chocan con los ya
+         aplicados, así que el aplicador rechazaría la tanda entera. Hay que copiar los paquetes 21 a 96 bajo un nombre
+         de ola nuevo, por ejemplo `k31b` (paquetes y `verif_trampas`), o filtrar de la salida los ids ya aplicados.
+         Después se aplica y se corren run_phase1, etiquetas, plan_readiness, sync y commit.
     2. **Leer los 12 lotes de vecindad que quedaron sin leer:** V063, V067, V075, V076, V078, V079 y V081 a V086. Se
        pararon a medias y no dejaron salida. El encargo del lector va en `docs/ACTA_SANEAMIENTO_FINAL.md` 15.16:
        `INSTRUCCIONES_LECTOR.md` más la vara de la medida. Después: `verificacion k32`, verificadores, `tanda k32` y
