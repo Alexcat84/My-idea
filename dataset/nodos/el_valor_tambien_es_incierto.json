@@ -25,7 +25,7 @@
     "cuando justificas un riesgo con un beneficio que asumes sin medir",
     "cuando tu proyección de ventas es un solo número optimista"
   ],
-  "etiqueta_arbol": "El Valor También Es Incierto",
+  "etiqueta_arbol": "Estima el Valor como un Rango",
   "fuentes_internas": [
     "DeMarco y Lister, Waltzing with Bears"
   ],
@@ -96,6 +96,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-el_valor_tambien_es_incierto-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "El Valor También Es Incierto",
+      "texto_nuevo": "Estima el Valor como un Rango",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "El Valor También Es Incierto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Preguntar: '¿Cuál es el mayor dolor en cómo trabajas?'",
     "Preguntar: 'Si pudieras cambiar algo con una varita mágica, ¿qué sería?'",
-    "Preguntar casualmente cuánto le cuesta este problema al cliente en términos monetarios o de tiempo",
+    "Preguntar de pasada cuánto le cuesta este problema al cliente en términos monetarios o de tiempo",
     "Registrar la respuesta para usarla luego en la presentación de validación de clientes"
   ],
   "entregable_esperado": "Lista de dolores priorizados por cliente con estimación de costo asociado a cada problema",
@@ -43,6 +43,23 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 1
+    },
+    {
+      "id": "voz-preguntas_ipo_dolor_cliente-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntar casualmente cuánto le cuesta este problema al cliente en términos monetarios o de tiempo",
+      "texto_nuevo": "Preguntar de pasada cuánto le cuesta este problema al cliente en términos monetarios o de tiempo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "casualmente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

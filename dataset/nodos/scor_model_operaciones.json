@@ -6,11 +6,11 @@
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El modelo SCOR (Supply Chain Operations Reference) es un marco estandarizado y reconocido mundialmente para analizar y mejorar el desempeño de la cadena de suministro. Organiza las operaciones en seis procesos de alto nivel: Planificar, Abastecer, Fabricar, Entregar, Devolver y Habilitar. Provee un lenguaje común, métricas estándar (KPIs de confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos) y permite benchmarking entre empresas. La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales. Su contra es la complejidad creciente: cuesta más entenderlo y adaptarlo, y pide más datos y capacitación.",
   "pasos_accionables": [
-    "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
-    "Definir métricas KPI de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlas con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
+    "Mapear las operaciones actuales de tu empresa según las categorías Planificar, Abastecer, Fabricar y Entregar (y Devolver y Habilitar si corresponde)",
+    "Definir indicadores clave de desempeño (KPI) de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlos con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
     "Comparar (benchmark) tu desempeño contra estándares de la industria",
     "Identificar cuellos de botella u operaciones no optimizadas usando el marco común",
-    "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)",
+    "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de devoluciones)",
     "Cuando se detecten desviaciones, profundizar con métricas de diagnóstico de nivel 3",
     "Vincular cada operación con la categoría de desempeño que más impacta (servicio, eficiencia, flexibilidad, desarrollo)"
   ],
@@ -30,7 +30,7 @@
     "Cuando se planea escalar operaciones y se requiere un lenguaje común entre equipos",
     "Si hay problemas recurrentes en la cadena de suministro (abastecimiento, fabricación, entrega o devoluciones) sin causa raíz identificada"
   ],
-  "etiqueta_arbol": "Estandariza tu Desempeño Logístico",
+  "etiqueta_arbol": "Evalúa tu Desempeño Logístico con Estándares",
   "ids_alias": [
     "framework_scor_plan_source_make_deliver"
   ],
@@ -117,6 +117,73 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro señala como límite del modelo su complejidad creciente, que lo hace más difícil de entender y adaptar y exige más datos y capacitación.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-scor_model_operaciones-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Estandariza tu Desempeño Logístico",
+      "texto_nuevo": "Evalúa tu Desempeño Logístico con Estándares",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v17)",
+        "evidencia": "'Estandariza tu desempeño' promete uniformarlo, pero el concepto es un marco estándar para analizar y mejorar el desempeño de la cadena; se cambia solo el verbo y se nombra el estándar."
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-scor_model_operaciones-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear las operaciones actuales de tu empresa según las categorías Plan-Source-Make-Deliver (y Return/Enable si aplica)",
+      "texto_nuevo": "Mapear las operaciones actuales de tu empresa según las categorías Planificar, Abastecer, Fabricar y Entregar (y Devolver y Habilitar si corresponde)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Plan-Source-Make-Deliver",
+          "Return/Enable",
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-scor_model_operaciones-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir métricas KPI de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlas con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
+      "texto_nuevo": "Definir indicadores clave de desempeño (KPI) de nivel 1 para la cadena en su conjunto (confiabilidad, capacidad de respuesta, agilidad, costo y gestión de activos), sin confundirlos con las categorías de proceso: los niveles 2 y 3 son los que desglosan esos KPI",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "métricas KPI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-scor_model_operaciones-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de retorno)",
+      "texto_nuevo": "Definir métricas de nivel 2 para cada categoría (ej. costo de planificación, tiempo de ciclo de abastecimiento, defectos de producto, tasa de devoluciones)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tasa de retorno"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

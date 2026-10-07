@@ -7,12 +7,12 @@
   "resumen_teorico": "La innovación de productos debe gestionarse como un proceso, aplicando principios de gestión de calidad total (TQM) para eliminar errores de ejecución. Muchas fallas de nuevos productos están muy ligadas a omisiones de pasos clave y a una ejecución deficiente. El objetivo es lograr completitud (ningún paso omitido), calidad (hacerlo bien a la primera, DIRTFT) y foco en las actividades críticas, especialmente las de front-end y las orientadas al mercado. Además de mapear y controlar el proceso, conviene revisar después de cada proyecto qué causó los fallos de ejecución, para cerrar la brecha entre lo planificado y lo realmente hecho, y dirigir los recursos hacia las etapas más débiles y pivotales del recorrido idea-lanzamiento.",
   "pasos_accionables": [
     "Mapea el proceso completo de idea a lanzamiento identificando todas las actividades necesarias",
-    "Verifica que no falten actividades críticas como VoC, homework o planificación de lanzamiento",
-    "Define controles de calidad o checkpoints en cada etapa del proceso",
-    "Prioriza tu tiempo y recursos en las etapas de front-end y validación de mercado, que suelen ser las más débiles",
+    "Verifica que no falten actividades críticas como voz del cliente, trabajo previo o planificación de lanzamiento",
+    "Define controles de calidad o puntos de control en cada etapa del proceso",
+    "Prioriza tu tiempo y recursos en las etapas iniciales y de validación de mercado, que suelen ser las más débiles",
     "Haz una revisión post mortem al cerrar cada proyecto para identificar por qué fallaron pasos de ejecución"
   ],
-  "entregable_esperado": "Un mapa de proceso de innovación con checklist de completitud, controles de calidad por etapa y métricas de cumplimiento.",
+  "entregable_esperado": "Un mapa de proceso de innovación con lista de verificación de completitud, controles de calidad por etapa y métricas de cumplimiento.",
   "nodos_previos": [
     "estrategia_innovacion_producto",
     "cultura_de_optimismo",
@@ -65,6 +65,74 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro liga las omisiones y la mala ejecución a los fracasos, pero no dice que no se deban a falta de ideas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-calidad_de_ejecucion_proceso_innovacion-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verifica que no falten actividades críticas como VoC, homework o planificación de lanzamiento",
+      "texto_nuevo": "Verifica que no falten actividades críticas como voz del cliente, trabajo previo o planificación de lanzamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VoC",
+          "homework"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calidad_de_ejecucion_proceso_innovacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define controles de calidad o checkpoints en cada etapa del proceso",
+      "texto_nuevo": "Define controles de calidad o puntos de control en cada etapa del proceso",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checkpoints"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calidad_de_ejecucion_proceso_innovacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prioriza tu tiempo y recursos en las etapas de front-end y validación de mercado, que suelen ser las más débiles",
+      "texto_nuevo": "Prioriza tu tiempo y recursos en las etapas iniciales y de validación de mercado, que suelen ser las más débiles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de front-end"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calidad_de_ejecucion_proceso_innovacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa de proceso de innovación con checklist de completitud, controles de calidad por etapa y métricas de cumplimiento.",
+      "texto_nuevo": "Un mapa de proceso de innovación con lista de verificación de completitud, controles de calidad por etapa y métricas de cumplimiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

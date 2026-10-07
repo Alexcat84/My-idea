@@ -8,8 +8,8 @@
     "Proyectar los flujos de efectivo futuros esperados de la inversión",
     "Definir la tasa de descuento (hurdle rate) de la empresa",
     "Aplicar la ecuación de descuento usando esa tasa para traer cada flujo futuro a valor presente, porque cualquier dinero que esperas recibir en el futuro tienes que descontarlo para poder compararlo con el efectivo que tienes hoy",
-    "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
-    "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
+    "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el valor presente neto",
+    "Aceptar la inversión si el valor presente neto es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor valor presente neto positivo",
     "Realizar un análisis de sensibilidad usando 80-90% de las proyecciones originales para probar la robustez de la decisión"
   ],
   "entregable_esperado": "Cifra de valor presente neto en dólares, con supuestos y análisis de sensibilidad documentados, que indique si la inversión agrega valor real a la empresa",
@@ -102,6 +102,40 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-metodo_valor_presente_neto-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el NPV",
+      "texto_nuevo": "Sumar los valores presentes de todos los flujos futuros y restar el desembolso inicial para obtener el valor presente neto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-metodo_valor_presente_neto-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aceptar la inversión si el NPV es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor NPV positivo",
+      "texto_nuevo": "Aceptar la inversión si el valor presente neto es positivo, rechazarla si es negativo; entre proyectos alternativos, elegir el de mayor valor presente neto positivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

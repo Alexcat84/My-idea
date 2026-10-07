@@ -6,11 +6,11 @@
   "fuente": "The Lean Startup - Eric Ries",
   "resumen_teorico": "Todo negocio que arrancas parte de una serie de suposiciones. La mayoría son hechos ya establecidos, pero unas pocas, las más riesgosas y de las que depende todo tu éxito, son los supuestos de salto de fe. No puedes probarlos de antemano: tienes que actuar como si fueran ciertos y diseñar pruebas para verificarlos lo antes posible. Los dos supuestos de salto de fe más importantes son la hipótesis de valor y la hipótesis de crecimiento.",
   "pasos_accionables": [
-    "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero",
+    "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y la hoja de cálculo financiera",
     "Identifica cuáles suposiciones son de bajo riesgo y cuáles son verdaderos saltos de fe",
     "Reescribe tus comparaciones con otros negocios en términos concretos y verificables, evitando analogías que te oculten el riesgo real",
     "Ordena tus supuestos según el riesgo que representan para que tu negocio funcione",
-    "Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo"
+    "Diseñar experimentos específicos para validar cada supuesto de salto de fe antes de construir el producto completo"
   ],
   "entregable_esperado": "Lista priorizada de tus supuestos de salto de fe, separados de los hechos comprobados de tu plan",
   "nodos_previos": [
@@ -45,5 +45,41 @@
   ],
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-leap_of_faith_assumptions-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y el spreadsheet financiero",
+      "texto_nuevo": "Revisa tu plan y separa los hechos comprobados de las suposiciones que aún no has verificado, incluidos el modelo de negocio y la hoja de cálculo financiera",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "spreadsheet financiero"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-leap_of_faith_assumptions-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar experimentos específicos para validar cada leap-of-faith question antes de construir el producto completo",
+      "texto_nuevo": "Diseñar experimentos específicos para validar cada supuesto de salto de fe antes de construir el producto completo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leap-of-faith question"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

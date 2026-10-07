@@ -6,7 +6,7 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Fijar metas numéricas arbitrarias (como un presupuesto de retrabajo del 6% o cuotas de producción diaria) sin comprender la capacidad real del sistema no mejora el desempeño; simplemente se convierte en un techo, no en un incentivo de mejora. La gestión por objetivos (MBO) y por números ignora la variación natural del sistema y genera presión que distorsiona los datos por miedo, en lugar de mejora real.",
   "pasos_accionables": [
-    "Identificar todos los objetivos numéricos fijos impuestos actualmente en la organización (cuotas, presupuestos de rework, metas de ventas)",
+    "Identificar todos los objetivos numéricos fijos impuestos actualmente en la organización (cuotas, presupuestos de retrabajo, metas de ventas)",
     "Evaluar si estos objetivos están basados en la capacidad real del proceso o son arbitrarios",
     "Reemplazar metas numéricas fijas por conocimiento del proceso y liderazgo competente",
     "Capacitar a supervisores para diagnosticar variación del sistema en vez de exigir cifras"
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "No Fijes Metas Arbitrarias",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-eliminacion_gestion_por_objetivos_y_numeros-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar todos los objetivos numéricos fijos impuestos actualmente en la organización (cuotas, presupuestos de rework, metas de ventas)",
+      "texto_nuevo": "Identificar todos los objetivos numéricos fijos impuestos actualmente en la organización (cuotas, presupuestos de retrabajo, metas de ventas)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "presupuestos de rework"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

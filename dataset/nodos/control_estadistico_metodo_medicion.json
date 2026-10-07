@@ -6,7 +6,7 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Ninguna medición, visual, manual o instrumental, puede considerarse confiable a menos que el sistema completo (instrumento y operador) esté en control estadístico. No basta con tener un buen equipo: la precisión del método exige que las mediciones repetidas del mismo ítem sean estables (dentro de un R-chart aceptable) y reproducibles entre distintos operadores o instrumentos, sin importar el costo del equipo de prueba. Si no logras esta estabilidad y reproducibilidad, no puedes atribuir precisión, buena o mala, a ningún método de medición, y debes descartarlo antes de usarlo para producción o inspección.",
   "pasos_accionables": [
-    "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
+    "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un gráfico de rangos (R).",
     "Verifica que el rango de variación se mantenga dentro de límites de control estadístico y que su nivel no sea tan grande que la precisión no alcance para el uso.",
     "Compara resultados entre diferentes operadores usando el mismo instrumento para detectar inconsistencias.",
     "Compara resultados entre diferentes instrumentos usados por el mismo operador.",
@@ -90,6 +90,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el control estadístico solo no basta: el nivel del R-chart no debe ser demasiado grande.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-control_estadistico_metodo_medicion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un R-chart.",
+      "texto_nuevo": "Realiza mediciones repetidas del mismo ítem con el mismo operador e instrumento y grafícalas en un gráfico de rangos (R).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un R-chart"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -7,12 +7,12 @@
   "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante los métodos de valor de transacción, Build-Up, Build-Down o Net Cost según el producto y el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-    "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
-    "Calcular el Regional Value Content del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o Net Cost) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
+    "Determinar por cuál de las cuatro vías del Artículo 401 el producto es originario: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
+    "Calcular el valor de contenido regional del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o costo neto) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
     "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA), en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen, de modo que esté en poder del importador cuando reclame la preferencia",
     "Conservar la documentación de respaldo sobre cómo calificó el producto, en caso de auditoría aduanera, y tenerla disponible para el importador; la mayoría de los tratados exigen guardarla hasta 5 años"
   ],
-  "entregable_esperado": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
+  "entregable_esperado": "Certificado de Origen firmado y cálculo del valor de contenido regional documentado que respalde el trato arancelario preferencial",
   "nodos_previos": [
     "documentacion_exportacion",
     "import_regulations_foreign_governments"
@@ -200,6 +200,57 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la mayoría de los acuerdos exigen conservar hasta 5 años; el T-MEC, los mínimos, las fechas de inicio y los seis años de Canadá no están.; Mismo defecto: plazos y fechas de inicio ajenos al libro.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-certificado_de_origen_tratados_libre_comercio-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar por cuál de las cuatro vías del Artículo 401 origina el producto: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
+      "texto_nuevo": "Determinar por cuál de las cuatro vías del Artículo 401 el producto es originario: obtenido enteramente en la región, conforme a la regla específica del Anexo 401 (cambio de clasificación arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o, si es un bien sin ensamblar o cuyo contenido no cumple la regla del Anexo 401, con el valor de contenido regional exigido",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "origina el producto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-certificado_de_origen_tratados_libre_comercio-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el Regional Value Content del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o Net Cost) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
+      "texto_nuevo": "Calcular el valor de contenido regional del producto según el método que corresponda al producto y al tratado (valor de transacción, Build-Up, Build-Down o costo neto) y compararlo con el porcentaje que fije su regla de origen; en el NAFTA, para la cuarta vía, 60% por el método de valor de transacción o 50% por el de costo neto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Regional Value Content",
+          "Net Cost"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-certificado_de_origen_tratados_libre_comercio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
+      "texto_nuevo": "Certificado de Origen firmado y cálculo del valor de contenido regional documentado que respalde el trato arancelario preferencial",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cálculo de RVC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

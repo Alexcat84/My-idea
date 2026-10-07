@@ -6,12 +6,12 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Proceso sistemático para gestionar exposiciones al riesgo cibernético, amenazas y vulnerabilidades en toda la cadena de suministro, desarrollando estrategias de respuesta ante riesgos presentados por proveedores, productos o servicios suministrados.",
   "pasos_accionables": [
-    "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten CUI o que les suministran componentes.",
-    "Definir la frecuencia de revisión y actualización del plan SCRM.",
+    "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten información controlada no clasificada (CUI) o que les suministran componentes.",
+    "Definir la frecuencia de revisión y actualización del plan de gestión de riesgos de la cadena de suministro.",
     "Identificar riesgos en desarrollo, diseño, manufactura, adquisición, entrega, integración, operación, mantenimiento y desecho del sistema, sus componentes o servicios.",
     "Establecer políticas para evaluar proveedores antes de la compra o contratación de servicios.",
     "Definir acciones de respuesta ante incidentes de la cadena de suministro y proveedores alternativos.",
-    "Establecer estrategia de monitoreo de desempeño frente al plan SCRM."
+    "Establecer estrategia de monitoreo de desempeño frente al plan de gestión de riesgos de la cadena de suministro."
   ],
   "entregable_esperado": "Plan de gestión de riesgo de cadena de suministro documentado con lista de proveedores críticos y estrategias de respuesta.",
   "nodos_previos": [
@@ -135,6 +135,57 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_supply_chain_risk_management-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten CUI o que les suministran componentes.",
+      "texto_nuevo": "Identificar proveedores críticos con acceso a sistemas que procesan, almacenan o transmiten información controlada no clasificada (CUI) o que les suministran componentes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "transmiten CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_supply_chain_risk_management-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir la frecuencia de revisión y actualización del plan SCRM.",
+      "texto_nuevo": "Definir la frecuencia de revisión y actualización del plan de gestión de riesgos de la cadena de suministro.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "plan SCRM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_supply_chain_risk_management-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer estrategia de monitoreo de desempeño frente al plan SCRM.",
+      "texto_nuevo": "Establecer estrategia de monitoreo de desempeño frente al plan de gestión de riesgos de la cadena de suministro.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "plan SCRM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

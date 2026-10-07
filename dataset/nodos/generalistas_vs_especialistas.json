@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar qué funciones del negocio siguen siendo inciertas/fluidas y priorizar generalistas allí",
     "Determinar qué funciones ya están estabilizadas y comenzar a contratar especialistas para ellas",
-    "Evitar contratar especialistas rígidos (ej. VP de ventas experimentado) antes de que el producto/mercado esté validado",
+    "Evitar contratar especialistas rígidos (ej. vicepresidente de ventas experimentado) antes de que el producto/mercado esté validado",
     "Revisar periódicamente qué funciones han pasado de fluidas a formalizadas para ajustar el perfil de contratación"
   ],
   "entregable_esperado": "Matriz de funciones del negocio clasificadas por nivel de madurez/incertidumbre con perfil de contratación recomendado (generalista/especialista)",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Contrata Generalistas al Inicio",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-generalistas_vs_especialistas-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar contratar especialistas rígidos (ej. VP de ventas experimentado) antes de que el producto/mercado esté validado",
+      "texto_nuevo": "Evitar contratar especialistas rígidos (ej. vicepresidente de ventas experimentado) antes de que el producto/mercado esté validado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

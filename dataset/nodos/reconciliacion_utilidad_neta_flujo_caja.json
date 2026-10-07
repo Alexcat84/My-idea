@@ -13,7 +13,7 @@
     "Ajustar por dividendos pagados y cambios en deuda de largo plazo",
     "Verificar que el resultado coincida con el cambio real en la línea de caja del balance"
   ],
-  "entregable_esperado": "Tabla de ajustes que reconcilia la utilidad neta con el cambio real en efectivo",
+  "entregable_esperado": "Tabla de ajustes que concilia la utilidad neta con el cambio real en efectivo",
   "nodos_previos": [
     "estado_flujo_de_caja_tres_categorias"
   ],
@@ -78,6 +78,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro resta las disminuciones de pasivos (cuentas por pagar que bajan).; Mismo caso contrario perdido.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-reconciliacion_utilidad_neta_flujo_caja-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tabla de ajustes que reconcilia la utilidad neta con el cambio real en efectivo",
+      "texto_nuevo": "Tabla de ajustes que concilia la utilidad neta con el cambio real en efectivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reconcilia"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

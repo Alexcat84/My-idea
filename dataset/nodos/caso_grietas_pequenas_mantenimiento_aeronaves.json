@@ -11,7 +11,7 @@
     "Prohibir o limitar que un supervisor firme como completado su propio trabajo técnico",
     "Revisar diferencias de prácticas de trabajo entre unidades que ocasionalmente colaboran (ej. línea vs base de mantenimiento)"
   ],
-  "entregable_esperado": "Informe de causas raíz del near-miss con recomendaciones específicas de control de dotación y traspaso de turnos",
+  "entregable_esperado": "Informe de causas raíz del casi accidente con recomendaciones específicas de control de dotación y traspaso de turnos",
   "nodos_previos": [
     "fallas_activas_condiciones_latentes",
     "defensas_en_profundidad_3"
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Cuida los Pequeños Detalles",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-caso_grietas_pequenas_mantenimiento_aeronaves-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Informe de causas raíz del near-miss con recomendaciones específicas de control de dotación y traspaso de turnos",
+      "texto_nuevo": "Informe de causas raíz del casi accidente con recomendaciones específicas de control de dotación y traspaso de turnos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "near-miss"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

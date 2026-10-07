@@ -7,13 +7,13 @@
   "resumen_teorico": "Los meetups pequeños te sirven muchísimo cuando arrancas: te permiten validar si hay interés real en tu mercado gastando poco, antes de meterte en eventos grandes. Te sirven como prueba piloto para ver si existe una comunidad genuina alrededor de tu producto o tu industria, y pueden convertirse en una comunidad duradera que sostenga tu crecimiento a largo plazo.",
   "pasos_accionables": [
     "Busca un vacío de comunidad en tu industria: algo que nadie más esté haciendo",
-    "Organiza tu primer meetup con el gasto mínimo posible (por ejemplo, solo pizza; pregunta el precio en tu mercado)",
+    "Organiza tu primer encuentro con el gasto mínimo posible (por ejemplo, solo pizza; pregunta el precio en tu mercado)",
     "Usa plataformas como Meetup.com para organizarlo y encontrar a tu audiencia",
     "Mide el interés real fijándote en la asistencia y en cómo crece el grupo de forma orgánica",
     "Si ves que la gente responde, formaliza el grupo y hazlo recurrente",
-    "Usa el meetup para recoger comentarios directos de tus usuarios potenciales"
+    "Usa el encuentro para recoger comentarios directos de tus usuarios potenciales"
   ],
-  "entregable_esperado": "Un meetup piloto que ya hiciste, con la asistencia y el crecimiento del grupo documentados",
+  "entregable_esperado": "Un encuentro piloto que ya hiciste, con la asistencia y el crecimiento del grupo documentados",
   "nodos_previos": [
     "eventos_offline_como_canal_traccion"
   ],
@@ -25,8 +25,76 @@
     "Si quieres validar si hay interés en el mercado antes de crecer",
     "Si todavía no existe una comunidad organizada en tu industria"
   ],
-  "etiqueta_arbol": "Valida con Meetups Pequeños",
+  "etiqueta_arbol": "Valida con Encuentros Pequeños",
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-meetups_bootstrapping_comunidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Valida con Meetups Pequeños",
+      "texto_nuevo": "Valida con Encuentros Pequeños",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Meetups"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-meetups_bootstrapping_comunidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organiza tu primer meetup con el gasto mínimo posible (por ejemplo, solo pizza; pregunta el precio en tu mercado)",
+      "texto_nuevo": "Organiza tu primer encuentro con el gasto mínimo posible (por ejemplo, solo pizza; pregunta el precio en tu mercado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "primer meetup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-meetups_bootstrapping_comunidad-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el meetup para recoger comentarios directos de tus usuarios potenciales",
+      "texto_nuevo": "Usa el encuentro para recoger comentarios directos de tus usuarios potenciales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el meetup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-meetups_bootstrapping_comunidad-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un meetup piloto que ya hiciste, con la asistencia y el crecimiento del grupo documentados",
+      "texto_nuevo": "Un encuentro piloto que ya hiciste, con la asistencia y el crecimiento del grupo documentados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "meetup piloto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

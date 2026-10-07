@@ -7,12 +7,12 @@
   "resumen_teorico": "Tras el cierre de una adquisición persisten temas como el manejo de escrow, earn-outs, ajustes de capital de trabajo y litigios sobre reps and warranties. El shareholder representative es la persona designada para gestionar estos asuntos en nombre de todos los antiguos accionistas del vendedor, generalmente sin compensación, lo cual puede convertirse en una carga significativa de tiempo y riesgo legal si surgen disputas.",
   "pasos_accionables": [
     "Negociar en el acuerdo de fusión un fondo (pool) de dinero destinado a que el representante pueda contratar profesionales",
-    "Evitar designar como shareholder rep a alguien que seguirá trabajando para el comprador post-transacción",
-    "Desconfiar de dejar el rol a un VC involucrado, porque puede no darle la atención que exige ni entender bien sus dinámicas legales",
+    "Evitar designar como representante de los accionistas a alguien que seguirá trabajando para el comprador post-transacción",
+    "Desconfiar de dejar el rol a un fondo de capital de riesgo involucrado, porque puede no darle la atención que exige ni entender bien sus dinámicas legales",
     "Considerar contratar un servicio profesional especializado (ej. SRS Acquiom) en lugar de asignar el rol a un individuo interno",
-    "Establecer un escrow separado exclusivamente para cubrir gastos del representante"
+    "Establecer una cuenta de garantía separada exclusivamente para cubrir gastos del representante"
   ],
-  "entregable_esperado": "Designación formal del shareholder representative con presupuesto asignado y cláusulas de protección en el acuerdo de fusión",
+  "entregable_esperado": "Designación formal del representante de los accionistas con presupuesto asignado y cláusulas de protección en el acuerdo de fusión",
   "nodos_previos": [
     "registration_rights_stock_consideration"
   ],
@@ -59,6 +59,73 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c01): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-shareholder_representative_role-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar designar como shareholder rep a alguien que seguirá trabajando para el comprador post-transacción",
+      "texto_nuevo": "Evitar designar como representante de los accionistas a alguien que seguirá trabajando para el comprador post-transacción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "shareholder rep"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-shareholder_representative_role-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desconfiar de dejar el rol a un VC involucrado, porque puede no darle la atención que exige ni entender bien sus dinámicas legales",
+      "texto_nuevo": "Desconfiar de dejar el rol a un fondo de capital de riesgo involucrado, porque puede no darle la atención que exige ni entender bien sus dinámicas legales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-shareholder_representative_role-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un escrow separado exclusivamente para cubrir gastos del representante",
+      "texto_nuevo": "Establecer una cuenta de garantía separada exclusivamente para cubrir gastos del representante",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un escrow separado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-shareholder_representative_role-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Designación formal del shareholder representative con presupuesto asignado y cláusulas de protección en el acuerdo de fusión",
+      "texto_nuevo": "Designación formal del representante de los accionistas con presupuesto asignado y cláusulas de protección en el acuerdo de fusión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "shareholder representative"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

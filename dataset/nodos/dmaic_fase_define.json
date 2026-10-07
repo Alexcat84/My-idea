@@ -11,7 +11,7 @@
     "Dibuja un mapa SIPOC para definir los límites de tu proceso",
     "Confirma el alcance, los recursos y el objetivo medible de tu proyecto"
   ],
-  "entregable_esperado": "Charter confirmado, voz del cliente documentada, requisitos CTQ definidos y mapa SIPOC elaborado",
+  "entregable_esperado": "Acta del proyecto confirmada, voz del cliente documentada, requisitos CTQ definidos y mapa SIPOC elaborado",
   "nodos_previos": [
     "dmaic_fase_select",
     "roles_equipo_proyecto_six_sigma"
@@ -39,6 +39,22 @@
         "evidencia": "F29-023: La fase Define de DMAIC delimita un proyecto de mejora de un proceso existente, lo que es mejora de lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-dmaic_fase_define-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Charter confirmado, voz del cliente documentada, requisitos CTQ definidos y mapa SIPOC elaborado",
+      "texto_nuevo": "Acta del proyecto confirmada, voz del cliente documentada, requisitos CTQ definidos y mapa SIPOC elaborado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Charter confirmado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

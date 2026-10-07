@@ -13,7 +13,7 @@
     "Calcular el costo neto operativo anual y el costo anualizado de inversiones únicas",
     "Sumar ambos para obtener el costo total anual y clasificar las alternativas"
   ],
-  "entregable_esperado": "Tabla comparativa de alternativas con su análisis beneficio/costo y ranking",
+  "entregable_esperado": "Tabla comparativa de alternativas con su análisis beneficio/costo y clasificación",
   "nodos_previos": [
     "diagrama_causa_efecto"
   ],
@@ -57,6 +57,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta el paso 4 del procedimiento: estimar cuánto del problema elimina cada remedio o, si no, ordenar su impacto.; Mismo defecto, misma evidencia.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-analisis_beneficio_costo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tabla comparativa de alternativas con su análisis beneficio/costo y ranking",
+      "texto_nuevo": "Tabla comparativa de alternativas con su análisis beneficio/costo y clasificación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "y ranking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

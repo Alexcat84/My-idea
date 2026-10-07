@@ -7,7 +7,7 @@
   "resumen_teorico": "Prácticas generales para proteger a los operadores de puntos de operación, partes rotativas, chispas y otros peligros mecánicos, incluyendo anclaje de máquinas, guardas, interruptores de apagado de emergencia y mantenimiento preventivo.",
   "pasos_accionables": [
     "Anclar máquinas fijas para prevenir volcamientos o movimientos.",
-    "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso o del nivel de trabajo.",
+    "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas a menos de 7 pies del piso o del nivel de trabajo.",
     "Proveer interruptores de apagado de emergencia de color rojo al alcance del operador.",
     "Capacitar a los trabajadores en métodos seguros de operación de maquinaria.",
     "Implementar un programa de inspección regular de seguridad de maquinaria y equipos."
@@ -61,6 +61,23 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro mide los 7 pies desde el piso o el nivel de trabajo; se cae el nivel de trabajo.; Mismo defecto.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-machinery_equipment_safety-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas dentro de 7 pies del piso o del nivel de trabajo.",
+      "texto_nuevo": "Instalar guardas en puntos de operación, engranajes y cadenas en movimiento, y en poleas y correas a menos de 7 pies del piso o del nivel de trabajo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dentro de 7 pies del piso"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

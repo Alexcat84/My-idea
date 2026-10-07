@@ -6,11 +6,11 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Cuando una empresa ha levantado múltiples rondas (Series A, B, etc.), existen dos enfoques principales para ordenar las liquidation preferences entre series: (1) Apiladas (stacked) - la serie más reciente (ej. Serie B) recibe su preferencia completa antes que las series anteriores (ej. Serie A); (2) Pari passu o mezcladas (blended) - todas las series comparten proporcionalmente según su capital invertido hasta satisfacer las preferencias. Esta decisión impacta drásticamente la distribución en escenarios de venta bajos.",
   "pasos_accionables": [
-    "Identificar qué enfoque (apilado o blended) se está proponiendo en el term sheet de la nueva ronda.",
+    "Identificar qué enfoque (apilado o mezclado) se está proponiendo en la hoja de términos de la nueva ronda.",
     "Modelar el impacto de cada enfoque en escenarios de venta bajos donde la preferencia de liquidación domina la distribución.",
     "Negociar considerando el poder relativo de negociación de cada serie de inversionistas, la posibilidad de tu empresa de conseguir financiamiento en otro lado y la estructura de capital existente."
   ],
-  "entregable_esperado": "Un modelo de cap table con escenarios de distribución de proceeds bajo enfoque apilado y bajo enfoque blended.",
+  "entregable_esperado": "Un modelo de tabla de capitalización con escenarios de distribución de lo obtenido en la venta bajo enfoque apilado y bajo enfoque mezclado.",
   "nodos_previos": [
     "preferencia_de_liquidacion",
     "participacion_preferente"
@@ -44,6 +44,42 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye entre los factores la posibilidad de la empresa de conseguir financiamiento en otro lado.; Misma omisión de ese factor.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-preferencias_apiladas_vs_blended-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar qué enfoque (apilado o blended) se está proponiendo en el term sheet de la nueva ronda.",
+      "texto_nuevo": "Identificar qué enfoque (apilado o mezclado) se está proponiendo en la hoja de términos de la nueva ronda.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "blended",
+          "el term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-preferencias_apiladas_vs_blended-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un modelo de cap table con escenarios de distribución de proceeds bajo enfoque apilado y bajo enfoque blended.",
+      "texto_nuevo": "Un modelo de tabla de capitalización con escenarios de distribución de lo obtenido en la venta bajo enfoque apilado y bajo enfoque mezclado.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cap table",
+          "proceeds",
+          "enfoque blended"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

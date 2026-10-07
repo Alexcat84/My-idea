@@ -6,14 +6,14 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento que detalla el alcance del proyecto, incluyendo la descripción del producto, entregables, criterios de aceptación, exclusiones, restricciones y supuestos. Es la base para desglosar el trabajo del proyecto y sirve como referencia para evaluar si un cambio o trabajo adicional cae dentro o fuera del proyecto.",
   "pasos_accionables": [
-    "Documentar la descripción del alcance del producto basándose en el project charter y en la documentación de requisitos",
+    "Documentar la descripción del alcance del producto basándose en el acta de constitución del proyecto y en la documentación de requisitos",
     "Listar todos los entregables únicos y verificables del proyecto",
     "Definir criterios de aceptación para el proyecto entero o para cada entregable",
     "Especificar qué queda fuera del alcance del proyecto",
     "Identificar restricciones como presupuesto fijo o fechas límite",
     "Documentar supuestos sobre recursos, estimaciones y otros aspectos"
   ],
-  "entregable_esperado": "Documento formal de Project Scope Statement con todos los elementos definidos",
+  "entregable_esperado": "Documento formal de declaración del alcance del proyecto con todos los elementos definidos",
   "nodos_previos": [
     "project_charter",
     "requirements_documentation",
@@ -87,6 +87,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro admite criterios para el proyecto entero o por componente; el paso deja solo una opción.; No añade nada que el libro no diga: pierde la opción de fijar criterios para el proyecto entero.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-project_scope_statement-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar la descripción del alcance del producto basándose en el project charter y en la documentación de requisitos",
+      "texto_nuevo": "Documentar la descripción del alcance del producto basándose en el acta de constitución del proyecto y en la documentación de requisitos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "project charter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-project_scope_statement-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento formal de Project Scope Statement con todos los elementos definidos",
+      "texto_nuevo": "Documento formal de declaración del alcance del proyecto con todos los elementos definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Project Scope Statement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

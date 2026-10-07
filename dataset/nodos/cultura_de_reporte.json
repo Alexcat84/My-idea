@@ -9,9 +9,9 @@
     "Diseñar un sistema de indemnidad ante sanciones disciplinarias para reportes honestos",
     "Establecer protocolos de confidencialidad o des-identificación de los reportes",
     "Separar organizacionalmente el área que recibe reportes de la que aplica sanciones",
-    "Crear canales de retroalimentación rápida y accesible hacia los reportantes",
+    "Crear canales de retroalimentación rápida y accesible hacia quienes informan",
     "Diseñar formularios de reporte fáciles de completar, equilibrando preguntas específicas (más fáciles de responder, pero que limitan la información) con preguntas abiertas (recogen la historia completa, pero toman más tiempo y suelen requerir más análisis)",
-    "Comunicar claramente los criterios de qué constituye un incidente reportable"
+    "Comunicar claramente los criterios de qué constituye un incidente que hay que informar"
   ],
   "entregable_esperado": "Sistema de reporte de incidentes implementado con políticas de confidencialidad, indemnidad y retroalimentación documentadas",
   "nodos_previos": [
@@ -27,7 +27,7 @@
     "Cuando los trabajadores no reportan errores por miedo a represalias",
     "Al diseñar o mejorar un sistema de gestión de seguridad"
   ],
-  "etiqueta_arbol": "Fomenta que Reporten los Errores",
+  "etiqueta_arbol": "Fomenta que Informen los Errores",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
   ],
@@ -97,6 +97,56 @@
       },
       "decision": "barrido 2 de procedencia (nombres propios y juicios ajenos): confirmado por el arbitro y verificado a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-cultura_de_reporte-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fomenta que Reporten los Errores",
+      "texto_nuevo": "Fomenta que Informen los Errores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporten"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cultura_de_reporte-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear canales de retroalimentación rápida y accesible hacia los reportantes",
+      "texto_nuevo": "Crear canales de retroalimentación rápida y accesible hacia quienes informan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los reportantes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cultura_de_reporte-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunicar claramente los criterios de qué constituye un incidente reportable",
+      "texto_nuevo": "Comunicar claramente los criterios de qué constituye un incidente que hay que informar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportable"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

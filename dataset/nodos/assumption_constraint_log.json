@@ -7,12 +7,12 @@
   "resumen_teorico": "Documento dinámico que registra los supuestos (factores considerados verdaderos sin comprobación) y las restricciones (limitaciones como presupuesto fijo o hitos obligatorios) que afectan la planificación y ejecución del proyecto. Se actualiza continuamente conforme los supuestos se validan o invalidan.",
   "pasos_accionables": [
     "Identificar supuestos provenientes de cualquier documento o del equipo del proyecto, y categorizar cada supuesto o restricción",
-    "Documentar restricciones definidas por el charter, el cliente, el patrocinador o los reguladores",
+    "Documentar restricciones definidas por el acta de constitución, el cliente, el patrocinador o los reguladores",
     "Asignar responsable y fecha límite para validar cada supuesto",
     "Registrar acciones tomadas y el estado actual de cada ítem, que puede ser activo, pendiente, cerrado",
-    "Actualizar el log conforme se validan o invalidan los supuestos"
+    "Actualizar el registro conforme se validan o invalidan los supuestos"
   ],
-  "entregable_esperado": "Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
+  "entregable_esperado": "Un registro con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
   "nodos_previos": [
     "project_scope_statement",
     "estrategia_de_innovacion_arenas",
@@ -57,6 +57,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro nombra también al patrocinador entre quienes determinan las restricciones.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-assumption_constraint_log-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar restricciones definidas por el charter, el cliente, el patrocinador o los reguladores",
+      "texto_nuevo": "Documentar restricciones definidas por el acta de constitución, el cliente, el patrocinador o los reguladores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el charter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-assumption_constraint_log-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualizar el log conforme se validan o invalidan los supuestos",
+      "texto_nuevo": "Actualizar el registro conforme se validan o invalidan los supuestos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el log"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-assumption_constraint_log-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un log con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
+      "texto_nuevo": "Un registro con identificador, categoría, descripción, responsable, fecha, acciones y estado de cada supuesto o restricción.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Un log"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,9 +11,9 @@
     "Rediseñar la estructura organizacional con responsabilidades claras",
     "Implementar programas de cambio rápido (step change) en áreas críticas como mantenimiento",
     "Adoptar mantenimiento basado en riesgo para optimizar frecuencias",
-    "Repetir el benchmarking anualmente para medir el progreso y mantenerse actualizado frente a los pares"
+    "Repetir la evaluación comparativa anualmente para medir el progreso y mantenerse actualizado frente a los pares"
   ],
-  "entregable_esperado": "Plan de acción de mejora basado en hallazgos de benchmarking, con métricas de seguimiento anual",
+  "entregable_esperado": "Plan de acción de mejora basado en hallazgos de la evaluación comparativa, con métricas de seguimiento anual",
   "nodos_previos": [
     "gestion_efectiva_benchmarking"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Mejora Comparando tu Desempeño",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-caso_estudio_benchmarking_terminal-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Repetir el benchmarking anualmente para medir el progreso y mantenerse actualizado frente a los pares",
+      "texto_nuevo": "Repetir la evaluación comparativa anualmente para medir el progreso y mantenerse actualizado frente a los pares",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-caso_estudio_benchmarking_terminal-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de acción de mejora basado en hallazgos de benchmarking, con métricas de seguimiento anual",
+      "texto_nuevo": "Plan de acción de mejora basado en hallazgos de la evaluación comparativa, con métricas de seguimiento anual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmarking"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

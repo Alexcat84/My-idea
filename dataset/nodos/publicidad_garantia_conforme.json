@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Revisa todo tu material publicitario que mencione garantías para verificar que cumple las guías de la FTC.",
     "Si tu producto se vende en tiendas por más de $15, indica en el anuncio que la garantía se puede leer antes de comprar donde se vende; si se puede comprar por correo o por teléfono, indica cómo conseguir una copia, sea cual sea su precio.",
-    "Si usas 'satisfacción garantizada' o 'money back', asegúrate de ofrecer reembolso total a quien te devuelva la mercancía por cualquier motivo, y declara cualquier condición, como un límite de días.",
-    "Si usas la palabra 'lifetime', especifica claramente a qué vida te refieres: por ejemplo, a la del vehículo donde va instalado el producto, al tiempo que el comprador original conserve ese vehículo o a la vida del comprador original.",
+    "Si usas 'satisfacción garantizada' o 'devolución del dinero', asegúrate de ofrecer reembolso total a quien te devuelva la mercancía por cualquier motivo, y declara cualquier condición, como un límite de días.",
+    "Si usas la expresión 'de por vida', especifica claramente a qué vida te refieres: por ejemplo, a la del vehículo donde va instalado el producto, al tiempo que el comprador original conserve ese vehículo o a la vida del comprador original.",
     "Verifica que lo que anuncias sobre tu garantía no sea engañoso frente a la garantía que realmente ofreces.",
     "Consulta a un abogado especializado en publicidad y garantías antes de lanzar tu campaña."
   ],
@@ -142,6 +142,41 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso omite que el reembolso total procede cuando devuelven la mercancía por cualquier motivo.; Mismo defecto: se cae el 'por cualquier motivo' del libro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-publicidad_garantia_conforme-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si usas 'satisfacción garantizada' o 'money back', asegúrate de ofrecer reembolso total a quien te devuelva la mercancía por cualquier motivo, y declara cualquier condición, como un límite de días.",
+      "texto_nuevo": "Si usas 'satisfacción garantizada' o 'devolución del dinero', asegúrate de ofrecer reembolso total a quien te devuelva la mercancía por cualquier motivo, y declara cualquier condición, como un límite de días.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "money back"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-publicidad_garantia_conforme-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si usas la palabra 'lifetime', especifica claramente a qué vida te refieres: por ejemplo, a la del vehículo donde va instalado el producto, al tiempo que el comprador original conserve ese vehículo o a la vida del comprador original.",
+      "texto_nuevo": "Si usas la expresión 'de por vida', especifica claramente a qué vida te refieres: por ejemplo, a la del vehículo donde va instalado el producto, al tiempo que el comprador original conserve ese vehículo o a la vida del comprador original.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "lifetime",
+          "la palabra"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

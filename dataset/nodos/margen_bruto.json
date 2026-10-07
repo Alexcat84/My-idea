@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "El margen bruto es la ganancia bruta (ingresos menos costo de lo vendido) dividida entre los ingresos, expresada en porcentaje. Muestra la rentabilidad básica del producto o servicio antes de los gastos generales: cuánto de cada unidad de dinero que vendes te queda para operar el negocio. Vale la pena entenderlo bien desde el principio, porque si no logras vender con suficiente holgura por encima de lo que te cuesta producir, es difícil que el negocio llegue a ganar dinero. Su tendencia importa igual: una tendencia negativa puede señalar presión de precios o aumento de costos directos.",
   "pasos_accionables": [
-    "Calcular: (Ingresos - COGS) / Ingresos",
+    "Calcular: (Ingresos - Costo de lo vendido) / Ingresos",
     "Analizar si el margen es suficiente para cubrir gastos operativos y generar utilidad",
     "Monitorear la tendencia trimestre a trimestre",
     "Investigar caídas en el margen: ¿son por descuentos o por aumento de costos directos?"
@@ -60,6 +60,23 @@
       },
       "decision": "barrido 2: sale la atribucion y queda el consejo con el alcance que da el libro; reescrito con su matiz y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-margen_bruto-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular: (Ingresos - COGS) / Ingresos",
+      "texto_nuevo": "Calcular: (Ingresos - Costo de lo vendido) / Ingresos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,11 +7,11 @@
   "resumen_teorico": "Cuando gestionas proveedores de forma avanzada, tu responsabilidad no termina en quien te vende directamente (tier 1). También debes preocuparte por la sostenibilidad de los proveedores de tus proveedores (tier 2 y 3). Logras este alcance incluyendo requisitos en los contratos con tus proveedores directos, exigiéndoles que trasladen tu código de conducta a quienes ellos les compran. Algunas empresas llegan a rastrear hasta el 4to o 5to nivel para verificar fórmulas químicas en los materiales que usan. Es una práctica propia de quienes ya tienen un programa avanzado de gestión de proveedores.",
   "pasos_accionables": [
     "Mapea tu cadena de suministro más allá del primer nivel, identificando quién le vende a tus proveedores directos",
-    "Incluye en tus contratos con proveedores tier 1 la exigencia de que apliquen tu código de conducta a sus propios proveedores",
-    "Pide trazabilidad de materiales o químicos críticos hasta tier 3, 4 o 5 si el riesgo lo justifica",
+    "Incluye en tus contratos con proveedores de primer nivel la exigencia de que apliquen tu código de conducta a sus propios proveedores",
+    "Pide trazabilidad de materiales o químicos críticos hasta el nivel 3, 4 o 5 si el riesgo lo justifica",
     "Solicita documentación o evidencia que te permita verificar el cumplimiento en esos niveles inferiores"
   ],
-  "entregable_esperado": "Un mapa extendido de tu cadena de suministro con requisitos de sostenibilidad y cláusulas de cumplimiento en cascada aplicados hasta tier 2 o 3.",
+  "entregable_esperado": "Un mapa extendido de tu cadena de suministro con requisitos de sostenibilidad y cláusulas de cumplimiento en cascada aplicados hasta el nivel 2 o 3.",
   "nodos_previos": [
     "programa_mentoria_proveedores",
     "codigo_conducta_proveedores",
@@ -108,6 +108,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no da ese porqué: solo dice que las empresas con programas avanzados se ocupan de la sostenibilidad de sus proveedores de segundo nivel.; El libro presenta la práctica como propia de programas avanzados; no dice que solo tenga sentido entonces ni la condiciona a sospechar riesgo profundo.; Misma causa añadida que la marca 0.; Mismo endurecimiento y condición añadida que la marca 1.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-alcance_profundo_cadena_suministro-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluye en tus contratos con proveedores tier 1 la exigencia de que apliquen tu código de conducta a sus propios proveedores",
+      "texto_nuevo": "Incluye en tus contratos con proveedores de primer nivel la exigencia de que apliquen tu código de conducta a sus propios proveedores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tier 1"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-alcance_profundo_cadena_suministro-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pide trazabilidad de materiales o químicos críticos hasta tier 3, 4 o 5 si el riesgo lo justifica",
+      "texto_nuevo": "Pide trazabilidad de materiales o químicos críticos hasta el nivel 3, 4 o 5 si el riesgo lo justifica",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tier 3, 4 o 5"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-alcance_profundo_cadena_suministro-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un mapa extendido de tu cadena de suministro con requisitos de sostenibilidad y cláusulas de cumplimiento en cascada aplicados hasta tier 2 o 3.",
+      "texto_nuevo": "Un mapa extendido de tu cadena de suministro con requisitos de sostenibilidad y cláusulas de cumplimiento en cascada aplicados hasta el nivel 2 o 3.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tier 2 o 3"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

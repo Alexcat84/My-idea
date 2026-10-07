@@ -6,7 +6,7 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Puede argumentarse que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.",
   "pasos_accionables": [
-    "Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.",
+    "Revisa si estás usando estándares de nivel de calidad aceptable (AQL) que toleran un porcentaje fijo de defectos.",
     "Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.",
     "Cambia la mentalidad de 'nivel aceptable de fallas' por el objetivo de conformidad total (Cero Defectos).",
     "Calcula el costo real de hacer las cosas mal frente al costo de hacerlas bien la primera vez."
@@ -53,6 +53,23 @@
         "evidencia": "F23-018: Revisar y eliminar estandares AQL y comparar costos de reprocesos frente a prevencion es control y mejora de la calidad de una operacion en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-critica_acceptable_quality_level-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.",
+      "texto_nuevo": "Revisa si estás usando estándares de nivel de calidad aceptable (AQL) que toleran un porcentaje fijo de defectos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "estándares de AQL"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

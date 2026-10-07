@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Recolectar datos de tiempos de fallo del producto en campo o pruebas",
     "Graficar la tasa de fallo en el tiempo para identificar en qué periodo se encuentra el producto",
-    "Aplicar pruebas de burn-in o screening ambiental para depurar fallos de mortalidad infantil",
+    "Aplicar pruebas de envejecimiento acelerado o cribado ambiental para depurar fallos de mortalidad infantil",
     "Implementar control de procedimientos operativos y de mantenimiento para contener los accidentes en el periodo de tasa constante, sabiendo que reducir esa tasa de fallo requiere un rediseño básico",
     "Establecer reemplazo preventivo de componentes antes de la fase de desgaste"
   ],
@@ -79,6 +79,24 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que estos fallos comúnmente vienen de esas causas; el nodo lo da sin matiz.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-curva_banera_periodos_fallo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar pruebas de burn-in o screening ambiental para depurar fallos de mortalidad infantil",
+      "texto_nuevo": "Aplicar pruebas de envejecimiento acelerado o cribado ambiental para depurar fallos de mortalidad infantil",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "burn-in",
+          "screening ambiental"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

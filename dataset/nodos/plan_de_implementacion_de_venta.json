@@ -6,12 +6,12 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Documento que detalla todos los pasos pendientes entre el momento en que un decisor dice 'sí' y el momento en que el pago se recibe efectivamente, incluyendo aprobaciones adicionales (CFO, junta directiva), financiamiento del cliente, o instalación de sistemas de terceros. Evita la falsa euforia de celebrar una venta antes de tiempo.",
   "pasos_accionables": [
-    "Lista todas las aprobaciones adicionales necesarias tras el 'sí' inicial (CFO, junta, etc.)",
+    "Lista todas las aprobaciones adicionales necesarias tras el 'sí' inicial (director financiero, junta, etc.)",
     "Verifica si el cliente necesita financiamiento o crédito para completar la compra",
     "Identifica si se requieren instalaciones o integraciones de terceros previas",
     "Asigna un responsable del equipo para dar seguimiento a cada pendiente"
   ],
-  "entregable_esperado": "Un checklist de implementación con responsables asignados para cada pendiente post-acuerdo",
+  "entregable_esperado": "Una lista de verificación de implementación con responsables asignados para cada pendiente post-acuerdo",
   "nodos_previos": [
     "estrategia_de_ventas",
     "business_plan_cinco_secciones"
@@ -39,6 +39,39 @@
         "evidencia": "F29-031: Tiene razon el lector A: el nodo no prueba la idea con el mercado, gestiona los pendientes operativos de una venta ya acordada (aprobaciones, financiamiento, instalaciones, responsables por pendiente) hasta el cobro, lo que es ejecucion. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-plan_de_implementacion_de_venta-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista todas las aprobaciones adicionales necesarias tras el 'sí' inicial (CFO, junta, etc.)",
+      "texto_nuevo": "Lista todas las aprobaciones adicionales necesarias tras el 'sí' inicial (director financiero, junta, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CFO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-plan_de_implementacion_de_venta-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un checklist de implementación con responsables asignados para cada pendiente post-acuerdo",
+      "texto_nuevo": "Una lista de verificación de implementación con responsables asignados para cada pendiente post-acuerdo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Un checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

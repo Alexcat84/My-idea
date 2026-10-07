@@ -7,11 +7,11 @@
   "resumen_teorico": "Método para involucrar directamente a las personas de la comunidad en el proceso de diseño, convocándolas para diseñar junto al equipo en lugar de solo entrevistarlas. Empodera a los participantes como co-diseñadores, permitiendo co-crear servicios, entender dinámicas comunitarias o definir la marca de la solución.",
   "pasos_accionables": [
     "Identificar a quién se quiere invitar (personas ya entrevistadas o un grupo demográfico específico)",
-    "Organizar el espacio, materiales (post-its, papel, arte) e invitar a los participantes",
-    "Usar Conversation Starters, Brainstorm, Role Playing o Rapid Prototyping para dinamizar la sesión",
-    "Capturar el feedback tratando a los participantes como diseñadores, no como sujetos de entrevista"
+    "Organizar el espacio, materiales (notas adhesivas, papel, arte) e invitar a los participantes",
+    "Usar disparadores de conversación, lluvia de ideas, juego de roles o prototipado rápido para dinamizar la sesión",
+    "Capturar los comentarios tratando a los participantes como diseñadores, no como sujetos de entrevista"
   ],
-  "entregable_esperado": "Registro de ideas y soluciones co-creadas junto con miembros de la comunidad",
+  "entregable_esperado": "Registro de ideas y soluciones cocreadas junto con miembros de la comunidad",
   "nodos_previos": [
     "customer_journey_mapping",
     "reglas_brainstorming",
@@ -29,5 +29,75 @@
   "etiqueta_arbol": "Diseña Junto a tu Comunidad",
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-co_creation_session-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organizar el espacio, materiales (post-its, papel, arte) e invitar a los participantes",
+      "texto_nuevo": "Organizar el espacio, materiales (notas adhesivas, papel, arte) e invitar a los participantes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "post-its"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-co_creation_session-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar Conversation Starters, Brainstorm, Role Playing o Rapid Prototyping para dinamizar la sesión",
+      "texto_nuevo": "Usar disparadores de conversación, lluvia de ideas, juego de roles o prototipado rápido para dinamizar la sesión",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Conversation Starters",
+          "Brainstorm",
+          "Role Playing",
+          "Rapid Prototyping"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-co_creation_session-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Capturar el feedback tratando a los participantes como diseñadores, no como sujetos de entrevista",
+      "texto_nuevo": "Capturar los comentarios tratando a los participantes como diseñadores, no como sujetos de entrevista",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-co_creation_session-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Registro de ideas y soluciones co-creadas junto con miembros de la comunidad",
+      "texto_nuevo": "Registro de ideas y soluciones cocreadas junto con miembros de la comunidad",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v17)",
+        "evidencia": "El prefijo co- se escribe unido a la palabra; es solo la grafía, el sentido no cambia."
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Protege medios digitales y no digitales (USB, discos, papel) que contienen CUI, limitando el acceso a usuarios autorizados y garantizando la sanitización o destrucción segura antes de su disposición o reutilización.",
   "pasos_accionables": [
-    "Inventariar qué medios contienen CUI.",
+    "Inventariar qué medios contienen información controlada no clasificada (CUI).",
     "Establecer procedimientos de préstamo y devolución de medios físicos.",
     "Almacenar medios de forma segura (cajón con llave, gabinete, biblioteca controlada).",
     "Marcar los medios con las restricciones de distribución y manejo de CUI.",
@@ -76,6 +76,23 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_media_protection-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Inventariar qué medios contienen CUI.",
+      "texto_nuevo": "Inventariar qué medios contienen información controlada no clasificada (CUI).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "contienen CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

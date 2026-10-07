@@ -6,12 +6,12 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Ilustrado por el caso Piper Alpha, este concepto señala que las inspecciones de seguridad basadas en muestreo, sin listas de verificación adecuadas, sin tiempo suficiente ni criterios estandarizados, pueden dar una falsa sensación de control mientras dejan pasar deficiencias críticas. En ese caso, el inspector no tenía la lista de verificación que existía para evaluar los permisos de trabajo ni experiencia en esos procedimientos.",
   "pasos_accionables": [
-    "Desarrollar checklists estandarizados para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
+    "Desarrollar listas de verificación estandarizadas para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
     "Asignar tiempo suficiente para auditorías completas en lugar de inspecciones rápidas",
     "Capacitar a los inspectores en el uso de procedimientos de permiso de trabajo y sistemas críticos",
-    "Verificar que los hallazgos de inspecciones previas fueron efectivamente corregidos y no solo reportados como resueltos"
+    "Verificar que los hallazgos de inspecciones previas fueron efectivamente corregidos y no solo informados como resueltos"
   ],
-  "entregable_esperado": "Checklist de auditoría de seguridad estandarizado y cronograma de inspecciones con tiempo asignado adecuado",
+  "entregable_esperado": "Lista de verificación de auditoría de seguridad estandarizada y cronograma de inspecciones con tiempo asignado adecuado",
   "nodos_previos": [
     "fallo_regulatorio_por_recursos_insuficientes"
   ],
@@ -22,7 +22,7 @@
     "Cuando las inspecciones se realizan sin checklist formal o con tiempo insuficiente",
     "Cuando existe discrepancia entre lo reportado en inspecciones rutinarias y hallazgos posteriores de investigaciones de incidentes"
   ],
-  "etiqueta_arbol": "Evita Inspecciones Superficiales",
+  "etiqueta_arbol": "Evita las Inspecciones Superficiales",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
   ],
@@ -42,6 +42,72 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no afirma que depender del juicio del inspector aumente la variabilidad; describe carencias concretas del inspector en ese caso.; Mismo defecto: causa general añadida que el libro no da.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-inspecciones_superficiales_y_muestreo_incompleto-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita Inspecciones Superficiales",
+      "texto_nuevo": "Evita las Inspecciones Superficiales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Evita Inspecciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inspecciones_superficiales_y_muestreo_incompleto-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desarrollar checklists estandarizados para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
+      "texto_nuevo": "Desarrollar listas de verificación estandarizadas para los procesos críticos de seguridad (permisos de trabajo, cambios de turno, sistemas de emergencia)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklists estandarizados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inspecciones_superficiales_y_muestreo_incompleto-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar que los hallazgos de inspecciones previas fueron efectivamente corregidos y no solo reportados como resueltos",
+      "texto_nuevo": "Verificar que los hallazgos de inspecciones previas fueron efectivamente corregidos y no solo informados como resueltos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-inspecciones_superficiales_y_muestreo_incompleto-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Checklist de auditoría de seguridad estandarizado y cronograma de inspecciones con tiempo asignado adecuado",
+      "texto_nuevo": "Lista de verificación de auditoría de seguridad estandarizada y cronograma de inspecciones con tiempo asignado adecuado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
