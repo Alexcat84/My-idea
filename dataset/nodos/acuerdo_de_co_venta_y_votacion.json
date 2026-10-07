@@ -20,7 +20,7 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Si necesitas alinear tus intereses con los de quienes invirtieron en decisiones de venta",
-    "Si quieres evitar que alguno de los socios fundadores venda sus acciones por su cuenta"
+    "Si quieres evitar que alguno de los socios fundadores venda sus acciones sin dar a quienes invirtieron la oportunidad de vender también su parte proporcional"
   ],
   "etiqueta_arbol": "Protege tu Venta de Acciones",
   "fuentes_internas": [
@@ -71,6 +71,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se caen dos límites del libro: la co-venta lleva excepciones razonables y termina con la salida a bolsa.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-acuerdo_de_co_venta_y_votacion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si quieres evitar que alguno de los socios fundadores venda sus acciones por su cuenta",
+      "texto_nuevo": "Si quieres evitar que alguno de los socios fundadores venda sus acciones sin dar a quienes invirtieron la oportunidad de vender también su parte proporcional",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1965-1967",
+        "frase": "if a founder sells shares, the investors will have an opportunity to sell a proportional"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c12): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
