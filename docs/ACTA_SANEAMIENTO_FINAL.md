@@ -1567,3 +1567,64 @@ vivos y las de entrada de las puertas.
   - Si no, nodos con procedencia confirmada sobre 200, con su intervalo de Wilson al 95 %.
   - Los 5 elementos del residuo declarado (14.3) cuentan si salen en la muestra.
   - Lo que aparezca se corrige por el método de la casa. No hay otra pasada.
+
+### 15.4 Resultado de la medida 4 (6 y 7 oct 2026): NO da 0
+
+Máquina en `auditoria-final-claves/medida4/medida4.py`.
+
+- **Lectura:** 20 lotes de 96 a 147 elementos, uno por cada texto de cara de los 200 nodos.
+  - El primer lector cazó 20 de 20 trampas.
+  - Hubo 24 marcas reales, y el árbitro confirmó 20.
+
+| Clase | Hallazgos | Por nodo | Wilson 95 % | Umbral | Resultado |
+|---|---|---|---|---|---|
+| Procedencia (D1) | 20 en 18 nodos | 9 % | 5,8 a 13,8 % | 0 | **NO PASA** |
+
+- **Lo nuevo, que ninguna guarda veía:**
+  - Nombres propios de personas como fuente: "El filósofo … llama", "Popularizada por …", "Basado en el modelo de …",
+    "las 6 preguntas de … y …".
+  - Una referencia: "(ver NIST SP 800-60)".
+  - Juicios ajenos impersonales: "se estima", "considerado la base", "es la recomendada", "el primer paso sugerido".
+  - El barrido 1 (punto 3) buscaba atribuciones blandas genéricas. La guarda de títulos solo conoce los libros de la
+    lista canónica.
+- **Corrección de las 20, por el método de la casa:**
+  - Las 20 pasaron por verificación ciega contra el libro, también las que solo quitaban: cambiar "se estima" por
+    "es" endurece. Fueron 2 paquetes, con 2 de 2 trampas cazadas.
+  - 13 se sostienen (tanda `medida4-procedencia`).
+  - 7 endurecían: quitaban "se estima", "en un estudio" o "según los autores" y dejaban una regla general. Se
+    reescribieron con el alcance del libro y se verificaron a ciegas: 7 de 7, trampa cazada (tanda
+    `medida4-procedencia-2`).
+  - **Las 20 de la muestra quedan corregidas.**
+
+**Remedio en todo el catálogo: barrido 2.** No cambia el veredicto medido; reduce el residuo.
+- **Búsqueda mecánica** (`barrido_nombres.py`) de lo que la medida descubrió. Encontró 1.392 elementos:
+  - nombres propios (un par de palabras con mayúscula en el que alguna nunca aparece en minúscula en el catálogo);
+  - verbos de autoría, "basado en el modelo de", "según" seguido de un nombre;
+  - oficios de autor, citas y referencias;
+  - juicios impersonales.
+- **Arbitraje:** 20 árbitros Opus, uno por paquete de unas 70, con una trampa sin marca por paquete (una atribución a
+  una persona con nombre inventado). Cazaron 20 de 20 trampas.
+  - Confirmaron 81 en 80 nodos. Entre ellas: George Box, Kaoru Ishikawa, Goldratt, Kim y Mauborgne, Alan Kay, Peter
+    Senge, Bill Campbell, Saarinen, Jens Rasmussen, Charles Perrow, Heider y Simmel, "la investigación de Huthwaite" y
+    organizaciones como origen de un método (XPLANE, Boeing).
+- **Verificación ciega contra el libro:** 5 paquetes, 5 de 5 trampas cazadas.
+  - 58 se sostienen (tanda `barrido2-procedencia`).
+  - 16 endurecían o dejaban una traducción literal. Se reescribieron con su matiz y se verificaron otra vez: 15 de
+    16, trampa cazada (tanda `barrido2-procedencia-2`).
+  - Van con ellas dos quitas puras del origen de un método en una organización (Motorola, Shell), con el precedente
+    de los árbitros.
+  - La guarda de voz cazó un "Se ilustra con" que dejó una corrección; sale por quita pura (tanda
+    `barrido2-procedencia-voz`).
+  - Queda 1 en una tercera reescritura: el hallazgo temprano de productividad de la IA (B15-045).
+- **Guarda nueva:** `engine/test_procedencia_nombres.py` (REGLAS D1). Ninguna persona u organización con nombre como
+  fuente en los textos de cara del grafo: autoría, "basado en el modelo de", "según X", "el filósofo X", citas y
+  referencias.
+  - Prueba en rojo primero: cazó 6. Cuatro se corrigieron; las otras dos eran etiquetas en mayúscula de título, que
+    la guarda ya no lee para "según".
+
+**Veredicto de la medida 4: procedencia NO da 0 en la muestra** (9 % de los nodos, de 5,8 a 13,8 % al 95 %).
+- Corregidos: los 20 de la muestra y 76 correcciones del barrido 2 (58 + 17 + 1).
+- El residuo que se declara es lo que ni la búsqueda mecánica ni la lectura de la muestra ven: atribución sin nombre
+  propio ni verbo de autoría. La prevalencia medida antes de corregir (9 %) es la cota para el resto del catálogo.
+- Lo que queda pendiente se decide con el fundador: si medir otra vez con semilla nueva después del barrido 2, o leer
+  el catálogo entero solo para procedencia (unos 350 lotes; ver `docs/PROXIMOS_PASOS.md`).
