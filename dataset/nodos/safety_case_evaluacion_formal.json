@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Safety Case y Evaluación Formal de Seguridad (FSA)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
+  "resumen_teorico": "Modelo regulatorio surgido tras el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
   "pasos_accionables": [
     "Identifica todos los peligros mayores de tu instalación u operación",
     "Evalúa el riesgo asociado a cada peligro identificado",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Falta la actualización a intervalos regulares que el libro pone junto al cambio mayor.; Mismo disparador perdido.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-safety_case_evaluacion_formal-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
+      "texto_nuevo": "Modelo regulatorio surgido tras el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case, que identificaste los peligros mayores de tu instalación y que cuentas con controles adecuados para ellos. La Evaluación Formal de Seguridad (FSA) que sustenta ese documento sigue cinco pasos: identificar peligros, evaluar los riesgos asociados, considerar alternativas de gestión, analizar costo beneficio de esas alternativas y decidir qué opción implementar. La responsabilidad de la seguridad es siempre tuya como operador, no se transfiere al regulador por presentar el documento. El Safety Case no es estático: debes revisarlo y actualizarlo a intervalos regulares y cada vez que cambien las circunstancias de la operación de forma significativa.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "nacido del Informe Cullen sobre el desastre de Piper Alpha"
+        ]
+      },
+      "decision": "lectura total de procedencia (w34): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }

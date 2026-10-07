@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Condiciones Productoras de Error (EPCs)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea, derivada de una amplia revisión de literatura en factores humanos. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
+  "resumen_teorico": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
   "pasos_accionables": [
     "Listar las condiciones de trabajo presentes en la tarea evaluada",
     "Comparar dichas condiciones contra la lista rankeada de EPCs",
@@ -43,6 +43,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no aplica el factor entero: multiplica la probabilidad nominal de la tarea por una proporción juzgada del factor.; Mismo defecto: se pierden la probabilidad nominal de partida y el ajuste por proporción juzgada.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-epc_condiciones_productoras_error-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea, derivada de una amplia revisión de literatura en factores humanos. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
+      "texto_nuevo": "Las EPCs son una lista jerarquizada de factores contextuales que multiplican la probabilidad de error humano en una tarea. Van desde la falta de familiaridad con una situación (factor x17) hasta la edad del personal en tareas perceptuales (x1.02). Permiten identificar qué condiciones del entorno de trabajo están incrementando el riesgo de error.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          ", derivada de una amplia revisión de literatura en factores humanos"
+        ]
+      },
+      "decision": "lectura total de procedencia (w34): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }
