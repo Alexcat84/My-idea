@@ -7,10 +7,10 @@
   "resumen_teorico": "Es una herramienta visual que parte del organigrama de la empresa cliente para identificar al earlyvangelist, sus influenciadores, recomendadores, saboteadores y compradores económicos. Permite navegar la política interna de una organización compleja para diseñar una estrategia de venta efectiva y repetible.",
   "pasos_accionables": [
     "Obtener el organigrama de la empresa cliente (formal o mediante conversaciones)",
-    "Localizar al earlyvangelist dentro del organigrama",
+    "Localizar al cliente pionero entusiasta dentro del organigrama",
     "Identificar influenciadores, recomendadores y saboteadores usando información de llamadas de venta previas",
     "Determinar quién es el comprador económico final",
-    "Repetir el mapeo con cada earlyvangelist para encontrar patrones comunes"
+    "Repetir el mapeo con cada cliente pionero entusiasta para encontrar patrones comunes"
   ],
   "entregable_esperado": "Mapa de influencia documentado para cada cuenta objetivo, mostrando roles clave en la decisión de compra",
   "nodos_previos": [
@@ -28,5 +28,41 @@
   "etiqueta_arbol": "Mapea las Influencias Internas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-influence_map_organizacional-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Localizar al earlyvangelist dentro del organigrama",
+      "texto_nuevo": "Localizar al cliente pionero entusiasta dentro del organigrama",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earlyvangelist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-influence_map_organizacional-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Repetir el mapeo con cada earlyvangelist para encontrar patrones comunes",
+      "texto_nuevo": "Repetir el mapeo con cada cliente pionero entusiasta para encontrar patrones comunes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earlyvangelist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

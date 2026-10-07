@@ -6,15 +6,15 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Stage-Gate es una metodología estructurada de idea-a-lanzamiento que organiza el desarrollo de productos en etapas (stages) separadas por puntos de decisión (gates) de Go/Kill. Integra los factores críticos de éxito y mejores prácticas, traduciéndolos en un blueprint operativo. Versiones modernas incorporan enfoques híbridos con métodos Agile (Agile-Stage-Gate), modelos basados en riesgo y contexto, haciendo el sistema más flexible, rápido y adaptativo para proyectos de innovación audaz.",
   "pasos_accionables": [
-    "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch",
-    "Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito",
+    "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo descubrimiento, alcance, caso de negocio, desarrollo, pruebas y lanzamiento",
+    "Establecer puntos de decisión de seguir o cancelar con criterios claros basados en los factores de éxito",
     "Incorporar prácticas ágiles donde sea apropiado para aumentar velocidad y flexibilidad",
     "Ajustar el rigor del proceso según el riesgo y tipo de proyecto (context-based approach)",
-    "Documentar el playbook como sistema operativo replicable para toda la organización",
+    "Documentar el manual de procedimientos como sistema operativo replicable para toda la organización",
     "Asegurar que cada etapa involucre equipos multifuncionales trabajando en paralelo",
     "Establecer que cada etapa cueste progresivamente más, siguiendo la lógica de compra de opciones incrementales"
   ],
-  "entregable_esperado": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos",
+  "entregable_esperado": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de cada punto de decisión definidos",
   "nodos_previos": [
     "gestion_portafolio_foco",
     "ocho_factores_exito_criticos",
@@ -76,6 +76,73 @@
       },
       "decision": "lectura total de procedencia (w43): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-stage_gate_system-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo Discovery, Scoping, Business Case, Development, Testing, Launch",
+      "texto_nuevo": "Definir las etapas (stages) del proceso de desarrollo con actividades específicas por etapa, por ejemplo descubrimiento, alcance, caso de negocio, desarrollo, pruebas y lanzamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Discovery, Scoping, Business Case, Development, Testing, Launch"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-stage_gate_system-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer gates de decisión Go/Kill con criterios claros basados en los factores de éxito",
+      "texto_nuevo": "Establecer puntos de decisión de seguir o cancelar con criterios claros basados en los factores de éxito",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gates de decisión Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-stage_gate_system-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar el playbook como sistema operativo replicable para toda la organización",
+      "texto_nuevo": "Documentar el manual de procedimientos como sistema operativo replicable para toda la organización",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el playbook"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-stage_gate_system-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de gate definidos",
+      "texto_nuevo": "Mapa documentado del proceso Stage-Gate adaptado a la organización, con etapas, entregables y criterios de cada punto de decisión definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "criterios de gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

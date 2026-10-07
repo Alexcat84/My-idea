@@ -6,11 +6,11 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento dinámico que rastrea todas las solicitudes de cambio desde su presentación hasta su disposición final, incluyendo estado y categoría.",
   "pasos_accionables": [
-    "Registrar cada Change Request con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
+    "Registrar cada solicitud de cambio con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
     "Actualizar el estado (abierto, pendiente, cerrado)",
     "Documentar la disposición final de cada cambio"
   ],
-  "entregable_esperado": "Log actualizado con el historial completo de cambios del proyecto",
+  "entregable_esperado": "Registro actualizado con el historial completo de cambios del proyecto",
   "nodos_previos": [
     "solicitud_cambio",
     "identificar_brechas_gaps",
@@ -44,6 +44,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro registra también categoría, descripción, solicitante y fecha de cada cambio.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-change_log-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar cada Change Request con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
+      "texto_nuevo": "Registrar cada solicitud de cambio con un ID único, su categoría, la descripción del cambio, quién lo solicitó y la fecha de solicitud",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada Change Request"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-change_log-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Log actualizado con el historial completo de cambios del proyecto",
+      "texto_nuevo": "Registro actualizado con el historial completo de cambios del proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Log actualizado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

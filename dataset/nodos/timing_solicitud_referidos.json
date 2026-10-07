@@ -7,10 +7,10 @@
   "resumen_teorico": "Solicitar referencias demasiado pronto (inmediatamente después de la compra) destruye las posibilidades de obtenerlas, ya que el cliente aún no ha experimentado el beneficio real del producto. La solicitud debe ocurrir solo después de que el cliente haya alcanzado su objetivo original de compra (point-of-purchase goal): aunque antes pueda sentir confianza para asociar su nombre con la marca, solo está listo para dar un referido cuando ya vivió la relación a fondo.",
   "pasos_accionables": [
     "Identificar el 'punto de logro' donde el cliente obtiene el beneficio prometido del producto/servicio",
-    "Configurar un disparador automatizado (ej. email a los 30 días) que se active después de este punto de logro",
+    "Configurar un disparador automatizado (ej. correo a los 30 días) que se active después de este punto de logro",
     "Evitar solicitudes de referido en el momento inmediato de la compra o registro",
-    "Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria",
-    "Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)"
+    "Validar mediante datos (aperturas, clics) que el momento elegido genera mejores tasas de respuesta que el promedio de la industria",
+    "Comunica el programa en momentos clave del ciclo de vida (ej: fase de adopción o de recomendación)"
   ],
   "entregable_esperado": "Definición documentada del punto de activación óptimo para solicitudes de referencia/testimonio con automatización configurada",
   "nodos_previos": [
@@ -43,6 +43,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro dice que la confianza para asociar su nombre puede llegar antes y no basta: solo tras vivir la relación está listo para referir.; Mismo defecto: el nodo presenta la confianza como la condición cuando el libro dice que no es suficiente.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-timing_solicitud_referidos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Configurar un disparador automatizado (ej. email a los 30 días) que se active después de este punto de logro",
+      "texto_nuevo": "Configurar un disparador automatizado (ej. correo a los 30 días) que se active después de este punto de logro",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-timing_solicitud_referidos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Validar mediante datos (aperturas, clics) que el timing elegido genera mejores tasas de respuesta que el promedio de la industria",
+      "texto_nuevo": "Validar mediante datos (aperturas, clics) que el momento elegido genera mejores tasas de respuesta que el promedio de la industria",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "timing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-timing_solicitud_referidos-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comunica el programa en momentos clave del ciclo de vida (ej: fase Adopt/Advocate)",
+      "texto_nuevo": "Comunica el programa en momentos clave del ciclo de vida (ej: fase de adopción o de recomendación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Adopt/Advocate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,11 +7,11 @@
   "resumen_teorico": "Para desarrollar una posición única (USP), el franquiciador debe conocer profundamente a los competidores con los que realmente compite por franquiciados (no todos los 3,000 franquiciadores existentes). Esto incluye revisar sus FDDs, entrevistar a sus franquiciados y monitorear constantemente nuevos competidores mencionados por los prospectos.",
   "pasos_accionables": [
     "Identificar a los competidores directos por categoría, tamaño de inversión y mercado",
-    "Obtener y analizar los FDDs de esos competidores",
+    "Obtener y analizar los documentos de divulgación de la franquicia (FDD) de esos competidores",
     "Entrevistar a franquiciados de esos sistemas para entender fortalezas y debilidades",
     "Preguntar sistemáticamente a los propios prospectos qué otras opciones están considerando"
   ],
-  "entregable_esperado": "Informe de análisis competitivo con FDDs revisados y entrevistas a franquiciados de la competencia",
+  "entregable_esperado": "Informe de análisis competitivo con documentos de divulgación de la franquicia (FDD) revisados y entrevistas a franquiciados de la competencia",
   "nodos_previos": [
     "entrenar_franquiciados_validacion",
     "determinacion_cuota_inicial"
@@ -41,6 +41,39 @@
         "evidencia": "F20-017: Razon para B: es un analisis competitivo (FDDs, entrevistas a franquiciados de la competencia) para definir el USP del franquiciador, es decir, estrategia de posicionamiento; no pone a prueba la idea propia con clientes, asi que validacion no se sostiene como defendible. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-analisis_competencia_franquicias-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Obtener y analizar los FDDs de esos competidores",
+      "texto_nuevo": "Obtener y analizar los documentos de divulgación de la franquicia (FDD) de esos competidores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FDDs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_competencia_franquicias-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Informe de análisis competitivo con FDDs revisados y entrevistas a franquiciados de la competencia",
+      "texto_nuevo": "Informe de análisis competitivo con documentos de divulgación de la franquicia (FDD) revisados y entrevistas a franquiciados de la competencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FDDs revisados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

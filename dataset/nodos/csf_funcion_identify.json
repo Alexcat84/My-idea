@@ -12,7 +12,7 @@
     "Documentar amenazas internas y externas y sus respuestas asociadas en un registro de riesgos",
     "Comunicar planes, políticas y buenas prácticas de ciberseguridad a todo el personal y terceros relevantes"
   ],
-  "entregable_esperado": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
+  "entregable_esperado": "Inventario de activos de TI completo (con dueño, uso oficial, datos sensibles asociados, si requiere autenticación multifactor y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
   "nodos_previos": [
     "csf_funcion_govern"
   ],
@@ -90,6 +90,23 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide comunicar planes, políticas y buenas prácticas; se cae el tercer elemento.; Mismo defecto.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-csf_funcion_identify-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Inventario de activos IT completo (con dueño, uso oficial, datos sensibles asociados, si requiere MFA y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
+      "texto_nuevo": "Inventario de activos de TI completo (con dueño, uso oficial, datos sensibles asociados, si requiere autenticación multifactor y riesgo para el negocio si se pierde el acceso) y un registro de riesgos documentado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "IT",
+          "MFA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

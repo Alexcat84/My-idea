@@ -11,7 +11,7 @@
     "Si hace falta, incluir reserva de contingencia para riesgos de incertidumbre",
     "Documentar la duración estimada para cada actividad"
   ],
-  "entregable_esperado": "Documento de estimaciones de duración para cada actividad del WBS",
+  "entregable_esperado": "Documento de estimaciones de duración para cada actividad de la estructura de desglose del trabajo",
   "nodos_previos": [
     "activity_resource_requirements",
     "resource_breakdown_structure",
@@ -98,6 +98,22 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las estimaciones pueden incluir la reserva, no que deban.; Mismo endurecimiento del 'may include' del libro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-activity_duration_estimates-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de estimaciones de duración para cada actividad del WBS",
+      "texto_nuevo": "Documento de estimaciones de duración para cada actividad de la estructura de desglose del trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del WBS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

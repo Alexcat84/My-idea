@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Convierte tus hipótesis de propuesta de valor en una presentación simple de una diapositiva con tres columnas: problemas, soluciones actuales, solución propuesta",
     "Presenta primero solo los problemas y haz una pausa para que el cliente reaccione y priorice",
-    "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean",
-    "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features",
+    "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las ordenan por importancia",
+    "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en funciones",
     "Cierra la reunión preguntando qué deberías haberle preguntado y pide referencias adicionales",
     "Anota el costo estimado del problema para el cliente, en tiempo, dinero o frustración, para usarlo más adelante en la validación",
     "Preguntar cómo se compara la solución propuesta con las soluciones actuales"
@@ -68,6 +68,40 @@
         "motivo": "La trampa de los numeros pequeños al buscar apoyo o inversion no es un paso natural despues de preparar la reunion de presentacion del problema. La correccion del entregable (50 clientes) no la sostenia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "voz-desarrollo_presentacion_problema-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las rankean",
+      "texto_nuevo": "Pregúntale cómo resuelve hoy ese problema y quién más lo comparte, y preguntar cómo las ordenan por importancia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "rankean"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-desarrollo_presentacion_problema-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en features",
+      "texto_nuevo": "Presenta tu solución al final y observa la reacción genuina del cliente, sin entrar en funciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar todos los hitos relevantes del proyecto",
     "Describir cada hito con suficiente detalle para determinar su cumplimiento",
-    "Clasificar cada hito según su tipo (interno/externo, interino/final, mandatorio/opcional)"
+    "Clasificar cada hito según su tipo (interno/externo, intermedio/final, mandatorio/opcional)"
   ],
   "entregable_esperado": "Lista de hitos categorizada y documentada",
   "nodos_previos": [
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Define los Hitos de tu Proyecto",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-milestone_list-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar cada hito según su tipo (interno/externo, interino/final, mandatorio/opcional)",
+      "texto_nuevo": "Clasificar cada hito según su tipo (interno/externo, intermedio/final, mandatorio/opcional)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "interino/final"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

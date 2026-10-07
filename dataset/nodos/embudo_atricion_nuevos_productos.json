@@ -6,10 +6,10 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "De cada 7 ideas de nuevos productos, solo 4 entran en desarrollo, 1.5 se lanzan al mercado, y únicamente 1 tiene éxito real. Además, aproximadamente el 46% de la inversión en desarrollo de productos se destina a iniciativas que fracasan o son canceladas. Entender esta curva de atrición ayuda a calibrar expectativas y a diseñar procesos de filtro (gates) más rigurosos desde el inicio.",
   "pasos_accionables": [
-    "Mapear cuántas ideas de producto entran al pipeline anualmente.",
+    "Mapear cuántas ideas de producto entran a la cartera de desarrollo anualmente.",
     "Medir cuántas de esas ideas pasan a fase de desarrollo, luego a lanzamiento, y finalmente logran éxito comercial.",
     "Calcular la tasa de atrición en cada etapa (idea->desarrollo->lanzamiento->éxito).",
-    "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final."
+    "Comparar la tasa propia contra la referencia de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final."
   ],
   "entregable_esperado": "Un diagrama de embudo (funnel) con las tasas de conversión de la empresa en cada etapa del proceso de innovación.",
   "nodos_previos": [
@@ -92,6 +92,40 @@
       },
       "decision": "barrido de procedencia del catalogo: procedencia confirmada por el arbitro; sale la atribucion y queda el consejo dicho directamente, sin cambiar el sentido",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+    },
+    {
+      "id": "voz-embudo_atricion_nuevos_productos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear cuántas ideas de producto entran al pipeline anualmente.",
+      "texto_nuevo": "Mapear cuántas ideas de producto entran a la cartera de desarrollo anualmente.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pipeline"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-embudo_atricion_nuevos_productos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comparar la tasa propia contra el benchmark de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final.",
+      "texto_nuevo": "Comparar la tasa propia contra la referencia de la industria (60% de éxito en lanzamiento es el promedio), sin tomar la curva de atrición promedio como meta: la ideal corta más en las primeras etapas y muy poco al final.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "benchmark"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

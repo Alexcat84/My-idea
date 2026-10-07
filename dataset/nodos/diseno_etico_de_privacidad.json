@@ -7,11 +7,11 @@
   "resumen_teorico": "Ante la recolección masiva de datos (en un escenario imaginado de futuro, 'data zero' es la tendencia de la gente a intentar desconectarse de ciertos flujos de datos como sexualidad, ubicación, o emociones), puedes querer ser dueño de tus datos o al menos tener agencia sobre quién los usa, o puede que prefieras menos agencia a cambio de conveniencia. Rara vez, en realidad nunca, el opt-out es la opción por defecto; es un trade-off entre conveniencia (en un escenario imaginado de futuro, menos fricción) y vigilancia.",
   "pasos_accionables": [
     "Enumera qué datos sensibles recolecta tu sistema (ubicación, salud, comportamiento, emociones).",
-    "Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.",
-    "Evalúa el trade-off: ¿qué conveniencia pierde el usuario al optar por no compartir datos?",
+    "Diseña mecanismos de exclusión voluntaria reales y accesibles, no ocultos en términos legales.",
+    "Evalúa la disyuntiva: ¿qué conveniencia pierde el usuario al optar por no compartir datos?",
     "Comunica de forma transparente cómo se usan y quién se beneficia de los datos recolectados."
   ],
-  "entregable_esperado": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras de opt-in/opt-out, documentado en el sistema o prototipo.",
+  "entregable_esperado": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras para aceptar o rechazar, documentado en el sistema o prototipo.",
   "nodos_previos": [
     "mapeo_flujos_invisibles_datos",
     "brief_de_diseno",
@@ -26,7 +26,7 @@
     "Cuando el diseño de un producto digital requiere políticas de privacidad.",
     "Si el usuario final es vulnerable a la vigilancia o el uso indebido de sus datos personales."
   ],
-  "etiqueta_arbol": "Da Agencia Sobre sus Datos",
+  "etiqueta_arbol": "Da Control Sobre sus Datos",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
   ],
@@ -62,6 +62,72 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura, matiz; modo redactar; doble lectura ciega, arbitro y verificador ciego): El libro no fija un deber del diseñador de dar agencia ni dice que el diseño ético implique ofrecer control; describe que puedes querer agencia, que puede no importarte o que prefieras menos.; El libro se corrige: rara vez, en realidad nunca, es la opción por defecto; el nodo deja solo 'rara vez'.; Mismo defecto que la marca 0: se pierde el 'en realidad nunca'.; Mismo defecto: la norma de diseño sobre agencia y control genuino no está en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-diseno_etico_de_privacidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Da Agencia Sobre sus Datos",
+      "texto_nuevo": "Da Control Sobre sus Datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Agencia"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_etico_de_privacidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña mecanismos de opt-out reales y accesibles, no ocultos en términos legales.",
+      "texto_nuevo": "Diseña mecanismos de exclusión voluntaria reales y accesibles, no ocultos en términos legales.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "opt-out"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_etico_de_privacidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa el trade-off: ¿qué conveniencia pierde el usuario al optar por no compartir datos?",
+      "texto_nuevo": "Evalúa la disyuntiva: ¿qué conveniencia pierde el usuario al optar por no compartir datos?",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "trade-off"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_etico_de_privacidad-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras de opt-in/opt-out, documentado en el sistema o prototipo.",
+      "texto_nuevo": "Una política o mecanismo de consentimiento de datos diseñado con opciones claras para aceptar o rechazar, documentado en el sistema o prototipo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "opt-in/opt-out"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

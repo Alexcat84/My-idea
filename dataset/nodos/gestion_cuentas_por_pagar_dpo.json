@@ -6,9 +6,9 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "Days Payable Outstanding (DPO) mide cuánto tarda una empresa en pagar a sus proveedores. Aumentar el DPO libera efectivo, pero implica un trade-off entre optimización financiera y la relación/reputación con proveedores. Pagar tarde consistentemente puede dañar la calificación crediticia (ej. Dun & Bradstreet) y dificultar futuras negociaciones o préstamos.",
   "pasos_accionables": [
-    "Calcular el DPO actual de la empresa.",
+    "Calcular los días de pago a proveedores (DPO) actuales de la empresa.",
     "Comparar el DPO con el DSO (días de cobro) para detectar desequilibrios.",
-    "Definir una política de pagos que balancee cash flow y relación con proveedores.",
+    "Definir una política de pagos que balancee flujo de caja y relación con proveedores.",
     "Evaluar el impacto reputacional y crediticio antes de extender plazos de pago."
   ],
   "entregable_esperado": "Política de pagos a proveedores documentada con métricas de DPO objetivo.",
@@ -25,5 +25,41 @@
   "etiqueta_arbol": "Administra tus Pagos a Proveedores",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-gestion_cuentas_por_pagar_dpo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el DPO actual de la empresa.",
+      "texto_nuevo": "Calcular los días de pago a proveedores (DPO) actuales de la empresa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el DPO"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_cuentas_por_pagar_dpo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir una política de pagos que balancee cash flow y relación con proveedores.",
+      "texto_nuevo": "Definir una política de pagos que balancee flujo de caja y relación con proveedores.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cash flow"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisar las encuestas de satisfacción actuales para detectar sesgo hacia preguntas cerradas",
     "Incorporar preguntas abiertas tipo '¿qué deberíamos hacer que no estamos haciendo?'",
-    "Separar métricas de fallas/quejas de métricas de features generadoras de deleite"
+    "Separar métricas de fallas/quejas de métricas de características generadoras de deleite"
   ],
   "entregable_esperado": "Rediseño del instrumento de medición de satisfacción del cliente que incluya preguntas abiertas",
   "nodos_previos": [
@@ -21,7 +21,7 @@
     "Cuando los resultados de encuestas de satisfacción no correlacionan con ventas o lealtad",
     "Al diseñar instrumentos de voz del cliente"
   ],
-  "etiqueta_arbol": "Satisfacer No Es Solo Arreglar",
+  "etiqueta_arbol": "Satisface, No Solo Arregles Fallas",
   "correcciones": [
     {
       "id": "atribucion-164",
@@ -67,6 +67,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la satisfacción la crea la presencia de características, sin exigir que sean nuevas.; Mismo añadido: 'nuevas' no está en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-satisfaccion_vs_insatisfaccion_kano-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Satisfacer No Es Solo Arreglar",
+      "texto_nuevo": "Satisface, No Solo Arregles Fallas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Satisfacer No Es Solo Arreglar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-satisfaccion_vs_insatisfaccion_kano-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Separar métricas de fallas/quejas de métricas de features generadoras de deleite",
+      "texto_nuevo": "Separar métricas de fallas/quejas de métricas de características generadoras de deleite",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

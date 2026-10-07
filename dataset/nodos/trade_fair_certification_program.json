@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Identificar ferias extranjeras certificadas bajo el programa TFC",
     "Inscribirse en el pabellón de EE.UU. correspondiente",
-    "Participar en el briefing previo de mercado e industria",
-    "Recibir asesoría individual sobre estrategias de entrada y protección de IP",
+    "Participar en la sesión informativa previa de mercado e industria",
+    "Recibir asesoría individual sobre estrategias de entrada y protección de propiedad intelectual",
     "Coordinar con el organizador del pabellón para optimizar espacio y servicios"
   ],
-  "entregable_esperado": "Espacio confirmado en pabellón de EE.UU. certificado en feria extranjera con asesoría pre-evento completada",
+  "entregable_esperado": "Espacio confirmado en pabellón de EE.UU. certificado en feria extranjera con asesoría preevento completada",
   "nodos_previos": [
     "international_buyer_program"
   ],
@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Si tu empresa opera o exporta desde Estados Unidos y quieres exhibir en una feria extranjera dentro de un pabellón oficial de EE.UU."
   ],
-  "etiqueta_arbol": "Certifica tu Feria Comercial",
+  "etiqueta_arbol": "Expón en Ferias Extranjeras Certificadas",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
   ],
@@ -55,6 +55,68 @@
       "decision": "auditoria final, remedio 9.3: tildes mecanicas (decision del fundador, 28 sep 2026)",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.3"
+    },
+    {
+      "id": "voz-trade_fair_certification_program-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Certifica tu Feria Comercial",
+      "texto_nuevo": "Expón en Ferias Extranjeras Certificadas",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v18)",
+        "evidencia": "La etiqueta promete certificar una feria propia, cuando el concepto trata de exponer en un pabellón dentro de ferias extranjeras certificadas; la nueva dice eso y nada más."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_fair_certification_program-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Participar en el briefing previo de mercado e industria",
+      "texto_nuevo": "Participar en la sesión informativa previa de mercado e industria",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el briefing previo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_fair_certification_program-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recibir asesoría individual sobre estrategias de entrada y protección de IP",
+      "texto_nuevo": "Recibir asesoría individual sobre estrategias de entrada y protección de propiedad intelectual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "protección de IP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-trade_fair_certification_program-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Espacio confirmado en pabellón de EE.UU. certificado en feria extranjera con asesoría pre-evento completada",
+      "texto_nuevo": "Espacio confirmado en pabellón de EE.UU. certificado en feria extranjera con asesoría preevento completada",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "El prefijo 'pre' se escribe unido a la palabra que acompaña ('preevento'); solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

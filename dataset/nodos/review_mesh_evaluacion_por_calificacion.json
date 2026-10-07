@@ -6,14 +6,14 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Review (operaciones ferroviarias) y MESH (mantenimiento aeronáutico) son descendientes de Tripod-Delta que usan calificaciones subjetivas de 1 a 5 en lugar de indicadores objetivos sí/no. Los especialistas de tarea estiman la frecuencia con que ciertos factores de problema (locales y organizacionales) han afectado su trabajo. Al agrupar datos de muchas personas, los sesgos individuales se cancelan, generando un perfil confiable de áreas problemáticas.",
   "pasos_accionables": [
-    "Definir los factores locales y organizacionales relevantes al contexto (ej. 16 RPFs para ferrocarril, 8 factores organizacionales + factores locales para mantenimiento)",
+    "Definir los factores locales y organizacionales relevantes al contexto (ej. 16 factores de problema para ferrocarril, 8 factores organizacionales + factores locales para mantenimiento)",
     "Seleccionar una muestra representativa de evaluadores (ej. 20-30% del personal operativo)",
     "Aplicar escalas de calificación de 1 (casi nunca) a 5 (muy frecuente) sobre un periodo definido",
     "Recolectar y promediar los datos de forma anónima mediante software",
     "Generar diagramas de barras comparando la calificación individual vs el promedio del área, para identificar los dos o tres factores que más necesitan corrección y seguir su evolución en el tiempo",
     "Comunicar a los trabajadores las acciones tomadas para mantener su confianza en el sistema"
   ],
-  "entregable_esperado": "Sistema periódico de calificación de factores de riesgo con reportes comparativos y plan de acción visible para el personal",
+  "entregable_esperado": "Sistema periódico de calificación de factores de riesgo con informes comparativos y plan de acción visible para el personal",
   "nodos_previos": [
     "tripod_delta_general_failure_types"
   ],
@@ -46,6 +46,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da a los perfiles el propósito de identificar los dos o tres factores que más necesitan remedio y seguir su evolución.; Mismo propósito perdido.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-review_mesh_evaluacion_por_calificacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir los factores locales y organizacionales relevantes al contexto (ej. 16 RPFs para ferrocarril, 8 factores organizacionales + factores locales para mantenimiento)",
+      "texto_nuevo": "Definir los factores locales y organizacionales relevantes al contexto (ej. 16 factores de problema para ferrocarril, 8 factores organizacionales + factores locales para mantenimiento)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "16 RPFs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-review_mesh_evaluacion_por_calificacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema periódico de calificación de factores de riesgo con reportes comparativos y plan de acción visible para el personal",
+      "texto_nuevo": "Sistema periódico de calificación de factores de riesgo con informes comparativos y plan de acción visible para el personal",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes comparativos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

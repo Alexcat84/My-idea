@@ -11,9 +11,9 @@
     "Evitar dar información excesiva que permita al prospecto decidir sin contactar, por ejemplo el detalle financiero o de soporte, aunque sí conviene dejar claros los requisitos de inversión para que los no aptos se descarten solos",
     "Optimizar el sitio tanto para consumidores como para marketing de franquicia (SEO)",
     "Usar llamados a la acción claros y persuasivos",
-    "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)"
+    "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. informe, video)"
   ],
-  "entregable_esperado": "Sitio web profesional con sección de franquicia optimizada para captura de leads",
+  "entregable_esperado": "Sitio web profesional con sección de franquicia optimizada para captura de prospectos",
   "nodos_previos": [
     "propuesta_valor_franquicia",
     "calificacion_prospectos_marketing",
@@ -73,6 +73,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-sitio_web_franquicia-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. reporte, video)",
+      "texto_nuevo": "Definir la 'oferta de valor' que se entrega a cambio del contacto (ej. informe, video)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-sitio_web_franquicia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sitio web profesional con sección de franquicia optimizada para captura de leads",
+      "texto_nuevo": "Sitio web profesional con sección de franquicia optimizada para captura de prospectos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

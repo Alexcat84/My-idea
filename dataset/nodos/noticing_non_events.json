@@ -7,11 +7,11 @@
   "resumen_teorico": "En sistemas automatizados, varios accidentes ocurren porque la máquina continúa haciendo algo por más tiempo del previsto (o deja de hacer algo) y los humanos no lo notan. Es evolutivamente difícil para las personas (y máquinas) detectar 'no-eventos': la falta de cambio no es informativa ni dispara atención, a diferencia del cambio mismo. Estrategias como pedir a los operadores que verbalicen el modo del sistema ('mode awareness') tienen valor limitado porque suelen abandonarse bajo carga de trabajo alta. A menudo el resultado son 'sorpresas de automatización' donde el sistema hizo algo no esperado por el usuario.",
   "pasos_accionables": [
     "Identificar en el diseño del sistema qué mecanismos existen para alertar sobre la ausencia de cambio esperado",
-    "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
+    "No depender únicamente de anuncios en voz alta del modo como salvaguarda, especialmente en alta carga de trabajo",
     "Diseñar alertas que se activen ante la falta de cambio (no solo ante cambios)",
     "Revisar incidentes pasados en busca de 'sorpresas de automatización' como indicador de este riesgo"
   ],
-  "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
+  "entregable_esperado": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de la ausencia de cambio",
   "nodos_previos": [
     "new_technology_error_pathways"
   ],
@@ -87,6 +87,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-noticing_non_events-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No depender únicamente de call-outs verbales de modo como salvaguarda, especialmente en alta carga de trabajo",
+      "texto_nuevo": "No depender únicamente de anuncios en voz alta del modo como salvaguarda, especialmente en alta carga de trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "call-outs verbales de modo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-noticing_non_events-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de no-eventos",
+      "texto_nuevo": "Rediseño de alertas o procedimientos de monitoreo que contemplen la detección de la ausencia de cambio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "no-eventos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Implementar tecnología/software que detecte automáticamente cuándo el cliente completa un hito clave",
     "Diseñar un mensaje de celebración que se dispare inmediatamente después del logro (no antes)",
-    "Personalizar el contenido según el comportamiento o feedback previo del cliente (ej. rating dado)",
-    "Incluir una oferta de upsell relevante y bien temporizada dentro del mensaje de celebración",
+    "Personalizar el contenido según el comportamiento u opinión previa del cliente (ej. calificación dada)",
+    "Incluir una oferta de venta adicional relevante y bien temporizada dentro del mensaje de celebración",
     "Usar presentación visual atractiva en lugar de solo texto plano para reforzar la experiencia emocional"
   ],
-  "entregable_esperado": "Flujo de automatización (email/notificación) que detecta el logro del cliente y dispara celebración + upsell contextual",
+  "entregable_esperado": "Flujo de automatización (email/notificación) que detecta el logro del cliente y dispara celebración + venta adicional contextual",
   "nodos_previos": [
     "fase_accomplish_experiencia_cliente"
   ],
@@ -26,5 +26,58 @@
   "etiqueta_arbol": "Automatiza la Celebración del Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-celebracion_automatizada_de_hitos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Personalizar el contenido según el comportamiento o feedback previo del cliente (ej. rating dado)",
+      "texto_nuevo": "Personalizar el contenido según el comportamiento u opinión previa del cliente (ej. calificación dada)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback previo",
+          "rating dado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-celebracion_automatizada_de_hitos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir una oferta de upsell relevante y bien temporizada dentro del mensaje de celebración",
+      "texto_nuevo": "Incluir una oferta de venta adicional relevante y bien temporizada dentro del mensaje de celebración",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "oferta de upsell"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-celebracion_automatizada_de_hitos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Flujo de automatización (email/notificación) que detecta el logro del cliente y dispara celebración + upsell contextual",
+      "texto_nuevo": "Flujo de automatización (email/notificación) que detecta el logro del cliente y dispara celebración + venta adicional contextual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "upsell contextual"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

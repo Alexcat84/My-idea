@@ -7,11 +7,11 @@
   "resumen_teorico": "La programación de producción asigna la capacidad disponible (equipo, mano de obra, instalaciones) al trabajo que debe realizarse, buscando el equilibrio óptimo entre tres objetivos que compiten entre sí: altas tasas de utilización (economías de escala mediante corridas largas), bajos niveles de inventario (corridas cortas y entrega justo a tiempo) y altos niveles de servicio al cliente (evitar quiebres de stock). No es posible maximizar los tres simultáneamente, por lo que la gestión de operaciones consiste en encontrar el balance adecuado según la estrategia del negocio.",
   "pasos_accionables": [
     "Identificar cuáles de los tres objetivos (utilización, inventario, servicio) son prioritarios para tu modelo de negocio",
-    "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de setup e inventario",
+    "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de preparación e inventario",
     "Determinar la secuencia de producción usando el concepto de 'run-out time' (tiempo de agotamiento de inventario), que es inventario disponible / demanda esperada, programando primero el producto con el menor valor, asumiendo producido su lote económico y recalculando todos los valores antes de elegir el siguiente",
     "Revisar continuamente el inventario resultante contra la demanda real y ajustar"
   ],
-  "entregable_esperado": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time",
+  "entregable_esperado": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en el tiempo de agotamiento",
   "nodos_previos": [
     "alineacion_ti_negocio",
     "modelo_simulacion_cadena_suministro_circular",
@@ -72,6 +72,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierde el procedimiento: programar primero el producto con menor run-out time, asumir producido su lote y recalcular todos los valores.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-produccion_scheduling_balance_objetivos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de setup e inventario",
+      "texto_nuevo": "Calcular el lote económico de producción (economic lot size) para cada producto, balanceando costos de preparación e inventario",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "costos de setup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-produccion_scheduling_balance_objetivos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en run-out time",
+      "texto_nuevo": "Un calendario de producción documentado con lotes económicos calculados y secuencia de corridas basada en el tiempo de agotamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "basada en run-out time"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

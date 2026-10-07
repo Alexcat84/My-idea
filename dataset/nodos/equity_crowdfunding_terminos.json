@@ -6,13 +6,13 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "A diferencia de una ronda tradicional con VC, en equity crowdfunding el propio emprendedor suele fijar los términos del acuerdo (tipo de instrumento, valoración, protecciones). Los inversionistas suelen ser muchos y pequeños, y pueden o no estar enfocados en ayudar a la empresa, lo que traslada la responsabilidad de comunicación al fundador. Existen riesgos: quedar 'varado' sin suficiente capital ni apoyo de inversionistas, y lidiar con inversionistas problemáticos ('jerks') sin mecanismos claros de diligencia previa.",
   "pasos_accionables": [
-    "Definir el tipo de instrumento a emitir (deuda convertible con cap, o acciones preferentes ligeras).",
+    "Definir el tipo de instrumento a emitir (deuda convertible con tope de valoración, o acciones preferentes ligeras).",
     "Preparar materiales atractivos: resumen ejecutivo, presentación, video y datos de tracción actualizados.",
     "Planificar un sistema propio de comunicación continua con los inversionistas, dado que es poco probable que muchos de ellos te busquen por iniciativa propia.",
     "Evaluar el riesgo de quedar sin fondos suficientes ni apoyo si la ronda no cierra bien.",
     "Ten cuidado con los inversionistas difíciles y fija desde el inicio límites y expectativas claras con todos tus inversionistas."
   ],
-  "entregable_esperado": "Paquete de materiales de fundraising (deck, resumen ejecutivo, términos del instrumento) y plan de comunicación post-inversión para una campaña de equity crowdfunding.",
+  "entregable_esperado": "Paquete de materiales de recaudación de fondos (presentación, resumen ejecutivo, términos del instrumento) y plan de comunicación posinversión para una campaña de financiación colectiva a cambio de acciones.",
   "nodos_previos": [
     "crowdfunding_legal_exemptions_jobs_act",
     "convertible_debt_fundamentos",
@@ -98,6 +98,42 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-equity_crowdfunding_terminos-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el tipo de instrumento a emitir (deuda convertible con cap, o acciones preferentes ligeras).",
+      "texto_nuevo": "Definir el tipo de instrumento a emitir (deuda convertible con tope de valoración, o acciones preferentes ligeras).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-equity_crowdfunding_terminos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paquete de materiales de fundraising (deck, resumen ejecutivo, términos del instrumento) y plan de comunicación post-inversión para una campaña de equity crowdfunding.",
+      "texto_nuevo": "Paquete de materiales de recaudación de fondos (presentación, resumen ejecutivo, términos del instrumento) y plan de comunicación posinversión para una campaña de financiación colectiva a cambio de acciones.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fundraising",
+          "deck",
+          "post-inversión",
+          "equity crowdfunding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

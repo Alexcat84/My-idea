@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Si el usuario debe elegir entre opciones imperfectas y no puede rediseñar el producto completo todavía.",
-    "Si el usuario busca comunicar compromiso ambiental sin caer en greenwashing."
+    "Si al elegir materiales o proveedores quieres distinguir los que de verdad tienen un compromiso ambiental de los que solo lo anuncian."
   ],
   "etiqueta_arbol": "Elige con Conciencia y Respeto",
   "fuentes_internas": [
@@ -73,6 +73,23 @@
       "decision": "lectura total de procedencia (w29): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "condiciones-resto-estrategias_seleccion_preferencial-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el usuario busca comunicar compromiso ambiental sin caer en greenwashing.",
+      "texto_nuevo": "Si al elegir materiales o proveedores quieres distinguir los que de verdad tienen un compromiso ambiental de los que solo lo anuncian.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "962",
+        "frase": "look for materials whose \"advertising\" matches their insides"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c21): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

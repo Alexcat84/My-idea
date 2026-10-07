@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Integrar el sistema de autorrespuesta con el software de gestión de contactos (CRM)",
     "Crear mensajes diferenciados según las respuestas del prospecto (por ejemplo, su capital disponible)",
-    "Configurar notificaciones (BCC) al equipo de ventas para prospectos altamente calificados",
+    "Configurar notificaciones (copia oculta) al equipo de ventas para prospectos altamente calificados",
     "Revisar y pulir la redacción para mantener profesionalismo y cumplimiento regulatorio"
   ],
-  "entregable_esperado": "Sistema automatizado de correspondencia integrado al CRM que segmenta y nutre leads según su perfil",
+  "entregable_esperado": "Sistema automatizado de correspondencia integrado al CRM que segmenta y nutre clientes potenciales según su perfil",
   "nodos_previos": [
     "tasa_captura_leads"
   ],
@@ -88,6 +88,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que internet puede crear ese volumen; el nodo lo afirma sin matiz.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-autoresponders_drip_campaigns-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Configurar notificaciones (BCC) al equipo de ventas para prospectos altamente calificados",
+      "texto_nuevo": "Configurar notificaciones (copia oculta) al equipo de ventas para prospectos altamente calificados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(BCC)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-autoresponders_drip_campaigns-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema automatizado de correspondencia integrado al CRM que segmenta y nutre leads según su perfil",
+      "texto_nuevo": "Sistema automatizado de correspondencia integrado al CRM que segmenta y nutre clientes potenciales según su perfil",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

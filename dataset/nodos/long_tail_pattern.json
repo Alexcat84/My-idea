@@ -7,7 +7,7 @@
   "resumen_teorico": "Modelo de negocio que se enfoca en 'vender menos de más': ofrecer un gran número de productos de nicho, cada uno con ventas poco frecuentes, pero cuya suma agregada puede ser tan o más rentable que el modelo tradicional de pocos best-sellers. Requiere bajos costos de inventario y una plataforma robusta que conecte oferta de nicho con demanda dispersa, impulsado por la democratización de producción, distribución y motores de búsqueda/recomendación.",
   "pasos_accionables": [
     "Evaluar si tu industria tiene alto costo de inventario que podría reducirse mediante digitalización o bajo costo de almacenamiento.",
-    "Identificar contenido o productos de nicho que actualmente son ignorados por el modelo de 'hits'.",
+    "Identificar contenido o productos de nicho que actualmente son ignorados por el modelo de grandes éxitos.",
     "Diseñar una plataforma (física o digital) que reduzca los costos de búsqueda entre oferta de nicho y demanda interesada.",
     "Considerar habilitar contenido generado por usuarios como fuente adicional de oferta de nicho."
   ],
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Vende Poco de Mucho",
   "fuentes_internas": [
     "Business Model Generation - Osterwalder, Alexander"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-long_tail_pattern-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar contenido o productos de nicho que actualmente son ignorados por el modelo de 'hits'.",
+      "texto_nuevo": "Identificar contenido o productos de nicho que actualmente son ignorados por el modelo de grandes éxitos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "modelo de 'hits'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

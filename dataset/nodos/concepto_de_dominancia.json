@@ -7,7 +7,7 @@
   "resumen_teorico": "Dado que existen numerosos sujetos de control, este concepto ayuda a identificar los 'pocos vitales' priorizando la variable dominante del proceso: dominante por configuración inicial (setup), por tiempo (desgaste progresivo), por componentes (calidad de insumos), por personas (habilidad del trabajador) o por información (procesos tipo taller que cambian frecuentemente). Cada tipo dominante sugiere un diseño de control distinto.",
   "pasos_accionables": [
     "Analizar el proceso para identificar cuál variable tiene mayor influencia sobre el resultado",
-    "Clasificar la variable dominante (setup, tiempo, componente, persona o información)",
+    "Clasificar la variable dominante (configuración inicial, tiempo, componente, persona o información)",
     "Diseñar el control priorizando la gestión de esa variable dominante",
     "Asignar recursos y prioridades acorde al tipo de dominancia identificado"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Identifica la Variable Dominante",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-concepto_de_dominancia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Clasificar la variable dominante (setup, tiempo, componente, persona o información)",
+      "texto_nuevo": "Clasificar la variable dominante (configuración inicial, tiempo, componente, persona o información)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "setup"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

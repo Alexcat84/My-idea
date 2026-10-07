@@ -11,9 +11,9 @@
     "Diseñar el experimento específico para verificar la hipótesis",
     "Estimar costo, fiabilidad de los datos y tiempo requerido",
     "Definir qué métrica se va a medir y el umbral que determina éxito o fracaso",
-    "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima"
+    "Repetir el proceso para las siguientes hipótesis críticas y ordenar las tarjetas de prueba por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima"
   ],
-  "entregable_esperado": "Serie de Test Cards completos, ordenados por prioridad, listos para ejecutar",
+  "entregable_esperado": "Serie de tarjetas de prueba completas, ordenadas por prioridad, listas para ejecutar",
   "nodos_previos": [
     "extraer_priorizar_hipotesis",
     "build_measure_learn",
@@ -47,6 +47,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde el criterio de orden del libro: lo más crítico arriba, pero las pruebas baratas y rápidas primero.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-test_card-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Repetir el proceso para las siguientes hipótesis críticas y ordenar los Test Cards por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima",
+      "texto_nuevo": "Repetir el proceso para las siguientes hipótesis críticas y ordenar las tarjetas de prueba por prioridad: las hipótesis más críticas arriba, pero las pruebas baratas y rápidas primero, cuando la incertidumbre es máxima",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los Test Cards"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-test_card-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Serie de Test Cards completos, ordenados por prioridad, listos para ejecutar",
+      "texto_nuevo": "Serie de tarjetas de prueba completas, ordenadas por prioridad, listas para ejecutar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Test Cards completos, ordenados por prioridad, listos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

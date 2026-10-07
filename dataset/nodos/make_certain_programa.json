@@ -14,7 +14,7 @@
     "Pedir a los participantes que envíen ideas escritas de prevención de defectos al equipo de mejora",
     "Sugerir a cada grupo que tenga reuniones regulares de prevención de defectos, similares a los círculos de acción correctiva en manufactura"
   ],
-  "entregable_esperado": "Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.",
+  "entregable_esperado": "Sesión de responsabilidad personal por la calidad ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.",
   "nodos_previos": [
     "programa_mejora_calidad_14_pasos",
     "zero_defects_concepto"
@@ -26,7 +26,7 @@
     "Cuando la organización desea extender la cultura de calidad a áreas administrativas y de servicio",
     "Cuando gran parte de los defectos provienen de papeleo y comunicación, no de manufactura"
   ],
-  "etiqueta_arbol": "Haz Certera tu Oficina",
+  "etiqueta_arbol": "Asume tus Errores en la Oficina",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
   ],
@@ -98,6 +98,36 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el núcleo del programa: los coordinadores preparan a los supervisores, que analizan con su gente quién es su cliente, qué quiere y cómo medir los fallos.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-make_certain_programa-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Haz Certera tu Oficina",
+      "texto_nuevo": "Asume tus Errores en la Oficina",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v18)",
+        "evidencia": "La etiqueta traduce al pie de la letra el nombre del programa y promete una oficina 'certera', no lo que trata el concepto (que cada quien asuma su responsabilidad en la calidad del trabajo de oficina en vez de culpar a otros); la nueva lo nombra sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-make_certain_programa-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sesión Make Certain ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.",
+      "texto_nuevo": "Sesión de responsabilidad personal por la calidad ejecutada con lista de problemas identificados y compromiso de reuniones regulares de prevención en áreas administrativas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sesión Make Certain"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

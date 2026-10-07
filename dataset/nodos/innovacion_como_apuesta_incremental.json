@@ -7,11 +7,11 @@
   "resumen_teorico": "A diferencia de una carrera de caballos donde las apuestas se hacen todas antes de empezar, el desarrollo de nuevos productos se parece más al póker de cinco cartas: las apuestas (inversión) se realizan progresivamente a medida que se revela nueva información en cada etapa. Esto significa que las empresas pueden y deben tomar decisiones de continuar/matar (Go/Kill) en cada etapa basándose en criterios sólidos, en lugar de apostar todo el presupuesto desde el inicio sin información.",
   "pasos_accionables": [
     "Diseñar el proceso de desarrollo de productos en etapas (stages) con puntos de decisión (gates) intermedios.",
-    "Definir criterios claros y objetivos de Go/Kill para cada gate, evitando decisiones basadas en intuición.",
+    "Definir criterios claros y objetivos de continuar o cancelar para cada punto de control, evitando decisiones basadas en intuición.",
     "Incrementar la inversión de forma progresiva según la información y validación obtenida en cada etapa.",
     "Evitar comprometer todos los recursos del proyecto en las etapas iniciales de incertidumbre."
   ],
-  "entregable_esperado": "Un proceso de etapas y compuertas (Stage-Gate) documentado con criterios de decisión Go/Kill en cada punto de control.",
+  "entregable_esperado": "Un proceso de etapas y compuertas (Stage-Gate) documentado con criterios de decisión de continuar o cancelar en cada punto de control.",
   "nodos_previos": [
     "definicion_tipos_nuevo_producto",
     "liderazgo_ejecutivo_innovacion"
@@ -27,5 +27,41 @@
   "etiqueta_arbol": "Apuesta Poco a Poco",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-innovacion_como_apuesta_incremental-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir criterios claros y objetivos de Go/Kill para cada gate, evitando decisiones basadas en intuición.",
+      "texto_nuevo": "Definir criterios claros y objetivos de continuar o cancelar para cada punto de control, evitando decisiones basadas en intuición.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de Go/Kill",
+          "cada gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-innovacion_como_apuesta_incremental-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un proceso de etapas y compuertas (Stage-Gate) documentado con criterios de decisión Go/Kill en cada punto de control.",
+      "texto_nuevo": "Un proceso de etapas y compuertas (Stage-Gate) documentado con criterios de decisión de continuar o cancelar en cada punto de control.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "decisión Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

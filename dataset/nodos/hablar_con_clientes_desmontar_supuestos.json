@@ -9,7 +9,7 @@
     "Traer usuarios potenciales a sesiones de prueba en persona regularmente, no solo una vez",
     "Observar el comportamiento real del usuario ante el producto, no solo escuchar sus opiniones verbales",
     "Buscar patrones repetidos en el rechazo o confusión de múltiples usuarios distintos, no descartar el primer caso como 'atípico'",
-    "Estar dispuesto a que el cliente contradiga la lógica estratégica que el equipo construyó en el whiteboard",
+    "Estar dispuesto a que el cliente contradiga la lógica estratégica que el equipo construyó en la pizarra",
     "Iterar rápidamente el producto entre sesiones de prueba basándose en lo observado"
   ],
   "entregable_esperado": "Un informe de patrones de comportamiento de usuarios reales que contraste (confirme o refute) los supuestos estratégicos originales del negocio",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Habla con Clientes, Revisa Supuestos",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-hablar_con_clientes_desmontar_supuestos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estar dispuesto a que el cliente contradiga la lógica estratégica que el equipo construyó en el whiteboard",
+      "texto_nuevo": "Estar dispuesto a que el cliente contradiga la lógica estratégica que el equipo construyó en la pizarra",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el whiteboard"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

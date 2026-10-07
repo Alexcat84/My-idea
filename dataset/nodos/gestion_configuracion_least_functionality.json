@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Establece y mantiene configuraciones base e inventarios de sistemas organizacionales (hardware, software, firmware, documentación), así como configuraciones de seguridad para productos de TI empleados. El concepto de Mínima Funcionalidad implica configurar el sistema para proveer solo las capacidades esenciales para la misión, deshabilitando o removiendo funciones, puertos, protocolos y servicios innecesarios o inseguros.",
   "pasos_accionables": [
-    "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+    "Limitar quién puede realizar cambios en sistemas que contienen información no clasificada controlada (CUI)",
     "Definir qué instalaciones de software están permitidas (por excepción) y cuáles prohibidas",
     "Localizar dónde reside el CUI y qué componentes del sistema lo procesan",
     "Deshabilitar o remover funciones, puertos, protocolos, conexiones y servicios innecesarios o inseguros en los sistemas"
@@ -90,6 +90,23 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-gestion_configuracion_least_functionality-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Limitar quién puede realizar cambios en sistemas que contienen CUI",
+      "texto_nuevo": "Limitar quién puede realizar cambios en sistemas que contienen información no clasificada controlada (CUI)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "contienen CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Antes de avanzar en cualquier paso de construcción de un startup, es fundamental poder explicar claramente por qué existe la empresa. Un buen formato es 'Ayudamos a X a hacer Y haciendo Z'. Esta declaración debe ser comprensible para terceros ajenos al negocio: pregunta a otras personas si tiene sentido y, si no, dales una explicación más larga y pídeles que te la resuman.",
   "pasos_accionables": [
-    "Redactar la USP en el formato 'Ayudamos a X a hacer Y haciendo Z'",
+    "Redactar la propuesta única de valor en el formato 'Ayudamos a X a hacer Y haciendo Z'",
     "Presentar la declaración a varias personas (no necesariamente del mercado objetivo)",
     "Pedirles que resuman lo que entendieron",
     "Si no la entienden, dar una explicación más larga y volver a pedir un resumen, porque otras personas suelen redactar mejor que tú una propuesta comprensible",
     "Iterar la declaración hasta que sea clara para terceros"
   ],
-  "entregable_esperado": "Declaración USP validada y comprendida por personas externas al equipo fundador",
+  "entregable_esperado": "Declaración de propuesta única de valor validada y comprendida por personas externas al equipo fundador",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "hipotesis_propuesta_de_valor_producto"
@@ -62,6 +62,39 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro primero pregunta si la declaración tiene sentido y solo si no lo tiene pide explicación larga y resumen; el resumen pierde esa condición.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-unique_selling_proposition_statement-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Redactar la USP en el formato 'Ayudamos a X a hacer Y haciendo Z'",
+      "texto_nuevo": "Redactar la propuesta única de valor en el formato 'Ayudamos a X a hacer Y haciendo Z'",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "la USP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-unique_selling_proposition_statement-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Declaración USP validada y comprendida por personas externas al equipo fundador",
+      "texto_nuevo": "Declaración de propuesta única de valor validada y comprendida por personas externas al equipo fundador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Declaración USP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

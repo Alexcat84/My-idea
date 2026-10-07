@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcula la capacidad real de recursos que tienes para desarrollar productos",
     "Limita el número de proyectos activos según esa capacidad real",
-    "Sé más exigente al descartar proyectos en las primeras etapas de revisión (los gates 1 a 3)",
+    "Sé más exigente al descartar proyectos en las primeras etapas de revisión (los puntos de decisión 1 a 3)",
     "Vigila el tiempo que tardas en llegar al mercado y cuántos lanzamientos haces al año, como señales de que vas bien"
   ],
   "entregable_esperado": "Un número definido y limitado de proyectos activos, ajustado a tu capacidad real de recursos, con mejoras en el tiempo que tardas en llegar al mercado",
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Elige Menos Proyectos, Mejor Hechos",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-decision_factory_mentality-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sé más exigente al descartar proyectos en las primeras etapas de revisión (los gates 1 a 3)",
+      "texto_nuevo": "Sé más exigente al descartar proyectos en las primeras etapas de revisión (los puntos de decisión 1 a 3)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los gates 1 a 3"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

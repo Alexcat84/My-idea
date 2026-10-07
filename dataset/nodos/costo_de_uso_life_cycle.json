@@ -7,7 +7,7 @@
   "resumen_teorico": "Para bienes de larga duración, el costo total de uso (operación, mantenimiento, downtime, depreciación, licencias) puede divergir significativamente del precio de compra. El énfasis histórico en el precio de compra genera subóptimos, donde el proveedor optimiza sus costos en vez de los costos combinados proveedor-cliente. El life-cycle costing ofrece una solución.",
   "pasos_accionables": [
     "Calcular el costo total de propiedad del producto/servicio a lo largo de su vida útil",
-    "Incluir costos de operación, mantenimiento, downtime y depreciación en el análisis",
+    "Incluir costos de operación, mantenimiento, tiempo de inactividad y depreciación en el análisis",
     "Comparar el costo de ciclo de vida contra el precio de compra inicial",
     "Comunicar al cliente el análisis de costo de ciclo de vida, para mostrar el costo combinado y no solo el precio de compra"
   ],
@@ -76,6 +76,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c06): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-costo_de_uso_life_cycle-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir costos de operación, mantenimiento, downtime y depreciación en el análisis",
+      "texto_nuevo": "Incluir costos de operación, mantenimiento, tiempo de inactividad y depreciación en el análisis",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "downtime"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

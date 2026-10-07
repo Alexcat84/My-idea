@@ -9,7 +9,7 @@
     "Seleccionar el área o proceso a auditar",
     "Documentar buenas prácticas identificadas y áreas de mejora, con las mejoras o mediciones concretas a lograr",
     "Registrar deficiencias con acción correctiva, responsable y fecha límite",
-    "Generar Change Request si se requiere acción correctiva"
+    "Generar una solicitud de cambio si se requiere acción correctiva"
   ],
   "entregable_esperado": "Informe de auditoría de calidad con hallazgos y acciones correctivas asignadas",
   "nodos_previos": [
@@ -68,6 +68,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro registra también las áreas de mejora con las mejoras o mediciones a lograr.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-quality_audit-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar Change Request si se requiere acción correctiva",
+      "texto_nuevo": "Generar una solicitud de cambio si se requiere acción correctiva",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Change Request"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

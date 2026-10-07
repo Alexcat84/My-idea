@@ -8,13 +8,13 @@
   "pasos_accionables": [
     "Identificar cuál es el momento exacto de 'primer contacto real' del cliente con el producto o servicio",
     "Eliminar cualquier barrera técnica o logística que retrase la gratificación inmediata (ej: baterías, configuración, activación)",
-    "Diseñar la entrega/kickoff como una experiencia memorable, no un simple trámite",
+    "Diseñar la entrega o la reunión de arranque como una experiencia memorable, no un simple trámite",
     "Evaluar la reacción emocional del cliente en ese primer momento y ajustar el proceso si genera frustración",
     "Establecer expectativas claras sobre los próximos pasos del proceso.",
-    "Generar momentum temprano mostrando avances o entregables rápidos.",
+    "Generar impulso temprano mostrando avances o entregables rápidos.",
     "Evitar fallos en la primera impresión operativa, ya que son difíciles de revertir."
   ],
-  "entregable_esperado": "Protocolo de entrega o kickoff diseñado explícitamente para generar una reacción de sorpresa y satisfacción inmediata",
+  "entregable_esperado": "Protocolo de entrega o reunión de arranque diseñado explícitamente para generar una reacción de sorpresa y satisfacción inmediata",
   "nodos_previos": [
     "fase_affirm_buyers_remorse",
     "welcome_call_cliente_veterano",
@@ -42,5 +42,57 @@
   ],
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-fase_activate_primera_impresion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar la entrega/kickoff como una experiencia memorable, no un simple trámite",
+      "texto_nuevo": "Diseñar la entrega o la reunión de arranque como una experiencia memorable, no un simple trámite",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "entrega/kickoff"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fase_activate_primera_impresion-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar momentum temprano mostrando avances o entregables rápidos.",
+      "texto_nuevo": "Generar impulso temprano mostrando avances o entregables rápidos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "momentum"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-fase_activate_primera_impresion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Protocolo de entrega o kickoff diseñado explícitamente para generar una reacción de sorpresa y satisfacción inmediata",
+      "texto_nuevo": "Protocolo de entrega o reunión de arranque diseñado explícitamente para generar una reacción de sorpresa y satisfacción inmediata",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "kickoff"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

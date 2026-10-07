@@ -7,11 +7,11 @@
   "resumen_teorico": "El franquiciante no es responsable de la gestión diaria de cada unidad; su ingreso típicamente se basa en ventas brutas, no en rentabilidad, lo que simplifica el monitoreo. El rol del franquiciante se enfoca en proteger la marca y ofrecer coaching de desempeño financiero, no en implementar cambios operativos diarios.",
   "pasos_accionables": [
     "Definir claramente qué aspectos del negocio serán responsabilidad del franquiciado vs. del franquiciante",
-    "Establecer indicadores clave de desempeño (KPIs) que el franquiciante monitoreará a distancia",
-    "Diseñar un protocolo de coaching y soporte para franquiciados con bajo desempeño",
+    "Establecer indicadores clave de desempeño (KPI) que el franquiciante monitoreará a distancia",
+    "Diseñar un protocolo de acompañamiento y soporte para franquiciados con bajo desempeño",
     "Separar las funciones de protección de marca de las funciones de gestión operativa diaria"
   ],
-  "entregable_esperado": "Protocolo de supervisión y soporte a franquiciados basado en KPIs, no en gestión operativa directa",
+  "entregable_esperado": "Protocolo de supervisión y soporte a franquiciados basado en indicadores clave de desempeño, no en gestión operativa directa",
   "nodos_previos": [
     "apalancamiento_personal_franquicia"
   ],
@@ -21,7 +21,7 @@
   "condiciones_activacion": [
     "Si el franquiciante busca enfocarse en estrategia en lugar de operaciones diarias"
   ],
-  "etiqueta_arbol": "Simplifica tu Supervisión",
+  "etiqueta_arbol": "Simplifica la Supervisión de tus Franquicias",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
   ],
@@ -38,6 +38,70 @@
         "evidencia": "F25-012: Disenar el protocolo de supervision por KPIs y el reparto de responsabilidades entre franquiciante y franquiciado es disenar el modelo operativo. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-facilidad_supervision_franquicia-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Simplifica tu Supervisión",
+      "texto_nuevo": "Simplifica la Supervisión de tus Franquicias",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tu Supervisión"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-facilidad_supervision_franquicia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer indicadores clave de desempeño (KPIs) que el franquiciante monitoreará a distancia",
+      "texto_nuevo": "Establecer indicadores clave de desempeño (KPI) que el franquiciante monitoreará a distancia",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "Las siglas son invariables en la escritura y no llevan -s de plural; la sigla queda definida igual y nada más cambia."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-facilidad_supervision_franquicia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar un protocolo de coaching y soporte para franquiciados con bajo desempeño",
+      "texto_nuevo": "Diseñar un protocolo de acompañamiento y soporte para franquiciados con bajo desempeño",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "coaching"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-facilidad_supervision_franquicia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Protocolo de supervisión y soporte a franquiciados basado en KPIs, no en gestión operativa directa",
+      "texto_nuevo": "Protocolo de supervisión y soporte a franquiciados basado en indicadores clave de desempeño, no en gestión operativa directa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "basado en KPIs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

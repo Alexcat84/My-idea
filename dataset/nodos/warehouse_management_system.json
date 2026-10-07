@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Mapear el flujo físico actual de productos en el almacén",
     "Definir ubicaciones y niveles de inventario a rastrear en el sistema",
-    "Automatizar procesos de picking, packing y shipping",
-    "Integrar el WMS con robots o vehículos automatizados si aplica"
+    "Automatizar procesos de preparación de pedidos, empaque y despacho",
+    "Integrar el sistema de gestión de almacén con robots o vehículos automatizados si corresponde"
   ],
-  "entregable_esperado": "WMS implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
+  "entregable_esperado": "Sistema de gestión de almacén implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
   "nodos_previos": [
     "erp_systems"
   ],
@@ -69,6 +69,57 @@
       "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-warehouse_management_system-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Automatizar procesos de picking, packing y shipping",
+      "texto_nuevo": "Automatizar procesos de preparación de pedidos, empaque y despacho",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "picking, packing y shipping"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-warehouse_management_system-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Integrar el WMS con robots o vehículos automatizados si aplica",
+      "texto_nuevo": "Integrar el sistema de gestión de almacén con robots o vehículos automatizados si corresponde",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el WMS",
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-warehouse_management_system-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "WMS implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
+      "texto_nuevo": "Sistema de gestión de almacén implementado y operando con seguimiento de niveles de inventario y ubicaciones de almacenamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "WMS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

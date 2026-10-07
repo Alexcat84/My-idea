@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Analizar si el producto/servicio del negocio podría volverse obsoleto en el tiempo",
     "Determinar si los franquiciados generarán ingresos por servicios además de productos",
-    "Establecer un royalty que compense el valor de marca, IP y soporte continuo",
-    "Establecer márgenes en venta de productos independientes del royalty"
+    "Establecer una regalía que compense el valor de marca, propiedad intelectual y soporte continuo",
+    "Establecer márgenes en venta de productos independientes de la regalía"
   ],
-  "entregable_esperado": "Modelo financiero que defina claramente los porcentajes de royalty y márgenes de producto",
+  "entregable_esperado": "Modelo financiero que defina claramente los porcentajes de regalías y márgenes de producto",
   "nodos_previos": [
     "estructura_proveedores_aprobados_designados"
   ],
@@ -43,6 +43,57 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que probablemente ('chances are') el royalty sea la única vía; el nodo lo vuelve absoluto.; El libro plantea la decisión suponiendo que puedes exigir legalmente a los franquiciados que te compren productos; esa condición se cae.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-decision_royalties_vs_venta_producto-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer un royalty que compense el valor de marca, IP y soporte continuo",
+      "texto_nuevo": "Establecer una regalía que compense el valor de marca, propiedad intelectual y soporte continuo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un royalty",
+          "IP"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-decision_royalties_vs_venta_producto-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer márgenes en venta de productos independientes del royalty",
+      "texto_nuevo": "Establecer márgenes en venta de productos independientes de la regalía",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del royalty"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-decision_royalties_vs_venta_producto-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modelo financiero que defina claramente los porcentajes de royalty y márgenes de producto",
+      "texto_nuevo": "Modelo financiero que defina claramente los porcentajes de regalías y márgenes de producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "royalty"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

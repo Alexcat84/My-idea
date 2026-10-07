@@ -6,12 +6,12 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Un CTA es una acción concreta que se le pide realizar a un cliente potencial (clic, registro, prepago) para medir el nivel real de interés, más allá de lo que dice verbalmente. Cuanto mayor es la inversión requerida para realizar el CTA (tiempo, dinero, datos personales), más fuerte es la evidencia de interés genuino.",
   "pasos_accionables": [
-    "Define qué acción específica quieres que el cliente realice (clic, email, compra simulada).",
-    "Selecciona el nivel de inversión del CTA según la etapa del proceso (bajo al inicio, alto más adelante).",
-    "Mide la tasa de conversión de quienes ven la oferta vs. quienes ejecutan el CTA.",
+    "Define qué acción específica quieres que el cliente realice (clic, correo electrónico, compra simulada).",
+    "Selecciona el nivel de inversión de la acción que pides según la etapa del proceso (bajo al inicio, alto más adelante).",
+    "Mide la tasa de conversión de quienes ven la oferta vs. quienes realizan la acción pedida.",
     "Usa los resultados para validar o invalidar la hipótesis de interés."
   ],
-  "entregable_esperado": "Una métrica de conversión (% de usuarios que ejecutaron el CTA) que sirva como evidencia cuantitativa de interés.",
+  "entregable_esperado": "Una métrica de conversión (% de usuarios que realizaron la acción pedida) que sirva como evidencia cuantitativa de interés.",
   "nodos_previos": [
     "mvp_catalogo_tecnicas"
   ],
@@ -26,5 +26,74 @@
   "etiqueta_arbol": "Pide una Acción Concreta",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-call_to_action_cta-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define qué acción específica quieres que el cliente realice (clic, email, compra simulada).",
+      "texto_nuevo": "Define qué acción específica quieres que el cliente realice (clic, correo electrónico, compra simulada).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-call_to_action_cta-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Selecciona el nivel de inversión del CTA según la etapa del proceso (bajo al inicio, alto más adelante).",
+      "texto_nuevo": "Selecciona el nivel de inversión de la acción que pides según la etapa del proceso (bajo al inicio, alto más adelante).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del CTA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-call_to_action_cta-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide la tasa de conversión de quienes ven la oferta vs. quienes ejecutan el CTA.",
+      "texto_nuevo": "Mide la tasa de conversión de quienes ven la oferta vs. quienes realizan la acción pedida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ejecutan el CTA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-call_to_action_cta-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una métrica de conversión (% de usuarios que ejecutaron el CTA) que sirva como evidencia cuantitativa de interés.",
+      "texto_nuevo": "Una métrica de conversión (% de usuarios que realizaron la acción pedida) que sirva como evidencia cuantitativa de interés.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ejecutaron el CTA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

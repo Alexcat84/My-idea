@@ -9,9 +9,9 @@
     "Evaluar la complejidad financiera del negocio para decidir el momento de contratar un CFO",
     "Tener en cuenta que el VP de Ventas suele ser una de las primeras posiciones especializadas que se crean, pero evitar contratar a un especialista que no pueda hacer otra cosa mientras el producto aún no se ha asentado",
     "Analizar si el rol de COO/presidente resuelve una necesidad real o solo compensa una carencia del CEO",
-    "Revisar el ratio de empleados por ejecutivo (leverage estructural) para justificar nuevas contrataciones"
+    "Revisar el ratio de empleados por ejecutivo (apalancamiento estructural) para justificar nuevas contrataciones"
   ],
-  "entregable_esperado": "Organigrama proyectado con roles C-level y VP planificados según hitos de financiamiento",
+  "entregable_esperado": "Organigrama proyectado con roles ejecutivos de primer nivel y VP planificados según hitos de financiamiento",
   "nodos_previos": [
     "riesgo_contratar_amigos_familia",
     "fuentes_contratacion_ejecutivos"
@@ -46,6 +46,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro advierte, con el ejemplo de un VP de ventas, que contratar especialistas mientras el producto sigue cambiando puede ser un gran error.; El libro solo describe que el VP de ventas suele ser el primer puesto VP creado; no recomienda priorizarlo.; Mismo defecto que la marca 0: una descripción convertida en prescripción.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-creacion_roles_c_level-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el ratio de empleados por ejecutivo (leverage estructural) para justificar nuevas contrataciones",
+      "texto_nuevo": "Revisar el ratio de empleados por ejecutivo (apalancamiento estructural) para justificar nuevas contrataciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leverage"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-creacion_roles_c_level-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organigrama proyectado con roles C-level y VP planificados según hitos de financiamiento",
+      "texto_nuevo": "Organigrama proyectado con roles ejecutivos de primer nivel y VP planificados según hitos de financiamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "C-level"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

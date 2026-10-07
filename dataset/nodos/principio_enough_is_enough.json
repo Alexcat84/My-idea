@@ -9,7 +9,7 @@
     "Definir claramente qué se quiere aprender antes de construir el prototipo",
     "Limitar la resolución del prototipo a solo lo necesario para responder esa pregunta",
     "Evitar usar tecnología de alta fidelidad (impresión 3D, CAD) para hacer prototipos demasiado refinados y detallados en etapas tempranas",
-    "Aumentar gradualmente la fidelidad solo cuando se necesite feedback de usuarios finales sobre superficie/detalles"
+    "Aumentar gradualmente la fidelidad solo cuando se necesite retroalimentación de usuarios finales sobre superficie/detalles"
   ],
   "entregable_esperado": "Un prototipo con el nivel de fidelidad justo y necesario para la pregunta de aprendizaje específica de esa etapa",
   "nodos_previos": [
@@ -23,7 +23,7 @@
     "Cuando el equipo tiende a sobre-invertir tiempo y recursos en prototipos tempranos",
     "Cuando se necesita decidir el nivel de detalle adecuado para una etapa del proyecto"
   ],
-  "etiqueta_arbol": "Basta con Suficiente Prototipo",
+  "etiqueta_arbol": "Haz Solo el Prototipo Necesario",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
   ],
@@ -44,6 +44,39 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro no desaconseja la herramienta; advierte contra usarla para prototipos demasiado refinados, detallados y tempranos.; Mismo defecto.; Mismo defecto: endurece la advertencia a evitar la tecnología.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-principio_enough_is_enough-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Basta con Suficiente Prototipo",
+      "texto_nuevo": "Haz Solo el Prototipo Necesario",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Basta con Suficiente"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-principio_enough_is_enough-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aumentar gradualmente la fidelidad solo cuando se necesite feedback de usuarios finales sobre superficie/detalles",
+      "texto_nuevo": "Aumentar gradualmente la fidelidad solo cuando se necesite retroalimentación de usuarios finales sobre superficie/detalles",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "feedback"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

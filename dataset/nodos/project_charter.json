@@ -6,14 +6,14 @@
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "Documento formal que autoriza la existencia de un proyecto o fase, otorga autoridad al project manager y define el proyecto en términos de alto nivel: propósito, objetivos, requisitos, riesgos, cronograma resumen, presupuesto resumen y lista de stakeholders. Es el punto de partida oficial que conecta el caso de negocio con la ejecución del proyecto.",
   "pasos_accionables": [
-    "Definir el propósito o justificación del proyecto (business case, contrato, plan estratégico)",
+    "Definir el propósito o justificación del proyecto (caso de negocio, contrato, plan estratégico)",
     "Redactar una descripción de alto nivel del proyecto y sus entregables principales",
-    "Establecer objetivos de alcance, tiempo y costo con criterios de éxito medibles, y los criterios que debe cumplir el proyecto para que el cliente o el sponsor lo acepte",
+    "Establecer objetivos de alcance, tiempo y costo con criterios de éxito medibles, y los criterios que debe cumplir el proyecto para que el cliente o el patrocinador lo acepte",
     "Identificar riesgos de alto nivel y un cronograma/presupuesto resumido",
-    "Asignar formalmente al project manager y definir su nivel de autoridad",
-    "Obtener la firma del sponsor que autoriza el proyecto"
+    "Asignar formalmente al director del proyecto y definir su nivel de autoridad",
+    "Obtener la firma del patrocinador que autoriza el proyecto"
   ],
-  "entregable_esperado": "Un documento de Project Charter firmado por el sponsor, con propósito, objetivos, alcance inicial, riesgos, presupuesto/cronograma resumido y autoridad del PM claramente definidos.",
+  "entregable_esperado": "Un documento de acta de inicio del proyecto firmado por el patrocinador, con propósito, objetivos, alcance inicial, riesgos, presupuesto/cronograma resumido y autoridad del director del proyecto claramente definidos.",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "fit_value_proposition",
@@ -69,6 +69,92 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae el elemento de requisitos de aprobación del acta: los criterios para que el cliente o el sponsor acepte el proyecto.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-project_charter-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir el propósito o justificación del proyecto (business case, contrato, plan estratégico)",
+      "texto_nuevo": "Definir el propósito o justificación del proyecto (caso de negocio, contrato, plan estratégico)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "business case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-project_charter-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer objetivos de alcance, tiempo y costo con criterios de éxito medibles, y los criterios que debe cumplir el proyecto para que el cliente o el sponsor lo acepte",
+      "texto_nuevo": "Establecer objetivos de alcance, tiempo y costo con criterios de éxito medibles, y los criterios que debe cumplir el proyecto para que el cliente o el patrocinador lo acepte",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sponsor"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-project_charter-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asignar formalmente al project manager y definir su nivel de autoridad",
+      "texto_nuevo": "Asignar formalmente al director del proyecto y definir su nivel de autoridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "project manager"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-project_charter-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Obtener la firma del sponsor que autoriza el proyecto",
+      "texto_nuevo": "Obtener la firma del patrocinador que autoriza el proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sponsor"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-project_charter-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un documento de Project Charter firmado por el sponsor, con propósito, objetivos, alcance inicial, riesgos, presupuesto/cronograma resumido y autoridad del PM claramente definidos.",
+      "texto_nuevo": "Un documento de acta de inicio del proyecto firmado por el patrocinador, con propósito, objetivos, alcance inicial, riesgos, presupuesto/cronograma resumido y autoridad del director del proyecto claramente definidos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Project Charter",
+          "sponsor",
+          "PM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

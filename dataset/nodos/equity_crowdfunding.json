@@ -11,7 +11,7 @@
     "Consulta con un abogado de valores qué excepción de registro ante la SEC aplica a tu forma de levantar capital",
     "Si usas una plataforma como AngelList, entiende cómo funcionan los grupos de inversionistas ('syndicates') que juntan capital"
   ],
-  "entregable_esperado": "Tener la estructura legal de tu ronda de equity crowdfunding validada con un abogado, cumpliendo las excepciones de la SEC que apliquen",
+  "entregable_esperado": "Tener la estructura legal de tu ronda de financiamiento colectivo por acciones validada con un abogado, cumpliendo las excepciones de la SEC que apliquen",
   "nodos_previos": [
     "crowdfunding_de_producto",
     "safe_simple_agreement_future_equity",
@@ -24,7 +24,7 @@
     "Si estás pensando en levantar capital en Estados Unidos a través de una plataforma online como AngelList",
     "Si levantas capital en Estados Unidos y existe riesgo de que promocionar tu ronda públicamente cuente como 'solicitud general' ante la SEC"
   ],
-  "etiqueta_arbol": "Financiamiento Colectivo por Acciones",
+  "etiqueta_arbol": "Vende Acciones Mediante Financiamiento Colectivo",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
   ],
@@ -72,6 +72,38 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: evitar la solicitud general no es absoluto, algunas excepciones la permiten.; Se pierde que, según la excepción, se puede promocionar la ronda o admitir inversionistas no acreditados.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-equity_crowdfunding-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Financiamiento Colectivo por Acciones",
+      "texto_nuevo": "Vende Acciones Mediante Financiamiento Colectivo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "por Acciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-equity_crowdfunding-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tener la estructura legal de tu ronda de equity crowdfunding validada con un abogado, cumpliendo las excepciones de la SEC que apliquen",
+      "texto_nuevo": "Tener la estructura legal de tu ronda de financiamiento colectivo por acciones validada con un abogado, cumpliendo las excepciones de la SEC que apliquen",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity crowdfunding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

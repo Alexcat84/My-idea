@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Calcular la tasa de churn (abandono) del producto por periodo",
     "Calcular la tasa de adquisición de nuevos clientes por el mismo periodo",
-    "Calcular la tasa de compounding (adquisición - churn) para proyectar la velocidad real de crecimiento",
-    "Si la tasa de compounding es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto"
+    "Calcular la tasa de crecimiento compuesto (adquisición - churn) para proyectar la velocidad real de crecimiento",
+    "Si la tasa de crecimiento compuesto es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el compromiso de los clientes con el producto"
   ],
-  "entregable_esperado": "Un modelo de churn rate y tasa de compounding calculado, con acciones concretas priorizadas para mejorar retención",
+  "entregable_esperado": "Un modelo de tasa de abandono y tasa de crecimiento compuesto calculado, con acciones concretas priorizadas para mejorar retención",
   "nodos_previos": [
     "motor_de_crecimiento"
   ],
@@ -45,6 +45,58 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pone el foco en retención cuando ya entran muchos clientes nuevos y el churn los anula; el paso pierde esa condición.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-motor_crecimiento_pegajoso-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular la tasa de compounding (adquisición - churn) para proyectar la velocidad real de crecimiento",
+      "texto_nuevo": "Calcular la tasa de crecimiento compuesto (adquisición - churn) para proyectar la velocidad real de crecimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tasa de compounding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-motor_crecimiento_pegajoso-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la tasa de compounding es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el engagement del producto",
+      "texto_nuevo": "Si la tasa de crecimiento compuesto es baja o cero aunque entren muchos clientes nuevos, enfocar esfuerzos en mejorar la retención (no en adquisición) mediante mejoras en el compromiso de los clientes con el producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tasa de compounding",
+          "engagement"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-motor_crecimiento_pegajoso-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un modelo de churn rate y tasa de compounding calculado, con acciones concretas priorizadas para mejorar retención",
+      "texto_nuevo": "Un modelo de tasa de abandono y tasa de crecimiento compuesto calculado, con acciones concretas priorizadas para mejorar retención",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "churn rate",
+          "tasa de compounding"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

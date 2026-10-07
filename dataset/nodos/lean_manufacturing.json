@@ -9,7 +9,7 @@
     "Definir el valor desde la perspectiva del cliente",
     "Mapear el flujo de valor actual (Value Stream Map)",
     "Identificar y eliminar actividades sin valor agregado (muda), atendiendo también la sobrecarga (muri) y la irregularidad (mura), no solo lo primero",
-    "Implementar sistema pull basado en takt time",
+    "Implementar sistema de producción por arrastre basado en el ritmo que marca la demanda",
     "Establecer controles para sostener las mejoras"
   ],
   "entregable_esperado": "Mapa de flujo de valor actual y futuro con plan de eliminación de desperdicios",
@@ -57,6 +57,24 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que atender solo el muda es reactivo e insuficiente y pide abordar también muri y mura.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-lean_manufacturing-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar sistema pull basado en takt time",
+      "texto_nuevo": "Implementar sistema de producción por arrastre basado en el ritmo que marca la demanda",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sistema pull",
+          "takt time"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

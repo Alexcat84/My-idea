@@ -20,7 +20,7 @@
   ],
   "condiciones_activacion": [
     "Cuando existen errores frecuentes de facturación o pedidos por discrepancias de códigos de producto",
-    "Si la empresa trabaja con múltiples socios comerciales con distintos sistemas ERP"
+    "Si la empresa trabaja con múltiples socios comerciales"
   ],
   "etiqueta_arbol": "Unifica los Datos de tus Productos",
   "fuentes_internas": [
@@ -81,6 +81,23 @@
       },
       "decision": "saneamiento continuo de la voz (ola v03): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-estandarizacion_codigos_producto_epc-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si la empresa trabaja con múltiples socios comerciales con distintos sistemas ERP",
+      "texto_nuevo": "Si la empresa trabaja con múltiples socios comerciales",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "3673-3679",
+        "frase": "the operating problems caused by using different part numbers for the same item"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c20): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

@@ -7,11 +7,11 @@
   "resumen_teorico": "Técnica de MVP en la que el cliente cree estar interactuando con un producto o sistema automatizado (por ejemplo, una inteligencia artificial), cuando en realidad hay personas detrás de escena realizando el trabajo manualmente. Permite validar si existe demanda real para una solución antes de invertir en resolver los problemas técnicos complejos que la automatización requeriría.",
   "pasos_accionables": [
     "Define la experiencia de usuario final que quieres probar, ocultando cómo se genera el resultado.",
-    "Sustituye el backend automatizado por personas que realizan el trabajo manualmente en tiempo real.",
+    "Sustituye el sistema interno automatizado por personas que realizan el trabajo manualmente en tiempo real.",
     "Lanza el producto a un grupo reducido de usuarios reales sin revelar que es simulado.",
     "Mide el uso, retención y satisfacción para validar si el concepto genera valor.",
     "Itera el concepto de producto (pivotando si es necesario) antes de invertir en la tecnología real.",
-    "Solo automatiza el backend una vez validado que el producto genera valor real."
+    "Solo automatiza el sistema interno una vez validado que el producto genera valor real."
   ],
   "entregable_esperado": "Validación de que el producto/valor propuesto genera enganche real en los usuarios antes de construir la tecnología compleja subyacente.",
   "nodos_previos": [
@@ -34,5 +34,41 @@
   "etiqueta_arbol": "Finge tu Producto Antes de Crearlo",
   "fuentes_internas": [
     "The Lean Startup - Eric Ries"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-wizard_of_oz_testing-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sustituye el backend automatizado por personas que realizan el trabajo manualmente en tiempo real.",
+      "texto_nuevo": "Sustituye el sistema interno automatizado por personas que realizan el trabajo manualmente en tiempo real.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "backend automatizado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-wizard_of_oz_testing-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Solo automatiza el backend una vez validado que el producto genera valor real.",
+      "texto_nuevo": "Solo automatiza el sistema interno una vez validado que el producto genera valor real.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el backend"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

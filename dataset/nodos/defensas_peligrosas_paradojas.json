@@ -7,7 +7,7 @@
   "resumen_teorico": "Las defensas, barreras y salvaguardas diseñadas para proteger contra un tipo de peligro pueden exponer a sus usuarios a otros tipos de riesgo no previstos por quienes las crearon —ilustrado históricamente con la armadura de placas en la batalla de Agincourt (1415), que protegía de armas penetrantes pero volvía a los caballeros indefensos al caer al suelo. En sistemas de alta tecnología, las defensas redundantes y diversas han reducido eventos adversos en términos absolutos, pero han transformado la naturaleza de los accidentes que sí ocurren y la relación entre componentes humanos y técnicos del sistema. Es esencial que gestores y operadores comprendan tanto las ventajas como los peligros de las defensas multicapa.",
   "pasos_accionables": [
     "Analizar cada capa de defensa/seguridad implementada preguntando: ¿qué nuevo riesgo podría estar introduciendo esta protección?",
-    "Revisar incidentes y casi-accidentes ('free lessons') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
+    "Revisar incidentes y casi accidentes ('lecciones gratis') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
     "Evaluar si las defensas han cambiado la relación humano-tecnología de forma que genere nuevas vulnerabilidades."
   ],
   "entregable_esperado": "Análisis crítico de las defensas de seguridad actuales de la organización, identificando efectos secundarios no deseados.",
@@ -21,8 +21,44 @@
     "Cuando se diseñan o revisan sistemas de defensa/protección en procesos de alto riesgo.",
     "Cuando se investigan incidentes en los que una medida de seguridad contribuyó paradójicamente al daño."
   ],
-  "etiqueta_arbol": "Barreras que Crean Nuevos Riesgos",
+  "etiqueta_arbol": "Vigila los Riesgos de tus Barreras",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-defensas_peligrosas_paradojas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Barreras que Crean Nuevos Riesgos",
+      "texto_nuevo": "Vigila los Riesgos de tus Barreras",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "que Crean Nuevos Riesgos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-defensas_peligrosas_paradojas-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar incidentes y casi-accidentes ('free lessons') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
+      "texto_nuevo": "Revisar incidentes y casi accidentes ('lecciones gratis') como oportunidad de 'vacunar' al sistema, aprendiendo de fortalezas y debilidades de las defensas existentes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "casi-accidentes",
+          "free lessons"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Enfoque estandarizado de Lean que utiliza eventos de mejora rápida (kaizens) para atacar el desperdicio embebido en los procesos y aumentar la velocidad del flujo. Mejorar la velocidad expone los problemas (desperdicio) y permite eliminarlos, haciendo los procesos más rápidos, mejores y más económicos.",
   "pasos_accionables": [
-    "Seleccionar un proceso o área con desperdicio identificado en el VSM",
-    "Organizar un evento de mejora rápida (kaizen) con equipo multidisciplinario, preparándolo antes: armar el equipo, redactar su charter y reunir datos del área una a tres semanas antes, y formar al equipo en lo básico de Lean la semana anterior",
+    "Seleccionar un proceso o área con desperdicio identificado en el mapa del flujo de valor (VSM)",
+    "Organizar un evento de mejora rápida (kaizen) con equipo multidisciplinario, preparándolo antes: armar el equipo, redactar su acta de constitución y reunir datos del área una a tres semanas antes, y formar al equipo en lo básico de Lean la semana anterior",
     "Implementar cambios inmediatos durante el evento (días, no meses)",
     "Medir el impacto en velocidad y desperdicio antes y después del evento",
     "Estandarizar la mejora e institucionalizarla en el proceso"
   ],
-  "entregable_esperado": "Reporte de evento kaizen con mejoras implementadas y métricas de antes/después",
+  "entregable_esperado": "Informe de evento kaizen con mejoras implementadas y métricas de antes/después",
   "nodos_previos": [
     "introduccion_lean",
     "mapeo_flujo_valor",
@@ -47,6 +47,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto: la preparación de una a tres semanas y la formación de la semana anterior.; Se pierde la preparación previa que el libro fija: equipo, charter, datos del área y formación básica en Lean.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-kaizen_mejora_continua-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar un proceso o área con desperdicio identificado en el VSM",
+      "texto_nuevo": "Seleccionar un proceso o área con desperdicio identificado en el mapa del flujo de valor (VSM)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en el VSM"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-kaizen_mejora_continua-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Organizar un evento de mejora rápida (kaizen) con equipo multidisciplinario, preparándolo antes: armar el equipo, redactar su charter y reunir datos del área una a tres semanas antes, y formar al equipo en lo básico de Lean la semana anterior",
+      "texto_nuevo": "Organizar un evento de mejora rápida (kaizen) con equipo multidisciplinario, preparándolo antes: armar el equipo, redactar su acta de constitución y reunir datos del área una a tres semanas antes, y formar al equipo en lo básico de Lean la semana anterior",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "su charter"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-kaizen_mejora_continua-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de evento kaizen con mejoras implementadas y métricas de antes/después",
+      "texto_nuevo": "Informe de evento kaizen con mejoras implementadas y métricas de antes/después",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

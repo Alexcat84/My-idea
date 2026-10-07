@@ -28,7 +28,7 @@
   ],
   "condiciones_activacion": [
     "Cuando diseñas un producto o proceso desde cero",
-    "Cuando rediseñas uno existente para reducir su impacto",
+    "Cuando rediseñas uno existente",
     "Cuando buscas eliminar el concepto de residuo en tu cadena de valor o adoptar modelos de negocio circulares"
   ],
   "etiqueta_arbol": "Convierte tu Desperdicio en Alimento",
@@ -62,6 +62,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que algunos materiales peligrosos no encajan en ningún metabolismo y deben guardarse de forma segura.; Mismo matiz: la clasificación binaria pierde los materiales no comercializables que el libro manda guardar.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-desperdicio_es_alimento-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando rediseñas uno existente para reducir su impacto",
+      "texto_nuevo": "Cuando rediseñas uno existente",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "394",
+        "frase": "attempting only to make it less bad is a fatally limited goal"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c21): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Cada capa de defensa tiene debilidades y huecos que cambian dinámicamente en el tiempo (no son estáticos), representados como rebanadas de queso suizo. Un accidente organizacional ocurre solo cuando los huecos de todas las capas se alinean momentáneamente, permitiendo que la trayectoria del peligro atraviese todas las defensas. Estos huecos se crean por fallos activos y condiciones latentes.",
   "pasos_accionables": [
     "Mapear las capas de defensa del sistema y los 'huecos' conocidos en cada una.",
-    "Analizar accidentes o cuasi-accidentes pasados identificando qué huecos se alinearon.",
+    "Analizar accidentes o cuasiaccidentes pasados identificando qué huecos se alinearon.",
     "Diseñar mecanismos de monitoreo continuo de huecos en cada capa defensiva."
   ],
   "entregable_esperado": "Un diagrama de trayectoria de accidente aplicando el modelo del queso suizo a un caso real o hipotético de la organización.",
@@ -39,6 +39,21 @@
         "evidencia": "F09-018: Mapear defensas, investigar accidentes pasados y monitorear huecos es gestión de seguridad de una organización en marcha; no prueba nada con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-modelo_queso_suizo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analizar accidentes o cuasi-accidentes pasados identificando qué huecos se alinearon.",
+      "texto_nuevo": "Analizar accidentes o cuasiaccidentes pasados identificando qué huecos se alinearon.",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "El prefijo 'cuasi' se escribe unido a la palabra; solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

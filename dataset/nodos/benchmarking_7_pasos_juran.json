@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Metodología estructurada para comparar el desempeño entre plantas, regiones o unidades de una organización, o con otras organizaciones, con el fin de identificar mejores prácticas y sostenerlas en el tiempo. Consta de siete pasos: preparación y planificación, recolección y validación de datos, análisis de datos (normalización), reporte de benchmark, aprendizaje de mejores prácticas, planificación e implementación de mejoras, y aprendizaje institucionalizado.",
   "pasos_accionables": [
-    "Definir áreas, KPIs y métricas a comparar (Paso 1: Preparación y planificación)",
+    "Definir áreas, indicadores clave y métricas a comparar (Paso 1: Preparación y planificación)",
     "Recolectar y validar datos de las unidades a comparar (Paso 2)",
     "Normalizar y analizar los datos usando factores de complejidad (Paso 3)",
     "Elaborar el informe de benchmarking con hallazgos y brechas (Paso 4)",
@@ -14,7 +14,7 @@
     "Desarrollar plan de acción de mejora e implementarlo (Paso 6)",
     "Institucionalizar el aprendizaje, enseñando o volviendo a enseñar las mejores prácticas cuando el plan de acción lo requiera (Paso 7)"
   ],
-  "entregable_esperado": "Informe de benchmarking completo con gap analysis, plan de mejora y mecanismo de sostenibilidad de mejores prácticas",
+  "entregable_esperado": "Informe de benchmarking completo con análisis de brechas, plan de mejora y mecanismo de sostenibilidad de mejores prácticas",
   "nodos_previos": [
     "modelo_madurez_capacidades_cmmi"
   ],
@@ -62,6 +62,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro plantea este proceso para benchmarks internos o externos (y lo aplica también con otras organizaciones); el resumen lo limita a la comparación interna.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-benchmarking_7_pasos_juran-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir áreas, KPIs y métricas a comparar (Paso 1: Preparación y planificación)",
+      "texto_nuevo": "Definir áreas, indicadores clave y métricas a comparar (Paso 1: Preparación y planificación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "KPIs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-benchmarking_7_pasos_juran-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Informe de benchmarking completo con gap analysis, plan de mejora y mecanismo de sostenibilidad de mejores prácticas",
+      "texto_nuevo": "Informe de benchmarking completo con análisis de brechas, plan de mejora y mecanismo de sostenibilidad de mejores prácticas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gap analysis"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,8 +7,8 @@
   "resumen_teorico": "Existen dos paradigmas opuestos para entender el 'error humano'. La Vieja Visión (Old View / Bad Apple Theory) considera que el error humano es la causa de los problemas de seguridad, que las personas son elementos a controlar y que basta con sancionar, entrenar o motivar mejor para eliminarlo. La Nueva Visión considera que el 'error humano' no es una causa sino un síntoma de problemas más profundos en el sistema y la organización; el comportamiento de las personas está sistemáticamente conectado con las herramientas, tareas y entorno operativo. Esta distinción es la base conceptual para reorientar la investigación de incidentes y el diseño de sistemas de seguridad.",
   "pasos_accionables": [
     "Identificar en la organización si predomina el lenguaje de la Vieja Visión (culpa, sanción, atención, actitud) o de la Nueva Visión (condiciones, sistema, resiliencia).",
-    "Revisar políticas de 'cultura justa', investigaciones y comunicados internos para detectar sesgos hacia el Bad Apple Theory.",
-    "Usar la tabla comparativa Old View / New View como herramienta de diagnóstico y diálogo con equipos directivos."
+    "Revisar políticas de 'cultura justa', investigaciones y comunicados internos para detectar sesgos hacia la teoría de la manzana podrida.",
+    "Usar la tabla comparativa Vieja Visión / Nueva Visión como herramienta de diagnóstico y diálogo con equipos directivos."
   ],
   "entregable_esperado": "Diagnóstico escrito que identifique qué visión predomina en la organización y evidencias concretas (políticas, comunicados, prácticas) que lo sustenten.",
   "nodos_previos": [
@@ -42,6 +42,40 @@
         "evidencia": "F15-028: Diagnostica la visión del error humano en las políticas e investigaciones de incidentes de una organización en marcha; es gestión operativa de la seguridad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-old_view_vs_new_view_human_error-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar políticas de 'cultura justa', investigaciones y comunicados internos para detectar sesgos hacia el Bad Apple Theory.",
+      "texto_nuevo": "Revisar políticas de 'cultura justa', investigaciones y comunicados internos para detectar sesgos hacia la teoría de la manzana podrida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el Bad Apple Theory"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-old_view_vs_new_view_human_error-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar la tabla comparativa Old View / New View como herramienta de diagnóstico y diálogo con equipos directivos.",
+      "texto_nuevo": "Usar la tabla comparativa Vieja Visión / Nueva Visión como herramienta de diagnóstico y diálogo con equipos directivos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Old View / New View"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

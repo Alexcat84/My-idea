@@ -7,7 +7,7 @@
   "resumen_teorico": "Los consumidores no son homogéneos respecto a la sostenibilidad; existen segmentos como LOHAS (estilos de vida de salud y sostenibilidad), Naturalites, Conventionals, Drifters, Dream Greens, Apathetics y Mean Greens, cada uno con distintas motivaciones y disposición a pagar por atributos verdes. Comprender estos segmentos permite dirigir mensajes de marketing de forma más efectiva y evitar suposiciones erróneas sobre la disposición de pago del cliente.",
   "pasos_accionables": [
     "Investigar qué segmento de consumidor verde predomina en el mercado objetivo",
-    "Determinar la disposición real a pagar un premium por atributos verdes",
+    "Determinar la disposición real a pagar un sobreprecio por atributos verdes",
     "Identificar barreras de compra (precio, confusión, desconfianza, conveniencia)",
     "Ajustar la propuesta de valor según el segmento predominante"
   ],
@@ -26,5 +26,24 @@
   "etiqueta_arbol": "Conoce a Tu Consumidor Verde",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-segmentacion_consumidor_verde-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar la disposición real a pagar un premium por atributos verdes",
+      "texto_nuevo": "Determinar la disposición real a pagar un sobreprecio por atributos verdes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un premium"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

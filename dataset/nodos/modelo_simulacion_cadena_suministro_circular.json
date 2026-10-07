@@ -7,12 +7,12 @@
   "resumen_teorico": "Antes de implementar una cadena de suministro física, es posible construir un modelo de simulación compuesto por entidades clave (productos, instalaciones, vehículos, rutas) para probar diferentes escenarios de oferta, demanda, costos y ubicaciones. Esto permite generar reportes de P&L y KPIs que sirven de base objetiva para comparar diseños alternativos antes de invertir capital, y se aplica también a cadenas de suministro circulares (como la recolección de aceite usado para biodiésel), donde la simulación muestra además si la operación puede dar ganancia o al menos cubrir sus costos.",
   "pasos_accionables": [
     "Definir las entidades del modelo: productos, instalaciones, vehículos y rutas",
-    "Usar el método del centro de gravedad para ubicar instalaciones de recolección/hubs",
+    "Usar el método del centro de gravedad para ubicar instalaciones de recolección o centros de acopio",
     "Correr simulaciones de varios días (por ejemplo, 14 días o más) con distintos supuestos de oferta y demanda",
-    "Generar reportes de P&L y KPIs a partir de los datos simulados",
+    "Generar reportes del estado de resultados y KPIs a partir de los datos simulados",
     "Comparar diseños alternativos de cadena de suministro antes de la inversión real"
   ],
-  "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
+  "entregable_esperado": "Modelo de simulación funcional con reporte del estado de resultados y KPIs para al menos dos escenarios de diseño de cadena de suministro",
   "nodos_previos": [
     "estrategia_circular_y_mecanismo_de_retorno"
   ],
@@ -159,6 +159,56 @@
       "decision": "lectura total de procedencia (w24): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-modelo_simulacion_cadena_suministro_circular-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar el método del centro de gravedad para ubicar instalaciones de recolección/hubs",
+      "texto_nuevo": "Usar el método del centro de gravedad para ubicar instalaciones de recolección o centros de acopio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "recolección/hubs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_simulacion_cadena_suministro_circular-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Generar reportes de P&L y KPIs a partir de los datos simulados",
+      "texto_nuevo": "Generar reportes del estado de resultados y KPIs a partir de los datos simulados",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportes de P&L"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_simulacion_cadena_suministro_circular-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
+      "texto_nuevo": "Modelo de simulación funcional con reporte del estado de resultados y KPIs para al menos dos escenarios de diseño de cadena de suministro",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reporte de P&L"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

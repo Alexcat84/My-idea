@@ -10,8 +10,8 @@
     "Describir amenazas específicas al sistema y su entorno operativo, incluidas sus dependencias o conexiones con otros sistemas o componentes.",
     "Detallar requisitos de seguridad y las salvaguardas implementadas o planeadas.",
     "Identificar individuos con roles y responsabilidades en el sistema.",
-    "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
-    "Obtener reconocimiento documentado de los usuarios sobre las reglas antes de otorgar acceso.",
+    "Establecer reglas de comportamiento para el uso del sistema y protección de la información controlada no clasificada (CUI).",
+    "Obtener constancia documentada de aceptación de los usuarios sobre las reglas antes de otorgar acceso.",
     "Revisar y actualizar periódicamente el plan de seguridad, protegiéndolo de divulgación no autorizada."
   ],
   "entregable_esperado": "Documento de Plan de Seguridad del Sistema (SSP) y Reglas de Comportamiento firmadas por los usuarios.",
@@ -78,6 +78,40 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_planning-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer reglas de comportamiento para el uso del sistema y protección de CUI.",
+      "texto_nuevo": "Establecer reglas de comportamiento para el uso del sistema y protección de la información controlada no clasificada (CUI).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "protección de CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_planning-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Obtener reconocimiento documentado de los usuarios sobre las reglas antes de otorgar acceso.",
+      "texto_nuevo": "Obtener constancia documentada de aceptación de los usuarios sobre las reglas antes de otorgar acceso.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reconocimiento documentado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

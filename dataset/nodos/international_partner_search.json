@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Prepara tus materiales de marketing y el perfil de tu negocio",
     "Solicita el International Partner Search en la oficina local del U.S. Commercial Service, indicando el mercado objetivo y el perfil de socio que buscas",
-    "Recibe y evalúa la lista de hasta 5 socios potenciales prescreened en 15 días",
-    "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, interprete y apoyo para cerrar el trato",
+    "Recibe y evalúa la lista de hasta 5 socios potenciales preseleccionados en 15 días",
+    "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, intérprete y apoyo para cerrar el trato",
     "Pide un informe ICP para verificar la reputación y las referencias financieras del socio antes de firmar, si su país no tiene proveedores privados adecuados de informes de crédito; si los tiene, pide el informe de crédito a esas fuentes privadas",
     "Contacta directamente a los socios interesados con la información proporcionada"
   ],
-  "entregable_esperado": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+  "entregable_esperado": "Lista de hasta 5 socios potenciales preseleccionados con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
   "nodos_previos": [
     "evaluacion_mercados_objetivo",
     "seleccion_representante_extranjero"
@@ -162,6 +162,54 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita el ICP a países sin proveedores privados adecuados de información crediticia y remite a esas fuentes privadas donde existen; el paso lo presenta como siempre disponible.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-international_partner_search-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recibe y evalúa la lista de hasta 5 socios potenciales prescreened en 15 días",
+      "texto_nuevo": "Recibe y evalúa la lista de hasta 5 socios potenciales preseleccionados en 15 días",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "prescreened"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-international_partner_search-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, interprete y apoyo para cerrar el trato",
+      "texto_nuevo": "Si necesitas reuniones ya agendadas, solicita el servicio Gold Key para obtener citas prearregladas, intérprete y apoyo para cerrar el trato",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "Falta la tilde de 'intérprete'; se añade sin tocar nada más (Gold Key es nombre propio del servicio)."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-international_partner_search-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de hasta 5 socios potenciales prescreened con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+      "texto_nuevo": "Lista de hasta 5 socios potenciales preseleccionados con datos de contacto e interés confirmado, complementada según el caso con agenda de reuniones Gold Key o informe de antecedentes ICP.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "prescreened"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -11,7 +11,7 @@
     "Probar la consistencia de la ejecución en escenarios repetidos",
     "Ajustar detalles menores que puedan arruinar la percepción general de calidad"
   ],
-  "entregable_esperado": "Una lista de especificaciones detalladas por touchpoint, verificada mediante pruebas de consistencia",
+  "entregable_esperado": "Una lista de especificaciones detalladas por punto de contacto, verificada mediante pruebas de consistencia",
   "nodos_previos": [
     "customer_journey_mapping",
     "hoja_de_ruta_de_ventas"
@@ -57,6 +57,22 @@
       },
       "decision": "lectura total de procedencia (w43): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-ejecucion_de_touchpoints-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista de especificaciones detalladas por touchpoint, verificada mediante pruebas de consistencia",
+      "texto_nuevo": "Una lista de especificaciones detalladas por punto de contacto, verificada mediante pruebas de consistencia",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "por touchpoint"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

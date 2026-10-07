@@ -11,7 +11,7 @@
     "Definir indicadores para medir el nivel de cultura informada de tu negocio",
     "Tener claro y por escrito por qué vale la pena invertir en estos cuatro pilares antes de decidir"
   ],
-  "entregable_esperado": "Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de acción para fortalecer cada subcomponente",
+  "entregable_esperado": "Diagnóstico documentado del estado de la cultura de seguridad de tu negocio con plan de acción para fortalecer cada subcomponente",
   "nodos_previos": [
     "ciclo_de_culpa_2",
     "new_view_investigation",
@@ -136,6 +136,20 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-cultura_de_seguridad_componentes-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diagnostico documentado del estado de la cultura de seguridad de tu negocio con plan de acción para fortalecer cada subcomponente",
+      "texto_nuevo": "Diagnóstico documentado del estado de la cultura de seguridad de tu negocio con plan de acción para fortalecer cada subcomponente",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "al sustantivo 'Diagnóstico' le faltaba la tilde; solo se añade la tilde."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -7,11 +7,11 @@
   "resumen_teorico": "El momento de las ventas de franquicia no es del todo predecible; conviene pensarlas como una curva de campana, donde cada lead o esfuerzo de marketing tiene una probabilidad de convertirse en venta distribuida a lo largo de varias semanas (típicamente 12-14 semanas desde el llenado del pipeline). Al apilar múltiples cohortes mensuales de leads, la probabilidad acumulada de cerrar una venta aumenta con cada mes que pasa. Esto implica que un franquiciante debe pensar en términos de flujo continuo de leads y no esperar resultados inmediatos o uniformes.",
   "pasos_accionables": [
     "Modelar el tiempo esperado de cierre de venta como una distribución de campana, no como un valor fijo",
-    "Proyectar múltiples cohortes mensuales de leads en paralelo, sabiendo que al apilarlas la probabilidad de cerrar una venta sube con cada mes",
+    "Proyectar múltiples cohortes mensuales de clientes potenciales en paralelo, sabiendo que al apilarlas la probabilidad de cerrar una venta sube con cada mes",
     "Calcular el punto medio esperado de cierre (ej. 12-14 semanas) para planificar flujo de caja",
-    "Ajustar expectativas considerando factores internos (calidad de oferta, validación, calidad de los leads, marketing, proceso y capacidad de venta) y externos (economía)"
+    "Ajustar expectativas considerando factores internos (calidad de oferta, validación, calidad de los clientes potenciales, marketing, proceso y capacidad de venta) y externos (economía)"
   ],
-  "entregable_esperado": "Proyección de calendario de ventas de franquicia basada en cohortes mensuales de leads con estimación de tiempos de cierre",
+  "entregable_esperado": "Proyección de calendario de ventas de franquicia basada en cohortes mensuales de clientes potenciales con estimación de tiempos de cierre",
   "nodos_previos": [
     "presupuesto_marketing_franquicia",
     "enfoque_integrado_marketing_franquicia"
@@ -77,6 +77,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): La lista del libro incluye la calidad de los leads y tu proceso y capacidad de venta, que se caen.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-modelo_curva_campana_ventas_franquicia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proyectar múltiples cohortes mensuales de leads en paralelo, sabiendo que al apilarlas la probabilidad de cerrar una venta sube con cada mes",
+      "texto_nuevo": "Proyectar múltiples cohortes mensuales de clientes potenciales en paralelo, sabiendo que al apilarlas la probabilidad de cerrar una venta sube con cada mes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_curva_campana_ventas_franquicia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ajustar expectativas considerando factores internos (calidad de oferta, validación, calidad de los leads, marketing, proceso y capacidad de venta) y externos (economía)",
+      "texto_nuevo": "Ajustar expectativas considerando factores internos (calidad de oferta, validación, calidad de los clientes potenciales, marketing, proceso y capacidad de venta) y externos (economía)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-modelo_curva_campana_ventas_franquicia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proyección de calendario de ventas de franquicia basada en cohortes mensuales de leads con estimación de tiempos de cierre",
+      "texto_nuevo": "Proyección de calendario de ventas de franquicia basada en cohortes mensuales de clientes potenciales con estimación de tiempos de cierre",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "leads"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

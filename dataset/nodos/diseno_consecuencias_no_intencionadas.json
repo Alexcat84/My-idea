@@ -10,7 +10,7 @@
     "Identifica quién se beneficia y quién podría ser perjudicado si tu solución escala sin control. Incluye a quien no está en la sala de diseño pero será afectado",
     "Pregunta explícitamente: '¿Qué pasaría si esto se usa de forma opuesta a la intención original?'",
     "Diseña salvaguardas, límites de uso o 'mecanismos de reversión' incorporados desde el inicio.",
-    "Documenta los riesgos identificados y revisítalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo post-lanzamiento",
+    "Documenta los riesgos identificados y revísalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo posterior al lanzamiento",
     "Antes de lanzar un producto o servicio, mapear posibles efectos de segundo y tercer orden (no solo el uso directo)",
     "Preguntar '¿qué comportamientos nuevos habilitará esto?' y '¿qué sistemas existentes alterará?'"
   ],
@@ -91,6 +91,24 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro no dice que pueda pasar sino que todo lo que se hace va a romperse, y esa certeza motiva prepararse.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diseno_consecuencias_no_intencionadas-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documenta los riesgos identificados y revisítalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo post-lanzamiento",
+      "texto_nuevo": "Documenta los riesgos identificados y revísalos periódicamente conforme el producto evoluciona. Establece mecanismos de monitoreo posterior al lanzamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "revisítalos",
+          "post-lanzamiento"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

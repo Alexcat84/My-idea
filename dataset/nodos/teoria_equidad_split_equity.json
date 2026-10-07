@@ -7,11 +7,11 @@
   "resumen_teorico": "Los equipos que operan bajo una 'lógica social' (relaciones previas como familia o amigos cercanos) priorizan preservar la relación sobre maximizar el éxito del negocio, por lo que la distribución IGUAL de equity (independiente de la contribución) resulta más alineada y genera más estabilidad. Los equipos que operan bajo 'lógica de negocio' (excompañeros de trabajo o extraños) encuentran más estable la distribución EQUITATIVA, es decir, proporcional a la contribución de cada uno. Usar la lógica equivocada para el tipo de equipo aumenta el riesgo de disolución del equipo fundador.",
   "pasos_accionables": [
     "Determinar si el equipo opera bajo lógica social o lógica de negocio según sus relaciones previas",
-    "Si es lógica social: considerar split igualitario aunque las contribuciones difieran, aceptando el trade-off",
-    "Si es lógica de negocio: diseñar un split proporcional a la contribución esperada de cada cofundador",
-    "Evaluar el riesgo de una asimetría entre contribución real y equity asignado si se elige la lógica incorrecta"
+    "Si es lógica social: considerar un reparto igualitario aunque las contribuciones difieran, aceptando la contrapartida",
+    "Si es lógica de negocio: diseñar un reparto proporcional a la contribución esperada de cada cofundador",
+    "Evaluar el riesgo de una asimetría entre contribución real y participación asignada si se elige la lógica incorrecta"
   ],
-  "entregable_esperado": "Justificación documentada del modelo de split de equity elegido (igual o equitativo) en función del tipo de relación del equipo",
+  "entregable_esperado": "Justificación documentada del modelo de reparto de la participación elegido (igual o equitativo) en función del tipo de relación del equipo",
   "nodos_previos": [
     "relacion_previa_y_estructura_roles",
     "criterios_equity_split"
@@ -27,5 +27,75 @@
   "etiqueta_arbol": "Decide Cómo Repartir el Equity",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-teoria_equidad_split_equity-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si es lógica social: considerar split igualitario aunque las contribuciones difieran, aceptando el trade-off",
+      "texto_nuevo": "Si es lógica social: considerar un reparto igualitario aunque las contribuciones difieran, aceptando la contrapartida",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "split igualitario",
+          "el trade-off"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-teoria_equidad_split_equity-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si es lógica de negocio: diseñar un split proporcional a la contribución esperada de cada cofundador",
+      "texto_nuevo": "Si es lógica de negocio: diseñar un reparto proporcional a la contribución esperada de cada cofundador",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "un split proporcional"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-teoria_equidad_split_equity-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el riesgo de una asimetría entre contribución real y equity asignado si se elige la lógica incorrecta",
+      "texto_nuevo": "Evaluar el riesgo de una asimetría entre contribución real y participación asignada si se elige la lógica incorrecta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity asignado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-teoria_equidad_split_equity-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Justificación documentada del modelo de split de equity elegido (igual o equitativo) en función del tipo de relación del equipo",
+      "texto_nuevo": "Justificación documentada del modelo de reparto de la participación elegido (igual o equitativo) en función del tipo de relación del equipo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "split de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

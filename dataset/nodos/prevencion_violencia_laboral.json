@@ -6,13 +6,13 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Un programa de prevención de violencia laboral identifica factores de riesgo (industria de alto riesgo, incidentes previos), analiza registros de incidentes, y establece controles administrativos y de ingeniería (botones de pánico, sistema de acompañamiento, protocolos de llamada a seguridad). Incluye capacitación en técnicas de desescalada y procedimientos de reporte.",
   "pasos_accionables": [
-    "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, retail nocturno, taxis y transporte público)",
+    "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, comercio minorista nocturno, taxis y transporte público)",
     "Revisa tus registros de incidentes (reportes de primeros auxilios, casi accidentes, registros de compensación laboral, reportes de seguros y los que exija tu mercado)",
     "Realiza un análisis de riesgo de tu lugar de trabajo",
     "Desarrolla un programa escrito de prevención de violencia, y revísalo cada año",
     "Implementa controles de ingeniería (alarmas, barreras) y administrativos (sistema de acompañamiento, protocolos)",
     "Capacita a todos los que trabajan contigo en desescalada y respuesta ante emergencias",
-    "Mantén registros de incidentes y analízalos para tomar acciones correctivas"
+    "Mantén registros de incidentes y analízalos para emprender acciones correctivas"
   ],
   "entregable_esperado": "Programa escrito de prevención de violencia laboral con controles implementados y personal capacitado.",
   "nodos_previos": [
@@ -24,7 +24,7 @@
   "condiciones_activacion": [
     "Si tu negocio opera en una industria de alto riesgo de violencia, ha tenido incidentes previos, un análisis de tu lugar de trabajo identificó riesgos de violencia o quienes trabajan contigo han expresado preocupación por ella"
   ],
-  "etiqueta_arbol": "Previene la Violencia Laboral",
+  "etiqueta_arbol": "Prevén la Violencia Laboral",
   "fuentes_internas": [
     "SMALL_BUSINESS"
   ],
@@ -78,6 +78,56 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c16): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-prevencion_violencia_laboral-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Previene la Violencia Laboral",
+      "texto_nuevo": "Prevén la Violencia Laboral",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Previene"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-prevencion_violencia_laboral-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, retail nocturno, taxis y transporte público)",
+      "texto_nuevo": "Evalúa si tu negocio pertenece a una industria de alto riesgo de violencia (salud y asistencia social, entornos correccionales, comercio minorista nocturno, taxis y transporte público)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "retail nocturno"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-prevencion_violencia_laboral-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantén registros de incidentes y analízalos para tomar acciones correctivas",
+      "texto_nuevo": "Mantén registros de incidentes y analízalos para emprender acciones correctivas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tomar acciones"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

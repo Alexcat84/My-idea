@@ -6,12 +6,12 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "CUI es información que el gobierno crea o posee, o que una entidad crea o posee en nombre del gobierno, y que por ley, regulación o política gubernamental requiere protección técnica y operativa. Cuando se entrega como parte de un contrato gubernamental, incluye por ejemplo información técnica controlada (datos de ingeniería, especificaciones) e información general de negocios propietaria (información financiera, secretos comerciales). Es responsabilidad de la agencia federal identificar y marcar el CUI en los contratos aplicables.",
   "pasos_accionables": [
-    "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
-    "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+    "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de información controlada no clasificada (CUI)",
+    "Contactar al funcionario a cargo del contrato para confirmar qué información específica es CUI",
     "Consultar el sitio de NARA (archives.gov/cui) para conocer tipos y marcados de CUI",
-    "Documentar qué tipo de CUI maneja el negocio (técnica, propietaria, etc.)"
+    "Documentar qué tipo de CUI maneja el negocio (técnica, reservada, etc.)"
   ],
-  "entregable_esperado": "Documento que identifica claramente qué información de la empresa califica como CUI y su origen contractual",
+  "entregable_esperado": "Documento que identifica claramente qué información de la empresa se considera CUI y su origen contractual",
   "nodos_previos": [
     "mantenimiento_sistema_cui"
   ],
@@ -100,6 +100,73 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro da esas categorías como ejemplos de CUI cuando se entregan como parte de un contrato gubernamental; sin la condición parece que toda información propietaria es CUI.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-que_es_cui-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de CUI",
+      "texto_nuevo": "Revisar los contratos federales vigentes para identificar si contienen requisitos de protección de información controlada no clasificada (CUI)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "protección de CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-que_es_cui-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contactar al oficial de contratos para confirmar qué información específica es CUI",
+      "texto_nuevo": "Contactar al funcionario a cargo del contrato para confirmar qué información específica es CUI",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "oficial de contratos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-que_es_cui-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar qué tipo de CUI maneja el negocio (técnica, propietaria, etc.)",
+      "texto_nuevo": "Documentar qué tipo de CUI maneja el negocio (técnica, reservada, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "propietaria"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-que_es_cui-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento que identifica claramente qué información de la empresa califica como CUI y su origen contractual",
+      "texto_nuevo": "Documento que identifica claramente qué información de la empresa se considera CUI y su origen contractual",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "califica como CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

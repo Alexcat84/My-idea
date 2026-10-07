@@ -6,10 +6,10 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Modelo de tres niveles para que los reguladores enfoquen sus recursos limitados: (1) instancias locales de incumplimiento detectadas en visitas de sitio, (2) factores organizacionales y gerenciales (O&M) subyacentes que causan esas instancias (ej. gestión de mantenimiento, presión comercial), calificados en escala de 1-5, y (3) un Perfil de Factores Organizacionales que resume las calificaciones para identificar qué factores necesitan reforma urgente. El modelo integra reguladores, regulados y legisladores en un ciclo de aprendizaje continuo.",
   "pasos_accionables": [
-    "Registrar instancias de incumplimiento durante inspecciones de sitio",
-    "Vincular cada instancia con los factores O&M subyacentes relevantes",
-    "Calificar la contribución de cada factor O&M en escala de 1 (poca influencia) a 5 (influencia considerable)",
-    "Sumar calificaciones a través de instancias para generar un Perfil de Factores Organizacionales",
+    "Registrar casos de incumplimiento durante inspecciones de sitio",
+    "Vincular cada caso con los factores organizacionales y gerenciales subyacentes relevantes",
+    "Calificar la contribución de cada factor organizacional o gerencial en escala de 1 (poca influencia) a 5 (influencia considerable)",
+    "Sumar calificaciones de todos los casos para generar un Perfil de Factores Organizacionales",
     "Priorizar 2-3 factores más críticos para reforma inmediata",
     "Monitorear el progreso mediante inspecciones sucesivas y perfiles actualizados"
   ],
@@ -28,5 +28,76 @@
   "etiqueta_arbol": "Enfoca tus Recursos Regulatorios",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-regulatory_process_model-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar instancias de incumplimiento durante inspecciones de sitio",
+      "texto_nuevo": "Registrar casos de incumplimiento durante inspecciones de sitio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "instancias de incumplimiento"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-regulatory_process_model-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vincular cada instancia con los factores O&M subyacentes relevantes",
+      "texto_nuevo": "Vincular cada caso con los factores organizacionales y gerenciales subyacentes relevantes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cada instancia",
+          "factores O&M"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-regulatory_process_model-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calificar la contribución de cada factor O&M en escala de 1 (poca influencia) a 5 (influencia considerable)",
+      "texto_nuevo": "Calificar la contribución de cada factor organizacional o gerencial en escala de 1 (poca influencia) a 5 (influencia considerable)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "factor O&M"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-regulatory_process_model-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sumar calificaciones a través de instancias para generar un Perfil de Factores Organizacionales",
+      "texto_nuevo": "Sumar calificaciones de todos los casos para generar un Perfil de Factores Organizacionales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "a través de instancias"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "Los experimentos de Customer Development deben ser cortos, simples y objetivos, diseñados para dar un resultado claro de aprobado/reprobado. El objetivo es obtener una señal fuerte que permita avanzar, buscando el 'máximo global' de respuesta en vez de detenerse en un 'máximo local' prematuro.",
   "pasos_accionables": [
     "Preguntarse qué se quiere aprender",
-    "Diseñar el test pass/fail más simple posible",
+    "Diseñar la prueba de aprobado o reprobado más simple posible",
     "Definir criterios numéricos claros de éxito o fracaso",
     "Ejecutar el test lo más corto posible, sin detenerlo antes de darle la oportunidad de alcanzar el máximo global; si recibes una señal fuerte temprana, puedes pararlo y declararlo un éxito",
-    "Registrar aprendizajes e insights, no solo datos"
+    "Registrar aprendizajes y hallazgos, no solo datos"
   ],
-  "entregable_esperado": "Lista de hipótesis del modelo de negocio con sus tests pass/fail diseñados y criterios de éxito definidos",
+  "entregable_esperado": "Lista de hipótesis del modelo de negocio con sus pruebas de aprobado o reprobado diseñadas y criterios de éxito definidos",
   "nodos_previos": [
     "sintesis_hipotesis_modelo_negocio",
     "diseno_experimentos_hipotesis",
@@ -47,6 +47,56 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se pierde que más corto siempre es mejor y que con una señal fuerte temprana se puede parar y declarar éxito.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-disenar_tests_pass_fail-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar el test pass/fail más simple posible",
+      "texto_nuevo": "Diseñar la prueba de aprobado o reprobado más simple posible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el test pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-disenar_tests_pass_fail-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Registrar aprendizajes e insights, no solo datos",
+      "texto_nuevo": "Registrar aprendizajes y hallazgos, no solo datos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "insights"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-disenar_tests_pass_fail-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de hipótesis del modelo de negocio con sus tests pass/fail diseñados y criterios de éxito definidos",
+      "texto_nuevo": "Lista de hipótesis del modelo de negocio con sus pruebas de aprobado o reprobado diseñadas y criterios de éxito definidos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tests pass/fail diseñados"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

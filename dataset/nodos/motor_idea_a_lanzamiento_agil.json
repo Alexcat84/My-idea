@@ -19,7 +19,7 @@
     "cultura_climatica_innovacion"
   ],
   "condiciones_activacion": [
-    "Si los proyectos tardan años en salir al mercado (ciclos de vida largos).",
+    "Si los proyectos tardan años en salir al mercado.",
     "Si las buenas ideas 'mueren en la viña' antes de llegar a producción."
   ],
   "etiqueta_arbol": "Cruza del Concepto al Lanzamiento",
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide equipos dedicados para ganar velocidad, sobre todo en proyectos críticos y audaces; no liga patrocinio ejecutivo ni equipos dedicados al valle de la muerte.; Mismo defecto: el remedio del libro para el valle es el motor de idea a lanzamiento, no equipos con patrocinio ejecutivo.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-motor_idea_a_lanzamiento_agil-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si los proyectos tardan años en salir al mercado (ciclos de vida largos).",
+      "texto_nuevo": "Si los proyectos tardan años en salir al mercado.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "587",
+        "frase": "Product life cycles have been cut by a factor of about four"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c21): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

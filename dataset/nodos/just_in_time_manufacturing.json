@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar la confiabilidad de proveedores y capacidad de comunicación con ellos.",
     "Reducir progresivamente los niveles de inventario almacenado.",
-    "Aplicar JIT a la gestión de químicos para reducir riesgos y residuos.",
+    "Aplicar el justo a tiempo (JIT) a la gestión de químicos para reducir riesgos y residuos.",
     "Establecer sistemas de pedidos personalizados basados en demanda real del cliente."
   ],
   "entregable_esperado": "Sistema de inventario reducido documentado, con acuerdos de reabastecimiento ágil con proveedores y métricas de reducción de desperdicio.",
@@ -100,6 +100,23 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c18): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-just_in_time_manufacturing-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar JIT a la gestión de químicos para reducir riesgos y residuos.",
+      "texto_nuevo": "Aplicar el justo a tiempo (JIT) a la gestión de químicos para reducir riesgos y residuos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Aplicar JIT"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

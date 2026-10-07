@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identificar si un tercero ya resuelve el problema no contractual detectado en el cliente crítico",
     "Evaluar la capitalización de mercado y disponibilidad de venta de esa empresa (ej. CEO interino como señal de apertura a vender)",
-    "Actuar con velocidad extrema, corriendo diligencia y negociación en paralelo si el plazo es crítico",
+    "Actuar con velocidad extrema, haciendo la diligencia debida y la negociación en paralelo si el plazo es crítico",
     "Tomar la decisión aunque el equipo financiero y técnico se oponga con argumentos convencionales",
-    "Post-adquisición, evaluar racionalmente qué activos, talento y ubicaciones conservar"
+    "Tras la adquisición, evaluar racionalmente qué activos, talento y ubicaciones conservar"
   ],
   "entregable_esperado": "Términos de adquisición cerrados antes del vencimiento del plazo crítico con el cliente",
   "nodos_previos": [
@@ -29,5 +29,39 @@
   "etiqueta_arbol": "Compra la Solución a tu Crisis",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-adquisicion_estrategica_resolver_crisis-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actuar con velocidad extrema, corriendo diligencia y negociación en paralelo si el plazo es crítico",
+      "texto_nuevo": "Actuar con velocidad extrema, haciendo la diligencia debida y la negociación en paralelo si el plazo es crítico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "corriendo diligencia"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-adquisicion_estrategica_resolver_crisis-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Post-adquisición, evaluar racionalmente qué activos, talento y ubicaciones conservar",
+      "texto_nuevo": "Tras la adquisición, evaluar racionalmente qué activos, talento y ubicaciones conservar",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "el prefijo no se separa con guion; 'Tras la adquisición' dice exactamente lo mismo con forma correcta."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

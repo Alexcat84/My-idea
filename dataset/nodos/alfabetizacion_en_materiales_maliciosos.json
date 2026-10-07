@@ -26,8 +26,24 @@
     "Cuando tu proyecto involucra tecnologías emergentes complejas, como inteligencia artificial, blockchain o biotecnología.",
     "Si necesitas explicarle la tecnología a alguien que te ayuda pero no tiene formación técnica."
   ],
-  "etiqueta_arbol": "Entiende las Tecnologías Riesgosas",
+  "etiqueta_arbol": "Entiende qué Pueden Hacer las Tecnologías",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-alfabetizacion_en_materiales_maliciosos-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Entiende las Tecnologías Riesgosas",
+      "texto_nuevo": "Entiende qué Pueden Hacer las Tecnologías",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v18)",
+        "evidencia": "El concepto trata de entender qué pueden hacer las tecnologías, no de su riesgo; la etiqueta nueva nombra esa alfabetización sin añadir nada."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

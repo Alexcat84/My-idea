@@ -7,7 +7,7 @@
   "resumen_teorico": "Técnica para probar el interés sincero del cliente simulando una venta real antes de que la propuesta de valor exista. Se busca que el cliente crea que está completando una compra real, generando evidencia fuerte de demanda (especialmente si se simula una transacción con tarjeta de crédito).",
   "pasos_accionables": [
     "Diseña un botón de 'comprar ahora' y mide cuántos clientes hacen clic.",
-    "Combina con A/B testing para explorar elasticidad de precio.",
+    "Combina con pruebas A/B para explorar elasticidad de precio.",
     "Simula una transacción capturando información de pago (borrando datos de tarjeta después).",
     "Sé transparente después del test: explica que fue una prueba y ofrece una recompensa."
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Simula una Venta Real Primero",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-mock_sales-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Combina con A/B testing para explorar elasticidad de precio.",
+      "texto_nuevo": "Combina con pruebas A/B para explorar elasticidad de precio.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "A/B testing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

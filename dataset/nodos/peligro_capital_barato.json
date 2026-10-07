@@ -11,7 +11,7 @@
     "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperabas.",
     "Distingue entre crecer rápido de forma sostenible y crecer rápido apalancado en supuestos financieros frágiles."
   ],
-  "entregable_esperado": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre el runway de la empresa.",
+  "entregable_esperado": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre los meses que la empresa puede operar con su caja.",
   "nodos_previos": [
     "construccion_de_leverage"
   ],
@@ -24,7 +24,7 @@
     "Cuando la empresa recauda una ronda inusualmente grande o a una valuación muy alta.",
     "Cuando inversionistas presionan por crecimiento agresivo sin considerar riesgos macroeconómicos."
   ],
-  "etiqueta_arbol": "Cuidado con el Capital Fácil",
+  "etiqueta_arbol": "Cuídate del Capital Fácil",
   "correcciones": [
     {
       "id": "fidelidad-t8-041",
@@ -93,6 +93,38 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-peligro_capital_barato-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuidado con el Capital Fácil",
+      "texto_nuevo": "Cuídate del Capital Fácil",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cuidado con el"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-peligro_capital_barato-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre el runway de la empresa.",
+      "texto_nuevo": "Análisis de sensibilidad financiera que muestre el impacto de una caída súbita en la disponibilidad de capital sobre los meses que la empresa puede operar con su caja.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el runway de la empresa"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

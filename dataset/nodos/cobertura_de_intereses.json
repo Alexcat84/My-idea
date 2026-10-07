@@ -9,7 +9,7 @@
     "Monitorear la tendencia del ratio a lo largo del tiempo",
     "Evaluar si el ratio es suficientemente alto para tranquilidad de bancos e inversionistas antes de solicitar financiamiento adicional",
     "Si el ratio es bajo, priorizar el pago de deuda existente antes de asumir más obligaciones",
-    "Usar este ratio junto con el de deuda-a-capital antes de solicitar financiamiento adicional"
+    "Usar este ratio junto con el de deuda sobre capital antes de solicitar financiamiento adicional"
   ],
   "entregable_esperado": "Cálculo del ratio de cobertura de intereses, su tendencia en el tiempo, y un plan de acción si está en zona de riesgo",
   "condiciones_activacion": [
@@ -43,6 +43,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que un ratio alto suele indicar que puede asumir más deuda o al menos cubrir los pagos; lo de sin riesgo lo añade el nodo.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-cobertura_de_intereses-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar este ratio junto con el de deuda-a-capital antes de solicitar financiamiento adicional",
+      "texto_nuevo": "Usar este ratio junto con el de deuda sobre capital antes de solicitar financiamiento adicional",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "deuda-a-capital"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

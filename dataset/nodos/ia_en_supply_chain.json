@@ -7,8 +7,8 @@
   "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como el clima, los eventos políticos y militares o el sentimiento en redes sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable, puede tomar sola las decisiones de rutina y te deja las más críticas y los imprevistos, donde tu juicio es clave. Los métodos tradicionales, al basarse en pocos datos, a menudo no reflejan la demanda real.",
   "pasos_accionables": [
     "Auditar tus fuentes de datos actuales de demanda, rutas o almacén para evaluar su calidad y volumen",
-    "Priorizar un área piloto entre forecasting, optimización de rutas u operaciones de almacén",
-    "Seleccionar una herramienta de IA/ML compatible con los sistemas que ya usas",
+    "Priorizar un área piloto entre pronóstico de demanda, optimización de rutas u operaciones de almacén",
+    "Seleccionar una herramienta de IA o aprendizaje automático compatible con los sistemas que ya usas",
     "Integrar esa herramienta con tus datos históricos y en tiempo real disponibles (tráfico, clima, redes sociales)",
     "Medir la mejora en precisión de pronóstico o eficiencia operativa antes de escalar a otra área",
     "Definir qué decisiones puede tomar la IA sola y cuáles necesitas revisar tú mismo, teniendo en cuenta que puede inventar información o recomendar cosas absurdas o incluso peligrosas"
@@ -145,6 +145,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la IA funciona como caja negra y puede inventar fuentes o recomendar cosas absurdas o peligrosas, límite que pesa al darle autonomía. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-ia_en_supply_chain-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Priorizar un área piloto entre forecasting, optimización de rutas u operaciones de almacén",
+      "texto_nuevo": "Priorizar un área piloto entre pronóstico de demanda, optimización de rutas u operaciones de almacén",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forecasting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-ia_en_supply_chain-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar una herramienta de IA/ML compatible con los sistemas que ya usas",
+      "texto_nuevo": "Seleccionar una herramienta de IA o aprendizaje automático compatible con los sistemas que ya usas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "IA/ML"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

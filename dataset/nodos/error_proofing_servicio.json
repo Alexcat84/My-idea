@@ -10,14 +10,14 @@
     "Evaluar si la actividad puede eliminarse completamente",
     "Buscar sustitutos más confiables para el proceso actual",
     "Simplificar el trabajo para reducir la posibilidad de error humano",
-    "Implementar detección temprana de errores (software, códigos de barras, checklists)",
+    "Implementar detección temprana de errores (software, códigos de barras, listas de verificación)",
     "Diseñar mecanismos para minimizar el impacto cuando ocurran errores",
     "Clasifica el tipo de intervención según los cinco principios: eliminación, reemplazo, facilitación, detección o mitigación",
     "Diseña dispositivos físicos o lógicos que hagan imposible o detectable el error, como encajes únicos o sensores",
     "Prioriza la prevención proactiva en la etapa de diseño por encima de la mitigación reactiva",
     "Valida que el dispositivo funcione consistentemente antes de escalar su uso"
   ],
-  "entregable_esperado": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
+  "entregable_esperado": "Lista de mecanismos a prueba de errores implementados en el proceso con evidencia de reducción de errores",
   "nodos_previos": [
     "analisis_flujo_proceso_servicio",
     "diseno_servicio_calidad",
@@ -116,6 +116,39 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 9,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-error_proofing_servicio-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar detección temprana de errores (software, códigos de barras, checklists)",
+      "texto_nuevo": "Implementar detección temprana de errores (software, códigos de barras, listas de verificación)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklists"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-error_proofing_servicio-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de mecanismos de error-proofing implementados en el proceso con evidencia de reducción de errores",
+      "texto_nuevo": "Lista de mecanismos a prueba de errores implementados en el proceso con evidencia de reducción de errores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mecanismos de error-proofing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

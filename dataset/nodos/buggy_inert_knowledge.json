@@ -6,12 +6,12 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Para aplicar conocimiento correctamente las personas necesitan poseerlo, tenerlo organizado de forma usable, y activarlo en contexto. El conocimiento 'buggy' (defectuoso) tiene huecos o errores por entrenamiento incompleto; el conocimiento mal organizado lleva a malinterpretar procesos dinámicos como estáticos, independientes cuando están interconectados, o varios procesos distintos como si fueran uno solo. El conocimiento 'inerte' es aquel que la persona posee (puede recitarlo en teoría) pero no logra activar cuando se necesita en una situación real; ese riesgo aparece cuando hay desajuste entre cómo se aprendió (en formatos estáticos) y cómo debe aplicarse (en situaciones dinámicas y novedosas).",
   "pasos_accionables": [
-    "Verificar si el personal poseía el conocimiento correcto, completo y no erróneo (buscar bugs)",
+    "Verificar si el personal poseía el conocimiento correcto, completo y no erróneo (buscar errores)",
     "Evaluar si el conocimiento fue enseñado de forma que refleje la interconexión y dinamismo real de los procesos",
     "Identificar posible sobregeneralización de un caso de entrenamiento aplicado incorrectamente a otro distinto",
     "Buscar desajustes entre el formato de adquisición del conocimiento (libros, capacitación estática) y su aplicación en campo (dinámica)"
   ],
-  "entregable_esperado": "Diagnóstico de brechas de conocimiento (buggy/inerte) y recomendaciones de rediseño de entrenamiento",
+  "entregable_esperado": "Diagnóstico de brechas de conocimiento (defectuoso/inerte) y recomendaciones de rediseño de entrenamiento",
   "nodos_previos": [
     "fatigue_performance_effects",
     "plan_continuation_bias"
@@ -59,6 +59,39 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta el desajuste entre aprendizaje estático y aplicación dinámica como un riesgo de conocimiento inerte, no como su causa establecida.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-buggy_inert_knowledge-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar si el personal poseía el conocimiento correcto, completo y no erróneo (buscar bugs)",
+      "texto_nuevo": "Verificar si el personal poseía el conocimiento correcto, completo y no erróneo (buscar errores)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "buscar bugs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-buggy_inert_knowledge-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diagnóstico de brechas de conocimiento (buggy/inerte) y recomendaciones de rediseño de entrenamiento",
+      "texto_nuevo": "Diagnóstico de brechas de conocimiento (defectuoso/inerte) y recomendaciones de rediseño de entrenamiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "buggy/inerte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

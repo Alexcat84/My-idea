@@ -6,7 +6,7 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "La carta de crédito (L/C) es un instrumento de pago emitido por el banco del comprador que garantiza al exportador el pago del monto que especifica la carta, siempre que se cumplan estrictamente los términos y condiciones especificados (documentos requeridos, fecha límite de embarque, prohibición de embarques parciales o transbordos, plazo de presentación de documentos, etc.). A veces es confirmada por un banco en el país del exportador, lo que añade una capa de seguridad adicional al pago; si no, solo se avisa a través de un banco de ese país. El exportador debe examinar cuidadosamente el instrumento y, si no puede cumplir alguna condición, comunicarse con el comprador para solicitar una enmienda antes del embarque. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Revisar minuciosamente todos los términos y condiciones de la L/C recibida.",
+    "Revisar minuciosamente todos los términos y condiciones de la carta de crédito recibida.",
     "Verificar la lista de documentos requeridos (factura comercial, conocimiento de embarque, lista de empaque, certificados) y su cantidad de copias.",
     "Confirmar la fecha límite de embarque y el plazo de presentación de documentos que fija la L/C.",
     "Si no se puede cumplir algún término, contactar al comprador para gestionar una enmienda antes de embarcar.",
@@ -134,6 +134,23 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (contrario; modo quitar; doble lectura ciega, arbitro): En el libro la carta se abre después de acordar la venta y se revisa al recibirla; el paso invierte el orden.; Mismo defecto: la revisión es posterior al acuerdo de venta, no previa a aceptar la orden.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-carta_de_credito_letter_of_credit-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar minuciosamente todos los términos y condiciones de la L/C recibida.",
+      "texto_nuevo": "Revisar minuciosamente todos los términos y condiciones de la carta de crédito recibida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "de la L/C recibida"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

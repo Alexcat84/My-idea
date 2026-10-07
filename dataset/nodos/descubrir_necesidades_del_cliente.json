@@ -6,14 +6,14 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, traducirlas al lenguaje de la organización y establecer unidades de medida y sensores.",
   "pasos_accionables": [
-    "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
+    "Planificar métodos de recolección de necesidades: encuestas, grupos focales, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
     "Recopilar la lista de necesidades en el lenguaje propio del cliente",
     "Distinguir entre necesidades declaradas, reales, percibidas y culturales, por cada segmento de cliente",
     "Investigar posibles usos no previstos del producto y sus riesgos de seguridad",
     "Analizar y priorizar las necesidades identificadas, de forma consensuada, sin asumir jerarquías automáticas por tipo de cliente",
     "Traducir las necesidades priorizadas al lenguaje técnico de la organización y establecer para cada una su unidad de medida y su sensor"
   ],
-  "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
+  "entregable_esperado": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en hoja de cálculo",
   "nodos_previos": [
     "identificar_clientes_externos_e_internos",
     "brecha_de_calidad_cuatro_gaps",
@@ -130,6 +130,39 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro incluye establecer unidades de medida y sensores, que los pasos omiten.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-descubrir_necesidades_del_cliente-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planificar métodos de recolección de necesidades: encuestas, focus groups, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
+      "texto_nuevo": "Planificar métodos de recolección de necesidades: encuestas, grupos focales, quejas, visitas a clientes, etc., y consultar a los clientes con frecuencia, porque sus necesidades cambian",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "focus groups"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-descubrir_necesidades_del_cliente-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en spreadsheet",
+      "texto_nuevo": "Lista de necesidades del cliente priorizadas y traducidas al lenguaje de la organización, lista para su análisis en hoja de cálculo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "spreadsheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -7,12 +7,12 @@
   "resumen_teorico": "La logística inversa gestiona el flujo de productos devueltos por clientes debido a errores de entrega, daños, defectos o excesos. Aunque necesaria, un alto volumen de retornos suele indicar ineficiencias en otras partes de la cadena de suministro que deberían corregirse en la fuente. Una excepción de valor añadido es el reciclaje al final del ciclo de vida del producto, que se convierte en una actividad de abastecimiento más que de retorno.",
   "pasos_accionables": [
     "Registrar y clasificar los motivos de cada devolución",
-    "Medir tasas de retorno y su tendencia (creciente o decreciente)",
+    "Medir tasas de devolución y su tendencia (creciente o decreciente)",
     "Identificar y corregir las causas raíz de las devoluciones en el proceso original",
-    "Diseñar un proceso eficiente de procesamiento de retornos para los casos inevitables",
-    "Evaluar oportunidades de reciclaje o reuso como fuente de materias primas"
+    "Diseñar un proceso eficiente de procesamiento de devoluciones para los casos inevitables",
+    "Evaluar oportunidades de reciclaje o reúso como fuente de materias primas"
   ],
-  "entregable_esperado": "Reporte de causas raíz de devoluciones y plan de mejora para reducir tasa de retornos",
+  "entregable_esperado": "Reporte de causas raíz de devoluciones y plan de mejora para reducir tasa de devoluciones",
   "nodos_previos": [
     "organizacion_independiente_de_calidad",
     "gestion_pedidos_order_management"
@@ -26,7 +26,7 @@
     "Cuando la tasa de devoluciones es alta o va en aumento",
     "Cuando se busca mejorar la satisfacción postventa reduciendo errores"
   ],
-  "etiqueta_arbol": "Gestiona tus Retornos de Producto",
+  "etiqueta_arbol": "Gestiona tus Devoluciones de Producto",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
   ],
@@ -43,6 +43,87 @@
         "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "voz-logistica_inversa_retornos-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Gestiona tus Retornos de Producto",
+      "texto_nuevo": "Gestiona tus Devoluciones de Producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Retornos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-logistica_inversa_retornos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir tasas de retorno y su tendencia (creciente o decreciente)",
+      "texto_nuevo": "Medir tasas de devolución y su tendencia (creciente o decreciente)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tasas de retorno"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-logistica_inversa_retornos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseñar un proceso eficiente de procesamiento de retornos para los casos inevitables",
+      "texto_nuevo": "Diseñar un proceso eficiente de procesamiento de devoluciones para los casos inevitables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "retornos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-logistica_inversa_retornos-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar oportunidades de reciclaje o reuso como fuente de materias primas",
+      "texto_nuevo": "Evaluar oportunidades de reciclaje o reúso como fuente de materias primas",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v18)",
+        "evidencia": "Falta la tilde del hiato en 'reúso'; solo se añade la tilde."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-logistica_inversa_retornos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de causas raíz de devoluciones y plan de mejora para reducir tasa de retornos",
+      "texto_nuevo": "Reporte de causas raíz de devoluciones y plan de mejora para reducir tasa de devoluciones",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tasa de retornos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

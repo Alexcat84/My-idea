@@ -6,13 +6,13 @@
   "fuente": "Value Proposition Design",
   "resumen_teorico": "Describen todo lo que molesta al cliente antes, durante y después de intentar completar un job, o lo que le impide lograrlo. Se identifican tres tipos: resultados/características no deseadas, obstáculos que impiden empezar o ralentizan, y riesgos (resultados potenciales negativos). Cada pain tiene un nivel de severidad (extremo o moderado) y debe describirse de forma concreta y medible.",
   "pasos_accionables": [
-    "Preguntar qué frustra o molesta al cliente al intentar completar sus jobs",
+    "Preguntar qué frustra o molesta al cliente al intentar completar sus tareas",
     "Identificar obstáculos que impiden comenzar o retrasan al cliente",
     "Identificar riesgos y consecuencias negativas potenciales",
-    "Hacer cada pain concreto y medible (ej. cuántos minutos es 'esperar demasiado')",
-    "Rankear pains según su severidad (extremo vs moderado)"
+    "Hacer cada dolor concreto y medible (ej. cuántos minutos es 'esperar demasiado')",
+    "Ordenar dolores según su severidad (extremo vs. moderado)"
   ],
-  "entregable_esperado": "Lista de post-its con pains concretos y priorizados por severidad",
+  "entregable_esperado": "Lista de notas adhesivas con dolores concretos y priorizados por severidad",
   "nodos_previos": [
     "customer_jobs",
     "customer_profile"
@@ -28,5 +28,77 @@
   "etiqueta_arbol": "Detecta los Dolores del Cliente",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-customer_pains-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntar qué frustra o molesta al cliente al intentar completar sus jobs",
+      "texto_nuevo": "Preguntar qué frustra o molesta al cliente al intentar completar sus tareas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "jobs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_pains-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hacer cada pain concreto y medible (ej. cuántos minutos es 'esperar demasiado')",
+      "texto_nuevo": "Hacer cada dolor concreto y medible (ej. cuántos minutos es 'esperar demasiado')",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "pain"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_pains-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rankear pains según su severidad (extremo vs moderado)",
+      "texto_nuevo": "Ordenar dolores según su severidad (extremo vs. moderado)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Rankear",
+          "pains",
+          "extremo vs moderado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-customer_pains-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lista de post-its con pains concretos y priorizados por severidad",
+      "texto_nuevo": "Lista de notas adhesivas con dolores concretos y priorizados por severidad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "post-its",
+          "pains"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

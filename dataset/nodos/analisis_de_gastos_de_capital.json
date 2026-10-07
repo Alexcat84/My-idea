@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Determina el desembolso inicial de efectivo incluyendo todos los costos asociados de la inversión: compra, envío, instalación, capacitación e interrupciones operativas (downtime)",
     "Proyecta de forma conservadora los flujos de efectivo futuros que generará la inversión, en términos de ahorro de costos o de ingresos adicionales; incluso puedes involucrar en esas proyecciones a los empleados y gerentes con conocimiento técnico",
-    "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa (si aún no tienes uno, decídelo, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el payback y el IRR",
+    "Evalúa los flujos proyectados con métodos financieros: calcula el valor actual neto (VAN) usando la tasa mínima de rendimiento de tu empresa (si aún no tienes una, decídela, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el periodo de recuperación y la tasa interna de retorno (TIR)",
     "Redacta la propuesta de inversión incluyendo los riesgos, los supuestos y un análisis de sensibilidad",
     "Toma la decisión de inversión basada en el análisis, no al revés: el análisis no se hace para justificar una decisión que ya estaba tomada"
   ],
-  "entregable_esperado": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por NPV, payback e IRR, redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
+  "entregable_esperado": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por valor actual neto (VAN), periodo de recuperación y tasa interna de retorno (TIR), redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
   "nodos_previos": [
     "metodo_valor_presente_neto",
     "tasa_de_retorno_requerida",
@@ -76,6 +76,41 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae la condición del libro: si no tienes hurdle rate, decides uno, y debe superar la tasa del préstamo que pides.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-analisis_de_gastos_de_capital-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa los flujos proyectados con métodos financieros: calcula el NPV usando el hurdle rate de tu empresa (si aún no tienes uno, decídelo, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el payback y el IRR",
+      "texto_nuevo": "Evalúa los flujos proyectados con métodos financieros: calcula el valor actual neto (VAN) usando la tasa mínima de rendimiento de tu empresa (si aún no tienes una, decídela, y que sea mayor que la tasa de interés del préstamo que solicitas), y respáldalo con el periodo de recuperación y la tasa interna de retorno (TIR)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "calcula el NPV",
+          "el hurdle rate",
+          "el payback y el IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_de_gastos_de_capital-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por NPV, payback e IRR, redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
+      "texto_nuevo": "Un análisis completo de gasto de capital con el desembolso inicial, los flujos proyectados y la evaluación de retorno por valor actual neto (VAN), periodo de recuperación y tasa interna de retorno (TIR), redactado como propuesta de inversión con sus riesgos, supuestos y análisis de sensibilidad, listo para presentar a un banco o inversionista",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "por NPV, payback e IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,11 +7,11 @@
   "resumen_teorico": "Cláusula del term sheet con dos variantes: en una, si la mayoría de los preferentes aprueba una venta, todos los demás, fundadores incluidos, deben aceptarla; en otra, un fundador que se va debe votar sus acciones en la misma proporción que el resto en cualquier votación. Su objetivo es evitar que un accionista minoritario bloquee una transacción beneficiosa para la mayoría. Ante la primera, el compromiso más común es que se aplique a la mayoría del common stock, no del preferred.",
   "pasos_accionables": [
     "Evaluar tu posición de propiedad (% de acciones) para determinar cuánto te afecta esta cláusula.",
-    "Negociar que el drag-along siga a la mayoría de accionistas comunes, no a los preferentes.",
+    "Negociar que la cláusula de arrastre siga a la mayoría de accionistas comunes, no a los preferentes.",
     "Verificar que tu abogado represente los intereses de la compañía y no solo los tuyos como fundador individual.",
     "No gastar energía negociando este término si tu participación accionaria es muy pequeña, salvo que haya muchos accionistas pequeños en tu misma situación."
   ],
-  "entregable_esperado": "Cláusula de drag-along revisada y negociada en el term sheet, con claridad sobre bajo qué mayoría se activa.",
+  "entregable_esperado": "Cláusula de arrastre revisada y negociada en la hoja de términos, con claridad sobre bajo qué mayoría se activa.",
   "nodos_previos": [
     "term_sheet_negociacion",
     "preferencia_de_liquidacion",
@@ -62,6 +62,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro exceptúa el caso de muchos accionistas pequeños en la misma situación.; Misma excepción perdida.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-drag_along_agreement-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar que el drag-along siga a la mayoría de accionistas comunes, no a los preferentes.",
+      "texto_nuevo": "Negociar que la cláusula de arrastre siga a la mayoría de accionistas comunes, no a los preferentes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el drag-along"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-drag_along_agreement-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de drag-along revisada y negociada en el term sheet, con claridad sobre bajo qué mayoría se activa.",
+      "texto_nuevo": "Cláusula de arrastre revisada y negociada en la hoja de términos, con claridad sobre bajo qué mayoría se activa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Cláusula de drag-along",
+          "en el term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

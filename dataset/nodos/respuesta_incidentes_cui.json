@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Designar un responsable (business champion) del plan de respuesta a incidentes",
     "Crear una lista de contactos con roles y responsabilidades (líder de negocio, contacto técnico, policía, FBI, banco, legal, seguro), con sus datos de contacto",
-    "Documentar requisitos específicos de reporte según contratos federales",
+    "Documentar requisitos específicos de notificación según contratos federales",
     "Probar la efectividad del plan mediante ejercicios de mesa (tabletop), simulaciones o listas de verificación",
-    "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos."
+    "Definir qué, cuándo y cómo notificar incidentes según leyes, regulaciones y contratos."
   ],
   "entregable_esperado": "Plan de respuesta a incidentes documentado con lista de contactos y procedimientos de prueba periódicos",
   "nodos_previos": [
@@ -102,6 +102,40 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-respuesta_incidentes_cui-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar requisitos específicos de reporte según contratos federales",
+      "texto_nuevo": "Documentar requisitos específicos de notificación según contratos federales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "requisitos específicos de reporte"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-respuesta_incidentes_cui-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir qué, cuándo y cómo reportar incidentes según leyes, regulaciones y contratos.",
+      "texto_nuevo": "Definir qué, cuándo y cómo notificar incidentes según leyes, regulaciones y contratos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reportar incidentes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

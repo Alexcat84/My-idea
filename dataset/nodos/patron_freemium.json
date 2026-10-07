@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando el producto es digital o de plataforma con bajo costo marginal",
-    "Cuando se necesita escalar rápidamente una base de usuarios antes de monetizar"
+    "Cuando se necesita escalar rápidamente una base de usuarios"
   ],
   "etiqueta_arbol": "Da lo Básico Gratis Siempre",
   "fuentes_internas": [
@@ -42,6 +42,23 @@
         "evidencia": "F28-028: Diseña el modelo de ingresos: los límites entre lo gratis y lo premium, la estructura de costos y la conversión proyectada. Eso es planificar el modelo de negocio. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "condiciones-resto-patron_freemium-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se necesita escalar rápidamente una base de usuarios antes de monetizar",
+      "texto_nuevo": "Cuando se necesita escalar rápidamente una base de usuarios",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "1399",
+        "frase": "This small base of paying users subsidizes the free users."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c21): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

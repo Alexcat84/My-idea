@@ -6,13 +6,13 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "Cuando un courier cotiza tu envío, no siempre cobra por el peso real de la báscula: compara ese peso con un peso dimensional que se calcula multiplicando el largo por el ancho y por el alto de la caja y dividiendo el resultado entre un número fijo, llamado divisor. Si tu caja es grande pero liviana, ese cálculo puede darte un peso mayor al real, y el courier siempre te cobra por el más alto de los dos. Conocer este cálculo antes de cotizar te evita sorpresas en la factura y te ayuda a elegir cajas más ajustadas al tamaño real de tu producto.",
   "pasos_accionables": [
-    "Mide el largo, ancho y alto de tu caja en las unidades que use tu courier.",
-    "Pregunta a tu courier cuál es su divisor de peso dimensional actual.",
+    "Mide el largo, ancho y alto de tu caja en las unidades que use tu empresa de mensajería.",
+    "Pregunta a tu empresa de mensajería cuál es su divisor de peso dimensional actual.",
     "Multiplica las tres medidas y divide el resultado entre ese divisor.",
     "Compara ese número contra el peso real de tu paquete en la báscula.",
     "Usa el mayor de los dos números para calcular el costo antes de cotizar con el cliente."
   ],
-  "entregable_esperado": "El peso facturable real de tu paquete, calculado con el divisor vigente de tu courier, listo para cotizar sin sorpresas.",
+  "entregable_esperado": "El peso facturable real de tu paquete, calculado con el divisor vigente de tu empresa de mensajería, listo para cotizar sin sorpresas.",
   "nodos_previos": [
     "decidir_cobro_velocidad_ventana_entrega",
     "probar_empaque_antes_de_escalar_envios",
@@ -147,6 +147,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro da un divisor fijo (139, con medidas en pulgadas) y no dice que cada transportista defina el suyo.; Mismo defecto: que no sirva conocer el número no está en el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-calcular_peso_dimensional_antes_cotizar-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide el largo, ancho y alto de tu caja en las unidades que use tu courier.",
+      "texto_nuevo": "Mide el largo, ancho y alto de tu caja en las unidades que use tu empresa de mensajería.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calcular_peso_dimensional_antes_cotizar-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a tu courier cuál es su divisor de peso dimensional actual.",
+      "texto_nuevo": "Pregunta a tu empresa de mensajería cuál es su divisor de peso dimensional actual.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-calcular_peso_dimensional_antes_cotizar-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El peso facturable real de tu paquete, calculado con el divisor vigente de tu courier, listo para cotizar sin sorpresas.",
+      "texto_nuevo": "El peso facturable real de tu paquete, calculado con el divisor vigente de tu empresa de mensajería, listo para cotizar sin sorpresas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "courier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

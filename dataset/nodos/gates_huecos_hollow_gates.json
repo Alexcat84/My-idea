@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un problema crítico ocurre cuando se aprueba un proyecto en el gate (decisión Go) pero no se comprometen los recursos necesarios para ejecutarlo. Esto suele saturar el pipeline con proyectos sin capacidad real de avance, que tardan demasiado en llegar al mercado, condenando al líder del proyecto al fracaso por falta de recursos.",
   "pasos_accionables": [
-    "Verificar que cada decisión Go en un gate venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)",
-    "Auditar si los líderes de proyecto salen de las reuniones de gate con los recursos que necesitan",
+    "Verificar que cada decisión de avanzar en un punto de evaluación venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)",
+    "Auditar si los líderes de proyecto salen de las reuniones de evaluación con los recursos que necesitan",
     "Eliminar la práctica de aprobar proyectos 'en principio' sin asignación real de equipo"
   ],
-  "entregable_esperado": "Política formal que vincule cada decisión Go con un compromiso de recursos verificable y documentado",
+  "entregable_esperado": "Política formal que vincule cada decisión de avanzar con un compromiso de recursos verificable y documentado",
   "nodos_previos": [
     "gates_sin_dientes_problema",
     "asignacion_recursos_en_gates"
@@ -58,6 +58,56 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro dice que la aprobación sin recursos carece de sentido y satura el pipeline, pero no habla de una ilusión de progreso; es un efecto añadido.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-gates_huecos_hollow_gates-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar que cada decisión Go en un gate venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)",
+      "texto_nuevo": "Verificar que cada decisión de avanzar en un punto de evaluación venga acompañada de compromiso explícito de recursos (personas, presupuesto, tiempo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "decisión Go en un gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gates_huecos_hollow_gates-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Auditar si los líderes de proyecto salen de las reuniones de gate con los recursos que necesitan",
+      "texto_nuevo": "Auditar si los líderes de proyecto salen de las reuniones de evaluación con los recursos que necesitan",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reuniones de gate"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gates_huecos_hollow_gates-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Política formal que vincule cada decisión Go con un compromiso de recursos verificable y documentado",
+      "texto_nuevo": "Política formal que vincule cada decisión de avanzar con un compromiso de recursos verificable y documentado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "decisión Go"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

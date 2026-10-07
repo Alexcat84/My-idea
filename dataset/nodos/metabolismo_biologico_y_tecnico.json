@@ -10,7 +10,7 @@
     "Audita los componentes biológicos para eliminar mutágenos, carcinógenos, tóxicos persistentes y bioacumulativos desde el diseño inicial",
     "Clasifica los componentes técnicos (metales, plásticos, aleaciones) evitando mezclarlos con materiales incompatibles",
     "Diseña el producto para que sus partes se separen fácilmente al final de su vida útil, evitando híbridos monstruosos",
-    "Establece rutas de retorno específicas: compostaje o biodegradación para lo biológico, y recuperación con el fabricante priorizando upcycling sobre downcycling para lo técnico"
+    "Establece rutas de retorno específicas: compostaje o biodegradación para lo biológico, y recuperación con el fabricante priorizando el reciclaje que sube la calidad del material sobre el que la degrada para lo técnico"
   ],
   "entregable_esperado": "Especificación técnica del producto que cataloga cada componente como nutriente biológico o técnico, con su ruta de retorno correspondiente.",
   "nodos_previos": [
@@ -95,6 +95,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): Los casi ocho mil químicos se descartaron; los 38 se buscaron después, no salieron de ese conjunto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-metabolismo_biologico_y_tecnico-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establece rutas de retorno específicas: compostaje o biodegradación para lo biológico, y recuperación con el fabricante priorizando upcycling sobre downcycling para lo técnico",
+      "texto_nuevo": "Establece rutas de retorno específicas: compostaje o biodegradación para lo biológico, y recuperación con el fabricante priorizando el reciclaje que sube la calidad del material sobre el que la degrada para lo técnico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "upcycling sobre downcycling"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

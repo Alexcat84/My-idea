@@ -7,14 +7,14 @@
   "pasos_accionables": [
     "Negociar una preferencia de liquidación simple (1x, no participante) en rondas iniciales; evitar múltiplos superiores a 1x, ya que son señal de alerta sobre el inversionista",
     "Entender la diferencia entre preferencia participante (preferencia MÁS parte proporcional como común), participante con tope (participa hasta un múltiplo pactado) y no participante (una u otra, no ambas)",
-    "Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
-    "Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
-    "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso",
+    "Si se acepta participación, solicitar cláusulas de extinción que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
+    "Definir con claridad qué eventos constituyen un cambio de control que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
+    "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier pago",
     "Modelar distintos escenarios de venta (bajo, medio, alto) para entender el impacto real en el retorno de fundadores, empleados e inversionistas (análisis de cascada o waterfall)",
     "Revisar cómo se tratan las contraprestaciones en garantía (escrow) o contingentes al calcular la distribución",
     "Anticipar que los inversionistas piden estos términos para reducir sus riesgos y alinear tus incentivos con los suyos"
   ],
-  "entregable_esperado": "Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
+  "entregable_esperado": "Cláusula de preferencia de liquidación definida en la hoja de términos (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
   "condiciones_activacion": [
     "Cuando se negocia el término económico central de una ronda de inversión con acciones preferentes",
     "Si el fundador necesita entender el impacto real en su retorno económico ante un evento de salida",
@@ -122,6 +122,74 @@
       },
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c17): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-preferencia_de_liquidacion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si se acepta participación, solicitar 'kick-outs' que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
+      "texto_nuevo": "Si se acepta participación, solicitar cláusulas de extinción que la eliminen una vez el inversionista alcance un retorno de 2x-3x",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'kick-outs'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-preferencia_de_liquidacion-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir con claridad qué eventos constituyen un 'Change in Control' que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
+      "texto_nuevo": "Definir con claridad qué eventos constituyen un cambio de control que dispara la liquidación; recordar que una oferta pública inicial NO se considera evento de liquidación",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'Change in Control'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-preferencia_de_liquidacion-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier proceso",
+      "texto_nuevo": "Entender el 'overhang' de la preferencia: el monto que debe devolverse a los inversionistas antes de que los comunes reciban cualquier pago",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "reciban cualquier proceso"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-preferencia_de_liquidacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de liquidation preference definida en el term sheet (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
+      "texto_nuevo": "Cláusula de preferencia de liquidación definida en la hoja de términos (multiplicador, tipo participante/no participante, definición de evento de liquidación) y modelada en distintos escenarios de salida (análisis de cascada o waterfall)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "liquidation preference",
+          "term sheet"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]

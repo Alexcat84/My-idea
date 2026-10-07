@@ -11,7 +11,7 @@
     "Definir qué decisiones son estratégicas (alto nivel) y cuáles tácticas (selección/priorización)",
     "Usar ambos procesos de forma complementaria, no sustitutiva"
   ],
-  "entregable_esperado": "Un sistema dual documentado de gates y revisiones de portafolio con roles y frecuencias definidas",
+  "entregable_esperado": "Un sistema dual documentado de puntos de evaluación y revisiones de portafolio con roles y frecuencias definidas",
   "nodos_previos": [
     "mitos_stage_gate",
     "gestion_de_portafolio_arriesgado",
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Revisa Proyectos en Dos Niveles",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-gestion_portafolio_dos_niveles-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema dual documentado de gates y revisiones de portafolio con roles y frecuencias definidas",
+      "texto_nuevo": "Un sistema dual documentado de puntos de evaluación y revisiones de portafolio con roles y frecuencias definidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -12,7 +12,7 @@
     "Guarda esta lista como plantilla para reutilizarla en tus siguientes contratos.",
     "Actualiza la lista cada vez que un contrato te enseñe algo que faltaba incluir."
   ],
-  "entregable_esperado": "Una lista propia de cláusulas contractuales, usada como checklist antes de firmar.",
+  "entregable_esperado": "Una lista propia de cláusulas contractuales, usada como lista de verificación antes de firmar.",
   "nodos_previos": [
     "pide_una_revision_externa_antes_de_firmar_cualquier_contrato",
     "calcula_costo_de_mantener_contra_costo_de_reponer",
@@ -179,6 +179,22 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida; modo quitar; doble lectura ciega, arbitro): Llamarlas mínimas las vuelve obligatorias siempre, cuando el libro dice que no todas son apropiadas en cada contrato.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-ten_un_checklist_de_clausulas_de_contrato-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista propia de cláusulas contractuales, usada como checklist antes de firmar.",
+      "texto_nuevo": "Una lista propia de cláusulas contractuales, usada como lista de verificación antes de firmar.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

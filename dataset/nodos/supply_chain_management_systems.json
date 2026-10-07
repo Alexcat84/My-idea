@@ -7,7 +7,7 @@
   "resumen_teorico": "Los sistemas SCM son suites de aplicaciones integradas (planificación avanzada, planificación de transporte, planificación de demanda, gestión de inventario) que dependen de datos del ERP u otros sistemas pertinentes y ofrecen capacidades analíticas para la toma de decisiones estratégicas y tácticas en la cadena de suministro.",
   "pasos_accionables": [
     "Identificar brechas analíticas no cubiertas por el ERP actual",
-    "Seleccionar módulos SCM relevantes (APS, demand planning, inventory)",
+    "Seleccionar módulos SCM relevantes (APS, planificación de la demanda, inventario)",
     "Integrar el sistema SCM con las fuentes de datos ERP existentes",
     "Establecer procesos de revisión periódica de los planes generados"
   ],
@@ -57,6 +57,23 @@
       },
       "decision": "auditoria final, barridos dirigidos de la medida final (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que se alimentan del ERP u otros sistemas pertinentes; el nodo deja el ERP como única fuente.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "voz-supply_chain_management_systems-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar módulos SCM relevantes (APS, demand planning, inventory)",
+      "texto_nuevo": "Seleccionar módulos SCM relevantes (APS, planificación de la demanda, inventario)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "demand planning, inventory"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

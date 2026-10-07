@@ -7,8 +7,8 @@
   "resumen_teorico": "Consiste en asegurar que el personal esté al tanto de los riesgos de seguridad asociados a sus actividades y de las leyes, directivas, políticas, estándares, regulaciones o procedimientos relacionados con la seguridad de los sistemas organizacionales, y que estén adecuadamente entrenados para llevar a cabo sus responsabilidades de seguridad de la información. El contenido debe incluir la necesidad de seguridad, acciones específicas requeridas (MFA, no compartir contraseñas), cómo responder a incidentes, cómo manejar CUI de forma segura, y cómo reconocer y reportar amenazas internas, ingeniería social y minería social.",
   "pasos_accionables": [
     "Diseñar contenido de entrenamiento básico y avanzado personalizado según roles, sistemas a los que se accede y entornos de trabajo del personal, e impartirlo con regularidad al personal nuevo y existente",
-    "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
-    "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
+    "Proveer entrenamiento antes de autorizar acceso al sistema o a la información no clasificada controlada",
+    "Implementar técnicas de concientización como carteles, correos de liderazgo, charlas durante el almuerzo",
     "Utilizar recursos gratuitos disponibles (NARA CUI training, Security Awareness Hub)"
   ],
   "entregable_esperado": "Programa de entrenamiento y concientización documentado, con registros de participación del personal",
@@ -120,6 +120,41 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-concientizacion_entrenamiento_cui-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Proveer entrenamiento antes de autorizar acceso al sistema o a CUI",
+      "texto_nuevo": "Proveer entrenamiento antes de autorizar acceso al sistema o a la información no clasificada controlada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-concientizacion_entrenamiento_cui-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar técnicas de concientización como posters, correos de liderazgo, eventos tipo lunch-and-learn",
+      "texto_nuevo": "Implementar técnicas de concientización como carteles, correos de liderazgo, charlas durante el almuerzo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "posters",
+          "eventos tipo lunch-and-learn"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -7,13 +7,13 @@
   "resumen_teorico": "No todos los costos variables van en COGS ni todos los fijos en gastos operativos. Salarios de supervisores pueden estar en COGS aunque sean fijos a corto plazo; comisiones de ventas son en parte variables pero suelen clasificarse en SG&A. El Costo de Bienes Vendidos (COGS) o Costo de Servicios (COS) incluye lo directamente asociado a producir o entregar, mientras que los gastos operativos son todo lo demás. La línea entre ambos suele ser un juicio (gray área) que afecta el margen bruto y puede cambiarse según necesidades gerenciales si la lógica es razonable y consistente, aunque eso puede distorsionar tendencias. Entender esta clasificación evita errores al analizar la rentabilidad real del negocio.",
   "pasos_accionables": [
     "Revisa cómo tu contador clasifica cada línea de costo",
-    "Define con tu contador criterios claros y consistentes para clasificar costos como COGS u operativos",
-    "Identifica qué costos fijos están incluidos en COGS",
+    "Define con tu contador criterios claros y consistentes para clasificar costos como costo de ventas u operativos",
+    "Identifica qué costos fijos están incluidos en el costo de ventas",
     "Verifica si costos variables como comisiones están en gastos operativos",
     "Verifica que la lógica de cada clasificación sea razonable para la situación de tu negocio, sabiendo que no hay reglas fijas",
     "Evita cambiar frecuentemente la clasificación de costos para no distorsionar tus tendencias de margen"
   ],
-  "entregable_esperado": "Documento de clasificación de costos que distinga claramente COGS vs Gastos Operativos con justificación de cada línea",
+  "entregable_esperado": "Documento de clasificación de costos que distinga claramente Costo de Ventas vs Gastos Operativos con justificación de cada línea",
   "nodos_previos": [
     "estructura_estado_resultados",
     "reconocimiento_de_ingresos",
@@ -90,6 +90,56 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro condiciona esos cambios a que la lógica sea razonable y consistente; el nodo lo pierde.; Endurece: el libro dice que los gastos de venta suelen ir en SG&A y con comisiones son variables en cierta medida.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-distincion_cogs_gastos_operativos-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define con tu contador criterios claros y consistentes para clasificar costos como COGS u operativos",
+      "texto_nuevo": "Define con tu contador criterios claros y consistentes para clasificar costos como costo de ventas u operativos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-distincion_cogs_gastos_operativos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica qué costos fijos están incluidos en COGS",
+      "texto_nuevo": "Identifica qué costos fijos están incluidos en el costo de ventas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-distincion_cogs_gastos_operativos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento de clasificación de costos que distinga claramente COGS vs Gastos Operativos con justificación de cada línea",
+      "texto_nuevo": "Documento de clasificación de costos que distinga claramente Costo de Ventas vs Gastos Operativos con justificación de cada línea",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "COGS"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

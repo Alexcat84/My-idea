@@ -6,8 +6,8 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "El transporte más barato no siempre es la mejor decisión. Cuando el costo de quedarte sin producto disponible, o de perder una venta por demora, junto con lo que ahorras en inventario al recibir más rápido, es mayor que la diferencia de precio entre un envío rápido y uno lento, conviene pagar más por la velocidad. Esta lógica aplica sobre todo a pedidos urgentes, insumos críticos o productos donde el cliente no esperará mucho tiempo antes de buscar otro proveedor. La decisión no es una regla fija, depende de tu margen, de tu tipo de producto y de cuánto te cuesta realmente la demora. Comparar ambos costos antes de elegir, en vez de asumir que lo barato siempre gana, evita perder más dinero del que ahorras en el flete.",
   "pasos_accionables": [
-    "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
-    "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
+    "Calcula cuánto te cuesta quedarte sin existencias o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
+    "Compara esos costos, lo que pierdes sin existencias y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
     "Elige el envío rápido solo cuando lo que pierdes sin producto, sumado a lo que ahorras en inventario, sea mayor que esa diferencia.",
     "Revisa esta decisión cada vez que cambien tus proveedores de envío o tus márgenes."
   ],
@@ -23,7 +23,7 @@
     "Tienes que elegir entre dos couriers y uno es mas caro pero mas confiable",
     "Vendes algo urgente, como repuestos o insumos, donde la demora cuesta mas que el flete"
   ],
-  "etiqueta_arbol": "Decide cuándo pagar más rápido",
+  "etiqueta_arbol": "Decide Cuándo Pagar el Envío Rápido",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
   ],
@@ -177,6 +177,54 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro compensa el flete más caro con el ahorro de inventario y la disponibilidad; el paso deja solo el costo de quedarse sin producto, contra los pasos 1 y 2.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-pagar_mas_por_velocidad-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Decide cuándo pagar más rápido",
+      "texto_nuevo": "Decide Cuándo Pagar el Envío Rápido",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v18)",
+        "evidencia": "'pagar más rápido' se lee como pagar antes, cuando el concepto es pagar más por un envío veloz; la nueva etiqueta dice eso y nada más."
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pagar_mas_por_velocidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcula cuánto te cuesta quedarte sin stock o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
+      "texto_nuevo": "Calcula cuánto te cuesta quedarte sin existencias o perder una venta por tardar en llegar, y cuánto te ahorras en inventario si recibes más rápido.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sin stock"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-pagar_mas_por_velocidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Compara esos costos, lo que pierdes sin stock y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
+      "texto_nuevo": "Compara esos costos, lo que pierdes sin existencias y lo que ahorras en inventario, contra la diferencia de precio entre el envío rápido y el barato.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sin stock"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

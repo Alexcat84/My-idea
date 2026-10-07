@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Escribe en una hoja los diez elementos: cantidad, costo, producto, cliente correcto, calidad, tiempo, lugar, condición, cumplimiento y origen ético.",
     "Revisa tu último mes de entregas y marca en cuáles de esos diez fallaste al menos una vez.",
-    "Elige los dos o tres derechos donde fallas más seguido y enfócate primero en corregirlos.",
+    "Elige los dos o tres puntos donde fallas más seguido y enfócate primero en corregirlos.",
     "Comparte esta lista con quien te ayude a empacar o despachar para que todos sepan que se revisa."
   ],
   "entregable_esperado": "Una lista personal de los diez elementos de servicio que definen si tu entrega fue buena o mala.",
@@ -23,7 +23,7 @@
     "Quieres auditar tu propia operación de entrega sin depender solo de la intuición.",
     "Estas armando por primera vez una política de servicio para tu negocio."
   ],
-  "etiqueta_arbol": "Los diez derechos de tu entrega",
+  "etiqueta_arbol": "Revisa tu Entrega en Diez Puntos",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
   ],
@@ -129,6 +129,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que estos elementos a veces representan un pequeño porcentaje del costo y pesan en la demanda; el nodo lo endurece a 'suele', lo aplica a cada punto y lo cambia por la recompra.; El libro dice que todos pueden ser requisitos clave y muchos serán esenciales, no que la entrega deba garantizar los diez.; Endurece 'a veces', lo aplica a cada punto y cambia la demanda por la recompra.; Endurece 'sometimes' a 'suele' y lo aplica a cada punto por separado.; Mismo endurecimiento de 'can be key requisites' a 'debe garantizar'.; Mismo endurecimiento: pueden ser requisitos clave y muchos esenciales, no obligatorios todos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-diez_derechos_servicio_cliente-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Los diez derechos de tu entrega",
+      "texto_nuevo": "Revisa tu Entrega en Diez Puntos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Los diez derechos de"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diez_derechos_servicio_cliente-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elige los dos o tres derechos donde fallas más seguido y enfócate primero en corregirlos.",
+      "texto_nuevo": "Elige los dos o tres puntos donde fallas más seguido y enfócate primero en corregirlos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "derechos"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
