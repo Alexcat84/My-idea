@@ -10,9 +10,9 @@
     "Usa la inspección variable como otra manera de bajar el coste del aseguramiento de la calidad.",
     "Varía cada cuánto inspeccionas, porque los niveles de calidad varían con el tiempo y es solo sentido común que la frecuencia los siga.",
     "Si pasan semanas sin que encuentres problemas, comprueba menos a menudo.",
-    "Si los problemas empiezan a aparecer, prueba cada vez con más frecuencia, hasta que la calidad vuelva a los niveles altos que tenía antes.",
-    "Cuenta con lo que ganas con eso: costes todavía más bajos y todavía menos interferencia en el flujo de producción.",
-    "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que las personas son animales de costumbres y siguen haciendo las cosas como las han hecho siempre, sea de una semana a otra o de un año a otro."
+    "Cuando empiecen a aparecer problemas, ve subiendo la frecuencia de las pruebas hasta que la calidad recupere el nivel alto de antes.",
+    "Ten presente la ganancia: bajas aún más los costes y estorbas aún menos el flujo de producción.",
+    "Ten en cuenta que este método apenas se aplica, ni siquiera en la fabricación corriente, y que lo más probable es que la causa sea la costumbre: las personas son animales de costumbres y repiten lo de siempre, semana tras semana o año tras año."
   ],
   "entregable_esperado": "La frecuencia de inspección movida en los dos sentidos según el nivel de calidad observado, con el coste y la interferencia en el flujo más bajos que con la frecuencia fija.",
   "nodos_previos": [
@@ -224,6 +224,57 @@
       "motivos": [
         "voz"
       ]
+    },
+    {
+      "id": "copia-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si los problemas empiezan a aparecer, prueba cada vez con más frecuencia, hasta que la calidad vuelva a los niveles altos que tenía antes.",
+      "texto_nuevo": "Cuando empiecen a aparecer problemas, ve subiendo la frecuencia de las pruebas hasta que la calidad recupere el nivel alto de antes.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "143",
+        "frase": "But if problems begin to develop, we can test ever more frequently"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con lo que ganas con eso: costes todavía más bajos y todavía menos interferencia en el flujo de producción.",
+      "texto_nuevo": "Ten presente la ganancia: bajas aún más los costes y estorbas aún menos el flujo de producción.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "143",
+        "frase": "The advantage here is still lower costs and even less interference"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que las personas son animales de costumbres y siguen haciendo las cosas como las han hecho siempre, sea de una semana a otra o de un año a otro.",
+      "texto_nuevo": "Ten en cuenta que este método apenas se aplica, ni siquiera en la fabricación corriente, y que lo más probable es que la causa sea la costumbre: las personas son animales de costumbres y repiten lo de siempre, semana tras semana o año tras año.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "143",
+        "frase": "Yet this approach is not used very often, even in widget manufacturing"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Ajusta cuánto Inspeccionas la Calidad",

@@ -7,7 +7,7 @@
   "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan huecos alrededor de artículos livianos, pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos y el artículo vaya envuelto en plástico de burbujas. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
   "pasos_accionables": [
     "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
-    "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+    "Envuelve los artículos livianos y delicados con plástico de burbujas, dando varias vueltas y superponiendo capas hasta cubrirlos del todo, con más cuidado en esquinas y bordes; deja la cara lisa contra el producto y las burbujas por fuera.",
     "Evita maníes de poliestireno comunes con productos planos, estrechos o electrónicos; para la electrónica usa maníes antiestáticos y envuelve el artículo en plástico de burbujas.",
     "Reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
     "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
@@ -159,6 +159,23 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro presenta los maníes como relleno de huecos para artículos livianos; el resumen pierde esa condición y habla de espacios grandes, que el libro no dice.; Para electrónica el libro pide maníes antiestáticos junto con plástico de burbujas alrededor del artículo; el resumen deja los antiestáticos como si bastaran.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-elegir_material_de_relleno_segun_producto-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+      "texto_nuevo": "Envuelve los artículos livianos y delicados con plástico de burbujas, dando varias vueltas y superponiendo capas hasta cubrirlos del todo, con más cuidado en esquinas y bordes; deja la cara lisa contra el producto y las burbujas por fuera.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "43-47",
+        "frase": "Used in multiple wraps and layers to ensure that the item is completely protected"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

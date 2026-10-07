@@ -7,10 +7,10 @@
   "resumen_teorico": "Cuando las ganas de estirarse no salen solas, el mando tiene que crear el entorno que las fomente, y en un sistema de dirección por objetivos su herramienta es el nivel al que los fija. Un objetivo bien puesto queda tan alto que, aun esforzándose a fondo, la persona o la organización solo tiene la mitad de probabilidades de lograrlo. El rendimiento tiende a ser mayor cuando todos persiguen un logro más allá de su alcance inmediato, aunque intentarlo suponga fallar la mitad de las veces. Si buscas el máximo rendimiento, el tuyo y el de tu equipo, esa manera de fijar metas es clave.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_12.md, unidad interna Cap. 11, titulo textual The Sports Analogy. Sale de la PIEZA P34 de la frontera de esta vuelta (.v57ext/frontera.py, .v57ext/frontera.txt), tramo L75 a L75, 97 palabras, un solo renglon. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro no se queda en el adjetivo de adecuacion (objectives should be set at a point high enough) sino que da la CIFRA DEL AUTOR que hace el criterio verificable: a fifty-fifty chance of making them. Sin esa cifra, el tramo caeria en la misma familia que P41 de este mismo capitulo (most appropriate measures, 9.1 restriccion 2); con ella, el criterio deja de ser un adjetivo y se vuelve una probabilidad nombrada. GRAFIA: uso direccion_objetivos y no MBO en el id, siguiendo la grafia ya viva en este mismo lote (contestar_dos_preguntas_direccion_objetivos.json y fijar_periodo_direccion_objetivos_retroalimentacion.json, ambos de cap_02 y cap_04 segun sus propias fichas): escribir una grafia nueva para el mismo sistema partiria la familia que la senial 2 necesita ver junta (EXTRACTOR.md 15.1: dos grafias del mismo concepto parten la familia). MBO viaja en denominaciones.otros_idiomas como sigla inglesa del propio texto (In an MBO system, for example) y no como pieza del id. DE DONDE SALE CADA PASO, uno a uno, todos de L75: paso 1 (When the need to stretch is not spontaneous, management needs to create an environment to foster it); paso 2 (In an MBO system, for example, objectives should be set at a point high enough so that even if the individual (or organization) pushes himself hard, he will still only have a fifty-fifty chance of making them); paso 3 (Output will tend to be greater when everybody strives for a level of achievement beyond his immediate grasp, even though trying means failure half the time); paso 4 (Such goal-setting is extremely important if what you want is peak performance from yourself and your subordinates). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: no escribo un metodo para calcular esa probabilidad de cincuenta por ciento (por ejemplo, historial de objetivos pasados o algun calculo estadistico): el libro da la cifra objetivo (fifty-fifty) y no el metodo para estimarla, y escribir un metodo aqui seria inventar un PUENTE de la especie EL PROCEDIMIENTO, la misma familia de tentacion que EXTRACTOR.md 15.4 avisa. No escribo el contraste con el laboratorio de investigacion centrado en el saber (P35, L77), que es DEFINICION con CASO nombrado (Intel) y queda fuera de esta pieza por frontera. VECINO DE FAMILIA MAS CERCANO EN ESTA MISMA TANDA, LEIDO ANTES DE ESCRIBIR EL VEREDICTO (EXTRACTOR.md 2): los dos nodos ya vivos de esta misma familia en cuarentena, contestar_dos_preguntas_direccion_objetivos y fijar_periodo_direccion_objetivos_retroalimentacion. El primero fija las DOS PREGUNTAS que todo objetivo de este sistema debe contestar (que hacer y como medir si se hizo), sin tocar el nivel de dificultad del objetivo; el segundo fija el PERIODO de la retroalimentacion, no el nivel del objetivo. Este nodo es el unico de los tres que fija CUANTO DE DIFICIL debe ser el objetivo, y los tres comparten la grafia direccion_objetivos a proposito para que la senial de familia los vea juntos sin que eso los funda en uno solo. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el cincuenta por ciento es una cifra del autor sobre COMO fijar el objetivo (un metodo), no una medicion de un fenomeno externo (como el 90 por ciento de fijar_frecuencia... o el que espero declarar hoy mismo para cap_13); dude si debia viajar en atribuciones en vez de en pasos_accionables, y decidi dejarla en pasos_accionables porque el texto la escribe en modo imperativo de instruccion (objectives should be set at a point...) y no como un dato que el autor midio sobre terceros. Si un lector estricto de manual principio 8 dice que toda cifra del autor va a atribuciones sin excepcion, cae DENTRO de mi marcado y el arreglo es mover la frase a atribuciones sin tocar los pasos. LA ADUANA EN SECO BLOQUEO ESTE CANDIDATO (poblacion 429, .v57ext/informe_fijar_meta.txt): BLOQUEARIA por familia_id 0.375 contra fijar_periodo_direccion_objetivos_retroalimentacion, con similitud_texto 0.289 y paso_contra_nodo 0.381, los dos por debajo de sus umbrales (0.35 y 0.60). LEO AL VECINO ANTES DE ESCRIBIR EL VEREDICTO (EXTRACTOR.md 2): la sena que sube es la familia, esperada y buscada, porque los dos ids comparten a proposito la raiz direccion_objetivos (parrafo de arriba, GRAFIA); la propia senal de familia es la que EXTRACTOR.md 15.1 dice que protege del duplicado cuando dos candidatos usan la MISMA grafia del mismo sistema. El paso senalado como mas parecido, mi paso 4 (Dentro de un sistema de direccion por objetivos, fija los objetivos en un punto lo bastante alto para que...) contra su paso 2 (Exigele que te diga como lo estas haciendo, para que puedas ajustar lo que sea que estes haciendo si hace falta), hablan de dos cosas distintas: el mio fija QUE TAN DIFICIL debe ser el objetivo (su probabilidad de exito), el suyo exige RETROALIMENTACION sobre como se esta haciendo. Cero pasos literalmente comunes entre las dos fichas completas. Los entregables tambien son distintos: el mio es un objetivo fijado en su punto de dificultad, el suyo es un periodo de retroalimentacion fijado y contrastado contra la base del plan. VEREDICTO SANO: son HERMANOS de la misma familia direccion_objetivos, cada uno resuelve una pregunta distinta del mismo sistema (cuan dificil fijar la meta, aqui; cada cuanto llega la retroalimentacion, alla), y ninguno de los dos despliega el procedimiento del otro. Este veredicto queda escrito aqui, dentro de la ficha que viaja, porque su sede (bitacora/VEREDICTOS.jsonl) la escribe forja.py insertar y D.39 mide la puerta cerrada para grove_high_output en esta vuelta: se traslada a su sede el dia de la insercion, con esta misma razon.",
   "pasos_accionables": [
-    "Cuando el impulso a estirarse no salga espontáneo, crea tú, como mando, un entorno que lo fomente.",
-    "Dentro de un sistema de dirección por objetivos, fija los objetivos en un punto lo bastante alto para que, incluso esforzándose al máximo, la persona o la organización solo tenga una probabilidad de éxito de cincuenta por ciento.",
-    "Cuenta con que el rendimiento tiende a ser mayor cuando todos se esfuerzan por un nivel de logro más allá de su alcance inmediato, aunque eso signifique fallar la mitad de las veces.",
-    "Trata esta manera de fijar objetivos como algo extremadamente importante si lo que buscas es el máximo rendimiento, el tuyo y el de tus subordinados."
+    "Si las ganas de exigirse más no surgen por sí solas, encárgate tú, como mando, de crear el ambiente que las impulse.",
+    "Pon las metas de tu sistema de dirección por objetivos tan altas que, aun dándolo todo, la persona o el equipo solo tenga la mitad de posibilidades de alcanzarlas.",
+    "Ten presente que se suele rendir más cuando cada quien persigue una meta que todavía no tiene al alcance de la mano, aunque intentarlo implique fracasar la mitad de las veces.",
+    "Dale a esta forma de poner metas muchísima importancia si quieres sacar el máximo rendimiento de ti y de quienes dependen de ti."
   ],
   "entregable_esperado": "Un objetivo fijado en el punto donde, aunque la persona o la organización se esfuercen al máximo, la probabilidad de conseguirlo sea de cincuenta por ciento, y no un objetivo cómodo ni uno inalcanzable.",
   "nodos_previos": [
@@ -162,6 +162,74 @@
       "motivos": [
         "ortografia"
       ]
+    },
+    {
+      "id": "copia-fijar_meta_direccion_objetivos_mitad_probabilidad-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando el impulso a estirarse no salga espontáneo, crea tú, como mando, un entorno que lo fomente.",
+      "texto_nuevo": "Si las ganas de exigirse más no surgen por sí solas, encárgate tú, como mando, de crear el ambiente que las impulse.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_12.md",
+        "lineas": "75",
+        "frase": "When the need to stretch is not spontaneous, management needs to create"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-fijar_meta_direccion_objetivos_mitad_probabilidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Dentro de un sistema de dirección por objetivos, fija los objetivos en un punto lo bastante alto para que, incluso esforzándose al máximo, la persona o la organización solo tenga una probabilidad de éxito de cincuenta por ciento.",
+      "texto_nuevo": "Pon las metas de tu sistema de dirección por objetivos tan altas que, aun dándolo todo, la persona o el equipo solo tenga la mitad de posibilidades de alcanzarlas.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_12.md",
+        "lineas": "75",
+        "frase": "objectives should be set at a point high enough so that even"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-fijar_meta_direccion_objetivos_mitad_probabilidad-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuenta con que el rendimiento tiende a ser mayor cuando todos se esfuerzan por un nivel de logro más allá de su alcance inmediato, aunque eso signifique fallar la mitad de las veces.",
+      "texto_nuevo": "Ten presente que se suele rendir más cuando cada quien persigue una meta que todavía no tiene al alcance de la mano, aunque intentarlo implique fracasar la mitad de las veces.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_12.md",
+        "lineas": "75",
+        "frase": "Output will tend to be greater when everybody strives for a level"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-fijar_meta_direccion_objetivos_mitad_probabilidad-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Trata esta manera de fijar objetivos como algo extremadamente importante si lo que buscas es el máximo rendimiento, el tuyo y el de tus subordinados.",
+      "texto_nuevo": "Dale a esta forma de poner metas muchísima importancia si quieres sacar el máximo rendimiento de ti y de quienes dependen de ti.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_12.md",
+        "lineas": "75",
+        "frase": "Such goal-setting is extremely important if what you want is peak performance"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Fija Metas al Límite Justo",

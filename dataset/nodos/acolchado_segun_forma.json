@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Identifica si tu pieza es plana, cilíndrica o de forma irregular antes de elegir el material de relleno.",
     "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o cartón corrugado.",
-    "En piezas cilíndricas o tubulares, empácalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
-    "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
-    "En piezas de más de unos 68 kilos, sujétalas a una base apta para montacargas y transpaleta, con flejes a la tarima o con refuerzos dentro de la caja, antes de cerrar el empaque."
+    "Mete las piezas cilíndricas o tubulares en una caja o en un tubo y rellena lo suficiente, por ejemplo con acolchado en las puntas y cacahuates sueltos, para evitar que atraviesen los cierres de los extremos.",
+    "Sujeta con cinta la protección de cada pieza irregular para que no se desplace durante el viaje; lo ideal es, además, guardarla en una caja.",
+    "Si la pieza pesa más de unos 68 kilos, fíjala antes de cerrar el empaque sobre una base que puedan mover un montacargas y una transpaleta, ya sea flejándola a la tarima o reforzándola por dentro de la caja."
   ],
   "entregable_esperado": "Un método de acolchado específico según la forma de cada producto que envías.",
   "nodos_previos": [
@@ -205,6 +205,57 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Mismo defecto.; Se pierden el umbral de 150 libras y la base apta para montacargas. | Texto reescrito solo en la forma porque el del arbitro no pasaba un filtro de la tanda (acta 9.6, correcciones FUERA).",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-acolchado_segun_forma-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En piezas cilíndricas o tubulares, empácalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
+      "texto_nuevo": "Mete las piezas cilíndricas o tubulares en una caja o en un tubo y rellena lo suficiente, por ejemplo con acolchado en las puntas y cacahuates sueltos, para evitar que atraviesen los cierres de los extremos.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1279",
+        "frase": "Box cylindrical parts that can be packaged in tubes with adequate dunnage"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-acolchado_segun_forma-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
+      "texto_nuevo": "Sujeta con cinta la protección de cada pieza irregular para que no se desplace durante el viaje; lo ideal es, además, guardarla en una caja.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1287",
+        "frase": "When preparing irregular-shaped parts for shipment, tape cushioning material securely"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-acolchado_segun_forma-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En piezas de más de unos 68 kilos, sujétalas a una base apta para montacargas y transpaleta, con flejes a la tarima o con refuerzos dentro de la caja, antes de cerrar el empaque.",
+      "texto_nuevo": "Si la pieza pesa más de unos 68 kilos, fíjala antes de cerrar el empaque sobre una base que puedan mover un montacargas y una transpaleta, ya sea flejándola a la tarima o reforzándola por dentro de la caja.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1307",
+        "frase": "Secure transmissions and other parts weighing more than 150 lbs. to a forkliftable base"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

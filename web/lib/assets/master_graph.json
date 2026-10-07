@@ -1014,9 +1014,9 @@
       "pasos_accionables": [
         "Identifica si tu pieza es plana, cilíndrica o de forma irregular antes de elegir el material de relleno.",
         "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o cartón corrugado.",
-        "En piezas cilíndricas o tubulares, empácalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
-        "En piezas irregulares, pega el material de protección con cinta para que no se corra en el trayecto y, además, conviene meter la pieza en una caja.",
-        "En piezas de más de unos 68 kilos, sujétalas a una base apta para montacargas y transpaleta, con flejes a la tarima o con refuerzos dentro de la caja, antes de cerrar el empaque."
+        "Mete las piezas cilíndricas o tubulares en una caja o en un tubo y rellena lo suficiente, por ejemplo con acolchado en las puntas y cacahuates sueltos, para evitar que atraviesen los cierres de los extremos.",
+        "Sujeta con cinta la protección de cada pieza irregular para que no se desplace durante el viaje; lo ideal es, además, guardarla en una caja.",
+        "Si la pieza pesa más de unos 68 kilos, fíjala antes de cerrar el empaque sobre una base que puedan mover un montacargas y una transpaleta, ya sea flejándola a la tarima o reforzándola por dentro de la caja."
       ],
       "entregable_esperado": "Un método de acolchado específico según la forma de cada producto que envías.",
       "nodos_previos": [
@@ -2746,13 +2746,13 @@
       "resumen_teorico": "La reunión individual es el foro ideal para llegar a los problemas sutiles y profundos que afectan a tu subordinado en su trabajo. Tres preguntas abren esa puerta: si está satisfecho con su propio rendimiento, si alguna frustración u obstáculo le carcome, y si tiene dudas sobre adónde va. Hay que vigilar además el asunto de corazón a corazón que sale a destiempo, la mayoría de las veces cerca del final. Si lo dejas pasar, tu subordinado puede decirte, por ejemplo, que no está contento y que busca trabajo fuera, y dejarte solo cinco minutos para tratarlo.",
       "pasos_accionables": [
         "Alienta que en la reunión individual se hablen los asuntos de corazón a corazón.",
-        "Cuenta con la razón que lo sostiene: es el foro perfecto para llegar a los problemas sutiles y profundos del trabajo que afectan al subordinado.",
+        "Ten presente por qué: no hay mejor foro que ese para llegar a los problemas sutiles y hondos del trabajo que le afectan a tu subordinado.",
         "Pregúntale si está satisfecho con su propio rendimiento.",
         "Pregúntale si alguna frustración o algún obstáculo le está carcomiendo.",
         "Pregúntale si tiene dudas sobre adónde va.",
         "Ponte en guardia contra el asunto de corazón a corazón sacado en un momento inoportuno.",
-        "Cuenta con que la mayoría de las veces esos llegan cerca del final de la reunión.",
-        "Cuenta con lo que pasa si lo dejas correr: el subordinado puede decirte algo como que no está contento y que lleva tiempo buscando trabajo fuera, y dejarte solo cinco minutos para lidiar con ello."
+        "Ten en cuenta que en la mayoría de los casos llegan cuando la reunión está por terminar.",
+        "Ten presente el riesgo de dejarlo pasar: tu subordinado puede soltarte, por ejemplo, que está descontento y que hace tiempo busca empleo en otra parte, y darte apenas cinco minutos para resolverlo."
       ],
       "entregable_esperado": "La reunión individual con la puerta abierta a los asuntos de corazón a corazón y las tres preguntas planteadas, y el asunto grave sacado a destiempo detectado a tiempo en vez de recibido con cinco minutos por delante.",
       "nodos_previos": [
@@ -3319,7 +3319,7 @@
       "resumen_teorico": "Los dealerships y distribuidoras involucran la venta de productos a terceros a precio mayorista de buena fe para reventa, sin cobrar tarifa (evitando así el elemento 'fee' de franquicia). Es apropiado solo para fabricantes y mayoristas. Puede resultar menos eficiente que franquiciar, porque el soporte se da gratis (erosionando el margen mayorista) y los distribuidores pueden tener poca lealtad de marca frente a competidores con mejores condiciones.",
       "pasos_accionables": [
         "Confirmar que el negocio es de manufactura o mayoreo de productos físicos",
-        "Evitar vender equipo, exhibidores u otros artículos no destinados a reventa, aunque sea sin ganancia: eso activa el elemento de tarifa",
+        "No les vendas a tus distribuidores nada que no sea para revender, como equipo o exhibidores, aunque no ganes nada con esa venta: con eso ya se activa el elemento de tarifa",
         "Comparar la eficiencia de soporte gratuito (distribuidor) vs. soporte pagado con regalías (franquicia)",
         "Evaluar el riesgo de baja lealtad de marca en distribuidores"
       ],
@@ -3604,7 +3604,7 @@
       "pasos_accionables": [
         "Graficar mediciones individuales contra los límites de especificación",
         "Verificar si el proceso está en control estadístico mediante cartas de control",
-        "Calcular la desviación estándar y los límites de capacidad del proceso; si está fuera de control y sus causas no se pueden eliminar de forma económica, calcularlos igual, sabiendo que saldrán inflados y que la predicción será aproximada",
+        "Calcula la desviación estándar y los límites de capacidad del proceso; aunque esté fuera de control, si eliminar sus causas no te resulta económico, haz el cálculo de todos modos y ten presente que los límites quedarán exagerados y que lo que predigan será solo aproximado",
         "Comparar los índices de capacidad (Cpk, Cpm) con las especificaciones usando un histograma",
         "Verificar los cinco supuestos clave: estabilidad, normalidad, datos suficientes, representatividad de muestras e independencia de mediciones"
       ],
@@ -4791,7 +4791,7 @@
         "Ajustar un modelo de regresión lineal (Y = b0 + b1X)",
         "Calcular el coeficiente de determinación R² para evaluar el ajuste del modelo",
         "Calcular el coeficiente de correlación r para medir la fuerza de la relación",
-        "Tener extrema cautela al predecir fuera del rango de los datos muestreados: esas predicciones son frágiles hasta confirmarlas con observaciones",
+        "Desconfía mucho de lo que el modelo prediga fuera del rango que muestreaste: mientras no lo confirmes con observaciones, esa predicción se sostiene poco.",
         "Considerar regresión múltiple si hay más de una variable independiente"
       ],
       "entregable_esperado": "Ecuación de regresión validada con R² y análisis de correlación para predecir o explicar una variable de calidad",
@@ -9871,10 +9871,10 @@
       "titulo_concepto": "Usar redes de intermediarios (brokers) para conseguir prospectos",
       "resumen_teorico": "Los brokers de franquicia (también llamados redes de referidos) te consiguen prospectos ya filtrados por una comisión que en general pagas solo al cerrar la venta, aunque algunos cobran por aceptarte (pregunta el precio en tu mercado). El costo es variable y los prospectos suelen llegar con mejor calidad, pero cada uno sale más caro que uno propio, estar en la red no te garantiza ventas ni más prospectos, alguien que no controlas puede representar mal tu marca, y esto no reemplaza que tú mismo trabajes tus ventas.",
       "pasos_accionables": [
-        "Evalúa tu presupuesto de marketing, tus metas de crecimiento, la cobertura geográfica que buscas y tu disposición a vigilar de cerca a la red para decidir si te conviene usar intermediarios",
-        "Elige las redes de intermediarios con el mismo cuidado con el que contratarías a alguien para vender por ti",
+        "Decide si te conviene usar intermediarios después de pesar cuatro cosas: tus metas de crecimiento, el dinero que tienes para marketing, el territorio que quieres cubrir y si estás dispuesto a supervisar de cerca a la red",
+        "Pon en la selección de las redes de intermediarios el mismo rigor que pondrías al contratar a alguien que venda por ti",
         "Evita intermediarios que te pidan un porcentaje de regalías o cualquier pago continuo, más allá de la comisión por cierre",
-        "Vigila de cerca cómo los intermediarios hablan de tu marca frente a los prospectos, dales capacitación y retroalimentación continua y asegúrate de que cada prospecto quede plenamente informado desde tu lado",
+        "Acompaña a los intermediarios con capacitación y retroalimentación constantes, observa de cerca cómo presentan tu marca a los prospectos y completa tú mismo la información que cada prospecto necesita para decidir con todo claro",
         "Si dependes mucho de los intermediarios, asiste a convenciones y mantén comunicación constante para que tu marca esté siempre presente en la mente de esa red"
       ],
       "entregable_esperado": "Un acuerdo firmado con una o varias redes de intermediarios, junto con una forma de vigilarlos y mantenerlos al tanto de tu marca",
@@ -12195,14 +12195,14 @@
       "titulo_concepto": "Canalizar las interrupciones a una forma organizada y programada colgando el cartel en la puerta y teniendo después una hora de oficina abierta",
       "resumen_teorico": "Quien interrumpe trae problemas legítimos que hay que atender, pero no sabe cuánto te cuesta cortar tu trabajo; si lo supiera, probablemente se contendría más. En vez de esconderte, obliga a quien interrumpe a menudo a decidir si su asunto puede esperar y dale a cambio un sitio fijo donde sí será atendido: un aviso en la puerta con la hora a la que puede volver y una hora de oficina abierta en la que lo recibes sin reservas. Así el tiempo que piden las interrupciones pasa a una forma organizada y programada, y lo irregular se vuelve regular, que es un principio básico de producción.",
       "pasos_accionables": [
-        "Cuenta con que si los que te interrumpen supieran cuánto te están molestando, probablemente se controlarían más y bajarían el número de veces que sienten que tienen que hablar contigo ahora mismo.",
-        "Intenta en todo caso obligar a los que te interrumpen a menudo a tomar una decisión activa sobre si su asunto puede esperar.",
-        "Cuelga en tu puerta, en vez de esconderte, un cartel que diga: estoy haciendo trabajo individual, por favor no me interrumpas a menos que de verdad no pueda esperar hasta las 2:00.",
-        "Ten después una hora de oficina abierta, y sé completamente receptivo con cualquiera que quiera verte.",
-        "Entiende lo que es la clave: los que te interrumpen tienen problemas legítimos que hay que atender, y por eso te los traen.",
-        "Canaliza el tiempo que hace falta para atenderlos a una forma organizada y programada, ofreciendo una alternativa a la interrupción: una reunión programada o una hora de oficina.",
+        "Ten presente que, de saber cuánto te molestan, quienes te interrumpen probablemente se contendrían más y sentirían menos veces que necesitan hablar contigo en el acto.",
+        "De cualquier forma, procura que quienes te interrumpen con frecuencia tengan que decidir activamente si lo suyo puede esperar.",
+        "En lugar de esconderte, pon en la puerta un aviso que diga que estás con trabajo individual y que solo te interrumpan si de verdad el asunto no puede esperar a las 2:00.",
+        "Luego abre una hora de oficina y recibe sin reservas a quien quiera verte.",
+        "Ten clara la clave: quien te interrumpe te trae problemas legítimos que necesitan atención, y por eso acude a ti.",
+        "Ofrece una alternativa a la interrupción, una reunión programada o una hora de oficina, y lleva así el tiempo que exigen esos problemas a una forma organizada y programada.",
         "Impón con todo ello un patrón a la forma en que afrontas los problemas.",
-        "Vuelve regular lo que antes era irregular, que es un principio de producción fundamental, y afronta así las interrupciones que te acosan."
+        "Afronta las interrupciones que te acosan convirtiendo en regular lo que antes era irregular: es un principio fundamental de producción."
       ],
       "entregable_esperado": "El tiempo que hace falta para atender a los que te interrumpen canalizado a una forma organizada y programada, con el cartel colgado en la puerta mientras haces trabajo individual y una hora de oficina abierta después.",
       "nodos_previos": [
@@ -18872,8 +18872,8 @@
       "titulo_concepto": "Comunicación Efectiva y Transparente con Franquiciados",
       "resumen_teorico": "La relación franquiciador-franquiciado se sostiene sobre comunicación frecuente, honesta y humana, no solo digital. El franquiciador debe demostrar compromiso genuino con el éxito de sus franquiciados, usando múltiples canales de diálogo (llamadas, convenciones, reuniones regionales) y evitando que el email sustituya el contacto humano. La confianza se construye con transparencia; una sola verdad a medias puede destruirla permanentemente.",
       "pasos_accionables": [
-        "Siempre que sea posible, atender llamadas de franquiciados directamente en vez de derivarlas a buzón de voz",
-        "Si es posible, una vez que tengas personal, establecer una línea de soporte dedicada atendida por personas reales",
+        "Contesta tú mismo las llamadas de tus franquiciados siempre que puedas, sin dejar que caigan en el buzón de voz",
+        "Cuando ya cuentes con personal, y si te es posible, habilita una línea exclusiva de soporte donde contesten personas reales",
         "Responder mensajes el mismo día hábil, priorizando llamadas sobre correos electrónicos",
         "Llamar proactivamente cada día a al menos un franquiciado sin contacto reciente",
         "Prohibir comentarios negativos sobre franquiciados frente a empleados",
@@ -23859,8 +23859,8 @@
       "resumen_teorico": "La función Control se enfoca en evaluar si la organización recolecta, comparte o mantiene datos innecesarios, en considerar los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de sus sistemas, y en diseñar políticas y sistemas con flexibilidad para adaptarse a preferencias cambiantes de privacidad y entornos legales dinámicos. Técnicas como la de-identificación y el procesamiento descentralizado disocian los datos de individuos y dispositivos: cuanto más se disocian, más gana la privacidad, y podrían permitir cumplir los objetivos del negocio.",
       "pasos_accionables": [
         "Auditar qué datos se recolectan y determinar si son realmente necesarios",
-        "Revisar cómo las políticas ayudan a la organización u otras organizaciones a mantener el control sobre los datos y qué papel podrían tener los individuos",
-        "Tomar en cuenta los riesgos de privacidad y las obligaciones legales al decidir la funcionalidad de los sistemas, e incorporar flexibilidad de diseño para adaptarse a cambios legales y de preferencias",
+        "Analiza de qué manera tus políticas te permiten, a ti o a otras empresas, conservar el control de los datos, y qué papel podrían jugar también las personas.",
+        "Antes de definir qué hará cada sistema, pon sobre la mesa tus riesgos de privacidad y tus obligaciones legales, y diseña con flexibilidad para poder adaptarte cuando cambien las leyes o las preferencias.",
         "Evaluar e implementar técnicas de desidentificación o procesamiento descentralizado donde sea posible"
       ],
       "entregable_esperado": "Política de minimización de datos y plan de técnicas de disociación implementadas",
@@ -28014,7 +28014,7 @@
       "titulo_concepto": "Cubrir en la reunión individual los indicadores del subordinado, lo ocurrido desde la anterior y el problema potencial, con el criterio de que sean los asuntos que le preocupan",
       "resumen_teorico": "La reunión individual trata lo que pesa en el trabajo del subordinado. Se puede empezar por sus indicadores, con el énfasis en los que avisan de problemas; después va lo importante ocurrido desde la anterior: contratación, personas, organización, planes y, muy importante, los problemas potenciales. Hasta una intuición de que algo falla merece decirse, porque hace que se mire dentro de la caja negra de la organización. Y todo se rige por un criterio: que sean asuntos que le preocupan y no lo dejan tranquilo, que a menudo son oscuros y tardan en aflorar.",
       "pasos_accionables": [
-        "Empieza por las cifras de rendimiento, o sea los indicadores que usa el subordinado, como los ritmos de pedidos entrantes, la producción o el estado de los proyectos.",
+        "Arranca por los indicadores con los que tu subordinado mide su rendimiento, sus cifras, como el ritmo de pedidos que entran, lo producido o cómo van los proyectos.",
         "Pon el énfasis en los indicadores que avisan de un problema.",
         "Cubre además cualquier cosa importante que haya ocurrido desde la reunión anterior.",
         "Trata dentro de eso los problemas de contratación del momento.",
@@ -28022,8 +28022,8 @@
         "Trata los problemas de organización y los planes futuros.",
         "Y trata, muy muy importante, los problemas potenciales.",
         "Cuenta con que aunque un problema no sea tangible, aunque sea solo una intuición de que algo va mal, el subordinado se lo debe a su supervisor y tiene que decírselo, porque eso lleva a mirar dentro de la caja negra de la organización.",
-        "Guíate en todo lo anterior por el criterio más importante de los asuntos que se hablan: que sean cuestiones que preocupan al subordinado y no lo dejan tranquilo.",
-        "Cuenta con que esas cuestiones suelen ser oscuras y tardan en aflorar, en considerarse y en resolverse."
+        "En todo lo anterior, deja que mande el criterio principal sobre qué tratar: que sean asuntos que inquietan a tu subordinado y no lo dejan en paz.",
+        "Ten en cuenta que esos asuntos suelen ser poco visibles y que tardan en salir, en pensarse y en resolverse."
       ],
       "entregable_esperado": "La reunión individual cubierta por sus asuntos: los indicadores del subordinado con los que avisan de problema por delante, lo importante ocurrido desde la anterior, los problemas potenciales, y todos ellos filtrados por el criterio de que sean los que preocupan al subordinado.",
       "nodos_previos": [
@@ -31561,13 +31561,13 @@
       "resumen_teorico": "Conviene que cada decisión se trabaje y se tome en el nivel competente más bajo, porque ahí está la gente más cerca de la situación y que más sabe de ella. Pero saber no es solo entender la técnica: esa pericia tiene que templarse con el criterio que dan la experiencia y los errores de toda una carrera. Lo ideal es el punto medio entre el saber técnico y los golpes de aplicarlo. Si nadie reúne ambas cosas, se busca la mejor mezcla posible; en una empresa suelen sumar a alguien de más rango por su experiencia, y es muy importante que todos opinen como iguales durante la discusión libre.",
       "pasos_accionables": [
         "Haz que cualquier decisión se trabaje y se alcance en el nivel competente más bajo.",
-        "Cuenta con el motivo: ahí la toma gente que está más cerca de la situación y que es la que más sabe de ella.",
-        "No entiendas saber como entender técnicamente y nada más: esa clase de pericia tiene que templarse con criterio.",
+        "Ten claro por qué: en ese nivel deciden quienes están más pegados a la situación y mejor la conocen.",
+        "Entiende que saber no se reduce al dominio técnico: ese dominio necesita el contrapeso del criterio.",
         "Cuenta con que ese criterio se desarrolla con la experiencia y aprendiendo de los muchos errores que uno ha cometido en su carrera.",
-        "Sitúa idealmente la toma de la decisión en el terreno intermedio: entre apoyarse en el conocimiento técnico por un lado, y en los golpes que uno se ha llevado al intentar implantar y aplicar ese conocimiento por el otro.",
-        "Si para tomar la decisión no encuentras personas que reúnan las dos cualidades, busca la mejor mezcla posible de participantes disponibles.",
-        "Para poner la experiencia, puedes pedir que venga a la reunión una persona de la dirección con rango superior al de los demás miembros del grupo.",
-        "Exige que allí todos expresen opiniones y creencias como iguales durante toda la etapa de discusión libre, olvidando o ignorando las diferencias de rango."
+        "Busca, como ideal, que la decisión se tome a medio camino entre dos apoyos: el conocimiento técnico y los golpes recibidos al tratar de llevar ese conocimiento a la práctica y aplicarlo.",
+        "Arma con la gente disponible la mejor combinación posible de participantes cuando nadie reúna las dos cualidades para esa decisión.",
+        "Considera invitar a la reunión a alguien de mayor rango que el resto del grupo para que aporte la experiencia.",
+        "Exige que, mientras dure la discusión libre, cada quien diga lo que opina y lo que cree de igual a igual, dejando de lado los rangos."
       ],
       "entregable_esperado": "El grupo que decide, compuesto con la mejor mezcla disponible de conocimiento técnico y de experiencia, trabajando en el nivel competente más bajo y con las diferencias de rango apartadas durante la discusión libre.",
       "nodos_previos": [
@@ -34382,16 +34382,16 @@
       "titulo_concepto": "Delegar una tarea sobre una base común de información, sin farsa y con su seguimiento, porque delegar sin seguimiento es abdicar",
       "resumen_teorico": "Delegar multiplica tu tiempo solo si quien recibe la tarea comparte contigo la información y la manera de abordar los problemas; sin esa base necesita instrucciones al detalle, y eso rinde tan poco como entrometerse. Quedarte tareas que disfrutas puede estar bien si lo decides a conciencia; fingir que delegas puede restar muchísimo. Y delegar no te quita la responsabilidad del resultado: supervisar lo delegado es la única vía práctica de asegurarlo, y supervisar no es meterse, es ver que avanza según lo previsto. Por eso conviene delegar lo que mejor conoces, que es lo más fácil de seguir.",
       "pasos_accionables": [
-        "Cuenta con que el tiempo de un mando tiene una jerarquía de valores, y con que por eso la delegación es un aspecto esencial del mando.",
-        "Antes de delegar, comprueba que quien delega y quien recibe comparten una base común de información y un conjunto común de ideas o nociones operativas sobre cómo abordar la resolución de problemas, que es un requisito que muchas veces no se cumple.",
+        "Ten presente que no todas tus horas de mando valen lo mismo; justamente por eso delegar es parte central de dirigir.",
+        "Asegúrate, antes de soltar una tarea, de que quien la recibe maneja la misma información de base que tú y comparte contigo una forma práctica de encarar los problemas; muchas veces esa condición falla.",
         "Cuenta con que, si las dos partes no comparten esa base común relevante, quien recibe solo puede llegar a ser un delegado efectivo con instrucciones específicas, y eso, igual que en la intromisión donde las actividades concretas se prescriben en detalle, produce palanca de mando baja.",
-        "Revisa qué tareas no quieres soltar en realidad: como todo el mundo, tienes algunas que no quieres delegar simplemente porque te gusta hacerlas y prefieres no soltarlas.",
-        "Deja que eso pase solo si se apoya en una decisión consciente de retener ciertas tareas que disfrutas haciendo aunque pudieras delegarlas si quisieras; sabe exactamente lo que estás haciendo y evita la farsa de la delegación insincera, que puede producir una palanca de mando negativa inmensa.",
-        "Antes de decidir si delegas las actividades que te son familiares o las que no, aplica el principio: delegar sin seguimiento es abdicar.",
-        "Cuenta con que nunca puedes lavarte las manos de una tarea: aun después de delegarla sigues siendo responsable de que se cumpla, y supervisar la tarea delegada es la única vía práctica que tienes de asegurar un resultado.",
-        "Separa el seguimiento de la intromisión: supervisar no es entrometerse, sino comprobar que una actividad avanza según lo previsto.",
-        "Elige con esa vara qué delegas: como es más fácil supervisar algo que te resulta familiar, si tienes elección delega aquellas actividades que mejor conoces.",
-        "Cuenta de antemano con que es muy probable que hacerlo así vaya en contra de tu inclinación natural, como le pasa a quien tiende un lápiz para que otro lo tome y no lo suelta."
+        "Identifica las tareas que en el fondo no quieres ceder; todos guardamos algunas solo porque disfrutamos haciéndolas y preferimos quedárnoslas.",
+        "Quédatelas solo si lo decides a conciencia, sabiendo que podrías delegarlas si quisieras; ten muy claro lo que haces y no finjas que delegas, porque ese teatro puede restarte muchísima palanca de mando.",
+        "Ten en cuenta, antes de elegir entre delegar lo que conoces o lo que te es ajeno, esta regla: delegar sin dar seguimiento equivale a abdicar.",
+        "Asume que nunca te desentiendes de una tarea: aunque la delegues, su cumplimiento sigue siendo cosa tuya, y la única forma práctica de garantizar el resultado es supervisarla.",
+        "Distingue supervisar de entrometerte: supervisar consiste en comprobar que la actividad marcha como esperabas, no en meterte en ella.",
+        "Usa ese criterio para escoger qué soltar: si puedes elegir, delega lo que mejor dominas, porque lo conocido es más fácil de supervisar.",
+        "Prepárate desde antes: lo más probable es que esto vaya contra lo que sientes, como le ocurre a quien ofrece un lápiz para que otro lo tome y no lo suelta."
       ],
       "entregable_esperado": "La tarea delegada sobre una base común de información ya comprobada, con la decisión consciente de qué retienes y qué sueltas, y con el seguimiento de la tarea delegada ya montado.",
       "nodos_previos": [
@@ -35272,7 +35272,7 @@
         "Identificar los controles necesarios evaluando el desempeño real contra las metas.",
         "Diseñar el bucle de retroalimentación y definir puntos de control en el diagrama de flujo.",
         "Establecer estándares de control, acciones correctivas ante desviaciones y quién tomará esas acciones.",
-        "Entrenar a los trabajadores en decisiones de conformidad del producto y evaluarlos para asegurar que deciden bien.",
+        "Prepara a tu gente para decidir si el producto cumple y ponla a prueba para confirmar que decide bien.",
         "Planificar y documentar la transferencia formal a operaciones incluyendo metas, procedimientos y capacitación.",
         "Desarrollar un plan de auditoría para validar que la transferencia fue exitosa."
       ],
@@ -38600,13 +38600,13 @@
       "titulo_concepto": "Dimensionar la plantilla de una unidad administrativa con el pronóstico de su carga de trabajo",
       "resumen_teorico": "Pronosticar la demanda y ajustar a ella la producción es una vía muy importante para subir la productividad, pero es poco común en el trabajo administrativo, visto como distinto del fabril y sin patrones objetivos para dimensionarlo. Si eliges bien los indicadores de la unidad y los vigilas de cerca, sus datos de tendencia dan patrones de hecho para pronosticar cuánta gente pide cada tarea prevista. Con rigor, se puede reasignar gente entre áreas y la plantilla puede seguir a la actividad. Sin rigor, la plantilla quedaría siempre en lo más alto y el trabajo se estiraría hasta llenar el tiempo.",
       "pasos_accionables": [
-        "Elige con cuidado los indicadores que caracterizan a la unidad administrativa y vigílalos de cerca, porque solo con eso estarás en condiciones de aplicarle los métodos de control de una fábrica.",
+        "Escoge con cuidado los indicadores que describen a la unidad administrativa y síguelos de cerca; sin eso no podrás aplicarle los métodos de control de una fábrica.",
         "Deduce de los datos de tendencia unos patrones de hecho, que son los que esa clase de trabajo nunca tuvo.",
-        "Usa esos patrones para pronosticar cuánta gente hace falta para sacar adelante las distintas tareas previstas.",
+        "Con esos patrones, calcula por adelantado cuántas personas necesitarás para cada una de las tareas que prevés.",
         "Pronostica la demanda de trabajo futura y ajusta después a ese pronóstico la producción de tu fábrica administrativa.",
         "Reasigna gente de un área a otra aplicando con rigor los principios del pronóstico.",
-        "Haz que el número de personas case con el crecimiento o el descenso pronosticado de la actividad administrativa.",
-        "Aplica ese rigor sin dejarlo caer, porque sin él la plantilla de una unidad administrativa se queda siempre en su nivel más alto y, por la famosa ley de Parkinson, la gente encuentra la manera de que lo que está haciendo llene el tiempo disponible para terminarlo."
+        "Ajusta la plantilla para que suba o baje al mismo paso que el pronóstico de la actividad administrativa.",
+        "No sueltes ese rigor: sin él, la plantilla administrativa queda siempre en su máximo, y la gente, como dice la famosa ley de Parkinson, se las arregla para que su tarea ocupe todo el tiempo que tiene para acabarla."
       ],
       "entregable_esperado": "Los patrones de hecho deducidos de los datos de tendencia, el pronóstico de cuánta gente hace falta para las tareas previstas, y la plantilla ya reasignada para casar con ese pronóstico.",
       "nodos_previos": [
@@ -38856,7 +38856,7 @@
       "titulo_concepto": "Diseño y Venta del Discovery Day",
       "resumen_teorico": "El Discovery Day es el evento donde el prospecto visita las oficinas del franquiciante, siendo una de las ventas más difíciles del proceso salvo el cierre. Su propósito es cuádruple: que el candidato conozca más al franquiciante, que el franquiciante califique mejor al candidato, obtener feedback del equipo directivo, y causar una buena impresión. Es crucial evitar la 'trampa del fundador' (responder todo por teléfono, eliminando el incentivo de asistir) y en su lugar generar valor específico reservado para el evento presencial.",
       "pasos_accionables": [
-        "Diseñar una agenda que puede incluir cena informal, recorrido por una o más unidades en operación (si tienes locales físicos), recorrido por la oficina central, entrevistas con el equipo y presentación del concepto",
+        "Arma la agenda del día con opciones como una cena informal, la visita a tu oficina central, entrevistas con tu equipo, la presentación del concepto y, si tienes locales físicos, un recorrido por una o más unidades en operación",
         "Reservar información valiosa para ser revelada solo en el Día de Descubrimiento, evitando responder todo por teléfono",
         "Vender el valor del evento como ayuda para la decisión informada, no solo como evaluación",
         "Al finalizar, dar la retroalimentación del equipo y pedir un compromiso de avance (o rechazar con delicadeza si no procede)"
@@ -39731,7 +39731,7 @@
         "Construir una hoja de cálculo de diseño de proceso vinculando características de proceso con metas de producto.",
         "Verificar que cada meta de producto sea alcanzada por al menos una característica de proceso.",
         "Verificar que cada característica de proceso sea necesaria para al menos una meta de producto.",
-        "Confirmar la capacidad de los macroprocesos organizacionales que sostienen el nuevo proceso y, si no son capaces, mejorarlos como parte del diseño o reemplazarlos por otra forma de entrega."
+        "Revisa si los macroprocesos de tu negocio de los que dependerá el nuevo proceso están a la altura; cuando no lo estén, inclúyelos en el diseño para mejorarlos o busca otra vía que entregue lo mismo."
       ],
       "entregable_esperado": "Hoja de cálculo de diseño de proceso completa, verificada y sin redundancias.",
       "nodos_previos": [
@@ -43984,13 +43984,13 @@
       "titulo_concepto": "Ejercer el poder de posición solo al llegar a la etapa de decisión clara sin consenso, y nunca antes",
       "resumen_teorico": "Hay momentos en que ninguna discusión produce consenso y aun así ha llegado claramente la hora de decidir. Entonces quien ha guiado al grupo no tiene más remedio que decidir por sí mismo. Usar su autoridad de rango es legítimo, y a veces inevitable, si se llegó a esa etapa sin consenso y tras una discusión libre sin el peso del cargo. Usarla antes no es legítimo, es destructivo. A menudo no es fácil: suele costar ejercer el cargo de forma deliberada, porque dar órdenes parece poco amable, y esa reticencia puede alargar la discusión libre más allá de su punto óptimo y aplazar la decisión.",
       "pasos_accionables": [
-        "Reconoce la situación por sus dos mitades: por mucho que se discuta no se va a llegar a un consenso, y aun así el momento de decidir ha llegado claramente.",
-        "Cuando eso pase, acepta que la persona de mayor rango, la que actúa como un igual con un escalón más, y que hasta ahora ha guiado, entrenado y espoleado al grupo, no tiene más remedio que tomar ella misma la decisión.",
-        "Comprueba que el proceso se desarrolló bien hasta ese punto: que quien decide lo hace con el beneficio completo de la discusión libre, en la que todos los puntos de vista, hechos, opiniones y juicios se expusieron sin el prejuicio del poder de posición.",
-        "Ejerce entonces la autoridad del poder de posición, que ahí es legítima y a veces inevitable, porque se alcanzó la etapa de decisión clara y no apareció ningún consenso.",
-        "No la ejerzas ni un momento antes: ejercerla antes no es legítimo, y es destructivo.",
-        "Cuenta con que esto no suele ser fácil, porque existe reticencia a ejercer el poder de posición de forma deliberada y explícita, ya que dar órdenes parece poco amable.",
-        "Vigila la consecuencia de esa reticencia: puede alargar la primera fase del proceso, que es el tiempo de discusión libre, más allá del punto óptimo, y la decisión se aplaza."
+        "Detecta cuándo se juntan dos cosas: seguir discutiendo ya no traerá acuerdo y, sin embargo, es evidente que toca decidir.",
+        "Acepta entonces que no queda otra salida: quien tiene más rango, ese igual con un peldaño de más que hasta ahora condujo, preparó y empujó al grupo, decide por su cuenta.",
+        "Asegúrate de que el camino hasta ahí fue el correcto: quien decide tiene que contar con todo lo que dio la discusión libre, donde cada punto de vista, dato, opinión y juicio salió a la mesa sin el sesgo del cargo.",
+        "Usa entonces tu autoridad de cargo: en esa etapa, a la que llegaste sin consenso y con la decisión ya clara, es legítima y a veces no hay forma de evitarla.",
+        "Jamás la uses antes de ese momento: hacerlo carece de legitimidad y causa daño.",
+        "Prepárate para que suela costar: ejercer el cargo de forma deliberada y abierta incomoda, porque mandar parece poco amable.",
+        "Cuida lo que provoca esa resistencia: puede estirar la discusión libre, primera fase del proceso, más allá de su punto óptimo, y retrasar la decisión."
       ],
       "entregable_esperado": "La decisión tomada por la persona de mayor rango, con el beneficio completo de la discusión libre detrás, y la constancia de que la autoridad de rango no se ejerció antes de la etapa de decisión clara.",
       "nodos_previos": [
@@ -44646,18 +44646,18 @@
       "titulo_concepto": "Elegir entre retener el material en una barrera y dejarlo correr con muestreo de seguimiento",
       "resumen_teorico": "Toda inspección cuesta dinero y además estorba al flujo: complica la fabricación y obliga a que parte del material vuelva por etapas ya hechas. Por eso se decide como un equilibrio entre la calidad que ganas y lo poco que quieres perturbar el proceso. Retener todo en una barrera frena el paso de cada lote; tomar muestras deja correr el flujo y por el mismo dinero permite mirar mucho más, aunque puede escaparse material malo hasta una etapa de más valor. Ningún lado gana siempre: se elige caso a caso, y se tiende a muestrear cuando la experiencia no anuncia problemas grandes.",
       "pasos_accionables": [
-        "Antes de añadir una inspección, cuenta con que cuesta dinero hacerla y con que además encarece la cosa al interferir en el flujo de fabricación y complicarlo.",
-        "Cuenta también con que parte del material tendrá que volver por etapas ya hechas, lo que estropea la suavidad con la que se mueve el resto del material.",
-        "Plantea la necesidad de inspeccionar como un equilibrio entre lo que quieres conseguir con ella, que es mejor calidad, y la mínima perturbación del propio proceso de producción.",
-        "Elige entre las dos técnicas que se usan normalmente para equilibrar esas dos necesidades: la inspección de barrera y el paso de monitorización.",
-        "Si eliges la barrera, retén todo el material en ella hasta que terminen las pruebas de inspección; si el material pasa, muévelo a la etapa siguiente del proceso, y si falla, devuélvelo a una etapa anterior para que se reprocese o se deseche.",
-        "Si eliges la monitorización, toma una muestra del material, y si esa muestra falla, deja una anotación con la que calcular una tasa de fallo.",
-        "No retengas el grueso del material mientras tomas la muestra: déjalo seguir moviéndose por el proceso de fabricación, que es lo que mantiene la suavidad del flujo.",
+        "Antes de sumar una inspección, recuerda que hacerla ya cuesta dinero, y que encima sale más cara porque se cruza con el flujo de fabricación y lo vuelve más complicado.",
+        "Ten presente además que una parte del material tendrá que repetir etapas ya hechas, y eso le quita fluidez al avance del resto.",
+        "Enfoca la decisión de inspeccionar como un balance: de un lado, la mejor calidad que buscas con ella; del otro, perturbar lo menos posible el propio proceso de producción.",
+        "Escoge entre las dos técnicas habituales para conciliar esas dos necesidades: la barrera de inspección o el paso de monitorización.",
+        "Con la barrera, deja todo el material detenido ahí mientras duran las pruebas; lo que pasa sigue a la siguiente etapa del proceso, y lo que falla vuelve a una etapa anterior para reprocesarlo o desecharlo.",
+        "Con la monitorización, saca una muestra del material; cuando esa muestra falle, anótalo para poder calcular después una tasa de fallo.",
+        "Mientras muestreas, deja que el grueso del material siga avanzando por la fabricación sin detenerlo: así el flujo conserva su suavidad.",
         "Para la línea cuando el seguimiento lo pida: por ejemplo, si tres muestras seguidas fallan la prueba de monitorización.",
-        "Pesa los pros y los contras: si retienes todo el material añades tiempo de paso y frenas la fabricación; la monitorización no produce un frenazo comparable, pero puede dejar escapar material malo antes de que puedas actuar sobre sus resultados y parar, lo que significa que a lo mejor tienes que rechazar ese material más tarde, en una etapa de más valor.",
-        "Cuenta con que por el mismo dinero puedes hacer mucha más monitorización que inspección de barrera, y con que hacer lo primero puede aportar más a la calidad final del producto que elegir inspecciones de barrera menos frecuentes.",
+        "Compara ventajas y desventajas: detener todo el material alarga el tiempo de paso y ralentiza la fabricación; monitorizar no frena de forma parecida, pero puede dejar pasar material defectuoso antes de que sus resultados te permitan actuar y parar, y entonces quizá te toque rechazarlo después, en una etapa donde ya vale más.",
+        "Ten presente que con el mismo dinero alcanzas a monitorizar mucho más de lo que inspeccionarías en barrera, y que esa opción puede sumar más a la calidad final del producto que unas inspecciones de barrera más espaciadas.",
         "Toma cada elección con un caso concreto delante, porque no es evidente qué conviene más.",
-        "Usa como regla práctica inclinarte por la monitorización cuando la experiencia enseñe que no es probable que te encuentres con problemas grandes."
+        "Cuando la experiencia te diga que es poco probable toparte con problemas grandes, toma como regla práctica inclinarte por la monitorización."
       ],
       "entregable_esperado": "Elegida, para ese punto concreto, una de las dos técnicas, con los pros y los contras pesados y, si es monitorización, la condición que para la línea ya fijada.",
       "nodos_previos": [
@@ -44681,7 +44681,7 @@
       "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan huecos alrededor de artículos livianos, pero se hunden con productos planos o estrechos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos y el artículo vaya envuelto en plástico de burbujas. El papel kraft arrugado y apretado protege artículos livianos y no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
       "pasos_accionables": [
         "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
-        "Usa burbujas en varias vueltas y capas para proteger por completo los artículos livianos y delicados, sobre todo en esquinas y bordes, con la cara lisa hacia el producto y las burbujas hacia afuera.",
+        "Envuelve los artículos livianos y delicados con plástico de burbujas, dando varias vueltas y superponiendo capas hasta cubrirlos del todo, con más cuidado en esquinas y bordes; deja la cara lisa contra el producto y las burbujas por fuera.",
         "Evita maníes de poliestireno comunes con productos planos, estrechos o electrónicos; para la electrónica usa maníes antiestáticos y envuelve el artículo en plástico de burbujas.",
         "Reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
         "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
@@ -44746,10 +44746,10 @@
         "Mide ese entorno con un índice compuesto imaginario que combine su complejidad, su incertidumbre y su ambigüedad, y que puede ir de bajo a alto.",
         "Reconoce que identificar cuál de los modos de control conviene en cada caso es tarea tuya como mando.",
         "Cruza las dos variables en un cuadro de cuatro cuadrantes: motivación, de interés propio a interés de grupo, contra ese índice del entorno, de bajo a alto.",
-        "Si la motivación es de interés propio y el índice del entorno es bajo, usa el modo de mercado, el mismo que gobierna una compra por el mejor precio.",
-        "Si la motivación se mueve hacia el interés de grupo con el índice del entorno bajo, usa el modo contractual, el mismo que gobierna que todos paren en el semáforo en rojo.",
-        "Si la orientación de interés de grupo y el índice del entorno son ambos altos, usa el modo de valores culturales, el mismo que explica que alguien se detenga a ayudar en un accidente.",
-        "Si el índice del entorno es alto y la motivación sigue siendo de interés propio, no esperes que ningún modo de control funcione bien: esa combinación, como cada uno por su cuenta en un barco que se hunde, solo produce caos."
+        "Recurre al modo de mercado cuando la motivación sea de interés propio y el índice del entorno sea bajo: es el que manda cuando compras buscando el mejor precio.",
+        "Pasa al modo contractual cuando, con el índice del entorno bajo, la motivación se desplace hacia el interés de grupo: es lo que hace que todos se detengan ante un semáforo en rojo.",
+        "Apóyate en el modo de valores culturales cuando tanto el interés de grupo como el índice del entorno estén altos: es lo que explica que alguien pare a ayudar en un accidente.",
+        "No esperes que funcione bien ningún modo de control cuando un entorno de índice alto se junte con una motivación de interés propio: esa mezcla solo trae caos, como un barco que se hunde donde cada quien va a lo suyo."
       ],
       "entregable_esperado": "El modo de control que corresponde a la situación (mercado, contractual, valores culturales, o la advertencia de que ningún modo va a funcionar bien), leído cruzando la motivación de la persona contra la complejidad, la incertidumbre y la ambigüedad de su entorno, y no elegido por preferencia personal.",
       "nodos_previos": [
@@ -46165,10 +46165,10 @@
       "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja y protegerlas de temperaturas extremas. El agua puede filtrarse y dañar el producto o causar problemas de seguridad, así que la técnica central es simple: nunca cargar agua en el envío. Vacía floreros o macetas antes de cerrar la caja, mete la maceta en una bolsa cerrada alrededor del tallo o, si la planta no tiene un solo tallo principal, cubre la tierra con papel sujeto a la maceta, y fija el arreglo o la maceta con bridas, cintas o un divisor de cartón para que no se desplace en tránsito. Cuando envíes varias piezas u orquídeas, sepáralas para que hojas y flores no se rocen. Esta preparación reduce derrames y piezas rotas en arreglos florales y plantas en maceta; los esquejes necesitan un empaque propio.",
       "pasos_accionables": [
         "Vacía toda el agua de floreros o recipientes antes de cerrar la caja.",
-        "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo; si la planta no tiene un solo tallo principal, pon papel entre las hojas y sobre la tierra y sujétalo a la maceta.",
+        "Encierra la tierra de cada maceta en una bolsa plástica cerrada en torno al tallo; cuando la planta carezca de un tallo principal único, coloca papel sobre la tierra y entre las hojas, y fíjalo a la maceta.",
         "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de cartón.",
         "Separa cada planta u orquídea individual para que hojas y flores no se toquen entre sí.",
-        "Pon la etiqueta de envío en la cara superior de la caja para aumentar la chance de que viaje derecha."
+        "Pega la etiqueta de envío en la cara de arriba de la caja: así es más probable que viaje derecha."
       ],
       "entregable_esperado": "Una caja de flores o plantas lista para despachar sin riesgo de fuga ni movimiento interno.",
       "nodos_previos": [
@@ -46512,8 +46512,8 @@
       "titulo_concepto": "Selección, Capacitación y Empoderamiento del Personal de Primera Línea",
       "resumen_teorico": "En el encuentro de servicio, tres factores son clave para la calidad de la transacción: la selección adecuada del empleado de contacto directo, su capacitación, y su empoderamiento para actuar según el juicio propio ante situaciones no cubiertas por procedimientos estándar. El empoderamiento minimiza el uso del manual de reglas y maximiza el conocimiento, iniciativa y juicio del empleado para satisfacer al cliente en el momento.",
       "pasos_accionables": [
-        "Identificar las características personales requeridas para el puesto consultando a empleados experimentados",
-        "Usar múltiples entrevistas, capacitar a los gerentes en procedimientos de entrevista, buscar candidatos entre los empleados actuales y pedirles recomendaciones",
+        "Consulta a empleados con experiencia para definir qué rasgos personales exige el puesto",
+        "Haz varias entrevistas por candidato, enseña a quienes entrevistan cómo conducirlas, busca aspirantes dentro de tu propio equipo y pide a tu gente que te recomiende personas",
         "Invertir entre 1% y 5% de las horas laborales en capacitación continua",
         "Incluir juegos de rol para manejar transacciones problemáticas y clientes molestos",
         "Otorgar autoridad a empleados para resolver situaciones inusuales sin escalar a un supervisor"
@@ -47759,12 +47759,12 @@
       "titulo_concepto": "Comunicar la evaluación de desempeño cara a cara con las tres claves del mando: franqueza, escucha total y dejar fuera las emociones propias",
       "resumen_teorico": "Una revisión de desempeño solo rinde si el pensamiento correcto del mando llega a la cabeza del subordinado, y eso se sostiene en tres claves. Primero, franqueza total, al elogiar y al criticar, porque de ella dependen la credibilidad y la integridad de todo el sistema. Segundo, escucha total: las palabras son solo el medio, así que hay que observar a la persona y usar todos los sentidos hasta estar seguro de que el mensaje se oyó y se entendió. Tercero, dejarse fuera: la revisión trata de los problemas del subordinado, no de las inseguridades de quien la da.",
       "pasos_accionables": [
-        "Sé totalmente franco con el subordinado al comunicarle la revisión, tanto al elogiar como al criticar, porque la credibilidad y la integridad de todo el sistema de revisión dependen de esa franqueza.",
-        "Recuerda que el objetivo de la comunicación es hacer llegar tus pensamientos de tu cabeza a la del subordinado, y que las palabras son solo el medio: el fin es que se comunique el pensamiento correcto.",
+        "Háblale con total franqueza al comunicarle la revisión, al elogiar y al criticar por igual: de esa franqueza depende que todo el sistema de revisión sea creíble e íntegro.",
+        "Ten claro para qué comunicas: para que lo que piensas pase de tu cabeza a la de tu subordinado; las palabras solo sirven de vehículo, y lo que cuenta es que llegue la idea correcta.",
         "Observa al subordinado mientras hablas y sigue insistiendo hasta estar seguro de que tu mensaje llegó y se entendió, sin conformarte con que haya parafraseado tus palabras.",
-        "Emplea toda tu capacidad sensorial, no solo el oído, para confirmar que tus puntos se están interpretando correctamente en la cabeza del subordinado.",
-        "Deja fuera tus propias inseguridades, ansiedades o culpa: la revisión trata de los problemas del subordinado y no de los tuyos.",
-        "Controla esas emociones propias para que no afecten tu tarea mientras comunicas la revisión, aunque sepas que van a aflorar."
+        "Usa todos tus sentidos, no solo el oído, para comprobar que tu subordinado interpreta bien tus puntos en su cabeza.",
+        "Saca de la revisión tus inseguridades, tus ansiedades o tu culpa: lo que está en juego son los problemas de tu subordinado, no los tuyos.",
+        "Contén esas emociones tuyas para que no estorben tu tarea al comunicar la revisión, aun sabiendo que van a salir a flote."
       ],
       "entregable_esperado": "La revisión comunicada con franqueza verificable, con la certeza comprobada de que el subordinado recibió e interpretó el mensaje, y sin que las inseguridades o emociones propias del supervisor hayan desplazado el foco de la conversación.",
       "nodos_previos": [
@@ -48297,13 +48297,13 @@
       "resumen_teorico": "Si dos pasos de un proceso chocan, el conflicto parece sin salida, pero la tiene: capacidad de equipo, mano de obra e inventario se pueden intercambiar y equilibrar contra el plazo de entrega. Cada salida tiene su precio: especializar al personal infla la estructura, pedir ayuda suele volver el resultado menos predecible, más equipo es capital caro y el inventario acumulado es desperdicio. Como todas cuestan dinero, buscas la combinación más rentable. Importa el razonamiento al que te obligas: entender cómo se relacionan las partes del proceso, probablemente sin cronómetro ni fórmula exacta.",
       "pasos_accionables": [
         "Cuando dos pasos de tu proceso te pidan estar en dos sitios a la vez, no lo des por irreconciliable: pon delante estas salidas, una a una.",
-        "Considera especializar al personal, por ejemplo contratar a uno que cueza huevos, uno que haga tostadas, uno que sirva café y uno que supervise la operación, y cuenta con su coste: crea una cantidad inmensa de gasto de estructura, y probablemente sale demasiado caro.",
-        "Considera pedir ayuda al compañero de al lado: en un servicio de desayunos, por ejemplo, que meta tu pan en la tostadora mientras tú vas a poner tu huevo a cocer, y cuenta con su coste: cuando dependes de otro, es probable que los resultados sean menos predecibles.",
+        "Valora convertir a tu personal en especialistas, por ejemplo una persona para los huevos, otra para las tostadas, otra para el café y otra que vigile la operación, y ten presente lo que cuesta: dispara de forma enorme el gasto de estructura y probablemente resulte demasiado caro.",
+        "Valora que el compañero que tienes al lado te eche una mano, por ejemplo en un servicio de desayunos, poniendo tu pan en la tostadora mientras corres a cocer tu huevo, y ten presente lo que cuesta: al depender de otra persona, el resultado probablemente se vuelva menos predecible.",
         "Considera añadir equipo, por ejemplo otra tostadora, y cuenta con su coste: es una inversión cara en bienes de capital.",
-        "Considera tener el equipo funcionando sin parar para acumular inventario de producto terminado, tirando lo que no puedas usar pero teniendo acceso inmediato a producto, y cuenta con su coste: eso es desperdicio, y también puede salir demasiado caro.",
-        "Intercambia entonces las tres piezas entre sí, que son capacidad de equipo, mano de obra e inventario, y equilíbralas contra el plazo de entrega.",
-        "Busca la forma más rentable de desplegar tus recursos, contando con que hay una respuesta correcta: la que te da el mejor plazo de entrega y la mejor calidad de producto al coste más bajo posible.",
-        "Reduce tu entendimiento de esos intercambios a un conjunto de relaciones cuantificables, probablemente sin llegar al cronómetro ni al cálculo exacto en términos matemáticos: lo que importa es el razonamiento que te obligas a hacer para entender cómo se relacionan las partes de tu proceso."
+        "Valora dejar el equipo trabajando de continuo para ir juntando producto terminado en inventario, desechando lo que no te sirva a cambio de tener siempre producto a mano al instante, y ten presente lo que cuesta: es desperdicio, y también puede resultar demasiado caro.",
+        "Equilibra después contra el plazo de entrega las tres piezas que puedes cambiar unas por otras: capacidad de equipo, mano de obra e inventario.",
+        "Encuentra cómo usar tus recursos de la manera más rentable, sabiendo que existe una respuesta correcta: la que logra el mejor plazo de entrega y la mejor calidad de producto con el menor coste posible.",
+        "Traduce lo que entiendes de esos intercambios en relaciones que puedas cuantificar, aunque probablemente no saques el cronómetro ni hagas la cuenta matemática exacta: lo valioso es el esfuerzo de pensar que te impones para ver cómo encajan entre sí las partes de tu proceso."
       ],
       "entregable_esperado": "Las cuatro salidas, cada una con su coste, el intercambio entre capacidad de equipo, mano de obra e inventario equilibrado contra el plazo de entrega, y la elección de la forma más rentable de desplegar tus recursos reducida a un conjunto de relaciones cuantificables.",
       "nodos_previos": [
@@ -50138,7 +50138,7 @@
         "Comunicar al proveedor el uso final y las condiciones de operación del producto",
         "Obtener evidencia de la capacidad del proveedor para cumplir los requisitos de aptitud de uso",
         "Redactar especificaciones de producto y especificaciones de sistema de calidad del proveedor",
-        "En productos complejos, mantener como mínimo una cooperación continua con el proveedor y, en casos especiales, considerar contratos de desarrollo separados antes de la producción"
+        "Coopera sin pausa con tu proveedor cuando tu producto sea complejo, como piso mínimo, y en situaciones especiales evalúa pactar el desarrollo en contratos aparte antes de pasar a producir."
       ],
       "entregable_esperado": "Documento de especificaciones de producto y de sistema de calidad para el proveedor",
       "nodos_previos": [
@@ -52783,7 +52783,7 @@
       "titulo_concepto": "Estratificación de Datos",
       "resumen_teorico": "La estratificación es la separación de datos en categorías para identificar qué grupos contribuyen a un problema de calidad. Se usa en análisis de problemas, identificación de proyectos, análisis de síntomas, prueba de hipótesis y desarrollo de soluciones. Ayuda a responder preguntas sobre frecuencia de defectos, factores contribuyentes y diferencias entre grupos (estratos), como en el caso de comparar proveedores distintos.",
       "pasos_accionables": [
-        "Seleccionar las variables de estratificación relevantes y, si vas a recolectar datos nuevos, registrar como identificadores todas las variables de estratificación posibles",
+        "Escoge las variables que importan para estratificar y, cuando reúnas datos nuevos, anota como identificador de cada registro toda variable que podría servirte para estratificar",
         "Establecer categorías (valores discretos o rangos) para cada variable",
         "Clasificar las observaciones en las categorías correspondientes",
         "Calcular el fenómeno medido (conteo, promedio o histograma) para cada categoría",
@@ -54819,7 +54819,7 @@
       "resumen_teorico": "Antes de franquiciar, evalúa si puedes alcanzar tus metas de crecimiento con tu estrategia actual de expansión propia y si tienes el capital y la capacidad de gestión necesarios, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas. Si no puedes, decide entre extender el plazo, reducir metas o cambiar de estrategia. Franquiciar significa entrar en un nuevo negocio, el de franquiciar: una alternativa a la deuda y el capital de terceros que usa el dinero y la motivación de franquiciados para crecer rápido, pero no es solución para un negocio débil, y tu éxito dependerá del éxito de ellos. Antes de avanzar, confirma que tu negocio es franquiciable: prototipo probado, diferenciable, replicable por alguien de competencia promedio en menos de tres meses, con ROI adecuado tras regalías y capacidad de dar soporte a largo plazo. Sopesa ventajas y desventajas frente a tus objetivos.",
       "pasos_accionables": [
         "Define tus metas de crecimiento personales y del negocio",
-        "Evalúa si tu capital y capacidad de gestión actuales bastan para alcanzarlas mediante expansión propia, o si puedes conseguir de forma realista el capital que falta sin ceder más de lo que aceptas; si no, decide entre extender el plazo, reducir metas o cambiar de estrategia",
+        "Comprueba primero si llegas a tus metas creciendo por tu cuenta con el dinero y la capacidad de gestión que ya tienes, o reuniendo con realismo el capital faltante sin entregar más de lo que estás dispuesto a ceder; si no llegas por ninguna de esas vías, elige entre darte más plazo, bajar tus metas o cambiar de estrategia",
         "Confirma que tu negocio tiene un prototipo probado, rentable y diferenciable frente a la competencia",
         "Verifica que tus procesos pueden documentarse y enseñarse a alguien de competencia promedio en menos de tres meses",
         "Calcula el ROI que obtendría un franquiciado tras deducir regalías y confirma que tienes recursos para dar soporte a largo plazo",
@@ -56317,12 +56317,12 @@
       "titulo_concepto": "Examinar la demanda de tu entorno en dos marcos temporales y trabajar sobre la diferencia, sin rebajarla por lo que creas que puedes entregar",
       "resumen_teorico": "Si lo que haces hoy ya satisface lo que hoy te piden, todo lo nuevo que emprendas debe responder a la diferencia entre la demanda de ahora y la que esperas más adelante, digamos dentro de un año. Por eso el análisis se centra en esa diferencia: cómo reaccionas a ella es el resultado clave de la planificación. En esta fase no pienses todavía en medidas prácticas, porque eso confunde la cuestión. Y declara la demanda sin rebajarla por lo que creas que se puede entregar, porque una demanda rebajada impide preparar la capacidad para la real.",
       "pasos_accionables": [
-        "Examina tu entorno en dos marcos temporales una vez que has establecido qué lo constituye: ahora, y en algún momento futuro, digamos dentro de un año.",
+        "Mira tu entorno en dos momentos, cuando ya sepas qué lo forma: hoy y más adelante, por ejemplo de aquí a un año.",
         "Contesta qué quieren de ti tus clientes ahora.",
         "Contesta si los estás satisfaciendo.",
         "Contesta qué esperarán de ti dentro de un año.",
-        "Concéntrate en la diferencia entre lo que tu entorno te demanda ahora y lo que esperas que te demande dentro de un año.",
-        "No pases todavía a qué medidas prácticas puedes tomar para atender el asunto, porque en esta fase eso solo confunde la cuestión.",
+        "Pon el foco en la brecha entre lo que hoy te pide tu entorno y lo que calculas que te pedirá de aquí a un año.",
+        "Deja para después las acciones concretas con que podrías resolverlo; pensar en ellas en esta fase solo enreda el análisis.",
         "No rebajes la demanda que declaras por lo que creas que se puede entregar: una demanda rebajada así hace que nunca se prepare la capacidad para la demanda real."
       ],
       "entregable_esperado": "Las tres preguntas contestadas por escrito y la diferencia entre el ahora y el dentro de un año puesta aparte, declarada sin rebajar por lo que creas que se puede entregar.",
@@ -56347,11 +56347,11 @@
       "titulo_concepto": "Examinar tu entorno por cuatro objetos: las expectativas del cliente, la tecnología, tus proveedores y los otros grupos de tu organización",
       "resumen_teorico": "Para establecer lo que tu entorno te va a pedir, mira tu grupo como si fuera una empresa independiente: tu entorno lo forman los otros grupos que influyen directamente en lo que haces. En él se miran cuatro cosas. Qué esperan tus clientes y cómo perciben tu desempeño. Qué desarrollos tecnológicos y maneras alternativas de hacer tu trabajo aparecen. Cómo rinden tus proveedores. Y cómo rinden los otros grupos de tu organización, preguntando si afectan a lo bien que puedes trabajar y si pueden cubrir lo que necesitas.",
       "pasos_accionables": [
-        "Determina las expectativas de tus clientes y la percepción que tienen de tu desempeño.",
-        "Mantente al corriente de los desarrollos tecnológicos y de las maneras alternativas de hacer tu trabajo.",
-        "Evalúa el desempeño de tus proveedores.",
-        "Evalúa el desempeño de los otros grupos de la organización a la que perteneces.",
-        "Contesta para cada uno de esos grupos dos preguntas: si ese grupo afecta a lo bien que puedes hacer tu trabajo, y si ese grupo puede cubrir lo que necesitas de él."
+        "Averigua qué esperan tus clientes y cómo ven tu desempeño.",
+        "Sigue de cerca los avances de la tecnología y las otras formas posibles de hacer tu trabajo.",
+        "Mide qué tal rinden tus proveedores.",
+        "Valora qué tal rinden los demás grupos de la empresa de la que formas parte.",
+        "Responde dos preguntas por cada uno de esos grupos: ¿influye en lo bien que puedes hacer tu trabajo? ¿Puede darte lo que necesitas de él?"
       ],
       "entregable_esperado": "Los cuatro objetos revisados por escrito: qué esperan tus clientes y cómo perciben tu desempeño, qué desarrollos técnicos cambian tu manera de trabajar, cómo se están portando tus proveedores, y qué otros grupos de tu organización afectan a tu trabajo y si pueden cubrir lo que necesitas de ellos.",
       "nodos_previos": [
@@ -59230,15 +59230,15 @@
       "resumen_teorico": "La frecuencia de la reunión individual la decide la madurez de cada persona en la tarea concreta, que no es su experiencia general ni su edad. Como el estilo de mando más eficaz pasa de una supervisión muy estrecha a una muy suelta a medida que esa madurez sube, con quien es nuevo en una situación toca reunirse a menudo, por ejemplo cada semana, y con el veterano menos, quizá cada pocas semanas. La velocidad de cambio del área también cuenta: donde todo se mueve deprisa pueden hacer falta reuniones más seguidas para estar al día, y en un entorno tranquilo pueden bastar menos.",
       "pasos_accionables": [
         "Decide cada cuánto necesita reunión individual cada persona, en vez de poner la misma frecuencia para todas.",
-        "Contesta a esa pregunta con la madurez relevante para el puesto o para la tarea de cada uno de tus subordinados.",
-        "Mide esa madurez por cuánta experiencia tiene ese subordinado con la tarea concreta que tiene entre manos.",
-        "No la confundas con la experiencia que tiene en general ni con lo mayor que sea.",
-        "Cuenta con que el estilo de mando más eficaz en un caso concreto va de la supervisión muy estrecha a la muy suelta a medida que sube la madurez de tarea del subordinado.",
-        "Ten reuniones individuales con frecuencia, por ejemplo una vez por semana, con el subordinado que es inexperto en una situación concreta.",
-        "Tenlas con menos frecuencia, quizá una vez cada pocas semanas, con el veterano experimentado.",
-        "Ten en cuenta además una segunda consideración: lo deprisa que cambian las cosas en el área del puesto.",
-        "Cuenta con que en un área de ritmo muy rápido, como puede ser la de mercadotecnia, el supervisor necesita reuniones individuales frecuentes para seguir al día de lo que pasa.",
-        "Cuenta con que en un entorno más tranquilo, como puede ser el de investigación, pueden bastar reuniones menos frecuentes para un mismo nivel de madurez relevante para la tarea."
+        "Basa la respuesta en la madurez que cada persona que te reporta tiene para su puesto o para su tarea.",
+        "Calcula esa madurez por la experiencia que esa persona acumula en la tarea específica que ahora le toca.",
+        "Sepárala de su experiencia general y de su edad, que son otra cosa.",
+        "Ten presente que, conforme crece la madurez de tarea de esa persona, el estilo de mando que mejor funciona en cada caso pasa de vigilarla muy de cerca a dejarla muy suelta.",
+        "Reúnete a menudo, por ejemplo cada semana, con quien todavía no tiene experiencia en una situación concreta.",
+        "Espacia más esas reuniones, quizá a una cada pocas semanas, con quien ya es veterano y tiene experiencia.",
+        "Suma otro criterio: la velocidad a la que cambian las cosas en el área de ese puesto.",
+        "Ten en cuenta que, si el área se mueve muy deprisa, como puede ocurrir en mercadotecnia, necesitarás reunirte a menudo con esa persona para no perder el hilo de lo que pasa.",
+        "Ten presente que en un entorno más tranquilo, como puede ser el de investigación, quizá te basten reuniones más espaciadas con personas del mismo nivel de madurez para la tarea."
       ],
       "entregable_esperado": "Una frecuencia de reunión individual por subordinado, sostenida en su madurez relevante para la tarea y ajustada por la velocidad de cambio de su área, y no una misma frecuencia para todos.",
       "nodos_previos": [
@@ -59288,10 +59288,10 @@
       "titulo_concepto": "Fijar la meta de un sistema de dirección por objetivos en el punto donde, esforzándose al máximo, la persona solo tiene una probabilidad de éxito de la mitad",
       "resumen_teorico": "Cuando las ganas de estirarse no salen solas, el mando tiene que crear el entorno que las fomente, y en un sistema de dirección por objetivos su herramienta es el nivel al que los fija. Un objetivo bien puesto queda tan alto que, aun esforzándose a fondo, la persona o la organización solo tiene la mitad de probabilidades de lograrlo. El rendimiento tiende a ser mayor cuando todos persiguen un logro más allá de su alcance inmediato, aunque intentarlo suponga fallar la mitad de las veces. Si buscas el máximo rendimiento, el tuyo y el de tu equipo, esa manera de fijar metas es clave.",
       "pasos_accionables": [
-        "Cuando el impulso a estirarse no salga espontáneo, crea tú, como mando, un entorno que lo fomente.",
-        "Dentro de un sistema de dirección por objetivos, fija los objetivos en un punto lo bastante alto para que, incluso esforzándose al máximo, la persona o la organización solo tenga una probabilidad de éxito de cincuenta por ciento.",
-        "Cuenta con que el rendimiento tiende a ser mayor cuando todos se esfuerzan por un nivel de logro más allá de su alcance inmediato, aunque eso signifique fallar la mitad de las veces.",
-        "Trata esta manera de fijar objetivos como algo extremadamente importante si lo que buscas es el máximo rendimiento, el tuyo y el de tus subordinados."
+        "Si las ganas de exigirse más no surgen por sí solas, encárgate tú, como mando, de crear el ambiente que las impulse.",
+        "Pon las metas de tu sistema de dirección por objetivos tan altas que, aun dándolo todo, la persona o el equipo solo tenga la mitad de posibilidades de alcanzarlas.",
+        "Ten presente que se suele rendir más cuando cada quien persigue una meta que todavía no tiene al alcance de la mano, aunque intentarlo implique fracasar la mitad de las veces.",
+        "Dale a esta forma de poner metas muchísima importancia si quieres sacar el máximo rendimiento de ti y de quienes dependen de ti."
       ],
       "entregable_esperado": "Un objetivo fijado en el punto donde, aunque la persona o la organización se esfuercen al máximo, la probabilidad de conseguirlo sea de cincuenta por ciento, y no un objetivo cómodo ni uno inalcanzable.",
       "nodos_previos": [
@@ -59311,7 +59311,7 @@
       "titulo_concepto": "Fijar el periodo del sistema de dirección por objetivos por el plazo en que su retroalimentación sigue sirviendo, y contrastarlo con la base del plan",
       "resumen_teorico": "La dirección por objetivos está pensada sobre todo para darte retroalimentación sobre la tarea concreta que tienes entre manos, de modo que sepas cómo vas y puedas ajustar lo que haces si hace falta. Esa retroalimentación solo es efectiva si llega muy poco después de la actividad que mide; si llega tarde, ya no sirve para corregir. Por eso los objetivos se fijan para un periodo relativamente corto y se contrastan con la base del plan: si planificas con base anual, el periodo de los objetivos debe ser al menos trimestral, y quizás incluso mensual.",
       "pasos_accionables": [
-        "Parte de para qué sirve el sistema: dar retroalimentación relevante a la tarea concreta que tienes entre manos.",
+        "Recuerda el propósito del sistema: devolverte retroalimentación útil sobre la tarea precisa en la que estás trabajando.",
         "Exígele que te diga cómo lo estás haciendo, para que puedas ajustar lo que sea que estés haciendo si hace falta.",
         "Recibe esa retroalimentación muy poco después de que ocurra la actividad que mide, porque si llega más tarde deja de ser efectiva.",
         "Fija en consecuencia los objetivos para un periodo relativamente corto.",
@@ -60246,7 +60246,7 @@
         "Contratar un consultor o agencia con experiencia específica en marketing de franquicias",
         "Diseñar en formato a cuatro colores con fotografía profesional de alta calidad",
         "Revisar el texto con el abogado de franquicias, contando con que también deben revisarlo los reguladores de los ocho estados que regulan la publicidad de franquicias",
-        "Decidir entre impresión offset (vale lo que cuesta, aunque es demasiado cara en tiradas cortas) o, si tienes que recortar gastos, digital (alta calidad con tiradas menores, aunque probablemente cueste más por pieza, ahorrando bastante en impresión)"
+        "Elige cómo imprimir: el offset vale su costo, pero sale demasiado caro en tiradas cortas; si necesitas recortar gastos, la impresión digital te da alta calidad aun con tiradas pequeñas y te ahorra bastante en impresión, aunque probablemente cada pieza te cueste más"
       ],
       "entregable_esperado": "Folleto físico de franquicia de alta calidad listo para distribución a posibles compradores con el perfil adecuado",
       "nodos_previos": [
@@ -64591,7 +64591,7 @@
       "pasos_accionables": [
         "Exigir que todos los franquiciados se identifiquen visiblemente como licenciatarios independientes (letreros, papelería, publicidad)",
         "Redactar el manual de operaciones y contrato de franquicia diferenciando claramente entre estándares de marca (control estricto) y aspectos operativos sin impacto en marca (mayor flexibilidad)",
-        "Exigir que los franquiciados contraten seguro de responsabilidad civil general, nombrando al franquiciador como coasegurado",
+        "Obliga a tus franquiciados a tener una póliza de responsabilidad civil general en la que tú, como franquiciador, figures como coasegurado",
         "Establecer un proceso de verificación rutinaria de certificados de seguro de franquiciados",
         "Hacer revisar el manual de operaciones por un abogado especializado antes de su publicación"
       ],
@@ -69369,7 +69369,7 @@
         "Identifica primero tu paso limitante preguntándote qué es, en tu trabajo, lo que marca el ritmo al que se acomoda todo lo demás.",
         "Busca para eso las cosas de tu vida de mando que de verdad tienen que ocurrir a una hora fija e inamovible, aquellas en cuyo tiempo no hay holgura ninguna.",
         "Crea desfases y programa el resto de tu trabajo alrededor de ese paso limitante.",
-        "En resumen: determina qué es lo inamovible y mueve a su alrededor las actividades más flexibles, y podrás trabajar de manera más eficiente."
+        "Fija primero lo que no se mueve y acomoda a su alrededor las actividades más flexibles: en resumen, así podrás trabajar con más eficiencia."
       ],
       "entregable_esperado": "El paso limitante de tu jornada ya identificado por su falta de holgura, y el resto de tu trabajo programado con sus desfases alrededor de ese paso.",
       "nodos_previos": [
@@ -75958,11 +75958,11 @@
       "titulo_concepto": "Llevar un inventario de materia prima en forma de proyectos discrecionales, distinto del trabajo en curso, para no gastar el tiempo libre metiéndote en el trabajo ajeno",
       "resumen_teorico": "Un mando sin trabajo propio y útil a mano lo más probable es que gaste su tiempo libre en meterse en el trabajo de sus subordinados. La salida es llevar un inventario de materia prima en forma de proyectos: cosas que necesitas hacer pero no terminar de inmediato, proyectos discrecionales con los que puedes subir la productividad de tu grupo a largo plazo. No hay que confundirlo con el trabajo en curso, que, como los huevos en un hervidor continuo, tiende a estropearse o a quedarse obsoleto con el tiempo.",
       "pasos_accionables": [
-        "Aplica aquí un principio de producción: lleva, como mando, un inventario de materia prima en forma de proyectos.",
-        "No lo confundas con tu inventario de trabajo en curso, porque ese, como los huevos en un hervidor continuo, tiende a estropearse o a quedarse obsoleto con el tiempo.",
-        "Mete en ese inventario cosas que necesitas hacer pero que no necesitas terminar de inmediato.",
-        "O sea, proyectos discrecionales, de esos en los que puedes trabajar para subir la productividad de tu grupo a largo plazo.",
-        "Cuenta con lo que pasa si no lo llevas: un mando sin ese inventario de proyectos lo más probable es que use su tiempo libre metiéndose en el trabajo de sus subordinados."
+        "Guarda como mando una reserva de proyectos, igual que una planta guarda su inventario de materia prima; es un principio de producción llevado a tu trabajo.",
+        "Sepáralo de lo que ya tienes a medio hacer: igual que los huevos de un hervidor continuo, eso tiende con el tiempo a echarse a perder o a quedar obsoleto.",
+        "Llénalo con tareas que te toca hacer, pero sin la urgencia de acabarlas ya.",
+        "Piensa en proyectos discrecionales, es decir, trabajo que puedes ir tomando para que la productividad de tu grupo suba a largo plazo.",
+        "Ten en cuenta el riesgo de no llevarla: sin esa reserva de proyectos, lo más probable es que acabes gastando tu tiempo libre en entrometerte en lo que hacen tus subordinados."
       ],
       "entregable_esperado": "Un inventario de proyectos discrecionales, separado del trabajo en curso, con cosas que necesitas hacer y que no necesitas terminar de inmediato, en las que puedes trabajar para subir la productividad de tu grupo a largo plazo.",
       "nodos_previos": [
@@ -80619,7 +80619,7 @@
       "resumen_teorico": "Si no tienes suficientes datos históricos para armar modelos predictivos complejos, puedes usar herramientas prácticas para estimar el tamaño de tu territorio: un mapa de tus clientes actuales (pin-map), estudios de mercados aislados, análisis de cómo divide la competencia sus zonas, y cálculos de penetración de mercado. Combínalas para tu mejor estimación y deja margen para ajustar los territorios con más datos. Con más presupuesto, considera una firma de mapeo geográfico (GIS).",
       "pasos_accionables": [
         "Haz un mapa (pin-map) de tus clientes actuales según la ubicación de tus unidades; luego traza un área hipotética alrededor del local y mide su demografía para fijar el tamaño con el que un franquiciado obtendría un retorno adecuado",
-        "Si tienes una unidad en un mercado aislado, estudia su demografía para saber qué hace falta para generar cierto nivel de negocio (muchas veces no habrá un mercado adecuado)",
+        "Aprovecha tu unidad en un mercado aislado, si la tienes: analiza la demografía de ese mercado y averigua cuánto se necesita para alcanzar cierto volumen de negocio (muchas veces no encontrarás un mercado que sirva para esto)",
         "Si tienes un competidor parecido y sabes cómo definió sus territorios, analiza cómo los divide en mercados parecidos, sin dar por hecho que no se equivocó en su análisis",
         "Calcula tu penetración de mercado actual y proyéctala a nuevas zonas",
         "Contrata una firma de mapeo geográfico (GIS) si tienes presupuesto para un análisis más completo"
@@ -88135,10 +88135,10 @@
       "titulo_concepto": "Pedir crítica anónima tras dar un curso de entrenamiento, con formulario numérico y preguntas abiertas",
       "resumen_teorico": "Después de dar el curso, pide críticas anónimas a quienes lo recibieron, con un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas. Estudia y considera las respuestas, pero cuenta con que nunca podrás complacer a todos los de la clase: lo típico es que las opiniones se repartan casi por igual entre demasiado detallado, demasiado superficial y en su punto. Tu objetivo último no es la unanimidad sino convencerte tú de que el curso está logrando lo que te propusiste.",
       "pasos_accionables": [
-        "Después de dar el curso, pide críticas anónimas a los empleados de tu clase.",
-        "Usa un formulario que pida calificaciones numéricas y que además plantee algunas preguntas abiertas.",
-        "Estudia y considera las respuestas, entendiendo que nunca podrás complacer a todos los miembros de tu clase.",
-        "Ten como objetivo último convencerte de que estás logrando lo que te propusiste."
+        "Pide a quienes tomaron el curso, una vez terminado, que lo critiquen de forma anónima.",
+        "Dales un formulario con preguntas abiertas y también con casillas para calificar con números.",
+        "Lee con calma lo que respondan y tenlo en cuenta, sabiendo que jamás vas a dejar contentos a todos tus alumnos.",
+        "Apunta, sobre todo, a quedar convencido tú de que el curso cumple lo que buscabas con él."
       ],
       "entregable_esperado": "Un conjunto de críticas anónimas recogidas y estudiadas, y tú convencido de estar logrando lo que te propusiste, sin esperar complacer a todos los alumnos.",
       "nodos_previos": [
@@ -93735,7 +93735,7 @@
       "resumen_teorico": "El vendedor de franquicias debe guiar al candidato sobre cómo realizar su investigación de validación, explicando que probablemente encontrará una variedad de respuestas (curva de campana de satisfacción) y enseñándole a profundizar en las respuestas negativas para entender las causas reales del desempeño, ya sea ubicación, habilidades de venta, capitalización o conocimiento del sector, entre otras.",
       "pasos_accionables": [
         "Explicar al candidato que encontrará variedad de opiniones entre franquiciados",
-        "Según el sistema, considerar decir con franqueza que algunos franquiciados tienen mejor desempeño que otros y, en la medida en que se conozca la razón, orientar al candidato sobre cómo llegar a la raíz de los problemas de quien rinde menos",
+        "Valora, según cómo sea tu sistema, reconocer abiertamente ante el candidato que no todos los franquiciados rinden igual y, cuando sepas por qué algunos se quedan atrás, enséñale a indagar el origen de sus dificultades",
         "Entrenar al candidato para profundizar en respuestas negativas y buscar causas raíz",
         "Proveer preguntas específicas que ayuden a obtener respuestas realistas",
         "Complementar con testimonios en video, datos de expansión y reportes de terceros"
@@ -93896,12 +93896,12 @@
       "titulo_concepto": "Preparar una revisión de desempeño mixta con el método de la hoja de trabajo: volcar todo sin editar, buscar relaciones, convertirlas en mensajes y recortar los que el subordinado no pueda retener",
       "resumen_teorico": "La hoja de trabajo sirve para centrar una revisión mixta en pocas áreas clave. Primero se reúne el material y se vuelca en una hoja sin editar, lo grande y lo trivial, sabiendo que anotarlo no compromete a nada. Después, sin los papeles delante, se buscan relaciones: probablemente varios puntos resulten ser caras de un mismo fenómeno, y puede haber indicios de por qué existe una fortaleza o una debilidad. Esas relaciones son los mensajes, con sus conclusiones y ejemplos. Al final se recortan hasta los que el subordinado pueda recordar; lo que no entre probablemente quepa en la próxima.",
       "pasos_accionables": [
-        "Reúne tantos aspectos del desempeño del subordinado como puedas: revisa informes de avance, el desempeño contra los objetivos trimestrales y las notas de las reuniones individuales.",
-        "Siéntate con una hoja en blanco y, sin editar en tu cabeza, anota todo lo que se te ocurra sobre el desempeño del subordinado, cosas mayores, menores y triviales, sin ningún orden particular.",
-        "Cuando hayas agotado los ítems, guarda toda la documentación de apoyo.",
-        "Busca relaciones entre los distintos ítems anotados en la hoja: probablemente notarás que algunos son manifestaciones distintas de un mismo fenómeno, y puede haber indicios de por qué existe cierta fortaleza o debilidad.",
-        "Cuando encuentres esas relaciones, empieza a llamarlas mensajes para el subordinado, y a partir de ahí extrae las conclusiones y los ejemplos concretos que las sostienen.",
-        "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido transmitir; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente."
+        "Junta todo lo que puedas sobre el desempeño de esa persona: repasa sus informes de avance, sus resultados frente a los objetivos del trimestre y las notas de las reuniones individuales.",
+        "Toma una hoja en blanco y vuelca en ella, sin filtrar nada mentalmente y sin orden alguno, todo lo que te venga a la cabeza del desempeño de esa persona, sea importante, menor o trivial.",
+        "Aparta toda la documentación de apoyo en cuanto ya no te salgan más ítems.",
+        "Mira qué relaciones hay entre los ítems de la hoja: probablemente verás que varios son caras distintas de un mismo fenómeno, y puede que aparezcan pistas de por qué existe tal fortaleza o debilidad.",
+        "Empieza a llamar mensajes para esa persona a las relaciones que encuentres y, desde ese punto, saca las conclusiones y los ejemplos concretos que las respaldan.",
+        "Comprueba si esa persona podrá retener todos los mensajes que decidiste darle; si no, quita los de menor peso, sabiendo que lo que quede fuera de esta revisión puede entrar en la próxima."
       ],
       "entregable_esperado": "Una lista corta de mensajes, cada uno respaldado por varios ítems del subordinado que son manifestaciones del mismo fenómeno, recortada al número que el subordinado pueda retener.",
       "nodos_previos": [
@@ -95484,10 +95484,10 @@
       "titulo_concepto": "Priorizar la lista de en qué hay que entrenar a los subordinados, tras preguntarles e inventariar los medios disponibles",
       "resumen_teorico": "Entrenar empieza por saber qué hace falta enseñar, y esa lista sale mejor si no la recortas de entrada: va desde lo que parece sencillo, como atender el teléfono, hasta los objetivos y valores de tu departamento y tu empresa. Preguntar a tu gente completa lo que tú no ves, porque suelen contarte necesidades que nunca supiste que existían. Hacer inventario de quién puede enseñar y con qué materiales pone la lista frente a los medios reales. Solo entonces priorizar tiene sentido: eliges por dónde empezar sabiendo qué necesitas y con qué cuentas para darlo.",
       "pasos_accionables": [
-        "Haz una lista de las cosas en que crees que tus subordinados o los miembros de tu departamento deberían entrenarse, sin limitar el alcance de la lista.",
-        "Incluye ítems que van desde lo que parece simple, como entrenar a la persona que atiende el teléfono, hasta cosas más generales y elevadas, como los objetivos y los sistemas de valores de tu departamento, tu planta y tu empresa.",
-        "Pregunta a la gente que trabaja para ti qué siente que necesita: es probable que te sorprenda contándote necesidades que nunca supiste que existían.",
-        "Hecho esto, haz inventario de los mandos que pueden enseñar y de los materiales de instrucción disponibles para ayudar a impartir el entrenamiento de los ítems de tu lista.",
+        "Anota todo aquello en lo que, a tu juicio, deberían formarse las personas a tu cargo o tu equipo, y no le pongas límites a esa lista.",
+        "Mete en ella desde lo que parece sencillo, como formar a quien contesta las llamadas, hasta asuntos más amplios y elevados, como los objetivos y los valores de tu área, de tu planta y de tu empresa.",
+        "Pregúntales a quienes trabajan para ti qué creen necesitar; probablemente te sorprendan con necesidades que ignorabas por completo.",
+        "Luego revisa con qué cuentas para enseñar cada punto de tu lista: qué mandos pueden dar la formación y qué materiales didácticos tienes a mano.",
         "Asigna prioridades entre esos ítems."
       ],
       "entregable_esperado": "Una lista de temas de entrenamiento priorizada, contrastada con lo que los propios subordinados dicen necesitar y con el inventario de mandos que pueden enseñar y de materiales disponibles para impartirla.",
@@ -95654,7 +95654,7 @@
       "pasos_accionables": [
         "Arma una muestra de tu empaque exactamente como la enviarías a un cliente real.",
         "Pregúntale a tu empresa de mensajería si tiene un servicio de prueba de empaque gratuito.",
-        "Envía la muestra marcada como paquete de prueba, junto con la solicitud de prueba llena, firmada y con el nombre de tu ejecutivo de cuenta, y el acolchado necesario, dentro de una caja exterior resistente marcada como sobreembalaje con paquete de prueba dentro, a la dirección que indica la solicitud.",
+        "Mete en una caja exterior resistente, rotulada como sobreembalaje con paquete de prueba dentro, la muestra rotulada como paquete de prueba, la solicitud llena y firmada con el nombre de tu ejecutivo de cuenta y el relleno que haga falta; luego mándala a la dirección que aparece en la solicitud.",
         "Espera el resultado y ajusta grosor de caja o relleno según lo que señalen.",
         "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
       ],
@@ -96142,8 +96142,8 @@
         "Identificar por qué considera tu franquicia específicamente (hot buttons)",
         "Entender su proceso de decisión y qué otras franquicias evalúa",
         "Dar un panorama general breve enfatizando sus motivos clave",
-        "Avisar que le enviarás materiales, explicar el proceso y cronograma, preguntarle si tiene dudas, y solicitar un avance (ej. completar el CIRF), y agendar la siguiente llamada",
-        "Si no califica, recházalo con amabilidad y termina pronto la llamada; si hay forma de remediar su situación, sugiérele cómo hacerlo"
+        "Explícale el proceso y sus plazos, cuéntale qué materiales le harás llegar y pregúntale qué dudas tiene; cierra pidiéndole un avance, como llenar el CIRF, y fija con él la próxima llamada",
+        "Ante un candidato que no califica, cierra la llamada pronto y con tacto; y si su situación tiene arreglo, oriéntalo sobre cómo resolverla"
       ],
       "entregable_esperado": "Guion estructurado de primera llamada con lista de verificación de calificación y objetivos de avance definidos",
       "nodos_previos": [
@@ -96315,7 +96315,7 @@
         "Diseñar un flujo de proceso de ventas adaptado al tipo de franquicia e inversión",
         "Capacitar al equipo de ventas en entender las motivaciones emocionales del comprador (independencia, ser su propio jefe) más que solo el retorno financiero",
         "Decidir la estrategia respecto a cerrar en el 'día de descubrimiento o de decisión' o después, teniendo en cuenta que cerrar ese mismo día puede sentirse como una venta de presión y conviene evitarlo para asegurar que la venta convenga a todos, aunque no es una regla absoluta",
-        "Animar a los candidatos a leer el documento de divulgación de la franquicia e insistirles en que lo revise un abogado externo",
+        "Pide con firmeza a cada candidato que un abogado externo revise el documento de divulgación de la franquicia, y anímalo también a leerlo él mismo",
         "Medir y ajustar continuamente el proceso según los resultados obtenidos"
       ],
       "entregable_esperado": "Diagrama de flujo del proceso de ventas de franquicia documentado y guion de ventas adaptado a las motivaciones del comprador",
@@ -97227,7 +97227,7 @@
         "Informar a empleados, proveedores y socios sobre el perfil de franquiciado buscado, los beneficios del programa y sus costos.",
         "Solicitar activamente referencias a franquiciados exitosos, destacando su rol como embajadores de marca.",
         "Contactar proactivamente a franquiciados existentes al expandirse a territorios cercanos, ofreciendo oportunidad de crecimiento multiunidad.",
-        "Capacitar al equipo de soporte de campo para discutir oportunidades de expansión con franquiciados desde el inicio de la relación, y orientar a los que se consideren capaces de crecer sobre los requisitos para ser elegibles.",
+        "Prepara a tu equipo de soporte de campo para que hable de oportunidades de expansión con cada franquiciado desde el primer día de la relación y, cuando vea que alguno tiene capacidad para crecer, le explique qué requisitos debe cumplir para ser elegible.",
         "Establecer incentivos formales para franquiciados por los referidos que terminen firmando contigo, consultándolo antes con tu abogado de franquicias, porque pueden activar obligaciones de divulgación y un conflicto de interés."
       ],
       "entregable_esperado": "Programa formal de referidos documentado, con incentivos definidos y proceso de seguimiento a prospectos referidos.",
@@ -98544,8 +98544,8 @@
       "titulo_concepto": "Identificar y Evitar al 'Flaming Entrepreneur'",
       "resumen_teorico": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, dedicación, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, y pueden contagiar esta actitud a los franquiciados que se sumen después.",
       "pasos_accionables": [
-        "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático, historial académico poco destacado; ninguna por sí sola lo confirma, pero si aparecen, indagar más",
-        "Hacer preguntas reveladoras como '¿cómo te sentirías si tuvieras una gran idea y no te dejáramos implementarla?'",
+        "Fíjate en las señales de alerta: si ha cambiado mucho de trabajo, si ha abierto varios negocios (le hayan ido bien o no), muchas veces desde muy joven, si tiene problemas en su historial de manejo o si sus estudios fueron flojos; ninguna basta por sí sola para confirmarlo, pero cuando las veas, investiga más a fondo",
+        "Hazle preguntas que revelen su actitud, por ejemplo: '¿qué sentirías si se te ocurre una idea buenísima y te decimos que no puedes ponerla en práctica?'",
         "Observar si el candidato cuestiona el modelo de negocio antes de firmar",
         "Distinguir entre espíritu emprendedor valioso y tendencia a romper reglas",
         "Rechazar candidatos que muestren patrones consistentes de rebeldía ante sistemas"
@@ -99696,7 +99696,7 @@
         "Evalúa el costo por prospecto y la tasa de cierre esperada, junto con la circulación de mano en mano de la publicación, antes de invertir",
         "Prioriza ediciones regionales o locales si buscas un despliegue localizado en vez de nacional",
         "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal impreso",
-        "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible, teniendo en cuenta que para la mayoría no es prioritario y con un presupuesto limitado probablemente no entra"
+        "Decide qué lugar ocupa el impreso según el presupuesto total que tengas: en la mayoría de los casos no es una prioridad, y si cuentas con poco presupuesto, lo más probable es que se quede fuera"
       ],
       "entregable_esperado": "Análisis costo-beneficio de medios impresos disponibles con métricas estimadas frente a otros canales y decisión documentada sobre su inclusión en el presupuesto de marketing.",
       "nodos_previos": [
@@ -101038,9 +101038,9 @@
       "titulo_concepto": "Devolver abiertamente a su puesto anterior a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, llevarlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
       "resumen_teorico": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
       "pasos_accionables": [
-        "Reconoce que el error fue de la dirección al juzgar mal la disposición del empleado para asumir más responsabilidad, en vez de dejar que el empleado cargue con la culpa y termine saliendo de la empresa.",
-        "Toma medidas deliberadas y directas para colocar a la persona de vuelta en un puesto que sepa desempeñar bien, en lugar de forzar su salida de la empresa.",
-        "Apoya al empleado frente a la vergüenza que es probable que sienta por el retroceso.",
+        "Asume que el fallo es de quien decidió el ascenso, por calcular mal si esa persona estaba lista para más responsabilidad, y no dejes que ella cargue con la culpa hasta acabar fuera de la empresa.",
+        "Da pasos francos e intencionados para llevar a esa persona de regreso a un trabajo que domine, en lugar de forzarla a irse de la empresa.",
+        "Acompaña a esa persona en la vergüenza que probablemente le dé el retroceso.",
         "Haz esa vuelta atrás abiertamente y no a escondidas, porque hecha así la vergüenza dura mucho menos de lo que todos esperan."
       ],
       "entregable_esperado": "El empleado devuelto abiertamente al puesto en el que se sabe que rinde bien, con el error de juicio reconocido por la dirección y con apoyo explícito frente a la vergüenza del retroceso.",
@@ -101331,7 +101331,7 @@
       "resumen_teorico": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
       "pasos_accionables": [
         "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos, encendedores, munición o material radiactivo.",
-        "Busca en la normativa de IATA y OACI la clasificación oficial de ese tipo de producto (número ONU, nombre de envío, clase de peligro y, si aplica, riesgo secundario y grupo de embalaje).",
+        "Consulta las normas de IATA y OACI para saber cómo se clasifica oficialmente tu producto: su número ONU, su nombre de envío y su clase de peligro, más el riesgo secundario y el grupo de embalaje cuando correspondan.",
         "Pregunta a tu empresa de mensajería si acepta ese producto y bajo qué condiciones de empaque.",
         "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
         "Guarda la documentación exigida junto con cada envío de mercancía peligrosa."
@@ -104680,14 +104680,14 @@
       "titulo_concepto": "Repartir la supervisión de un puesto entre su grupo funcional y su división, dando a cada jefe lo que le toca: al de misión las prioridades, al funcional el oficio y la carrera",
       "resumen_teorico": "Una organización híbrida solo funciona si hay una manera de coordinar las unidades de misión con los grupos funcionales, para que los recursos de estos lleguen a donde aquellas los necesitan. La doble dependencia es esa manera: como el grupo funcional fija los métodos y estándares del oficio, el puesto responde a dos jefes y cada uno supervisa lo que le corresponde. El de misión le marca prioridades con problemas concretos del negocio; el funcional vela por su formación técnica, vigila su desempeño técnico y cuida su carrera.",
       "pasos_accionables": [
-        "Parte de lo que hace falta para que la organización híbrida funcione: una manera de coordinar las unidades de misión y los grupos funcionales, de modo que los recursos de los segundos se asignen y se entreguen para cubrir las necesidades de las primeras.",
-        "Deja que el grupo funcional al que el puesto pertenece fije sus métodos profesionales, sus prácticas y sus estándares.",
-        "Haz en consecuencia que ese puesto dependa de alguien de la organización funcional y de alguien de la organización de misión.",
-        "Ajusta el tipo de supervisión de cada uno de los dos a las necesidades distintas de las dos organizaciones.",
-        "Encarga al jefe de la unidad de misión que le dé las prioridades de misión, pidiéndole que trabaje en problemas concretos del negocio.",
-        "Encarga al jefe funcional que se asegure de que quien ocupa ese puesto está formado para hacer su trabajo de manera técnicamente competente.",
-        "Encarga a ese mismo jefe funcional que supervise y vigile su desempeño técnico.",
-        "Encarga al jefe funcional que cuide su carrera dentro de la función, quizá promocionándolo si lo hace bien."
+        "Asegúrate de tener cómo coordinar las unidades de misión con los grupos funcionales, para que lo que estos tienen se asigne y llegue a donde aquellas lo necesitan: sin eso, una estructura híbrida no funciona.",
+        "Reconoce al grupo funcional del puesto como quien marca sus métodos de oficio, sus prácticas y sus estándares.",
+        "Por eso, dale a ese puesto dos jefes: uno del lado funcional y otro del lado de misión.",
+        "Haz que cada uno lo supervise de un modo distinto, según lo que necesita cada uno de los dos lados.",
+        "Deja que el jefe de misión le marque qué es prioritario, asignándole problemas concretos del negocio.",
+        "Pide al jefe funcional que cuide su formación, para que haga su trabajo con solvencia técnica.",
+        "Pide también al jefe funcional que siga de cerca y controle la calidad técnica de lo que hace.",
+        "Confía al jefe funcional su carrera dentro del área, incluido un posible ascenso si rinde bien."
       ],
       "entregable_esperado": "El reparto escrito de la supervisión de ese puesto: sus dos jefes nombrados, y al lado de cada uno lo que le toca hacer, desde las prioridades hasta la formación, la vigilancia técnica y la carrera.",
       "nodos_previos": [
@@ -106027,7 +106027,7 @@
         "Déjalo hablar sin discutir nada de lo que diga, aunque sus razones no te parezcan buenas.",
         "Cuando haya terminado de exponer sus razones, hazle más preguntas para que los asuntos de fondo puedan salir a la luz.",
         "No discutas, no sermonees y no entres en pánico durante esta primera conversación.",
-        "No intentes cambiarle la idea en este momento, sino gana tiempo: cuando haya dicho todo lo que tiene que decir, pide el tiempo que necesites para prepararte para el siguiente encuentro.",
+        "Gana tiempo en vez de intentar que cambie de idea ahora: cuando ya haya dicho todo, pide el plazo que creas necesario para preparar el siguiente encuentro.",
         "Cumple después con lo que te hayas comprometido a hacer en esta primera conversación."
       ],
       "entregable_esperado": "El subordinado escuchado por completo, sin que hayas discutido ni intentado cambiarle la idea en ese primer momento, con el tiempo ganado para preparar la siguiente conversación y el compromiso de seguimiento que hayas hecho ya asumido.",
@@ -106854,7 +106854,7 @@
       "resumen_teorico": "Muchos franquiciadores confían en su instinto para evaluar cómo se sienten sus franquiciados, lo cual suele estar sesgado. Es fundamental escucharlos y pedirles retroalimentación con regularidad, complementada si hace falta con encuestas e incluso mystery shopping de validación, para conocer la percepción real de los franquiciados sobre la marca y su liderazgo.",
       "pasos_accionables": [
         "Si hace falta, diseñar encuestas periódicas de satisfacción de franquiciados para complementar otras vías de retroalimentación",
-        "Si lo eliges, realizar un ejercicio de cliente misterioso sobre el proceso de validación de franquicias para oír lo que tus franquiciados dicen a tus prospectos",
+        "Encarga, si así lo decides, un cliente misterioso que recorra tu proceso de validación de franquicias como si fuera prospecto, y así sabrás qué les cuentan tus franquiciados a tus prospectos",
         "Solicitar retroalimentación de manera regular más allá de conversaciones informales",
         "Analizar resultados y comunicar acciones derivadas de la retroalimentación"
       ],
@@ -107882,7 +107882,7 @@
         "Evaluar cuánto tiempo lleva operando el concepto y qué tan probado está el modelo",
         "Identificar barreras de entrada (patentes, exclusividad, dificultad de replicar el concepto)",
         "Monitorear actividad de competidores potenciales que podrían copiar el concepto",
-        "Estimar el punto de cruce entre ambos riesgos y planificar el inicio del proceso de franquicia en ese punto o incluso unos meses antes, porque la preparación suele tomar de 4 a 6 meses"
+        "Calcula dónde se cruzan ambos riesgos y fija el arranque de tu franquicia para ese momento, o incluso unos meses antes: dejar todo listo para vender suele llevarte de 4 a 6 meses"
       ],
       "entregable_esperado": "Cronograma de decisión de franquicia basado en el análisis de riesgo de concepto vs. amenaza competitiva",
       "nodos_previos": [
@@ -113352,12 +113352,12 @@
       "resumen_teorico": "Automatizar no es la única manera de sacar más de un trabajo: simplificarlo también puede subir lo que rinde cada actividad, en la fábrica y en la oficina. Lo habitual es encontrar muchos pasos que están en el flujo sin una buena razón, a menudo por tradición o porque un procedimiento formal los ordena, sin que nada práctico los pida. Para verlos tienes que dibujar el flujo tal como es, con todos sus pasos y sin maquillarlo, contarlos y fijarte una meta aproximada de reducción. Luego cada paso tiene que aguantar la pregunta de por qué se hace, y el que el sentido común no sostiene sale.",
       "pasos_accionables": [
         "Dibuja primero un diagrama de flujo del proceso de producción tal y como existe hoy.",
-        "Enseña en ese diagrama todos y cada uno de los pasos, y no omitas ninguno para que el papel quede más presentable.",
-        "Cuenta, en segundo lugar, el número de pasos del diagrama, para saber con cuántos has empezado.",
+        "Incluye en el diagrama cada paso sin excepción; no quites ninguno para que el dibujo luzca mejor.",
+        "Como segundo paso, cuenta los pasos del diagrama para saber de cuántos partes.",
         "Fija, en tercer lugar, una meta aproximada de reducción del número de pasos.",
         "Para ejecutar la simplificación de verdad, pregunta por qué se hace cada paso.",
         "Cuenta con que lo habitual es encontrar muchos pasos que están en tu flujo de trabajo sin ninguna buena razón, a menudo puestos ahí por tradición o porque un procedimiento formal lo ordena, sin que nada práctico exija incluirlos.",
-        "Cuestiona cada paso de forma crítica, sea cual sea la razón que te den para él, y tira los que el sentido común diga que puedes ahorrarte."
+        "Somete cada paso a una crítica, te den la razón que te den, y elimina todos los que el sentido común te diga que sobran."
       ],
       "entregable_esperado": "El diagrama de flujo del proceso tal como es hoy con todos sus pasos, el número de pasos de partida contado, la meta de reducción fijada, y tirados los pasos que no aguantaron la pregunta.",
       "nodos_previos": [
@@ -116217,8 +116217,8 @@
       "resumen_teorico": "La productividad de un mando es su resultado por cada unidad de tiempo trabajado, y ese resultado es la suma de lo que aporta cada actividad según su palanca, es decir, cuánto crece el resultado de la organización gracias a ella. Por eso la clave de un resultado alto es fijarte en la palanca de lo que haces durante el día. Hay tres maneras de mejorar la productividad: hacer tus actividades más deprisa, aumentar la palanca asociada a cada actividad y cambiar la mezcla, dejando las actividades de poca palanca para dedicarte a las de mucha.",
       "pasos_accionables": [
         "Entiende la productividad de un mando como su resultado por unidad de tiempo trabajado.",
-        "Sube el ritmo con el que ejecutas tus actividades, o sea acelera tu trabajo.",
-        "Sube la palanca asociada a las distintas actividades de mando que haces.",
+        "Acelera tu trabajo: haz más deprisa cada una de tus actividades.",
+        "Consigue que cada una de tus tareas de mando tenga más palanca.",
         "Corre la mezcla de tus actividades desde las de menor palanca hacia las de mayor palanca."
       ],
       "entregable_esperado": "Tu resultado por unidad de tiempo trabajado subido por una de las tres vías nombradas, o por varias, con la vía elegida dicha por su nombre.",
@@ -116938,7 +116938,7 @@
       "resumen_teorico": "La tasa de captura es el porcentaje de visitantes de una página que proporcionan su información de contacto. Se puede mejorar significativamente ofreciendo un beneficio tangible (como un video educativo gratuito) a cambio de completar un formulario, lo cual puede aumentar la tasa de captura entre 40-60% o más.",
       "pasos_accionables": [
         "Medir la tasa de captura actual del sitio web (visitantes vs formularios completados)",
-        "Crear un formulario simple que solicite los datos de contacto y otra información relevante como capital disponible, cronograma y área geográfica de interés, a no más de un clic de cualquier página del sitio y con el enlace bien visible",
+        "Pon, a no más de un clic de cualquier página del sitio y con un enlace bien visible, un formulario fácil de llenar que pida los datos de contacto y lo que te sirve saber del candidato, como el capital con que cuenta, su cronograma y la zona geográfica que le interesa",
         "Ofrecer un incentivo tangible (video educativo) a cambio de completar el formulario",
         "Nunca permitir descargas de material sin antes capturar información de contacto",
         "Implementar sistema de autorrespuesta personalizado según el perfil del prospecto"
@@ -122765,9 +122765,9 @@
         "Usa la inspección variable como otra manera de bajar el coste del aseguramiento de la calidad.",
         "Varía cada cuánto inspeccionas, porque los niveles de calidad varían con el tiempo y es solo sentido común que la frecuencia los siga.",
         "Si pasan semanas sin que encuentres problemas, comprueba menos a menudo.",
-        "Si los problemas empiezan a aparecer, prueba cada vez con más frecuencia, hasta que la calidad vuelva a los niveles altos que tenía antes.",
-        "Cuenta con lo que ganas con eso: costes todavía más bajos y todavía menos interferencia en el flujo de producción.",
-        "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que las personas son animales de costumbres y siguen haciendo las cosas como las han hecho siempre, sea de una semana a otra o de un año a otro."
+        "Cuando empiecen a aparecer problemas, ve subiendo la frecuencia de las pruebas hasta que la calidad recupere el nivel alto de antes.",
+        "Ten presente la ganancia: bajas aún más los costes y estorbas aún menos el flujo de producción.",
+        "Ten en cuenta que este método apenas se aplica, ni siquiera en la fabricación corriente, y que lo más probable es que la causa sea la costumbre: las personas son animales de costumbres y repiten lo de siempre, semana tras semana o año tras año."
       ],
       "entregable_esperado": "La frecuencia de inspección movida en los dos sentidos según el nivel de calidad observado, con el coste y la interferencia en el flujo más bajos que con la frecuencia fija.",
       "nodos_previos": [
@@ -125321,8 +125321,8 @@
       "titulo_concepto": "Zanjar por adelantado las seis preguntas de una decisión: qué, cuándo, quién decide, a quién se consulta, quién ratifica y a quién se informa",
       "resumen_teorico": "Decidir es un trabajo con su propio resultado, la decisión misma, y como cualquier otro proceso de mando tiene más probabilidades de dar un resultado de calidad y a tiempo si desde el principio dices con claridad qué esperas exactamente. Dicho de otro modo, una de las tareas clave del mando es zanjar antes de empezar seis preguntas: qué hay que decidir, para cuándo, quién decide, a quién se consulta antes, quién ratifica o veta y a quién se informa después. Contestadas de antemano, vuelven concreta la expectativa: el proceso sabe desde el inicio qué resultado entregar, para cuándo y con quién.",
       "pasos_accionables": [
-        "Cuenta con que la toma de decisiones, como las demás cosas que hace un mando, lleva asociado un resultado, y en este caso ese resultado es la decisión misma.",
-        "Di con claridad desde el principio que esperas exactamente eso, un resultado de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darlo, igual que los demás procesos de mando.",
+        "Ten presente que decidir, igual que cualquier otra tarea de un mando, produce algo, y aquí lo que produce es la propia decisión.",
+        "Deja claro desde el arranque que lo que esperas es justo eso, un resultado de alta calidad y a tiempo; como en cualquier otro proceso de mando, decirlo así hace más probable que llegue.",
         "Zanja por adelantado las seis preguntas importantes, que es una de las tareas clave del mando.",
         "Pregunta primero qué decisión hay que tomar.",
         "Pregunta cuándo tiene que estar tomada.",

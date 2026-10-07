@@ -7,13 +7,13 @@
   "resumen_teorico": "Pronosticar la demanda y ajustar a ella la producción es una vía muy importante para subir la productividad, pero es poco común en el trabajo administrativo, visto como distinto del fabril y sin patrones objetivos para dimensionarlo. Si eliges bien los indicadores de la unidad y los vigilas de cerca, sus datos de tendencia dan patrones de hecho para pronosticar cuánta gente pide cada tarea prevista. Con rigor, se puede reasignar gente entre áreas y la plantilla puede seguir a la actividad. Sin rigor, la plantilla quedaría siempre en lo más alto y el trabajo se estiraría hasta llenar el tiempo.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P15 de la frontera publicada en la vuelta 2 del frente, L123 a L125, 228 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone la cadena entera de medios, uno detras de otro y cada uno nombrado, indicadores elegidos y vigilados, patrones de hecho deducidos de los datos de tendencia, pronostico del numero de personas, reasignacion entre areas y plantilla casada con el crecimiento o el descenso previsto. Inventario de MEDIOS y de ETAPAS, no de metas. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L125 (if we have carefully chosen indicators that characterize an administrative unit and watch them closely, we are ready to apply the methods of factory control to administrative work); pasos 2 y 3 de L125 (We can use de facto standards, inferred from the trend data, to forecast the number of people needed to accomplish various anticipated tasks); paso 4 de L123 (Forecasting future work demands and then adjusting the output of an administrative factory represents a very important way in which its productivity can be increased); pasos 5 y 6 de L125 (By rigorous application of the principles of forecasting, manpower can be reassigned from one area to another, and the headcount made to match the forecasted growth or decline in administrative activity); paso 7 de L125 (Without rigor, the staffing of administrative units would always be left at its highest level and, given Parkinson famous law, people would find ways to let whatever they are doing fill the time available for its completion). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. PARKINSON ES NOMBRE PROPIO Y NO SE TRADUCE NI SE CAZA (EXTRACTOR.md 15.1, tercera fila de la tabla de listas), y no va a atribuciones porque una ley nombrada no es una cifra del autor: no hay tasa, ni banda, ni fecha de corte que registrar. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo CUALES son los indicadores que caracterizan a una unidad administrativa, porque eso vive en su propio nodo, el de las dos varas del indicador administrativo, y repetirlo aqui fabricaria el gemelo de su donante (P.19). NO escribo como se deduce un patron de hecho de los datos de tendencia, porque el libro dice inferred from the trend data y no dice con que metodo; escribir ese metodo seria escribirlo yo. NO escribo cada cuanto se rehace el pronostico de plantilla ni quien lo aprueba, porque no hay ni periodo ni responsable en el texto. NO escribo que se haga con la gente que sobra cuando la actividad baja: el libro dice reassigned from one area to another y no dice nada mas, y cerrar ese bucle seria puente de la especie destinatario. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1 es la condicion de entrada del procedimiento y remite a otro nodo, asi que un lector estricto puede decir que es una arista disfrazada de paso y que sobra. Lo sostengo porque el libro lo escribe como condicion en la misma frase (if we have carefully chosen indicators... we are ready to apply), y quitarlo dejaria el nodo empezando por deducir patrones de unos datos de tendencia que nadie ha mandado recoger. Y ademas lo declaro como ARISTA por lectura en el reporte de esta vuelta, que es lo que EXTRACTOR.md 11 manda cuando el candidato despliega algo que el libro ya nombro en otra linea. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 63 de la linea serial, la de insercion, en la relectura de fidelidad entera que D.30 y D.58 mandan hacer sobre los candidatos que entran, y ANTES de su insercion. EL ENTREGABLE TRAIA UN PUENTE DE SOPORTE Y SE REESCRIBE SIN BORRAR EL RASTRO: decia Los patrones de hecho escritos a partir de los datos de tendencia y hoy dice Los patrones de hecho deducidos de los datos de tendencia, que es lo que L125 dice (de facto standards, inferred from the trend data). El libro no manda escribirlos en ningun sitio. Los 7 pasos, releidos uno a uno contra L123 y L125: 7 TRANSCRIPCION, 0 PUENTE.",
   "pasos_accionables": [
-    "Elige con cuidado los indicadores que caracterizan a la unidad administrativa y vigílalos de cerca, porque solo con eso estarás en condiciones de aplicarle los métodos de control de una fábrica.",
+    "Escoge con cuidado los indicadores que describen a la unidad administrativa y síguelos de cerca; sin eso no podrás aplicarle los métodos de control de una fábrica.",
     "Deduce de los datos de tendencia unos patrones de hecho, que son los que esa clase de trabajo nunca tuvo.",
-    "Usa esos patrones para pronosticar cuánta gente hace falta para sacar adelante las distintas tareas previstas.",
+    "Con esos patrones, calcula por adelantado cuántas personas necesitarás para cada una de las tareas que prevés.",
     "Pronostica la demanda de trabajo futura y ajusta después a ese pronóstico la producción de tu fábrica administrativa.",
     "Reasigna gente de un área a otra aplicando con rigor los principios del pronóstico.",
-    "Haz que el número de personas case con el crecimiento o el descenso pronosticado de la actividad administrativa.",
-    "Aplica ese rigor sin dejarlo caer, porque sin él la plantilla de una unidad administrativa se queda siempre en su nivel más alto y, por la famosa ley de Parkinson, la gente encuentra la manera de que lo que está haciendo llene el tiempo disponible para terminarlo."
+    "Ajusta la plantilla para que suba o baje al mismo paso que el pronóstico de la actividad administrativa.",
+    "No sueltes ese rigor: sin él, la plantilla administrativa queda siempre en su máximo, y la gente, como dice la famosa ley de Parkinson, se las arregla para que su tarea ocupe todo el tiempo que tiene para acabarla."
   ],
   "entregable_esperado": "Los patrones de hecho deducidos de los datos de tendencia, el pronóstico de cuánta gente hace falta para las tareas previstas, y la plantilla ya reasignada para casar con ese pronóstico.",
   "nodos_previos": [
@@ -222,6 +222,74 @@
       "motivos": [
         "calco"
       ]
+    },
+    {
+      "id": "copia-dimensionar_plantilla_administrativa_pronostico-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Elige con cuidado los indicadores que caracterizan a la unidad administrativa y vigílalos de cerca, porque solo con eso estarás en condiciones de aplicarle los métodos de control de una fábrica.",
+      "texto_nuevo": "Escoge con cuidado los indicadores que describen a la unidad administrativa y síguelos de cerca; sin eso no podrás aplicarle los métodos de control de una fábrica.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "125",
+        "frase": "But if we have carefully chosen indicators that characterize an administrative unit"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-dimensionar_plantilla_administrativa_pronostico-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Usa esos patrones para pronosticar cuánta gente hace falta para sacar adelante las distintas tareas previstas.",
+      "texto_nuevo": "Con esos patrones, calcula por adelantado cuántas personas necesitarás para cada una de las tareas que prevés.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "125",
+        "frase": "to forecast the number of people needed to accomplish various anticipated tasks"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-dimensionar_plantilla_administrativa_pronostico-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Haz que el número de personas case con el crecimiento o el descenso pronosticado de la actividad administrativa.",
+      "texto_nuevo": "Ajusta la plantilla para que suba o baje al mismo paso que el pronóstico de la actividad administrativa.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "125",
+        "frase": "and the headcount made to match the forecasted growth or decline"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-dimensionar_plantilla_administrativa_pronostico-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Aplica ese rigor sin dejarlo caer, porque sin él la plantilla de una unidad administrativa se queda siempre en su nivel más alto y, por la famosa ley de Parkinson, la gente encuentra la manera de que lo que está haciendo llene el tiempo disponible para terminarlo.",
+      "texto_nuevo": "No sueltes ese rigor: sin él, la plantilla administrativa queda siempre en su máximo, y la gente, como dice la famosa ley de Parkinson, se las arregla para que su tarea ocupe todo el tiempo que tiene para acabarla.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "125",
+        "frase": "Without rigor, the staffing of administrative units would always be left"
+      },
+      "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "etiqueta_arbol": "Dimensiona tu Plantilla Administrativa",
