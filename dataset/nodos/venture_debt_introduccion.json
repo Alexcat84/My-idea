@@ -25,7 +25,7 @@
   ],
   "condiciones_activacion": [
     "Si la empresa ya levantó una ronda de equity institucional y busca extender runway sin diluirse más.",
-    "Si se necesita capital para un propósito específico (capex, adquisición, puente) sin ceder más equity."
+    "Si la empresa ya tiene respaldo de capital de riesgo y necesita capital para un propósito específico (capex, adquisición, puente) sin ceder más equity."
   ],
   "etiqueta_arbol": "Complementa tu Capital con Deuda",
   "fuentes_internas": [
@@ -63,6 +63,23 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro da cuatro usos y el resumen omite el de financiar adquisiciones, gastos de capital e inventario.; Mismo defecto: falta el uso de financiar adquisiciones, gastos de capital e inventario.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "condiciones-resto-venture_debt_introduccion-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si se necesita capital para un propósito específico (capex, adquisición, puente) sin ceder más equity.",
+      "texto_nuevo": "Si la empresa ya tiene respaldo de capital de riesgo y necesita capital para un propósito específico (capex, adquisición, puente) sin ceder más equity.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2761-2763",
+        "frase": "companies without VC investors face significant difficulties in attracting any venture debt"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

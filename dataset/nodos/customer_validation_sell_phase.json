@@ -24,10 +24,29 @@
     "earlyvangelists_ventas_tempranas"
   ],
   "condiciones_activacion": [
-    "Cuando ya tienes tu producto listo (tu primera versión o MVP) y necesitas comprobar con ventas reales si tu negocio funciona"
+    "Cuando necesitas comprobar con ventas reales si tu negocio funciona"
   ],
   "etiqueta_arbol": "Sal a Vender de Verdad",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "condiciones-resto-customer_validation_sell_phase-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando ya tienes tu producto listo (tu primera versión o MVP) y necesitas comprobar con ventas reales si tu negocio funciona",
+      "texto_nuevo": "Cuando necesitas comprobar con ventas reales si tu negocio funciona",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "2047, 11347",
+        "frase": "attempt to actually sell customers an unfinished and unproven product"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c04): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

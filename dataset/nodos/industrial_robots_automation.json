@@ -21,7 +21,7 @@
     "vehiculos_autonomos_drones_supply_chain"
   ],
   "condiciones_activacion": [
-    "Si existen tareas de manufactura o almacén de alto volumen y baja variabilidad"
+    "Si existen tareas de manufactura o almacén de alto volumen y baja variabilidad, o peligrosas o poco adecuadas para las personas"
   ],
   "etiqueta_arbol": "Automatiza con Robots Industriales",
   "fuentes_internas": [
@@ -40,6 +40,23 @@
         "motivo": "Tras disenar fabricas y almacenes en el driver de produccion se llega a automatizarlos con robots."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "condiciones-resto-industrial_robots_automation-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si existen tareas de manufactura o almacén de alto volumen y baja variabilidad",
+      "texto_nuevo": "Si existen tareas de manufactura o almacén de alto volumen y baja variabilidad, o peligrosas o poco adecuadas para las personas",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "2222",
+        "frase": "often used to perform duties that are dangerous or unsuitable for human workers"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

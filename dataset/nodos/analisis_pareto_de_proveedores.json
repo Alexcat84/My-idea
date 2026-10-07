@@ -6,12 +6,12 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Técnica para identificar los 'pocos vitales' problemas de proveedores en lugar de intentar programas amplios que aprieten todos los procedimientos. Puede aplicarse por número de parte, familia de producto, proceso, proveedor completo, costo total, o modo de falla, revelando debilidades gerenciales y tecnológicas específicas que merecen atención prioritaria.",
   "pasos_accionables": [
-    "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el gran total",
+    "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el total general",
     "Clasificar las pérdidas usando el principio de Pareto (80/20)",
     "Identificar los pocos proveedores o partes que concentran la mayoría de los problemas, analizando el punto de quiebre en la curva",
     "Enfocar recursos de mejora en los elementos vitales identificados",
     "Repetir el análisis por diferentes dimensiones (costo, modo de falla, etc.)",
-    "Reordenar los contribuyentes de mayor a menor y calcular el porcentaje acumulado",
+    "Reordenar las categorías de mayor a menor y calcular el porcentaje acumulado",
     "Dibujar ejes con barras de magnitud y línea de porcentaje acumulado",
     "Repetir el análisis de forma iterativa sobre las subcategorías del problema principal"
   ],
@@ -50,5 +50,41 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-analisis_pareto_de_proveedores-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el gran total",
+      "texto_nuevo": "Recopilar datos de defectos y rechazos por proveedor, parte o proceso y calcular el total general",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el gran total"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_pareto_de_proveedores-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reordenar los contribuyentes de mayor a menor y calcular el porcentaje acumulado",
+      "texto_nuevo": "Reordenar las categorías de mayor a menor y calcular el porcentaje acumulado",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los contribuyentes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Vigilar si las métricas de crecimiento muestran rendimientos decrecientes pese al éxito aparente en métricas agregadas",
     "Distinguir entre métricas de vanidad (usuarios totales, ingresos crecientes) e hitos de aprendizaje validado",
-    "Evaluar si el mercado de adoptantes tempranos se está agotando y si el costo de adquisición de clientes mainstream está aumentando",
+    "Evaluar si el mercado de adoptantes tempranos se está agotando y si el costo de adquisición de clientes del mercado mayoritario está aumentando",
     "Si se detecta estancamiento, reiniciar el ciclo de contabilidad de innovación como una 'segunda fundación' de la empresa",
-    "Invertir en conocer a fondo al nuevo cliente mainstream (arquetipos, entrevistas, observación) antes de rediseñar el producto",
-    "Realizar una inversión mayor en calidad y diseño, probada en un sandbox de experimentación, comparando cabeza a cabeza contra el diseño anterior, sabiendo que al principio el nuevo suele rendir peor y hay que mejorarlo sin descanso hasta que lo supere"
+    "Invertir en conocer a fondo al nuevo cliente del mercado mayoritario (arquetipos, entrevistas, observación) antes de rediseñar el producto",
+    "Realizar una inversión mayor en calidad y diseño, probada en un entorno aislado de experimentación, comparando directamente contra el diseño anterior, sabiendo que al principio el nuevo suele rendir peor y hay que mejorarlo sin descanso hasta que lo supere"
   ],
-  "entregable_esperado": "Un diagnóstico honesto de si el crecimiento actual es sostenible, y si no, un plan de rediseño de producto orientado al cliente mainstream, validado experimentalmente",
+  "entregable_esperado": "Un diagnóstico honesto de si el crecimiento actual es sostenible, y si no, un plan de rediseño de producto orientado al cliente del mercado mayoritario, validado experimentalmente",
   "nodos_previos": [
     "metricas_accionables",
     "reunion_pivotar_o_perseverar",
@@ -49,6 +49,74 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el diseño nuevo suele rendir peor al principio y hay que mejorarlo sin descanso hasta superar al anterior.; Mismo defecto: se pierde que el nuevo diseño suele empezar perdiendo y se mejora hasta superar al viejo.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-riesgo_no_pivotar_a_tiempo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar si el mercado de adoptantes tempranos se está agotando y si el costo de adquisición de clientes mainstream está aumentando",
+      "texto_nuevo": "Evaluar si el mercado de adoptantes tempranos se está agotando y si el costo de adquisición de clientes del mercado mayoritario está aumentando",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "clientes mainstream"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-riesgo_no_pivotar_a_tiempo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Invertir en conocer a fondo al nuevo cliente mainstream (arquetipos, entrevistas, observación) antes de rediseñar el producto",
+      "texto_nuevo": "Invertir en conocer a fondo al nuevo cliente del mercado mayoritario (arquetipos, entrevistas, observación) antes de rediseñar el producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cliente mainstream"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-riesgo_no_pivotar_a_tiempo-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Realizar una inversión mayor en calidad y diseño, probada en un sandbox de experimentación, comparando cabeza a cabeza contra el diseño anterior, sabiendo que al principio el nuevo suele rendir peor y hay que mejorarlo sin descanso hasta que lo supere",
+      "texto_nuevo": "Realizar una inversión mayor en calidad y diseño, probada en un entorno aislado de experimentación, comparando directamente contra el diseño anterior, sabiendo que al principio el nuevo suele rendir peor y hay que mejorarlo sin descanso hasta que lo supere",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sandbox",
+          "cabeza a cabeza"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-riesgo_no_pivotar_a_tiempo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un diagnóstico honesto de si el crecimiento actual es sostenible, y si no, un plan de rediseño de producto orientado al cliente mainstream, validado experimentalmente",
+      "texto_nuevo": "Un diagnóstico honesto de si el crecimiento actual es sostenible, y si no, un plan de rediseño de producto orientado al cliente del mercado mayoritario, validado experimentalmente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "cliente mainstream"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

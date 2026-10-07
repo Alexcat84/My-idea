@@ -6,11 +6,11 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Los VCs frecuentemente exigen que el equity de fundadores y ejecutivos se someta a vesting ('golden handcuffs') como condición de inversión, y en algunos casos insisten en reasignar las participaciones entre cofundadores si detectan desbalances respecto a sus contribuciones reales. Esto puede generar tensiones significativas en el equipo fundador, y podría explicar por qué la rotación aumenta tras la primera ronda de inversión.",
   "pasos_accionables": [
-    "Establecer acuerdos de vesting claros entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
-    "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
-    "Anticipar y discutir en equipo la posibilidad de renegociación de equity al recibir la primera ronda de VC."
+    "Establecer acuerdos claros de consolidación gradual de participaciones entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
+    "Documentar las contribuciones reales de cada cofundador para justificar el reparto de participaciones ante futuros inversores.",
+    "Anticipar y discutir en equipo la posibilidad de renegociación de las participaciones al recibir la primera ronda de capital de riesgo."
   ],
-  "entregable_esperado": "Acuerdo de vesting y documento de justificación de split de equity entre cofundadores.",
+  "entregable_esperado": "Acuerdo de consolidación gradual de participaciones y documento de justificación del reparto de participaciones entre cofundadores.",
   "nodos_previos": [
     "preferencia_de_liquidacion",
     "vesting_dinamico",
@@ -62,6 +62,75 @@
       "decision": "muestra de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "voz-reasignacion_equity_fundadores-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Establecer acuerdos de vesting claros entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
+      "texto_nuevo": "Establecer acuerdos claros de consolidación gradual de participaciones entre cofundadores desde el inicio, antes de que los inversores lo exijan.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "acuerdos de vesting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reasignacion_equity_fundadores-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documentar las contribuciones reales de cada cofundador para justificar splits de equity ante futuros inversores.",
+      "texto_nuevo": "Documentar las contribuciones reales de cada cofundador para justificar el reparto de participaciones ante futuros inversores.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "splits de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reasignacion_equity_fundadores-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anticipar y discutir en equipo la posibilidad de renegociación de equity al recibir la primera ronda de VC.",
+      "texto_nuevo": "Anticipar y discutir en equipo la posibilidad de renegociación de las participaciones al recibir la primera ronda de capital de riesgo.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "renegociación de equity",
+          "ronda de VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reasignacion_equity_fundadores-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Acuerdo de vesting y documento de justificación de split de equity entre cofundadores.",
+      "texto_nuevo": "Acuerdo de consolidación gradual de participaciones y documento de justificación del reparto de participaciones entre cofundadores.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Acuerdo de vesting",
+          "de split de equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

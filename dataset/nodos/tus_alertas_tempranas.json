@@ -24,7 +24,7 @@
     "cuando tienes planes de emergencia pero no sabes cuándo activarlos",
     "cuando un riesgo se volvió problema sin que lo vieras venir"
   ],
-  "etiqueta_arbol": "Tus Alertas Tempranas",
+  "etiqueta_arbol": "Define Alertas Tempranas para tus Riesgos",
   "correcciones": [
     {
       "id": "fidelidad-t5-016",
@@ -59,6 +59,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la señal más temprana puede dar falsas alarmas y pide sopesar urgencia contra ese costo.; Mismo matiz que la marca 0.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-tus_alertas_tempranas-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tus Alertas Tempranas",
+      "texto_nuevo": "Define Alertas Tempranas para tus Riesgos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Tus Alertas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

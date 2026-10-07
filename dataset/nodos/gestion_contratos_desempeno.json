@@ -9,7 +9,7 @@
     "Establecer indicadores de desempeño (KPIs) alineados al contrato",
     "Recolectar datos de desempeño de proveedores de forma rutinaria",
     "Notificar y exigir corrección a proveedores que de forma constante no cumplen niveles acordados",
-    "Evaluar implementar Vendor-Managed Inventory (VMI) para proveedores estratégicos"
+    "Evaluar implementar un inventario gestionado por el proveedor para proveedores estratégicos"
   ],
   "entregable_esperado": "Sistema de seguimiento de KPIs de proveedores con reportes periódicos de cumplimiento",
   "nodos_previos": [
@@ -86,6 +86,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide avisar y pedir corrección al proveedor que queda por debajo de forma constante, no ante cualquier falla.; Mismo defecto: se pierde la condición de incumplimiento consistente.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gestion_contratos_desempeno-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar implementar Vendor-Managed Inventory (VMI) para proveedores estratégicos",
+      "texto_nuevo": "Evaluar implementar un inventario gestionado por el proveedor para proveedores estratégicos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Vendor-Managed Inventory (VMI)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

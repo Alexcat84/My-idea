@@ -19,7 +19,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando necesitas identificar de qué tipo es cada sistema de tu negocio, antes de poder innovarlo, cuantificarlo y orquestarlo para desarrollar tu negocio."
+    "Cuando necesitas identificar de qué tipo es cada sistema de tu negocio, antes de poder innovarlo, cuantificarlo, orquestarlo e integrarlo para desarrollar tu negocio."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -331,6 +331,23 @@
       "motivos": [
         "regionalismo"
       ]
+    },
+    {
+      "id": "condiciones-resto-distinguir_tres_tipos_sistemas_negocio-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando necesitas identificar de qué tipo es cada sistema de tu negocio, antes de poder innovarlo, cuantificarlo y orquestarlo para desarrollar tu negocio.",
+      "texto_nuevo": "Cuando necesitas identificar de qué tipo es cada sistema de tu negocio, antes de poder innovarlo, cuantificarlo, orquestarlo e integrarlo para desarrollar tu negocio.",
+      "cita": {
+        "libro": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+        "fichero": "fuentes/gerber_emyth/cap_19.md",
+        "lineas": "42",
+        "frase": "The Innovation, Quantification, Orchestration, and integration of these three kinds of systems"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c04): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "etiqueta_arbol": "Distingue tus Tres Sistemas",

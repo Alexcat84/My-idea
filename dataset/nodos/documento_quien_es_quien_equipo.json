@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Listar a todos los miembros del equipo que interactuarán con el cliente.",
     "Especificar responsabilidades y el tipo de consulta que debe dirigirse a cada persona.",
-    "Incluir fotos y detalles personales (hobbies, intereses) para generar cercanía.",
+    "Incluir fotos y detalles personales (pasatiempos, intereses) para generar cercanía.",
     "Enviar el documento dentro de las primeras semanas de la relación contractual.",
     "Establecer un mecanismo de escalamiento claro para problemas mayores.",
     "Complementar con encuestas periódicas de satisfacción (pulso del cliente)."
   ],
-  "entregable_esperado": "Email y/o PDF con perfil de cada miembro del equipo, sus responsabilidades y protocolo de escalamiento.",
+  "entregable_esperado": "Correo electrónico y/o PDF con perfil de cada miembro del equipo, sus responsabilidades y protocolo de escalamiento.",
   "nodos_previos": [
     "fase_acclimate_experiencia_cliente"
   ],
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Presenta a tu Equipo de Atención",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-documento_quien_es_quien_equipo-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Incluir fotos y detalles personales (hobbies, intereses) para generar cercanía.",
+      "texto_nuevo": "Incluir fotos y detalles personales (pasatiempos, intereses) para generar cercanía.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "hobbies"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-documento_quien_es_quien_equipo-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Email y/o PDF con perfil de cada miembro del equipo, sus responsabilidades y protocolo de escalamiento.",
+      "texto_nuevo": "Correo electrónico y/o PDF con perfil de cada miembro del equipo, sus responsabilidades y protocolo de escalamiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Email"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

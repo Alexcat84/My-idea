@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "En Agile-Stage-Gate, el plan de producto (backlog) y el cronograma se crean al inicio de una etapa como estimaciones tentativas de alto nivel, no como planes fijos. A medida que el proyecto avanza y la incertidumbre disminuye, estos elementos se actualizan y validan constantemente, volviéndose más estables hacia el final de la etapa de Desarrollo. Esto contrasta con la planificación tradicional tipo Gantt donde todo se fija desde el inicio.",
   "pasos_accionables": [
-    "Crear un backlog de producto inicial basado en las mejores estimaciones disponibles al aprobar el proyecto",
+    "Crear un plan de producto inicial basado en las mejores estimaciones disponibles al aprobar el proyecto",
     "Generar un cronograma tentativo de alto nivel (no un Gantt detallado y fijo)",
     "Estimar un presupuesto inicial reconociendo que cambiará",
     "Revisar y actualizar el backlog y cronograma en cada sprint o iteración",
@@ -31,5 +31,24 @@
   "etiqueta_arbol": "Ajusta tu Plan Gradualmente",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-backlog_evolutivo_y_cronograma_flexible-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear un backlog de producto inicial basado en las mejores estimaciones disponibles al aprobar el proyecto",
+      "texto_nuevo": "Crear un plan de producto inicial basado en las mejores estimaciones disponibles al aprobar el proyecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "backlog"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

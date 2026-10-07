@@ -28,7 +28,7 @@
   "condiciones_activacion": [
     "Vas a empezar a enviar un producto nuevo y no sabes que tipo de caja comprar.",
     "Has tenido devoluciones por daño y no sabes si el problema es el empaque o el contenido.",
-    "Sospechas que tu producto podría clasificar como mercancía peligrosa, como perfumes o baterías."
+    "Sospechas que tu producto podría clasificar como mercancía peligrosa, como perfumes o equipos electrónicos."
   ],
   "etiqueta_arbol": "Evalúa antes de empacar",
   "correcciones": [
@@ -256,6 +256,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "condiciones-resto-revisar_necesidades_de_empaque-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sospechas que tu producto podría clasificar como mercancía peligrosa, como perfumes o baterías.",
+      "texto_nuevo": "Sospechas que tu producto podría clasificar como mercancía peligrosa, como perfumes o equipos electrónicos.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "69",
+        "frase": "food flavoring, perfumes, chemicals and electronic equipment can be classified as dangerous goods"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

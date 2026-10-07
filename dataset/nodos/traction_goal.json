@@ -7,14 +7,14 @@
   "resumen_teorico": "Un objetivo de tracción explícito y cuantificable que guía todas las decisiones estratégicas del startup (ej. 1,000 clientes pagos, 10% del mercado). Debe estar alineado con la estrategia de la empresa y representar un hito que cambie significativamente el destino del negocio (rentabilidad, levantamiento de capital, liderazgo de mercado). A partir de este objetivo se derivan subobjetivos cuantitativos y con fecha límite.",
   "pasos_accionables": [
     "Define un objetivo de tracción cuantificable y significativo para tu etapa actual de negocio, en números concretos como cantidad de clientes y tasa de crecimiento mensual",
-    "Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs fundraising)",
+    "Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs levantamiento de capital)",
     "Desglosa el objetivo en subobjetivos cuantitativos con fechas límite (ej. 20% de crecimiento mensual)",
     "Coloca estos subobjetivos en el calendario junto a los hitos de producto",
-    "Reevalúa el traction goal cuando cambie de fase (I, II, III)",
-    "Evalúa cada actividad de marketing preguntando si mueve la aguja hacia esa meta",
+    "Reevalúa el objetivo de tracción cuando cambie de fase (I, II, III)",
+    "Evalúa cada actividad de marketing preguntando si te acerca de verdad a esa meta",
     "Antes de invertir en un canal, calcula si el volumen potencial de ese canal puede acercarte realmente a tu meta."
   ],
-  "entregable_esperado": "Documento con el traction goal principal, su justificación estratégica, y subobjetivos cuantitativos con fechas",
+  "entregable_esperado": "Documento con el objetivo de tracción principal, su justificación estratégica, y subobjetivos cuantitativos con fechas",
   "nodos_previos": [
     "despliegue_metas",
     "regla_50_por_ciento",
@@ -49,5 +49,74 @@
   ],
   "fuentes_internas": [
     "Traction - Gabriel Weinberg"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-traction_goal-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs fundraising)",
+      "texto_nuevo": "Verifica que el objetivo esté alineado con tu estrategia general (crecimiento vs rentabilidad vs levantamiento de capital)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fundraising"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-traction_goal-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reevalúa el traction goal cuando cambie de fase (I, II, III)",
+      "texto_nuevo": "Reevalúa el objetivo de tracción cuando cambie de fase (I, II, III)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "traction goal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-traction_goal-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalúa cada actividad de marketing preguntando si mueve la aguja hacia esa meta",
+      "texto_nuevo": "Evalúa cada actividad de marketing preguntando si te acerca de verdad a esa meta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mueve la aguja"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-traction_goal-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Documento con el traction goal principal, su justificación estratégica, y subobjetivos cuantitativos con fechas",
+      "texto_nuevo": "Documento con el objetivo de tracción principal, su justificación estratégica, y subobjetivos cuantitativos con fechas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "traction goal"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

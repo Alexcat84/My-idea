@@ -22,7 +22,7 @@
     "reinicio_programa_calidad"
   ],
   "condiciones_activacion": [
-    "Cuando sientes que evalúas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
+    "Cuando sientes que evalúas en soledad la calidad del trabajo de otros, sin con quien contrastarlo",
     "Si necesitas mantener un criterio consistente en distintas áreas o partes de tu negocio",
     "Si manejas varias sucursales o negocios y falta intercambio de experiencias entre ellos"
   ],
@@ -179,6 +179,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro solo dice que la membresía no se restringe por rango; la experiencia y 'quien quiera aportar' no están.; Mismo defecto: abre el consejo a cualquiera y añade la experiencia.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-consejos_de_calidad-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando sientes que evalúas la calidad de tu trabajo en soledad, sin con quien contrastarlo",
+      "texto_nuevo": "Cuando sientes que evalúas en soledad la calidad del trabajo de otros, sin con quien contrastarlo",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "3381-3383",
+        "frase": "the essential personal characteristic of one who evaluates another's work"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c04): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

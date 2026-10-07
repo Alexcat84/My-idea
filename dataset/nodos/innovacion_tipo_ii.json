@@ -19,9 +19,9 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto o servicio",
+    "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto, un servicio, una estrategia de mercadeo o una tarea parecida",
     "Cuando se requiere romper esquemas mentales limitantes ('pensar fuera de la caja')",
-    "Cuando no se dispone de recursos para innovación tipo I (revolucionaria) y se busca innovación incremental efectiva"
+    "Cuando no se puede depender de un genio ni de un golpe de suerte para lograr innovación tipo I (revolucionaria) y se busca un camino más sencillo que también puede lograr avances drásticos"
   ],
   "etiqueta_arbol": "Agranda, Achica o Combina",
   "ids_alias": [
@@ -89,6 +89,40 @@
         "motivo": "La tecnica se usa en sesiones de brainstorming, cuyas reglas son el paso previo natural."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    },
+    {
+      "id": "condiciones-resto-innovacion_tipo_ii-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto o servicio",
+      "texto_nuevo": "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto, un servicio, una estrategia de mercadeo o una tarea parecida",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15942",
+        "frase": "need an innovation for a new product, service, marketing strategy, or similar task"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-innovacion_tipo_ii-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando no se dispone de recursos para innovación tipo I (revolucionaria) y se busca innovación incremental efectiva",
+      "texto_nuevo": "Cuando no se puede depender de un genio ni de un golpe de suerte para lograr innovación tipo I (revolucionaria) y se busca un camino más sencillo que también puede lograr avances drásticos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "15932",
+        "frase": "The simplicity of type II is profound. It can create dramatic breakthroughs"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): contrario/invencion_dura; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

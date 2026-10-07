@@ -9,8 +9,8 @@
     "Mapear todas las capas de defensa del sistema (barreras físicas, sistemas de protección, procedimientos), clasificándolas en las siete funciones defensivas",
     "Evaluar si existen dependencias ocultas entre capas que se asumen independientes",
     "Implementar mecanismos de detección temprana de fallas latentes antes de que se acumulen",
-    "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa",
-    "Evaluar el balance entre defensas duras y blandas existentes.",
+    "Revisar si la confianza en las múltiples defensas ha generado relajación operativa",
+    "Evaluar el equilibrio entre defensas duras y blandas existentes.",
     "Identificar funciones defensivas ausentes o débiles en el sistema.",
     "Antes de añadir redundancia entre capas, evaluar si volverá el sistema más complejo y opaco o si un mismo error podría hacer fallar varias capas a la vez"
   ],
@@ -34,7 +34,7 @@
     "Cuando el sistema depende de múltiples capas de protección redundantes",
     "Si ha ocurrido un accidente donde fallaron varias defensas simultáneamente"
   ],
-  "etiqueta_arbol": "Cuidado con Ocultar Riesgos",
+  "etiqueta_arbol": "Vigila lo que Ocultan tus Defensas",
   "ids_alias": [
     "defensas_en_profundidad",
     "defensas_en_profundidad_2"
@@ -99,6 +99,54 @@
       },
       "decision": "barrido 2: sale la atribucion y queda el consejo con el alcance que da el libro; reescrito con su matiz y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-defensas_en_profundidad_3-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuidado con Ocultar Riesgos",
+      "texto_nuevo": "Vigila lo que Ocultan tus Defensas",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v04)",
+        "evidencia": "La etiqueta sugiere que tú ocultas riesgos y no empieza por verbo en segunda persona; el concepto trata de los errores que esconden las capas de defensa, que es lo que dice la nueva."
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-defensas_en_profundidad_3-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar si la confianza en las múltiples defensas ha generado complacencia operativa",
+      "texto_nuevo": "Revisar si la confianza en las múltiples defensas ha generado relajación operativa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "complacencia operativa"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-defensas_en_profundidad_3-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el balance entre defensas duras y blandas existentes.",
+      "texto_nuevo": "Evaluar el equilibrio entre defensas duras y blandas existentes.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el balance entre"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

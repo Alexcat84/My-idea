@@ -10,7 +10,7 @@
     "Calcular promedio y rango/desviación estándar de cada subgrupo",
     "Graficar X-bar y R (o s) uno encima del otro en la misma línea vertical temporal",
     "Por lo general, interpretar primero el gráfico R/s antes que el X-bar",
-    "Identificar patrones no aleatorios usando las pruebas de Nelson (8 tests con zonas de 1σ)"
+    "Identificar patrones no aleatorios usando las pruebas de Nelson (8 pruebas con zonas de 1σ)"
   ],
   "entregable_esperado": "Par de gráficos X-bar y R/s completos con interpretación de causas especiales identificadas",
   "nodos_previos": [
@@ -43,6 +43,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que usualmente se interpreta primero el R/s; el paso lo vuelve regla.; Mismo endurecimiento del 'usually' del libro.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-graficos_control_variables-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar patrones no aleatorios usando las pruebas de Nelson (8 tests con zonas de 1σ)",
+      "texto_nuevo": "Identificar patrones no aleatorios usando las pruebas de Nelson (8 pruebas con zonas de 1σ)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "8 tests"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

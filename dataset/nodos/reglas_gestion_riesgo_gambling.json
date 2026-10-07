@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Evaluar el nivel de incertidumbre actual antes de asignar recursos a la siguiente etapa",
     "Dividir tu inversión total en etapas incrementales en vez de comprometer todo el presupuesto de una vez",
-    "Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto",
-    "Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable",
+    "Invertir en investigación de mercado y técnica (voz del cliente, pruebas) para reducir la incertidumbre antes de aumentar el gasto",
+    "Definir puntos de decisión claros (gates) donde puedas cancelar el proyecto si la información no es favorable",
     "Aumentar el monto invertido solo cuando la incertidumbre haya bajado en la etapa anterior"
   ],
   "entregable_esperado": "Un mapa de riesgo del proyecto que muestre la relación entre incertidumbre y montos invertidos en cada etapa, con puntos de salida definidos",
@@ -84,6 +84,41 @@
         "motivo": "Las reglas de riesgo para nuevos productos no llevan a cadenas de respuesta a desastres."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "voz-reglas_gestion_riesgo_gambling-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Invertir en investigación de mercado y técnica (VoC, tests) para reducir la incertidumbre antes de aumentar el gasto",
+      "texto_nuevo": "Invertir en investigación de mercado y técnica (voz del cliente, pruebas) para reducir la incertidumbre antes de aumentar el gasto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "VoC",
+          "tests"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-reglas_gestion_riesgo_gambling-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir puntos de decisión claros (gates) donde puedas matar el proyecto si la información no es favorable",
+      "texto_nuevo": "Definir puntos de decisión claros (gates) donde puedas cancelar el proyecto si la información no es favorable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "matar el proyecto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

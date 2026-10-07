@@ -1,0 +1,18 @@
+[
+ {
+  "id": "voz-v04b-preguntas_need_payoff-etiqueta_arbol",
+  "fecha": "2026-10-07",
+  "node_id": "preguntas_need_payoff",
+  "campo": "etiqueta_arbol",
+  "indice": null,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Haz Preguntas de Beneficio",
+  "texto_nuevo": "Pregunta por el Valor de Resolver",
+  "cita": {
+   "instrumento": "guarda de unicidad de etiquetas (web/lib/etiquetasCara.test.ts), acta 15.13",
+   "evidencia": "la correccion de voz-v04 le dio la misma etiqueta que su nodo gemelo preguntas_beneficio; esta dice lo mismo que el resumen (el cliente expresa el valor de resolver su problema) sin chocar"
+  },
+  "decision": "saneamiento continuo de la voz (ola v04, suplemento): etiqueta distinta de la de su gemelo, fiel al resumen del nodo",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

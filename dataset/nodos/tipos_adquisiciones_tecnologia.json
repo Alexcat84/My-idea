@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica qué te están comprando realmente: la gente, el producto o el negocio completo",
     "Ajusta lo que esperas de valor según cuál de las tres categorías te ofrecen",
-    "Prepara la documentación financiera que corresponda, con las métricas de negocio si aplica."
+    "Prepara la documentación financiera que corresponda, con las métricas de negocio si es el caso."
   ],
   "entregable_esperado": "Tener claro qué tipo de oferta de compra recibiste y qué rango de valor esperar según esa categoría",
   "nodos_previos": [
@@ -114,6 +114,23 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 2,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-tipos_adquisiciones_tecnologia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prepara la documentación financiera que corresponda, con las métricas de negocio si aplica.",
+      "texto_nuevo": "Prepara la documentación financiera que corresponda, con las métricas de negocio si es el caso.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "si aplica"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -25,7 +25,7 @@
     "desarrollo_presentacion_problema"
   ],
   "condiciones_activacion": [
-    "Cuando estás listo para iniciar la fase de Descubrimiento de Clientes (Customer Discovery) y necesitas programar entrevistas reales con clientes"
+    "Cuando ya formulaste las hipótesis de tu modelo de negocio en el Descubrimiento de Clientes (Customer Discovery), estás listo para salir a probarlas y necesitas programar entrevistas reales con clientes"
   ],
   "etiqueta_arbol": "Prepara tu Lista de Clientes",
   "fuentes_internas": [
@@ -81,6 +81,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el libro el mensaje introductorio explica el motivo de la llamada que vendrá después y advierte que agendar solo por correo es mucho menos eficaz; el paso pierde la llamada.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-preparar_contacto_clientes-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando estás listo para iniciar la fase de Descubrimiento de Clientes (Customer Discovery) y necesitas programar entrevistas reales con clientes",
+      "texto_nuevo": "Cuando ya formulaste las hipótesis de tu modelo de negocio en el Descubrimiento de Clientes (Customer Discovery), estás listo para salir a probarlas y necesitas programar entrevistas reales con clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "19928",
+        "frase": "In this phase you'll turn those hypotheses into facts by getting out of the building"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c05): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

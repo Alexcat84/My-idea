@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando una organización lleva tiempo operando sin incidentes graves y desea evaluar su riesgo real",
-    "Cuando se investigan las causas raíz sistémicas de un accidente"
+    "Cuando se investigan las causas sistémicas de un accidente"
   ],
   "etiqueta_arbol": "Evita el Desvío al Fallo",
   "fuentes_internas": [
@@ -44,6 +44,23 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "condiciones-resto-drift_hacia_el_fallo-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se investigan las causas raíz sistémicas de un accidente",
+      "texto_nuevo": "Cuando se investigan las causas sistémicas de un accidente",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "1942-1946",
+        "frase": "What you call root cause is simply the place where you stop looking"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c04): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

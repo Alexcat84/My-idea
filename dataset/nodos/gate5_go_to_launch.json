@@ -12,7 +12,7 @@
     "Realizar un chequeo de preparación comercial (readiness check)",
     "Aprobar el Plan de Lanzamiento al Mercado y el Plan de Operaciones para su implementación"
   ],
-  "entregable_esperado": "Decisión formal Go/Kill/Hold/Recycle y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+  "entregable_esperado": "Decisión formal (seguir, cancelar, pausar o reciclar) y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
   "nodos_previos": [
     "etapa_testing_validation"
   ],
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Las salidas de una puerta son cuatro (Go/Kill/Hold/Recycle); el entregable pierde Recycle, la opción de devolver el proyecto a rehacer trabajo. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gate5_go_to_launch-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decisión formal Go/Kill/Hold/Recycle y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+      "texto_nuevo": "Decisión formal (seguir, cancelar, pausar o reciclar) y aprobación de los planes de lanzamiento y operaciones para la Etapa 5.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Go/Kill/Hold/Recycle"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

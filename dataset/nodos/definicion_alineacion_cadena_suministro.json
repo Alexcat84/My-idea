@@ -7,9 +7,9 @@
   "resumen_teorico": "Una cadena de suministro es la red de empresas y actividades necesarias para diseñar, fabricar, entregar y usar un producto o servicio. Toda empresa participa en una o más cadenas de suministro y debe entender el rol que juega en ellas. La gestión de la cadena de suministro (SCM) es la coordinación sistémica de producción, inventario, ubicación y transporte entre los participantes para lograr el mejor balance entre capacidad de respuesta y eficiencia según el mercado servido. La estrategia de la empresa (competir por precio vs. por servicio/conveniencia) debe determinar el diseño de su cadena de suministro.",
   "pasos_accionables": [
     "Mapear todas las empresas y actividades que participan en la cadena de suministro de tu producto/servicio.",
-    "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies",
+    "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus competencias clave",
     "Definir si tu estrategia competitiva se basa en precio bajo (requiere eficiencia) o en servicio/conveniencia (requiere capacidad de respuesta).",
-    "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)",
+    "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 factores clave (producción, inventario, ubicación, transporte, información)",
     "Identificar en qué categoría(s) participa tu empresa: productor, distribuidor, minorista, proveedor de servicios",
     "Mapear todos los participantes de tu cadena de suministro actual, incluyendo proveedores del proveedor y clientes del cliente",
     "Determinar qué proveedores de servicios (logística, financieros, TI) podrían mejorar tu eficiencia operativa",
@@ -44,7 +44,7 @@
     "Cuando el usuario está diseñando o rediseñando las operaciones de su negocio.",
     "Cuando el usuario no ha definido claramente su ventaja competitiva operativa."
   ],
-  "etiqueta_arbol": "Conecta tu Red con el Negocio",
+  "etiqueta_arbol": "Alinea tu Suministro con tu Estrategia",
   "ids_alias": [
     "alineacion_cadena_estrategia_negocio"
   ],
@@ -114,6 +114,54 @@
       "decision": "medida 4 de procedencia: procedencia confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion y queda el consejo con el mismo sentido y la misma certeza",
       "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.3"
+    },
+    {
+      "id": "voz-definicion_alineacion_cadena_suministro-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Conecta tu Red con el Negocio",
+      "texto_nuevo": "Alinea tu Suministro con tu Estrategia",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v04)",
+        "evidencia": "'tu Red' sin más sugiere una red de contactos, no la cadena de suministro; el concepto trata de que la estrategia determine el diseño del suministro, y la nueva etiqueta dice eso en seis palabras."
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-definicion_alineacion_cadena_suministro-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus core competencies",
+      "texto_nuevo": "Identificar tu rol específico dentro de esa cadena (proveedor, fabricante, distribuidor, etc.), y sus competencias clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "core competencies"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-definicion_alineacion_cadena_suministro-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 drivers (producción, inventario, ubicación, transporte, información)",
+      "texto_nuevo": "Alinear las decisiones de producción, inventario, ubicación y transporte con esa estrategia elegida, que son los 5 factores clave (producción, inventario, ubicación, transporte, información)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "drivers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -10,7 +10,7 @@
     "Listar las características candidatas del producto como columnas",
     "Marcar la relación (ninguna, moderada, fuerte, muy fuerte) entre cada característica y cada necesidad",
     "Verificar que cada necesidad prioritaria esté cubierta por al menos una característica",
-    "Verificar que cada característica sea necesaria (removerla dejaría una necesidad sin cubrir)"
+    "Verificar que cada característica sea necesaria (quitarla dejaría una necesidad sin cubrir)"
   ],
   "entregable_esperado": "Hoja de cálculo completa de diseño de producto vinculando necesidades, mediciones y características",
   "nodos_previos": [
@@ -46,6 +46,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro pide documentar que el impacto total probablemente sea suficiente; el nodo lo vuelve certeza.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-product_design_spreadsheet-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Verificar que cada característica sea necesaria (removerla dejaría una necesidad sin cubrir)",
+      "texto_nuevo": "Verificar que cada característica sea necesaria (quitarla dejaría una necesidad sin cubrir)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "removerla"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v04): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
