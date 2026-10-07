@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Crítica de tu Plan con IA",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Aquí se usa a la IA como crítico del plan propio, porque cualquier plan se beneficia de la crítica, aunque solo sea porque da permiso para hablar de lo que podría salir mal. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas en que podría fallar, una visión de cómo sería el éxito, y la voz de tres personas conocidas que lo critiquen a su manera.",
+  "resumen_teorico": "Pon a la IA a criticar tu propio plan. Toda crítica le sirve a un plan, aunque lo único que aporte sea abrir la puerta a conversar sobre lo que podría fallar. Explícale el plan con detalle y pídele que lo ataque: que te dé maneras concretas en que podría fracasar, que te pinte cómo se vería el éxito y que le preste su voz a tres personas conocidas para que lo critiquen cada una a su estilo.",
   "pasos_accionables": [
     "Describir el plan o modelo de negocio a la IA con suficiente detalle",
     "Pedir 10 formas específicas en que el plan podría fallar",
@@ -134,6 +134,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 4,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-critica_del_plan_con_ia-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Aquí se usa a la IA como crítico del plan propio, porque cualquier plan se beneficia de la crítica, aunque solo sea porque da permiso para hablar de lo que podría salir mal. Se le describe el plan con detalle y se le pide que lo ataque: formas concretas en que podría fallar, una visión de cómo sería el éxito, y la voz de tres personas conocidas que lo critiquen a su manera.",
+      "texto_nuevo": "Pon a la IA a criticar tu propio plan. Toda crítica le sirve a un plan, aunque lo único que aporte sea abrir la puerta a conversar sobre lo que podría fallar. Explícale el plan con detalle y pídele que lo ataque: que te dé maneras concretas en que podría fracasar, que te pinte cómo se vería el éxito y que le preste su voz a tres personas conocidas para que lo critiquen cada una a su estilo.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "1216",
+        "frase": "Any plan benefits from feedback, even if it just gives you permission"
+      },
+      "decision": "copia fiel (regla D2, ola k16): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

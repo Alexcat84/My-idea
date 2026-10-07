@@ -9,8 +9,8 @@
     "Identificar y señalizar espacios confinados con permiso requerido.",
     "Implementar un programa escrito de espacios confinados.",
     "Realizar pruebas atmosféricas antes y durante la entrada (oxígeno, gases inflamables, tóxicos).",
-    "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
-    "Verificar la comunicación operativa con los servicios de rescate y su disponibilidad antes de cada entrada."
+    "Coloca afuera del espacio, en comunicación constante, a un vigilante con formación y equipamiento cuya única tarea sea seguir el trabajo con la vista, dar la alarma y prestar auxilio.",
+    "Comprueba, antes de cada entrada, que los servicios de rescate estén disponibles y que la comunicación con ellos funcione."
   ],
   "entregable_esperado": "Programa escrito de espacios confinados, señalización instalada y protocolo de rescate verificado.",
   "nodos_previos": [
@@ -76,6 +76,40 @@
       "decision": "auditoria final, muestra de cierre de la etapa 1 (regla de parada) (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide verificar antes de la entrada la comunicación operativa con los servicios de rescate y su disponibilidad; se cae la comunicación.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7 (muestra de cierre)"
+    },
+    {
+      "id": "copia-permit_required_confined_spaces-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asignar un vigilante capacitado y equipado fuera del espacio, dedicado solo a vigilar el trabajo, dar la alarma y prestar ayuda, con comunicación constante.",
+      "texto_nuevo": "Coloca afuera del espacio, en comunicación constante, a un vigilante con formación y equipamiento cuya única tarea sea seguir el trabajo con la vista, dar la alarma y prestar auxilio.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1339-1341",
+        "frase": "A trained and equipped attendant is positioned outside the confined space, whose sole responsibility"
+      },
+      "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-permit_required_confined_spaces-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Verificar la comunicación operativa con los servicios de rescate y su disponibilidad antes de cada entrada.",
+      "texto_nuevo": "Comprueba, antes de cada entrada, que los servicios de rescate estén disponibles y que la comunicación con ellos funcione.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "1351",
+        "frase": "Before entry, operable communications with and availability of rescue services are verified."
+      },
+      "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

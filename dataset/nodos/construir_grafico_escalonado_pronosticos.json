@@ -13,7 +13,7 @@
     "Fíjate en cuánto cambia cada pronóstico respecto del anterior: esa variación puede servirte para adelantarte a la tendencia mejor que un gráfico de tendencia simple.",
     "Por ejemplo, toma el pronóstico de la tasa de pedidos que entran y colócale al lado el mismo pronóstico hecho al mes siguiente, el del mes posterior, y así en adelante.",
     "Saca de él dos lecturas juntas: cómo ves el negocio en cada mes y cuánto cambió esa visión de un mes a otro.",
-    "Compara de forma rutinaria el pronóstico de cualquier mes con los pronósticos posteriores y, al final, con el resultado real.",
+    "Haz una rutina de contrastar lo que pronosticaste para cualquier mes con los pronósticos que vinieron después y, por último, con lo que pasó en realidad.",
     "Usa como indicador de hacia dónde va el negocio cuánto mejora o empeora, de un mes a otro, la perspectiva que pronosticas."
   ],
   "entregable_esperado": "El gráfico con cada pronóstico mensual junto a los anteriores, el número real marcado con asterisco, y leída la variación de un pronóstico al siguiente.",
@@ -397,6 +397,23 @@
       },
       "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-construir_grafico_escalonado_pronosticos-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Compara de forma rutinaria el pronóstico de cualquier mes con los pronósticos posteriores y, al final, con el resultado real.",
+      "texto_nuevo": "Haz una rutina de contrastar lo que pronosticaste para cualquier mes con los pronósticos que vinieron después y, por último, con lo que pasó en realidad.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "93",
+        "frase": "his forecast for any given month will be routinely compared with future"
+      },
+      "decision": "copia fiel (regla D2, ola r1): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
