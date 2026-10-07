@@ -9,9 +9,11 @@ las decisiones del fundador de ese día: la copia fiel (regla D2, sección 8) y 
 
 **Lo que sigue, en este orden, con suscripción normal** (cada punto tiene su sección abajo):
 1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
-2. **Segunda pasada de Voyage** (sección 4). La primera se hizo el 7 oct 2026 por orden del fundador, antes de que
-   se acabara la cuota. Re-embebió 2.706 nodos, con la copia fiel aplicada hasta la tanda k26. Falta otra pasada
-   cuando la copia fiel termine de corregir resúmenes y condiciones; los pasos no entran en el vector.
+2. **Terminar la copia fiel** (sección 8; NO quedó certificada): verificar la ola k31, ya leída; leer 12 lotes de
+   vecindad; reescribir lo retenido; decidir el residuo de resúmenes; medir otra vez.
+   **Después, la segunda pasada de Voyage** (sección 4). La primera se hizo el 7 oct 2026 con la copia fiel hasta
+   k26. Las tandas posteriores que tocan resúmenes (k27, k28, r2, h7) dejan esos vectores atrasados; los pasos no
+   entran en el vector.
 3. **Despliegue**, con el índice de la segunda pasada.
 4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
 5. **Lanzamiento en Google Play** (sección 8).
@@ -253,13 +255,38 @@ rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412
 
 ## 8. Más adelante
 
-- **Copia fiel (regla D2), en curso desde el 7 oct (acta 15.15).** Decisión del fundador: se corrige ya, primero los
-  PASOS de los 3.634 nodos vivos y después los RESÚMENES y las CONDICIONES; se cambia la forma, nunca el contenido.
-  Máquina: `auditoria-final-claves/copia/copia.py` (`estado`, `verificacion <ola>`, `tanda <ola>`, `reescritura <ola>`;
-  instrucciones en `auditoria-final/copia/`). Resúmenes y condiciones van en lotes con los mismos nodos (R### y C###),
-  un lector para los dos. Regla de parada fijada: muestra de 200 nodos con semilla 20261028 (copia, y como control
-  contrarios e invenciones); se cierra si la copia da como mucho 1 cada 20 nodos y contrarios e invenciones 0. Lo que
-  falte al agotarse la cuota queda dicho en el acta 15.15.
+- **Copia fiel (regla D2): parada segura el 7 oct 2026 por cuota; NO certificada (acta 15.15 y 15.16).**
+  - **Hecho y aplicado en main** (todo lo que pasó el verificador ciego está aplicado; no queda nada verificado
+    sin aplicar):
+    - la pasada completa: 728 lotes de pasos, resúmenes y condiciones;
+    - las reescrituras r1 y r2;
+    - la medida 7 con su resultado: copia en 57 de 200 nodos, contrarios 0, invenciones 1;
+    - lo hallado en la medida: la tanda h7 (137 correcciones) y la invención corregida;
+    - las tandas k29 (72) y k30 (666) de la vecindad de los pasos.
+  - **Máquina:** `auditoria-final-claves/copia/copia.py`. Las instrucciones de los agentes están en
+    `auditoria-final/copia/`.
+  - **Lo que queda, en este orden:**
+    1. **Verificar la ola k31 (ya leída, falta verificar).** Son 1.915 propuestas de 32 lotes de la vecindad, en 96
+       paquetes (`auditoria-final/copia/verif/paq_v_k31_01.json` a `_96.json`). Ningún verificador corrió todavía.
+       Esos lotes ya figuran en `verificados.json`, así que `verificacion` no los vuelve a empaquetar: se usan los
+       paquetes que ya existen. El encargo del verificador es el de siempre (`INSTRUCCIONES_VERIFICADOR.md`, salida
+       `verif_v_k31_NN.json`). Después: `python copia.py tanda k31`, aplicar, run_phase1, etiquetas, plan_readiness,
+       sync y commit.
+    2. **Leer los 12 lotes de vecindad que quedaron sin leer:** V063, V067, V075, V076, V078, V079 y V081 a V086. Se
+       pararon a medias y no dejaron salida. El encargo del lector va en `docs/ACTA_SANEAMIENTO_FINAL.md` 15.16:
+       `INSTRUCCIONES_LECTOR.md` más la vara de la medida. Después: `verificacion k32`, verificadores, `tanda k32` y
+       aplicar.
+    3. **Reescribir lo que no sostuvo:** `python copia.py reescritura r3 k29` toma lo retenido de k29 en adelante: 5
+       de k29, 111 de k30 y lo que dejen k31 y k32. Después: `verificacion_r r3`, verificadores, `tanda r3` y aplicar.
+       Los 6 retenidos de h7 se le añaden aparte o quedan como residuo.
+    4. **Decisión del fundador sobre los resúmenes:** su vecindad abarca 2.154 nodos, casi todos. Si se corre, es una
+       segunda pasada completa, y la regla no la permite. Si no, se declara el residuo de resúmenes con su intervalo
+       (medida 7: 38 resúmenes con copia confirmada en 21 libros).
+    5. **Medida nueva:** muestra nueva con semilla nueva, fijada en el acta antes de sortear, con la misma máquina
+       (`auditoria-final-claves/medida7/medida7.py`, cambiando la semilla). Después, la segunda pasada de Voyage
+       (sección 4) y el despliegue.
+  - **Ojo con los ids de las tandas:** desde k29, el id lleva la ola (`copia-k29-<nodo>-...`). Sin eso, el aplicador
+    rechaza la tanda entera porque el id choca con una corrección anterior del mismo elemento.
 - **Valoración con pulgares:** que la persona marque si un paso, una pregunta o un plan le sirvió. Son datos para la
   mejora continua, nunca un juicio público.
 - **Mundos sugeridos:** proponer a la persona el mundo que más encaja con lo que contó, sin venderlo como necesario

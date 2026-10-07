@@ -2013,3 +2013,37 @@ queda certificada.**
 3. **La vecindad de los resúmenes** abarca 2.154 nodos, prácticamente todos, porque los 38 resúmenes confirmados están
    repartidos entre 21 libros. Equivale a una segunda pasada completa, que la regla no permite. Queda declarada como
    pendiente en `docs/PROXIMOS_PASOS.md`, para que el fundador decida.
+
+**Encargo del lector de la vecindad** (para que se reproduzca igual): `auditoria-final/copia/INSTRUCCIONES_LECTOR.md`
+más esta vara, escrita en el encargo: *"una frase de más de unas 15 palabras, o dos frases seguidas, que siguen al
+original término a término (traducido al español) es copia aunque cambie alguna palabra suelta; una paráfrasis de
+verdad, con otra estructura y palabras propias, no lo es"*.
+- Cada lote V lleva como trampa una traducción literal de otro pasaje del mismo libro, sacada de las trampas de los
+  lotes P. Va como último elemento del lote, colgada de un nodo de ese libro.
+- Los lectores la cazaron como copia y varios avisaron de que "no pertenece al nodo". Es la trampa, no un defecto del
+  nodo.
+
+### 15.17 Copia fiel: parada segura por cuota (7 oct 2026)
+
+El fundador pidió parar de forma segura antes del 90 % de la cuota.
+
+**Aplicado en main:** todo lo que el verificador ciego sostuvo. No queda ninguna corrección verificada sin aplicar.
+
+| tanda | qué | correcciones aplicadas | no sostienen |
+|---|---|---:|---:|
+| h7 | lo hallado por la medida 7 | 137 | 6 |
+| medida7-invencion | la invención confirmada | 1 | 0 |
+| k29 | vecindad de pasos, lotes V001 a V026 | 72 | 5 |
+| k30 | vecindad de pasos, 15 lotes con mucha copia (Primer Equipo) | 666 | 111 |
+
+**Se paró a medias:**
+- **Ola k31:** 1.915 propuestas de 32 lotes V ya leídos, empaquetadas para el verificador en 96 paquetes. No se
+  verificó ninguna. Lo que el verificador no ha visto no se aplica, así que no entra ninguna.
+- **Lotes V sin leer:** V063, V067, V075, V076, V078, V079 y V081 a V086. Sus lectores se pararon antes de escribir.
+- **Retenidos:** 122 (6 de h7, 5 de k29 y 111 de k30), sin la reescritura r3.
+- **Vecindad de los resúmenes:** pendiente de la decisión del fundador (15.16).
+
+Los pasos para retomar están en `docs/PROXIMOS_PASOS.md`, sección 8.
+
+**La copia fiel no queda certificada.** El residuo de copia en pasos baja con cada tanda de la vecindad, pero no se
+volvió a medir. La medida 7 vale para el estado anterior a h7, k29 y k30.
