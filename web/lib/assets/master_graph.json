@@ -7968,7 +7968,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Ausencia de Valor Verdadero en Mediciones",
-      "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto, aunque los expertos pueden preferir uno por dar resultados más cercanos a lo que se necesita. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
+      "resumen_teorico": "Ninguna medición física tiene un 'valor verdadero' absoluto: el resultado que obtienes depende siempre del método que uses. Ejemplos como la velocidad de la luz o el conteo de un censo muestran que cambiar el método de medición produce un resultado distinto, y ninguno es más 'correcto' que otro en sentido absoluto, aunque puede preferirse uno por dar resultados más cercanos a lo que se necesita. Esto tiene implicaciones profundas para cómo mides la calidad en tu negocio: no existe un promedio de proceso 'real', solo el resultado del método que aplicaste.",
       "pasos_accionables": [
         "Reconocer que cualquier especificación de calidad que uses depende del método de medición que elijas.",
         "Documentar de forma explícita el método que usaste para cada medición que reportes.",
@@ -9755,7 +9755,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "La Brecha de Calidad (Quality Gap) - Modelo de 4 Gaps",
-      "resumen_teorico": "Explica por qué las organizaciones fallan sistemáticamente en satisfacer a sus clientes mediante cuatro brechas componentes: (1) brecha de entendimiento (falta de comprensión de necesidades del cliente), (2) brecha de diseño (diseños no alineados con lo entendido), (3) brecha de proceso (el proceso no es capaz de cumplir el diseño consistentemente), y (4) brecha de operaciones (fallas en cómo se opera y controla el proceso). Quality by Design provee las herramientas para cerrar cada una de estas brechas.",
+      "resumen_teorico": "Explica por qué las organizaciones fallan sistemáticamente en satisfacer a sus clientes mediante cuatro brechas componentes: (1) brecha de entendimiento (falta de comprensión de necesidades del cliente), (2) brecha de diseño (diseños no alineados con lo entendido), (3) brecha de proceso (el proceso no es capaz de cumplir el diseño consistentemente), y (4) brecha de operaciones (fallas en cómo se opera y controla el proceso). El diseño para la calidad provee las herramientas para cerrar cada una de estas brechas.",
       "pasos_accionables": [
         "Evaluar el nivel actual de comprensión de las necesidades reales del cliente",
         "Revisar si los diseños actuales reflejan fielmente esa comprensión",
@@ -10964,7 +10964,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Reacción en Cadena: Calidad, Productividad, Costos y Mercado",
-      "resumen_teorico": "La mejora de la calidad desencadena naturalmente una reacción en cadena: al mejorar la calidad se reduce el desperdicio y el retrabajo, lo que aumenta la productividad, disminuye los costos, permite mejorar la posición competitiva, capturar mercado y generar más empleo. Esta idea, adoptada en Japón desde 1950, contradice la creencia popular de que calidad y productividad son incompatibles.",
+      "resumen_teorico": "La mejora de la calidad desencadena naturalmente una reacción en cadena: al mejorar la calidad se reduce el desperdicio y el retrabajo, lo que aumenta la productividad, disminuye los costos, permite mejorar la posición competitiva, capturar mercado y generar más empleo. Esta idea contradice la creencia popular de que calidad y productividad son incompatibles.",
       "pasos_accionables": [
         "Usa el diagrama de la reacción en cadena como marco mental inicial para pensar tu negocio.",
         "Identifica dónde existe retrabajo o desperdicio que puedas vincular a fallas de calidad.",
@@ -19592,7 +19592,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Sistema de Reconocimiento (Ring of Quality)",
-      "resumen_teorico": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. En ITT se implementó el 'Ring of Quality', un premio nominado por pares (no por subordinados) para reconocer a quienes dieron un apoyo sobresaliente a la calidad durante cinco años o lograron un acto sensacional, específico y único. La reacción a estos premios dejó claro que el reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) funciona mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
+      "resumen_teorico": "El reconocimiento es el cuarto pilar del programa de calidad y a menudo se pasa por alto o se hace mal. Un recurso es un premio nominado por pares (no por subordinados) para reconocer a quienes dieron un apoyo sobresaliente a la calidad durante cinco años o lograron un acto sensacional, específico y único. El reconocimiento simbólico y ceremonial (entregado por el presidente corporativo) puede funcionar mejor que las recompensas monetarias, que no son lo bastante personales para reconocer de verdad.",
       "pasos_accionables": [
         "Diseñar un sistema de nominación entre pares, excluyendo nominaciones de subordinados hacia superiores.",
         "Definir criterios claros: apoyo sostenido durante años o un logro específico y sobresaliente.",
@@ -23405,9 +23405,9 @@
       "titulo_concepto": "Gráficos de Control de Shewhart",
       "resumen_teorico": "Los gráficos de control son herramientas estadísticas que permiten distinguir entre variación de causa común y causa especial en un proceso. Se dividen en dos categorías: gráficos de variables (datos continuos medibles) y gráficos de atributos (datos de conteo). Los límites de control se establecen típicamente en ±3 desviaciones estándar de la línea central, calculados a partir de 20-30 muestras (subgrupos racionales) recolectadas previamente.",
       "pasos_accionables": [
-        "Seleccionar el tipo de gráfico adecuado según el tipo de dato (Fig. 19.23 Roadmap)",
+        "Seleccionar el tipo de gráfico adecuado según el tipo de dato",
         "Recolectar 20-30 subgrupos racionales antes de establecer límites",
-        "Calcular límites de control usando fórmulas basadas en ±3σ (Tabla 19.3)",
+        "Calcular límites de control usando fórmulas basadas en ±3σ",
         "Graficar los datos en orden temporal de producción",
         "Interpretar los resultados y definir acciones para el personal de producción",
         "Retirar muchos de los gráficos una vez cumplido su propósito y enfocar el esfuerzo en otras características"
@@ -43561,7 +43561,7 @@
       "fase_proyecto": "planificacion",
       "dominio": "quality",
       "titulo_concepto": "Educación Masiva en Métodos Estadísticos para la Calidad",
-      "resumen_teorico": "En la experiencia japonesa, el conocimiento estadístico para mejorar la calidad llegó a todos los que participaban en el negocio, no solo a quien decide. JUSE (Union of Japanese Scientists and Engineers) capacitó a 14,700 ingenieros y a miles de supervisores entre 1950 y 1970 en métodos estadísticos básicos y avanzados, incluido el uso de gráficos de control. Como las barreras que impiden sentir orgullo por el trabajo bien hecho eran nulas o escasas, hasta quienes hacían el trabajo operativo podían aprender y aplicar estas herramientas.",
+      "resumen_teorico": "El conocimiento estadístico para mejorar la calidad puede llegar a todos los que participan en el negocio, no solo a quien decide: la capacitación en métodos estadísticos básicos y avanzados, incluido el uso de gráficos de control, puede extenderse a ingenieros y supervisores. Cuando las barreras que impiden sentir orgullo por el trabajo bien hecho son nulas o escasas, hasta quienes hacen el trabajo operativo pueden aprender y aplicar estas herramientas.",
       "pasos_accionables": [
         "Diseñar una capacitación en métodos estadísticos para ti y para cada persona que trabaja contigo, sin importar la tarea que haga",
         "Eliminar cualquier barrera que impida que quien hace el trabajo se sienta orgulloso de hacerlo bien",
@@ -65996,7 +65996,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Gráficos de Control Individuales para Retroalimentación al Trabajador",
-      "resumen_teorico": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo formó parte del programa que, en el caso de la fábrica de medias, logró mejoras dramáticas sin nuevo equipo ni personal adicional.",
+      "resumen_teorico": "Proveer a cada operario su propio gráfico de control permite que perciba semana a semana su desempeño real, motivando la mejora personal y revelando problemas ocultos (como deficiencias visuales o falta de capacitación) que antes no se detectaban. Este mecanismo puede formar parte de un programa que logre mejoras dramáticas sin nuevo equipo ni personal adicional.",
       "pasos_accionables": [
         "Establecer un sistema de inspección diario o periódico por trabajador",
         "Calcular y graficar el porcentaje de defectos por trabajador a lo largo del tiempo",
@@ -73527,7 +73527,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Just Do Its (JDI) - Soluciones Rápidas sin Análisis Formal",
-      "resumen_teorico": "Los JDI son acciones correctivas implementadas sin un análisis formal de causa raíz, porque esta resulta obvia por observación directa ('destello cegador de lo obvio'). Se aplican cuando la urgencia es alta, el costo de fallar es bajo y el potencial beneficio es significativo, como ilustra el caso histórico de John Snow y la epidemia de cólera en Londres (1854).",
+      "resumen_teorico": "Los JDI son acciones correctivas implementadas sin un análisis formal de causa raíz, porque esta resulta obvia por observación directa. Se aplican cuando la urgencia es alta, el costo de fallar es bajo y el potencial beneficio es significativo.",
       "pasos_accionables": [
         "Observar el problema y detectar si la causa es evidente sin necesidad de análisis profundo",
         "Verificar que exista urgencia real para actuar",
@@ -76901,7 +76901,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Programa de Mantenimiento Preventivo Basado en Voz del Cliente",
-      "resumen_teorico": "El caso de la División de Equipos Motorizados de Madison ilustra cómo, ante quejas de calidad de servicio, un equipo puede recopilar información directa de sus clientes internos (entrevistas y cuestionarios), mapear el proceso mediante diagramas de flujo, medir tiempos de cada etapa, y comparar el costo de reparar fallos versus prevenirlos. La conclusión del equipo fue instituir un programa integral de mantenimiento preventivo, y la evidencia cuantitativa (comparación de costos) es una herramienta poderosa para convencer a la dirección de invertir en prevención.",
+      "resumen_teorico": "Ante quejas de calidad de servicio, un equipo puede recopilar información directa de sus clientes internos (entrevistas y cuestionarios), mapear el proceso mediante diagramas de flujo, medir tiempos de cada etapa, y comparar el costo de reparar fallos versus prevenirlos. Esa comparación puede llevar a instituir un programa integral de mantenimiento preventivo, y la evidencia cuantitativa (comparación de costos) es una herramienta poderosa para convencer a la dirección de invertir en prevención.",
       "pasos_accionables": [
         "Recopilar quejas y expectativas de los clientes internos o externos mediante entrevistas y encuestas",
         "Elaborar un diagrama de flujo del proceso actual y medir tiempos por etapa",
@@ -85690,7 +85690,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Los Ocho Desperdicios de Lean (Ohno)",
-      "resumen_teorico": "Taiichi Ohno identificó siete tipos de desperdicio en procesos productivos, a los que se ha añadido un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Estos desperdicios existen en la mayoría de los procesos y, si no se atienden, llevan a procesos de bajo desempeño. Debes enfocarte en reducir o eliminar estos desperdicios, típicamente mediante eventos de mejora rápida tipo Kaizen.",
+      "resumen_teorico": "Existen siete tipos de desperdicio en procesos productivos, más un octavo enfocado en el talento no utilizado. Estos son: sobreproducción, espera, transporte, diseño deficiente de procesos, inventario, movimiento, defectos, y creatividad o talento propio subutilizados. Estos desperdicios existen en la mayoría de los procesos y, si no se atienden, llevan a procesos de bajo desempeño. Debes enfocarte en reducir o eliminar estos desperdicios, típicamente mediante eventos de mejora rápida tipo Kaizen.",
       "pasos_accionables": [
         "Mapea el proceso actual identificando cada uno de los ocho tipos de desperdicio",
         "Cuantifica el impacto de cada desperdicio detectado",
@@ -99501,7 +99501,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Prueba de Teorías para Identificar la Causa Raíz",
-      "resumen_teorico": "Proceso iterativo de validación de teorías mediante datos, donde cada teoría se asume falsa hasta que los datos demuestren lo contrario. Se aplican preguntas sucesivas de '¿por qué?' hasta llegar a una causa raíz que sea controlable y no tenga teorías alternativas plausibles pendientes. El ejemplo del Jefferson Memorial ilustra cómo profundizar más allá de síntomas superficiales para hallar la verdadera causa raíz.",
+      "resumen_teorico": "Proceso iterativo de validación de teorías mediante datos, donde cada teoría se asume falsa hasta que los datos demuestren lo contrario. Se aplican preguntas sucesivas de '¿por qué?' hasta llegar a una causa raíz que sea controlable y no tenga teorías alternativas plausibles pendientes. Así se profundiza más allá de síntomas superficiales para hallar la verdadera causa raíz.",
       "pasos_accionables": [
         "Seleccionar las teorías más probables del diagrama de causa-efecto.",
         "Diseñar y recolectar datos específicos para probar cada teoría.",
@@ -101468,7 +101468,7 @@
       "fase_proyecto": "ejecucion",
       "dominio": "quality",
       "titulo_concepto": "Paso 12: Reconocimiento",
-      "resumen_teorico": "Duodécimo paso del programa de catorce pasos. Su propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, que deben poder ayudar a elegir.",
+      "resumen_teorico": "El propósito es apreciar de forma sincera a quienes te ayudan a mejorar. La clave no es el valor del premio, sino el reconocimiento genuino y visible frente a los demás. Las personas no trabajan solo por dinero; una vez fijado el pago, lo que buscan es apreciación real por metas concretas acordadas antes, que deben poder ayudar a elegir.",
       "pasos_accionables": [
         "Arma un sistema simple con tres tipos de reconocimiento: logros grupales de metas a corto plazo, contribuciones individuales sobresalientes y sorteos ocasionales entre los problemas que te reporten, y trata todos los problemas reportados de manera equitativa",
         "Define una frecuencia: reconocimiento individual cada trimestre, logros grupales cada mes, y sorteos de vez en cuando",
