@@ -72,3 +72,20 @@ venta en español. **Nada se cambia sin el visto.**
 - Lo gratis es verdad: la Claridad, el diagnóstico de mundo y Tus Números incluido.
 - Los precios mostrados salen de `precios.ts`. "Si algo falla a mitad, no se cobra nada" coincide con la reserva y su
   liberación.
+
+## Estado tras el encargo del 6 oct 2026 (punto 8)
+
+**Corregidos los 28 medios y bajos** (M1 a M15 y B1 a B13), en los 11 idiomas, con guardas nuevas que impiden volver
+a la promesa:
+- `web/lib/i18n/promesasPortada.test.ts`: ni "plantillas" ni "para siempre"; el precio del plan sale de `PRECIOS`; el
+  dictado depende del navegador.
+- `web/lib/i18n/promesasPublicas.test.ts`: créditos, recargas, documentos y el ciclo de replanteamiento.
+- `web/app/ui/promesasDeCopy.test.ts`: Tus Números, recordatorios solo con el calendario sincronizado, y "incluido"
+  en lugar de "gratis" en las funciones de un plan pagado.
+
+`docs/BANCO_DE_TEXTOS.md` se alineó con los textos nuevos.
+
+**Para el visto del fundador:**
+- El nombre "Riesgos Bajo Control" da a entender control. Solo se cambió su promesa.
+- `tusNumeros.ts`, `compuerta.titulo`, todavía dice "Tus cifras reales". El informe no lo marcaba.
+- Los mockups de `docs/diseno-canon/` conservan las promesas viejas: son errata de canon para Design.

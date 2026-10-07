@@ -26,23 +26,24 @@ Destino: `docs/BANCO_DE_TEXTOS.md` (versionado en el repo).
 - "No es un chatbot, es tu espacio de trabajo."
 - "Un árbol que piensa contigo."
 - "Cuéntame tu idea, o en qué punto estás con ella."
-- "Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito."
-- "Sin plantillas ni formularios. Solo tu idea, en tus palabras."
+- "Escríbela tal como la tienes en mente, o díctala si tu navegador lo permite. Ese es todo el requisito."
+- "Sin formularios ni casillas que llenar. Solo tu idea, en tus palabras." (las preguntas salen de un banco que se adapta: no se promete "sin plantillas"; promesas públicas, 7 oct 2026)
 - "Tu primera idea empieza aquí." (home vacío)
 - Los 6 hitos: **La Chispa · Claridad · La Exploración · Tu Plan · Manos a la Obra · Realizado**
   (el sexto es la celebración; corregido en la AUD-09, que encontró aquí 5)
 - Distintivo final: **Proyecto**
-- Los 9 mundos y sus promesas (fuente: `web/lib/assets/packs_catalog.json`):
-  - Calidad y Confianza: "Que tu cliente confíe, vuelva y te recomiende."
-  - Seguridad y Personas: "Protege a tu gente y a tu negocio de su peor día."
-  - Ambiente y Futuro: "Convierte lo sostenible en ventaja que se nota y se cobra."
-  - Seguridad Digital: "Blinda tus datos, tus cuentas y la confianza de tus clientes."
+- Los 10 mundos y sus promesas (fuente: `web/lib/assets/packs_catalog.json`; corregidas el 7 oct 2026 para que no garanticen resultados):
+  - Calidad y Confianza: "Trabaja la calidad para que tu cliente confíe, vuelva y te recomiende."
+  - Seguridad y Personas: "Prepara a tu gente y a tu negocio para los riesgos de cada día."
+  - Ambiente y Futuro: "Haz de lo sostenible una ventaja que tus clientes puedan ver."
+  - Seguridad Digital: "Un plan para proteger tus datos, tus cuentas y la confianza de tus clientes."
   - Vender al Mundo: "Lleva tu producto a clientes de otros países, con método."
-  - Multiplica tu Negocio: "Convierte tu negocio probado en muchos que funcionan igual."
-  - Riesgos Bajo Control: "Ve venir lo que puede fallar, y decide antes de que decida por ti."
-  - Tu Compra Correcta: "Compra lo que toca, al que toca, al precio que toca."
-  - Del Taller a sus Manos: "Que llegue entero, a tiempo y sin sorpresas de costo."
-- Tus Números: "Tus cifras reales convertidas en margen, punto de equilibrio y escenarios."
+  - Multiplica tu Negocio: "Prepara tu negocio probado para replicarlo con el mismo estándar."
+  - Riesgos Bajo Control: "Anticipa lo que puede fallar y decide antes de que decida por ti."
+  - Tu Compra Correcta: "Elige con método qué comprar, a quién y a qué precio."
+  - Del Taller a sus Manos: "Planea tus entregas para que lleguen enteras, a tiempo y con costos previstos."
+  - Primer Equipo: "Contrata bien, dirige mejor y haz crecer a tu gente." (sin publicar)
+- Tus Números: "Las cifras que nos das, convertidas en margen, punto de equilibrio y escenarios."
 
 ### 2.1 El cierre (proyecto y mundo) — Fase 4.0 §8 / Fase 4.2 §9.2
 

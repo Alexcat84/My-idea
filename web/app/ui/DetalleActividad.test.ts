@@ -149,7 +149,7 @@ describe("DetalleActividad — el chip de cumplimiento es espejo (Fase 4.3.2)", 
     expect(html).toContain("Consigue tu primera venta real"); // etapa
     expect(html).toContain("Identifica un mercado"); // texto
     expect(html).toContain("Tu nota");
-    expect(html).toContain("Registrar tu nota es gratis");
+    expect(html).toContain("Registrar tu nota va incluido");
     expect(html).toContain('role="dialog"');
   });
 });

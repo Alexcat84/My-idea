@@ -16,10 +16,10 @@ const es = {
   organizando: "Organizando tu idea…",
   etiquetaChispa: "Nueva idea · La Chispa",
   cuentameTuIdea: "Cuéntame tu idea",
-  subtitulo: "Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.",
+  subtitulo: "Escríbela tal como la tienes en mente, o díctala si tu navegador lo permite. Ese es todo el requisito.",
   placeholder: "Quiero vender café de especialidad a domicilio en mi barrio…",
   intentarDeNuevo: "Intentar de nuevo",
-  sinPlantillas: "Sin plantillas ni formularios. Solo tu idea, en tus palabras.",
+  sinPlantillas: "Sin formularios ni casillas que llenar. Solo tu idea, en tus palabras.",
   continuar: "Continuar",
 };
 
@@ -37,10 +37,10 @@ const en: typeof es = {
   organizando: "Organizing your idea…",
   etiquetaChispa: "New idea · The Spark",
   cuentameTuIdea: "Tell me your idea",
-  subtitulo: "Type it or dictate it just as you have it in mind. That's all it takes.",
+  subtitulo: "Type it just as you have it in mind, or dictate it if your browser supports it. That's all it takes.",
   placeholder: "I want to deliver specialty coffee to homes in my neighborhood…",
   intentarDeNuevo: "Try again",
-  sinPlantillas: "No templates or forms. Just your idea, in your own words.",
+  sinPlantillas: "No forms or boxes to fill in. Just your idea, in your own words.",
   continuar: "Continue",
 };
 
@@ -57,10 +57,10 @@ const fr: typeof es = {
   organizando: "J'organise ton idée…",
   etiquetaChispa: "Nouvelle idée · L'Étincelle",
   cuentameTuIdea: "Raconte-moi ton idée",
-  subtitulo: "Écris-la ou dicte-la telle que tu l'as en tête. C'est tout ce qu'il faut.",
+  subtitulo: "Écris-la telle que tu l'as en tête, ou dicte-la si ton navigateur le permet. C'est tout ce qu'il faut.",
   placeholder: "Je veux livrer du café de spécialité à domicile dans mon quartier…",
   intentarDeNuevo: "Réessayer",
-  sinPlantillas: "Sans modèles ni formulaires. Juste ton idée, avec tes mots.",
+  sinPlantillas: "Sans formulaires ni cases à remplir. Juste ton idée, avec tes mots.",
   continuar: "Continuer",
 };
 
@@ -77,10 +77,10 @@ const pt: typeof es = {
   organizando: "Organizando sua ideia…",
   etiquetaChispa: "Nova ideia · A Faísca",
   cuentameTuIdea: "Me conte sua ideia",
-  subtitulo: "Escreva ou dite do jeito que ela está na sua cabeça. Só isso já basta.",
+  subtitulo: "Escreva do jeito que ela está na sua cabeça, ou dite se o seu navegador permitir. Só isso já basta.",
   placeholder: "Quero vender café especial com entrega em domicílio no meu bairro…",
   intentarDeNuevo: "Tentar de novo",
-  sinPlantillas: "Sem modelos nem formulários. Só sua ideia, com suas palavras.",
+  sinPlantillas: "Sem formulários nem campos para preencher. Só sua ideia, com suas palavras.",
   continuar: "Continuar",
 };
 
@@ -97,10 +97,10 @@ const de: typeof es = {
   organizando: "Deine Idee wird geordnet…",
   etiquetaChispa: "Neue Idee · Der Funke",
   cuentameTuIdea: "Erzähl mir deine Idee",
-  subtitulo: "Schreib oder diktiere sie so, wie du sie im Kopf hast. Mehr braucht es nicht.",
+  subtitulo: "Schreib sie so, wie du sie im Kopf hast, oder diktiere sie, wenn dein Browser das unterstützt. Mehr braucht es nicht.",
   placeholder: "Ich möchte in meinem Viertel Spezialitätenkaffee nach Hause liefern…",
   intentarDeNuevo: "Noch einmal versuchen",
-  sinPlantillas: "Keine Vorlagen, keine Formulare. Nur deine Idee, in deinen Worten.",
+  sinPlantillas: "Keine Formulare, keine Felder zum Ausfüllen. Nur deine Idee, in deinen Worten.",
   continuar: "Weiter",
 };
 
@@ -117,10 +117,10 @@ const it: typeof es = {
   organizando: "Sto organizzando la tua idea…",
   etiquetaChispa: "Nuova idea · La Scintilla",
   cuentameTuIdea: "Raccontami la tua idea",
-  subtitulo: "Scrivila o dettala così come ce l'hai in mente. Non serve altro.",
+  subtitulo: "Scrivila così come ce l'hai in mente, o dettala se il tuo browser lo consente. Non serve altro.",
   placeholder: "Voglio vendere caffè di specialità a domicilio nel mio quartiere…",
   intentarDeNuevo: "Riprova",
-  sinPlantillas: "Niente modelli né moduli. Solo la tua idea, con parole tue.",
+  sinPlantillas: "Niente moduli né caselle da compilare. Solo la tua idea, con parole tue.",
   continuar: "Continua",
 };
 
@@ -137,10 +137,10 @@ const ja: typeof es = {
   organizando: "アイデアを整理しています…",
   etiquetaChispa: "新しいアイデア · ひらめき",
   cuentameTuIdea: "アイデアを聞かせてください",
-  subtitulo: "頭の中にあるまま、書くか話してください。必要なのはそれだけです。",
+  subtitulo: "頭の中にあるまま書いてください。ブラウザが対応していれば、話して入力することもできます。必要なのはそれだけです。",
   placeholder: "近所でスペシャルティコーヒーの宅配をしたい…",
   intentarDeNuevo: "もう一度試す",
-  sinPlantillas: "テンプレートもフォームもいりません。自分の言葉で、アイデアをそのまま。",
+  sinPlantillas: "記入するフォームも項目もありません。自分の言葉で、アイデアをそのまま。",
   continuar: "続ける",
 };
 
@@ -157,10 +157,10 @@ const zh: typeof es = {
   organizando: "正在整理你的想法…",
   etiquetaChispa: "新想法 · 灵光一闪",
   cuentameTuIdea: "告诉我你的想法",
-  subtitulo: "按你脑子里的样子写下来，或者说出来。只需要这些。",
+  subtitulo: "按你脑子里的样子写下来；如果浏览器支持，也可以说出来。只需要这些。",
   placeholder: "我想在我住的小区做精品咖啡外送…",
   intentarDeNuevo: "再试一次",
-  sinPlantillas: "没有模板，也没有表单。只有你的想法，用你自己的话。",
+  sinPlantillas: "没有表单，也没有要填的栏目。只有你的想法，用你自己的话。",
   continuar: "继续",
 };
 
@@ -177,10 +177,10 @@ const ko: typeof es = {
   organizando: "아이디어를 정리하는 중…",
   etiquetaChispa: "새 아이디어 · 불꽃",
   cuentameTuIdea: "아이디어를 들려주세요",
-  subtitulo: "머릿속에 있는 그대로 쓰거나 말해 주세요. 그거면 충분해요.",
+  subtitulo: "머릿속에 있는 그대로 쓰거나, 브라우저가 지원하면 말해 주세요. 그거면 충분해요.",
   placeholder: "우리 동네에 스페셜티 커피를 배달하고 싶어요…",
   intentarDeNuevo: "다시 시도",
-  sinPlantillas: "템플릿도, 양식도 없어요. 내 말로 쓴 아이디어면 돼요.",
+  sinPlantillas: "채워야 할 양식도 칸도 없어요. 내 말로 쓴 아이디어면 돼요.",
   continuar: "계속",
 };
 
@@ -197,10 +197,10 @@ const ar: typeof es = {
   organizando: "جارٍ ترتيب فكرتكم…",
   etiquetaChispa: "فكرة جديدة · الشرارة",
   cuentameTuIdea: "حدّثوني عن فكرتكم",
-  subtitulo: "اكتبوها أو أملوها كما هي في أذهانكم. هذا كل المطلوب.",
+  subtitulo: "اكتبوها كما هي في أذهانكم، أو أملوها إن كان متصفّحكم يتيح ذلك. هذا كل المطلوب.",
   placeholder: "أريد بيع قهوة مختصة مع التوصيل إلى المنازل في حيّي…",
   intentarDeNuevo: "المحاولة مرة أخرى",
-  sinPlantillas: "بلا قوالب ولا استمارات. فقط فكرتكم، بكلماتكم.",
+  sinPlantillas: "بلا استمارات ولا خانات تملؤونها. فقط فكرتكم، بكلماتكم.",
   continuar: "متابعة",
 };
 
@@ -217,10 +217,10 @@ const hi: typeof es = {
   organizando: "आपका विचार व्यवस्थित हो रहा है…",
   etiquetaChispa: "नया विचार · चिंगारी",
   cuentameTuIdea: "मुझे अपना विचार बताइए",
-  subtitulo: "इसे वैसे ही लिखें या बोलकर लिखवाएँ, जैसा आपके मन में है। बस इतना ही चाहिए।",
+  subtitulo: "इसे वैसे ही लिखें जैसा आपके मन में है, या आपका ब्राउज़र सपोर्ट करे तो बोलकर लिखवाएँ। बस इतना ही चाहिए।",
   placeholder: "मेरा विचार: अपने मोहल्ले में घर-घर स्पेशलिटी कॉफ़ी पहुँचाना…",
   intentarDeNuevo: "फिर से कोशिश करें",
-  sinPlantillas: "न टेम्पलेट, न फ़ॉर्म। सिर्फ़ आपका विचार, आपके शब्दों में।",
+  sinPlantillas: "न फ़ॉर्म, न भरने के लिए खाने। सिर्फ़ आपका विचार, आपके शब्दों में।",
   continuar: "आगे बढ़ें",
 };
 

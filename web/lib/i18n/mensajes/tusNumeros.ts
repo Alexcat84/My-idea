@@ -70,7 +70,7 @@ const es = {
   },
   anadir: "Añadir →",
   todoLoEsencial: "Tienes todo lo esencial. Buen trabajo.",
-  leyGratis: "Añadir o corregir cifras es gratis, siempre: tu tablero se recalcula al momento.",
+  leyGratis: "Añadir o corregir cifras va siempre incluido: tu tablero se recalcula al momento.",
   secciones: {
     deUnVistazo: "De un vistazo",
     barraDeLaVerdad: "La barra de la verdad",
@@ -118,7 +118,7 @@ const es = {
   calculadoPorCodigo: "Calculado por código, sobre tus cifras",
   tusNumerosDeHoy: "Tus números de HOY",
   calculadoConCifrasDel: "· calculado con tus cifras ({{sello}})",
-  corregirGratis: "Corregir mis cifras · gratis",
+  corregirGratis: "Corregir mis cifras · incluido",
 };
 
 const en: typeof es = {
@@ -188,7 +188,7 @@ const en: typeof es = {
   },
   anadir: "Add →",
   todoLoEsencial: "You have all the essentials. Nice work.",
-  leyGratis: "Adding or correcting figures is always free: your dashboard recalculates instantly.",
+  leyGratis: "Adding or correcting figures is always included: your dashboard recalculates instantly.",
   secciones: {
     deUnVistazo: "At a glance",
     barraDeLaVerdad: "The truth bar",
@@ -235,7 +235,7 @@ const en: typeof es = {
   calculadoPorCodigo: "Calculated by code, from your figures",
   tusNumerosDeHoy: "Your numbers TODAY",
   calculadoConCifrasDel: "· calculated with your figures ({{sello}})",
-  corregirGratis: "Correct my figures · free",
+  corregirGratis: "Correct my figures · included",
 };
 
 const fr: typeof es = {
@@ -332,7 +332,7 @@ const fr: typeof es = {
   },
   anadir: "Ajouter →",
   todoLoEsencial: "Tu as tout l'essentiel. Beau travail.",
-  leyGratis: "Ajouter ou corriger des chiffres, c'est gratuit, toujours : ton tableau de bord se recalcule sur-le-champ.",
+  leyGratis: "Ajouter ou corriger des chiffres, c'est toujours inclus : ton tableau de bord se recalcule sur-le-champ.",
   secciones: {
     deUnVistazo: "En un coup d'œil",
     barraDeLaVerdad: "La barre de vérité",
@@ -377,7 +377,7 @@ const fr: typeof es = {
   calculadoPorCodigo: "Calculé par le code, à partir de tes chiffres",
   tusNumerosDeHoy: "Tes chiffres d'AUJOURD'HUI",
   calculadoConCifrasDel: "· calculé avec tes chiffres ({{sello}})",
-  corregirGratis: "Corriger mes chiffres · gratuit",
+  corregirGratis: "Corriger mes chiffres · inclus",
 };
 
 const pt: typeof es = {
@@ -474,7 +474,7 @@ const pt: typeof es = {
   },
   anadir: "Adicionar →",
   todoLoEsencial: "Você tem tudo o que é essencial. Bom trabalho.",
-  leyGratis: "Adicionar ou corrigir valores é sempre grátis: seu painel se recalcula na hora.",
+  leyGratis: "Adicionar ou corrigir valores está sempre incluído: seu painel se recalcula na hora.",
   secciones: {
     deUnVistazo: "De relance",
     barraDeLaVerdad: "A barra da verdade",
@@ -519,7 +519,7 @@ const pt: typeof es = {
   calculadoPorCodigo: "Calculado por código, com base nos seus valores",
   tusNumerosDeHoy: "Seus números de HOJE",
   calculadoConCifrasDel: "· calculado com seus valores ({{sello}})",
-  corregirGratis: "Corrigir meus valores · grátis",
+  corregirGratis: "Corrigir meus valores · incluído",
 };
 
 const de: typeof es = {
@@ -616,7 +616,7 @@ const de: typeof es = {
   },
   anadir: "Ergänzen →",
   todoLoEsencial: "Du hast alles Wesentliche. Gut gemacht.",
-  leyGratis: "Zahlen ergänzen oder korrigieren ist immer kostenlos: Deine Übersicht rechnet sofort neu.",
+  leyGratis: "Zahlen ergänzen oder korrigieren ist immer inklusive: Deine Übersicht rechnet sofort neu.",
   secciones: {
     deUnVistazo: "Auf einen Blick",
     barraDeLaVerdad: "Der Balken der Wahrheit",
@@ -661,7 +661,7 @@ const de: typeof es = {
   calculadoPorCodigo: "Per Code berechnet, aus deinen Zahlen",
   tusNumerosDeHoy: "Deine Zahlen von HEUTE",
   calculadoConCifrasDel: "· berechnet mit deinen Zahlen, Stand: {{sello}}",
-  corregirGratis: "Meine Zahlen korrigieren · kostenlos",
+  corregirGratis: "Meine Zahlen korrigieren · inklusive",
 };
 
 const it: typeof es = {
@@ -758,7 +758,7 @@ const it: typeof es = {
   },
   anadir: "Aggiungi →",
   todoLoEsencial: "Hai tutto l'essenziale. Ottimo lavoro.",
-  leyGratis: "Aggiungere o correggere cifre è gratis, sempre: il tuo cruscotto si ricalcola all'istante.",
+  leyGratis: "Aggiungere o correggere cifre è sempre incluso: il tuo cruscotto si ricalcola all'istante.",
   secciones: {
     deUnVistazo: "A colpo d'occhio",
     barraDeLaVerdad: "La barra della verità",
@@ -803,7 +803,7 @@ const it: typeof es = {
   calculadoPorCodigo: "Calcolato dal codice, sulle tue cifre",
   tusNumerosDeHoy: "I tuoi numeri di OGGI",
   calculadoConCifrasDel: "· calcolato con le tue cifre ({{sello}})",
-  corregirGratis: "Correggi le mie cifre · gratis",
+  corregirGratis: "Correggi le mie cifre · incluso",
 };
 
 const ja: typeof es = {
@@ -900,7 +900,7 @@ const ja: typeof es = {
   },
   anadir: "追加する →",
   todoLoEsencial: "必要な数字はすべてそろいました。いい調子です。",
-  leyGratis: "数字の追加や修正は、いつでも無料です。ダッシュボードはすぐに再計算されます。",
+  leyGratis: "数字の追加や修正は、いつでもプランに含まれています。ダッシュボードはすぐに再計算されます。",
   secciones: {
     deUnVistazo: "ひと目でわかる",
     barraDeLaVerdad: "真実のバー",
@@ -945,7 +945,7 @@ const ja: typeof es = {
   calculadoPorCodigo: "入力した数字をもとに、プログラムで計算",
   tusNumerosDeHoy: "今日時点の数字",
   calculadoConCifrasDel: "· 入力した数字で計算（{{sello}}）",
-  corregirGratis: "数字を修正する · 無料",
+  corregirGratis: "数字を修正する · プランに含む",
 };
 
 const zh: typeof es = {
@@ -1042,7 +1042,7 @@ const zh: typeof es = {
   },
   anadir: "添加 →",
   todoLoEsencial: "关键数字你都有了。干得好。",
-  leyGratis: "添加或修改数字永远免费：你的看板会立即重新计算。",
+  leyGratis: "添加或修改数字始终包含在你的计划中：你的看板会立即重新计算。",
   secciones: {
     deUnVistazo: "一目了然",
     barraDeLaVerdad: "真相条",
@@ -1087,7 +1087,7 @@ const zh: typeof es = {
   calculadoPorCodigo: "由程序根据你的数字计算",
   tusNumerosDeHoy: "你今天的数字",
   calculadoConCifrasDel: "· 基于你的数字计算（{{sello}}）",
-  corregirGratis: "修改我的数字 · 免费",
+  corregirGratis: "修改我的数字 · 已包含",
 };
 
 const ko: typeof es = {
@@ -1184,7 +1184,7 @@ const ko: typeof es = {
   },
   anadir: "추가 →",
   todoLoEsencial: "필요한 건 다 갖췄어요. 잘했어요.",
-  leyGratis: "수치를 추가하거나 고치는 건 언제나 무료예요. 대시보드가 바로 다시 계산돼요.",
+  leyGratis: "수치를 추가하거나 고치는 건 언제나 계획에 포함돼요. 대시보드가 바로 다시 계산돼요.",
   secciones: {
     deUnVistazo: "한눈에 보기",
     barraDeLaVerdad: "진실의 막대",
@@ -1229,7 +1229,7 @@ const ko: typeof es = {
   calculadoPorCodigo: "내 수치를 바탕으로 코드가 계산했어요",
   tusNumerosDeHoy: "오늘의 나의 숫자",
   calculadoConCifrasDel: "· 계산에 쓴 수치: {{sello}}",
-  corregirGratis: "내 수치 고치기 · 무료",
+  corregirGratis: "내 수치 고치기 · 포함",
 };
 
 const ar: typeof es = {
@@ -1326,7 +1326,7 @@ const ar: typeof es = {
   },
   anadir: "إضافة ←",
   todoLoEsencial: "لديكم كل الأساسيات. عمل رائع.",
-  leyGratis: "إضافة الأرقام أو تصحيحها مجانية دائمًا: يُعاد حساب لوحتكم فورًا.",
+  leyGratis: "إضافة الأرقام أو تصحيحها مُضمَّنة دائمًا: يُعاد حساب لوحتكم فورًا.",
   secciones: {
     deUnVistazo: "نظرة سريعة",
     barraDeLaVerdad: "شريط الحقيقة",
@@ -1371,7 +1371,7 @@ const ar: typeof es = {
   calculadoPorCodigo: "محسوبة برمجيًا من أرقامكم",
   tusNumerosDeHoy: "أرقامكم لهذا اليوم",
   calculadoConCifrasDel: "· محسوبة من أرقامكم ({{sello}})",
-  corregirGratis: "تصحيح أرقامي · مجانًا",
+  corregirGratis: "تصحيح أرقامي · مُضمَّن",
 };
 
 const hi: typeof es = {
@@ -1468,7 +1468,7 @@ const hi: typeof es = {
   },
   anadir: "जोड़ें →",
   todoLoEsencial: "आपके पास सारी ज़रूरी जानकारी है। बढ़िया काम।",
-  leyGratis: "आंकड़े जोड़ना या सुधारना हमेशा मुफ़्त है: आपका डैशबोर्ड तुरंत दोबारा गणना करता है।",
+  leyGratis: "आंकड़े जोड़ना या सुधारना हमेशा शामिल है: आपका डैशबोर्ड तुरंत दोबारा गणना करता है।",
   secciones: {
     deUnVistazo: "एक नज़र में",
     barraDeLaVerdad: "सच की पट्टी",
@@ -1513,7 +1513,7 @@ const hi: typeof es = {
   calculadoPorCodigo: "कोड से गणना, आपके आंकड़ों पर",
   tusNumerosDeHoy: "आज के आपके आंकड़े",
   calculadoConCifrasDel: "· आपके आंकड़ों से गणना ({{sello}})",
-  corregirGratis: "मेरे आंकड़े सुधारें · मुफ़्त",
+  corregirGratis: "मेरे आंकड़े सुधारें · शामिल",
 };
 
 export const TUS_NUMEROS: PorIdioma<typeof es> = { es, en, fr, pt, de, it, ja, zh, ko, ar, hi };

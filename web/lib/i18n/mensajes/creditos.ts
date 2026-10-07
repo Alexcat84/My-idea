@@ -31,7 +31,7 @@ const es = {
   proyecto: {
     etiqueta: "Tu proyecto",
     plan: "Tu Plan",
-    planTexto: "Tu viaje completo, de la idea a hacerla realidad: el plan y todo para llevarlo a cabo.",
+    planTexto: "Tu plan completo, de la idea a hacerla realidad, y las herramientas para ejecutarlo. Los ciclos de ajuste para rehacerlo después y los mundos se pagan aparte.",
     cambioRumbo: "Un cambio de rumbo",
     cambioRumboTexto:
       "Cuando la realidad te mueve el plan y necesitas replantear sin empezar de cero: cuentas qué pasó, se conserva lo que ya lograste y tu viaje se rehace desde ahí.",
@@ -41,7 +41,7 @@ const es = {
     "<b>El plan:</b> tus etapas, con sus entregables, tus tareas y tus fechas de un vistazo.",
     "<b>Manos a la Obra:</b> ejecuta tu plan. Marca lo hecho, añade tus notas y ve tu avance en tiempo real. Incluido, siempre.",
     "<b>Tus Números:</b> el tablero de tu idea (margen, punto de equilibrio, escenarios). Corrige cifras y recalcula cuando quieras.",
-    "<b>Tus documentos:</b> tu plan y cada resumen, en archivo y PDF, para leer o guardar.",
+    "<b>Tus documentos:</b> tu plan y cada resumen, en .md para editarlos o en PDF, que guardas desde tu navegador.",
     "<b>Tu bitácora:</b> la historia de tu viaje, cada decisión, guardada en orden.",
   ],
   mundo: {
@@ -88,7 +88,7 @@ const en: typeof es = {
   proyecto: {
     etiqueta: "Your project",
     plan: "Your Plan",
-    planTexto: "Your whole journey, from idea to reality: the plan and everything you need to carry it out.",
+    planTexto: "Your full plan, from idea to reality, plus the tools to carry it out. Adjustment cycles to rework it later, and worlds, are paid for separately.",
     cambioRumbo: "A change of course",
     cambioRumboTexto:
       "When reality shakes up your plan and you need to rethink it without starting over: you share what happened, everything you've achieved is kept, and your journey is rebuilt from there.",
@@ -97,7 +97,7 @@ const en: typeof es = {
     "<b>The plan:</b> your stages, with their deliverables, your tasks, and your dates at a glance.",
     "<b>Get to Work:</b> carry out your plan. Check off what's done, add your notes, and see your progress in real time. Always included.",
     "<b>Your Numbers:</b> your idea's dashboard (margin, break-even point, scenarios). Adjust figures and recalculate whenever you want.",
-    "<b>Your documents:</b> your plan and every summary, as a file and a PDF, to read or keep.",
+    "<b>Your documents:</b> your plan and every summary, as .md to edit or as a PDF you save from your browser.",
     "<b>Your logbook:</b> the story of your journey, every decision, kept in order.",
   ],
   mundo: {
@@ -141,7 +141,7 @@ const fr: typeof es = {
   proyecto: {
     etiqueta: "Ton projet",
     plan: "Ton plan",
-    planTexto: "Ton parcours complet, de l'idée à sa réalisation : le plan et tout ce qu'il faut pour le mener à bien.",
+    planTexto: "Ton plan complet, de l'idée à sa réalisation, et les outils pour le mener à bien. Les cycles d'ajustement pour le refaire plus tard et les mondes se paient à part.",
     cambioRumbo: "Un changement de cap",
     cambioRumboTexto: "Quand la réalité bouscule ton plan et que tu dois le repenser sans repartir de zéro : tu racontes ce qui s'est passé, ce que tu as déjà accompli est conservé, et ton parcours est refait à partir de là.",
   },
@@ -149,7 +149,7 @@ const fr: typeof es = {
     "<b>Le plan :</b> tes étapes, avec leurs livrables, tes tâches et tes dates en un coup d'œil.",
     "<b>À l'ouvrage :</b> passe à l'action avec ton plan. Coche ce qui est fait, ajoute tes notes et vois ton avancement en temps réel. Inclus, toujours.",
     "<b>Tes chiffres :</b> le tableau de bord de ton idée (marge, seuil de rentabilité, scénarios). Corrige des chiffres et recalcule quand tu veux.",
-    "<b>Tes documents :</b> ton plan et chaque résumé, en fichier et en PDF, à lire ou à garder.",
+    "<b>Tes documents :</b> ton plan et chaque résumé, en .md pour les modifier ou en PDF que tu enregistres depuis ton navigateur.",
     "<b>Ton journal de bord :</b> l'histoire de ton parcours, chaque décision, gardée dans l'ordre.",
   ],
   mundo: {
@@ -192,7 +192,7 @@ const pt: typeof es = {
   proyecto: {
     etiqueta: "Seu projeto",
     plan: "Seu Plano",
-    planTexto: "Sua jornada completa, da ideia à realidade: o plano e tudo para colocá-lo em prática.",
+    planTexto: "Seu plano completo, da ideia à realidade, e as ferramentas para colocá-lo em prática. Os ciclos de ajuste para refazê-lo depois e os mundos são pagos à parte.",
     cambioRumbo: "Uma mudança de rumo",
     cambioRumboTexto: "Quando a realidade mexe no seu plano e você precisa repensar sem começar do zero: você conta o que aconteceu, o que já conquistou é mantido e sua jornada é refeita a partir daí.",
   },
@@ -200,7 +200,7 @@ const pt: typeof es = {
     "<b>O plano:</b> suas etapas, com as entregas, suas tarefas e suas datas num relance.",
     "<b>Mãos à Obra:</b> execute seu plano. Marque o que foi feito, adicione suas notas e veja seu avanço em tempo real. Incluído, sempre.",
     "<b>Seus Números:</b> o painel da sua ideia (margem, ponto de equilíbrio, cenários). Corrija valores e recalcule quando quiser.",
-    "<b>Seus documentos:</b> seu plano e cada resumo, em arquivo e PDF, para ler ou guardar.",
+    "<b>Seus documentos:</b> seu plano e cada resumo, em .md para editar ou em PDF, que você salva pelo seu navegador.",
     "<b>Seu diário de bordo:</b> a história da sua jornada, cada decisão, guardada em ordem.",
   ],
   mundo: {
@@ -243,7 +243,7 @@ const de: typeof es = {
   proyecto: {
     etiqueta: "Dein Projekt",
     plan: "Dein Plan",
-    planTexto: "Deine ganze Reise, von der Idee bis zur Wirklichkeit: der Plan und alles, was du brauchst, um ihn umzusetzen.",
+    planTexto: "Dein vollständiger Plan, von der Idee bis zur Wirklichkeit, und die Werkzeuge, um ihn umzusetzen. Anpassungsrunden für spätere Änderungen und Welten werden separat bezahlt.",
     cambioRumbo: "Eine Kurskorrektur",
     cambioRumboTexto: "Wenn die Wirklichkeit deinen Plan durcheinanderbringt und du neu planen musst, ohne bei null anzufangen: Du erzählst, was passiert ist, alles Erreichte bleibt erhalten, und deine Reise wird von dort aus neu aufgebaut.",
   },
@@ -251,7 +251,7 @@ const de: typeof es = {
     "<b>Der Plan:</b> deine Etappen mit ihren Ergebnissen, deine Aufgaben und deine Termine auf einen Blick.",
     "<b>Ans Werk:</b> Setz deinen Plan um. Hak ab, was erledigt ist, füg deine Notizen hinzu und sieh deinen Fortschritt in Echtzeit. Immer inklusive.",
     "<b>Deine Zahlen:</b> die Übersicht deiner Idee (Marge, Gewinnschwelle, Szenarien). Korrigiere Zahlen und rechne neu, wann immer du willst.",
-    "<b>Deine Dokumente:</b> dein Plan und jede Zusammenfassung, als Datei und als PDF, zum Lesen oder Aufbewahren.",
+    "<b>Deine Dokumente:</b> dein Plan und jede Zusammenfassung, als .md zum Bearbeiten oder als PDF, das du über deinen Browser speicherst.",
     "<b>Dein Logbuch:</b> die Geschichte deiner Reise, jede Entscheidung, der Reihe nach festgehalten.",
   ],
   mundo: {
@@ -294,7 +294,7 @@ const it: typeof es = {
   proyecto: {
     etiqueta: "Il tuo progetto",
     plan: "Il tuo piano",
-    planTexto: "Il tuo viaggio completo, dall'idea alla realtà: il piano e tutto ciò che serve per metterlo in pratica.",
+    planTexto: "Il tuo piano completo, dall'idea alla realtà, e gli strumenti per metterlo in pratica. I cicli di aggiustamento per rifarlo più avanti e i mondi si pagano a parte.",
     cambioRumbo: "Un cambio di rotta",
     cambioRumboTexto: "Quando la realtà ti scombina il piano e devi ripensarlo senza ripartire da zero: racconti cos'è successo, ciò che hai già ottenuto resta e il tuo viaggio viene ricostruito da lì.",
   },
@@ -302,7 +302,7 @@ const it: typeof es = {
     "<b>Il piano:</b> le tue tappe, con i loro risultati attesi, le tue attività e le tue date a colpo d'occhio.",
     "<b>Al lavoro:</b> metti in pratica il tuo piano. Segna ciò che hai fatto, aggiungi le tue note e guarda i tuoi progressi in tempo reale. Incluso, sempre.",
     "<b>I tuoi numeri:</b> il cruscotto della tua idea (margine, punto di pareggio, scenari). Correggi le cifre e ricalcola quando vuoi.",
-    "<b>I tuoi documenti:</b> il tuo piano e ogni riepilogo, come file e in PDF, da leggere o conservare.",
+    "<b>I tuoi documenti:</b> il tuo piano e ogni riepilogo, in .md da modificare o in PDF, che salvi dal tuo browser.",
     "<b>Il tuo diario di bordo:</b> la storia del tuo viaggio, ogni decisione, conservata in ordine.",
   ],
   mundo: {
@@ -345,7 +345,7 @@ const ja: typeof es = {
   proyecto: {
     etiqueta: "プロジェクト",
     plan: "あなたのプラン",
-    planTexto: "アイデアを実現するまでの旅のすべて。プランと、それをやり遂げるために必要なものがそろっています。",
+    planTexto: "アイデアを実現するまでの完全なプランと、それを実行するためのツール。あとでプランを作り直す調整サイクルやワールドには、別にポイントが必要です。",
     cambioRumbo: "方向転換",
     cambioRumboTexto: "現実の変化でプランが揺らぎ、ゼロからやり直さずに考え直したいときに。起きたことを伝えれば、これまでの成果はそのままに、そこから旅を組み直します。",
   },
@@ -353,7 +353,7 @@ const ja: typeof es = {
     "<b>プラン：</b>ステージとその成果物、タスク、期日をひと目で。",
     "<b>実行：</b>プランを実行に移します。終えたものにチェックを入れ、メモを残し、進み具合をリアルタイムで確認できます。常に含まれます。",
     "<b>あなたの数字：</b>アイデアのダッシュボード（利益、損益分岐点、シナリオ）。数字を直して、いつでも再計算できます。",
-    "<b>ドキュメント：</b>プランと各まとめを、ファイルとPDFで。読むことも保存することもできます。",
+    "<b>ドキュメント：</b>プランと各まとめを、編集できる.mdで、またはブラウザから保存するPDFで。",
     "<b>活動ログ：</b>あなたの旅の歩みと一つひとつの決定を、順番どおりに保存します。",
   ],
   mundo: {
@@ -396,7 +396,7 @@ const zh: typeof es = {
   proyecto: {
     etiqueta: "你的项目",
     plan: "你的计划",
-    planTexto: "你的完整旅程，从想法到实现：计划，以及把它落地所需的一切。",
+    planTexto: "你的完整计划，从想法到实现，加上执行它的工具。之后重做计划的调整循环和各个世界，需要另外使用点数。",
     cambioRumbo: "一次方向调整",
     cambioRumboTexto: "当现实打乱了你的计划，你需要重新规划又不想从头开始时：你讲讲发生了什么，已经取得的成果都会保留，你的旅程从那里重新搭建。",
   },
@@ -404,7 +404,7 @@ const zh: typeof es = {
     "<b>计划：</b>你的各个阶段及其交付成果、你的任务和日期，一目了然。",
     "<b>动手做：</b>执行你的计划。勾选完成的事，添加笔记，实时查看进度。始终包含。",
     "<b>你的数字：</b>你的想法的看板（利润、盈亏平衡点、情景）。随时修改数字、重新计算。",
-    "<b>你的文档：</b>你的计划和每份摘要，提供文件和PDF，可以阅读或保存。",
+    "<b>你的文档：</b>你的计划和每份摘要，可下载 .md 文件编辑，也可以通过浏览器另存为 PDF。",
     "<b>你的日志：</b>你旅程的故事，每个决定都按顺序保存。",
   ],
   mundo: {
@@ -447,7 +447,7 @@ const ko: typeof es = {
   proyecto: {
     etiqueta: "나의 프로젝트",
     plan: "나의 계획",
-    planTexto: "아이디어에서 실현까지 이어지는 여정 전체: 계획과 그 계획을 실행하는 데 필요한 모든 것.",
+    planTexto: "아이디어에서 실현까지 이어지는 전체 계획과 그 계획을 실행할 도구. 나중에 계획을 다시 짜는 조정 사이클과 월드는 크레딧이 따로 들어요.",
     cambioRumbo: "방향 전환",
     cambioRumboTexto: "현실 때문에 계획이 흔들려서 처음부터가 아니라 지금 자리에서 다시 짜야 할 때: 있었던 일을 이야기하면, 이미 이룬 것은 그대로 두고 그 지점부터 여정을 다시 세워요.",
   },
@@ -455,7 +455,7 @@ const ko: typeof es = {
     "<b>계획:</b> 단계와 결과물, 할 일, 날짜를 한눈에.",
     "<b>실행하기:</b> 계획을 실행해요. 끝낸 일을 표시하고, 메모를 남기고, 진행 상황을 실시간으로 확인하세요. 언제나 포함돼요.",
     "<b>나의 숫자:</b> 아이디어의 대시보드(마진, 손익분기점, 시나리오). 언제든 수치를 고치고 다시 계산할 수 있어요.",
-    "<b>나의 문서:</b> 계획과 모든 요약을 파일과 PDF로 받아 읽거나 보관할 수 있어요.",
+    "<b>나의 문서:</b> 계획과 모든 요약을 편집할 수 있는 .md로 받거나, 브라우저에서 PDF로 저장할 수 있어요.",
     "<b>나의 기록장:</b> 여정의 이야기와 모든 결정이 순서대로 저장돼요.",
   ],
   mundo: {
@@ -498,7 +498,7 @@ const ar: typeof es = {
   proyecto: {
     etiqueta: "مشروعكم",
     plan: "خطتكم",
-    planTexto: "رحلتكم كاملة، من الفكرة إلى تحقيقها: الخطة وكل ما يلزم لتنفيذها.",
+    planTexto: "خطتكم الكاملة، من الفكرة إلى تحقيقها، والأدوات اللازمة لتنفيذها. أما دورات التعديل لإعادة بنائها لاحقًا والعوالم فتُدفع على حدة.",
     cambioRumbo: "تغيير في الاتجاه",
     cambioRumboTexto: "حين يحرّك الواقع خطتكم وتحتاجون إلى إعادة التفكير دون البدء من الصفر: تحكون ما حدث، ويُحفظ ما أنجزتموه، ويُعاد بناء رحلتكم من تلك النقطة.",
   },
@@ -506,7 +506,7 @@ const ar: typeof es = {
     "<b>الخطة:</b> مراحلكم بمخرجاتها، ومهامكم ومواعيدكم في لمحة واحدة.",
     "<b>إلى العمل:</b> نفّذوا خطتكم. علّموا ما أنجزتموه، وأضيفوا ملاحظاتكم، وتابعوا تقدّمكم لحظة بلحظة. مشمول دائمًا.",
     "<b>أرقامكم:</b> لوحة فكرتكم (هامش الربح، ونقطة التعادل، والسيناريوهات). صحّحوا الأرقام وأعيدوا الحساب متى شئتم.",
-    "<b>مستنداتكم:</b> خطتكم وكل ملخص، كملف وبصيغة PDF، للقراءة أو الحفظ.",
+    "<b>مستنداتكم:</b> خطتكم وكل ملخص، بصيغة .md لتعديلها أو بصيغة PDF تحفظونها من متصفحكم.",
     "<b>سجلّ رحلتكم:</b> قصة رحلتكم، كل قرار فيها، محفوظ بالترتيب.",
   ],
   mundo: {
@@ -549,7 +549,7 @@ const hi: typeof es = {
   proyecto: {
     etiqueta: "आपकी परियोजना",
     plan: "आपकी योजना",
-    planTexto: "आपकी पूरी यात्रा, विचार से उसे साकार करने तक: योजना और उसे पूरा करने के लिए सब कुछ।",
+    planTexto: "आपकी पूरी योजना, विचार से उसे साकार करने तक, और उस पर अमल करने के साधन। बाद में उसे फिर से बनाने वाले बदलाव के चक्र और दुनियाएँ अलग से ली जाती हैं।",
     cambioRumbo: "नई दिशा",
     cambioRumboTexto: "जब हालात आपकी योजना हिला दें और आपको शून्य से शुरू किए बिना फिर से सोचना हो: बस बताइए कि क्या हुआ, अब तक जो हासिल हुआ वह बना रहता है, और आपकी यात्रा वहीं से फिर से बनती है।",
   },
@@ -557,7 +557,7 @@ const hi: typeof es = {
     "<b>योजना:</b> आपके चरण, उनके नतीजों, आपके कामों और आपकी तारीखों के साथ, एक नज़र में।",
     "<b>काम शुरू करें:</b> अपनी योजना पर अमल करें। जो हो गया उसे मार्क करें, अपने नोट जोड़ें और अपनी प्रगति तुरंत देखें। हमेशा शामिल।",
     "<b>आपके आंकड़े:</b> आपके विचार का डैशबोर्ड (मार्जिन, ब्रेक-ईवन बिंदु, परिदृश्य)। जब चाहें संख्याएँ सुधारें और फिर से गणना करें।",
-    "<b>आपके दस्तावेज़:</b> आपकी योजना और हर सारांश, फ़ाइल और PDF में, पढ़ने या सहेजने के लिए।",
+    "<b>आपके दस्तावेज़:</b> आपकी योजना और हर सारांश, बदलाव के लिए .md में, या PDF के रूप में जिसे आप अपने ब्राउज़र से सहेजते हैं।",
     "<b>आपकी लॉगबुक:</b> आपकी यात्रा की कहानी, हर फ़ैसला, क्रम से सहेजा हुआ।",
   ],
   mundo: {

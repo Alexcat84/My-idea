@@ -48,7 +48,7 @@ const es = {
   siLaMueves: "Si la mueves, la fecha original se conserva en tu historia. No se reescribe nada.",
   tuNota: "Tu nota",
   placeholderNota: "Lo que necesites recordar de esta acción…",
-  notaGratis: "Registrar tu nota es gratis, siempre.",
+  notaGratis: "Registrar tu nota va incluido, siempre.",
   guardar: "Guardar",
   botonCancelar: "Cancelar",
 };
@@ -99,7 +99,7 @@ const en: typeof es = {
   siLaMueves: "If you move it, the original date stays in your history. Nothing gets rewritten.",
   tuNota: "Your note",
   placeholderNota: "Anything you need to remember about this action…",
-  notaGratis: "Saving your note is free, always.",
+  notaGratis: "Saving your note is always included.",
   guardar: "Save",
   botonCancelar: "Cancel",
 };
@@ -161,7 +161,7 @@ const fr: typeof es = {
   siLaMueves: "Si tu la déplaces, la date d'origine reste dans ton histoire. Rien n'est réécrit.",
   tuNota: "Ta note",
   placeholderNota: "Ce que tu veux retenir de cette action…",
-  notaGratis: "Enregistrer ta note est gratuit, toujours.",
+  notaGratis: "Enregistrer ta note est toujours inclus.",
   guardar: "Enregistrer",
   botonCancelar: "Annuler",
 };
@@ -223,7 +223,7 @@ const pt: typeof es = {
   siLaMueves: "Se você movê-la, a data original fica guardada na sua história. Nada é reescrito.",
   tuNota: "Sua nota",
   placeholderNota: "O que você precisar lembrar desta ação…",
-  notaGratis: "Registrar sua nota é grátis, sempre.",
+  notaGratis: "Registrar sua nota está sempre incluído.",
   guardar: "Salvar",
   botonCancelar: "Cancelar",
 };
@@ -285,7 +285,7 @@ const de: typeof es = {
   siLaMueves: "Wenn du ihn verschiebst, bleibt der ursprüngliche Termin in deiner Geschichte erhalten. Nichts wird umgeschrieben.",
   tuNota: "Deine Notiz",
   placeholderNota: "Was du dir zu diesem Schritt merken willst…",
-  notaGratis: "Notizen festhalten ist immer kostenlos.",
+  notaGratis: "Notizen festhalten ist immer inklusive.",
   guardar: "Speichern",
   botonCancelar: "Abbrechen",
 };
@@ -347,7 +347,7 @@ const it: typeof es = {
   siLaMueves: "Se la sposti, la data originale resta nella tua storia. Non si riscrive nulla.",
   tuNota: "La tua nota",
   placeholderNota: "Quello che ti serve ricordare di questa azione…",
-  notaGratis: "Salvare la tua nota è gratis, sempre.",
+  notaGratis: "Salvare la tua nota è sempre incluso.",
   guardar: "Salva",
   botonCancelar: "Annulla",
 };
@@ -409,7 +409,7 @@ const ja: typeof es = {
   siLaMueves: "動かしても、元の期日は履歴に残ります。書き換えられるものは何もありません。",
   tuNota: "メモ",
   placeholderNota: "このアクションについて覚えておきたいこと…",
-  notaGratis: "メモの記録は、いつでも無料です。",
+  notaGratis: "メモの記録は、いつでもプランに含まれています。",
   guardar: "保存",
   botonCancelar: "キャンセル",
 };
@@ -471,7 +471,7 @@ const zh: typeof es = {
   siLaMueves: "如果你挪动它，原来的日期会保留在你的历史里。不会改写任何内容。",
   tuNota: "你的笔记",
   placeholderNota: "关于这项行动，你需要记住的事…",
-  notaGratis: "记笔记永远免费。",
+  notaGratis: "记笔记始终包含在你的计划中。",
   guardar: "保存",
   botonCancelar: "取消",
 };
@@ -533,7 +533,7 @@ const ko: typeof es = {
   siLaMueves: "옮겨도 원래 날짜는 이력에 남아요. 다시 쓰이는 건 없어요.",
   tuNota: "메모",
   placeholderNota: "이 실행 항목에 대해 기억해 둘 것…",
-  notaGratis: "메모 기록은 언제나 무료예요.",
+  notaGratis: "메모 기록은 언제나 계획에 포함돼요.",
   guardar: "저장",
   botonCancelar: "취소",
 };
@@ -595,7 +595,7 @@ const ar: typeof es = {
   siLaMueves: "إن نقلتموها، يبقى الموعد الأصلي محفوظًا في قصتكم. لا يُعاد كتابة شيء.",
   tuNota: "ملاحظتكم",
   placeholderNota: "ما تحتاجون إلى تذكّره عن هذا الإجراء…",
-  notaGratis: "تسجيل ملاحظتكم مجاني، دائمًا.",
+  notaGratis: "تسجيل ملاحظتكم مشمول، دائمًا.",
   guardar: "حفظ",
   botonCancelar: "إلغاء",
 };
@@ -657,7 +657,7 @@ const hi: typeof es = {
   siLaMueves: "अगर आप इसे खिसकाएँ, तो मूल तारीख आपकी कहानी में सहेजी रहती है। कुछ भी दोबारा नहीं लिखा जाता।",
   tuNota: "आपका नोट",
   placeholderNota: "इस कदम के बारे में जो भी आपको याद रखना हो…",
-  notaGratis: "अपना नोट दर्ज करना हमेशा मुफ़्त है।",
+  notaGratis: "अपना नोट दर्ज करना हमेशा शामिल है।",
   guardar: "सहेजें",
   botonCancelar: "रद्द करें",
 };

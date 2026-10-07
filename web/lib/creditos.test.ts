@@ -40,7 +40,7 @@ describe("Catálogo congruente §4: Tus Números incluido + packs == paquetes", 
     expect(PRECIOS.mundo_activar).toBe(5);
     expect(PRECIOS.mundo_seguimiento).toBe(5);
   });
-  it("Recarga (5) == un seguimiento o un mundo suelto", () => {
+  it("Recarga (5) == un seguimiento o el plan de un mundo", () => {
     expect(pack("Recarga").creditos).toBe(PRECIOS.seguimiento);
     expect(pack("Recarga").creditos).toBe(PRECIOS.mundo_activar);
   });
@@ -51,7 +51,7 @@ describe("Catálogo congruente §4: Tus Números incluido + packs == paquetes", 
     expect(pack("Premium").creditos).toBe(PRECIOS.plan_completo + PRECIOS.seguimiento);
     expect(pack("Premium").destacado).toBe(true); // el más elegido
   });
-  it("Profesional (30) == el viaje entero: plan + 2 seguimientos + mundo + su seguimiento", () => {
+  it("Profesional (30) == plan + 2 seguimientos + mundo + su seguimiento", () => {
     expect(pack("Profesional").creditos).toBe(
       PRECIOS.plan_completo + 2 * PRECIOS.seguimiento + PRECIOS.mundo_activar + PRECIOS.mundo_seguimiento
     );

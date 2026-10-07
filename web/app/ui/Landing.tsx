@@ -14,7 +14,7 @@
  * HERO (portada-particula, decisión del fundador): la masa líquida que se
  * transforma, con su misma materia, en las cinco figuras (ui/portada/HeroMasa).
  * El lema y su animación desaparecen; el título queda como texto oculto a
- * la vista (lectores de pantalla y buscadores) y "Comenzar gratis" se
+ * la vista (lectores de pantalla y buscadores) y "Ordena tu idea gratis" (antes "Comenzar gratis") se
  * mantiene, discreto, en el borde inferior.
  */
 import { useEffect, useState } from "react";

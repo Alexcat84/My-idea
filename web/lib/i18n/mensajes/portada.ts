@@ -1,11 +1,18 @@
 /** La portada pública ("/"): ui/Landing.tsx y los metadatos de app/page.tsx. */
 import type { PorIdioma } from "../config";
+import { PRECIOS } from "../../precios";
+
+/** El precio de Tu Plan en "Recibe tu plan": sale de precios.ts y de ningún otro
+ * lado (AGENTS.md, los precios viven en precios.ts). Promesas públicas del
+ * 1 oct 2026: la portada no promete lo que la app no hace (el plan usa créditos
+ * y solo se cobra si se entrega). */
+const PLAN = PRECIOS.plan_completo;
 
 const es = {
   meta: {
     titulo: "My Idea: transforma tu creatividad en acción",
     descripcion:
-      "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, recibe tu plan y ejecútalo.",
+      "A los emprendedores no les faltan ideas. Les falta un interlocutor serio. Cuéntala, ordénala gratis y, cuando quieras, conviértela en un plan para ejecutarla.",
   },
   nav: {
     inicio: "Inicio",
@@ -17,7 +24,7 @@ const es = {
   iniciarSesion: "Iniciar sesión",
   misIdeas: "Mis ideas",
   comenzar: "Comenzar",
-  comenzarGratis: "Comenzar gratis",
+  comenzarGratis: "Ordena tu idea gratis",
   tituloOculto: "My Idea: transforma tu creatividad en acción",
   /** Las cinco etapas del recorrido (marquesina, mockup y banda del árbol). */
   etapas: {
@@ -35,34 +42,34 @@ const es = {
   acerca: {
     titulo: "A los emprendedores no les faltan ideas. Les falta un interlocutor serio",
     parrafo1:
-      "My Idea nace de esa convicción. Construimos un motor de conocimiento que pregunta como un buen mentor y estructura como un buen consultor: escucha tu contexto, no repite plantillas, y sabe cuándo una etapa ya quedó cubierta por lo que contaste.",
+      "My Idea nace de esa convicción. Construimos un motor de conocimiento que te pregunta con método y ordena lo que respondes en un plan: escucha tu contexto, adapta sus preguntas a lo que ya contaste y sabe cuándo una etapa ya quedó cubierta.",
     parrafo2:
-      "El resultado no es una conversación que se pierde: es un proyecto vivo. Pausa, ejecuta en el mundo real y regresa cuando quieras. My Idea recalcula dónde estás parado y te muestra los siguientes pasos exactos, hasta el cierre definitivo. Y si el proyecto lo exige, se expande con módulos especializados.",
+      "El resultado no es una conversación que se pierde: es un proyecto vivo. Pausa, ejecuta en el mundo real y vuelve cuando quieras: con tu cuenta, tu idea te espera tal como la dejaste. Y si tu idea lo necesita, puedes sumarle mundos especializados, cada uno con su diagnóstico gratis.",
   },
   como: {
     titulo: "De la idea al mundo real",
     cuentameTuIdea: "Cuéntame tu idea, o en qué punto estás con ella",
     paso1: {
       titulo: "Describe tu idea",
-      texto: "Escríbela o díctala tal como la tienes en mente. Ese es todo el requisito.",
+      texto: "Escríbela tal como la tienes en mente, o díctala si tu navegador lo permite. Ese es todo el requisito.",
     },
     paso2: {
       demo: "generando…",
       titulo: "Aporta más detalles",
       texto:
-        "Nada de plantillas: una entrevista específica evoluciona en tiempo real con la naturaleza de tu idea y te habla en tu propio lenguaje, sin barreras técnicas.",
+        "Una entrevista que se adapta a tu idea: elige cada pregunta según lo que ya contaste y te habla en tu propio lenguaje, sin barreras técnicas.",
     },
     paso3: {
       demo: "Esta semana",
       titulo: "Recibe tu plan",
       texto:
-        "Un plan detallado con etapas, experimentos y acciones concretas para ejecutarlo. Aquí se genera tu hoja de ruta.",
+        `Un plan detallado con etapas, experimentos y acciones concretas para ejecutarlo. Usa ${PLAN} créditos, que solo se cobran si lo recibes. Por ahora estamos en beta privada, por invitación.`,
     },
     paso4: {
-      demo: "siguiente paso exacto",
+      demo: "tu siguiente paso",
       titulo: "Ejecuta y regresa",
       texto:
-        "Pausa, actúa en el mundo real y vuelve: el plan recalcula dónde estás y te muestra los pasos exactos hasta el cierre.",
+        "Pausa, actúa en el mundo real y vuelve: marca lo que hiciste y ve tu avance. Si la realidad cambia, pide un nuevo ciclo con tus créditos y tu plan se rehace desde donde estás.",
     },
   },
   mockup: {
@@ -78,14 +85,14 @@ const es = {
   banda: {
     titulo: "De la chispa a la realidad",
     texto:
-      "Cinco etapas acompañan tu idea desde el primer destello hasta verla funcionando en el mundo real. En cada una sabes dónde estás y cuál es el siguiente paso.",
+      "Cinco etapas acompañan tu idea desde el primer destello hasta llevarla a la práctica. En cada una sabes dónde estás y cuál es el siguiente paso.",
   },
   descargar: {
     etiqueta: "La app",
     titulo: "Llévala en el bolsillo",
     texto: "Las mejores respuestas llegan lejos del escritorio.",
     googlePlay: "Próximamente en Google Play",
-    dictar: "también puedes dictarla",
+    dictar: "si tu navegador lo permite, también puedes dictarla",
   },
   cta: {
     titulo: "Aquí acaba tu idea y nace tu proyecto",
@@ -104,7 +111,7 @@ const en: typeof es = {
   meta: {
     titulo: "My Idea: turn your creativity into action",
     descripcion:
-      "Entrepreneurs don't lack ideas. What they lack is a serious sounding board. Share yours, get your plan, and put it to work.",
+      "Entrepreneurs don't lack ideas. What they lack is a serious sounding board. Share yours, get it organized for free and, whenever you're ready, turn it into a plan you can put to work.",
   },
   nav: {
     inicio: "Home",
@@ -116,7 +123,7 @@ const en: typeof es = {
   iniciarSesion: "Log in",
   misIdeas: "My ideas",
   comenzar: "Get started",
-  comenzarGratis: "Start for free",
+  comenzarGratis: "Organize your idea for free",
   tituloOculto: "My Idea: turn your creativity into action",
   etapas: {
     chispa: "The Spark",
@@ -133,34 +140,34 @@ const en: typeof es = {
   acerca: {
     titulo: "Entrepreneurs don't lack ideas. What they lack is a serious sounding board",
     parrafo1:
-      "My Idea was born from that belief. We built a knowledge engine that asks like a good mentor and structures like a good consultant: it listens to your context, doesn't recycle templates, and knows when what you've shared already covers a stage.",
+      "My Idea was born from that belief. We built a knowledge engine that asks you questions with method and organizes your answers into a plan: it listens to your context, adapts its questions to what you've already shared, and knows when a stage is already covered.",
     parrafo2:
-      "What you get isn't a conversation that fades away: it's a living project. Pause, act in the real world, and come back whenever you want. My Idea works out where you stand and shows you the exact next steps, all the way to the finish line. And if your project calls for it, it grows with specialized modules.",
+      "What you get isn't a conversation that fades away: it's a living project. Pause, act in the real world, and come back whenever you want: with your account, your idea waits for you just as you left it. And if your idea needs it, you can add specialized worlds, each with a free diagnosis.",
   },
   como: {
     titulo: "From idea to the real world",
     cuentameTuIdea: "Tell me your idea, or where you are with it",
     paso1: {
       titulo: "Describe your idea",
-      texto: "Write it or say it, just as you picture it. That's all it takes.",
+      texto: "Write it just as you picture it, or say it out loud if your browser supports it. That's all it takes.",
     },
     paso2: {
       demo: "generating…",
       titulo: "Add more detail",
       texto:
-        "No templates: a tailored interview evolves in real time with the nature of your idea and speaks your language, with no technical barriers.",
+        "An interview that adapts to your idea: it picks each question based on what you've already shared and speaks your language, with no technical barriers.",
     },
     paso3: {
       demo: "This week",
       titulo: "Get your plan",
       texto:
-        "A detailed plan with stages, experiments, and concrete actions to carry it out. This is where your roadmap comes together.",
+        `A detailed plan with stages, experiments, and concrete actions to carry it out. It uses ${PLAN} credits, charged only if you receive it. For now we're in private beta, by invitation.`,
     },
     paso4: {
-      demo: "exact next step",
+      demo: "your next step",
       titulo: "Act and come back",
       texto:
-        "Pause, take action in the real world, and come back: the plan works out where you are and shows you the exact steps to the finish line.",
+        "Pause, take action in the real world, and come back: check off what you've done and see your progress. If reality changes, request a new cycle with your credits and your plan is rebuilt from where you are.",
     },
   },
   mockup: {
@@ -176,14 +183,14 @@ const en: typeof es = {
   banda: {
     titulo: "From spark to reality",
     texto:
-      "Five stages carry your idea from the first spark to seeing it work in the real world. At every one, you know where you are and what comes next.",
+      "Five stages carry your idea from the first spark to putting it into practice. At every one, you know where you are and what comes next.",
   },
   descargar: {
     etiqueta: "The app",
     titulo: "Keep it in your pocket",
     texto: "The best answers come to you away from your desk.",
     googlePlay: "Coming soon to Google Play",
-    dictar: "you can also just say it",
+    dictar: "you can also say it, if your browser supports it",
   },
   cta: {
     titulo: "This is where your idea ends and your project begins",
@@ -201,7 +208,7 @@ const en: typeof es = {
 const fr: typeof es = {
   meta: {
     titulo: "My Idea : mets ta créativité en action",
-    descripcion: "Les entrepreneurs ne manquent pas d'idées. Ce qui leur manque, c'est un interlocuteur sérieux. Raconte la tienne, reçois ton plan et passe à l'action.",
+    descripcion: "Les entrepreneurs ne manquent pas d'idées. Ce qui leur manque, c'est un interlocuteur sérieux. Raconte la tienne, mets-la en ordre gratuitement et, quand tu veux, transforme-la en plan pour la réaliser.",
   },
   nav: {
     inicio: "Accueil",
@@ -213,7 +220,7 @@ const fr: typeof es = {
   iniciarSesion: "Se connecter",
   misIdeas: "Mes idées",
   comenzar: "Commencer",
-  comenzarGratis: "Commencer gratuitement",
+  comenzarGratis: "Organise ton idée gratuitement",
   tituloOculto: "My Idea : mets ta créativité en action",
   etapas: {
     chispa: "L'Étincelle",
@@ -229,30 +236,30 @@ const fr: typeof es = {
   },
   acerca: {
     titulo: "Les entrepreneurs ne manquent pas d'idées. Ce qui leur manque, c'est un interlocuteur sérieux",
-    parrafo1: "My Idea est né de cette conviction. Nous avons construit un moteur de connaissances qui questionne comme un bon mentor et structure comme un bon consultant : il écoute ton contexte, ne ressert pas de modèles tout faits, et sait quand ce que tu as raconté couvre déjà une étape.",
-    parrafo2: "Le résultat n'est pas une conversation qui s'envole : c'est un projet vivant. Fais une pause, passe à l'action dans le monde réel et reviens quand tu veux. My Idea recalcule où tu en es et te montre précisément quoi faire ensuite, jusqu'à la clôture finale. Et si le projet l'exige, il s'enrichit de modules spécialisés.",
+    parrafo1: "My Idea est né de cette conviction. Nous avons construit un moteur de connaissances qui te pose des questions avec méthode et transforme tes réponses en plan : il écoute ton contexte, adapte ses questions à ce que tu as déjà raconté et sait quand une étape est déjà couverte.",
+    parrafo2: "Le résultat n'est pas une conversation qui s'envole : c'est un projet vivant. Fais une pause, passe à l'action dans le monde réel et reviens quand tu veux : avec ton compte, ton idée t'attend telle que tu l'as laissée. Et si ton idée en a besoin, tu peux y ajouter des mondes spécialisés, chacun avec son diagnostic gratuit.",
   },
   como: {
     titulo: "De l'idée au monde réel",
     cuentameTuIdea: "Raconte-moi ton idée, ou où tu en es avec elle",
     paso1: {
       titulo: "Décris ton idée",
-      texto: "Écris-la ou dicte-la telle que tu l'as en tête. C'est tout ce qu'il faut.",
+      texto: "Écris-la telle que tu l'as en tête, ou dicte-la si ton navigateur le permet. C'est tout ce qu'il faut.",
     },
     paso2: {
       demo: "génération…",
       titulo: "Ajoute des détails",
-      texto: "Pas de modèles : un entretien sur mesure évolue en temps réel selon la nature de ton idée et te parle dans tes mots, sans barrière technique.",
+      texto: "Un entretien qui s'adapte à ton idée : il choisit chaque question selon ce que tu as déjà raconté et te parle dans tes mots, sans barrière technique.",
     },
     paso3: {
       demo: "Cette semaine",
       titulo: "Reçois ton plan",
-      texto: "Un plan détaillé avec des étapes, des expériences et des actions concrètes pour le réaliser. C'est ici que se dessine ta feuille de route.",
+      texto: `Un plan détaillé avec des étapes, des expériences et des actions concrètes pour le réaliser. Il utilise ${PLAN} crédits, débités seulement si tu le reçois. Pour l'instant, nous sommes en bêta privée, sur invitation.`,
     },
     paso4: {
-      demo: "prochain pas précis",
+      demo: "ton prochain pas",
       titulo: "Agis et reviens",
-      texto: "Fais une pause, agis dans le monde réel et reviens : le plan recalcule où tu en es et te montre le chemin précis jusqu'à la clôture.",
+      texto: "Fais une pause, agis dans le monde réel et reviens : coche ce que tu as fait et vois ton avancement. Si la réalité change, demande un nouveau cycle avec tes crédits et ton plan se refait à partir de là où tu en es.",
     },
   },
   mockup: {
@@ -266,14 +273,14 @@ const fr: typeof es = {
   },
   banda: {
     titulo: "De l'étincelle à la réalité",
-    texto: "Cinq étapes accompagnent ton idée, de la première lueur jusqu'au jour où tu la vois fonctionner dans le monde réel. À chacune, tu sais où tu en es et ce qui vient ensuite.",
+    texto: "Cinq étapes accompagnent ton idée, de la première lueur jusqu'à sa mise en pratique. À chacune, tu sais où tu en es et ce qui vient ensuite.",
   },
   descargar: {
     etiqueta: "L'appli",
     titulo: "Garde-la dans ta poche",
     texto: "Les meilleures réponses arrivent loin du bureau.",
     googlePlay: "Bientôt sur Google Play",
-    dictar: "tu peux aussi la dicter",
+    dictar: "tu peux aussi la dicter, si ton navigateur le permet",
   },
   cta: {
     titulo: "Ici s'achève ton idée et naît ton projet",
@@ -291,7 +298,7 @@ const fr: typeof es = {
 const pt: typeof es = {
   meta: {
     titulo: "My Idea: transforme sua criatividade em ação",
-    descripcion: "Aos empreendedores não faltam ideias. Falta alguém sério do outro lado da conversa. Conte a sua, receba seu plano e coloque em prática.",
+    descripcion: "Aos empreendedores não faltam ideias. Falta alguém sério do outro lado da conversa. Conte a sua, organize-a de graça e, quando quiser, transforme-a em um plano para colocá-la em prática.",
   },
   nav: {
     inicio: "Início",
@@ -303,7 +310,7 @@ const pt: typeof es = {
   iniciarSesion: "Entrar",
   misIdeas: "Minhas ideias",
   comenzar: "Começar",
-  comenzarGratis: "Começar grátis",
+  comenzarGratis: "Organize sua ideia grátis",
   tituloOculto: "My Idea: transforme sua criatividade em ação",
   etapas: {
     chispa: "A Faísca",
@@ -319,30 +326,30 @@ const pt: typeof es = {
   },
   acerca: {
     titulo: "Aos empreendedores não faltam ideias. Falta alguém sério do outro lado da conversa",
-    parrafo1: "O My Idea nasce dessa convicção. Construímos um motor de conhecimento que pergunta como um bom mentor e estrutura como um bom consultor: escuta o seu contexto, não repete modelos prontos e sabe quando uma etapa já ficou coberta pelo que você contou.",
-    parrafo2: "O resultado não é uma conversa que se perde: é um projeto vivo. Pause, execute no mundo real e volte quando quiser. O My Idea recalcula onde você está e mostra os próximos passos exatos, até o encerramento definitivo. E, se o projeto pedir, ele se expande com módulos especializados.",
+    parrafo1: "O My Idea nasce dessa convicção. Construímos um motor de conhecimento que faz perguntas com método e organiza suas respostas em um plano: escuta o seu contexto, adapta as perguntas ao que você já contou e sabe quando uma etapa já ficou coberta.",
+    parrafo2: "O resultado não é uma conversa que se perde: é um projeto vivo. Pause, execute no mundo real e volte quando quiser: com a sua conta, sua ideia espera por você do jeito que você deixou. E, se a sua ideia precisar, você pode somar mundos especializados, cada um com seu diagnóstico gratuito.",
   },
   como: {
     titulo: "Da ideia ao mundo real",
     cuentameTuIdea: "Me conte sua ideia, ou em que ponto você está com ela",
     paso1: {
       titulo: "Descreva sua ideia",
-      texto: "Escreva ou dite do jeito que ela está na sua cabeça. Esse é o único requisito.",
+      texto: "Escreva do jeito que ela está na sua cabeça, ou dite se o seu navegador permitir. Esse é o único requisito.",
     },
     paso2: {
       demo: "gerando…",
       titulo: "Traga mais detalhes",
-      texto: "Nada de modelos prontos: uma entrevista feita sob medida evolui em tempo real conforme a natureza da sua ideia e fala a sua língua, sem barreiras técnicas.",
+      texto: "Uma entrevista que se adapta à sua ideia: escolhe cada pergunta de acordo com o que você já contou e fala a sua língua, sem barreiras técnicas.",
     },
     paso3: {
       demo: "Esta semana",
       titulo: "Receba seu plano",
-      texto: "Um plano detalhado com etapas, experimentos e ações concretas para colocá-lo em prática. É aqui que seu roteiro ganha forma.",
+      texto: `Um plano detalhado com etapas, experimentos e ações concretas para colocá-lo em prática. Usa ${PLAN} créditos, cobrados só se você recebê-lo. Por enquanto estamos em beta privada, só com convite.`,
     },
     paso4: {
-      demo: "próximo passo exato",
+      demo: "seu próximo passo",
       titulo: "Execute e volte",
-      texto: "Pause, aja no mundo real e volte: o plano recalcula onde você está e mostra os passos exatos até o encerramento.",
+      texto: "Pause, aja no mundo real e volte: marque o que você fez e veja seu avanço. Se a realidade mudar, peça um novo ciclo com seus créditos e seu plano é refeito a partir de onde você está.",
     },
   },
   mockup: {
@@ -356,14 +363,14 @@ const pt: typeof es = {
   },
   banda: {
     titulo: "Da faísca à realidade",
-    texto: "Cinco etapas acompanham sua ideia desde o primeiro lampejo até vê-la funcionando no mundo real. Em cada uma, você sabe onde está e qual é o próximo passo.",
+    texto: "Cinco etapas acompanham sua ideia desde o primeiro lampejo até colocá-la em prática. Em cada uma, você sabe onde está e qual é o próximo passo.",
   },
   descargar: {
     etiqueta: "O app",
     titulo: "Leve no bolso",
     texto: "As melhores respostas chegam longe da mesa de trabalho.",
     googlePlay: "Em breve no Google Play",
-    dictar: "você também pode ditar",
+    dictar: "se o seu navegador permitir, você também pode ditar",
   },
   cta: {
     titulo: "Aqui termina sua ideia e nasce seu projeto",
@@ -381,7 +388,7 @@ const pt: typeof es = {
 const de: typeof es = {
   meta: {
     titulo: "My Idea: Verwandle deine Kreativität in Taten",
-    descripcion: "Wer etwas gründen will, hat genug Ideen. Was fehlt, ist ein Gegenüber, das sie ernst nimmt. Erzähl deine Idee, hol dir deinen Plan und setz ihn um.",
+    descripcion: "Wer etwas gründen will, hat genug Ideen. Was fehlt, ist ein Gegenüber, das sie ernst nimmt. Erzähl deine Idee, ordne sie kostenlos und mach daraus, wann immer du willst, einen Plan zur Umsetzung.",
   },
   nav: {
     inicio: "Start",
@@ -393,7 +400,7 @@ const de: typeof es = {
   iniciarSesion: "Anmelden",
   misIdeas: "Meine Ideen",
   comenzar: "Loslegen",
-  comenzarGratis: "Kostenlos loslegen",
+  comenzarGratis: "Ordne deine Idee kostenlos",
   tituloOculto: "My Idea: Verwandle deine Kreativität in Taten",
   etapas: {
     chispa: "Der Funke",
@@ -409,30 +416,30 @@ const de: typeof es = {
   },
   acerca: {
     titulo: "Wer etwas gründen will, hat genug Ideen. Was fehlt, ist ein Gegenüber, das sie ernst nimmt",
-    parrafo1: "My Idea ist aus dieser Überzeugung entstanden. Wir haben ein Wissenssystem gebaut, das fragt wie ein guter Mentor und ordnet wie ein guter Berater: Es hört auf deine Situation, spult keine Vorlagen ab und merkt, wann das, was du erzählt hast, eine Etappe schon abdeckt.",
-    parrafo2: "Am Ende steht kein Gespräch, das verloren geht, sondern ein lebendiges Projekt. Mach Pause, handle in der echten Welt und komm zurück, wann du willst. My Idea ermittelt neu, wo du stehst, und zeigt dir die genauen nächsten Schritte, bis zum endgültigen Abschluss. Und wenn dein Projekt es verlangt, wächst es mit spezialisierten Modulen.",
+    parrafo1: "My Idea ist aus dieser Überzeugung entstanden. Wir haben ein Wissenssystem gebaut, das dir mit Methode Fragen stellt und deine Antworten zu einem Plan ordnet: Es hört auf deine Situation, passt seine Fragen an das an, was du schon erzählt hast, und merkt, wann eine Etappe schon abgedeckt ist.",
+    parrafo2: "Am Ende steht kein Gespräch, das verloren geht, sondern ein lebendiges Projekt. Mach Pause, handle in der echten Welt und komm zurück, wann du willst: Mit deinem Konto wartet deine Idee genau so auf dich, wie du sie verlassen hast. Und wenn deine Idee es braucht, kannst du spezialisierte Welten hinzufügen, jede mit ihrer kostenlosen Diagnose.",
   },
   como: {
     titulo: "Von der Idee in die echte Welt",
     cuentameTuIdea: "Erzähl mir deine Idee oder wo du damit gerade stehst",
     paso1: {
       titulo: "Beschreib deine Idee",
-      texto: "Schreib sie auf oder sprich sie ein, so wie du sie im Kopf hast. Mehr braucht es nicht.",
+      texto: "Schreib sie auf, so wie du sie im Kopf hast, oder sprich sie ein, wenn dein Browser das unterstützt. Mehr braucht es nicht.",
     },
     paso2: {
       demo: "wird erstellt…",
       titulo: "Erzähl mehr",
-      texto: "Keine Vorlagen: Ein Gespräch, das genau zu dir passt, entwickelt sich in Echtzeit mit deiner Idee und spricht deine Sprache, ganz ohne technische Hürden.",
+      texto: "Ein Gespräch, das sich deiner Idee anpasst: Es wählt jede Frage nach dem, was du schon erzählt hast, und spricht deine Sprache, ganz ohne technische Hürden.",
     },
     paso3: {
       demo: "Diese Woche",
       titulo: "Hol dir deinen Plan",
-      texto: "Ein detaillierter Plan mit Etappen, Experimenten und konkreten Schritten zur Umsetzung. Hier entsteht dein Fahrplan.",
+      texto: `Ein detaillierter Plan mit Etappen, Experimenten und konkreten Schritten zur Umsetzung. Er kostet ${PLAN} Punkte, die nur abgebucht werden, wenn du ihn erhältst. Im Moment sind wir in einer privaten Beta, nur auf Einladung.`,
     },
     paso4: {
-      demo: "genau der nächste Schritt",
+      demo: "dein nächster Schritt",
       titulo: "Setz um und komm zurück",
-      texto: "Mach Pause, handle in der echten Welt und komm zurück: Der Plan ermittelt neu, wo du stehst, und zeigt dir die genauen Schritte bis zum Abschluss.",
+      texto: "Mach Pause, handle in der echten Welt und komm zurück: Hak ab, was du erledigt hast, und sieh deinen Fortschritt. Wenn sich die Wirklichkeit ändert, fordere mit deinen Punkten einen neuen Zyklus an, und dein Plan wird von deinem jetzigen Stand aus neu erstellt.",
     },
   },
   mockup: {
@@ -446,14 +453,14 @@ const de: typeof es = {
   },
   banda: {
     titulo: "Vom Funken zur Wirklichkeit",
-    texto: "Fünf Etappen begleiten deine Idee vom ersten Funken, bis du sie in der echten Welt funktionieren siehst. In jeder weißt du, wo du stehst und was als Nächstes kommt.",
+    texto: "Fünf Etappen begleiten deine Idee vom ersten Funken, bis du sie in die Praxis umsetzt. In jeder weißt du, wo du stehst und was als Nächstes kommt.",
   },
   descargar: {
     etiqueta: "Die App",
     titulo: "Immer in deiner Tasche",
     texto: "Die besten Antworten kommen dir fern vom Schreibtisch.",
     googlePlay: "Demnächst bei Google Play",
-    dictar: "du kannst sie auch einsprechen",
+    dictar: "wenn dein Browser es unterstützt, kannst du sie auch einsprechen",
   },
   cta: {
     titulo: "Hier endet deine Idee und beginnt dein Projekt",
@@ -471,7 +478,7 @@ const de: typeof es = {
 const it: typeof es = {
   meta: {
     titulo: "My Idea: trasforma la tua creatività in azione",
-    descripcion: "Agli imprenditori non mancano le idee. Manca un interlocutore serio. Racconta la tua, ricevi il tuo piano e mettilo in pratica.",
+    descripcion: "Agli imprenditori non mancano le idee. Manca un interlocutore serio. Racconta la tua, mettila in ordine gratis e, quando vuoi, trasformala in un piano da mettere in pratica.",
   },
   nav: {
     inicio: "Home",
@@ -483,7 +490,7 @@ const it: typeof es = {
   iniciarSesion: "Accedi",
   misIdeas: "Le mie idee",
   comenzar: "Inizia",
-  comenzarGratis: "Inizia gratis",
+  comenzarGratis: "Organizza la tua idea gratis",
   tituloOculto: "My Idea: trasforma la tua creatività in azione",
   etapas: {
     chispa: "La Scintilla",
@@ -499,30 +506,30 @@ const it: typeof es = {
   },
   acerca: {
     titulo: "Agli imprenditori non mancano le idee. Manca un interlocutore serio",
-    parrafo1: "My Idea nasce da questa convinzione. Abbiamo costruito un motore di conoscenza che fa domande come un buon mentore e mette ordine come un buon consulente: ascolta il tuo contesto, non ripete modelli preconfezionati e capisce quando quello che hai raccontato copre già una tappa.",
-    parrafo2: "Il risultato non è una conversazione che si perde: è un progetto vivo. Fermati, agisci nel mondo reale e torna quando vuoi. My Idea ricalcola a che punto sei e ti mostra i prossimi passi esatti, fino al traguardo finale. E se il progetto lo richiede, si amplia con moduli specializzati.",
+    parrafo1: "My Idea nasce da questa convinzione. Abbiamo costruito un motore di conoscenza che ti fa domande con metodo e mette in ordine le tue risposte in un piano: ascolta il tuo contesto, adatta le domande a quello che hai già raccontato e capisce quando una tappa è già coperta.",
+    parrafo2: "Il risultato non è una conversazione che si perde: è un progetto vivo. Fermati, agisci nel mondo reale e torna quando vuoi: con il tuo account, la tua idea ti aspetta così come l'hai lasciata. E se la tua idea ne ha bisogno, puoi aggiungere mondi specializzati, ognuno con la sua diagnosi gratuita.",
   },
   como: {
     titulo: "Dall'idea al mondo reale",
     cuentameTuIdea: "Raccontami la tua idea, o a che punto sei",
     paso1: {
       titulo: "Descrivi la tua idea",
-      texto: "Scrivila o dettala così come ce l'hai in testa. Non serve altro.",
+      texto: "Scrivila così come ce l'hai in testa, o dettala se il tuo browser lo consente. Non serve altro.",
     },
     paso2: {
       demo: "in generazione…",
       titulo: "Aggiungi dettagli",
-      texto: "Niente modelli: un'intervista su misura si evolve in tempo reale secondo la natura della tua idea e ti parla con parole tue, senza barriere tecniche.",
+      texto: "Un'intervista che si adatta alla tua idea: sceglie ogni domanda in base a quello che hai già raccontato e ti parla con parole tue, senza barriere tecniche.",
     },
     paso3: {
       demo: "Questa settimana",
       titulo: "Ricevi il tuo piano",
-      texto: "Un piano dettagliato con tappe, esperimenti e azioni concrete per metterlo in pratica. Qui prende forma la tua tabella di marcia.",
+      texto: `Un piano dettagliato con tappe, esperimenti e azioni concrete per metterlo in pratica. Usa ${PLAN} crediti, addebitati solo se lo ricevi. Per ora siamo in beta privata, su invito.`,
     },
     paso4: {
-      demo: "prossimo passo esatto",
+      demo: "il tuo prossimo passo",
       titulo: "Agisci e torna",
-      texto: "Fermati, agisci nel mondo reale e torna: il piano ricalcola a che punto sei e ti mostra i passi esatti fino al traguardo.",
+      texto: "Fermati, agisci nel mondo reale e torna: segna quello che hai fatto e guarda i tuoi progressi. Se la realtà cambia, chiedi un nuovo ciclo con i tuoi crediti e il tuo piano si rifà da dove sei.",
     },
   },
   mockup: {
@@ -536,14 +543,14 @@ const it: typeof es = {
   },
   banda: {
     titulo: "Dalla scintilla alla realtà",
-    texto: "Cinque tappe accompagnano la tua idea dalla prima intuizione fino a vederla funzionare nel mondo reale. In ognuna sai dove sei e qual è il passo successivo.",
+    texto: "Cinque tappe accompagnano la tua idea dalla prima intuizione fino a metterla in pratica. In ognuna sai dove sei e qual è il passo successivo.",
   },
   descargar: {
     etiqueta: "L'app",
     titulo: "Portala sempre con te",
     texto: "Le risposte migliori arrivano lontano dalla scrivania.",
     googlePlay: "Presto su Google Play",
-    dictar: "puoi anche dettarla",
+    dictar: "se il tuo browser lo consente, puoi anche dettarla",
   },
   cta: {
     titulo: "Qui finisce la tua idea e nasce il tuo progetto",
@@ -561,7 +568,7 @@ const it: typeof es = {
 const ja: typeof es = {
   meta: {
     titulo: "My Idea：あなたの創造力を、行動に変える",
-    descripcion: "起業家に足りないのは、アイデアではありません。真剣に向き合ってくれる相手です。アイデアを話して、プランを受け取り、実行に移しましょう。",
+    descripcion: "起業家に足りないのは、アイデアではありません。真剣に向き合ってくれる相手です。アイデアを話して、無料で整理し、準備ができたら、実行するためのプランに変えましょう。",
   },
   nav: {
     inicio: "ホーム",
@@ -573,7 +580,7 @@ const ja: typeof es = {
   iniciarSesion: "ログイン",
   misIdeas: "アイデア一覧",
   comenzar: "はじめる",
-  comenzarGratis: "無料ではじめる",
+  comenzarGratis: "無料でアイデアを整理する",
   tituloOculto: "My Idea：あなたの創造力を、行動に変える",
   etapas: {
     chispa: "ひらめき",
@@ -589,30 +596,30 @@ const ja: typeof es = {
   },
   acerca: {
     titulo: "起業家に足りないのは、アイデアではありません。真剣に向き合ってくれる相手です",
-    parrafo1: "My Ideaは、その確信から生まれました。私たちがつくったのは、良きメンターのように問いかけ、優れたコンサルタントのように整理するナレッジエンジンです。あなたの状況に耳を傾け、テンプレートを繰り返さず、話した内容でステージがもう満たされたかどうかを見極めます。",
-    parrafo2: "手元に残るのは、流れて消えていく会話ではありません。動き続けるプロジェクトです。一度止めて、現実の世界で動き、いつでも戻ってきてください。My Ideaが今の立ち位置を計算し直し、最後の締めくくりまで、次にやるべき具体的な一歩を示します。プロジェクトが必要とすれば、専門のモジュールで広がっていきます。",
+    parrafo1: "My Ideaは、その確信から生まれました。私たちがつくったのは、筋道を立てて問いかけ、あなたの答えをプランへと整理するナレッジエンジンです。あなたの状況に耳を傾け、すでに話した内容に合わせて質問を変え、ステージがもう満たされたかどうかを見極めます。",
+    parrafo2: "手元に残るのは、流れて消えていく会話ではありません。動き続けるプロジェクトです。一度止めて、現実の世界で動き、いつでも戻ってきてください。アカウントがあれば、アイデアは離れたときのままあなたを待っています。アイデアに必要なら、専門のワールドを追加することもできます。どのワールドも診断は無料です。",
   },
   como: {
     titulo: "アイデアを、現実の世界へ",
     cuentameTuIdea: "アイデアを聞かせてください。今どこまで進んでいるかでもかまいません",
     paso1: {
       titulo: "アイデアを伝える",
-      texto: "頭の中にあるままを、書くか話すだけ。必要なのはそれだけです。",
+      texto: "頭の中にあるままを書くか、ブラウザが対応していれば話すだけ。必要なのはそれだけです。",
     },
     paso2: {
       demo: "生成中…",
       titulo: "詳しく話す",
-      texto: "テンプレートはありません。アイデアの性質に合わせて専用のインタビューがリアルタイムに変化し、専門用語の壁なしに、あなたの言葉で語りかけます。",
+      texto: "アイデアに合わせて変わるインタビューです。すでに話した内容をもとに質問を一つずつ選び、専門用語の壁なしに、あなたの言葉で語りかけます。",
     },
     paso3: {
       demo: "今週",
       titulo: "プランを受け取る",
-      texto: "ステージ、実験、実行のための具体的なアクションまでそろった、詳しいプラン。あなたのロードマップは、ここで生まれます。",
+      texto: `ステージ、実験、実行のための具体的なアクションまでそろった、詳しいプラン。${PLAN}ポイントを使いますが、消費されるのはプランを受け取ったときだけです。現在は招待制のプライベートベータです。`,
     },
     paso4: {
-      demo: "次にやるべき一歩",
+      demo: "あなたの次の一歩",
       titulo: "実行して、戻ってくる",
-      texto: "一度止めて、現実の世界で動いて、戻ってくる。プランが今の位置を計算し直し、締めくくりまでの具体的なステップを示します。",
+      texto: "一度止めて、現実の世界で動いて、戻ってくる。やったことに印をつけて、進み具合を確かめましょう。状況が変わったら、ポイントで新しいサイクルを依頼すると、今いる地点からプランを作り直します。",
     },
   },
   mockup: {
@@ -626,14 +633,14 @@ const ja: typeof es = {
   },
   banda: {
     titulo: "ひらめきを、現実に",
-    texto: "最初のひらめきから、現実の世界で動き出すその日まで、5つのステージがあなたのアイデアに寄り添います。どのステージでも、今どこにいて、次に何をすればいいかがわかります。",
+    texto: "最初のひらめきから実践に移すその日まで、5つのステージがあなたのアイデアに寄り添います。どのステージでも、今どこにいて、次に何をすればいいかがわかります。",
   },
   descargar: {
     etiqueta: "アプリ",
     titulo: "いつもポケットの中に",
     texto: "いい答えは、机を離れたときに浮かぶものです。",
     googlePlay: "Google Play で近日公開",
-    dictar: "話して入力することもできます",
+    dictar: "ブラウザが対応していれば、話して入力することもできます",
   },
   cta: {
     titulo: "ここでアイデアは終わり、プロジェクトが生まれます",
@@ -651,7 +658,7 @@ const ja: typeof es = {
 const zh: typeof es = {
   meta: {
     titulo: "My Idea：把你的创意变成行动",
-    descripcion: "创业者从不缺想法，缺的是一个认真的对话者。说出你的想法，拿到你的计划，然后动手去做。",
+    descripcion: "创业者从不缺想法，缺的是一个认真的对话者。说出你的想法，免费把它理清，等你准备好了，再把它变成一份可以执行的计划。",
   },
   nav: {
     inicio: "首页",
@@ -663,7 +670,7 @@ const zh: typeof es = {
   iniciarSesion: "登录",
   misIdeas: "我的想法",
   comenzar: "开始",
-  comenzarGratis: "免费开始",
+  comenzarGratis: "免费理清你的想法",
   tituloOculto: "My Idea：把你的创意变成行动",
   etapas: {
     chispa: "灵光一闪",
@@ -679,30 +686,30 @@ const zh: typeof es = {
   },
   acerca: {
     titulo: "创业者从不缺想法，缺的是一个认真的对话者",
-    parrafo1: "My Idea 正是从这个信念中诞生的。我们打造了一个知识引擎：它像好导师一样提问，像好顾问一样梳理。它倾听你的具体情况，不套用模板，也知道你讲过的内容什么时候已经覆盖了某个阶段。",
-    parrafo2: "你得到的不是一段聊完就散的对话，而是一个持续生长的项目。你可以暂停，去现实中行动，随时回来。My Idea 会重新判断你所处的位置，给出确切的下一步，一直陪你走到最后的收尾。如果项目需要，它还能接入专业模块，继续扩展。",
+    parrafo1: "My Idea 正是从这个信念中诞生的。我们打造了一个知识引擎：它有条理地向你提问，把你的回答整理成一份计划。它倾听你的具体情况，根据你已经讲过的内容调整问题，也知道某个阶段什么时候已经覆盖了。",
+    parrafo2: "你得到的不是一段聊完就散的对话，而是一个持续生长的项目。你可以暂停，去现实中行动，随时回来：有了账户，你的想法会原样等着你。如果你的想法需要，还可以加入专业的世界，每个世界的诊断都是免费的。",
   },
   como: {
     titulo: "从想法到现实",
     cuentameTuIdea: "跟我说说你的想法，或者你现在走到哪一步了",
     paso1: {
       titulo: "描述你的想法",
-      texto: "按你脑海中的样子写下来，或者直接说出来。这就是全部要求。",
+      texto: "按你脑海中的样子写下来；如果你的浏览器支持，也可以直接说出来。这就是全部要求。",
     },
     paso2: {
       demo: "生成中…",
       titulo: "补充更多细节",
-      texto: "没有模板：一场专属访谈会随着你想法的特点实时调整，用你自己的语言和你交流，没有任何技术门槛。",
+      texto: "一场随你的想法调整的访谈：它根据你已经讲过的内容挑选每一个问题，用你自己的语言和你交流，没有任何技术门槛。",
     },
     paso3: {
       demo: "本周",
       titulo: "拿到你的计划",
-      texto: "一份详细的计划，包含阶段、实验和具体行动，帮你把它落地。你的路线图就在这里生成。",
+      texto: `一份详细的计划，包含阶段、实验和具体行动，帮你把它落地。它需要${PLAN}点，只有在你收到计划时才会扣除。目前处于邀请制内测阶段。`,
     },
     paso4: {
-      demo: "确切的下一步",
+      demo: "你的下一步",
       titulo: "去执行，再回来",
-      texto: "暂停，去现实中行动，再回来：计划会重新判断你所处的位置，给出直到收尾的每一个确切步骤。",
+      texto: "暂停，去现实中行动，再回来：勾选你完成的事，看看自己的进展。如果现实发生变化，用你的点数申请一个新周期，计划就会从你现在的位置重新制定。",
     },
   },
   mockup: {
@@ -716,14 +723,14 @@ const zh: typeof es = {
   },
   banda: {
     titulo: "从灵光一闪，到落地成真",
-    texto: "五个阶段陪伴你的想法，从最初的灵光一现，一直到它在现实中运转起来。每个阶段，你都清楚自己在哪里、下一步是什么。",
+    texto: "五个阶段陪伴你的想法，从最初的灵光一现，一直到把它付诸实践。每个阶段，你都清楚自己在哪里、下一步是什么。",
   },
   descargar: {
     etiqueta: "应用",
     titulo: "把它装进口袋",
     texto: "最好的答案，往往在你离开办公桌时出现。",
     googlePlay: "即将登陆 Google Play",
-    dictar: "也可以直接说出来",
+    dictar: "如果浏览器支持，也可以直接说出来",
   },
   cta: {
     titulo: "你的想法在这里圆满，你的项目从这里启程",
@@ -741,7 +748,7 @@ const zh: typeof es = {
 const ko: typeof es = {
   meta: {
     titulo: "My Idea: 창의력을 실행으로 바꿔 보세요",
-    descripcion: "창업가에게 부족한 건 아이디어가 아니에요. 진지하게 함께 고민해 줄 상대예요. 아이디어를 들려주고, 계획을 받아, 실행해 보세요.",
+    descripcion: "창업가에게 부족한 건 아이디어가 아니에요. 진지하게 함께 고민해 줄 상대예요. 아이디어를 들려주고, 무료로 정리한 다음, 원할 때 실행할 수 있는 계획으로 바꿔 보세요.",
   },
   nav: {
     inicio: "홈",
@@ -753,7 +760,7 @@ const ko: typeof es = {
   iniciarSesion: "로그인",
   misIdeas: "내 아이디어",
   comenzar: "시작하기",
-  comenzarGratis: "무료로 시작하기",
+  comenzarGratis: "무료로 아이디어 정리하기",
   tituloOculto: "My Idea: 창의력을 실행으로 바꿔 보세요",
   etapas: {
     chispa: "불꽃",
@@ -769,30 +776,30 @@ const ko: typeof es = {
   },
   acerca: {
     titulo: "창업가에게 부족한 건 아이디어가 아니에요. 진지하게 함께 고민해 줄 상대예요",
-    parrafo1: "My Idea는 바로 이 믿음에서 시작했어요. 좋은 멘토처럼 질문하고 좋은 컨설턴트처럼 정리하는 지식 엔진을 만들었어요. 상황에 귀 기울이고, 뻔한 템플릿을 되풀이하지 않으며, 들려준 이야기로 어떤 단계가 이미 채워졌는지 알아차려요.",
-    parrafo2: "그 결과는 흘러가 버리는 대화가 아니라 살아 있는 프로젝트예요. 잠시 멈추고, 현실에서 실행하고, 언제든 돌아오세요. My Idea가 지금 어디쯤 서 있는지 다시 계산해서 정확한 다음 단계를 보여 줘요. 마지막 마무리까지요. 프로젝트에 필요하면 전문 모듈로 확장돼요.",
+    parrafo1: "My Idea는 바로 이 믿음에서 시작했어요. 체계적으로 질문하고, 답한 내용을 계획으로 정리하는 지식 엔진을 만들었어요. 상황에 귀 기울이고, 이미 들려준 이야기에 맞춰 질문을 바꾸며, 어떤 단계가 이미 채워졌는지 알아차려요.",
+    parrafo2: "그 결과는 흘러가 버리는 대화가 아니라 살아 있는 프로젝트예요. 잠시 멈추고, 현실에서 실행하고, 언제든 돌아오세요. 계정이 있으면 아이디어가 떠날 때 모습 그대로 기다리고 있어요. 아이디어에 필요하면 전문 월드를 더할 수도 있어요. 월드마다 진단은 무료예요.",
   },
   como: {
     titulo: "아이디어에서 현실로",
     cuentameTuIdea: "아이디어를 들려주세요. 지금 어디까지 왔는지도요",
     paso1: {
       titulo: "아이디어를 들려주세요",
-      texto: "머릿속에 있는 그대로 쓰거나 말로 하세요. 필요한 건 그게 전부예요.",
+      texto: "머릿속에 있는 그대로 쓰거나, 브라우저가 지원하면 말로 하세요. 필요한 건 그게 전부예요.",
     },
     paso2: {
       demo: "생성하는 중…",
       titulo: "조금 더 자세히 알려 주세요",
-      texto: "템플릿은 없어요. 아이디어의 성격에 맞춰 실시간으로 달라지는 맞춤 인터뷰가, 어려운 전문 용어 없이 내 언어로 말을 걸어요.",
+      texto: "아이디어에 맞춰 달라지는 인터뷰예요. 이미 들려준 이야기를 바탕으로 질문을 하나하나 고르고, 어려운 전문 용어 없이 내 언어로 말을 걸어요.",
     },
     paso3: {
       demo: "이번 주",
       titulo: "계획을 받아 보세요",
-      texto: "단계, 실험, 구체적인 실행 항목까지 담은 상세한 계획이에요. 나만의 로드맵이 여기서 만들어져요.",
+      texto: `단계, 실험, 구체적인 실행 항목까지 담은 상세한 계획이에요. ${PLAN}크레딧이 들고, 계획을 받았을 때만 차감돼요. 지금은 초대받은 분만 쓸 수 있는 비공개 베타예요.`,
     },
     paso4: {
-      demo: "정확한 다음 단계",
+      demo: "나의 다음 단계",
       titulo: "실행하고 돌아오세요",
-      texto: "잠시 멈추고, 현실에서 움직인 뒤 돌아오세요. 계획이 지금 위치를 다시 계산해서 마무리까지 정확한 단계를 보여 줘요.",
+      texto: "잠시 멈추고, 현실에서 움직인 뒤 돌아오세요. 한 일을 표시하고 진행 상황을 확인해요. 상황이 바뀌면 크레딧으로 새 사이클을 요청하세요. 지금 있는 지점부터 계획을 다시 짜 드려요.",
     },
   },
   mockup: {
@@ -806,14 +813,14 @@ const ko: typeof es = {
   },
   banda: {
     titulo: "불꽃에서 현실까지",
-    texto: "첫 번째 불꽃부터 현실에서 실제로 돌아가는 모습을 보기까지, 다섯 단계가 아이디어와 함께해요. 단계마다 지금 어디에 있고 다음에 무엇을 할지 알 수 있어요.",
+    texto: "첫 번째 불꽃부터 실제로 실행에 옮기기까지, 다섯 단계가 아이디어와 함께해요. 단계마다 지금 어디에 있고 다음에 무엇을 할지 알 수 있어요.",
   },
   descargar: {
     etiqueta: "앱",
     titulo: "주머니 속에 넣고 다니세요",
     texto: "가장 좋은 답은 책상에서 멀리 떨어져 있을 때 떠올라요.",
     googlePlay: "Google Play 출시 예정",
-    dictar: "말로 해도 돼요",
+    dictar: "브라우저가 지원하면 말로 해도 돼요",
   },
   cta: {
     titulo: "여기서 아이디어가 끝나고 프로젝트가 태어나요",
@@ -831,7 +838,7 @@ const ko: typeof es = {
 const ar: typeof es = {
   meta: {
     titulo: "My Idea: حوّلوا إبداعكم إلى فعل",
-    descripcion: "رواد الأعمال لا تنقصهم الأفكار، بل ينقصهم محاور جادّ. احكوا لنا فكرتكم، واحصلوا على خطتكم، ونفّذوها.",
+    descripcion: "رواد الأعمال لا تنقصهم الأفكار، بل ينقصهم محاور جادّ. احكوا لنا فكرتكم، ورتّبوها مجانًا، ومتى شئتم حوّلوها إلى خطة لتنفيذها.",
   },
   nav: {
     inicio: "الرئيسية",
@@ -843,7 +850,7 @@ const ar: typeof es = {
   iniciarSesion: "تسجيل الدخول",
   misIdeas: "أفكاري",
   comenzar: "ابدؤوا الآن",
-  comenzarGratis: "ابدؤوا مجانًا",
+  comenzarGratis: "رتّبوا فكرتكم مجانًا",
   tituloOculto: "My Idea: حوّلوا إبداعكم إلى فعل",
   etapas: {
     chispa: "الشرارة",
@@ -859,30 +866,30 @@ const ar: typeof es = {
   },
   acerca: {
     titulo: "رواد الأعمال لا تنقصهم الأفكار، بل ينقصهم محاور جادّ",
-    parrafo1: "من هذه القناعة وُلدت My Idea. بنينا محرّك معرفة يسأل كما يسأل مرشد جيد، وينظّم كما ينظّم مستشار جيد: يصغي إلى سياقكم، ولا يكرّر القوالب، ويعرف متى صارت مرحلة ما مغطّاة بما رويتموه.",
-    parrafo2: "النتيجة ليست محادثة تضيع، بل مشروع حيّ. توقّفوا، ونفّذوا في العالم الحقيقي، وعودوا متى شئتم. تعيد My Idea حساب موقعكم وتُريكم الخطوات التالية بدقة، حتى الإغلاق النهائي. وإن تطلّب المشروع ذلك، يتّسع بوحدات متخصّصة.",
+    parrafo1: "من هذه القناعة وُلدت My Idea. بنينا محرّك معرفة يطرح عليكم الأسئلة بمنهج، وينظّم إجاباتكم في خطة: يصغي إلى سياقكم، ويكيّف أسئلته مع ما رويتموه، ويعرف متى صارت مرحلة ما مغطّاة.",
+    parrafo2: "النتيجة ليست محادثة تضيع، بل مشروع حيّ. توقّفوا، ونفّذوا في العالم الحقيقي، وعودوا متى شئتم: مع حسابكم، تنتظركم فكرتكم كما تركتموها. وإن احتاجت فكرتكم ذلك، يمكنكم إضافة عوالم متخصّصة، ولكلّ منها تشخيص مجاني.",
   },
   como: {
     titulo: "من الفكرة إلى العالم الحقيقي",
     cuentameTuIdea: "احكوا لي فكرتكم، أو إلى أين وصلتم بها",
     paso1: {
       titulo: "صِفوا فكرتكم",
-      texto: "اكتبوها أو أملوها كما هي في أذهانكم. هذا كل المطلوب.",
+      texto: "اكتبوها كما هي في أذهانكم، أو أملوها إن كان متصفّحكم يتيح ذلك. هذا كل المطلوب.",
     },
     paso2: {
       demo: "جارٍ الإنشاء…",
       titulo: "أضيفوا تفاصيل أكثر",
-      texto: "لا قوالب هنا: مقابلة مصمَّمة لفكرتكم تتطوّر في الوقت الفعلي مع طبيعتها، وتخاطبكم بلغتكم أنتم، بلا حواجز تقنية.",
+      texto: "مقابلة تتكيّف مع فكرتكم: تختار كل سؤال بناءً على ما رويتموه، وتخاطبكم بلغتكم أنتم، بلا حواجز تقنية.",
     },
     paso3: {
       demo: "هذا الأسبوع",
       titulo: "احصلوا على خطتكم",
-      texto: "خطة مفصّلة بمراحل وتجارب وإجراءات ملموسة لتنفيذها. هنا تُرسم خارطة طريقكم.",
+      texto: `خطة مفصّلة بمراحل وتجارب وإجراءات ملموسة لتنفيذها. تستخدم ${PLAN} من النقاط، ولا تُخصم إلا إذا استلمتموها. نحن الآن في نسخة تجريبية خاصة، بالدعوة فقط.`,
     },
     paso4: {
-      demo: "الخطوة التالية بدقة",
+      demo: "خطوتكم التالية",
       titulo: "نفّذوا وعودوا",
-      texto: "توقّفوا، واعملوا في العالم الحقيقي، ثم عودوا: تعيد الخطة حساب موقعكم وتُريكم الخطوات الدقيقة حتى الإغلاق.",
+      texto: "توقّفوا، واعملوا في العالم الحقيقي، ثم عودوا: علّموا ما أنجزتموه وتابعوا تقدّمكم. وإن تغيّر الواقع، اطلبوا دورة جديدة بنقاطكم، فتُعاد خطتكم من حيث أنتم.",
     },
   },
   mockup: {
@@ -896,14 +903,14 @@ const ar: typeof es = {
   },
   banda: {
     titulo: "من الشرارة إلى الواقع",
-    texto: "خمس مراحل ترافق فكرتكم من أول ومضة حتى ترونها تعمل في العالم الحقيقي. في كل منها تعرفون أين أنتم وما الخطوة التالية.",
+    texto: "خمس مراحل ترافق فكرتكم من أول ومضة حتى تضعوها موضع التطبيق. في كل منها تعرفون أين أنتم وما الخطوة التالية.",
   },
   descargar: {
     etiqueta: "التطبيق",
     titulo: "احملوه في جيبكم",
     texto: "أفضل الإجابات تأتي بعيدًا عن المكتب.",
     googlePlay: "قريبًا على Google Play",
-    dictar: "ويمكنكم أيضًا إملاؤها",
+    dictar: "ويمكنكم أيضًا إملاؤها إن كان متصفّحكم يتيح ذلك",
   },
   cta: {
     titulo: "هنا تنتهي فكرتكم ويولد مشروعكم",
@@ -921,7 +928,7 @@ const ar: typeof es = {
 const hi: typeof es = {
   meta: {
     titulo: "My Idea: अपनी रचनात्मकता को अमल में लाएँ",
-    descripcion: "उद्यमियों के पास विचारों की कमी नहीं होती। कमी होती है ऐसे साथी की जो उनकी बात गंभीरता से ले। अपना विचार बताएँ, अपनी योजना पाएँ और उसे अमल में लाएँ।",
+    descripcion: "उद्यमियों के पास विचारों की कमी नहीं होती। कमी होती है ऐसे साथी की जो उनकी बात गंभीरता से ले। अपना विचार बताएँ, उसे मुफ़्त में व्यवस्थित करें और जब चाहें, उसे अमल में लाने की योजना में बदलें।",
   },
   nav: {
     inicio: "होम",
@@ -933,7 +940,7 @@ const hi: typeof es = {
   iniciarSesion: "लॉग इन करें",
   misIdeas: "मेरे विचार",
   comenzar: "शुरू करें",
-  comenzarGratis: "मुफ़्त में शुरू करें",
+  comenzarGratis: "अपना विचार मुफ़्त में व्यवस्थित करें",
   tituloOculto: "My Idea: अपनी रचनात्मकता को अमल में लाएँ",
   etapas: {
     chispa: "चिंगारी",
@@ -949,30 +956,30 @@ const hi: typeof es = {
   },
   acerca: {
     titulo: "उद्यमियों के पास विचारों की कमी नहीं होती। कमी होती है ऐसे साथी की जो उनकी बात गंभीरता से ले",
-    parrafo1: "My Idea इसी सोच से जन्मा है। हमने एक ज्ञान इंजन बनाया है जो एक अच्छे मेंटर की तरह सवाल पूछता है और एक अच्छे सलाहकार की तरह चीज़ों को ढाँचा देता है: यह आपकी पूरी स्थिति सुनता है, रटे-रटाए टेम्पलेट नहीं दोहराता, और समझता है कि आपकी बताई बातों से कोई चरण कब पूरा हो चुका है।",
-    parrafo2: "नतीजा कोई ऐसी बातचीत नहीं जो कहीं खो जाए: यह एक जीवंत परियोजना है। रुकें, असल दुनिया में काम करें और जब चाहें लौट आएँ। My Idea फिर से हिसाब लगाता है कि आप अभी कहाँ हैं और आपको अगले सटीक कदम दिखाता है, आख़िरी मंज़िल तक। और अगर परियोजना को ज़रूरत हो, तो यह खास मॉड्यूल के साथ और बड़ा हो जाता है।",
+    parrafo1: "My Idea इसी सोच से जन्मा है। हमने एक ज्ञान इंजन बनाया है जो तरीके से सवाल पूछता है और आपके जवाबों को एक योजना में व्यवस्थित करता है: यह आपकी पूरी स्थिति सुनता है, आपकी बताई बातों के हिसाब से अपने सवाल ढालता है, और समझता है कि कोई चरण कब पूरा हो चुका है।",
+    parrafo2: "नतीजा कोई ऐसी बातचीत नहीं जो कहीं खो जाए: यह एक जीवंत परियोजना है। रुकें, असल दुनिया में काम करें और जब चाहें लौट आएँ: आपके खाते में आपका विचार वैसा ही आपका इंतज़ार करता है जैसा आपने छोड़ा था। और अगर आपके विचार को ज़रूरत हो, तो आप खास दुनियाएँ जोड़ सकते हैं, हर एक का आकलन मुफ़्त है।",
   },
   como: {
     titulo: "विचार से असल दुनिया तक",
     cuentameTuIdea: "मुझे अपना विचार बताएँ, या यह कि वह अभी किस मोड़ पर है",
     paso1: {
       titulo: "अपना विचार बताएँ",
-      texto: "इसे लिखें या बोलकर लिखवाएँ, ठीक वैसे ही जैसे यह आपके मन में है। बस इतना ही चाहिए।",
+      texto: "इसे वैसे ही लिखें जैसे यह आपके मन में है, या आपका ब्राउज़र सपोर्ट करे तो बोलकर लिखवाएँ। बस इतना ही चाहिए।",
     },
     paso2: {
       demo: "बन रहा है…",
       titulo: "और जानकारी दें",
-      texto: "कोई टेम्पलेट नहीं: एक खास बातचीत आपके विचार के स्वभाव के हिसाब से उसी वक़्त ढलती जाती है और आपकी अपनी भाषा में बात करती है, बिना किसी तकनीकी रुकावट के।",
+      texto: "एक बातचीत जो आपके विचार के हिसाब से ढलती है: यह आपकी बताई बातों के आधार पर हर सवाल चुनती है और आपकी अपनी भाषा में बात करती है, बिना किसी तकनीकी रुकावट के।",
     },
     paso3: {
       demo: "इस हफ़्ते",
       titulo: "अपनी योजना पाएँ",
-      texto: "चरणों, प्रयोगों और ठोस कदमों वाली एक विस्तृत योजना, जिस पर आप अमल कर सकें। यहीं आपका रोडमैप तैयार होता है।",
+      texto: `चरणों, प्रयोगों और ठोस कदमों वाली एक विस्तृत योजना, जिस पर आप अमल कर सकें। इसमें ${PLAN} क्रेडिट लगते हैं, जो तभी कटते हैं जब योजना आपको मिल जाए। अभी हम निजी बीटा में हैं, सिर्फ़ न्योते पर।`,
     },
     paso4: {
-      demo: "अगला सटीक कदम",
+      demo: "आपका अगला कदम",
       titulo: "अमल करें और लौटें",
-      texto: "रुकें, असल दुनिया में कदम उठाएँ और लौट आएँ: योजना फिर से हिसाब लगाती है कि आप कहाँ हैं और आपको मंज़िल तक के सटीक कदम दिखाती है।",
+      texto: "रुकें, असल दुनिया में कदम उठाएँ और लौट आएँ: जो किया उस पर निशान लगाएँ और अपनी प्रगति देखें। अगर हालात बदलें, तो अपने क्रेडिट से नया चक्र माँगें, और आपकी योजना वहीं से दोबारा बनती है जहाँ आप हैं।",
     },
   },
   mockup: {
@@ -986,14 +993,14 @@ const hi: typeof es = {
   },
   banda: {
     titulo: "चिंगारी से हकीकत तक",
-    texto: "पाँच चरण आपके विचार के साथ चलते हैं, पहली चमक से लेकर उसे असल दुनिया में चलता देखने तक। हर चरण में आपको पता रहता है कि आप कहाँ हैं और अगला कदम क्या है।",
+    texto: "पाँच चरण आपके विचार के साथ चलते हैं, पहली चमक से लेकर उसे अमल में लाने तक। हर चरण में आपको पता रहता है कि आप कहाँ हैं और अगला कदम क्या है।",
   },
   descargar: {
     etiqueta: "ऐप",
     titulo: "इसे अपनी जेब में रखें",
     texto: "सबसे अच्छे जवाब अक्सर डेस्क से दूर सूझते हैं।",
     googlePlay: "जल्द ही Google Play पर",
-    dictar: "इसे बोलकर भी लिखवाया जा सकता है",
+    dictar: "ब्राउज़र सपोर्ट करे तो इसे बोलकर भी लिखवाया जा सकता है",
   },
   cta: {
     titulo: "यहाँ आपका विचार पूरा होता है और आपकी परियोजना जन्म लेती है",

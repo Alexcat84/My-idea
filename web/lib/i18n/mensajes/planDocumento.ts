@@ -23,7 +23,7 @@ const es = {
   verMiBitacora: "Ver mi bitácora",
   construidoConTuRecorrido: "Construido con tu recorrido",
   notaRecalculo:
-    "¿Cambia algo en el mundo real? Vuelve a la entrevista cuando quieras: el plan se recalcula desde donde estés.",
+    "¿Cambia algo en el mundo real? Pide un nuevo ciclo desde Manos a la Obra y tu plan se rehace desde donde estés. Cuesta créditos y verás el precio antes de confirmarlo.",
   /** planParser: el bloque que rescata las cifras en negrita de la sección de números */
   losNumerosQueNecesitas: "Los números que necesitas",
 };
@@ -43,7 +43,7 @@ const en: typeof es = {
   verMiBitacora: "See my Logbook",
   construidoConTuRecorrido: "Built from your path",
   notaRecalculo:
-    "Something changed in the real world? Go back to the interview whenever you like: the plan recalculates from wherever you are.",
+    "Something changed in the real world? Ask for a new cycle from Get to Work and your plan is rebuilt from wherever you are. It costs credits, and you'll see the price before you confirm.",
   losNumerosQueNecesitas: "The numbers you need",
 };
 
@@ -64,7 +64,7 @@ const fr: typeof es = {
   historiaDeTuViaje: "L'histoire de ton parcours, pas à pas.",
   verMiBitacora: "Voir mon journal de bord",
   construidoConTuRecorrido: "Construit avec ton cheminement",
-  notaRecalculo: "Quelque chose change dans la vraie vie? Reviens à l'entretien quand tu veux : le plan se recalcule à partir de là où tu en es.",
+  notaRecalculo: "Quelque chose change dans la vraie vie ? Demande un nouveau cycle depuis À l'ouvrage et ton plan est refait à partir de là où tu en es. Il coûte des crédits, et tu verras le prix avant de confirmer.",
   losNumerosQueNecesitas: "Les chiffres dont tu as besoin",
 };
 
@@ -85,7 +85,7 @@ const pt: typeof es = {
   historiaDeTuViaje: "A história da sua jornada, passo a passo.",
   verMiBitacora: "Ver meu diário de bordo",
   construidoConTuRecorrido: "Construído com o seu percurso",
-  notaRecalculo: "Algo mudou no mundo real? Volte à entrevista quando quiser: o plano é recalculado a partir de onde você estiver.",
+  notaRecalculo: "Algo mudou no mundo real? Peça um novo ciclo em Mãos à Obra e seu plano é refeito a partir de onde você estiver. Custa créditos, e você vê o preço antes de confirmar.",
   losNumerosQueNecesitas: "Os números de que você precisa",
 };
 
@@ -106,7 +106,7 @@ const de: typeof es = {
   historiaDeTuViaje: "Die Geschichte deiner Reise, Schritt für Schritt.",
   verMiBitacora: "Mein Logbuch ansehen",
   construidoConTuRecorrido: "Auf deinem Weg aufgebaut",
-  notaRecalculo: "Ändert sich etwas in der echten Welt? Geh zurück ins Gespräch, wann immer du willst: Der Plan wird von dort aus neu berechnet, wo du gerade stehst.",
+  notaRecalculo: "Ändert sich etwas in der echten Welt? Fordere unter „Ans Werk“ eine neue Runde an, und dein Plan wird von dort aus neu aufgebaut, wo du gerade stehst. Das kostet Punkte, und du siehst den Preis, bevor du bestätigst.",
   losNumerosQueNecesitas: "Die Zahlen, die du brauchst",
 };
 
@@ -127,7 +127,7 @@ const it: typeof es = {
   historiaDeTuViaje: "La storia del tuo viaggio, passo dopo passo.",
   verMiBitacora: "Vedi il mio diario di bordo",
   construidoConTuRecorrido: "Costruito con il tuo percorso",
-  notaRecalculo: "Qualcosa è cambiato nel mondo reale? Torna all'intervista quando vuoi: il piano si ricalcola da dove ti trovi.",
+  notaRecalculo: "Qualcosa è cambiato nel mondo reale? Chiedi un nuovo ciclo da Al lavoro e il tuo piano viene rifatto da dove ti trovi. Costa crediti, e vedrai il prezzo prima di confermare.",
   losNumerosQueNecesitas: "I numeri che ti servono",
 };
 
@@ -148,7 +148,7 @@ const ja: typeof es = {
   historiaDeTuViaje: "あなたの旅の歩みを、一歩ずつ。",
   verMiBitacora: "活動ログを見る",
   construidoConTuRecorrido: "これまでの道のりをもとに作成",
-  notaRecalculo: "現実に何か変化がありましたか？いつでもインタビューに戻れます。プランは今いる地点から再計算されます。",
+  notaRecalculo: "現実に何か変化がありましたか？「実行」から新しいサイクルを依頼すると、今いる地点からプランを作り直します。ポイントが必要で、確定する前に価格を確認できます。",
   losNumerosQueNecesitas: "必要な数字",
 };
 
@@ -169,7 +169,7 @@ const zh: typeof es = {
   historiaDeTuViaje: "你的旅程一步步走来的故事。",
   verMiBitacora: "查看我的日志",
   construidoConTuRecorrido: "基于你的探索路径构建",
-  notaRecalculo: "现实中有了变化？随时回到访谈：计划会从你现在的位置重新计算。",
+  notaRecalculo: "现实中有了变化？在“动手做”里申请一个新的循环，你的计划会从你现在的位置重新搭建。这需要使用点数，确认之前你会看到价格。",
   losNumerosQueNecesitas: "你需要的数字",
 };
 
@@ -190,7 +190,7 @@ const ko: typeof es = {
   historiaDeTuViaje: "여정의 이야기를 한 걸음씩.",
   verMiBitacora: "기록장 보기",
   construidoConTuRecorrido: "탐색 경로로 만들었어요",
-  notaRecalculo: "현실에서 뭔가 달라졌나요? 언제든 인터뷰로 돌아오세요. 지금 있는 곳에서부터 계획을 다시 계산해요.",
+  notaRecalculo: "현실에서 뭔가 달라졌나요? 실행하기에서 새 사이클을 요청하면 지금 있는 곳에서부터 계획을 다시 짜요. 크레딧이 들고, 확정하기 전에 가격을 볼 수 있어요.",
   losNumerosQueNecesitas: "필요한 숫자",
 };
 
@@ -211,7 +211,7 @@ const ar: typeof es = {
   historiaDeTuViaje: "قصة رحلتكم، خطوة بخطوة.",
   verMiBitacora: "عرض سجلّ رحلتي",
   construidoConTuRecorrido: "مبنيّة على مساركم",
-  notaRecalculo: "هل تغيّر شيء في العالم الحقيقي؟ عودوا إلى المقابلة متى شئتم: يُعاد حساب الخطة من حيث وصلتم.",
+  notaRecalculo: "هل تغيّر شيء في العالم الحقيقي؟ اطلبوا دورة جديدة من «إلى العمل» ويُعاد بناء خطتكم من حيث وصلتم. تكلّف نقاطًا، وسترون السعر قبل التأكيد.",
   losNumerosQueNecesitas: "الأرقام التي تحتاجونها",
 };
 
@@ -232,7 +232,7 @@ const hi: typeof es = {
   historiaDeTuViaje: "आपकी यात्रा की कहानी, कदम दर कदम।",
   verMiBitacora: "मेरी लॉगबुक देखें",
   construidoConTuRecorrido: "आपके रास्ते से बना",
-  notaRecalculo: "असल दुनिया में कुछ बदला? जब चाहें बातचीत पर लौटें: योजना वहीं से फिर से बनती है जहाँ आप हैं।",
+  notaRecalculo: "असल दुनिया में कुछ बदला? “काम शुरू करें” से नया चक्र माँगें, और आपकी योजना वहीं से फिर से बनती है जहाँ आप हैं। इसमें क्रेडिट लगते हैं, और पुष्टि करने से पहले आपको कीमत दिख जाती है।",
   losNumerosQueNecesitas: "जिन आंकड़ों की आपको ज़रूरत है",
 };
 
