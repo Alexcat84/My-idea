@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cálculo de Aranceles y Tarifas de Importación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Puedes calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Antes de fijar tu precio en un mercado extranjero, suma lo que pesan los aranceles, las tarifas de puerto y los impuestos: pueden ser altos y es clave ver cómo afectan el costo final de tu producto allá. Lo habitual es que esos aranceles los cubra el importador, pero igual condicionan cuánto aceptará pagarte tu comprador. Para calcularlos y saber si tu precio final es viable y competitivo, puedes apoyarte en herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o en el organismo equivalente de tu mercado. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar el código HS (Sistema Armonizado) de 6 dígitos del producto.",
     "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
@@ -107,6 +107,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que puedes calcular aranceles e impuestos con esa base de datos; el nodo lo vuelve esencial.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-calculo_de_aranceles_importacion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los aranceles, tarifas portuarias e impuestos pueden ser altos, por lo que es muy importante considerar su efecto en el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Puedes calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Antes de fijar tu precio en un mercado extranjero, suma lo que pesan los aranceles, las tarifas de puerto y los impuestos: pueden ser altos y es clave ver cómo afectan el costo final de tu producto allá. Lo habitual es que esos aranceles los cubra el importador, pero igual condicionan cuánto aceptará pagarte tu comprador. Para calcularlos y saber si tu precio final es viable y competitivo, puedes apoyarte en herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o en el organismo equivalente de tu mercado. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3681",
+        "frase": "Because tariffs, port handling fees, and taxes can be high, it is very important"
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Fiscalidad en el Comercio Electrónico Internacional",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios de bienes y servicios electrónicos registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Vender por internet a otros países te genera obligaciones fiscales que cambian de una jurisdicción a otra. Como regla general, un país solo puede someterte a sus impuestos generales si tu empresa tiene allí un 'establecimiento permanente'. Esa regla, sin embargo, tiene excepciones de peso: en la Unión Europea, por ejemplo, si vendes bienes o servicios electrónicos desde fuera de la Unión, tienes que registrarte y cobrar el IVA que corresponde al lugar donde está tu cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado objetivo aplica impuestos según ubicación del cliente o del vendedor",
     "Verificar si se requiere registro fiscal en el país destino (ej. régimen de IVA de la UE)",
@@ -121,6 +121,22 @@
       "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-fiscalidad_comercio_electronico_internacional-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La venta online a mercados extranjeros implica obligaciones fiscales que varían según jurisdicción. Generalmente una empresa necesita 'establecimiento permanente' en un país para estar sujeta a su jurisdicción tributaria general, pero existen excepciones importantes, como el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios de bienes y servicios electrónicos registrarse y cobrar IVA según la ubicación del cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Vender por internet a otros países te genera obligaciones fiscales que cambian de una jurisdicción a otra. Como regla general, un país solo puede someterte a sus impuestos generales si tu empresa tiene allí un 'establecimiento permanente'. Esa regla, sin embargo, tiene excepciones de peso: en la Unión Europea, por ejemplo, si vendes bienes o servicios electrónicos desde fuera de la Unión, tienes que registrarte y cobrar el IVA que corresponde al lugar donde está tu cliente. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "3355",
+        "frase": "In general, for most overseas markets, a company must have a permanent establishment"
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Estadísticas Comerciales (Trade Statistics)",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Datos que indican el total de exportaciones o importaciones por país y por producto, permitiendo comparar el tamaño del mercado para un producto en distintos países. Al analizar estadísticas de varios años se puede determinar qué mercados están creciendo y cuáles se están contrayendo.",
+  "resumen_teorico": "Son las cifras de cuánto exporta o importa cada país en cada producto. Con ellas mides qué tan grande es el mercado de un producto en un país frente a otro, y si las revisas a lo largo de varios años descubres cuáles mercados van en aumento y cuáles van a la baja.",
   "pasos_accionables": [
     "Recopilar datos de importación/exportación del producto en los mercados candidatos",
     "Comparar series históricas de al menos 3-5 años para identificar tendencias",
@@ -23,5 +23,23 @@
   "etiqueta_arbol": "Analiza las Estadísticas de Comercio",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-estadisticas_comerciales-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Datos que indican el total de exportaciones o importaciones por país y por producto, permitiendo comparar el tamaño del mercado para un producto en distintos países. Al analizar estadísticas de varios años se puede determinar qué mercados están creciendo y cuáles se están contrayendo.",
+      "texto_nuevo": "Son las cifras de cuánto exporta o importa cada país en cada producto. Con ellas mides qué tan grande es el mercado de un producto en un país frente a otro, y si las revisas a lo largo de varios años descubres cuáles mercados van en aumento y cuáles van a la baja.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "5493, 1305",
+        "frase": "Trade Statistics Data that indicate total exports or imports by country and by product."
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

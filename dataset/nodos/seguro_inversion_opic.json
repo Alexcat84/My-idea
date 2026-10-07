@@ -4,7 +4,7 @@
   "dominio": "exportacion",
   "titulo_concepto": "Seguro y Financiamiento de Inversión OPIC",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "La Overseas Private Investment Corporation (OPIC) facilita la inversión extranjera directa de EE.UU. en mercados emergentes mediante seguro de riesgo político, garantías integrales y préstamos directos, cubriendo hasta 400 millones de dólares por proyecto. Protege contra expropiación, violencia política e inconvertibilidad de moneda, y cuenta con un Small Business Center para apoyar a pequeñas y medianas empresas.",
+  "resumen_teorico": "Para que capital de EE.UU. se invierta de forma directa en mercados emergentes, la Overseas Private Investment Corporation (OPIC) ofrece tres herramientas: préstamos directos, garantías integrales y seguro contra el riesgo político, con un respaldo de hasta 400 millones de dólares por proyecto. Ese seguro te cubre si hay violencia política, si te expropian o si la moneda local no se puede convertir. Además, las pequeñas y medianas empresas tienen un Small Business Center pensado para apoyarlas.",
   "pasos_accionables": [
     "Evaluar si el proyecto de exportación implica inversión directa en el extranjero (construcción de instalaciones, equipos)",
     "Contactar OPIC InfoLine o FactsLine para determinar elegibilidad",
@@ -74,6 +74,22 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "copia-seguro_inversion_opic-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La Overseas Private Investment Corporation (OPIC) facilita la inversión extranjera directa de EE.UU. en mercados emergentes mediante seguro de riesgo político, garantías integrales y préstamos directos, cubriendo hasta 400 millones de dólares por proyecto. Protege contra expropiación, violencia política e inconvertibilidad de moneda, y cuenta con un Small Business Center para apoyar a pequeñas y medianas empresas.",
+      "texto_nuevo": "Para que capital de EE.UU. se invierta de forma directa en mercados emergentes, la Overseas Private Investment Corporation (OPIC) ofrece tres herramientas: préstamos directos, garantías integrales y seguro contra el riesgo político, con un respaldo de hasta 400 millones de dólares por proyecto. Ese seguro te cubre si hay violencia política, si te expropian o si la moneda local no se puede convertir. Además, las pequeñas y medianas empresas tienen un Small Business Center pensado para apoyarlas.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4373-4375",
+        "frase": "OPIC is a federal agency that facilitates U.S. foreign direct investment"
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

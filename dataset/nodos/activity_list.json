@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Activity List",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "Documento que define todas las actividades necesarias para completar el trabajo del proyecto, describiéndolas con suficiente detalle para que quien las ejecute entienda los requisitos necesarios.",
+  "resumen_teorico": "Reúne en un documento cada actividad que tu proyecto exige para completar su trabajo, y explica cada una con el detalle suficiente para que quien la haga tenga claros sus requisitos.",
   "pasos_accionables": [
     "Identificar cada actividad a partir de los entregables de la EDT (estructura de desglose del trabajo)",
     "Asignar un identificador único a cada actividad",
@@ -49,6 +49,22 @@
       "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-activity_list-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Documento que define todas las actividades necesarias para completar el trabajo del proyecto, describiéndolas con suficiente detalle para que quien las ejecute entienda los requisitos necesarios.",
+      "texto_nuevo": "Reúne en un documento cada actividad que tu proyecto exige para completar su trabajo, y explica cada una con el detalle suficiente para que quien la haga tenga claros sus requisitos.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "1413",
+        "frase": "The Activity List defines all the activities necessary to complete the project work."
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

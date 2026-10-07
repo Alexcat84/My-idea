@@ -4,7 +4,7 @@
   "dominio": "compras",
   "titulo_concepto": "Cierre de Contrato",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
-  "resumen_teorico": "El Cierre de Contrato documenta el desempeño del proveedor para evaluaciones futuras, asegurando que todas las disputas se resuelvan, el producto sea aceptado y los pagos finales realizados antes de cerrar formalmente el contrato. Incluye análisis de desempeño del proveedor, registro de cambios contractuales y disputas, así como la fecha de finalización, firma y pago final.",
+  "resumen_teorico": "Cerrar un contrato es dejar por escrito cómo trabajó tu proveedor, para tenerlo en cuenta cuando vuelvas a evaluarlo más adelante. Antes de darlo por cerrado formalmente, comprueba que todas las disputas estén resueltas, que el producto esté aceptado y que los pagos finales estén hechos. El cierre recoge el análisis del desempeño del proveedor, los cambios que tuvo el contrato y las disputas que surgieron, además de la fecha de término, la firma y el pago final.",
   "pasos_accionables": [
     "Confirmar que todas las disputas contractuales estén resueltas",
     "Verificar que el producto o resultado haya sido aceptado",
@@ -71,6 +71,22 @@
         "motivo": "Las disputas de garantia con consumidores no tienen relacion con el cierre de contratos con proveedores."
       },
       "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "copia-contract_close_out-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El Cierre de Contrato documenta el desempeño del proveedor para evaluaciones futuras, asegurando que todas las disputas se resuelvan, el producto sea aceptado y los pagos finales realizados antes de cerrar formalmente el contrato. Incluye análisis de desempeño del proveedor, registro de cambios contractuales y disputas, así como la fecha de finalización, firma y pago final.",
+      "texto_nuevo": "Cerrar un contrato es dejar por escrito cómo trabajó tu proveedor, para tenerlo en cuenta cuando vuelvas a evaluarlo más adelante. Antes de darlo por cerrado formalmente, comprueba que todas las disputas estén resueltas, que el producto esté aceptado y que los pagos finales estén hechos. El cierre recoge el análisis del desempeño del proveedor, los cambios que tuvo el contrato y las disputas que surgieron, además de la fecha de término, la firma y el pago final.",
+      "cita": {
+        "libro": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
+        "fichero": "txt/A Project Manager's Book of For - Cynthia Stackpole Snyder.txt",
+        "lineas": "5439",
+        "frase": "Contract close-out involves documenting the vendor performance so that the information"
+      },
+      "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
