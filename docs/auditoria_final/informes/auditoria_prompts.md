@@ -106,3 +106,38 @@ Menores, sin hallazgo formal:
 2. A4 (estado vivo), porque contamina el contexto de todas las llamadas siguientes.
 3. A5-A6 (diagnóstico de mundo).
 4. Los medios, y después los bajos.
+
+## F. Los 18 medios y bajos: estado tras el encargo del 6 oct 2026 (punto 7a)
+
+Encargo: aplicar los ajustes que solo QUITAN y dejar los demás listados para el visto del fundador. Se aplicó solo lo
+que se puede quitar sin poner palabras nuevas. La parte que añade texto de cada ajuste queda aquí para el visto.
+
+**Aplicados (solo quitan):**
+
+| # | Qué se quitó | Dónde |
+|---|---|---|
+| B1 | "con lo que va a lograr con este plan concreto" (prometía un resultado) | SYSTEM_PLAN, regla 6 |
+| B2, parte | el ejemplo de las cuatro columnas de un caso digital, que el modelo copiaba | SYSTEM_PLAN, regla 4-bis |
+| B3 | la causa añadida del paso 2 de las velas (ya había salido con A1) | SYSTEM_PLAN, ejemplo |
+| B6 | "¿es sano el margen?" (pedía una referencia externa); queda "¿el techo de ingreso alcanza lo que busca?" | SYSTEM_REPORTE |
+| C4 | "con case studies y un criterio pass/fail" | SYSTEM_PLAN, regla 16 |
+| C5, parte | los beneficios prometidos de los ejemplos ("te protege de invertir de más", "evita que inviertas semanas…") | SYSTEM_INTERPRETE_MULTI |
+| C8, parte | "su contador o abogado" (roles supuestos) | REGLA_CONTEXTO_USUARIO (TS y su copia en `build_question_cache.py`) |
+
+**Para el visto del fundador (añaden texto, o quitar solo no basta):**
+
+- **B2, resto:** limitar los números a los que nombran los conceptos de viabilidad.
+- **B4:** ampliar el cierre del plan a leyes, normas, trámites, plazos, precios de referencia, tasas de éxito,
+  resultados y nombres de herramientas o empresas.
+- **B5:** el resumen del perfil, con las palabras de la persona y sin deducir.
+- **B7:** "Eres el estratega" y "qué harías distinto" se reescriben. Quitar el ejemplo "Vender por encargo sin local"
+  dejaba el título sin modelo, así que se cambia por un ejemplo neutro, que es texto nuevo.
+- **B8 y B9:** la detección y la severidad del enlazador, solo con base en el texto.
+- **B10:** las áreas y los supuestos del organizador.
+- **C1:** el ejemplo del registro oficial. Quitar solo el paréntesis deja el ejemplo sin la instrucción de buscar.
+- **C2:** el ejemplo "ya validaste el interés de dos instituciones".
+- **C3:** "3 piezas", opcional.
+- **C5, resto:** "lo adyacente que trae alguno de los nodos".
+- **C6:** "(y cómo conseguirlos)" es un título fijo que también usa el código del reporte, y el ejemplo de $850/$170.
+- **C7:** quitar los ejemplos de métodos de `REGLA_SIN_FUENTES` rompe la guarda `lib/procedencia.test.ts`, que fija la
+  regla D5 del fundador (el método se nombra con su nombre neutro, por ejemplo "el ciclo PDCA"). No se toca sin su visto.

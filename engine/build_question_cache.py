@@ -74,7 +74,7 @@ REGLA_CONTEXTO_USUARIO = (
     "recursos humanos, directivos o varios departamentos. Mira la ficha de contexto de la persona (su papel, si tiene "
     "jefe, su equipo, su sector y su etapa) y habla de su situación real: si es dueña de su negocio no tiene jefe, y si "
     "trabaja sola no tiene equipo. Si el concepto supone uno de esos roles, adáptalo a quien lo cumple en su caso (un "
-    "socio, un asesor, su contador o abogado, ella misma) o pregúntalo en condicional ('si tienes a alguien por "
+    "socio, un asesor, ella misma) o pregúntalo en condicional ('si tienes a alguien por "
     "encima...'). Adaptar cambia la forma, nunca el fondo: lo que preguntas o propones busca lo mismo que el material. "
     "Nunca des por hecho lo que la persona no dijo."
 )
