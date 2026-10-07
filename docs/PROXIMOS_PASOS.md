@@ -11,9 +11,7 @@ las decisiones del fundador de ese día: la copia fiel (regla D2, sección 8) y 
 1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
 2. **Terminar la copia fiel** (sección 8; NO quedó certificada): verificar la ola k31, ya leída; leer 12 lotes de
    vecindad; reescribir lo retenido; decidir el residuo de resúmenes; medir otra vez.
-   **Después, la segunda pasada de Voyage** (sección 4). La primera se hizo el 7 oct 2026 con la copia fiel hasta
-   k26. Las tandas posteriores que tocan resúmenes (k27, k28, r2, h7) dejan esos vectores atrasados; los pasos no
-   entran en el vector.
+   Voyage va al día con main del 8 oct 2026 (segunda pasada, sección 4); los pasos no entran en el vector.
 3. **Despliegue**, con el índice de la segunda pasada.
 4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
 5. **Lanzamiento en Google Play** (sección 8).
@@ -155,7 +153,9 @@ copia fiel.
   - el vecino más cercano de cada nodo pasó de 0,796 a 0,800 de media.
 - Gate 0 y las dos suites en verde.
 
-**Segunda pasada: cuando la copia fiel termine resúmenes y condiciones**, después de la medida 7.
+**Segunda pasada, 8 oct 2026 (orden del fundador, con el estado de main tras k31 parcial):** re-embebió 191 nodos; coherencia igual que la primera: 3.634 vectores para 3.634 vivos, lista roja vacía, sin duplicados, `MIN_SCORE_SALTO` en 0,3, vecino más cercano medio 0,800 → 0,801; Gate 0, tsc y suites en verde.
+
+**Pasadas siguientes:** cada vez que el cierre del dataset (sección 8) cambie resúmenes o condiciones, con el mismo método.
 1. Pon `VOYAGE_API_KEY` en el `.env` raíz, o pásala solo al proceso. La quitas al terminar.
 2. Saca la lista de nodos con texto embebible cambiado desde el índice vigente:
 
