@@ -43,12 +43,11 @@ export const MUNDOS: readonly Mundo[] = (catalogo as { packs: Mundo[] }).packs;
 /**
  * El filtro, PURO y aparte del catálogo real.
  *
- * Está separado a propósito: hoy los nueve mundos están publicados, así que
- * `mundosVisibles()` no filtra nada y un test sobre el catálogo real no probaría
- * el mecanismo, solo lo recorrería. Un mecanismo sin sujeto deja de estar
- * probado sin que nadie lo note, y el día que nazca el décimo mundo se
- * descubriría roto. Con esta función el filtro se prueba con datos sintéticos,
- * exista o no un pack oculto de verdad.
+ * Está separado a propósito: que el catálogo real tenga o no un mundo oculto
+ * (hoy lo tiene: Primer Equipo) cambia con cada publicación, y un test sobre el
+ * catálogo real solo recorrería lo que haya ese día. Un mecanismo sin sujeto deja
+ * de estar probado sin que nadie lo note. Con esta función el filtro se prueba
+ * con datos sintéticos, exista o no un pack oculto de verdad.
  */
 export function filtrarVisibles(lista: readonly Mundo[], incluirOcultos = false): Mundo[] {
   return incluirOcultos ? [...lista] : lista.filter((m) => !m.oculto);
@@ -62,7 +61,8 @@ export function filtrarVisibles(lista: readonly Mundo[], incluirOcultos = false)
  * ocultarlo dejaría al propio fundador sin poder caminarlo antes de decidir si
  * lo publica, que es justo lo contrario de lo que se busca. Con la puerta
  * abierta el mundo aparece MARCADO como sin publicar, para que nadie confunda
- * un paseo de prueba con un mundo en venta.
+ * un paseo de prueba con un mundo en venta. Quién puede abrir la puerta lo
+ * decide el servidor, no la URL: lib/fundador.ts (punto 7c del 6 oct 2026).
  */
 export function mundosVisibles(incluirOcultos = false, idioma: Locale = LOCALE_BASE): Mundo[] {
   return filtrarVisibles(MUNDOS, incluirOcultos).map((m) => enIdioma(m, idioma));

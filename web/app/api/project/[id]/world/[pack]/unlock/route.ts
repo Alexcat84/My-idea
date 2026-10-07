@@ -19,6 +19,7 @@ import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { murallaSinPlan } from "@/lib/espacios";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { mundoAlcanzable } from "@/lib/fundador";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { createClient } from "@/lib/supabase/server";
 
@@ -48,6 +49,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // cuenta real y plan del núcleo. Sin ellas no se abre nada.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(avisoLogin(idioma), { status: 401 });
+  }
+  // Punto 7c del encargo del 6 oct: un mundo sin publicar solo lo abre quien puede verlo (lib/fundador.ts);
+  // para cualquier otra cuenta, como si no existiera.
+  if (!mundoAlcanzable(pack, user)) {
+    return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
   }
   const proyecto = await obtenerProyecto(supabase, projectId);
   if (!proyecto) {

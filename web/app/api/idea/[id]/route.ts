@@ -20,6 +20,7 @@ import { nombreDeIdea } from "@/lib/ideas";
 import { createClient } from "@/lib/supabase/server";
 import { estadoEntrevista } from "@/lib/entrevistaAbierta";
 import { ETIQUETAS_CICLO } from "@/lib/dbContract";
+import { puedeVerOcultos } from "@/lib/fundador";
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
@@ -303,6 +304,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const capacidades = await obtenerCapacidadesPorEspacio(supabase, projectId);
 
   return NextResponse.json({
+    // Punto 7c del encargo del 6 oct: ?ver=ocultos solo se enciende si el servidor dice que puedes (lib/fundador.ts).
+    puedeVerOcultos: puedeVerOcultos(user),
     idea: {
       id: proyecto.id,
       nombre: nombreDeIdea(proyecto.titulo, proyecto.entrada_original),

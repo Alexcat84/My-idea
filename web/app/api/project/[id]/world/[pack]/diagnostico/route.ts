@@ -24,6 +24,7 @@ import { guardarEstadoSesion, obtenerProyecto, obtenerSesion, registrarBitacora 
 import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
+import { mundoAlcanzable } from "@/lib/fundador";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { materialDiagnostico, redactarDiagnostico } from "@/lib/engine/diagnosticoMundo";
 import { cargarGrafo } from "@/lib/engine/graph";
@@ -63,6 +64,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // ETAPA 2 (la frontera): motor pagado; cuenta real.
   if (esInvitadoInvisible(user)) {
     return NextResponse.json(avisoLogin(idioma), { status: 401 });
+  }
+  // Punto 7c del encargo del 6 oct: un mundo sin publicar solo lo abre quien puede verlo (lib/fundador.ts);
+  // para cualquier otra cuenta, como si no existiera.
+  if (!mundoAlcanzable(pack, user)) {
+    return NextResponse.json({ error: r.mundoNoExiste }, { status: 404 });
   }
   if (await faltaSegundoFactor()) {
     return NextResponse.json(aviso2FA(idioma), { status: 403 });

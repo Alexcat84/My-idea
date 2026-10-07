@@ -67,6 +67,8 @@ import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 const LIMITE_CHECKLIST_MS = 20_000;
 
 interface DetalleIdea {
+  /** Punto 7c: el servidor dice si esta cuenta puede ver los mundos sin publicar (lib/fundador.ts). */
+  puedeVerOcultos?: boolean;
   idea: {
     id: string;
     nombre: string;
@@ -194,7 +196,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const quiereBitacora = searchParams.get("vista") === "bitacora";
   // La puerta del mini-gate: ?ver=ocultos revela los mundos SIN PUBLICAR, con
   // su marca, para que el fundador los camine antes de decidir si los publica.
-  // No publica nada: solo los vuelve alcanzables desde su propia idea.
+  // No publica nada: solo los vuelve alcanzables desde su propia idea. La URL
+  // solo pide: se enciende si el servidor dice que esta cuenta puede (punto 7c).
   const verOcultos = searchParams.get("ver") === "ocultos";
   const quiereCalendario = searchParams.get("vista") === "calendario";
   // Campaña "Espacios": el hub de un mundo. Deep-linkeable: ?vista=mundo&dominio=X.
@@ -1677,7 +1680,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   estadosMundo={estadosMundo}
                   progresoMundos={progresoMundos}
                   mundosCompletados={mundosParaObra.filter((m) => m.completadoAt).map((m) => m.dominio)}
-                  mostrarOcultos={verOcultos}
+                  mostrarOcultos={verOcultos && detalle?.puedeVerOcultos === true}
                   onVerMundo={(dominio) => irAMundo(dominio)}
                   onActivarMundo={(dominio) => {
                     // Campaña "Espacios": abrir el mundo lo añade a la lista local
