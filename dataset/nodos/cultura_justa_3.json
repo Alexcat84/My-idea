@@ -19,7 +19,7 @@
   "nodos_siguientes": [],
   "condiciones_activacion": [
     "Al diseñar políticas de reporte de incidentes y accountability",
-    "Cuando un trabajador se ve emocionalmente afectado tras estar involucrado en un incidente de seguridad"
+    "Cuando un trabajador se siente personalmente responsable tras estar involucrado en un incidente que dañó, o pudo dañar, a otra persona"
   ],
   "etiqueta_arbol": "Equilibra Justicia y Aprendizaje",
   "correcciones": [
@@ -104,6 +104,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-cultura_justa_3-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un trabajador se ve emocionalmente afectado tras estar involucrado en un incidente de seguridad",
+      "texto_nuevo": "Cuando un trabajador se siente personalmente responsable tras estar involucrado en un incidente que dañó, o pudo dañar, a otra persona",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "658, 3599, 4155",
+        "frase": "involved in an incident that (potentially) hurt or killed someone else"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

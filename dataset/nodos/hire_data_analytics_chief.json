@@ -22,7 +22,7 @@
     "war_room_pivot_proceed"
   ],
   "condiciones_activacion": [
-    "Cuando la startup ya tiene métricas y dashboard pero nadie lidera su interpretación y mejora continua"
+    "Cuando la startup ya descubrió sus métricas clave de adquisición y activación pero nadie lidera su interpretación y mejora continua"
   ],
   "etiqueta_arbol": "Contrata tu Analista de Datos",
   "fuentes_internas": [
@@ -57,6 +57,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que idealmente se contrate a tiempo para el diseño del dashboard; el nodo lo vuelve obligatorio.; El libro plantea la necesidad para empresas web o móviles, tras descubrir las métricas de adquisición y activación.; Misma condición caída: empresa web o móvil y métricas de adquisición y activación.; Mismo endurecimiento del 'idealmente' del libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-hire_data_analytics_chief-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando la startup ya tiene métricas y dashboard pero nadie lidera su interpretación y mejora continua",
+      "texto_nuevo": "Cuando la startup ya descubrió sus métricas clave de adquisición y activación pero nadie lidera su interpretación y mejora continua",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "11176, 11198",
+        "frase": "ideally in time to participate in development of the dashboard system"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): contrario; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

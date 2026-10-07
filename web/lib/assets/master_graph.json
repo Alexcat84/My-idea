@@ -973,7 +973,7 @@
       "nodos_siguientes": [],
       "condiciones_activacion": [
         "Cuando buscas eliminar el riesgo por completo sin pensar en el costo.",
-        "Cuando hace mucho no ves fallas y sospechas que se están escondiendo."
+        "Cuando hace mucho no ves fallas."
       ],
       "etiqueta_arbol": "Acepta que las Fallas Ocurren"
     },
@@ -10149,7 +10149,7 @@
         "targeting_blogs_traccion"
       ],
       "condiciones_activacion": [
-        "Cuando tienes un producto validado pero no sabes qué canal de marketing o distribución usar.",
+        "Cuando no sabes qué canal de marketing o distribución usar.",
         "Cuando tus canales actuales no generan crecimiento suficiente.",
         "Cuando estás dispersando recursos en múltiples canales sin resultados claros.",
         "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
@@ -17665,7 +17665,7 @@
         "cribado_prueba_barata"
       ],
       "condiciones_activacion": [
-        "Cuando se busca reducir costos de inspección sin sacrificar calidad.",
+        "Cuando la inspección tiene que hacerse y se busca reducir su costo sin sacrificar calidad.",
         "Cuando existe un método de prueba alternativo más económico que el método estándar actual."
       ],
       "etiqueta_arbol": "Compara Costos de Inspección"
@@ -21421,7 +21421,7 @@
       ],
       "condiciones_activacion": [
         "Cuando el cliente no percibe suficiente valor para justificar una decisión de compra grande",
-        "Si el vendedor depende del conocimiento técnico del producto y aún así no cierra ventas"
+        "Si el vendedor depende del conocimiento técnico del producto y aún así no cierra ventas grandes"
       ],
       "etiqueta_arbol": "Construye el Valor Percibido"
     },
@@ -26470,8 +26470,8 @@
       ],
       "nodos_siguientes": [],
       "condiciones_activacion": [
-        "Cuando la inspección al 100% es obligatoria por alto costo de falla (pk2 > k1).",
-        "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva."
+        "Cuando el cálculo muestra que inspeccionar el 100 % de las partes da el menor costo total (pk2 > k1).",
+        "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva y que puedes ajustar para que no acepte ninguna parte que la prueba maestra rechazaría."
       ],
       "etiqueta_arbol": "Filtra Barato Antes de lo Caro"
     },
@@ -28912,7 +28912,7 @@
       "nodos_siguientes": [],
       "condiciones_activacion": [
         "Al diseñar políticas de reporte de incidentes y accountability",
-        "Cuando un trabajador se ve emocionalmente afectado tras estar involucrado en un incidente de seguridad"
+        "Cuando un trabajador se siente personalmente responsable tras estar involucrado en un incidente que dañó, o pudo dañar, a otra persona"
       ],
       "etiqueta_arbol": "Equilibra Justicia y Aprendizaje"
     },
@@ -67393,7 +67393,7 @@
         "war_room_pivot_proceed"
       ],
       "condiciones_activacion": [
-        "Cuando la startup ya tiene métricas y dashboard pero nadie lidera su interpretación y mejora continua"
+        "Cuando la startup ya descubrió sus métricas clave de adquisición y activación pero nadie lidera su interpretación y mejora continua"
       ],
       "etiqueta_arbol": "Contrata tu Analista de Datos"
     },
@@ -88065,7 +88065,7 @@
       ],
       "condiciones_activacion": [
         "Cuando se busca incentivar a inversionistas existentes a seguir invirtiendo en rondas futuras",
-        "Si existe riesgo de que inversionistas no participen en rondas posteriores necesarias"
+        "Si existe riesgo de que inversionistas no participen en rondas posteriores necesarias, salvo que por práctica habitual no inviertan en rondas siguientes, como suele pasar con un fondo semilla"
       ],
       "etiqueta_arbol": "Obliga a tus Inversionistas a Participar"
     },

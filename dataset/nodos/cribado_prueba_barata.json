@@ -19,8 +19,8 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando la inspección al 100% es obligatoria por alto costo de falla (pk2 > k1).",
-    "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva."
+    "Cuando el cálculo muestra que inspeccionar el 100 % de las partes da el menor costo total (pk2 > k1).",
+    "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva y que puedes ajustar para que no acepte ninguna parte que la prueba maestra rechazaría."
   ],
   "etiqueta_arbol": "Filtra Barato Antes de lo Caro",
   "fuentes_internas": [
@@ -42,6 +42,40 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Endurece: el libro dice que el plan puede lograr ahorros dignos de considerar, con la condición del costo de la prueba maestra sobre las no aceptadas.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-cribado_prueba_barata-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la inspección al 100% es obligatoria por alto costo de falla (pk2 > k1).",
+      "texto_nuevo": "Cuando el cálculo muestra que inspeccionar el 100 % de las partes da el menor costo total (pk2 > k1).",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9868",
+        "frase": "100 percent testing of a part will deliver minimum total cost"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): certeza_endurecida; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-cribado_prueba_barata-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva.",
+      "texto_nuevo": "Cuando existe un método de prueba rápido y económico que puede pre-filtrar antes de la prueba definitiva y que puedes ajustar para que no acepte ninguna parte que la prueba maestra rechazaría.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9868-9882",
+        "frase": "can be adjusted so that it will accept no part that the master test would reject"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -38,7 +38,7 @@
     "targeting_blogs_traccion"
   ],
   "condiciones_activacion": [
-    "Cuando tienes un producto validado pero no sabes qué canal de marketing o distribución usar.",
+    "Cuando no sabes qué canal de marketing o distribución usar.",
     "Cuando tus canales actuales no generan crecimiento suficiente.",
     "Cuando estás dispersando recursos en múltiples canales sin resultados claros.",
     "Cuando tienes recursos limitados y no puedes probar todos los canales al mismo tiempo"
@@ -327,6 +327,23 @@
         ]
       },
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "condiciones-resto-bullseye_framework-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando tienes un producto validado pero no sabes qué canal de marketing o distribución usar.",
+      "texto_nuevo": "Cuando no sabes qué canal de marketing o distribución usar.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "217, 490",
+        "frase": "spend your time constructing your product or service and testing traction channels in parallel"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): contrario; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],

@@ -21,7 +21,7 @@
     "cribado_prueba_barata"
   ],
   "condiciones_activacion": [
-    "Cuando se busca reducir costos de inspección sin sacrificar calidad.",
+    "Cuando la inspección tiene que hacerse y se busca reducir su costo sin sacrificar calidad.",
     "Cuando existe un método de prueba alternativo más económico que el método estándar actual."
   ],
   "etiqueta_arbol": "Compara Costos de Inspección",
@@ -78,6 +78,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro es para pruebas no destructivas, donde la misma pieza pasa por ambos métodos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-comparacion_metodos_inspeccion-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando se busca reducir costos de inspección sin sacrificar calidad.",
+      "texto_nuevo": "Cuando la inspección tiene que hacerse y se busca reducir su costo sin sacrificar calidad.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "9811",
+        "frase": "how to cut the cost of inspection, if inspection there must be"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
