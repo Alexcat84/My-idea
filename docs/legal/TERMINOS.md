@@ -8,7 +8,7 @@
 
 # Términos de uso de My Idea
 
-**Última actualización:** 6 de octubre de 2026
+**Última actualización:** 7 de octubre de 2026
 **Quién presta el servicio:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá
 ("nosotros"). Dirección postal del comerciante: se publicará aquí en cuanto esté confirmada; mientras tanto, puedes escribirnos a support@myideaproject.com.
 
@@ -22,6 +22,8 @@ Al usar la app aceptas estos términos y la Política de privacidad.
 
 - Para usar las funciones que consumen créditos necesitas una cuenta. Puedes escribir tu idea y
   recibir tu Claridad sin cuenta, con una identidad invisible que pasa a tu cuenta cuando la creas.
+- Con tu cuenta, te pedimos que aceptes estos términos y la Política de privacidad, y de nuevo cada
+  vez que cambien; guardamos la versión que aceptaste y su fecha.
 - Eres responsable de mantener segura tu contraseña. Puedes activar la verificación en dos pasos.
 - Durante la beta, el acceso puede estar limitado a personas invitadas.
 - Puedes borrar tu cuenta cuando quieras desde el centro de cuenta.

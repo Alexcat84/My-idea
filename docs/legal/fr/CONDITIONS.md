@@ -11,7 +11,7 @@
 
 # Conditions d'utilisation de My Idea
 
-**Dernière mise à jour :** 6 octobre 2026
+**Dernière mise à jour :** 7 octobre 2026
 **Qui fournit le service :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada
 (« nous »). Adresse postale du commerçant : elle sera publiée ici dès qu'elle sera confirmée; d'ici là, vous pouvez nous écrire à support@myideaproject.com.
 
@@ -27,6 +27,9 @@ l'application, vous acceptez les présentes conditions et la Politique de confid
 - Pour utiliser les fonctions qui consomment des crédits, vous avez besoin d'un compte. Vous pouvez
   écrire votre idée et recevoir votre Clarté sans compte, avec une identité invisible qui est
   transférée à votre compte lorsque vous le créez.
+- Avec votre compte, nous vous demandons d'accepter les présentes conditions et la Politique de
+  confidentialité, et de nouveau chaque fois qu'elles changent; nous conservons la version que vous
+  avez acceptée et sa date.
 - Vous êtes responsable de la sécurité de votre mot de passe. Vous pouvez activer la vérification
   en deux étapes.
 - Pendant la version bêta, l'accès peut être limité aux personnes invitées.

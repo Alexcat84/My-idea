@@ -10,7 +10,7 @@
 
 # Politique de confidentialité de My Idea
 
-**Dernière mise à jour :** 6 octobre 2026
+**Dernière mise à jour :** 7 octobre 2026
 **Responsable :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada (« nous »), qui exploite
 l'application My Idea.
 
@@ -32,6 +32,11 @@ l'application My Idea.
 hachage, jamais en clair) ou votre identité Google si vous vous connectez avec celle-ci, ainsi que
 vos paramètres de sécurité (la vérification en deux étapes, avec son secret chiffré et ses codes
 hachés).
+
+**Votre acceptation des Conditions et de la présente politique :** lorsque vous vous connectez avec
+votre compte, nous vous demandons de les accepter, et nous conservons la version que vous avez
+acceptée, la langue du texte que vous avez lu (espagnol ou français) et la date. Si les textes
+changent, nous vous demandons d'accepter la nouvelle version et nous la conservons aussi.
 
 **Ce que vous écrivez ou dictez :** le texte de votre idée tel que vous l'avez écrit, vos réponses
 pendant l'entretien, vos notes, les tâches de votre plan et les motifs que vous indiquez (par
@@ -75,7 +80,8 @@ politique (§6).
 
 Nous traitons vos données avec votre consentement, que vous donnez en créant votre compte et en
 utilisant le service, et dans la mesure nécessaire pour vous fournir le service que vous avez
-demandé. Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (§8),
+demandé. Avec votre compte, ce consentement est enregistré : la version des Conditions et de la
+présente politique que vous avez acceptée et sa date (§2). Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (§8),
 étant entendu que, sans vos données, nous ne pouvons pas vous fournir le service.
 
 ## 5. L'intelligence artificielle
@@ -117,8 +123,8 @@ Vous avez le droit :
 - **de les faire supprimer :** vous pouvez supprimer votre compte depuis le centre de compte.
   Lorsque vous le supprimez :
   - votre compte, vos idées, vos plans, vos tâches et vos notes, votre journal de bord, vos
-    chiffres, votre solde de crédits et vos réservations, ainsi que vos données de sécurité sont
-    supprimés;
+    chiffres, votre solde de crédits et vos réservations, vos données de sécurité ainsi que le
+    registre de vos acceptations des Conditions et de la présente politique sont supprimés;
   - les idées que vous avez écrites avant de créer votre compte sont également supprimées, si elles
     n'y avaient pas encore été transférées;
   - votre adresse courriel est retirée de la liste des invités de la version bêta;
@@ -156,6 +162,8 @@ Nous conservons vos données tant que votre compte existe et nous les supprimons
 supprimez votre compte, sous les réserves suivantes :
 - Une empreinte chiffrée (hachage) de votre adresse courriel est conservée afin de prévenir l'abus
   des offres de bienvenue.
+- Le registre de vos acceptations des Conditions et de la présente politique est conservé tant que
+  votre compte existe et il est supprimé avec lui.
 - Les limites d'utilisation conservent votre adresse IP ou votre identifiant pendant 48 heures au
   maximum.
 - Les journaux techniques de l'hébergement et les copies de sauvegarde de la base de données sont
@@ -185,5 +193,8 @@ devez obtenir le consentement de votre mère, de votre père ou de votre tuteur 
 
 ## 14. Modifications de la présente politique
 
-Si nous modifions la présente politique, nous publierons la nouvelle version avec sa date et, si la
-modification est importante, nous vous en aviserons dans l'application.
+Si nous modifions la présente politique, nous publierons la nouvelle version avec sa date. La
+prochaine fois que vous vous connecterez avec votre compte, nous vous demanderons d'accepter la
+nouvelle version avant de continuer; si vous ne l'acceptez pas, vous pouvez vous déconnecter de
+votre compte, continuer à utiliser ce qui ne l'exige pas ou le supprimer. Sans compte, la version en
+vigueur est toujours celle publiée ici.

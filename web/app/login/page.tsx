@@ -13,6 +13,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { LOGIN } from "@/lib/i18n/mensajes/acceso";
+import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
 import { rico } from "@/lib/i18n/rico";
 import { destinoPostLogin } from "@/lib/nextSeguro";
 import { LARGO_MINIMO, validarPassword } from "@/lib/password";
@@ -436,6 +437,7 @@ function LoginForm() {
       {modo === "crear" && (
         <p className="text-xs text-dim">{interpolar(t.reglasContrasena, { n: LARGO_MINIMO })}</p>
       )}
+      {modo === "crear" && <p className="text-xs text-dim">{elegir(CONSENTIMIENTO, idioma).login.aviso}</p>}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
       {estado.sinConfirmar && (
         <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-start text-sm text-accent hover:opacity-80">
@@ -473,6 +475,28 @@ function LoginForm() {
   );
 }
 
+/** Los enlaces a los Términos y la Privacidad (decisión del fundador, 7 oct 2026): se leen sin cuenta. Tras entrar,
+ * una cuenta real los acepta por versión en el modal del layout (app/ui/ConsentimientoLegal.tsx). */
+function EnlacesLegales() {
+  const t = elegir(CONSENTIMIENTO, useIdioma()).login;
+  return (
+    <nav className="text-center text-xs text-dim">
+      {rico(t.enlaces, {
+        terminos: (c) => (
+          <a href="/terminos" className="hover:text-ink underline underline-offset-2">
+            {c}
+          </a>
+        ),
+        privacidad: (c) => (
+          <a href="/privacidad" className="hover:text-ink underline underline-offset-2">
+            {c}
+          </a>
+        ),
+      })}
+    </nav>
+  );
+}
+
 export default function LoginPage() {
   const t = elegir(LOGIN, useIdioma());
   return (
@@ -485,6 +509,7 @@ export default function LoginPage() {
         <Suspense>
           <LoginForm />
         </Suspense>
+        <EnlacesLegales />
       </div>
     </main>
   );

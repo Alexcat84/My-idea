@@ -149,3 +149,13 @@ export type Camino = (typeof CAMINO)[number];
  * sin 'sms' (no tenemos SMS). */
 export const METODO_2FA = ["totp", "email"] as const;
 export type Metodo2FA = (typeof METODO_2FA)[number];
+
+/** aceptaciones_legales.motivo (migración 050, consentimiento legal del 7 oct 2026): la primera aceptación de una
+ * cuenta real o la de una versión nueva de los Términos y la Privacidad. Lo decide el servidor, nunca el navegador. */
+export const ACEPTACION_MOTIVO = ["primera_aceptacion", "nueva_version"] as const;
+export type MotivoAceptacion = (typeof ACEPTACION_MOTIVO)[number];
+
+/** aceptaciones_legales.idioma_texto (migración 050): el idioma del texto legal que la persona tuvo delante. Los
+ * textos legales existen en español y francés; cualquier otro idioma de la interfaz lee el español. */
+export const ACEPTACION_IDIOMA_TEXTO = ["es", "fr"] as const;
+export type IdiomaTextoLegal = (typeof ACEPTACION_IDIOMA_TEXTO)[number];

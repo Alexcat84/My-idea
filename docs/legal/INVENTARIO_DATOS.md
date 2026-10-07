@@ -5,6 +5,9 @@
 afirmar va marcado **POR VERIFICAR**. Este inventario es la base de los borradores de Términos,
 Privacidad y Cookies de esta carpeta.
 
+**Adición del 7 oct 2026 (migración 050):** el registro de la aceptación de los Términos y la
+Privacidad por versión (`aceptaciones_legales`, fila nueva de §1; borrado en §4; pendiente en §7).
+
 ## 1. Qué se guarda y dónde
 
 Todo vive en la base de datos de **Supabase** (PostgreSQL + autenticación). Salvo donde se indica,
@@ -25,6 +28,7 @@ de `projects`.
 | Créditos | `credit_accounts`, `credit_transactions`, `credit_reservas`, `query_credits` (antiguo), `beta_courtesy_log` | saldo, movimientos (cobros, otorgamientos, reembolsos), reservas en curso |
 | Reembolsos | `credit_refund_log` | id de usuario, monto y motivo. **Sin FK a la cuenta: sobrevive al borrado** (hallazgo B1) |
 | Eventos de pago | `revenuecat_webhook_events` | id de usuario del procesador, tipo de evento. **Sin FK: sobreviviría al borrado** (hallazgo B2). Hoy no hay código que la escriba |
+| Aceptación de los textos legales | `aceptaciones_legales` (migración 050) | una fila por cuenta real y versión aceptada de los Términos y la Privacidad: la versión, la huella sha256 de esos textos, el idioma del texto leído (`es` o `fr`), si fue la primera aceptación o una versión nueva, y la hora del servidor. Sin IP ni navegador. La identidad invisible no escribe aquí. Cuelga de la cuenta con `ON DELETE CASCADE` |
 | Doble factor | `user_seguridad` (secreto TOTP cifrado AES-256-GCM), `two_factor_recovery_codes` (hash bcrypt), `two_factor_email_codes` (hash, vence a los 10 min), `two_factor_attempts` | secretos cifrados, códigos en hash, **dirección IP** y sesión de cada intento |
 | Lista de invitados de la beta | `beta_allowlist` | **el correo en claro**, quién invitó y notas. **Sin vínculo con la cuenta: sobrevive al borrado** (hallazgo B3) |
 | Huella anti-abuso de la cortesía | `cortesia_email_log` | el hash SHA-256 del correo. Sin vínculo con la cuenta **a propósito**: evita que borrar y volver a crear la cuenta repita la cortesía (hoy la cortesía está dormida) |
@@ -71,7 +75,10 @@ de `projects`.
 `/api/cuenta/eliminar` pide la palabra "ELIMINAR" (y el doble factor si está activo), guarda la
 huella anti-abuso de la cortesía si hace falta, y llama a `auth.admin.deleteUser`. **Todo lo demás
 depende del `ON DELETE CASCADE`.** Se borra con la cuenta: ideas, sesiones, planes, tareas, bitácora,
-números, actas, saldo de créditos, reservas y los datos de doble factor.
+números, actas, saldo de créditos, reservas, los datos de doble factor y el registro de la
+aceptación de los textos legales (`aceptaciones_legales`, migración 050: es un dato personal de la
+cuenta y se borra con ella, coherente con el borrado real de la 044; no se anonimiza porque, sin
+vínculo con la persona, no prueba nada).
 
 **Sobrevivía al borrado (hallazgos B1 a B4). ARREGLADO y en producción (decisiones del fundador,
 26 sep 2026; `main` 8d890b3e, web-v2.6.9, migración 044 aplicada):**
@@ -125,6 +132,10 @@ depende del navegador.
    conserva el procesador de pagos (§4, B5).
 7. Dónde procesa el audio el navegador al dictar.
 8. Que `next/font` no llame a Google en el despliegue real.
+10. Si la prueba del consentimiento a los Términos y la Privacidad debe conservarse un plazo después
+    de borrar la cuenta (por ejemplo, para defender un reclamo). Hoy se borra con la cuenta
+    (migración 050, `ON DELETE CASCADE`); conservarla pediría una migración aparte y un cambio en la
+    Privacidad.
 9. ~~El nombre legal~~ CONFIRMADO por el fundador contra sus certificados de Revenu Québec:
    **Alexis Garcia Hurtado** (empresa individual, sin segundos nombres); TPS/TVH (GST/HST)
    72180 8434 RT0001 y TVQ (QST) 4056093040 TQ0001, vigentes desde el 7 de abril de 2026. Contactos:

@@ -7,7 +7,7 @@
 
 # Política de privacidad de My Idea
 
-**Última actualización:** 6 de octubre de 2026
+**Última actualización:** 7 de octubre de 2026
 **Responsable:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá ("nosotros"), que opera la
 aplicación My Idea.
 
@@ -26,6 +26,10 @@ aplicación My Idea.
 **Datos de tu cuenta:** tu correo electrónico, tu contraseña (guardada como hash, nunca en claro) o
 tu identidad de Google si entras con ella, y la configuración de seguridad (el doble factor, con su
 secreto cifrado y sus códigos en hash).
+
+**Tu aceptación de los Términos y de esta política:** cuando entras con tu cuenta te pedimos que los
+aceptes, y guardamos la versión que aceptaste, el idioma del texto que leíste (español o francés) y
+la fecha. Si los textos cambian, te pedimos aceptar la versión nueva y guardamos esa también.
 
 **Lo que escribes o dictas:** el texto de tu idea tal como lo escribiste, tus respuestas en la
 entrevista, tus notas, las tareas de tu plan y los motivos que das (por ejemplo, al retirar una
@@ -64,7 +68,8 @@ datos de cada proveedor están en su política (§6).
 ## 4. Base de nuestro tratamiento
 
 Tratamos tus datos con tu consentimiento, que das al crear tu cuenta y al usar el servicio, y en la
-medida necesaria para prestarte el servicio que pediste. Puedes retirar tu consentimiento en
+medida necesaria para prestarte el servicio que pediste. Con tu cuenta, ese consentimiento queda
+registrado: la versión de los Términos y de esta política que aceptaste y su fecha (§2). Puedes retirar tu consentimiento en
 cualquier momento borrando tu cuenta (§8), sabiendo que sin tus datos no podemos prestarte el
 servicio.
 
@@ -103,7 +108,8 @@ Tienes derecho a:
 - **Rectificarlos** si son inexactos o están incompletos.
 - **Borrarlos:** puedes borrar tu cuenta desde el centro de cuenta. Al borrarla:
   - se borran tu cuenta, tus ideas, tus planes, tus tareas y notas, tu bitácora, tus números, tu
-    saldo de créditos y tus reservas, y tus datos de seguridad;
+    saldo de créditos y tus reservas, tus datos de seguridad y el registro de tus aceptaciones de
+    los Términos y de esta política;
   - se borran también las ideas que escribiste antes de crear tu cuenta, si aún no habían pasado a
     ella;
   - tu correo sale de la lista de invitados de la beta;
@@ -136,6 +142,8 @@ máximo de 30 días.
 Conservamos tus datos mientras tu cuenta exista, y los borramos cuando borras tu cuenta, con estas
 salvedades:
 - Una huella cifrada (hash) de tu correo se conserva para evitar el abuso de ofertas de bienvenida.
+- El registro de tus aceptaciones de los Términos y de esta política se conserva mientras tu cuenta
+  exista y se borra con ella.
 - Los límites de uso guardan tu IP o identificador un máximo de 48 horas.
 - Los registros técnicos del alojamiento y las copias de seguridad de la base se conservan según los
   plazos de esos proveedores.
@@ -164,5 +172,7 @@ consentimiento de tu madre, padre o tutor para usarla.
 
 ## 14. Cambios a esta política
 
-Si cambiamos esta política, publicaremos la nueva versión con su fecha y, si el cambio es
-importante, te avisaremos en la app.
+Si cambiamos esta política, publicaremos la nueva versión con su fecha. La próxima vez que entres
+con tu cuenta te pediremos que aceptes la versión nueva antes de seguir; si no la aceptas, puedes
+salir de tu cuenta, seguir usando lo que no la necesita o borrarla. Sin cuenta, la versión vigente
+es siempre la publicada aquí.

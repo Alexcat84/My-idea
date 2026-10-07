@@ -50,7 +50,7 @@ export const ELIMINAR_CUENTA = {
     borraTitulo: "Qué se borra",
     borra: [
       "Tu cuenta, tus ideas, tus planes, tus tareas, tus notas, tu bitácora y tus números.",
-      "Tu saldo de créditos y tus reservas, y tus datos de seguridad.",
+      "Tu saldo de créditos y tus reservas, tus datos de seguridad y el registro de tu aceptación de los Términos y la Privacidad.",
       "Las ideas que escribiste antes de crear tu cuenta, si aún no habían pasado a ella.",
     ],
     quedaTitulo: "Qué se conserva",
@@ -75,7 +75,7 @@ export const ELIMINAR_CUENTA = {
     borraTitulo: "Ce qui est supprimé",
     borra: [
       "Ton compte, tes idées, tes plans, tes tâches, tes notes, ton journal de bord et tes chiffres.",
-      "Ton solde de crédits et tes réservations, ainsi que tes données de sécurité.",
+      "Ton solde de crédits et tes réservations, tes données de sécurité ainsi que le registre de ton acceptation des Conditions et de la Confidentialité.",
       "Les idées écrites avant la création de ton compte, si elles n'y avaient pas encore été transférées.",
     ],
     quedaTitulo: "Ce qui est conservé",
@@ -100,7 +100,7 @@ export const ELIMINAR_CUENTA = {
     borraTitulo: "What is deleted",
     borra: [
       "Your account, your ideas, your plans, your tasks, your notes, your log and your numbers.",
-      "Your credit balance and reservations, and your security data.",
+      "Your credit balance and reservations, your security data and the record of your acceptance of the Terms and the Privacy policy.",
       "Ideas you wrote before creating your account, if they had not been moved to it yet.",
     ],
     quedaTitulo: "What is kept",

@@ -1,0 +1,18 @@
+{
+  "_nota": "Una sola fuente de la version de los Terminos y la Privacidad (decision del fundador, 7 oct 2026). Cada version guarda la huella sha256 de esos textos en espanol y frances, tal como se publican. No se edita a mano: python scripts/sync_legal_web.py --nueva-version AAAA-MM-DD. Guarda: engine/test_version_legal.py.",
+  "documentos": [
+    "terminos",
+    "privacidad"
+  ],
+  "vigente": "2026-10-07",
+  "versiones": [
+    {
+      "version": "2026-10-06",
+      "huella": "f51124fb4797b47aed47897347842234fddec454f09b4d895a416312916649f6"
+    },
+    {
+      "version": "2026-10-07",
+      "huella": "603096055c1b87928108b8ef205364dc92575e722ef902677061d353f8af61dc"
+    }
+  ]
+}
