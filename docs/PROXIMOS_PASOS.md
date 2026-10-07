@@ -4,8 +4,16 @@
 Una suscripción normal no aguanta oleadas de veinte agentes. Aquí queda lo que se hace con pocas llamadas, con saldo
 propio o con una decisión del fundador.
 
-**Estado:** reescrito entero el 7 oct 2026 con lo hecho en el encargo del 6 oct. El detalle de cada cosa hecha está en
-`docs/ACTA_SANEAMIENTO_FINAL.md`, sección 15.
+**Estado:** reescrito entero el 7 oct 2026 con lo hecho en el encargo del 6 oct, y puesto al día la noche del 7 oct con
+las decisiones del fundador de ese día. El detalle de cada cosa hecha está en `docs/ACTA_SANEAMIENTO_FINAL.md`, sección 15.
+
+**Lo que sigue, en este orden, con suscripción normal** (cada punto tiene su sección abajo):
+1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
+2. **Re-embebido con Voyage** (sección 4): una sola pasada, al final del saneamiento, menos de 0,05 USD.
+3. **Despliegue**, con el índice nuevo.
+4. **Corrida final con la API** (sección 5): unos 9 a 12 USD más las neutrales.
+5. **Lanzamiento en Google Play** (sección 8).
+Mientras tanto, el saneamiento continuo (sección 7) puede seguir a ritmo lento, una ola pequeña cada vez.
 
 ## 1. Dónde quedó todo
 
@@ -32,6 +40,17 @@ propio o con una decisión del fundador.
   - las 28 promesas no graves, corregidas en 11 idiomas;
   - las condiciones de los 104 nodos-frontera de otro país, leídas contra el libro: 55 correcciones verificadas a
     ciegas.
+
+**Hecho el 7 oct por la tarde** (decisiones del fundador de ese día):
+- **Prompts de la sección F:** aprobados y aplicados con su guarda (main bfc9eb73).
+- **Consentimiento legal versionado:** navegar es libre; la aceptación se pide junto al botón al generar la evaluación
+  gratuita ("Aceptar y generar") y la exige el servidor (428) antes de tocar la IA o el buscador; queda también en la
+  identidad invisible y la adopción la traslada a la cuenta al confirmar el correo; aviso de cookies que no tapa nada;
+  /login enlaza a Términos y Privacidad. Migración 050 aplicada. Regla P24.
+- **Reglas a la forja:** `guardas_contenido.json` 1.1.0 con las pautas de procedencia desde una sola fuente; la aduana de
+  `forja-nodos` usa esa copia versionada y su BANCO hereda las 57 reglas de contenido y método (forja-nodos 1a70e45d).
+- **Condiciones de las clases B y A** de `jurisdiccion.json`: leídas contra el libro, 22 correcciones (acta 15.12).
+- **Saneamiento continuo** en marcha (acta 15.13; sección 7).
 
 **El veredicto del dataset, sin adornos:**
 - **Contrarios e invenciones duras:** 0 en la muestra de la medida 3, con un residuo por nodo de 0 a 1,9 % al 95 %
@@ -65,14 +84,25 @@ propio o con una decisión del fundador.
    - la dirección postal del comerciante;
    - la revisión profesional de Privacidad, Términos y Cookies, en español y francés. Cuando el profesional cambie un
      texto se edita el `.md` en `docs/legal/` y se corre `python scripts/sync_legal_web.py`.
-4. **`FUNDADOR_EMAILS`:** ponerla en Vercel y en el `.env` con el correo de la cuenta del fundador. Sin ella nadie ve
-   los mundos ocultos, tampoco el fundador.
+   - Para el profesional, anotado: el registro de la aceptación se guarda sin IP ni navegador (lo mínimo); se borra con
+     la cuenta; los Términos dicen "al usar la app aceptas" también para el invitado; la cookie `myidea_idioma`
+     (preferencia de idioma, un año) no es estrictamente necesaria; la versión vigente de los textos se llama
+     `2026-10-07.2`.
+4. **`FUNDADOR_EMAILS`:** sirve para que solo la cuenta del fundador vea y camine los mundos sin publicar con
+   `?ver=ocultos`. Valor: el correo con el que el fundador inicia sesión en My Idea (varios, separados por comas). Dónde:
+   Vercel, Settings, Environment Variables, entorno Production, y volver a desplegar. Sin ella nadie los ve, tampoco el
+   fundador.
 5. **Copy pendiente de visto:**
    - el nombre "Riesgos Bajo Control", que da a entender control;
    - "Tus cifras reales" en la compuerta de Tus Números;
    - las promesas viejas en los mockups de `docs/diseno-canon/`, que son errata para Design.
 6. ~~**La licencia de IDEO.org**~~ **Decidida el 7 oct (acta 15.11): los nodos se quedan.** Anotada en
    `fuentes_canonicas.json` y en `docs/internos/INVENTARIO_FUENTES.md`.
+7. **Tres choques de la forja que el fundador debería ver** (declarados en D.63 de su BANCO y resueltos hoy por su D.13,
+   gana la regla más reciente): el "puente" de su D.30 frente a la regla de la casa de que un consejo práctico no es
+   defecto; los pasos que dicen "la frase del libro" o "el texto dice", que desde hoy caen en su aduana; y que los nodos
+   de la forja van sin tildes. Además, su aduana exige el glosario sin condiciones ("marketing" no entra), más estricta
+   que el catálogo de hoy.
 
 ## 3. Qué gasta cada cosa, y en qué orden
 
@@ -81,7 +111,6 @@ propio o con una decisión del fundador.
 | Re-embebido con Voyage | saldo de Voyage | menos de 0,05 USD |
 | Corrida final | saldo de la API de Anthropic | unos 9 a 12 USD (`docs/producto/CORRIDA_FINAL.md`), más las neutrales |
 | Juez de fidelidad, auditoría de neutrales | agentes de Claude Code | pocas decenas de agentes |
-| Reglas a la forja | una sesión corta | poco |
 
 **El orden importa:** el índice de vectores y la caché viajan dentro del despliegue.
 1. Re-embebido.
@@ -92,13 +121,14 @@ propio o con una decisión del fundador.
 ## 4. Re-embebido con Voyage (una sola pasada)
 
 Decisión del fundador: Voyage corre una sola vez, al final, con todos los nodos corregidos. Las tandas de la auditoría
-cambiaron el texto de **2.808 nodos vivos**, según la prueba en seco del 7 oct (tras la lectura total).
+cambiaron el texto de **2.896 nodos vivos**, según la prueba en seco de la noche del 7 oct (con las primeras tandas del
+saneamiento continuo). Como el saneamiento sigue, la prueba en seco del día da el número de verdad.
 
 1. Pon `VOYAGE_API_KEY` en el `.env` raíz. La quitas al terminar.
 2. Prueba en seco, que no llama a nadie:
 
    ```
-   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json
+   python scripts/auditoria_final/reembeber.py docs/saneamiento/tandas/final-*.json docs/saneamiento/tandas/procedencia-*.json docs/saneamiento/tandas/medida*.json docs/saneamiento/tandas/barrido*.json docs/saneamiento/tandas/condiciones-*.json docs/saneamiento/tandas/lectura-total-*.json docs/saneamiento/tandas/voz-*.json
    ```
 
    Si después de esta fecha entra otra tanda que cambie texto de nodos, se añade a la línea.
@@ -136,7 +166,8 @@ que compara la app con el saldo.
    - Riesgo a mirar en el informe: si el primer envío de un turno falla después de que el servidor ya guardó la
      respuesta, el reintento la guarda dos veces en el hilo, y la condición del hilo falla. Si pasa, se mira esa
      sesión antes de dar la prueba por caída.
-3. **Paso C, vuelo completo:** `pnpm vuelo`.
+3. **Paso C, vuelo completo:** `pnpm vuelo`. Desde el 7 oct los arneses aceptan los textos legales antes de generar
+   (`aceptarTextosLegales` en `web/scripts/_shared/http.ts`); sin eso el servidor responde 428.
 4. **Paso D, juez de fidelidad de la salida.**
    - El extractor ya existe (`web/scripts/juezFidelidad.ts`, con sus funciones en `web/lib/coherencia/juezFidelidad.ts`).
      Arma un paquete por salida y planta 1 trampa sin marca por cada 5.
@@ -151,29 +182,14 @@ que compara la app con el saldo.
 La regla D1 vale también aquí: si una respuesta de la IA nombra un libro, un autor o "los estudios", o insinúa un
 origen, es un fallo que se anota con su sesión.
 
-## 6. Reglas a la forja
+## 6. ~~Reglas a la forja~~ (hecho el 7 oct)
 
-La forja (`forja-nodos`) convierte libros en nodos para packs futuros. Tiene que limpiar con la misma vara que el
-catálogo.
-
-1. **Las guardas como datos:** copiar `dataset/metadata/guardas_contenido.json`, con su versión, a donde la forja lo
-   lee.
-2. **Las reglas duras D1, D2, D3 y la política C32** de `docs/REGLAS_DE_LA_CASA.md` van al `docs/BANCO_DE_REGLAS.md`
-   de la forja, con su fecha y su regla madre. Se añade debajo, nunca se tapa.
-3. **Las pautas de procedencia, para que la forja las use:**
-   - las de `web/lib/procedencia.test.ts`, en once idiomas;
-   - las formas de nombre propio de `engine/test_procedencia_nombres.py` (autoría, "basado en el modelo de", "según X",
-     "el filósofo X", citas y referencias).
-   - Primero pasan a `guardas_contenido.json` (prueba en rojo primero, versión nueva) y después se copian.
-4. **En la forja,** el gate rechaza un candidato que las incumpla. Su prueba va en rojo primero.
-
-**Avance del 7 oct 2026** (decisión del fundador: la forja hereda las reglas de contenido y de método de
-`docs/REGLAS_DE_LA_CASA.md`, y su aduana usa la copia versionada de `guardas_contenido.json`, con su prueba de versión):
-- Punto 3, hecho: `guardas_contenido.json` 1.1.0 trae las pautas de procedencia desde `web/lib/pautasProcedencia.ts`
-  (una sola fuente para las dos pruebas y la forja) y las reglas de voz que van a un nodo. Prueba en rojo primero.
-- Puntos 1, 2 y 4, hechos en `forja-nodos` (pendientes de commit allí): la copia en `config/guardas_contenido.json` con
-  su prueba de versión, la aduana que rechaza voz, glosario y procedencia (D.62 de su BANCO) y las reglas heredadas
-  (D.63: D1 a D6, C1 a C32 con la política C32 y R8, M1 a M19).
+La forja (`forja-nodos`) hereda las reglas de contenido y de método de `docs/REGLAS_DE_LA_CASA.md` (D.63 de su BANCO) y
+su aduana usa la copia versionada de `guardas_contenido.json` 1.1.0 (`config/`, con su prueba de versión y huella), que
+rechaza al candidato que incumple voz, glosario o procedencia (D.62). Main 45412e3e y forja-nodos 1a70e45d.
+- **Cuando cambie una guarda:** se sube `VERSION_GUARDAS` en `web/lib/guardasContenido.ts`, se regenera el JSON
+  (`cd web && npx tsx scripts/exportar_guardas.ts`) y en la forja se corre `python scripts/copiar_guardas.py`, que
+  imprime la versión y la huella nuevas para su `src/guardas_contenido.py`.
 
 ## 7. Resto de la etapa 2
 
@@ -181,7 +197,19 @@ catálogo.
   etiquetas avisa cuál quedó atrasada.
 - ~~**Condiciones de los nodos de clase B y A.**~~ Leídas y corregidas el 7 oct (acta 15.12): 22 correcciones en 22
   nodos. Con las de clase C (acta 15.5), las condiciones de los 239 nodos de `jurisdiccion.json` quedan leídas.
-- **A mejora continua, con su ficha:** la ortografía y los calcos del resumen, las condiciones y el título.
+- **A mejora continua, con su ficha:** la ortografía y los calcos del resumen y el título.
+- **Saneamiento continuo (acta 15.13), en marcha desde la noche del 7 oct.** Dos corrientes:
+  - condiciones del resto de nodos contra el libro: `auditoria-final-claves/condiciones_resto/condiciones_resto.py`,
+    243 lotes;
+  - la voz de lo que el cliente ve crudo (etiqueta, ortografía y calcos en etiqueta, pasos y entregable):
+    `auditoria-final-claves/voz/voz.py`, 146 lotes.
+  - Cada ola: lectores (uno por lote, con trampa; segundo lector si no la caza), `estado`, `arbitraje <ola>`, árbitros,
+    (`confirmados <ola>` en condiciones), `verificacion <ola>`, verificadores, `tanda <ola>`, aplicar, el ciclo entero
+    (Gate 0, etiquetas, familias, sincronizar), retraducir las etiquetas que cambien
+    (`npx tsx scripts/i18n/etiquetasRiel.ts exportar|aplicar`) y las dos suites antes del commit.
+  - Con suscripción normal se sigue a ritmo lento, una ola pequeña cada vez. Por dónde va y lo que queda:
+    `python condiciones_resto.py estado` y `python voz.py estado`.
+  - Lo que la verificación no sostiene queda en `no_sostienen_<ola>.json`, para reescribirlo después.
 
 ## 8. Más adelante
 
@@ -195,7 +223,9 @@ catálogo.
 - **Revisión profesional legal:** ver la decisión 3 de la sección 2.
 - **Documentos desfasados:** corregidos el 7 oct 2026. `docs/MIGRACION_DE_BASE.md` lista ya las 49 migraciones, y
   `docs/producto/CONTEXTO_ENTREVISTA.md` dice que la 049 está aplicada.
-- **Lanzamiento en Google Play:**
+- **Lanzamiento en Google Play** (después de la corrida final):
+  - Antes: la revisión profesional de las páginas legales y la dirección postal del comerciante (sección 2,
+    decisión 3).
+  - La página `/eliminar-cuenta` ya cumple el requisito de Google Play de eliminar la cuenta sin la app, y el
+    consentimiento versionado ya registra la aceptación.
   - El botón de la portada pasa de "Próximamente en Google Play" al enlace real, en los once idiomas.
-  - La página `/eliminar-cuenta` ya cumple el requisito de Google Play de eliminar la cuenta sin la app.
-  - Antes, la revisión profesional de las páginas legales.

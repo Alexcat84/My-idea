@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando un proceso esta en control estadístico pero la tasa de defectos sigue siendo inaceptable",
-    "Cuando varias personas o maquinas presentan el mismo problema"
+    "Cuando todas las personas y máquinas presentan el mismo problema"
   ],
   "etiqueta_arbol": "Mejora el Sistema desde Gerencia",
   "fuentes_internas": [
@@ -144,6 +144,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que la mejora puede requerir probar dos o más factores a la vez con diseño estadístico, porque de uno en uno se pierden interacciones.; Misma advertencia perdida.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "condiciones-resto-mejora_del_sistema_responsabilidad_gerencial-condiciones_activacion-1",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando varias personas o maquinas presentan el mismo problema",
+      "texto_nuevo": "Cuando todas las personas y máquinas presentan el mismo problema",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "8649",
+        "frase": "the trouble was common to all machines and to all operators"
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c06): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }
