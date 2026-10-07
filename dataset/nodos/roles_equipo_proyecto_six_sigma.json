@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Roles del Equipo de Proyecto y Process Owners",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los miembros de los equipos Six Sigma pueden venir de toda la organización y a menudo son expertos en la materia (subject matter experts) de las distintas áreas funcionales, que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, normalmente no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+  "resumen_teorico": "Para armar un equipo Six Sigma puedes sumar gente de cualquier área de tu negocio; con frecuencia son quienes más saben del tema en cada función (subject matter experts). Su aporte está en detectar problemas, mapear el proceso, recoger datos y proponer soluciones. Los dueños del proceso (process owners), que suelen tener un puesto de mando, por lo general no forman parte del núcleo del equipo, pero lo respaldan en fases críticas como Improve y Control: ayudan a poner en marcha las mejoras y a diseñar el plan de control.",
   "pasos_accionables": [
     "Identificar y convocar expertos en la materia relevantes para el proceso bajo estudio",
     "Definir responsabilidades claras para los miembros del equipo en cada fase DMAIC",
@@ -109,6 +109,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v18): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-roles_equipo_proyecto_six_sigma-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los miembros de los equipos Six Sigma pueden venir de toda la organización y a menudo son expertos en la materia (subject matter experts) de las distintas áreas funcionales, que asisten en la identificación de problemas, mapeo de procesos, recolección de datos y desarrollo de soluciones. Los process owners, usualmente de nivel gerencial, normalmente no son miembros centrales del equipo pero apoyan en fases críticas como Improve y Control, incluyendo la implementación de mejoras y el diseño del plan de control.",
+      "texto_nuevo": "Para armar un equipo Six Sigma puedes sumar gente de cualquier área de tu negocio; con frecuencia son quienes más saben del tema en cada función (subject matter experts). Su aporte está en detectar problemas, mapear el proceso, recoger datos y proponer soluciones. Los dueños del proceso (process owners), que suelen tener un puesto de mando, por lo general no forman parte del núcleo del equipo, pero lo respaldan en fases críticas como Improve y Control: ayudan a poner en marcha las mejoras y a diseñar el plan de control.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "14110-14133",
+        "frase": "The members of the Six Sigma team can come from throughout the"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

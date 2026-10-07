@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Devolver abiertamente a su puesto anterior a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, llevarlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
   "fuente": "High Output Management - Andrew S. Grove",
-  "resumen_teorico": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+  "resumen_teorico": "Cuando una persona ascendida lleva demasiado tiempo rindiendo por debajo de lo esperado, la culpa no es suya, sino de quien calculó mal que estaba preparada para asumir más. Empujarla fuera de la empresa sería un error. Lo correcto es actuar de frente y con decisión para que vuelva al puesto que dominaba, y así recuperas a alguien en un trabajo que ya probó que hace bien. Probablemente le dará vergüenza dar ese paso atrás, así que respáldala; cuando el regreso ocurre abiertamente y no a escondidas, ese mal trago se pasa mucho antes de lo que nadie espera.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_16.md, unidad Cap. 15, titulo textual Compensation as Task-Relevant Feedback. Sale de la PIEZA P21 de la frontera publicada hoy en .v58ext/frontera.txt, L49, 253 palabras. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el parrafo trae una secuencia de acciones concretas en modo deber (the solution is to recycle him... management ought to face up to its own error in judgment and take forthright and deliberate steps to place the person into a job he can do. Management should also support the employee... If recycling is done openly...), un inventario de PASOS de trabajo de la direccion y no de fines, sin adjetivo de adecuacion en el criterio: el libro no dice medidas apropiadas, dice la accion concreta a tomar. DE DONDE SALE CADA PASO, uno a uno, todos de L49: paso 1 (management was at fault for misjudging the employee's readiness for more responsibility... I think it is dead wrong to force someone in such circumstances out of the company. Instead, I think management ought to face up to its own error in judgment); paso 2 (take forthright and deliberate steps to place the person into a job he can do); paso 3 (Management should also support the employee in the face of the embarrassment that he is likely to feel); paso 4 (If recycling is done openly, all will be pleasantly surprised how short-lived that embarrassment will be). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. NO escribo un responsable nombrado distinto de management, ni un plazo, porque el texto no los pone: la doctrina se queda en la direccion en general como sujeto que actua. EL CIERRE DEL PARRAFO NO ENTRA COMO PASO PROPIO: la frase sobre que estos empleados, una vez recuperan la confianza, sueles ser excelentes candidatos a un ascenso posterior es una consecuencia esperada y no una accion nueva que ejecutar, y queda fuera del entregable por ser desenlace y no procedimiento.",
   "pasos_accionables": [
     "Asume que el fallo es de quien decidió el ascenso, por calcular mal si esa persona estaba lista para más responsabilidad, y no dejes que ella cargue con la culpa hasta acabar fuera de la empresa.",
@@ -19,7 +19,7 @@
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
-    "Cuando una persona fue ascendida a un puesto que la supera y lleva demasiado tiempo rindiendo por debajo de lo esperado en él."
+    "Cuando quien recibió un ascenso no está a la altura del nuevo cargo y su rendimiento lleva ya demasiado tiempo quedándose corto."
   ],
   "ids_alias": [],
   "correcciones": [
@@ -269,6 +269,39 @@
       },
       "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-reciclar_empleado_ascendido_mas_alla_capacidad-condiciones_activacion-0",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando una persona fue ascendida a un puesto que la supera y lleva demasiado tiempo rindiendo por debajo de lo esperado en él.",
+      "texto_nuevo": "Cuando quien recibió un ascenso no está a la altura del nuevo cargo y su rendimiento lleva ya demasiado tiempo quedándose corto.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_16.md",
+        "lineas": "49",
+        "frase": "a person is promoted into a position so much over his head"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-reciclar_empleado_ascendido_mas_alla_capacidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+      "texto_nuevo": "Cuando una persona ascendida lleva demasiado tiempo rindiendo por debajo de lo esperado, la culpa no es suya, sino de quien calculó mal que estaba preparada para asumir más. Empujarla fuera de la empresa sería un error. Lo correcto es actuar de frente y con decisión para que vuelva al puesto que dominaba, y así recuperas a alguien en un trabajo que ya probó que hace bien. Probablemente le dará vergüenza dar ese paso atrás, así que respáldala; cuando el regreso ocurre abiertamente y no a escondidas, ese mal trago se pasa mucho antes de lo que nadie espera.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_16.md",
+        "lineas": "49",
+        "frase": "There are times when a person is promoted into a position so much"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

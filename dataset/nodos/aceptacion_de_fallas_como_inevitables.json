@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Aceptar la falla como parte necesaria del sistema",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, probablemente no te estás esforzando lo suficiente, o puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable: haz lo posible por anticiparla y prevenirla, y construye además formas de detectarla y gestionarla rápido para minimizar la pérdida.",
+  "resumen_teorico": "Nada sale perfecto, y aunque saliera, no podrías pagarlo: hasta los sistemas de calidad más exigentes (Six Sigma) aceptan una tasa de defectos que jamás llega a cero. Lo que arma la gente termina fallando en algún momento. Por eso, si tu negocio no muestra fallas, lo más probable es que te estés exigiendo poco, aunque también puede ser señal de que las escondes o no las detectas bien. Da por hecho que vas a fallar: anticípate y prevén todo lo que puedas, y prepara además maneras de notar la falla y manejarla rápido para que la pérdida sea mínima.",
   "pasos_accionables": [
     "Decide qué tasa de falla puedes costear comparando el costo de que algo falle contra el costo de prevenirlo.",
     "Revisa si la ausencia de fallas registradas significa que tu sistema es robusto o que hay fallas escondidas.",
@@ -129,6 +129,22 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): matiz; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-aceptacion_de_fallas_como_inevitables-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, probablemente no te estás esforzando lo suficiente, o puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable: haz lo posible por anticiparla y prevenirla, y construye además formas de detectarla y gestionarla rápido para minimizar la pérdida.",
+      "texto_nuevo": "Nada sale perfecto, y aunque saliera, no podrías pagarlo: hasta los sistemas de calidad más exigentes (Six Sigma) aceptan una tasa de defectos que jamás llega a cero. Lo que arma la gente termina fallando en algún momento. Por eso, si tu negocio no muestra fallas, lo más probable es que te estés exigiendo poco, aunque también puede ser señal de que las escondes o no las detectas bien. Da por hecho que vas a fallar: anticípate y prevén todo lo que puedas, y prepara además maneras de notar la falla y manejarla rápido para que la pérdida sea mínima.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "12376-12378",
+        "frase": "All human systems fail eventually. In fact if we are not failing"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

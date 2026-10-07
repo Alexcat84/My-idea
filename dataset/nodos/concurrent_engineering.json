@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ingeniería Concurrente",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso de desarrollo de productos donde todos los responsables de desarrollo y producción participan desde las etapas más tempranas del diseño. Dado que el 70-80% del costo de un producto se determina en estas etapas iniciales, es esencial considerar el costo desde el principio para lograr competitividad.",
+  "resumen_teorico": "Entre el 70 y el 80% de lo que costará un producto queda decidido en las primeras etapas de su diseño. Por eso, en la ingeniería concurrente, todas las personas responsables de desarrollarlo y de producirlo participan desde el arranque, y tú consideras el costo desde el principio, condición imprescindible para que el producto sea competitivo.",
   "pasos_accionables": [
     "Involucrar a equipos multifuncionales (diseño, manufactura, costos) desde el inicio del proyecto",
     "Determinar la configuración del producto considerando procesos de manufactura y materiales disponibles",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Diseña y Produce Juntos",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-concurrent_engineering-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Proceso de desarrollo de productos donde todos los responsables de desarrollo y producción participan desde las etapas más tempranas del diseño. Dado que el 70-80% del costo de un producto se determina en estas etapas iniciales, es esencial considerar el costo desde el principio para lograr competitividad.",
+      "texto_nuevo": "Entre el 70 y el 80% de lo que costará un producto queda decidido en las primeras etapas de su diseño. Por eso, en la ingeniería concurrente, todas las personas responsables de desarrollarlo y de producirlo participan desde el arranque, y tú consideras el costo desde el principio, condición imprescindible para que el producto sea competitivo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "16036",
+        "frase": "Concurrent Engineering was a popular new product development process in which all individuals"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

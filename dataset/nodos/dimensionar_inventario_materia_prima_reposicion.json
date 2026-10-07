@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Inspeccionar el material al recibirlo y dimensionar el inventario por el tiempo de reposición",
   "fuente": "High Output Management - Andrew S. Grove",
-  "resumen_teorico": "La inspección al recibir y el inventario de materia prima van juntos: la inspección caza lo roto o fuera de tamaño, rechazarlo te deja sin material y el inventario existe para cubrir ese hueco. Su tamaño no se adivina: debe cubrir tu ritmo de consumo durante lo que tarda en llegar la reposición, así que si te entregan una vez al día, guardas un día de consumo. Como el inventario cuesta dinero, se pesa contra lo que arriesgas si paras: el día de máquina parada, los clientes que perderías y lo que costaría atraerlos de nuevo.",
+  "resumen_teorico": "Revisar el material cuando llega y tener inventario de materia prima van de la mano. La revisión detecta lo roto o con un tamaño que no sirve; si lo rechazas, te quedas sin material, y el inventario está para tapar ese hueco. Calcula su tamaño en vez de adivinarlo: tiene que alcanzar para lo que consumes mientras tarda en llegarte la reposición, así que con entregas diarias guardas un día de consumo. Mantenerlo cuesta dinero, así que compáralo con lo que arriesgas si paras: una jornada con la máquina detenida, los clientes que se irían y lo que costaría recuperarlos.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P10 de la frontera publicada en la vuelta 1 del frente, L69, 237 palabras. Es un tramo de UNA sola linea del recorte, y los siete pasos salen todos de ella. POR QUE ES PROCEDIMIENTO: el libro pone su propio inventario de OBJETOS y de ETAPAS y hasta pone la formula (you will want to look at the eggs at the time of receipt, something called incoming or receiving inspection; The principle to be applied here is that you should have enough to cover your consumption rate for the length of time it takes to replace your raw material; you should also try to gauge the opportunity at risk: what would it cost if you had to shut your egg machine down for a day? How many customers would you lose? How much would it cost to lure them back?). El criterio NO es un adjetivo de adecuacion: no dice un inventario razonable, dice ritmo de consumo por tiempo de reposicion. POR QUE VA FUNDIDO EN UN SOLO NODO Y NO EN DOS (P.19, la repeticion interna): la inspeccion de recepcion y el inventario de materia prima parecen dos procedimientos, pero en el texto son uno: la inspeccion produce la devolucion, la devolucion produce el parado, y el inventario existe para cubrir ese parado. Partirlo dejaria un nodo sin su disparador y otro sin su motivo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuantos dias de inventario hay que tener, porque el libro da la formula y el ejemplo de un dia para un proveedor que entrega una vez al dia, y fijar un numero seria escribirlo yo; NO escribo a quien se devuelve el material ni con que documento, que seria puente de la especie destinatario; NO escribo quien hace la inspeccion, que seria puente de la especie responsable. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1 y el paso 2 podrian leerse como el mismo paso. Los separo porque el libro nombra los defectos en una frase aparte y porque el segundo trae la razon de mirar el tamano (which would affect how fast they cook), que no es evidente y es lo que distingue una inspeccion de recepcion de mirar si algo esta roto.",
   "pasos_accionables": [
     "Revisa el material justo cuando te llega: es la inspección de recepción, también llamada de entrada.",
@@ -275,6 +275,22 @@
       },
       "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-dimensionar_inventario_materia_prima_reposicion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La inspección al recibir y el inventario de materia prima van juntos: la inspección caza lo roto o fuera de tamaño, rechazarlo te deja sin material y el inventario existe para cubrir ese hueco. Su tamaño no se adivina: debe cubrir tu ritmo de consumo durante lo que tarda en llegar la reposición, así que si te entregan una vez al día, guardas un día de consumo. Como el inventario cuesta dinero, se pesa contra lo que arriesgas si paras: el día de máquina parada, los clientes que perderías y lo que costaría atraerlos de nuevo.",
+      "texto_nuevo": "Revisar el material cuando llega y tener inventario de materia prima van de la mano. La revisión detecta lo roto o con un tamaño que no sirve; si lo rechazas, te quedas sin material, y el inventario está para tapar ese hueco. Calcula su tamaño en vez de adivinarlo: tiene que alcanzar para lo que consumes mientras tarda en llegarte la reposición, así que con entregas diarias guardas un día de consumo. Mantenerlo cuesta dinero, así que compáralo con lo que arriesgas si paras: una jornada con la máquina detenida, los clientes que se irían y lo que costaría recuperarlos.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "69",
+        "frase": "you should have enough to cover your consumption rate for the length"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

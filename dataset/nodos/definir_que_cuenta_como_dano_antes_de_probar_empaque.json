@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Definir qué cuenta como daño antes de probar el empaque",
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
-  "resumen_teorico": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir tres cosas: qué cuenta como falla del producto y del empaque, qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro, y cómo vas a revisar el estado del producto y del empaque antes y después de la prueba, para comparar y saber si hubo falla real o solo desgaste normal.",
+  "resumen_teorico": "Fija de antemano qué vas a llamar falla, antes de poner tu empaque a prueba para ver si aguanta el viaje. Ese criterio tiene que responder tres preguntas. La primera: ¿en qué punto consideras que fallaron el producto o el empaque? La segunda: ¿hay algún daño que estés dispuesto a aceptar, por ejemplo unos rayones leves en la caja que no afectan lo de adentro, o no aceptas ninguno? La tercera: ¿cómo vas a revisar producto y empaque antes de la prueba y después de ella? Comparar ambos momentos te dice si hubo una falla real o solo el desgaste normal.",
   "pasos_accionables": [
     "Decide antes de la prueba qué tipo de daño en el producto y en el empaque es inaceptable.",
     "Decide qué nivel de daño toleras sin considerarlo falla, si es que toleras alguno.",
@@ -257,6 +257,22 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro incluye entre lo que debe estar decidido antes de probar cómo se comprobará el estado antes y después; el entregable lo omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-definir_que_cuenta_como_dano_antes_de_probar_empaque-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Antes de probar si tu empaque aguanta el viaje, necesitas decidir con anticipación qué vas a considerar una falla. El criterio debe cubrir tres cosas: qué cuenta como falla del producto y del empaque, qué nivel de daño toleras, si es que toleras alguno, como rayones leves en la caja que no afectan lo que hay dentro, y cómo vas a revisar el estado del producto y del empaque antes y después de la prueba, para comparar y saber si hubo falla real o solo desgaste normal.",
+      "texto_nuevo": "Fija de antemano qué vas a llamar falla, antes de poner tu empaque a prueba para ver si aguanta el viaje. Ese criterio tiene que responder tres preguntas. La primera: ¿en qué punto consideras que fallaron el producto o el empaque? La segunda: ¿hay algún daño que estés dispuesto a aceptar, por ejemplo unos rayones leves en la caja que no afectan lo de adentro, o no aceptas ninguno? La tercera: ¿cómo vas a revisar producto y empaque antes de la prueba y después de ella? Comparar ambos momentos te dice si hubo una falla real o solo el desgaste normal.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "191-195",
+        "frase": "The test requestor shall determine all of the following before testing"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

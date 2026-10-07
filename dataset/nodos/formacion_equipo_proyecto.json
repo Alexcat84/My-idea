@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Formación del Equipo de Proyecto Multifuncional",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas suelen aparecer en un departamento pero no hay acuerdo sobre dónde están las causas ni cuáles deben ser los remedios. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). La mayoría de los equipos tiene de 6 a 8 miembros; más gente tiende a volverlo difícil de manejar y costoso.",
+  "resumen_teorico": "Los proyectos vitales suelen cruzar varias áreas por su propia naturaleza, así que piden un equipo que reúna varias funciones y no una persona sola: el problema suele asomar en un departamento, pero nadie coincide en dónde nacen las causas ni en qué remedio aplicar. Al elegir a quién sumas, decide qué departamentos llevas (el que sufre el síntoma, los sospechosos, los que darían el remedio, los de diagnóstico y los expertos), de qué nivel jerárquico conviene cada miembro según de qué trate el proyecto y si cada persona tiene tiempo, conocimiento y entrenamiento. Lo habitual es un equipo de 6 a 8 personas; si sumas más, tiende a volverse costoso y difícil de manejar.",
   "pasos_accionables": [
     "Identificar los departamentos relevantes: afectado, sospechoso, remediador, diagnóstico, expertos",
     "Determinar el nivel jerárquico apropiado según la naturaleza técnica o gerencial del proyecto",
@@ -78,6 +78,22 @@
       },
       "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-formacion_equipo_proyecto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los proyectos vitales suelen ser multifuncionales por naturaleza, por lo que requieren equipos multifuncionales en lugar de individuos, ya que los síntomas suelen aparecer en un departamento pero no hay acuerdo sobre dónde están las causas ni cuáles deben ser los remedios. La selección de miembros debe considerar qué departamentos representar (afectado, sospechoso, remediador, diagnóstico, expertos), el nivel jerárquico apropiado según la naturaleza del proyecto, y las capacidades individuales (tiempo, conocimiento, entrenamiento). La mayoría de los equipos tiene de 6 a 8 miembros; más gente tiende a volverlo difícil de manejar y costoso.",
+      "texto_nuevo": "Los proyectos vitales suelen cruzar varias áreas por su propia naturaleza, así que piden un equipo que reúna varias funciones y no una persona sola: el problema suele asomar en un departamento, pero nadie coincide en dónde nacen las causas ni en qué remedio aplicar. Al elegir a quién sumas, decide qué departamentos llevas (el que sufre el síntoma, los sospechosos, los que darían el remedio, los de diagnóstico y los expertos), de qué nivel jerárquico conviene cada miembro según de qué trate el proyecto y si cada persona tiene tiempo, conocimiento y entrenamiento. Lo habitual es un equipo de 6 a 8 personas; si sumas más, tiende a volverse costoso y difícil de manejar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6842-6911",
+        "frase": "The symptoms typically show up in one department, but there is no agreement"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

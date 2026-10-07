@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "De Muestreo de Aceptación a Control de Aceptación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El muestreo de aceptación es el proceso de evaluar una porción del producto en un lote para aceptar o rechazar todo el lote. El control de aceptación es una estrategia continua de selección, aplicación y modificación de procedimientos de muestreo ante un ambiente de inspección cambiante. Este ciclo se aplica durante toda la vida del producto para lograr mejora de calidad (usando control y capacidad de proceso) y reducción/eliminación de la inspección.",
+  "resumen_teorico": "Muestrear para aceptar consiste en revisar solo una parte de un lote y, con eso, decidir si lo aceptas o lo rechazas completo. Controlar la aceptación va más allá: es una estrategia permanente en la que eliges, aplicas y ajustas tus procedimientos de muestreo a medida que cambian las condiciones de inspección. Repites ese ciclo a lo largo de toda la vida del producto con dos fines: mejorar la calidad, apoyándote en el control y la capacidad del proceso, y reducir o eliminar la inspección.",
   "pasos_accionables": [
     "Establecer un ciclo de vida de aplicación de control de aceptación para el producto",
     "Usar retroalimentación de datos de inspección para modificar y evolucionar los planes de muestreo",
@@ -26,5 +26,23 @@
   "etiqueta_arbol": "Controla la Aceptación, No Muestrees",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-acceptance_control-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El muestreo de aceptación es el proceso de evaluar una porción del producto en un lote para aceptar o rechazar todo el lote. El control de aceptación es una estrategia continua de selección, aplicación y modificación de procedimientos de muestreo ante un ambiente de inspección cambiante. Este ciclo se aplica durante toda la vida del producto para lograr mejora de calidad (usando control y capacidad de proceso) y reducción/eliminación de la inspección.",
+      "texto_nuevo": "Muestrear para aceptar consiste en revisar solo una parte de un lote y, con eso, decidir si lo aceptas o lo rechazas completo. Controlar la aceptación va más allá: es una estrategia permanente en la que eliges, aplicas y ajustas tus procedimientos de muestreo a medida que cambian las condiciones de inspección. Repites ese ciclo a lo largo de toda la vida del producto con dos fines: mejorar la calidad, apoyándote en el control y la capacidad del proceso, y reducir o eliminar la inspección.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "25174",
+        "frase": "Acceptance sampling is the process of evaluating a portion of the product"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

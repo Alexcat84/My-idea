@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Selección del Diseño General del Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El diseño de proceso debe comenzar con un diagrama de flujo de alto nivel que describa el flujo general, desde el cual se identifican subprocesos y actividades principales para diseño detallado. Debe cumplir criterios como entregar las metas de calidad del producto, ser eficiente en recursos y no exigir inversiones mayores a las planificadas.",
+  "resumen_teorico": "Empieza por dibujar el proceso completo en un diagrama de flujo de alto nivel. Ese mapa general te muestra los subprocesos y las actividades principales que luego diseñarás en detalle. Tiene que cumplir criterios como lograr las metas de calidad del producto, usar los recursos con eficiencia y no pedir más inversión de la planificada.",
   "pasos_accionables": [
     "Elaborar un diagrama de flujo de proceso de alto nivel",
     "Verificar que el diseño incorpore contramedidas de análisis de criticidad, análisis de modo y efecto de falla y árbol de fallas",
@@ -60,6 +60,22 @@
       "decision": "saneamiento continuo de la voz (ola v09): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-seleccionar_diseno_general_proceso-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El diseño de proceso debe comenzar con un diagrama de flujo de alto nivel que describa el flujo general, desde el cual se identifican subprocesos y actividades principales para diseño detallado. Debe cumplir criterios como entregar las metas de calidad del producto, ser eficiente en recursos y no exigir inversiones mayores a las planificadas.",
+      "texto_nuevo": "Empieza por dibujar el proceso completo en un diagrama de flujo de alto nivel. Ese mapa general te muestra los subprocesos y las actividades principales que luego diseñarás en detalle. Tiene que cumplir criterios como lograr las metas de calidad del producto, usar los recursos con eficiencia y no pedir más inversión de la planificada.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4464-4476",
+        "frase": "process design should begin by describing the overall process flow with"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

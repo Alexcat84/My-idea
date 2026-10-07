@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Anatomía del Proceso: Árbol de Ensamble",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Estructura coherente que une al proceso e incorpora las salidas de varios subprocesos, muchos ejecutados concurrentemente, convergiendo en un ensamblaje final. Es ampliamente usada en manufactura, hospitales y procesos de oficina como la elaboración de reportes contables o presupuestos, donde múltiples especialistas contribuyen datos que se consolidan progresivamente.",
+  "resumen_teorico": "Es la estructura que le da coherencia al proceso: reúne lo que producen varios subprocesos, muchos de ellos al mismo tiempo, y lo hace converger en un ensamblaje final. Se usa mucho en manufactura, en hospitales y en tareas de oficina como preparar reportes contables o presupuestos, donde varios especialistas aportan datos que se van consolidando paso a paso.",
   "pasos_accionables": [
     "Identificar los subprocesos o componentes que deben ensamblarse para el resultado final",
     "Determinar qué departamentos o especialistas contribuyen a cada rama del árbol",
@@ -24,5 +24,23 @@
   "etiqueta_arbol": "Une las Piezas del Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "copia-anatomia_proceso_arbol_ensamble-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Estructura coherente que une al proceso e incorpora las salidas de varios subprocesos, muchos ejecutados concurrentemente, convergiendo en un ensamblaje final. Es ampliamente usada en manufactura, hospitales y procesos de oficina como la elaboración de reportes contables o presupuestos, donde múltiples especialistas contribuyen datos que se consolidan progresivamente.",
+      "texto_nuevo": "Es la estructura que le da coherencia al proceso: reúne lo que producen varios subprocesos, muchos de ellos al mismo tiempo, y lo hace converger en un ensamblaje final. Se usa mucho en manufactura, en hospitales y en tareas de oficina como preparar reportes contables o presupuestos, donde varios especialistas aportan datos que se van consolidando paso a paso.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4411",
+        "frase": "The assembly tree is a familiar process that incorporates the outputs of several subprocesses"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    }
   ]
 }

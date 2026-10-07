@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Vendibilidad (Salability Analysis)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Evalúa qué características del producto estimulan a los clientes a comprarlo y el precio que están dispuestos a pagar. A diferencia del análisis competitivo, el punto de referencia es la respuesta del cliente al diseño propuesto, no solo la comparación con competidores, aunque ambos análisis pueden combinarse.",
+  "resumen_teorico": "Te sirve para saber cuánto pagaría tu cliente y cuáles características de tu producto lo empujan a comprarlo. Se parece al análisis competitivo, pero aquí la referencia no es solo cómo te comparas con tus rivales, sino cómo reacciona el cliente ante el diseño que le propones. Las dos miradas pueden ir juntas en un mismo análisis.",
   "pasos_accionables": [
     "Diseñar encuestas o pruebas de mercado sobre el diseño propuesto",
     "Medir la disposición a pagar de distintos segmentos de mercado por cada característica",
@@ -42,6 +42,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro presenta las tasas de instalación de opciones como oportunidad propia de productos complejos con características opcionales; el paso lo generaliza.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-analisis_vendibilidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Evalúa qué características del producto estimulan a los clientes a comprarlo y el precio que están dispuestos a pagar. A diferencia del análisis competitivo, el punto de referencia es la respuesta del cliente al diseño propuesto, no solo la comparación con competidores, aunque ambos análisis pueden combinarse.",
+      "texto_nuevo": "Te sirve para saber cuánto pagaría tu cliente y cuáles características de tu producto lo empujan a comprarlo. Se parece al análisis competitivo, pero aquí la referencia no es solo cómo te comparas con tus rivales, sino cómo reacciona el cliente ante el diseño que le propones. Las dos miradas pueden ir juntas en un mismo análisis.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4293, 4313",
+        "frase": "Salability analysis evaluates which features stimulate customers to be willing to buy"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

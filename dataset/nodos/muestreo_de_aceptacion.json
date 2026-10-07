@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo de Aceptación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso de evaluar una porción de un lote para decidir la aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo y errores por monotonía, pero implica riesgos de muestreo (rechazar buenos lotes o aceptar malos), más costo administrativo y menos información. Rinde más tras un programa de prevención.",
+  "resumen_teorico": "Revisas solo una parte de un lote y, con lo que encuentras, decides si aceptas o rechazas el lote entero. Frente a revisar el 100%, te sale más barato, maltratas menos el producto al manipularlo y bajas los errores que causa la monotonía. A cambio, corres el riesgo de rechazar lotes buenos o aceptar malos, gastas más en administrarlo y obtienes menos información. Funciona mejor si antes ya tienes en marcha un programa de prevención.",
   "pasos_accionables": [
     "Determinar si el objetivo es evaluar el lote inmediato o el proceso productivo",
     "Definir el tamaño de muestra (n) y el criterio de aceptación (c)",
@@ -47,6 +47,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro condiciona su mayor eficacia a un programa de prevención previo, y el resumen lo omite.; El libro da tres desventajas y el resumen solo conserva los riesgos de muestreo.; Mismo defecto: faltan el mayor costo administrativo y la menor información.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-muestreo_de_aceptacion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Proceso de evaluar una porción de un lote para decidir la aceptación o rechazo del lote completo. Ofrece ventajas económicas frente a la inspección 100%, reduce daño por manejo y errores por monotonía, pero implica riesgos de muestreo (rechazar buenos lotes o aceptar malos), más costo administrativo y menos información. Rinde más tras un programa de prevención.",
+      "texto_nuevo": "Revisas solo una parte de un lote y, con lo que encuentras, decides si aceptas o rechazas el lote entero. Frente a revisar el 100%, te sale más barato, maltratas menos el producto al manipularlo y bajas los errores que causa la monotonía. A cambio, corres el riesgo de rechazar lotes buenos o aceptar malos, gastas más en administrarlo y obtienes menos información. Funciona mejor si antes ya tienes en marcha un programa de prevención.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24861-24881",
+        "frase": "Acceptance sampling is the process of evaluating a portion of the product"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

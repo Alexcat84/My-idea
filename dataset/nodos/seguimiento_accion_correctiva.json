@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Seguimiento de la Acción Correctiva Post-Auditoría",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que pesen ante la dirección, por ejemplo, en términos monetarios.",
+  "resumen_teorico": "Cierra cada auditoría con un seguimiento que compruebe dos cosas: que la acción correctiva se puso en marcha y que de verdad da resultado. Cuando no se aplicó, tu primer paso es revisar si lo que concluye el reporte es correcto y si hay acuerdo al respecto; de no haberlo, ese desacuerdo es lo primero que resuelves. Cuando sí hay acuerdo y lo que falta son recursos, puedes echar una mano presentando la gravedad del hallazgo de un modo que pese a quien decide, por ejemplo traducida a dinero.",
   "pasos_accionables": [
     "Programar una auditoría de seguimiento para verificar que las acciones correctivas se implementaron y que son eficaces",
     "Si la acción correctiva quedó sin aplicar, revisa antes que nada que lo que concluyó el reporte original sea acertado y que exista acuerdo al respecto; si ese acuerdo falta, resuélvelo antes que cualquier otra cosa",
@@ -193,6 +193,22 @@
       },
       "decision": "copia fiel (regla D2, ola k07): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-seguimiento_accion_correctiva-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La fase final de una auditoría es el seguimiento: confirmar que la acción correctiva se implementó y que funciona. Si no se implementó, primero verificas que las conclusiones del reporte sean correctas y que haya acuerdo sobre ellas; si no lo hay, resuelves ese desacuerdo. Si hay acuerdo pero faltan recursos, puedes ayudar reformulando la seriedad del hallazgo en términos que pesen ante la dirección, por ejemplo, en términos monetarios.",
+      "texto_nuevo": "Cierra cada auditoría con un seguimiento que compruebe dos cosas: que la acción correctiva se puso en marcha y que de verdad da resultado. Cuando no se aplicó, tu primer paso es revisar si lo que concluye el reporte es correcto y si hay acuerdo al respecto; de no haberlo, ese desacuerdo es lo primero que resuelves. Cuando sí hay acuerdo y lo que falta son recursos, puedes echar una mano presentando la gravedad del hallazgo de un modo que pese a quien decide, por ejemplo traducida a dinero.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "10278-10284",
+        "frase": "The final phase of the audit is follow-up to confirm that corrective action"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

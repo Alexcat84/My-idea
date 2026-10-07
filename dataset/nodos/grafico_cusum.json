@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gráfico de Suma Acumulada (CUSUM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). Cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+  "resumen_teorico": "Con el gráfico CUSUM vas sumando, en orden cronológico, cuánto se aparta el estadístico de cada muestra de un valor de referencia, que es tu objetivo, y graficas ese acumulado. Como cada punto arrastra lo ocurrido en todas las observaciones anteriores, este gráfico resulta muy sensible a los desplazamientos pequeños del proceso, del orden de 0.5σ a 2.0σ.",
   "pasos_accionables": [
     "Calcular el estadístico de control (por ejemplo, x-barra) para cada muestra",
     "Definir el valor objetivo T y la desviación estándar del proceso",
@@ -61,6 +61,22 @@
       "decision": "procedencia (D5): sale la atribucion a una persona o fuente, o el metodo con persona pasa a su nombre neutro, sin cambiar el sentido",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 11"
+    },
+    {
+      "id": "copia-grafico_cusum-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El gráfico CUSUM es una representación cronológica de la suma acumulada de desviaciones de un estadístico muestral respecto a un valor de referencia (objetivo). Cada punto contiene información de todas las observaciones anteriores, lo que lo hace especialmente sensible para detectar pequeños desplazamientos del proceso (0.5σ a 2.0σ).",
+      "texto_nuevo": "Con el gráfico CUSUM vas sumando, en orden cronológico, cuánto se aparta el estadístico de cada muestra de un valor de referencia, que es tu objetivo, y graficas ese acumulado. Como cada punto arrastra lo ocurrido en todas las observaciones anteriores, este gráfico resulta muy sensible a los desplazamientos pequeños del proceso, del orden de 0.5σ a 2.0σ.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20642",
+        "frase": "The cumulative sum (CUMSUM or CUSUM) control chart is a chronological plot"
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

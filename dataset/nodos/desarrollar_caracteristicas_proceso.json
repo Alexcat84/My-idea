@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Desarrollar las Características del Proceso",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.",
+  "resumen_teorico": "Quinto paso del modelo: entre los procesos que ya tienes y otras alternativas, identifica y elige los que puedan dar las características que definiste para el producto. La idea central es que lo que tu proceso es capaz de lograr tiene que cuadrar con lo que el producto exige, porque la variación nace en el proceso y las metas las ponen las personas.",
   "pasos_accionables": [
     "Listar los procesos posibles capaces de generar cada característica del producto",
     "Evaluar la capacidad actual de los procesos frente a los requisitos definidos",
@@ -41,6 +41,22 @@
         "evidencia": "Q094-011: Es un paso del modelo de planificacion de la calidad: seleccionar y disenar los procesos capaces de producir las caracteristicas del producto, no operar lo que ya funciona. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "copia-desarrollar_caracteristicas_proceso-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.",
+      "texto_nuevo": "Quinto paso del modelo: entre los procesos que ya tienes y otras alternativas, identifica y elige los que puedan dar las características que definiste para el producto. La idea central es que lo que tu proceso es capaz de lograr tiene que cuadrar con lo que el producto exige, porque la variación nace en el proceso y las metas las ponen las personas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "3300",
+        "frase": "Process capability must reconcile with product requirements."
+      },
+      "decision": "copia fiel (regla D2, ola k19): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
