@@ -1,21 +1,22 @@
 /**
  * /eliminar-cuenta: instrucciones públicas para eliminar la cuenta (encargo del fundador del 6 oct 2026, punto 6).
  * Requisito de Google Play: se lee sin la app y sin iniciar sesión (proxy.ts, RUTAS_PUBLICAS). El borrado real vive
- * en el centro de cuenta (/cuenta, «Zona de peligro», /api/cuenta/eliminar).
+ * en el centro de cuenta (/cuenta, «Zona de peligro», /api/cuenta/eliminar). En el idioma de la persona, en los once
+ * (I18N AL DÍA, 7 oct 2026: catálogo lib/i18n/mensajes/paginasAyuda.ts, con los rótulos reales del centro de cuenta).
  */
 import type { Metadata } from "next";
 import { PaginaPublica } from "@/app/ui/PaginaPublica";
 import { idiomaDeCookies } from "@/lib/i18n/servidor";
-import { ELIMINAR_CUENTA, idiomaDePagina } from "@/lib/legal/paginas";
+import { eliminarCuenta } from "@/lib/legal/paginas";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const m = ELIMINAR_CUENTA[idiomaDePagina(await idiomaDeCookies())];
+  const m = eliminarCuenta(await idiomaDeCookies());
   return { title: `${m.titulo} | My Idea`, description: m.descripcion };
 }
 
 export default async function EliminarCuenta() {
-  const idioma = idiomaDePagina(await idiomaDeCookies());
-  const m = ELIMINAR_CUENTA[idioma];
+  const idioma = await idiomaDeCookies();
+  const m = eliminarCuenta(idioma);
   return (
     <PaginaPublica idioma={idioma}>
       <h1>{m.titulo}</h1>

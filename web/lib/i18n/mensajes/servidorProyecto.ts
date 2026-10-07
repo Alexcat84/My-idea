@@ -121,7 +121,7 @@ const en: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Tell me what happened: without your story I can't rethink your path.",
     caminosFallidos: "I couldn't suggest paths right now. Nothing was charged; try again in a little while.",
-    topeCaminos: "You've already asked for paths {{n}} times for this rethink. Choose one of the ones you have, or close it and start a new rethink.",
+    topeCaminos: "You've already asked for paths {{n}} times for this rethink. Choose one of the paths you have, or close it and start a new rethink.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' must be an object of field: value",
@@ -193,8 +193,8 @@ const fr: typeof es = {
     primeroExplora: "Explore d'abord « {{mundo}} » : son suivi naît de son plan.",
     puertasRecorridas: "Tu as déjà franchi toutes les portes de « {{mundo}} ».",
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
-    historiaObligatoria: "Raconte-moi ce qui s'est passé : sans ton histoire, je ne peux pas repenser ton chemin.",
-    caminosFallidos: "Je n'ai pas pu te proposer de chemins pour l'instant. Rien n'a été débité ; réessaie dans un moment.",
+    historiaObligatoria: "Raconte-moi ce qui s'est passé : sans ton histoire, je ne peux pas repenser ton chemin.",
+    caminosFallidos: "Je n'ai pas pu te proposer de chemins pour l'instant. Rien n'a été débité; réessaie dans un moment.",
     topeCaminos: "Tu as déjà demandé des chemins {{n}} fois pour ce nouveau cap. Choisis l'un de ceux que tu as, ou ferme et recommence un nouveau cap.",
   },
   numeros: {
@@ -339,7 +339,7 @@ const de: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Erzähl mir, was passiert ist: Ohne deine Geschichte kann ich deinen Weg nicht neu denken.",
     caminosFallidos: "Ich konnte dir gerade keine Wege vorschlagen. Es wurde nichts abgebucht; versuch es gleich noch einmal.",
-    topeCaminos: "Du hast für diese Neuausrichtung schon {{n}} Mal Wege angefragt. Wähle einen der vorhandenen, oder schließe sie und beginne eine neue Neuausrichtung.",
+    topeCaminos: "Du hast für diese Neuausrichtung schon {{n}} Mal Wege angefragt. Wähle einen der vorhandenen oder schließe sie ab und beginne eine weitere Neuausrichtung.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' muss ein Objekt aus Feld: Wert sein",
@@ -555,7 +555,7 @@ const zh: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "告诉我发生了什么：没有你的经历，我没法重新规划你的道路。",
     caminosFallidos: "现在没能为你提出可选的道路。没有扣除任何费用；请稍后再试。",
-    topeCaminos: "这次重新规划你已经要求了{{n}}次道路。请从现有的道路中选一条，或者关闭后重新开始一次重新规划。",
+    topeCaminos: "这次重新规划中，你已经请求了 {{n}} 次可选道路。请从现有的道路中选一条，或者关闭后另起一次重新规划。",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' 必须是“字段：值”形式的对象",
@@ -697,9 +697,9 @@ const ar: typeof es = {
     primeroExplora: "استكشفوا «{{mundo}}» أولًا: متابعته تنبثق من خطته.",
     puertasRecorridas: "لقد مررتم بكل أبواب «{{mundo}}».",
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
-    historiaObligatoria: "احكوا لي ما حدث: من دون قصتكم لا أستطيع إعادة التفكير في طريقكم.",
-    caminosFallidos: "لم أتمكن من اقتراح طرق الآن. لم يُخصم شيء؛ حاولوا مرة أخرى بعد قليل.",
-    topeCaminos: "طلبتم طرقًا {{n}} مرات لإعادة التوجيه هذه. اختاروا أحد الطرق التي لديكم، أو أغلقوا وابدؤوا إعادة توجيه جديدة.",
+    historiaObligatoria: "احكوا لي ما حدث: من دون قصتكم لا أستطيع إعادة التفكير في مساركم.",
+    caminosFallidos: "لم أتمكن من اقتراح مسارات الآن. لم يُخصم شيء؛ حاولوا مرة أخرى بعد قليل.",
+    topeCaminos: "عدد مرات طلب المسارات في إعادة التفكير هذه: {{n}}. اختاروا أحد المسارات التي لديكم، أو أغلقوا وابدؤوا إعادة تفكير جديدة.",
   },
   numeros: {
     cifrasNoObjeto: "يجب أن تكون 'numeros' كائنًا بصيغة حقل: قيمة",
@@ -769,7 +769,7 @@ const hi: typeof es = {
     primeroExplora: "पहले “{{mundo}}” को खोजें: इसका फ़ॉलो-अप इसकी योजना से बनता है।",
     puertasRecorridas: "“{{mundo}}” के सारे दरवाज़े आपने खोल लिए हैं।",
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
-    historiaObligatoria: "बताइए क्या हुआ: आपकी कहानी के बिना मैं आपका रास्ता दोबारा नहीं सोच सकता।",
+    historiaObligatoria: "बताइए क्या हुआ: आपकी कहानी के बिना आपके रास्ते पर दोबारा सोचना संभव नहीं है।",
     caminosFallidos: "अभी मैं रास्ते नहीं सुझा सका। कुछ भी नहीं कटा; थोड़ी देर बाद फिर कोशिश करें।",
     topeCaminos: "इस नई दिशा के लिए आप {{n}} बार रास्ते माँग चुके हैं। जो रास्ते आपके पास हैं उनमें से एक चुनें, या बंद करके नई दिशा शुरू करें।",
   },

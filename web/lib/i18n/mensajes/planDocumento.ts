@@ -64,7 +64,7 @@ const fr: typeof es = {
   historiaDeTuViaje: "L'histoire de ton parcours, pas à pas.",
   verMiBitacora: "Voir mon journal de bord",
   construidoConTuRecorrido: "Construit avec ton cheminement",
-  notaRecalculo: "Quelque chose change dans la vraie vie ? Demande un nouveau cycle depuis À l'ouvrage et ton plan est refait à partir de là où tu en es. Il coûte des crédits, et tu verras le prix avant de confirmer.",
+  notaRecalculo: "Quelque chose change dans la vraie vie? Demande un nouveau cycle depuis À l'ouvrage et ton plan est refait à partir de là où tu en es. Il coûte des crédits, et tu verras le prix avant de confirmer.",
   losNumerosQueNecesitas: "Les chiffres dont tu as besoin",
 };
 
@@ -163,7 +163,7 @@ const zh: typeof es = {
     one: "{{n}}个阶段",
     other: "{{n}}个阶段",
   },
-  metaEtapas: "{{etapas}} · 每一栏显示它的交付成果；展开可查看步骤和行动",
+  metaEtapas: "{{etapas}} · 每一条都显示它的交付成果；展开即可查看步骤和行动",
   tuPrimeraAccion: "你的第一项行动",
   miBitacora: "我的日志",
   historiaDeTuViaje: "你的旅程一步步走来的故事。",

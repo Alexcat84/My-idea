@@ -3,7 +3,8 @@
  * al botón en el primer envío de datos (app/ui/LineaConsentimiento.tsx, en /nueva y en La Exploración), la línea y
  * los enlaces de /login, el aviso de cookies del pie (app/ui/AvisoCookies.tsx) y los mensajes del servidor
  * (/api/cuenta/consentimiento y la guarda de lib/legal/aceptacionServidor.ts). Lo ve toda identidad que envía datos,
- * también la invisible. Los textos legales existen en español y francés; los enlaces llevan a esas páginas.
+ * también la invisible. Los enlaces llevan a las páginas legales, que se leen en el idioma de la persona si su
+ * traducción está publicada y, si no, en español.
  */
 import type { PorIdioma } from "../config";
 
@@ -58,7 +59,7 @@ const en: typeof es = {
   servidor: {
     sinIdentidad: "We couldn't recognize your session. Reload the page and try again.",
     cuerpoInvalido: "We didn't understand the request. Please try again.",
-    noLeido: "We couldn't check your acceptance of the Terms and the Privacy policy. Please try again in a moment.",
+    noLeido: "We couldn't check your acceptance of the Terms and the Privacy Policy. Please try again in a moment.",
     noGuardado: "We couldn't save your acceptance, so it doesn't count yet. Please try again.",
     versionVieja: "The texts changed while you were reading them. Reload the page to see the new version.",
     requerida: "Before generating, accept the Terms and the Privacy Policy.",
@@ -209,7 +210,7 @@ const ja: typeof es = {
     linea: "続行すると、<terminos>利用規約</terminos>と<privacidad>プライバシーポリシー</privacidad>に同意したことになります",
   },
   cookies: {
-    aviso: "アプリの動作と言語の記憶に必要なクッキーだけを使っています。<cookies>詳しく見る</cookies>",
+    aviso: "アプリを動かすためと、表示言語を覚えておくために必要なCookieだけを使っています。<cookies>詳しく見る</cookies>",
   },
   servidor: {
     sinIdentidad: "セッションを確認できませんでした。ページを再読み込みして、もう一度お試しください。",
@@ -228,8 +229,8 @@ const zh: typeof es = {
     lineaNueva: "我们更新了<terminos>使用条款</terminos>和<privacidad>隐私政策</privacidad>。继续即表示你接受新版本",
     aceptarYGenerar: "接受并生成",
     aceptarYSeguir: "接受并继续",
-    guardando: "正在保存你的接受…",
-    errorGuardar: "我们没能保存你的接受，所以什么都没有发送。请再试一次。",
+    guardando: "正在保存你的同意…",
+    errorGuardar: "我们没能保存你的同意，所以什么都没有发送。请再试一次。",
     versionCambio: "你输入期间，使用条款或隐私政策有了变化。请刷新页面查看新版本。",
   },
   login: {
@@ -242,8 +243,8 @@ const zh: typeof es = {
   servidor: {
     sinIdentidad: "我们没能识别你的会话。请刷新页面后再试一次。",
     cuerpoInvalido: "我们没能理解这个请求。请再试一次。",
-    noLeido: "我们没能确认你对使用条款和隐私政策的接受。请稍后再试。",
-    noGuardado: "我们没能保存你的接受，所以它还不算数。请再试一次。",
+    noLeido: "我们没能确认你是否已同意使用条款和隐私政策。请稍后再试。",
+    noGuardado: "我们没能保存你的同意，所以暂时还未生效。请再试一次。",
     versionVieja: "你阅读期间文本有了变化。请刷新页面查看新版本。",
     requerida: "生成之前，请接受使用条款和隐私政策。",
     requeridaNueva: "我们更新了使用条款和隐私政策。接受新版本后即可继续。",
@@ -281,30 +282,30 @@ const ko: typeof es = {
 
 const ar: typeof es = {
   envio: {
-    linea: "بالمتابعة، أنت توافق على <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>",
+    linea: "بالمتابعة، توافقون على <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>",
     lineaNueva:
-      "حدّثنا <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>. بالمتابعة، أنت توافق على النسخة الجديدة",
+      "حدّثنا <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>. بالمتابعة، توافقون على النسخة الجديدة",
     aceptarYGenerar: "أوافق وأنشئ",
     aceptarYSeguir: "أوافق وأتابع",
-    guardando: "جارٍ حفظ موافقتك…",
-    errorGuardar: "لم نتمكن من حفظ موافقتك، لذلك لم نرسل شيئًا. حاول مرة أخرى.",
-    versionCambio: "تغيّرت الشروط أو سياسة الخصوصية أثناء كتابتك. أعد تحميل الصفحة لترى النسخة الجديدة.",
+    guardando: "جارٍ حفظ موافقتكم…",
+    errorGuardar: "لم نتمكن من حفظ موافقتكم، لذلك لم نرسل شيئًا. حاولوا مرة أخرى.",
+    versionCambio: "تغيّرت الشروط أو سياسة الخصوصية أثناء كتابتكم. أعيدوا تحميل الصفحة لتروا النسخة الجديدة.",
   },
   login: {
     enlaces: "<terminos>الشروط</terminos> · <privacidad>الخصوصية</privacidad>",
-    linea: "بالمتابعة، أنت توافق على <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>",
+    linea: "بالمتابعة، توافقون على <terminos>الشروط</terminos> و<privacidad>سياسة الخصوصية</privacidad>",
   },
   cookies: {
-    aviso: "نستخدم فقط ملفات تعريف الارتباط اللازمة لعمل التطبيق ولتذكّر لغتك. <cookies>اعرف المزيد</cookies>",
+    aviso: "نستخدم فقط ملفات تعريف الارتباط اللازمة لعمل التطبيق ولتذكّر لغتكم. <cookies>مزيد من المعلومات</cookies>",
   },
   servidor: {
-    sinIdentidad: "لم نتمكن من التعرّف على جلستك. أعد تحميل الصفحة وحاول مرة أخرى.",
-    cuerpoInvalido: "لم نفهم الطلب. حاول مرة أخرى.",
-    noLeido: "لم نتمكن من التحقق من موافقتك على الشروط وسياسة الخصوصية. حاول مرة أخرى بعد قليل.",
-    noGuardado: "لم نتمكن من حفظ موافقتك، لذلك لا تُحتسب بعد. حاول مرة أخرى.",
-    versionVieja: "تغيّرت النصوص أثناء قراءتك لها. أعد تحميل الصفحة لترى النسخة الجديدة.",
-    requerida: "قبل الإنشاء، وافق على الشروط وسياسة الخصوصية.",
-    requeridaNueva: "حدّثنا الشروط وسياسة الخصوصية. وافق على النسخة الجديدة للمتابعة.",
+    sinIdentidad: "لم نتمكن من التعرّف على جلستكم. أعيدوا تحميل الصفحة وحاولوا مرة أخرى.",
+    cuerpoInvalido: "لم نفهم الطلب. حاولوا مرة أخرى.",
+    noLeido: "لم نتمكن من التحقق من موافقتكم على الشروط وسياسة الخصوصية. حاولوا مرة أخرى بعد قليل.",
+    noGuardado: "لم نتمكن من حفظ موافقتكم، لذلك لا تُحتسب بعد. حاولوا مرة أخرى.",
+    versionVieja: "تغيّرت النصوص أثناء قراءتكم لها. أعيدوا تحميل الصفحة لتروا النسخة الجديدة.",
+    requerida: "قبل الإنشاء، وافقوا على الشروط وسياسة الخصوصية.",
+    requeridaNueva: "حدّثنا الشروط وسياسة الخصوصية. وافقوا على النسخة الجديدة للمتابعة.",
   },
 };
 
