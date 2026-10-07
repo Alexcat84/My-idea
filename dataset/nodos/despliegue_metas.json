@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Despliegue de Metas (Goal Deployment)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las metas estratégicas son solo una lista de deseos hasta que se descomponen en proyectos específicos asignados a individuos o equipos con los recursos necesarios. El proceso involucra división y asignación de metas a niveles inferiores, quienes proponen proyectos y recursos, en un diálogo bidireccional hasta llegar a un acuerdo final sobre qué proyectos ejecutar.",
+  "resumen_teorico": "Mientras una meta estratégica no se reparta en proyectos concretos, cada uno con una persona o un equipo responsable y con los recursos que necesita, no pasa de ser un deseo. Para lograrlo, divides las metas y las asignas a los niveles de abajo; quienes las reciben proponen proyectos y los recursos que piden, y la conversación va y viene en ambos sentidos hasta acordar qué proyectos ejecutar.",
   "pasos_accionables": [
     "Dividir las metas estratégicas del consejo en submetas por nivel organizacional",
     "Solicitar a los niveles de acción que seleccionen proyectos de mejora radical que cumplan las metas",
@@ -45,6 +45,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-despliegue_metas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las metas estratégicas son solo una lista de deseos hasta que se descomponen en proyectos específicos asignados a individuos o equipos con los recursos necesarios. El proceso involucra división y asignación de metas a niveles inferiores, quienes proponen proyectos y recursos, en un diálogo bidireccional hasta llegar a un acuerdo final sobre qué proyectos ejecutar.",
+      "texto_nuevo": "Mientras una meta estratégica no se reparta en proyectos concretos, cada uno con una persona o un equipo responsable y con los recursos que necesita, no pasa de ser un deseo. Para lograrlo, divides las metas y las asignas a los niveles de abajo; quienes las reciben proponen proyectos y los recursos que piden, y la conversación va y viene en ambos sentidos hasta acordar qué proyectos ejecutar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6463",
+        "frase": "Goals are merely a wish list until they are deployed"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

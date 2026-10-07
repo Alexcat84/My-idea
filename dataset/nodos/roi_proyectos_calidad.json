@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Retorno de Inversión (ROI) en Proyectos de Mejora de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El ROI es la razón entre la ganancia estimada y los recursos estimados necesarios para un proyecto de mejora. Calcular el ROI de proyectos que buscan reducir el desperdicio crónico requiere estimar los costos actuales de mala calidad, la reducción potencial de costos si el proyecto tiene éxito, y los costos del diagnóstico y remedio necesarios. Muchas propuestas de mejora se quedan en el cajón porque nadie cuantificó su ROI, lo que impide comparar esta oportunidad con otras formas de usar el mismo dinero en tu negocio.",
+  "resumen_teorico": "Para saber si un proyecto de mejora vale la pena, divide lo que esperas ganar entre los recursos que calculas que te va a pedir: eso es su ROI. Cuando el proyecto ataca un desperdicio crónico, necesitas tres estimaciones: cuánto te cuesta hoy la mala calidad, cuánto podrías ahorrar si el proyecto sale bien y cuánto costarán el diagnóstico y el remedio. Muchas propuestas de mejora terminan olvidadas cuando nadie pone cifras a ese retorno, porque así no hay manera de compararlas con otros usos posibles del mismo dinero en tu negocio.",
   "pasos_accionables": [
     "Estima el costo actual del desperdicio crónico asociado al proyecto que tienes en mente",
     "Estima la reducción de costos potencial si el proyecto tiene éxito",
@@ -92,6 +92,22 @@
       "decision": "saneamiento continuo de la voz (ola v17): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-roi_proyectos_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El ROI es la razón entre la ganancia estimada y los recursos estimados necesarios para un proyecto de mejora. Calcular el ROI de proyectos que buscan reducir el desperdicio crónico requiere estimar los costos actuales de mala calidad, la reducción potencial de costos si el proyecto tiene éxito, y los costos del diagnóstico y remedio necesarios. Muchas propuestas de mejora se quedan en el cajón porque nadie cuantificó su ROI, lo que impide comparar esta oportunidad con otras formas de usar el mismo dinero en tu negocio.",
+      "texto_nuevo": "Para saber si un proyecto de mejora vale la pena, divide lo que esperas ganar entre los recursos que calculas que te va a pedir: eso es su ROI. Cuando el proyecto ataca un desperdicio crónico, necesitas tres estimaciones: cuánto te cuesta hoy la mala calidad, cuánto podrías ahorrar si el proyecto sale bien y cuánto costarán el diagnóstico y el remedio. Muchas propuestas de mejora terminan olvidadas cuando nadie pone cifras a ese retorno, porque así no hay manera de compararlas con otros usos posibles del mismo dinero en tu negocio.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6220-6228",
+        "frase": "In general terms, ROI is the ratio of (1) the estimated gain"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

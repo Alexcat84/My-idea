@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis de Capacidad de Proceso mediante Histogramas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acción sobre el proceso conviene tomar, si alguna.",
+  "resumen_teorico": "Este análisis junta el histograma y la curva de probabilidad para saber si tu proceso logra mantenerse dentro de los límites de especificación que pide el cliente. Fíjate en tres rasgos del histograma: dónde está centrado frente al objetivo del proceso (aim), qué tan ancha es la distribución comparada con esos límites y qué forma tiene, porque si muestra varios picos puede estar delatando poblaciones mezcladas o problemas de calidad. Por lo general, hacen falta 40 mediciones o más de la característica de calidad para que aparezca el patrón básico de variación. Ten en cuenta que el histograma no refleja en qué orden se produjo cada pieza, así que, si el proceso se fue corriendo, el centro que aparenta puede engañarte. Con todo esto decides si el proceso es capaz y si conviene actuar sobre él y de qué manera.",
   "pasos_accionables": [
     "Seleccionar una muestra aleatoria de al menos 40 mediciones del proceso",
     "Construir el histograma con los límites de especificación superpuestos",
@@ -135,6 +135,22 @@
       "decision": "saneamiento continuo de la voz (ola v15): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-analisis_capacidad_procesos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acción sobre el proceso conviene tomar, si alguna.",
+      "texto_nuevo": "Este análisis junta el histograma y la curva de probabilidad para saber si tu proceso logra mantenerse dentro de los límites de especificación que pide el cliente. Fíjate en tres rasgos del histograma: dónde está centrado frente al objetivo del proceso (aim), qué tan ancha es la distribución comparada con esos límites y qué forma tiene, porque si muestra varios picos puede estar delatando poblaciones mezcladas o problemas de calidad. Por lo general, hacen falta 40 mediciones o más de la característica de calidad para que aparezca el patrón básico de variación. Ten en cuenta que el histograma no refleja en qué orden se produjo cada pieza, así que, si el proceso se fue corriendo, el centro que aparenta puede engañarte. Con todo esto decides si el proceso es capaz y si conviene actuar sobre él y de qué manera.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11834-11866",
+        "frase": "As a general rule, at least 40 measurements are needed for the histogram"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

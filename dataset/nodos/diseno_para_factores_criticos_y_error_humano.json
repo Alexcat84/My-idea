@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diseño para Factores Críticos y Reducción de Error Humano",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los factores críticos son aspectos del proceso que representan peligro serio para la vida, la salud, el medio ambiente o riesgo de pérdidas económicas muy grandes. El diseño de proceso debe incorporar márgenes amplios de seguridad, provisiones a prueba de fallas, sistemas de redundancia y alarmas múltiples, apoyándose en análisis de criticidad y FMEA para priorizarlos. Además, dado que las personas son falibles, hay que analizar y reducir el error humano mediante técnicas de mistake-proofing, clasificando los errores según si son por técnica, por retroalimentación insuficiente o por falta de atención sostenida, y usando el principio de Pareto para enfocarse en los tipos de error más vitales.",
+  "resumen_teorico": "Un factor crítico es cualquier aspecto de tu proceso capaz de poner en grave peligro la vida, la salud o el ambiente, o de provocar pérdidas de dinero enormes. Para esos factores, diseña con una holgura de seguridad amplia, mecanismos a prueba de fallas, redundancia y varias alarmas, y usa el análisis de criticidad y el FMEA para decidir cuáles atender primero. Como toda persona se equivoca, analiza también los errores humanos y redúcelos con técnicas de mistake-proofing: sepáralos en errores de técnica, errores por falta de retroalimentación y errores por no poder sostener la atención, y aplica el principio de Pareto para concentrarte en los pocos tipos de error que son vitales.",
   "pasos_accionables": [
     "Identifica los aspectos del proceso con riesgo serio para la vida, la salud, el ambiente o grandes pérdidas económicas",
     "Aplica un análisis de criticidad y FMEA para priorizar estos factores",
@@ -74,6 +74,22 @@
       "decision": "saneamiento continuo de la voz (ola v19): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-diseno_para_factores_criticos_y_error_humano-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los factores críticos son aspectos del proceso que representan peligro serio para la vida, la salud, el medio ambiente o riesgo de pérdidas económicas muy grandes. El diseño de proceso debe incorporar márgenes amplios de seguridad, provisiones a prueba de fallas, sistemas de redundancia y alarmas múltiples, apoyándose en análisis de criticidad y FMEA para priorizarlos. Además, dado que las personas son falibles, hay que analizar y reducir el error humano mediante técnicas de mistake-proofing, clasificando los errores según si son por técnica, por retroalimentación insuficiente o por falta de atención sostenida, y usando el principio de Pareto para enfocarse en los tipos de error más vitales.",
+      "texto_nuevo": "Un factor crítico es cualquier aspecto de tu proceso capaz de poner en grave peligro la vida, la salud o el ambiente, o de provocar pérdidas de dinero enormes. Para esos factores, diseña con una holgura de seguridad amplia, mecanismos a prueba de fallas, redundancia y varias alarmas, y usa el análisis de criticidad y el FMEA para decidir cuáles atender primero. Como toda persona se equivoca, analiza también los errores humanos y redúcelos con técnicas de mistake-proofing: sepáralos en errores de técnica, errores por falta de retroalimentación y errores por no poder sostener la atención, y aplica el principio de Pareto para concentrarte en los pocos tipos de error que son vitales.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "4625-4637",
+        "frase": "Critical factors are those aspects which present serious danger to human life"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

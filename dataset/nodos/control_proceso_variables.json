@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Correlación de Variables de Proceso con Resultados de Producto",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en descubrir mediante análisis de datos las relaciones entre las variables del proceso y los resultados del producto, lo cual permite crear características de control de proceso (límites y mecanismos reguladores) para mantener el proceso estable. El diseño estadístico de experimentos (DOE) es clave para entender interacciones entre variables bajo enfoques como Six Sigma.",
+  "resumen_teorico": "La idea es usar el análisis de datos para encontrar cómo se relacionan las variables de tu proceso con los resultados que da tu producto. Con ese conocimiento puedes definir características de control del proceso, como límites y mecanismos que lo regulan, y así mantenerlo estable. Para entender cómo interactúan varias variables entre sí, en enfoques como Six Sigma, el diseño estadístico de experimentos (DOE) resulta clave.",
   "pasos_accionables": [
     "Recolectar datos de variables de proceso y resultados de producto",
     "Aplicar diseño estadístico de experimentos para identificar relaciones causales, con personas dedicadas y formadas para diseñarlos y analizarlos",
@@ -77,6 +77,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v10): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-control_proceso_variables-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consiste en descubrir mediante análisis de datos las relaciones entre las variables del proceso y los resultados del producto, lo cual permite crear características de control de proceso (límites y mecanismos reguladores) para mantener el proceso estable. El diseño estadístico de experimentos (DOE) es clave para entender interacciones entre variables bajo enfoques como Six Sigma.",
+      "texto_nuevo": "La idea es usar el análisis de datos para encontrar cómo se relacionan las variables de tu proceso con los resultados que da tu producto. Con ese conocimiento puedes definir características de control del proceso, como límites y mecanismos que lo regulan, y así mantenerlo estable. Para entender cómo interactúan varias variables entre sí, en enfoques como Six Sigma, el diseño estadístico de experimentos (DOE) resulta clave.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22418-22436",
+        "frase": "discover, by data analysis, the relationships between process features or variables and product"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

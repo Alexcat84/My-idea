@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema de Respuesta Oportuna a Alarmas de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Mecanismo para detectar fallas de calidad y actuar positivamente sobre estas señales para evitar deterioro en calidad, costo o entrega. La función de calidad debe establecer estos sistemas de alarma dentro del cronograma común que, en muchos contratos, comparten comprador y proveedor.",
+  "resumen_teorico": "Es un mecanismo que levanta señales cuando la calidad falla y te lleva a responder ante ellas de forma activa, antes de que se deterioren la calidad, el costo o la entrega. Muchos contratos atan a comprador y proveedor a un mismo cronograma, y dentro de él le toca a la función de calidad montar estas alarmas.",
   "pasos_accionables": [
     "Definir indicadores clave que disparen alarmas de calidad",
     "Ubicar las alarmas dentro del cronograma común que el contrato fije entre comprador y proveedor",
@@ -61,6 +61,22 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que comprador y proveedor comparten un cronograma común bajo muchos contratos; el nodo lo da como situación general.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-sistema_de_alarma_de_defectos-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Mecanismo para detectar fallas de calidad y actuar positivamente sobre estas señales para evitar deterioro en calidad, costo o entrega. La función de calidad debe establecer estos sistemas de alarma dentro del cronograma común que, en muchos contratos, comparten comprador y proveedor.",
+      "texto_nuevo": "Es un mecanismo que levanta señales cuando la calidad falla y te lleva a responder ante ellas de forma activa, antes de que se deterioren la calidad, el costo o la entrega. Muchos contratos atan a comprador y proveedor a un mismo cronograma, y dentro de él le toca a la función de calidad montar estas alarmas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "23867",
+        "frase": "set up alarm signals to detect quality failures and to act positively"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

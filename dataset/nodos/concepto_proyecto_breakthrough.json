@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "El Proyecto como Unidad de Breakthrough",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección, que produce tanto vitales pocos como útiles muchos.",
+  "resumen_teorico": "Llamas proyecto a un problema crónico al que le pones fecha para resolverlo. Es la pieza básica con la que se logra un breakthrough, un avance de fondo: las mejoras grandes no llegan en general, llegan una a una, cada una como su propio proyecto, y no hay otro camino. Unos pocos proyectos, los vitales, salen directo de tu plan de negocio; la mayoría nace de nominar y seleccionar candidatos, un proceso del que salen tanto vitales pocos como útiles muchos.",
   "pasos_accionables": [
     "Definir claramente el problema crónico a resolver como proyecto",
     "Clasificar el proyecto como parte de los 'vitales pocos' o 'útiles muchos'",
@@ -43,6 +43,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que las nominaciones de niveles altos son vitales pocos y solo las de niveles bajos útiles muchos; el nodo las etiqueta todas como útiles muchos.; Mismo defecto.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-concepto_proyecto_breakthrough-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección, que produce tanto vitales pocos como útiles muchos.",
+      "texto_nuevo": "Llamas proyecto a un problema crónico al que le pones fecha para resolverlo. Es la pieza básica con la que se logra un breakthrough, un avance de fondo: las mejoras grandes no llegan en general, llegan una a una, cada una como su propio proyecto, y no hay otro camino. Unos pocos proyectos, los vitales, salen directo de tu plan de negocio; la mayoría nace de nominar y seleccionar candidatos, un proceso del que salen tanto vitales pocos como útiles muchos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6482-6484",
+        "frase": "As used here, a project is a chronic problem scheduled for solution."
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

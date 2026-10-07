@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Carta del Proyecto (Problem and Goal Statement)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, le ayuda a saber cuándo terminó el proyecto, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.",
+  "resumen_teorico": "Acompaña cada proyecto elegido con un enunciado por escrito del problema y de la meta, donde quede claro en qué se va a enfocar y qué resultado busca. Esa carta fija lo que el equipo tiene que hacer y le permite reconocer cuándo ha terminado; deja la responsabilidad clara, porque la meta pasa a formar parte de la descripción de trabajo de cada integrante; le da al proyecto legitimidad oficial, y le otorga al equipo derechos como convocar reuniones y pedir datos.",
   "pasos_accionables": [
     "Redactar una declaración clara del problema a resolver",
     "Definir la meta específica y medible del proyecto",
@@ -44,6 +44,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae uno de los propósitos de la lista: al definir problema y resultado, ayuda al equipo a saber cuándo terminó.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-carta_proyecto_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, le ayuda a saber cuándo terminó el proyecto, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.",
+      "texto_nuevo": "Acompaña cada proyecto elegido con un enunciado por escrito del problema y de la meta, donde quede claro en qué se va a enfocar y qué resultado busca. Esa carta fija lo que el equipo tiene que hacer y le permite reconocer cuándo ha terminado; deja la responsabilidad clara, porque la meta pasa a formar parte de la descripción de trabajo de cada integrante; le da al proyecto legitimidad oficial, y le otorga al equipo derechos como convocar reuniones y pedir datos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "6795-6812",
+        "frase": "Each project selected should be accompanied by a written problem and goal"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

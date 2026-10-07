@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Mantenimiento Productivo Total (TPM) y Mantenimiento Centrado en Confiabilidad (RCM)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El TPM y RCM son enfoques donde equipos multidisciplinarios (operarios, mantenimiento, ingenieros de proceso) identifican, analizan y resuelven problemas de mantenimiento para maximizar el tiempo de actividad del equipo. Buscan mejoras incrementales como reducción de pérdidas de herramientas, simplificación de ajustes y aumento de la efectividad global del equipo (OEE).",
+  "resumen_teorico": "Con TPM y RCM, equipos mixtos de operarios, personal de mantenimiento e ingenieros de proceso detectan los problemas de mantenimiento, los estudian y los corrigen para que la maquinaria pase el mayor tiempo posible en marcha. El avance llega en pasos pequeños: perder menos herramientas, hacer los ajustes más sencillos y elevar la efectividad global del equipo (OEE).",
   "pasos_accionables": [
     "Formar equipos multidisciplinarios de mantenimiento",
     "Identificar problemas de mantenimiento que afectan la capacidad del proceso",
@@ -58,6 +58,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v13): calco, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-mantenimiento_productivo_total-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El TPM y RCM son enfoques donde equipos multidisciplinarios (operarios, mantenimiento, ingenieros de proceso) identifican, analizan y resuelven problemas de mantenimiento para maximizar el tiempo de actividad del equipo. Buscan mejoras incrementales como reducción de pérdidas de herramientas, simplificación de ajustes y aumento de la efectividad global del equipo (OEE).",
+      "texto_nuevo": "Con TPM y RCM, equipos mixtos de operarios, personal de mantenimiento e ingenieros de proceso detectan los problemas de mantenimiento, los estudian y los corrigen para que la maquinaria pase el mayor tiempo posible en marcha. El avance llega en pasos pequeños: perder menos herramientas, hacer los ajustes más sencillos y elevar la efectividad global del equipo (OEE).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22850",
+        "frase": "Under this approach, teams are formed to identify, analyze, and solve maintenance problems"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

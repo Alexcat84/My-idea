@@ -1,0 +1,2440 @@
+[
+ {
+  "id": "copia-desarrollar_caracteristicas_proceso_2-condiciones_activacion-0",
+  "fecha": "2026-10-07",
+  "node_id": "desarrollar_caracteristicas_proceso_2",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "COPIA",
+  "texto_anterior": "Cuando ya tienes listo el diseño de tu producto y necesitas definir cómo lo vas a crear y entregar de forma continua",
+  "texto_nuevo": "Cuando el producto ya está diseñado y te falta decidir con qué proceso lo producirás y harás llegar una y otra vez",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4343",
+   "frase": "Once the product is designed and developed, it is necessary to"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-analisis_identificacion_mejores_practicas-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "analisis_identificacion_mejores_practicas",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+  "texto_nuevo": "Es el momento de tomar los datos de tu benchmarking, ya recolectados y normalizados, y examinarlos sin sesgo ni favoritismo para ver en qué destacas, en qué flaqueas y qué tan lejos quedas de los mejores del grupo; cuando se pueda, averigua también por qué existe cada brecha. No mires cada dato por separado: léelos en conjunto, y somete las comparaciones a pruebas estadísticas para que tengan un significado real. Puedes medirte contra el líder único, contra el cuartil superior o contra el promedio del grupo, y cada referencia trae sus propias ventajas y sus propios riesgos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17451-17457",
+   "frase": "It is essential that the analysis be impartial and totally objective"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-especificacion_requisitos_proveedores-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "especificacion_requisitos_proveedores",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La planificación de calidad con proveedores debe iniciarse antes de firmar el contrato, asegurando que el comprador comunique claramente el uso que se hará del producto y que obtenga evidencia de que el proveedor puede cumplir con los requisitos de aptitud para el uso. Según las circunstancias, pueden requerirse dos tipos de especificaciones: las que definen los requisitos del producto y las que definen las actividades del sistema de calidad esperadas del proveedor.",
+  "texto_nuevo": "Con un proveedor, la planificación de la calidad tiene que empezar antes de que firmes el contrato. Explícale con claridad para qué vas a usar lo que te entrega y consigue pruebas de que de verdad puede cumplir todo lo que hace falta para que el producto sirva a ese uso. Dependiendo del caso, quizá necesites dos clases de especificación: una que fija cómo debe ser el producto y otra que fija qué actividades de su sistema de calidad esperas que el proveedor lleve a cabo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23566-23582",
+   "frase": "For modern products, quality planning starts before a contract is signed."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-diseno_para_factores_criticos_y_error_humano-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Los factores críticos son aspectos del proceso que representan peligro serio para la vida, la salud, el medio ambiente o riesgo de pérdidas económicas muy grandes. El diseño de proceso debe incorporar márgenes amplios de seguridad, provisiones a prueba de fallas, sistemas de redundancia y alarmas múltiples, apoyándose en análisis de criticidad y FMEA para priorizarlos. Además, dado que las personas son falibles, hay que analizar y reducir el error humano mediante técnicas de mistake-proofing, clasificando los errores según si son por técnica, por retroalimentación insuficiente o por falta de atención sostenida, y usando el principio de Pareto para enfocarse en los tipos de error más vitales.",
+  "texto_nuevo": "Un factor crítico es cualquier aspecto de tu proceso capaz de poner en grave peligro la vida, la salud o el ambiente, o de provocar pérdidas de dinero enormes. Para esos factores, diseña con una holgura de seguridad amplia, mecanismos a prueba de fallas, redundancia y varias alarmas, y usa el análisis de criticidad y el FMEA para decidir cuáles atender primero. Como toda persona se equivoca, analiza también los errores humanos y redúcelos con técnicas de mistake-proofing: sepáralos en errores de técnica, errores por falta de retroalimentación y errores por no poder sostener la atención, y aplica el principio de Pareto para concentrarte en los pocos tipos de error que son vitales.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4625-4637",
+   "frase": "Critical factors are those aspects which present serious danger to human life"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-roi_proyectos_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "roi_proyectos_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El ROI es la razón entre la ganancia estimada y los recursos estimados necesarios para un proyecto de mejora. Calcular el ROI de proyectos que buscan reducir el desperdicio crónico requiere estimar los costos actuales de mala calidad, la reducción potencial de costos si el proyecto tiene éxito, y los costos del diagnóstico y remedio necesarios. Muchas propuestas de mejora se quedan en el cajón porque nadie cuantificó su ROI, lo que impide comparar esta oportunidad con otras formas de usar el mismo dinero en tu negocio.",
+  "texto_nuevo": "Para saber si un proyecto de mejora vale la pena, divide lo que esperas ganar entre los recursos que calculas que te va a pedir: eso es su ROI. Cuando el proyecto ataca un desperdicio crónico, necesitas tres estimaciones: cuánto te cuesta hoy la mala calidad, cuánto podrías ahorrar si el proyecto sale bien y cuánto costarán el diagnóstico y el remedio. Muchas propuestas de mejora terminan olvidadas cuando nadie pone cifras a ese retorno, porque así no hay manera de compararlas con otros usos posibles del mismo dinero en tu negocio.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6220-6228",
+   "frase": "In general terms, ROI is the ratio of (1) the estimated gain"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-tipos_escalas_medicion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "tipos_escalas_medicion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Existen cuatro escalas de medición fundamentales que determinan qué análisis estadístico puedes aplicar a tus datos. La escala de razón registra cantidades reales con un origen aritmético cero, como el peso, y es la más potente para el análisis. La escala de intervalo usa números ordenados sin origen aritmético, como el tiempo del reloj. La escala ordinal clasifica en categorías con un orden o rango, como la preferencia de un cliente. La escala nominal solo clasifica en categorías sin ningún orden, como género, color o turno de producción. Reconocer la escala natural de cada variable, ya sea que midas un atributo o una variable continua, es el primer paso antes de elegir cualquier herramienta estadística.",
+  "texto_nuevo": "Tus datos pueden venir en cuatro escalas de medición básicas, y la escala decide qué análisis estadístico puedes aplicarles. Con la nominal solo repartes en categorías sin ningún orden: género, color, turno de producción. La ordinal añade un orden o rango entre categorías, como cuando un cliente dice qué prefiere. La de intervalo ya usa números ordenados, aunque le falta un origen aritmético; piensa en la hora del reloj. La de razón, la más potente para analizar, registra cantidades reales y parte de un cero aritmético, como el peso. Identificar la escala natural de cada variable, ya midas un atributo o una variable continua, es lo primero que haces antes de escoger cualquier herramienta estadística.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19131-19139",
+   "frase": "An interval scale records ordered numbers but lacks an arithmetic origin"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-iso_31000_gestion_riesgo-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "iso_31000_gestion_riesgo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "ISO 31000:2009 proporciona principios, marco de trabajo y un proceso para gestionar cualquier forma de riesgo de manera transparente, sistemática y creíble, dentro de cualquier alcance o contexto organizacional. Esta norma internacional se desarrolló para ayudar a las organizaciones a gestionar el riesgo con eficacia.",
+  "texto_nuevo": "La norma internacional ISO 31000:2009 nació para que cualquier negocio gestione el riesgo con eficacia. Te ofrece tres cosas: unos principios, un marco de trabajo y un proceso, con los que puedes manejar cualquier tipo de riesgo de forma creíble, sistemática y transparente, sea cual sea el alcance o el contexto en que operes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11463",
+   "frase": "ISO 31000 provides principles, framework, and a process for managing any form of risk"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-kaizen_mejora_continua-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "kaizen_mejora_continua",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Enfoque estandarizado de Lean que utiliza eventos de mejora rápida (kaizens) para atacar el desperdicio embebido en los procesos y aumentar la velocidad del flujo. Mejorar la velocidad expone los problemas (desperdicio) y permite eliminarlos, haciendo los procesos más rápidos, mejores y más económicos.",
+  "texto_nuevo": "Lean cuenta con un enfoque estandarizado basado en eventos de mejora rápida, los kaizens, para combatir el desperdicio metido en tus procesos y acelerar su flujo. Cuando ganas velocidad, los problemas (es decir, el desperdicio) salen a la luz y puedes eliminarlos; así tus procesos quedan más rápidos, mejores y más baratos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12782",
+   "frase": "There is a standardized approach and set of tools, such as rapid improvement events"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-control_proceso_variables-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "control_proceso_variables",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Consiste en descubrir mediante análisis de datos las relaciones entre las variables del proceso y los resultados del producto, lo cual permite crear características de control de proceso (límites y mecanismos reguladores) para mantener el proceso estable. El diseño estadístico de experimentos (DOE) es clave para entender interacciones entre variables bajo enfoques como Six Sigma.",
+  "texto_nuevo": "La idea es usar el análisis de datos para encontrar cómo se relacionan las variables de tu proceso con los resultados que da tu producto. Con ese conocimiento puedes definir características de control del proceso, como límites y mecanismos que lo regulan, y así mantenerlo estable. Para entender cómo interactúan varias variables entre sí, en enfoques como Six Sigma, el diseño estadístico de experimentos (DOE) resulta clave.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22418-22436",
+   "frase": "discover, by data analysis, the relationships between process features or variables and product"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-design_for_manufacture-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "design_for_manufacture",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Enfoque sistemático que permite a los ingenieros anticipar los costos de manufactura desde etapas tempranas del diseño, incluso con geometrías preliminares. Ayuda a explorar procesos y materiales alternativos más allá de los que el ingeniero conoce, permitiendo comparar costos entre diseños alternativos.",
+  "texto_nuevo": "Gracias a este enfoque sistemático, los ingenieros pueden calcular de antemano el costo de fabricación desde el inicio del diseño, aunque solo cuenten con una geometría aproximada. Además, les ayuda a explorar materiales y procesos distintos de los que ya conocen, para que comparen cuánto costaría fabricar cada una de las alternativas de diseño.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "16047",
+   "frase": "Design for Manufacture (DFM) is a systematic approach that allows engineers to anticipate"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-fitness_for_purpose_vs_conformance-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "fitness_for_purpose_vs_conformance",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "A veces hay una diferencia crítica entre cómo los clientes definen calidad (fitness for purpose: características que responden a sus necesidades, incluyendo ausencia de fallas y buen servicio) y cómo durante años la definieron muchos proveedores (conformance to specification: cumplir especificaciones en la prueba final). Esta brecha ignora factores como empaque, almacenamiento, transporte, instalación, confiabilidad, mantenibilidad y servicio al cliente.",
+  "texto_nuevo": "Lo que tus clientes entienden por calidad y lo que muchos proveedores entendieron por ella durante años a veces no coincide, y esa diferencia es crítica. Para el cliente, calidad es aptitud para el uso (fitness for purpose): que el producto tenga características que respondan a sus necesidades, que no falle y que venga con buen servicio. Para esos proveedores era conformidad con la especificación (conformance to specification): pasar la prueba final cumpliendo lo especificado. Esa mirada deja fuera el empaque, el almacenamiento, el transporte, la instalación, la confiabilidad, la mantenibilidad y el servicio al cliente, entre otros factores.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "729-731",
+   "frase": "In contrast, for years many suppliers had defined quality as conformance to specification"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-trazabilidad_de_lotes-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "trazabilidad_de_lotes",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Sistema que permite identificar y rastrear productos a través de números de lote o heat numbers, facilitando la localización de problemas, reduciendo el volumen de retiros de producto (recalls) y fijando responsabilidades. Requiere esfuerzo adicional para preservar el orden de manufactura pero permite mayor precisión en el muestreo.",
+  "texto_nuevo": "Es un sistema que asigna a cada producto un número de lote o de colada (heat number) para identificarlo y seguirle la pista. Con él ubicas los problemas con más facilidad, limitas cuántos productos tienes que retirar del mercado en un recall y puedes fijar responsabilidades. Te exige un esfuerzo extra para conservar el orden de fabricación, pero a cambio te deja muestrear con más precisión.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23865",
+   "frase": "to simplify the localization of trouble, to reduce the volume of product recall"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-hojas_de_verificacion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "hojas_de_verificacion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Es una herramienta para recolectar y analizar datos con un formato que te permite ver de inmediato patrones y tendencias. Te ayuda a contar de forma ordenada cuántas veces ocurre un defecto o un evento.",
+  "texto_nuevo": "Una hoja de verificación te sirve para reunir datos y analizarlos sobre la marcha: su diseño acomoda lo que anotas de manera que las tendencias y los patrones saltan a la vista en el acto. Con ella llevas una cuenta ordenada de las veces que aparece un defecto o un evento.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18145",
+   "frase": "Used to collect and analyze data, a check sheet is a type"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-clasificacion_caracteristicas_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "clasificacion_caracteristicas_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Consiste en elaborar dos listas y clasificar ambas por gravedad: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+  "texto_nuevo": "Aquí trabajas con dos listas y ordenas ambas según su gravedad. En una anotas las características de calidad que nacen de las especificaciones; en la otra, los defectos, o sea, las señales de incumplimiento que aparecen al fabricar el producto o al usarlo. Esas listas orientan a quien planifica para saber qué características piden más atención en la inspección.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24654",
+   "frase": "There are actually two lists that need to be classified."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-sistema_de_alarma_de_defectos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "sistema_de_alarma_de_defectos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Mecanismo para detectar fallas de calidad y actuar positivamente sobre estas señales para evitar deterioro en calidad, costo o entrega. La función de calidad debe establecer estos sistemas de alarma dentro del cronograma común que, en muchos contratos, comparten comprador y proveedor.",
+  "texto_nuevo": "Es un mecanismo que levanta señales cuando la calidad falla y te lleva a responder ante ellas de forma activa, antes de que se deterioren la calidad, el costo o la entrega. Muchos contratos atan a comprador y proveedor a un mismo cronograma, y dentro de él le toca a la función de calidad montar estas alarmas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23867",
+   "frase": "set up alarm signals to detect quality failures and to act positively"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-seleccion_fuente_unica_multiple-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "seleccion_fuente_unica_multiple",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Múltiples proveedores generan competencia, que puede traer mejor calidad, menores costos, mejor servicio y menor riesgo de interrupción de suministro. Una fuente única permite contratos más grandes, comunicación simplificada y relaciones de cooperación más profundas. La tendencia moderna es reducir el número de proveedores para facilitar asociaciones (partnerships), sin llevar todas las compras a fuente única.",
+  "texto_nuevo": "Cuando trabajas con varios proveedores, la competencia entre ellos puede darte costos más bajos, mejor calidad, menos riesgo de que se corte tu suministro y un servicio mejor. Con una sola fuente, en cambio, el contrato que das es mayor, la comunicación se simplifica y la cooperación llega más hondo. Hoy la tendencia es recortar el número de proveedores para facilitar asociaciones (partnerships), sin que eso signifique comprarlo todo a una sola fuente.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23656-23660",
+   "frase": "Competition can result in better quality, lower costs, better service, and minimum"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-graficos_control_tiradas_cortas-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "graficos_control_tiradas_cortas",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "En procesos de producción corta o en sistemas de manufactura esbelta con cambios frecuentes de producto, no es factible recolectar 20-30 muestras para establecer un gráfico de control tradicional. Existen cuatro enfoques: ignorar la variabilidad sistemática, estratificar datos, usar análisis de regresión con residuos, o estandarizar los datos mediante transformación Z para normalizarlos a una línea base común.",
+  "texto_nuevo": "Si produces en tiradas cortas, o en un sistema de manufactura esbelta donde cambias de producto a menudo, no te resulta viable juntar las 20-30 muestras que pide un gráfico de control tradicional. Para esos casos tienes cuatro caminos: estandarizar los datos con una transformación Z que los lleve a una línea base común, estratificarlos, modelarlos con análisis de regresión y graficar los residuos, o ignorar la variabilidad sistemática.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20619-20629",
+   "frase": "Some processes are carried out in such short runs that the usual"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-sipoc-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "sipoc",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Mapa de alto nivel que muestra los proveedores principales de un proceso, las entradas recibidas, el proceso que agrega valor, las salidas producidas y los clientes que las reciben. Se usa en etapas tempranas de un proyecto para caracterizar el proceso e identificar miembros clave del equipo.",
+  "texto_nuevo": "El SIPOC te da una vista panorámica de un proceso: quiénes son sus proveedores principales, qué entradas te entregan, qué proceso les suma valor, qué salidas resultan y qué clientes las reciben. Lo usas en las primeras etapas de un proyecto, para describir el proceso y descubrir a qué personas clave necesitas en el equipo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18608",
+   "frase": "It is a high-level map showing a process's primary suppliers, the inputs"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-conformidad_especificacion_aptitud_uso-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "conformidad_especificacion_aptitud_uso",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La aceptación de un producto involucra tres decisiones clave: si el producto conforma a las especificaciones, si el producto no conforme es apto para el uso pretendido (requiriendo input de múltiples fuentes), y cómo comunicar la decisión tanto a clientes externos como a personal interno. Estas decisiones son fundamentales para la disposición del producto no conforme.",
+  "texto_nuevo": "Aceptar un producto te pone frente a tres decisiones clave. Primero, juzgar si cumple las especificaciones. Segundo, cuando no las cumple, decidir si aun así sirve para el uso previsto, algo que pide la opinión de varias fuentes. Tercero, definir cómo comunicas esa decisión, tanto a tus clientes externos como a tu propia gente. De estas decisiones depende qué haces con el producto no conforme.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24374-24380",
+   "frase": "Product acceptance involves the disposition of product based on its quality."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-medicion_capacidad_servicio-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "medicion_capacidad_servicio",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Se necesita asegurar que el proceso de servicio pueda cumplir con las necesidades y metas del cliente bajo condiciones normales de operación. Cuando las necesidades del cliente pueden cuantificarse, se usan índices de capacidad de proceso o niveles Sigma. Un parámetro cuantitativo importante en el sector servicios es el tiempo para completar una transacción de servicio. Una evaluación más amplia del proceso de servicio mide cuatro parámetros: efectividad, eficiencia, adaptabilidad y tiempo de ciclo.",
+  "texto_nuevo": "Lo que buscas es comprobar que tu proceso de servicio responde a lo que tu cliente necesita y a sus metas cuando trabajas en condiciones normales. Si puedes poner en números esas necesidades, recurre a los índices de capacidad de proceso o a los niveles Sigma. En un servicio, una de las cifras que más pesan es cuánto tardas en completar cada transacción con el cliente. Si quieres una evaluación más completa de tu proceso de servicio, mide cuatro cosas: su efectividad, su eficiencia, su adaptabilidad y su tiempo de ciclo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "21473-21481",
+   "frase": "We need to ensure that the process can meet customer needs"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-oficina_calidad_y_excelencia-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "oficina_calidad_y_excelencia",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Es la función organizacional responsable de asegurar que se diseñen, controlen y mejoren continuamente el producto, el proceso y las personas para satisfacer las necesidades cambiantes de los clientes. Debe actuar como un habilitador (enabler) tanto a nivel táctico como estratégico, integrando recursos que tradicionalmente estaban dispersos en departamentos paralelos, y hablando el 'lenguaje del dinero' además del 'lenguaje de las cosas' para influir en la dirección ejecutiva.",
+  "texto_nuevo": "Es el área encargada de que tu producto, tus procesos y tu gente se diseñen bien, se mantengan bajo control y mejoren sin pausa, para responder a lo que tus clientes van necesitando a medida que sus necesidades cambian. Le toca ser un habilitador (enabler), en lo táctico y en lo estratégico: reúne recursos que antes solían estar repartidos en departamentos paralelos y, para influir en quienes dirigen, habla el 'lenguaje del dinero' y no solo el 'lenguaje de las cosas'.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2386",
+   "frase": "This mission is to ensure that the organization designs, controls, and continuously"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-sistema_informacion_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "sistema_informacion_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El control de calidad requiere una red de información que sirva a todos los niveles de toma de decisión: información en tiempo real para detección y corrección inmediata en niveles operativos, resúmenes para que los líderes controlen los pocos vitales, y datos para ver tendencias, amenazas, oportunidades y el desempeño de áreas y personas. Lo mejor es que lo diseñe un equipo multifuncional que incluya clientes y proveedores de información, y el liderazgo debe auditar que cumpla las necesidades de todos los usuarios.",
+  "texto_nuevo": "Para controlar la calidad necesitas que la información sirva a cada nivel donde alguien toma decisiones. Quien opera necesita datos al instante para detectar una desviación y corregirla de inmediato; quien lidera necesita resúmenes para vigilar los pocos asuntos vitales; y el sistema también debe darte datos para ver tendencias, amenazas y oportunidades y para evaluar cómo rinden tus áreas y tu gente. Lo ideal es que lo diseñe un equipo de varias áreas en el que estén quienes usan esa información y quienes la aportan, y que el liderazgo audite que responde a lo que necesita cada usuario.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8354-8357",
+   "frase": "The planning for quality control should provide an information network"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-teoria_triple_rol_sistemas_abiertos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "teoria_triple_rol_sistemas_abiertos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Modelo organizacional donde cada función, departamento o individuo actúa de forma más o menos simultánea como proveedor, procesador y cliente. Las organizaciones son sistemas abiertos cuya vida depende de transacciones exitosas con el entorno externo y de la coordinación adecuada de sus funciones internas. Los roles se mantienen mediante expectativas mutuas (especificaciones, órdenes de trabajo) y retroalimentación (quejas, reportes de calidad, reconocimientos).",
+  "texto_nuevo": "Es un modelo según el cual toda función, departamento o persona juega casi al mismo tiempo tres papeles: el de proveedor, el de procesador y el de cliente. Un negocio funciona como un sistema abierto: sobrevive si le salen bien sus intercambios con el entorno de fuera y si sus funciones internas están bien coordinadas entre sí. Cada papel se sostiene con expectativas que ambas partes comparten (especificaciones, órdenes de trabajo) y con retroalimentación (quejas, reportes de calidad, reconocimientos).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1536-1542",
+   "frase": "Because an organization is an open system, its life depends on"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-single_double_multiple_sampling-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "single_double_multiple_sampling",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple en general reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+  "texto_nuevo": "Puedes muestrear de tres maneras. Con el muestreo simple, una sola muestra basta para aceptar o rechazar. Con el doble, una primera muestra pequeña resuelve los casos claros y solo en los casos límite tomas una segunda. Con el múltiple, sacas varias muestras pequeñas, una tras otra, hasta poder decidir. Los dos últimos, en general, bajan la cantidad promedio de piezas que inspeccionas, a cambio de una administración más complicada. Y elijas el tipo que elijas, puedes armar planes cuyas curvas OC (curva característica de operación) sean prácticamente las mismas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24996-24999",
+   "frase": "Thus, double- and multiple-sampling plans may mean less inspection"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-lean_manufacturing_tps-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "lean_manufacturing_tps",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Lean es un conjunto de herramientas del TPS orientadas a identificar y eliminar sistemáticamente el desperdicio (muda), mejorar la calidad y reducir tiempos y costos de producción. Complementariamente, se enfoca en mejorar el flujo de trabajo (eliminando mura, la irregularidad) mediante técnicas como nivelación de producción, producción pull (kanban) y el Heijunka box. El objetivo es entregar lo correcto, en el lugar correcto, en el momento correcto y en la cantidad correcta, minimizando desperdicio y maximizando flexibilidad. Quien hace el trabajo debe asumirlo: la cultura y la gestión pesan tanto o más que las herramientas.",
+  "texto_nuevo": "Lean reúne herramientas nacidas en el sistema de producción de Toyota (TPS) para que detectes el desperdicio (muda) y lo elimines sin pausa, y para que mejores la calidad y recortes tiempos y costos de producción. Su otra cara, complementaria, busca que el trabajo fluya parejo y sin altibajos (mura), con apoyos como nivelar la producción, la producción pull (kanban) y la caja Heijunka. La meta es que llegue lo que hace falta, adonde hace falta, cuando hace falta y en la cantidad justa, con el menor desperdicio y la mayor flexibilidad. Quien hace el trabajo debe asumirlo: la cultura y la gestión pesan tanto o más que las herramientas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12799-12803",
+   "frase": "For many, Lean is the set of TPS tools that assist"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-benchmarking_proceso-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "benchmarking_proceso",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El benchmarking es un proceso sistemático y continuo que te permite medir y comparar tu desempeño, e identificar las prácticas que llevan a un desempeño superior. No es turismo industrial, ni una evaluación de desempeño personal, ni una actividad aislada: debe formar parte de tu estrategia continua de mejora. Se compone de tres fases: analizar tu posicionamiento (identificar brechas), aprender de las prácticas líderes, y adaptar o adoptar ese aprendizaje para transformar tu desempeño hacia el liderazgo.",
+  "texto_nuevo": "Hacer benchmarking es medir tu desempeño y compararlo con el de otros de manera ordenada y sin pausa, para descubrir qué prácticas explican los mejores resultados. No equivale a hacer turismo industrial, ni sirve para calificar a cada persona, ni es algo que haces una sola vez: tiene que vivir dentro de tu estrategia de mejora continua. Avanza en tres fases: primero ubicas dónde estás y qué brechas tienes, después aprendes de las prácticas de quienes van a la cabeza y al final adaptas o adoptas lo aprendido para llevar tu desempeño hasta el liderazgo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "16896-16933",
+   "frase": "Benchmarking is a systematic and continuous process that facilitates the measurement"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-doble_significado_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "doble_significado_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La calidad tiene dos significados críticos que deben entenderse y comunicarse con claridad: (1) cómo las características (features) de un producto/servicio satisfacen las necesidades del cliente, generando satisfacción (normalmente a mayor costo), y (2) la libertad respecto a fallos, orientada a costos (donde mayor calidad usualmente implica menor costo).",
+  "texto_nuevo": "La palabra calidad encierra dos sentidos clave, y tienes que tenerlos claros y saber transmitirlos. El primero mira al cliente: qué tan bien responden las características (features) de tu producto o servicio a lo que necesita, y cuánta satisfacción le dan; en este sentido, más calidad normalmente cuesta más. El segundo mira a los costos: estar libre de fallos, y aquí más calidad suele costar menos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1057-1121",
+   "frase": "Quality has two meanings that must be clearly understood and communicated"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planificacion_de_la_inspeccion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "planificacion_de_la_inspeccion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).",
+  "texto_nuevo": "Consiste en decidir en qué puntos del proceso vas a inspeccionar y darle a cada uno instrucciones y medios para comprobar que el producto cumple sus especificaciones. Abarca dos clasificaciones: la de características, la lista que sale de las especificaciones, y la de defectos, las señales de no conformidad que aparecen al fabricar y durante el uso del producto.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24346-24506",
+   "frase": "Inspection planning is the activity of (1) designating the stations"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-cultura_organizacional_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "cultura_organizacional_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La organización es una sociedad con normas, creencias y valores compartidos (cultura) que determinan si las metas de desempeño y calidad serán aceptadas o resistidas. Un ejemplo es la baja adopción de las cartas de control en planta: el fracaso viene principalmente de la falta de adaptación a la cultura existente, más que de debilidades técnicas (legitimidad, conflicto con jerarquías establecidas, nuevas fuentes de información sin resolución clara de las antiguas y nuevos deberes sin conocer su efecto en quienes deben cumplirlos).",
+  "texto_nuevo": "Tu negocio funciona como una pequeña sociedad: comparte normas, creencias y valores, y esa cultura decide si tus metas de desempeño y de calidad encuentran aceptación o resistencia. Mira lo que pasa con las cartas de control, que en planta casi no prenden: fallan sobre todo porque no encajan en la cultura que ya existe, mucho más que por fallas técnicas. Les falta legitimidad, chocan con las jerarquías establecidas, traen fuentes de información nuevas sin aclarar qué pasa con las viejas y crean tareas nuevas sin saber cómo afectan a quienes tienen que hacerlas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1399-1434",
+   "frase": "It is my belief that the failure of the control chart"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-articular_etica_valores-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "articular_etica_valores",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Los valores corporativos reflejan la cultura de la organización: el conjunto de hábitos y creencias compartidas por un grupo, así como su interacción con el entorno (responsabilidad social). Los valores publicados deben ir acompañados de acciones concretas de la dirección, o generarán cinismo en la organización.",
+  "texto_nuevo": "Los valores que declara una empresa son reflejo de su cultura, es decir, de los hábitos y creencias que comparte un grupo de personas, y también de cómo ese grupo se relaciona con su entorno, que es donde entra la responsabilidad social. Si publicas tus valores y no los respaldas con acciones concretas tuyas y de quienes dirigen, lo que vas a generar en tu equipo es cinismo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8919-8927",
+   "frase": "Corporate values reflect an organization's culture"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-optimizacion_caracteristicas_diseno-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "optimizacion_caracteristicas_diseno",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Una vez completado el diseño preliminar, debe optimizarse para satisfacer tanto al cliente como al proveedor, minimizando costos combinados e igualando o superando a la competencia. La optimización requiere un enfoque organizado que balancee necesidades multiorganizacionales mediante técnicas como revisión de diseño, equipos multifuncionales y negociación estructurada.",
+  "texto_nuevo": "Con el diseño preliminar terminado llega el momento de afinarlo: ajustarlo hasta que responda a lo que necesitan tu cliente y tu proveedor, con el menor costo sumado para ambos y a la altura de la competencia o por encima. Llegar a ese punto óptimo pide orden, porque equilibras las necesidades de varias empresas, y para eso sirven la revisión de diseño, los equipos multifuncionales y la negociación estructurada.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4221-4225",
+   "frase": "Once the preliminary design is complete, it must be optimized"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-desplegar_metas_organizacion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "desplegar_metas_organizacion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El despliegue convierte las metas de largo y corto plazo en planes operativos y proyectos, subdividiendo objetivos y asignándolos a niveles inferiores. Requiere definir acciones, responsables, recursos y cronogramas, y establecer una infraestructura para gestionar el plan. Dado que muchos procesos son multifuncionales, el despliegue se hace a equipos multifuncionales y, al concluir el proyecto del equipo, se identifica un 'dueño' del proceso.",
+  "texto_nuevo": "Desplegar tus metas de largo y de corto plazo es convertirlas en proyectos y planes de operación: partes cada objetivo en metas más pequeñas y las repartes hacia abajo, entre quienes trabajan contigo. Precisa qué acciones hacen falta, quién las hace, con qué recursos y en qué plazos, y monta una estructura para gestionar el plan. Como muchos procesos cruzan varias áreas, entrega la meta a un equipo que las reúna y, cuando termine su proyecto, nombra a un dueño del proceso.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8980; 9040",
+   "frase": "The deployment of long- and short-term goals is the conversion of goals"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-programa_auditoria_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "programa_auditoria_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un programa de auditoría de calidad puede enfocarse en el cumplimiento, en la efectividad, o en ambos. Auditar por cumplimiento significa verificar que las actividades sigan un estándar o requisito establecido (por ejemplo, que existan instrucciones de trabajo escritas). Auditar por efectividad significa evaluar si ese requisito realmente logra el resultado esperado y si los recursos se usan bien. Cuando revisas tú mismo tu negocio puedes y debes mirar ambas cosas; si le pides a alguien externo que audite, que evalúe la efectividad puede generarte reparos serios y razonables, porque es difícil hacerlo desde fuera de forma justa y útil.",
+  "texto_nuevo": "Al montar un programa para auditar la calidad de tu negocio, decide si revisarás el cumplimiento, la efectividad o ambas cosas. Revisar el cumplimiento es comprobar que lo que haces se ajusta a una norma o requisito ya fijado; por ejemplo, que tengas por escrito las instrucciones de trabajo. Revisar la efectividad va más allá: mira si ese requisito de verdad da el resultado buscado y si aprovechas bien tus recursos. Si la revisión la haces tú, puedes cubrir ambos frentes y te corresponde hacerlo. Si la encargas a alguien de fuera, que juzgue la efectividad puede despertarte objeciones fundadas y de peso, porque desde afuera cuesta evaluarla con justicia y provecho.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9928-9930",
+   "frase": "A key question in establishing an audit program is whether the audits"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-diagrama_arbol_despliegue-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "diagrama_arbol_despliegue",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El diagrama de árbol es una herramienta gráfica que muestra la relación jerárquica entre metas, objetivos a largo y corto plazo, y proyectos específicos, indicando dónde se asigna cada uno dentro de la organización. Permite visualizar la relación entre metas y objetivos, o entre equipos y metas, y ver si todos los objetivos están respaldados por acciones concretas.",
+  "texto_nuevo": "Con un diagrama de árbol dibujas, por niveles, cómo de tus metas se desprenden los objetivos de largo plazo, de estos los de corto plazo y de ellos los proyectos concretos, y anotas quién de tu equipo se hace cargo de cada rama. Así ves de un vistazo cómo se conectan metas y objetivos, o equipos y metas, y descubres si a alguna meta le faltan acciones concretas que la sostengan.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9070",
+   "frase": "The tree diagram is a graphic tool that aids in the deployment process"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-identificacion_practicas_lideres-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "identificacion_practicas_lideres",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un programa de benchmarking debe ir más allá de la comparación de datos, enfocándose en la transferencia de conocimiento desde los practicantes líderes hacia el resto de los participantes. Esto se logra mediante foros internos (para compartir hallazgos entre unidades de negocio), benchmarking uno a uno (visitas o intercambios detallados con líderes específicos), y foros de intercambio de prácticas líderes (presentaciones cerradas donde los líderes explican el 'por qué' y 'cómo' de sus prácticas).",
+  "texto_nuevo": "Un benchmarking que valga la pena tiene que ir más allá de poner cifras lado a lado: lo central es que lo que saben quienes lideran cada práctica pase al resto de los participantes. Tienes tres vías para lograrlo: los foros internos, donde tus distintas unidades de negocio se cuentan lo que encontraron; el benchmarking uno a uno, con visitas o intercambios a fondo con un líder concreto; y los foros para compartir prácticas líderes, sesiones cerradas en las que esos líderes explican por qué hacen lo que hacen y cómo lo hacen.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17485-17491",
+   "frase": "A benchmarking program must go well beyond the comparison of performance data."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-expand_phase_roadmap-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "expand_phase_roadmap",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Cuarta y quinta fase del roadmap. La fase Expand implica desplegar el plan de mejora a través de toda la organización, unidad por unidad, proceso que puede tomar de 3 a 5 años dependiendo del tamaño organizacional. La fase Sustain implica que la organización tiene una operación totalmente integrada, con metas de mejora alineadas a la estrategia, procesos bien gestionados con dueños asignados, evaluaciones de desempeño y compensación alineadas a los cambios, y revisiones y auditorías regulares del proceso de cambio por parte de la dirección. Concluye con breakthroughs en cultura y sostenibilidad ágil.",
+  "texto_nuevo": "Estas son la cuarta y la quinta fase de la hoja de ruta de transformación. En la fase Expand (expansión) llevas tu plan de mejora a todo tu negocio, una unidad tras otra, y según su tamaño puede llevarte de 3 a 5 años. En la fase Sustain (sostenimiento) operas de forma totalmente integrada: tus metas de mejora responden a tu estrategia, cada proceso está bien llevado y tiene un dueño, las evaluaciones del desempeño y los pagos van de acuerdo con los cambios, y quienes dirigen revisan y auditan con regularidad cómo avanza el cambio. El cierre son saltos en la cultura y una sostenibilidad ágil.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2279",
+   "frase": "The final phase is the Sustain Phase when the organization has a fully"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planificacion_estudio_capacidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "planificacion_estudio_capacidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Antes de ponerte a recolectar datos, aclara para qué quieres el estudio y qué pasos necesitas dar para lograrlo. Si tu proceso es complicado o buscas un nivel de defectos muy bajo (partes por millón), conviene seguir una secuencia de nueve pasos que va desde describir el proceso hasta armar el plan de análisis de los datos.",
+  "texto_nuevo": "Define primero el propósito del estudio y los pasos que te asegurarán cumplirlo, y solo entonces empieza a juntar datos. Cuando tu proceso es complicado o aspiras a un nivel de defectos muy bajo (partes por millón), te conviene seguir una secuencia de nueve pasos que arranca con la descripción del proceso y llega hasta el plan para analizar los datos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20755",
+   "frase": "Prior to data collection, clarify the purpose for making the study"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-frecuencia_distribucion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "frecuencia_distribucion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Una distribución de frecuencia es una tabulación de datos organizados según su magnitud, que revela dónde se agrupan la mayoría de los datos y cuánta variación existe. Cuando los datos son numerosos, pueden agruparse en celdas para condensar la información, aunque así se pierde algo de detalle, siguiendo un procedimiento estándar de construcción (número de celdas, intervalo, límites, tabulación).",
+  "texto_nuevo": "Cuando acomodas tus datos en una tabla según su tamaño obtienes una distribución de frecuencia, que te muestra en qué zona se concentra el grueso de los valores y qué tan dispersos están. Si tienes muchos datos, puedes reunirlos en celdas para resumirlos mejor, a cambio de sacrificar parte del detalle; para armarla hay un procedimiento estándar (número de celdas, intervalo, límites y tabulación).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11608-11618",
+   "frase": "A frequency distribution is a tabulation of data arranged according to magnitude"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-identificacion_de_riesgos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "identificacion_de_riesgos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un riesgo es cualquier cosa que puede salir mal y resultar en una pérdida. Antes de gestionar o mitigar riesgos es indispensable identificarlos de forma sistemática, porque cuando las condiciones son buenas pueden pasar desapercibidos y a veces solo se manifiestan bajo condiciones adversas. Como primer paso, conviene formar un equipo multifuncional con conocimiento amplio sobre tu negocio, sus sistemas, personas y procesos, y examinar de forma crítica qué puede fallar en cada uno. Usa el sombrero negro de la técnica de los seis sombreros, cuyo papel es buscar todo lo que puede salir mal, para evitar el pensamiento de grupo. Revisar fallas pasadas ayuda a completar la lista. El resultado debe documentarse por completo antes de pasar a evaluar la probabilidad o el impacto de cada riesgo.",
+  "texto_nuevo": "Un riesgo es todo aquello que puede fallar y terminar en una pérdida. Antes de gestionarlos o mitigarlos es indispensable que los identifiques con método, porque cuando las cosas marchan bien pueden quedar ocultos y a veces solo salen a la luz en condiciones adversas. Para empezar, conviene que reúnas un equipo de distintas funciones que conozca a fondo tu negocio, sus sistemas, su gente y sus procesos, y que revise con ojo crítico qué puede fallar en cada uno. Para no caer en el pensamiento de grupo, usa el sombrero negro de la técnica de los seis sombreros, cuya tarea es buscar todo lo que puede salir mal. Repasar las fallas del pasado ayuda a completar la lista. Documenta el resultado completo antes de pasar a evaluar la probabilidad o el impacto de cada riesgo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12200-12212",
+   "frase": "I suggest that the first step to identify the risks"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-dmadv_fase_diseno-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "dmadv_fase_diseno",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La fase de diseño en la metodología DMADV (Define, Measure, Analyze, Design, Verify) construye sobre los requisitos del diseño de alto nivel para entregar un diseño funcional detallado y optimizado que cumple con los requisitos operativos de manufactura y servicio. Se realizan diseños detallados en subsistemas que eventualmente se integran en el sistema funcional completo. Se utilizan experimentos diseñados y simulaciones para determinar la mejor configuración de características y obtener ecuaciones matemáticas de predicción.",
+  "texto_nuevo": "En DMADV (Define, Measure, Analyze, Design, Verify), la fase de diseño parte de los requisitos fijados en el diseño de alto nivel y los convierte en un diseño funcional detallado y optimizado, capaz de responder a lo que la manufactura y el servicio exigen en la operación. Primero desarrollas el detalle de cada subsistema y con el tiempo los unes en el sistema funcional completo. Con experimentos diseñados y simulaciones defines la mejor combinación de características y obtienes ecuaciones matemáticas que te permiten hacer predicciones.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "16402-16404",
+   "frase": "The design phase builds upon the high-level design requirements to deliver"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-optimizacion_de_procesos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "optimizacion_de_procesos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Después de diseñar pensando en lo crítico y de reducir el margen de error humano, tienes que ajustar primero cada parte del proceso por separado y después el proceso completo. Busca cubrir las necesidades de tu cliente y las tuyas al menor costo combinado, usando los mismos principios que ya aplicaste cuando ajustaste las características de tu producto.",
+  "texto_nuevo": "Ajusta a fondo tu proceso empezando por cada una de sus partes, una por una, y termina con el proceso completo; este paso llega cuando ya diseñaste teniendo en cuenta lo crítico y redujiste las ocasiones de error humano. La meta es cubrir lo que necesita tu cliente y lo que necesitas tú con el menor costo sumado para ambos, aplicando los mismos principios que usaste al ajustar las características de tu producto.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4644",
+   "frase": "After the planners have designed for critical factors and made modifications"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-revision_progreso-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "revision_progreso",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un proceso formal y eficiente de revisión aumenta la probabilidad de alcanzar las metas al identificar brechas entre el estado actual y el objetivo buscado. Requiere un ciclo de retroalimentación claro con responsabilidad y autoridad definidas para actuar sobre las diferencias detectadas, incluyendo puntos de revisión planificados para cada proyecto.",
+  "texto_nuevo": "Revisar tu avance con un método formal y eficiente aumenta tus probabilidades de cumplir tus metas, porque te deja ver la distancia entre dónde estás hoy y el objetivo que persigues. Para actuar sobre esas diferencias necesitas un circuito de retroalimentación claro, donde quede definido quién responde y quién tiene autoridad para corregir, y puntos de revisión planeados de antemano en cada proyecto.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9198-9206",
+   "frase": "A formal, efficient review process will increase the probability of reaching"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-control_calidad_operaciones_servicio-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "control_calidad_operaciones_servicio",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El control de calidad en servicios sigue un ciclo estructurado: elegir sujetos de control, establecer medición, establecer estándares de desempeño, medir el desempeño real, comparar el desempeño contra los estándares y tomar acción sobre la diferencia. Se distinguen indicadores de desempeño (miden la salida del proceso y su conformidad con necesidades del cliente) e indicadores de proceso (miden actividades o variación interna que afectan el desempeño).",
+  "texto_nuevo": "Para controlar la calidad de un servicio recorres un ciclo de seis pasos en orden: decides qué vas a vigilar, fijas cómo lo vas a medir, defines qué nivel de desempeño esperas, mides lo que de verdad ocurre, contrastas ese resultado con lo esperado y actúas sobre la brecha que encuentres. Al medir distingues dos tipos de indicadores: los de desempeño, que miran lo que sale del proceso y si cumple con lo que el cliente necesita, y los de proceso, que miran las actividades o la variación dentro del proceso que terminan afectando ese desempeño.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "21754-21782",
+   "frase": "These steps are: choose control subjects, establish measurement"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planificacion_cadena_suministro-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "planificacion_cadena_suministro",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Proceso estructurado de abastecimiento que involucra a la organización compradora, proveedores y usuarios finales. Incluye documentar la actividad de compras histórica, actual y futura, identificar commodities de alto gasto y alta criticidad, formar equipos cross-funcionales, analizar la industria proveedora y el costo total de propiedad, y traducir necesidades del cliente en una estrategia de sourcing.",
+  "texto_nuevo": "Es una manera ordenada de abastecerte en la que participan quien compra, los proveedores y quienes usan al final lo comprado. Empiezas por dejar por escrito lo que compraste antes, lo que compras hoy y lo que comprarás; luego eliges los insumos en los que más gastas y que más pesan para tu negocio, armas equipos con gente de distintas áreas, estudias el sector de los proveedores y el costo total de tener cada insumo, y conviertes lo que tu cliente necesita en una estrategia de compra.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23779-23793",
+   "frase": "suggest the following steps for a purchasing process that involves the"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-buenas_practicas_manufactura_cgmp-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "buenas_practicas_manufactura_cgmp",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las cGMP son regulaciones que hace cumplir la autoridad sanitaria de un país concreto, que no tiene por qué ser el tuyo, para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
+  "texto_nuevo": "Las cGMP son normas de fabricación que hace cumplir la autoridad sanitaria de algún país, que puede no ser el tuyo. Su fin es que tus procesos e instalaciones de producción estén bien diseñados, vigilados y controlados, para que tus productos farmacéuticos tengan la identidad, la potencia, la calidad y la pureza que les corresponden. Marcan un piso mínimo, pero te dejan margen: eliges tú la forma de aplicar los controles, apoyándote en un diseño con base científica sólida, en métodos de procesamiento y en procedimientos de prueba, con la condición de usar tecnología al día ('current').",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11356-11358",
+   "frase": "cGMP refers to the Current Good Manufacturing Practice regulations enforced by"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-desarrollar_caracteristicas_proceso_2-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "desarrollar_caracteristicas_proceso_2",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Una vez que tienes listo el diseño de tu producto, tienes que definir el proceso con el que lo vas a crear y entregar de forma continua. Este desarrollo incluye 11 actividades, desde revisar las metas del producto hasta publicar el diseño final del proceso, asegurándote de que sea orientado a metas, sistemático, capaz y legítimo.",
+  "texto_nuevo": "Con el producto ya diseñado, te toca decidir con qué proceso lo vas a producir y hacer llegar una y otra vez. Ese trabajo abarca 11 actividades, que van de revisar las metas del producto a publicar el diseño definitivo del proceso, y en ellas te aseguras de que el proceso quede orientado a metas, sistemático, capaz y legítimo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "4343-4351",
+   "frase": "Once the product is designed and developed, it is necessary to"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-aprobacion_alta_direccion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "aprobacion_alta_direccion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Tu implicación directa y no delegable es indispensable para lograr avances importantes cada año. Respondes mejor cuando ves una amenaza competitiva concreta, como perder clientes, o una oportunidad de ahorro cuantificada a través del costo de la mala calidad, y necesitas asumir tareas activas en vez de delegarlo todo.",
+  "texto_nuevo": "Para lograr avances grandes cada año necesitas meterte en persona; es un papel que no puedes pasarle a nadie más. Te mueve más ver una amenaza competitiva concreta, como quedarte sin clientes, o un ahorro que puedes cuantificar mediante el costo de la mala calidad, y te toca asumir tareas activas en lugar de delegarlo todo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "5732-5747",
+   "frase": "Personal participation by upper managers is indispensable to getting a high"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-consejo_ejecutivo_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "consejo_ejecutivo_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un paso clave en la planificación estratégica es tener un espacio propio, o junto con las personas que te ayudan, para revisar y coordinar las acciones estratégicas de tu negocio. Ese espacio es responsable de ejecutar el plan de negocio y de vigilar los indicadores clave (KPI). Conviene reunirse de forma mensual o trimestral, y repetir esta misma dinámica en escalas más pequeñas si tu negocio crece y sumas colaboradores.",
+  "texto_nuevo": "Dentro de tu planificación estratégica pesa mucho reservar un lugar, solo para ti o compartido con quienes te ayudan, donde revises y coordines lo que haces para avanzar en tu estrategia. Desde ahí te encargas de llevar a la práctica el plan de negocio y de seguir de cerca tus indicadores clave (KPI). Lo conveniente es reunirse cada mes o cada trimestre y, si tu negocio crece y sumas colaboradores, repetir la misma dinámica en grupos más pequeños.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8964-8967",
+   "frase": "A fundamental step in the establishment of any strategic plan is"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-visualizacion_datos_deteccion_outliers-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "visualizacion_datos_deteccion_outliers",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Método para identificar puntos de datos anómalos (outliers) mediante técnicas gráficas como box plots y scatter plots. Los puntos visualmente distantes deben ser investigados y solo eliminados si son atribuibles a una causa específica no relacionada con la pregunta de análisis. El análisis de residuos de una regresión también ayuda a detectar puntos inusuales.",
+  "texto_nuevo": "Sirve para encontrar a simple vista datos que se salen de lo normal (outliers), con gráficos como box plots y scatter plots. Cuando un punto queda lejos del resto, investígalo, y sácalo solo si puedes atribuirlo a una causa concreta que nada tenga que ver con la pregunta que estás analizando. Revisar los residuos de una regresión es otra ayuda para localizar puntos raros.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19423",
+   "frase": "Points visually distant from the others should be scrutinized and eliminated"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-iso_ts_16949_automotriz-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "iso_ts_16949_automotriz",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "ISO/TS 16949:2009, en conjunto con ISO 9001:2008, define los requisitos del sistema de gestión de calidad para el diseño, desarrollo, producción y, cuando corresponda, instalación y servicio de productos relacionados con la industria automotriz. Se aplica a los sitios donde se fabrican partes especificadas por el cliente, incluyendo funciones de soporte, en el sitio o remotas, como centros de diseño y distribución, aunque estas no pueden certificarse de forma independiente.",
+  "texto_nuevo": "ISO/TS 16949:2009 funciona en pareja con ISO 9001:2008 y fija los requisitos que tu sistema de gestión de calidad tiene que cumplir para diseñar, desarrollar y producir artículos vinculados a la industria automotriz, y también para instalarlos y darles servicio cuando corresponda. Abarca los lugares donde fabricas piezas especificadas por tu cliente, junto con sus funciones de apoyo, estén ahí mismo o a distancia, como centros de diseño o de distribución; eso sí, estas funciones no pueden certificarse por su cuenta.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11401-11405",
+   "frase": "ISO/TS 16949:2009, in conjunction with ISO 9001:2008, defines quality management"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-littles_law-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "littles_law",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Relación matemática fundamental en Lean: WIP = Throughput × Lead Time. Establece que reducir el trabajo en proceso (WIP) reduce directamente el lead time hacia el cliente, y que si el WIP varía, el lead time también variará; si el WIP se mantiene constante, también lo hará el lead time.",
+  "texto_nuevo": "La Ley de Little es una relación matemática básica en Lean: WIP = Throughput × Lead Time. Te dice que, al bajar el trabajo en proceso (WIP), acortas directamente el lead time con el que llegas a tu cliente. También te avisa que un WIP que sube y baja hace variar el lead time, mientras que un WIP estable lo mantiene estable.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "13434-13444",
+   "frase": "by reducing WIP, we can directly improve time to the customer"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-generic_benchmarking-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "generic_benchmarking",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El benchmarking genérico considera todos los procesos de negocio necesarios para alcanzar un nivel de desempeño determinado en un área específica, enfocándose en el resultado y en lo que se requiere para lograrlo, a menudo con mayor énfasis en el detalle de las prácticas de trabajo. Permite comparar prácticas entre industrias distintas cuando el objetivo compartido (por ejemplo, reducir tiempos de espera) es común, independientemente del sector.",
+  "texto_nuevo": "Con el benchmarking genérico miras el conjunto completo de procesos de negocio que hacen falta para llegar a cierto nivel de desempeño en un área concreta. Lo que importa es el resultado y todo lo que exige conseguirlo, y a menudo pones más atención en cómo se trabaja en detalle. Te sirve para comparar prácticas con industrias muy distintas a la tuya siempre que compartan la misma meta (por ejemplo, reducir tiempos de espera), sin importar el sector.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17033",
+   "frase": "Generic benchmarking considers all business processes required to achieve a certain level of performance"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-medicion_de_calidad_en_manufactura-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "medicion_de_calidad_en_manufactura",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La gestión de procesos clave de trabajo debe incluir mediciones sistemáticas. La productividad se define como la relación entre el output y los recursos de entrada, y debe calcularse usando únicamente el output aceptable (utilizable por el cliente), no el output total. La selección y reporte periódico de estas unidades de medida comunica al personal que la calidad es prioritaria, sentando las bases para la mejora continua.",
+  "texto_nuevo": "Todo proceso central de tu trabajo necesita medirse de forma sistemática. Mide la productividad como lo que produces en relación con los recursos que inviertes, pero cuenta solo lo aceptable, lo que tu cliente sí puede usar, y nunca el total que incluye lo defectuoso. Cuando eliges qué unidades de medida vas a seguir y reportas sus datos cada cierto tiempo, le dejas claro a tu equipo que la calidad va primero, y así preparas el terreno para la mejora continua.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23213-23216",
+   "frase": "The management of key work processes must include provision for measurement"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-key_process_product_characteristics-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "key_process_product_characteristics",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las características clave de producto son salidas medibles, percibidas directamente por el cliente. Las características clave de proceso (KPC) son las entradas o factores del proceso que afectan esas salidas, aunque el cliente no las vea. Identificar ambas te permite enfocar tus recursos de control y mejora donde realmente importa, apoyándote en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene clasificarlas según su importancia relativa (crítica, mayor, menor o incidental) y reconocer las partes sensibles a calidad por su complejidad o tasa de fallos. Documentar la relación causal entre las entradas de proceso y las salidas de producto, junto con las especificaciones correspondientes, te ayuda a dirigir el esfuerzo de control a lo que el cliente valora y a lo que realmente afecta el resultado final.",
+  "texto_nuevo": "Hay dos tipos de características clave. Las de producto son resultados que puedes medir en el propio producto y que tu cliente nota directamente. Las de proceso (KPC) son lo que entra al proceso, sus factores, que influyen en esos resultados aunque tu cliente nunca los vea. Conocer unas y otras te deja concentrar tus recursos de control y mejora donde de verdad cuenta; para encontrarlas, apóyate en investigación de mercado, QFD, revisión de diseño y AMFE. Además de detectarlas, conviene ordenarlas por su importancia relativa (crítica, mayor, menor o incidental) y señalar las partes sensibles a la calidad por ser complejas o fallar con frecuencia. Si documentas cómo cada entrada del proceso causa cada salida del producto, junto con sus especificaciones, podrás dirigir tu esfuerzo de control hacia lo que tu cliente valora y hacia lo que de verdad mueve el resultado final.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22391",
+   "frase": "Key product characteristics are outputs from a process that are measurable on"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-interpretacion_graficos_variables-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "interpretacion_graficos_variables",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La interpretación correcta de los gráficos de control requiere identificar puntos fuera de los límites y patrones no aleatorios. Valores de R fuera de límites indican cambios en la uniformidad del proceso (personal, material, desgaste de maquinaria). Valores de X-bar fuera de límites indican un cambio general que afecta a todas las piezas desde el primer subgrupo fuera de límites. Hay ocho pruebas para detectar patrones no aleatorios usando zonas de 1σ.",
+  "texto_nuevo": "Para leer bien un gráfico de control, busca dos cosas: puntos que caen fuera de los límites y patrones que no parecen aleatorios. Si un valor de R sale de sus límites, la uniformidad de tu proceso cambió, por ejemplo por un cambio de personal, de material o por desgaste de la maquinaria. Si lo que sale es un valor de X-bar, hubo un cambio general que toca todas las piezas a partir del primer subgrupo fuera de límites. Para detectar patrones no aleatorios tienes ocho pruebas que trabajan con zonas de 1σ.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18724-18728",
+   "frase": "X-bars outside the control limits are evidence of a general change affecting all pieces"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-concepto_proyecto_breakthrough-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "concepto_proyecto_breakthrough",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección, que produce tanto vitales pocos como útiles muchos.",
+  "texto_nuevo": "Llamas proyecto a un problema crónico al que le pones fecha para resolverlo. Es la pieza básica con la que se logra un breakthrough, un avance de fondo: las mejoras grandes no llegan en general, llegan una a una, cada una como su propio proyecto, y no hay otro camino. Unos pocos proyectos, los vitales, salen directo de tu plan de negocio; la mayoría nace de nominar y seleccionar candidatos, un proceso del que salen tanto vitales pocos como útiles muchos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6482-6484",
+   "frase": "As used here, a project is a chronic problem scheduled for solution."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-equipos_blitz-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "equipos_blitz",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Metodología de equipos de resolución rápida de problemas que utiliza un facilitador dedicado y experimentado para acelerar el proceso estándar de solución de problemas, reduciendo tiempos en enfoque del problema, procesamiento de datos y dinámica grupal. En un caso, el equipo pasó de la primera reunión a documentar las causas raíz en una semana y aplicó algunos remedios en las semanas siguientes.",
+  "texto_nuevo": "Es una forma de resolver problemas en equipo a toda velocidad: al método habitual le sumas un facilitador con mucha experiencia y dedicado de lleno, que recorta el tiempo que se pierde en tres frentes: mantener el foco en el problema, procesar los datos y manejar la dinámica del grupo. En un caso, bastó una semana para ir de la primera reunión a tener las causas raíz documentadas, y algunos remedios quedaron aplicados en las semanas siguientes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1759-1760",
+   "frase": "The blitz team approach accelerated the standard team problem-solving approach by adding"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planificacion_inicial_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "planificacion_inicial_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La planificación de calidad en manufactura inicia con la revisión del diseño de producto y proceso para identificar características clave, determinar su importancia, analizar el diagrama de flujo, fijar las características vitales, evaluar capacidad y control, aplicar error-proofing, planear un lugar de trabajo limpio, validar sistemas de medición y planear el autocontrol del operador, buscando prevenir defectos y minimizar variabilidad.",
+  "texto_nuevo": "En manufactura, planear la calidad arranca por revisar cómo están diseñados el producto y el proceso. De ahí sacas cuáles son las características clave y cuánto pesa cada una, recorres el diagrama de flujo y fijas las que son vitales. Después compruebas si el proceso es capaz y está bajo control, lo blindas contra errores (error-proofing), planeas un lugar de trabajo limpio, validas tus sistemas de medición y preparas al operador para que se controle solo. Todo apunta a prevenir defectos y reducir al mínimo la variabilidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22351",
+   "frase": "Then we review the process designs to identify key product and process characteristics"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-planes_de_muestreo_de_aceptacion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "planes_de_muestreo_de_aceptacion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Establecimiento de criterios de muestreo para inspección y pruebas que equilibran el riesgo del proveedor (aceptar lotes con el promedio de proceso habitual) y el riesgo del comprador (daño causado por un defecto que pasa el filtro de muestreo). Balancear el costo de clasificación (sorting) versus muestreo puede ser un insumo útil para el diseño, considerando también el error de medición.",
+  "texto_nuevo": "Consiste en fijar con qué criterios muestreas cuando inspeccionas y pruebas, buscando el equilibrio entre dos riesgos: el de quien provee, que espera que le acepten los lotes que salen con su promedio de proceso de siempre, y el de quien compra, para quien pesa el daño de un solo defecto que se cuela por la muestra. Al diseñar el plan puede servirte comparar lo que cuesta revisar pieza por pieza (sorting) con lo que cuesta muestrear, y tener en cuenta también el error de medición.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23861",
+   "frase": "Establishment of sampling plans and other criteria relative to inspection and test activity."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-superioridad_calidad_market_share-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "superioridad_calidad_market_share",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La superioridad de calidad puede traducirse en mayor participación de mercado, pero solo si el cliente percibe esa diferencia con claridad, sea por evidencia obvia, por traducción a términos económicos, por una ventaja pequeña pero demostrable que se le hace notar y que valora, o incluso por fe en la marca. Cuando la diferencia de preferencia entre tu producto y el líder cae fuera del rango 25-75 por ciento y lo demás es igual, la calidad se vuelve decisiva para la cuota de mercado; un producto preferido por más del 75 por ciento tiende a dominar todo el mercado. Cuando la diferencia es mínima, lo que decide es la habilidad de marketing. Por eso conviene invertir en mejoras de calidad solo cuando puedan mover la preferencia de débil a aceptable, o de aceptable a claramente dominante, evitando gastar en mejoras que el cliente no note ni valore.",
+  "texto_nuevo": "Ser mejor en calidad puede darte más cuota de mercado, siempre que tu cliente note la diferencia con claridad: porque salta a la vista, porque se la traduces a dinero, porque tu ventaja es pequeña pero demostrable y te encargas de hacérsela notar y él la valora, o incluso porque confía en tu marca. Si con todo lo demás igual la preferencia por tu producto frente al del líder queda por debajo del 25 o por encima del 75 por ciento, la calidad pasa a decidir la cuota; y cuando la preferencia supera el 75 por ciento, ese producto tiende a quedarse con todo el mercado. Si las preferencias están muy parejas, gana quien mejor hace marketing. Antes de invertir en calidad, pregúntate si esa mejora te llevará de una preferencia débil a una aceptable, o de una aceptable a una claramente dominante; si es un retoque que tu cliente no va a notar ni valorar, no gastes en él.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "581-587",
+   "frase": "When quality differences are slight, the decisive factor in share of market is"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-sistemas_sociotecnicos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "sistemas_sociotecnicos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Enfoque organizacional que reconoce la interacción entre el sistema técnico (equipos, procedimientos) y el sistema social (personas, roles) dentro de una organización. Por otro lado, cuando una empresa busca unir la excelencia funcional con la gestión por procesos, lo probable es que termine con una estructura híbrida entre ambas, donde las unidades de negocio responden por los resultados y las áreas funcionales por la mejora continua de los procesos y el desarrollo de recursos.",
+  "texto_nuevo": "Este enfoque parte de que en una empresa conviven dos sistemas que se afectan entre sí: el técnico, hecho de equipos y procedimientos, y el social, hecho de personas y roles. Aparte de eso, si en tu empresa quieres combinar la excelencia de cada área funcional con una gestión por procesos, lo más probable es que acabes con una estructura mixta: las unidades de negocio rinden cuentas por los resultados, mientras que las áreas funcionales se encargan del desarrollo de recursos y de mejorar los procesos de manera continua.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1736",
+   "frase": "This organization will likely be a hybrid of functional and process-based"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-establecimiento_de_niveles_de_calidad_aql_dpm-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "establecimiento_de_niveles_de_calidad_aql_dpm",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El AQL (nivel de calidad aceptable) es un punto en la curva que describe los riesgos de los planes de muestreo, pero muchos proveedores lo malinterpretan como si fuera el nivel de defectos que se permite tener. Por eso conviene dejar en el contrato que todo el producto debe cumplir las especificaciones y que el producto no conforme puede devolverse para su reemplazo. En muchas industrias, la unidad de medida es la de defectos por millón (DPM).",
+  "texto_nuevo": "El AQL, o nivel de calidad aceptable, no es más que un punto de la curva que muestra los riesgos de un plan de muestreo; aun así, muchos proveedores lo toman, por error, como la cantidad de defectos que tienen permitida. Para evitar esa confusión, conviene que tu contrato aclare que todo lo que te entreguen debe cumplir las especificaciones y que puedes devolver cualquier producto no conforme para que te lo reemplacen. En muchas industrias, la calidad se mide en defectos por millón (DPM).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23863",
+   "frase": "The AQL value was just one point on the operating characteristic curve"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-grafico_media_movil_ewma-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "grafico_media_movil_ewma",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El gráfico de media móvil actualiza el promedio eliminando la medición individual más antigua y agregando la más reciente. El EWMA es un refinamiento que pondera las observaciones dando mayor peso a los datos más recientes, siendo efectivo para detectar pequeños desplazamientos y tendencias, especialmente en procesos donde generar un solo dato toma mucho tiempo.",
+  "texto_nuevo": "En el gráfico de media móvil, cada medición individual nueva entra al cálculo y la más antigua sale, así que el promedio se renueva con cada dato. El EWMA lleva esa idea un paso más allá: le da un peso a cada observación, y el más alto le toca a lo más reciente. Te sirve para detectar desplazamientos pequeños y tendencias, sobre todo cuando tu proceso tarda mucho en producir un solo dato.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20675",
+   "frase": "calculated as the average value updated by dropping the oldest individual measurement"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-auditoria_de_producto_2-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "auditoria_de_producto_2",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La auditoría de producto consiste en la reinspección de productos ya aceptados o rechazados para verificar la adecuación de esas decisiones de inspección. Aunque en teoría no debería ser necesaria si el sistema de calidad funciona correctamente, en la práctica a menudo puede justificarse por quejas de campo. Puede realizarse en cada estación de inspección o después del ensamblaje final.",
+  "texto_nuevo": "Auditar tu producto es volver a revisar lo que ya aceptaste o rechazaste en la inspección, para comprobar que esas decisiones fueron las correctas. Si tu sistema de calidad funcionara bien, en teoría no haría falta; en la práctica, las quejas de campo a menudo pueden justificarla. Puedes hacerla en cada punto de inspección o al final, una vez terminado el ensamblaje.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23204",
+   "frase": "A product audit involves the re-inspection of product to verify the adequacy"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-feedback_supervisores_trabajadores-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "feedback_supervisores_trabajadores",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Para lograr el autocontrol, la retroalimentación a los trabajadores debe ser reconocible de un vistazo, enfocarse en los pocos defectos importantes, tratar solo defectos controlables por el trabajador, ser oportuna y proveer información suficiente para guiar la acción correctiva. A nivel de supervisores se usan resúmenes matriciales, análisis de Pareto e información automatizada de calidad.",
+  "texto_nuevo": "Si buscas que cada trabajador se controle a sí mismo, la información que le devuelves tiene que entenderse con solo mirarla, concentrarse en los pocos defectos que importan y limitarse a los que él puede controlar; además, debe llegarle a tiempo y con datos suficientes para saber cómo corregir. Para los supervisores, las herramientas habituales son los resúmenes en forma de matriz, el análisis de Pareto y la información de calidad automatizada.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22724",
+   "frase": "the data feedback can be read at a glance, deal only with the"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-establecer_metas_de_calidad_basadas_en_mercado-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "establecer_metas_de_calidad_basadas_en_mercado",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las metas de calidad que afectan la venta de un producto deben basarse principalmente en igualar o superar la calidad del mercado y la competencia. Se pueden usar cuatro bases para fijar metas: la tecnología, el mercado/competencia proyectada al finalizar el proyecto, el benchmarking (comparación con lo logrado por otros, asumiendo que es alcanzable) y el historial de desempeño pasado (cuidando no perpetuar desperdicios crónicos). Además, las metas son un blanco móvil que debe ajustarse ante nueva tecnología, competencia, amenazas y oportunidades.",
+  "texto_nuevo": "Cuando una meta de calidad influye en lo que vendes, tu referencia principal es alcanzar o mejorar el nivel de calidad del mercado y de tu competencia. Tienes cuatro puntos de partida para fijarla: la tecnología; el mercado y la competencia tal como esperas que estén al terminar el proyecto; el benchmarking, que toma como vara lo que otros ya lograron y por eso lo supone alcanzable; y tu historial de desempeño, con cuidado de no arrastrar desperdicios crónicos. Ten presente también que tus metas se mueven: ajústalas cuando aparezcan nueva tecnología, competencia, amenazas u oportunidades.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3439-3445",
+   "frase": "Quality goals that affect product salability should be based primarily on meeting"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-formula_exponencial_confiabilidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "formula_exponencial_confiabilidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Cuando la tasa de fallo es constante, el tiempo entre fallos sigue una distribución exponencial. La confiabilidad (probabilidad de operación sin fallo) se calcula como R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Es importante entender que un aumento en el MTBF no produce un aumento proporcional en la confiabilidad, y que la probabilidad de operar sin fallo un tiempo igual o mayor que el MTBF es solo del 37%.",
+  "texto_nuevo": "Si la tasa de fallo se mantiene constante, los tiempos entre fallos se distribuyen de forma exponencial, y la confiabilidad, es decir, la probabilidad de que el equipo funcione sin fallar, sale de R = e^(-t/μ), donde μ es el tiempo medio entre fallos (MTBF). Ten presente que subir el MTBF no eleva la confiabilidad en la misma proporción, y que lograr un periodo sin fallos igual o más largo que el MTBF solo ocurre en un 37% de los casos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20188-20192",
+   "frase": "If the failure rate is constant, the probability that a product"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-competencias_ingeniero_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "competencias_ingeniero_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El Ingeniero de Calidad o 'qualitist' es el experto técnico responsable de ejecutar los tres procesos universales de gestión de calidad: planificación, control y mejora. Sus competencias se agrupan en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. Requiere como mínimo los tres primeros niveles de la Taxonomía de Bloom (recordar, comprender, aplicar), y la mayoría de sus competencias exige además analizar y evaluar.",
+  "texto_nuevo": "El Ingeniero de Calidad, también llamado 'qualitist', es el experto técnico que lleva a la práctica los tres procesos universales de la gestión de calidad: planificación, control y mejora. Sus competencias caben en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. En ellas necesita, como piso, recordar, comprender y aplicar, que son los tres niveles iniciales de la Taxonomía de Bloom, y la mayoría le pide además analizar y evaluar.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2909-2927",
+   "frase": "The Competencies for the Officer Engineer require, at a bare minimum"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-autocontrol_empoderamiento-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "autocontrol_empoderamiento",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La persona que trabaja contigo está en autocontrol cuando tiene todo lo necesario para hacer bien su trabajo: sabe exactamente qué esperas de ella, recibe a tiempo tu retroalimentación para ajustar lo que hace, y cuenta con un proceso capaz, con las herramientas, el equipo, los materiales, el mantenimiento, el tiempo y la autoridad para corregir cuando algo no sale bien. Esto genera confianza y credibilidad hacia ti.",
+  "texto_nuevo": "Quien trabaja contigo está en autocontrol cuando le has dado todo lo que necesita para hacerlo bien. Eso significa tres cosas: tiene claro, con exactitud, lo que esperas de su trabajo; le llega tu retroalimentación a tiempo para ajustar su labor; y trabaja con un proceso capaz, que le da herramientas, equipo, materiales, mantenimiento, tiempo y la autoridad de corregir cuando el resultado se desvía. Así te ganas su confianza y tu credibilidad ante esa persona crece.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "1600-1606",
+   "frase": "A person is in a state of self-control if that person"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-criterios_seleccion_proyectos_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "criterios_seleccion_proyectos_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Para priorizar proyectos de mejora entre múltiples nominaciones, puedes evaluar sistemáticamente factores como el retorno de inversión (ROI), el potencial de gran avance (breakthrough), la urgencia (seguridad, moral, servicio al cliente), la facilidad de solución tecnológica, la salud de la línea de producto, y la resistencia probable al cambio. Una evaluación compuesta de estos criterios da una indicación de las prioridades relativas de las nominaciones antes de que el consejo tome la decisión final.",
+  "texto_nuevo": "Cuando tienes muchas propuestas de proyectos de mejora, puedes ordenarlas revisando cada una con método frente a varios factores: el retorno de inversión (ROI), cuánto gran avance (breakthrough) puede lograr, la urgencia (seguridad, moral, servicio al cliente), qué tan fácil es su solución tecnológica, la salud de su línea de producto y la resistencia al cambio que probablemente encuentre. Al combinar esos criterios en una sola evaluación obtienes una pista de la prioridad relativa de cada propuesta, antes de que el consejo tome la decisión final.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6662-6676",
+   "frase": "Most organizations use a systematic approach to evaluate nominations relative to these"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-carta_proyecto_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "carta_proyecto_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, le ayuda a saber cuándo terminó el proyecto, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.",
+  "texto_nuevo": "Acompaña cada proyecto elegido con un enunciado por escrito del problema y de la meta, donde quede claro en qué se va a enfocar y qué resultado busca. Esa carta fija lo que el equipo tiene que hacer y le permite reconocer cuándo ha terminado; deja la responsabilidad clara, porque la meta pasa a formar parte de la descripción de trabajo de cada integrante; le da al proyecto legitimidad oficial, y le otorga al equipo derechos como convocar reuniones y pedir datos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6795-6812",
+   "frase": "Each project selected should be accompanied by a written problem and goal"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-precision_exactitud_sensores-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "precision_exactitud_sensores",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La precisión de un sensor es su capacidad de reproducir resultados en pruebas repetidas, mientras que la exactitud es el grado en que el sensor refleja el valor verdadero según un estándar establecido. Los sensores humanos (inspectores, auditores) suelen ser menos precisos que los tecnológicos. En los sensores tecnológicos, la exactitud generalmente se corrige mediante recalibración, mientras que mejorar la precisión más allá de su límite de diseño requiere rediseñar el sensor.",
+  "texto_nuevo": "En un sensor, la precisión mide si repite los mismos resultados cuando haces la prueba una y otra vez; la exactitud mide cuánto se acerca lo que marca al valor verdadero, tomando como referencia un estándar establecido. Las personas que actúan como sensores, como inspectores o auditores, suelen ser menos precisas que los instrumentos. En un instrumento, la exactitud generalmente se arregla recalibrándolo; la precisión, en cambio, tiene un tope que viene de su diseño, y superarlo exige rediseñar el sensor.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3990-3996",
+   "frase": "The precision of a sensor is a measure of the ability"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-organizaciones_paralelas_cambio-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "organizaciones_paralelas_cambio",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Son formas organizacionales que existen en adición y simultáneamente con la organización de línea regular, diseñadas para manejar programas de cambio no rutinarios o inusuales, que en general requieren formas nuevas; los cambios pequeños y similares a menudo se coordinan con procedimientos bien planeados. Ejemplos incluyen equipos de proceso, equipos de proyecto, y comités o consejos directivos de excelencia en el desempeño. Pueden ser permanentes (equipos de valor/VSM) o ad hoc (proyectos Six Sigma o Lean que se disuelven al cumplir su misión).",
+  "texto_nuevo": "Cuando el cambio que buscas es inusual y se sale de la rutina, por lo general necesitas estructuras nuevas que funcionen junto a tu operación de siempre y al mismo tiempo, sin reemplazarla. Los cambios menores y parecidos entre sí, en cambio, a menudo se coordinan bien con procedimientos bien planeados. Sirven de ejemplo los equipos de proyecto, los de proceso y los grupos o consejos directivos de excelencia en el desempeño. Algunas son permanentes, como un equipo de valor (VSM), y otras temporales, como un proyecto Six Sigma o Lean que se disuelve al cumplir su misión.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2619-2623",
+   "frase": "Parallel means that these organizational forms exist in addition to and simultaneously with"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-alineacion_estrategica_despliegue-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "alineacion_estrategica_despliegue",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y políticas estén alineados y se comuniquen con claridad, teniendo presente al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante políticas e iniciativas. La falta de alineación entre tu plan estratégico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
+  "texto_nuevo": "Cuando revises tu negocio, sea cual sea la revisión, uno de los pasos clave es comprobar que tus políticas, tus valores, tu visión y tu misión apuntan en la misma dirección, que los comunicas bien y que ninguno pierde de vista al cliente final. De esa base salen tus estrategias de largo plazo y tus metas de cada año, de corto plazo, que llevas a la práctica con políticas e iniciativas concretas. Si tu plan estratégico no conecta con lo que haces día a día, puedes terminar con proyectos de poca importancia y gastando recursos en vano.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "25341-25349",
+   "frase": "The leadership of the organization needs to identify if their mission, vision, values"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-certificacion_de_proveedores-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "certificacion_de_proveedores",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "texto_nuevo": "Consiste en ordenar a tus proveedores por niveles: el 'aprobado' cumple los requisitos mínimos, el 'preferido' supera ese mínimo en calidad y el 'certificado' tiene un historial de calidad que te permite dejar de inspeccionarlo de rutina. Certificar te ayuda a ubicar con qué proveedores vale la pena formar alianzas estratégicas, recorta de forma drástica lo que gastas como comprador en inspección y te da un modelo para llegar a los niveles muy bajos de defectos que exige la manufactura justo a tiempo (JIT).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24011",
+   "frase": "Supplier certification provides a model for the low DPM levels necessary for just-in-time"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-reduccion_tiempo_ciclo-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "reduccion_tiempo_ciclo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El tiempo es una de las métricas más utilizadas para medir la entrega de servicios. Los clientes demandan continuamente tiempos de entrega más cortos. Mediante el análisis del diagrama de flujo y técnicas Lean, se pueden eliminar desperdicios y reducir el tiempo de ciclo mediante acciones como eliminar reprocesos, simplificar pasos, combinar actividades, transferir aprobaciones a niveles más bajos, y usar tecnología.",
+  "texto_nuevo": "Cuando entregas un servicio, el tiempo es de los indicadores que más se usan para medirlo, y tus clientes te van a pedir una y otra vez que tardes menos. Si analizas el diagrama de flujo de tu proceso y aplicas técnicas Lean, puedes quitar desperdicios y acortar el tiempo de ciclo con acciones como eliminar los reprocesos, simplificar pasos, juntar actividades, pasar las aprobaciones a niveles más bajos y apoyarte en la tecnología.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "21385",
+   "frase": "One of the most widely used metrics to measure service delivery is time."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-descubrir_necesidades_del_cliente-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "descubrir_necesidades_del_cliente",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El tercer paso del Diseño para la Calidad consiste en descubrir las necesidades reales de clientes externos e internos, diferenciando entre necesidades declaradas (lo que el cliente dice que quiere) y necesidades reales (los beneficios que realmente busca). También deben considerarse las necesidades percibidas, culturales, y las derivadas de usos no previstos. El proceso incluye planificar la recolección de necesidades, listarlas en el lenguaje del cliente, analizarlas y priorizarlas, traducirlas al lenguaje de la organización y establecer unidades de medida y sensores.",
+  "texto_nuevo": "En el tercer paso del Diseño para la Calidad averiguas qué necesitan de verdad tus clientes externos e internos. Distingue lo que el cliente dice que quiere (su necesidad declarada) del beneficio que en realidad persigue (su necesidad real), y considera además lo que percibe, lo que pesa por su cultura y lo que surge de usos que nadie había previsto. Para lograrlo, organiza cómo vas a recoger esas necesidades, anótalas con las palabras del cliente, analízalas y ordénalas por prioridad, pásalas a tu propio lenguaje y define con qué unidades y sensores vas a medirlas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3575-3585",
+   "frase": "The third step of Quality by Design is to discover the needs"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-requisitos_numericos_calidad_lotes-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "requisitos_numericos_calidad_lotes",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Más allá de los requisitos de calidad para unidades individuales, suelen necesitarse criterios numéricos para juzgar la conformidad de lotes completos, típicamente usados en procedimientos de muestreo de aceptación. Estos criterios facilitan decidir la aceptación o rechazo de un lote basándose en una muestra aleatoria, aunque frecuentemente los proveedores malinterpretan los conceptos estadísticos subyacentes, y los criterios también pueden generar confusión en discusiones de responsabilidad del producto.",
+  "texto_nuevo": "Además de fijar qué calidad debe tener cada unidad por separado, a menudo te hará falta definir con números cuándo un lote entero cumple, y eso es lo típico en los procedimientos de muestreo de aceptación. Con esos criterios te resulta más fácil aceptar o rechazar todo un lote a partir de una muestra tomada al azar. Ten presente que es frecuente que los proveedores entiendan mal los conceptos estadísticos que hay detrás, y que estos criterios también pueden enredar las discusiones sobre quién responde por el producto.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "23590-23598",
+   "frase": "Beyond the quality and reliability requirements imposed on individual units or products"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-analisis_capacidad_procesos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "analisis_capacidad_procesos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Este análisis combina el histograma con la curva de probabilidad para evaluar si tu proceso puede cumplir con los límites de especificación del cliente. Debes revisar tres aspectos del histograma: el centrado respecto al objetivo del proceso (aim), el ancho de la distribución frente a los límites de especificación, y la forma, que puede revelar mezclas de poblaciones o problemas de calidad si aparecen picos múltiples. Como regla general, para que el histograma revele el patrón básico de variación necesitas tomar al menos 40 mediciones de la característica de calidad. Como no muestra el orden de producción, su centrado puede engañarte si el proceso se desplazó. Con esta información determinas si el proceso es capaz y qué acción sobre el proceso conviene tomar, si alguna.",
+  "texto_nuevo": "Este análisis junta el histograma y la curva de probabilidad para saber si tu proceso logra mantenerse dentro de los límites de especificación que pide el cliente. Fíjate en tres rasgos del histograma: dónde está centrado frente al objetivo del proceso (aim), qué tan ancha es la distribución comparada con esos límites y qué forma tiene, porque si muestra varios picos puede estar delatando poblaciones mezcladas o problemas de calidad. Por lo general, hacen falta 40 mediciones o más de la característica de calidad para que aparezca el patrón básico de variación. Ten en cuenta que el histograma no refleja en qué orden se produjo cada pieza, así que, si el proceso se fue corriendo, el centro que aparenta puede engañarte. Con todo esto decides si el proceso es capaz y si conviene actuar sobre él y de qué manera.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11834-11866",
+   "frase": "As a general rule, at least 40 measurements are needed for the histogram"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-concepto_variacion_estadistica-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "concepto_variacion_estadistica",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Ningún elemento es perfectamente idéntico a otro; la variación es un hecho de la naturaleza y de la vida industrial. Ignorar la existencia de variación o subestimarla puede llevar a decisiones incorrectas sobre problemas importantes. La variación debida a causas aleatorias suele ser mayor de lo que la mayoría de las personas piensan, y a menudo se toman decisiones basadas en el punto de dato más reciente, olvidando que forma parte de un historial de datos.",
+  "texto_nuevo": "No hay dos cosas perfectamente iguales: la variación forma parte de la naturaleza y de la vida en la industria. Si la pasas por alto o la das por pequeña, puedes terminar decidiendo mal en asuntos importantes. Lo que cambia solo por azar suele ser mayor de lo que casi todos creen, y muchas veces decides según el último dato que llega y olvidas que es apenas un punto dentro de toda una historia de datos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11593-11597",
+   "frase": "Statistical variation—variation due to random causes—is much greater than most people think."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-establecer_politicas_de_nuevo_producto-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "establecer_politicas_de_nuevo_producto",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las organizaciones necesitan políticas claras que guíen el diseño de nuevos productos, cubriendo cuatro áreas críticas: (1) fallas en diseños nuevos y heredados, exigiendo que ningún producto nuevo tenga mayor tasa de fallas que el que reemplaza y que todo diseño heredado alcance un nivel mínimo de confiabilidad o se sustituya por uno más confiable; (2) uso previsto versus no previsto, decidiendo antes de iniciar el proyecto, según la estrategia y el entorno de uso, si se diseña para usos indebidos previsibles; (3) exigencia de un proceso formal de Diseño para la Calidad que enfoque la creatividad en el cliente; y (4) custodia de diseños y control de cambios, asegurando que los diseños aprobados estén documentados y accesibles, y que todo cambio se valide, se apruebe, se documente y se incorpore al producto o proceso.",
+  "texto_nuevo": "Para guiar el diseño de productos nuevos necesitas políticas claras en cuatro frentes críticos. Primero, las fallas: un producto nuevo nunca debe fallar más que aquel al que sustituye, y cualquier diseño que heredes de versiones anteriores tiene que llegar a un piso de confiabilidad o dar paso a otro más confiable. Segundo, el uso previsto frente al no previsto: decide antes de arrancar el proyecto, a la luz de tu estrategia y del entorno donde se usará el producto, si vas a diseñar pensando en los malos usos que puedes anticipar. Tercero, exige un proceso formal de Diseño para la Calidad que ponga la creatividad al servicio del cliente. Cuarto, la custodia de los diseños y el control de cambios: cada diseño aprobado queda documentado y a la mano, y cada cambio es validado, aprobado y documentado, y luego queda incorporado al producto o al proceso.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3479-3485",
+   "frase": "Failures in new and carryover designs. Many organizations have established the clear policy"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-definicion_calidad_fitness_for_purpose-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "definicion_calidad_fitness_for_purpose",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La calidad se define como 'aptitud para el uso' (fitness for use), concepto que se amplía a 'fitness for purpose' para reflejar también la economía de servicios. El propósito siempre lo define el cliente que usa el bien o servicio, y surge de sus necesidades, las cuales impulsan la compra. Para ser apto para su propósito, todo bien, servicio e interacción con el cliente debe tener las características correctas que satisfacen esas necesidades y estar libre de fallas, sin retrabajo, desperdicio ni quejas. Esta definición aplica tanto a bienes como a servicios y es la base conceptual para gestionar la calidad de forma consistente en tu negocio.",
+  "texto_nuevo": "Aquí la calidad significa 'aptitud para el uso' (fitness for use), una idea que se extiende a 'fitness for purpose' para abarcar también la economía de servicios. Quien fija el propósito es siempre el cliente que usa lo que vendes, y ese propósito nace de sus necesidades, que son las que lo mueven a comprar. Para que cada bien, servicio o contacto con tu cliente cumpla su propósito necesita dos cosas: las características adecuadas para cubrir esas necesidades y cero fallas, es decir, nada de retrabajo, desperdicio ni quejas. La definición sirve igual para bienes que para servicios y te da la base para gestionar la calidad con coherencia en tu negocio.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "265",
+   "frase": "To be fit for purpose, every good, service, and interaction with customers"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-validacion_sistema_medicion_2-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "validacion_sistema_medicion_2",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Bajo enfoques Six Sigma con bajos niveles de defectos permitidos, es crucial validar la capacidad del sistema de medición, no solo del proceso de manufactura. La variación observada proviene tanto del proceso como de la medición; si esta última es incluso moderadamente grande, se producen clasificaciones erróneas de producto bueno como defectuoso o viceversa.",
+  "texto_nuevo": "Lo que ves variar en tus resultados tiene dos orígenes: el proceso que fabrica y el instrumento que mide. Cuando trabajas con un enfoque Six Sigma, que admite muy pocos defectos, no basta con comprobar la capacidad de tu proceso de manufactura; también tienes que validar la de tu sistema de medición. Si el error al medir es aunque sea moderadamente grande, terminarás tomando producto bueno por defectuoso y producto malo por bueno.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22497",
+   "frase": "Particularly with the low defect levels demanded under the Six Sigma approach"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-grafico_box_jenkins-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "grafico_box_jenkins",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "A diferencia de otros gráficos de control cuyo objetivo es monitorear y reducir la variabilidad por causas especiales, el gráfico Box-Jenkins tiene como objetivo analizar los datos del proceso para regular el mismo después de cada observación, minimizando así la variación del proceso mediante ajustes continuos.",
+  "texto_nuevo": "El gráfico de ajuste manual Box-Jenkins persigue algo distinto que los demás gráficos de control: aquellos vigilan el proceso para detectar y reducir la variabilidad que nace de causas especiales, y este usa los datos del proceso para corregirlo tras cada observación, de modo que esos ajustes continuos dejen la variación del proceso al mínimo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "20684",
+   "frase": "Box-Jenkins charts have a different objective: to analyze process data to regulate"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-muestreo_dodge_romig-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "muestreo_dodge_romig",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las tablas Dodge-Romig ofrecen planes de muestreo por atributos rectificantes, es decir, asumen que todos los lotes rechazados son inspeccionados al 100% y los defectuosos son reemplazados por unidades aceptables. Existen dos enfoques: LTPD (protege calidad lote a lote) y AOQL (protege calidad promedio a largo plazo). Se usan cuando se prioriza la protección contra mala calidad ya sea a nivel de lote individual o en el promedio de muchos lotes.",
+  "texto_nuevo": "Las tablas Dodge-Romig dan planes de muestreo por atributos de tipo rectificante: parten de que cada lote rechazado pasa por una revisión del 100% y de que toda unidad defectuosa encontrada queda sustituida por una aceptable. Traen dos enfoques: LTPD, que cuida la calidad de cada lote por separado, y AOQL, que cuida la calidad promedio a largo plazo. Recurre a ellas cuando lo que más te importa es protegerte de la mala calidad, sea en un lote concreto o en el promedio de muchos lotes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "25113",
+   "frase": "the Dodge–Romig plans assume that all rejected lots are 100 percent inspected"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-auditoria_sistema_control_calidad_2-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "auditoria_sistema_control_calidad_2",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Los sistemas de control de calidad se deterioran con el tiempo por rotación de personas, cambios no anticipados y atajos que erosionan su efectividad. Revisar el sistema de forma periódica e independiente es la herramienta principal para responder dos preguntas clave: si el sistema sigue siendo adecuado y si realmente se está siguiendo. Aunque no participes directamente en las operaciones diarias, tú decides que esta revisión se haga, para mantenerte informado sobre la salud del sistema. Además, te toca clarificar quién actúa cuando los puntos salen de los límites de control, y definir qué hacer cuando los puntos están fuera de los límites estadísticos pero el producto aún cumple la tolerancia. Los hallazgos deben traducirse en actualizaciones concretas del manual y los procedimientos de calidad.",
+  "texto_nuevo": "Con el paso del tiempo, todo sistema de control de calidad se desgasta: la rotación de personas lo debilita, los cambios que nadie previó lo dejan atrás y los atajos le van quitando eficacia. Tu principal defensa contra ese desgaste es una revisión independiente que repitas cada cierto tiempo y que conteste dos cosas: si el sistema todavía sirve para lo que tiene que hacer y si de verdad lo están siguiendo. Aunque no participes en la operación diaria, la decisión de que esa revisión exista es tuya, porque así sabes en qué estado está el sistema. También te corresponde dejar claro a quién le toca actuar cuando un punto cae fuera de los límites de control, y fijar la pauta para el caso en que un punto rebasa los límites estadísticos aunque el producto siga dentro de la tolerancia. Lo que encuentre la revisión tiene que convertirse en cambios concretos al manual y a los procedimientos de calidad.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8429-8446",
+   "frase": "Experience has shown that control systems are subject to “slippage” of all"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-medicion_kpi-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "medicion_kpi",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Los scorecards y los indicadores clave de desempeño (KPI) son mediciones visibles en toda la organización que permiten evaluar el grado de cumplimiento del plan estratégico. Son esenciales para cerrar el ciclo de planificación estratégica, ya que proporcionan retroalimentación sobre el desempeño reciente y sirven de base para ajustar las prioridades futuras de la organización.",
+  "texto_nuevo": "Para saber hasta dónde estás cumpliendo tu plan estratégico te sirven los scorecards y los indicadores clave de desempeño (KPI), mediciones que todos en tu negocio pueden ver. Son indispensables para cerrar el ciclo de la planificación estratégica: te muestran cómo te ha ido en el periodo reciente y te dan la base para reajustar las prioridades que fijes en adelante.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8761",
+   "frase": "Scorecards and key performance indicators. Measurements that are visible throughout the organization"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-estrategias_estimacion_costos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "estrategias_estimacion_costos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Existen dos estrategias principales para estimar el costo de una actividad relacionada con la mala calidad. El enfoque de recursos totales calcula el total de recursos consumidos en una categoría y el porcentaje de esos recursos dedicado a actividades de mala calidad (Costo = recursos totales × % dedicado a mala calidad). El enfoque de costo unitario calcula el costo promedio de corregir una ocurrencia y lo multiplica por la frecuencia anual de esa ocurrencia. El costo unitario suele ser el más apropiado cuando las deficiencias son raras pero pueden ser costosas, cuando son complejas, o cuando son tan rutinarias que su impacto acumulado no es evidente.",
+  "texto_nuevo": "Para ponerle cifra a una actividad ligada a la mala calidad tienes dos estrategias principales. Con la de recursos totales, tomas todo lo que consume una categoría y lo multiplicas por la parte de esos recursos que se va en mala calidad (Costo = recursos totales × % dedicado a mala calidad). Con la de costo unitario, averiguas cuánto cuesta en promedio corregir una ocurrencia y multiplicas esa cifra por las veces que ocurre al año. Esta segunda suele convenir más en tres casos: deficiencias raras que pueden salir caras, deficiencias complejas y deficiencias tan rutinarias que su impacto acumulado pasa desapercibido.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6150",
+   "frase": "Unit cost is often the most appropriate strategy when deficiencies occur rarely"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-estimacion_intervalos_confianza-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "estimacion_intervalos_confianza",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La estimación es el proceso de analizar un resultado muestral para predecir el valor correspondiente del parámetro poblacional. Consta de dos partes: la estimación puntual (un único valor) y el intervalo de confianza (un rango de valores que incluye, con una probabilidad preasignada, el verdadero valor del parámetro poblacional). Los límites de confianza no deben confundirse con límites de control u otros límites estadísticos.",
+  "texto_nuevo": "Estimar consiste en tomar lo que observaste en una muestra y, a partir de ahí, anticipar cuánto vale ese mismo parámetro en toda la población. Tiene dos componentes: la estimación puntual, que te da una sola cifra, y el intervalo de confianza, que te da un rango que contiene el valor real del parámetro con una probabilidad fijada de antemano. No confundas los límites de ese intervalo con los límites de control ni con otros límites estadísticos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "19601-19607",
+   "frase": "Estimation is the process of analyzing a sample result to predict"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-six_sigma_dmaic-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "six_sigma_dmaic",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "DMAIC es el modelo de mejora Six Sigma más ampliamente adoptado y reconocido, basado en la secuencia universal para resolver problemas crónicos de calidad. Consiste en seis momentos: seleccionar el problema y lanzar el proyecto, definir el problema con claridad, medir la magnitud de los síntomas, analizar la información para descubrir la causa raíz, mejorar aplicando un remedio a esa causa, y controlar para sostener las ganancias obtenidas. Es un método estructurado que te permite avanzar de forma ordenada desde el diagnóstico hasta la solución sostenida en el tiempo.",
+  "texto_nuevo": "DMAIC es el modelo de mejora Six Sigma con mayor adopción y reconocimiento, y se apoya en la secuencia universal para atacar problemas crónicos de calidad. Avanza en seis momentos: eliges el problema y arrancas el proyecto; lo defines con claridad; cuantificas qué tan grandes son sus síntomas; estudias la información hasta dar con la causa raíz; le aplicas una solución a esa causa, y por último pones controles para no perder lo ganado. Es un método estructurado que te deja recorrer en orden el camino del diagnóstico a una solución que se sostiene en el tiempo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "5036-5048",
+   "frase": "Select the problem and launch a project. Define the problem."
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-despliegue_metas-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "despliegue_metas",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las metas estratégicas son solo una lista de deseos hasta que se descomponen en proyectos específicos asignados a individuos o equipos con los recursos necesarios. El proceso involucra división y asignación de metas a niveles inferiores, quienes proponen proyectos y recursos, en un diálogo bidireccional hasta llegar a un acuerdo final sobre qué proyectos ejecutar.",
+  "texto_nuevo": "Mientras una meta estratégica no se reparta en proyectos concretos, cada uno con una persona o un equipo responsable y con los recursos que necesita, no pasa de ser un deseo. Para lograrlo, divides las metas y las asignas a los niveles de abajo; quienes las reciben proponen proyectos y los recursos que piden, y la conversación va y viene en ambos sentidos hasta acordar qué proyectos ejecutar.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "6463",
+   "frase": "Goals are merely a wish list until they are deployed"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-causas_especiales_y_comunes_variacion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "causas_especiales_y_comunes_variacion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Las causas de variación se conocen como 'asignables' y 'no asignables', o como 'especiales' y 'comunes'. Las causas especiales suelen ser esporádicas, a menudo originadas en una variable dominante y comparativamente fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes suelen ser crónicas, por lo general originadas en la interacción de múltiples variables menores, y difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.",
+  "texto_nuevo": "A las causas de variación también se les llama 'asignables' y 'no asignables', o bien 'especiales' y 'comunes'. Una causa especial tiende a aparecer de vez en cuando, muchas veces nace de una sola variable dominante y cuesta relativamente poco diagnosticarla; atenderla le toca al control de calidad. Una causa común, en cambio, tiende a ser crónica, por lo regular surge de cómo interactúan muchas variables pequeñas y es difícil diagnosticarla; atenderla le toca a la mejora de calidad. Saber distinguirlas es clave para elegir la acción correcta.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7971-7975",
+   "frase": "Special causes are typically sporadic, and often have their origin"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-concepto_de_auditoria_de_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "concepto_de_auditoria_de_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Una auditoría de calidad es una revisión independiente que compara el desempeño de calidad con un estándar definido, determinando si las actividades y resultados cumplen con lo planificado y si estos arreglos son efectivamente implementados. Existen auditorías internas (primera parte), de segunda parte (realizadas por clientes) y de tercera parte (organismos externos de certificación como ISO 9001).",
+  "texto_nuevo": "Auditar la calidad es someter tu desempeño de calidad a una revisión independiente que lo compara contra un estándar definido: así compruebas si lo que haces y lo que obtienes se ajusta a lo que habías planificado, y si eso que planificaste de verdad se puso en práctica. Hay tres tipos: la interna o de primera parte, la de segunda parte, que hace un cliente, y la de tercera parte, a cargo de organismos certificadores externos, como los de ISO 9001.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "9902-9906",
+   "frase": "A quality audit is an independent review conducted to compare"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-dmaic_fase_select-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "dmaic_fase_select",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Antes de iniciar el ciclo DMAIC, la dirección debe seleccionar el proyecto adecuado. Las nominaciones pueden provenir de clientes, reportes o empleados. El criterio de evaluación más frecuente es el costo de la mala calidad (COPQ), junto con el impacto en la lealtad del cliente, la eficacia de los empleados y el cumplimiento de requisitos regulatorios u otros. Se prepara un team charter con el problema y objetivo del proyecto, y se asignan los recursos y el equipo apropiado.",
+  "texto_nuevo": "Antes de arrancar el ciclo DMAIC te toca elegir bien el proyecto. Las propuestas pueden llegarte de tus clientes, de tus reportes o de tu equipo. Para compararlas, el criterio más frecuente es el costo de la mala calidad (COPQ), y a su lado pesan el efecto en la lealtad de tus clientes, en la eficacia de tu equipo y en el cumplimiento de requisitos regulatorios o de otro tipo. Después redactas un acta del equipo (team charter) con el problema y el objetivo del proyecto, y asignas los recursos y las personas adecuadas.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "14267",
+   "frase": "In the select phase, potential projects are identified. Nominations can come"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-mapa_de_proceso_planificacion_control-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "mapa_de_proceso_planificacion_control",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El primer paso habitual en la planificación del control es mapear el flujo del proceso operativo mediante un diagrama de flujo. Esto ayuda al equipo planificador a comprender el proceso completo (más allá de su segmento individual) y a identificar los sujetos de control alrededor de los cuales se construirán los bucles de retroalimentación.",
+  "texto_nuevo": "Para planificar el control, lo habitual es empezar dibujando en un diagrama de flujo cómo avanza tu proceso operativo. Así el equipo que planifica entiende el proceso entero y no solo el tramo que cada quien conoce, y puede identificar los sujetos de control sobre los que vas a montar los bucles de retroalimentación.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "7771-7781",
+   "frase": "The usual first step in planning for control is to map"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-estratificacion_datos-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "estratificacion_datos",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "La estratificación es la separación de datos en categorías para identificar qué grupos contribuyen a un problema de calidad. Se usa en análisis de problemas, identificación de proyectos, análisis de síntomas, prueba de hipótesis y desarrollo de soluciones. Ayuda a responder preguntas sobre frecuencia de defectos, factores contribuyentes y diferencias entre grupos (estratos), como en el caso de comparar proveedores distintos.",
+  "texto_nuevo": "Estratificar es repartir tus datos en categorías para descubrir cuáles de esos grupos están detrás de un problema de calidad. Te sirve al analizar un problema, pero también al elegir proyectos, al examinar síntomas, al poner a prueba hipótesis y al desarrollar soluciones. Con ella respondes cuántas veces aparece un defecto, qué factores lo alimentan y en qué se distinguen los grupos (estratos) entre sí, por ejemplo cuando comparas proveedores distintos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18766",
+   "frase": "Stratification is the separation of data into categories"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-evitacion_del_riesgo-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "evitacion_del_riesgo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Estrategia de gestión de riesgos que consiste en evitar completamente una práctica o actividad cuando el riesgo es demasiado alto, el costo de gestionarlo es prohibitivo, tu capacidad de gestionarlo es demasiado limitada, o el beneficio no justifica la exposición. Requiere sopesar si el beneficio potencial amerita aceptar el riesgo o si es mejor abstenerse por completo.",
+  "texto_nuevo": "Como estrategia de gestión de riesgos, consiste en renunciar del todo a una práctica o actividad. La eliges cuando el riesgo resulta excesivo, cuando gestionarlo te costaría demasiado, cuando tus medios para manejarlo se quedan muy cortos o cuando lo que ganas no compensa quedar expuesto. Te obliga a poner en la balanza si el posible beneficio vale aceptar el riesgo o si es mejor abstenerte por completo.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12496",
+   "frase": "The potential loss is too great, the cost of managing it too high"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-coordinacion_control_vs_cambio-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "coordinacion_control_vs_cambio",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Existen dos formas principales de coordinar las actividades de calidad y excelencia: la coordinación para control, lograda mediante departamentos de línea y staff usando procedimientos formales y ciclos de retroalimentación (auditorías, cartas de control, reportes); y la coordinación para crear cambio, lograda mediante equipos de proyecto de calidad, Six Sigma, Lean o eventos kaizen. Un enfoque excesivo en el control puede impedir que la Oficina impulse cambios importantes.",
+  "texto_nuevo": "Hay dos maneras principales de coordinar las actividades de calidad y excelencia. La coordinación para crear cambio se apoya en equipos de proyecto de calidad, de Six Sigma o de Lean, o en eventos kaizen. La coordinación para control, en cambio, recae en los departamentos de línea y de staff, que trabajan con procedimientos formales y ciclos de retroalimentación como auditorías, cartas de control y reportes. Si el control acapara demasiado la atención, la Oficina puede quedarse sin fuerza para impulsar cambios importantes.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "2604-2610",
+   "frase": "Coordination for control is achieved by the regular line and staff departments"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-desarrollar_estrategias_largo_plazo-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "desarrollar_estrategias_largo_plazo",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El primer paso para convertir tu visión en un plan alcanzable es dividirla en un pequeño número de estrategias clave (usualmente 4 o 5), que son las decisiones fundamentales sobre cómo vas a alcanzar tu visión. Para definirlas, quizá necesites evaluar cinco áreas: la lealtad y satisfacción de tus clientes, los costos de la mala calidad, tu cultura y la satisfacción de tu equipo, tus procesos internos (incluidos tus proveedores) y cómo te comparas con la competencia.",
+  "texto_nuevo": "Para que tu visión se vuelva un plan que puedas cumplir, empieza por repartirla en unas pocas estrategias clave, por lo general cuatro o cinco: las elecciones más de fondo sobre el camino que tomarás para alcanzarla. Antes de fijarlas, quizá te convenga revisar cinco frentes: qué tan leales y satisfechos están tus clientes, cuánto te cuesta la mala calidad, cómo están tu cultura y la satisfacción de tu equipo, cómo funcionan tus procesos internos (proveedores incluidos) y cómo te comparas con la competencia.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "8853-8869",
+   "frase": "The first step in converting the vision into an achievable plan"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-consortium_benchmarking-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "consortium_benchmarking",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Forma de benchmarking con el mayor potencial de generar mejoras de desempeño, en la que un grupo de participantes (frecuentemente facilitado por un tercero) acuerda conjuntamente los participantes, temas, metodología, métricas, criterios de validación, la naturaleza del análisis, los informes y los entregables, y el cronograma. Este alto nivel de control colectivo normalmente produce datos confiables, análisis exhaustivos y resultados de gran valor, aunque requiere mayor inversión de tiempo y recursos.",
+  "texto_nuevo": "Es la modalidad de benchmarking con más potencial para mejorar el desempeño. Un grupo de participantes, a menudo con un tercero que facilita, decide en común quiénes entran, qué temas comparar, con qué metodología y métricas, con qué criterios validar, cómo serán el análisis, los informes y los entregables, y en qué plazos. Gracias a ese control compartido tan alto, lo normal es obtener datos confiables, un análisis a fondo y resultados muy valiosos, aunque a cambio inviertes más tiempo y recursos.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17189",
+   "frase": "Without doubt, this form of benchmarking has the greatest potential"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-histograma_calidad-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "histograma_calidad",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El histograma es un gráfico de barras verticales de una distribución de frecuencia que resalta el centro y la cantidad de variación en una muestra de datos. Su simplicidad de construcción e interpretación lo convierte en una herramienta efectiva para el análisis elemental de datos y para evaluar si un proceso puede cumplir con los límites de especificación.",
+  "texto_nuevo": "El histograma representa una distribución de frecuencia con barras verticales y deja a la vista dónde se centran los datos de una muestra y cuánto varían. Como es fácil de construir y de leer, te sirve para un análisis básico de datos y para comprobar si un proceso puede cumplir con los límites de especificación.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "11651",
+   "frase": "A histogram is a vertical bar chart of a frequency distribution"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-mantenimiento_productivo_total-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "mantenimiento_productivo_total",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El TPM y RCM son enfoques donde equipos multidisciplinarios (operarios, mantenimiento, ingenieros de proceso) identifican, analizan y resuelven problemas de mantenimiento para maximizar el tiempo de actividad del equipo. Buscan mejoras incrementales como reducción de pérdidas de herramientas, simplificación de ajustes y aumento de la efectividad global del equipo (OEE).",
+  "texto_nuevo": "Con TPM y RCM, equipos mixtos de operarios, personal de mantenimiento e ingenieros de proceso detectan los problemas de mantenimiento, los estudian y los corrigen para que la maquinaria pase el mayor tiempo posible en marcha. El avance llega en pasos pequeños: perder menos herramientas, hacer los ajustes más sencillos y elevar la efectividad global del equipo (OEE).",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "22850",
+   "frase": "Under this approach, teams are formed to identify, analyze, and solve maintenance problems"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-matriz_de_seleccion-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "matriz_de_seleccion",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Herramienta para reducir un conjunto de alternativas basándose en criterios explícitos y ponderados por el equipo, introduciendo objetividad al proceso de decisión frente a métodos más subjetivos como la votación simple.",
+  "texto_nuevo": "Te sirve para acotar un abanico de opciones con criterios claros que tu equipo define y pondera; frente a una simple votación, más subjetiva, le da objetividad a tu decisión.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "18571",
+   "frase": "This tool assists in reducing a set of alternatives based on explicit criteria"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-dmaic_fase_improve-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "dmaic_fase_improve",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El equipo busca cuantificar la relación causa-efecto, con diseño de experimentos (DOE) si aplica al proyecto, para predecir, mejorar y optimizar el desempeño del proceso. Se utilizan experimentos de screening (factoriales fraccionados) para identificar los determinantes vitales, seguidos de factoriales 2k para modelar el proceso y, si hace falta, factoriales completos y técnicas de optimización como RSM y EVOP.",
+  "texto_nuevo": "En esta fase tu equipo pone en números el vínculo entre las causas y el efecto, apoyado en el diseño de experimentos (DOE) cuando el proyecto lo admite, con la meta de anticipar cómo rendirá el proceso, mejorarlo y llevarlo a su punto óptimo. Primero, unos experimentos de cribado o screening (factoriales fraccionados) separan los pocos determinantes vitales; después, los factoriales 2k dan el modelo del proceso y, cuando hace falta, entran los factoriales completos y técnicas de ajuste fino como RSM y EVOP.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "14624",
+   "frase": "In the improve phase, the project team seeks to quantify the cause-effect relationship"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-diagrama_barreras_ayudas-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "diagrama_barreras_ayudas",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "Herramienta gráfica que identifica obstáculos (barreras) y apoyos (ayudas) para implementar una mejora, ayudando a superar tanto problemas técnicos como resistencia cultural. Permite diseñar contramedidas específicas para barreras sin ayudas suficientes.",
+  "texto_nuevo": "Es un esquema visual donde pones, frente a la mejora que quieres implantar, lo que la frena (barreras) y lo que la empuja (ayudas). Te sirve para vencer tanto los tropiezos técnicos como la resistencia cultural, y para idear contramedidas concretas allí donde una barrera no tiene apoyo suficiente.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "17879-17897",
+   "frase": "A barriers and aids chart is a graphical means to define obstacles"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ },
+ {
+  "id": "copia-modelo_shingo_evaluacion_excelencia-resumen_teorico",
+  "fecha": "2026-10-07",
+  "node_id": "modelo_shingo_evaluacion_excelencia",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "COPIA",
+  "texto_anterior": "El Modelo Shingo evalúa tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados (200). La premisa es que los habilitadores culturales, la mejora de procesos y la alineación empresarial impulsan los resultados. Usa escalas de madurez graduadas y descriptivas donde cada nivel representa hallazgos típicos de comportamiento o desempeño en estados progresivamente más maduros, y requiere tu juicio experto para aplicarla. Puedes usarla tanto para prepararte formalmente ante un premio de excelencia operacional como para autoevaluarte de forma estructurada, diferenciando según distintos roles dentro de tu negocio el análisis de cultura, procesos y alineación; los resultados se valoran sin distinguir roles.",
+  "texto_nuevo": "Con el Modelo Shingo mides tu operación sobre un total de 1000 puntos repartidos en cuatro frentes: los Resultados pesan 200, la Alineación Empresarial otros 200, los Habilitadores Culturales 250 y la Mejora Continua de Procesos 350. Detrás hay una idea sencilla: los resultados llegan como consecuencia de la cultura, de la mejora de los procesos y de la alineación. Valoras cada frente con escalas de madurez graduadas y descriptivas, en las que cada peldaño retrata lo que suele observarse en conductas o en desempeño a medida que la operación madura, y hace falta criterio experto para ubicarte en ellas. Te sirve igual si vas a presentarte formalmente a un premio de excelencia operacional que si buscas autoevaluarte con orden. Analizas la cultura, los procesos y la alineación por separado según los distintos roles de tu negocio, y valoras los resultados sin distinguir roles.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "12951, 12979",
+   "frase": "applicant enterprises are assessed on a 1000 points possible scale"
+  },
+  "verificacion": {
+   "veredicto": "sostiene",
+   "contra": "el libro",
+   "trampas": "cazadas"
+  },
+  "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+ }
+]

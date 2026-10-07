@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gráfico de Ajuste Manual Box-Jenkins",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "A diferencia de otros gráficos de control cuyo objetivo es monitorear y reducir la variabilidad por causas especiales, el gráfico Box-Jenkins tiene como objetivo analizar los datos del proceso para regular el mismo después de cada observación, minimizando así la variación del proceso mediante ajustes continuos.",
+  "resumen_teorico": "El gráfico de ajuste manual Box-Jenkins persigue algo distinto que los demás gráficos de control: aquellos vigilan el proceso para detectar y reducir la variabilidad que nace de causas especiales, y este usa los datos del proceso para corregirlo tras cada observación, de modo que esos ajustes continuos dejen la variación del proceso al mínimo.",
   "pasos_accionables": [
     "Recolectar datos secuenciales del proceso después de cada observación",
     "Modelar la serie temporal del proceso usando técnicas Box-Jenkins",
@@ -78,6 +78,22 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 1,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "copia-grafico_box_jenkins-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "A diferencia de otros gráficos de control cuyo objetivo es monitorear y reducir la variabilidad por causas especiales, el gráfico Box-Jenkins tiene como objetivo analizar los datos del proceso para regular el mismo después de cada observación, minimizando así la variación del proceso mediante ajustes continuos.",
+      "texto_nuevo": "El gráfico de ajuste manual Box-Jenkins persigue algo distinto que los demás gráficos de control: aquellos vigilan el proceso para detectar y reducir la variabilidad que nace de causas especiales, y este usa los datos del proceso para corregirlo tras cada observación, de modo que esos ajustes continuos dejen la variación del proceso al mínimo.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "20684",
+        "frase": "Box-Jenkins charts have a different objective: to analyze process data to regulate"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

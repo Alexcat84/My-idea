@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diagrama de Barreras y Ayudas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Herramienta gráfica que identifica obstáculos (barreras) y apoyos (ayudas) para implementar una mejora, ayudando a superar tanto problemas técnicos como resistencia cultural. Permite diseñar contramedidas específicas para barreras sin ayudas suficientes.",
+  "resumen_teorico": "Es un esquema visual donde pones, frente a la mejora que quieres implantar, lo que la frena (barreras) y lo que la empuja (ayudas). Te sirve para vencer tanto los tropiezos técnicos como la resistencia cultural, y para idear contramedidas concretas allí donde una barrera no tiene apoyo suficiente.",
   "pasos_accionables": [
     "Colocar el objetivo/remedio claro a la derecha con una flecha apuntando hacia él",
     "Hacer una lluvia de ideas para listar barreras potenciales y seleccionar las más críticas",
@@ -129,6 +129,22 @@
       },
       "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-diagrama_barreras_ayudas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Herramienta gráfica que identifica obstáculos (barreras) y apoyos (ayudas) para implementar una mejora, ayudando a superar tanto problemas técnicos como resistencia cultural. Permite diseñar contramedidas específicas para barreras sin ayudas suficientes.",
+      "texto_nuevo": "Es un esquema visual donde pones, frente a la mejora que quieres implantar, lo que la frena (barreras) y lo que la empuja (ayudas). Te sirve para vencer tanto los tropiezos técnicos como la resistencia cultural, y para idear contramedidas concretas allí donde una barrera no tiene apoyo suficiente.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17879-17897",
+        "frase": "A barriers and aids chart is a graphical means to define obstacles"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

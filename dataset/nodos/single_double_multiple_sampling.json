@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo Simple, Doble y Múltiple",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple en general reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+  "resumen_teorico": "Puedes muestrear de tres maneras. Con el muestreo simple, una sola muestra basta para aceptar o rechazar. Con el doble, una primera muestra pequeña resuelve los casos claros y solo en los casos límite tomas una segunda. Con el múltiple, sacas varias muestras pequeñas, una tras otra, hasta poder decidir. Los dos últimos, en general, bajan la cantidad promedio de piezas que inspeccionas, a cambio de una administración más complicada. Y elijas el tipo que elijas, puedes armar planes cuyas curvas OC (curva característica de operación) sean prácticamente las mismas.",
   "pasos_accionables": [
     "Evaluar el volumen de inspección disponible y la complejidad administrativa tolerable",
     "Optar por muestreo simple si se prioriza la simplicidad de administración",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que el promedio inspeccionado es en general menor y que estos planes pueden significar menos inspección; el nodo lo afirma sin cautela.; Mismo defecto: se endurece el 'en general menor' y el 'puede significar menos inspección'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-single_double_multiple_sampling-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Los planes de muestreo pueden ser simples (una sola muestra decide aceptación/rechazo), dobles (una muestra inicial pequeña decide en casos claros, y una segunda muestra se toma en casos límite) o múltiples (varias muestras pequeñas sucesivas hasta llegar a una decisión). El muestreo doble y múltiple en general reduce el número promedio de piezas inspeccionadas pero es más complejo de administrar. Es posible diseñar planes con curvas OC (curva característica de operación) esencialmente idénticas independientemente del tipo elegido.",
+      "texto_nuevo": "Puedes muestrear de tres maneras. Con el muestreo simple, una sola muestra basta para aceptar o rechazar. Con el doble, una primera muestra pequeña resuelve los casos claros y solo en los casos límite tomas una segunda. Con el múltiple, sacas varias muestras pequeñas, una tras otra, hasta poder decidir. Los dos últimos, en general, bajan la cantidad promedio de piezas que inspeccionas, a cambio de una administración más complicada. Y elijas el tipo que elijas, puedes armar planes cuyas curvas OC (curva característica de operación) sean prácticamente las mismas.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24996-24999",
+        "frase": "Thus, double- and multiple-sampling plans may mean less inspection"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

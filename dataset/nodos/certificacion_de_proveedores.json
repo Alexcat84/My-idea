@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Certificación de Proveedores",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+  "resumen_teorico": "Consiste en ordenar a tus proveedores por niveles: el 'aprobado' cumple los requisitos mínimos, el 'preferido' supera ese mínimo en calidad y el 'certificado' tiene un historial de calidad que te permite dejar de inspeccionarlo de rutina. Certificar te ayuda a ubicar con qué proveedores vale la pena formar alianzas estratégicas, recorta de forma drástica lo que gastas como comprador en inspección y te da un modelo para llegar a los niveles muy bajos de defectos que exige la manufactura justo a tiempo (JIT).",
   "pasos_accionables": [
     "Definir criterios de certificación (ej. 90% de cumplimiento por 4 trimestres consecutivos)",
     "Aplicar los ocho criterios para certificación",
@@ -77,6 +77,22 @@
       "decision": "lectura total de procedencia (w24): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-certificacion_de_proveedores-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, ofrece un modelo para los niveles muy bajos de defectos que necesita la manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.",
+      "texto_nuevo": "Consiste en ordenar a tus proveedores por niveles: el 'aprobado' cumple los requisitos mínimos, el 'preferido' supera ese mínimo en calidad y el 'certificado' tiene un historial de calidad que te permite dejar de inspeccionarlo de rutina. Certificar te ayuda a ubicar con qué proveedores vale la pena formar alianzas estratégicas, recorta de forma drástica lo que gastas como comprador en inspección y te da un modelo para llegar a los niveles muy bajos de defectos que exige la manufactura justo a tiempo (JIT).",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24011",
+        "frase": "Supplier certification provides a model for the low DPM levels necessary for just-in-time"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

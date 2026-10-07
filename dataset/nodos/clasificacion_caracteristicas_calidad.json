@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Clasificación de Características y Defectos de Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en elaborar dos listas y clasificar ambas por gravedad: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+  "resumen_teorico": "Aquí trabajas con dos listas y ordenas ambas según su gravedad. En una anotas las características de calidad que nacen de las especificaciones; en la otra, los defectos, o sea, las señales de incumplimiento que aparecen al fabricar el producto o al usarlo. Esas listas orientan a quien planifica para saber qué características piden más atención en la inspección.",
   "pasos_accionables": [
     "Derivar la lista de características de calidad a partir de las especificaciones del producto.",
     "Elaborar la lista de defectos observados en manufactura y en campo.",
@@ -77,6 +77,22 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (paso_sin_etiqueta; modo quitar; doble lectura ciega, arbitro): El libro señala que las listas se parecen y difieren y conviene publicarlas por separado, pero no aconseja compararlas; basta con quitar la acción añadida.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "copia-clasificacion_caracteristicas_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consiste en elaborar dos listas y clasificar ambas por gravedad: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.",
+      "texto_nuevo": "Aquí trabajas con dos listas y ordenas ambas según su gravedad. En una anotas las características de calidad que nacen de las especificaciones; en la otra, los defectos, o sea, las señales de incumplimiento que aparecen al fabricar el producto o al usarlo. Esas listas orientan a quien planifica para saber qué características piden más atención en la inspección.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24654",
+        "frase": "There are actually two lists that need to be classified."
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

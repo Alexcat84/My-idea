@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Concepto de Variación Estadística",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Ningún elemento es perfectamente idéntico a otro; la variación es un hecho de la naturaleza y de la vida industrial. Ignorar la existencia de variación o subestimarla puede llevar a decisiones incorrectas sobre problemas importantes. La variación debida a causas aleatorias suele ser mayor de lo que la mayoría de las personas piensan, y a menudo se toman decisiones basadas en el punto de dato más reciente, olvidando que forma parte de un historial de datos.",
+  "resumen_teorico": "No hay dos cosas perfectamente iguales: la variación forma parte de la naturaleza y de la vida en la industria. Si la pasas por alto o la das por pequeña, puedes terminar decidiendo mal en asuntos importantes. Lo que cambia solo por azar suele ser mayor de lo que casi todos creen, y muchas veces decides según el último dato que llega y olvidas que es apenas un punto dentro de toda una historia de datos.",
   "pasos_accionables": [
     "Reconocer que toda medición tiene variación inherente",
     "Evitar tomar decisiones basadas en un solo punto de dato reciente",
@@ -76,6 +76,22 @@
       "decision": "saneamiento continuo de la voz (ola v05): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-concepto_variacion_estadistica-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ningún elemento es perfectamente idéntico a otro; la variación es un hecho de la naturaleza y de la vida industrial. Ignorar la existencia de variación o subestimarla puede llevar a decisiones incorrectas sobre problemas importantes. La variación debida a causas aleatorias suele ser mayor de lo que la mayoría de las personas piensan, y a menudo se toman decisiones basadas en el punto de dato más reciente, olvidando que forma parte de un historial de datos.",
+      "texto_nuevo": "No hay dos cosas perfectamente iguales: la variación forma parte de la naturaleza y de la vida en la industria. Si la pasas por alto o la das por pequeña, puedes terminar decidiendo mal en asuntos importantes. Lo que cambia solo por azar suele ser mayor de lo que casi todos creen, y muchas veces decides según el último dato que llega y olvidas que es apenas un punto dentro de toda una historia de datos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11593-11597",
+        "frase": "Statistical variation—variation due to random causes—is much greater than most people think."
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

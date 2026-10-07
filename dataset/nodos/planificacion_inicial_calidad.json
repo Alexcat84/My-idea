@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planificación Inicial de Calidad en Manufactura",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "La planificación de calidad en manufactura inicia con la revisión del diseño de producto y proceso para identificar características clave, determinar su importancia, analizar el diagrama de flujo, fijar las características vitales, evaluar capacidad y control, aplicar error-proofing, planear un lugar de trabajo limpio, validar sistemas de medición y planear el autocontrol del operador, buscando prevenir defectos y minimizar variabilidad.",
+  "resumen_teorico": "En manufactura, planear la calidad arranca por revisar cómo están diseñados el producto y el proceso. De ahí sacas cuáles son las características clave y cuánto pesa cada una, recorres el diagrama de flujo y fijas las que son vitales. Después compruebas si el proceso es capaz y está bajo control, lo blindas contra errores (error-proofing), planeas un lugar de trabajo limpio, validas tus sistemas de medición y preparas al operador para que se controle solo. Todo apunta a prevenir defectos y reducir al mínimo la variabilidad.",
   "pasos_accionables": [
     "Revisar el diseño del producto con personal de operaciones antes de que el diseño quede definitivo",
     "Identificar características clave del producto y del proceso (KPCs)",
@@ -65,6 +65,22 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide la revisión por operaciones antes de que el diseño quede definitivo, no solo antes del lanzamiento.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-planificacion_inicial_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "La planificación de calidad en manufactura inicia con la revisión del diseño de producto y proceso para identificar características clave, determinar su importancia, analizar el diagrama de flujo, fijar las características vitales, evaluar capacidad y control, aplicar error-proofing, planear un lugar de trabajo limpio, validar sistemas de medición y planear el autocontrol del operador, buscando prevenir defectos y minimizar variabilidad.",
+      "texto_nuevo": "En manufactura, planear la calidad arranca por revisar cómo están diseñados el producto y el proceso. De ahí sacas cuáles son las características clave y cuánto pesa cada una, recorres el diagrama de flujo y fijas las que son vitales. Después compruebas si el proceso es capaz y está bajo control, lo blindas contra errores (error-proofing), planeas un lugar de trabajo limpio, validas tus sistemas de medición y preparas al operador para que se controle solo. Todo apunta a prevenir defectos y reducir al mínimo la variabilidad.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "22351",
+        "frase": "Then we review the process designs to identify key product and process characteristics"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

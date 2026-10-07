@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis e Identificación de Mejores Prácticas",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+  "resumen_teorico": "Es el momento de tomar los datos de tu benchmarking, ya recolectados y normalizados, y examinarlos sin sesgo ni favoritismo para ver en qué destacas, en qué flaqueas y qué tan lejos quedas de los mejores del grupo; cuando se pueda, averigua también por qué existe cada brecha. No mires cada dato por separado: léelos en conjunto, y somete las comparaciones a pruebas estadísticas para que tengan un significado real. Puedes medirte contra el líder único, contra el cuartil superior o contra el promedio del grupo, y cada referencia trae sus propias ventajas y sus propios riesgos.",
   "pasos_accionables": [
     "Recolectar y consolidar los datos de desempeño y normalización de todos los participantes",
     "Aplicar pruebas de significancia estadística a las comparaciones",
@@ -59,6 +59,22 @@
       },
       "decision": "saneamiento continuo de la voz (ola v15): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-analisis_identificacion_mejores_practicas-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consiste en analizar de forma objetiva e imparcial los datos recolectados y normalizados del benchmarking para determinar fortalezas, debilidades y brechas de desempeño frente a los mejores del grupo, e identificar en lo posible las razones de esas brechas. El análisis debe considerar los datos de forma colectiva, no aislada, y aplicar pruebas estadísticas para garantizar que las comparaciones sean significativas. Las comparaciones pueden hacerse contra el mejor de la clase, el cuartil superior o el promedio del grupo, cada uno con ventajas y riesgos distintos.",
+      "texto_nuevo": "Es el momento de tomar los datos de tu benchmarking, ya recolectados y normalizados, y examinarlos sin sesgo ni favoritismo para ver en qué destacas, en qué flaqueas y qué tan lejos quedas de los mejores del grupo; cuando se pueda, averigua también por qué existe cada brecha. No mires cada dato por separado: léelos en conjunto, y somete las comparaciones a pruebas estadísticas para que tengan un significado real. Puedes medirte contra el líder único, contra el cuartil superior o contra el promedio del grupo, y cada referencia trae sus propias ventajas y sus propios riesgos.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "17451-17457",
+        "frase": "It is essential that the analysis be impartial and totally objective"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

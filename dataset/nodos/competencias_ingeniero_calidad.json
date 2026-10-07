@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Competencias del Ingeniero de Calidad (Qualitist)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El Ingeniero de Calidad o 'qualitist' es el experto técnico responsable de ejecutar los tres procesos universales de gestión de calidad: planificación, control y mejora. Sus competencias se agrupan en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. Requiere como mínimo los tres primeros niveles de la Taxonomía de Bloom (recordar, comprender, aplicar), y la mayoría de sus competencias exige además analizar y evaluar.",
+  "resumen_teorico": "El Ingeniero de Calidad, también llamado 'qualitist', es el experto técnico que lleva a la práctica los tres procesos universales de la gestión de calidad: planificación, control y mejora. Sus competencias caben en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. En ellas necesita, como piso, recordar, comprender y aplicar, que son los tres niveles iniciales de la Taxonomía de Bloom, y la mayoría le pide además analizar y evaluar.",
   "pasos_accionables": [
     "Definir las siete categorías de competencia técnica requeridas para el rol",
     "Evaluar el nivel de dominio de Bloom alcanzado en cada categoría",
@@ -41,6 +41,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro añade que la mayoría de las competencias exige además analizar y evaluar, lo que cambia el listón.; Mismo matiz: se caen los niveles cuatro y cinco que exige la mayoría de las competencias.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-competencias_ingeniero_calidad-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El Ingeniero de Calidad o 'qualitist' es el experto técnico responsable de ejecutar los tres procesos universales de gestión de calidad: planificación, control y mejora. Sus competencias se agrupan en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. Requiere como mínimo los tres primeros niveles de la Taxonomía de Bloom (recordar, comprender, aplicar), y la mayoría de sus competencias exige además analizar y evaluar.",
+      "texto_nuevo": "El Ingeniero de Calidad, también llamado 'qualitist', es el experto técnico que lleva a la práctica los tres procesos universales de la gestión de calidad: planificación, control y mejora. Sus competencias caben en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. En ellas necesita, como piso, recordar, comprender y aplicar, que son los tres niveles iniciales de la Taxonomía de Bloom, y la mayoría le pide además analizar y evaluar.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "2909-2927",
+        "frase": "The Competencies for the Officer Engineer require, at a bare minimum"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

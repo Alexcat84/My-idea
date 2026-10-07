@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Buenas Prácticas de Manufactura Actuales (cGMP)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Las cGMP son regulaciones que hace cumplir la autoridad sanitaria de un país concreto, que no tiene por qué ser el tuyo, para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
+  "resumen_teorico": "Las cGMP son normas de fabricación que hace cumplir la autoridad sanitaria de algún país, que puede no ser el tuyo. Su fin es que tus procesos e instalaciones de producción estén bien diseñados, vigilados y controlados, para que tus productos farmacéuticos tengan la identidad, la potencia, la calidad y la pureza que les corresponden. Marcan un piso mínimo, pero te dejan margen: eliges tú la forma de aplicar los controles, apoyándote en un diseño con base científica sólida, en métodos de procesamiento y en procedimientos de prueba, con la condición de usar tecnología al día ('current').",
   "pasos_accionables": [
     "Monta un sistema sólido para gestionar la calidad de tu fabricación y consigue materias primas con la calidad adecuada",
     "Define procedimientos operativos estandarizados y validados",
@@ -92,6 +92,22 @@
       },
       "decision": "copia fiel (regla D2, ola k06): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-buenas_practicas_manufactura_cgmp-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Las cGMP son regulaciones que hace cumplir la autoridad sanitaria de un país concreto, que no tiene por qué ser el tuyo, para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').",
+      "texto_nuevo": "Las cGMP son normas de fabricación que hace cumplir la autoridad sanitaria de algún país, que puede no ser el tuyo. Su fin es que tus procesos e instalaciones de producción estén bien diseñados, vigilados y controlados, para que tus productos farmacéuticos tengan la identidad, la potencia, la calidad y la pureza que les corresponden. Marcan un piso mínimo, pero te dejan margen: eliges tú la forma de aplicar los controles, apoyándote en un diseño con base científica sólida, en métodos de procesamiento y en procedimientos de prueba, con la condición de usar tecnología al día ('current').",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "11356-11358",
+        "frase": "cGMP refers to the Current Good Manufacturing Practice regulations enforced by"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Planificación de la Inspección",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).",
+  "resumen_teorico": "Consiste en decidir en qué puntos del proceso vas a inspeccionar y darle a cada uno instrucciones y medios para comprobar que el producto cumple sus especificaciones. Abarca dos clasificaciones: la de características, la lista que sale de las especificaciones, y la de defectos, las señales de no conformidad que aparecen al fabricar y durante el uso del producto.",
   "pasos_accionables": [
     "Designar las estaciones de inspección a lo largo del proceso productivo",
     "Especificar instrucciones detalladas para cada punto de inspección",
@@ -47,6 +47,22 @@
       "decision": "saneamiento continuo de la voz (ola v01): calco, confirmado por el arbitro y verificado a ciegas",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-planificacion_de_la_inspeccion-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Proceso de designar estaciones de inspección y especificar las instrucciones y facilidades requeridas para verificar la conformidad del producto con las especificaciones. Incluye la definición de una clasificación de características (lista derivada de especificaciones) y una clasificación de defectos (síntomas de no conformidad durante manufactura y uso en campo).",
+      "texto_nuevo": "Consiste en decidir en qué puntos del proceso vas a inspeccionar y darle a cada uno instrucciones y medios para comprobar que el producto cumple sus especificaciones. Abarca dos clasificaciones: la de características, la lista que sale de las especificaciones, y la de defectos, las señales de no conformidad que aparecen al fabricar y durante el uso del producto.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "24346-24506",
+        "frase": "Inspection planning is the activity of (1) designating the stations"
+      },
+      "decision": "copia fiel (regla D2, ola k20): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
