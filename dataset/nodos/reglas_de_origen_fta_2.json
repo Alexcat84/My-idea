@@ -6,8 +6,8 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Para saber si tu producto exportado obtiene el trato arancelario preferencial de un Tratado de Libre Comercio (FTA), revisa sus Reglas de Origen (ROOs). Hay dos clases: las no preferenciales, genéricas, que rigen entre países de la OMC que se dan trato de Nación Más Favorecida, y las preferenciales, que cada FTA define a su manera. Tu bien califica cuando es 'wholly obtained', es decir, totalmente originario del territorio de alguno de los países del tratado, y también cuando, aun llevando insumos extranjeros, cumple las reglas específicas del acuerdo sobre cambio arancelario o contenido de valor regional, u otros requisitos que el propio acuerdo fije. Esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes en su momento; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
-    "Identificar el número de clasificación del Sistema Armonizado del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
-    "Determinar si existe ventaja arancelaria comparando la tasa de nación más favorecida vs la tasa preferencial del tratado de libre comercio (export.customsinfo.com)",
+    "Busca el código Schedule B de tu producto en uscensus.prod.3ceonline.com y obtén con él su número de clasificación del Sistema Armonizado",
+    "Compara en export.customsinfo.com la tasa preferencial del tratado de libre comercio con la de nación más favorecida para saber si tu producto gana alguna ventaja arancelaria",
     "Verificar si el producto contiene insumos no originarios del tratado de libre comercio",
     "Consultar la regla de origen específica del producto en el capítulo de reglas de origen del tratado de libre comercio correspondiente, en el portal oficial de exportación del gobierno de EE. UU. o en las notas generales de su arancel armonizado",
     "Determinar si el contenido extranjero cumple con la regla de cambio arancelario (Tariff Shift) o de contenido de valor regional (RVC)"
@@ -235,6 +235,40 @@
         "frase": "ROOs are used to determine whether or not a product qualifies to receive"
       },
       "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k29-reglas_de_origen_fta_2-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identificar el número de clasificación del Sistema Armonizado del producto usando el código Schedule B (uscensus.prod.3ceonline.com)",
+      "texto_nuevo": "Busca el código Schedule B de tu producto en uscensus.prod.3ceonline.com y obtén con él su número de clasificación del Sistema Armonizado",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4809",
+        "frase": "Obtain the product's HS classification number by locating the Schedule B code"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k29-reglas_de_origen_fta_2-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Determinar si existe ventaja arancelaria comparando la tasa de nación más favorecida vs la tasa preferencial del tratado de libre comercio (export.customsinfo.com)",
+      "texto_nuevo": "Compara en export.customsinfo.com la tasa preferencial del tratado de libre comercio con la de nación más favorecida para saber si tu producto gana alguna ventaja arancelaria",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4813",
+        "frase": "See if there is a duty difference between the standard (Most-Favored-Nation, or MFN)"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

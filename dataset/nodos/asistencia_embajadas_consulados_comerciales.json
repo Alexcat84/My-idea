@@ -9,7 +9,7 @@
     "Contactar a la oficina local de U.S. Commercial Service para coordinar con la embajada del país destino",
     "Revisar la Country Commercial Guide del país a visitar",
     "Compartir con anticipación información de la empresa, su experiencia internacional y los objetivos del viaje",
-    "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal"
+    "Recurre al U.S. Commercial Service, a tu banco y a tu asesor legal cuando negociar con el cliente no baste para resolver un cobro pendiente y el monto en juego sea importante"
   ],
   "entregable_esperado": "Contacto establecido con la embajada/consulado y reunión informativa programada antes del viaje",
   "nodos_previos": [
@@ -137,6 +137,23 @@
         "frase": "Commercial and economic officers in U.S. embassies and consulates abroad assist U.S. exporters"
       },
       "decision": "copia fiel (regla D2, ola k15): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k29-asistencia_embajadas_consulados_comerciales-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si un problema de cobro no se resuelve negociando con el cliente y la suma es significativa, pedir ayuda al U.S. Commercial Service, junto con tu banco y tu asesor legal",
+      "texto_nuevo": "Recurre al U.S. Commercial Service, a tu banco y a tu asesor legal cuando negociar con el cliente no baste para resolver un cobro pendiente y el monto en juego sea importante",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "4163",
+        "frase": "if negotiations fail and the sum involved is considered significant enough"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

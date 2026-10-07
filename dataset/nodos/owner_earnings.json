@@ -7,7 +7,7 @@
   "resumen_teorico": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas lo que inviertes en bienes de capital para mantener tu negocio funcionando.",
   "pasos_accionables": [
     "Calcula el flujo de caja operativo de tu negocio",
-    "Resta lo invertido en bienes de capital, tal como aparece en la sección de inversiones de tu estado de flujo de caja",
+    "Busca en tu estado de flujo de caja el apartado de inversiones y descuenta el monto que destinaste a bienes de capital",
     "Usa esa cifra para saber cuánto efectivo podrías retirar sin dañar tu negocio",
     "Compara esta cifra entre distintos períodos para ver si tu salud financiera real mejora o empeora"
   ],
@@ -86,6 +86,23 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El procedimiento del libro resta lo invertido en equipo según la sección de inversión, sin excluir lo que es para crecer.; Misma distinción ausente del libro.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-k29-owner_earnings-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Resta lo invertido en bienes de capital, tal como aparece en la sección de inversiones de tu estado de flujo de caja",
+      "texto_nuevo": "Busca en tu estado de flujo de caja el apartado de inversiones y descuenta el monto que destinaste a bienes de capital",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2369",
+        "frase": "deduct the amount invested in capital equipment, as shown in the investment section"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
   "fuentes_internas": [

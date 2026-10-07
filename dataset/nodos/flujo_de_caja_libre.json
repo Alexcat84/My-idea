@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Consigue el estado de flujo de caja del periodo",
     "Toma el efectivo neto que dejaron las operaciones",
-    "Resta lo que invertiste en equipo o activos (capex), que aparece en la sección de inversión",
+    "Descuenta tu capex, es decir, el dinero que pusiste en equipo o activos; lo encuentras en el apartado de inversión de ese estado",
     "Revisa si el resultado es positivo y si va creciendo con el tiempo",
     "Usa esta cifra para decidir si pagas deuda, compras algo o subes sueldos"
   ],
@@ -80,6 +80,23 @@
       },
       "decision": "lectura total de procedencia (w46): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "copia-k29-flujo_de_caja_libre-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Resta lo que invertiste en equipo o activos (capex), que aparece en la sección de inversión",
+      "texto_nuevo": "Descuenta tu capex, es decir, el dinero que pusiste en equipo o activos; lo encuentras en el apartado de inversión de ese estado",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "2369",
+        "frase": "deduct the amount invested in capital equipment, as shown in the investment section"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Determinar si el negocio requiere una marca común reconocible",
     "Evaluar si es necesario controlar la representación de la marca por terceros",
     "Definir si se brindará soporte, entrenamiento y sistemas operativos a los operadores",
-    "Establecer si se cobrará alguna tarifa (franquicia, regalías, publicidad, etc.) por ese soporte; en EE.UU. basta recibir más de 500 dólares por cualquier concepto que no sea reparto de utilidades o pago de mercancía para reventa",
+    "Decide si cobrarás alguna tarifa por ese soporte (franquicia, regalías, publicidad, etc.); ten presente que en EE.UU. ya cuenta como tarifa cualquier pago que recibas por encima de 500 dólares, excepto un reparto de utilidades o el pago de mercancía que el operador revende",
     "Consultar con abogados especializados en franquicias para confirmar la clasificación legal"
   ],
   "entregable_esperado": "Análisis documentado que confirme si el modelo de negocio cumple los tres criterios legales de una franquicia (marca, sistema y tarifa)",
@@ -58,6 +58,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): Se cae que cualquier pago de más de 500 dólares, salvo reparto de utilidades o mercancía para reventa, activa la ley; no solo una tarifa por el soporte.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-k29-marco_name_system_fee-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Establecer si se cobrará alguna tarifa (franquicia, regalías, publicidad, etc.) por ese soporte; en EE.UU. basta recibir más de 500 dólares por cualquier concepto que no sea reparto de utilidades o pago de mercancía para reventa",
+      "texto_nuevo": "Decide si cobrarás alguna tarifa por ese soporte (franquicia, regalías, publicidad, etc.); ten presente que en EE.UU. ya cuenta como tarifa cualquier pago que recibas por encima de 500 dólares, excepto un reparto de utilidades o el pago de mercancía que el operador revende",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "1341",
+        "frase": "if your third party sends you more than $500 for anything other than"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

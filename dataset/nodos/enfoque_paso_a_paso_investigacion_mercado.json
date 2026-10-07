@@ -7,10 +7,10 @@
   "resumen_teorico": "Sigue una metodología en tres etapas para elegir tus mercados de exportación. Primero filtras el universo de mercados con estadísticas oficiales de exportación. Segundo, evalúas los candidatos analizando tendencias de consumo e importación, la competencia doméstica y extranjera, y factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales locales. También revisas barreras arancelarias y no arancelarias, requisitos de licencia de exportación e incentivos gubernamentales disponibles. Tercero, sacas conclusiones y te quedas con un grupo reducido de mercados objetivo. Si tu negocio es nuevo en exportación, conviene limitar la selección final a menos de diez mercados para no dispersar tus recursos limitados.",
   "pasos_accionables": [
     "Obtén estadísticas de exportación de tu producto por país usando el U.S. Census Bureau",
-    "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento mirando sus tendencias de los últimos 3 a 5 años, y explora mercados emergentes, donde puede haber menos competencia, considerando agrupaciones por tratados de libre comercio",
+    "Repasa cómo han evolucionado los mercados en los últimos 3 a 5 años y quédate con 5 a 10 que sean grandes o crezcan rápido; suma algunos emergentes, donde puede haber menos competencia, y ten en cuenta las agrupaciones de países por tratados de libre comercio",
     "Selecciona de 3 a 5 mercados más prometedores para profundizar el análisis",
     "Examina las tendencias de consumo e importación del producto y estudia la competencia doméstica y extranjera en cada mercado",
-    "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+    "Revisa qué barreras arancelarias y no arancelarias, requisitos de licencia e incentivos gubernamentales vas a encontrar, y estudia los factores que pesan en tu marketing: la cultura, las prácticas comerciales, la distribución y los sectores de usuarios finales",
     "Concluye con tu lista final de mercados, limitándola a menos de 10 si recién comienzas a exportar"
   ],
   "entregable_esperado": "Lista corta de 3 a 5 mercados meta seleccionados con justificación basada en estadísticas de exportación, tendencias, competencia, barreras e incentivos.",
@@ -96,6 +96,40 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (certeza_endurecida, matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que en un mercado que recién se abre puede haber menos competidores; el paso lo da como rasgo seguro.; El libro identifica esos mercados mirando su tendencia de los últimos 3 a 5 años, criterio que el paso pierde.; Mismo defecto que la marca 0: el libro dice que puede haber menos competidores.; Mismo defecto: se cae la revisión de tendencias de 3 a 5 años con que el libro hace esa identificación.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "copia-k29-enfoque_paso_a_paso_investigacion_mercado-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Identifica entre 5 y 10 mercados grandes o de rápido crecimiento mirando sus tendencias de los últimos 3 a 5 años, y explora mercados emergentes, donde puede haber menos competencia, considerando agrupaciones por tratados de libre comercio",
+      "texto_nuevo": "Repasa cómo han evolucionado los mercados en los últimos 3 a 5 años y quédate con 5 a 10 que sean grandes o crezcan rápido; suma algunos emergentes, donde puede haber menos competencia, y ten en cuenta las agrupaciones de países por tratados de libre comercio",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1261",
+        "frase": "First, you should identify 5 to 10 large and fast-growing markets"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k29-enfoque_paso_a_paso_investigacion_mercado-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Analiza factores de marketing como sectores de usuarios finales, distribución, cultura y prácticas comerciales, y revisa barreras arancelarias, no arancelarias, requisitos de licencia e incentivos gubernamentales",
+      "texto_nuevo": "Revisa qué barreras arancelarias y no arancelarias, requisitos de licencia e incentivos gubernamentales vas a encontrar, y estudia los factores que pesan en tu marketing: la cultura, las prácticas comerciales, la distribución y los sectores de usuarios finales",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "1287-1295",
+        "frase": "Analyze factors affecting the marketing and use of your product in each market"
+      },
+      "decision": "copia fiel (regla D2, ola k29): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }
