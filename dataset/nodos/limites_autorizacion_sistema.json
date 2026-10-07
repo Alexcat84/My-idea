@@ -4,7 +4,7 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Límites de Autorización del Sistema (Authorization Boundaries)",
   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-  "resumen_teorico": "Un sistema es la combinación de elementos interactuantes (personas, procesos, tecnologías, instalaciones) organizados para lograr un propósito. Establecer un límite de autorización significa trazar una línea imaginaria alrededor del sistema para poder categorizar sus riesgos e identificar los controles apropiados. Esto también aplica a contratos con proveedores, que deben documentar los límites de autorización y responsabilidad.",
+  "resumen_teorico": "Un sistema es un conjunto de elementos que interactúan, como personas, procesos, tecnologías e instalaciones, y que se organizan en torno a un propósito. Fijar su límite de autorización consiste en rodearlo con una frontera imaginaria; al delimitarlo así cuentas con un perímetro definido en el que clasificas sus riesgos por categoría e identificas los controles que le corresponden. La misma lógica alcanza a tus proveedores: en los contratos con ellos también hace falta dejar por escrito dónde terminan la autorización y la responsabilidad.",
   "pasos_accionables": [
     "Identificar los sistemas que componen la organización (ej. dispositivo médico, proceso de manejo de información confidencial).",
     "Trazar el límite o alcance de cada sistema a proteger.",
@@ -45,6 +45,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pide que los contratos documenten límites y responsabilidad del proveedor; el paso omite la responsabilidad.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-limites_autorizacion_sistema-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Un sistema es la combinación de elementos interactuantes (personas, procesos, tecnologías, instalaciones) organizados para lograr un propósito. Establecer un límite de autorización significa trazar una línea imaginaria alrededor del sistema para poder categorizar sus riesgos e identificar los controles apropiados. Esto también aplica a contratos con proveedores, que deben documentar los límites de autorización y responsabilidad.",
+      "texto_nuevo": "Un sistema es un conjunto de elementos que interactúan, como personas, procesos, tecnologías e instalaciones, y que se organizan en torno a un propósito. Fijar su límite de autorización consiste en rodearlo con una frontera imaginaria; al delimitarlo así cuentas con un perímetro definido en el que clasificas sus riesgos por categoría e identificas los controles que le corresponden. La misma lógica alcanza a tus proveedores: en los contratos con ellos también hace falta dejar por escrito dónde terminan la autorización y la responsabilidad.",
+      "cita": {
+        "libro": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
+        "fichero": "books/seguridad_digital/NIST.SP.1314.txt",
+        "lineas": "85, 115",
+        "frase": "System: Combination of interacting elements (such as people, processes, technologies, facilities)"
+      },
+      "decision": "copia fiel (regla D2, ola r2): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

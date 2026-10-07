@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Takt Time y Producción en Flujo",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos y dimensionar tu dotación de trabajo; reducir restricciones como los tiempos de cambio permite lotes más pequeños e, idealmente, flujo de una sola pieza, y si lo logras eliminas la sobreproducción. Si la demanda varía mucho, considera manejar líneas de valor separadas, cada una con su propio takt time y sus propios recursos.",
+  "resumen_teorico": "En un sistema pull, el takt time marca el compás de la producción: equivale a la cadencia con que tus clientes adquieren cada unidad de producto. Para obtenerlo, toma el tiempo disponible en un periodo definido y divídelo por la demanda del cliente en ese mismo periodo. Si quieres calcularlo bien y ajustar tus recursos, es esencial que entiendas cómo se comporta esa demanda: su patrón, su variabilidad y su tendencia. Al poner el takt time junto a tu capacidad demostrada y a la teórica, puedes balancear los procesos y decidir cuánta dotación de trabajo necesitas. Recortar restricciones como los tiempos de cambio te deja trabajar con lotes menores y, en el caso ideal, hacer que las piezas fluyan de una en una; si llegas ahí, la sobreproducción desaparece. Cuando la demanda varía mucho, valora trabajar con líneas de valor separadas, cada una con su takt time y sus recursos propios.",
   "pasos_accionables": [
     "Calcular la demanda del cliente en un periodo definido",
     "Determinar el takt time dividiendo el tiempo disponible entre la demanda; si la variabilidad del proceso obliga a ajustarlo, llamarlo takt práctico y tratar ese ajuste como desperdicio planeado",
@@ -101,6 +101,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro advierte que el takt puede necesitar ajuste por la variabilidad, con otro nombre y como desperdicio planeado.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "copia-takt_time-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "El takt time es el ritmo al cual el cliente compra una unidad de producto: el compás que marca la pauta de producción en un sistema pull. Se calcula dividiendo el tiempo disponible entre la demanda del cliente en un periodo definido. Entender el patrón, variabilidad y tendencia de esa demanda es esencial para calcularlo bien y ajustar tus recursos. Comparar el takt time con tu capacidad demostrada y teórica te permite balancear procesos y dimensionar tu dotación de trabajo; reducir restricciones como los tiempos de cambio permite lotes más pequeños e, idealmente, flujo de una sola pieza, y si lo logras eliminas la sobreproducción. Si la demanda varía mucho, considera manejar líneas de valor separadas, cada una con su propio takt time y sus propios recursos.",
+      "texto_nuevo": "En un sistema pull, el takt time marca el compás de la producción: equivale a la cadencia con que tus clientes adquieren cada unidad de producto. Para obtenerlo, toma el tiempo disponible en un periodo definido y divídelo por la demanda del cliente en ese mismo periodo. Si quieres calcularlo bien y ajustar tus recursos, es esencial que entiendas cómo se comporta esa demanda: su patrón, su variabilidad y su tendencia. Al poner el takt time junto a tu capacidad demostrada y a la teórica, puedes balancear los procesos y decidir cuánta dotación de trabajo necesitas. Recortar restricciones como los tiempos de cambio te deja trabajar con lotes menores y, en el caso ideal, hacer que las piezas fluyan de una en una; si llegas ahí, la sobreproducción desaparece. Cuando la demanda varía mucho, valora trabajar con líneas de valor separadas, cada una con su takt time y sus recursos propios.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "13329",
+        "frase": "It is recommended that if demand varies significantly, multiple value streams be"
+      },
+      "decision": "copia fiel (regla D2, ola r2): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

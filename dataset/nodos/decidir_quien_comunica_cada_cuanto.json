@@ -4,7 +4,7 @@
   "dominio": "primer_equipo",
   "titulo_concepto": "Decidir quién necesita comunicarse con quién y cada cuánto, minimizando el coste de cada reunión",
   "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
-  "resumen_teorico": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros visuales de tareas o pasear por la organización.",
+  "resumen_teorico": "Para que todo marche sin roces, entre lo más importante de tu labor está definir quién tiene que comunicarse con quién y con qué frecuencia; en la práctica, eso son reuniones. Cada una te cuesta algo considerable, el tiempo, así que conviene acortarlas, espaciarlas y reducir cuántas personas deben asistir. Por encima de todas está la conversación a solas con cada persona que depende directamente de ti. A su alrededor tienes otras herramientas, como las reuniones de equipo o de gran decisión, las zonas sin reuniones, los tableros visuales de tareas o recorrer la empresa.",
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_11.md, unidad Cap. 8, Results. Sale de las lineas 15 a 35. ES LA PIEZA P1 DE LA FRONTERA DE cap_11 Y ES LA CABEZA DEL CAPITULO. POR QUE ES PROCEDIMIENTO Y NO ENTRADA, con D.27 delante: la linea 15 pone un mandato (decide who needs to communicate with whom and how frequently) Y SU PROPIO INVENTARIO DE OBJETOS A MINIMIZAR nombrados uno a uno (the duration, frequency and number of people required to attend), y las lineas 17 a 35 ponen el inventario de MEDIOS del capitulo entero, diez herramientas nombradas una a una. Escribir los pasos es transcribir esos dos inventarios. POR QUE NO ES UNA SERIE D.37 SINO D.29: el libro NO escribe la cuenta en ningun sitio. Enumera las diez sin decir cuantas son, y EXTRACTOR.md 15.6 dice que si el texto solo enumera sin decir cuantas esto NO es D.37 sino D.29, y la arista se declara igual pero con razon escrita que la sostenga. Las aristas van declaradas en docs/loop/REPORTE.md de la vuelta 22. UNA DISCREPANCIA DEL PROPIO LIBRO QUE DECLARO EN VEZ DE ARREGLARLA: el indice de la linea 29 dice Meeting-Free Zones y el rotulo de la seccion que le corresponde, en la linea 223, dice EXECUTION TIME. Transcribo el indice tal como esta en la linea 29 y dejo dicho aqui que el rotulo de la seccion es otro. No elijo por el libro. RELECTURA DE FIDELIDAD D.30 EN EL ACTO, paso a paso contra su linea: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. P1 a P5 de la linea 15; P6 de las lineas 17 a 35. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto es demasiada duracion, cada cuanto es demasiada frecuencia, cuantas personas son demasiadas, y en que orden se montan las diez herramientas. El libro pone el mandato de minimizar y NO pone el umbral, asi que cualquier cifra que yo escribiera ahi la escribiria yo.",
   "pasos_accionables": [
     "Toma como tarea central tuya, para que el trabajo fluya sin fricciones, definir qué personas tienen que hablar entre sí y cada cuánto.",
@@ -355,6 +355,22 @@
       },
       "decision": "copia fiel (regla D2, ola k09): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-decidir_quien_comunica_cada_cuanto-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "COPIA",
+      "texto_anterior": "Para que todo siga moviéndose sin roces, una de tus responsabilidades más importantes es decidir quién necesita hablar con quién y cada cuánto, y eso significa reuniones. Toda reunión tiene un coste significativo, el tiempo, así que importa recortar su duración, su frecuencia y el número de personas que tienen que asistir. La más importante de todas es la reunión a solas con cada persona a tu cargo. Junto a ella hay más herramientas, de las reuniones de equipo o de gran decisión a las zonas sin reuniones, los tableros visuales de tareas o pasear por la organización.",
+      "texto_nuevo": "Para que todo marche sin roces, entre lo más importante de tu labor está definir quién tiene que comunicarse con quién y con qué frecuencia; en la práctica, eso son reuniones. Cada una te cuesta algo considerable, el tiempo, así que conviene acortarlas, espaciarlas y reducir cuántas personas deben asistir. Por encima de todas está la conversación a solas con cada persona que depende directamente de ti. A su alrededor tienes otras herramientas, como las reuniones de equipo o de gran decisión, las zonas sin reuniones, los tableros visuales de tareas o recorrer la empresa.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "fichero": "fuentes/scott_radical_candor/cap_11.md",
+        "lineas": "15",
+        "frase": "One of your most important responsibilities to keep everything moving smoothly"
+      },
+      "decision": "copia fiel (regla D2, ola r2): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
