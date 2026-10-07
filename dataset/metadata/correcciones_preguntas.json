@@ -22,6 +22,606 @@
    },
    "decision": "medida 2: contrario confirmado en la pregunta base (el equipo externo no genera los contactos); decision del fundador del 1 oct 2026 (punto 5b corregido): la pregunta base se corrige directamente por correccion declarada",
    "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 13"
+  },
+  {
+   "id": "auditoria-preguntas-ia_como_nivelador_habilidades-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "ia_como_nivelador_habilidades",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Si pudieras hacer que cada persona en tu equipo entendiera cómo su trabajo se conecta con el resto del proyecto, ¿cómo crees que cambiaría la calidad de lo que hacen y cuánto tiempo te gustaría que pasaran conociendo otras áreas además de la suya?",
+   "texto_nuevo": "Cuando pruebes la IA en las tareas donde tú o tus colaboradores rinden de forma desigual, ¿te gustaría además que cada persona entendiera cómo su trabajo se conecta con el resto del proyecto y pasara algo de tiempo conociendo otras áreas, o prefieres que cada quien siga concentrado en lo suyo?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de la IA como niveladora del desempeño desigual y la pregunta solo habla de que el equipo conozca otras áreas, sin tocar la IA."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-sandbox_de_innovacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "sandbox_de_innovacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando lograste que el sandbox funcionara y empezaron a surgir resultados, ¿qué fue lo que más te frenó: que otros equipos de la organización vieran esos experimentos como una amenaza, que el talento innovador terminara cansado haciendo tareas operativas, o que simplemente no sabías cómo encajar esa innovación con el resto de productos y procesos que ya estaban en marcha?",
+   "texto_nuevo": "Si montas un sandbox y empieza a dar resultados, ¿qué crees que te frenaría más: que otros equipos de la organización vean esos experimentos como una amenaza, que el talento innovador termine cansado haciendo tareas operativas, o no saber cómo encajar esa innovación con el resto de productos y procesos que ya están en marcha?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Presupone en pasado que la persona ya montó un sandbox que dio resultados y que algo la frenó, cuando el nodo apenas propone crearlo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-cumplimiento_sarbanes_oxley-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "cumplimiento_sarbanes_oxley",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "¿Qué desafíos ves ahora mismo en tu equipo o dentro de tu proyecto: hay falta de confianza, conflictos sin resolver, o simplemente las personas no entienden realmente cómo funciona lo que están haciendo y por qué importa?",
+   "texto_nuevo": "Ahora que piensas en controles internos y en transparencia financiera, ¿te interesa que esa transparencia llegue también a tu equipo, de modo que todos entiendan los números del proyecto y por qué importan, o prefieres que las cuentas queden solo entre quienes las controlan y las revisan?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata del cumplimiento de Sarbanes-Oxley y la transparencia financiera, y la pregunta indaga confianza y conflictos en el equipo, otro tema."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-ceo_de_guerra_vs_paz-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "ceo_de_guerra_vs_paz",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Si mirás tu idea hoy, ¿hay algo que te preocupe que podría no funcionar en el futuro cercano? Y si es así, ¿qué parte de lo que estás construyendo crees que podría tener valor incluso si el camino principal no resulta como esperas?",
+   "texto_nuevo": "Si miras tu proyecto hoy, ¿sientes que enfrenta una amenaza seria a su supervivencia? Y si es así, ¿qué te cuesta más ahora: decidir rápido sin tener toda la información, dar la cara y comunicarle a tu equipo la situación con claridad y sin falsas esperanzas, o saber si lo peor ya pasó?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo distingue liderar en modo guerra o paz ante una amenaza existencial, y la pregunta busca qué parte del proyecto conserva valor si falla, lo que no sirve para elegir entre los candidatos de manejo de crisis."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-coordinacion_organica_de_elementos_independientes-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "coordinacion_organica_de_elementos_independientes",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que ves tu idea como algo que requiere que distintas partes (tú, tu equipo, los clientes, el mercado) trabajen juntas sin que una sola persona lo controle todo, ¿qué desafío sientes que es más urgente resolver: encontrar nuevas ideas cuando te quedas atascado, o aprender a generar muchas posibilidades diferentes antes de elegir cuál seguir?",
+   "texto_nuevo": "Si piensas en tu proceso creativo como una coordinación de partes distintas (intuición, lógica, emoción, experiencia) que se fusionan con la práctica, ¿qué sientes que es más urgente trabajar: conectar ideas entre sí cuando te quedas atascado, distinguir cuándo dejar que tu mente asocie libremente y cuándo enfocarla, o aprender a alternar tu foco antes de elegir qué camino seguir?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Presenta el nodo como coordinar a personas y actores externos, cuando trata de los elementos internos del pensamiento creativo que se fusionan con la práctica."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-concientizacion_entrenamiento_cui-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "concientizacion_entrenamiento_cui",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Una vez que tu equipo entienda bien qué riesgos existen y cómo actuar en su día a día para evitarlos, ¿qué te preocupa más: que no sepan qué hacer si algo sale mal, o que ya tengas claro cómo responderían ante un incidente de seguridad?",
+   "texto_nuevo": "Una vez que tu equipo entienda bien qué riesgos existen y cómo actuar en su día a día para evitarlos, ¿crees que sabrían qué hacer si algo sale mal, o todavía no tienes claro cómo responderían ante un incidente de seguridad?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "La segunda opción no es una preocupación, así que la disyuntiva no tiene sentido y no sirve para decidir si toca prepararse para responder incidentes."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-transparencia_facturacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "transparencia_facturacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando alguien en tu equipo interactúa con un cliente, ¿qué tan importante es que esa persona entienda y represente los valores de lo que estás creando, o crees que es más un tema de seguir procesos y procedimientos?",
+   "texto_nuevo": "Cuando alguien de tu equipo le explica un cobro o una factura a un cliente, ¿qué tan importante es que esa persona entienda y represente los valores de lo que estás creando, o crees que basta con seguir un procedimiento claro?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de simplificar y explicar la facturación, y la pregunta habla de los valores de marca del equipo sin tocar la facturación."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-preparar_candidato_validacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "preparar_candidato_validacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando hayas hablado con varios dueños de franquicias como la tuya, ¿qué te gustaría saber de ellos para realmente entender si tu idea puede funcionar en diferentes situaciones?",
+   "texto_nuevo": "Cuando un candidato vaya a hablar con varios de tus franquiciados, ¿qué te gustaría que les preguntara para entender de verdad por qué a algunos les va mejor que a otros, y cómo encaja ese paso en tu proceso de venta?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo es el franquiciador que prepara al candidato para validar, y la pregunta trata a la persona como el candidato que valida, invirtiendo la perspectiva."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-biomimicry_diseno-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "biomimicry_diseno",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando pensás en tu idea, ¿hay momentos en que lo que realmente necesita la gente es usar algo de forma ocasional o temporal, en lugar de tener que poseerlo? ¿Qué pasaría si en lugar de vender el producto en sí, ofrecieras la experiencia o el servicio que la gente busca obtener con él?",
+   "texto_nuevo": "Cuando miras tu producto con la idea de optimizar en lugar de maximizar, como suele hacerlo la naturaleza, ¿hay momentos en que la gente solo necesita usarlo de forma ocasional o temporal, en lugar de poseerlo? ¿Qué pasaría si en lugar de vender el producto en sí, ofrecieras el servicio que la gente busca obtener con él?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de la biomímesis como inspiración de diseño y la pregunta solo habla de pasar de producto a servicio, sin relación con el nodo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-decidir_quien_comunica_cada_cuanto-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "decidir_quien_comunica_cada_cuanto",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora mismo, ¿tienes personas que dependen directamente de ti, o estás todavía en la fase de armar tu idea y tu equipo desde cero?",
+   "texto_nuevo": "Ahora mismo, ¿qué te cuesta más con tu equipo: tener buenas reuniones a solas con cada persona, que las reuniones de grupo debatan y decidan sin alargarse, que todos sepan en qué anda cada quien, o encontrar tiempo para pensar sin reuniones?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Saber si ya tiene gente a su cargo no sirve para elegir entre nueve candidatos que son tipos de reunión y herramientas de coordinación."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-distribucion_binomial-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "distribucion_binomial",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "En tu idea, ¿necesitas evaluar qué tan confiable es algo que depende de que varias partes o pasos funcionen bien al mismo tiempo, o cómo se combinan diferentes riesgos?",
+   "texto_nuevo": "En tu idea, ¿necesitas revisar muestras de un lote para decidir si lo aceptas o lo rechazas según cuántos defectos aparecen, o te interesa más entender en general cómo usar la probabilidad para cuidar tu calidad?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Pregunta por la confiabilidad de sistemas y la combinación de riesgos, cuando el nodo trata la binomial para el muestreo de aceptación de lotes."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-preguntas_situacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "preguntas_situacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que entiendo tu contexto, ¿cuál es la situación o la dificultad principal que te llevó a pensar en esta idea en primer lugar?",
+   "texto_nuevo": "Cuando hablas con un cliente nuevo, ¿sueles pasar mucho tiempo preguntando por su contexto y sus antecedentes, o ya llegas investigado y pasas pronto a preguntarle por los problemas que tiene?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo enseña a dosificar las preguntas de situación con un cliente, y la pregunta le hace al emprendedor una pregunta sobre el origen de su idea."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-financiamiento_amigos_y_familia-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "financiamiento_amigos_y_familia",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que has recibido dinero de gente que confía en ti, ¿qué es lo que más te preocupa o te quita el sueño en este momento: la presión emocional de no defraudar a quienes creyeron en ti, o la incertidumbre sobre si realmente tienes el capital y el apoyo que necesitas para llevar esto adelante?",
+   "texto_nuevo": "Si llegas a recibir dinero de gente que confía en ti, ¿qué crees que te preocuparía más: la presión emocional de no defraudar a quienes creyeron en ti, o la incertidumbre de si ese capital y ese apoyo alcanzan para llevar esto adelante?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Da por hecho que la persona ya recibió dinero de su círculo cercano, cuando el nodo trata de evaluar y pactar antes de aceptarlo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-embalaje_exportacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "embalaje_exportacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que estás pensando en cómo proteger tu producto durante el transporte, ¿ya tienes clientes que están recibiendo tus pedidos, o todavía estás en la fase de preparar tu primer envío?",
+   "texto_nuevo": "Ahora que estás pensando en cómo proteger tu producto durante el transporte, ¿qué te preocupa más: que tus bultos lleven las marcas de envío correctas sin delatar lo que contienen, o lo que pagas de transporte por el peso y el volumen de tu empaque?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Saber si ya hay clientes recibiendo pedidos no sirve para elegir entre marcar bien los envíos y ajustar el peso del empaque."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-plan_a_b_c_soft_landing-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "plan_a_b_c_soft_landing",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Si las cosas no salieran como las planeaste en los próximos meses, ¿qué te importaría más: mantener viva la relación con tus clientes actuales o buscar una salida rápida del proyecto?",
+   "texto_nuevo": "Si las cosas no salieran como las planeaste en los próximos meses y tuvieras que pasar a un plan B o a un cierre ordenado, ¿qué te importaría más cuidar: la relación con tus clientes actuales o la relación con tus inversionistas y con quienes te prestaron dinero?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata la progresión ordenada de los planes A, B y C, y la pregunta plantea un dilema ajeno entre clientes y una salida rápida que no encaja con ese cierre ordenado."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-ganar_confianza_personas_cargo-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "ganar_confianza_personas_cargo",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "¿Tienes ahora mismo a alguien trabajando contigo o bajo tu dirección, o es algo que esperas que suceda en tu proyecto?",
+   "texto_nuevo": "Pensando en las personas que trabajan contigo o que tendrás a tu cargo, ¿qué sientes que te costaría más: respetarlas y cuidar de ellas, reunirte a solas con cada una cada semana, ser honesto sobre cómo va su desempeño, o admitir tus propios errores?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Preguntar solo si ya tiene gente a su cargo no sirve para elegir entre las cuatro acciones candidatas."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-crowdfunding_legal_exemptions_jobs_act-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "crowdfunding_legal_exemptions_jobs_act",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Si tuvieras que financiar tu idea ahora mismo, ¿ya sabes a quién le vas a pedir dinero o todavía estás evaluando opciones? Y si ya lo sabes, ¿qué tipo de inversionista te imaginas: amigos, gente desconocida en una plataforma, o alguien que ya conoce tu sector?",
+   "texto_nuevo": "Si fueras a levantar dinero ofreciendo participaciones a inversionistas, ¿qué te preocupa más ahora: definir bien los términos de tu ronda y los riesgos legales de ofrecerla, o te preguntas si te convendría combinar ese capital con algo de deuda?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El tipo de inversionista al que pedirá dinero no sirve para elegir entre fijar los términos y riesgos de la ronda o complementar el capital con deuda."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-negociacion_contratos_proveedores-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "negociacion_contratos_proveedores",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "De los proveedores con los que ya estás trabajando o planeas trabajar, ¿hay alguno que sea prácticamente tu única opción para algo que es crítico en tu idea, o hay alguna parte del manejo diario de inventario que te gustaría que ellos ayudaran a controlar?",
+   "texto_nuevo": "Con los proveedores con los que ya trabajas o planeas trabajar, ¿has fijado metas de desempeño claras, como entregas frecuentes o precisión en los pedidos, y te gustaría poder medir si las cumplen?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Pregunta por un proveedor casi único o por ayuda con el inventario, temas que el nodo de negociación de contratos no trata y que no llevan a medir a los proveedores."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-compensacion_fundadores_cash_vs_equity-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "compensacion_fundadores_cash_vs_equity",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando pienses en armar tu equipo inicial, ¿cómo imaginas que vas a convencer a alguien realmente talentoso para que se sume sin poder ofrecerle un salario alto? ¿Qué tiene que pasar para que alguien deje su estabilidad actual y se arriesgue contigo?",
+   "texto_nuevo": "Cuando pienses en cómo se van a pagar tú y tus cofundadores al principio, ¿cuánto sueldo estarías dispuesto a dejar de cobrar a cambio de más participación? ¿Qué tendría que pasar para que ese acuerdo te siga pareciendo justo cuando el negocio crezca?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata del sueldo que el propio fundador cede a cambio de participación, y la pregunta se va a cómo convencer a un talento externo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-licencia_exportacion_regulaciones-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "licencia_exportacion_regulaciones",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que sabes que tu producto no necesita licencias especiales, ¿ya estás pensando en vender a otros países, o primero quieres asegurarte de que tu idea tiene realmente potencial para exportarse?",
+   "texto_nuevo": "Una vez que sepas si tu producto necesita o no una licencia de exportación, ¿qué quieres resolver primero: asegurarte de que tu idea tiene realmente potencial para exportarse, o ordenar cómo vas a cumplir con los controles de exportación cada vez que vendas a otro país?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Da por hecho que el producto de la persona no necesita licencia, algo que el nodo no establece sobre su proyecto, y deja sin servir al candidato de cumplimiento."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-normalizacion_de_la_desviacion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "normalizacion_de_la_desviacion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando en tu proyecto se han normalizado estas prácticas riesgosas que mencionas, ¿qué ves que ha pasado con la gente que trabaja en ello? ¿Cómo reaccionan ahora ante estos problemas?",
+   "texto_nuevo": "Si en tu proyecto se hubieran normalizado algunas prácticas riesgosas, ¿qué crees que pasaría con la gente que trabaja en él? ¿Cómo reaccionarían ante esos problemas: los señalarían o los callarían como malas noticias?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Da por hecho que en el proyecto ya se normalizaron prácticas riesgosas y que la persona las mencionó, cuando el nodo plantea auditar si eso ocurre."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-validar_modelo_negocio_hechos-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "validar_modelo_negocio_hechos",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que has probado tu idea con muchos clientes reales y sabes que la gente efectivamente quiere lo que ofreces, ¿qué es lo que más te preocupa en este momento: entender si realmente puedes ganar dinero con esto, o saber cuánto dinero necesitas para crecer sin quedarte sin recursos?",
+   "texto_nuevo": "Si ya probaste tu idea con muchos clientes reales y estás convirtiendo tus supuestos en hechos, ¿qué es lo que más te preocupa en este momento: entender si realmente puedes ganar dinero con esto, o saber cuánto dinero necesitas para crecer sin quedarte sin recursos?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Da por hecho que la demanda ya está comprobada, cuando el nodo trata de convertir las hipótesis en hechos y prevé iterar o pivotar si no convencen."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-responder_critica_abrasiva_cuatro_reglas-pregunta_entrada",
+   "fecha": "2026-10-06",
+   "node_id": "responder_critica_abrasiva_cuatro_reglas",
+   "campo": "pregunta_entrada",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que te han dicho que eres demasiado agresiva o abrasiva, ¿qué crees que hay detrás: que de verdad heriste a alguien sin necesidad, o que se castiga tu franqueza por un sesgo, como el de género?",
+   "texto_nuevo": "Si alguna vez te criticaran porque tu franqueza resulta abrasiva o agresiva, ¿qué crees que habría detrás: que de verdad hubieras herido a alguien sin necesidad, o que se castiga tu franqueza por un sesgo, como el de género?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Como pregunta de entrada da por hecho que a la persona ya le dijeron que es agresiva o abrasiva, cuando eso es solo la condición del nodo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-product_backlog_fisico-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "product_backlog_fisico",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando avanzan en el desarrollo de este producto, ¿cómo se aseguran hoy de que todas las áreas del equipo (diseño, ingeniería, calidad, etc.) tomen decisiones alineadas? ¿O es algo que sienten que les falta definir?",
+   "texto_nuevo": "Mientras tu lista de requisitos sigue evolucionando, ¿qué te cuesta más hoy: decidir en qué puntos de revisión congelas cada parte del producto, o saber cuándo das por terminada una pieza física que todavía puede cambiar?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Pregunta por la alineación entre áreas del equipo, tema que el nodo no toca, y su respuesta no sirve para elegir entre los puntos de decisión y la adaptación de terminado."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-consejo_ejecutivo_calidad-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "consejo_ejecutivo_calidad",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Ahora que tienes claridad sobre quiénes son los responsables de guiar tu proyecto, ¿cómo planeas traducir esos objetivos que el equipo directivo ha acordado en tareas y resultados concretos que cada área o persona realmente entienda y pueda ejecutar día a día?",
+   "texto_nuevo": "Ahora que tienes claro quién participa en tu espacio de revisión, ¿cómo planeas traducir el plan de tu negocio en tareas y resultados concretos que tú y quienes te ayudan realmente entiendan y puedan ejecutar día a día?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Presupone un equipo directivo que ya acordó objetivos, cuando el nodo plantea un espacio de revisión que puede ser de la persona sola o con quienes la ayudan."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-consejo_de_calidad_y_rol_del_director-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "consejo_de_calidad_y_rol_del_director",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando piensas en cómo la calidad debería funcionar en tu proyecto, ¿ves que tu equipo de calidad está atrapado haciendo muchas tareas operativas que podrían hacer los propios equipos, o lo que más te preocupa es que la calidad no tiene suficiente voz en las decisiones grandes de la organización?",
+   "texto_nuevo": "Cuando piensas en cómo debería funcionar la calidad en tu proyecto, ¿lo que más te falta es que cada parte de tu negocio se haga cargo de su propia calidad, o que la calidad tenga voz en las decisiones grandes de tu estrategia?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "Da por hecho que la persona tiene un equipo de calidad atrapado en tareas operativas, cuando el nodo solo dice si tienes a alguien que lidera calidad y aplica cuando el negocio no tiene una forma clara de liderarla."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-mensaje_franquicias_conversion-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "mensaje_franquicias_conversion",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Cuando imaginas convenciendo a alguien que ya tiene un negocio funcionando para que se sume a tu idea, ¿en qué momento crees que estaría listo para escucharte: cuando ya tengas todo el sistema claro y probado, o prefieres empezar a conversar con esas personas primero para entender qué les importa y ajustar tu propuesta?",
+   "texto_nuevo": "Cuando piensas en convencer a dueños de negocios que ya funcionan para que se conviertan a tu marca, ¿todavía te falta mostrarles qué valor les sumas por encima de las regalías y de la independencia que ceden, o ese mensaje ya lo tienes claro y ahora lo que te ocupa es hablar con inversionistas grandes?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de responder a las objeciones de los franquiciados de conversión y la pregunta se va al momento de acercarse a ellos, sin que sus opciones lleven a los candidatos."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-examinar_trabajo_pasado_candidato-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "examinar_trabajo_pasado_candidato",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "¿Hay algún proyecto o trabajo que hayas hecho antes que sea muy parecido a lo que necesitas hacer ahora en tu idea? Si es así, ¿cómo fue ese proceso y qué aprendiste de él?",
+   "texto_nuevo": "Con el candidato que estás evaluando, ¿ya pudiste revisar ejemplos concretos de su trabajo en proyectos parecidos y aclarar qué partes fueron suyas, o todavía te falta algo para confiar en cómo trabajará?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de examinar el trabajo pasado de un candidato a contratar y la pregunta interroga a la persona sobre sus propios proyectos, cambiando el sujeto."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-desconexion_ventas_experiencia-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "desconexion_ventas_experiencia",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "¿Tienes clientes que ya están usando tu idea y que confiarían en ayudar a otros a empezar, o ese tipo de comunidad aún no existe en tu proyecto?",
+   "texto_nuevo": "Cuando un cliente nuevo pasa de la venta a la entrega, ¿quién lo recibe hoy y sabe lo que le prometiste, o ese traspaso todavía depende de que alguien se acuerde?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata del traspaso del cliente entre quien vende y quien entrega, y la pregunta indaga por una comunidad de clientes que ayuden a otros, tema ajeno al nodo."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
+  },
+  {
+   "id": "auditoria-preguntas-negociacion_con_plazos_artificiales-pregunta",
+   "fecha": "2026-10-06",
+   "node_id": "negociacion_con_plazos_artificiales",
+   "campo": "pregunta",
+   "veredicto": "LOGICA",
+   "texto_anterior": "Si en algún momento un competidor directo atacara tu idea con precios mucho más bajos, o si la prensa empezara a cuestionar si tu proyecto realmente funciona, ¿cómo te gustaría responder y a quién le hablarías primero?",
+   "texto_nuevo": "Si tuvieras que vender tu negocio o un activo con el tiempo en contra, ¿esa prisa vendría de una situación difícil que también tendrías que enfrentar dando la cara ante tu gente, o solo de que tus compradores no muestran urgencia?",
+   "cita": {
+    "instrumento": "auditoria de preguntas contra su propio nodo (encargo del fundador del 6 oct 2026, punto 4)",
+    "evidencia": "El nodo trata de poner fechas límite a varios compradores al vender un activo, y la pregunta habla de responder a un competidor o a la prensa, otro tema."
+   },
+   "verificacion": {
+    "paquete": "vq01",
+    "veredicto": "sostiene",
+    "trampa": "cazada"
+   },
+   "decision": "la pregunta logica se reemplaza por correccion declarada (REGLAS R1/R3)",
+   "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15"
   }
  ]
 }
