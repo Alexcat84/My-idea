@@ -15,7 +15,7 @@
     "Diseñar acciones/remedios solo para las causas de mayor riesgo",
     "Validar cada acción/remedio implementada"
   ],
-  "entregable_esperado": "Matriz FMEA completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
+  "entregable_esperado": "Matriz de análisis de modos y efectos de falla completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
   "nodos_previos": [
     "diagrama_de_flujo_proceso_map",
     "analisis_pareto_de_proveedores"
@@ -31,5 +31,23 @@
   "etiqueta_arbol": "Anticipa tus Modos de Falla",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-fmea_analisis_de_modos_de_falla-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Matriz FMEA completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
+      "texto_nuevo": "Matriz de análisis de modos y efectos de falla completa con modos de falla, causas, efectos, RPN calculado y plan de acción para los riesgos más altos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

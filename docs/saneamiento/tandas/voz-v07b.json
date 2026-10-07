@@ -1,0 +1,18 @@
+[
+ {
+  "id": "voz-v07b-nueve_pasos_iniciar_programa-etiqueta_arbol",
+  "fecha": "2026-10-07",
+  "node_id": "nueve_pasos_iniciar_programa",
+  "campo": "etiqueta_arbol",
+  "indice": null,
+  "veredicto": "COHERENCIA",
+  "texto_anterior": "Arranca tu Programa de Seguridad",
+  "texto_nuevo": "Inicia tu Programa de Seguridad",
+  "cita": {
+   "instrumento": "guarda de unicidad de etiquetas (web/lib/etiquetasCara.test.ts), acta 15.13",
+   "evidencia": "la correccion de voz-v07 le dio la misma etiqueta que su gemelo deprecado diez_pasos_iniciales_programa, que el grafo de la web conserva; esta dice lo mismo que su titulo (pasos simples para iniciar un programa de seguridad) sin chocar"
+  },
+  "decision": "saneamiento continuo de la voz (ola v07, suplemento): etiqueta distinta de la de su gemelo, fiel al titulo del nodo",
+  "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+ }
+]

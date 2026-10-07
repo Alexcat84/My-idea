@@ -6,14 +6,14 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "En la fase de control, tu equipo diseña y documenta los controles para sostener las ganancias de la mejora: actualizar el FMEA, aplicar, si es posible, técnicas a prueba de errores (mistake-proofing), fijar estándares de control según el desempeño real del nuevo proceso y garantizar el autocontrol de los individuos: que conozcan exactamente los estándares de producto y de proceso, reciban retroalimentación oportuna y tengan un proceso capaz, los medios necesarios y autoridad para ajustarlo.",
   "pasos_accionables": [
-    "Actualizar el FMEA para identificar controles necesarios",
-    "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
+    "Actualizar el análisis de modos de falla y sus efectos (FMEA) para identificar controles necesarios",
+    "Aplicar técnicas a prueba de errores en las mejoras, si es posible",
     "Diseñar controles de calidad de proceso para Xs y Ys",
     "Establecer estándares de control basados en el desempeño real",
-    "Determinar cómo se comparará el desempeño real con el estándar (SPC) y diseñar acciones para regular el desempeño si no lo cumple",
+    "Determinar cómo se comparará el desempeño real con el estándar (control estadístico de procesos) y diseñar acciones para regular el desempeño si no lo cumple",
     "Establecer el autocontrol para los individuos responsables del proceso"
   ],
-  "entregable_esperado": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing",
+  "entregable_esperado": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y técnicas a prueba de errores",
   "nodos_previos": [
     "diseno_de_mejoras_para_clientes"
   ],
@@ -94,6 +94,73 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pone la condición 'si es posible' a la prueba de errores y el resumen la omite.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-diseno_controles_proceso_mejorado-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Actualizar el FMEA para identificar controles necesarios",
+      "texto_nuevo": "Actualizar el análisis de modos de falla y sus efectos (FMEA) para identificar controles necesarios",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el FMEA"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_controles_proceso_mejorado-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar técnicas de mistake-proofing en las mejoras, si es posible",
+      "texto_nuevo": "Aplicar técnicas a prueba de errores en las mejoras, si es posible",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mistake-proofing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_controles_proceso_mejorado-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Determinar cómo se comparará el desempeño real con el estándar (SPC) y diseñar acciones para regular el desempeño si no lo cumple",
+      "texto_nuevo": "Determinar cómo se comparará el desempeño real con el estándar (control estadístico de procesos) y diseñar acciones para regular el desempeño si no lo cumple",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "(SPC)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_controles_proceso_mejorado-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y mistake-proofing",
+      "texto_nuevo": "Plan de control de proceso actualizado con estándares, mecanismos de retroalimentación y técnicas a prueba de errores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mistake-proofing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

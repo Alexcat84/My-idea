@@ -6,14 +6,14 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Herramienta visual tipo canvas que guia a quien tiene menos experiencia a mapear su propio plan de acción, en lugar de seguir una lista estándar de actividades. Se usan post its para volcar hipótesis en cada área: clientes, necesidades no resueltas, tendencias de mercado, competencia, propuesta de valor, soluciones, modelo de negocio, riesgos e incertidumbres criticas. Esto revela que se sabe con certeza y que es solo suposición, lo que permite priorizar las brechas de conocimiento a cerrar y definir actividades clave con responsable y plazo. Es una versión mas estructurada del lienzo en blanco que usan los mas expertos, útil para aumentar tu propio compromiso con el plan.",
   "pasos_accionables": [
-    "Completa el canvas con post its en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+    "Completa el lienzo con notas adhesivas en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
     "Define los segmentos de clientes objetivo, sus requisitos estándar y sus necesidades no resueltas",
     "Mapea tendencias de mercado y competidores relevantes",
     "Articula la propuesta de valor, las soluciones consideradas, cómo obtendrás valor del proyecto (modelo de negocio) y los riesgos que podrían ponerlo en peligro",
     "Separa qué es hecho comprobado y qué es suposición no probada, y prioriza las brechas críticas a cerrar",
     "Define las actividades clave: qué, quién la hace, cuándo y qué recursos necesitas"
   ],
-  "entregable_esperado": "Un canvas completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
+  "entregable_esperado": "Un lienzo completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
   "nodos_previos": [
     "modelo_contingencia_riesgo",
     "afinar_frente_difuso_innovacion",
@@ -237,6 +237,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El área de necesidades del lienzo incluye los requisitos estándar además de los problemas no resueltos; el paso deja fuera los requisitos estándar. | Hallado en la muestra de parada de la etapa 1 (semilla 20261001, acta 9.6).",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-lienzo_proyecto_innovacion-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Completa el canvas con post its en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+      "texto_nuevo": "Completa el lienzo con notas adhesivas en una sesión dedicada con el equipo del proyecto; esa sesión suele hacerse con alguien que la facilite",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "canvas",
+          "post its"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-lienzo_proyecto_innovacion-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un canvas completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
+      "texto_nuevo": "Un lienzo completo del proyecto de innovación con hipótesis documentadas en cada área, brechas de conocimiento identificadas y un plan de próximos pasos priorizado con tiempos.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Un canvas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

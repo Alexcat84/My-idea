@@ -9,10 +9,10 @@
     "Listar todas las operaciones de la cadena de suministro actualmente realizadas internamente",
     "Clasificar cada operación según si es núcleo competitivo o no",
     "Evaluar el costo interno de cada operación vs. el costo de tercerizarla",
-    "Identificar proveedores externos especializados en las operaciones no-núcleo",
+    "Identificar proveedores externos especializados en las operaciones no núcleo",
     "Definir acuerdos de nivel de servicio (SLA) para las operaciones tercerizadas"
   ],
-  "entregable_esperado": "Matriz de decisión de outsourcing con operaciones clasificadas como núcleo vs. tercerizables y análisis costo-beneficio",
+  "entregable_esperado": "Matriz de decisión de tercerización con operaciones clasificadas como núcleo vs. tercerizables y análisis costo-beneficio",
   "nodos_previos": [
     "definicion_alineacion_cadena_suministro"
   ],
@@ -72,6 +72,37 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): La enumeración del libro incluye a los proveedores de logística entre los participantes tradicionales.; Mismo defecto: falta proveedores de logística en la lista.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-outsourcing_cadena_suministro-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar proveedores externos especializados en las operaciones no-núcleo",
+      "texto_nuevo": "Identificar proveedores externos especializados en las operaciones no núcleo",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v07)",
+        "evidencia": "El adverbio 'no' antepuesto a un sustantivo se escribe separado y sin guion; el sentido es el mismo."
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-outsourcing_cadena_suministro-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Matriz de decisión de outsourcing con operaciones clasificadas como núcleo vs. tercerizables y análisis costo-beneficio",
+      "texto_nuevo": "Matriz de decisión de tercerización con operaciones clasificadas como núcleo vs. tercerizables y análisis costo-beneficio",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outsourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

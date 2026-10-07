@@ -6,11 +6,11 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Los criterios de negocio de un gate se dividen en tres categorías: Must-meet (preguntas de sí/no tipo checklist, eliminatorias, ej. alineación estratégica o ética), Go/Kill (criterios cuantitativos con umbral mínimo, ej. NPV positivo, IRR>30%, Payback<3 años), y Should-meet (criterios deseables usados para priorización relativa, evaluados en formato scorecard, ej. atractivo de mercado, ventaja competitiva). Estos criterios deben mantenerse consistentes de gate a gate cuando sea posible, aunque las subpreguntas financieras se vuelven más específicas en etapas avanzadas.",
   "pasos_accionables": [
-    "Definir una lista de preguntas must-meet tipo checklist para las primeras etapas (eliminatorias).",
-    "Definir umbrales financieros mínimos (NPV, IRR, Payback) para criterios Go/Kill en etapas avanzadas.",
+    "Definir una lista de preguntas de cumplimiento obligatorio tipo lista de verificación para las primeras etapas (eliminatorias).",
+    "Definir umbrales financieros mínimos (VAN, TIR, periodo de recuperación) para criterios de continuar o detener en etapas avanzadas.",
     "Usar un scorecard para las preguntas should-meet que evalúan atractivo relativo del proyecto.",
     "Mantener los mismos factores principales del scorecard consistentes entre gates, ajustando solo las subpreguntas según la etapa.",
-    "Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, sales-force request, o desarrollo tecnológico)."
+    "Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, solicitud de la fuerza de ventas, o desarrollo tecnológico)."
   ],
   "entregable_esperado": "Un set documentado de criterios must-meet, go/kill y should-meet (scorecard) por cada gate del proceso.",
   "nodos_previos": [
@@ -45,6 +45,61 @@
       },
       "decision": "auditoria final, barridos de cierre de la etapa 1 (contrario; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro junta Go/Kill y should-meet en un mismo bloque, con los financieros dentro del scorecard, y separa la verificación de preparación; decir que esas tres categorías no deben mezclarse lo contradice.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-tipos_criterios_gate-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir una lista de preguntas must-meet tipo checklist para las primeras etapas (eliminatorias).",
+      "texto_nuevo": "Definir una lista de preguntas de cumplimiento obligatorio tipo lista de verificación para las primeras etapas (eliminatorias).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "must-meet",
+          "checklist"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tipos_criterios_gate-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir umbrales financieros mínimos (NPV, IRR, Payback) para criterios Go/Kill en etapas avanzadas.",
+      "texto_nuevo": "Definir umbrales financieros mínimos (VAN, TIR, periodo de recuperación) para criterios de continuar o detener en etapas avanzadas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV",
+          "IRR",
+          "Payback",
+          "Go/Kill"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-tipos_criterios_gate-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, sales-force request, o desarrollo tecnológico).",
+      "texto_nuevo": "Adaptar los criterios según el tipo de proyecto (mayor innovación, renovación, solicitud de la fuerza de ventas, o desarrollo tecnológico).",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sales-force request"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Establece la seguridad y salud como prioridad máxima y comunícalo con claridad",
     "Predica con el ejemplo mostrando comportamientos seguros en tu trabajo diario",
-    "Crea y comunica un canal simple y sin represalias para reportar lesiones, enfermedades, incidentes (incluidos los cuasi accidentes), peligros o inquietudes de seguridad y salud, con una opción para reportar peligros o inquietudes de forma anónima",
+    "Crea y comunica un canal simple y sin represalias para informar de lesiones, enfermedades, incidentes (incluidos los cuasiaccidentes), peligros o inquietudes de seguridad y salud, con una opción para informar de peligros o inquietudes de forma anónima",
     "Capacita a tus trabajadores en identificar y controlar peligros, y realiza inspecciones conjuntas para recoger sus ideas de mejora",
     "Asigna a los trabajadores la tarea de elegir, implementar y evaluar las soluciones identificadas, e identifica las emergencias previsibles, prepara instrucciones para cada caso, reúnete a comentarlas y publícalas en un lugar visible del sitio",
     "Consulta a los trabajadores antes de cambios significativos y reserva tiempo regular para revisar y mejorar el programa"
@@ -27,7 +27,7 @@
     "Cuando el marco completo de elementos de seguridad te resulta abrumador",
     "Cuando buscas un punto de partida sencillo antes de estructurar un programa completo"
   ],
-  "etiqueta_arbol": "Nueve Pasos para tu Programa",
+  "etiqueta_arbol": "Inicia tu Programa de Seguridad",
   "ids_alias": [
     "diez_pasos_iniciales_programa"
   ],
@@ -180,6 +180,54 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide identificar las emergencias previsibles, preparar instrucciones para cada caso y reunirse a comentarlas antes de colocarlas a la vista; el paso lo reduce a protocolos visibles.; Se cae la reunión para comentar las instrucciones, parte del mismo procedimiento.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-nueve_pasos_iniciar_programa-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Nueve Pasos para tu Programa",
+      "texto_nuevo": "Arranca tu Programa de Seguridad",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Nueve Pasos para"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-nueve_pasos_iniciar_programa-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crea y comunica un canal simple y sin represalias para reportar lesiones, enfermedades, incidentes (incluidos los cuasi accidentes), peligros o inquietudes de seguridad y salud, con una opción para reportar peligros o inquietudes de forma anónima",
+      "texto_nuevo": "Crea y comunica un canal simple y sin represalias para informar de lesiones, enfermedades, incidentes (incluidos los cuasiaccidentes), peligros o inquietudes de seguridad y salud, con una opción para informar de peligros o inquietudes de forma anónima",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "para reportar",
+          "cuasi accidentes"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-v07b-nueve_pasos_iniciar_programa-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Arranca tu Programa de Seguridad",
+      "texto_nuevo": "Inicia tu Programa de Seguridad",
+      "cita": {
+        "instrumento": "guarda de unicidad de etiquetas (web/lib/etiquetasCara.test.ts), acta 15.13",
+        "evidencia": "la correccion de voz-v07 le dio la misma etiqueta que su gemelo deprecado diez_pasos_iniciales_programa, que el grafo de la web conserva; esta dice lo mismo que su titulo (pasos simples para iniciar un programa de seguridad) sin chocar"
+      },
+      "decision": "saneamiento continuo de la voz (ola v07, suplemento): etiqueta distinta de la de su gemelo, fiel al titulo del nodo",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

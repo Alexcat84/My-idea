@@ -11,7 +11,7 @@
     "Determinar cuántas llamadas de venta y cuánto tiempo toma cerrar una venta",
     "Probar el proceso de venta completo con órdenes reales a precio completo antes de escalar"
   ],
-  "entregable_esperado": "Sales roadmap validado con evidencia de ventas repetibles antes de construir el equipo comercial",
+  "entregable_esperado": "Hoja de ruta de ventas validada con evidencia de ventas repetibles antes de construir el equipo comercial",
   "nodos_previos": [
     "producto_minimo_viable",
     "customer_discovery",
@@ -46,6 +46,22 @@
         "evidencia": "Q093-028: Customer Validation consiste en convertir hipótesis en hechos con ventas reales antes de escalar, lo que es validacion con el mercado y no planificacion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "voz-customer_validation_sales_roadmap-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sales roadmap validado con evidencia de ventas repetibles antes de construir el equipo comercial",
+      "texto_nuevo": "Hoja de ruta de ventas validada con evidencia de ventas repetibles antes de construir el equipo comercial",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Sales roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

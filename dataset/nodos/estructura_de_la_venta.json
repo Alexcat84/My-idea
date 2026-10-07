@@ -7,10 +7,10 @@
   "resumen_teorico": "Cuando negocias la venta de tu negocio, hay muchas formas de estructurarla; dos de las principales son cobrar todo en efectivo de una vez por tus acciones, o una parte al momento y otra parte importante en pagos futuros que dependen de que el negocio cumpla ciertas metas después de la venta (earn-out). Si confías en el futuro del negocio, el earn-out te puede convenir: te permite pedir más dinero y le muestra al comprador que crees en lo que construiste. Pero tiene riesgos: puedes perder el control sobre decisiones que afectan si esas metas se cumplen, y puedes quedarte sin ese dinero por cosas que no dependen de ti, como cambios del mercado o que el comprador cambie de prioridades.",
   "pasos_accionables": [
     "Pregúntate qué tan seguro estás del desempeño futuro de tu negocio",
-    "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el earn-out",
+    "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el pago condicionado a metas",
     "Compara las ofertas: dinero inmediato contra dinero condicionado a cumplir metas",
     "Revisa cuánto control vas a mantener sobre las decisiones que afectan esas metas",
-    "Negocia condiciones de earn-out realistas, con supuestos conservadores"
+    "Negocia condiciones realistas de pago condicionado a metas, con supuestos conservadores"
   ],
   "entregable_esperado": "Condiciones de negociación claras sobre cómo vas a cobrar (todo de una vez o por metas cumplidas), alineadas con el riesgo que estás dispuesto a asumir.",
   "nodos_previos": [
@@ -77,6 +77,40 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que la venta se puede estructurar de muchas formas y estas son dos de las principales; el nodo la reduce a una elección entre solo dos.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-estructura_de_la_venta-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el earn-out",
+      "texto_nuevo": "Decide si quieres o puedes comprometerte a seguir trabajando ahí durante los años que dure el pago condicionado a metas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earn-out"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estructura_de_la_venta-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negocia condiciones de earn-out realistas, con supuestos conservadores",
+      "texto_nuevo": "Negocia condiciones realistas de pago condicionado a metas, con supuestos conservadores",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earn-out"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

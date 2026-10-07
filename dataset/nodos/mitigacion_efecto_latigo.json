@@ -7,10 +7,10 @@
   "resumen_teorico": "Existen cinco factores que generan el efecto látigo y sus respectivas estrategias de mitigación: (1) pronóstico de demanda basado en pedidos en lugar de datos de punto de venta reales; (2) agrupamiento de pedidos (order batching) por costos de procesamiento/transporte; (3) racionamiento de producto que induce 'shortage gaming'; (4) fluctuación de precios que genera compras anticipadas; y (5) incentivos de desempeño desalineados (ej. cuotas de fin de mes). Cada factor requiere una intervención específica: compartir datos POS, reducir costos de pedido, basar el racionamiento en históricos, aplicar precios estables ('everyday low prices'), y alinear incentivos con costeo basado en actividades (ABC).",
   "pasos_accionables": [
     "Sustituir pronósticos basados en pedidos por datos de punto de venta (POS) compartidos",
-    "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes",
+    "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y operadores logísticos externos para permitir lotes más pequeños y frecuentes",
     "Basar el racionamiento de producto en patrones históricos de pedido, no en el pedido actual, y avisar con anticipación de posibles escaseces",
     "Implementar políticas de precios estables ('everyday low price') para evitar compras anticipadas",
-    "Rediseñar incentivos de ventas e internos partiendo de datos de costeo ABC: cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente"
+    "Rediseñar incentivos de ventas e internos partiendo de datos de costeo basado en actividades (ABC): cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente"
   ],
   "entregable_esperado": "Plan de acción con al menos una intervención implementada por cada uno de los cinco factores causales del efecto látigo",
   "nodos_previos": [
@@ -61,6 +61,40 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): Mismo resultado prometido con ABC que el libro no da; allí ABC es solo el comienzo del proceso.; Promete eliminar el impulso de ventas por cuota; el libro presenta la alineación de incentivos como un reto que cada empresa trabaja a su manera.; Se cae el procedimiento del libro: tras los datos ABC, cuantificar el costo de las compras por cuota, identificar incentivos internos en conflicto y experimentar con nuevos planes.",
       "indice": 4,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-mitigacion_efecto_latigo-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y 3PLs para permitir lotes más pequeños y frecuentes",
+      "texto_nuevo": "Reducir costos de procesamiento de pedidos mediante pedidos electrónicos y operadores logísticos externos para permitir lotes más pequeños y frecuentes",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "3PLs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-mitigacion_efecto_latigo-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Rediseñar incentivos de ventas e internos partiendo de datos de costeo ABC: cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente",
+      "texto_nuevo": "Rediseñar incentivos de ventas e internos partiendo de datos de costeo basado en actividades (ABC): cuantificar lo que cuestan las compras anticipadas por cuotas de fin de periodo, identificar los incentivos internos en conflicto y experimentar con nuevos planes que apoyen una cadena eficiente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "costeo ABC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

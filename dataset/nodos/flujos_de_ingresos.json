@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Preguntar por qué valor están los clientes realmente dispuestos a pagar",
     "Seleccionar el/los mecanismo(s) de ingreso adecuados (venta, uso, suscripción, licencia, etc.)",
-    "Definir si el precio será fijo (lista, por característica, por segmento, por volumen) o dinámico (negociación, subasta, yield management, mercado en tiempo real según oferta y demanda)",
+    "Definir si el precio será fijo (lista, por característica, por segmento, por volumen) o dinámico (negociación, subasta, gestión de ingresos, mercado en tiempo real según oferta y demanda)",
     "Estimar la contribución de cada flujo de ingreso al total"
   ],
   "entregable_esperado": "Estructura de ingresos definida con mecanismos y tipo de precio por segmento",
@@ -46,6 +46,23 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro trae cuatro mecanismos dinámicos y el paso omite el de mercado en tiempo real según oferta y demanda.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-flujos_de_ingresos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir si el precio será fijo (lista, por característica, por segmento, por volumen) o dinámico (negociación, subasta, yield management, mercado en tiempo real según oferta y demanda)",
+      "texto_nuevo": "Definir si el precio será fijo (lista, por característica, por segmento, por volumen) o dinámico (negociación, subasta, gestión de ingresos, mercado en tiempo real según oferta y demanda)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "yield management"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

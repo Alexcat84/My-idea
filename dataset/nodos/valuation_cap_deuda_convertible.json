@@ -6,12 +6,12 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "El valuation cap establece un techo máximo sobre el precio de conversión de la deuda convertible, protegiendo a los inversionistas tempranos de que su descuento no sea suficiente si la empresa alcanza una valuación muy alta en la siguiente ronda. Sin embargo, puede fijar un techo indeseado para negociaciones futuras con nuevos inversionistas (VCs), ya que algunos de ellos ven el cap existente como el techo de precio de la siguiente ronda.",
   "pasos_accionables": [
-    "Negociar el cap con cuidado, según la etapa en que está la empresa.",
-    "Evitar revelar el cap a nuevos inversionistas VC hasta haber acordado un precio, si es posible.",
-    "Analizar el efecto combinado del cap y el descuento para saber cuál aplica en la conversión real.",
-    "Considerar los riesgos de que el cap se convierta en un techo de precio para la ronda Serie A."
+    "Negociar el tope de valuación con cuidado, según la etapa en que está la empresa.",
+    "Evitar revelar el tope de valuación a nuevos inversionistas de capital de riesgo hasta haber acordado un precio, si es posible.",
+    "Analizar el efecto combinado del tope de valuación y el descuento para saber cuál aplica en la conversión real.",
+    "Considerar los riesgos de que el tope de valuación se convierta en un techo de precio para la ronda Serie A."
   ],
-  "entregable_esperado": "Cláusula de valuation cap definida y documentada en el acuerdo de nota convertible, con simulación de escenarios de conversión.",
+  "entregable_esperado": "Cláusula de tope de valuación definida y documentada en el acuerdo de nota convertible, con simulación de escenarios de conversión.",
   "nodos_previos": [
     "convertible_debt_fundamentos"
   ],
@@ -60,6 +60,91 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): Cambia el criterio del libro (negociar el cap con cuidado según la etapa) por uno que no da (valor esperado a corto o mediano plazo).; Mismo criterio inventado.",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-valuation_cap_deuda_convertible-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Negociar el cap con cuidado, según la etapa en que está la empresa.",
+      "texto_nuevo": "Negociar el tope de valuación con cuidado, según la etapa en que está la empresa.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el cap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuation_cap_deuda_convertible-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evitar revelar el cap a nuevos inversionistas VC hasta haber acordado un precio, si es posible.",
+      "texto_nuevo": "Evitar revelar el tope de valuación a nuevos inversionistas de capital de riesgo hasta haber acordado un precio, si es posible.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el cap",
+          "VC"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuation_cap_deuda_convertible-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar el efecto combinado del cap y el descuento para saber cuál aplica en la conversión real.",
+      "texto_nuevo": "Analizar el efecto combinado del tope de valuación y el descuento para saber cuál aplica en la conversión real.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "del cap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuation_cap_deuda_convertible-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considerar los riesgos de que el cap se convierta en un techo de precio para la ronda Serie A.",
+      "texto_nuevo": "Considerar los riesgos de que el tope de valuación se convierta en un techo de precio para la ronda Serie A.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el cap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-valuation_cap_deuda_convertible-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cláusula de valuation cap definida y documentada en el acuerdo de nota convertible, con simulación de escenarios de conversión.",
+      "texto_nuevo": "Cláusula de tope de valuación definida y documentada en el acuerdo de nota convertible, con simulación de escenarios de conversión.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "valuation cap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

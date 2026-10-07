@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Listar las funciones que requiere el negocio pero que no justifican contratación interna aún",
     "Evaluar proveedores externos especializados para cada función (marketing, legal, contabilidad, ventas de franquicia)",
-    "Definir si el outsourcing será temporal (stopgap) o de largo plazo según el plan de crecimiento",
-    "Revisar el costo-beneficio de outsourcing vs contratación interna en cada etapa de crecimiento"
+    "Definir si la tercerización será temporal o de largo plazo según el plan de crecimiento",
+    "Revisar el costo-beneficio de la tercerización vs contratación interna en cada etapa de crecimiento"
   ],
   "entregable_esperado": "Un mapa de funciones tercerizadas con proveedores identificados y criterio de transición a personal interno",
   "nodos_previos": [
@@ -24,5 +24,42 @@
   "etiqueta_arbol": "Terceriza Funciones al Iniciar",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-outsourcing_funciones_franquicia-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir si el outsourcing será temporal (stopgap) o de largo plazo según el plan de crecimiento",
+      "texto_nuevo": "Definir si la tercerización será temporal o de largo plazo según el plan de crecimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el outsourcing",
+          "(stopgap)"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-outsourcing_funciones_franquicia-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar el costo-beneficio de outsourcing vs contratación interna en cada etapa de crecimiento",
+      "texto_nuevo": "Revisar el costo-beneficio de la tercerización vs contratación interna en cada etapa de crecimiento",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outsourcing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

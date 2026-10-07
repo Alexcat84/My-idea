@@ -12,7 +12,7 @@
     "Indica si entregas los documentos solo contra el pago (sight draft) o contra la aceptación de pago futuro (time draft).",
     "Decide quién paga los costos del banco y si quieres pedir protesto formal en caso de que no te paguen o no acepten, sabiendo que los gastos extra del protesto suelen cargarse a ti.",
     "Entrega la letra y los documentos a tu banco para que los envíe al banco del comprador, siguiendo las instrucciones que el comprador te dio.",
-    "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft"
+    "Evaluar el riesgo de no pago, especialmente en envíos aéreos con letra a la vista"
   ],
   "entregable_esperado": "Tu letra de cambio y tu carta de instrucciones completas y firmadas, listas para enviar al banco junto con los documentos de embarque que te pidieron.",
   "nodos_previos": [
@@ -94,6 +94,23 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): En el cobro documentario el exportador confía la letra y los documentos a su propio banco, que los remite al banco del comprador; el paso se salta tu banco y sugiere enviarlos directamente.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-letra_de_cambio_bill_of_exchange-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el riesgo de no pago, especialmente en envíos aéreos con sight draft",
+      "texto_nuevo": "Evaluar el riesgo de no pago, especialmente en envíos aéreos con letra a la vista",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "sight draft"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

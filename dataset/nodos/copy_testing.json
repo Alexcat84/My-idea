@@ -6,13 +6,13 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "El copy testing es la práctica de probar y mejorar continuamente los textos de venta, ofertas y mensajes que buscan generar interés en el producto. Ningún titular es nunca el mejor posible; siempre hay margen de mejora. Los usuarios suelen enfocarse en titulares, palabras resaltadas y listas con viñetas, sin leer todo el texto.",
   "pasos_accionables": [
-    "Identificar los textos clave (titulares, ofertas, CTAs) del sitio/app",
-    "Crear variantes de copy enfocadas en titulares, palabras clave y listas",
-    "Testear las variantes mediante A/B testing, focus groups o encuestas web",
+    "Identificar los textos clave (titulares, ofertas, llamados a la acción) del sitio/app",
+    "Crear variantes de texto enfocadas en titulares, palabras clave y listas",
+    "Testear las variantes mediante pruebas A/B, grupos focales o encuestas web",
     "Priorizar elementos de diseño efectivos: texto plano, rostros humanos, elementos visuales atractivos",
     "Iterar continuamente ya que siempre existe una versión potencialmente mejor"
   ],
-  "entregable_esperado": "Set de variantes de copy probadas con métricas de desempeño comparadas",
+  "entregable_esperado": "Set de variantes de texto probadas con métricas de desempeño comparadas",
   "nodos_previos": [
     "fit_value_proposition",
     "diez_principios_testing"
@@ -27,5 +27,75 @@
   "etiqueta_arbol": "Prueba y Mejora tus Textos",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-copy_testing-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar los textos clave (titulares, ofertas, CTAs) del sitio/app",
+      "texto_nuevo": "Identificar los textos clave (titulares, ofertas, llamados a la acción) del sitio/app",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "CTAs"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-copy_testing-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Crear variantes de copy enfocadas en titulares, palabras clave y listas",
+      "texto_nuevo": "Crear variantes de texto enfocadas en titulares, palabras clave y listas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "copy"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-copy_testing-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Testear las variantes mediante A/B testing, focus groups o encuestas web",
+      "texto_nuevo": "Testear las variantes mediante pruebas A/B, grupos focales o encuestas web",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "A/B testing",
+          "focus groups"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-copy_testing-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Set de variantes de copy probadas con métricas de desempeño comparadas",
+      "texto_nuevo": "Set de variantes de texto probadas con métricas de desempeño comparadas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "copy"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

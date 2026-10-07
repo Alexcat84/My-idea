@@ -18,10 +18,11 @@ PARES = json.loads((BASE / "docs" / "saneamiento" / "ortografia" / "tildes_mecan
 
 
 def test_las_ambiguas_no_estan_en_la_lista():
-    # Lista del fundador ("solo, este, tu, si, mas, el, aun y similares") mas las que tienen otra lectura sin tilde.
+    # Lista del fundador ("solo, este, tu, si, mas, el, aun y similares") mas las que tienen otra lectura sin tilde
+    # ("cobertura cambiaria" es el adjetivo, no el verbo: la lista la rompia y los lectores de voz-v07 lo cazaron).
     ambiguas = ["solo", "este", "esta", "estas", "tu", "si", "mas", "el", "aun", "que", "como", "cuando", "donde",
                 "quien", "cual", "critica", "practica", "publico", "calculo", "continua", "limites", "numero",
-                "negocio", "cambio", "paso", "seria", "periodo", "diseno", "dano", "envio", "guia", "linea", "ultimo"]
+                "negocio", "cambio", "cambiaria", "cambiarias", "paso", "seria", "periodo", "diseno", "dano", "envio", "guia", "linea", "ultimo"]
     assert [a for a in ambiguas if a in PARES] == []
 
 

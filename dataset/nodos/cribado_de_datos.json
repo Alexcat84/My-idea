@@ -9,11 +9,11 @@
     "Calcular la media y desviación estándar del conjunto de datos",
     "Definir el multiplicador L según el tamaño de la muestra (ej. L=3 para n=1000, L=2.5 para n=100)",
     "Identificar observaciones fuera del intervalo ±L desviaciones estándar",
-    "Investigar la causa de cada posible outlier y eliminarlo solo si se puede atribuir a una causa específica",
+    "Investigar la causa de cada posible valor atípico y eliminarlo solo si se puede atribuir a una causa específica",
     "Visualizar los datos con diagramas de caja o dispersión para detectar anomalías",
     "Repetir el cribado tras corregir o eliminar datos erróneos"
   ],
-  "entregable_esperado": "Conjunto de datos depurado y validado, con outliers identificados y justificados, listo para análisis estadístico",
+  "entregable_esperado": "Conjunto de datos depurado y validado, con valores atípicos identificados y justificados, listo para análisis estadístico",
   "nodos_previos": [
     "diseno_de_metodos_de_recoleccion_de_datos",
     "analisis_de_sistemas_de_medicion_msa"
@@ -47,6 +47,39 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El paso da por hecha la eliminación; el libro solo la admite si el outlier se rastrea a una causa específica y advierte del riesgo de borrar datos valiosos.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-cribado_de_datos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Investigar la causa de cada posible outlier y eliminarlo solo si se puede atribuir a una causa específica",
+      "texto_nuevo": "Investigar la causa de cada posible valor atípico y eliminarlo solo si se puede atribuir a una causa específica",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outlier"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-cribado_de_datos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conjunto de datos depurado y validado, con outliers identificados y justificados, listo para análisis estadístico",
+      "texto_nuevo": "Conjunto de datos depurado y validado, con valores atípicos identificados y justificados, listo para análisis estadístico",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "outliers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

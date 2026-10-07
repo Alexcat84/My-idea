@@ -10,9 +10,9 @@
     "Realizar un primer filtro cualitativo (Idea Screen) basado en potencial estratégico y viabilidad técnica",
     "Definir primero el alcance del proyecto con un trabajo breve de preparación (literatura técnica, patentes, alternativas competidoras e identificación de brechas de recursos) y luego ejecutar una evaluación técnica preliminar de bajo costo para demostrar factibilidad técnica en condiciones ideales",
     "Profundizar en una investigación detallada si los resultados son prometedores",
-    "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave"
+    "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en los puntos de decisión del proceso e incluyendo transferencia de personal clave"
   ],
-  "entregable_esperado": "Un plan de transferencia tecnológica documentado con gates claros y un business case preliminar de aplicación comercial",
+  "entregable_esperado": "Un plan de transferencia tecnológica documentado con puntos de decisión claros y un caso de negocio preliminar de aplicación comercial",
   "nodos_previos": [
     "procesos_contextuales_stage_gate",
     "backlog_evolutivo_y_cronograma_flexible",
@@ -82,6 +82,40 @@
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro limita la evaluación técnica a demostrar factibilidad técnica en condiciones ideales; probarla queda para la investigación detallada.; La lista del trabajo de alcance del libro incluye la identificación de brechas de recursos, que el paso omite.; Mismo defecto que la marca 0: se cae la identificación de brechas de recursos de la lista del libro.",
       "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-stage_gate_td_tecnologia-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en las gates del proceso e incluyendo transferencia de personal clave",
+      "texto_nuevo": "Planificar la transferencia de la tecnología a la unidad de negocio, sumando desde temprano a su gente clave como decisores en los puntos de decisión del proceso e incluyendo transferencia de personal clave",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "en las gates del proceso"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-stage_gate_td_tecnologia-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un plan de transferencia tecnológica documentado con gates claros y un business case preliminar de aplicación comercial",
+      "texto_nuevo": "Un plan de transferencia tecnológica documentado con puntos de decisión claros y un caso de negocio preliminar de aplicación comercial",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gates claros",
+          "business case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

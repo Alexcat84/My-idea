@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Las tecnologías de eco-routing permiten planificar no solo la ruta más rápida sino la más eficiente en combustible, considerando pendientes, semáforos y límites de velocidad. Además, emparejar el tipo correcto de vehículo con la ruta adecuada (alta capacidad para rutas cortas, alta eficiencia para rutas largas) optimiza el consumo de combustible y reduce emisiones significativamente.",
   "pasos_accionables": [
-    "Implementar tecnología de eco-routing que calcule la ruta más eficiente en combustible, no solo la más rápida.",
+    "Implementar tecnología de enrutamiento ecológico que calcule la ruta más eficiente en combustible, no solo la más rápida.",
     "Eliminar giros innecesarios (ej. giros a la izquierda) que incrementan tiempo de motor encendido.",
     "Emparejar vehículos de baja capacidad y alta eficiencia con rutas de alto kilometraje, y viceversa.",
     "Medir el ahorro de combustible comparando rutas tradicionales vs. rutas optimizadas."
@@ -23,5 +23,24 @@
   "etiqueta_arbol": "Optimiza tus Rutas y Combustible",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-optimizacion_rutas_ecoruteo-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar tecnología de eco-routing que calcule la ruta más eficiente en combustible, no solo la más rápida.",
+      "texto_nuevo": "Implementar tecnología de enrutamiento ecológico que calcule la ruta más eficiente en combustible, no solo la más rápida.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "eco-routing"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

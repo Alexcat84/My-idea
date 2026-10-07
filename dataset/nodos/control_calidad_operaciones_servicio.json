@@ -7,12 +7,12 @@
   "resumen_teorico": "El control de calidad en servicios sigue un ciclo estructurado: elegir sujetos de control, establecer medición, establecer estándares de desempeño, medir el desempeño real, comparar el desempeño contra los estándares y tomar acción sobre la diferencia. Se distinguen indicadores de desempeño (miden la salida del proceso y su conformidad con necesidades del cliente) e indicadores de proceso (miden actividades o variación interna que afectan el desempeño).",
   "pasos_accionables": [
     "Identificar el proceso principal, su objetivo, y las necesidades del cliente",
-    "Seleccionar sujetos de control relevantes (features de producto, proceso o efectos secundarios)",
+    "Seleccionar sujetos de control relevantes (características de producto, proceso o efectos secundarios)",
     "Definir indicadores de desempeño y de proceso con unidades de medida claras",
     "Establecer valores objetivo y límites máximos/mínimos para cada indicador",
-    "Medir el desempeño real usando métodos automatizados o mystery shoppers",
+    "Medir el desempeño real usando métodos automatizados o clientes incógnitos",
     "Comparar resultados contra estándares, pudiendo usar control estadístico de procesos para distinguir causas comunes y especiales",
-    "Aplicar troubleshooting, mejora de calidad o planificación según la brecha detectada"
+    "Aplicar diagnóstico y solución de problemas, mejora de calidad o planificación según la brecha detectada"
   ],
   "entregable_esperado": "Sistema de control de calidad documentado con indicadores definidos, estándares establecidos y mecanismo de comparación y acción correctiva",
   "nodos_previos": [
@@ -48,6 +48,57 @@
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que la comparación puede usar control estadístico de procesos; el paso lo vuelve el método obligado.; Mismo endurecimiento: 'may use' pasa a método fijo.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-control_calidad_operaciones_servicio-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Seleccionar sujetos de control relevantes (features de producto, proceso o efectos secundarios)",
+      "texto_nuevo": "Seleccionar sujetos de control relevantes (características de producto, proceso o efectos secundarios)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "features"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_calidad_operaciones_servicio-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Medir el desempeño real usando métodos automatizados o mystery shoppers",
+      "texto_nuevo": "Medir el desempeño real usando métodos automatizados o clientes incógnitos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "mystery shoppers"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-control_calidad_operaciones_servicio-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar troubleshooting, mejora de calidad o planificación según la brecha detectada",
+      "texto_nuevo": "Aplicar diagnóstico y solución de problemas, mejora de calidad o planificación según la brecha detectada",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "troubleshooting"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

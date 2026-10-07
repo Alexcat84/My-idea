@@ -11,7 +11,7 @@
     "Priorizar materiales y diseños que extiendan la vida útil del producto",
     "Elegir la estrategia (reciclaje, reacondicionamiento, longevidad) según el tipo de producto"
   ],
-  "entregable_esperado": "Estrategia de DfE seleccionada (reciclaje, reacondicionamiento o longevidad) aplicada al diseño del producto",
+  "entregable_esperado": "Estrategia de diseño ecológico seleccionada (reciclaje, reacondicionamiento o longevidad) aplicada al diseño del producto",
   "nodos_previos": [
     "quimica_verde",
     "marcos_pensamiento_dfe"
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Separa tus Estrategias Ambientales",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-separar_opciones_dfe-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Estrategia de DfE seleccionada (reciclaje, reacondicionamiento o longevidad) aplicada al diseño del producto",
+      "texto_nuevo": "Estrategia de diseño ecológico seleccionada (reciclaje, reacondicionamiento o longevidad) aplicada al diseño del producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "DfE"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -9,7 +9,7 @@
     "Pregunta directamente qué otras franquicias está considerando el candidato",
     "Compara en detalle tu franquicia con las de tus competidores directos",
     "Responde destacando tus diferencias, incluyendo tus propias desventajas, con una justificación clara",
-    "Si el competidor es de una industria distinta, enfoca la conversación en las ventajas de panorama general"
+    "Si el competidor es de una industria distinta, enfoca la conversación en las ventajas generales"
   ],
   "entregable_esperado": "Un resumen claro de cómo te comparas con tus competidores directos, con tu propuesta única de venta bien definida y lista para usar en cualquier conversación con un candidato",
   "nodos_previos": [
@@ -22,5 +22,24 @@
   "etiqueta_arbol": "Posiciónate frente a Competidores",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-posicionamiento_vs_competidores-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si el competidor es de una industria distinta, enfoca la conversación en las ventajas de panorama general",
+      "texto_nuevo": "Si el competidor es de una industria distinta, enfoca la conversación en las ventajas generales",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "ventajas de panorama general"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

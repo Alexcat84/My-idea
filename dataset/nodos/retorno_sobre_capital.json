@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Calcular: Ganancia Neta / Capital de los Accionistas (Equity)",
     "Comparar el ROE con el retorno de inversiones libres de riesgo",
-    "Analizar si un ROE alto se debe a mayor deuda (revisar debt-to-equity) o a mejor gestión operativa"
+    "Analizar si un ROE alto se debe a mayor deuda (revisar la razón deuda/capital) o a mejor gestión operativa"
   ],
   "entregable_esperado": "Cálculo de ROE y justificación del retorno frente al riesgo asumido",
   "nodos_previos": [
@@ -24,5 +24,24 @@
   "etiqueta_arbol": "Calcula el Retorno de tu Capital",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-retorno_sobre_capital-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Analizar si un ROE alto se debe a mayor deuda (revisar debt-to-equity) o a mejor gestión operativa",
+      "texto_nuevo": "Analizar si un ROE alto se debe a mayor deuda (revisar la razón deuda/capital) o a mejor gestión operativa",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "debt-to-equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

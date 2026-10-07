@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Comparte tu mapa de propuesta de valor con quienes te ayudan en ventas, marketing y producto",
     "Traduce los aliviadores de dolor y creadores de ganancia (pain relievers y gain creators) en mensajes de marketing y guiones de venta",
-    "Explica a tus socios de canal por qué los clientes amarán tu producto",
+    "Explica a tus socios de canal por qué a los clientes les encantará tu producto",
     "Alinea tu discurso frente a inversionistas o socios con tu propuesta de valor central",
     "Crea materiales (publicidad, empaque, videos explicativos) coherentes con tu mapa"
   ],
@@ -27,5 +27,24 @@
   "etiqueta_arbol": "Alinea tu Equipo con Canvas",
   "fuentes_internas": [
     "Value Proposition Design"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-alineacion_con_canvas-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Explica a tus socios de canal por qué los clientes amarán tu producto",
+      "texto_nuevo": "Explica a tus socios de canal por qué a los clientes les encantará tu producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "los clientes amarán"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Capacítate y obtén tu tarjeta de operador válida",
     "Revisa la herramienta antes de cada uso para detectar obstrucciones o defectos",
-    "Guarda la herramienta en un contenedor bloqueado, uno por cada herramienta",
-    "Coloca la señal de 'EXPLOSIVE-TOOL IN USE' mientras la usas"
+    "Guarda la herramienta en un contenedor cerrado con llave, uno por cada herramienta",
+    "Coloca la señal de 'HERRAMIENTA EXPLOSIVA EN USO' mientras la usas"
   ],
   "entregable_esperado": "Tu registro de capacitación y el procedimiento de uso seguro por escrito",
   "nodos_previos": [
@@ -58,6 +58,40 @@
       "decision": "auditoria final, barridos de cierre de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro pide revisar la herramienta antes de usarla por obstrucciones y por defectos; el paso deja fuera las obstrucciones.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-herramientas_accionadas_por_explosivos-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Guarda la herramienta en un contenedor bloqueado, uno por cada herramienta",
+      "texto_nuevo": "Guarda la herramienta en un contenedor cerrado con llave, uno por cada herramienta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "contenedor bloqueado"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-herramientas_accionadas_por_explosivos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Coloca la señal de 'EXPLOSIVE-TOOL IN USE' mientras la usas",
+      "texto_nuevo": "Coloca la señal de 'HERRAMIENTA EXPLOSIVA EN USO' mientras la usas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "'EXPLOSIVE-TOOL IN USE'"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

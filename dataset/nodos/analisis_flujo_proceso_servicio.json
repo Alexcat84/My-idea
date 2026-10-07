@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Los diagramas de flujo de proceso (mapas de proceso o blueprints de servicio) permiten visualizar las actividades del servicio, identificando la 'línea de interacción' (donde cliente y empleados interactúan), la 'línea de invisibilidad' (actividades visibles vs no visibles para el cliente) y los límites organizacionales. Se identifican puntos de proceso (P) donde pueden ocurrir problemas que causen insatisfacción del cliente, permitiendo implementar acciones preventivas.",
   "pasos_accionables": [
-    "Mapear todas las actividades del proceso de servicio incluyendo front-office y back-office",
+    "Mapear todas las actividades del proceso de servicio incluyendo las de cara al cliente y las internas",
     "Identificar la línea de interacción cliente-empleado",
     "Marcar la línea de invisibilidad entre actividades visibles y no visibles al cliente",
     "Identificar puntos de proceso (P) donde pueden ocurrir problemas",
@@ -28,5 +28,24 @@
   "etiqueta_arbol": "Visualiza tu Proceso de Servicio",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-analisis_flujo_proceso_servicio-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mapear todas las actividades del proceso de servicio incluyendo front-office y back-office",
+      "texto_nuevo": "Mapear todas las actividades del proceso de servicio incluyendo las de cara al cliente y las internas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "front-office y back-office"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

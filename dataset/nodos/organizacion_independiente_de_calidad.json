@@ -7,7 +7,7 @@
   "resumen_teorico": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las áreas que revisa: ingeniería, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas áreas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interés.",
   "pasos_accionables": [
     "Ubica a quien se encarga de calidad al mismo nivel que ingeniería, producción y marketing en tu organigrama.",
-    "Asegúrate de que esa persona te reporte directamente a ti, no a las áreas operativas.",
+    "Asegúrate de que esa persona dependa directamente de ti, no de las áreas operativas.",
     "Elige a alguien capaz de comunicarse, e incluso llamar la atención a otros responsables, sin generar antagonismo.",
     "Evita que la calidad se convierta en solo una revisión posterior; que prevenga defectos activamente, no que solo los detecte."
   ],
@@ -127,6 +127,24 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (invencion_dura; modo quitar; doble lectura ciega, arbitro): El libro no atribuye la prevención a la independencia en el organigrama; dice que esa labor no se puede poner en un organigrama.; Mismo defecto: la ubicación organizacional no produce la prevención según el libro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-organizacion_independiente_de_calidad-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegúrate de que esa persona te reporte directamente a ti, no a las áreas operativas.",
+      "texto_nuevo": "Asegúrate de que esa persona dependa directamente de ti, no de las áreas operativas.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "te reporte directamente a ti",
+          "no a las áreas operativas"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

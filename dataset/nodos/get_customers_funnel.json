@@ -7,11 +7,11 @@
   "resumen_teorico": "El proceso de generación de demanda en canal físico tiene cuatro etapas: Awareness (conocimiento del producto), Interest (el mensaje ya no se ignora), Consideration (el cliente evalúa seriamente comprar) y Purchase (compra real). Las primeras tres ocurren en la mente del consumidor; las dos primeras están fuera de tu control hasta que el cliente se autoidentifica ante un canal (retail, vendedor, web), que desde ahí se encarga de la consideración y la compra.",
   "pasos_accionables": [
     "Diseñar experimentos pequeños y económicos para cada etapa del embudo, incluyendo tácticas web y móviles, porque los clientes empiezan su búsqueda en internet",
-    "Definir métricas pass/fail para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos) y cómo mejorar el resultado si el test no funciona",
+    "Definir métricas de pasa o no pasa para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos) y cómo mejorar el resultado si el test no funciona",
     "Medir el costo de adquisición de cliente (CAC) y compararlo con el margen de ganancia por venta",
     "Documentar resultados en una hoja de cálculo de hipótesis de gasto"
   ],
-  "entregable_esperado": "Hoja de cálculo con programas de medios earned/paid, costos esperados, y métricas pass/fail definidas",
+  "entregable_esperado": "Hoja de cálculo con programas de medios ganados y pagados, costos esperados, y métricas de pasa o no pasa definidas",
   "nodos_previos": [
     "embudo_get_keep_grow"
   ],
@@ -76,6 +76,40 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El procedimiento del libro pide también prever cómo mejorar el resultado de cada test.",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-get_customers_funnel-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir métricas pass/fail para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos) y cómo mejorar el resultado si el test no funciona",
+      "texto_nuevo": "Definir métricas de pasa o no pasa para cada test (ej: 1 llamada de venta por cada 30 llamadas a prospectos) y cómo mejorar el resultado si el test no funciona",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "métricas pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-get_customers_funnel-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hoja de cálculo con programas de medios earned/paid, costos esperados, y métricas pass/fail definidas",
+      "texto_nuevo": "Hoja de cálculo con programas de medios ganados y pagados, costos esperados, y métricas de pasa o no pasa definidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "earned/paid",
+          "métricas pass/fail"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

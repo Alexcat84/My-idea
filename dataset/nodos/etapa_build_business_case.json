@@ -8,13 +8,13 @@
   "pasos_accionables": [
     "Definir el mercado objetivo, posicionamiento y propuesta de valor del producto",
     "Realizar investigación de mercado detallada (tamaño, segmentos, factores de éxito)",
-    "Ejecutar investigación VoC profunda para especificar requerimientos del producto",
+    "Ejecutar investigación profunda de la voz del cliente para especificar requerimientos del producto",
     "Realizar prueba de concepto con clientes potenciales",
     "Llevar a cabo evaluación técnica y operativa detallada de viabilidad",
-    "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad, junto con una evaluación de riesgos",
-    "Consolidar todo en un Business Case con definición de producto, justificación y plan de acción"
+    "Elaborar análisis financiero con valor actual neto, tasa interna de retorno y análisis de sensibilidad, junto con una evaluación de riesgos",
+    "Consolidar todo en un caso de negocio con definición de producto, justificación y plan de acción"
   ],
-  "entregable_esperado": "Un Business Case completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)",
+  "entregable_esperado": "Un caso de negocio completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)",
   "nodos_previos": [
     "gate2_second_screen",
     "afinar_frente_difuso_innovacion",
@@ -48,6 +48,73 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro incluye la evaluación de riesgos en el análisis de negocio que justifica el proyecto; ningún paso la recoge.",
       "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-etapa_build_business_case-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ejecutar investigación VoC profunda para especificar requerimientos del producto",
+      "texto_nuevo": "Ejecutar investigación profunda de la voz del cliente para especificar requerimientos del producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "investigación VoC profunda"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-etapa_build_business_case-pasos_accionables-5",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elaborar análisis financiero con NPV, IRR y análisis de sensibilidad, junto con una evaluación de riesgos",
+      "texto_nuevo": "Elaborar análisis financiero con valor actual neto, tasa interna de retorno y análisis de sensibilidad, junto con una evaluación de riesgos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "NPV, IRR"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-etapa_build_business_case-pasos_accionables-6",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consolidar todo en un Business Case con definición de producto, justificación y plan de acción",
+      "texto_nuevo": "Consolidar todo en un caso de negocio con definición de producto, justificación y plan de acción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-etapa_build_business_case-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un Business Case completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)",
+      "texto_nuevo": "Un caso de negocio completo con tres elementos: definición del producto, justificación financiera/de negocio, y plan de proyecto detallado (action plan)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Business Case"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

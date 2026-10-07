@@ -9,10 +9,10 @@
     "Seleccionar el método de estimación según la información disponible",
     "Para paramétrico: definir variable de costo y multiplicar por cantidad de unidades",
     "Para análogo: comparar tamaño y costo de actividad previa con la actual",
-    "Para bottom-up: sumar todos los componentes de costo detallados por paquete de trabajo",
+    "Para el método ascendente: sumar todos los componentes de costo detallados por paquete de trabajo",
     "Consolidar resultados en la hoja de trabajo"
   ],
-  "entregable_esperado": "Hoja de trabajo completa con estimación de costo por WBS ID",
+  "entregable_esperado": "Hoja de trabajo completa con estimación de costo por identificador de la EDT (estructura de desglose del trabajo)",
   "nodos_previos": [
     "estimacion_costos_actividad",
     "registro_de_riesgos"
@@ -26,5 +26,40 @@
   "etiqueta_arbol": "Estima tus Costos con Precisión",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-hoja_estimacion_costos-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para bottom-up: sumar todos los componentes de costo detallados por paquete de trabajo",
+      "texto_nuevo": "Para el método ascendente: sumar todos los componentes de costo detallados por paquete de trabajo",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "bottom-up"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-hoja_estimacion_costos-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hoja de trabajo completa con estimación de costo por WBS ID",
+      "texto_nuevo": "Hoja de trabajo completa con estimación de costo por identificador de la EDT (estructura de desglose del trabajo)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "WBS ID"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

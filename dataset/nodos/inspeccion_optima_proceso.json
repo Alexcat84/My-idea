@@ -19,7 +19,7 @@
   "condiciones_activacion": [
     "Cuando la empresa usa planes de muestreo tradicionales sin analizar costo total del proceso"
   ],
-  "etiqueta_arbol": "Decide Dónde Inspeccionar",
+  "etiqueta_arbol": "Decide Dónde Conviene Inspeccionar",
   "correcciones": [
     {
       "id": "atribucion-107",
@@ -69,6 +69,22 @@
       "decision": "auditoria final, etapa 1 del remedio (matiz; doble lectura ciega y arbitro): El libro pregunta primero por qué no se llevan registros en gráficos de control o de corrida; el paso deja solo la opción de cortar la inspección.",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-inspeccion_optima_proceso-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decide Dónde Inspeccionar",
+      "texto_nuevo": "Decide Dónde Conviene Inspeccionar",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Decide Dónde Inspeccionar"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): etiqueta_forma, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

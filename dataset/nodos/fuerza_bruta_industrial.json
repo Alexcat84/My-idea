@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar en qué procesos se está usando energía o químicos de forma excesiva para forzar un resultado",
     "Evaluar el uso de energía solar/corriente disponible en el contexto como alternativa",
-    "Calcular el costo ambiental y económico de la dependencia en fuerza bruta"
+    "Calcular el costo ambiental y económico de la dependencia de fuerza bruta"
   ],
   "entregable_esperado": "Auditoría energética/química identificando puntos de uso excesivo de fuerza bruta",
   "nodos_previos": [
@@ -67,6 +67,23 @@
       },
       "decision": "la voz de exposicion (el nodo que se presenta como el libro que lo conto) sale sin cambiar el sentido: el ejemplo, las cifras y los pasos se conservan",
       "auditoria": "auditoria final del dataset (docs/ACTA_SANEAMIENTO_FINAL.md), guardas G6 y G7 en rojo sobre el grafo vivo"
+    },
+    {
+      "id": "voz-fuerza_bruta_industrial-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Calcular el costo ambiental y económico de la dependencia en fuerza bruta",
+      "texto_nuevo": "Calcular el costo ambiental y económico de la dependencia de fuerza bruta",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "dependencia en"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

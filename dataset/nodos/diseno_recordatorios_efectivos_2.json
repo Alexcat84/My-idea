@@ -7,12 +7,12 @@
   "resumen_teorico": "Los errores por omisión son frecuentes en tareas de mantenimiento y se reducen significativamente con recordatorios bien diseñados, aunque no los eliminan del todo: son primeros auxilios. Soluciones más duraderas serían diseñar piezas que solo puedan instalarse bien, que el sistema se desactive solo al detectar piezas faltantes y, más de fondo, eliminar la necesidad de contacto manual en las inspecciones. Un buen recordatorio cumple cinco criterios universales: ser conspicuo (atrae tu atención en el momento crítico), contiguo (cercano en tiempo y espacio a la tarea), contextual (indica cuándo y dónde), de contenido claro (qué hacer) y verificable (permite marcar el paso como completado). Criterios secundarios incluyen ser comprehensivo, compulsivo (bloquea el avance si falta un paso), confirmatorio (visible tras completar la acción) y concluyente (se retira una vez cumplida su función). Aplicar este diseño te ayuda a reducir costos y accidentes derivados de fallas por olvido en procedimientos con pasos secuenciales.",
   "pasos_accionables": [
     "Identifica los pasos de tarea propensos a omisión revisando errores históricos",
-    "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y check",
+    "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y verificable",
     "Evalúa si conviene sumar criterios secundarios como bloquear el avance o confirmar la finalización",
     "Prueba el recordatorio en el flujo real de trabajo antes de aplicarlo de forma general",
     "Revisa periódicamente su efectividad y ajústalo según lo que observes en la práctica"
   ],
-  "entregable_esperado": "Sistema de recordatorios documentado con checklist de verificación implementado en los pasos críticos de tus tareas de mantenimiento.",
+  "entregable_esperado": "Sistema de recordatorios documentado con lista de verificación implementado en los pasos críticos de tus tareas de mantenimiento.",
   "nodos_previos": [
     "caracteristicas_tareas_propensas_omision",
     "prevalencia_omisiones"
@@ -118,6 +118,39 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-diseno_recordatorios_efectivos_2-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y check",
+      "texto_nuevo": "Diseña el recordatorio cumpliendo los 5 criterios universales: conspicuo, contiguo, contextual, contenido y verificable",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "check"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-diseno_recordatorios_efectivos_2-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sistema de recordatorios documentado con checklist de verificación implementado en los pasos críticos de tus tareas de mantenimiento.",
+      "texto_nuevo": "Sistema de recordatorios documentado con lista de verificación implementado en los pasos críticos de tus tareas de mantenimiento.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "checklist de verificación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

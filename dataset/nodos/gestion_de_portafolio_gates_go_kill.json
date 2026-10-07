@@ -7,11 +7,11 @@
   "resumen_teorico": "Puedes hacer menos proyectos, pero mejores y con la mezcla adecuada, apoyándote en un sistema de gestión de portafolio y en puntos de decisión Go/Kill rigurosos, que de verdad detengan lo que no debe seguir. La falta de criterios claros y la reticencia a matar proyectos débiles genera dispersión de recursos y baja calidad de ejecución en todos los proyectos. Para evaluar, puedes usar seis criterios: encaje con tu estrategia, ventaja competitiva del producto, atractivo del mercado, aprovechamiento de tus capacidades clave, viabilidad técnica y relación entre riesgo y retorno financiero.",
   "pasos_accionables": [
     "Diseñar un proceso de embudo (funnel) que vaya descartando proyectos débiles progresivamente",
-    "Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, apalancamiento, factibilidad técnica, riesgo/retorno",
+    "Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, aprovechamiento de capacidades, factibilidad técnica, riesgo/retorno",
     "Tomar decisiones firmes de matar proyectos de bajo valor en lugar de reducirles recursos gradualmente",
     "Revisar el balance y mezcla de proyectos del portafolio completo, no solo proyecto por proyecto"
   ],
-  "entregable_esperado": "Un sistema de portafolio con gates definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos",
+  "entregable_esperado": "Un sistema de portafolio con puntos de decisión definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos",
   "nodos_previos": [
     "estrategia_innovacion_producto",
     "apalancamiento_de_competencias_centrales"
@@ -46,6 +46,39 @@
       },
       "decision": "lectura total de procedencia (w41): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-gestion_de_portafolio_gates_go_kill-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, apalancamiento, factibilidad técnica, riesgo/retorno",
+      "texto_nuevo": "Evaluar cada proyecto con los seis criterios: estratégico, ventaja competitiva, atractivo de mercado, aprovechamiento de capacidades, factibilidad técnica, riesgo/retorno",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "apalancamiento"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_de_portafolio_gates_go_kill-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un sistema de portafolio con gates definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos",
+      "texto_nuevo": "Un sistema de portafolio con puntos de decisión definidos, criterios de evaluación documentados y decisiones explícitas de continuidad o cancelación de proyectos",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "gates"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

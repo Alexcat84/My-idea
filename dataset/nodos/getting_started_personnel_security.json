@@ -7,10 +7,10 @@
   "resumen_teorico": "Asegura que las personas, incluidos proveedores externos, sean confiables y cumplan criterios de seguridad; protege la información durante y después de despidos o transferencias, y sanciona formalmente a quien incumpla las políticas de seguridad.",
   "pasos_accionables": [
     "Establecer un proceso de verificación (background checks) antes de otorgar acceso al sistema.",
-    "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+    "Definir políticas de desvinculación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
     "Definir políticas de reasignación: revisar y ajustar los permisos según nueva necesidad operativa."
   ],
-  "entregable_esperado": "Políticas documentadas de screening, terminación y transferencia de personal con acceso a CUI.",
+  "entregable_esperado": "Políticas documentadas de verificación de antecedentes, desvinculación y transferencia de personal con acceso a información controlada no clasificada.",
   "nodos_previos": [
     "getting_started_media_protection"
   ],
@@ -71,6 +71,41 @@
       "decision": "condiciones de los nodos-frontera de otro pais (punto 8 del encargo del 6 oct): matiz; modo devolver; doble lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.5"
+    },
+    {
+      "id": "voz-getting_started_personnel_security-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir políticas de terminación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+      "texto_nuevo": "Definir políticas de desvinculación: deshabilitar acceso, revocar credenciales, recuperar propiedad del sistema.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "terminación"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-getting_started_personnel_security-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Políticas documentadas de screening, terminación y transferencia de personal con acceso a CUI.",
+      "texto_nuevo": "Políticas documentadas de verificación de antecedentes, desvinculación y transferencia de personal con acceso a información controlada no clasificada.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "screening",
+          "terminación",
+          "CUI"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

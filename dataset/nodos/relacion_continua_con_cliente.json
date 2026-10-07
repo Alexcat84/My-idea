@@ -6,8 +6,8 @@
   "fuente": "SPIN Selling - Neil Rackham",
   "resumen_teorico": "En la mayoría de las ventas grandes, comprar un producto implica también 'comprar' una relación continua con el vendedor, ya que suele requerirse soporte post-venta y interacción recurrente. Esto hace que, a diferencia de la venta pequeña donde producto y vendedor pueden separarse fácilmente, en la venta grande sean mucho más difíciles de separar y el cliente pueda llegar a verlos como inseparables, afectando directamente la probabilidad de cierre.",
   "pasos_accionables": [
-    "Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo el pitch del producto",
-    "Anticipar y comunicar claramente el soporte post-venta disponible",
+    "Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo la presentación del producto",
+    "Anticipar y comunicar claramente el soporte posventa disponible",
     "Evitar estilos de venta agresivos que dañen la relación de largo plazo",
     "Planificar puntos de contacto recurrentes con el cliente durante y después de la venta"
   ],
@@ -106,6 +106,38 @@
       "decision": "procedencia: paso de la casa; se quita el prefijo visible 'Sugerencia de My Idea:' sin cambiar el consejo (constancia interna: origen casa)",
       "indice": 3,
       "auditoria": "docs/REGLAS_DE_LA_CASA.md, regla dura de procedencia (30 sep 2026)"
+    },
+    {
+      "id": "voz-relacion_continua_con_cliente-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo el pitch del producto",
+      "texto_nuevo": "Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo la presentación del producto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el pitch del producto"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-relacion_continua_con_cliente-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anticipar y comunicar claramente el soporte post-venta disponible",
+      "texto_nuevo": "Anticipar y comunicar claramente el soporte posventa disponible",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v07)",
+        "evidencia": "\"posventa\" se escribe en una sola palabra y sin guion; solo cambia la grafía."
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

@@ -6,10 +6,10 @@
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
   "resumen_teorico": "Técnica de notación de grano fino para transcripciones de voz, que captura el orden de los turnos (quién habla, quién escucha y cuánto), pausas exactas, superposiciones, cambios de tono, velocidad y volumen del habla, y marcadores como 'oh', 'um'. Estas características pueden revelar cómo las personas entienden sus roles y contribuciones en el manejo de un proceso, pudiendo evidenciar fenómenos como pérdida de gestión de recursos de tripulación.",
   "pasos_accionables": [
-    "Aplicar notación estándar (pausas en segundos, micro-pausas, superposición con corchetes)",
+    "Aplicar notación estándar (pausas en segundos, micropausas, superposición con corchetes)",
     "Marcar cambios de velocidad (más rápido/lento que el habla circundante)",
     "Marcar cambios de tono (ascendente, descendente, dentro de palabra)",
-    "Identificar tokens como 'oh', 'um', 'ah'",
+    "Identificar marcadores como 'oh', 'um', 'ah'",
     "Interpretar los patrones en conjunto, no aisladamente, para construir evidencia de fenómenos de interacción"
   ],
   "entregable_esperado": "Transcripción con notación de análisis conversacional e interpretación de patrones de interacción",
@@ -88,6 +88,38 @@
       },
       "decision": "lectura total de procedencia (w34): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "voz-analisis_conversacional-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplicar notación estándar (pausas en segundos, micro-pausas, superposición con corchetes)",
+      "texto_nuevo": "Aplicar notación estándar (pausas en segundos, micropausas, superposición con corchetes)",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v07)",
+        "evidencia": "El prefijo 'micro' se escribe unido a la palabra; quitar el guion no cambia el sentido."
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-analisis_conversacional-pasos_accionables-3",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identificar tokens como 'oh', 'um', 'ah'",
+      "texto_nuevo": "Identificar marcadores como 'oh', 'um', 'ah'",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "tokens"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [

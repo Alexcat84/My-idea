@@ -6,11 +6,11 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Algunos fundadores adoptan una secuencia: primero maximizan control (solo founder, contrataciones que no desafíen su autoridad) para desarrollar el producto y alcanzar hitos tempranos con fuerza negociadora, y luego giran hacia decisiones orientadas a riqueza (atraer los mejores inversionistas y talento) para escalar. El caso de Genevieve Thiers (Sittercity) ilustra esto: mantuvo control 8 años antes de levantar VC en una posición de fuerza. Puede funcionar con tiempo y poca necesidad de capital; si no, hace más probable un producto lento y una desventaja competitiva. Además, puede aumentar el riesgo de terminar 'atascado en el medio' y fracasar.",
   "pasos_accionables": [
-    "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir equity.",
+    "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir tu participación.",
     "Establecer criterios claros (hitos, tiempo, tracción) que determinen el momento de transición hacia decisiones de riqueza.",
     "Evaluar si el sector permite este 'lujo de tiempo' (baja intensidad de capital) o si la ventana competitiva obliga a decisiones más rápidas."
   ],
-  "entregable_esperado": "Roadmap con hitos definidos que marquen la transición de fase de control a fase de crecimiento/riqueza.",
+  "entregable_esperado": "Hoja de ruta con hitos definidos que marquen la transición de fase de control a fase de crecimiento/riqueza.",
   "nodos_previos": [
     "dilema_riqueza_vs_control"
   ],
@@ -21,7 +21,7 @@
     "Cuando el fundador no tiene claridad sobre su motivación dominante y busca cubrir ambos objetivos.",
     "Cuando el mercado permite tiempo para bootstrapping antes de la entrada de competidores."
   ],
-  "etiqueta_arbol": "Combina Control y Riqueza",
+  "etiqueta_arbol": "Pasa del Control a la Riqueza",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
   ],
@@ -57,6 +57,53 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (matiz; modo devolver; doble lectura ciega, arbitro y verificador ciego): Se cae la condición del libro: la secuencia puede funcionar con tiempo y poca intensidad de capital; en otros negocios hace más probable un producto lento y desventaja competitiva.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-estrategia_hibrida_control_riqueza-etiqueta_arbol",
+      "fecha": "2026-10-07",
+      "campo": "etiqueta_arbol",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Combina Control y Riqueza",
+      "texto_nuevo": "Pasa del Control a la Riqueza",
+      "cita": {
+        "instrumento": "lectura de voz contra el propio nodo, acta 15.13 (ola v07)",
+        "evidencia": "El concepto es una secuencia (primero control, luego riqueza), no una combinación a la vez; la nueva etiqueta dice esa transición y cumple la forma."
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): etiqueta_infiel, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estrategia_hibrida_control_riqueza-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir equity.",
+      "texto_nuevo": "Definir una fase inicial de control absoluto para validar producto y alcanzar métricas clave sin diluir tu participación.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "equity"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-estrategia_hibrida_control_riqueza-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Roadmap con hitos definidos que marquen la transición de fase de control a fase de crecimiento/riqueza.",
+      "texto_nuevo": "Hoja de ruta con hitos definidos que marquen la transición de fase de control a fase de crecimiento/riqueza.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Roadmap"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

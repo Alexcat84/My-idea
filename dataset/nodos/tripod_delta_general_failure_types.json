@@ -25,7 +25,7 @@
   "condiciones_activacion": [
     "Cuando la organización busca una herramienta proactiva de gestión de riesgos",
     "Cuando se quiere medir condiciones latentes antes de que ocurran accidentes",
-    "En operaciones de alto riesgo como exploración petrolera, mantenimiento aéreo o transporte"
+    "En operaciones de alto riesgo como exploración petrolera o transporte"
   ],
   "etiqueta_arbol": "Detecta tus Fallas Generales a Tiempo",
   "fuentes_internas": [
@@ -64,6 +64,23 @@
       },
       "decision": "lectura total de procedencia (w33): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
+    },
+    {
+      "id": "condiciones-resto-tripod_delta_general_failure_types-condiciones_activacion-2",
+      "fecha": "2026-10-07",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En operaciones de alto riesgo como exploración petrolera, mantenimiento aéreo o transporte",
+      "texto_nuevo": "En operaciones de alto riesgo como exploración petrolera o transporte",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "3004, 3222",
+        "frase": "Tripod-Delta Oil exploration and production. Shipping."
+      },
+      "decision": "condiciones del resto de nodos (saneamiento continuo, ola c07): invencion_dura; modo quitar; lectura ciega contra el libro, arbitro y verificador ciego",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

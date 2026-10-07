@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar qué canal(es) son coherentes con la relación y el tipo de negocio",
     "Diseñar un mensaje de celebración específico para el logro del cliente",
-    "Personalizar el contenido con detalles del journey del cliente",
+    "Personalizar el contenido con detalles del recorrido del cliente",
     "Elegir el momento oportuno de envío (justo tras confirmar el logro)",
     "Medir la reacción/respuesta del cliente al gesto"
   ],
@@ -25,5 +25,24 @@
   "etiqueta_arbol": "Celebra los Logros del Cliente",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-seis_herramientas_comunicacion_celebracion-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Personalizar el contenido con detalles del journey del cliente",
+      "texto_nuevo": "Personalizar el contenido con detalles del recorrido del cliente",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "journey"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

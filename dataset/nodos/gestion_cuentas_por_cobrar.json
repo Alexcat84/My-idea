@@ -11,7 +11,7 @@
     "Monitorear los días promedio de cobro (DSO) para detectar deterioro en la cobranza",
     "Implementar seguimiento activo con clientes morosos para acelerar conversión a efectivo"
   ],
-  "entregable_esperado": "Reporte de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
+  "entregable_esperado": "Informe de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
   "nodos_previos": [
     "clasificacion_tipos_activos",
     "analisis_antiguedad_cuentas_por_cobrar",
@@ -44,6 +44,22 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): El libro dice que es probable que los acreedores la vigilen; el nodo lo vuelve hecho y añade el porqué.; Mismo defecto: endurece el 'likely' del libro y añade la causa 'indicador de salud financiera'.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-gestion_cuentas_por_cobrar-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporte de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
+      "texto_nuevo": "Informe de antigüedad de cuentas por cobrar con acciones de cobranza definidas",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "Reporte de antigüedad"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

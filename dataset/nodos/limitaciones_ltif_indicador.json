@@ -6,8 +6,8 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "El índice de lesiones con tiempo perdido (LTIF) tiene una relación asimétrica con los accidentes organizacionales: un LTIF alto sí indica un sistema 'enfermo' propenso a accidentes mayores, pero un LTIF bajo NO garantiza baja probabilidad de un accidente organizacional catastrófico. Esto ocurre porque en sistemas con LTIF muy bajo, el ruido estadístico domina sobre la señal real (ej. un empleado que se cae de la bicicleta en el estacionamiento), y porque las lesiones menores no reflejan la integridad de las defensas del sistema ante fallas catastróficas. Eventos precursores (fugas, casi-accidentes) son más diagnósticos que el LTIF en sistemas maduros.",
   "pasos_accionables": [
-    "Dejar de usar el LTIF como único o principal indicador de seguridad del sistema",
-    "Implementar sistemas de reporte y seguimiento de eventos precursores (near-misses, fugas, fallas de equipos)",
+    "Dejar de usar el índice de lesiones con tiempo perdido (LTIF) como único o principal indicador de seguridad del sistema",
+    "Implementar sistemas de reporte y seguimiento de eventos precursores (casi accidentes, fugas, fallas de equipos)",
     "Establecer métricas de integridad de procesos (process safety indicators) complementarias al LTIF",
     "Evitar comunicar señales de 'días sin accidentes' como sinónimo de seguridad total del sitio"
   ],
@@ -39,6 +39,40 @@
         "evidencia": "F16-026: Montar indicadores de seguridad de proceso en una organizacion que opera es control operativo. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "voz-limitaciones_ltif_indicador-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dejar de usar el LTIF como único o principal indicador de seguridad del sistema",
+      "texto_nuevo": "Dejar de usar el índice de lesiones con tiempo perdido (LTIF) como único o principal indicador de seguridad del sistema",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el LTIF"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-limitaciones_ltif_indicador-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Implementar sistemas de reporte y seguimiento de eventos precursores (near-misses, fugas, fallas de equipos)",
+      "texto_nuevo": "Implementar sistemas de reporte y seguimiento de eventos precursores (casi accidentes, fugas, fallas de equipos)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "near-misses"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

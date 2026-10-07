@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Decidir si se cotizará y cobrará en USD o en moneda extranjera",
     "Si se opta por moneda extranjera, consultar con un banquero internacional antes de negociar el contrato",
-    "Evaluar el uso de un forward contract para fijar el tipo de cambio a futuro",
+    "Evaluar el uso de un contrato a plazo para fijar el tipo de cambio a futuro",
     "Verificar problemas de convertibilidad de la moneda del comprador"
   ],
-  "entregable_esperado": "Estrategia de cobertura cambiaría definida (cotización en USD o contrato forward) documentada en el contrato de venta",
+  "entregable_esperado": "Estrategia de cobertura cambiaria definida (cotización en USD o contrato forward) documentada en el contrato de venta",
   "nodos_previos": [
     "letters_of_credit",
     "open_account",
@@ -88,6 +88,37 @@
       },
       "decision": "auditoria final, pase dirigido de la etapa 1 (certeza_endurecida; modo devolver; doble lectura ciega, arbitro y verificador ciego): El libro dice que vender en moneda extranjera puede ser una opción viable si el riesgo se gestiona con éxito; el resumen lo da por resultado seguro.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.7"
+    },
+    {
+      "id": "voz-gestion_riesgo_cambiario-pasos_accionables-2",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evaluar el uso de un forward contract para fijar el tipo de cambio a futuro",
+      "texto_nuevo": "Evaluar el uso de un contrato a plazo para fijar el tipo de cambio a futuro",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "forward contract"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-gestion_riesgo_cambiario-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Estrategia de cobertura cambiaría definida (cotización en USD o contrato forward) documentada en el contrato de venta",
+      "texto_nuevo": "Estrategia de cobertura cambiaria definida (cotización en USD o contrato forward) documentada en el contrato de venta",
+      "cita": {
+        "instrumento": "lectura de voz, acta 15.13 (ola v07)",
+        "evidencia": "El adjetivo es 'cambiaria' sin tilde ('cambiaría' es del verbo cambiar); solo se quita la tilde sobrante."
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): ortografia, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

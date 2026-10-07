@@ -10,9 +10,9 @@
     "Pedir a la IA que primero liste opciones o ideas",
     "Solicitar una crítica o comparación de esas opciones (tabla de pros/contras)",
     "Pedir una recomendación final justificada",
-    "Revisar cada paso antes de avanzar al siguiente para poder ajustar el prompt"
+    "Revisar cada paso antes de avanzar al siguiente para poder ajustar la instrucción"
   ],
-  "entregable_esperado": "Un análisis estructurado (ej. comparación de estrategias, modelos de negocio o soluciones) generado mediante prompts secuenciales verificables",
+  "entregable_esperado": "Un análisis estructurado (ej. comparación de estrategias, modelos de negocio o soluciones) generado mediante instrucciones secuenciales verificables",
   "nodos_previos": [
     "ingenieria_de_prompts_efectiva"
   ],
@@ -54,6 +54,39 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion, matiz; doble lectura ciega y arbitro): El libro dice que tiende a hacer la respuesta más precisa; 'mejora significativamente' endurece.; Mismo endurecimiento que la marca 0.; Mismo matiz que la marca 1.; Se cae la forma que el libro llama cadena de pensamiento: darle antes del pedido un ejemplo de cómo quieres que razone.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "voz-prompting_cadena_de_pensamiento-pasos_accionables-4",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisar cada paso antes de avanzar al siguiente para poder ajustar el prompt",
+      "texto_nuevo": "Revisar cada paso antes de avanzar al siguiente para poder ajustar la instrucción",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "el prompt"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-prompting_cadena_de_pensamiento-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un análisis estructurado (ej. comparación de estrategias, modelos de negocio o soluciones) generado mediante prompts secuenciales verificables",
+      "texto_nuevo": "Un análisis estructurado (ej. comparación de estrategias, modelos de negocio o soluciones) generado mediante instrucciones secuenciales verificables",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "prompts"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ]
 }

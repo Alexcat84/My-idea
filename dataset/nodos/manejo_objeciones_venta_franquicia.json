@@ -6,8 +6,8 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Las objeciones son el mejor aliado del vendedor: indican interés real. No conocer las objeciones de un prospecto lleva inevitablemente a perder la venta. El vendedor debe preguntar activamente para descubrir objeciones (sobre novedad de la marca, experiencia del equipo, competencia, regulaciones, territorio, tarifas, litigios, tasas de fracaso, etc.) y prepararse con respuestas antes de la interacción en vivo.",
   "pasos_accionables": [
-    "Preguntar activamente qué está previniendo el avance del prospecto",
-    "Listar de antemano las objeciones típicas del sector/franquicia (novedad, competencia, fees, litigios, etc.)",
+    "Preguntar activamente qué está impidiendo el avance del prospecto",
+    "Listar de antemano las objeciones típicas del sector/franquicia (novedad, competencia, tarifas, litigios, etc.)",
     "Preparar respuestas estructuradas para cada objeción común antes de la llamada en vivo",
     "Usar frases exploratorias como '¿Qué información adicional necesitas para...?'"
   ],
@@ -26,5 +26,41 @@
   "etiqueta_arbol": "Descubre y Maneja Objeciones",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "voz-manejo_objeciones_venta_franquicia-pasos_accionables-0",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntar activamente qué está previniendo el avance del prospecto",
+      "texto_nuevo": "Preguntar activamente qué está impidiendo el avance del prospecto",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "previniendo"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "voz-manejo_objeciones_venta_franquicia-pasos_accionables-1",
+      "fecha": "2026-10-07",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Listar de antemano las objeciones típicas del sector/franquicia (novedad, competencia, fees, litigios, etc.)",
+      "texto_nuevo": "Listar de antemano las objeciones típicas del sector/franquicia (novedad, competencia, tarifas, litigios, etc.)",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "fees"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    }
   ]
 }

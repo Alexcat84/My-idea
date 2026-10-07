@@ -12,7 +12,7 @@
     "Deja por escrito quién responde si el envío llega tarde, dañado o incompleto.",
     "Revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
   ],
-  "entregable_esperado": "Un acuerdo escrito con el proveedor de drop-shipping más el resultado documentado de un pedido de prueba.",
+  "entregable_esperado": "Un acuerdo escrito con el proveedor de envío directo más el resultado documentado de un pedido de prueba.",
   "nodos_previos": [
     "decidir_vender_solo_online_o_tambien_tienda_fisica"
   ],
@@ -250,6 +250,22 @@
       "decision": "barridos de cierre de la etapa 1: paso de la casa (paso sin marca), constancia interna sin tocar el texto",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.9"
+    },
+    {
+      "id": "voz-vender_sin_stock_con_drop_shipping-entregable_esperado",
+      "fecha": "2026-10-07",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un acuerdo escrito con el proveedor de drop-shipping más el resultado documentado de un pedido de prueba.",
+      "texto_nuevo": "Un acuerdo escrito con el proveedor de envío directo más el resultado documentado de un pedido de prueba.",
+      "cita": {
+        "regla": "Voz de la casa (REGLAS_DE_LA_CASA C5 y C7; acta 15.13): sin calcos del ingles ni jerga cruda, y la etiqueta en segunda persona con un verbo, de 4 a 6 palabras",
+        "fragmentos": [
+          "drop-shipping"
+        ]
+      },
+      "decision": "saneamiento continuo de la voz (ola v07): calco, confirmado por el arbitro y verificado a ciegas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
     }
   ],
   "fuentes_internas": [
