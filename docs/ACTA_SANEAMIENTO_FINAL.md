@@ -1653,3 +1653,16 @@ Es el único campo de estos nodos que la etapa 1 no leyó contra el libro. Máqu
 - **Aplicadas:** 55 correcciones en 52 nodos (tanda `condiciones-frontera`).
 - **Lo que no se leyó:** las condiciones de los nodos de clase B (123) y A (12). Un nodo B se reencuadra a lo
   universal, así que sus condiciones no limitan a un país. Si se quiere, la misma máquina las lee cambiando la clase.
+
+### 15.6 Medida 5, solo procedencia, después del barrido 2: diseño fijado antes de sortear (7 oct 2026, 01:15)
+
+Es la decisión 1 (a) de `docs/PROXIMOS_PASOS.md`, tomada con la cuota que queda antes del jueves. No cambia el
+veredicto de la medida 4: mide el catálogo de hoy, después del barrido 2 y de su guarda.
+- **Semilla: 20261008**, escrita aquí antes de sortear. Muestra con `scripts/auditoria_final/muestra.py 20261008`:
+  200 nodos vivos con el reparto de la sección 3.
+- **Igual que la medida 4 (15.3):** 20 lotes de 10 nodos, todos los textos de cara, una trampa sin marca por lote
+  (atribución blanda, ahora también con nombre propio), lector Opus ciego, segundo lector si no caza, árbitro.
+- **Veredicto:**
+  - "SANEADO en procedencia" si da 0 nodos.
+  - Si no, nodos sobre 200 con su Wilson al 95 %.
+  - Lo que aparezca se corrige por el método de la casa.
