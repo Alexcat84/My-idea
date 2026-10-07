@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Control Estadístico de Procesos en Tiempo Real",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral porque el trabajador ya no produce defectos.",
+  "resumen_teorico": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. Con acceso a datos en tiempo real, un operador que maneja cuatro tornos puede reducir los defectos de 1 en 10 a prácticamente cero y mejorar su satisfacción laboral, porque ya no produce defectos.",
   "pasos_accionables": [
     "Capacitar a los operadores en el uso e interpretación de cartas de control",
     "Colocar las cartas de control directamente en el puesto de trabajo, accesibles para todos los turnos",
@@ -46,6 +46,23 @@
       },
       "decision": "auditoria final, etapa 1 del remedio (invencion; doble lectura ciega y arbitro): En el libro el operador está más contento porque ya no produce defectos, no por tener control sobre su desempeño.",
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 9.4"
+    },
+    {
+      "id": "lectura-total-control_estadistico_de_procesos_en_tiempo_real-resumen_teorico",
+      "fecha": "2026-10-07",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce defectos de 1 en 10 a prácticamente cero, y mejora la satisfacción laboral porque el trabajador ya no produce defectos.",
+      "texto_nuevo": "El uso de cartas de control (control charts) por parte de los propios operadores permite detectar variaciones antes de que se conviertan en defectos, en lugar de descubrirlos demasiado tarde mediante inspección posterior. Con acceso a datos en tiempo real, un operador que maneja cuatro tornos puede reducir los defectos de 1 en 10 a prácticamente cero y mejorar su satisfacción laboral, porque ya no produce defectos.",
+      "cita": {
+        "regla": "Regla dura D1 y de procedencia D5 (fundador, 30 sep y 1 oct 2026): nada se atribuye a una persona, un libro, estudios, datos, estimaciones o expertos; el consejo se dice directamente.",
+        "fragmentos": [
+          "El caso del operador que maneja cuatro tornos ilustra cómo el acceso a datos en tiempo real reduce",
+          "y mejora la satisfacción laboral porque el trabajador ya no produce defectos"
+        ]
+      },
+      "decision": "lectura total de procedencia (w27): confirmada por el arbitro y verificada a ciegas contra el libro; sale la atribucion con el mismo sentido y la misma certeza",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.8"
     }
   ]
 }
