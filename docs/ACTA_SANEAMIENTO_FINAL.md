@@ -1956,3 +1956,60 @@ ni traducción palabra por palabra de un pasaje de su libro), sin releer lo ya c
 - **Voyage al final**, en una sola pasada con todo corregido.
 - Lo que no quepa antes de que se agote la cuota del jueves 8 queda al día en `docs/PROXIMOS_PASOS.md`, con prioridad a
   que los pasos queden terminados.
+
+### 15.16 Copia fiel: lo hecho y resultado de la medida 7 (7 oct 2026): NO CERTIFICADO
+
+**La pasada completa.** Se leyeron y verificaron los 728 lotes del plan:
+- 242 lotes de pasos;
+- 243 de resúmenes;
+- 243 de condiciones.
+
+Cada lector cazó su trampa, y los verificadores ciegos cazaron todas las suyas.
+
+Entraron 4.750 correcciones de forma en 1.698 nodos:
+- 3.361 pasos en 804 nodos;
+- 1.314 resúmenes;
+- 75 condiciones.
+
+Eso incluye dos pasadas de reescritura sobre lo que el verificador no sostuvo: r1 sobre los pasos y r2 sobre los
+resúmenes y las condiciones. Quedan como residuo declarado 49 pasos y 30 resúmenes o condiciones. Para esos elementos
+el reescritor y el verificador no encontraron una forma nueva que dijera exactamente lo mismo.
+
+**Voyage, primera pasada** (orden del fundador del 7 oct 2026, antes de la medida y del fin de la cuota):
+- Re-embebió los 2.706 nodos cuyo texto embebible cambió desde el índice anterior.
+- El índice quedó coherente y Gate 0 y las dos suites quedaron en verde.
+- Está desplegado en producción (commit d4dc7377).
+
+**Medida 7.** Se usó la muestra de 200 nodos con la semilla 20261028, fijada antes de sortear en 15.15.
+- Se leyeron 20 lotes con una trampa sin marca cada uno, y se cazaron las 20.
+- Los lectores dejaron 148 marcas, y el árbitro confirmó 144 y rechazó 4.
+
+| tipo | nodos con al menos un defecto confirmado | proporción | Wilson 95 % |
+|---|---:|---:|---|
+| copia | 57 de 200 | 28,5 % | 22,7 a 35,1 % |
+| contrario | 0 de 200 | 0 % | 0,0 a 1,9 % |
+| invención | 1 de 200 | 0,5 % | 0,1 a 2,8 % |
+
+La regla pedía como mucho 10 de 200 en copia, y cero contrarios y cero invenciones. **No se cumple: la copia fiel NO
+queda certificada.**
+
+**Dónde está la copia que quedó.**
+- Pasos: el árbitro confirmó 106 elementos. De ellos, 93 vienen de cuatro libros (42, 34, 10 y 7), los cuatro del
+  mundo Primer Equipo.
+- Resúmenes: confirmó 38 elementos, repartidos entre 21 libros.
+- La primera pasada sí había leído todos los nodos de esos cuatro libros: 425 nodos y 3.767 pasos. Los dejó pasar.
+- La medida aplicó la vara del criterio con más rigor: una frase de más de unas 15 palabras, o dos frases seguidas, que
+  siguen al original término a término. Es la lección de método de esta campaña. Un lector que corrige reescribiendo
+  tiende a aceptar como paráfrasis una traducción con alguna palabra cambiada; un lector que solo mide no.
+
+**Lo que se corrige** (regla de 15.15: lo hallado y su vecindad, sin otra pasada completa):
+1. **Lo hallado:** los 143 elementos de copia confirmados pasan por la máquina de siempre: reescritor, verificador ciego
+   con dos trampas y tanda (ola h7). La invención, en `eficiencia_hidrica_edificios_2`, entra por corrección declarada
+   ANADIDO (`docs/saneamiento/tandas/medida7-invencion.json`). El libro liga bajar la temperatura del agua caliente al
+   ahorro de la energía que se gasta en calentarla, no al consumo de agua.
+2. **La vecindad de los pasos** (mismo libro y mismo campo): los pasos de los 1.280 nodos vivos que comparten libro con
+   un paso confirmado, en 13 libros. Son 86 lotes (V001 a V086) con trampa del mismo libro, y la vara de la medida va
+   escrita en el encargo del lector.
+3. **La vecindad de los resúmenes** abarca 2.154 nodos, prácticamente todos, porque los 38 resúmenes confirmados están
+   repartidos entre 21 libros. Equivale a una segunda pasada completa, que la regla no permite. Queda declarada como
+   pendiente en `docs/PROXIMOS_PASOS.md`, para que el fundador decida.
