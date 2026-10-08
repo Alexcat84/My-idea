@@ -1798,9 +1798,13 @@ async function faseParidadMundos(cookie: string, projectId: string) {
   log(`OK: los ${itemsMundo.length} items de '${MUNDO}' nacen SIN fecha base (post-baseline).`);
 
   // ── 3. Recalcular: los items del MUNDO entran al ritual del proyecto (V3a) ──
-  // Fechas base CONOCIDAS, en el pasado, para que el cumplimiento sea exacto.
-  const dia = (offset: number) => new Date(Date.now() + offset * 86_400_000).toISOString();
-  const BASES = [dia(-20), dia(-20), dia(-10)]; // 3 items fechados; el resto sin tocar
+  // Fechas base CONOCIDAS, para que el cumplimiento sea exacto.
+  // Fechas (decision del fundador, 8 oct 2026): lo DECLARADO -- hecho antes de que naciera su plan -- no cuenta para la
+  // puntualidad, y estos planes de mundo nacen minutos antes. Por eso los items se completan HOY (despues de su plan,
+  // nunca en el futuro) y las bases se corren para conservar EXACTAMENTE las diferencias calculadas a mano.
+  const hoy = Date.now() - 60_000;
+  const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
+  const BASES = [enDias(0), enDias(-8), enDias(5)]; // 3 items fechados; el resto sin tocar
   const aFechar = itemsMundo.slice(0, 3);
   const rBase = await postJson(cookie, `/api/project/${projectId}/baseline`, {
     plan_id: gCore.plan_id, // la baseline es DEL PROYECTO; el plan del mundo no se sella
@@ -1815,10 +1819,10 @@ async function faseParidadMundos(cookie: string, projectId: string) {
   log("OK: los items del MUNDO reciben fecha base por el ritual del proyecto (V3a).");
 
   // ── 4. Completarlos con fechas conocidas -> cumplimiento deterministico ──
-  // A MANO: base -20d, hecho -20d -> dif 0  -> A TIEMPO
-  //         base -20d, hecho -12d -> dif +8 -> TARDIA
-  //         base -10d, hecho -15d -> dif -5 -> ADELANTADA
-  const REALES = [dia(-20), dia(-12), dia(-15)];
+  // A MANO (hecho hoy): base hoy    -> dif 0  -> A TIEMPO
+  //                     base hoy-8d -> dif +8 -> TARDIA
+  //                     base hoy+5d -> dif -5 -> ADELANTADA
+  const REALES = [enDias(0), enDias(0), enDias(0)];
   for (const [k, it] of aFechar.entries()) {
     await patchJson(cookie, `/api/project/${projectId}/checklist`, {
       item_id: it.id as string,
@@ -1996,9 +2000,13 @@ async function faseTodoSeparado(cookie: string, projectId: string) {
   // ── 2. Su ritual sella SU plan (grupo.plan_id del MUNDO), no el del core ──
   const itemsW1 = gW1.etapas.flatMap((e) => e.items);
   if (itemsW1.length < 3) throw new Error(`el mundo ${W1} dejó ${itemsW1.length} ítems: pocos para el escenario`);
-  const dia = (o: number) => new Date(Date.now() + o * 86_400_000).toISOString();
+  // Fechas (decision del fundador, 8 oct 2026): lo DECLARADO -- hecho antes de que naciera su plan -- no cuenta para la
+  // puntualidad, y estos planes de mundo nacen minutos antes. Por eso los items se completan HOY (despues de su plan,
+  // nunca en el futuro) y las bases se corren para conservar EXACTAMENTE las diferencias calculadas a mano.
+  const hoy = Date.now() - 60_000;
+  const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
   const aFechar = itemsW1.slice(0, 3);
-  const BASES = [dia(-20), dia(-20), dia(-10)];
+  const BASES = [enDias(0), enDias(-8), enDias(5)];
   const rSeal = await postJson(cookie, `/api/project/${projectId}/baseline`, {
     plan_id: gW1.plan_id, // el plan DEL MUNDO (T3c-2 sella por espacio), no el core
     fechas: aFechar.map((it, k) => ({ item_id: it.id as string, fecha: BASES[k], origen: "sugerida" })),
@@ -2019,9 +2027,9 @@ async function faseTodoSeparado(cookie: string, projectId: string) {
   log("OK: no-arrastre e2e -- sellar el mundo no tocó el modo ni la baseline del core.");
 
   // ── 3. Completar sus ítems -> el análisis del mundo trae SU Gantt (porEtapa) ──
-  // A MANO: base -20, hecho -20 -> 0 A TIEMPO; base -20, hecho -12 -> +8 TARDÍA;
-  //         base -10, hecho -15 -> -5 ADELANTADA.  (1 / 1 / 1 de 3)
-  const REALES = [dia(-20), dia(-12), dia(-15)];
+  // A MANO (hecho hoy): base hoy -> 0 A TIEMPO; base hoy-8d -> +8 TARDÍA;
+  //                     base hoy+5d -> -5 ADELANTADA.  (1 / 1 / 1 de 3)
+  const REALES = [enDias(0), enDias(0), enDias(0)];
   for (const [k, it] of aFechar.entries()) {
     await patchJson(cookie, `/api/project/${projectId}/checklist`, {
       item_id: it.id as string,
@@ -2101,8 +2109,6 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   let costoUsd = 0;
   const MUNDO = "health_safety";
   const NOMBRE = "Seguridad y Personas";
-  const dia = (offset: number) => new Date(Date.now() + offset * 86_400_000).toISOString();
-
   // El cumplimiento solo existe en modo fechas; la 2k lo dejo asi.
   const rModo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
   if (rModo.modo_camino !== "fechas") throw new Error("no se pudo restituir el modo 'fechas'");
@@ -2118,8 +2124,9 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   // ── 1. Desviacion sembrada en los items DEL MUNDO ──
   // La 2k dejo 3 items del mundo fechados y hechos: dif 0, +8, -5.
   // Aqui se anaden 2 tardias GRANDES, con textos propios del mundo:
-  //   base -30d, hecho -18d -> +12 (tardia)
-  //   base -30d, hecho -21d ->  +9 (tardia)
+  //   hecho hoy, base hoy-12d -> +12 (tardia)
+  //   hecho hoy, base hoy-9d  ->  +9 (tardia)
+  //   (hechos HOY, despues de su plan: lo declarado antes del plan no cuenta, decision del fundador del 8 oct 2026)
   // A MANO, el mundo queda: 1 a tiempo, 1 adelantada, 3 tardias (total 5);
   // desviacion media = (0 + 8 - 5 + 12 + 9) / 5 = 24/5 = +4.8 dias.
   const gruposPrevios = await gruposChecklist(cookie, projectId);
@@ -2133,7 +2140,10 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   }
   const nuevos = itemsMundo.filter((i) => !i.fecha_base).slice(0, 2);
   if (nuevos.length !== 2) throw new Error("el mundo no tiene 2 items libres para sembrar la desviacion");
-  const fechasSembradas = nuevos.map((it) => ({ item_id: it.id as string, fecha: dia(-30), origen: "sugerida" }));
+  const hoy = Date.now() - 60_000;
+  const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
+  const BASES_TARDIAS = [enDias(-12), enDias(-9)];
+  const fechasSembradas = nuevos.map((it, k) => ({ item_id: it.id as string, fecha: BASES_TARDIAS[k], origen: "sugerida" }));
   await postJson(cookie, `/api/project/${projectId}/baseline`, {
     plan_id: gCorePrevio.plan_id,
     fechas: fechasSembradas,
@@ -2165,7 +2175,7 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
     plan_id: gMundoPrevio.plan_id,
     fechas: fechasSembradas,
   });
-  const REALES = [dia(-18), dia(-21)];
+  const REALES = [enDias(0), enDias(0)];
   for (const [k, it] of nuevos.entries()) {
     await patchJson(cookie, `/api/project/${projectId}/checklist`, {
       item_id: it.id as string,
