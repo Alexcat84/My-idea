@@ -86,7 +86,9 @@ describe("avanzarTurno pasa la pregunta cacheada por el adaptador", () => {
     const entrada = preguntasCache[nid]!;
     const neutral = typeof entrada.pregunta_neutral === "string" ? entrada.pregunta_neutral : null;
     if (neutral) expect(r.pregunta).toBe(neutral);
-    expect(r.pregunta).not.toBe(entrada.pregunta);
+    // Seguridad máxima de sentido (decisión del fundador, 8 oct 2026): en el NIVEL 1 la neutral ES la base, palabra por
+    // palabra (la base no supone ningún papel y pasa todas las guardas). Fuera del nivel 1, nunca la base cruda.
+    if (entrada.pregunta_neutral_nivel !== 1) expect(r.pregunta).not.toBe(entrada.pregunta);
     expect(r.estado.fallbackEvents.at(-1)).toMatchObject({
       tipo: "adaptacion_pregunta",
       salida: neutral ? "neutral" : "plantilla_neutral",

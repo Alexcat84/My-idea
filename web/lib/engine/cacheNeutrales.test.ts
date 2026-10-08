@@ -13,15 +13,15 @@ import { cargarGrafo, cargarPreguntasCache } from "./graph";
  * y 3.287 con las 347 bases de Primer Equipo al traer main a puente-forja. 3.288 con la base escrita a mano de la
  * puerta nueva de la auditoria final (repartir_supervision_puesto_funcional_mision, 28 sep 2026): su neutral la
  * genera la corrida final, que es la primera con API. */
-const TOPE_SIN_NEUTRAL = 3288;
+const TOPE_SIN_NEUTRAL = 0; // corrida final, 8 oct 2026: neutrales por niveles (las de nivel 3 usan la plantilla)
 /** Nodos con siguientes y sin pregunta al 28 sep 2026 (engine/build_question_cache.py faltantes): 40, y 43 desde la
  * auditoria final, cuyas aristas verificadas dieron siguientes a cuestionar_historia_irracional_cabeza,
  * lleva_scorecard_desempeno_proveedor y traduce_stock_muerto_numeros (docs/ACTA_SANEAMIENTO_FINAL.md, 6.1). Se
  * generan en la corrida final con --faltantes. */
-const TOPE_SIN_PREGUNTA = 43;
+const TOPE_SIN_PREGUNTA = 0; // corrida final, 8 oct 2026: --faltantes hizo las 43
 /** Preguntas de ENTRADA de puertas vivas sin su neutral (decisión del fundador para la corrida final, 8 oct 2026: las
  * neutrales de TODAS las preguntas, base y de entrada, en `pregunta_entrada_neutral`). 86 al 8 oct 2026. */
-const TOPE_ENTRADA_SIN_NEUTRAL = 86;
+const TOPE_ENTRADA_SIN_NEUTRAL = 0; // corrida final, 8 oct 2026
 
 const graph = cargarGrafo();
 const cache = cargarPreguntasCache();
@@ -56,6 +56,31 @@ describe("la cache camina hacia completa (trinquete)", () => {
         expect(typeof e.pregunta).toBe("string");
         expect(typeof e.pregunta_neutral).toBe("string");
       }
+    }
+  });
+});
+
+// SEGURIDAD MÁXIMA DE SENTIDO (decisión del fundador, corrida final, 8 oct 2026): cada pregunta viva tiene su nivel.
+// 1 = la base tal cual; 2 = edición mínima verificada; 3 = plantilla segura (sin texto: la app pone la plantilla).
+describe("neutrales por niveles", () => {
+  const vivos = Object.entries(cache).filter(([nid]) => graph[nid] && !graph[nid].deprecado);
+  it("toda base viva tiene nivel; los niveles 1 y 2 llevan su neutral y el 3 no", () => {
+    for (const [nid, e] of vivos) {
+      if (!e.pregunta) continue;
+      const nivel = e.pregunta_neutral_nivel;
+      expect([1, 2, 3], nid).toContain(nivel);
+      if (nivel === 3) expect(e.pregunta_neutral, nid).toBeUndefined();
+      else expect(typeof e.pregunta_neutral, nid).toBe("string");
+      if (nivel === 1) expect(e.pregunta_neutral, nid).toBe(e.pregunta);
+    }
+  });
+  it("lo mismo para las preguntas de entrada", () => {
+    for (const [nid, e] of vivos) {
+      if (!e.pregunta_entrada) continue;
+      const nivel = e.pregunta_entrada_neutral_nivel;
+      expect([1, 2, 3], nid).toContain(nivel);
+      if (nivel === 3) expect(e.pregunta_entrada_neutral, nid).toBeUndefined();
+      if (nivel === 1) expect(e.pregunta_entrada_neutral, nid).toBe(e.pregunta_entrada);
     }
   });
 });

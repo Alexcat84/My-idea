@@ -1,0 +1,31 @@
+# Acta de la corrida final (8 oct 2026)
+
+Lista de comprobación de `docs/producto/CORRIDA_FINAL.md`, con la hora de cada paso en UTC. Sin claves, contraseñas
+ni correos.
+
+| # | Paso | Hora UTC | Nota |
+|---|---|---|---|
+| 1 | Saldo inicial de la API, anotado por el fundador | 01:05:49 | **19,67 USD** |
+| 1b | Sondeos de modelo (cambio de modelos pedido por el fundador antes de empezar) | 01:09 a 01:13 | 5 llamadas mínimas: Haiku 5.5 y Sonnet 5.5 razonan por defecto; se apagan con `disabled` (Haiku) y `between_tools` (Sonnet) |
+| 1c | Cambio de modelos en main (ae3a0ddcc) | 01:25 | Haiku 4.5 → 5.5; Sonnet 4.6/5 → 5.5; el estimador queda en Sonnet 4.6 hasta su visto |
+| 1d | Re-validación del estimador con los casos del spike original | 01:25:55 | 6 llamadas, 0,0629 USD; ver `revalidacion_estimador.md` |
+| 2 | Siembra de créditos del dev user | 01:27:13 | saldo 70, apartado 10, disponibles 60 → se otorgan 60 (`siembra_beta`, clave `siembra_corrida_final_2026`) → saldo 130, disponibles 120 |
+| 3 | Límites en Vercel (producción) | 01:27:58 | `LIMITE_ARRANQUES_DIA`: sin variable (vale 5) → 80. `FUSIBLE_SESIONES_DIA`: sin variable (vale 30) → 100. Para devolverlos: **borrar las dos variables** |
+| 3b | Redespliegue de producción con los límites | 01:28:14 | despliegue del commit ae3a0ddcc, alias www.myideaproject.com |
+| 4 | Clave cargada (la del `.env` raíz, en el entorno del proceso) e inicio de la ventana: paso 1, completar la caché | 01:30 | A1: 43 preguntas nuevas, 0,0051 USD. A2 (neutrales de bases y de entradas) desde 01:31 |
+| 4b | Estimador a Sonnet 5.5 con el VISTO DEL FUNDADOR (fabe3961e, registro resellado) | 01:50 | Constancia del 100 % en los dos modelos; la calibración real contra duraciones registradas queda en PROXIMOS_PASOS 3-ter |
+| 5 | Muestra ciega de las neutrales (semilla 20261008) | 02:55 | **NO PASA**: 49 de 200 sostenidos por el árbitro (tope 10); trampas 10/10. Ver `verificacion_neutrales.md` |
+| 5b | Decisión del fundador: corregir el generador (4 patrones), ampliar la guarda, regenerar las 3.417 y repetir la muestra | | **Semilla de la muestra nueva, escrita ANTES de regenerar: 20261009** |
+| 5c | Generador corregido (503af3379 y 57d90d6fa) y dos pilotos sobre los 49 nodos fallidos | 03:00 | USD 0,0061 + 0,0067; el género desaparece y vuelve el contexto |
+| 5d | Regeneración completa de las neutrales (A3 a A3e + respaldo Sonnet) | 03:04 a 05:25 | 3.417 de 3.417; USD 0,978 en total |
+| 5e | Guarda del 100 % y muestra ciega nueva (semilla 20261009) | 05:45 | Guarda: 0 en los cuatro patrones. Muestra: **NO PASA**, 16 de 200 (tope 10); trampas 10/10. Ver `verificacion_neutrales_v2.md` |
+| 5f | Decisión del fundador: SEGURIDAD MÁXIMA DE SENTIDO (tres niveles: base tal cual, edición mínima, plantilla segura) | | **Semilla de la tercera muestra, escrita ANTES de regenerar: 20261010** |
+| 5g | Regeneración por niveles (A4) y repaso de 73 con la detección de "el equipo" | 10:25 a 11:05 | USD 1,691 + 0,200. Bases: nivel 1 = 2.601, nivel 2 = 462, nivel 3 = 268. Entradas: nivel 1 = 83, nivel 3 = 3 |
+| 5h | Guarda del 100 % y tercera muestra (semilla 20261010, trampas de cambio de sentido) | 11:10 | Guarda: 0 en los cuatro patrones; 32 avisos de papeles revisados (falsos positivos) |
+| 5i | Tercera muestra contada con el árbitro | 11:30 | **NO PASA**: 0 cambios de sentido (cumple), 17 otros defectos (tope 10); trampas 10/10. 15 de los 17 son bases copiadas tal cual (nivel 1). Ver `verificacion_neutrales_v3.md`. Se para sin arreglar nada (decisión del fundador) |
+| 5j | Decisión del fundador: corrección declarada de bases (voseo, inglés, formas rotas), nivel 1 ampliado (papeles implícitos y plurales de grupo), regenerar las afectadas y cuarta muestra | | **Semilla de la cuarta muestra, escrita ANTES: 20261011.** REGLA DE CIERRE fijada: 0 cambios de sentido y como mucho 10 de 200 en lo demás, PASA; si falla SOLO en defectos menores, se corrige lo hallado, se declara el residuo en este acta y SE SIGUE con la sincronización, el despliegue y la coherencia; solo un cambio de sentido o un contrario detiene la corrida |
+| 5k | Corrección declarada de bases (C34) | 11:40 a 12:50 | Lector de inglés y formas rotas: 3.331 bases, 421 marcadas (USD 1,560). Correcciones: 382 declaradas en `engine/correcciones_preguntas.json` (formas rotas 213, voseo 170, inglés 14; una base puede tener varias), USD 0,700 + 0,674 + 0,063 + 0,037 + 0,021 + 0,007 + juez manual. Voseo: queda 1 base sin corregir porque el juez independiente duda (`trabajo_como_imaginado_vs_trabajo_como_hecho`), declarada en el residuo; su neutral no sale tal cual. Residuo del lector sin tocar: 132 marcas que no superaron las comprobaciones o el juez (muchas eran estilo, no formas rotas); `residuo_correccion_bases.json` |
+| 5l | Regeneración de las neutrales afectadas (379 de bases corregidas + 44 por la detección ampliada) | 12:55 a 13:01 | USD 0,308. Bases: nivel 1 = 2.674, nivel 2 = 391, nivel 3 = 266. Entradas: 83 / 0 / 3. Guarda: 0 en los cuatro patrones; 32 avisos de papeles, los mismos ya revisados |
+| 5m | Cuarta muestra (semilla 20261011) contada con el árbitro | 13:30 | 0 cambios de sentido (cumple); 16 otros defectos (tope 10); trampas 10/10. **Falla solo en defectos menores: se aplica la regla de cierre.** Ver `verificacion_neutrales_v4.md` |
+| 5n | Regla de cierre: lo hallado se corrige | 13:40 | Las 16 neutrales sostenidas pasan a nivel 3 (plantilla); 2 bases corregidas por corrección declarada verificada ("te detenes", "cómodos te sientes"). Niveles finales: bases {1: 2661, 2: 388, 3: 282}, entradas {1: 83, 3: 3} |
+| 5o | **RESIDUO DECLARADO** | 13:40 | En torno a 250 neutrales de nivel 1 o 2 con un defecto menor fuera de la muestra (8 % estimado), casi todas bases copiadas tal cual que suponen un grupo de forma implícita; ninguna cambia el sentido (0 en cuatro muestras con trampas). Voseo sin tilde: posible en otras bases, para una pasada posterior. 1 base con voseo sin aprobar por el juez (su neutral no sale tal cual). **Se sigue con la sincronización, el despliegue y la coherencia** |
