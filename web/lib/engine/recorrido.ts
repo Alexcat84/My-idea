@@ -21,7 +21,7 @@
 import type { CicloSesion } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { buscarAfines } from "../compass";
-import { llamarClaude, MODEL_HAIKU, type MensajeConversacion, type UsoAcumulado } from "../costmeter";
+import { costoAcumuladoUsd, llamarClaude, MODEL_HAIKU, PRESUPUESTO_SESION_USD_DEFAULT, type MensajeConversacion, type UsoAcumulado } from "../costmeter";
 import type { ModoRuta } from "../dbContract";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
@@ -464,6 +464,24 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     }));
   }
 
+  // TOPE POR SESION (visto del fundador, 8 oct 2026): al alcanzarlo la entrevista termina ORDENADA, en el borde del
+  // turno: pasa al plan con lo ya hablado (la respuesta de este turno se guarda en el hilo y en los turnos al
+  // persistir), sin llamar a la IA y sin un error_temporal que ningun reintento puede arreglar (el gasto no baja).
+  const topeAlcanzado = () => costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT;
+  const cierrePorPresupuesto = (): ResultadoTurno => {
+    estado = {
+      ...estado,
+      fase: "listo_para_plan",
+      preguntaPendiente: null,
+      fallbackEvents: [
+        ...estado.fallbackEvents,
+        { tipo: "cierre_por_presupuesto", costo_usd: Number(costoAcumuladoUsd(acumulado).toFixed(4)), tope_usd: PRESUPUESTO_SESION_USD_DEFAULT },
+      ],
+    };
+    return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: nodosNuevosDesdeInicio() };
+  };
+  if (topeAlcanzado()) return cierrePorPresupuesto();
+
   // --- Sub-fase: esperando "¿seguimos un poco o lo quieres ya?" ---
   if (estado.fase === "esperando_profundizar") {
     let decision: "generar_ya" | "continuar";
@@ -693,6 +711,8 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     }
 
     const resultado = resultadoInterprete.resultado;
+    // El tope cruzado DENTRO del turno llega aqui como "sin resultado": es el cierre ordenado, no un fallo de red.
+    if (!resultado && topeAlcanzado()) return cierrePorPresupuesto();
     if (!resultado) {
       return {
         tipo: "error_temporal",

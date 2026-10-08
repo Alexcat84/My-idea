@@ -94,14 +94,14 @@ describe("llamarClaudeConversacion: presupuesto excedido corta ANTES de llamar a
   it("no llama a create() si el acumulado ya supera el presupuesto", async () => {
     const { cliente } = clienteFalso([msgFalso("no deberia usarse")]);
     let acumulado = usoVacio();
-    // Registra un costo que ya supera el presupuesto por defecto ($0.30) a mano:
-    // MODEL_HAIKU pin=1.00 -> 400,000 in tokens = $0.40
+    // Registra un costo que ya supera el presupuesto por defecto ($1.00 desde el 8 oct 2026) a mano:
+    // claude-haiku-4-5 pin=1.00 -> 1,200,000 in tokens = 1.2 × 1.00 = $1.20
     acumulado = {
-      uso: { "claude-haiku-4-5": { in: 400_000, out: 0, llamadas: 1, cache_read: 0, cache_write: 0 } },
+      uso: { "claude-haiku-4-5": { in: 1_200_000, out: 0, llamadas: 1, cache_read: 0, cache_write: 0 } },
       uso_por_componente: {},
       presupuesto_excedido: false,
     };
-    expect(costoAcumuladoUsd(acumulado)).toBeGreaterThan(0.3);
+    expect(costoAcumuladoUsd(acumulado)).toBeGreaterThan(1);
     await expect(
       llamarClaudeConversacion(cliente as never, "system-x", [], "turno", "claude-haiku-4-5", acumulado)
     ).rejects.toThrow(/presupuesto/);

@@ -202,8 +202,9 @@ describe("interpretarMultiSalto: presupuesto excedido se propaga como resultado=
     buscarAfinesFalso.mockReset();
     buscarAfinesFalso.mockResolvedValue([]);
     const { cliente } = clienteFalso([respuestaClaudeFalsa({ accion: "salir" })]);
+    // a mano: claude-haiku-4-5 pin=1.00 -> 1,200,000 in tokens = $1.20, por encima del tope por defecto ($1.00)
     const acumuladoExcedido = {
-      uso: { "claude-haiku-4-5": { in: 400_000, out: 0, llamadas: 1, cache_read: 0, cache_write: 0 } },
+      uso: { "claude-haiku-4-5": { in: 1_200_000, out: 0, llamadas: 1, cache_read: 0, cache_write: 0 } },
       uso_por_componente: {},
       presupuesto_excedido: false,
     };

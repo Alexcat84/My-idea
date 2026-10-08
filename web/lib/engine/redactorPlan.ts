@@ -20,7 +20,7 @@ import {
   MODEL_SONNET,
   parametrosDeModelo,
   PresupuestoExcedidoError,
-  PRESUPUESTO_SESION_USD_DEFAULT,
+  presupuestoDelPlanUsd,
   registrarUso,
   RespuestaCortadaError,
   type UsoAcumulado,
@@ -46,8 +46,10 @@ export async function generarTextoPlan(
   idiomaSalida: string | null = null,
   opts: { backoffsMs?: number[]; contexto?: string | null } = {}
 ): Promise<{ rawTexto: string | null; acumulado: UsoAcumulado; avisoFallback: string | null }> {
-  if (costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT) {
-    return { rawTexto: null, acumulado, avisoFallback: "presupuesto de sesion ya excedido, ensamblo sin narrar" };
+  // El plan tiene su margen sobre el tope de la entrevista (visto del fundador, 8 oct 2026): una entrevista cerrada
+  // por el tope recibe su plan entero con IA. Solo un gasto desbocado (tope + margen) ensambla sin narrar.
+  if (costoAcumuladoUsd(acumulado) >= presupuestoDelPlanUsd()) {
+    return { rawTexto: null, acumulado, avisoFallback: "gasto de la sesion por encima del techo del plan, ensamblo sin narrar" };
   }
   const backoffs = opts.backoffsMs ?? BACKOFFS_PLAN_MS;
   const material = JSON.stringify(preparacion.payload);

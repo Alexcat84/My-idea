@@ -743,7 +743,9 @@ export async function comprimirEstadoVivo(
   /** i18n F5: el estado vivo es memoria del proyecto: en el idioma de la idea. */
   idiomaSalida: string | null = null,
   /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
-  contexto: string | null = null
+  contexto: string | null = null,
+  /** Tope por sesion (8 oct 2026): dentro de un plan, el techo del plan (presupuestoDelPlanUsd), no el de la entrevista. */
+  presupuestoUsd?: number
 ): Promise<{ estadoVivo: string; acumulado: UsoAcumulado }> {
   try {
     const ctx = {
@@ -756,6 +758,7 @@ export async function comprimirEstadoVivo(
       contexto,
       componente: "estado_vivo",
       idiomaSalida,
+      presupuestoUsd,
     });
     return { estadoVivo: r.texto.trim(), acumulado: r.acumulado };
   } catch (e) {

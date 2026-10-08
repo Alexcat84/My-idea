@@ -168,7 +168,8 @@ Fase 2.5 - persistencia y proyectos de largo plazo:
       excluyen automaticamente los nodos ya cubiertos (se siembran en
       visitados). El plan de seguimiento abre reconociendo el avance.
     - Presupuesto duro por sesion (PRESUPUESTO_SESION_USD, env var,
-      default 0.35 desde Hotfix v2.2.1): si el costo acumulado alcanza el
+      default 1.00 desde la corrida final del 8 oct 2026, antes 0.35;
+      espejo de web/lib/costmeter.ts): si el costo acumulado alcanza el
       tope, las llamadas
       posteriores fallan a proposito y cada punto de la app ya sabe caer a
       su respaldo offline existente (menu de emergencia, cuestionario
@@ -309,7 +310,7 @@ CACHE_WRITE_MULT = 1.25
 USO = {}
 USO_POR_COMPONENTE = {}
 
-PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "0.35"))
+PRESUPUESTO_SESION_USD = float(os.environ.get("PRESUPUESTO_SESION_USD", "1.00"))
 PRESUPUESTO_EXCEDIDO = False
 
 # Fase 3.1: fraccion de sesiones que pasan por el juez de calidad muestreado

@@ -202,7 +202,16 @@ export interface EventoPrioridadSinMedir {
   nodo_actual: string;
 }
 
+/** Tope por sesion (visto del fundador, 8 oct 2026): la entrevista alcanzo el tope y se cerro ordenada, en el borde
+ * de un turno, para pasar al plan con lo ya hablado. Lleva el gasto y el tope medidos. */
+export interface EventoCierrePorPresupuesto {
+  tipo: "cierre_por_presupuesto";
+  costo_usd: number;
+  tope_usd: number;
+}
+
 export type EventoInterprete =
+  | EventoCierrePorPresupuesto
   | EventoConsultaSinTraducir
   | EventoFallback
   | EventoDecisionTurno

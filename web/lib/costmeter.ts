@@ -80,18 +80,30 @@ export const CACHE_WRITE_1H_MULT = 2.0;
 export const CACHE_1H = { type: "ephemeral", ttl: "1h" } as const;
 
 // Hotfix v2.2.1: configurable por variable de entorno, espejo exacto de
-// PRESUPUESTO_SESION_USD en prototipo_motor.py (mismo nombre de env var,
-// mismo default subido de 0.30 a 0.35). PRESUPUESTO_REPORTE_USD se
-// mantiene fijo -- --reporte es una corrida corta y aislada, no necesita
-// ser configurable por separado.
-function leerPresupuestoSesionUsd(): number {
-  const raw = process.env.PRESUPUESTO_SESION_USD;
-  if (!raw) return 0.35;
+// PRESUPUESTO_SESION_USD en prototipo_motor.py (mismo nombre de env var y
+// mismo default). PRESUPUESTO_REPORTE_USD se mantiene fijo -- --reporte es
+// una corrida corta y aislada, no necesita ser configurable por separado.
+// Corrida final (visto del fundador, 8 oct 2026): el default sube de 0,35 a
+// 1,00 con los costos reales de Sonnet 5.5 / Haiku 5.5 (una sesion de Riesgos
+// llego a 0,63 antes de arreglar el cache del anclaje), para no cortar
+// sesiones reales. Al alcanzarlo la entrevista se cierra ordenada (recorrido.ts)
+// y el plan que arranca se termina entero (MARGEN_PLAN_USD).
+const PRESUPUESTO_SESION_POR_DEFECTO = 1.0;
+export function presupuestoSesionUsdDe(raw: string | undefined): number {
+  if (!raw) return PRESUPUESTO_SESION_POR_DEFECTO;
   const valor = Number(raw);
-  return Number.isFinite(valor) ? valor : 0.35;
+  return Number.isFinite(valor) ? valor : PRESUPUESTO_SESION_POR_DEFECTO;
 }
 
-export const PRESUPUESTO_SESION_USD_DEFAULT = leerPresupuestoSesionUsd();
+export const PRESUPUESTO_SESION_USD_DEFAULT = presupuestoSesionUsdDe(process.env.PRESUPUESTO_SESION_USD);
+
+/** El plan que arranca no se corta a mitad: el redactor y todo lo que le sigue
+ * (estado vivo, estimacion, enlace, juez) tienen este margen sobre el tope de
+ * la entrevista. El ensamblado offline queda solo para un gasto desbocado. */
+export const MARGEN_PLAN_USD = 0.5;
+export function presupuestoDelPlanUsd(topeSesion: number = PRESUPUESTO_SESION_USD_DEFAULT): number {
+  return topeSesion + MARGEN_PLAN_USD;
+}
 export const PRESUPUESTO_REPORTE_USD = 0.1;
 
 export interface UsoModelo {

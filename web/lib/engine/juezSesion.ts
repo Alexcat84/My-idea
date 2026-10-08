@@ -45,7 +45,9 @@ export async function evaluarCalidadSesion(
   acumulado: UsoAcumulado,
   muestreo?: number,
   /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
-  contexto: string | null = null
+  contexto: string | null = null,
+  /** Tope por sesion (8 oct 2026): dentro de un plan, el techo del plan (presupuestoDelPlanUsd), no el de la entrevista. */
+  presupuestoUsd?: number
 ): Promise<{ calidad: VeredictoJuez | null; acumulado: UsoAcumulado }> {
   const tasaMuestreo = muestreo ?? leerMuestreo();
   if (Math.random() >= tasaMuestreo) {
@@ -81,6 +83,7 @@ export async function evaluarCalidadSesion(
       maxTokens: 400,
       contexto,
       componente: "juez_sesion",
+      presupuestoUsd,
     });
     const calidad = parsearJson<VeredictoJuez>(r.texto);
     return { calidad, acumulado: r.acumulado };

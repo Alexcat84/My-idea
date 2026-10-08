@@ -29,6 +29,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import {
   costoAcumuladoUsd,
   PRESUPUESTO_SESION_USD_DEFAULT,
+  presupuestoDelPlanUsd,
 } from "@/lib/costmeter";
 import {
   cobrar,
@@ -273,6 +274,10 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           }
         );
 
+        // Tope por sesion (visto del fundador, 8 oct 2026): el plan que arranca se termina entero. Todo lo que sigue al
+        // redactor (estado vivo, estimacion, juez; el enlace ya lleva el suyo) usa el techo del plan, no el de la
+        // entrevista, para que un plan no salga a medias si el redactor cruzo el tope.
+        const presupuestoPlan = presupuestoDelPlanUsd();
         const { rawTexto, acumulado: acumuladoTrasRedactor, avisoFallback } = await generarTextoPlan(
           client,
           preparacion,
@@ -327,7 +332,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
           versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor,
           idiomaSalida,
-          contextoCompleto
+          contextoCompleto,
+          presupuestoPlan
         );
 
         const nodosConTipo: NodoConTipo[] = [
@@ -381,7 +387,7 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
         let itemsChecklist: Parameters<typeof insertarChecklist>[3] = itemsDerivados;
         let acumuladoTrasEstimacion = acumuladoFinal;
         try {
-          const est = await estimarLoteMayoria(client, itemsDerivados, acumuladoFinal, {}, contextoCompleto);
+          const est = await estimarLoteMayoria(client, itemsDerivados, acumuladoFinal, { presupuestoUsd: presupuestoPlan }, contextoCompleto);
           acumuladoTrasEstimacion = est.acumulado;
           itemsChecklist = itemsDerivados.map((it, i) => ({
             ...it,
@@ -476,7 +482,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           graph,
           acumuladoTrasEstimacion,
           undefined,
-          contextoCompleto
+          contextoCompleto,
+          presupuestoPlan
         );
 
         const rutaConModos = recorrido.ruta.map((nid, i) => ({ node_id: nid, tipo: recorrido.modos[i] }));
