@@ -18,9 +18,17 @@ import { elegir } from "@/lib/i18n/config";
 import { OPINIONES } from "@/lib/i18n/mensajes/opiniones";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
-import { decidirPregunta, TOPE_GENERALES_DIA, validarOpinion } from "@/lib/opiniones";
-import { completarOpinion, eventoDePlan, eventoDeSeguimiento, generalesDelDia, guardarOpinion, historialDe, type EventoResuelto } from "@/lib/opinionesServidor";
+import { decidirPregunta, TOPE_ESCRITURAS_DIA, TOPE_GENERALES_DIA, validarOpinion } from "@/lib/opiniones";
+import { completarOpinion, eventoDePlan, eventoDeSeguimiento, guardarOpinion, historialDe, type EventoResuelto } from "@/lib/opinionesServidor";
+import { limitarPorClave } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
+
+const DIA_S = 86_400;
+
+/** Tope general de escrituras por cuenta, con contador atómico (revisión de seguridad, 8 oct 2026). */
+async function dentroDelTope(userId: string): Promise<boolean> {
+  return (await limitarPorClave(`opiniones:${userId}`, DIA_S, TOPE_ESCRITURAS_DIA)).permitido;
+}
 
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -71,15 +79,25 @@ export async function POST(request: Request) {
   if (!v.ok) return NextResponse.json({ error: t.cuerpoInvalido }, { status: 400 });
 
   try {
+    if (!(await dentroDelTope(user.id))) return NextResponse.json({ error: t.tope }, { status: 429 });
     if (body.general === true) {
       if (!v.texto) return NextResponse.json({ error: t.cuerpoInvalido }, { status: 400 });
-      if ((await generalesDelDia(user.id)) >= TOPE_GENERALES_DIA) return NextResponse.json({ error: t.tope }, { status: 429 });
+      // Contador atómico: contar en la base y luego insertar dejaba pasar peticiones simultáneas.
+      if (!(await limitarPorClave(`opiniones-general:${user.id}`, DIA_S, TOPE_GENERALES_DIA)).permitido) {
+        return NextResponse.json({ error: t.tope }, { status: 429 });
+      }
       const g = await guardarOpinion({ userId: user.id, tipo: "general", objetoId: null, proyectoId: null, ...v, idioma, contexto: {} });
       return NextResponse.json(g === "repetida" ? { ok: true, repetida: true } : { ok: true, id: g.id });
     }
     const r = await resolver(user.id, body.sesion, body.seguimiento);
     if (r === "invalido") return NextResponse.json({ error: t.cuerpoInvalido }, { status: 400 });
     if (!r) return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
+    // Solo se guarda si la tarjeta tocaba: así el seguimiento no acumula filas sin fin y un plan no se valora dos veces.
+    const decision = decidirPregunta(r.evento, await historialDe(user.id), new Date());
+    if (!decision.preguntar) {
+      if (decision.razon === "ya_respondida") return NextResponse.json({ ok: true, repetida: true });
+      return NextResponse.json({ error: t.noGuardado }, { status: 409 });
+    }
     const g = await guardarOpinion({
       userId: user.id,
       tipo: r.evento.tipo,
@@ -112,6 +130,7 @@ export async function PATCH(request: Request) {
   const v = validarOpinion({ valoracion: "malo", motivo: body.motivo ?? null, texto: body.texto ?? null });
   if (!v.ok || typeof body.id !== "string" || !UUID.test(body.id)) return NextResponse.json({ error: t.cuerpoInvalido }, { status: 400 });
   try {
+    if (!(await dentroDelTope(user.id))) return NextResponse.json({ error: t.tope }, { status: 429 });
     const hecho = await completarOpinion(user.id, body.id, v.motivo, v.texto);
     return hecho ? NextResponse.json({ ok: true }) : NextResponse.json({ error: t.noEncontrado }, { status: 404 });
   } catch (e) {

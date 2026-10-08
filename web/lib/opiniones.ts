@@ -12,6 +12,8 @@ import { OPINIONES_MOTIVO, OPINIONES_TIPO, OPINIONES_VALORACION, type OpinionMot
 export const TEXTO_MAX = 2000;
 /** Comentarios y sugerencias por cuenta en 24 horas. */
 export const TOPE_GENERALES_DIA = 5;
+/** Escrituras de opiniones por cuenta en 24 horas (todas: tarjetas, cierres, motivos y comentarios). */
+export const TOPE_ESCRITURAS_DIA = 30;
 
 /** Las reglas de frecuencia. Cambiarlas cambia cuánto se le pregunta a la gente: van con su prueba. */
 export const REGLAS_FRECUENCIA = {

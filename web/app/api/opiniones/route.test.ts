@@ -4,6 +4,8 @@
 //   sesión mira, y el contexto jamás vuelve en la respuesta.
 // - Una sola vez por plan (la segunda vale como hecha), tope de frecuencia, tope diario de comentarios.
 // - Fallar ruidoso (BANCO §9): si no se puede guardar, error y nunca un ok.
+// - Revisión de seguridad (8 oct 2026): el seguimiento solo se guarda si la tarjeta tocaba (si no, filas sin fin), y
+//   los topes los cuenta un contador atómico (contar y luego insertar dejaba pasar peticiones simultáneas).
 // Prueba en rojo primero.
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -21,8 +23,16 @@ const OPINION = "44444444-4444-4444-8444-444444444444";
 const guardadas: Array<Record<string, unknown>> = [];
 const completadas: unknown[][] = [];
 let historial: Array<{ tipo: string; objeto_id: string | null; created_at: string }> = [];
-let generales = 0;
 let fallaGuardar = false;
+let limites: Record<string, boolean> = {};
+const clavesLimitadas: Array<[string, number, number]> = [];
+vi.mock("@/lib/rateLimit", () => ({
+  limitarPorClave: async (clave: string, ttl: number, limite: number) => {
+    clavesLimitadas.push([clave, ttl, limite]);
+    const permitido = limites[clave.split(":")[0]] ?? true;
+    return { permitido, usados: permitido ? 1 : limite + 1, limite };
+  },
+}));
 let repetida = false;
 const planReciente = () => new Date(Date.now() - 2 * 86_400_000).toISOString();
 
@@ -47,7 +57,6 @@ vi.mock("@/lib/opinionesServidor", () => ({
     return { id: OPINION };
   },
   completarOpinion: async (...args: unknown[]) => (completadas.push(args), true),
-  generalesDelDia: async () => generales,
 }));
 
 import { GET, PATCH, POST } from "./route";
@@ -62,9 +71,10 @@ beforeEach(() => {
   guardadas.length = 0;
   completadas.length = 0;
   historial = [];
-  generales = 0;
   fallaGuardar = false;
   repetida = false;
+  limites = {};
+  clavesLimitadas.length = 0;
 });
 
 describe("GET: ¿se muestra la tarjeta?", () => {
@@ -169,9 +179,38 @@ describe("POST: guardar", () => {
     expect((await post({ general: true, valoracion: "bueno" })).status).toBe(400);
   });
 
-  it("tope: el sexto comentario del día se rechaza con 429", async () => {
-    generales = 5;
+  it("tope: los comentarios del día los cuenta un contador atómico (5 por cuenta en 24 h); pasado el tope, 429", async () => {
+    expect((await post({ general: true, texto: "uno" })).status).toBe(200);
+    expect(clavesLimitadas).toContainEqual(["opiniones-general:u1", 86_400, 5]);
+    limites["opiniones-general"] = false;
     expect((await post({ general: true, texto: "otro más" })).status).toBe(429);
+  });
+
+  it("tope general de escrituras por cuenta (30 en 24 h, también en PATCH): pasado, 429 y no se guarda", async () => {
+    expect((await post({ sesion: SESION, valoracion: "bueno" })).status).toBe(200);
+    expect(clavesLimitadas).toContainEqual(["opiniones:u1", 86_400, 30]);
+    guardadas.length = 0;
+    limites["opiniones"] = false;
+    expect((await post({ sesion: SESION, valoracion: "bueno" })).status).toBe(429);
+    expect((await patch({ id: OPINION, motivo: "otro" })).status).toBe(429);
+    expect(guardadas).toHaveLength(0);
+  });
+
+  it("seguimiento que no tocaba (ya se preguntó hace poco): 409 y no se guarda", async () => {
+    historial = [{ tipo: "seguimiento", objeto_id: PROYECTO, created_at: new Date().toISOString() }];
+    expect((await post({ seguimiento: PROYECTO, valoracion: "bueno" })).status).toBe(409);
+    expect(guardadas).toHaveLength(0);
+  });
+
+  it("seguimiento que sí tocaba: se guarda", async () => {
+    expect((await post({ seguimiento: PROYECTO, valoracion: "excelente" })).status).toBe(200);
+    expect(guardadas[0]).toMatchObject({ tipo: "seguimiento", objetoId: PROYECTO });
+  });
+
+  it("un plan que ya tenía opinión: vale como hecha sin volver a guardar", async () => {
+    historial = [{ tipo: "plan_mundo", objeto_id: PLAN, created_at: new Date().toISOString() }];
+    expect(await (await post({ sesion: SESION, valoracion: "bueno" })).json()).toEqual({ ok: true, repetida: true });
+    expect(guardadas).toHaveLength(0);
   });
 });
 

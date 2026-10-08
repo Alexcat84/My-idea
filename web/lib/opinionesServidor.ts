@@ -156,18 +156,6 @@ export async function completarOpinion(userId: string, id: string, motivo: Opini
   return (data ?? []).length > 0;
 }
 
-/** Cuántos Comentarios y sugerencias mandó la cuenta en las últimas 24 horas (su tope). */
-export async function generalesDelDia(userId: string, ahora = new Date()): Promise<number> {
-  const { count, error } = await createAdminClient()
-    .from("opiniones")
-    .select("id", { count: "exact", head: true })
-    .eq("user_id", userId)
-    .eq("tipo", "general")
-    .gte("created_at", new Date(ahora.getTime() - 86_400_000).toISOString());
-  if (error) throw new Error(error.message);
-  return count ?? 0;
-}
-
 /** Las opiniones de TODAS las cuentas, para el panel del fundador (la ruta ya comprobó que es el fundador). */
 export async function listarOpiniones(f: FiltrosPanel): Promise<FilaOpinion[]> {
   let q = createAdminClient()
