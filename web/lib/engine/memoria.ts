@@ -56,14 +56,38 @@ export function fichaVacia(): FichaContexto {
   };
 }
 
-const PAPELES: readonly Papel[] = ["dueno", "empleado", "directivo", "desconocido"];
 const texto = (v: unknown): string | null => (typeof v === "string" && v.trim() ? v.trim() : null);
+const sinMarcas = (v: string) => v.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+/** El papel como lo diga el interprete ("dueña", "Dueño", "fundadora", "empleada"...) leido a su clave; lo que no se
+ * reconoce es desconocido (y lo desconocido nunca pisa lo conocido). Ficha de memoria, corrida final, 8 oct 2026: el
+ * modelo escribe "dueña" con su ñ y la ficha la tiraba, de ahi el dueño 'desconocido' de la prueba de coherencia. */
+function papelDe(v: unknown): Papel {
+  if (typeof v !== "string") return "desconocido";
+  const p = sinMarcas(v);
+  if (/^(dueno|duena|fundador|fundadora|propietario|propietaria|cofundador|cofundadora)$/.test(p)) return "dueno";
+  if (/^(empleado|empleada)$/.test(p)) return "empleado";
+  if (/^(directivo|directiva)$/.test(p)) return "directivo";
+  return "desconocido";
+}
+
+function jefeDe(v: unknown): boolean | null {
+  if (typeof v === "boolean") return v;
+  if (typeof v !== "string") return null;
+  const j = sinMarcas(v);
+  return j === "si" || j === "true" ? true : j === "no" || j === "false" ? false : null;
+}
 
 /** La ficha con lo nuevo encima. Un dato desconocido, nulo o vacio nunca pisa uno conocido; las frases textuales
- * solo se añaden, sin repetir. */
+ * solo se añaden, sin repetir; "tiene jefe" se sigue del papel cuando el papel lo decide. */
 export function fusionarFicha(base: FichaContexto, parcial: Partial<FichaContexto> | null | undefined): FichaContexto {
   if (!parcial) return base;
-  const papel = parcial.papel && PAPELES.includes(parcial.papel) && parcial.papel !== "desconocido" ? parcial.papel : base.papel;
+  const papelNuevo = papelDe(parcial.papel);
+  const papel = papelNuevo !== "desconocido" ? papelNuevo : base.papel;
+  // "Tiene jefe" es en ESTE proyecto y se sigue del papel: la dueña de su negocio no tiene jefe en el (un empleo aparte
+  // no cuenta), quien trabaja para otro si. Solo el directivo depende de lo que la persona diga.
+  const jefe = jefeDe(parcial.tiene_jefe);
+  const tieneJefe = papel === "dueno" ? false : papel === "empleado" ? true : (jefe ?? base.tiene_jefe);
   const personas =
     typeof parcial.equipo?.personas === "number" && Number.isFinite(parcial.equipo.personas) ? parcial.equipo.personas : base.equipo.personas;
   const dijo = [...base.dijo_textual];
@@ -73,7 +97,7 @@ export function fusionarFicha(base: FichaContexto, parcial: Partial<FichaContext
   }
   return {
     papel,
-    tiene_jefe: typeof parcial.tiene_jefe === "boolean" ? parcial.tiene_jefe : base.tiene_jefe,
+    tiene_jefe: tieneJefe,
     equipo: { personas, descripcion: texto(parcial.equipo?.descripcion) ?? base.equipo.descripcion },
     sector: texto(parcial.sector) ?? base.sector,
     etapa: texto(parcial.etapa) ?? base.etapa,
