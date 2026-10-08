@@ -104,8 +104,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ toke
     headers: {
       "Content-Type": "text/calendar; charset=utf-8",
       "Content-Disposition": 'inline; filename="my-idea.ics"',
-      // el cliente de calendario decide cuándo re-leer; una hora de gracia.
-      "Cache-Control": "public, max-age=3600",
+      // Dato PERSONAL y siempre fresco (decisión del fundador, 8 oct 2026): privado y sin copias. Con "public,
+      // max-age=3600" el borde de Vercel guardaba una copia por hora y el feed mostraba fechas viejas. El cliente de
+      // calendario sigue decidiendo cuándo re-leer.
+      "Cache-Control": "private, no-store",
     },
   });
 }
