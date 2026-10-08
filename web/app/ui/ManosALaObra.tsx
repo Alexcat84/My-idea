@@ -13,6 +13,7 @@
  * del plan ("## Etapa N: título"); si el plan no los trae, se muestra
  * solo el número. Nada se anima sin un evento real detrás.
  */
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { Acordeon } from "./Acordeon";
 import { BarraAvance } from "./BarraAvance";
@@ -1642,6 +1643,12 @@ function PanelModoFechas({
 // jamás la función. Ninguna tarjeta de aside vive fuera de este componente
 // (lo prueba un test de contrato). El `tono` 'done' viste la de realizar/cierre.
 const ICONO_ACCESO = {
+  // Tus créditos (8 oct 2026): una moneda, la puerta a /creditos.
+  creditos: (
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="8.5" /><path d="M14.6 9.2c-.5-.9-1.5-1.4-2.6-1.4-1.6 0-2.7.9-2.7 2.1 0 2.9 5.6 1.5 5.6 4.3 0 1.2-1.2 2.1-2.9 2.1-1.2 0-2.2-.5-2.7-1.4M12 6.3v1.5M12 16.8v1.5" />
+    </svg>
+  ),
   bitacora: (
     <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M12 5v14" /><circle cx="12" cy="6.5" r="1.6" /><circle cx="12" cy="12" r="1.6" /><circle cx="12" cy="17.5" r="1.6" />
@@ -1687,12 +1694,16 @@ function TarjetaAcceso({
   titulo,
   descripcion,
   onClick,
+  href,
   tono = "accent",
 }: {
   icono: keyof typeof ICONO_ACCESO;
   titulo: string;
   descripcion: string;
-  onClick: () => void;
+  /** Abre una vista dentro de la idea. */
+  onClick?: () => void;
+  /** O lleva a otra página de la app (Tus créditos → /creditos). */
+  href?: string;
   tono?: "accent" | "done";
 }) {
   // Llevan el CRISTAL del intercambiador de caras (decision del fundador, ago
@@ -1703,11 +1714,8 @@ function TarjetaAcceso({
   // El icono se hunde en la RANURA (la otra mitad del intercambiador): un
   // cajetin del color del cristal se perderia contra el cristal.
   const tinta = tono === "done" ? "text-done" : "text-accent";
-  return (
-    <button
-      onClick={onClick}
-      className={`cristal cristal-boton relative w-full rounded-panel p-5 text-start ${tono === "done" ? "cristal-done" : ""}`}
-    >
+  const clase = `cristal cristal-boton relative block w-full rounded-panel p-5 text-start ${tono === "done" ? "cristal-done" : ""}`;
+  const contenido = (
       <div className="flex items-start gap-3.5">
         <span aria-hidden className={`ranura grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[11px] ${tinta}`}>
           {ICONO_ACCESO[icono]}
@@ -1717,6 +1725,14 @@ function TarjetaAcceso({
           <p className="mt-1 text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">{descripcion}</p>
         </div>
       </div>
+  );
+  return href ? (
+    <Link href={href} className={clase}>
+      {contenido}
+    </Link>
+  ) : (
+    <button onClick={onClick} className={clase}>
+      {contenido}
     </button>
   );
 }
@@ -2944,6 +2960,12 @@ export function ManosALaObra({
                               descripcion={t.mundo.documentosDesc}
                               onClick={() => onVerDocumentos(mundo.dominio)}
                             />
+                            <TarjetaAcceso
+                              icono="creditos"
+                              titulo={t.tarjetas.creditosTitulo}
+                              descripcion={t.tarjetas.creditosDesc}
+                              href="/creditos#historial"
+                            />
                           </div>
                         )}
                       </div>
@@ -3124,6 +3146,13 @@ export function ManosALaObra({
           titulo={t.tarjetas.documentosTitulo}
           descripcion={t.tarjetas.documentosDesc}
           onClick={() => onVerDocumentos()}
+        />
+        {/* Tus créditos (8 oct 2026): comprar y administrar, en su propia página. */}
+        <TarjetaAcceso
+          icono="creditos"
+          titulo={t.tarjetas.creditosTitulo}
+          descripcion={t.tarjetas.creditosDesc}
+          href="/creditos#historial"
         />
 
         {/* Las DOS entradas del ciclo (Fase 2 del replanteamiento: "Profundizar mi

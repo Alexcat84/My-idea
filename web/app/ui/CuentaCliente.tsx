@@ -60,6 +60,107 @@ function ZonaDePeligro({ children }: { children: React.ReactNode }) {
   );
 }
 
+/** El botón de acción de las dos opciones: el mismo para las dos (8 oct 2026). */
+const BOTON_OPCION =
+  "self-start rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50";
+
+function IconoTelefono() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
+      <path d="M10.5 18.5h3" />
+    </svg>
+  );
+}
+
+function IconoSobre() {
+  return (
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="M3.5 6.5 12 13l8.5-6.5" />
+    </svg>
+  );
+}
+
+/**
+ * Las dos opciones de la verificación en dos pasos como TARJETAS HERMANAS
+ * (decisión del fundador, 8 oct 2026): el mismo botón de acción en las dos,
+ * cada una con su icono y su descripción para que no se confundan. La activa
+ * se pinta en verde con su marca de verificación y ofrece desactivarla; la otra
+ * espera, porque el servidor admite un solo método a la vez.
+ */
+export function OpcionesDobleFactor({
+  metodo,
+  ocupado,
+  onActivarApp,
+  onActivarCorreo,
+  onDesactivar,
+}: {
+  metodo: "totp" | "email" | null;
+  ocupado: boolean;
+  onActivarApp: () => void;
+  onActivarCorreo: () => void;
+  onDesactivar: () => void;
+}) {
+  const t = elegir(CUENTA, useIdioma()).seguridad;
+  const opciones = [
+    { clave: "totp", titulo: t.opcionApp, desc: t.opcionAppDesc, activar: t.activarApp, onActivar: onActivarApp, icono: <IconoTelefono /> },
+    { clave: "email", titulo: t.opcionCorreo, desc: t.opcionCorreoDesc, activar: t.activarCorreo, onActivar: onActivarCorreo, icono: <IconoSobre /> },
+  ] as const;
+  return (
+    <ul className="grid gap-3 sm:grid-cols-2">
+      {opciones.map((o) => {
+        const activa = metodo === o.clave;
+        const enEspera = metodo !== null && !activa;
+        return (
+          <li
+            key={o.clave}
+            className={
+              "flex flex-col gap-3 rounded-panel border p-4 " + (activa ? "border-done/60 bg-done-soft" : "border-hairline bg-surface")
+            }
+          >
+            <div className="flex items-start gap-3">
+              <span
+                className={
+                  "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border " +
+                  (activa ? "border-done/60 text-done" : "border-accent/40 text-accent")
+                }
+              >
+                {o.icono}
+              </span>
+              <div className="min-w-0">
+                <p className="text-[14.5px] font-semibold text-ink">{o.titulo}</p>
+                <p className="mt-0.5 text-[13px] leading-snug text-dim [text-wrap:pretty]">{o.desc}</p>
+              </div>
+            </div>
+            {activa ? (
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-done">
+                  <svg data-marca="verificado" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+                    <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5" />
+                    <path d="M4.8 8.2 7 10.4l4.2-4.6" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  {t.activa}
+                </span>
+                <button onClick={onDesactivar} disabled={ocupado} className={BOTON_OPCION}>
+                  {t.desactivarOpcion}
+                </button>
+              </div>
+            ) : (
+              <>
+                <button onClick={o.onActivar} disabled={ocupado || enEspera} className={BOTON_OPCION}>
+                  {o.activar}
+                </button>
+                {enEspera && <p className="text-[12.5px] leading-snug text-dim">{t.otraActiva}</p>}
+              </>
+            )}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 export function CuentaCliente({ email }: { email: string }) {
   const idioma = useIdioma();
   const t = elegir(CUENTA, idioma);
@@ -259,26 +360,19 @@ export function CuentaCliente({ email }: { email: string }) {
           </div>
         ) : seguridad.habilitado ? (
           <div>
-            <p className="text-[15px]">
-              <span className="font-semibold text-done">{t.seguridad.activada}</span>
-              <span className="text-dim">
-                {" "}
-                · {seguridad.metodo === "email" ? t.seguridad.codigoPorCorreo : t.seguridad.appAutenticacion}
-              </span>
-            </p>
-            <p className="mt-1 text-sm text-dim">
+            <OpcionesDobleFactor
+              metodo={seguridad.metodo}
+              ocupado={ocupado}
+              onActivarApp={empezarTotp}
+              onActivarCorreo={empezarEmail}
+              onDesactivar={desactivar2FA}
+            />
+            <p className="mt-3 text-sm text-dim">
               {interpolar(t.seguridad.alEntrar, {
                 que: seguridad.metodo === "email" ? t.seguridad.unCodigoCorreo : t.seguridad.elCodigoApp,
               })}
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
-            <button
-              onClick={desactivar2FA}
-              disabled={ocupado}
-              className="mt-3 text-sm text-dim underline-offset-2 hover:text-ink hover:underline disabled:opacity-50"
-            >
-              {t.seguridad.desactivar}
-            </button>
           </div>
         ) : flujo.paso === "totp_qr" ? (
           <form onSubmit={verificarTotp}>
@@ -328,21 +422,14 @@ export function CuentaCliente({ email }: { email: string }) {
               {t.seguridad.queHace}
             </p>
             {avisoSeguridad && <p className="mt-2 text-sm text-warn">{avisoSeguridad}</p>}
-            <div className="mt-3 flex flex-wrap gap-3">
-              <button
-                onClick={empezarTotp}
-                disabled={ocupado}
-                className="rounded-cinta border border-accent/40 px-4 py-2.5 text-sm font-medium text-accent hover:border-accent/70 disabled:opacity-50"
-              >
-                {t.seguridad.activarApp}
-              </button>
-              <button
-                onClick={empezarEmail}
-                disabled={ocupado}
-                className="rounded-cinta border border-hairline px-4 py-2.5 text-sm font-medium text-ink hover:border-white/25 disabled:opacity-50"
-              >
-                {t.seguridad.activarCorreo}
-              </button>
+            <div className="mt-3">
+              <OpcionesDobleFactor
+                metodo={null}
+                ocupado={ocupado}
+                onActivarApp={empezarTotp}
+                onActivarCorreo={empezarEmail}
+                onDesactivar={desactivar2FA}
+              />
             </div>
           </div>
         )}

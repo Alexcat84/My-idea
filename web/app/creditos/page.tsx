@@ -29,6 +29,8 @@ import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { PACKS, PRECIOS } from "@/lib/precios";
 import { apartadoDe } from "@/lib/creditos";
+import { fechaHumanaConAno } from "@/lib/fechas";
+import { etiquetaMovimiento, leerHistorial, type Movimiento } from "@/lib/historialCreditos";
 import { leerSaldo } from "@/lib/saldo";
 import { textoChipSaldo } from "@/lib/textoSaldo";
 import { createClient } from "@/lib/supabase/server";
@@ -134,6 +136,9 @@ export default async function Creditos() {
     }
   }
   const textoSaldo = saldo !== null && reservados !== null ? textoChipSaldo(Math.max(0, saldo - reservados), reservados, idioma) : null;
+  // El historial (8 oct 2026): solo con cuenta real; null si no se pudo leer.
+  const th = t.historial;
+  const historial: Movimiento[] | null = cuentaReal ? await leerHistorial(supabase) : [];
 
   return (
     <div className="flex min-h-full flex-1 flex-col">
@@ -220,6 +225,35 @@ export default async function Creditos() {
             })}
           </div>
         </section>
+
+        {/* ── TU HISTORIAL: los movimientos del libro (8 oct 2026) ────────── */}
+        {cuentaReal && (
+          <section id="historial" className="anima-plan-in mx-auto flex w-full max-w-2xl scroll-mt-20 flex-col gap-4" style={{ animationDelay: "0.08s" }}>
+            <h2 className="text-center text-[22px] font-bold tracking-tight">{th.titulo}</h2>
+            {historial === null ? (
+              <p className="text-center text-[14px] text-warn">{th.noPudeLeer}</p>
+            ) : historial.length === 0 ? (
+              <p className="text-center text-[14px] text-dim">{th.vacio}</p>
+            ) : (
+              <ul className="flex flex-col divide-y divide-hairline rounded-panel border border-hairline bg-surface">
+                {historial.map((m) => (
+                  <li key={m.id} className="flex items-center gap-4 px-5 py-3.5">
+                    <div className="min-w-0 flex-1">
+                      <p className="text-[14px] font-semibold text-ink">{etiquetaMovimiento(m, th)}</p>
+                      <p className="mt-0.5 text-[12.5px] text-dim">
+                        {fechaHumanaConAno(m.created_at, idioma)}
+                        {m.saldo_resultante !== null && <> · {interpolar(th.saldoTras, { n: m.saldo_resultante })}</>}
+                      </p>
+                    </div>
+                    <span className={`shrink-0 text-[15px] font-bold tabular-nums ${m.delta > 0 ? "text-done" : "text-ink"}`}>
+                      {m.delta > 0 ? `+${m.delta}` : `${m.delta}`}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
         {/* ── USA TUS CRÉDITOS: lo gratis, luego los tres planes ──────────── */}
         <section className="anima-plan-in flex flex-col items-center gap-6 border-t border-hairline pt-10" style={{ animationDelay: "0.1s" }}>
