@@ -16,7 +16,9 @@ PRINCIPIO 2 (decision del fundador, 28 sep 2026, docs/REGLAS_DE_LA_CASA.md): nad
 preguntas de la cache son PREGUNTAS BASE y se quedan EXACTAMENTE como estan. Dos modos que solo AÑADEN:
     --faltantes --yes   # la pregunta de los nodos con siguientes que aun no la tienen (los 40); nunca pisa una base
     --neutrales --yes   # la version NEUTRAL de cada base (sin roles supuestos, tuteo neutro), en el campo aparte
-                        # pregunta_neutral; es la salida segura del adaptador (web/lib/engine/adaptadorPregunta.ts)
+                        # pregunta_neutral; es la salida segura del adaptador (web/lib/engine/adaptadorPregunta.ts).
+                        # Desde la corrida final (8 oct 2026) tambien la de cada pregunta de ENTRADA de una puerta, en
+                        # su campo aparte pregunta_entrada_neutral (la salida segura de esa entrada)
 Los dos corren en la CORRIDA FINAL (regla del fundador: ninguna llamada a la API real antes), y se pueden reanudar:
 lo que ya esta hecho no se vuelve a pagar.
 """
@@ -165,31 +167,34 @@ def generar_neutral(client, nid, base, candidatos_ids, graph):
     return texto, msg.usage
 
 
-def objetivos_neutrales(cache, graph):
-    """Las bases que necesitan neutral: nodo vivo (existe y no esta deprecado), con pregunta y sin neutral aun."""
+def objetivos_neutrales(cache, graph, origen="pregunta", destino="pregunta_neutral"):
+    """Las preguntas que necesitan neutral: nodo vivo (existe y no esta deprecado), con `origen` y sin `destino` aun.
+    Por defecto, las bases (pregunta -> pregunta_neutral); con origen="pregunta_entrada" y
+    destino="pregunta_entrada_neutral", las preguntas de entrada de las puertas (corrida final, 8 oct 2026)."""
     return [
         nid for nid, e in cache.items()
-        if e.get("pregunta") and not e.get("pregunta_neutral") and nid in graph and not graph[nid].get("deprecado")
+        if e.get(origen) and not e.get(destino) and nid in graph and not graph[nid].get("deprecado")
     ]
 
 
-def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos=1):
-    """Añade pregunta_neutral a cada base que la necesita. La base NO se toca. Reanudable: solo trabaja lo que falta.
-    Devuelve {'hechas', 'fallidas': [(nid, motivo)], 'tokens_in', 'tokens_out'}."""
-    trabajo = objetivos_neutrales(cache, graph)
+def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos=1, origen="pregunta",
+                     destino="pregunta_neutral"):
+    """Añade `destino` (la neutral) a cada pregunta `origen` que la necesita. Ni el origen ni la base se tocan.
+    Reanudable: solo trabaja lo que falta. Devuelve {'hechas', 'fallidas': [(nid, motivo)], 'tokens_in', 'tokens_out'}."""
+    trabajo = objetivos_neutrales(cache, graph, origen, destino)
     if limite is not None:
         trabajo = trabajo[:limite]
     hechas, fallidas, t_in, t_out = 0, [], 0, 0
     for i, nid in enumerate(trabajo, 1):
-        base = cache[nid]["pregunta"]
+        base = cache[nid][origen]
         ultimo = None
         for _ in range(1 + reintentos):
             try:
                 texto, usage = generar_neutral(client, nid, base, cache[nid].get("candidatos", []), graph)
                 t_in += usage.input_tokens
                 t_out += usage.output_tokens
-                cache[nid] = {**cache[nid], "pregunta_neutral": texto}
-                assert cache[nid]["pregunta"] == base  # la base queda intacta
+                cache[nid] = {**cache[nid], destino: texto}
+                assert cache[nid][origen] == base  # el origen queda intacto
                 hechas += 1
                 ultimo = None
                 break
@@ -329,7 +334,10 @@ def main():
 
     if args.faltantes or args.neutrales:
         cache = json.load(open(CACHE_PATH, encoding="utf-8"))
-        pendientes = faltantes(cache, graph) if args.faltantes else objetivos_neutrales(cache, graph)
+        # --neutrales: las bases y, desde la corrida final (8 oct 2026), las preguntas de entrada de las puertas.
+        ENTRADA = dict(origen="pregunta_entrada", destino="pregunta_entrada_neutral")
+        pendientes = faltantes(cache, graph) if args.faltantes else (
+            objetivos_neutrales(cache, graph) + objetivos_neutrales(cache, graph, **ENTRADA))
         modo = "faltantes" if args.faltantes else "neutrales"
         if not args.yes:
             print(f"\n--{modo}: {len(pendientes)} nodos por hacer. Gasta dinero real: pasa --yes para correrlo.")
@@ -343,6 +351,12 @@ def main():
             r = correr_faltantes(client, cache, graph, guardar=guardar)
         else:
             r = correr_neutrales(client, cache, graph, limite=args.limite, guardar=guardar)
+            if args.limite is None or r["hechas"] + len(r["fallidas"]) < args.limite:
+                resto = None if args.limite is None else args.limite - r["hechas"] - len(r["fallidas"])
+                re_ = correr_neutrales(client, cache, graph, limite=resto, guardar=guardar, **ENTRADA)
+                print(f"  (de ellas, de entrada: hechas {re_['hechas']}, fallidas {len(re_['fallidas'])})")
+                r = {"hechas": r["hechas"] + re_["hechas"], "fallidas": r["fallidas"] + re_["fallidas"],
+                     "tokens_in": r["tokens_in"] + re_["tokens_in"], "tokens_out": r["tokens_out"] + re_["tokens_out"]}
         cost = (r["tokens_in"] / 1_000_000) * PRICE_INPUT_PER_MTOK + (r["tokens_out"] / 1_000_000) * PRICE_OUTPUT_PER_MTOK
         print(f"\n--{modo}: hechas {r['hechas']}, fallidas {len(r['fallidas'])}")
         for nid, motivo in r["fallidas"][:30]:

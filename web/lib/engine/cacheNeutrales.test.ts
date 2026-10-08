@@ -19,6 +19,9 @@ const TOPE_SIN_NEUTRAL = 3288;
  * lleva_scorecard_desempeno_proveedor y traduce_stock_muerto_numeros (docs/ACTA_SANEAMIENTO_FINAL.md, 6.1). Se
  * generan en la corrida final con --faltantes. */
 const TOPE_SIN_PREGUNTA = 43;
+/** Preguntas de ENTRADA de puertas vivas sin su neutral (decisión del fundador para la corrida final, 8 oct 2026: las
+ * neutrales de TODAS las preguntas, base y de entrada, en `pregunta_entrada_neutral`). 86 al 8 oct 2026. */
+const TOPE_ENTRADA_SIN_NEUTRAL = 86;
 
 const graph = cargarGrafo();
 const cache = cargarPreguntasCache();
@@ -38,6 +41,13 @@ describe("la cache camina hacia completa (trinquete)", () => {
       return siguientes.length > 0 && !cache[nid]?.pregunta;
     });
     expect(sinPregunta.length).toBeLessThanOrEqual(TOPE_SIN_PREGUNTA);
+  });
+
+  it("las preguntas de entrada de nodos vivos sin su neutral no suben del tope", () => {
+    const sinNeutral = Object.entries(cache).filter(
+      ([nid, e]) => e.pregunta_entrada && !e.pregunta_entrada_neutral && graph[nid] && !graph[nid].deprecado
+    );
+    expect(sinNeutral.length).toBeLessThanOrEqual(TOPE_ENTRADA_SIN_NEUTRAL);
   });
 
   it("una neutral, donde la hay, nunca pisa la base: es un campo aparte", () => {

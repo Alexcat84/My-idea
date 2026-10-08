@@ -147,4 +147,28 @@ assert r["hechas"] == 0 and r["fallidas"] == [("x", "respuesta cortada por tope 
 assert "x" not in cache
 print("OK correr_faltantes: solo los que no tienen pregunta, con la regla unica, nunca una salida cortada")
 
+# --- 5. neutrales de las preguntas de ENTRADA (corrida final, 8 oct 2026) -------------------------------------------
+# Decision del fundador: se generan las neutrales de TODAS las preguntas, base y de entrada. La de entrada va a su campo
+# aparte (pregunta_entrada_neutral); la entrada y la base no se tocan.
+ENT = "¿Tu equipo ya sabe a quién acudir cuando algo se atasca?"
+graph_e = {**graph, "e": nodo("Puerta", ["s"]), "f": nodo("Puerta hecha", ["s"]), "g": nodo("Puerta deprecada", ["s"], deprecado=True)}
+cache = {
+    "e": {"pregunta": BASE, "pregunta_entrada": ENT, "candidatos": ["s"]},
+    "f": {"pregunta": "¿F?", "pregunta_entrada": "¿Entrada F?", "pregunta_entrada_neutral": "¿Entrada F, neutral?", "candidatos": ["s"]},
+    "g": {"pregunta": "¿G?", "pregunta_entrada": "¿Entrada G?", "candidatos": ["s"]},
+}
+ENTRADA = dict(origen="pregunta_entrada", destino="pregunta_entrada_neutral")
+assert bqc.objetivos_neutrales(cache, graph_e, **ENTRADA) == ["e"]  # ni la hecha ni la deprecada
+cliente = ClienteFalso([(json.dumps({"pregunta_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}), "end_turn")])
+r = bqc.correr_neutrales(cliente, cache, graph_e, **ENTRADA)
+# A mano: 1 llamada -> 300 de entrada, 40 de salida.
+assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40}, r
+assert cache["e"] == {"pregunta": BASE, "pregunta_entrada": ENT, "candidatos": ["s"],
+                      "pregunta_entrada_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}
+assert "pregunta_neutral" not in cache["e"]  # la neutral de la base es otra cosa y no se toca aqui
+assert json.loads(cliente.llamadas[0]["messages"][0]["content"])["pregunta_base"] == ENT  # se neutraliza la ENTRADA
+# por defecto, el modo de siempre (las bases)
+assert bqc.objetivos_neutrales(cache, graph_e) == ["e", "f"]
+print("OK neutrales de entrada: campo aparte, ni la entrada ni la base cambian, el modo de las bases sigue igual")
+
 print("\nTODO OK")

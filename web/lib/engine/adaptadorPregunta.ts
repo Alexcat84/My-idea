@@ -16,7 +16,9 @@
  * la cache (`pregunta_neutral`, un campo aparte: la base sigue intacta), nunca la base cruda. Mientras un nodo no tenga
  * neutral (se generan en la corrida final), sale una PLANTILLA NEUTRAL generica sin roles supuestos (visto del
  * fundador, 28 sep 2026, punto 1): la generica que nombra el tema por su etiqueta, o, si la etiqueta supone un papel
- * (equipo, jefe, socios), la que no nombra tema. El evento dice cual salio.
+ * (equipo, jefe, socios), la que no nombra tema. La pregunta de ENTRADA de una puerta tiene su propia neutral
+ * (`pregunta_entrada_neutral`, corrida final, 8 oct 2026) y sale por ella; mientras no la tenga, sale tal cual. El
+ * evento dice cual salio.
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
@@ -61,7 +63,8 @@ export interface EntradaAdaptador {
   plantilla: string;
   /** las etiquetas de los siguientes entre los que la respuesta ayuda a elegir */
   siguientes: string[];
-  /** true si `base` es la pregunta de ENTRADA de una puerta: su salida segura es ella misma */
+  /** true si `base` es la pregunta de ENTRADA de una puerta. Su salida segura es su neutral de entrada (`neutral`,
+   * corrida final, 8 oct 2026) y, mientras no la tenga, ella misma. */
   esEntrada?: boolean;
 }
 
@@ -116,7 +119,7 @@ export async function adaptarPregunta(
   opts: { idiomaSalida: string | null; contexto: string | null; tiempoMaxMs?: number }
 ): Promise<ResultadoAdaptador> {
   const segura = (fallo: string, acc: UsoAcumulado): ResultadoAdaptador =>
-    entrada.esEntrada
+    entrada.esEntrada && !entrada.neutral
       ? { pregunta: entrada.base, busca: null, acumulado: acc, salida: "entrada", fallo }
       : entrada.neutral
       ? { pregunta: entrada.neutral, busca: null, acumulado: acc, salida: "neutral", fallo }
@@ -179,11 +182,14 @@ export async function adaptarResultadoTurno<
   if (!n) return resultado;
   const entradaCache = datos.preguntasCache[nodo];
   const mostrada = resultado.pregunta;
-  // La pregunta de ENTRADA de una puerta (punto 3 del fundador, 28 sep 2026) se adapta igual que las demás.
-  const deEntrada = typeof entradaCache?.pregunta_entrada === "string" && entradaCache.pregunta_entrada.trim() ? entradaCache.pregunta_entrada : null;
-  const esEntrada = deEntrada !== null && mostrada === deEntrada;
-  const base = esEntrada ? deEntrada : obtenerPregunta(nodo, n, datos.preguntasCache, datos.idiomaPlantilla);
-  const neutral = typeof entradaCache?.pregunta_neutral === "string" && entradaCache.pregunta_neutral.trim() ? entradaCache.pregunta_neutral : null;
+  // La pregunta de ENTRADA de una puerta (punto 3 del fundador, 28 sep 2026) se adapta igual que las demás, y desde
+  // la corrida final (8 oct 2026) tiene su propia neutral (`pregunta_entrada_neutral`), que es su salida segura.
+  const texto = (v: unknown) => (typeof v === "string" && v.trim() ? v : null);
+  const deEntrada = texto(entradaCache?.pregunta_entrada);
+  const entradaNeutral = texto(entradaCache?.pregunta_entrada_neutral);
+  const esEntrada = deEntrada !== null && (mostrada === deEntrada || (entradaNeutral !== null && mostrada === entradaNeutral));
+  const base = esEntrada ? (deEntrada as string) : obtenerPregunta(nodo, n, datos.preguntasCache, datos.idiomaPlantilla);
+  const neutral = esEntrada ? entradaNeutral : texto(entradaCache?.pregunta_neutral);
   if (mostrada !== base && mostrada !== neutral) return resultado;
 
   const candidatos = Array.isArray(entradaCache?.candidatos) ? (entradaCache.candidatos as unknown[]) : [];
