@@ -237,7 +237,9 @@ async function faseSesionMacetas(cookie: string) {
     }
     registrarNodosNuevos(r.nodos_nuevos);
   }
-  registrarNodosNuevos(r.nodos_nuevos);
+  // Sin un registrarNodosNuevos aqui: la ultima respuesta ya se registro dentro del bucle (o, si el bucle no corrio,
+  // arriba con la del arranque). Volver a registrarla contaba dos veces los nodos del turno que cierra la entrevista;
+  // el 8 oct 2026 ese turno trajo un salto y el arnes conto 8 donde el producto guardo 7, bien.
 
   log(`\nInterprete se detuvo tras ${turnos} turno(s). tipo final: ${r.tipo}`);
   if (r.tipo === "salio") {
