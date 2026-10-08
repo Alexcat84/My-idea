@@ -115,6 +115,30 @@ VOSEO = re.compile(
     re.IGNORECASE,
 )
 
+# VOSEO por REGLA GENERAL (cuarta vuelta de la corrida final, 8 oct 2026): el presente voseante termina en -ás, -és o
+# -ís con tilde (sentís, contactás, imaginás, descubrís, decidís, contás). No lo son las palabras de siempre ni el
+# futuro del tuteo (tendrás, lograrás, sabrás), salvo los voseos en -rás que se midieron en las bases.
+_VOSEO_CANDIDATA = re.compile(r"\b[a-záéíóúñü]+(?:ás|és|ís)\b", re.IGNORECASE)
+_NO_VOSEO = {
+    "más", "además", "jamás", "demás", "atrás", "detrás", "quizás", "compás", "estás", "después", "estés", "través",
+    "interés", "revés", "inglés", "francés", "cortés", "portugués", "japonés", "escocés", "holandés", "estrés", "país",
+    "anís", "cafés", "bebés", "sofás", "mamás", "papás", "querrás", "habrás", "cabrás", "jamás",
+}
+_FUTURO = re.compile(r"(ar|er|ir|dr|br)ás$", re.IGNORECASE)
+_VOSEO_EN_RAS = {"mirás", "esperás"}
+
+
+def voseo_en(texto):
+    """Los tramos con voseo de un texto: [(inicio, fin, palabra)], por la lista y por la regla general."""
+    out = [(m.start(), m.end(), m.group(0)) for m in VOSEO.finditer(texto or "")]
+    for m in _VOSEO_CANDIDATA.finditer(texto or ""):
+        w = m.group(0).lower()
+        if w in _NO_VOSEO or (_FUTURO.search(w) and w not in _VOSEO_EN_RAS):
+            continue
+        if not any(a <= m.start() < b for a, b, _ in out):
+            out.append((m.start(), m.end(), m.group(0)))
+    return sorted(out)
+
 # El genero marcado al hablarle a la persona (decision del fundador, 8 oct 2026: al lector se le habla en masculino
 # generico). Solo formas que se refieren a ella: "una sola vez", "tu lista", "es segura" (una cosa), "tu misma
 # situacion" (posesivo, sin tilde) o "esa persona podria estar interesada" (un tercero) no cuentan.
@@ -197,7 +221,7 @@ def comprobar_neutral(base, texto):
         return "guion_largo"
     if len(t) > max(2 * len(base), len(base) + 200):
         return "demasiado_larga"
-    if VOSEO.search(t):
+    if voseo_en(t):
         return "voseo"
     if GENERO.search(t):
         return "genero"

@@ -46,6 +46,22 @@ for sin_papel in ["¿Hay equipos en tu taller que levanten cargas?",
                   "Si llegas a tener un equipo, ¿cómo lo organizarías?",
                   "¿Usas equipo de protección cuando trabajas?"]:
     assert "papel" not in [p["clase"] for p in nn.problemas(sin_papel)], sin_papel
+# VOSEO por regla general (cuarta vuelta, 8 oct 2026): -ás, -és, -ís de presente, salvo las palabras de siempre y el
+# futuro. Las formas que se colaron en la tercera muestra: sentis, contactas, imaginas, descubris, decidis, contas.
+for vos in ["¿Qué sentís cuando contactás a un cliente?", "¿Cómo imaginás tu primer año?", "¿Qué descubrís al probar?",
+            "¿Cómo decidís el precio?", "¿A quién le contás tu idea?", "¿Qué preferís hacer primero?",
+            "¿Cuánto gastás en envíos?", "¿Qué entendés por calidad?", "Si mirás tus números, ¿qué ves?"]:
+    assert "voseo" in [p["clase"] for p in nn.problemas(vos)], vos
+for tu in ["¿Qué es lo más importante para ti?", "¿Cómo estás hoy con tu idea?", "¿Qué harás después?",
+           "¿En qué país vendes?", "¿Qué tendrás listo a través de este paso?", "¿Qué lograrás si funciona?",
+           "Cuando estés listo, ¿qué harás además?", "¿Qué interés tiene?", "¿Qué podrás medir?", "¿Qué sabrás entonces?"]:
+    assert "voseo" not in [p["clase"] for p in nn.problemas(tu)], tu
+# PAPELES IMPLICITOS y plurales de grupo (cuarta vuelta): nunca tal cual
+for implicito in ["¿Qué hace la gente que trabaja en él cuando algo falla?", "¿Hacia dónde quieres ir como organización?",
+                  "¿Cómo lo muestras para que todos sepan en qué etapa está cada uno?", "¿Ya tienen claro qué quieren resolver?",
+                  "¿Cómo convences a quien toma las decisiones?", "¿Qué hacen los responsables de equipos?",
+                  "¿Qué pasa cuando alguien que trabaja contigo atiende a un cliente?", "¿Ya tenemos claro qué queremos?"]:
+    assert nn.problemas(implicito) and not nn.nivel_1(implicito), implicito
 print("OK nivel 1: la base sin papeles ni defectos pasa tal cual; con cualquier problema, no")
 
 
@@ -128,4 +144,57 @@ assert r["nivel"] == 3, r
 # el juez es un modelo distinto del editor
 assert nn.MODELO_EDITOR != nn.MODELO_JUEZ
 print("OK niveles: 1 sin llamadas, 2 con edicion verificada y juez de acuerdo, 3 ante cualquier duda")
+
+
+# --- 5. correccion declarada de una BASE (voseo, ingles, forma rota), con la misma maquina de edicion minima ----------
+BV = "¿Qué sentís cuando contactás a tu primer cliente?"
+C_BV = [{"original": "sentís", "nuevo": "sientes"}, {"original": "contactás", "nuevo": "contactas"}]
+r = nn.corregir_base(cliente([json.dumps({"cambios": C_BV})]), cliente([json.dumps({"mismo_sentido": True, "motivo": "igual"})]),
+                     "n2", BV, GRAFO, extras=[])
+assert r["corregida"] == "¿Qué sientes cuando contactas a tu primer cliente?" and r["clases"] == ["voseo"], r
+# una forma rota que trae el lector (no la detectan las reglas): el fragmento lo marca el lector y solo ese se toca
+BR = "¿Cómo vas a figura out el precio de tu servicio?"
+r = nn.corregir_base(cliente([json.dumps({"cambios": [{"original": "figura out", "nuevo": "averiguar"}]})]),
+                     cliente([json.dumps({"mismo_sentido": True, "motivo": "igual"})]), "n2", BR, GRAFO,
+                     extras=[{"clase": "forma_rota", "fragmento": "figura out"}])
+assert r["corregida"] == "¿Cómo vas a averiguar el precio de tu servicio?" and r["clases"] == ["forma_rota"], r
+# solo las palabras del problema: un fragmento que va mas alla del problema se rechaza y la base NO se toca
+r = nn.corregir_base(cliente([json.dumps({"cambios": [{"original": "figura out el precio", "nuevo": "bajar el precio"}]})] * 2),
+                     cliente([]), "n2", BR, GRAFO, extras=[{"clase": "forma_rota", "fragmento": "figura out"}])
+assert r["corregida"] is None and r["motivo"] == "fragmento_mas_que_el_problema", r
+# si el juez independiente duda, la base no se toca
+r = nn.corregir_base(cliente([json.dumps({"cambios": C_BV})] * 2), cliente([json.dumps({"mismo_sentido": False, "motivo": "x"})] * 2),
+                     "n2", BV, GRAFO, extras=[])
+assert r["corregida"] is None and r["motivo"] == "juez_independiente", r
+# una base sin nada que corregir no llama a nadie
+r = nn.corregir_base(cliente([]), cliente([]), "n2", LIMPIA, GRAFO, extras=[])
+assert r["corregida"] is None and r["motivo"] == "sin_problemas_de_base", r
+# una forma rota larga (hasta 12 palabras) cabe en la segunda pasada, con las mismas comprobaciones y el juez
+BL = "¿O todos los que importan en la decisión eres tú y el que usa el producto?"
+FR = "los que importan en la decisión eres tú y el que usa"  # 12 palabras
+C_BL = [{"original": FR, "nuevo": "los que importan en la decisión son tú y quien usa"}]
+assert nn.corregir_base(cliente([json.dumps({"cambios": C_BL})] * 2), cliente([]), "n2", BL, GRAFO,
+                        extras=[{"clase": "forma_rota", "fragmento": FR}])["motivo"] == "fragmento_largo"
+r = nn.corregir_base(cliente([json.dumps({"cambios": C_BL})]), cliente([json.dumps({"mismo_sentido": True, "motivo": "igual"})]),
+                     "n2", BL, GRAFO, extras=[{"clase": "forma_rota", "fragmento": FR}], max_frag=12)
+assert r["corregida"] == "¿O todos los que importan en la decisión son tú y quien usa el producto?", r
+# la misma palabra de voseo repetida se cambia en todas sus apariciones (antes se rechazaba por "fragmento_repetido")
+BR2 = "¿Ya tenés claro qué querés y tenés el dinero para empezar?"
+C_R2 = [{"original": "tenés", "nuevo": "tienes"}, {"original": "querés", "nuevo": "quieres"}]
+r = nn.corregir_base(cliente([json.dumps({"cambios": C_R2})]), cliente([json.dumps({"mismo_sentido": True, "motivo": "igual"})]),
+                     "n2", BR2, GRAFO, extras=[])
+assert r["corregida"] == "¿Ya tienes claro qué quieres y tienes el dinero para empezar?", r
+# el pronombre "vos" va con la palabra de antes: tras preposicion pasa a "ti" ("de vos" -> "de ti"), si no a "tu"
+BP = "¿Deben obtenerlos de vos o de proveedores que vos designes?"
+frags = [p["fragmento"] for p in nn.problemas(BP) if p["clase"] == "voseo"]
+assert "de vos" in frags and "que vos" in frags, frags
+C_BP = [{"original": "de vos", "nuevo": "de ti"}, {"original": "que vos", "nuevo": "que tú"}]
+r = nn.corregir_base(cliente([json.dumps({"cambios": C_BP})]), cliente([json.dumps({"mismo_sentido": True, "motivo": "igual"})]),
+                     "n2", BP, GRAFO, extras=[])
+assert r["corregida"] == "¿Deben obtenerlos de ti o de proveedores que tú designes?", r
+# "vos" nunca se cambia en bloque: un unico reemplazo "vos" -> "tu" para todas las apariciones se rechaza
+assert nn.aplicar_cambios(BP, [{"original": "vos", "nuevo": "tú"}], probs=nn.problemas(BP), editables=nn.CLASES_DE_BASE)[1] in (
+    "fragmento_repetido", "fragmento_sin_problema")
+assert "Juzga SOLO los cambios" in nn.SYSTEM_JUEZ_CORRECCION
+print("OK correccion declarada de bases: voseo y formas rotas por edicion minima verificada; si duda, no se toca")
 print("\nTODO OK")

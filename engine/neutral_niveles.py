@@ -44,10 +44,16 @@ CONDICIONAL_PEGADO = re.compile(r"^[^.?!]{0,40}?\bsi\s+(l[oa]s?\s+)?(tienes|hay|
 PAPEL_SUELTO = re.compile(r"\b(jef[ea]s?|recursos humanos|emplead\w*|subordinad\w*|gerente\w*|cofundador\w*|personal a tu cargo|"
                           # "el equipo" (singular, con articulo) da por hecho un equipo; "equipos" suele ser maquinaria
                           r"(todo |el resto )?(el|al|del) equipo(?! de (protecci|c[oó]mputo|carga|trabajo pesado))|"
-                          r"responsables de equipo|los departamentos|las [aá]reas de tu empresa|los trabajadores)\b", re.I)
+                          r"responsables de equipos?|los departamentos|las [aá]reas de tu empresa|los trabajadores)\b", re.I)
 CONDICIONAL = re.compile(r"\b(si|en caso|cuando tengas|alg[uú]n d[ií]a|en alg[uú]n momento)\b", re.I)
 GRUPO = re.compile(r"\b(ustedes|vosotr[oa]s|ambos|ambas|entre todos|tu empresa|tu organizaci[oó]n|tu compa[ñn][ií]a|"
-                   r"tu plantilla|tu gente)\b|\b\w+(?:áis|éis)\b", re.I)
+                   r"tu plantilla|tu gente|"
+                   # papeles implicitos y plurales de grupo (cuarta vuelta, 8 oct 2026): nunca tal cual
+                   r"la gente que trabaja|la gente de tu|como organizaci[oó]n|para que todos|"
+                   r"todos (sepan|entiendan|est[eé]n|tengan|conozcan)|quien(es)? toma(n)? (las )?decisiones|quien aprueba|"
+                   r"(tienen|tengan|tenemos) claro|alguien que trabaja contigo|"
+                   r"nosotros|nuestr[oa]s?|tenemos|queremos|sabemos|podemos|"
+                   r"(c[oó]mo|qu[eé]) (desarrollan|inventan|deciden|organizan)|van inventando)\b|\b\w+(?:áis|éis)\b", re.I)
 VOZ_LIBRO = re.compile(r"\b(el libro|del libro|el autor|la autora|seg[uú]n (el|la) (autor|autora|libro|texto)|"
                        r"como se (explica|ilustra|describe)|el texto)\b", re.I)
 EDITABLES = {"papel", "grupo", "personas", "voseo", "genero"}
@@ -103,8 +109,13 @@ def problemas(texto):
         if not bqc.CONDICIONAL_PERSONAS.search(_frase_de(texto, m.start())) and not any(
                 p["inicio"] <= m.start() < p["fin"] for p in out):
             anota("personas", m)
-    for m in bqc.VOSEO.finditer(texto):
-        anota("voseo", m)
+    for a, b, w in bqc.voseo_en(texto):
+        if w.lower() == "vos":
+            # el pronombre va con la palabra de antes: tras preposicion pasa a "ti" ("de vos" -> "de ti"), si no a "tu"
+            previa = re.search(r"(\S+)\s+$", texto[:a])
+            if previa:
+                a = previa.start(1)
+        out.append({"clase": "voseo", "fragmento": texto[a:b], "inicio": a, "fin": b})
     for m in bqc.GENERO.finditer(texto):
         anota("genero", m)
     for m in VOZ_LIBRO.finditer(texto):
@@ -119,12 +130,13 @@ def nivel_1(base):
     return bool(base and base.strip()) and not problemas(base)
 
 
-def aplicar_cambios(base, cambios):
+def aplicar_cambios(base, cambios, probs=None, editables=None, max_frag=MAX_FRAG_PALABRAS):
     """Aplica los reemplazos del editor. Devuelve (texto, None) o (None, motivo). Cada fragmento: existe una sola vez,
-    es corto y contiene un problema detectado en la base."""
+    es corto y contiene un problema detectado en la base (o uno de `probs`, los que trae el lector de bases)."""
     if not isinstance(cambios, list) or not cambios:
         return None, "sin_cambios"
-    probs = problemas(base)
+    probs = problemas(base) if probs is None else probs
+    editables = EDITABLES if editables is None else editables
     texto = base
     for c in cambios:
         orig = (c or {}).get("original") if isinstance(c, dict) else None
@@ -134,15 +146,23 @@ def aplicar_cambios(base, cambios):
         n = base.count(orig)
         if n == 0:
             return None, "fragmento_inexistente"
-        if n > 1:
+        # la misma palabra de voseo repetida ("tenés ... tenés") se cambia en todas sus apariciones
+        repetida_voseo = n > 1 and len(_palabras(orig)) == 1 and orig.lower() != "vos" and all(
+            any(p["clase"] == "voseo" and p["inicio"] == m.start() for p in probs)
+            for m in re.finditer(r"(?<!\w)" + re.escape(orig) + r"(?!\w)", base)) and len(
+            re.findall(r"(?<!\w)" + re.escape(orig) + r"(?!\w)", base)) == n
+        if n > 1 and not repetida_voseo:
             return None, "fragmento_repetido"
-        if len(_palabras(orig)) > MAX_FRAG_PALABRAS:
+        if len(_palabras(orig)) > max_frag:
             return None, "fragmento_largo"
         ini = base.index(orig)
-        if not any(p["clase"] in EDITABLES and ini <= p["inicio"] and p["fin"] <= ini + len(orig) for p in probs):
+        if not any(p["clase"] in editables and ini <= p["inicio"] and p["fin"] <= ini + len(orig) for p in probs):
             return None, "fragmento_sin_problema"
         if len(_palabras(nuevo)) > MAX_NUEVO_PALABRAS:
             return None, "reemplazo_largo"
+        if repetida_voseo:
+            texto = re.sub(r"(?<!\w)" + re.escape(orig) + r"(?!\w)", nuevo, texto)
+            continue
         if texto.count(orig) != 1:
             return None, "fragmentos_solapados"
         # el condicional insertado se cierra con su coma si lo que sigue no es puntuacion ("tu equipo, si lo tienes, no")
@@ -159,11 +179,11 @@ def _spans_permitidos(base, cambios):
     for m in re.finditer(r"\S+", base):
         pos.append((m.start(), m.end()))
     for c in cambios:
-        ini = base.find(c["original"])
-        fin = ini + len(c["original"])
-        for i, (a, b) in enumerate(pos):
-            if a < fin and b > ini:
-                permitidas.add(i)
+        for m in re.finditer(re.escape(c["original"]), base):
+            ini, fin = m.start(), m.end()
+            for i, (a, b) in enumerate(pos):
+                if a < fin and b > ini:
+                    permitidas.add(i)
     return permitidas
 
 
@@ -367,3 +387,103 @@ def correr_niveles(cli_editor, cli_juez, cache, graph, origen="pregunta", destin
         guardar(cache)
     return {"niveles": dict(niveles), "motivos_nivel_3": dict(motivos3), "tokens": dict(tot), "costo": costo_usd(tot),
             "trabajadas": len(trabajo)}
+
+
+# --- CORRECCION DECLARADA DE BASES (decision del fundador, cuarta vuelta, 8 oct 2026) ---------------------------------
+# El voseo, el ingles y las formas rotas son defectos que se corrigen tambien en las preguntas base (REGLAS C34), por
+# correccion declarada y con la misma maquina de edicion minima: solo las palabras exactas del problema, comprobaciones
+# automaticas y juez independiente. Si algo duda, la base NO se toca y queda reportada.
+CLASES_DE_BASE = {"voseo", "forma_rota", "ingles"}
+
+SYSTEM_CORRECCION = (
+    "PROHIBIDO usar guiones largos o medios. Recibes una PREGUNTA BASE de una entrevista de emprendimiento y los "
+    "PROBLEMAS de lengua detectados en ella, cada uno con su fragmento exacto: voseo (pasa a tuteo neutro: 'tenes' "
+    "pasa a 'tienes', 'sentis' a 'sientes', 'contas' a 'cuentas'), una palabra o frase en ingles (pasa a su "
+    "equivalente en espanol neutro) o una forma rota (concordancia, persona o regimen equivocados; se arregla con el "
+    "minimo de palabras). Tu trabajo es la EDICION MINIMA: cada cambio reemplaza EXACTAMENTE el fragmento del problema, "
+    "copiado tal como esta en la base, y nada mas; todo lo demas queda identico, letra por letra. No cambies terminos "
+    "del tema, negaciones, limites, cifras, plazos ni fechas. Responde SOLO un JSON: "
+    "{\"cambios\": [{\"original\": str, \"nuevo\": str}]}."
+)
+
+SYSTEM_JUEZ_CORRECCION = (
+    "Eres un juez independiente. Recibes una PREGUNTA BASE y su version CORREGIDA, que solo debia pasar el voseo a "
+    "tuteo, traducir una palabra en ingles o arreglar una forma rota. Decide si la CORREGIDA pregunta EXACTAMENTE lo "
+    "mismo que la BASE, en el mismo sentido, y si los cambios hechos son correctos en espanol neutro. Juzga SOLO los cambios "
+    "hechos: no rechaces porque quede otra palabra sin tocar, que no se pidio corregir. Ante CUALQUIER duda, "
+    "responde false. Responde SOLO un JSON: {\"mismo_sentido\": true o false, \"motivo\": str}."
+)
+
+
+def corregir_base(cli_editor, cli_juez, nid, base, graph, extras, intentos=INTENTOS, max_frag=MAX_FRAG_PALABRAS):
+    """La correccion declarada de UNA base. `extras`: los problemas que trae el lector ({clase, fragmento}). Devuelve
+    {corregida (None si no se toca), clases, cambios, motivo, tokens...}."""
+    r = {"corregida": None, "clases": [], "cambios": None, "motivo": None, "tokens_in": 0, "tokens_out": 0,
+         "cache_read": 0, "cache_write": 0, "juez_in": 0, "juez_out": 0, "juez_read": 0, "juez_write": 0}
+    probs = [p for p in problemas(base) if p["clase"] in CLASES_DE_BASE]
+    for e in extras or []:
+        frag = (e or {}).get("fragmento") or ""
+        if frag and base.count(frag) == 1 and e.get("clase") in CLASES_DE_BASE:
+            ini = base.index(frag)
+            probs.append({"clase": e["clase"], "fragmento": frag, "inicio": ini, "fin": ini + len(frag)})
+    if not probs:
+        return {**r, "motivo": "sin_problemas_de_base"}
+    nodo = graph.get(nid, {})
+    fragmentos = {p["fragmento"] for p in probs}
+    aviso = None
+    for _ in range(intentos):
+        pedido = {"pregunta_base": base, "problemas": [{"clase": p["clase"], "fragmento": p["fragmento"]} for p in probs]}
+        if aviso:
+            pedido["el_intento_anterior_fallo_por"] = aviso
+        msg = cli_editor.messages.create(
+            model=MODELO_EDITOR, **bqc.PARAMETROS_MODELO, max_tokens=400,
+            system=[{"type": "text", "text": SYSTEM_CORRECCION, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": json.dumps(pedido, ensure_ascii=False)}])
+        r["tokens_in"] += msg.usage.input_tokens
+        r["tokens_out"] += msg.usage.output_tokens
+        lei, esc = bqc._cache_de(msg.usage)
+        r["cache_read"] += lei
+        r["cache_write"] += esc
+        try:
+            cambios = bqc._json_de(_texto_de(msg)).get("cambios")
+        except (ValueError, AttributeError):
+            aviso = r["motivo"] = "salida_no_json"
+            continue
+        if not isinstance(cambios, list) or not cambios or any(
+                not isinstance(c, dict) or c.get("original") not in fragmentos for c in cambios):
+            aviso = r["motivo"] = "fragmento_mas_que_el_problema"
+            continue
+        corregida, err = aplicar_cambios(base, cambios, probs=probs, editables=CLASES_DE_BASE, max_frag=max_frag)
+        if err:
+            aviso = r["motivo"] = err
+            continue
+        if cambio_fuera(base, corregida, cambios):
+            aviso = r["motivo"] = "cambio_fuera_del_fragmento"
+            continue
+        if termino_perdido(base, corregida, nodo):
+            aviso = r["motivo"] = "termino_clave_perdido"
+            continue
+        if polaridad_cambiada(base, corregida):
+            aviso = r["motivo"] = "polaridad_cambiada"
+            continue
+        if bqc.voseo_en(corregida) or re.search(r"[—–]", corregida):
+            aviso = r["motivo"] = "problema_sin_resolver"
+            continue
+        j = cli_juez.messages.create(
+            model=MODELO_JUEZ, **PARAMETROS_JUEZ, max_tokens=300,
+            system=[{"type": "text", "text": SYSTEM_JUEZ_CORRECCION, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": json.dumps({"pregunta_base": base, "corregida": corregida}, ensure_ascii=False)}])
+        r["juez_in"] += j.usage.input_tokens
+        r["juez_out"] += j.usage.output_tokens
+        lei, esc = bqc._cache_de(j.usage)
+        r["juez_read"] += lei
+        r["juez_write"] += esc
+        try:
+            veredicto = bqc._json_de(_texto_de(j))
+        except ValueError:
+            veredicto = {}
+        if veredicto.get("mismo_sentido") is True:
+            return {**r, "corregida": corregida, "clases": sorted({p["clase"] for p in probs}), "cambios": cambios,
+                    "motivo": None}
+        aviso = r["motivo"] = "juez_independiente"
+    return r
