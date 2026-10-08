@@ -48,6 +48,7 @@ GRUPO = re.compile(r"\b(ustedes|vosotr[oa]s|ambos|ambas|entre todos|tu empresa|t
 VOZ_LIBRO = re.compile(r"\b(el libro|del libro|el autor|la autora|seg[uú]n (el|la) (autor|autora|libro|texto)|"
                        r"como se (explica|ilustra|describe)|el texto)\b", re.I)
 EDITABLES = {"papel", "grupo", "personas", "voseo", "genero"}
+CIERRE_CONDICIONAL = re.compile(r",\s*si\s+(l[oa]s?\s+)?(tienes|hay|existe|existen)$", re.I)
 
 # Terminos clave: si estan en la base, siguen en la neutral (sin sinonimos: la edicion minima no los toca).
 TERMINOS = [
@@ -141,6 +142,10 @@ def aplicar_cambios(base, cambios):
             return None, "reemplazo_largo"
         if texto.count(orig) != 1:
             return None, "fragmentos_solapados"
+        # el condicional insertado se cierra con su coma si lo que sigue no es puntuacion ("tu equipo, si lo tienes, no")
+        pos = texto.index(orig) + len(orig)
+        if CIERRE_CONDICIONAL.search(nuevo) and pos < len(texto) and texto[pos] not in ",.;:?!)":
+            nuevo = nuevo + ","
         texto = texto.replace(orig, nuevo, 1)
     return texto, None
 

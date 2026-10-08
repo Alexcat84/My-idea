@@ -43,6 +43,13 @@ assert nn.aplicar_cambios(B, [{"original": "con tus socios", "nuevo": "x"}])[1] 
 assert nn.aplicar_cambios(B, [{"original": "vender franquicias", "nuevo": "vender tu negocio"}])[1] == "fragmento_sin_problema"
 # el fragmento es corto (las palabras del problema, no la frase entera)
 assert nn.aplicar_cambios(B, [{"original": "Cuando lo hablas con tu equipo, ¿qué es lo que más te preocupa", "nuevo": "y"}])[1] == "fragmento_largo"
+# el condicional insertado se cierra con su coma si lo que sigue no es puntuacion (piloto del 8 oct: "si lo tienes no vea")
+B3 = "¿Qué pasa si tu equipo no ve por qué importa?"
+ok, err = nn.aplicar_cambios(B3, [{"original": "tu equipo", "nuevo": "tu equipo, si lo tienes"}])
+assert (ok, err) == ("¿Qué pasa si tu equipo, si lo tienes, no ve por qué importa?", None), ok
+B4 = "¿Qué opina tu equipo?"
+ok, err = nn.aplicar_cambios(B4, [{"original": "tu equipo", "nuevo": "tu equipo, si lo tienes"}])
+assert ok == "¿Qué opina tu equipo, si lo tienes?", ok
 print("OK aplicar_cambios: solo fragmentos que existen, cortos y que contienen el problema")
 
 
