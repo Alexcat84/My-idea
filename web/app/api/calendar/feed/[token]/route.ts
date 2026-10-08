@@ -4,7 +4,8 @@
  * cierto tiempo; devolvemos SIEMPRE fresco un .ics con las fechas PENDIENTES de
  * todas las ideas del usuario (las hechas/retiradas no llevan recordatorio).
  * AUD-09 H11: y solo del plan VIGENTE de cada espacio, nunca de un espacio "a
- * mi ritmo", de un mundo completado ni de una idea realizada.
+ * mi ritmo" ni de un mundo completado; de una idea realizada, solo sus mundos
+ * que siguen abiertos (8 oct 2026).
  *
  * Sin cookie de sesión: el `token` firmado ES la autorización (lo verifica
  * feedCalendario). Solo lectura, cliente admin. Funciona en Google/Apple/
@@ -49,7 +50,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ toke
     realizada_at: string | null;
     modo_camino: "ritmo" | "fechas" | null;
   }>) {
-    if (p.realizada_at) continue; // silencio para ideas cerradas
     const nombre = nombreDeIdea(p.titulo, p.entrada_original ?? "");
     const { data: items } = await admin
       .from("checklist_items")
@@ -74,7 +74,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ toke
       .map((u) => u.dominio);
 
     const vigentes = itemsQueAvisan({
-      realizada: false,
+      realizada: Boolean(p.realizada_at),
       items: filas,
       planes: (planes ?? []) as PlanFeed[],
       modos,

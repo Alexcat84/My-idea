@@ -75,8 +75,10 @@ const dominioDe = (d: string | null | undefined) => (!d ? "core" : d);
  * El teléfono solo recibe recordatorios de lo que el usuario sigue queriendo
  * con fechas: el plan VIGENTE de cada espacio (el último; los reemplazados ya
  * no avisan), nunca un espacio en modo "a mi ritmo" (BANCO §5: sin fechas no
- * hay recordatorios), nunca un mundo completado, y silencio entero para una
- * idea realizada. De lo que queda, solo lo pendiente con fecha. Pura.
+ * hay recordatorios) y nunca un mundo completado. Con la idea REALIZADA se
+ * calla solo el viaje principal: sus mundos abiertos conservan sus fechas hasta
+ * que se cierren (decisión del fundador, 8 oct 2026). De lo que queda, solo lo
+ * pendiente con fecha. Pura.
  */
 export function itemsQueAvisan(opts: {
   realizada: boolean;
@@ -85,7 +87,6 @@ export function itemsQueAvisan(opts: {
   modos: Record<string, "ritmo" | "fechas">;
   mundosCompletados: string[];
 }): ItemFeed[] {
-  if (opts.realizada) return [];
   const vigente: Record<string, PlanFeed> = {};
   for (const p of opts.planes) {
     if (!ETIQUETAS_DE_PLAN.includes(p.etiqueta)) continue;
@@ -97,6 +98,7 @@ export function itemsQueAvisan(opts: {
     if (!i.fecha_base || i.estado === "hecho" || i.estado === "no_aplica") return false;
     if (!vigente[d] || i.plan_id !== vigente[d].id) return false;
     if (opts.modos[d] === "ritmo") return false;
+    if (d === "core" && opts.realizada) return false;
     if (d !== "core" && opts.mundosCompletados.includes(d)) return false;
     return true;
   });

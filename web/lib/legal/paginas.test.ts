@@ -56,6 +56,13 @@ describe("Preguntas frecuentes y Eliminar tu cuenta, en los once idiomas", () =>
       expect(leer(rel)).not.toMatch(/idiomaDePagina|IdiomaPagina/);
   });
 
+  it("en español, la respuesta del calendario dice una sola vía y cada varias horas", () => {
+    const r = preguntasFrecuentes("es").items[8].r;
+    expect(r).toMatch(/una sola vía/);
+    expect(r).toMatch(/cada varias horas/);
+    expect(r).toMatch(/Google Calendar/);
+  });
+
   it("cada idioma tiene su texto propio y los precios salen de precios.ts", () => {
     const es = preguntasFrecuentes("es");
     for (const idioma of ACTIVE_LOCALES) {
@@ -63,10 +70,14 @@ describe("Preguntas frecuentes y Eliminar tu cuenta, en los once idiomas", () =>
       const e = eliminarCuenta(idioma);
       const todo = JSON.stringify([p, e, navPublica(idioma)]);
       expect(todo).not.toContain("{{");
-      expect(p.items).toHaveLength(9);
+      // 10 desde el 8 oct 2026: la respuesta del calendario (una sola vía y la
+      // actualización cada varias horas de las apps que suscriben).
+      expect(p.items).toHaveLength(10);
+      expect(p.items[8].r, idioma).toMatch(/Google/);
       expect(p.items[2].r).toContain(String(PRECIOS.plan_completo));
       expect(p.items[2].r).toContain(String(PRECIOS.seguimiento));
       expect(e.sinAcceso).toContain(CORREO_PRIVACIDAD);
+      expect(p.items[8].p.length, idioma).toBeGreaterThan(10);
       if (idioma !== "es") {
         expect(p.titulo).not.toBe(es.titulo);
         expect(e.titulo).not.toBe(eliminarCuenta("es").titulo);

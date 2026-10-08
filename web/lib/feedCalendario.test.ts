@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { describe, expect, it } from "vitest";
 
 // La clave HMAC se lee de process.env al LLAMAR (no al importar), así que basta
@@ -74,7 +76,17 @@ describe("itemsQueAvisan: solo avisa lo vigente, con fechas y abierto", () => {
     expect(ids).not.toContain("riesgos-pendiente");
   });
 
-  it("una idea realizada guarda silencio entera", () => {
-    expect(itemsQueAvisan({ realizada: true, items, planes, modos: {}, mundosCompletados: [] })).toEqual([]);
+  // Decisión del fundador (8 oct 2026): al cerrar la idea se ocultan SOLO las
+  // fechas del viaje principal; los mundos que siguen abiertos conservan las
+  // suyas hasta que se cierren. Fixture: calidad abierta, riesgos completado.
+  it("una idea realizada calla el viaje principal; sus mundos abiertos siguen avisando", () => {
+    const ids = itemsQueAvisan({ realizada: true, items, planes, modos: {}, mundosCompletados: ["risk_management"] }).map((i) => i.id);
+    expect(ids).toEqual(["calidad-pendiente"]);
+  });
+
+  it("el feed ya no se salta la idea realizada: le pasa su estado a la regla", () => {
+    const ruta = readFileSync(path.join(__dirname, "..", "app", "api", "calendar", "feed", "[token]", "route.ts"), "utf8");
+    expect(ruta).not.toMatch(/if \(p\.realizada_at\) continue/);
+    expect(ruta).toContain("realizada: Boolean(p.realizada_at)");
   });
 });
