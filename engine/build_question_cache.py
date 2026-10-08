@@ -93,11 +93,12 @@ REGLA_CONTEXTO_USUARIO = (
     "CONTEXTO REAL DE LA PERSONA: no supongas roles ni estructuras que la persona no mencionó. Muchos conceptos del "
     "material vienen de libros escritos para empresas grandes y suponen un jefe por encima, un departamento de "
     "recursos humanos, directivos o varios departamentos. Mira la ficha de contexto de la persona (su papel, si tiene "
-    "jefe, su equipo, su sector y su etapa) y habla de su situación real: si es dueña de su negocio no tiene jefe, y si "
-    "trabaja sola no tiene equipo. Si el concepto supone uno de esos roles, adáptalo a quien lo cumple en su caso (un "
-    "socio, un asesor, ella misma) o pregúntalo en condicional ('si tienes a alguien por "
+    "jefe, su equipo, su sector y su etapa) y habla de su situación real: quien es dueño de su negocio no tiene jefe, y quien "
+    "trabaja solo no tiene equipo. Si el concepto supone uno de esos roles, adáptalo a quien lo cumple en su caso (un "
+    "socio, un asesor, él mismo) o pregúntalo en condicional ('si tienes a alguien por "
     "encima...'). Adaptar cambia la forma, nunca el fondo: lo que preguntas o propones busca lo mismo que el material. "
-    "Nunca des por hecho lo que la persona no dijo."
+    "Nunca des por hecho lo que la persona no dijo. Al hablarle a la persona usa el masculino genérico (tú mismo, solo, "
+    "seguro, preparado): nunca marques el femenino ni uses barras como mismo/a."
 )
 
 # El generador de preguntas base lleva tambien la regla unica (las 40 nuevas nacen con ella).
@@ -107,13 +108,20 @@ SYSTEM_NEUTRAL = (
     "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
     "Recibes la PREGUNTA BASE de un concepto de una entrevista de emprendimiento, el concepto y los temas siguientes "
     "entre los que la respuesta ayuda a elegir. Escribe su VERSION NEUTRAL: la que se le puede hacer a CUALQUIER "
-    "persona sin saber nada de ella (puede estar sola, ser dueña de su negocio, tener un equipo o trabajar para "
+    "persona sin saber nada de ella (puede trabajar solo, ser dueño de su negocio, tener un equipo o trabajar para "
     "otro). Cambia la FORMA, nunca el FONDO: busca averiguar exactamente lo mismo que la base y su respuesta sirve "
     "para elegir entre los mismos temas. Quita todo rol o estructura que la base da por hecho (un jefe, un equipo, "
     "empleados, recursos humanos, directivos, departamentos, una empresa grande): si el concepto lo necesita, "
     "preguntalo en condicional ('si tienes a alguien por encima...') o habla de quien lo cumpla. Tutea en espanol "
-    "neutro, nada de voseo (tienes, quieres, puedes; nunca tenes, queres, podes, vos). UNA sola pregunta, abierta, "
-    "calida, sin jerga, sin autores ni libros. Si la base ya es neutral, devuelvela igual. "
+    "neutro, nada de voseo (tienes, quieres, puedes; nunca tenes, queres, podes, vos). Abierta, calida, sin jerga, "
+    "sin autores ni libros. Si la base ya es neutral, devuelvela igual. "
+    "FIDELIDAD, cuatro reglas: (1) sin segunda petición: no añadas ninguna pregunta, opción ni petición que la base "
+    "no tenga; tantas preguntas como la base, nunca más. (2) Conserva el contexto propio de la base: si habla de una "
+    "franquicia, de proveedores, de exportar, de seguridad, de inversionistas o de otro tema concreto, ese tema y sus "
+    "mismas opciones siguen en la neutral; no la vuelvas genérica. (3) Masculino genérico al hablarle a la persona "
+    "(tú mismo, solo, seguro, preparado): nunca el femenino ni barras como mismo/a. (4) Personas solo en "
+    "condicional: no metas personas que la base no nombra, y si la base supone gente (un equipo, socios, quienes "
+    "trabajan contigo), pregúntalo en condicional ('si trabajas con otras personas...'). "
     "Responde SOLO un JSON: {\"pregunta_neutral\": str}."
     "\n\n" + REGLA_CONTEXTO_USUARIO
 )
@@ -126,6 +134,17 @@ VOSEO = re.compile(
     re.IGNORECASE,
 )
 
+# El genero marcado al hablarle a la persona (decision del fundador, 8 oct 2026: al lector se le habla en masculino
+# generico). Solo formas que se refieren a ella: "una sola vez", "tu lista", "es segura" (una cosa), "tu misma
+# situacion" (posesivo, sin tilde) o "esa persona podria estar interesada" (un tercero) no cuentan.
+GENERO = re.compile(
+    r"\b(tú|ti) misma\b|\bmism[oa]/[ao]\b|\btú sola\b|"
+    r"\b(trabajas|empiezas|emprendes|arrancas|vas|lo haces|hacerlo|te quedas|sigues) sola\b|"
+    r"\b(te sientes|te sientas|te ves|est[aá]s|eres|seas|est[eé]s|quedas|quedes|sentirte|verte) "
+    r"(segura|preparada|lista|convencida|cansada|tranquila|c[oó]moda|dispuesta|obligada|abrumada|perdida|atascada|"
+    r"motivada|interesada|sola|sobrepasada|insegura)\b",
+    re.IGNORECASE,
+)
 
 def comprobar_neutral(base, texto):
     """None si la neutral sirve; si no, el motivo. El fondo lo mide el juez de la prueba de coherencia."""
@@ -140,6 +159,10 @@ def comprobar_neutral(base, texto):
         return "demasiado_larga"
     if VOSEO.search(t):
         return "voseo"
+    if GENERO.search(t):
+        return "genero"
+    if t.count("?") > base.count("?"):
+        return "segunda_peticion"
     return None
 
 

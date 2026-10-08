@@ -47,6 +47,37 @@ assert bqc.comprobar_neutral(BASE, "¿" + "a" * 263 + "?") == "demasiado_larga" 
 print("OK comprobar_neutral: tuteo pasa, voseo/guion/largo/vacia/no-pregunta no")
 
 
+# --- 2b. los cuatro patrones de la muestra que NO PASO (decision del fundador, 8 oct 2026) ---------------------------
+# La muestra ciega (semilla 20261008) sostuvo 49 de 200: la neutral añadia una segunda peticion, perdia el contexto
+# propio de la base, marcaba el genero ("tu misma, si trabajas sola") y metia personas sin condicional. La regla de la
+# casa: al lector se le habla en masculino generico. La causa del genero estaba en las propias instrucciones, escritas
+# en femenino ("si es dueña", "si trabaja sola", "ella misma").
+for femenino in ["dueña", "trabaja sola", "ella misma", "puede estar sola"]:
+    assert femenino not in bqc.REGLA_CONTEXTO_USUARIO, f"la regla unica habla en femenino: {femenino}"
+    assert femenino not in bqc.SYSTEM_NEUTRAL, f"las instrucciones de la neutral hablan en femenino: {femenino}"
+assert "masculino genérico" in bqc.REGLA_CONTEXTO_USUARIO
+for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional"]:
+    assert regla in bqc.SYSTEM_NEUTRAL, f"falta la regla: {regla}"
+# el genero marcado al hablarle a la persona no pasa
+B2 = "¿Cómo te organizas hoy para atender a tus clientes?"
+for g in ["¿Lo haces tú misma o con ayuda?", "¿Trabajas sola o con alguien?", "¿Lo decides por ti misma?",
+          "¿Te sientes preparada para atenderlos?", "¿Estás segura de cómo atenderlos?", "¿Lo haces tú mismo/a?"]:
+    assert bqc.comprobar_neutral(B2, g) == "genero", g
+# el masculino generico y los usos que no se refieren a la persona SI pasan
+for ok in ["¿Lo haces tú mismo o con ayuda?", "¿Trabajas solo o con alguien?", "¿Cómo se ve tu lista de clientes?",
+           "¿Lo haces una sola vez o cada semana?", "¿Qué tan segura es la forma en que guardas sus datos?",
+           # los tres falsos positivos del primer conteo (preguntas base reales): posesivo y tercera persona
+           "¿Compartirías lo que aprendiste con otros que están en tu misma situación?",
+           "¿Te preocupa que otros en tu misma industria sigan igual?",
+           "¿Por qué pensaste que esa persona podría estar interesada en comprar?"]:
+    assert bqc.comprobar_neutral(B2, ok) is None, ok
+# una segunda peticion que la base no tiene no pasa (mas preguntas que la base)
+assert bqc.comprobar_neutral(B2, "¿Cómo te organizas hoy? ¿Y cómo lo harías con alguien por encima?") == "segunda_peticion"
+B_DOS = "¿Cómo atiendes hoy a tus clientes? ¿Qué te gustaría cambiar?"
+assert bqc.comprobar_neutral(B_DOS, "¿Cómo los atiendes hoy? ¿Qué cambiarías?") is None
+print("OK los cuatro patrones: instrucciones en masculino generico con sus reglas; genero y segunda peticion no pasan")
+
+
 # --- cliente falso ----------------------------------------------------------------------------------------------------
 class ClienteFalso:
     def __init__(self, salidas):
