@@ -166,12 +166,13 @@ CONDICIONAL_PERSONAS = re.compile(
 # vuelve condicional o nombra por su funcion ("quienes pusieron dinero") no es contexto perdido; "importante" no es
 # importar ni "contratar" un contrato (falsos positivos del diagnostico del 8 oct 2026).
 ANCLAS = [
-    (r"franquic", r"franquic"),
+    (r"franquic", r"franquic|bajo tu marca|con tu marca"),
     (r"proveedor", r"proveedor|quien(es)? te (vende|surte|provee)"),
     (r"export", r"export|vender (fuera|en otros pa[ií]ses|al extranjero)|otros pa[ií]ses|extranjero"),
     (r"\bimport(ar|as|a|o|amos|an|aci[oó]n|aciones|ador\w*)\b", r"import|traer de fuera|del extranjero|de otros pa[ií]ses"),
     (r"aduan", r"aduan"),
-    (r"inversionist|inversor", r"inversionist|inversor|pusieron dinero|ponen dinero|poner dinero|apoy\w+ con dinero|"
+    (r"inversionist|inversor", r"inversionist|inversor|pusieron dinero|ponen dinero|poner dinero|puesto dinero|"
+                               r"apoy\w+ con dinero|"
                                r"aport\w+ (dinero|capital)|invirti|invertir|capital|financ"),
     (r"financiaci", r"financ|dinero|capital|fondos"),
     (r"segurid", r"segur"),

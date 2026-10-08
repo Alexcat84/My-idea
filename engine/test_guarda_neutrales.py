@@ -38,6 +38,8 @@ assert "contexto_perdido" not in vc.patrones("¿Qué es lo más importante que n
 assert "contexto_perdido" not in vc.patrones("¿Ya decidiste cuándo contratar y a quién?", "¿Ya decidiste cuándo sumar a alguien y a quién?")
 assert "contexto_perdido" not in vc.patrones("¿Qué te preocupa de los inversionistas que ya están dentro?", "¿Qué te preocupa de quienes ya pusieron dinero?")
 assert "contexto_perdido" not in vc.patrones("¿Qué riesgos ves en tu idea?", "¿Qué peligros ves en tu idea?")
+assert "contexto_perdido" not in vc.patrones("¿Qué quieren los inversionistas?", "¿Qué quieren quienes hayan puesto dinero en ella, si los hay?")
+assert "contexto_perdido" not in vc.patrones("¿Cómo sabes que tus franquiciados están listos?", "¿Cómo sabes que quienes operan bajo tu marca están listos?")
 # ...y los que si son perdida real siguen saltando
 assert "contexto_perdido" in vc.patrones("¿Cómo importas hoy tus insumos?", "¿Cómo consigues hoy tus insumos?")
 assert "contexto_perdido" in vc.patrones("¿Qué cláusulas de tu contrato te preocupan?", "¿Qué te preocupa de tu negocio?")
