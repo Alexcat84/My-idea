@@ -331,6 +331,26 @@ REGLA_IDIOMA_SALIDA = (
     "y lo que ese bloque diga sobre el idioma manda sobre estas reglas."
 )
 
+# Juez de fidelidad de la corrida final (decision del fundador, 8 oct 2026): una
+# sola regla para todo redactor que escribe para la persona (plan y seguimiento,
+# diagnostico de mundo, caminos del replanteamiento, Claridad, reporte). Nacio de
+# una invencion sostenida por el arbitro en un plan del nucleo
+# (docs/coherencia/2026-10-08/fidelidad.md).
+REGLA_SIN_CAUSAS_INVENTADAS = (
+    "\n\nNINGUNA CAUSA INVENTADA: no afirmes CAUSAS de la situacion de la "
+    "persona (por que le pasa algo) que ella no haya dicho ni den los nodos o "
+    "el material que recibes. Si la causa no esta dicha, describe lo que pasa "
+    "sin explicar por que. Tampoco le pongas una causa con 'suele pasar "
+    "cuando', 'es comun que' o 'casi siempre es porque'. El consejo practico "
+    "de la casa (como hacer algo) sigue permitido. Caso real de lo que NO se "
+    "escribe: la persona conto 'no les explico como quiero que lo hagan, asi "
+    "que al final lo termino haciendo yo', y el plan escribio 'eso suele pasar "
+    "cuando las expectativas no estan dichas con claridad y cuando enseñar un "
+    "puesto cuesta más que hacerlo uno mismo'. La primera causa la dijo ella; "
+    "la segunda ('cuando enseñar un puesto cuesta más que hacerlo uno mismo') "
+    "no la dijo nadie: es inventada aunque suene razonable."
+)
+
 
 SYSTEM_CLASIFICACION = (
     "Eres el clasificador de entrada de una app de guia de emprendimiento. El "
@@ -1214,7 +1234,9 @@ SYSTEM_CAMINOS = (
     "Responde SOLO con JSON valido, sin texto antes ni despues, con esta forma: "
     '{"caminos": [{"titulo": "...", "descripcion": "...", "nodos": ["id1", "id2", "id3"]}]}'
 )
+SYSTEM_CAMINOS += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
 
+SYSTEM_PLAN += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
 SYSTEM_PLAN += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_ESTADO_VIVO = (
@@ -1296,6 +1318,7 @@ SYSTEM_ORGANIZADOR = (
     "'lo_que_estas_asumiendo_sin_saberlo' son preguntas abiertas, nunca "
     "afirmaciones de mercado, normas o cifras."
 )
+SYSTEM_ORGANIZADOR += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
 SYSTEM_ORGANIZADOR += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_REPORTE = (
@@ -1359,6 +1382,7 @@ SYSTEM_REPORTE = (
     "'negocio' salvo que el propio usuario ya la haya usado; habla de "
     "'tu idea' o 'tu proyecto'."
 )
+SYSTEM_REPORTE += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
 SYSTEM_REPORTE += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 # Fase 4.5 (docs/PREVIEW_MUNDOS_PLAN.md): el redactor del DIAGNOSTICO del
@@ -1402,6 +1426,7 @@ SYSTEM_DIAGNOSTICO_MUNDO = (
     "agregues secciones, notas, precios ni llamados a comprar: el sistema "
     "pone el boton despues de tu texto."
 )
+SYSTEM_DIAGNOSTICO_MUNDO += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
 SYSTEM_DIAGNOSTICO_MUNDO += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 
