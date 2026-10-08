@@ -41,7 +41,10 @@ ROLES = r"(jef[ea]s?|equipo\w*|socio\w*|emplead\w*|colaborador\w*|subordinad\w*|
 # los vuelva condicionales justo despues ("tu equipo, si lo tienes").
 PAPEL_POSESIVO = re.compile(r"\b(tu|tus)\s+(propi[oa]s?\s+)?" + ROLES + r"\b", re.I)
 CONDICIONAL_PEGADO = re.compile(r"^[^.?!]{0,40}?\bsi\s+(l[oa]s?\s+)?(tienes|hay|existe|existen)\b", re.I)
-PAPEL_SUELTO = re.compile(r"\b(jef[ea]s?|recursos humanos|emplead\w*|subordinad\w*|gerente\w*|cofundador\w*|personal a tu cargo)\b", re.I)
+PAPEL_SUELTO = re.compile(r"\b(jef[ea]s?|recursos humanos|emplead\w*|subordinad\w*|gerente\w*|cofundador\w*|personal a tu cargo|"
+                          # "el equipo" (singular, con articulo) da por hecho un equipo; "equipos" suele ser maquinaria
+                          r"(todo |el resto )?(el|al|del) equipo(?! de (protecci|c[oó]mputo|carga|trabajo pesado))|"
+                          r"responsables de equipo|los departamentos|las [aá]reas de tu empresa|los trabajadores)\b", re.I)
 CONDICIONAL = re.compile(r"\b(si|en caso|cuando tengas|alg[uú]n d[ií]a|en alg[uú]n momento)\b", re.I)
 GRUPO = re.compile(r"\b(ustedes|vosotr[oa]s|ambos|ambas|entre todos|tu empresa|tu organizaci[oó]n|tu compa[ñn][ií]a|"
                    r"tu plantilla|tu gente)\b|\b\w+(?:áis|éis)\b", re.I)

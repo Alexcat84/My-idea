@@ -30,6 +30,22 @@ for con_problema, clase in [
 ]:
     assert clase in [p["clase"] for p in nn.problemas(con_problema)], (con_problema, nn.problemas(con_problema))
     assert nn.nivel_1(con_problema) is False, con_problema
+# "el equipo" tambien da por hecho un equipo (la guarda de la tercera vuelta encontro 15 en el nivel 1)
+for con_papel in ["¿Qué te preocupa más: que el equipo siga debatiendo o decidir rápido?",
+                  "¿Cómo se entera el resto del equipo de lo que pasó?",
+                  "¿Qué cambia en cómo trabaja el equipo?",
+                  "¿Qué impide que el equipo las cumpla día a día?",
+                  "Una vez que los departamentos sientan el impacto, ¿qué harías?",
+                  "¿Cómo es la relación entre los responsables de equipo y quienes hacen el trabajo?",
+                  "¿Lograrías que todo el equipo entienda esas ideas?"]:
+    assert "papel" in [p["clase"] for p in nn.problemas(con_papel)], con_papel
+# ...pero no la maquinaria, ni un equipo hipotetico, ni el equipo en condicional
+for sin_papel in ["¿Hay equipos en tu taller que levanten cargas?",
+                  "¿Necesitarías invertir en equipos nuevos?",
+                  "¿Quieres armar un equipo de directores que te ayude?",
+                  "Si llegas a tener un equipo, ¿cómo lo organizarías?",
+                  "¿Usas equipo de protección cuando trabajas?"]:
+    assert "papel" not in [p["clase"] for p in nn.problemas(sin_papel)], sin_papel
 print("OK nivel 1: la base sin papeles ni defectos pasa tal cual; con cualquier problema, no")
 
 
