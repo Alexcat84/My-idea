@@ -162,3 +162,37 @@ describe("cada llamada registra si llevo el contexto del proyecto", () => {
     expect(r3.acumulado.llamadas![0].con_contexto).toBe(false);
   });
 });
+
+// Decisión del fundador (corrida final, 8 oct 2026): en el anclaje de protección, la ficha ACTUAL (que cambia en cada
+// turno) iba dentro del bloque de contexto con caché de 1 hora, junto a la foto fija del proyecto: cada cambio de la
+// ficha invalidaba y reescribía los ~13.450 tokens (medido: 10 de 12 llamadas escribían; USD 0,059 contra 0,0066 de
+// una que reutiliza). Solo la parte FIJA va en caché; lo variable viaja aparte, sin marca.
+describe("contexto fijo en caché, contexto variable fuera de la caché", () => {
+  it("con contextoVariable: tres bloques; solo el fijo lleva la marca de 1 hora", async () => {
+    const create = vi.fn(async (_req: unknown) => ({
+      usage: { input_tokens: 10, output_tokens: 5 },
+      stop_reason: "end_turn",
+      content: [{ type: "text", text: "ok" }],
+    }));
+    const client = { messages: { create } } as unknown as Anthropic;
+    await llamarClaude(client, "P", "TURNO", "claude-sonnet-5-5", usoVacio(), {
+      contexto: "FOTO FIJA",
+      contextoVariable: "FICHA ACTUAL",
+      componente: "anclaje_proteccion",
+    });
+    const req = create.mock.calls[0][0] as { messages: Array<{ content: Array<{ text: string; cache_control?: unknown }> }> };
+    const bloques = req.messages[0].content;
+    expect(bloques.map((b) => b.text)).toEqual(["FOTO FIJA", "FICHA ACTUAL", "TURNO"]);
+    expect(bloques[0].cache_control).toEqual({ type: "ephemeral", ttl: "1h" });
+    expect(bloques[1].cache_control).toBeUndefined();
+    expect(bloques[2].cache_control).toBeUndefined();
+  });
+
+  it("sin contextoVariable, todo sigue como antes (contexto en un bloque de 1 hora)", async () => {
+    const create = vi.fn(async (_req: unknown) => ({ usage: { input_tokens: 1, output_tokens: 1 }, stop_reason: "end_turn", content: [{ type: "text", text: "ok" }] }));
+    const client = { messages: { create } } as unknown as Anthropic;
+    await llamarClaude(client, "P", "TURNO", "claude-haiku-5-5", usoVacio(), { contexto: "CTX" });
+    const req = create.mock.calls[0][0] as { messages: Array<{ content: Array<{ text: string }> }> };
+    expect(req.messages[0].content.map((b) => b.text)).toEqual(["CTX", "TURNO"]);
+  });
+});

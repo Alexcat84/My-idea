@@ -306,3 +306,31 @@ describe("anclarResultadoTurno: el idioma de la idea (i18n F5)", () => {
     expect(sistema[3].text).toMatch(/^IDIOMA DE SALIDA: hindi/);
   });
 });
+
+// Decisión del fundador (corrida final, 8 oct 2026): el anclaje guarda en caché SOLO la parte fija del contexto (la
+// foto del proyecto al abrir la sesión); la ficha actual, que cambia en cada turno, viaja aparte y sin marca. Antes iba
+// todo junto en el bloque de 1 hora y cada cambio de la ficha reescribía ~13.450 tokens (USD 0,059 por llamada).
+describe("anclaje: solo la parte fija del contexto va en caché", () => {
+  it("la foto del proyecto en el bloque cacheado; la ficha actual en un bloque aparte, sin marca", async () => {
+    const create = vi.fn(async () => ({ content: [{ type: "text", text: "¿Qué haces hoy en tu taller?" }], usage: { input_tokens: 1, output_tokens: 1 } }));
+    const resultado = {
+      tipo: "pregunta",
+      pregunta: "¿Qué haces hoy?",
+      estado: {
+        snapshotNucleo: "actividades",
+        preguntaPendiente: "¿Qué haces hoy?",
+        ultimasPreguntas: [],
+        fallbackEvents: [],
+        contextoProyecto: "FOTO DEL PROYECTO",
+        ficha: { papel: "dueno", tiene_jefe: false } as never,
+      },
+    };
+    await anclarResultadoTurno({ messages: { create } } as never, resultado, usoVacio());
+    const req = (create.mock.calls[0] as unknown as [{ messages: Array<{ content: Array<{ text: string; cache_control?: unknown }> }> }])[0];
+    const bloques = req.messages[0].content;
+    expect(bloques[0].text).toBe("FOTO DEL PROYECTO");
+    expect(bloques[0].cache_control).toEqual({ type: "ephemeral", ttl: "1h" });
+    expect(bloques[1].text).toMatch(/^FICHA DE CONTEXTO ACTUAL/);
+    expect(bloques[1].cache_control).toBeUndefined();
+  });
+});

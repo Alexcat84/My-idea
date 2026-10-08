@@ -141,6 +141,15 @@ export function aperturaDeSesion(proyecto: {
 
 /** El contexto completo para una llamada suelta de una sesion: la foto del proyecto y la ficha actual. null si la
  * sesion es anterior a la memoria. */
+/** El contexto de la sesion en sus dos partes: la FIJA (la foto del proyecto al abrir la sesion, que puede ir en cache)
+ * y la VARIABLE (la ficha de este momento, que cambia en cada turno y nunca va en cache). Corrida final, 8 oct 2026. */
+export function partesDeContexto(estado: { contextoProyecto?: string | null; ficha?: FichaContexto | null }): {
+  fijo: string | null;
+  variable: string | null;
+} {
+  return { fijo: estado.contextoProyecto ?? null, variable: estado.ficha ? textoFichaActual(estado.ficha) : null };
+}
+
 export function contextoDeSesion(estado: { contextoProyecto?: string | null; ficha?: FichaContexto | null }): string | null {
   const partes = [estado.contextoProyecto ?? null, estado.ficha ? textoFichaActual(estado.ficha) : null].filter(Boolean);
   return partes.length > 0 ? partes.join("\n\n") : null;

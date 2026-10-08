@@ -1,0 +1,365 @@
+{
+  "nota": "Vuelo completo de la corrida final (8 oct 2026, 13:32 a 13:41 UTC), modelos nuevos, tope 3.00. Se detuvo en la fase 2i (fecha de completado anterior al inicio del proyecto, regla del 8 oct): hasta ahi, todas las sesiones. Solo datos de coste.",
+  "ventana": {
+    "desde": "2026-10-08T13:32:00Z",
+    "hasta": "2026-10-08T13:42:00Z"
+  },
+  "sesiones": [
+    {
+      "id": "ebac6651-cdb0-4382-91a3-3bd789c7fbe6",
+      "project_id": "ab5a309f-2a1e-44c3-94ae-c41bf31e5772",
+      "tipo": "gratuito",
+      "dominio": "core",
+      "created_at": "2026-10-08T13:32:11.946689+00:00",
+      "closed_at": "2026-10-08T13:32:15.008+00:00",
+      "costo_usd": 0.0008,
+      "costo_desglose": {
+        "organizador": 0.0008026
+      },
+      "uso": null,
+      "uso_por_componente": null,
+      "presupuesto_excedido": null
+    },
+    {
+      "id": "fb0c4ac6-1208-4766-94fd-7512c5899f10",
+      "project_id": "0a86807f-e7cf-4d57-bf8c-c00b80c37754",
+      "tipo": "gratuito",
+      "dominio": "core",
+      "created_at": "2026-10-08T13:32:15.831472+00:00",
+      "closed_at": "2026-10-08T13:32:19.931+00:00",
+      "costo_usd": 0.0007,
+      "costo_desglose": {
+        "organizador": 0.00069823
+      },
+      "uso": null,
+      "uso_por_componente": null,
+      "presupuesto_excedido": null
+    },
+    {
+      "id": "2b4a6a1a-26f0-472a-bed4-d67447cee825",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "core",
+      "created_at": "2026-10-08T13:32:20.874558+00:00",
+      "closed_at": "2026-10-08T13:33:31.392+00:00",
+      "costo_usd": 0.1155,
+      "costo_desglose": {
+        "plan": 0.0664666,
+        "turnos": 0.009394240000000002,
+        "estado_vivo": 0.00048770000000000004,
+        "juez_sesion": 0.0007557099999999999,
+        "clasificacion": 0.00045126000000000004,
+        "estimacion_banda": 0.037972900000000004
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 13742,
+          "out": 4531,
+          "llamadas": 12,
+          "cache_read": 252926,
+          "cache_write": 36926,
+          "cache_write_1h": 1521
+        },
+        "claude-sonnet-5-5": {
+          "in": 20605,
+          "out": 5838,
+          "llamadas": 4,
+          "cache_read": 13375,
+          "cache_write": 0,
+          "cache_write_1h": 878
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.0664666,
+        "turnos": 0.009394240000000002,
+        "estado_vivo": 0.00048770000000000004,
+        "juez_sesion": 0.0007557099999999999,
+        "clasificacion": 0.00045126000000000004,
+        "estimacion_banda": 0.037972900000000004
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "dd7175ae-d118-4bd1-8112-01a98438ec52",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "seguimiento",
+      "dominio": "core",
+      "created_at": "2026-10-08T13:33:40.047083+00:00",
+      "closed_at": "2026-10-08T13:34:47.619+00:00",
+      "costo_usd": 0.1096,
+      "costo_desglose": {
+        "plan": 0.061478599999999994,
+        "turnos": 0.008750785,
+        "adaptador": 0.00052093,
+        "estado_vivo": 0.00134537,
+        "juez_sesion": 0.00143499,
+        "clasificacion": 0.0018052,
+        "estimacion_banda": 0.0343065
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 40970,
+          "out": 7457,
+          "llamadas": 15,
+          "cache_read": 185515,
+          "cache_write": 16397,
+          "cache_write_1h": 10635
+        },
+        "claude-sonnet-5-5": {
+          "in": 17740,
+          "out": 4350,
+          "llamadas": 4,
+          "cache_read": 16291,
+          "cache_write": 0,
+          "cache_write_1h": 3794
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.061478599999999994,
+        "turnos": 0.008750785,
+        "adaptador": 0.00052093,
+        "estado_vivo": 0.00134537,
+        "juez_sesion": 0.00143499,
+        "clasificacion": 0.0018052,
+        "estimacion_banda": 0.0343065
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "85da6290-fe83-4b6c-a102-c27855910761",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "quality",
+      "created_at": "2026-10-08T13:34:52.150484+00:00",
+      "closed_at": "2026-10-08T13:35:49.846+00:00",
+      "costo_usd": 0.1248,
+      "costo_desglose": {
+        "plan": 0.0733566,
+        "turnos": 0.006943550000000001,
+        "adaptador": 0.0006278299999999999,
+        "estado_vivo": 0.0010672,
+        "juez_sesion": 0.00095551,
+        "estimacion_banda": 0.0418429
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 12730,
+          "out": 2979,
+          "llamadas": 8,
+          "cache_read": 129364,
+          "cache_write": 28542,
+          "cache_write_1h": 9851
+        },
+        "claude-sonnet-5-5": {
+          "in": 19588,
+          "out": 5420,
+          "llamadas": 4,
+          "cache_read": 17515,
+          "cache_write": 0,
+          "cache_write_1h": 5018
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.0733566,
+        "turnos": 0.006943550000000001,
+        "adaptador": 0.0006278299999999999,
+        "estado_vivo": 0.0010672,
+        "juez_sesion": 0.00095551,
+        "estimacion_banda": 0.0418429
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "95fb5291-3525-428b-93c2-ad8ce8fecd3e",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "exportacion",
+      "created_at": "2026-10-08T13:35:52.170115+00:00",
+      "closed_at": null,
+      "costo_usd": 0.0008,
+      "costo_desglose": {
+        "adaptador": 0.00076873
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 191,
+          "out": 187,
+          "llamadas": 1,
+          "cache_read": 1513,
+          "cache_write": 0,
+          "cache_write_1h": 3205
+        }
+      },
+      "uso_por_componente": {
+        "adaptador": 0.00076873
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "4634733f-3cea-46aa-a3d0-6891be0b2783",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "franquicias",
+      "created_at": "2026-10-08T13:35:54.661978+00:00",
+      "closed_at": null,
+      "costo_usd": 0.0002,
+      "costo_desglose": {
+        "adaptador": 0.00017218000000000002
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 145,
+          "out": 221,
+          "llamadas": 1,
+          "cache_read": 4718,
+          "cache_write": 0,
+          "cache_write_1h": 0
+        }
+      },
+      "uso_por_componente": {
+        "adaptador": 0.00017218000000000002
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "30ff3bec-a2fe-4654-8af1-9d2e07695a04",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "seguridad_digital",
+      "created_at": "2026-10-08T13:35:58.061662+00:00",
+      "closed_at": "2026-10-08T13:38:29.833+00:00",
+      "costo_usd": 0.3615,
+      "costo_desglose": {
+        "plan": 0.0815506,
+        "turnos": 0.028466059999999998,
+        "adaptador": 0.00123637,
+        "estado_vivo": 0.0019742600000000003,
+        "juez_sesion": 0.0029280800000000004,
+        "estimacion_banda": 0.04692030000000001,
+        "enlace_proteccion": 0.0743375,
+        "anclaje_proteccion": 0.1240479
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 95622,
+          "out": 12929,
+          "llamadas": 32,
+          "cache_read": 777202,
+          "cache_write": 66226,
+          "cache_write_1h": 12639
+        },
+        "claude-sonnet-5-5": {
+          "in": 50416,
+          "out": 11045,
+          "llamadas": 18,
+          "cache_read": 62463,
+          "cache_write": 0,
+          "cache_write_1h": 27332
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.0815506,
+        "turnos": 0.028466059999999998,
+        "adaptador": 0.00123637,
+        "estado_vivo": 0.0019742600000000003,
+        "juez_sesion": 0.0029280800000000004,
+        "estimacion_banda": 0.04692030000000001,
+        "enlace_proteccion": 0.0743375,
+        "anclaje_proteccion": 0.1240479
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "6c5c5fb3-c938-41ed-b076-90fd1df8a203",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "risk_management",
+      "created_at": "2026-10-08T13:38:32.594589+00:00",
+      "closed_at": "2026-10-08T13:40:18.31+00:00",
+      "costo_usd": 0.4066,
+      "costo_desglose": {
+        "plan": 0.0926046,
+        "turnos": 0.011467820000000002,
+        "adaptador": 0.0035593899999999995,
+        "estado_vivo": 0.00245905,
+        "juez_sesion": 0.0017248099999999998,
+        "estimacion_banda": 0.058712099999999996,
+        "enlace_proteccion": 0.0468829,
+        "anclaje_proteccion": 0.18919609999999998
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 22275,
+          "out": 6493,
+          "llamadas": 15,
+          "cache_read": 287267,
+          "cache_write": 36376,
+          "cache_write_1h": 31587
+        },
+        "claude-sonnet-5-5": {
+          "in": 37564,
+          "out": 9553,
+          "llamadas": 13,
+          "cache_read": 40977,
+          "cache_write": 0,
+          "cache_write_1h": 53160
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.0926046,
+        "turnos": 0.011467820000000002,
+        "adaptador": 0.0035593899999999995,
+        "estado_vivo": 0.00245905,
+        "juez_sesion": 0.0017248099999999998,
+        "estimacion_banda": 0.058712099999999996,
+        "enlace_proteccion": 0.0468829,
+        "anclaje_proteccion": 0.18919609999999998
+      },
+      "presupuesto_excedido": false
+    },
+    {
+      "id": "0f891f47-a2ec-47da-99da-30a6c3b76097",
+      "project_id": "de53faf7-2765-4c64-841c-824496ab37cb",
+      "tipo": "inicial",
+      "dominio": "primer_equipo",
+      "created_at": "2026-10-08T13:40:22.149519+00:00",
+      "closed_at": "2026-10-08T13:41:30.241+00:00",
+      "costo_usd": 0.1653,
+      "costo_desglose": {
+        "plan": 0.0897346,
+        "turnos": 0.009314435000000001,
+        "adaptador": 0.0031144600000000003,
+        "estado_vivo": 0.00293356,
+        "juez_sesion": 0.00276538,
+        "estimacion_banda": 0.0574683
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 21388,
+          "out": 6154,
+          "llamadas": 12,
+          "cache_read": 206076,
+          "cache_write": 30479,
+          "cache_write_1h": 35207
+        },
+        "claude-sonnet-5-5": {
+          "in": 19984,
+          "out": 4706,
+          "llamadas": 4,
+          "cache_read": 26869,
+          "cache_write": 0,
+          "cache_write_1h": 14372
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.0897346,
+        "turnos": 0.009314435000000001,
+        "adaptador": 0.0031144600000000003,
+        "estado_vivo": 0.00293356,
+        "juez_sesion": 0.00276538,
+        "estimacion_banda": 0.0574683
+      },
+      "presupuesto_excedido": false
+    }
+  ]
+}

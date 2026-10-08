@@ -27,7 +27,7 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { costoAcumuladoUsd, llamarClaude, MODEL_SONNET, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_REFORMULADOR_PROTECCION } from "../prompts";
 import type { EventoInterprete } from "./interprete";
-import { contextoDeSesion, type FichaContexto } from "./memoria";
+import { partesDeContexto, type FichaContexto } from "./memoria";
 
 /** Una pregunta es una línea corta. Más allá de esto, lo que volvió no es una
  * pregunta anclada: es el modelo explicando teoría, y se descarta. */
@@ -72,9 +72,16 @@ export async function anclarPregunta(
   acumulado: UsoAcumulado,
   /** i18n F5: `idiomaSalida`, el idioma de la idea. */
   opts: { presupuestoUsd?: number; idiomaSalida?: string | null } = {},
-  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
-  contexto: string | null = null
+  /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. Desde la corrida final (8 oct
+   * 2026), en sus dos partes: la fija va en cache y la variable (la ficha de este turno) aparte, sin cache. */
+  contexto: string | { fijo: string | null; variable: string | null } | null = null
 ): Promise<ResultadoAnclaje> {
+  const partes =
+    contexto && typeof contexto === "object"
+      ? contexto.fijo
+        ? { contexto: contexto.fijo, contextoVariable: contexto.variable }
+        : { contexto: contexto.variable, contextoVariable: null }
+      : { contexto, contextoVariable: null };
   const sinAnclar = (fallo: string | null): ResultadoAnclaje => ({
     pregunta,
     acumulado,
@@ -95,7 +102,7 @@ export async function anclarPregunta(
       // a un modelo menor abarata justo lo que se ve.
       MODEL_SONNET,
       acumulado,
-      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida, contexto }
+      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida, contexto: partes.contexto, contextoVariable: partes.contextoVariable }
     );
     const texto = r.texto.trim();
     if (!esPreguntaUsable(texto)) {
@@ -155,8 +162,9 @@ export async function anclarResultadoTurno<
     resultado.estado.snapshotNucleo,
     acumulado,
     { ...opts, idiomaSalida: resultado.estado.idioma ?? null },
-    // Principio 1 (28 sep 2026): el contexto completo de la sesion.
-    contextoDeSesion(resultado.estado)
+    // Principio 1 (28 sep 2026): el contexto completo de la sesion, en sus dos partes (corrida final, 8 oct 2026):
+    // la foto fija en cache, la ficha de este turno aparte.
+    partesDeContexto(resultado.estado)
   );
 
   // El PAR va siempre a los eventos de la sesion, se haya anclado o no: es lo

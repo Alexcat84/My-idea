@@ -271,6 +271,8 @@ export interface LlamadaOpts {
   /** El contexto del proyecto (memoria y ficha de la persona): viaja en su
    * propio bloque, con cache de 1 hora, antes de la parte del turno. */
   contexto?: string | null;
+  /** Lo que cambia en cada turno (la ficha actual): viaja despues del contexto fijo y SIN marca de cache. */
+  contextoVariable?: string | null;
   componente?: string;
   presupuestoUsd?: number;
   idiomaSalida?: string | null;
@@ -303,9 +305,12 @@ export async function llamarClaude(
   if (costoAcumuladoUsd(acumulado) >= presupuestoUsd) {
     throw new PresupuestoExcedidoError(presupuestoUsd);
   }
+  // Lo fijo del contexto va con marca de 1 hora; lo variable (la ficha de este turno), aparte y SIN marca: si fuera
+  // dentro del bloque cacheado, cada cambio lo invalidaria y se reescribiria entero (corrida final, 8 oct 2026).
   const content: string | BloqueTexto[] = opts.contexto
     ? [
         { type: "text", text: opts.contexto, cache_control: CACHE_1H },
+        ...(opts.contextoVariable ? [{ type: "text" as const, text: opts.contextoVariable }] : []),
         { type: "text", text: userText },
       ]
     : userText;
