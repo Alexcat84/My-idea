@@ -1,0 +1,279 @@
+{
+  "nota": "Vuelo completo, intento 3 (8 oct 2026, 19:28 a 19:30 UTC), tope por defecto 1.00 en el codigo (3.00 en Vercel). Se detuvo en 2f: el usuario de pruebas sin creditos. Solo datos de coste.",
+  "ventana": {
+    "desde": "2026-10-08T19:28:00Z",
+    "hasta": "2026-10-08T19:30:30Z"
+  },
+  "sesiones": [
+    {
+      "id": "83ac5350-114e-4ed4-99ab-202e4e73453e",
+      "project_id": "31e8cc7f-61ff-472e-8e92-55d2515f7176",
+      "tipo": "gratuito",
+      "dominio": "core",
+      "created_at": "2026-10-08T19:28:21.370032+00:00",
+      "closed_at": "2026-10-08T19:28:25.17+00:00",
+      "costo_usd": 0.0009,
+      "costo_desglose": {
+        "organizador": 0.0008681
+      },
+      "uso": null,
+      "uso_por_componente": null,
+      "presupuesto_excedido": null,
+      "llamadas": null
+    },
+    {
+      "id": "29a5780d-b489-4cca-a813-c89e752bb286",
+      "project_id": "aa63c23f-f83d-4637-ae07-a79c0feddd82",
+      "tipo": "gratuito",
+      "dominio": "core",
+      "created_at": "2026-10-08T19:28:26.517852+00:00",
+      "closed_at": "2026-10-08T19:28:30.418+00:00",
+      "costo_usd": 0.0007,
+      "costo_desglose": {
+        "organizador": 0.00070323
+      },
+      "uso": null,
+      "uso_por_componente": null,
+      "presupuesto_excedido": null,
+      "llamadas": null
+    },
+    {
+      "id": "95dd2ade-3551-4429-9f07-da1f3861fd7f",
+      "project_id": "d7cb440b-fd02-46a4-aa15-93167b83acbd",
+      "tipo": "inicial",
+      "dominio": "core",
+      "created_at": "2026-10-08T19:28:33.063099+00:00",
+      "closed_at": "2026-10-08T19:29:46.233+00:00",
+      "costo_usd": 0.1468,
+      "costo_desglose": {
+        "plan": 0.092996,
+        "turnos": 0.013359335000000002,
+        "estado_vivo": 0.0008717,
+        "juez_sesion": 0.0012157000000000001,
+        "clasificacion": 0.0006566,
+        "estimacion_banda": 0.0377382
+      },
+      "uso": {
+        "claude-haiku-5-5": {
+          "in": 9845,
+          "out": 6079,
+          "llamadas": 12,
+          "cache_read": 276586,
+          "cache_write": 40575,
+          "cache_write_1h": 21208
+        },
+        "claude-sonnet-5-5": {
+          "in": 17101,
+          "out": 4878,
+          "llamadas": 4,
+          "cache_read": 4282,
+          "cache_write": 0,
+          "cache_write_1h": 11831
+        }
+      },
+      "uso_por_componente": {
+        "plan": 0.092996,
+        "turnos": 0.013359335000000002,
+        "estado_vivo": 0.0008717,
+        "juez_sesion": 0.0012157000000000001,
+        "clasificacion": 0.0006566,
+        "estimacion_banda": 0.0377382
+      },
+      "presupuesto_excedido": false,
+      "llamadas": [
+        {
+          "in": 2873,
+          "out": 169,
+          "usd": 0.0006566,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 0,
+          "componente": "clasificacion",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 1424,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 4,
+          "out": 500,
+          "usd": 0.00396165,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 0,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 14915,
+          "cache_write_5m": 5826
+        },
+        {
+          "in": 4,
+          "out": 517,
+          "usd": 0.0008985600000000001,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 20741,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 3458
+        },
+        {
+          "in": 4,
+          "out": 536,
+          "usd": 0.00094289,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 24199,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 3460
+        },
+        {
+          "in": 4,
+          "out": 554,
+          "usd": 0.0009743650000000001,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 27659,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 3363
+        },
+        {
+          "in": 4,
+          "out": 536,
+          "usd": 0.0010222450000000002,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 31022,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 3549
+        },
+        {
+          "in": 4,
+          "out": 689,
+          "usd": 0.001287235,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 34571,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 4773
+        },
+        {
+          "in": 4,
+          "out": 599,
+          "usd": 0.0016472150000000003,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 39344,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 7631
+        },
+        {
+          "in": 4,
+          "out": 633,
+          "usd": 0.0014241500000000001,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 46975,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 5100
+        },
+        {
+          "in": 4,
+          "out": 506,
+          "usd": 0.001201025,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 52075,
+          "componente": "turnos",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 3415
+        },
+        {
+          "in": 11293,
+          "out": 3165,
+          "usd": 0.092996,
+          "modelo": "claude-sonnet-5-5",
+          "cache_read": 0,
+          "componente": "plan",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 9690,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 1219,
+          "out": 610,
+          "usd": 0.0008717,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 0,
+          "componente": "estado_vivo",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 2224,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 1936,
+          "out": 571,
+          "usd": 0.018146000000000002,
+          "modelo": "claude-sonnet-5-5",
+          "cache_read": 0,
+          "componente": "estimacion_banda",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 2141,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 1936,
+          "out": 571,
+          "usd": 0.009796099999999999,
+          "modelo": "claude-sonnet-5-5",
+          "cache_read": 2141,
+          "componente": "estimacion_banda",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 1936,
+          "out": 571,
+          "usd": 0.009796099999999999,
+          "modelo": "claude-sonnet-5-5",
+          "cache_read": 2141,
+          "componente": "estimacion_banda",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 0,
+          "cache_write_5m": 0
+        },
+        {
+          "in": 5717,
+          "out": 230,
+          "usd": 0.0012157000000000001,
+          "modelo": "claude-haiku-5-5",
+          "cache_read": 0,
+          "componente": "juez_sesion",
+          "stop_reason": "end_turn",
+          "con_contexto": true,
+          "cache_write_1h": 2645,
+          "cache_write_5m": 0
+        }
+      ]
+    }
+  ]
+}
