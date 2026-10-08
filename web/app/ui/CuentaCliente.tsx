@@ -62,7 +62,7 @@ function ZonaDePeligro({ children }: { children: React.ReactNode }) {
 
 /** El botón de acción de las dos opciones: el mismo para las dos (8 oct 2026). */
 const BOTON_OPCION =
-  "self-start rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50";
+  "w-full rounded-cinta border border-accent/40 bg-accent/10 px-4 py-2.5 text-sm font-medium text-accent hover:bg-accent/20 disabled:opacity-50";
 
 function IconoTelefono() {
   return (
