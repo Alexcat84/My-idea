@@ -2616,6 +2616,24 @@ async function faseMundoNuncaAbandona(cookie: string, projectId: string) {
   return { costoUsd };
 }
 
+/** Tus Numeros viene incluido con el plan (catalogo congruente, jul 2026): el reporte responde 409 sin un plan core
+ * vigente. Las fases 3 y 4 prueban la matematica del reporte sobre un proyecto nuevo, asi que primero le arman un plan
+ * REAL con el boton permanente "Generar mi plan" (no se siembra un plan falso: lo leeria el juez de fidelidad). */
+async function planCoreReal(cookie: string, sessionId: string): Promise<number> {
+  let costo = 0;
+  const res = await fetch(`${BASE_URL}/api/session/${sessionId}/plan`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Cookie: cookie },
+    body: JSON.stringify({}),
+  });
+  await consumirSSE(res, ({ evento, data }) => {
+    if (evento === "done") costo = Number((data as { costo_usd?: number }).costo_usd ?? 0);
+    if (evento === "error") throw new Error(`el plan previo al reporte fallo: ${JSON.stringify(data)}`);
+  });
+  log(`OK: plan core real armado antes del reporte (Tus Numeros viene con el plan), $${costo.toFixed(4)}.`);
+  return costo;
+}
+
 async function faseReporteDigital(cookie: string) {
   separador("FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))");
   const textoInicial = "Tengo una app de suscripcion mensual para llevar el registro de gastos personales.";
@@ -2623,6 +2641,7 @@ async function faseReporteDigital(cookie: string) {
   const projectId = String(start.project_id);
   log(`project_id: ${projectId}`);
   let costoUsd = Number(start.costo_usd ?? 0);
+  costoUsd += await planCoreReal(cookie, String(start.session_id));
 
   const RESPUESTAS = [
     "Es una app de suscripcion mensual, cada usuario paga una cuota fija cada mes, no vendo piezas ni nada fisico.",
@@ -2697,6 +2716,7 @@ async function faseGuardianGigo(cookie: string) {
   const projectId = String(start.project_id);
   log(`project_id: ${projectId}`);
   let costoUsd = Number(start.costo_usd ?? 0);
+  costoUsd += await planCoreReal(cookie, String(start.session_id));
 
   // Mismos 6 campos esenciales de producto_fisico/servicio, con los
   // valores EXACTOS del caso real que motivo detectarInconsistenciaGigo:
