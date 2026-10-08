@@ -1299,7 +1299,7 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   const cl0 = await getJson(cookie, `/api/project/${projectId}/checklist`);
   const vig0 = grupoVigenteCore(cl0);
   const items = vig0.etapas.flatMap((e) => e.items) as Array<{ id: string; etapa: number; destacado: boolean }>;
-  if (items.length < 3) throw new Error(`el plan vigente necesita >=3 items para el vuelo del tiempo, hay ${items.length}`);
+  if (items.length < 4) throw new Error(`el plan vigente necesita >=4 items para el vuelo del tiempo, hay ${items.length}`);
 
   // completed_at real (pasado) de un toque
   const rHecho = await patchJson(cookie, `/api/project/${projectId}/checklist`, {
@@ -1310,7 +1310,7 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   if (!mismaFecha((rHecho.item as { completed_at?: string }).completed_at, "2026-06-01T12:00:00.000Z")) {
     throw new Error(`completed_at no se persistio: ${JSON.stringify(rHecho.item)}`);
   }
-  log("OK: timeline real -- completed_at pasado persistido (para todos, sin fechas base).");
+  log("OK: timeline real -- completed_at ANTERIOR al proyecto aceptado y persistido (se revirtio la restriccion, 8 oct 2026).");
 
   const anRitmo = await getJson(cookie, `/api/project/${projectId}/analisis`);
   if (anRitmo.tiene_baseline !== false) throw new Error("a-mi-ritmo NO debe tener capa de cumplimiento");
@@ -1318,17 +1318,23 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   if (uRitmo.accionesHechas < 1) throw new Error("la capa universal no conto la accion completada");
   log(`OK: analisis a-mi-ritmo -- capa universal sola (acciones=${uRitmo.accionesHechas}, cumplimiento=null).`);
 
-  // ---- (b) modo FECHAS: baseline con fechas pasadas controladas ----
+  // ---- (b) modo FECHAS: baseline con fechas controladas ----
   const rModoFechas = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
   if (rModoFechas.modo_camino !== "fechas") throw new Error("/modo no persistio 'fechas'");
   log("OK: modo del camino = 'fechas'.");
 
-  // Fechas base PASADAS a proposito, para poder producir las 3 clases de
-  // cumplimiento con completed_at tambien pasado (nunca futuro).
+  // Fechas del cumplimiento (decision del fundador, 8 oct 2026): lo DECLARADO (hecho antes de que naciera el plan) no
+  // cuenta para la puntualidad. item0 (hecho el 2026-06-01, antes del proyecto) lleva fecha base y debe quedar FUERA.
+  // Las tres clases se miden con tareas hechas HOY (despues del plan, nunca en el futuro) contra bases relativas a hoy.
+  const DIA = 86_400_000;
+  const ahora = Date.now();
+  const iso = (ms: number) => new Date(ms).toISOString();
+  const hechoHoy = iso(ahora - 2 * 60_000);
   const fechas = [
-    { item_id: items[0].id, fecha: "2026-06-01T12:00:00.000Z", origen: "sugerida" }, // completed 06-01 = a tiempo
-    { item_id: items[1].id, fecha: "2026-06-05T12:00:00.000Z", origen: "sugerida" }, // completed 06-12 = tardia
-    { item_id: items[2].id, fecha: "2026-06-20T12:00:00.000Z", origen: "sugerida" }, // completed 06-12 = adelantada
+    { item_id: items[0].id, fecha: "2026-06-01T12:00:00.000Z", origen: "sugerida" }, // declarada: fuera
+    { item_id: items[1].id, fecha: iso(ahora), origen: "sugerida" }, // hecha hoy = a tiempo
+    { item_id: items[2].id, fecha: iso(ahora - 7 * DIA), origen: "sugerida" }, // hecha hoy, base hace 7 dias = tardia
+    { item_id: items[3].id, fecha: iso(ahora + 8 * DIA), origen: "sugerida" }, // hecha hoy, base en 8 dias = adelantada
   ];
   const rBaseline = await postJson(cookie, `/api/project/${projectId}/baseline`, {
     plan_id: vig0.plan_id,
@@ -1337,27 +1343,20 @@ async function faseSentidoDelTiempo(cookie: string, projectId: string) {
   if (rBaseline.ok !== true) throw new Error(`/baseline no confirmo: ${JSON.stringify(rBaseline)}`);
   log(`OK: linea base sellada (${rBaseline.confirmadas} fechas, baseline_confirmada_at=${rBaseline.baseline_confirmada_at}).`);
 
-  // completed_at de item[1] (tardia: 06-12 > 06-05) y item[2] (adelantada: 06-12 < 06-20)
-  await patchJson(cookie, `/api/project/${projectId}/checklist`, {
-    item_id: items[1].id,
-    estado: "hecho",
-    completed_at: "2026-06-12T12:00:00.000Z",
-  });
-  await patchJson(cookie, `/api/project/${projectId}/checklist`, {
-    item_id: items[2].id,
-    estado: "hecho",
-    completed_at: "2026-06-12T12:00:00.000Z",
-  });
+  for (const it of items.slice(1, 4)) {
+    await patchJson(cookie, `/api/project/${projectId}/checklist`, { item_id: it.id, estado: "hecho", completed_at: hechoHoy });
+  }
 
   const anFechas = await getJson(cookie, `/api/project/${projectId}/analisis`);
   if (anFechas.tiene_baseline !== true) throw new Error("modo fechas con baseline: la capa de cumplimiento debia existir");
   const c = (anFechas.analytics as { cumplimiento: { aTiempo: number; adelantadas: number; tardias: number; totalConFecha: number } }).cumplimiento;
-  // a mano: item0 06-01 vs base 06-01 -> a tiempo; item1 06-12 vs 06-05 (+7) -> tardia; item2 06-12 vs 06-20 (-8) -> adelantada
-  if (c.aTiempo < 1 || c.tardias < 1 || c.adelantadas < 1) {
-    throw new Error(`las 3 clases de cumplimiento debian aparecer: ${JSON.stringify(c)}`);
+  // a mano: item1 hoy vs base hoy (0 dias) -> a tiempo; item2 hoy vs hace 7 dias (+7) -> tardia; item3 hoy vs en 8 dias
+  // (-8) -> adelantada; item0 declarado (06-01, antes del plan) -> fuera. Total con fecha = 3, una de cada clase.
+  if (c.aTiempo !== 1 || c.tardias !== 1 || c.adelantadas !== 1) {
+    throw new Error(`debia salir una de cada clase (y la declarada fuera): ${JSON.stringify(c)}`);
   }
-  if (c.totalConFecha !== 3) throw new Error(`totalConFecha esperado 3, llego ${c.totalConFecha}`);
-  log(`OK: analisis con cumplimiento -- ${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardias (calculado de lo persistido).`);
+  if (c.totalConFecha !== 3) throw new Error(`totalConFecha esperado 3 (la declarada no cuenta), llego ${c.totalConFecha}`);
+  log(`OK: analisis con cumplimiento -- ${c.aTiempo} a tiempo, ${c.adelantadas} adelantadas, ${c.tardias} tardias; la tarea declarada antes del proyecto queda fuera de la puntualidad.`);
 
   // ---- realizar -> celebracion -> reabrir ----
   const rReal = await postJson(cookie, `/api/project/${projectId}/realizar`, { accion: "realizar" });
