@@ -1,0 +1,132 @@
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: https://www.myideaproject.com
+Fecha: 2026-10-08T23:36:42.366Z
+
+==============================================================================
+  FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
+==============================================================================
+OK: numero inyectado (4500) detectado como huerfano -- contexto: "alas, podrias llegar a vender 4500 unidades el proximo trimestre"
+Autenticado como dev user (con la aceptación vigente de los textos legales).
+
+==============================================================================
+  VUELO PARCIAL: solo las fases 3, 4 (las anteriores, validadas en otro vuelo sobre el mismo codigo)
+==============================================================================
+
+==============================================================================
+  FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))
+==============================================================================
+project_id: e1223e7c-6219-4ab8-8fa5-b70a4859fc6a
+OK: plan core real armado antes del reporte (Tus Numeros viene con el plan), $0.1094.
+
+PREGUNTA: ¿Cuánto gastas al mes en costos fijos de infraestructura (hosting, APIs, herramientas, suscripciones)?
+RESPUESTA: 200
+
+PREGUNTA: ¿Tienes algún costo variable por cada suscripción (por ejemplo, costo de API por uso)? Si es prácticamente cero, responde 0.
+RESPUESTA: 0
+
+PREGUNTA: ¿A qué precio o ingreso promedio vendes (o venderías) cada suscripción?
+RESPUESTA: 13
+
+PREGUNTA: Contando por suscripción, ¿cuánto tienes hoy, o cuál sería una meta mensual realista?
+RESPUESTA: 20
+
+--- contenido del reporte ---
+## Tus números hoy
+
+- **Tu costo por usuario:** $0. Con lo que declaraste, cada usuario adicional no te cuesta nada en materiales.
+- **Tu margen por usuario:** $13 − $0 = $13 por usuario al mes; de cada suscripción te quedan $13, es decir, el 100% del precio.
+- **Tu punto de equilibrio:** $200 de costos fijos al mes ÷ $13 de margen por usuario = 16 usuarios al mes. Con 16 suscriptores cubres tus costos fijos; del usuario 17 en adelante empiezas a ganar.
+
+## Qué significan
+
+Con tu precio de $13 y sin costo variable por usuario, cada suscripción que sumas aporta $13 completos para cubrir tus $200 de costos fijos mensuales. Necesitas 16 usuarios para llegar a cero, y tu meta de 20 usuarios al mes te deja un poco por encima de ese punto. Ese colchón es pequeño: si en la práctica consigues menos de 16, el mes cierra con pérdida. Y como todavía no has comprobado con usuarios reales que estén dispuestos a pagar $13, lo más útil por ahora es confirmar eso antes que afinar números.
+
+## Escenarios
+
+Estos tres escenarios no hablan de cuánto puedes producir, sino de cuánta gente adopta tu app respecto a tu meta de 20 usuarios al mes:
+
+- **Adopción al 50% de tu meta:** 10 usuarios, $130 de ingreso y $130 de margen total. No alcanzas a cubrir los $200 de costos fijos.
+- **Adopción al 100% de tu meta:** 20 usuarios, $260 de ingreso y $260 de margen total. Cubres tus costos fijos con un pequeño excedente.
+- **Adopción al 200% de tu meta:** 40 usuarios, $520 de ingreso y $520 de margen total. Aquí el excedente sobre tus costos fijos ya es claro.
+
+## Los números que te faltan (y cómo conseguirlos)
+
+- **Cuántos días tardas en convertir lo que gastas en dinero que entra:** con este dato podrías saber cuánto tiempo pasa entre que pagas algo y recuperas ese dinero. Se consigue anotando, para cada gasto de tu proyecto, cuántos días pasan hasta que el cobro correspondiente llega a tu cuenta.
+- **Cuántos días tardan tus clientes en pagarte:** serviría para saber cuándo entra realmente el dinero después de vender. En una suscripción mensual suele ser corto, pero conviene confirmarlo según el medio de pago que uses.
+- **Cuántos días tardas en pagar a tus proveedores:** serviría para saber cuánto margen de tiempo tienes entre recibir un servicio y tener que pagarlo. Se consigue revisando los plazos de pago de cada proveedor o herramienta que uses.
+
+---
+_Estimaciones basadas en las cifras que tú diste; no sustituyen contabilidad formal ni asesoría fiscal, que varían según tu país._
+
+costo_usd: $0.0148
+
+Contiene '16': true
+Contiene 'pieza'/'piezas' (NO deberia): false
+
+==============================================================================
+  FASE 3b (Fase 3.1): verificando que el reporte del 16 no tenga numeros huerfanos
+==============================================================================
+OK: el verificador de numeros huerfanos paso limpio en el reporte del 16 (0 flags).
+
+==============================================================================
+  FASE 4: guardian GIGO -- numeros contaminados del caso real de Motor v2.2
+==============================================================================
+project_id: 92d8a83e-f59e-40f1-b1eb-b93d32a06eb4
+OK: plan core real armado antes del reporte (Tus Numeros viene con el plan), $0.0995.
+
+PREGUNTA: ¿Cuánto gastas en materiales por pieza, más o menos? Un número aproximado sirve.
+RESPUESTA: 200
+
+PREGUNTA: ¿Cuántas horas de trabajo te toma cada pieza, de principio a fin?
+RESPUESTA: 4
+
+PREGUNTA: ¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?
+RESPUESTA: 50
+
+PREGUNTA: ¿A qué precio venderías (o vendes) cada pieza?
+RESPUESTA: 13
+
+PREGUNTA: En una semana normal, ¿cuánto puedes producir, contando por pieza?
+RESPUESTA: 5
+
+PREGUNTA: ¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?
+RESPUESTA: 200
+
+--- contenido del reporte (debe ser el guardian GIGO, sin narracion) ---
+## Tus números hoy
+
+Antes de calcular nada, encontré algo que no cuadra en estos números:
+
+> con estos números el margen por unidad es -2976.9%, muy por debajo de -100%: lo más probable es que alguna cifra esté en la unidad equivocada (por ejemplo, un presupuesto mensual leído como costo por unidad, o un plazo en meses leído como horas), no que cada venta pierda esa cantidad de dinero
+
+No voy a calcular margen ni punto de equilibrio con estos datos: el resultado sería una cifra que suena precisa pero está mal, y eso es peor que no tener el cálculo. Prefiero decírtelo con honestidad.
+
+## Los números que diste
+
+- valor_hora: 50
+- horas_por_unidad: 4
+- precio_tentativo: 13
+- capacidad_semanal: 5
+- costo_materiales_unidad: 200
+- costos_fijos_mensuales: 200
+
+## Los números que te faltan (y cómo conseguirlos)
+
+Revisa si alguno de los números de arriba está en una unidad distinta a la que esperaba el reporte (por ejemplo, un gasto mensual anotado como costo por unidad, o un plazo en meses anotado como horas), corrígelo, y vuelve a generar el reporte con la cifra corregida.
+
+costo_usd: $0.0000
+
+Muestra el aviso del guardian GIGO: true
+
+==============================================================================
+  RESUMEN DE COSTOS REALES (vuelo parcial)
+==============================================================================
+  fase3: $0.0148
+  fase4: $0.0000
+
+==============================================================================
+  VUELO PARCIAL COMPLETO: fases 3, 4 OK
+==============================================================================
