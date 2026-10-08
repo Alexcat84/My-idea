@@ -2,6 +2,8 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { MUNDOS, estaPublicado, filtrarVisibles, mundo, mundosVisibles, nombreDeMundo } from "./catalogoMundos";
+import { ACTIVE_LOCALES } from "./i18n/config";
+import { MUNDOS_I18N } from "./i18n/mensajes/mundos";
 import { PRECIOS } from "./precios";
 
 const RAIZ = path.resolve(__dirname, "..");
@@ -17,7 +19,7 @@ const leer = (rel: string) => readFileSync(path.join(RAIZ, rel), "utf-8");
  * nadie lo note, y se descubriría roto el día que hiciera falta.
  */
 const NUEVOS = ["compras", "entrega"];
-// (los "nueve" de abajo son los publicados: Primer Equipo entra oculto, ver su bloque)
+// (los "nueve" de abajo son los de antes de Primer Equipo; el 8 oct 2026 se publicó, ver su bloque)
 
 describe("el catálogo de mundos", () => {
   it("tiene los nueve mundos publicados más Primer Equipo, con los dos nuevos por su nombre de cara", () => {
@@ -42,9 +44,9 @@ describe("el catálogo de mundos", () => {
     expect(PRECIOS.mundo_activar).toBe(5);
   });
 
-  it("los nueve están publicados: ninguno queda escondido", () => {
+  it("los diez están publicados: ninguno queda escondido", () => {
     const visibles = mundosVisibles().map((m) => m.clave);
-    expect(visibles).toHaveLength(9);
+    expect(visibles).toHaveLength(10);
     for (const clave of NUEVOS) {
       expect(visibles, `${clave} no se está ofreciendo`).toContain(clave);
       expect(estaPublicado(clave)).toBe(true);
@@ -88,20 +90,23 @@ describe("el catálogo de mundos", () => {
   });
 });
 
-// Integracion del mundo 11 (28 sep 2026): Primer Equipo entra OCULTO hasta el
-// visto del fundador, como entraron compras y entrega. Se resuelve por clave (el
-// mini-gate lo puede caminar con ?ver=ocultos) pero no se lista.
-describe("Primer Equipo, el undécimo mundo, entra oculto", () => {
+// Integracion del mundo 11 (28 sep 2026): Primer Equipo entró OCULTO hasta el
+// visto del fundador, como entraron compras y entrega. El 8 oct 2026 el
+// fundador lo recorrió y dio su visto: se PUBLICA (tag mundo-11-publico).
+describe("Primer Equipo, el undécimo mundo, publicado", () => {
   it("existe en el catálogo con su nombre y su promesa", () => {
     expect(mundo("primer_equipo")).toBeDefined();
     expect(nombreDeMundo("primer_equipo")).toBe("Primer Equipo");
     expect(mundo("primer_equipo")!.promesa.length).toBeGreaterThan(10);
   });
 
-  it("no se lista hasta el visto del fundador, pero la puerta lo revela", () => {
-    expect(estaPublicado("primer_equipo")).toBe(false);
-    expect(mundosVisibles().map((m) => m.clave)).not.toContain("primer_equipo");
-    expect(mundosVisibles(true).map((m) => m.clave)).toContain("primer_equipo");
+  it("con el visto del fundador se lista en todas las vitrinas, en los once idiomas", () => {
+    expect(estaPublicado("primer_equipo")).toBe(true);
+    for (const idioma of ACTIVE_LOCALES) {
+      const pe = mundosVisibles(false, idioma).find((m) => m.clave === "primer_equipo");
+      expect(pe, idioma).toBeDefined();
+      expect(pe!.promesa, idioma).toBe((MUNDOS_I18N[idioma] as Record<string, { promesa: string }>).primer_equipo.promesa);
+    }
   });
 
   it("es de la familia MEJORA: no entra en los mundos de protección", () => {
@@ -157,6 +162,30 @@ describe("el mecanismo de ocultar, para el próximo mundo", () => {
 // (glosario, DISENO §6). El español del catálogo de idiomas es COPIA del JSON
 // y esta prueba impide que se separen; los nombres en inglés son los del
 // glosario, escritos aquí a mano.
+// Punto 7 del fundador (8 oct 2026): la lista de mundos para desbloquear de la
+// página de precios (/creditos) sale del catálogo de mundos VISIBLES, nunca
+// escrita a mano: un mundo publicado aparece solo, con su promesa.
+describe("la página de precios lista el catálogo visible", () => {
+  it("recorre mundosVisibles en el idioma de la página y pinta su nombre y su promesa", () => {
+    const fuente = leer("app/creditos/page.tsx");
+    expect(fuente).toContain("{mundosVisibles(false, idioma).map((mundo) => (");
+    expect(fuente).toContain("{mundo.nombre}");
+    expect(fuente).toContain("{mundo.promesa}");
+    // ni un nombre de mundo escrito a mano
+    for (const m of MUNDOS) expect(fuente, m.clave).not.toContain(m.nombre);
+  });
+
+  it("cada mundo tiene nombre y promesa propios en los once idiomas", () => {
+    for (const idioma of ACTIVE_LOCALES) {
+      const t = MUNDOS_I18N[idioma] as Record<string, { nombre: string; promesa: string } | undefined>;
+      for (const m of MUNDOS) {
+        expect(t[m.clave]?.nombre, `${idioma}/${m.clave}`).toBeTruthy();
+        expect(t[m.clave]?.promesa.length ?? 0, `${idioma}/${m.clave}`).toBeGreaterThan(10);
+      }
+    }
+  });
+});
+
 describe("mundos por idioma (i18n F3)", () => {
   it("el español del catálogo de idiomas es exactamente el de packs_catalog.json", () => {
     for (const m of MUNDOS) {
