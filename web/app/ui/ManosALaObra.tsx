@@ -20,7 +20,6 @@ import { BarraAvance } from "./BarraAvance";
 import { CampoConVoz } from "./CampoConVoz";
 import { BotonHeroe } from "./BotonHeroe";
 import { DetalleActividad } from "./DetalleActividad";
-import { useMinFechaHecho } from "./InicioProyecto";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
 import { RitualReplantear } from "./RitualReplantear";
@@ -420,7 +419,6 @@ function FilaItem({
   const [editandoFecha, setEditandoFecha] = useState(false);
   const hoyInput = fechaInputLocal(new Date());
   // No antes de que naciera el proyecto (decisión del fundador, 8 oct 2026).
-  const minHecho = useMinFechaHecho();
 
   function marcarHecho(completedAt?: string | null) {
     setEditandoFecha(false);
@@ -526,11 +524,10 @@ function FilaItem({
           <span className="text-[12.5px] text-dim">{t.fila.cambiarLaFecha}</span>
           <input
             type="date"
-            min={minHecho}
             max={hoyInput}
             defaultValue={item.completed_at ? fechaInputLocal(new Date(item.completed_at)) : hoyInput}
             onChange={(e) =>
-              e.target.value && !(minHecho && e.target.value < minHecho) && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })
+              e.target.value && onCambio({ completed_at: isoDesdeInputLocal(e.target.value) })
             }
             disabled={ocupado}
             aria-label={t.fila.ariaCambiarFecha}
@@ -1859,6 +1856,9 @@ export function ManosALaObra({
               banda: i.banda,
               completed_at: i.completed_at,
               espera_externa: i.espera_externa,
+              // lo declarado antes del plan no cuenta para el ritmo (corrida final, 8 oct 2026)
+              creada_at: i.created_at,
+              heredada: Boolean(i.heredado_de),
             });
           }
         }

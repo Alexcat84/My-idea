@@ -14,7 +14,6 @@
  * rápidas (el círculo y "Marcar hecho"): el detalle es la vista profunda.
  */
 import { useEffect, useMemo, useState } from "react";
-import { useMinFechaHecho } from "./InicioProyecto";
 import { CampoConVoz } from "./CampoConVoz";
 import { IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
@@ -130,7 +129,6 @@ export function DetalleActividad({
   const [corrigiendoBanda, setCorrigiendoBanda] = useState(false);
   const hecho = bEstado === "hecho";
   // No antes de que naciera el proyecto (decisión del fundador, 8 oct 2026).
-  const minHecho = useMinFechaHecho();
   const retirada = bEstado === "no_aplica";
 
   function elegirEstado(e: ChecklistEstado) {
@@ -315,11 +313,10 @@ export function DetalleActividad({
                 <span className="text-[12.5px] text-dim">{t.cuandoLoHiciste}</span>
                 <input
                   type="date"
-                  min={minHecho}
                   max={hoyInput}
                   value={bCompletado ? fechaInputLocal(new Date(bCompletado)) : hoyInput}
                   onChange={(ev) =>
-                    ev.target.value && !(minHecho && ev.target.value < minHecho) && setBCompletado(isoDesdeInputLocal(ev.target.value))
+                    ev.target.value && setBCompletado(isoDesdeInputLocal(ev.target.value))
                   }
                   disabled={ocupado}
                   aria-label={t.cuandoLoHicisteAria}

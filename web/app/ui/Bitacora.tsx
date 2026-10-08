@@ -140,8 +140,9 @@ export function LineaBitacora({
   const idioma = useIdioma();
   const t = elegir(BITACORA, idioma).pagina;
   const cronologicas = ordenCronologico(entradas);
-  const chispa = cronologicas.find((e) => e.chispa);
-  const diaInicial = chispa ? fechaInputLocal(new Date(chispa.fecha)) : "";
+  // "El día en que empezó todo" es la fecha MÁS ANTIGUA: la chispa o una tarea que
+  // ya traías hecha de antes (decisión del fundador, 8 oct 2026). Sin chispa, sin etiqueta.
+  const diaInicial = cronologicas.some((e) => e.chispa) && cronologicas.length ? fechaInputLocal(new Date(cronologicas[0].fecha)) : "";
   const cerrada = entradas.some((e) => e.peso === "cierre");
   // De la más reciente a la más antigua, en una sola lista.
   const filas = aFilas([...cronologicas].reverse(), t, diaInicial);

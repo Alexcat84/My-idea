@@ -106,6 +106,24 @@ export interface EntradaAnalytics {
 
 export type CumplimientoItem = "a_tiempo" | "adelantada" | "tardia";
 
+/** Lo DECLARADO no cuenta para la puntualidad (decisión del fundador, corrida final, 8 oct 2026): una tarea no
+ * heredada que se cumplió antes de que naciera su plan es algo que la persona ya había hecho. Sigue contando como hecha
+ * (avance, ritmo de acciones, bitácora); solo deja de tener fecha base contra la que medir si llegó a tiempo. */
+export function sinPuntualidadDeLoDeclarado(entrada: EntradaAnalytics): EntradaAnalytics {
+  const nacio = new Map<string, number>();
+  for (const p of [...entrada.planesCore, ...(entrada.planesMundo ?? [])]) nacio.set(p.id, Date.parse(p.created_at));
+  let cambio = false;
+  const items = entrada.items.map((it) => {
+    const plan = nacio.get(it.plan_id);
+    const hecho = it.completed_at ? Date.parse(it.completed_at) : Number.NaN;
+    if (it.heredado_de || plan === undefined || Number.isNaN(plan) || Number.isNaN(hecho) || hecho >= plan) return it;
+    if (!it.fecha_base && !it.fecha_base_original) return it;
+    cambio = true;
+    return { ...it, fecha_base: null, fecha_base_original: null };
+  });
+  return cambio ? { ...entrada, items } : entrada;
+}
+
 export function clasificarCumplimiento(completedAt: string, fechaBase: string): CumplimientoItem {
   const d = difDias(fechaBase, completedAt); // + = tarde, − = adelantada
   if (Math.abs(d) <= 1 + 1e-6) return "a_tiempo";
@@ -487,7 +505,8 @@ export interface AnalyticsMundo {
   cierreMotivo: string | null;
 }
 
-export function analyticsDeMundo(entrada: EntradaAnalytics, dominio: string): AnalyticsMundo | null {
+export function analyticsDeMundo(entradaCruda: EntradaAnalytics, dominio: string): AnalyticsMundo | null {
+  const entrada = sinPuntualidadDeLoDeclarado(entradaCruda);
   const mundo = entrada.mundos.find((m) => m.dominio === dominio);
   if (!mundo) return null;
   const items = entrada.items.filter((i) => dominioDe(i) === dominio);
@@ -619,7 +638,8 @@ export function capaCumplimientoDe(delPlan: ItemAnalytics[], chispa: string): Om
   };
 }
 
-export function calcularAnalytics(entrada: EntradaAnalytics, idioma: Locale = LOCALE_BASE): Analytics {
+export function calcularAnalytics(entradaCruda: EntradaAnalytics, idioma: Locale = LOCALE_BASE): Analytics {
+  const entrada = sinPuntualidadDeLoDeclarado(entradaCruda);
   const ahora = entrada.ahora ?? new Date().toISOString();
   const chispa = entrada.proyectoCreatedAt;
   const fin = entrada.realizadaAt ?? ahora;

@@ -856,3 +856,23 @@ describe("un mundo cuenta cuando tiene su plan (AUD-09 M37)", () => {
     expect(instantaneaDeActa(a, "core").mundos.map((m) => m.dominio)).toEqual(["quality"]);
   });
 });
+
+// Decisión del fundador (corrida final, 8 oct 2026): las tareas DECLARADAS con fecha anterior a su plan (lo que la
+// persona ya había hecho) no cuentan para la puntualidad. A mano, sobre BASE (plan p1 creado el 2026-03-03):
+//   E: completed 2026-02-20, base 03-10 → sería "adelantada" (−18 d), pero es anterior al plan → fuera.
+//   F: completed 2026-03-02, base 03-10 → también anterior al plan (03-03) → fuera.
+//   → los conteos de BASE no cambian: 2 a tiempo, 1 adelantada, 1 tardía, 4 con fecha.
+describe("puntualidad: lo declarado antes del plan no cuenta", () => {
+  it("dos tareas hechas antes de que existiera el plan no mueven los conteos", () => {
+    const conDeclaradas: EntradaAnalytics = {
+      ...BASE,
+      items: [
+        ...BASE.items,
+        { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "E", completed_at: iso("2026-02-20"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
+        { plan_id: "p1", etapa: 1, estado: "hecho", destacado: false, texto: "F", completed_at: iso("2026-03-02"), fecha_base: iso("2026-03-10"), fecha_base_original: null },
+      ],
+    };
+    const c = calcularAnalytics(conDeclaradas).cumplimiento!;
+    expect([c.aTiempo, c.adelantadas, c.tardias, c.totalConFecha]).toEqual([2, 1, 1, 4]);
+  });
+});

@@ -114,6 +114,18 @@ export interface MuestraCumplida {
   banda: Banda | null;
   completed_at: string | null;
   espera_externa?: boolean | null;
+  /** Cuando nació la tarea (con su plan). Una tarea NO heredada cumplida antes de nacer es lo que la persona ya había
+   * hecho y declaró: no es su ritmo (decisión del fundador, corrida final, 8 oct 2026). */
+  creada_at?: string | null;
+  heredada?: boolean;
+}
+
+/** ¿Es una tarea declarada (ya hecha antes de existir en el plan)? Las heredadas de un ciclo anterior no lo son. */
+export function esDeclaradaAntesDelPlan(m: { completed_at: string | null; creada_at?: string | null; heredada?: boolean }): boolean {
+  if (m.heredada || !m.completed_at || !m.creada_at) return false;
+  const hecho = Date.parse(m.completed_at);
+  const creada = Date.parse(m.creada_at);
+  return !Number.isNaN(hecho) && !Number.isNaN(creada) && hecho < creada;
 }
 
 export type FactoresPorBanda = Partial<Record<Banda, number>>;
@@ -149,6 +161,9 @@ function diasPrometidos(banda: Banda, capacidad: CapacidadSemanal): number {
  *    puede reescribir el calendario de todas las tareas de esa banda.
  *  - Sin `MIN_MUESTRAS_FACTOR` muestras de una banda, esa banda NO aparece en el
  *    resultado, y el empaquetado la trata como factor 1.
+ *  - **Lo declarado antes del plan no cuenta** (`esDeclaradaAntesDelPlan`): una
+ *    tarea que la persona ya había hecho antes de tenerla en el plan no dice
+ *    nada de su ritmo. Las heredadas de un ciclo anterior sí cuentan.
  */
 export function factorPorBanda(opts: {
   /** Las tareas cumplidas del MISMO espacio (mezclar espacios mezclaría ritmos). */
@@ -157,6 +172,8 @@ export function factorPorBanda(opts: {
 }): FactoresPorBanda {
   const utiles = opts.hechas
     .filter((h) => h.banda && h.completed_at && !Number.isNaN(Date.parse(h.completed_at)))
+    // lo declarado antes del plan no da muestra ni sirve de "anterior" (corrida final, 8 oct 2026)
+    .filter((h) => !esDeclaradaAntesDelPlan(h))
     .sort((a, b) => Date.parse(a.completed_at!) - Date.parse(b.completed_at!));
 
   const razones: Partial<Record<Banda, number[]>> = {};

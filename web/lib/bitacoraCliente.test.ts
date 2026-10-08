@@ -318,3 +318,28 @@ describe("Tu Plan tiene una sola fecha (AUD-09 B10)", () => {
     expect(e.find((x) => x.texto === "Recibiste tu plan.")?.fecha).toBe("2026-01-05T10:00:00Z");
   });
 });
+
+// Decisión del fundador (corrida final, 8 oct 2026): se puede marcar hecha una tarea con fecha ANTERIOR a la creación
+// del proyecto (nunca futura). En la bitácora esa entrada se escribe "Ya lo habías hecho: …", en los once idiomas.
+describe("tareas hechas antes de que naciera el proyecto", () => {
+  it("la entrada derivada de completed_at anterior a la chispa dice 'Ya lo habías hecho'", () => {
+    const e = construirBitacora(
+      datos({ items: [{ id: "v1", texto: "Registra tu marca", completed_at: "2025-11-15T12:00:00Z", dominio: "core" }], eventos: [] })
+    );
+    const vieja = e.find((x) => x.fecha === "2025-11-15T12:00:00Z")!;
+    expect(vieja.texto).toBe("Ya lo habías hecho: «Registra tu marca».");
+  });
+  it("el evento item_hecho con fecha anterior a la chispa también", () => {
+    const e = construirBitacora(
+      datos({
+        items: [{ id: "v1", texto: "Registra tu marca", completed_at: "2025-11-15T12:00:00Z", dominio: "core" }],
+        eventos: [{ tipo: "item_hecho", payload: { item: "v1", completed_at: "2025-11-15T12:00:00Z" }, created_at: "2026-01-04T10:00:00Z" }],
+      })
+    );
+    expect(e.find((x) => x.fecha === "2025-11-15T12:00:00Z")!.texto).toBe("Ya lo habías hecho: «Registra tu marca».");
+  });
+  it("una tarea hecha después de la chispa sigue diciendo 'Marcaste hecha'", () => {
+    const e = construirBitacora(datos());
+    expect(e.find((x) => x.fecha === "2026-01-10T15:00:00Z")!.texto).toBe("Marcaste hecha «Publica el video de tu producto».");
+  });
+});

@@ -707,3 +707,24 @@ describe("bordes que no pueden reventar en producción", () => {
     expect(mapa["d"] > "2026-08-05").toBe(true);
   });
 });
+
+// Decisión del fundador (corrida final, 8 oct 2026): las tareas declaradas con fecha anterior al plan no cuentan para
+// el ritmo personal. A mano, capacidad "20+" (una M promete 3/20 × 7 = 1,05 días): cuatro M cerradas en julio con un día
+// entre cada una darían tres muestras (razón 1/1,05 ≈ 0,95) y un factor M. Si las cuatro tareas nacieron con un plan del
+// 1 de agosto (y no son heredadas), se cumplieron antes de existir: ninguna muestra, ningún factor. Si son heredadas de
+// un ciclo anterior, sí cuentan.
+describe("ritmo personal: lo declarado antes del plan no cuenta", () => {
+  const julio = ["2026-07-01T12:00:00.000Z", "2026-07-02T12:00:00.000Z", "2026-07-03T12:00:00.000Z", "2026-07-04T12:00:00.000Z"]
+    .map((completed_at) => ({ banda: "M" as const, completed_at }));
+  it("sin la fecha del plan, esas cuatro dan un factor M", () => {
+    expect(factorPorBanda({ hechas: julio, capacidad: "20+" }).M).toBeDefined();
+  });
+  it("nacidas con un plan posterior (declaradas), no dan ninguna muestra", () => {
+    const declaradas = julio.map((h) => ({ ...h, creada_at: "2026-08-01T00:00:00.000Z" }));
+    expect(factorPorBanda({ hechas: declaradas, capacidad: "20+" })).toEqual({});
+  });
+  it("si son heredadas de un ciclo anterior, sí cuentan", () => {
+    const heredadas = julio.map((h) => ({ ...h, creada_at: "2026-08-01T00:00:00.000Z", heredada: true }));
+    expect(factorPorBanda({ hechas: heredadas, capacidad: "20+" }).M).toBeDefined();
+  });
+});

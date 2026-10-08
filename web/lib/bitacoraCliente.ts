@@ -19,6 +19,7 @@
  * HONESTIDAD CON EL PASADO: lo que no quedó registrado en su día simplemente no
  * aparece. Nunca se inventa ni se estima una entrada.
  */
+import { anteriorAlInicio } from "./inicioProyecto";
 import { fechaHumanaConAno, fechaInputLocal } from "./fechas";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { interpolarEn } from "./i18n/elision";
@@ -234,7 +235,13 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
   const hechosConEvento = new Set(d.eventos.filter((e) => e.tipo === "item_hecho").map((e) => String(e.payload?.item)));
   for (const it of d.items)
     if (it.completed_at && !hechosConEvento.has(it.id) && !it.heredado_de)
-      push(it.completed_at, interpolar(t.marcasteHechaCita, { texto: corto(it.texto) }), "accion", undefined, esCore(it.dominio) ? "core" : it.dominio);
+      push(
+        it.completed_at,
+        interpolar(anteriorAlInicio(it.completed_at, d.creadaAt) ? t.yaLoHabiasHechoCita : t.marcasteHechaCita, { texto: corto(it.texto) }),
+        "accion",
+        undefined,
+        esCore(it.dominio) ? "core" : it.dominio
+      );
 
   // ── Eventos registrados (lista blanca) ────────────────────────────────────
   const huboRealizada = d.eventos.some((e) => e.tipo === "realizada" && (e.payload?.accion ?? "realizar") === "realizar");
@@ -272,7 +279,10 @@ export function construirBitacora(d: DatosBitacora, idioma: Locale = LOCALE_BASE
       }
       case "item_hecho":
         // Con su fecha de realización (la que el usuario dijo), no la del clic.
-        pushE(typeof p.completed_at === "string" ? p.completed_at : e.created_at, interpolar(t.marcasteHecha, { ref: ref(p.item) }));
+        // Una fecha anterior a la chispa es algo que ya traías hecho (decisión del fundador, 8 oct 2026).
+        if (typeof p.completed_at === "string" && anteriorAlInicio(p.completed_at, d.creadaAt))
+          pushE(p.completed_at, interpolar(t.yaLoHabiasHecho, { ref: ref(p.item) }));
+        else pushE(typeof p.completed_at === "string" ? p.completed_at : e.created_at, interpolar(t.marcasteHecha, { ref: ref(p.item) }));
         break;
       case "item_no_aplica":
         pushE(e.created_at, interpolar(t.retiraste, { ref: ref(p.item), cita: cita(p.motivo) }), "retirada");

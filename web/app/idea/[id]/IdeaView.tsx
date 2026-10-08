@@ -52,7 +52,6 @@ import { urlSinParametro } from "@/lib/urlSinParametro";
 import { avisoPrecioExploracion } from "@/lib/avisoExploracion";
 import { etapaDeIdea } from "@/lib/etapaIdea";
 import { Stepper } from "../../ui/Stepper";
-import { InicioProyectoProvider } from "../../ui/InicioProyecto";
 import { TarjetaPregunta } from "../../ui/TarjetaPregunta";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { mundo as mundoDe, nombreDeMundo } from "@/lib/catalogoMundos";
@@ -1169,7 +1168,6 @@ export function IdeaView({ projectId }: { projectId: string }) {
   );
 
   return (
-    <InicioProyectoProvider creadoAt={detalle.idea.created_at ?? null}>
     <div className="flex min-h-full flex-1 flex-col">
       {/* header canon: breadcrumb + stepper de 5 etapas.
           STICKY (ago 2026, cazado por el fundador en su corrida): al bajar a
@@ -1783,6 +1781,5 @@ export function IdeaView({ projectId }: { projectId: string }) {
         )}
       </main>
     </div>
-    </InicioProyectoProvider>
   );
 }

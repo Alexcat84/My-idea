@@ -147,17 +147,16 @@ describe("PATCH /api/project/[id]/checklist — sentido del tiempo (Fase 3.8)", 
     expect(item.completed_at).toBe("2026-03-15T12:00:00.000Z");
   });
 
-  // Decisión del fundador (8 oct 2026): nada hecho antes de que naciera el proyecto.
-  // Proyecto creado el 2026-03-10T15:00Z: el 1 de marzo es anterior (400) y el
-  // mediodía del 10 de marzo no (200). El ítem no cambia cuando se rechaza.
-  it("400 si completed_at es anterior al inicio del proyecto, y el ítem no cambia", async () => {
+  // Decisión del fundador (corrida final, 8 oct 2026; revierte la de esa misma mañana): se PUEDE marcar hecha una
+  // tarea con fecha anterior a la creación del proyecto (lo que ya habías hecho). Solo el futuro se rechaza.
+  it("acepta completed_at anterior al inicio del proyecto (lo que ya habías hecho)", async () => {
     sembrarItem();
     estadoFalso.projects["p1"].created_at = "2026-03-10T15:00:00.000Z";
     const res = await PATCH(req({ item_id: "it1", estado: "hecho", completed_at: "2026-03-01T12:00:00.000Z" }), PARAMS);
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(200);
     const item = estadoFalso.checklistItems.find((i) => i.id === "it1")!;
-    expect(item.estado).toBe("pendiente");
-    expect(item.completed_at).toBeNull();
+    expect(item.estado).toBe("hecho");
+    expect(item.completed_at).toBe("2026-03-01T12:00:00.000Z");
   });
 
   it("acepta completed_at del mismo día en que nació el proyecto", async () => {

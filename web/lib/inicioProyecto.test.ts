@@ -1,6 +1,6 @@
-// Bitácora, decisión del fundador (8 oct 2026): no se puede marcar una tarea como
-// hecha con fecha ANTERIOR al inicio del proyecto (ni en pantalla ni en el
-// servidor). Las entradas viejas no se reescriben: la regla vale al escribir.
+// Bitácora, decisión del fundador (8 oct 2026, revierte la restricción de esa
+// mañana): una tarea SÍ se puede marcar hecha con fecha ANTERIOR al inicio del
+// proyecto. Esta función la reconoce para contarla como "Ya lo habías hecho".
 //
 // El servidor no conoce la zona horaria de la persona. La pantalla ancla el día
 // elegido al MEDIODÍA local (isoDesdeInputLocal), así que el mediodía del día de

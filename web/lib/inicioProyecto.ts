@@ -1,8 +1,9 @@
 /**
- * inicioProyecto.ts — nada se marca hecho antes de que naciera el proyecto
- * (decisión del fundador, 8 oct 2026). La regla vale al ESCRIBIR: la pantalla
- * no ofrece días anteriores y el servidor rechaza la fecha. Las entradas viejas
- * no se reescriben.
+ * inicioProyecto.ts — ¿una fecha de realización es anterior al nacimiento del
+ * proyecto? Desde el 8 oct 2026 (decisión del fundador, que revierte la
+ * restricción de esa mañana) SÍ se puede marcar hecha una tarea con fecha
+ * anterior (nunca futura): la bitácora la cuenta como "Ya lo habías hecho" y no
+ * entra al ritmo personal ni a la puntualidad.
  *
  * El servidor no conoce la zona horaria de la persona; la pantalla ancla el día
  * elegido al mediodía local (isoDesdeInputLocal). El mediodía del día de
@@ -13,7 +14,7 @@ const DOCE_HORAS = 12 * 3600 * 1000;
 
 /** ¿La fecha de realización `valor` es anterior al inicio del proyecto
  * (`creadoIso`)? Una fecha sin hora ("2026-03-10") se lee como su mediodía UTC.
- * Sin fecha de creación no hay contra qué comparar: no bloquea. */
+ * Sin fecha de creación no hay contra qué comparar: no es anterior. */
 export function anteriorAlInicio(valor: string, creadoIso: string | null | undefined): boolean {
   if (!creadoIso) return false;
   const creado = Date.parse(creadoIso);
