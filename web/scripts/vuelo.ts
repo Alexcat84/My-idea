@@ -3072,6 +3072,35 @@ async function main() {
 
   const costos: Record<string, number> = {};
   let saltosVerificados = 0;
+
+  // FASES SUELTAS (decision del fundador, cierre de la corrida final, 8 oct 2026): VUELO_SOLO_FASES="3,4" corre solo
+  // las fases independientes que se piden, sobre proyectos propios. Las fases 1 a 2P se encadenan sobre el proyecto de
+  // macetas y no se pueden correr sueltas. Uso: cuando las anteriores quedaron validadas en un vuelo sobre el MISMO
+  // codigo de producto (sin commits de producto en medio), y queda declarado en el acta.
+  const soloFases = (process.env.VUELO_SOLO_FASES ?? "").split(",").map((f) => f.trim()).filter(Boolean);
+  if (soloFases.length > 0) {
+    const SUELTAS: Record<string, () => Promise<{ costoUsd: number }>> = {
+      "3": () => faseReporteDigital(cookie),
+      "4": () => faseGuardianGigo(cookie),
+    };
+    const invalidas = soloFases.filter((f) => !SUELTAS[f]);
+    if (invalidas.length > 0) throw new Error(`VUELO_SOLO_FASES: solo se pueden correr sueltas las fases 3 y 4, no ${invalidas.join(", ")}`);
+    separador(`VUELO PARCIAL: solo las fases ${soloFases.join(", ")} (las anteriores, validadas en otro vuelo sobre el mismo codigo)`);
+    try {
+      for (const f of soloFases) costos[`fase${f}`] = (await SUELTAS[f]()).costoUsd;
+    } catch (e) {
+      separador("VUELO PARCIAL FALLIDO");
+      log(String(e instanceof Error ? e.stack : e));
+      escribirTranscripcion();
+      process.exit(1);
+    }
+    separador("RESUMEN DE COSTOS REALES (vuelo parcial)");
+    for (const [fase, costo] of Object.entries(costos)) log(`  ${fase}: $${costo.toFixed(4)}`);
+    separador(`VUELO PARCIAL COMPLETO: fases ${soloFases.join(", ")} OK`);
+    escribirTranscripcion();
+    return;
+  }
+
   try {
     costos.organizer = (await faseOrganizerSonar(cookie)).costoUsd;
     costos.organizerIdeaLarga = (await faseOrganizerIdeaLarga(cookie)).costoUsd;
