@@ -756,7 +756,7 @@ FROM (
   -- 051 . opiniones de las cuentas reales (decision del fundador, 8 oct 2026).
   -- ANTES de aplicar debe decir MISSING (to_regclass da NULL sin la tabla: la consulta no revienta); DESPUES, OK.
   -- Comprueba las columnas obligatorias, los 7 CHECK, el indice unico por plan, la cascada con la cuenta, el SET NULL
-  -- con la idea, RLS encendido, las dos politicas propias (y ninguna de UPDATE o DELETE), que anon no tiene nada y
+  -- con la idea, RLS encendido, la politica de lectura propia (y ninguna de UPDATE o DELETE), que anon no tiene nada y
   -- que authenticated no lee ni escribe el contexto interno.
   SELECT '051', 'opiniones (tipo, valoracion, motivo, texto, idioma; contexto interno; RLS inserta y lee lo suyo)',
     (SELECT count(*) FROM information_schema.columns
@@ -788,10 +788,7 @@ FROM (
       SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones'
         AND policyname='opiniones_own_select' AND cmd='SELECT'
     )
-    AND EXISTS (
-      SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones'
-        AND policyname='opiniones_own_insert' AND cmd='INSERT'
-    )
+    -- (la politica opiniones_own_insert de la 051 la retira la 052; por eso aqui no se exige)
     AND NOT EXISTS (
       SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones' AND cmd IN ('UPDATE','DELETE','ALL')
     )
@@ -808,6 +805,23 @@ FROM (
       SELECT 1 FROM information_schema.column_privileges
       WHERE table_schema='public' AND table_name='opiniones' AND grantee = 'authenticated'
         AND column_name IN ('contexto','proyecto_id')
+    )
+  UNION ALL
+  -- 052 . opiniones sin escritura directa del cliente (revision de seguridad, 8 oct 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK: sin la politica de insercion y sin INSERT de authenticated,
+  -- ni de tabla ni por columna.
+  SELECT '052', 'opiniones: solo la ruta del servidor escribe (sin politica ni permiso de INSERT para el cliente)',
+    to_regclass('public.opiniones') IS NOT NULL
+    AND NOT EXISTS (
+      SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones' AND cmd='INSERT'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_table_grants
+      WHERE table_schema='public' AND table_name='opiniones' AND grantee IN ('anon','authenticated') AND privilege_type='INSERT'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.column_privileges
+      WHERE table_schema='public' AND table_name='opiniones' AND grantee IN ('anon','authenticated') AND privilege_type='INSERT'
     )
 ) checks
 ORDER BY num;

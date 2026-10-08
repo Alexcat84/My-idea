@@ -30,6 +30,10 @@
 -- interno no se ve y no se puede falsear). La app escribe por la ruta del servidor (service_role), que valida la
 -- sesión, comprueba que el plan es de esa persona y arma el contexto. Sin UPDATE ni DELETE para el cliente.
 -- El bloque 051 de my_idea_check_migraciones.sql la confirma ANTES (MISSING) y DESPUÉS (OK).
+--
+-- REVISIÓN DE SEGURIDAD (8 oct 2026, después de aplicada): la inserción directa de authenticated se saltaba los
+-- topes, la regla de "solo si la tarjeta tocaba" y dejaba opinar al invitado de respaldo. La retira la 052; lo de
+-- abajo queda como se aplicó: es historia.
 
 CREATE TABLE IF NOT EXISTS public.opiniones (
   id          uuid PRIMARY KEY DEFAULT gen_random_uuid(),
