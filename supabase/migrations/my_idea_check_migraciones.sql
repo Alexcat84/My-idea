@@ -752,5 +752,62 @@ FROM (
       WHERE table_schema='public' AND table_name='aceptaciones_legales'
         AND grantee IN ('anon','authenticated') AND privilege_type IN ('INSERT','UPDATE','DELETE','TRUNCATE')
     )
+  UNION ALL
+  -- 051 . opiniones de las cuentas reales (decision del fundador, 8 oct 2026).
+  -- ANTES de aplicar debe decir MISSING (to_regclass da NULL sin la tabla: la consulta no revienta); DESPUES, OK.
+  -- Comprueba las columnas obligatorias, los 7 CHECK, el indice unico por plan, la cascada con la cuenta, el SET NULL
+  -- con la idea, RLS encendido, las dos politicas propias (y ninguna de UPDATE o DELETE), que anon no tiene nada y
+  -- que authenticated no lee ni escribe el contexto interno.
+  SELECT '051', 'opiniones (tipo, valoracion, motivo, texto, idioma; contexto interno; RLS inserta y lee lo suyo)',
+    (SELECT count(*) FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='opiniones'
+        AND column_name IN ('id','user_id','tipo','idioma','contexto','created_at')
+        AND is_nullable='NO') = 6
+    AND (SELECT count(*) FROM pg_constraint
+      WHERE conrelid = to_regclass('public.opiniones') AND contype = 'c'
+        AND conname IN ('opiniones_tipo_check','opiniones_valoracion_check','opiniones_motivo_check',
+                        'opiniones_idioma_check','opiniones_motivo_solo_malo_check','opiniones_texto_largo_check',
+                        'opiniones_objeto_check')) = 7
+    AND EXISTS (
+      SELECT 1 FROM pg_indexes WHERE schemaname='public' AND tablename='opiniones' AND indexname='opiniones_una_por_plan_idx'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = to_regclass('public.opiniones') AND contype = 'f' AND confdeltype = 'c'
+        AND confrelid = to_regclass('auth.users')
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_constraint
+      WHERE conrelid = to_regclass('public.opiniones') AND contype = 'f' AND confdeltype = 'n'
+        AND confrelid = to_regclass('public.projects')
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_class WHERE oid = to_regclass('public.opiniones') AND relrowsecurity
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones'
+        AND policyname='opiniones_own_select' AND cmd='SELECT'
+    )
+    AND EXISTS (
+      SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones'
+        AND policyname='opiniones_own_insert' AND cmd='INSERT'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM pg_policies WHERE schemaname='public' AND tablename='opiniones' AND cmd IN ('UPDATE','DELETE','ALL')
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_table_grants
+      WHERE table_schema='public' AND table_name='opiniones' AND grantee = 'anon'
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_table_grants
+      WHERE table_schema='public' AND table_name='opiniones' AND grantee = 'authenticated'
+        AND privilege_type IN ('SELECT','INSERT','UPDATE','DELETE','TRUNCATE')
+    )
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.column_privileges
+      WHERE table_schema='public' AND table_name='opiniones' AND grantee = 'authenticated'
+        AND column_name IN ('contexto','proyecto_id')
+    )
 ) checks
 ORDER BY num;
