@@ -2634,6 +2634,15 @@ async function planCoreReal(cookie: string, sessionId: string): Promise<number> 
   return costo;
 }
 
+/** La respuesta del guion a una pregunta del reporte, por LO QUE PREGUNTA y no por su orden. Con el plan armado primero,
+ * el proyecto ya trae su tipo de oferta y el reporte se salta la pregunta del tipo: las respuestas por posicion se
+ * corrian un lugar (8 oct 2026: el costo de 200 cayo como costo por usuario y el precio como 0). Lo que no reconoce es
+ * la pregunta del tipo, y recibe la frase del tipo. */
+function respuestaDelReporte(pregunta: string, campos: Array<[RegExp, string]>, fraseTipo: string): string {
+  const p = pregunta.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+  return campos.find(([re]) => re.test(p))?.[1] ?? fraseTipo;
+}
+
 async function faseReporteDigital(cookie: string) {
   separador("FASE 3: reporte digital -- equilibrio esperado 16 (ceil(200/13))");
   const textoInicial = "Tengo una app de suscripcion mensual para llevar el registro de gastos personales.";
@@ -2650,11 +2659,17 @@ async function faseReporteDigital(cookie: string) {
     "13", // precio_tentativo
     "20", // unidades_vendidas / meta mensual
   ];
-  let idx = 0;
+  // Por lo que pregunta (preguntas del reporte para oferta digital, lib/i18n/mensajes/reporte.ts):
+  const CAMPOS_DIGITAL: Array<[RegExp, string]> = [
+    [/costos fijos/, "200"],
+    [/costo variable/, "0"],
+    [/precio/, "13"],
+    [/meta mensual|cuanto tienes hoy/, "20"],
+  ];
   let r = await postJson(cookie, `/api/project/${projectId}/report`, {});
   while (r.tipo === "pregunta") {
     const pregunta = String(r.pregunta);
-    const respuesta = RESPUESTAS[Math.min(idx++, RESPUESTAS.length - 1)];
+    const respuesta = respuestaDelReporte(pregunta, CAMPOS_DIGITAL, RESPUESTAS[0]);
     log(`\nPREGUNTA: ${pregunta}`);
     log(`RESPUESTA: ${respuesta}`);
     r = await postJson(cookie, `/api/project/${projectId}/report`, { respuesta });
@@ -2732,11 +2747,19 @@ async function faseGuardianGigo(cookie: string) {
     "5", // capacidad_semanal
     "200", // costos_fijos_mensuales
   ];
-  let idx = 0;
+  // Por lo que pregunta (preguntas del reporte para producto fisico, lib/i18n/mensajes/reporte.ts):
+  const CAMPOS_FISICO: Array<[RegExp, string]> = [
+    [/materiales/, "200"],
+    [/valoras tu hora/, "50"],
+    [/cuantas horas/, "4"],
+    [/precio/, "13"],
+    [/semana normal/, "5"],
+    [/costos fijos/, "200"],
+  ];
   let r = await postJson(cookie, `/api/project/${projectId}/report`, {});
   while (r.tipo === "pregunta") {
     const pregunta = String(r.pregunta);
-    const respuesta = RESPUESTAS[Math.min(idx++, RESPUESTAS.length - 1)];
+    const respuesta = respuestaDelReporte(pregunta, CAMPOS_FISICO, RESPUESTAS[0]);
     log(`\nPREGUNTA: ${pregunta}`);
     log(`RESPUESTA: ${respuesta}`);
     r = await postJson(cookie, `/api/project/${projectId}/report`, { respuesta });
