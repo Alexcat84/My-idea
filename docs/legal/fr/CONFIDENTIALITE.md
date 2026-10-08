@@ -52,6 +52,12 @@ ventes).
 **Ce que l'application génère pour vous :** votre Clarté, votre plan et ses cycles, les diagnostics
 des mondes, le Dossier, le journal de bord de vos décisions et le tableau de vos chiffres.
 
+**Vos avis sur l'application :** si vous avez un compte, nous vous demandons de temps en temps comment s'est passé
+votre plan ou comment avance votre idée, et vous pouvez nous écrire depuis Commentaires et suggestions, dans votre
+compte. Nous conservons votre évaluation, le motif et le texte que vous nous donnez, la langue et la date et, pour
+comprendre à quoi ils se rapportent, l'idée, le plan et les concepts de l'entretien dont vous parlez. Répondre est
+facultatif : vous pouvez fermer la question sans répondre.
+
 **Données d'utilisation et de sécurité :** vos crédits et leurs mouvements (prélèvements,
 réservations, remboursements); l'adresse IP des tentatives de vérification en deux étapes; et, pour
 limiter l'utilisation quotidienne, votre adresse IP ou votre identifiant d'utilisateur pendant
@@ -76,6 +82,8 @@ L'endroit où votre navigateur traite le son dépend du navigateur que vous util
   que si le livrable est fourni (voir la section 9).
 - **Communiquer avec vous** au sujet de votre compte (par exemple, le code de vérification par
   courriel).
+- **Améliorer My Idea :** lire vos avis pour corriger ce qui ne fonctionne pas et améliorer les plans. Ils ne sont
+  ni publiés ni partagés avec d'autres utilisateurs.
 
 **Nous n'utilisons pas vos idées à d'autres fins :** nous ne les vendons pas, nous ne les utilisons
 pas à des fins publicitaires et nous ne les communiquons pas aux autres utilisateurs. Nous
@@ -167,6 +175,8 @@ supprimez votre compte, sous les réserves suivantes :
 - Le registre de vos acceptations des Conditions et de la présente politique est conservé tant que
   votre compte existe et il est supprimé avec lui. Sans compte, il reste lié à votre identité
   invisible, et il est transféré à votre compte si vous en créez un.
+- Vos avis sont conservés tant que votre compte existe et sont supprimés avec lui. Si vous supprimez une idée, ce
+  que vous en avez dit est conservé sans le lien avec cette idée.
 - Les limites d'utilisation conservent votre adresse IP ou votre identifiant pendant 48 heures au
   maximum.
 - Les journaux techniques de l'hébergement et les copies de sauvegarde de la base de données sont

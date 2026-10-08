@@ -19,10 +19,16 @@ function correosFundador(): Set<string> {
   );
 }
 
-/** ¿Esta cuenta puede ver y caminar los mundos sin publicar? */
-export function puedeVerOcultos(user: Pick<User, "is_anonymous" | "email"> | null | undefined): boolean {
+/** ¿Es la cuenta del fundador? Una cuenta real cuyo correo está en FUNDADOR_EMAILS. Abre los mundos sin publicar y
+ * el panel de opiniones (app/fundador/opiniones, decisión del 8 oct 2026). */
+export function esFundador(user: Pick<User, "is_anonymous" | "email"> | null | undefined): boolean {
   if (!user || esInvitadoInvisible(user)) return false;
   return correosFundador().has((user.email ?? "").trim().toLowerCase());
+}
+
+/** ¿Esta cuenta puede ver y caminar los mundos sin publicar? */
+export function puedeVerOcultos(user: Pick<User, "is_anonymous" | "email"> | null | undefined): boolean {
+  return esFundador(user);
 }
 
 /** ¿Esta cuenta puede abrir este mundo? Publicado: cualquiera. Oculto: solo quien puede verlo. Inexistente: nadie. */

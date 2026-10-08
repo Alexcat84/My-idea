@@ -52,6 +52,12 @@ Zahlen deines Geschäfts, die du uns in Deine Zahlen nennst (Kosten, Stunden, Pr
 **Was die App für dich erstellt:** deine Klarheit, deinen Plan und seine Zyklen, die Diagnosen der
 Welten, das Dossier, das Logbuch deiner Entscheidungen und die Übersicht deiner Zahlen.
 
+**Deine Meinung zur App:** Wenn du ein Konto hast, fragen wir dich ab und zu, wie dein Plan geworden ist oder wie
+deine Idee läuft, und du kannst uns über Kommentare und Vorschläge in deinem Konto schreiben. Wir speichern deine
+Bewertung, den Grund und den Text, den du uns gibst, die Sprache und das Datum und, um zu verstehen, worauf sie sich
+bezieht, die Idee, den Plan und die Konzepte des Gesprächs, über die du sprichst. Antworten ist freiwillig: Du
+kannst die Frage schließen, ohne zu antworten.
+
 **Nutzungs- und Sicherheitsdaten:** dein Guthaben und seine Bewegungen (Abbuchungen, Reservierungen,
 Erstattungen); die IP-Adresse bei Versuchen der Bestätigung in zwei Schritten; und, um die tägliche
 Nutzung zu begrenzen, deine IP-Adresse oder deine Nutzerkennung für höchstens 48 Stunden.
@@ -76,6 +82,8 @@ Herstellers.
   ihn nur abbuchen, wenn die Leistung auch geliefert wird (siehe Abschnitt 9).
 - **Um mit dir zu kommunizieren**, wenn es um dein Konto geht (zum Beispiel der Bestätigungscode per
   E-Mail).
+- **My Idea verbessern:** deine Meinungen lesen, um zu beheben, was nicht funktioniert, und die Pläne zu
+  verbessern. Sie werden weder veröffentlicht noch mit anderen Nutzern geteilt.
 
 **Für andere Zwecke nutzen wir deine Ideen nicht:** Wir verkaufen sie nicht, nutzen sie nicht für
 Werbung und teilen sie nicht mit anderen Nutzern. Wir selbst trainieren keine KI-Modelle mit deinen Ideen.
@@ -167,6 +175,8 @@ löschst, mit folgenden Ausnahmen:
 - Der Eintrag deiner Zustimmungen zu den Nutzungsbedingungen und zu dieser Erklärung wird
   aufbewahrt, solange dein Konto besteht, und mit ihm gelöscht. Ohne Konto bleibt er bei deiner
   unsichtbaren Identität und geht auf dein Konto über, wenn du eines erstellst.
+- Deine Meinungen werden aufbewahrt, solange dein Konto besteht, und mit ihm gelöscht. Wenn du eine Idee löschst,
+  bleibt deine Meinung dazu ohne die Verbindung zu dieser Idee erhalten.
 - Die Nutzungsgrenzen speichern deine IP-Adresse oder Kennung höchstens 48 Stunden.
 - Die technischen Protokolle des Hostings und die Sicherungskopien der Datenbank werden nach den
   Fristen dieser Dienstleister aufbewahrt.

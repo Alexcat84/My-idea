@@ -5,7 +5,7 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
-import { mundoAlcanzable, puedeVerOcultos } from "./fundador";
+import { esFundador, mundoAlcanzable, puedeVerOcultos } from "./fundador";
 import { MUNDOS } from "./catalogoMundos";
 
 const leer = (ruta: string) => readFileSync(join(__dirname, "..", ruta), "utf-8");
@@ -58,5 +58,17 @@ describe("la puerta se cumple en el servidor", () => {
   it("la vista solo enciende la puerta si el servidor dice que puedes", () => {
     expect(leer("app/api/idea/[id]/route.ts")).toContain("puedeVerOcultos(user)");
     expect(leer("app/idea/[id]/IdeaView.tsx")).toContain("detalle?.puedeVerOcultos === true");
+  });
+});
+
+describe("esFundador (el panel de opiniones, 8 oct 2026): la misma puerta que los mundos ocultos", () => {
+  it("solo una cuenta real cuyo correo está en FUNDADOR_EMAILS", () => {
+    process.env.FUNDADOR_EMAILS = "Dueno@Ejemplo.com";
+    expect(esFundador({ is_anonymous: false, email: "dueno@ejemplo.com" })).toBe(true);
+    expect(esFundador({ is_anonymous: false, email: "otra@ejemplo.com" })).toBe(false);
+    expect(esFundador({ is_anonymous: true, email: "dueno@ejemplo.com" })).toBe(false);
+    expect(esFundador(null)).toBe(false);
+    delete process.env.FUNDADOR_EMAILS;
+    expect(esFundador({ is_anonymous: false, email: "dueno@ejemplo.com" })).toBe(false);
   });
 });

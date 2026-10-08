@@ -160,3 +160,12 @@ export type MotivoAceptacion = (typeof ACEPTACION_MOTIVO)[number];
  * textos legales existen en español y francés; cualquier otro idioma de la interfaz lee el español. */
 export const ACEPTACION_IDIOMA_TEXTO = ["es", "fr"] as const;
 export type IdiomaTextoLegal = (typeof ACEPTACION_IDIOMA_TEXTO)[number];
+
+/** opiniones (migración 051, decisión del fundador del 8 oct 2026): las opiniones de las cuentas reales. El tipo lo
+ * decide el servidor a partir del plan (lib/opiniones.ts, tipoDePlan); el motivo solo acompaña a 'malo'. */
+export const OPINIONES_TIPO = ["plan", "plan_mundo", "profundizacion", "replanteamiento", "seguimiento", "general"] as const;
+export type OpinionTipo = (typeof OPINIONES_TIPO)[number];
+export const OPINIONES_VALORACION = ["malo", "bueno", "excelente"] as const;
+export type OpinionValoracion = (typeof OPINIONES_VALORACION)[number];
+export const OPINIONES_MOTIVO = ["no_es_correcto", "no_aplica", "confuso", "otro"] as const;
+export type OpinionMotivo = (typeof OPINIONES_MOTIVO)[number];

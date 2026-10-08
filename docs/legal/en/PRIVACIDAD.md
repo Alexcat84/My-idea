@@ -46,6 +46,12 @@ us in Your Numbers (costs, hours, prices, sales).
 **What the app generates for you:** your Clarity, your plan and its cycles, the diagnoses of the worlds,
 the Full Record, the logbook of your decisions and the dashboard of your numbers.
 
+**Your feedback on the app:** if you have an account, every now and then we ask how your plan turned out or how
+your idea is going, and you can write to us from Comments and suggestions, in your account. We keep your rating,
+the reason and the text you give us, the language and the date and, to understand what it refers to, the idea, the
+plan and the interview concepts you are talking about. Answering is optional: you can close the question without
+replying.
+
 **Usage and security data:** your credits and their transactions (charges, reservations, refunds); the
 IP address of two-step verification attempts; and, to limit daily use, your IP or your
 user identifier for a maximum of 48 hours.
@@ -67,6 +73,8 @@ on the browser you use: some send the audio to their maker's servers.
 - **Credits:** keeping track of your balance, reserving the price of a piece of work when it starts and charging it only if
   it is delivered (see section 9).
 - **Contacting you** about your account (for example, the verification code by email).
+- **Improving My Idea:** reading your feedback to fix what does not work and to improve the plans. It is not
+  published or shared with other users.
 
 **We do not use your ideas for other purposes:** we do not sell them, we do not use them for advertising and we do not
 share them with other users. We do not train AI models with your ideas. Each provider processes your data only for
@@ -151,6 +159,8 @@ exceptions:
 - The record of your acceptances of the Terms and of this policy is kept for as long as your account
   exists and is deleted with it. Without an account, it stays with your invisible identity, and it moves to your account if you
   create one.
+- Your feedback is kept while your account exists and is deleted with it. If you delete an idea, what you said
+  about it is kept without the link to that idea.
 - Usage limits keep your IP or identifier for a maximum of 48 hours.
 - Technical logs from hosting and database backups are kept according to those
   providers' retention periods.

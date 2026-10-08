@@ -50,6 +50,11 @@ attività che ci comunichi in I tuoi numeri (costi, ore, prezzi, vendite).
 **Ciò che l'app genera per te:** la tua Chiarezza, il tuo piano e i suoi cicli, le diagnosi dei
 mondi, il Fascicolo, il diario di bordo delle tue decisioni e il cruscotto dei tuoi numeri.
 
+**Le tue opinioni sull'app:** se hai un account, ogni tanto ti chiediamo com'è venuto il tuo piano o come sta
+andando la tua idea, e puoi scriverci da Commenti e suggerimenti, nel tuo account. Conserviamo la tua valutazione,
+il motivo e il testo che ci dai, la lingua e la data e, per capire a cosa si riferisce, l'idea, il piano e i
+concetti dell'intervista di cui parli. Rispondere è facoltativo: puoi chiudere la domanda senza rispondere.
+
 **Dati di utilizzo e di sicurezza:** i tuoi crediti e i relativi movimenti (addebiti, riserve,
 rimborsi); l'indirizzo IP dei tentativi di verifica in due passaggi; e, per limitare l'uso
 giornaliero, il tuo IP o il tuo identificativo utente per un massimo di 48 ore.
@@ -73,6 +78,8 @@ produttore.
 - **I crediti:** gestire il tuo saldo, riservare il prezzo di un risultato all'avvio e
   addebitarlo solo se il risultato viene consegnato (vedi la sezione 9).
 - **Comunicare con te** in merito al tuo account (per esempio, il codice di verifica via email).
+- **Migliorare My Idea:** leggere le tue opinioni per correggere ciò che non funziona e migliorare i piani. Non
+  vengono pubblicate né condivise con altri utenti.
 
 **Non usiamo le tue idee per altre finalità:** non le vendiamo, non le usiamo per la pubblicità e
 non le condividiamo con altri utenti. Noi non addestriamo modelli di IA con le tue idee. Ciascun
@@ -163,6 +170,8 @@ account, con queste eccezioni:
 - La registrazione delle tue accettazioni dei Termini e della presente informativa viene conservata
   finché il tuo account esiste e viene cancellata insieme a esso. Senza account, resta collegata
   alla tua identità invisibile e passa al tuo account se lo crei.
+- Le tue opinioni vengono conservate finché il tuo account esiste e vengono eliminate insieme a esso. Se elimini
+  un'idea, ciò che hai detto su di essa resta senza il collegamento a quell'idea.
 - I limiti di utilizzo conservano il tuo IP o identificativo per un massimo di 48 ore.
 - I registri tecnici dell'hosting e le copie di backup del database vengono conservati secondo i
   tempi di conservazione previsti da tali fornitori.

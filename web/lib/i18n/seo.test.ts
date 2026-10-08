@@ -60,7 +60,7 @@ describe("SEO por idioma", () => {
   it("la portada y las páginas legales y de ayuda son públicas para el buscador; las rutas de sesión quedan fuera", () => {
     // páginas legales y de cuenta (encargo del fundador del 6 oct 2026): públicas, también para Google Play
     expect(PAGINAS_PUBLICAS).toEqual(["/", "/privacidad", "/terminos", "/cookies", "/eliminar-cuenta", "/preguntas-frecuentes"]);
-    for (const r of ["/login", "/auth/", "/nueva", "/ideas", "/idea/", "/cuenta", "/creditos", "/potenciadores", "/dev/", "/api/"])
+    for (const r of ["/login", "/auth/", "/nueva", "/ideas", "/idea/", "/cuenta", "/creditos", "/potenciadores", "/dev/", "/fundador/", "/api/"])
       expect(RUTAS_PRIVADAS).toContain(r);
   });
 

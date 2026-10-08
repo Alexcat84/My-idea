@@ -10,7 +10,7 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { ACEPTACION_IDIOMA_TEXTO, ACEPTACION_MOTIVO, BANDA, CAMINO, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOLOR, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROBABILIDAD, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
+import { ACEPTACION_IDIOMA_TEXTO, ACEPTACION_MOTIVO, BANDA, CAMINO, CAPACIDAD_SEMANAL, CHECKLIST_ESTADO, DOLOR, DOMINIOS, FECHA_BASE_ORIGEN, MODO_CAMINO, OPINIONES_MOTIVO, OPINIONES_TIPO, OPINIONES_VALORACION, PACK_CLICKS_PACK, PLANS_ETIQUETA, PROBABILIDAD, PROJECT_NODES_TIPO, SESSIONS_TIPO } from "./dbContract";
 
 const MIGRATIONS_DIR = path.resolve(__dirname, "..", "..", "supabase", "migrations");
 
@@ -75,6 +75,12 @@ function assertSubconjuntoDelContrato(claveTabla: string, valoresCodigo: readonl
 }
 
 describe("contrato codigo<->DB: todo lo que el codigo emite, Supabase lo acepta (Hotfix v2.2.2)", () => {
+  it("opiniones.tipo, opiniones.valoracion y opiniones.motivo (migración 051)", () => {
+    assertSubconjuntoDelContrato("opiniones.tipo", OPINIONES_TIPO);
+    assertSubconjuntoDelContrato("opiniones.valoracion", OPINIONES_VALORACION);
+    assertSubconjuntoDelContrato("opiniones.motivo", OPINIONES_MOTIVO);
+  });
+
   it("sessions.tipo", () => {
     assertSubconjuntoDelContrato("sessions.tipo", SESSIONS_TIPO);
   });

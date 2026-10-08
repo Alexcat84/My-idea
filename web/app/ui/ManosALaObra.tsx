@@ -76,6 +76,7 @@ import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
 import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
 import { REGISTRO_PROTECCION } from "@/lib/i18n/mensajes/registroProteccion";
 import { textoParaMostrar } from "@/lib/textoTarea";
+import { PreguntaOpinion } from "./PreguntaOpinion";
 
 export interface ItemChecklistUI {
   id: string;
@@ -2616,6 +2617,8 @@ export function ManosALaObra({
         {coreEnEspacio && cara === "avance" && <LineaAvance hitos={hitosCore} />}
         {(!coreEnEspacio || cara === "manos") && (
           <>
+        {/* Opiniones (decisión del fundador, 8 oct 2026): "¿Qué tal va tu idea?", de vez en cuando; el servidor decide. */}
+        <PreguntaOpinion seguimiento={projectId} />
         {/* "Todo separado" (T3c): el modo + ritual del CORE, con el panel común
             scopeado a su espacio (mismo componente que usa el hub del mundo). */}
         <PanelModoFechas
@@ -2836,6 +2839,7 @@ export function ManosALaObra({
                           </div>
                         )}
                         {mundo.plan && <PlanDocumento md={mundo.plan.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={mundo.nombre} />}
+                        {mundo.plan && <PreguntaOpinion sesionId={mundo.plan.session_id} />}
                       </div>
                     )}
                     {cara === "avance" && (
@@ -2985,6 +2989,7 @@ export function ManosALaObra({
                         <PlanDocumento md={mundo.plan.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={mundo.nombre} />
                       </Acordeon>
                     )}
+                    {mundo.plan && <PreguntaOpinion sesionId={mundo.plan.session_id} />}
                     <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                   </div>
                 )
@@ -3089,6 +3094,7 @@ export function ManosALaObra({
                   </Acordeon>
                 </div>
               )}
+              {mundo.plan && <PreguntaOpinion sesionId={mundo.plan.session_id} className="mt-3" />}
               {/* Ciclo de replanteamiento, Fase 2: la Historia del mundo, igual
                   que la del núcleo (lo hecho no se pierde). En su hub, en la
                   cara "manos". */}

@@ -69,6 +69,7 @@ import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 import { LineaConsentimiento } from "@/app/ui/LineaConsentimiento";
 import { CONSENTIMIENTO } from "@/lib/i18n/mensajes/consentimiento";
 import { useConsentimiento } from "@/lib/legal/useConsentimiento";
+import { PreguntaOpinion } from "@/app/ui/PreguntaOpinion";
 
 // i18n F2: la nota de los nodos silenciosos (t.notaSilencioso) y el mensaje de
 // respaldo del cierre (t.cierreRespaldo) viven en el catálogo de la vista.
@@ -1662,6 +1663,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   idiomaDocumento={idiomaDoc}
                 />
               )}
+
+              {/* Opiniones (decisión del fundador, 8 oct 2026): "¿Qué tal salió tu plan?" al recibirlo (también la
+                  profundización y el replanteamiento). Una vez por plan; el servidor decide si toca. */}
+              {planMd && !generandoPlan && <PreguntaOpinion sesionId={planSesionId} />}
 
               {/* CTA canon 05: el verde ejecuta espera en la etapa 5.
                   Fase 4.0 (regla de UNA sola puerta, docs/FLUJO_TRACKING.md §2):

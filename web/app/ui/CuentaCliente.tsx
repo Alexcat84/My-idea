@@ -17,6 +17,8 @@ import { rico } from "@/lib/i18n/rico";
 import { palabraEliminar } from "@/lib/i18n/palabraEliminar";
 import { SELECTOR_IDIOMA } from "@/lib/i18n/mensajes/selectorIdioma";
 import { SelectorIdioma } from "./SelectorIdioma";
+import { ComentariosSugerencias } from "./ComentariosSugerencias";
+import { OPINIONES } from "@/lib/i18n/mensajes/opiniones";
 import { createClient } from "@/lib/supabase/client";
 
 
@@ -433,6 +435,10 @@ export function CuentaCliente({ email }: { email: string }) {
             </div>
           </div>
         )}
+      </Seccion>
+
+      <Seccion titulo={elegir(OPINIONES, idioma).cuenta.titulo}>
+        <ComentariosSugerencias />
       </Seccion>
 
       <ZonaDePeligro>

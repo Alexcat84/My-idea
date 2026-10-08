@@ -32,6 +32,8 @@ export const RUTAS_PRIVADAS = [
   "/creditos",
   "/potenciadores",
   "/dev/",
+  // El panel de opiniones del fundador (8 oct 2026): protegido por FUNDADOR_EMAILS y fuera del buscador.
+  "/fundador/",
 ];
 
 /** La variante de una ruta en un idioma: `?lang=xx` sobre la URL canónica. */

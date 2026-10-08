@@ -48,6 +48,11 @@ tarefa ou ao dar sua ideia por realizada), e os números do seu negócio que voc
 **O que o aplicativo gera para você:** sua Clareza, seu plano e seus ciclos, os diagnósticos dos mundos,
 o Dossiê, o diário de bordo das suas decisões e o painel dos seus números.
 
+**Suas opiniões sobre o app:** se você tem conta, de vez em quando perguntamos como ficou o seu plano ou como está
+indo a sua ideia, e você pode nos escrever em Comentários e sugestões, na sua conta. Guardamos a sua avaliação, o
+motivo e o texto que você nos der, o idioma e a data e, para entender a que se refere, a ideia, o plano e os
+conceitos da entrevista de que você fala. Responder é opcional: você pode fechar a pergunta sem responder.
+
 **Dados de uso e de segurança:** seus créditos e suas movimentações (cobranças, reservas, reembolsos); o
 endereço IP das tentativas de verificação em duas etapas; e, para limitar o uso diário, seu IP ou seu
 identificador de usuário por no máximo 48 horas.
@@ -69,6 +74,8 @@ do navegador que você usa: alguns enviam o áudio aos servidores do respectivo 
 - **Os créditos:** controlar seu saldo, reservar o preço de uma entrega quando ela começa e cobrá-lo somente se
   a entrega for concluída (veja a seção 9).
 - **Comunicar-nos com você** sobre sua conta (por exemplo, o código de verificação por e-mail).
+- **Melhorar o My Idea:** ler as suas opiniões para corrigir o que não funciona e melhorar os planos. Elas não são
+  publicadas nem compartilhadas com outros usuários.
 
 **Não usamos suas ideias para outros fins:** não as vendemos, não as usamos para publicidade e não as
 compartilhamos com outros usuários. Nós não treinamos modelos de IA com suas ideias. Cada fornecedor trata seus
@@ -153,6 +160,8 @@ ressalvas:
 - O registro das suas aceitações dos Termos e desta política é conservado enquanto sua conta
   existir e é excluído com ela. Sem conta, ele fica vinculado à sua identidade invisível e passa para a sua conta se você
   a criar.
+- As suas opiniões são guardadas enquanto a sua conta existir e são excluídas com ela. Se você excluir uma ideia, o
+  que opinou sobre ela é guardado sem o vínculo com essa ideia.
 - Os limites de uso guardam seu IP ou identificador por no máximo 48 horas.
 - Os registros técnicos da hospedagem e as cópias de segurança do banco de dados são conservados conforme os
   prazos desses fornecedores.

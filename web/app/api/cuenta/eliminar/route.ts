@@ -34,6 +34,11 @@ import {
 } from "@/lib/seguridad";
 import { createAdminClient } from "@/lib/supabase/admin";
 
+/** La tabla no existe todavía (una migración sin aplicar): PostgREST la llama PGRST205; Postgres, 42P01. */
+function tablaInexistente(e: { code?: string }): boolean {
+  return e.code === "PGRST205" || e.code === "42P01";
+}
+
 export async function POST(request: Request) {
   const idioma = idiomaDeRequest(request);
   const t = elegir(SERVIDOR_CUENTA, idioma);
@@ -133,6 +138,11 @@ export async function POST(request: Request) {
     .update({ user_id: null, saldo_resultante: null, concepto: null, origen: null, idempotency_key: null })
     .eq("user_id", userId);
   if (errHistorial) return fallo("la anonimización del historial de créditos (¿falta la migración 045?)", errHistorial);
+
+  // B6 (decisión del fundador, 8 oct 2026): sus opiniones (migración 051) se borran, explícitamente y antes de la
+  // cuenta (su ON DELETE CASCADE también lo haría). Si la 051 aún no está aplicada no hay tabla ni nada que borrar.
+  const { error: errOpiniones } = await admin.from("opiniones").delete().eq("user_id", userId);
+  if (errOpiniones && !tablaInexistente(errOpiniones)) return fallo("el borrado de las opiniones", errOpiniones);
 
   // B3: el correo sale de la lista de invitados (normalizado como la guarda).
   if (email) {

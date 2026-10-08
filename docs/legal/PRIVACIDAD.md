@@ -43,6 +43,11 @@ tarea o al dar tu idea por realizada), y las cifras de tu negocio que nos cuenta
 **Lo que la app genera para ti:** tu Claridad, tu plan y sus ciclos, los diagnósticos de los mundos,
 el Expediente, la bitácora de tus decisiones y el tablero de tus números.
 
+**Tus opiniones sobre la app:** si tienes cuenta, de vez en cuando te preguntamos qué tal salió tu plan o qué tal
+va tu idea, y puedes escribirnos desde Comentarios y sugerencias, en tu cuenta. Guardamos tu valoración, el motivo y
+el texto que nos des, el idioma y la fecha y, para entender a qué se refiere, la idea, el plan y los conceptos de la
+entrevista de los que hablas. Responder es opcional: puedes cerrar la pregunta sin contestar.
+
 **Datos de uso y seguridad:** tus créditos y sus movimientos (cobros, reservas, reembolsos); la
 dirección IP de los intentos de verificación en dos pasos; y, para limitar el uso diario, tu IP o tu
 identificador de usuario durante un máximo de 48 horas.
@@ -64,6 +69,8 @@ del navegador que uses: algunos envían el audio a los servidores de su fabrican
 - **Los créditos:** llevar tu saldo, reservar el precio de una entrega al empezar y cobrarlo solo si
   la entrega llega (ver la sección 9).
 - **Comunicarnos contigo** sobre tu cuenta (por ejemplo, el código de verificación por correo).
+- **Mejorar My Idea:** leer tus opiniones para corregir lo que no funciona y mejorar los planes. No se publican ni
+  se comparten con otros usuarios.
 
 **No usamos tus ideas para otros fines:** no las vendemos, no las usamos para publicidad y no las
 compartimos con otros usuarios. Nosotros no entrenamos modelos de IA con tus ideas. Cada proveedor trata tus
@@ -152,6 +159,8 @@ salvedades:
 - El registro de tus aceptaciones de los Términos y de esta política se conserva mientras tu cuenta
   exista y se borra con ella. Sin cuenta, queda con tu identidad invisible, y pasa a tu cuenta si la
   creas.
+- Tus opiniones se conservan mientras tu cuenta exista y se borran con ella. Si borras una idea, lo que opinaste
+  sobre ella se conserva sin el vínculo con esa idea.
 - Los límites de uso guardan tu IP o identificador un máximo de 48 horas.
 - Los registros técnicos del alojamiento y las copias de seguridad de la base se conservan según los
   plazos de esos proveedores.

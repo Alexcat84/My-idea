@@ -18,6 +18,9 @@
 //       queda el monto (con su tipo: compra, consumo o devolución) y la fecha;
 //       sin persona, concepto, origen, clave ni saldo acumulado. Los registros
 //       fiscales de las ventas los conserva el procesador de pagos.
+//   B6 (decisión del fundador, 8 oct 2026). opiniones (migración 051): SE BORRAN, explícitamente y antes de borrar
+//       la cuenta (además de su ON DELETE CASCADE). Si la 051 aún no está aplicada, no hay nada que borrar y el
+//       borrado de la cuenta sigue; cualquier otro error lo detiene.
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("@/lib/seguridad", async (importOriginal) => ({
@@ -30,6 +33,7 @@ vi.mock("@/lib/seguridad", async (importOriginal) => ({
 const borrados: Array<{ tabla: string; col: string; val: unknown }> = [];
 const anonimizados: Array<{ tabla: string; cambios: Record<string, unknown>; col: string; val: unknown }> = [];
 const usuariosBorrados: string[] = [];
+let errorOpiniones: { code: string; message: string } | null = null;
 const USUARIOS: Record<string, { id: string; is_anonymous?: boolean; app_metadata?: Record<string, unknown> }> = {
   u1: { id: "u1", app_metadata: { adopcion_pendiente: ["anon-1", "real-2"] } },
   "anon-1": { id: "anon-1", is_anonymous: true },
@@ -41,7 +45,8 @@ vi.mock("@/lib/supabase/admin", () => ({
       select: () => ({ eq: () => ({ maybeSingle: async () => ({ data: null }) }) }),
       upsert: async () => ({ error: null }),
       delete: () => ({
-        eq: async (col: string, val: unknown) => (borrados.push({ tabla, col, val }), { error: null }),
+        eq: async (col: string, val: unknown) =>
+          tabla === "opiniones" && errorOpiniones ? { error: errorOpiniones } : (borrados.push({ tabla, col, val }), { error: null }),
       }),
       update: (cambios: Record<string, unknown>) => ({
         eq: async (col: string, val: unknown) => (anonimizados.push({ tabla, cambios, col, val }), { error: null }),
@@ -66,6 +71,7 @@ describe("borrar la cuenta borra o anonimiza todo lo del usuario", () => {
     borrados.length = 0;
     anonimizados.length = 0;
     usuariosBorrados.length = 0;
+    errorOpiniones = null;
   });
 
   it("la cuenta se borra", async () => {
@@ -119,5 +125,30 @@ describe("borrar la cuenta borra o anonimiza todo lo del usuario", () => {
   it("B4: una identidad pendiente que NO es invisible jamás se borra", async () => {
     await pedir();
     expect(usuariosBorrados).not.toContain("real-2");
+  });
+
+  it("B6: sus opiniones se borran, antes de borrar la cuenta", async () => {
+    const orden: string[] = [];
+    const antes = borrados.push.bind(borrados);
+    borrados.push = (...xs) => (xs.forEach((x) => orden.push(x.tabla)), antes(...xs));
+    const antesU = usuariosBorrados.push.bind(usuariosBorrados);
+    usuariosBorrados.push = (...xs) => (xs.forEach((x) => orden.push(`borrar:${x}`)), antesU(...xs));
+    await pedir();
+    borrados.push = antes;
+    usuariosBorrados.push = antesU;
+    expect(borrados).toContainEqual({ tabla: "opiniones", col: "user_id", val: "u1" });
+    expect(orden.indexOf("opiniones")).toBeLessThan(orden.indexOf("borrar:u1"));
+  });
+
+  it("B6: si la 051 aún no está aplicada (la tabla no existe), la cuenta se borra igual", async () => {
+    errorOpiniones = { code: "PGRST205", message: "Could not find the table 'public.opiniones' in the schema cache" };
+    expect((await pedir()).status).toBe(200);
+    expect(usuariosBorrados).toContain("u1");
+  });
+
+  it("B6: cualquier otro error al borrar las opiniones detiene el borrado (nunca un ok a medias)", async () => {
+    errorOpiniones = { code: "57014", message: "canceling statement due to statement timeout" };
+    expect((await pedir()).status).toBe(500);
+    expect(usuariosBorrados).not.toContain("u1");
   });
 });

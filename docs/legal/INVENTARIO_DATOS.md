@@ -11,6 +11,9 @@ Privacidad por versión (`aceptaciones_legales`, fila nueva de §1; borrado en �
 generar la evaluación gratuita), no en un modal al navegar, y la guarda también la identidad
 invisible; la adopción la copia a la cuenta al crearla (`lib/cuentas.ts`). Sin SQL nuevo.
 
+**Adición del 8 oct 2026 (migración 051):** las opiniones de los usuarios (`opiniones`, fila nueva de
+§1; borrado en §4, B6). La Política lo declara en sus secciones 2, 3 y 10 (versión legal `2026-10-08.2`).
+
 ## 1. Qué se guarda y dónde
 
 Todo vive en la base de datos de **Supabase** (PostgreSQL + autenticación). Salvo donde se indica,
@@ -32,6 +35,7 @@ de `projects`.
 | Reembolsos | `credit_refund_log` | id de usuario, monto y motivo. **Sin FK a la cuenta: sobrevive al borrado** (hallazgo B1) |
 | Eventos de pago | `revenuecat_webhook_events` | id de usuario del procesador, tipo de evento. **Sin FK: sobreviviría al borrado** (hallazgo B2). Hoy no hay código que la escriba |
 | Aceptación de los textos legales | `aceptaciones_legales` (migración 050) | una fila por identidad y versión aceptada de los Términos y la Privacidad: la versión, la huella sha256 de esos textos, el idioma del texto leído (`es` o `fr`), si fue la primera aceptación o una versión nueva, y la hora del servidor. Sin IP ni navegador. La escribe toda identidad que envía datos, también la identidad invisible (su fila de `auth.users`), al generar la evaluación gratuita; al crear la cuenta, la adopción copia esas filas a la cuenta con su versión, huella, idioma y fecha. Cuelga de `auth.users` con `ON DELETE CASCADE` |
+| Opiniones sobre la app | `opiniones` (migración 051) | solo cuentas reales: el tipo (plan, plan de mundo, profundización, replanteamiento, seguimiento o Comentarios y sugerencias), lo valorado (el id del plan o de la idea), la valoración (malo, bueno, excelente o ninguna si cerró sin responder), el motivo, el texto que escribió, el idioma y la fecha. **Contexto interno que la persona no ve** (`contexto`, `proyecto_id`): la etiqueta y el número de ciclo del plan, el mundo y los nodos del grafo usados en esa entrevista. Cuelga de `auth.users` con `ON DELETE CASCADE`; `proyecto_id` con `ON DELETE SET NULL` (borrar una idea no borra la opinión, corta el vínculo). La lee el fundador en `/fundador/opiniones` (protegido con `FUNDADOR_EMAILS`) y la exporta a CSV sin correos |
 | Doble factor | `user_seguridad` (secreto TOTP cifrado AES-256-GCM), `two_factor_recovery_codes` (hash bcrypt), `two_factor_email_codes` (hash, vence a los 10 min), `two_factor_attempts` | secretos cifrados, códigos en hash, **dirección IP** y sesión de cada intento |
 | Lista de invitados de la beta | `beta_allowlist` | **el correo en claro**, quién invitó y notas. **Sin vínculo con la cuenta: sobrevive al borrado** (hallazgo B3) |
 | Huella anti-abuso de la cortesía | `cortesia_email_log` | el hash SHA-256 del correo. Sin vínculo con la cuenta **a propósito**: evita que borrar y volver a crear la cuenta repita la cortesía (hoy la cortesía está dormida) |
@@ -118,6 +122,11 @@ monto (`delta`, con su `tipo`: compra, consumo o devolución) y la fecha; `user_
 `saldo_resultante`, `concepto`, `origen` e `idempotency_key` quedan en NULL antes de borrar la
 cuenta (migración 045, `main` ad8b2059, web-v2.6.10). **Los registros fiscales de las ventas los
 conserva el procesador de pagos.**
+
+**B6, opiniones (decisión del fundador, 8 oct 2026):** `/api/cuenta/eliminar` borra las filas de
+`opiniones` de la cuenta **explícitamente y antes de borrarla** (además de su `ON DELETE CASCADE`); si la
+tabla aún no existiera (051 sin aplicar), sigue. Lo prueba `borradoCompleto.test.ts`. El CSV que el fundador
+haya descargado antes del borrado queda fuera del alcance de la app: es una copia suya.
 
 ## 5. Navegador
 
