@@ -86,35 +86,8 @@ def falta_papel(neutral):
     return None
 
 
-# Los cuatro patrones de la muestra que no paso (decision del fundador, 8 oct 2026). El genero y la segunda peticion
-# son precisos (el generador ya los rechaza); las personas sin condicional y el contexto perdido son heuristicas: la
-# guarda los reporta para revisarlos, no los da por fallo sin mirar.
-PERSONAS = re.compile(
-    r"\b(las personas que (trabajan|colaboran|te acompañan|te ayudan)|quienes (trabajan|colaboran) contigo|"
-    r"quienes te acompañan|la gente que trabaja contigo|tu gente|tus compañer\w+|tus colaborador\w+|tu equipo|"
-    r"las personas de tu equipo)\b", re.I)
-CONDICIONAL_PERSONAS = re.compile(
-    r"\b(si|en caso|alg[uú]n d[ií]a|alguna vez|en alg[uú]n momento|quiz[aá]s?|llegaras|llegas a|trabajen|tengas|"
-    r"tuvieras|contaras|cuentes)\b", re.I)
-# El contexto propio: temas concretos que, si estan en la base, deben seguir en la neutral (por su raiz).
-ANCLAS = ["franquic", "proveedor", "export", "import", "aduan", "inversionist", "financiaci", "segurid", "accident",
-          "lesi", "riesg", "calidad", "ambient", "residu", "emisi", "energ", "cumplimiento", "legal", "contrat",
-          "certific", "patent", "licenci"]
-
-
-def patrones(base, neutral):
-    """Los patrones de fallo que la guarda detecta en una neutral (lista vacia = ninguno)."""
-    out = []
-    if bqc.GENERO.search(neutral):
-        out.append("genero")
-    if neutral.count("?") > base.count("?"):
-        out.append("segunda_peticion")
-    if any(PERSONAS.search(f) and not CONDICIONAL_PERSONAS.search(f) for f in frases(neutral)):
-        out.append("personas_sin_condicional")
-    b, n = base.lower(), neutral.lower()
-    if any(a in b and a not in n for a in ANCLAS):
-        out.append("contexto_perdido")
-    return out
+# Los cuatro patrones: una sola definicion, la del generador (que ademas los rechaza al generar).
+patrones = bqc.patrones_neutral
 
 
 def cmd_papeles(a):

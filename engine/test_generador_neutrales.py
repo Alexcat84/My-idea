@@ -33,7 +33,7 @@ BASE = "¿Qué le dirías a tu propio jefe si te pide un informe de avance?"
 assert len(BASE) == 64
 assert bqc.comprobar_neutral(BASE, "¿Qué le contarías a quien sigue tu avance?") is None
 # tuteo que se parece al voseo salvo la tilde: NO es voseo
-assert bqc.comprobar_neutral(BASE, "¿Qué sabes hoy de lo que buscas y necesitas? Mira tus números.") is None
+assert bqc.comprobar_neutral(BASE, "Mira tus números: ¿qué sabes hoy de lo que buscas y necesitas?") is None
 assert bqc.comprobar_neutral(BASE, "¿Qué haces cuando tienes dudas?") is None
 # voseo: no pasa
 for vos in ["¿Qué tenés pensado?", "¿Qué sabés de tu cliente?", "Mirá, ¿qué harías?", "¿Vos qué buscás?", "¿Qué podes hacer?"]:
@@ -56,7 +56,7 @@ for femenino in ["dueña", "trabaja sola", "ella misma", "puede estar sola"]:
     assert femenino not in bqc.REGLA_CONTEXTO_USUARIO, f"la regla unica habla en femenino: {femenino}"
     assert femenino not in bqc.SYSTEM_NEUTRAL, f"las instrucciones de la neutral hablan en femenino: {femenino}"
 assert "masculino genérico" in bqc.REGLA_CONTEXTO_USUARIO
-for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional"]:
+for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional", "dentro de la misma pregunta"]:
     assert regla in bqc.SYSTEM_NEUTRAL, f"falta la regla: {regla}"
 # el genero marcado al hablarle a la persona no pasa
 B2 = "¿Cómo te organizas hoy para atender a tus clientes?"
@@ -73,8 +73,25 @@ for ok in ["¿Lo haces tú mismo o con ayuda?", "¿Trabajas solo o con alguien?"
     assert bqc.comprobar_neutral(B2, ok) is None, ok
 # una segunda peticion que la base no tiene no pasa (mas preguntas que la base)
 assert bqc.comprobar_neutral(B2, "¿Cómo te organizas hoy? ¿Y cómo lo harías con alguien por encima?") == "segunda_peticion"
+# ...ni una frase añadida despues de la pregunta (el piloto del 8 oct: "Si trabajas solo, dime cual...")
+assert bqc.comprobar_neutral(B2, "¿Cómo te organizas hoy? Si trabajas solo, dime cuál te preocupa más.") == "segunda_peticion"
+assert bqc.comprobar_neutral(B2, "¿Cómo te organizas hoy? (Si trabajas solo, piensa en ti mismo.)") == "segunda_peticion"
+B_COLA = "¿Cómo te organizas hoy para atender a tus clientes? Cuéntame un ejemplo."
+assert bqc.comprobar_neutral(B_COLA, "¿Cómo te organizas para atender a tus clientes? Cuéntame un caso.") is None
 B_DOS = "¿Cómo atiendes hoy a tus clientes? ¿Qué te gustaría cambiar?"
 assert bqc.comprobar_neutral(B_DOS, "¿Cómo los atiendes hoy? ¿Qué cambiarías?") is None
+# personas sin condicional y contexto propio perdido (el segundo piloto del 8 oct): tambien se rechazan al generar
+B_EQ = "Antes de trabajar con tu equipo en esta estrategia, ¿sabes cómo piensan tus colaboradores?"
+assert bqc.comprobar_neutral(B_EQ, "Antes de trabajar en esta estrategia con las personas que te acompañan, ¿sabes cómo piensan?") == "personas_sin_condicional"
+assert bqc.comprobar_neutral(B_EQ, "Antes de trabajar en esta estrategia, si trabajas con otras personas, ¿sabes cómo piensan?") is None
+B_FR = "¿Qué pasos sigues hoy con cada persona interesada en tu franquicia?"
+assert bqc.comprobar_neutral(B_FR, "¿Qué pasos sigues hoy con cada persona interesada en lo que ofreces?") == "contexto_perdido"
+assert bqc.comprobar_neutral(B_FR, "¿Qué pasos sigues hoy con quien se interesa en tu franquicia?") is None
+# el generador y la guarda usan la MISMA definicion
+import importlib.util as _u
+_sp = _u.spec_from_file_location("vc", os.path.join(RAIZ, "scripts", "corrida_final", "verificar_cache.py"))
+_vc = _u.module_from_spec(_sp); _sp.loader.exec_module(_vc)
+assert _vc.patrones is bqc.patrones_neutral
 print("OK los cuatro patrones: instrucciones en masculino generico con sus reglas; genero y segunda peticion no pasan")
 
 

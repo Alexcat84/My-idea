@@ -116,7 +116,8 @@ SYSTEM_NEUTRAL = (
     "neutro, nada de voseo (tienes, quieres, puedes; nunca tenes, queres, podes, vos). Abierta, calida, sin jerga, "
     "sin autores ni libros. Si la base ya es neutral, devuelvela igual. "
     "FIDELIDAD, cuatro reglas: (1) sin segunda petición: no añadas ninguna pregunta, opción ni petición que la base "
-    "no tenga; tantas preguntas como la base, nunca más. (2) Conserva el contexto propio de la base: si habla de una "
+    "no tenga; tantas preguntas como la base, nunca más, y ninguna frase ni paréntesis añadido (tampoco uno para quien "
+    "trabaja solo): si hace falta un condicional, va dentro de la misma pregunta. (2) Conserva el contexto propio de la base: si habla de una "
     "franquicia, de proveedores, de exportar, de seguridad, de inversionistas o de otro tema concreto, ese tema y sus "
     "mismas opciones siguen en la neutral; no la vuelvas genérica. (3) Masculino genérico al hablarle a la persona "
     "(tú mismo, solo, seguro, preparado): nunca el femenino ni barras como mismo/a. (4) Personas solo en "
@@ -146,6 +147,43 @@ GENERO = re.compile(
     re.IGNORECASE,
 )
 
+# Los cuatro patrones de la muestra que no paso (decision del fundador, 8 oct 2026). El genero y la segunda peticion
+# son precisos (el generador ya los rechaza); las personas sin condicional y el contexto perdido son heuristicas: el
+# generador las rechaza y reintenta; la guarda del 100 % (scripts/corrida_final/verificar_cache.py) usa esta misma
+# funcion.
+PERSONAS = re.compile(
+    r"\b(las personas que (trabajan|colaboran|te acompañan|te ayudan)|quienes (trabajan|colaboran) contigo|"
+    r"quienes te acompañan|la gente que trabaja contigo|tu gente|tus compañer\w+|tus colaborador\w+|tu equipo|"
+    r"las personas de tu equipo)\b", re.I)
+CONDICIONAL_PERSONAS = re.compile(
+    r"\b(si|en caso|alg[uú]n d[ií]a|alguna vez|en alg[uú]n momento|quiz[aá]s?|llegaras|llegas a|trabajen|tengas|"
+    r"tuvieras|contaras|cuentes)\b", re.I)
+# El contexto propio: temas concretos que, si estan en la base, deben seguir en la neutral (por su raiz).
+ANCLAS = ["franquic", "proveedor", "export", "import", "aduan", "inversionist", "financiaci", "segurid", "accident",
+          "lesi", "riesg", "calidad", "ambient", "residu", "emisi", "energ", "cumplimiento", "legal", "contrat",
+          "certific", "patent", "licenci"]
+
+
+def patrones_neutral(base, neutral):
+    """Los patrones de fallo que la guarda detecta en una neutral (lista vacia = ninguno)."""
+    out = []
+    if GENERO.search(neutral):
+        out.append("genero")
+    if neutral.count("?") > base.count("?") or (
+            "?" in neutral and neutral[neutral.rfind("?") + 1:].strip() and not base[base.rfind("?") + 1:].strip()):
+        out.append("segunda_peticion")
+    if any(PERSONAS.search(f) and not CONDICIONAL_PERSONAS.search(f) for f in re.split(r"(?<=[.?!¿¡])\s+", neutral) if f.strip()):
+        out.append("personas_sin_condicional")
+    b, n = base.lower(), neutral.lower()
+    if any(a in b and a not in n for a in ANCLAS):
+        out.append("contexto_perdido")
+    return out
+
+
+# Con las reglas de fidelidad (8 oct 2026) se rechazan mas salidas: tres reintentos antes de darla por fallida.
+REINTENTOS_NEUTRAL = 3
+
+
 def comprobar_neutral(base, texto):
     """None si la neutral sirve; si no, el motivo. El fondo lo mide el juez de la prueba de coherencia."""
     t = (texto or "").strip()
@@ -163,6 +201,12 @@ def comprobar_neutral(base, texto):
         return "genero"
     if t.count("?") > base.count("?"):
         return "segunda_peticion"
+    # una frase o un parentesis añadido despues de la ultima pregunta, si la base no lo tiene
+    if "?" in t and t[t.rfind("?") + 1:].strip() and not base[base.rfind("?") + 1:].strip():
+        return "segunda_peticion"
+    for patron in ("personas_sin_condicional", "contexto_perdido"):
+        if patron in patrones_neutral(base, t):
+            return patron
     return None
 
 
@@ -399,10 +443,10 @@ def main():
         if args.faltantes:
             r = correr_faltantes(client, cache, graph, guardar=guardar)
         else:
-            r = correr_neutrales(client, cache, graph, limite=args.limite, guardar=guardar)
+            r = correr_neutrales(client, cache, graph, limite=args.limite, guardar=guardar, reintentos=REINTENTOS_NEUTRAL)
             if args.limite is None or r["hechas"] + len(r["fallidas"]) < args.limite:
                 resto = None if args.limite is None else args.limite - r["hechas"] - len(r["fallidas"])
-                re_ = correr_neutrales(client, cache, graph, limite=resto, guardar=guardar, **ENTRADA)
+                re_ = correr_neutrales(client, cache, graph, limite=resto, guardar=guardar, reintentos=REINTENTOS_NEUTRAL, **ENTRADA)
                 print(f"  (de ellas, de entrada: hechas {re_['hechas']}, fallidas {len(re_['fallidas'])})")
                 r = {"hechas": r["hechas"] + re_["hechas"], "fallidas": r["fallidas"] + re_["fallidas"],
                      "tokens_in": r["tokens_in"] + re_["tokens_in"], "tokens_out": r["tokens_out"] + re_["tokens_out"],
