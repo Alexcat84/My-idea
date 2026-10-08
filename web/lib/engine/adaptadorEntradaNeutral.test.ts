@@ -82,3 +82,40 @@ describe("adaptarResultadoTurno con la pregunta de entrada de una puerta", () =>
     expect(r.pregunta).toBe("¿A quién acudes cuando algo se atasca?");
   });
 });
+
+// SEGURIDAD MÁXIMA DE SENTIDO (decisión del fundador, 8 oct 2026): las neutrales salen por niveles. Si la edición
+// mínima no supera todas las comprobaciones, la neutral queda vacía con nivel 3 y se usa la PLANTILLA SEGURA. Para una
+// entrada en nivel 3 eso cambia lo de antes: nunca la entrada tal cual, la plantilla.
+describe("entrada en nivel 3 (la edición mínima no pasó): plantilla segura", () => {
+  const graph = {
+    n0: { titulo_concepto: "Inicio", etiqueta_arbol: "Empieza por aquí", dominio: "core" },
+    p1: { titulo_concepto: "Puerta", etiqueta_arbol: "Ordena a quién acudir", dominio: "primer_equipo" },
+  } as unknown as Grafo;
+  const cache: PreguntasCache = {
+    p1: { pregunta: BASE, pregunta_neutral: NEUTRAL, pregunta_neutral_nivel: 2, pregunta_entrada: ENTRADA, pregunta_entrada_neutral_nivel: 3, candidatos: [] },
+  };
+  const turno = (pregunta: string) => ({
+    tipo: "pregunta" as const,
+    pregunta,
+    acumulado: usoVacio(),
+    estado: { ruta: ["n0", "p1"], idioma: "es", preguntaPendiente: pregunta, ultimasPreguntas: [pregunta], fallbackEvents: [] as EventoInterprete[] },
+  });
+
+  it("si el adaptador falla, sale la plantilla, no la entrada cruda", async () => {
+    const { client } = clienteFalso(new Error("timeout"));
+    const r = await adaptarResultadoTurno(client, turno(ENTRADA), { graph, preguntasCache: cache, idiomaPlantilla: "es" });
+    expect(r.estado.fallbackEvents[0]).toMatchObject({ de: ENTRADA, salida: "plantilla_neutral" });
+    expect(r.pregunta).not.toBe(ENTRADA);
+  });
+
+  it("adaptarPregunta con plantillaSegura: la plantilla", async () => {
+    const { client } = clienteFalso(new Error("timeout"));
+    const r = await adaptarPregunta(
+      client,
+      { nodo: "p1", base: ENTRADA, neutral: null, plantilla: PLANTILLA, siguientes: [], esEntrada: true, plantillaSegura: true },
+      usoVacio(),
+      { idiomaSalida: "es", contexto: null }
+    );
+    expect(r).toMatchObject({ pregunta: PLANTILLA, salida: "plantilla_neutral" });
+  });
+});

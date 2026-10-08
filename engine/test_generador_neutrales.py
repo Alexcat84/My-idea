@@ -22,10 +22,9 @@ ts = open(os.path.join(RAIZ, "web", "lib", "reglaContextoUsuario.ts"), encoding=
 cuerpo = ts[ts.index("REGLA_CONTEXTO_USUARIO =") : ts.index(";", ts.index("REGLA_CONTEXTO_USUARIO ="))]
 regla_ts = "".join(re.findall(r'"((?:[^"\\]|\\.)*)"', cuerpo))
 assert regla_ts == bqc.REGLA_CONTEXTO_USUARIO, "la regla del generador difiere de web/lib/reglaContextoUsuario.ts"
-assert bqc.REGLA_CONTEXTO_USUARIO in bqc.SYSTEM_NEUTRAL
 assert bqc.SYSTEM_PREGUNTA_CON_REGLA.endswith(bqc.REGLA_CONTEXTO_USUARIO)
 assert bqc.SYSTEM_PREGUNTA_CON_REGLA.startswith(bqc.SYSTEM_PREGUNTA)
-print("OK regla unica: misma letra que el producto, en los dos generadores")
+print("OK regla unica: misma letra que el producto, en el generador de preguntas")
 
 
 # --- 2. comprobar_neutral ---------------------------------------------------------------------------------------------
@@ -54,11 +53,7 @@ print("OK comprobar_neutral: tuteo pasa, voseo/guion/largo/vacia/no-pregunta no"
 # en femenino ("si es dueña", "si trabaja sola", "ella misma").
 for femenino in ["dueña", "trabaja sola", "ella misma", "puede estar sola"]:
     assert femenino not in bqc.REGLA_CONTEXTO_USUARIO, f"la regla unica habla en femenino: {femenino}"
-    assert femenino not in bqc.SYSTEM_NEUTRAL, f"las instrucciones de la neutral hablan en femenino: {femenino}"
 assert "masculino genérico" in bqc.REGLA_CONTEXTO_USUARIO
-for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional", "dentro de la misma pregunta",
-              "NUNCA termines con"]:
-    assert regla in bqc.SYSTEM_NEUTRAL, f"falta la regla: {regla}"
 # el genero marcado al hablarle a la persona no pasa
 B2 = "¿Cómo te organizas hoy para atender a tus clientes?"
 for g in ["¿Lo haces tú misma o con ayuda?", "¿Trabajas sola o con alguien?", "¿Lo decides por ti misma?",
@@ -93,7 +88,7 @@ import importlib.util as _u
 _sp = _u.spec_from_file_location("vc", os.path.join(RAIZ, "scripts", "corrida_final", "verificar_cache.py"))
 _vc = _u.module_from_spec(_sp); _sp.loader.exec_module(_vc)
 assert _vc.patrones is bqc.patrones_neutral
-print("OK los cuatro patrones: instrucciones en masculino generico con sus reglas; genero y segunda peticion no pasan")
+print("OK los cuatro patrones: la regla unica en masculino generico; comprobar_neutral los rechaza")
 
 
 # --- cliente falso ----------------------------------------------------------------------------------------------------
@@ -141,42 +136,8 @@ def cache_inicial():
     }
 
 
-# --- 3. correr_neutrales ----------------------------------------------------------------------------------------------
-cache = cache_inicial()
-assert bqc.objetivos_neutrales(cache, graph) == ["a", "t"]  # ni deprecado, ni ya hecho, ni nodo inexistente
-cliente = ClienteFalso([
-    (json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te lo pide? Contame."}), "end_turn"),  # a: voseo
-    (json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te pide un informe?"}), "end_turn"),  # a: bien
-    ('{"pregunta_neutral": "¿Qué tema', "max_tokens"),  # t: cortada
-    ('{"pregunta_neutral": "¿Qué tema', "max_tokens"),  # t: cortada otra vez
-])
-guardados = []
-r = bqc.correr_neutrales(cliente, cache, graph, guardar=lambda c: guardados.append(json.loads(json.dumps(c))))
-# A mano: 4 llamadas pagadas (2 de 'a', 2 de 't'), cada una 300 de entrada y 40 de salida.
-#   tokens_in  = 4 x 300 = 1200
-#   tokens_out = 4 x 40  = 160
-# 'a' queda hecha al segundo intento; 't' falla las dos veces (reintentos=1 -> 2 intentos) y se reporta.
-assert r["hechas"] == 1
-assert r["fallidas"] == [("t", "respuesta cortada por tope de tokens")]
-assert r["tokens_in"] == 1200 and r["tokens_out"] == 160, r
-assert len(cliente.llamadas) == 4
-assert cache["a"] == {"pregunta": BASE, "candidatos": ["s"],
-                      "pregunta_neutral": "¿Qué le contarías a quien sigue tu avance si te pide un informe?"}
-assert cache["t"] == cache_inicial()["t"]  # sin neutral: nada inventado
-for nid in ["b", "c", "d"]:
-    assert cache[nid] == cache_inicial()[nid], nid  # intactas
-for nid, e in cache.items():
-    assert e["pregunta"] == cache_inicial()[nid]["pregunta"], nid  # NINGUNA base cambia
-assert guardados and guardados[-1] == cache  # se guarda al final
-# lo que viaja: la base, el concepto por su etiqueta y los siguientes por su etiqueta; system = SYSTEM_NEUTRAL
-enviado = json.loads(cliente.llamadas[0]["messages"][0]["content"])
-assert enviado == {"pregunta_base": BASE, "concepto": {"etiqueta": "informe al jefe", "resumen": "resumen de Informe al jefe"},
-                   "temas_siguientes": ["siguiente"]}
-assert cliente.llamadas[0]["system"][0]["text"] == bqc.SYSTEM_NEUTRAL
-# reanudable: una segunda pasada solo trabaja lo que falta ('t')
-assert bqc.objetivos_neutrales(cache, graph) == ["t"]
-print("OK correr_neutrales: añade sin tocar la base, reintenta, reporta el fallo y cuenta todo lo pagado")
-
+# --- 3 y 5. La reescritura libre de la neutral se retiro el 8 oct 2026 (seguridad maxima de sentido): las neutrales
+# salen por niveles y se prueban en engine/test_neutral_niveles.py.
 
 # --- 4. correr_faltantes ----------------------------------------------------------------------------------------------
 cache = cache_inicial()
@@ -197,36 +158,9 @@ assert r["hechas"] == 0 and r["fallidas"] == [("x", "respuesta cortada por tope 
 assert "x" not in cache
 print("OK correr_faltantes: solo los que no tienen pregunta, con la regla unica, nunca una salida cortada")
 
-# --- 5. neutrales de las preguntas de ENTRADA (corrida final, 8 oct 2026) -------------------------------------------
-# Decision del fundador: se generan las neutrales de TODAS las preguntas, base y de entrada. La de entrada va a su campo
-# aparte (pregunta_entrada_neutral); la entrada y la base no se tocan.
-ENT = "¿Tu equipo ya sabe a quién acudir cuando algo se atasca?"
-graph_e = {**graph, "e": nodo("Puerta", ["s"]), "f": nodo("Puerta hecha", ["s"]), "g": nodo("Puerta deprecada", ["s"], deprecado=True)}
-cache = {
-    "e": {"pregunta": BASE, "pregunta_entrada": ENT, "candidatos": ["s"]},
-    "f": {"pregunta": "¿F?", "pregunta_entrada": "¿Entrada F?", "pregunta_entrada_neutral": "¿Entrada F, neutral?", "candidatos": ["s"]},
-    "g": {"pregunta": "¿G?", "pregunta_entrada": "¿Entrada G?", "candidatos": ["s"]},
-}
-ENTRADA = dict(origen="pregunta_entrada", destino="pregunta_entrada_neutral")
-assert bqc.objetivos_neutrales(cache, graph_e, **ENTRADA) == ["e"]  # ni la hecha ni la deprecada
-cliente = ClienteFalso([(json.dumps({"pregunta_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}), "end_turn")])
-r = bqc.correr_neutrales(cliente, cache, graph_e, **ENTRADA)
-# A mano: 1 llamada -> 300 de entrada, 40 de salida.
-assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40, "cache_read": 0, "cache_write": 0}, r
-assert cache["e"] == {"pregunta": BASE, "pregunta_entrada": ENT, "candidatos": ["s"],
-                      "pregunta_entrada_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}
-assert "pregunta_neutral" not in cache["e"]  # la neutral de la base es otra cosa y no se toca aqui
-assert json.loads(cliente.llamadas[0]["messages"][0]["content"])["pregunta_base"] == ENT  # se neutraliza la ENTRADA
-# por defecto, el modo de siempre (las bases)
-assert bqc.objetivos_neutrales(cache, graph_e) == ["e", "f"]
-print("OK neutrales de entrada: campo aparte, ni la entrada ni la base cambian, el modo de las bases sigue igual")
-
 # --- 6. el modelo y su coste (cambio de modelos, 8 oct 2026) ------------------------------------------------------
 assert bqc.MODEL == "claude-haiku-5-5"
 assert bqc.PARAMETROS_MODELO == {"thinking": {"type": "disabled"}}
-cliente = ClienteFalso([(json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance?"}), "end_turn")])
-bqc.correr_neutrales(cliente, {"a": {"pregunta": BASE, "candidatos": ["s"]}}, graph)
-assert cliente.llamadas[0]["thinking"] == {"type": "disabled"} and cliente.llamadas[0]["model"] == "claude-haiku-5-5"
 # A mano: 1.000.000 de entrada x 0,10 + 100.000 de salida x 0,50 + 2.000.000 leidos x 0,01 + 400.000 escritos x 0,125
 #   = 0,10 + 0,05 + 0,02 + 0,05 = 0,22 USD
 r = {"tokens_in": 1_000_000, "tokens_out": 100_000, "cache_read": 2_000_000, "cache_write": 400_000}

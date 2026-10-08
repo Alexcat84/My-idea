@@ -29,7 +29,7 @@ const cache = cargarPreguntasCache();
 describe("la cache camina hacia completa (trinquete)", () => {
   it("las bases de nodos vivos sin version neutral no suben del tope", () => {
     const sinNeutral = Object.entries(cache).filter(
-      ([nid, e]) => e.pregunta && !e.pregunta_neutral && graph[nid] && !graph[nid].deprecado
+      ([nid, e]) => e.pregunta && !e.pregunta_neutral && e.pregunta_neutral_nivel !== 3 && graph[nid] && !graph[nid].deprecado
     );
     expect(sinNeutral.length).toBeLessThanOrEqual(TOPE_SIN_NEUTRAL);
   });
@@ -45,7 +45,7 @@ describe("la cache camina hacia completa (trinquete)", () => {
 
   it("las preguntas de entrada de nodos vivos sin su neutral no suben del tope", () => {
     const sinNeutral = Object.entries(cache).filter(
-      ([nid, e]) => e.pregunta_entrada && !e.pregunta_entrada_neutral && graph[nid] && !graph[nid].deprecado
+      ([nid, e]) => e.pregunta_entrada && !e.pregunta_entrada_neutral && e.pregunta_entrada_neutral_nivel !== 3 && graph[nid] && !graph[nid].deprecado
     );
     expect(sinNeutral.length).toBeLessThanOrEqual(TOPE_ENTRADA_SIN_NEUTRAL);
   });

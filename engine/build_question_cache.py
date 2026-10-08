@@ -104,31 +104,8 @@ REGLA_CONTEXTO_USUARIO = (
 # El generador de preguntas base lleva tambien la regla unica (las 40 nuevas nacen con ella).
 SYSTEM_PREGUNTA_CON_REGLA = SYSTEM_PREGUNTA + "\n\n" + REGLA_CONTEXTO_USUARIO
 
-SYSTEM_NEUTRAL = (
-    "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
-    "Recibes la PREGUNTA BASE de un concepto de una entrevista de emprendimiento, el concepto y los temas siguientes "
-    "entre los que la respuesta ayuda a elegir. Escribe su VERSION NEUTRAL: la que se le puede hacer a CUALQUIER "
-    "persona sin saber nada de ella (puede trabajar solo, ser dueño de su negocio, tener un equipo o trabajar para "
-    "otro). Cambia la FORMA, nunca el FONDO: busca averiguar exactamente lo mismo que la base y su respuesta sirve "
-    "para elegir entre los mismos temas. Quita todo rol o estructura que la base da por hecho (un jefe, un equipo, "
-    "empleados, recursos humanos, directivos, departamentos, una empresa grande): si el concepto lo necesita, "
-    "preguntalo en condicional ('si tienes a alguien por encima...') o habla de quien lo cumpla. Tutea en espanol "
-    "neutro, nada de voseo (tienes, quieres, puedes; nunca tenes, queres, podes, vos). Abierta, calida, sin jerga, "
-    "sin autores ni libros. Si la base ya es neutral, devuelvela igual. "
-    "FIDELIDAD, cuatro reglas: (1) sin segunda petición: no añadas ninguna pregunta, opción ni petición que la base "
-    "no tenga; tantas preguntas como la base, nunca más, y ninguna frase ni paréntesis añadido (tampoco uno para quien "
-    "trabaja solo): si hace falta un condicional, va dentro de la misma pregunta. NUNCA termines con una frase o una "
-    "pregunta aparte como 'Si trabajas con otras personas, ¿cómo lo deciden?' o 'Cuéntame también cómo lo llevan': "
-    "el condicional se mete dentro de la frase que ya existe ('¿cómo decides tú, o con quienes trabajes si los "
-    "tienes, qué...?'). (2) Conserva el contexto propio de la base: si habla de una "
-    "franquicia, de proveedores, de exportar, de seguridad, de inversionistas o de otro tema concreto, ese tema y sus "
-    "mismas opciones siguen en la neutral; no la vuelvas genérica. (3) Masculino genérico al hablarle a la persona "
-    "(tú mismo, solo, seguro, preparado): nunca el femenino ni barras como mismo/a. (4) Personas solo en "
-    "condicional: no metas personas que la base no nombra, y si la base supone gente (un equipo, socios, quienes "
-    "trabajan contigo), pregúntalo en condicional ('si trabajas con otras personas...'). "
-    "Responde SOLO un JSON: {\"pregunta_neutral\": str}."
-    "\n\n" + REGLA_CONTEXTO_USUARIO
-)
+# SYSTEM_NEUTRAL (la reescritura libre de la neutral) se retiro el 8 oct 2026 (decision del fundador, seguridad
+# maxima de sentido): las neutrales salen por niveles en engine/neutral_niveles.py.
 
 # Voseo que la neutral no puede traer (la base puede: no se toca). Donde el tuteo se escribe igual salvo la tilde
 # (sabes/sabés, buscas/buscás, mira/mirá) se exige la tilde; donde el tuteo diptonga (tienes/tenés), basta la raiz.
@@ -209,10 +186,6 @@ def patrones_neutral(base, neutral):
     return out
 
 
-# Con las reglas de fidelidad (8 oct 2026) se rechazan mas salidas: tres reintentos antes de darla por fallida.
-REINTENTOS_NEUTRAL = 3
-
-
 def comprobar_neutral(base, texto):
     """None si la neutral sirve; si no, el motivo. El fondo lo mide el juez de la prueba de coherencia."""
     t = (texto or "").strip()
@@ -253,83 +226,6 @@ class SalidaFallida(ValueError):
     def __init__(self, motivo, usage):
         super().__init__(motivo)
         self.usage = usage
-
-
-def generar_neutral(client, nid, base, candidatos_ids, graph):
-    """La version neutral de UNA base. Devuelve (texto, usage); lanza SalidaFallida (con su uso) si no sirve."""
-    n = graph[nid]
-    ctx = {
-        "pregunta_base": base,
-        "concepto": {"etiqueta": n.get("etiqueta_arbol") or n["titulo_concepto"], "resumen": n.get("resumen_teorico", "")[:400]},
-        "temas_siguientes": [graph[c].get("etiqueta_arbol") or graph[c]["titulo_concepto"] for c in candidatos_ids if c in graph][:6],
-    }
-    msg = client.messages.create(
-        model=MODEL,
-        **PARAMETROS_MODELO,
-        max_tokens=400,
-        system=[{"type": "text", "text": SYSTEM_NEUTRAL, "cache_control": {"type": "ephemeral"}}],
-        messages=[{"role": "user", "content": json.dumps(ctx, ensure_ascii=False)}],
-    )
-    if getattr(msg, "stop_reason", None) == "max_tokens":
-        raise SalidaFallida("respuesta cortada por tope de tokens", msg.usage)
-    raw = "".join(b.text for b in msg.content if b.type == "text")
-    try:
-        texto = str(_json_de(raw).get("pregunta_neutral", "")).strip()
-    except ValueError as e:
-        raise SalidaFallida(f"no es JSON: {e}", msg.usage) from e
-    motivo = comprobar_neutral(base, texto)
-    if motivo:
-        raise SalidaFallida(f"la neutral no pasa: {motivo}", msg.usage)
-    return texto, msg.usage
-
-
-def objetivos_neutrales(cache, graph, origen="pregunta", destino="pregunta_neutral"):
-    """Las preguntas que necesitan neutral: nodo vivo (existe y no esta deprecado), con `origen` y sin `destino` aun.
-    Por defecto, las bases (pregunta -> pregunta_neutral); con origen="pregunta_entrada" y
-    destino="pregunta_entrada_neutral", las preguntas de entrada de las puertas (corrida final, 8 oct 2026)."""
-    return [
-        nid for nid, e in cache.items()
-        if e.get(origen) and not e.get(destino) and nid in graph and not graph[nid].get("deprecado")
-    ]
-
-
-def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos=1, origen="pregunta",
-                     destino="pregunta_neutral"):
-    """Añade `destino` (la neutral) a cada pregunta `origen` que la necesita. Ni el origen ni la base se tocan.
-    Reanudable: solo trabaja lo que falta. Devuelve {'hechas', 'fallidas': [(nid, motivo)], 'tokens_in', 'tokens_out'}."""
-    trabajo = objetivos_neutrales(cache, graph, origen, destino)
-    if limite is not None:
-        trabajo = trabajo[:limite]
-    hechas, fallidas, t_in, t_out, c_read, c_write = 0, [], 0, 0, 0, 0
-    for i, nid in enumerate(trabajo, 1):
-        base = cache[nid][origen]
-        ultimo = None
-        for _ in range(1 + reintentos):
-            try:
-                texto, usage = generar_neutral(client, nid, base, cache[nid].get("candidatos", []), graph)
-                t_in += usage.input_tokens
-                t_out += usage.output_tokens
-                c_read, c_write = c_read + _cache_de(usage)[0], c_write + _cache_de(usage)[1]
-                cache[nid] = {**cache[nid], destino: texto}
-                assert cache[nid][origen] == base  # el origen queda intacto
-                hechas += 1
-                ultimo = None
-                break
-            except Exception as e:  # noqa: BLE001 - se reporta, no se calla
-                ultimo = str(e)
-                usage = getattr(e, "usage", None)
-                if usage is not None:  # lo pagado cuenta aunque la salida no sirva
-                    t_in += usage.input_tokens
-                    t_out += usage.output_tokens
-                    c_read, c_write = c_read + _cache_de(usage)[0], c_write + _cache_de(usage)[1]
-        if ultimo:
-            fallidas.append((nid, ultimo))
-        if guardar and i % 50 == 0:
-            guardar(cache)
-    if guardar:
-        guardar(cache)
-    return {"hechas": hechas, "fallidas": fallidas, "tokens_in": t_in, "tokens_out": t_out,
-            "cache_read": c_read, "cache_write": c_write}
 
 
 def faltantes(cache, graph):
@@ -433,8 +329,9 @@ def main():
     ap.add_argument("--faltantes", action="store_true",
                      help="Principio 2: genera la pregunta SOLO de los nodos con siguientes que no la tienen (exige --yes)")
     ap.add_argument("--neutrales", action="store_true",
-                     help="Principio 2: añade pregunta_neutral a cada base que no la tiene; la base no se toca (exige --yes)")
-    ap.add_argument("--limite", type=int, default=None, help="Con --neutrales: como mucho N nodos en esta pasada")
+                     help="Neutrales por niveles (base tal cual, edicion minima, plantilla); la base no se toca (exige --yes)")
+    ap.add_argument("--rehacer", action="store_true", help="Con --neutrales: rehace tambien las que ya tienen nivel")
+    ap.add_argument("--limite", type=int, default=None, help="Con --neutrales: como mucho N bases en esta pasada")
     args = ap.parse_args()
 
     if args.patch_file:
@@ -454,40 +351,49 @@ def main():
     total = len(elegibles)
     print(f"Nodos elegibles (con nodos_siguientes validos): {total}")
 
-    if args.faltantes or args.neutrales:
+    if args.neutrales:
+        # SEGURIDAD MAXIMA DE SENTIDO (decision del fundador, 8 oct 2026): por niveles, para las bases y las preguntas
+        # de entrada de las puertas. Editor Haiku 5.5, juez independiente Sonnet 5.5.
+        import neutral_niveles as nn
         cache = json.load(open(CACHE_PATH, encoding="utf-8"))
-        # --neutrales: las bases y, desde la corrida final (8 oct 2026), las preguntas de entrada de las puertas.
-        ENTRADA = dict(origen="pregunta_entrada", destino="pregunta_entrada_neutral")
-        pendientes = faltantes(cache, graph) if args.faltantes else (
-            objetivos_neutrales(cache, graph) + objetivos_neutrales(cache, graph, **ENTRADA))
-        modo = "faltantes" if args.faltantes else "neutrales"
         if not args.yes:
-            print(f"\n--{modo}: {len(pendientes)} nodos por hacer. Gasta dinero real: pasa --yes para correrlo.")
+            print("\n--neutrales: gasta dinero real (editor y juez): pasa --yes para correrlo.")
             sys.exit(1)
 
         def guardar(c):
             CACHE_PATH.write_text(json.dumps(c, ensure_ascii=False, indent=2), encoding="utf-8")
 
         t0 = time.time()
-        if args.faltantes:
-            r = correr_faltantes(client, cache, graph, guardar=guardar)
-        else:
-            r = correr_neutrales(client, cache, graph, limite=args.limite, guardar=guardar, reintentos=REINTENTOS_NEUTRAL)
-            if args.limite is None or r["hechas"] + len(r["fallidas"]) < args.limite:
-                resto = None if args.limite is None else args.limite - r["hechas"] - len(r["fallidas"])
-                re_ = correr_neutrales(client, cache, graph, limite=resto, guardar=guardar, reintentos=REINTENTOS_NEUTRAL, **ENTRADA)
-                print(f"  (de ellas, de entrada: hechas {re_['hechas']}, fallidas {len(re_['fallidas'])})")
-                r = {"hechas": r["hechas"] + re_["hechas"], "fallidas": r["fallidas"] + re_["fallidas"],
-                     "tokens_in": r["tokens_in"] + re_["tokens_in"], "tokens_out": r["tokens_out"] + re_["tokens_out"],
-                     "cache_read": r["cache_read"] + re_["cache_read"], "cache_write": r["cache_write"] + re_["cache_write"]}
+        rb = nn.correr_niveles(client, client, cache, graph, guardar=guardar, rehacer=args.rehacer, limite=args.limite)
+        re_ = nn.correr_niveles(client, client, cache, graph, origen="pregunta_entrada",
+                                destino="pregunta_entrada_neutral", guardar=guardar, rehacer=args.rehacer)
+        for nombre, r in (("bases", rb), ("entradas", re_)):
+            print(f"--neutrales {nombre}: {r['trabajadas']} trabajadas | niveles {r['niveles']} | "
+                  f"motivos del nivel 3 {r['motivos_nivel_3']} | costo real ${r['costo']:.4f}")
+            print(f"  tokens {r['tokens']}")
+        print(f"Costo total: ${rb['costo'] + re_['costo']:.4f} | {time.time() - t0:.1f}s")
+        print("Despues: python scripts/sync_assets_web.py")
+        sys.exit(0)
+
+    if args.faltantes:
+        cache = json.load(open(CACHE_PATH, encoding="utf-8"))
+        pendientes = faltantes(cache, graph)
+        if not args.yes:
+            print(f"\n--faltantes: {len(pendientes)} nodos por hacer. Gasta dinero real: pasa --yes para correrlo.")
+            sys.exit(1)
+
+        def guardar(c):
+            CACHE_PATH.write_text(json.dumps(c, ensure_ascii=False, indent=2), encoding="utf-8")
+
+        t0 = time.time()
+        r = correr_faltantes(client, cache, graph, guardar=guardar)
         cost = costo_usd(r)
-        print(f"\n--{modo}: hechas {r['hechas']}, fallidas {len(r['fallidas'])}")
+        print(f"\n--faltantes: hechas {r['hechas']}, fallidas {len(r['fallidas'])}")
         for nid, motivo in r["fallidas"][:30]:
             print(f"  FALLO {nid}: {motivo}")
         print(f"Tokens reales: {r['tokens_in']} in / {r['tokens_out']} out / cache {r['cache_read']} leidos, "
               f"{r['cache_write']} escritos | Costo real ({MODEL}, con cache): ${cost:.4f} | {time.time() - t0:.1f}s")
         print("Despues: python scripts/sync_assets_web.py")
-        # fallar ruidoso: si algo quedo sin hacer, el codigo de salida lo dice
         sys.exit(1 if r["fallidas"] else 0)
 
     if args.patch:

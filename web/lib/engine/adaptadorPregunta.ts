@@ -66,6 +66,9 @@ export interface EntradaAdaptador {
   /** true si `base` es la pregunta de ENTRADA de una puerta. Su salida segura es su neutral de entrada (`neutral`,
    * corrida final, 8 oct 2026) y, mientras no la tenga, ella misma. */
   esEntrada?: boolean;
+  /** la entrada quedó en nivel 3 (su edición mínima no pasó): la salida segura es la plantilla, nunca la entrada tal
+   * cual (decisión del fundador, seguridad máxima de sentido, 8 oct 2026) */
+  plantillaSegura?: boolean;
 }
 
 export interface ResultadoAdaptador {
@@ -119,7 +122,7 @@ export async function adaptarPregunta(
   opts: { idiomaSalida: string | null; contexto: string | null; tiempoMaxMs?: number }
 ): Promise<ResultadoAdaptador> {
   const segura = (fallo: string, acc: UsoAcumulado): ResultadoAdaptador =>
-    entrada.esEntrada && !entrada.neutral
+    entrada.esEntrada && !entrada.neutral && !entrada.plantillaSegura
       ? { pregunta: entrada.base, busca: null, acumulado: acc, salida: "entrada", fallo }
       : entrada.neutral
       ? { pregunta: entrada.neutral, busca: null, acumulado: acc, salida: "neutral", fallo }
@@ -190,6 +193,8 @@ export async function adaptarResultadoTurno<
   const esEntrada = deEntrada !== null && (mostrada === deEntrada || (entradaNeutral !== null && mostrada === entradaNeutral));
   const base = esEntrada ? (deEntrada as string) : obtenerPregunta(nodo, n, datos.preguntasCache, datos.idiomaPlantilla);
   const neutral = esEntrada ? entradaNeutral : texto(entradaCache?.pregunta_neutral);
+  // Nivel 3 (seguridad máxima de sentido, 8 oct 2026): la edición mínima no pasó y la neutral quedó vacía a propósito.
+  const plantillaSegura = esEntrada && entradaCache?.pregunta_entrada_neutral_nivel === 3;
   if (mostrada !== base && mostrada !== neutral) return resultado;
 
   const candidatos = Array.isArray(entradaCache?.candidatos) ? (entradaCache.candidatos as unknown[]) : [];
@@ -201,7 +206,7 @@ export async function adaptarResultadoTurno<
     .map((c) => etiquetaArbol(c, datos.graph));
 
   const plantilla = plantillaNeutral(nodo, n, datos.idiomaPlantilla);
-  const a = await adaptarPregunta(client, { nodo, base, neutral, plantilla, siguientes, esEntrada }, resultado.acumulado, {
+  const a = await adaptarPregunta(client, { nodo, base, neutral, plantilla, siguientes, esEntrada, plantillaSegura }, resultado.acumulado, {
     idiomaSalida: resultado.estado.idioma ?? null,
     contexto: contextoDeSesion(resultado.estado),
     tiempoMaxMs: datos.tiempoMaxMs,

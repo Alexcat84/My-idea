@@ -48,4 +48,14 @@ assert "contexto_perdido" in vc.patrones("¿Qué te preocupa de los inversionist
 
 # una neutral fiel no dispara nada
 assert vc.patrones(BASE, "¿Cómo atiendes hoy a quienes se interesan en tu franquicia?") == []
+# las trampas de la tercera muestra: cambian el SENTIDO sin marca (negacion, mas/menos, termino clave, antes/despues)
+import random as _r
+for original, esperado in [
+    ("¿Qué te preocupa más: el precio o la calidad?", "¿Qué te preocupa menos: el precio o la calidad?"),
+    ("¿Cómo eliges a tus proveedores?", "¿Cómo eliges a tus clientes?"),
+    ("¿Qué pasos sigues para vender franquicias?", "¿Qué pasos sigues para vender tu negocio?"),
+    ("¿Qué haces antes de lanzar?", "¿Qué haces después de lanzar?"),
+]:
+    assert vc.mutar_sentido(original, _r.Random(1)) == esperado, (original, vc.mutar_sentido(original, _r.Random(1)))
+assert vc.mutar_sentido("¿Cómo va todo?", _r.Random(1)) is None  # nada que mutar: no sirve de trampa
 print("OK guarda de las neutrales: genero, segunda peticion, personas sin condicional y contexto perdido")

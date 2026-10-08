@@ -126,6 +126,28 @@ def repartir(items, tam):
     return [items[i:i + tam] for i in range(0, len(items), tam)]
 
 
+# Trampas de la TERCERA muestra (decision del fundador, 8 oct 2026): una neutral real con el SENTIDO cambiado y sin
+# ninguna marca. Cada mutacion es (patron, reemplazo); se prueban en orden y vale la primera que aplica.
+MUTACIONES = [
+    (r"\bmás\b", "menos"), (r"\bmenos\b", "más"),
+    (r"\bvender franquicias\b", "vender tu negocio"), (r"\bfranquicias\b", "sucursales propias"),
+    (r"\bproveedores\b", "clientes"), (r"\bproveedor\b", "cliente"),
+    (r"\bclientes\b", "proveedores"), (r"\bcliente\b", "proveedor"),
+    (r"\bantes\b", "después"), (r"\bdespués\b", "antes"),
+    (r"¿qué te ", "¿qué no te "), (r"\bte preocupa\b", "no te preocupa"),
+    (r"\bexportar\b", "vender en tu ciudad"), (r"\binversionistas\b", "clientes"),
+]
+
+
+def mutar_sentido(neutral, rnd):
+    """La neutral con el sentido cambiado por la primera mutacion que aplica (None si ninguna aplica)."""
+    del rnd  # el orden es fijo: la trampa no depende del azar, solo la eleccion del par
+    for patron, nuevo in MUTACIONES:
+        if re.search(patron, neutral):
+            return re.sub(patron, nuevo, neutral, count=1)
+    return None
+
+
 def cmd_muestra(a):
     cache, grafo = cargar()
     rnd = random.Random(a.semilla)
@@ -139,7 +161,16 @@ def cmd_muestra(a):
     usados = {(p[0], p[1]) for p in elegidos}
     resto = [p for p in todos if (p[0], p[1]) not in usados]
     trampas = []
-    for p in rnd.sample(resto, 40):
+    if getattr(a, "trampas", "otro_nodo") == "sentido":
+        # tercera muestra: la neutral real de un par de fuera de la muestra, con el sentido cambiado y sin marca
+        for p in rnd.sample(resto, len(resto)):
+            mutada = mutar_sentido(p[3], rnd)
+            if mutada and mutada != p[3]:
+                trampas.append({"nid": p[0], "clase": p[1], "base": p[2], "neutral": mutada, "neutral_de": "mutada"})
+            if len(trampas) == 10:
+                break
+        resto = []
+    for p in rnd.sample(resto, min(40, len(resto))):
         dom = grafo[p[0]].get("dominio", "core")
         otros = [q for q in todos if q[0] != p[0] and grafo[q[0]].get("dominio", "core") == dom
                  and q[0] not in grafo[p[0]].get("nodos_siguientes", [])]
@@ -163,7 +194,9 @@ def cmd_muestra(a):
             iid = f"{pid}-{j:02d}"
             etiqueta = grafo[it["nid"]].get("etiqueta_arbol") or grafo[it["nid"]].get("titulo_concepto", "")
             salida.append({"id": iid, "tema": etiqueta, "pregunta_base": it["base"], "pregunta_neutral": it["neutral"]})
-            clave[iid] = {k: it[k] for k in ("nid", "clase", "trampa")} | ({"neutral_de": it["neutral_de"]} if it["trampa"] else {})
+            campo_nivel = "pregunta_neutral_nivel" if it["clase"] == "base" else "pregunta_entrada_neutral_nivel"
+            clave[iid] = ({k: it[k] for k in ("nid", "clase", "trampa")} | {"nivel": cache[it["nid"]].get(campo_nivel)}
+                          | ({"neutral_de": it["neutral_de"]} if it["trampa"] else {}))
         (paquetes / f"{pid}.json").write_text(json.dumps({"paquete": pid, "pares": salida}, ensure_ascii=False, indent=2),
                                               encoding="utf-8")
     (claves / "claves_muestra.json").write_text(json.dumps(clave, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -237,6 +270,31 @@ def cmd_contar(a):
         cazadas = [i for i in trampas if veredictos.get(i, {}).get("veredicto") != "fiel"]
         tope = len(reales) // 20
         pasa = len(fallo) <= tope and len(cazadas) == len(trampas) and not faltan
+        if getattr(a, "arbitraje", None):
+            # tercera muestra (8 oct 2026): cuentan los SOSTENIDOS por el arbitro. Umbral: 0 cambios de sentido o
+            # contrarios, y como mucho 1 de cada 20 con cualquier otro defecto.
+            arb = {x["id"]: x for x in json.loads(Path(a.arbitraje).read_text(encoding="utf-8"))["arbitraje"]}
+            sost = [i for i in fallo if arb.get(i, {}).get("decision") == "sostenido"]
+            sentido = [i for i in sost if arb[i].get("tipo") in ("cambio_de_sentido", "contrario")]
+            otros = [i for i in sost if i not in sentido]
+            sin_arbitrar = [i for i in fallo if i not in arb]
+            pasa = not sentido and len(otros) <= tope and len(cazadas) == len(trampas) and not faltan and not sin_arbitrar
+            niveles = {}
+            for i in reales:
+                niveles[clave[i].get("nivel")] = niveles.get(clave[i].get("nivel"), 0) + 1
+            L += [f"Composicion de la muestra por nivel: {niveles}.",
+                  f"Marcados por los jueces: {len(fallo)}; sostenidos por el arbitro: {len(sost)} "
+                  f"({len(sentido)} cambio de sentido o contrario, umbral 0; {len(otros)} otros defectos, tope {tope}).",
+                  f"Trampas cazadas: **{len(cazadas)}/{len(trampas)}**. Sin veredicto: {len(faltan)}. Sin arbitrar: {len(sin_arbitrar)}.",
+                  f"**{'PASA' if pasa else 'NO PASA'}**", "", "## Sostenidos"]
+            for i in sost:
+                L.append(f"- {i} `{clave[i]['nid']}` ({clave[i]['clase']}, nivel {clave[i].get('nivel')}): "
+                         f"{arb[i].get('tipo')}: {arb[i].get('motivo', '')}")
+            L += ["", "## Trampas no cazadas"] + [f"- {i} `{clave[i]['nid']}`" for i in trampas if i not in cazadas]
+            Path(a.salida).parent.mkdir(parents=True, exist_ok=True)
+            Path(a.salida).write_text("\n".join(L) + "\n", encoding="utf-8")
+            print("\n".join(L[:6]))
+            return 0 if pasa else 1
         L += [f"Pares reales: {len(reales)}. Con fallo: **{len(fallo)}** (tope: {tope}, 1 de cada 20).",
               f"Trampas cazadas: **{len(cazadas)}/{len(trampas)}**. Sin veredicto: {len(faltan)}.",
               f"**{'PASA' if pasa else 'NO PASA'}**", "", "## Fallos en pares reales"]
@@ -272,9 +330,12 @@ def main():
         p.add_argument("--paquetes", required=True); p.add_argument("--claves", required=True)
         p.add_argument("--semilla", type=int, default=20261008)
         p.add_argument("--lista", default=None, help="nuevas: solo los nodos de este JSON (lista de ids o de objetos con nid)")
+        p.add_argument("--trampas", choices=["otro_nodo", "sentido"], default="otro_nodo",
+                       help="muestra: la neutral de otro nodo (1.a y 2.a muestras) o la propia con el sentido cambiado (3.a)")
     p = sub.add_parser("contar")
     p.add_argument("--veredictos", required=True); p.add_argument("--claves", required=True)
     p.add_argument("--modo", choices=["muestra", "nuevas"], required=True); p.add_argument("--salida", required=True)
+    p.add_argument("--arbitraje", default=None, help="muestra: el arbitraje.json; cuenta solo los sostenidos (3.a muestra)")
     a = ap.parse_args()
     return {"papeles": cmd_papeles, "muestra": cmd_muestra, "nuevas": cmd_nuevas, "contar": cmd_contar}[a.cmd](a)
 
