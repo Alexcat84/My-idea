@@ -2,6 +2,22 @@
 
 > BORRADOR: falta el vuelo completo final; se regenera al terminarlo.
 
+## La cifra oficial: la consola del fundador
+
+El coste oficial de la corrida es el que marca la consola de Anthropic del fundador, no la suma de `costo_usd`:
+
+| | USD | Hora (UTC) |
+|---|---:|---|
+| Saldo inicial de referencia | 19,67 | 8 oct 2026, 01:05 |
+| Saldo final | pendiente (lo anota el fundador) |  |
+| Coste oficial de la corrida | pendiente | |
+
+La consola incluye todo lo que corrió con la clave en el día (la caché de preguntas, sus jueces, las neutrales, la
+coherencia, cada intento del vuelo y la medición del anclaje). `costo_usd` de la app queda solo como DESGLOSE por pieza
+y por modelo, que es lo que decide qué modelo usa cada pieza.
+
+## El desglose
+
 De esta medición depende qué modelo usa cada pieza de la app. Todo sale de los volcados de coste de esta carpeta
 (solo números, sin textos de usuario). El coste por modelo se recalcula con `costoLlamadaUsd` de `web/lib/costmeter.ts`:
 los mismos precios y multiplicadores de caché que usa la app para cobrar.

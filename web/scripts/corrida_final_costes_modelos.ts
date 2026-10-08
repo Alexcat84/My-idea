@@ -67,6 +67,22 @@ const datos = CORRIDAS.map((c) => ({ ...c, v: leer(c.archivo) })).filter((c) => 
 
 L("# Costes por modelo: la corrida final contra el vuelo del 27 de septiembre");
 L();
+L("## La cifra oficial: la consola del fundador");
+L();
+L("El coste oficial de la corrida es el que marca la consola de Anthropic del fundador, no la suma de `costo_usd`:");
+L();
+L("| | USD | Hora (UTC) |");
+L("|---|---:|---|");
+L(`| Saldo inicial de referencia | 19,67 | 8 oct 2026, 01:05 |`);
+L(`| Saldo final | ${process.env.SALDO_FINAL_USD ?? "pendiente (lo anota el fundador)"} | ${process.env.SALDO_FINAL_HORA ?? ""} |`);
+L(`| Coste oficial de la corrida | ${process.env.SALDO_FINAL_USD ? (19.67 - Number(process.env.SALDO_FINAL_USD.replace(",", "."))).toFixed(2).replace(".", ",") : "pendiente"} | |`);
+L();
+L("La consola incluye todo lo que corrió con la clave en el día (la caché de preguntas, sus jueces, las neutrales, la");
+L("coherencia, cada intento del vuelo y la medición del anclaje). `costo_usd` de la app queda solo como DESGLOSE por pieza");
+L("y por modelo, que es lo que decide qué modelo usa cada pieza.");
+L();
+L("## El desglose");
+L();
 L("De esta medición depende qué modelo usa cada pieza de la app. Todo sale de los volcados de coste de esta carpeta");
 L("(solo números, sin textos de usuario). El coste por modelo se recalcula con `costoLlamadaUsd` de `web/lib/costmeter.ts`:");
 L("los mismos precios y multiplicadores de caché que usa la app para cobrar.");
