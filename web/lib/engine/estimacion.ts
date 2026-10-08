@@ -18,7 +18,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { BANDA, type Banda } from "../dbContract";
-import { llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
+import { llamarClaude, MODEL_ESTIMACION, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ESTIMACION_BANDA } from "../prompts";
 
 export interface EstimacionItem {
@@ -134,7 +134,7 @@ export async function estimarLoteMayoria(
   for (let c = 0; c < CORRIDAS; c += 1) {
     let texto: string;
     try {
-      const r = await llamarClaude(client, SYSTEM_ESTIMACION_BANDA, userText, MODEL, acc, {
+      const r = await llamarClaude(client, SYSTEM_ESTIMACION_BANDA, userText, MODEL_ESTIMACION, acc, {
         maxTokens,
         contexto,
         componente: opts.componente ?? "estimacion_banda",

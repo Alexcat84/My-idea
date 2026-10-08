@@ -109,6 +109,15 @@ de cierre hecha.
    y confirma que el teléfono la recoge en la siguiente actualización: las apps de calendario releen un calendario
    suscrito cada varias horas, no al instante, y la suscripción es de una sola vía (lo que cambies en el teléfono no
    vuelve a la app).
+3-ter. **Calibración real del estimador** (decisión del fundador, 8 oct 2026). El estimador de bandas
+   (`SYSTEM_ESTIMACION_BANDA`, método validado) pasó a Sonnet 5.5 con el visto del fundador: en la revalidación con los
+   24 casos del estudio original que siguen en el grafo, los dos modelos tuvieron constancia del 100 %, y la comparación
+   con Sonnet 4.6 no prueba exactitud, porque la referencia del estudio también salió de un modelo (ver
+   `docs/corrida_final/2026-10-08/revalidacion_estimador.md`). La exactitud se mide contra la realidad: **cuando la
+   beta tenga tareas completadas**, comparar la talla estimada de cada tarea con la duración real que registró el
+   ritmo personal (el multiplicador del scheduler), **por talla**, y reportar si el estimador tiende a quedarse corto o
+   largo en cada una. Si hay un sesgo claro, el ajuste es un cambio a un método validado: se presenta con su evidencia
+   y se resella con `python scripts/metodos_validados.py --visto "<nota>"` y "VISTO DEL FUNDADOR" en el commit.
 4. **`FUNDADOR_EMAILS`:** sirve para que solo la cuenta del fundador vea y camine los mundos sin publicar con
    `?ver=ocultos`. Valor: el correo con el que el fundador inicia sesión en My Idea (varios, separados por comas). Dónde:
    Vercel, Settings, Environment Variables, entorno Production, y volver a desplegar. Sin ella nadie los ve, tampoco el

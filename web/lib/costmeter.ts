@@ -22,8 +22,8 @@ import Anthropic from "@anthropic-ai/sdk";
 import { limpiarGuiones } from "./voz";
 
 // CAMBIO DE MODELOS (decisión del fundador, corrida final, 8 oct 2026): lo que usaba Sonnet 4.6 pasa a Sonnet 5.5 y
-// lo que usaba Haiku 4.5 pasa a Haiku 5.5. El ESTIMADOR de bandas queda en Sonnet 4.6 (MODEL_ESTIMACION) hasta
-// re-validarse con los casos de su validación original y el visto del fundador.
+// lo que usaba Haiku 4.5 pasa a Haiku 5.5. El ESTIMADOR de bandas (método validado) pasó también a Sonnet 5.5 con el
+// VISTO DEL FUNDADOR: re-validado con los casos de su validación original, constancia del 100 % en los dos modelos.
 //
 // OJO, TOKENIZADOR: los modelos 4.7 en adelante (los 5.5 incluidos) usan un tokenizador nuevo que genera alrededor de
 // un 30 % más de tokens para el mismo texto (documentación de precios de Anthropic). Al comparar con corridas viejas,
@@ -34,11 +34,11 @@ export const MODEL_HAIKU = "claude-haiku-5-5";
 /** Los anteriores: sus precios se conservan para leer el coste de las sesiones que los usaron. */
 export const MODEL_SONNET_4_6 = "claude-sonnet-4-6";
 export const MODEL_HAIKU_4_5 = "claude-haiku-4-5";
-/** MODEL es el que usa el ESTIMADOR de bandas (web/lib/engine/estimacion.ts, método validado: no se toca sin el visto
- * del fundador, docs/metodos_validados.json). Se queda en Sonnet 4.6 hasta que el estimador se re-valide con el modelo
- * nuevo y el fundador dé su visto. NADA MÁS usa MODEL: el resto de la app usa MODEL_SONNET. */
-export const MODEL = MODEL_SONNET_4_6;
-export const MODEL_ESTIMACION = MODEL;
+/** MODEL queda como alias de MODEL_SONNET para los scripts; la app nombra MODEL_SONNET o MODEL_HAIKU. */
+export const MODEL = MODEL_SONNET;
+/** El del ESTIMADOR de bandas (web/lib/engine/estimacion.ts, método validado: no cambia sin re-validarse y sin el visto
+ * del fundador, docs/metodos_validados.json). Sonnet 5.5 desde el visto del 8 oct 2026. */
+export const MODEL_ESTIMACION = MODEL_SONNET;
 
 // Por millón de tokens [entrada, salida], precios oficiales al 8 oct 2026. Haiku 5.5 vale 0,10/0,50 con prompts de
 // hasta 100.000 tokens (los de la app están muy por debajo; por encima cobraría 0,50/2,50).

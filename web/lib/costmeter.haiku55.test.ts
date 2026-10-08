@@ -2,8 +2,9 @@
  * Decisión del fundador (corrida final, 8 oct 2026), CAMBIO DE MODELOS:
  *  - lo que usaba Haiku 4.5 pasa a Haiku 5.5 (claude-haiku-5-5);
  *  - lo que usaba Sonnet 4.6 pasa a Sonnet 5.5 (claude-sonnet-5-5);
- *  - el ESTIMADOR (SYSTEM_ESTIMACION_BANDA) NO cambia sin re-validarse con los casos de su validación original y el
- *    visto del fundador: se queda en Sonnet 4.6 (MODEL_ESTIMACION) hasta entonces.
+ *  - el ESTIMADOR (SYSTEM_ESTIMACION_BANDA) es método validado: se re-validó con los casos de su validación original
+ *    (constancia del 100 % en los dos modelos) y pasó a Sonnet 5.5 con el VISTO DEL FUNDADOR (8 oct 2026). Llama con
+ *    MODEL_ESTIMACION, a la vista en estimacion.ts, para que un cambio de modelo toque el archivo sellado.
  *
  * Los dos modelos 5.5 RAZONAN POR DEFECTO (sondeado contra la API real el 8 oct 2026): Haiku 5.5 gastó 60 de 123
  * tokens de salida en razonar; Sonnet 5.5, 293 de 300, y la respuesta salió CORTADA. El razonamiento sale del tope de
@@ -45,14 +46,13 @@ function clienteFalso() {
 const leer = (rel: string) => readFileSync(path.join(__dirname, "..", rel), "utf8");
 
 describe("los modelos de la corrida final", () => {
-  it("Haiku 5.5 y Sonnet 5.5; el estimador protegido en Sonnet 4.6", () => {
+  it("Haiku 5.5 y Sonnet 5.5; el estimador también en Sonnet 5.5 (visto del fundador)", () => {
     expect(MODEL_HAIKU).toBe("claude-haiku-5-5");
     expect(MODEL_SONNET).toBe("claude-sonnet-5-5");
-    // MODEL es el del estimador (método validado): sigue en 4.6 hasta su re-validación y el visto.
-    expect(MODEL).toBe("claude-sonnet-4-6");
+    expect(MODEL).toBe(MODEL_SONNET);
     expect(MODEL_SONNET_4_6).toBe("claude-sonnet-4-6");
     expect(MODEL_HAIKU_4_5).toBe("claude-haiku-4-5");
-    expect(MODEL_ESTIMACION).toBe(MODEL_SONNET_4_6);
+    expect(MODEL_ESTIMACION).toBe("claude-sonnet-5-5");
   });
 
   it("precios por millón [entrada, salida]", () => {
@@ -115,10 +115,10 @@ describe("el razonamiento por defecto se apaga en los modelos 5.5", () => {
 });
 
 describe("el estimador queda protegido", () => {
-  it("estimacion.ts (método validado, sin tocar) llama con MODEL, que sigue siendo Sonnet 4.6", () => {
+  it("estimacion.ts (método validado) llama con MODEL_ESTIMACION, que es Sonnet 5.5", () => {
     const fuente = leer("lib/engine/estimacion.ts");
-    expect(fuente).toMatch(/llamarClaude\(client, SYSTEM_ESTIMACION_BANDA, userText, MODEL,/);
-    expect(MODEL_ESTIMACION).toBe(MODEL);
+    expect(fuente).toMatch(/llamarClaude\(client, SYSTEM_ESTIMACION_BANDA, userText, MODEL_ESTIMACION,/);
+    expect(MODEL_ESTIMACION).toBe(MODEL_SONNET);
   });
 
   it("ningún otro componente de la app usa MODEL: todos usan MODEL_SONNET o MODEL_HAIKU", () => {

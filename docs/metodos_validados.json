@@ -5,7 +5,7 @@
   "engine/test_calculadora.py": "601d976835cb634e01d20add45e20eefbfb0ad8b22c97922dd108243b3b63a3b",
   "web/lib/calculadora.ts": "c96ad685418a693385da1588f158d3eec572e67730729039deb5347947d00fc9",
   "web/lib/calculadora.test.ts": "36ba564bb2c124443229f82432fe8e52e07dd2f8b71a872d1577bdd49ef8efba",
-  "web/lib/engine/estimacion.ts": "def76f44d7baf1f3a7406796928bd4c9bf33e6087965fce432096f04c447a4c4",
+  "web/lib/engine/estimacion.ts": "7d65edf70d75521c4d9f67f2558637d20635b2006c03daa965aab5b7beb7fec5",
   "web/lib/engine/estimacion.test.ts": "4532d72d7bc64522ace2617f0b3431102c82337ecad9d6bfc93771564deac948",
   "web/lib/engine/rangoBanda.ts": "421d11c485b7b6c10dc12046e46893167b3e21d19a64902bfb9bc24404b48344",
   "web/lib/prompts.ts#SYSTEM_ESTIMACION_BANDA": "7655dab7394c1ee4338cb6d292ac6ce928e44e45a65056a95fa250bb908300d5"
@@ -14,6 +14,10 @@
   {
    "fecha": "2026-10-06",
    "nota": "Sello inicial: decision del fundador del 6 oct 2026 (encargo, punto 1); la calculadora y el estimador quedan como metodos validados tal como estan en main 97f28884."
+  },
+  {
+   "fecha": "2026-10-07",
+   "nota": "2026-10-08: VISTO DEL FUNDADOR, el estimador de bandas (SYSTEM_ESTIMACION_BANDA) pasa de Sonnet 4.6 a Sonnet 5.5 (MODEL_ESTIMACION). Motivo: constancia del 100 % en los dos modelos en la revalidacion con los casos del estudio original; la comparacion con Sonnet 4.6 no prueba exactitud (la referencia del estudio tambien salio de un modelo). Calibracion real contra duraciones registradas en PROXIMOS_PASOS 3-ter. Prompt, formulas y rangos sin cambios."
   }
  ]
 }
