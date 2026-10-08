@@ -1,6 +1,6 @@
 # DRAFT PENDING PROFESSIONAL REVIEW
 
-> Draft built on the data inventory (`INVENTARIO_DATOS.md`, §5). It is not legal advice. The
+> Draft built on the data inventory (`INVENTARIO_DATOS.md`, section 5). It is not legal advice. The
 > French version will be mandatory. The visible note under the title says that, in case of
 > discrepancy, the Spanish version prevails (and the French version in Quebec).
 >
@@ -11,7 +11,7 @@
 > This English version is a translation provided for your convenience. In case of any discrepancy,
 > the Spanish version prevails, and in Quebec, the French version.
 
-**Last updated:** October 6, 2026
+**Last updated:** October 8, 2026
 
 ## 1. What we use and why
 
@@ -19,14 +19,14 @@ My Idea uses **only cookies and local storage that are necessary for the app to 
 remember your preferences. **We do not use analytics cookies, advertising cookies or third-party cookies that
 follow you across sites.**
 
-| name | type | what for | duration |
-|---|---|---|---|
-| `sb-*` (Supabase) | necessary cookie | keeping your session open, including that of the invisible identity that lets you write your idea without an account | for as long as your session lasts |
-| Supabase PKCE verifier | necessary cookie | completing sign-in with Google securely | a few minutes |
-| `post_login_next` | necessary cookie | taking you back to the page you were on after you sign in | 10 minutes |
-| `myidea_idioma` | preference cookie | remembering the language you chose (it takes effect once the app is available in several languages) | 1 year |
-| `mi-idea:gantt-vista` | local storage | remembering the Gantt view you prefer | until you clear your browser data |
-| `mi-idea:selector-estado-usado` | local storage | making sure a hint you have already seen is not shown again | until you clear your browser data |
+| type | purpose | duration |
+|---|---|---|
+| necessary | keeping your session open, including the session of the invisible identity that lets you write your idea without an account | for as long as your session lasts |
+| necessary | completing sign-in with an external provider securely, if you choose that method | a few minutes |
+| necessary | returning you to the page you were on after you sign in | 10 to 30 minutes |
+| preference | remembering the language in which you see the app, which is available in eleven languages | 1 year |
+| local storage | remembering your preferred view of your progress chart | until you clear your browser data |
+| local storage | not showing you again a tip you have already seen | until you clear your browser data |
 
 ## 2. Your choice
 

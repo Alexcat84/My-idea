@@ -11,7 +11,7 @@
 > This English version is a translation provided for your convenience. In case of any discrepancy,
 > the Spanish version prevails, and in Quebec, the French version.
 
-**Last updated:** October 7, 2026
+**Last updated:** October 8, 2026
 **Controller:** Alexis Garcia Hurtado, a sole proprietorship registered in Quebec, Canada ("we"), which operates the
 My Idea application.
 
@@ -21,13 +21,13 @@ My Idea application.
   interviewing you, writing your plan and supporting you as you carry it out.
 - **We do not sell your data** or use it for advertising. There is no third-party analytics or
   advertising in the app.
-- For the app to work, some providers process your data on our behalf, some of them **outside Quebec** (§6).
-- You can request access to your data, or its correction, portability or deletion (§8).
+- For the app to work, some providers process your data on our behalf, some of them **outside Quebec** (see section 6).
+- You can request access to your data, or its correction, portability or deletion (see section 8).
 
 ## 2. What data we process
 
 **Your account data:** your email address, your password (stored as a hash, never in plain text) or
-your Google identity if you sign in with it, and your security settings (two-step verification,
+your identity with the external sign-in provider if you sign in with it, and your security settings (two-step verification,
 with its secret encrypted and its codes hashed).
 
 **Your acceptance of the Terms and of this policy:** we ask you to accept them
@@ -65,26 +65,26 @@ on the browser you use: some send the audio to their maker's servers.
 - **Your account and its security:** signing in, two-step verification, preventing abuse (daily
   usage limits).
 - **Credits:** keeping track of your balance, reserving the price of a piece of work when it starts and charging it only if
-  it is delivered (§9).
+  it is delivered (see section 9).
 - **Contacting you** about your account (for example, the verification code by email).
 
 **We do not use your ideas for other purposes:** we do not sell them, we do not use them for advertising and we do not
-share them with other users. We do not train AI models with your ideas. Each provider's terms for the use of
-data are in its policy (§6).
+share them with other users. We do not train AI models with your ideas. Each provider processes your data only for
+the function stated in section 6.
 
 ## 4. Basis for our processing
 
 We process your data with your consent, which you give when you send your idea for the first time, when you create your
 account and when you use the service, and to the extent necessary to provide the service you asked for. That
 consent is recorded, with or without an account: the version of the Terms and of this policy
-that you accepted and its date (§2). You can withdraw your consent at
-any time by deleting your account (§8), bearing in mind that without your data we cannot provide the
+that you accepted and its date (see section 2). You can withdraw your consent at
+any time by deleting your account (see section 8), bearing in mind that without your data we cannot provide the
 service to you.
 
 ## 5. Artificial intelligence
 
 My Idea uses language models to talk with you and write your documents. To do so, the
-text of your idea, your answers and the figures you give us are sent to an AI provider (§6). The
+text of your idea, your answers and the figures you give us are sent to an AI provider (see section 6). The
 plan you receive is a suggestion for you to decide on: the app makes no decisions about you that have
 legal effects. The numbers are calculated by deterministic code, not by the AI.
 
@@ -93,21 +93,19 @@ legal effects. The numbers are calculated by deterministic code, not by the AI.
 These providers process data on our behalf, only for the function shown. Several operate
 outside Quebec.
 
-| provider | function | country | their policy |
-|---|---|---|---|
-| Anthropic | AI model (Claude) that talks and writes | United States | https://www.anthropic.com/legal/privacy |
-| Voyage AI | semantic search in our knowledge catalog | United States | https://www.voyageai.com/privacy |
-| Supabase | database and authentication | depending on the project's region; may be outside Quebec | https://supabase.com/privacy |
-| Vercel | hosting of the app | United States and other countries | https://vercel.com/legal/privacy-policy |
-| Resend | sending emails | United States | https://resend.com/legal/privacy-policy |
-| Upstash | usage limits | depending on the configured region; may be outside Quebec | https://upstash.com/trust |
-| Google | signing in with Google, if you choose that method | United States and other countries | https://policies.google.com/privacy |
+| category | function | country |
+|---|---|---|
+| artificial intelligence provider | the language model that talks with you and writes your documents | United States |
+| semantic search | finding in our knowledge catalog what relates to your idea | United States |
+| database and authentication | storing your data and your account, and letting you sign in | depending on the contracted region; may be outside Quebec |
+| app hosting | serving the app and its pages | United States and other countries |
+| email delivery | sending your account emails, such as the verification code | United States |
+| usage control | applying the daily usage limits | depending on the contracted region; may be outside Quebec |
+| sign-in with an external provider | letting you sign in with your account at that provider, if you choose that method | United States and other countries |
 
 ## 7. Transfers outside Quebec
 
-Some providers in §6 process your data outside Quebec, mainly in the United States (see the table in §6). Before communicating personal information outside Quebec, Quebec law requires
-us to assess whether it will receive adequate protection and to set this out in writing with the provider; that assessment
-is part of the professional review of this policy.
+Some providers in section 6 process your data outside Quebec, mainly in the United States (see the table in section 6). We work with providers that offer adequate contractual and security protections for the data they process on our behalf, and we only share with each one what is necessary for its function.
 
 ## 8. Your rights and how to exercise them
 
@@ -126,11 +124,11 @@ You have the right to:
     The tax records of sales are kept by the payment processor.
 - **Portability:** receive your data in a structured, commonly used format. Today you can
   download your documents (plan, Full Record, logbook) in markdown; if you need a full export of
-  your data in a structured format, write to us (§12) and we will prepare it for you.
+  your data in a structured format, write to us (see section 12) and we will prepare it for you.
 - **Withdraw your consent** and file a complaint with the Commission d'accès à l'information du
   Québec (Quebec's access to information commission).
 
-To exercise them, write to the person in charge of the protection of personal information (§12). We respond within a
+To exercise them, write to the person in charge of the protection of personal information (see section 12). We respond within a
 maximum of 30 days.
 
 ## 9. Credits and payments

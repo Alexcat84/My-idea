@@ -1,7 +1,7 @@
 # BOZZA IN ATTESA DI REVISIONE PROFESSIONALE
 
 > Bozza costruita sull'inventario dei dati (`INVENTARIO_DATOS.md`) e sui limiti di portata del
-> BANCO_DE_TEXTOS (§4 e §5). Non costituisce consulenza legale e non è pubblicata: l'app non vi
+> BANCO_DE_TEXTOS (sezione 4 e sezione 5). Non costituisce consulenza legale e non è pubblicata: l'app non vi
 > rimanda finché il fondatore non la approva dopo la revisione di un professionista del Québec.
 > **La versione francese sarà obbligatoria** e, secondo la legge del Québec, deve essere offerta per
 > prima (DA VERIFICARE). I prezzi non sono indicati qui: l'unica fonte dei prezzi è l'app
@@ -14,7 +14,7 @@
 > Questa versione italiana è una traduzione fornita per tua comodità. In caso di discrepanza prevale
 > la versione spagnola (e, per il Québec, quella francese).
 
-**Ultimo aggiornamento:** 7 ottobre 2026
+**Ultimo aggiornamento:** 8 ottobre 2026
 **Chi fornisce il servizio:** Alexis Garcia Hurtado, impresa individuale registrata in Québec, Canada
 ("noi"). Indirizzo postale dell'esercente: sarà pubblicato qui non appena sarà confermato; nel frattempo, puoi scriverci a support@myideaproject.com.
 
@@ -94,7 +94,7 @@ avvisandoti quando possibile.
 ## 7. I nostri contenuti
 
 L'app, il suo design e il suo catalogo di conoscenze sono nostri; le tue idee e i tuoi documenti
-sono tuoi (§3).
+sono tuoi (vedi la sezione 3).
 
 ## 8. Disponibilità e modifiche
 
@@ -105,7 +105,7 @@ errore.
 ## 9. Responsabilità
 
 Nei limiti consentiti dalla legge del Québec, non siamo responsabili delle decisioni che prendi
-sulla base dei contenuti dell'app (§4). Nulla nei presenti termini limita i diritti che la legge ti
+sulla base dei contenuti dell'app (vedi la sezione 4). Nulla nei presenti termini limita i diritti che la legge ti
 garantisce in quanto consumatore.
 
 ## 10. Risoluzione

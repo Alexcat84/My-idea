@@ -1,7 +1,7 @@
 # DRAFT PENDING PROFESSIONAL REVIEW
 
 > Draft built on the data inventory (`INVENTARIO_DATOS.md`) and the scope boundaries of the
-> BANCO_DE_TEXTOS (§4 and §5). It is not legal advice. **The French version will be mandatory**.
+> BANCO_DE_TEXTOS (section 4 and section 5). It is not legal advice. **The French version will be mandatory**.
 > Prices are not written here: the only source of prices is the app (`precios.ts`). The visible
 > note under the title says that, in case of discrepancy, the Spanish version prevails (and the
 > French version in Quebec).
@@ -13,7 +13,7 @@
 > This English version is a translation provided for your convenience. In case of any discrepancy,
 > the Spanish version prevails, and in Quebec, the French version.
 
-**Last updated:** October 7, 2026
+**Last updated:** October 8, 2026
 **Who provides the service:** Alexis Garcia Hurtado, a sole proprietorship registered in Quebec, Canada
 ("we"). Merchant's mailing address: it will be published here as soon as it is confirmed; in the meantime, you can write to us at support@myideaproject.com.
 
@@ -83,7 +83,7 @@ when possible.
 ## 7. Our content
 
 The app, its design and its knowledge catalog are ours; your ideas and your documents are
-yours (§3).
+yours (see section 3).
 
 ## 8. Availability and changes
 
@@ -93,7 +93,7 @@ We do our best to make sure you never lose your progress or your credits because
 ## 9. Liability
 
 To the extent permitted by Quebec law, we are not responsible for the decisions you make
-based on the app's content (§4). Nothing in these terms limits the rights the law
+based on the app's content (see section 4). Nothing in these terms limits the rights the law
 guarantees you as a consumer.
 
 ## 10. Termination

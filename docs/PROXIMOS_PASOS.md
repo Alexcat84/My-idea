@@ -8,7 +8,9 @@ propio o con una decisión del fundador.
 las decisiones del fundador de ese día: la copia fiel (regla D2, sección 8) y el i18n al día (sección 2, decisión 8). El detalle de cada cosa hecha está en `docs/ACTA_SANEAMIENTO_FINAL.md`, sección 15.
 
 **Lo que sigue, en este orden, con suscripción normal** (cada punto tiene su sección abajo):
-1. **Revisión legal profesional y dirección postal** (sección 2, decisión 3): sin ellas no se lanza en Google Play.
+1. **Revisión legal profesional, evaluación de privacidad y dirección postal** (sección 2, decisión 3): sin ellas no se
+   lanza en Google Play. **Tarea del fundador ANTES DEL LANZAMIENTO:** hacer con el profesional la evaluación de
+   factores relativos a la privacidad que exige la ley de Quebec para comunicar datos fuera de la provincia.
 2. **Terminar la copia fiel** (sección 8; NO quedó certificada): verificar la ola k31, ya leída; leer 12 lotes de
    vecindad; reescribir lo retenido; decidir el residuo de resúmenes; medir otra vez.
    Voyage va al día con main del 8 oct 2026 (segunda pasada, sección 4); los pasos no entran en el vector.
@@ -85,6 +87,12 @@ de cierre hecha.
    auditoria_prompts.md`, sección F.
 3. **Páginas legales:**
    - la dirección postal del comerciante;
+   - **ANTES DEL LANZAMIENTO, tarea del fundador con el profesional:** la evaluación de factores relativos a la
+     privacidad (EFVP) que exige la ley de Quebec antes de comunicar datos personales fuera de la provincia. Desde el
+     8 oct 2026 la sección 7 de la Privacidad describe la práctica (proveedores con protecciones contractuales y de
+     seguridad adecuadas) y ya no anuncia trámites pendientes: esa evaluación es la que lo respalda. Quién es cada
+     proveedor (las categorías de la sección 6) está en el inventario interno, `docs/legal/INVENTARIO_DATOS.md`,
+     sección 3;
    - la revisión profesional de Privacidad, Términos y Cookies, en español y francés. Cuando el profesional cambie un
      texto se edita el `.md` en `docs/legal/` y se corre `python scripts/sync_legal_web.py`.
    - **Las traducciones a los otros nueve idiomas** (en, pt, de, it, ja, zh, ko, ar, hi, desde el 7 oct) guardan la
@@ -94,7 +102,13 @@ de cierre hecha.
    - Para el profesional, anotado: el registro de la aceptación se guarda sin IP ni navegador (lo mínimo); se borra con
      la cuenta; los Términos dicen "al usar la app aceptas" también para el invitado; la cookie `myidea_idioma`
      (preferencia de idioma, un año) no es estrictamente necesaria; la versión vigente de los textos se llama
-     `2026-10-07.2`.
+     `2026-10-08` (proveedores por categorías, sin el símbolo de sección y la sección 7 sin trámites anunciados).
+3-bis. **Prueba del calendario en tu Android, de punta a punta** (tarea del fundador, 8 oct 2026): en una idea en modo
+   con fechas, abre el calendario, toca «Suscribir», añade el enlace en el calendario del teléfono (Google Calendar) y
+   comprueba que aparecen las fechas pendientes, con el nombre del espacio delante. Después cambia una fecha en la app
+   y confirma que el teléfono la recoge en la siguiente actualización: las apps de calendario releen un calendario
+   suscrito cada varias horas, no al instante, y la suscripción es de una sola vía (lo que cambies en el teléfono no
+   vuelve a la app).
 4. **`FUNDADOR_EMAILS`:** sirve para que solo la cuenta del fundador vea y camine los mundos sin publicar con
    `?ver=ocultos`. Valor: el correo con el que el fundador inicia sesión en My Idea (varios, separados por comas). Dónde:
    Vercel, Settings, Environment Variables, entorno Production, y volver a desplegar. Sin ella nadie los ve, tampoco el

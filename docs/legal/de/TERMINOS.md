@@ -3,7 +3,7 @@
 > Dies ist eine deutsche Übersetzung des spanischen Entwurfs `docs/legal/TERMINOS.md`.
 >
 > Entwurf auf Grundlage des Datenverzeichnisses (`INVENTARIO_DATOS.md`) und der Abgrenzungen des
-> Leistungsumfangs aus dem BANCO_DE_TEXTOS (§4 und §5). Er ist keine Rechtsberatung und nicht
+> Leistungsumfangs aus dem BANCO_DE_TEXTOS (Abschnitt 4 und Abschnitt 5). Er ist keine Rechtsberatung und nicht
 > veröffentlicht: Die App verlinkt erst darauf, wenn der Gründer ihn nach der Prüfung durch eine
 > Fachperson aus Quebec freigibt. **Die französische Fassung wird verpflichtend sein** und muss
 > nach dem Recht von Quebec zuerst angeboten werden (ZU PRÜFEN). Preise stehen hier nicht: Die
@@ -14,7 +14,7 @@
 > Diese deutsche Fassung ist eine Übersetzung, die wir dir der Einfachheit halber zur Verfügung
 > stellen. Bei Abweichungen gilt die spanische Fassung (für Quebec die französische).
 
-**Letzte Aktualisierung:** 7. Oktober 2026
+**Letzte Aktualisierung:** 8. Oktober 2026
 **Wer den Dienst erbringt:** Alexis Garcia Hurtado, in Quebec, Kanada, eingetragenes Einzelunternehmen
 („wir“). Postanschrift des Unternehmens: Sie wird hier veröffentlicht, sobald sie bestätigt ist; bis dahin kannst du uns an support@myideaproject.com schreiben.
 
@@ -95,7 +95,7 @@ das so etwas tut, sperren und informieren dich darüber, soweit es möglich ist.
 ## 7. Unsere Inhalte
 
 Die App, ihr Design und ihr Wissenskatalog gehören uns; deine Ideen und deine Dokumente gehören
-dir (§3).
+dir (siehe Abschnitt 3).
 
 ## 8. Verfügbarkeit und Änderungen
 
@@ -106,7 +106,7 @@ Fortschritt oder dein Guthaben verlierst.
 ## 9. Haftung
 
 Soweit das Recht von Quebec es zulässt, haften wir nicht für die Entscheidungen, die du auf
-Grundlage der Inhalte der App triffst (§4). Nichts in diesen Bedingungen schränkt die Rechte ein,
+Grundlage der Inhalte der App triffst (siehe Abschnitt 4). Nichts in diesen Bedingungen schränkt die Rechte ein,
 die dir das Gesetz als Verbraucher garantiert.
 
 ## 10. Beendigung

@@ -1,7 +1,7 @@
 # RASCUNHO PENDENTE DE REVISÃO PROFISSIONAL
 
 > Rascunho elaborado a partir do inventário de dados (`INVENTARIO_DATOS.md`) e dos limites de alcance
-> do BANCO_DE_TEXTOS (§4 e §5). Não constitui assessoria jurídica e não está publicado: o aplicativo não tem
+> do BANCO_DE_TEXTOS (seção 4 e seção 5). Não constitui assessoria jurídica e não está publicado: o aplicativo não tem
 > link para ele até que o fundador o aprove após a revisão de um profissional de Quebec. **A versão
 > em francês será obrigatória** e, segundo a lei de Quebec, deve ser oferecida primeiro (A VERIFICAR).
 > Os preços não são escritos aqui: a única fonte dos preços é o aplicativo (`precios.ts`).
@@ -13,7 +13,7 @@
 > Esta versão em português é uma tradução oferecida para sua conveniência. Em caso de divergência,
 > prevalece a versão em espanhol (e, para Quebec, a versão em francês).
 
-**Última atualização:** 7 de outubro de 2026
+**Última atualização:** 8 de outubro de 2026
 **Quem presta o serviço:** Alexis Garcia Hurtado, empresa individual registrada em Quebec, Canadá
 ("nós"). Endereço postal do comerciante: será publicado aqui assim que for confirmado; enquanto isso, você pode nos escrever em support@myideaproject.com.
 
@@ -83,7 +83,7 @@ quando for possível.
 ## 7. Nosso conteúdo
 
 O aplicativo, o design e o catálogo de conhecimento dele são nossos; suas ideias e seus documentos são
-seus (§3).
+seus (veja a seção 3).
 
 ## 8. Disponibilidade e alterações
 
@@ -93,7 +93,7 @@ Fazemos o possível para que você nunca perca seu progresso nem seus créditos 
 ## 9. Responsabilidade
 
 Dentro do que a lei de Quebec permite, não somos responsáveis pelas decisões que você tomar com
-base no conteúdo do aplicativo (§4). Nada nestes termos limita os direitos que a lei garante a você
+base no conteúdo do aplicativo (veja a seção 4). Nada nestes termos limita os direitos que a lei garante a você
 como consumidor.
 
 ## 10. Rescisão

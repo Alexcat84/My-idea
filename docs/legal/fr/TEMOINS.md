@@ -1,6 +1,6 @@
 # ÉBAUCHE EN ATTENTE DE RÉVISION PROFESSIONNELLE
 
-> Ébauche établie à partir de l'inventaire des données (`INVENTAIRE_DONNEES.md`, §5). Elle ne
+> Ébauche établie à partir de l'inventaire des données (`INVENTAIRE_DONNEES.md`, section 5). Elle ne
 > constitue pas un avis juridique et n'est pas publiée : l'application n'y renvoie pas tant que le
 > fondateur ne l'a pas approuvée après la révision d'un professionnel du Québec. La version
 > française sera obligatoire.
@@ -9,7 +9,7 @@
 
 # Politique relative aux témoins de My Idea
 
-**Dernière mise à jour :** 6 octobre 2026
+**Dernière mise à jour :** 8 octobre 2026
 
 ## 1. Ce que nous utilisons et pourquoi
 
@@ -17,14 +17,14 @@ My Idea utilise **uniquement les témoins (cookies) et le stockage local nécess
 fonctionnement de l'application** ou à la mémorisation de vos préférences. **Nous n'utilisons aucun
 témoin d'analyse, de publicité ou de tiers qui vous suit d'un site à l'autre.**
 
-| nom | type | à quoi il sert | durée |
-|---|---|---|---|
-| `sb-*` (Supabase) | témoin nécessaire | maintenir votre session ouverte, y compris celle de l'identité invisible qui vous permet d'écrire votre idée sans compte | pendant la durée de votre session |
-| Vérificateur PKCE de Supabase | témoin nécessaire | effectuer la connexion avec Google de façon sécuritaire | quelques minutes |
-| `post_login_next` | témoin nécessaire | revenir à la page où vous étiez après la connexion | 10 minutes |
-| `myidea_idioma` | témoin de préférence | mémoriser la langue que vous avez choisie (activé lorsque l'application est offerte en plusieurs langues) | 1 an |
-| `mi-idea:gantt-vista` | stockage local | mémoriser la vue du diagramme de Gantt que vous préférez | jusqu'à ce que vous effaciez les données du navigateur |
-| `mi-idea:selector-estado-usado` | stockage local | ne plus vous montrer une indication que vous avez déjà vue | jusqu'à ce que vous effaciez les données du navigateur |
+| type | utilité | durée |
+|---|---|---|
+| nécessaire | garder votre session ouverte, y compris celle de l'identité invisible qui vous permet d'écrire votre idée sans compte | pendant toute la durée de votre session |
+| nécessaire | terminer de façon sécuritaire la connexion avec un fournisseur externe, si vous choisissez cette méthode | quelques minutes |
+| nécessaire | vous ramener à la page où vous étiez après la connexion | de 10 à 30 minutes |
+| préférence | retenir la langue dans laquelle vous voyez l'application, offerte en onze langues | 1 an |
+| stockage local | retenir l'affichage que vous préférez pour le graphique de votre progression | jusqu'à ce que vous effaciez les données du navigateur |
+| stockage local | ne plus vous montrer une astuce que vous avez déjà vue | jusqu'à ce que vous effaciez les données du navigateur |
 
 ## 2. Votre choix
 

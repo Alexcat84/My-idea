@@ -71,7 +71,20 @@ de `projects`.
 - **No hay analítica ni publicidad de terceros:** ni Vercel Analytics, ni PostHog, ni Sentry, ni
   píxeles.
 - **Si un proveedor usa los datos para entrenar sus modelos:** POR VERIFICAR en su política (enlaces
-  en el borrador de Privacidad). El código no lo puede afirmar.
+  abajo). El código no lo puede afirmar.
+
+**Las categorías que publica la Privacidad (sección 6) y quién está detrás** (decisión del fundador, 8 oct
+2026: el texto público nombra categorías, con su función y su país; los nombres viven SOLO aquí):
+
+| categoría pública | proveedor | su política |
+|---|---|---|
+| proveedor de inteligencia artificial | Anthropic (Claude) | https://www.anthropic.com/legal/privacy |
+| búsqueda semántica | Voyage AI | https://www.voyageai.com/privacy |
+| base de datos y autenticación | Supabase | https://supabase.com/privacy |
+| alojamiento de la app | Vercel | https://vercel.com/legal/privacy-policy |
+| envío de correos | Resend | https://resend.com/legal/privacy-policy |
+| control de uso | Upstash | https://upstash.com/trust |
+| inicio de sesión con un proveedor externo | Google | https://policies.google.com/privacy |
 
 ## 4. El borrado de la cuenta (comprobado en el código)
 

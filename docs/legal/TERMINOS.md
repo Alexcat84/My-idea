@@ -1,14 +1,14 @@
 # BORRADOR PENDIENTE DE REVISIÓN PROFESIONAL
 
 > Borrador construido sobre el inventario de datos (`INVENTARIO_DATOS.md`) y las fronteras de alcance
-> del BANCO_DE_TEXTOS (§4 y §5). No es asesoría legal y no está publicado: la app no enlaza a él
+> del BANCO_DE_TEXTOS (secciones 4 y 5). No es asesoría legal y no está publicado: la app no enlaza a él
 > hasta que el fundador lo apruebe tras la revisión de un profesional de Quebec. **La versión
 > francesa será obligatoria** y, según la ley de Quebec, debe ofrecerse primero (POR VERIFICAR).
 > Los precios no se escriben aquí: la única fuente de los precios es la app (`precios.ts`).
 
 # Términos de uso de My Idea
 
-**Última actualización:** 7 de octubre de 2026
+**Última actualización:** 8 de octubre de 2026
 **Quién presta el servicio:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá
 ("nosotros"). Dirección postal del comerciante: se publicará aquí en cuanto esté confirmada; mientras tanto, puedes escribirnos a support@myideaproject.com.
 
@@ -78,7 +78,7 @@ cuando sea posible.
 ## 7. Nuestro contenido
 
 La app, su diseño y su catálogo de conocimiento son nuestros; tus ideas y tus documentos son
-tuyos (§3).
+tuyos (ver la sección 3).
 
 ## 8. Disponibilidad y cambios
 
@@ -88,7 +88,7 @@ Hacemos lo posible por que nunca pierdas tu avance ni tus créditos por un fallo
 ## 9. Responsabilidad
 
 Dentro de lo que permite la ley de Quebec, no somos responsables de las decisiones que tomes con
-base en el contenido de la app (§4). Nada de estos términos limita los derechos que la ley te
+base en el contenido de la app (ver la sección 4). Nada de estos términos limita los derechos que la ley te
 garantiza como consumidor.
 
 ## 10. Terminación

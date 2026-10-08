@@ -12,7 +12,7 @@
 > Esta versão em português é uma tradução oferecida para sua conveniência. Em caso de divergência,
 > prevalece a versão em espanhol (e, para Quebec, a versão em francês).
 
-**Última atualização:** 7 de outubro de 2026
+**Última atualização:** 8 de outubro de 2026
 **Responsável:** Alexis Garcia Hurtado, empresa individual registrada em Quebec, Canadá ("nós"), que opera o
 aplicativo My Idea.
 
@@ -23,13 +23,13 @@ aplicativo My Idea.
 - **Não vendemos seus dados** nem os usamos para publicidade. Não há análise de uso nem publicidade de
   terceiros no aplicativo.
 - Para funcionar, alguns fornecedores tratam seus dados em nosso nome, alguns deles **fora de
-  Quebec** (§6).
-- Você pode solicitar acesso, correção, portabilidade ou exclusão dos seus dados (§8).
+  Quebec** (veja a seção 6).
+- Você pode solicitar acesso, correção, portabilidade ou exclusão dos seus dados (veja a seção 8).
 
 ## 2. Quais dados tratamos
 
 **Dados da sua conta:** seu e-mail, sua senha (guardada como hash, nunca em texto legível) ou
-sua identidade do Google, se você entrar com ela, e as configurações de segurança (a verificação em
+sua identidade no provedor externo de login, se você entrar com ele, e as configurações de segurança (a verificação em
 duas etapas, com seu segredo criptografado e seus códigos em hash).
 
 **Sua aceitação dos Termos e desta política:** pedimos que você os aceite
@@ -67,26 +67,26 @@ do navegador que você usa: alguns enviam o áudio aos servidores do respectivo 
 - **Sua conta e a segurança dela:** entrar, a verificação em duas etapas, prevenir abusos (limites de
   uso diário).
 - **Os créditos:** controlar seu saldo, reservar o preço de uma entrega quando ela começa e cobrá-lo somente se
-  a entrega for concluída (§9).
+  a entrega for concluída (veja a seção 9).
 - **Comunicar-nos com você** sobre sua conta (por exemplo, o código de verificação por e-mail).
 
 **Não usamos suas ideias para outros fins:** não as vendemos, não as usamos para publicidade e não as
-compartilhamos com outros usuários. Nós não treinamos modelos de IA com suas ideias. As condições de uso de
-dados de cada fornecedor estão na respectiva política (§6).
+compartilhamos com outros usuários. Nós não treinamos modelos de IA com suas ideias. Cada fornecedor trata seus
+dados apenas para a função indicada na seção 6.
 
 ## 4. Base do nosso tratamento
 
 Tratamos seus dados com o seu consentimento, que você dá ao enviar sua ideia pela primeira vez, ao criar sua
 conta e ao usar o serviço, e na medida necessária para prestar o serviço que você solicitou. Esse
 consentimento fica registrado, com ou sem conta: a versão dos Termos e desta política
-que você aceitou e a respectiva data (§2). Você pode retirar seu consentimento a
-qualquer momento excluindo sua conta (§8), ciente de que sem os seus dados não podemos prestar o
+que você aceitou e a respectiva data (veja a seção 2). Você pode retirar seu consentimento a
+qualquer momento excluindo sua conta (veja a seção 8), ciente de que sem os seus dados não podemos prestar o
 serviço.
 
 ## 5. A inteligência artificial
 
 O My Idea usa modelos de linguagem para conversar com você e redigir seus documentos. Para isso, o
-texto da sua ideia, suas respostas e os números que você nos informa são enviados a um fornecedor de IA (§6). O
+texto da sua ideia, suas respostas e os números que você nos informa são enviados a um fornecedor de IA (veja a seção 6). O
 plano que você recebe é uma sugestão para que você decida: o aplicativo não toma decisões sobre você com
 efeitos jurídicos. Os números são calculados por código determinístico, não pela IA.
 
@@ -95,21 +95,19 @@ efeitos jurídicos. Os números são calculados por código determinístico, nã
 Estes fornecedores tratam dados em nosso nome, apenas para a função indicada. Vários deles operam
 fora de Quebec.
 
-| fornecedor | função | país | política do fornecedor |
-|---|---|---|---|
-| Anthropic | modelo de IA (Claude) que conversa e redige | Estados Unidos | https://www.anthropic.com/legal/privacy |
-| Voyage AI | busca semântica no nosso catálogo de conhecimento | Estados Unidos | https://www.voyageai.com/privacy |
-| Supabase | banco de dados e autenticação | conforme a região do projeto; pode ficar fora de Quebec | https://supabase.com/privacy |
-| Vercel | hospedagem do aplicativo | Estados Unidos e outros países | https://vercel.com/legal/privacy-policy |
-| Resend | envio de e-mails | Estados Unidos | https://resend.com/legal/privacy-policy |
-| Upstash | limites de uso | conforme a região configurada; pode ficar fora de Quebec | https://upstash.com/trust |
-| Google | entrar com o Google, se você escolher esse método | Estados Unidos e outros países | https://policies.google.com/privacy |
+| categoria | função | país |
+|---|---|---|
+| fornecedor de inteligência artificial | o modelo de linguagem que conversa com você e redige seus documentos | Estados Unidos |
+| busca semântica | encontrar no nosso catálogo de conhecimento o que se relaciona com a sua ideia | Estados Unidos |
+| banco de dados e autenticação | guardar seus dados e sua conta, e permitir que você entre | conforme a região contratada; pode ficar fora de Quebec |
+| hospedagem do aplicativo | servir o aplicativo e suas páginas | Estados Unidos e outros países |
+| envio de e-mails | enviar os e-mails da sua conta, como o código de verificação | Estados Unidos |
+| controle de uso | aplicar os limites de uso diário | conforme a região contratada; pode ficar fora de Quebec |
+| login com um provedor externo | permitir que você entre com a sua conta desse provedor, se escolher esse método | Estados Unidos e outros países |
 
 ## 7. Transferências para fora de Quebec
 
-Alguns fornecedores do §6 tratam seus dados fora de Quebec, principalmente nos Estados Unidos (veja a tabela do §6). Antes de comunicar dados pessoais para fora de Quebec, a lei de Quebec exige
-avaliar se eles receberão uma proteção adequada e formalizar isso por escrito com o fornecedor; essa avaliação
-faz parte da revisão profissional desta política.
+Alguns fornecedores da seção 6 tratam seus dados fora de Quebec, principalmente nos Estados Unidos (veja a tabela da seção 6). Trabalhamos com fornecedores que oferecem proteções contratuais e de segurança adequadas para os dados que tratam por nossa conta, e só comunicamos a cada um o necessário para a sua função.
 
 ## 8. Seus direitos e como exercê-los
 
@@ -128,11 +126,11 @@ Você tem direito de:
     Os registros fiscais das vendas são mantidos pelo processador de pagamentos.
 - **Portabilidade:** receber seus dados em um formato estruturado e de uso comum. Hoje você pode
   baixar seus documentos (plano, Dossiê, diário de bordo) em markdown; se precisar de uma exportação completa dos
-  seus dados em formato estruturado, escreva para nós (§12) e nós a prepararemos.
+  seus dados em formato estruturado, escreva para nós (veja a seção 12) e nós a prepararemos.
 - **Retirar seu consentimento** e apresentar uma reclamação à Comissão de acesso à informação de
   Quebec (Commission d'accès à l'information).
 
-Para exercê-los, escreva ao responsável pela proteção de dados (§12). Respondemos em um prazo
+Para exercê-los, escreva ao responsável pela proteção de dados (veja a seção 12). Respondemos em um prazo
 máximo de 30 dias.
 
 ## 9. Créditos e pagamentos

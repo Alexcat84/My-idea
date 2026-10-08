@@ -10,7 +10,7 @@
 
 # Politique de confidentialité de My Idea
 
-**Dernière mise à jour :** 7 octobre 2026
+**Dernière mise à jour :** 8 octobre 2026
 **Responsable :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada (« nous »), qui exploite
 l'application My Idea.
 
@@ -22,14 +22,14 @@ l'application My Idea.
 - **Nous ne vendons pas vos données** et ne les utilisons pas à des fins publicitaires.
   L'application ne contient ni outil d'analyse ni publicité de tiers.
 - Pour fonctionner, certains fournisseurs traitent vos données pour notre compte, dont certains
-  **à l'extérieur du Québec** (§6).
+  **à l'extérieur du Québec** (voir la section 6).
 - Vous pouvez demander l'accès à vos données, leur rectification, leur portabilité ou leur
-  suppression (§8).
+  suppression (voir la section 8).
 
 ## 2. Les données que nous traitons
 
 **Données de votre compte :** votre adresse courriel, votre mot de passe (conservé sous forme de
-hachage, jamais en clair) ou votre identité Google si vous vous connectez avec celle-ci, ainsi que
+hachage, jamais en clair) ou votre identité auprès du fournisseur de connexion externe si vous vous connectez avec celui-ci, ainsi que
 vos paramètres de sécurité (la vérification en deux étapes, avec son secret chiffré et ses codes
 hachés).
 
@@ -73,28 +73,28 @@ L'endroit où votre navigateur traite le son dépend du navigateur que vous util
 - **Votre compte et sa sécurité :** la connexion, la vérification en deux étapes, la prévention des
   abus (limites d'utilisation quotidienne).
 - **Les crédits :** tenir votre solde, réserver le prix d'un livrable au début et ne le prélever
-  que si le livrable est fourni (§9).
+  que si le livrable est fourni (voir la section 9).
 - **Communiquer avec vous** au sujet de votre compte (par exemple, le code de vérification par
   courriel).
 
 **Nous n'utilisons pas vos idées à d'autres fins :** nous ne les vendons pas, nous ne les utilisons
 pas à des fins publicitaires et nous ne les communiquons pas aux autres utilisateurs. Nous
-n'entraînons aucun modèle d'IA avec vos idées. Les conditions d'utilisation des données de chaque fournisseur figurent dans sa
-politique (§6).
+n'entraînons aucun modèle d'IA avec vos idées. Chaque fournisseur traite vos données uniquement pour la fonction
+indiquée à la section 6.
 
 ## 4. Fondement de notre traitement
 
 Nous traitons vos données avec votre consentement, que vous donnez en envoyant votre idée pour la
 première fois, en créant votre compte et en utilisant le service, et dans la mesure nécessaire pour
 vous fournir le service que vous avez demandé. Ce consentement est enregistré, avec ou sans compte :
-la version des Conditions et de la présente politique que vous avez acceptée et sa date (§2). Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (§8),
+la version des Conditions et de la présente politique que vous avez acceptée et sa date (voir la section 2). Vous pouvez retirer votre consentement en tout temps en supprimant votre compte (voir la section 8),
 étant entendu que, sans vos données, nous ne pouvons pas vous fournir le service.
 
 ## 5. L'intelligence artificielle
 
 My Idea utilise des modèles de langage pour converser avec vous et rédiger vos documents. Pour ce
 faire, le texte de votre idée, vos réponses et les chiffres que vous nous fournissez sont transmis
-à un fournisseur d'IA (§6). Le plan que vous recevez est une suggestion sur laquelle vous
+à un fournisseur d'IA (voir la section 6). Le plan que vous recevez est une suggestion sur laquelle vous
 décidez : l'application ne prend aucune décision à votre sujet produisant des effets juridiques.
 Les chiffres sont calculés par du code déterministe, et non par l'IA.
 
@@ -103,23 +103,19 @@ Les chiffres sont calculés par du code déterministe, et non par l'IA.
 Ces fournisseurs traitent des données pour notre compte, uniquement pour la fonction indiquée.
 Plusieurs d'entre eux exercent leurs activités à l'extérieur du Québec.
 
-| fournisseur | fonction | pays | sa politique |
-|---|---|---|---|
-| Anthropic | modèle d'IA (Claude) qui converse et rédige | États-Unis | https://www.anthropic.com/legal/privacy |
-| Voyage AI | recherche sémantique dans notre catalogue de connaissances | États-Unis | https://www.voyageai.com/privacy |
-| Supabase | base de données et authentification | selon la région du projet; peut être à l'extérieur du Québec | https://supabase.com/privacy |
-| Vercel | hébergement de l'application | États-Unis et autres pays | https://vercel.com/legal/privacy-policy |
-| Resend | envoi des courriels | États-Unis | https://resend.com/legal/privacy-policy |
-| Upstash | limites d'utilisation | selon la région configurée; peut être à l'extérieur du Québec | https://upstash.com/trust |
-| Google | connexion avec Google, si vous choisissez cette méthode | États-Unis et autres pays | https://policies.google.com/privacy |
+| catégorie | fonction | pays |
+|---|---|---|
+| fournisseur d'intelligence artificielle | le modèle de langage qui converse avec vous et rédige vos documents | États-Unis |
+| recherche sémantique | trouver dans notre catalogue de connaissances ce qui se rapporte à votre idée | États-Unis |
+| base de données et authentification | conserver vos données et votre compte, et vous permettre de vous connecter | selon la région retenue; peut se trouver à l'extérieur du Québec |
+| hébergement de l'application | servir l'application et ses pages | États-Unis et autres pays |
+| envoi de courriels | vous envoyer les courriels liés à votre compte, comme le code de vérification | États-Unis |
+| contrôle de l'utilisation | appliquer les limites d'utilisation quotidienne | selon la région retenue; peut se trouver à l'extérieur du Québec |
+| connexion avec un fournisseur externe | vous permettre de vous connecter avec votre compte chez ce fournisseur, si vous choisissez cette méthode | États-Unis et autres pays |
 
 ## 7. Communications à l'extérieur du Québec
 
-Certains fournisseurs mentionnés au §6 traitent vos données à l'extérieur du Québec, principalement
-aux États-Unis (voir le tableau du §6). Avant de communiquer des renseignements personnels à
-l'extérieur du Québec, la loi québécoise exige d'évaluer si ceux-ci bénéficieront d'une protection
-adéquate et de le consigner par écrit avec le fournisseur; cette évaluation fait partie de la révision
-professionnelle de la présente politique.
+Certains fournisseurs mentionnés à la section 6 traitent vos données à l'extérieur du Québec, principalement aux États-Unis (voir le tableau de la section 6). Nous faisons affaire avec des fournisseurs qui offrent des protections contractuelles et de sécurité adéquates pour les données qu'ils traitent pour notre compte, et nous ne communiquons à chacun que ce qui est nécessaire à sa fonction.
 
 ## 8. Vos droits et comment les exercer
 
@@ -141,11 +137,11 @@ Vous avez le droit :
 - **à la portabilité :** recevoir vos données dans un format structuré et couramment utilisé.
   Aujourd'hui, vous pouvez télécharger vos documents (plan, Dossier, journal de bord) en markdown;
   si vous avez besoin d'une exportation complète de vos données dans un format structuré,
-  écrivez-nous (§12) et nous la préparerons;
+  écrivez-nous (voir la section 12) et nous la préparerons;
 - **de retirer votre consentement** et de porter plainte auprès de la Commission d'accès à
   l'information du Québec.
 
-Pour les exercer, écrivez au responsable de la protection des renseignements personnels (§12).
+Pour les exercer, écrivez au responsable de la protection des renseignements personnels (voir la section 12).
 Nous répondons dans un délai maximal de 30 jours.
 
 ## 9. Crédits et paiements

@@ -1,7 +1,7 @@
 # ÉBAUCHE EN ATTENTE DE RÉVISION PROFESSIONNELLE
 
 > Ébauche établie à partir de l'inventaire des données (`INVENTAIRE_DONNEES.md`) et des limites de
-> portée du BANCO_DE_TEXTOS (§4 et §5). Elle ne constitue pas un avis juridique et n'est pas
+> portée du BANCO_DE_TEXTOS (section 4 et section 5). Elle ne constitue pas un avis juridique et n'est pas
 > publiée : l'application n'y renvoie pas tant que le fondateur ne l'a pas approuvée après la
 > révision d'un professionnel du Québec. **La version française sera obligatoire** et, selon la
 > loi québécoise, doit être offerte en premier (À VÉRIFIER). Les prix ne figurent pas ici : la seule
@@ -11,7 +11,7 @@
 
 # Conditions d'utilisation de My Idea
 
-**Dernière mise à jour :** 7 octobre 2026
+**Dernière mise à jour :** 8 octobre 2026
 **Qui fournit le service :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada
 (« nous »). Adresse postale du commerçant : elle sera publiée ici dès qu'elle sera confirmée; d'ici là, vous pouvez nous écrire à support@myideaproject.com.
 
@@ -95,7 +95,7 @@ compte qui le fait, en vous en avisant lorsque c'est possible.
 ## 7. Notre contenu
 
 L'application, sa conception et son catalogue de connaissances nous appartiennent; vos idées et
-vos documents vous appartiennent (§3).
+vos documents vous appartiennent (voir la section 3).
 
 ## 8. Disponibilité et modifications
 
@@ -106,7 +106,7 @@ progression ni vos crédits en raison d'une défaillance de notre part.
 ## 9. Responsabilité
 
 Dans les limites permises par la loi québécoise, nous ne sommes pas responsables des décisions que
-vous prenez sur la base du contenu de l'application (§4). Rien dans les présentes conditions ne
+vous prenez sur la base du contenu de l'application (voir la section 4). Rien dans les présentes conditions ne
 limite les droits que la loi vous garantit en tant que consommateur.
 
 ## 10. Résiliation

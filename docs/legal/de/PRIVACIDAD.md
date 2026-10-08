@@ -13,7 +13,7 @@
 > Diese deutsche Fassung ist eine Übersetzung, die wir dir der Einfachheit halber zur Verfügung
 > stellen. Bei Abweichungen gilt die spanische Fassung (für Quebec die französische).
 
-**Letzte Aktualisierung:** 7. Oktober 2026
+**Letzte Aktualisierung:** 8. Oktober 2026
 **Verantwortlich:** Alexis Garcia Hurtado, in Quebec, Kanada, eingetragenes Einzelunternehmen („wir“), das die
 App My Idea betreibt.
 
@@ -24,13 +24,13 @@ App My Idea betreibt.
 - **Wir verkaufen deine Daten nicht** und nutzen sie nicht für Werbung. In der App gibt es weder
   Analysetools noch Werbung von Dritten.
 - Damit alles funktioniert, verarbeiten einige Dienstleister deine Daten in unserem Auftrag, einige
-  davon **außerhalb von Quebec** (§6).
-- Du kannst Auskunft, Berichtigung, Übertragung oder Löschung deiner Daten verlangen (§8).
+  davon **außerhalb von Quebec** (siehe Abschnitt 6).
+- Du kannst Auskunft, Berichtigung, Übertragung oder Löschung deiner Daten verlangen (siehe Abschnitt 8).
 
 ## 2. Welche Daten wir verarbeiten
 
 **Daten deines Kontos:** deine E-Mail-Adresse, dein Passwort (als Hash gespeichert, nie im
-Klartext) oder deine Google-Identität, wenn du dich damit anmeldest, sowie deine
+Klartext) oder deine Identität beim externen Anmeldedienst, wenn du dich damit anmeldest, sowie deine
 Sicherheitseinstellungen (die Bestätigung in zwei Schritten, mit verschlüsseltem Geheimschlüssel
 und gehashten Codes).
 
@@ -73,14 +73,14 @@ Herstellers.
 - **Für dein Konto und seine Sicherheit:** die Anmeldung, die Bestätigung in zwei Schritten und
   der Schutz vor Missbrauch (tägliche Nutzungsgrenzen).
 - **Für das Guthaben:** deinen Kontostand führen, den Preis einer Leistung zu Beginn reservieren und
-  ihn nur abbuchen, wenn die Leistung auch geliefert wird (§9).
+  ihn nur abbuchen, wenn die Leistung auch geliefert wird (siehe Abschnitt 9).
 - **Um mit dir zu kommunizieren**, wenn es um dein Konto geht (zum Beispiel der Bestätigungscode per
   E-Mail).
 
 **Für andere Zwecke nutzen wir deine Ideen nicht:** Wir verkaufen sie nicht, nutzen sie nicht für
 Werbung und teilen sie nicht mit anderen Nutzern. Wir selbst trainieren keine KI-Modelle mit deinen Ideen.
-Die Bedingungen, zu denen jeder Dienstleister Daten nutzt, findest du in seiner Datenschutzerklärung
-(§6).
+Jeder Dienstleister verarbeitet deine Daten nur für die
+in Abschnitt 6 genannte Funktion.
 
 ## 4. Grundlage unserer Verarbeitung
 
@@ -88,14 +88,14 @@ Wir verarbeiten deine Daten mit deiner Einwilligung, die du gibst, wenn du deine
 Mal absendest, wenn du dein Konto erstellst und wenn du den Dienst nutzt, sowie soweit es nötig
 ist, um dir den gewünschten Dienst zu erbringen. Diese Einwilligung wird festgehalten, mit oder
 ohne Konto: die Version der Nutzungsbedingungen und dieser Erklärung, der du zugestimmt hast, und
-das Datum (§2). Du kannst deine Einwilligung jederzeit widerrufen, indem du dein Konto löschst
-(§8). Ohne deine Daten können wir dir den Dienst allerdings nicht erbringen.
+das Datum (siehe Abschnitt 2). Du kannst deine Einwilligung jederzeit widerrufen, indem du dein Konto löschst
+(siehe Abschnitt 8). Ohne deine Daten können wir dir den Dienst allerdings nicht erbringen.
 
 ## 5. Die künstliche Intelligenz
 
 My Idea nutzt Sprachmodelle, um sich mit dir zu unterhalten und deine Dokumente zu schreiben. Dazu
 werden der Text deiner Idee, deine Antworten und die Zahlen, die du uns nennst, an einen
-KI-Dienstleister gesendet (§6). Der Plan, den du erhältst, ist ein Vorschlag, über den du selbst
+KI-Dienstleister gesendet (siehe Abschnitt 6). Der Plan, den du erhältst, ist ein Vorschlag, über den du selbst
 entscheidest: Die App trifft keine Entscheidungen über dich mit rechtlicher Wirkung. Die Zahlen
 berechnet deterministischer Code, nicht die KI.
 
@@ -104,23 +104,19 @@ berechnet deterministischer Code, nicht die KI.
 Diese Dienstleister verarbeiten Daten in unserem Auftrag, und zwar nur für die angegebene Funktion.
 Mehrere davon sind außerhalb von Quebec tätig.
 
-| Dienstleister | Funktion | Land | Datenschutzerklärung |
-|---|---|---|---|
-| Anthropic | KI-Modell (Claude), das sich mit dir unterhält und schreibt | Vereinigte Staaten | https://www.anthropic.com/legal/privacy |
-| Voyage AI | semantische Suche in unserem Wissenskatalog | Vereinigte Staaten | https://www.voyageai.com/privacy |
-| Supabase | Datenbank und Authentifizierung | je nach Region des Projekts; kann außerhalb von Quebec liegen | https://supabase.com/privacy |
-| Vercel | Hosting der App | Vereinigte Staaten und andere Länder | https://vercel.com/legal/privacy-policy |
-| Resend | Versand von E-Mails | Vereinigte Staaten | https://resend.com/legal/privacy-policy |
-| Upstash | Nutzungsgrenzen | je nach eingestellter Region; kann außerhalb von Quebec liegen | https://upstash.com/trust |
-| Google | Anmeldung mit Google, wenn du diese Methode wählst | Vereinigte Staaten und andere Länder | https://policies.google.com/privacy |
+| Kategorie | Funktion | Land |
+|---|---|---|
+| Anbieter künstlicher Intelligenz | das Sprachmodell, das mit dir spricht und deine Dokumente verfasst | Vereinigte Staaten |
+| semantische Suche | in unserem Wissenskatalog finden, was zu deiner Idee passt | Vereinigte Staaten |
+| Datenbank und Authentifizierung | deine Daten und dein Konto speichern und dich anmelden lassen | je nach gebuchter Region; kann außerhalb von Quebec liegen |
+| Hosting der App | die App und ihre Seiten bereitstellen | Vereinigte Staaten und andere Länder |
+| E-Mail-Versand | dir die E-Mails zu deinem Konto senden, etwa den Bestätigungscode | Vereinigte Staaten |
+| Nutzungskontrolle | die täglichen Nutzungsgrenzen anwenden | je nach gebuchter Region; kann außerhalb von Quebec liegen |
+| Anmeldung über einen externen Anbieter | dich mit deinem Konto bei diesem Anbieter anmelden lassen, wenn du diese Methode wählst | Vereinigte Staaten und andere Länder |
 
 ## 7. Übermittlungen außerhalb von Quebec
 
-Einige Dienstleister aus §6 verarbeiten deine Daten außerhalb von Quebec, vor allem in den
-Vereinigten Staaten (siehe die Tabelle in §6). Bevor personenbezogene Daten außerhalb von Quebec
-weitergegeben werden, verlangt das Recht von Quebec zu prüfen, ob sie dort angemessen geschützt
-sind, und dies schriftlich mit dem Dienstleister festzuhalten; diese Prüfung ist Teil der
-fachlichen Prüfung dieser Erklärung.
+Einige Dienstleister aus Abschnitt 6 verarbeiten deine Daten außerhalb von Quebec, vor allem in den Vereinigten Staaten (siehe die Tabelle in Abschnitt 6). Wir arbeiten mit Dienstleistern, die angemessene vertragliche und technische Schutzmaßnahmen für die Daten bieten, die sie in unserem Auftrag verarbeiten, und wir geben jedem nur weiter, was für seine Funktion nötig ist.
 
 ## 8. Deine Rechte und wie du sie ausübst
 
@@ -141,12 +137,12 @@ Du hast das Recht:
 - auf **Datenübertragbarkeit:** deine Daten in einem strukturierten, gängigen Format zu erhalten.
   Schon heute kannst du deine Dokumente (Plan, Dossier, Logbuch) als Markdown herunterladen; wenn
   du einen vollständigen Export deiner Daten in einem strukturierten Format brauchst, schreib uns
-  (§12) und wir bereiten ihn für dich vor.
+  (siehe Abschnitt 12) und wir bereiten ihn für dich vor.
 - deine **Einwilligung zu widerrufen** und eine Beschwerde bei der Kommission für den Zugang zu
   Informationen von Quebec (Commission d'accès à l'information) einzureichen.
 
 Um diese Rechte auszuüben, schreib an die für den Schutz personenbezogener Daten verantwortliche
-Person (§12). Wir antworten innerhalb von höchstens 30 Tagen.
+Person (siehe Abschnitt 12). Wir antworten innerhalb von höchstens 30 Tagen.
 
 ## 9. Guthaben und Zahlungen
 
