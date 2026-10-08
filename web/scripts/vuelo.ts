@@ -37,6 +37,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { aceptarTextosLegales, autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, getJson, patchJson, postJson, ROOT } from "./_shared/http";
 import { verificarNumerosHuerfanos } from "../lib/verificadorHuerfanos";
+import { juiciosDeRitmo } from "../lib/coherencia/juicioDeRitmo";
 import { empaquetarFechas } from "../lib/empaquetado";
 import { PRECIOS } from "../lib/precios";
 
@@ -1476,8 +1477,6 @@ async function tuberiaDelCalendario(
 /** Frases que el §3 / regla 8-bis PROHIBEN en un plan de seguimiento: el tono
  * es espejo, jamas regaño. Se comparan sin acentos y en minusculas. */
 const REGANOS = ["vas tarde", "te atrasaste", "no cumpliste", "deberias haber", "vas retrasado", "incumpliste"];
-/** Vocabulario de cumplimiento: prohibido cuando el usuario va "a mi ritmo". */
-const VOCES_CUMPLIMIENTO = ["a tiempo", "tardia", "adelantada", "desviacion", "dias tarde"];
 
 const sinAcentos = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
@@ -1619,10 +1618,11 @@ async function faseBucleTracking(cookie: string, projectId: string) {
   if (!msg2.includes("a mi ritmo")) throw new Error("el bloque no declara el modo 'a mi ritmo'");
   log("OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).");
 
-  const p2 = sinAcentos(c2.markdown);
-  const voces = frasesPresentes(p2, VOCES_CUMPLIMIENTO);
-  if (voces.length > 0) {
-    throw new Error(`el plan a-mi-ritmo habla de cumplimiento (§3 violado): ${voces.join(", ")}`);
+  // El juicio sobre la puntualidad del usuario, no la expresion suelta: "a tiempo" como consejo de negocio vale
+  // (decision del fundador, 8 oct 2026; lib/coherencia/juicioDeRitmo.ts).
+  const juicios = juiciosDeRitmo(c2.markdown);
+  if (juicios.length > 0) {
+    throw new Error(`el plan a-mi-ritmo juzga la puntualidad del usuario (§3 violado): ${juicios.join(" | ")}`);
   }
   log("OK: el plan del ciclo a-mi-ritmo no juzga contra fechas que el usuario no tiene.");
 
