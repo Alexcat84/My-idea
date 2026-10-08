@@ -1,0 +1,371 @@
+
+==============================================================================
+  VUELO Fase 3.0.1 -- cerebro web completo vía HTTP real
+==============================================================================
+BASE_URL: https://www.myideaproject.com
+Fecha: 2026-10-08T14:44:25.566Z
+
+==============================================================================
+  FASE 0 (Fase 3.1): caso sintetico -- numero inyectado fuera de material
+==============================================================================
+OK: numero inyectado (4500) detectado como huerfano -- contexto: "alas, podrias llegar a vender 4500 unidades el proximo trimestre"
+Autenticado como dev user (con la aceptación vigente de los textos legales).
+
+==============================================================================
+  FASE 1: organizer (capa gratuita) -- idea del sonar para ciegos
+==============================================================================
+project_id: d2cedd75-5d18-4b4a-9190-2eef539aa851
+costo_usd: 0.0008331
+tiempo: 5713ms
+--- markdown (primeras 500 chars) ---
+# Organizador de tu idea
+
+**En una frase:** App que ayuda a personas ciegas a guiarse mediante sonidos, usando un sensor tipo sonar y alertas en tiempo real.
+
+**Etapa detectada:** ideacion
+
+## Lo que ya tienes claro
+- El problema que quieres resolver: la orientación y el desplazamiento de personas ciegas.
+- El tipo de solución: un sensor tipo sonar que convierte el entorno en sonidos y alertas.
+- El momento de uso: alertas en tiempo real mientras la persona se mueve.
+
+## Lo que estás asumiendo s
+  voz OK (sin guiones largos): organizer (sonar)
+
+==============================================================================
+  FASE 1b: organizer con idea larga multi-dominio (regresion tope de tokens)
+==============================================================================
+largo del texto: 1237 chars
+project_id: 8ed38143-721c-44f7-bc3c-a47c350e9577
+costo_usd: 0.00072473
+tiempo: 5110ms
+  voz OK (sin guiones largos): organizer (idea larga, markdown)
+  voz OK (sin guiones largos): organizer (idea larga, data)
+OK -- frase: "Una app de auditoría HSEQ virtual que, con una base de conocimiento de las normas ISO 9001..."
+
+==============================================================================
+  FASE 2: sesion completa de macetas de cemento (HTTP + SSE)
+==============================================================================
+Entrada inicial: "Hago y vendo macetas de cemento decorativas, ya tengo ventas reales por Instagram, pero no se si el precio que cobro de verdad me deja ganancia."
+project_id: a703fdd1-d4b9-40d6-a50f-7aeabb2dc69b, session_id: 0226be85-e72d-47aa-85ec-af8874619af4
+
+[turno 1] PREGUNTA: Antes de mirar tu margen, ¿cuánto te cuesta hoy hacer una maceta, sumando el cemento, los moldes, el empaque y las horas que le dedicas?
+[turno 1] RESPUESTA: Hago macetas de cemento decorativas, chicas y medianas, las vendo a tiendas de plantas y directo por Instagram.
+
+[turno 2] PREGUNTA: Cuando dices que vendes a tiendas de plantas y directo por Instagram, ¿qué precio le cobras a la tienda por cada maceta, y cuánto le cobras al cliente final en Instagram?
+[turno 2] RESPUESTA: Cobro por pieza pero no he calculado bien cuanto me cuesta en minutos y materiales hacer cada maceta.
+  nodos nuevos: undefined [salto]
+
+[turno 3] PREGUNTA: Tomando en cuenta que cobras por pieza pero aún no has medido cuánto te toma cada maceta, ¿cuántos minutos te lleva hacer una maceta mediana de principio a fin, desde preparar el cemento hasta el secado y el empaque?
+[turno 3] RESPUESTA: Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende.
+  nodos nuevos: undefined [conversado]
+
+[turno 4] PREGUNTA: Con 15 ventas en dos meses, ¿ya sabes cuánto te cuesta cada maceta en cemento, moldes, empaque y tu tiempo, o todavía no lo has sumado?
+[turno 4] RESPUESTA: Lo que mas me preocupa es no saber si el precio que cobro de verdad me deja ganancia una vez que cuento mi tiempo.
+  nodos nuevos: undefined [salto]
+
+[turno 5] PREGUNTA: Para saber si te deja ganancia con tu tiempo incluido, ¿cuántas horas te toma una maceta de principio a fin, y cuánto quieres ganarte por hora de trabajo?
+[turno 5] RESPUESTA: Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura -- y le dedico un par de horas entre mezclar, moldear y pulir.
+  nodos nuevos: undefined [conversado]
+
+[turno 6] PREGUNTA: Con 68 en materiales y un par de horas por maceta, ¿cuánto te queda de cada una después de restar lo que te cuesta la Instagram, el envío y lo que le das a la tienda de plantas?
+[turno 6] RESPUESTA: Valoro mi hora de trabajo en unos 17, aunque nunca lo habia puesto en numeros asi.
+
+Interprete se detuvo tras 6 turno(s). tipo final: listo_para_plan
+costo acumulado hasta aqui: $0.0122
+
+==============================================================================
+  FASE 2b: ensamblando el plan (SSE streaming)
+==============================================================================
+SSE: 613 deltas de texto recibidos, 0 aviso(s), tiempo total: 38013ms
+evaluacion_cobertura: {"es_completa":true,"tiene_accion_clientes":true,"tiene_viabilidad_economica":true,"familias_faltantes":[]}
+costo_usd (sesion completa, incluye el plan): $0.1389
+--- plan generado (completo) ---
+_Plan completo_
+
+# Calcula si el precio de tus macetas de cemento te deja ganancia real
+
+Ya tienes unas 15 ventas reales en dos meses, por Instagram y a través de una tienda de plantas que te las revende. Eso confirma que hay quien paga por tu producto. Lo que falta saber es si, con todo contado (materiales, tu tiempo y lo que cobras), te queda algo o estás regalando trabajo. Este plan arma esa cuenta con tus números: 68 de materiales por maceta, un par de horas de trabajo y tu hora valorada en unos 17.
+
+## Etapa 1: Descubre cuánto te cuesta de verdad cada maceta
+
+Hoy sabes lo que gastas en materiales, pero tu tiempo nunca lo habías puesto en números. Una maceta no cuesta 68: cuesta 68 más las horas que le dedicas.
+
+**Pasos:**
+1. Anota, para cada tamaño (chica y mediana), cuánto gastas en cemento, moldes y pintura por pieza. Si los moldes duran muchas piezas, reparte su precio entre las que sacas con cada uno.
+2. Mide con reloj cuánto tardas en mezclar, moldear y pulir una maceta de cada tamaño, sin contar los tiempos de espera del secado.
+3. Multiplica esas horas por el valor de tu hora (unos 17) y suma el resultado a tus materiales.
+4. Anota el costo total por unidad de cada tamaño.
+
+**Entregable:** Una hoja con el costo real por maceta, separado en materiales y tiempo, para cada tamaño.
+
+**Primera acción:** Haz una maceta mediana con el cronómetro del celular, apunta los minutos de cada paso (mezclar, moldear, pulir) y anota al lado lo que gastaste en materiales para esa pieza.
+
+## Etapa 2: Separa lo que cuesta cada pieza de lo que cuesta mantener tu taller
+
+Para saber qué te queda de verdad, necesitas distinguir qué gastos cambian con cada maceta que haces y cuáles pagas aunque no hagas ninguna.
+
+**Pasos:**
+1. Clasifica cada gasto como variable (cemento, pintura, tu tiempo de producción) o fijo (herramientas, moldes si los pagas de golpe, espacio de trabajo, lo que pagas por publicar o enviar).
+2. Revisa que la clasificación tenga lógica para tu caso y mantenla igual de un mes a otro, para que tus cuentas se puedan comparar con el tiempo.
+3. Anota los gastos fijos de un mes típico.
+
+**Entregable:** Una lista de tus costos separados en variables y fijos, con el total de fijos al mes.
+
+**Primera acción:** Escribe en una hoja todo lo que pagaste el mes pasado para poder hacer macetas, y márcalo como variable o fijo.
+
+## Etapa 3: Calcula cuánto te queda por cada maceta que vendes
+
+Aquí responde la duda que te trajo hasta aquí: si lo que cobras cubre tus costos y deja ganancia.
+
+**Pasos:**
+1. Calcula tu margen: (precio de venta − costo de lo que vendes) ÷ precio de venta, una vez con el tiempo incluido y otra solo con materiales, para ver cuánto cambia el resultado.
+2. Haz la cuenta por separado en tus dos canales. Lo que cobras en Instagram y lo que le cobras a la tienda, que seguramente te compra más barato, pueden dejarte márgenes muy distintos.
+3. Revisa si el margen alcanza para cubrir tus gastos fijos y todavía dejarte utilidad.
+4. Si el margen sale bajo o negativo, anota qué lo causa: precio demasiado bajo, descuentos a la tienda o costos altos de producción.
+
+**Entregable:** El margen por maceta de cada tamaño y cada canal, con tu conclusión: ¿el precio actual te deja ganancia real o no?
+
+**Primera acción:** Toma el precio al que vendiste tu última maceta mediana y réstale el costo total que calculaste en la Etapa 1 (materiales más tiempo) para ver cuánto te quedó.
+
+## Etapa 4: Averigua cuántas macetas necesitas vender para que valga la pena
+
+Un margen positivo no basta si vendes muy pocas piezas para cubrir tus gastos fijos. Este número te dice la meta mensual mínima.
+
+**Pasos:**
+1. Calcula el margen de contribución por unidad: precio de venta menos costo variable por maceta.
+2. Divide tus costos fijos mensuales entre ese margen para obtener cuántas macetas debes vender al mes para quedar a mano.
+3. Compara ese número con lo que realmente puedes producir con tus horas disponibles: si necesitas más piezas de las que tu tiempo permite, el precio o los costos tienen que cambiar.
+4. Recalcula este número cada vez que cambie tu precio o tus costos fijos.
+
+**Entregable:** Tu punto de equilibrio en macetas por mes, con los costos fijos y el margen por unidad que lo sustentan.
+
+**Primera acción:** Suma tus gastos fijos del mes y divídelos entre lo que te deja cada maceta, para ver cuántas necesitas vender solo para cubrirlos.
+
+## Etapa 5: Ajusta tu precio y comprueba que los clientes lo aceptan
+
+Con tus números claros, decide si el precio sube, se queda o se reparte distinto entre tus canales, y prueba que la gente sigue comprando.
+
+**Pasos:**
+1. Define tu hipótesis de precio con un número concreto para cada tamaño, a partir de lo que descubriste en las etapas anteriores.
+2. Pruébalo con clientes reales cambiando una sola cosa a la vez (por ejemplo, el precio de un tamaño en Instagram) y compara las ventas contra el precio anterior.
+3. Anota qué resultado te bastaría para considerar que el nuevo precio funciona (por ejemplo, cuántas ventas mantienes).
+4. Revisa con la tienda de plantas si tu precio de reventa te deja margen suficiente, y decide si lo renegocias.
+5. Decide con los datos en la mano: si el precio nuevo se sostiene, sigue con él; si las ventas caen más de lo que aceptas, ajusta de nuevo.
+
+**Entregable:** Tu decisión escrita de precio por tamaño y canal, con el resultado de la prueba que la respalda.
+
+**Primera acción:** Elige un tamaño de maceta y publica en Instagram el nuevo precio que calculaste, anotando cuántas consultas y ventas recibes en comparación con las anteriores.
+
+## ¿Puede sostenerse tu idea? Los números en simple
+
+Con ventas reales y un costo de materiales de 68 por maceta, la pregunta es si el precio paga también tu tiempo y tus gastos fijos. Estos son los números que lo responden:
+
+- **Costo por unidad:** materiales (68) más tus horas valoradas en unos 17 cada una. Es lo mínimo que debe cubrir cada venta.
+- **Margen por maceta:** el precio al que vendes menos ese costo, medido por separado en Instagram y en la tienda.
+- **Costos fijos al mes:** lo que pagas aunque ese mes no vendas, como herramientas, moldes o espacio.
+- **Punto de equilibrio:** costos fijos divididos entre el margen por maceta. Es cuántas piezas necesitas vender al mes para no perder.
+
+Si ese número de piezas es mayor que lo que puedes producir con tus horas, el precio o los costos deben cambiar.
+
+**Primera acción:** Anota tu costo total por maceta mediana (materiales más tiempo) y el precio al que la vendes en Instagram, y resta uno del otro.
+
+==============================================================================
+  FASE 2c (Hotfix v2.2.2): verificando persistencia real de saltos semanticos
+==============================================================================
+saltos detectados en la ruta: undefined (customer_validation_sell_phase), undefined (hoja_estimacion_costos), undefined (margen_bruto)
+  OK: project_nodes.tipo='salto' persistido correctamente para 'customer_validation_sell_phase'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'hoja_estimacion_costos'
+  OK: project_nodes.tipo='salto' persistido correctamente para 'margen_bruto'
+
+==============================================================================
+  FASE 2d (Fase 3.1): verificando la bitacora de decisiones (caja de vidrio)
+==============================================================================
+decision_turno persistidos: 7, con salto+score verificable: 3
+OK: los 3 saltos quedaron en la bitacora con su score de afinidad.
+OK: procedencia por etapa valida (sin eventos procedencia_invalida en la bitacora).
+
+==============================================================================
+  FASE 2e (Fase 3.2): eventos del arbol == ruta persistida, 1:1 y en orden
+==============================================================================
+eventos del arbol (6): metricas_accionables[conversado] -> customer_validation_sell_phase[salto] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> margen_bruto[salto] -> margen_operativo[conversado]
+ruta persistida  (6): metricas_accionables[conversado] -> customer_validation_sell_phase[salto] -> hoja_estimacion_costos[salto] -> linea_base_costos[conversado] -> margen_bruto[salto] -> margen_operativo[conversado]
+OK: el arbol que piensa muestra EXACTAMENTE la ruta persistida (misma secuencia, mismos modos).
+
+==============================================================================
+  FASE 2f (Fase 3.3): checklist -> PATCH -> follow -> plan seguimiento encadenado
+==============================================================================
+checklist derivado: 25 items en 5 etapa(s), dominio 'core'
+OK: estructura del checklist (1 destacado por etapa, al final; todos pendientes; resumen consistente).
+OK: 'Anota, para cada tamaño (chica y mediana), cuánto …' -> hecho (con nota); destacado etapa 1 -> en_proceso.
+OK: retirada 'Mide con reloj cuánto tardas en mezclar,…' con motivo; activas=24, retiradas=1.
+OK: el expediente muestra la retirada aparte, con su motivo, y no como pendiente.
+OK: reactivación conserva historia en project_bitacora (retiro + reactivación).
+OK: estado fuera de CHECKLIST_ESTADO rechazado con 400.
+nodos cubiertos antes del follow: 31
+follow session_id: f192d1aa-699b-4333-89b5-5cc4e7051330, tipo primer turno: pregunta
+OK: puerta avanzada 'undefined' (demand_curve_pricing) fuera de lo ya cubierto.
+OK: mensaje compuesto auditable (estados, nota, detalles, enfoque, y la retirada aparte sin reproponerse).
+
+[seguimiento turno 1] PREGUNTA: Ya tienes el costo por maceta (68 en materiales más unas dos horas a 17 la hora), así que la cuenta que falta es cuánto te queda después de Instagram, el envío y lo que te cobra o te paga la tienda de plantas. ¿Sabes ya qué precio te dejó la última maceta mediana en cada canal?
+[seguimiento turno 1] RESPUESTA: Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.
+
+[seguimiento turno 2] PREGUNTA: Con ese costo de 130 por pieza, ¿ya sacaste cuánto te queda neto a 250 después de Instagram, el envío y lo que te quita o te paga la tienda de plantas?
+[seguimiento turno 2] RESPUESTA: Vendo unas 12 macetas al mes por Instagram, y el proveedor nuevo me baja el cemento un 20%.
+
+[seguimiento turno 3] PREGUNTA: Con 12 macetas al mes a 250 y el cemento bajando 20%, ¿ya calculaste cuánto te queda limpio al mes después de Instagram, el envío y la tienda de plantas, sin contar tu hora?
+[seguimiento turno 3] RESPUESTA: Mi duda ahora es si producir por lotes de 10 o seguir por pedido; por pedido no me atraso, pero pierdo el descuento de materiales.
+
+[seguimiento turno 4] PREGUNTA: Con lotes de 10 te ahorras en materiales, pero tienes que poner ese cemento antes de venderlo; ¿cuánto dinero tienes disponible para comprar material de una vez sin que te falte para el resto del mes?
+[seguimiento turno 4] RESPUESTA: Sí: tengo dos clientes mayoristas interesados que me pidieron precio por docena, todavía no les respondo.
+
+listo_para_plan tras 4 turno(s) de seguimiento.
+OK: plan persistido con etiqueta 'seguimiento' (48ea3014-7e79-44ab-847e-fb92493dce87).
+OK: checklist encadenado (28 items nuevos del plan de seguimiento; hechos previos preservados).
+OK: el replan nace estimado -- 28/28 items del plan de seguimiento traen banda.
+
+==============================================================================
+  FASE 2g (Fase 3.5): mundos HSEQ -- el muro, el unlock y el ciclo
+==============================================================================
+OK: contrato 4.5 -- sin plan core el mundo no abre (409); el muro de pago 403 murió.
+OK: pack fuera del catalogo rechazado (404).
+OK: unlock de quality con 5 creditos (stub).
+OK: unlock idempotente (23505 absorbido).
+OK: fila persistida (creditos_pagados=0).
+world session: 5a3c22c8-c85e-478f-8827-b3b442be22f0, tipo: pregunta
+[mundo turno 1] Con tus macetas, ¿cómo sabes hoy si el trabajo sale bien: solo miras el resultado final de cada pieza o también revisas cómo la haces, sobre todo cuando se repiten los mismos errores, como un secado parejo o un acabado que no te sale?
+[mundo turno 2] Dices que tus clientes se quejan de burbujas y acabados irregulares entre lotes, y lo que más te preocupa es si el precio te deja ganancia real; ¿ya tienes anotado cuánto te queda limpio por maceta después de Instagram, el envío y lo que se queda la tienda de plantas?
+[mundo turno 3] Tu prioridad sigue siendo saber si cada maceta te deja ganancia contando tu tiempo, y las piezas que fallan son parte de eso: si revisas cada pieza al final, ¿puedes estimar cuántas salen con burbujas o acabados malos por lote, y cuánto te cuesta rehacerlas en materiales y horas?
+[mundo turno 4] Buena idea: detectar el defecto antes de hornear te ahorra la pieza entera. Y como tu prioridad es saber cuánto te deja cada maceta, vale la pena que lo midas: ¿cuántas piezas de un lote de 10 salen con burbujas o acabado malo hoy, y cuántas veces has tenido que rehacer una desde cero?
+OK: ciclo completo del mundo (plan dominio=quality, checklist quality con 27 items).
+
+==============================================================================
+  FASE 2g-bis (v1.3.2): mundos nuevos -- murallas x2 + ciclo de seguridad_digital
+==============================================================================
+OK: 'exportacion' abre su preview gratis (200); el muro murió.
+OK: 'franquicias' abre su preview gratis (200); el muro murió.
+OK: unlock de seguridad_digital con 5 creditos (migracion 017 viva).
+world session: 93d19de5-b82d-4ec2-9ca3-e7aa3b3f4af1, tipo: pregunta
+[seguridad_digital turno 1] Cuando abres los gastos del mes pasado para escribirlos uno por uno en la hoja (actividad #10), también pasas por tu Instagram, el correo del negocio y los pagos a la tienda de plantas: ¿en esas cuentas te basta con una contraseña o también te piden una segunda prueba, como un código al celular o una huella?
+[seguridad_digital turno 2] Ninguna actividad del plan toca el tema de las contraseñas ni de la seguridad de tus cuentas. Ahí el plan se queda sin anclaje, así que la pregunta va tal cual:
+
+Tu prioridad sigue siendo saber si cada maceta te deja ganancia contando tu tiempo, y eso va primero; mientras la cierras, ¿tu Instagram y el correo del negocio tienen contraseña fuerte y una segunda prueba, como un código al celular?
+[seguridad_digital turno 3] Si al repasar tus gastos y tus ventas (actividades #6 y #10) notas algo raro, como un cobro que no reconoces o un acceso a tu cuenta de Instagram o a tu computadora que no es tuyo, ¿qué crees que deberías hacer primero? ¿Tienes claro qué harías tú mismo en ese momento, sin nadie por encima que te diga qué hacer?
+[seguridad_digital turno 4] En la actividad #12 ("Repite la cuenta por separado en Instagram y en la tienda de plantas"), vas a calcular el margen de cada canal: ¿ya tienes una cifra de lo que te queda limpio por maceta a 250 en Instagram y en la tienda, después de restar tu costo de 130, el envío y lo que se queda la tienda?
+[seguridad_digital turno 5] Ninguna de las actividades de tu plan toca la seguridad de tus cuentas, así que la pregunta se queda igual: Tu prioridad sigue siendo saber si cada maceta te deja ganancia contando tu tiempo, y eso va primero; mientras la cierras, ¿tu Instagram y el correo del negocio tienen contraseña fuerte y una segunda prueba, como un código al celular?
+[seguridad_digital turno 6] Tu prioridad es saber si cada maceta te deja ganancia contando tu tiempo, y eso va primero. Como trabajas solo, ¿cuántas macetas sacas en una semana normal, y cuando haces la cuenta de la actividad #12 (repetir el margen por separado en Instagram y en la tienda de plantas), ya sabes cuánto te queda limpio por cada una después de Instagram, el envío y lo que se queda la tienda?
+[seguridad_digital turno 7] Cuando haces la actividad #25 (probar con clientes reales cambiando una sola cosa a la vez, por ejemplo el precio de un tamaño en Instagram), o cuando te piden precio por docena, ¿cómo sabes si ese interés es real o solo cariño por lo que haces?
+[seguridad_digital turno 8] Tu prioridad es saber cuánto te deja cada maceta contando tu tiempo, y en el plan vas a apuntar los minutos de cada paso con el cronómetro (#1) y a comparar tus ventas contra lo que puedes producir con tus horas disponibles (#19); mientras tanto, ¿cuántas macetas sacas en una semana normal, trabajando solo?
+[seguridad_digital turno 9] Ninguna actividad del plan trata de fallas, defectos o calidad de las piezas, así que la pregunta se queda como está:
+
+Cuando piensas en lo que podría fallar con tus macetas, como piezas que se rompen, acabados que salen mal o clientes que se quejan, ¿tienes hoy alguna forma ordenada de decidir qué fallas aceptas, cuáles corriges antes de hornear y cómo las vigilas?
+[seguridad_digital turno 10] Sabes que tu prioridad es saber cuánto te deja cada maceta contando tu hora, así que empecemos por ahí: ¿ya anotaste el precio exacto de tu última maceta mediana por Instagram y le restaste los 130 de costo total (actividad #16) para ver cuánto te quedó, y qué cifra te salió?
+[seguridad_digital turno 11] Si vendes tus macetas a empresas o instituciones que piden requisitos formales, ¿qué tienes hoy por escrito sobre cómo cuidas la calidad de cada pieza y qué reglas siguen las personas que trabajan contigo cuando preparan o entregan un lote?
+[seguridad_digital turno 12] ¿De qué depende tu negocio para poder cumplir con el costo que vas a calcular en #3 (el cemento, los moldes, la pintura) y con el margen que vas a sacar en #12 (Instagram y la tienda de plantas), y qué pasaría con esas cuentas si uno de esos proveedores o servicios dejara de estar disponible o tuviera un problema?
+[seguridad_digital turno 13] Tu frente principal es saber cuánto te deja cada maceta contando tu hora, así que vamos directo a eso: en la actividad #12, donde repites la cuenta por separado en Instagram y en la tienda de plantas, ¿ya restaste de los 250 el costo total de 130 y los cargos de Instagram, el envío y lo que se queda la tienda, para ver qué cifra te queda limpia en cada canal?
+OK: ciclo completo del mundo nuevo (plan dominio=seguridad_digital, checklist con 27 items).
+
+==============================================================================
+  FASE 2g-ter (v1.4): Riesgos Bajo Control -- contrato 4.5 (sin muro, unlock gratis) + ciclo
+==============================================================================
+OK: risk_management sin muro de pago (contrato 4.5); el ciclo abajo prueba su preview.
+OK: unlock de risk_management (precio de catálogo 5, migracion 019 viva).
+world session: f5ef77df-e004-4b42-af4d-17ecea7c6c3c, tipo: pregunta
+[risk_management brecha] primera pregunta (semilla del mapeo, cero LLM): Cuando haces las cuentas de las actividades #6 a #9 (anotar los gastos del mes, clasificarlos y sumar tus gastos fijos), ¿tienes hoy un momento fijo cada mes para mirar también los riesgos de tu negocio, como que te roben la cuenta de Instagram o que pierdas el celular con tus pedidos, o solo vuelves a ellos cuando te sobra tiempo o cuando alguno ya te dio un problema?
+[risk_management turno 1] Cuando haces las cuentas de las actividades #6 a #9 (anotar los gastos del mes, clasificarlos y sumar tus gastos fijos), ¿tienes hoy un momento fijo cada mes para mirar también los riesgos de tu negocio, como que te roben la cuenta de Instagram o que pierdas el celular con tus pedidos, o solo vuelves a ellos cuando te sobra tiempo o cuando alguno ya te dio un problema?
+[risk_management turno 2] Tu prioridad es saber si esa maceta te deja ganancia contando tu hora, y lo que dices del proveedor de resina pesa mucho en esa cuenta; en la actividad #4, donde recalculas tu costo de materiales con el precio nuevo del cemento, ¿cuánto te cuesta hoy el cemento por maceta y qué pasaría con tu margen si ese precio subiera un 30%?
+[risk_management turno 3] Tu prioridad sigue siendo saber si cada maceta te deja ganancia contando tu hora, y eso va primero; en la actividad #12 ("Repite la cuenta por separado en Instagram y en la tienda de plantas"), ¿cuánto te queda limpio por maceta a 250 en Instagram, después de restar tu costo de 130 y el envío, y qué cifra sale distinta en la tienda de plantas por lo que te cobra o te paga?
+[risk_management turno 4] Tu prioridad sigue siendo saber cuánto te deja cada maceta contando tu hora, y eso va primero; en la actividad #16 (anotar el precio exacto de tu última maceta mediana por Instagram y restarle tus 130 de costo total), ¿qué cifra te queda limpia por pieza si además descuentas el envío?
+[risk_management turno 5] Tu frente principal es saber cuánto te deja cada maceta contando tu hora, y en la actividad #4 vas a recalcular el costo de materiales con el cemento 20% más barato del proveedor nuevo. Antes de hacer esa cuenta, ¿ya tienes confirmado por escrito el precio que ese proveedor te dará por el cemento, o por ahora es solo una promesa de palabra?
+[risk_management turno 6] En la actividad #16 vas a restar tus 130 de costo total al precio exacto de tu última maceta mediana en Instagram: ¿ya tienes esa cifra, y cuánto te queda limpio por pieza una vez que también restas el envío?
+[risk_management turno 7] Tu prioridad sigue siendo saber cuánto te deja cada maceta contando tu hora; en la actividad #16 (anota el precio exacto de tu última maceta mediana por Instagram y réstale tu costo total de 130), ¿cuánto te queda limpio por pieza a 250 después de restar esos 130 y el envío?
+[risk_management turno 8] En la actividad #16 ("Anota el precio exacto al que vendiste tu última maceta mediana por Instagram y réstale tu costo total de 130 para ver cuánto te quedó"), ¿ya sacaste cuánto te queda limpio por esa pieza después de restar los 130 y el envío, y qué cifra te salió?
+[risk_management turno 9] Cuando hagas la actividad #16, donde anotas el precio exacto al que vendiste tu última maceta mediana por Instagram y le restas tus 130 de costo total, ¿cuánto te queda limpio por pieza una vez que también descuentas el envío?
+[risk_management turno 10] Para repetir la cuenta por separado en Instagram y en la tienda de plantas (actividad #12), te falta un dato: ¿cuánto te cobran Instagram y el envío por una maceta mediana, y la tienda de plantas te compra a precio de mayoreo o se queda con una comisión?
+[risk_management turno 11] En la actividad #16 vas a anotar el precio exacto de tu última maceta mediana por Instagram y restarle tus 130 de costo total; para saber si esos 250 te dejan ganancia limpia, ¿ya le restaste también los cargos de Instagram y el envío, y en el caso de la tienda de plantas lo que se queda ella (actividad #12), aunque sea con cifras aproximadas?
+[risk_management turno 12] De las compras que estás considerando, como comprar cemento por lotes de 10 (actividad #20) o el siguiente juego de moldes, cuando cierres la cuenta de cuánto te queda por maceta (actividades #12 y #13), ¿qué te preocupa más: descartar rápido las que no te convienen, saber cuánto dinero te queda de verdad en el bolsillo al final, o poder explicarle a alguien cuánto vas a ganar?
+[risk_management turno 13] Al clasificar tus gastos en la actividad #7 y al calcular cuántas macetas necesitas vender para quedar a mano en la #18, ¿dónde sientes que se te queda atrapado más dinero: en lo que la tienda de plantas o tus clientes todavía no te pagan, en el cemento y las macetas que tienes guardados sin vender, o en el tiempo que pasa entre que pones el dinero para producir y cuando de verdad lo recuperas?
+[risk_management turno 14] Tu prioridad es saber si cada maceta te deja ganancia contando tu hora, y eso se cierra con la actividad #12 (repetir la cuenta por separado en Instagram y en la tienda de plantas): ¿cuánto te cobran en cada canal, entre Instagram, el envío y lo que se queda la tienda cuando te revende, sobre una maceta de 250?
+[risk_management turno 15] En la actividad #3, donde sumas el costo de materiales y de tu hora para sacar el costo total por unidad de cada tamaño, ¿cuánto arriesgas hoy en una sola maceta entre materiales (68), tu tiempo (dos horas a 50) y el esfuerzo de producirla, y cuánto podrías ganar por pieza si el precio de 250 te deja la ganancia que buscas?
+OK: ciclo completo del 7.o mundo (plan dominio=risk_management, checklist con 36 items).
+
+==============================================================================
+  FASE 2g-quater (mundo 11): Primer Equipo -- oculto, unlock gratis (048), su puerta y su plan
+==============================================================================
+OK: unlock de primer_equipo (precio de catalogo 5, migracion 048 viva, fila gratis).
+world session: 8ac9a771-8cc2-4423-8892-a6b328baa558, tipo: pregunta
+[primer_equipo brecha] primera pregunta: Como trabajas solo, ¿cómo te das tu propia retroalimentación cuando terminas una maceta o un lote, y cuánto tardas en revisar si lo hiciste bien?
+  voz OK (sin guiones largos): primera pregunta de primer_equipo
+[primer_equipo turno 1] Como trabajas solo, ¿cómo te das tu propia retroalimentación cuando terminas una maceta o un lote, y cuánto tardas en revisar si lo hiciste bien?
+  voz OK (sin guiones largos): pregunta 1 de primer_equipo
+[primer_equipo turno 2] Dices que acabas de contratar a tus dos primeros empleados para el taller, pero tu ficha dice que trabajas solo: ¿ya están trabajando contigo, o todavía es un plan que estás por arrancar?
+  voz OK (sin guiones largos): pregunta 2 de primer_equipo
+[primer_equipo turno 3] Cuando les hablas a tus dos empleados solo cuando algo sale mal y a las carreras, ¿alguna vez han entendido exactamente qué esperas de ellos y qué hacer distinto la siguiente vez, o te quedas con la sensación de que el mensaje no llegó?
+  voz OK (sin guiones largos): pregunta 3 de primer_equipo
+[primer_equipo turno 4] Ya que uno entrega tarde y el otro va bien pero nunca se lo has dicho, ¿qué le dirías hoy al que va bien para que sepa exactamente qué te gustaría que siga haciendo?
+  voz OK (sin guiones largos): pregunta 4 de primer_equipo
+[primer_equipo turno 5] Cuando piensas en el próximo que vas a contratar para el taller, ¿cuánto depende hoy de la corazonada y cuánto de un proceso: tener claro qué debe lograr esa persona, reunir candidatos, elegir con entrevistas y convencer al que elijas?
+  voz OK (sin guiones largos): pregunta 5 de primer_equipo
+[primer_equipo turno 6] Antes de meterte de lleno con tus empleados, ¿cuánto te cuesta hoy cada maceta si la haces tú: cemento, moldes, pintura y tu hora a 50, sin contar nada más?
+  voz OK (sin guiones largos): pregunta 6 de primer_equipo
+[primer_equipo turno 7] Ya tienes dos personas en el taller y, según cuentas, todavía no sabes muy bien qué se espera de cada una. ¿Cuánto tienes escrito sobre para qué existe su puesto, qué resultados concretos debería lograr cada uno y cómo te gustaría que trabajaran para conseguirlos?
+  voz OK (sin guiones largos): pregunta 7 de primer_equipo
+[primer_equipo turno 8] Dices que con eso te basta por ahora, pero tu prioridad sigue siendo saber si las 250 te dejan ganancia real. ¿Cuánto te queda limpio por maceta después de Instagram, el envío y lo que se queda la tienda de plantas?
+  voz OK (sin guiones largos): pregunta 8 de primer_equipo
+[primer_equipo turno 9] Ya tienes claro qué se espera de cada uno de tus dos empleados, qué resultados buscas y cómo debería trabajar quien ocupa cada puesto. ¿Cómo piensas comunicarles eso, sobre todo al que entrega tarde y al que va muy bien? ¿Hay algo que hayas escrito y que sientas que no está del todo alineado con lo que de verdad quieres, o que podría confundirlos?
+  voz OK (sin guiones largos): pregunta 9 de primer_equipo
+[primer_equipo turno 10] Con tus dos empleados ya en el taller, ¿qué es lo primero que harías esta semana para que el que entrega tarde sepa exactamente qué se espera de él, sin que lo sienta como un ataque?
+  voz OK (sin guiones largos): pregunta 10 de primer_equipo
+[primer_equipo turno 11] Ya tienes clara la forma de calificar a quienes postulan para tu taller, ¿cómo piensas trasladar esa claridad a tus dos empleados actuales, sobre todo a la hora de decirles cuándo algo no está bien? ¿Ya has tenido alguna conversación así con alguno de ellos, o todavía no encuentras el momento?
+  voz OK (sin guiones largos): pregunta 11 de primer_equipo
+[primer_equipo turno 12] Ahora que ya tienes dos personas en el taller, ¿qué te atrae más de dirigirlas: que el trabajo salga bien y a tiempo, tener conversaciones frecuentes con ellas, o darles calma cuando algo se complica? Y en tu día a día real, ¿cuál de esas tres cosas te cuesta más hacer hoy?
+  voz OK (sin guiones largos): pregunta 12 de primer_equipo
+[primer_equipo turno 13] Imagina que uno de tus dos empleados, el que va muy bien, te dice que se quiere ir. ¿Cómo sería tu primera reacción y qué tanto sabrías ya de sus razones de fondo, más allá de lo que te diga en la superficie?
+  voz OK (sin guiones largos): pregunta 13 de primer_equipo
+[primer_equipo turno 14] Cuando revisas tus macetas antes de entregarlas, ¿en qué parte de ese trabajo sientes que pones tu valor de verdad y en cuál solo estás pasando lo que ya hicieron otros? Y de lo nuevo en tu sector, como cementos, acabados o formas, ¿cuánto llegas a conocer o probar tú mismo en el taller?
+  voz OK (sin guiones largos): pregunta 14 de primer_equipo
+[primer_equipo turno 15] Si miras tu taller como una pequeña producción, ¿sabrías decir qué parte de tu trabajo transforma el cemento en maceta, cuál junta las piezas o les pone el acabado, y en qué momento revisas cada una antes de entregarla? Y si ya tienes a tus dos empleados, ¿cómo se reparte hoy esa revisión entre tú y ellos?
+  voz OK (sin guiones largos): pregunta 15 de primer_equipo
+[primer_equipo turno 16] Si decides revisar cómo evalúas el trabajo de tus dos empleados, ¿quién podría acompañarte a hacerlo, alguien que conozca de cerca cómo se hacen las macetas en el taller, y cómo harías para que el proceso no se alargue ni te quite demasiado tiempo a ti y a ellos?
+  voz OK (sin guiones largos): pregunta 16 de primer_equipo
+  voz OK (sin guiones largos): plan de primer_equipo
+  sin titulos ni autores de libros en el plan: OK
+OK: ciclo completo del mundo 11 (16 turnos, plan dominio=primer_equipo, checklist con 37 items).
+
+==============================================================================
+  FASE 2h (Fase 3.6): contrato de la UI -- /api/idea con unlocks, mundos e historial
+==============================================================================
+OK: unlocks = ["exportacion","franquicias","primer_equipo","quality","risk_management","seguridad_digital"] (fila real de project_unlocks).
+OK: historial con 1 plan(es) core anteriores, releibles.
+OK: el plan de la vista es el ultimo CORE (los planes de mundos no lo tapan).
+OK: seccion de mundo quality con su plan.
+OK: grupo vigente = ultimo cronologico (la pantalla Manos a la Obra pinta el checklist correcto).
+
+==============================================================================
+  FASE 2i (Fase 3.8): el sentido del tiempo -- modo, timeline real, baseline, analisis, celebracion
+==============================================================================
+OK: modo del camino = 'ritmo' (persistido).
+OK: timeline real -- completed_at ANTERIOR al proyecto aceptado y persistido (se revirtio la restriccion, 8 oct 2026).
+OK: analisis a-mi-ritmo -- capa universal sola (acciones=2, cumplimiento=null).
+OK: modo del camino = 'fechas'.
+OK: linea base sellada (4 fechas, baseline_confirmada_at=2026-10-08T14:55:31.247Z).
+OK: analisis con cumplimiento -- 1 a tiempo, 1 adelantadas, 1 tardias; la tarea declarada antes del proyecto queda fuera de la puntualidad.
+OK: realizada -> celebracion (timeline de 13 hitos con acciones y REALIZADA).
+OK: reabrir puso realizada_at a null (la idea vuelve a estar viva).
+OK: empaquetado -- la S cae en la semana 1 y la XL en la 4 (misma etapa, capacidad 5-10).
+OK: tuberia del calendario -- el .ics exporta las fechas EMPAQUETADAS tal cual, con UID estable.
+
+==============================================================================
+  FASE 2j (Fase 4.0): el bucle de tracking -- bloque de realidad, dos ciclos, y el acta
+==============================================================================
+OK: el BLOQUE DE REALIDAD llego al motor con cumplimiento (modo fechas), auditable en la bitacora.
+OK: el plan de seguimiento asume la desviacion SIN regañar (cero frases prohibidas).
+OK: en 'a mi ritmo' el bloque NO menciona cumplimiento (aunque la baseline vieja siga existiendo).
+
+==============================================================================
+  VUELO FALLIDO
+==============================================================================
+Error: el plan a-mi-ritmo habla de cumplimiento (§3 violado): a tiempo
+    at faseBucleTracking (C:\Users\AlexDesk\Documents\my-idea-main\web\scripts\vuelo.ts:1625:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async main (C:\Users\AlexDesk\Documents\my-idea-main\web\scripts\vuelo.ts:3020:29)
