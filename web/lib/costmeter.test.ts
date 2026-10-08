@@ -8,6 +8,7 @@ import {
   CACHE_READ_MULT,
   CACHE_WRITE_MULT,
   MODEL_HAIKU,
+  MODEL_HAIKU_4_5,
   costoAcumuladoUsd,
   costoLlamadaUsd,
   desgloseCosto,
@@ -23,7 +24,8 @@ describe("costoLlamadaUsd -- caso real documentado (hotfix v2.1.2)", () => {
     //   cache_write: 1275 / 1e6 * 1.00 * 1.25 = 0.00159375
     //   out:         575 / 1e6 * 5.00        = 0.002875
     //   total = 0.000003 + 0.0008081 + 0.00159375 + 0.002875 = 0.00527985
-    const costo = costoLlamadaUsd(MODEL_HAIKU, 3, 575, 8081, 1275);
+    // Caso medido con Haiku 4.5 (su precio se conserva en la tabla tras pasar a Haiku 5.5, 8 oct 2026).
+    const costo = costoLlamadaUsd(MODEL_HAIKU_4_5, 3, 575, 8081, 1275);
     expect(Number(costo.toFixed(4))).toBe(0.0053);
     expect(costo).toBeCloseTo(0.00527985, 8);
   });
@@ -37,11 +39,12 @@ describe("multiplicadores de cache", () => {
 });
 
 describe("registrarUso + costoAcumuladoUsd: acumula sin mutar el original", () => {
+  // Cálculos a mano con el precio de Haiku 4.5 (1,00 / 5,00), que se conserva en la tabla.
   it("dos llamadas al mismo modelo se suman; el acumulador original queda intacto", () => {
     const inicial = usoVacio();
     const despuesDeUnaLlamada = registrarUso(
       inicial,
-      MODEL_HAIKU,
+      MODEL_HAIKU_4_5,
       { input_tokens: 100, output_tokens: 20, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 },
       "turnos"
     );
@@ -50,13 +53,13 @@ describe("registrarUso + costoAcumuladoUsd: acumula sin mutar el original", () =
 
     const despuesDeDosLlamadas = registrarUso(
       despuesDeUnaLlamada,
-      MODEL_HAIKU,
+      MODEL_HAIKU_4_5,
       { input_tokens: 50, output_tokens: 10, cache_read_input_tokens: 0, cache_creation_input_tokens: 0 },
       "turnos"
     );
-    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU].llamadas).toBe(2);
-    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU].in).toBe(150);
-    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU].out).toBe(30);
+    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU_4_5].llamadas).toBe(2);
+    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU_4_5].in).toBe(150);
+    expect(despuesDeDosLlamadas.uso[MODEL_HAIKU_4_5].out).toBe(30);
 
     // costoAcumuladoUsd sobre 150 in / 30 out, sin cache:
     //   150/1e6*1.00 + 30/1e6*5.00 = 0.00015 + 0.00015 = 0.0003
@@ -66,7 +69,7 @@ describe("registrarUso + costoAcumuladoUsd: acumula sin mutar el original", () =
   it("desgloseCosto agrega por componente y por modelo", () => {
     const acumulado = registrarUso(
       usoVacio(),
-      MODEL_HAIKU,
+      MODEL_HAIKU_4_5,
       { input_tokens: 3, output_tokens: 575, cache_read_input_tokens: 8081, cache_creation_input_tokens: 1275 },
       "turnos"
     );

@@ -21,13 +21,52 @@ import { bloquesDeSistema } from "./i18n/idiomaSalida";
 import Anthropic from "@anthropic-ai/sdk";
 import { limpiarGuiones } from "./voz";
 
-export const MODEL = "claude-sonnet-4-6";
-export const MODEL_HAIKU = "claude-haiku-4-5";
+// CAMBIO DE MODELOS (decisión del fundador, corrida final, 8 oct 2026): lo que usaba Sonnet 4.6 pasa a Sonnet 5.5 y
+// lo que usaba Haiku 4.5 pasa a Haiku 5.5. El ESTIMADOR de bandas queda en Sonnet 4.6 (MODEL_ESTIMACION) hasta
+// re-validarse con los casos de su validación original y el visto del fundador.
+//
+// OJO, TOKENIZADOR: los modelos 4.7 en adelante (los 5.5 incluidos) usan un tokenizador nuevo que genera alrededor de
+// un 30 % más de tokens para el mismo texto (documentación de precios de Anthropic). Al comparar con corridas viejas,
+// más tokens no quiere decir más texto.
+/** El Sonnet de la app: el redactor del plan, el diagnóstico, los caminos, el enlazador, el reformulador, el reporte. */
+export const MODEL_SONNET = "claude-sonnet-5-5";
+export const MODEL_HAIKU = "claude-haiku-5-5";
+/** Los anteriores: sus precios se conservan para leer el coste de las sesiones que los usaron. */
+export const MODEL_SONNET_4_6 = "claude-sonnet-4-6";
+export const MODEL_HAIKU_4_5 = "claude-haiku-4-5";
+/** MODEL es el que usa el ESTIMADOR de bandas (web/lib/engine/estimacion.ts, método validado: no se toca sin el visto
+ * del fundador, docs/metodos_validados.json). Se queda en Sonnet 4.6 hasta que el estimador se re-valide con el modelo
+ * nuevo y el fundador dé su visto. NADA MÁS usa MODEL: el resto de la app usa MODEL_SONNET. */
+export const MODEL = MODEL_SONNET_4_6;
+export const MODEL_ESTIMACION = MODEL;
 
+// Por millón de tokens [entrada, salida], precios oficiales al 8 oct 2026. Haiku 5.5 vale 0,10/0,50 con prompts de
+// hasta 100.000 tokens (los de la app están muy por debajo; por encima cobraría 0,50/2,50).
 export const PRECIOS: Record<string, [number, number]> = {
-  [MODEL]: [3.0, 15.0],
-  [MODEL_HAIKU]: [1.0, 5.0],
+  [MODEL_SONNET]: [2.0, 10.0],
+  [MODEL_HAIKU]: [0.1, 0.5],
+  [MODEL_SONNET_4_6]: [3.0, 15.0],
+  [MODEL_HAIKU_4_5]: [1.0, 5.0],
 };
+
+/** La lectura de caché de los modelos que no la cobran al 10 % de la entrada: Sonnet 5.5 la cobra al 5 %. */
+const LECTURA_CACHE_MULT: Record<string, number> = { [MODEL_SONNET]: 0.05 };
+
+/** Los modelos que RAZONAN por defecto y cómo se apaga en cada uno (sondeado contra la API real el 8 oct 2026: Haiku
+ * 5.5 gastó 60 de 123 tokens de salida en razonar; Sonnet 5.5, 293 de 300, y la respuesta salió cortada). Ese
+ * razonamiento sale del tope de salida: con los topes de la app cortaría respuestas. Haiku 5.5 acepta "disabled";
+ * Sonnet 5.5 lo rechaza y pide "between_tools" (no razona antes de responder). Los demás no reciben el parámetro. */
+const APAGAR_RAZONAMIENTO: Record<string, "disabled" | "between_tools"> = {
+  [MODEL_HAIKU]: "disabled",
+  [MODEL_SONNET]: "between_tools",
+};
+
+/** Los parámetros propios de cada modelo en una llamada: hoy, apagar el razonamiento por defecto. */
+export function parametrosDeModelo(model: string): { thinking?: { type: "disabled" } } {
+  const modo = APAGAR_RAZONAMIENTO[model];
+  // "between_tools" aún no está en los tipos del SDK; la API lo acepta (sondeado).
+  return modo ? ({ thinking: { type: modo } } as { thinking: { type: "disabled" } }) : {};
+}
 
 // Multiplicadores de cache sobre el precio de entrada: lectura ~10%;
 // escritura de 5 minutos ~125% (Fase 2.7); escritura de 1 hora ~200%
@@ -115,7 +154,7 @@ export function costoLlamadaUsd(
   const [pin, pout] = PRECIOS[model] ?? [0.0, 0.0];
   return (
     (inTokens / 1_000_000) * pin +
-    (cacheReadTokens / 1_000_000) * pin * CACHE_READ_MULT +
+    (cacheReadTokens / 1_000_000) * pin * (LECTURA_CACHE_MULT[model] ?? CACHE_READ_MULT) +
     (cacheWriteTokens / 1_000_000) * pin * CACHE_WRITE_MULT +
     (cacheWrite1hTokens / 1_000_000) * pin * CACHE_WRITE_1H_MULT +
     (outTokens / 1_000_000) * pout
@@ -275,6 +314,7 @@ export async function llamarClaude(
   for (let intento = 0; ; intento++) {
     const msg = await client.messages.create({
       model,
+      ...parametrosDeModelo(model),
       max_tokens: maxTokens,
       system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
       messages: [{ role: "user", content }] as Anthropic.MessageParam[],
@@ -381,6 +421,7 @@ export async function llamarClaudeConversacion(
   for (let intento = 0; ; intento++) {
     msg = await client.messages.create({
       model,
+      ...parametrosDeModelo(model),
       max_tokens: maxTokens,
       system: bloquesDeSistema(system, opts.idiomaSalida, opts.rotulosFijos),
       messages: [...historialSinMarca, nuevoTurno] as Anthropic.MessageParam[],

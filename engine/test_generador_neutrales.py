@@ -135,7 +135,8 @@ assert bqc.faltantes(cache, graph) == ["x"]  # 'b' deprecado no; los que tienen 
 cliente = ClienteFalso([(json.dumps({"pregunta": "¿Qué te gustaría ordenar primero?"}), "end_turn")])
 r = bqc.correr_faltantes(cliente, cache, graph)
 # A mano: 1 llamada -> 300 de entrada, 40 de salida.
-assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40}, r
+# El cliente falso no trae tokens de cache: 0 leidos, 0 escritos.
+assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40, "cache_read": 0, "cache_write": 0}, r
 assert cache["x"] == {"pregunta": "¿Qué te gustaría ordenar primero?", "candidatos": ["s"]}
 assert cliente.llamadas[0]["system"][0]["text"] == bqc.SYSTEM_PREGUNTA_CON_REGLA  # nace con la regla unica
 for nid, e in cache_inicial().items():
@@ -162,7 +163,7 @@ assert bqc.objetivos_neutrales(cache, graph_e, **ENTRADA) == ["e"]  # ni la hech
 cliente = ClienteFalso([(json.dumps({"pregunta_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}), "end_turn")])
 r = bqc.correr_neutrales(cliente, cache, graph_e, **ENTRADA)
 # A mano: 1 llamada -> 300 de entrada, 40 de salida.
-assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40}, r
+assert r == {"hechas": 1, "fallidas": [], "tokens_in": 300, "tokens_out": 40, "cache_read": 0, "cache_write": 0}, r
 assert cache["e"] == {"pregunta": BASE, "pregunta_entrada": ENT, "candidatos": ["s"],
                       "pregunta_entrada_neutral": "¿Quién sabe hoy a quién acudir cuando algo se atasca?"}
 assert "pregunta_neutral" not in cache["e"]  # la neutral de la base es otra cosa y no se toca aqui
@@ -170,5 +171,17 @@ assert json.loads(cliente.llamadas[0]["messages"][0]["content"])["pregunta_base"
 # por defecto, el modo de siempre (las bases)
 assert bqc.objetivos_neutrales(cache, graph_e) == ["e", "f"]
 print("OK neutrales de entrada: campo aparte, ni la entrada ni la base cambian, el modo de las bases sigue igual")
+
+# --- 6. el modelo y su coste (cambio de modelos, 8 oct 2026) ------------------------------------------------------
+assert bqc.MODEL == "claude-haiku-5-5"
+assert bqc.PARAMETROS_MODELO == {"thinking": {"type": "disabled"}}
+cliente = ClienteFalso([(json.dumps({"pregunta_neutral": "¿Qué le contarías a quien sigue tu avance?"}), "end_turn")])
+bqc.correr_neutrales(cliente, {"a": {"pregunta": BASE, "candidatos": ["s"]}}, graph)
+assert cliente.llamadas[0]["thinking"] == {"type": "disabled"} and cliente.llamadas[0]["model"] == "claude-haiku-5-5"
+# A mano: 1.000.000 de entrada x 0,10 + 100.000 de salida x 0,50 + 2.000.000 leidos x 0,01 + 400.000 escritos x 0,125
+#   = 0,10 + 0,05 + 0,02 + 0,05 = 0,22 USD
+r = {"tokens_in": 1_000_000, "tokens_out": 100_000, "cache_read": 2_000_000, "cache_write": 400_000}
+assert abs(bqc.costo_usd(r) - 0.22) < 1e-9, bqc.costo_usd(r)
+print("OK modelo: Haiku 5.5 sin razonamiento por defecto; el coste cuenta la cache")
 
 print("\nTODO OK")

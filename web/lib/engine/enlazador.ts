@@ -23,7 +23,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { CAMINO, DOLOR, PROBABILIDAD, type Camino, type Dolor, type Probabilidad } from "../dbContract";
-import { costoAcumuladoUsd, llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
+import { costoAcumuladoUsd, llamarClaude, MODEL_SONNET, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ENLACE_PROTECCION } from "../prompts";
 import type { SnapshotNucleo } from "./snapshotProyecto";
 
@@ -211,7 +211,7 @@ export async function enlazarPlanProteccion(
       client,
       SYSTEM_ENLACE_PROTECCION,
       construirUserTextEnlace(respuestas, snapshot),
-      MODEL,
+      MODEL_SONNET,
       acumulado,
       {
         maxTokens: Math.min(4000, 300 + respuestas.length * 60),

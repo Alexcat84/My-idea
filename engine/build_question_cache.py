@@ -43,9 +43,28 @@ GRAPH_PATH = BASE / "dataset" / "metadata" / "master_graph.json"
 CACHE_PATH = BASE / "engine" / "preguntas_cache.json"
 SAMPLE_CACHE_PATH = BASE / "engine" / "preguntas_cache.sample.json"
 
-MODEL = "claude-haiku-4-5"
-PRICE_INPUT_PER_MTOK = 1.00
-PRICE_OUTPUT_PER_MTOK = 5.00
+# Decision del fundador (corrida final, 8 oct 2026): Haiku 5.5. Precios oficiales por millon de tokens (prompts de
+# hasta 100.000): entrada 0,10; salida 0,50; lectura de cache 0,01 (0,1x); escritura de 5 minutos 0,125 (1,25x).
+# Razona POR DEFECTO (sondeado contra la API real el 8 oct 2026) y ese razonamiento sale del tope de salida: se apaga.
+# El tokenizador nuevo (modelos 4.7 en adelante) genera alrededor de un 30 % mas de tokens para el mismo texto.
+MODEL = "claude-haiku-5-5"
+PRICE_INPUT_PER_MTOK = 0.10
+PRICE_OUTPUT_PER_MTOK = 0.50
+PRICE_CACHE_READ_PER_MTOK = 0.01
+PRICE_CACHE_WRITE_PER_MTOK = 0.125
+PARAMETROS_MODELO = {"thinking": {"type": "disabled"}}
+
+
+def costo_usd(r):
+    """El coste de una pasada, con la cache: lo que imprime el generador al terminar."""
+    return (r["tokens_in"] * PRICE_INPUT_PER_MTOK + r["tokens_out"] * PRICE_OUTPUT_PER_MTOK
+            + r.get("cache_read", 0) * PRICE_CACHE_READ_PER_MTOK
+            + r.get("cache_write", 0) * PRICE_CACHE_WRITE_PER_MTOK) / 1_000_000
+
+
+def _cache_de(usage):
+    """(leidos, escritos) de cache de una respuesta; 0 si el uso no los trae."""
+    return (getattr(usage, "cache_read_input_tokens", 0) or 0, getattr(usage, "cache_creation_input_tokens", 0) or 0)
 
 SYSTEM_PREGUNTA = (
     "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
@@ -150,6 +169,7 @@ def generar_neutral(client, nid, base, candidatos_ids, graph):
     }
     msg = client.messages.create(
         model=MODEL,
+        **PARAMETROS_MODELO,
         max_tokens=400,
         system=[{"type": "text", "text": SYSTEM_NEUTRAL, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": json.dumps(ctx, ensure_ascii=False)}],
@@ -184,7 +204,7 @@ def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos
     trabajo = objetivos_neutrales(cache, graph, origen, destino)
     if limite is not None:
         trabajo = trabajo[:limite]
-    hechas, fallidas, t_in, t_out = 0, [], 0, 0
+    hechas, fallidas, t_in, t_out, c_read, c_write = 0, [], 0, 0, 0, 0
     for i, nid in enumerate(trabajo, 1):
         base = cache[nid][origen]
         ultimo = None
@@ -193,6 +213,7 @@ def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos
                 texto, usage = generar_neutral(client, nid, base, cache[nid].get("candidatos", []), graph)
                 t_in += usage.input_tokens
                 t_out += usage.output_tokens
+                c_read, c_write = c_read + _cache_de(usage)[0], c_write + _cache_de(usage)[1]
                 cache[nid] = {**cache[nid], destino: texto}
                 assert cache[nid][origen] == base  # el origen queda intacto
                 hechas += 1
@@ -204,13 +225,15 @@ def correr_neutrales(client, cache, graph, limite=None, guardar=None, reintentos
                 if usage is not None:  # lo pagado cuenta aunque la salida no sirva
                     t_in += usage.input_tokens
                     t_out += usage.output_tokens
+                    c_read, c_write = c_read + _cache_de(usage)[0], c_write + _cache_de(usage)[1]
         if ultimo:
             fallidas.append((nid, ultimo))
         if guardar and i % 50 == 0:
             guardar(cache)
     if guardar:
         guardar(cache)
-    return {"hechas": hechas, "fallidas": fallidas, "tokens_in": t_in, "tokens_out": t_out}
+    return {"hechas": hechas, "fallidas": fallidas, "tokens_in": t_in, "tokens_out": t_out,
+            "cache_read": c_read, "cache_write": c_write}
 
 
 def faltantes(cache, graph):
@@ -221,7 +244,7 @@ def faltantes(cache, graph):
 def correr_faltantes(client, cache, graph, guardar=None):
     """Añade la pregunta de los nodos que no la tienen. Jamas pisa una base existente."""
     elegibles = nodos_elegibles(graph)
-    hechas, fallidas, t_in, t_out = 0, [], 0, 0
+    hechas, fallidas, t_in, t_out, c_read, c_write = 0, [], 0, 0, 0, 0
     for nid in faltantes(cache, graph):
         try:
             pregunta, usage = generar_pregunta(client, graph[nid], elegibles[nid], graph, system=SYSTEM_PREGUNTA_CON_REGLA)
@@ -233,9 +256,11 @@ def correr_faltantes(client, cache, graph, guardar=None):
         hechas += 1
         t_in += usage.input_tokens
         t_out += usage.output_tokens
+        c_read, c_write = c_read + _cache_de(usage)[0], c_write + _cache_de(usage)[1]
     if guardar:
         guardar(cache)
-    return {"hechas": hechas, "fallidas": fallidas, "tokens_in": t_in, "tokens_out": t_out}
+    return {"hechas": hechas, "fallidas": fallidas, "tokens_in": t_in, "tokens_out": t_out,
+            "cache_read": c_read, "cache_write": c_write}
 
 
 def cargar_grafo():
@@ -286,6 +311,7 @@ def generar_pregunta(client, actual, candidatos_ids, graph, system=SYSTEM_PREGUN
     }
     msg = client.messages.create(
         model=MODEL,
+        **PARAMETROS_MODELO,
         max_tokens=300,
         system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": json.dumps(ctx, ensure_ascii=False)}],
@@ -356,12 +382,14 @@ def main():
                 re_ = correr_neutrales(client, cache, graph, limite=resto, guardar=guardar, **ENTRADA)
                 print(f"  (de ellas, de entrada: hechas {re_['hechas']}, fallidas {len(re_['fallidas'])})")
                 r = {"hechas": r["hechas"] + re_["hechas"], "fallidas": r["fallidas"] + re_["fallidas"],
-                     "tokens_in": r["tokens_in"] + re_["tokens_in"], "tokens_out": r["tokens_out"] + re_["tokens_out"]}
-        cost = (r["tokens_in"] / 1_000_000) * PRICE_INPUT_PER_MTOK + (r["tokens_out"] / 1_000_000) * PRICE_OUTPUT_PER_MTOK
+                     "tokens_in": r["tokens_in"] + re_["tokens_in"], "tokens_out": r["tokens_out"] + re_["tokens_out"],
+                     "cache_read": r["cache_read"] + re_["cache_read"], "cache_write": r["cache_write"] + re_["cache_write"]}
+        cost = costo_usd(r)
         print(f"\n--{modo}: hechas {r['hechas']}, fallidas {len(r['fallidas'])}")
         for nid, motivo in r["fallidas"][:30]:
             print(f"  FALLO {nid}: {motivo}")
-        print(f"Tokens reales: {r['tokens_in']} in / {r['tokens_out']} out | Costo real aprox: ${cost:.4f} | {time.time() - t0:.1f}s")
+        print(f"Tokens reales: {r['tokens_in']} in / {r['tokens_out']} out / cache {r['cache_read']} leidos, "
+              f"{r['cache_write']} escritos | Costo real ({MODEL}, con cache): ${cost:.4f} | {time.time() - t0:.1f}s")
         print("Despues: python scripts/sync_assets_web.py")
         # fallar ruidoso: si algo quedo sin hacer, el codigo de salida lo dice
         sys.exit(1 if r["fallidas"] else 0)

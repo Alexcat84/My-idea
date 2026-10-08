@@ -17,7 +17,8 @@ import type Anthropic from "@anthropic-ai/sdk";
 import {
   CACHE_1H,
   costoAcumuladoUsd,
-  MODEL,
+  MODEL_SONNET,
+  parametrosDeModelo,
   PresupuestoExcedidoError,
   PRESUPUESTO_SESION_USD_DEFAULT,
   registrarUso,
@@ -66,7 +67,8 @@ export async function generarTextoPlan(
     }
     try {
       const stream = client.messages.stream({
-        model: MODEL,
+        model: MODEL_SONNET,
+        ...parametrosDeModelo(MODEL_SONNET),
         max_tokens: maxTokens,
         system: bloquesDeSistema(SYSTEM_PLAN, idiomaSalida, ROTULOS_PLAN),
         messages: [{ role: "user", content }] as Anthropic.MessageParam[],
@@ -78,7 +80,7 @@ export async function generarTextoPlan(
       stream.on("text", filtro.onChunk);
       const mensajeFinal = await stream.finalMessage();
       filtro.finalizar();
-      acumuladoVivo = registrarUso(acumuladoVivo, MODEL, mensajeFinal.usage, "plan", mensajeFinal.stop_reason ?? null, Boolean(opts.contexto));
+      acumuladoVivo = registrarUso(acumuladoVivo, MODEL_SONNET, mensajeFinal.usage, "plan", mensajeFinal.stop_reason ?? null, Boolean(opts.contexto));
       if (mensajeFinal.stop_reason === "max_tokens") {
         ultimoError = new RespuestaCortadaError("plan", maxTokens);
         console.error(`[plan] intento ${intento + 1}/${backoffs.length} salio cortado por tope de tokens (${maxTokens})`);

@@ -9,7 +9,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import type { NumerosProyecto, ReporteCalculado, TipoOferta } from "../calculadora";
-import { llamarClaude, MODEL, MODEL_HAIKU, PRESUPUESTO_REPORTE_USD, type UsoAcumulado } from "../costmeter";
+import { llamarClaude, MODEL_SONNET, MODEL_HAIKU, PRESUPUESTO_REPORTE_USD, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_CLASIFICAR_OFERTA, SYSTEM_REPORTE } from "../prompts";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
@@ -210,7 +210,7 @@ export async function narrarReporte(
     tipo_oferta: tipoOferta ?? null,
   };
   try {
-    const r = await llamarClaude(client, SYSTEM_REPORTE, JSON.stringify(payload), MODEL, acumulado, {
+    const r = await llamarClaude(client, SYSTEM_REPORTE, JSON.stringify(payload), MODEL_SONNET, acumulado, {
       maxTokens: 1800,
       contexto,
       componente: "reporte",

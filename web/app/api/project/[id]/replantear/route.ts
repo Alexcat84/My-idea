@@ -26,7 +26,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { abrirCiclo, consultarSaldoCiclo, realidadDelCiclo } from "@/lib/cicloApertura";
 import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
-import { llamarClaude, MODEL, usoVacio } from "@/lib/costmeter";
+import { llamarClaude, MODEL_SONNET, usoVacio } from "@/lib/costmeter";
 import {
   crearSesion,
   dominiosDesbloqueados,
@@ -215,7 +215,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     let caminos: ReturnType<typeof validarCaminos> = [];
     if (candidatosIds.length > 0) {
       try {
-        const r = await llamarClaude(createAnthropicClient(), SYSTEM_CAMINOS, JSON.stringify(ctx), MODEL, acumulado, {
+        const r = await llamarClaude(createAnthropicClient(), SYSTEM_CAMINOS, JSON.stringify(ctx), MODEL_SONNET, acumulado, {
           maxTokens: 1200,
           componente: "caminos",
           idiomaSalida,

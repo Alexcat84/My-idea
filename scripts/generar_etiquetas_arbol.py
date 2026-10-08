@@ -25,7 +25,7 @@ from dotenv import load_dotenv
 BASE = Path(__file__).resolve().parent.parent
 load_dotenv(BASE / ".env")
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 LOTE = 40
 PRICE_IN, PRICE_OUT = 2.00, 10.00  # intro hasta 2026-08-31
 

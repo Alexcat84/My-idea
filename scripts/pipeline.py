@@ -57,7 +57,7 @@ def extract_nodes_from_chunk(chunk, book_name):
     
     try:
         response = client.messages.create(
-            model="claude-sonnet-5", # Usando el modelo de alta capacidad con descuento
+            model="claude-sonnet-5-5",  # 8 oct 2026 (antes claude-sonnet-5); # Usando el modelo de alta capacidad con descuento
             max_tokens=8192,         # Sonnet permite respuestas mucho más largas
             system=SYSTEM_PROMPT,
             messages=[

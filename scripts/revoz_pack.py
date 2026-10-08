@@ -42,7 +42,7 @@ import libro_mayor  # noqa: E402
 
 BASE = Path(__file__).resolve().parent.parent
 NODOS = BASE / "dataset" / "nodos"
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 TECHOS = (16000, 32000, 64000)
 PRECIO_IN, PRECIO_OUT = 2.00, 10.00
 PALABRAS = (80, 150)

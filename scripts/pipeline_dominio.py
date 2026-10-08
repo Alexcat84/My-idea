@@ -68,7 +68,7 @@ CATEGORIAS = {
 
 MAX_WORDS_POR_CHUNK = 5000
 OVERLAP_WORDS = 500
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 # claude-sonnet-5 soporta hasta 128000 tokens de salida (verificado via
 # client.models.retrieve). 8192 resultaba insuficiente para chunks
 # inusualmente densos en conceptos -- confirmado en vivo: un capitulo tipo

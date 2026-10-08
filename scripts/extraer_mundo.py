@@ -61,7 +61,7 @@ from validar_esquema import (  # noqa: E402
     RE_ID,
 )
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 # La escalera de techos. Ver la cabecera: reintentar un corte con el mismo
 # techo es reintentar el fallo.
 TECHOS = (16000, 32000, 64000)

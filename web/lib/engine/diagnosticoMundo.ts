@@ -10,7 +10,7 @@
  * plantilla: se falla ruidoso y el usuario reintenta (BANCO §9).
  */
 import type Anthropic from "@anthropic-ai/sdk";
-import { llamarClaude, MODEL, sumarUso, usoVacio, type UsoAcumulado } from "../costmeter";
+import { llamarClaude, MODEL_SONNET, sumarUso, usoVacio, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_DIAGNOSTICO_MUNDO } from "../prompts";
 import { etiquetaArbol, type Grafo } from "./graph";
 import type { EstadoRecorrido } from "./recorrido";
@@ -83,7 +83,7 @@ export async function redactarDiagnostico(
   /** Principio 1 (28 sep 2026): el contexto completo del proyecto y de la persona. */
   contexto: string | null = null
 ): Promise<ResultadoDiagnostico> {
-  const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL, usoVacio(), {
+  const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL_SONNET, usoVacio(), {
     maxTokens: 700,
     contexto,
     componente: "diagnostico",

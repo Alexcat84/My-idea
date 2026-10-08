@@ -41,7 +41,7 @@ VOYAGE_MODEL = "voyage-4-lite"
 DIM = 512
 VOYAGE_API_KEY = os.environ.get("VOYAGE_API_KEY", "").strip()
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 UMBRAL_CANDIDATO = 0.60
 
 import re

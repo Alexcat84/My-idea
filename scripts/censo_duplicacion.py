@@ -59,7 +59,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 UMBRAL = 0.90
 SEMILLA_MUESTREO = 20260807  # fija: el muestreo "al azar" tiene que repetirse
 NODOS_POR_MUESTRA = 10
-MODEL = "claude-sonnet-5"
+MODEL = "claude-sonnet-5-5"  # cambio de modelos, 8 oct 2026 (antes claude-sonnet-5)
 TECHOS = (16000, 32000, 64000)
 PRECIO_IN_MTOK = 2.00
 PRECIO_OUT_MTOK = 10.00

@@ -24,7 +24,7 @@
  *      MEDIDO y reportado.
  */
 import type Anthropic from "@anthropic-ai/sdk";
-import { costoAcumuladoUsd, llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
+import { costoAcumuladoUsd, llamarClaude, MODEL_SONNET, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_REFORMULADOR_PROTECCION } from "../prompts";
 import type { EventoInterprete } from "./interprete";
 import { contextoDeSesion, type FichaContexto } from "./memoria";
@@ -93,7 +93,7 @@ export async function anclarPregunta(
       [snapshotTexto, "", "PREGUNTA A ANCLAR:", pregunta].join("\n"),
       // Baraja (c): calidad plena. Es la pregunta que la persona lee; degradarla
       // a un modelo menor abarata justo lo que se ve.
-      MODEL,
+      MODEL_SONNET,
       acumulado,
       { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida, contexto }
     );

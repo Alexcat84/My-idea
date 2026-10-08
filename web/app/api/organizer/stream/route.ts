@@ -18,6 +18,7 @@ import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   MODEL_HAIKU,
+  parametrosDeModelo,
   PRESUPUESTO_SESION_USD_DEFAULT,
   registrarUso,
   usoVacio,
@@ -185,6 +186,7 @@ export async function POST(request: Request) {
       async function intentarOrganizar(): Promise<OrganizadorData> {
         const claudeStream = client.messages.stream({
           model: MODEL_HAIKU,
+          ...parametrosDeModelo(MODEL_HAIKU),
           max_tokens: MAX_TOKENS_ORGANIZADOR,
           system: bloquesDeSistema(SYSTEM_ORGANIZADOR, idiomaIdea),
           messages: [{ role: "user", content: JSON.stringify({ texto_usuario: texto, puertas }) }],

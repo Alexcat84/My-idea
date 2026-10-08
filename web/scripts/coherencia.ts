@@ -28,7 +28,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { aceptarTextosLegales, autenticarComoDevUser, BASE_URL, cargarEnvRaiz, consumirSSE, postJson, ROOT } from "./_shared/http";
-import { costoAcumuladoUsd, llamarClaude, MODEL, MODEL_HAIKU, usoVacio, type RegistroLlamada, type UsoAcumulado } from "../lib/costmeter";
+import { costoAcumuladoUsd, llamarClaude, MODEL_SONNET, MODEL_HAIKU, usoVacio, type RegistroLlamada, type UsoAcumulado } from "../lib/costmeter";
 import { memoriaDe, type EntradaHilo, type MemoriaProyecto } from "../lib/engine/memoria";
 import {
   condicionDeSalida,
@@ -276,7 +276,7 @@ async function main() {
 
     const reales: PreguntaReal[] = historial.map((t) => ({ sesion: t.sesion, espacio: t.espacio, pregunta: t.pregunta, base: baseDe.get(t.pregunta) ?? null }));
     const { items, clave } = construirLote(p.id, reales);
-    const j = await llamarClaude(client, SYSTEM_JUEZ_COHERENCIA, pedidoAlJuez(p, items), MODEL, arnes.uso, {
+    const j = await llamarClaude(client, SYSTEM_JUEZ_COHERENCIA, pedidoAlJuez(p, items), MODEL_SONNET, arnes.uso, {
       maxTokens: 12000,
       componente: "arnes_juez",
     });

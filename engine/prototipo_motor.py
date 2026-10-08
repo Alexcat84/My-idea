@@ -276,13 +276,30 @@ def _dominio_permitido(nid, graph, dominios_desbloqueados):
     return graph[nid].get("dominio", "core") in (dominios_desbloqueados or DOMINIOS_DESBLOQUEADOS_DEFECTO)
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-MODEL = "claude-sonnet-4-6"
-MODEL_HAIKU = "claude-haiku-4-5"
+# CAMBIO DE MODELOS (decision del fundador, corrida final, 8 oct 2026): Sonnet 5.5 y Haiku 5.5, espejo de
+# web/lib/costmeter.ts. Precios oficiales por millon [entrada, salida]; los anteriores se conservan para leer sesiones
+# viejas. El tokenizador nuevo (4.7 en adelante) genera alrededor de un 30 % mas de tokens para el mismo texto.
+MODEL = "claude-sonnet-5-5"
+MODEL_HAIKU = "claude-haiku-5-5"
+MODEL_SONNET_4_6 = "claude-sonnet-4-6"
+MODEL_HAIKU_4_5 = "claude-haiku-4-5"
 
 PRECIOS = {
-    MODEL: (3.00, 15.00),
-    MODEL_HAIKU: (1.00, 5.00),
+    MODEL: (2.00, 10.00),
+    MODEL_HAIKU: (0.10, 0.50),
+    MODEL_SONNET_4_6: (3.00, 15.00),
+    MODEL_HAIKU_4_5: (1.00, 5.00),
 }
+# Sonnet 5.5 cobra la lectura de cache al 5 % de la entrada (los demas, al 10 %).
+LECTURA_CACHE_MULT = {MODEL: 0.05}
+# Los dos 5.5 razonan por defecto (sondeado el 8 oct 2026) y ese razonamiento sale del tope de salida: se apaga.
+# Haiku 5.5 acepta "disabled"; Sonnet 5.5 lo rechaza y pide "between_tools".
+APAGAR_RAZONAMIENTO = {MODEL_HAIKU: "disabled", MODEL: "between_tools"}
+
+
+def parametros_de_modelo(model):
+    modo = APAGAR_RAZONAMIENTO.get(model)
+    return {"thinking": {"type": modo}} if modo else {}
 # Multiplicadores de cache ephemeral (5 min) sobre el precio de entrada:
 # lectura de cache cuesta ~10%, escritura de cache cuesta ~125% (Fase 2.7:
 # antes de esto, costo_acumulado_usd/reportar_costo ignoraban por completo
@@ -1483,7 +1500,7 @@ def _costo_llamada_usd(model, in_tokens, out_tokens, cache_read_tokens=0, cache_
     pin, pout = PRECIOS.get(model, (0.0, 0.0))
     return (
         in_tokens / 1_000_000 * pin
-        + cache_read_tokens / 1_000_000 * pin * CACHE_READ_MULT
+        + cache_read_tokens / 1_000_000 * pin * LECTURA_CACHE_MULT.get(model, CACHE_READ_MULT)
         + cache_write_tokens / 1_000_000 * pin * CACHE_WRITE_MULT
         + out_tokens / 1_000_000 * pout
     )
@@ -1514,7 +1531,7 @@ def llamar_claude(system, user_text, model, max_tokens=1500, componente=None):
     import anthropic
     client = anthropic.Anthropic()
     msg = client.messages.create(
-        model=model, max_tokens=max_tokens,
+        model=model, max_tokens=max_tokens, **parametros_de_modelo(model),
         system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         messages=[{"role": "user", "content": user_text}],
     )
@@ -1569,7 +1586,7 @@ def llamar_claude_conversacion(system, historial_mensajes, nuevo_turno_texto, mo
         "content": [{"type": "text", "text": nuevo_turno_texto, "cache_control": {"type": "ephemeral"}}],
     }
     msg = client.messages.create(
-        model=model, max_tokens=max_tokens,
+        model=model, max_tokens=max_tokens, **parametros_de_modelo(model),
         system=[{"type": "text", "text": system, "cache_control": {"type": "ephemeral"}}],
         messages=historial_mensajes + [nuevo_turno],
     )

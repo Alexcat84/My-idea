@@ -126,7 +126,8 @@ describe("BARANDA (c): calidad plena y costo medido", () => {
     const c = clienteFalso("¿Y si el proveedor (#1) no responde a tiempo?");
     await anclarPregunta(c, PREGUNTA_DEL_GRAFO, snapshotTexto(), usoVacio());
     const llamada = (c.messages.create as ReturnType<typeof vi.fn>).mock.calls[0][0] as { model: string };
-    expect(llamada.model).toBe("claude-sonnet-4-6");
+    // Calidad plena = el Sonnet de la app (Sonnet 5.5 desde el cambio de modelos del 8 oct 2026), nunca Haiku.
+    expect(llamada.model).toBe("claude-sonnet-5-5");
   });
 
   it("el costo sale MEDIDO cuando se ancla", async () => {
