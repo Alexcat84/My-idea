@@ -117,7 +117,10 @@ SYSTEM_NEUTRAL = (
     "sin autores ni libros. Si la base ya es neutral, devuelvela igual. "
     "FIDELIDAD, cuatro reglas: (1) sin segunda petición: no añadas ninguna pregunta, opción ni petición que la base "
     "no tenga; tantas preguntas como la base, nunca más, y ninguna frase ni paréntesis añadido (tampoco uno para quien "
-    "trabaja solo): si hace falta un condicional, va dentro de la misma pregunta. (2) Conserva el contexto propio de la base: si habla de una "
+    "trabaja solo): si hace falta un condicional, va dentro de la misma pregunta. NUNCA termines con una frase o una "
+    "pregunta aparte como 'Si trabajas con otras personas, ¿cómo lo deciden?' o 'Cuéntame también cómo lo llevan': "
+    "el condicional se mete dentro de la frase que ya existe ('¿cómo decides tú, o con quienes trabajes si los "
+    "tienes, qué...?'). (2) Conserva el contexto propio de la base: si habla de una "
     "franquicia, de proveedores, de exportar, de seguridad, de inversionistas o de otro tema concreto, ese tema y sus "
     "mismas opciones siguen en la neutral; no la vuelvas genérica. (3) Masculino genérico al hablarle a la persona "
     "(tú mismo, solo, seguro, preparado): nunca el femenino ni barras como mismo/a. (4) Personas solo en "
@@ -158,10 +161,35 @@ PERSONAS = re.compile(
 CONDICIONAL_PERSONAS = re.compile(
     r"\b(si|en caso|alg[uú]n d[ií]a|alguna vez|en alg[uú]n momento|quiz[aá]s?|llegaras|llegas a|trabajen|tengas|"
     r"tuvieras|contaras|cuentes)\b", re.I)
-# El contexto propio: temas concretos que, si estan en la base, deben seguir en la neutral (por su raiz).
-ANCLAS = ["franquic", "proveedor", "export", "import", "aduan", "inversionist", "financiaci", "segurid", "accident",
-          "lesi", "riesg", "calidad", "ambient", "residu", "emisi", "energ", "cumplimiento", "legal", "contrat",
-          "certific", "patent", "licenci"]
+# El contexto propio: temas concretos que, si estan en la base, deben seguir en la neutral. Cada ancla es (lo que la
+# marca en la base, lo que en la neutral cuenta como el mismo tema, sinonimos incluidos). Un papel que la neutral
+# vuelve condicional o nombra por su funcion ("quienes pusieron dinero") no es contexto perdido; "importante" no es
+# importar ni "contratar" un contrato (falsos positivos del diagnostico del 8 oct 2026).
+ANCLAS = [
+    (r"franquic", r"franquic"),
+    (r"proveedor", r"proveedor|quien(es)? te (vende|surte|provee)"),
+    (r"export", r"export|vender (fuera|en otros pa[ií]ses|al extranjero)|otros pa[ií]ses|extranjero"),
+    (r"\bimport(ar|as|a|o|amos|an|aci[oó]n|aciones|ador\w*)\b", r"import|traer de fuera|del extranjero|de otros pa[ií]ses"),
+    (r"aduan", r"aduan"),
+    (r"inversionist|inversor", r"inversionist|inversor|pusieron dinero|ponen dinero|poner dinero|apoy\w+ con dinero|"
+                               r"aport\w+ (dinero|capital)|invirti|invertir|capital|financ"),
+    (r"financiaci", r"financ|dinero|capital|fondos"),
+    (r"segurid", r"segur"),
+    (r"accident", r"accident|lesi|da[ñn]o|peligr"),
+    (r"\blesi[oó]n", r"lesi|da[ñn]o|accident|herid"),
+    (r"riesg", r"riesg|peligr|amenaz"),
+    (r"calidad", r"calidad"),
+    (r"ambient", r"ambient|planeta|naturaleza|ecol[oó]g"),
+    (r"residu", r"residu|desech|basura|desperdici"),
+    (r"emisi[oó]n|emisiones", r"emisi|contamina|co2|carbono"),
+    (r"energ", r"energ|luz|electricidad"),
+    (r"cumplimiento", r"cumpl|norma|regla|ley"),
+    (r"\blegal(es|mente)?\b", r"legal|ley|norma|regla|permiso"),
+    (r"\bcontrato(s)?\b|contractual", r"contrat|acuerdo"),
+    (r"certific", r"certific|sello|acredit"),
+    (r"patent", r"patent|propiedad intelectual|registr"),
+    (r"licenci", r"licenci|permiso"),
+]
 
 
 def patrones_neutral(base, neutral):
@@ -175,7 +203,7 @@ def patrones_neutral(base, neutral):
     if any(PERSONAS.search(f) and not CONDICIONAL_PERSONAS.search(f) for f in re.split(r"(?<=[.?!¿¡])\s+", neutral) if f.strip()):
         out.append("personas_sin_condicional")
     b, n = base.lower(), neutral.lower()
-    if any(a in b and a not in n for a in ANCLAS):
+    if any(re.search(marca, b) and not re.search(igual, n) for marca, igual in ANCLAS):
         out.append("contexto_perdido")
     return out
 

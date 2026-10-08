@@ -56,7 +56,8 @@ for femenino in ["dueña", "trabaja sola", "ella misma", "puede estar sola"]:
     assert femenino not in bqc.REGLA_CONTEXTO_USUARIO, f"la regla unica habla en femenino: {femenino}"
     assert femenino not in bqc.SYSTEM_NEUTRAL, f"las instrucciones de la neutral hablan en femenino: {femenino}"
 assert "masculino genérico" in bqc.REGLA_CONTEXTO_USUARIO
-for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional", "dentro de la misma pregunta"]:
+for regla in ["segunda petición", "contexto propio", "masculino genérico", "en condicional", "dentro de la misma pregunta",
+              "NUNCA termines con"]:
     assert regla in bqc.SYSTEM_NEUTRAL, f"falta la regla: {regla}"
 # el genero marcado al hablarle a la persona no pasa
 B2 = "¿Cómo te organizas hoy para atender a tus clientes?"
