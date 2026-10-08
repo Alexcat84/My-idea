@@ -1731,6 +1731,20 @@ async function faseBucleTracking(cookie: string, projectId: string) {
 //   5. El follow core NO toma sus items, aunque sean los mas recientes (V4):
 //      el escenario exacto del hallazgo, que en los vuelos previos no se
 //      manifestaba por suerte del orden.
+/** El instante de "hecho hoy" para los items de un plan: ahora menos un minuto, pero NUNCA antes de que naciera su
+ * plan. Lo hecho antes de su plan es lo DECLARADO y no cuenta para la puntualidad (decision del fundador, 8 oct 2026);
+ * un plan de mundo recien creado (2k) nace segundos antes de completar sus items, y "ahora menos un minuto" caia antes
+ * de su nacimiento. Deja en el log las dos horas, para que un fallo se lea sin adivinar. */
+async function hechoTrasSuPlan(planId: string): Promise<number> {
+  const { data, error } = await supabaseAdmin.from("plans").select("created_at").eq("id", planId).single();
+  if (error || !data) throw new Error(`no pude leer el nacimiento del plan ${planId}: ${error?.message ?? "sin fila"}`);
+  const nacio = Date.parse((data as { created_at: string }).created_at);
+  const hecho = Math.max(Date.now() - 60_000, nacio + 5_000);
+  while (hecho > Date.now()) await new Promise((r) => setTimeout(r, 1000));
+  log(`  (plan ${planId}: nacio ${new Date(nacio).toISOString()}, items hechos ${new Date(hecho).toISOString()})`);
+  return hecho;
+}
+
 // ---------------------------------------------------------------------------
 async function faseParidadMundos(cookie: string, projectId: string) {
   separador("FASE 2k (Fase 4.1): paridad de mundos -- fechas, cumplimiento por dominio y follow limpio");
@@ -1802,7 +1816,7 @@ async function faseParidadMundos(cookie: string, projectId: string) {
   // Fechas (decision del fundador, 8 oct 2026): lo DECLARADO -- hecho antes de que naciera su plan -- no cuenta para la
   // puntualidad, y estos planes de mundo nacen minutos antes. Por eso los items se completan HOY (despues de su plan,
   // nunca en el futuro) y las bases se corren para conservar EXACTAMENTE las diferencias calculadas a mano.
-  const hoy = Date.now() - 60_000;
+  const hoy = await hechoTrasSuPlan(gMundo.plan_id);
   const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
   const BASES = [enDias(0), enDias(-8), enDias(5)]; // 3 items fechados; el resto sin tocar
   const aFechar = itemsMundo.slice(0, 3);
@@ -2003,7 +2017,7 @@ async function faseTodoSeparado(cookie: string, projectId: string) {
   // Fechas (decision del fundador, 8 oct 2026): lo DECLARADO -- hecho antes de que naciera su plan -- no cuenta para la
   // puntualidad, y estos planes de mundo nacen minutos antes. Por eso los items se completan HOY (despues de su plan,
   // nunca en el futuro) y las bases se corren para conservar EXACTAMENTE las diferencias calculadas a mano.
-  const hoy = Date.now() - 60_000;
+  const hoy = await hechoTrasSuPlan(gW1.plan_id);
   const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
   const aFechar = itemsW1.slice(0, 3);
   const BASES = [enDias(0), enDias(-8), enDias(5)];
@@ -2140,7 +2154,7 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   }
   const nuevos = itemsMundo.filter((i) => !i.fecha_base).slice(0, 2);
   if (nuevos.length !== 2) throw new Error("el mundo no tiene 2 items libres para sembrar la desviacion");
-  const hoy = Date.now() - 60_000;
+  const hoy = await hechoTrasSuPlan(gMundoPrevio!.plan_id);
   const enDias = (d: number) => new Date(hoy + d * 86_400_000).toISOString();
   const BASES_TARDIAS = [enDias(-12), enDias(-9)];
   const fechasSembradas = nuevos.map((it, k) => ({ item_id: it.id as string, fecha: BASES_TARDIAS[k], origen: "sugerida" }));
