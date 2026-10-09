@@ -405,6 +405,45 @@ describe("POST /api/session/[id]/plan", () => {
     expect(cobrar).toHaveBeenCalledWith("user-fake", "plan_completo", 10, "plan:s1");
     expect(done.version_basica).toBe(false);
   });
+
+  // VERIFICADOR (decision del fundador, 8 oct 2026): apagado por defecto; encendido y con la llamada caida, el plan sale
+  // igual, el fallo queda registrado en la sesion y el cobro es el mismo (10, calculo a mano: nucleo, primer plan).
+  it("verificador encendido y caido: el plan sale igual, queda registrado y el cobro no cambia", async () => {
+    vi.mocked(cobrar).mockClear();
+    process.env.VERIFICADOR_PLAN = "1";
+    try {
+      estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+      estadoFalso.sessions["s1"] = {
+        id: "s1",
+        project_id: "p1",
+        closed_at: null,
+        estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+      };
+      messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+      const res = await POST(requestFalso(), ctxFalso("s1"));
+      const done = await leerEventoDone(res);
+      expect(String(done.markdown)).toContain("Haz algo concreto");
+      expect(cobrar).toHaveBeenCalledWith("user-fake", "plan_completo", 10, "plan:s1");
+      const decisiones = (estadoFalso.sessions["s1"].decisiones ?? []) as Array<{ tipo: string }>;
+      expect(decisiones.some((d) => d.tipo === "verificador_fallido")).toBe(true);
+    } finally {
+      delete process.env.VERIFICADOR_PLAN;
+    }
+  });
+
+  it("verificador apagado (por defecto): no deja rastro", async () => {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido: estadoRecorridoBase(), acumulado: acumuladoVacio },
+    };
+    messagesStreamFalso.mockReturnValue(streamFalsoExitoso(["# Tu plan", "", "## Etapa 1: Arranca", "", "- [ ] Haz algo concreto", ""].join(String.fromCharCode(10))));
+    await leerEventoDone(await POST(requestFalso(), ctxFalso("s1")));
+    const decisiones = (estadoFalso.sessions["s1"].decisiones ?? []) as Array<{ tipo: string }>;
+    expect(decisiones.some((d) => String(d.tipo).startsWith("verificador"))).toBe(false);
+  });
 });
 
 // AUD-09 M25 (tanda 7A, dinero): la entrega renueva la reserva de SU sesión

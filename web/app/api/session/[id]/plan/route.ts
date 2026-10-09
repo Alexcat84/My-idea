@@ -19,6 +19,7 @@
  * sin IA (el ensamblado offline) NO se cobra: se entrega gratis, marcado como
  * version basica y con un aviso honesto que la pantalla muestra.
  */
+import { verificadorActivo, verificarPlan } from "@/lib/engine/verificadorPlan";
 import { memoriaDe } from "@/lib/engine/memoria";
 import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
@@ -309,6 +310,10 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
           ...recorrido.numerosDetectadosSesion,
         };
+        const respuestasDeLaPersona = [
+          ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
+          ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),
+        ];
         const resultado = finalizarPlan(
           rawTexto,
           preparacion,
@@ -319,11 +324,41 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           numerosParaPlan,
           idiomaPlan,
           // las palabras de la persona (para la moneda): sus respuestas de esta sesion y las de su memoria
-          [
-            ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
-            ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),
-          ]
+          respuestasDeLaPersona
         );
+
+        // VERIFICADOR (decision del fundador, 8 oct 2026; APAGADO salvo VERIFICADOR_PLAN=1): antes de entregar el plan,
+        // Sonnet 5.5 compara cada afirmacion con lo que dijo la persona y con sus nodos; el codigo solo quita frases o las
+        // vuelve pregunta, citadas tal cual. Si falla, el plan sale igual (el cobro no cambia); si propone quitar mas del
+        // 20 %, no se aplica y queda marcado para revision.
+        let acumuladoPlan = acumuladoTrasRedactor;
+        if (!versionBasica && verificadorActivo()) {
+          const v = await verificarPlan(
+            client,
+            {
+              markdown: resultado.markdown,
+              nodos: [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo].map((m) => ({
+                id: m.id,
+                etiqueta: m.etiqueta,
+                pasos: m.pasos,
+                entregable: m.entregable,
+              })),
+              respuestas: respuestasDeLaPersona,
+            },
+            acumuladoPlan,
+            { presupuestoUsd: presupuestoPlan, contexto: contextoCompleto, idiomaSalida }
+          );
+          acumuladoPlan = v.acumulado;
+          resultado.markdown = v.markdown;
+          eventosPlan.push({
+            tipo: v.fallo ? "verificador_fallido" : v.revision ? "verificador_revision" : "verificador_plan",
+            propuestas: v.correcciones.length,
+            aplicadas: v.aplicadas,
+            ignoradas: v.ignoradas,
+            ...(v.fallo ? { motivo: v.fallo } : {}),
+            correcciones: v.correcciones.slice(0, 30),
+          });
+        }
 
         const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
         const { estadoVivo, acumulado: acumuladoFinal } = await comprimirEstadoVivo(
@@ -336,7 +371,7 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           conceptosTitulos,
           // El unico camino offline es el techo de la sesion: queda registrado
           // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
-          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor,
+          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoPlan,
           idiomaSalida,
           contextoCompleto,
           presupuestoPlan
