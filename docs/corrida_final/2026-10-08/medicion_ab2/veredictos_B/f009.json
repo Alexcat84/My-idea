@@ -1,0 +1,18 @@
+{
+  "paquete": "f009",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Tu producto hecho a mano, pieza a pieza",
+      "por_que": "Afirma que la persona fabrica a mano, pero ella solo dijo que fabrica ella misma cada pieza, una a la vez; no dijo cómo la fabrica (a mano o con máquinas), y ningún nodo lo dice.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Traduce cada característica de tu pieza (material, acabado, tamaño, hecha a mano)",
+      "por_que": "Presenta \"hecha a mano\" como una característica del producto de la persona, un dato de su negocio que ella no dio.",
+      "nodo": "producto_unico_superior"
+    }
+  ],
+  "afirmaciones_leidas": 52
+}

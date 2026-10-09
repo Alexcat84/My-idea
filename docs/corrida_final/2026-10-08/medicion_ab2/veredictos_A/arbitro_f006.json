@@ -1,0 +1,29 @@
+{
+  "paquete": "f006",
+  "arbitrajes": [
+    {
+      "afirmacion": "cuántas de tus 12 macetas al mes vendes por Instagram",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.lo_que_conto: \"Vendo unas 12 macetas al mes por Instagram\"; la misma salida repite en la intro \"Ya vendes unas 12 macetas al mes por Instagram\" y en los números \"las 12 que vendes al mes por Instagram\".",
+      "razon": "La persona dijo que las 12 macetas al mes son las que vende por Instagram. El paso 3 de la Etapa 6 las presenta como su venta total y pregunta qué parte pasa por Instagram, lo que contradice el dato que ella dio y choca con el resto de la salida."
+    },
+    {
+      "afirmacion": "Considera primero si puedes evitarlo cambiando de rumbo. Ejemplo: si dependes de un solo proveedor, busca un segundo para tener alternativa.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "cuatro_caminos_ante_un_riesgo: \"evitarlo, cambiando de rumbo para que ya no pueda ocurrir\" frente a \"reducirlo, bajando su probabilidad, su impacto [...] y quedándote con lo que sobra\".",
+      "razon": "Con un segundo proveedor, el proveedor de resina todavía puede subir el precio o desaparecer; lo que baja es el impacto, y queda un resto. Según la definición del nodo, eso es reducir, no evitar, así que el ejemplo enseña el camino equivocado."
+    },
+    {
+      "afirmacion": "Si Instagram pesa mucho, eso confirma que conviene tener otra vía para llegar a tus clientes.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "channels_hypothesis_web_mobile: \"Elige un único canal principal para enfocar ahí tus recursos al inicio\". Ningún nodo de riesgo concluye que concentrar las ventas confirme la necesidad de otro canal. La persona respondió \"Con eso me basta por ahora\" cuando se le preguntó por otra forma de avisar a sus clientes.",
+      "razon": "La salida da por confirmada una conclusión que ningún nodo respalda y que la persona no dio. Además, el paso siguiente de la propia salida deja la decisión abierta (\"decide si te basta con vigilar la cuenta o si conviene abrir un segundo canal\")."
+    }
+  ]
+}

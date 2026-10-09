@@ -1,0 +1,24 @@
+{
+  "paquete": "f006",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "cuántas de tus 12 macetas al mes vendes por Instagram",
+      "por_que": "La persona dijo que vende unas 12 macetas al mes por Instagram. La salida trata esas 12 como su venta total, de la que solo una parte pasaría por Instagram.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Considera primero si puedes evitarlo cambiando de rumbo. Ejemplo: si dependes de un solo proveedor, busca un segundo para tener alternativa.",
+      "por_que": "El nodo define evitar como cambiar de rumbo para que el riesgo ya no pueda ocurrir. Buscar un segundo proveedor baja el impacto y deja un resto, que es el camino de reducir, no el de evitar.",
+      "nodo": "cuatro_caminos_ante_un_riesgo"
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Si Instagram pesa mucho, eso confirma que conviene tener otra vía para llegar a tus clientes.",
+      "por_que": "Ningún nodo da por confirmada esa conclusión. El nodo de canales aconseja lo contrario: enfocar los recursos en un único canal principal al inicio.",
+      "nodo": "channels_hypothesis_web_mobile"
+    }
+  ],
+  "afirmaciones_leidas": 72
+}

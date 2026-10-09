@@ -53,6 +53,27 @@ cifra final de la consola; el `.env` raíz se queda hasta entonces.
 «kits de huerto») a los planes de mundo; afecta a 3 sostenidos y no cambia el veredicto (sin ellos, A 12 y B 9). Detalle en
 [medicion_ab/RESULTADO.md](medicion_ab/RESULTADO.md). Las opciones de decisión están en `docs/PROXIMOS_PASOS.md` §5.
 
+## La segunda medición A/B: el contexto arreglado (9 oct)
+
+Arreglos (ea094911d, rama `fidelidad-contexto`, sin push): en el contexto, la pregunta de la IA y la respuesta de la
+persona van separadas y solo la respuesta es dato suyo; la misma regla en los cinco redactores; el verificador busca
+también lo que solo aparece en una pregunta y los contrarios de cálculo u orden; sin el defecto del guion. Juez,
+relectura y árbitro por la API (Opus 5.5). Informe: [medicion_ab2/RESULTADO.md](medicion_ab2/RESULTADO.md).
+
+| | A (solo reglas) | B (reglas + verificador) | Umbral |
+|---|---:|---:|---:|
+| Sostenidos por el árbitro | 14 (9 invenciones, 5 contrarios) | 15 (9 invenciones, 6 contrarios) | 0 |
+| Planes con algún sostenido | 7 de 14 | 9 de 14 | 0 |
+| Trampas cazadas | 3 de 3 | 3 de 3 | todas |
+| Coste de API | 1,1126 USD (redactor, compartido) | + 0,7725 USD (verificador) = 1,8851; juez por la API 9,29 estimado | tope 2,10 + 30 |
+
+**Veredicto: B NO PASA.** Se para y se reporta, sin arreglar ni desplegar. Lo buscado desapareció de los borradores
+(premisas de preguntas, «siguen vigentes», la resta al revés, la cuota de defectos). Lo que queda: (1) una **frase fija
+del motor** («Lo que este plan aún no cubre: validar con clientes reales…», de `plan_readiness`) en 11 de 14 planes,
+sostenida como contrario en 3 (B) y 2 (A); sin ella, A 12 y B 12; (2) causas y resultados prometidos en las bisagras del
+texto, que el verificador deja pasar; (3) ruido del juez. Y un daño nuevo del verificador que el juez no cuenta: vuelve
+pregunta lo que la persona dijo en la misma sesión («¿Usas resina en tus macetas?»).
+
 ## Qué hay en esta carpeta
 
 | Archivo o carpeta | Qué es |
@@ -61,6 +82,7 @@ cifra final de la consola; el `.env` raíz se queda hasta entonces.
 | [COSTES_MODELOS.md](COSTES_MODELOS.md) | coste por corrida, por modelo, por pieza, por llamada y por espacio; la caché; el tope; la consulta SQL; contra el vuelo del 27 sep (Sonnet 4.6 + Haiku 4.5) |
 | [coherencia/](coherencia/) | la prueba de coherencia: por proyecto, cada sesión turno por turno y cada documento tal como lo lee la persona |
 | [medicion_ab/](medicion_ab/) | la medición barata: los 14 planes redactados de nuevo en A y en B, los veredictos del juez y del árbitro y el informe |
+| [medicion_ab2/](medicion_ab2/) | la segunda medición A/B (contexto arreglado): planes, veredictos del juez por la API y el informe |
 | [vuelo/](vuelo/) | el vuelo final validado (intento 10 + fases 3 y 4): igual, por proyecto, sesión por sesión y cada plan completo |
 | [revision_guion_vuelo.md](revision_guion_vuelo.md) | el guion del vuelo revisado contra las reglas cambiadas hoy |
 | `vuelo_transcripcion_*.txt` | la salida de cada intento del vuelo |

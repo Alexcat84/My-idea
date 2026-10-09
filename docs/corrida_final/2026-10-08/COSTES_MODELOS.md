@@ -339,3 +339,18 @@ El verificador sube el coste del plan en torno a un 67 % sobre el redactor (0,05
 revisión. **Resultado de fidelidad: B NO PASA** (10 sostenidos en 8 de 14 planes contra 14 en 7 de A), así que el
 coste no se despliega: ver [medicion_ab/RESULTADO.md](medicion_ab/RESULTADO.md). Esta sección es manual: si se vuelve a
 generar el archivo con `corrida_final_costes_modelos.ts`, hay que volver a añadirla.
+
+## 10. La segunda medición A/B (9 oct 2026)
+
+Los mismos 14 planes con el contexto arreglado. Cifras de `medicion_ab2/costes.json`.
+
+| Pieza | USD | Por plan (media) |
+|---|---:|---:|
+| Redactor (un borrador por plan, compartido por A y B) | 1,1126 | 0,0795 |
+| Verificador (Sonnet 5.5) | 0,7725 | 0,0552 |
+| **Total de redacción** | **1,8851** | 0,1347 |
+| Juez, relectura y árbitro por la API (Opus 5.5, 51 llamadas; estimado a 5/25 por millón) | 9,29 | n/a |
+
+El verificador sube el coste del plan en torno a un 69 % sobre el redactor (mínimo 0,0312, máximo 0,0805). Propuso 87
+ediciones y aplicó 83, ninguna a revisión. **Resultado de fidelidad: B NO PASA** (15 sostenidos en 9 de 14 planes
+contra 14 en 7 de A): ver [medicion_ab2/RESULTADO.md](medicion_ab2/RESULTADO.md). Sección manual, como la 9.

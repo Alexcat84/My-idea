@@ -1,0 +1,21 @@
+{
+  "paquete": "f005",
+  "arbitrajes": [
+    {
+      "afirmacion": "lo más barato y rápido es observar y escuchar a personas reales antes de tocar el producto",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "genchi_gembutsu_salir_del_edificio pide basar las decisiones en conocimiento directo y no en reportes de segunda mano, pero no compara costo ni rapidez. romper_vision_en_experimentos habla de experimentos 'pequeños y rápidos', no de que observar sea lo más barato. concierge_mvp lo llama 'ineficiente a propósito'. Contexto: la persona no dijo nada al respecto ('lo_que_conto': []).",
+      "razon": "La frase presenta como hecho que escuchar y observar es la opción más barata y rápida. Ningún nodo afirma esa ventaja, así que es una causa o un resultado añadido que no viene de ninguna fuente, aunque suene plausible."
+    },
+    {
+      "afirmacion": "validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "La etapa 2 se apoya en genchi_gembutsu_salir_del_edificio ('Salir a hablar con clientes potenciales reales'). La etapa 3 se apoya en concierge_mvp ('Consigue un primer cliente real... dispuesto a pagar'). La etapa 4 se apoya en producto_minimo_viable ('Lanza tu primera versión a tus primeros usuarios... Mide la reacción real'). Los tres están en el paquete y el plan los desarrolla.",
+      "razon": "La sección declara como no cubierto justo lo que el plan sí cubre: conversaciones, primera versión, pruebas con usuarios y un cliente que paga. Eso es lo opuesto a lo que dicen los nodos usados en el propio plan, y la persona recibe una afirmación falsa sobre su plan."
+    }
+  ]
+}

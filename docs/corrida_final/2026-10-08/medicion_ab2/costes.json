@@ -1,0 +1,1127 @@
+{
+  "gastado_usd": 1.88511,
+  "planes": [
+    {
+      "plan_id": "9909f451-a7e1-482a-b21f-ded87c7a070f",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09425,
+      "costo_verificador": 0.04089,
+      "verificador": {
+        "propuestas": 4,
+        "aplicadas": 3,
+        "ignoradas": 1,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Tu hipótesis es que registrar gastos es un problema que duele; las conversaciones te dirán si es cierto o si solo es una molestia pequeña.",
+          "accion": "pregunta",
+          "pregunta": "¿Crees que registrar gastos es un problema que duele? Las conversaciones te dirán si es cierto o si solo es una molestia pequeña.",
+          "motivo": "Atribuye a la persona una hipótesis que no declaró; es una suposición del plan."
+        },
+        {
+          "frase": "Busca a quienes ya tengan una solución casera, estén dispuestos a pagar por una versión incompleta y puedan servirte de referencia.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Mezcla material de ventas B2B (clientes visionarios que sirven de referencia) que no encaja con una app de gastos personales."
+        },
+        {
+          "frase": "Exígete una prueba concreta de que tu app se diferencia. Si es una copia de algo que ya existe, no avanzas.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Regla dura de avanzar o no sobre la idea, sin base en lo que la persona contó; condiciona su proyecto con una condición inventada."
+        },
+        {
+          "frase": "Si es una copia de algo que ya existe, no avances.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Regla dura sin respaldo en lo que la persona dijo sobre su idea; el plan la impone como condición."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11021,
+          "out": 3157,
+          "cache_read": 0,
+          "cache_write_5m": 0,
+          "cache_write_1h": 10160,
+          "usd": 0.094252,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 13065,
+          "out": 516,
+          "cache_read": 0,
+          "cache_write_5m": 0,
+          "cache_write_1h": 2400,
+          "usd": 0.040889999999999996,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "0e481ad8-ec8f-4cb1-a1af-2bb5d3ee86f9",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.0855,
+      "costo_verificador": 0.06486,
+      "verificador": {
+        "propuestas": 9,
+        "aplicadas": 9,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Ya recorriste el taller, revisaste las hojas de seguridad, hablaste con tus dos empleados y ordenaste los peligros por gravedad.",
+          "accion": "quitar",
+          "motivo": "Da por hecho acciones que la persona no contó; ella dijo que nunca escribió qué puede lastimarla ni habló con sus empleados."
+        },
+        {
+          "frase": "Compraste las mascarillas, pero el polvo sigue igual de bravo: eso indica que la mascarilla sola no alcanza y que toca atacar el polvo desde donde se produce.",
+          "accion": "quitar",
+          "motivo": "Afirma una compra y un resultado que nadie dio; la persona dijo que trabaja sin mascarilla decente."
+        },
+        {
+          "frase": "Este plan parte de ahí, asume el ritmo real que has llevado (las etapas de análisis te tomaron más de lo previsto, así que aquí cada etapa pide poco y concreto) y deja para el final tu cuenta de Instagram, que sigue siendo tu prioridad.",
+          "accion": "quitar",
+          "motivo": "Inventa un historial de etapas de análisis y un ritmo que la persona no contó."
+        },
+        {
+          "frase": "Con lo que ya anotaste de tu lista de peligros, esta etapa busca reducirlo en el lugar donde se genera.",
+          "accion": "quitar",
+          "motivo": "La persona dijo que nunca ha escrito una lista de peligros."
+        },
+        {
+          "frase": "Toma la zona de mezcla y pulido que ya fotografiaste y escribe cuál de las dos levanta más polvo y en qué momento exacto del proceso.",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes fotos de tu zona de mezcla y pulido? Si no, toma una hoy y escribe cuál de las dos levanta más polvo y en qué momento exacto del proceso.",
+          "motivo": "Supone fotos que la persona nunca dijo haber tomado."
+        },
+        {
+          "frase": "Revisa que la mascarilla que compraste cierre bien contra la cara y se use durante toda la mezcla y el pulido, no solo al empezar.",
+          "accion": "pregunta",
+          "pregunta": "¿Ya tienes una mascarilla? Si es así, revisa que cierre bien contra la cara y se use durante toda la mezcla y el pulido, no solo al empezar.",
+          "motivo": "Da por hecha una compra que la persona no confirmó."
+        },
+        {
+          "frase": "Ellos ya te dijeron qué peligros ven: retoma esa lista como punto de partida.",
+          "accion": "pregunta",
+          "pregunta": "¿Tus empleados te han dicho ya qué peligros ven en su puesto? Si es así, retoma esa lista como punto de partida.",
+          "motivo": "La persona dijo que nunca ha tenido reuniones a solas con ellos; no hay lista de ellos."
+        },
+        {
+          "frase": "Hoy tu correo, tu Instagram y tu banco comparten la misma contraseña, así que perder una significa perder las tres.",
+          "accion": "quitar",
+          "motivo": "La consecuencia 'perder una significa perder las tres' es una causa no dada por la persona."
+        },
+        {
+          "frase": "Cambia la contraseña de tu correo por una distinta a la de Instagram y a la del banco, porque quien controla tu correo puede intentar recuperar tus otras cuentas desde ahí.",
+          "accion": "quitar",
+          "motivo": "El motivo viene de lo que afirmó la IA en su pregunta, no de la persona."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7873,
+          "out": 2899,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9945,
+          "usd": 0.08549620000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 6510,
+          "out": 1186,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9945,
+          "usd": 0.0648642,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "265e4486-ae89-44ad-b449-6f6a0234acfb",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07263,
+      "costo_verificador": 0.05126,
+      "verificador": {
+        "propuestas": 5,
+        "aplicadas": 5,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Ya vendes con regularidad y subiste tu precio sin perder ventas, lo que significa que tus clientes valoran tu trabajo.",
+          "accion": "quitar",
+          "motivo": "Atribuye una causa (que los clientes valoran su trabajo) que la persona no dio; solo dijo que las ventas se mantuvieron."
+        },
+        {
+          "frase": "Quieres atraparlo antes de hornear.",
+          "accion": "pregunta",
+          "pregunta": "¿Quieres atrapar el defecto antes de hornear la pieza? Si es así, ¿tus macetas de cemento pasan por horno?",
+          "motivo": "La persona habló de hornear, pero el cemento no se hornea; el proceso real del taller no está confirmado."
+        },
+        {
+          "frase": "Hoy revisas cada maceta al final, pero sin anotar qué falla ni cuándo, y tus clientes ya notan burbujas y acabados distintos entre lotes.",
+          "accion": "pregunta",
+          "pregunta": "Hoy revisas cada maceta al final, pero sin anotar qué falla ni cuándo; ¿tus clientes se quejan de burbujas y de acabados distintos entre lotes?",
+          "motivo": "La persona habló de piezas con burbujas y acabados irregulares entre lotes, y dice que revisa sin registro. La parte de que los clientes lo notan ya es dato suyo, pero se matiza con pregunta por la mezcla de afirmaciones."
+        },
+        {
+          "frase": "Si el defecto aparece en casi todos los lotes, trátalo como un problema de tu proceso, no del día: toca rediseñar el paso donde se forma.",
+          "accion": "quitar",
+          "motivo": "Da una causa ('problema de tu proceso') como regla sin respaldo en lo que contó la persona; en el nodo la acción difiere por tipo de causa pero no promete rediseñar siempre."
+        },
+        {
+          "frase": "Con tu precio nuevo y tu costo real por pieza, el margen mejoró, pero los defectos se comen una parte que hoy no estás midiendo.",
+          "accion": "quitar",
+          "motivo": "Afirma que el margen mejoró y que los defectos se comen una parte, cuando el estado del proyecto dice que ese margen aún no está calculado ni los defectos medidos."
+        }
+      ],
+      "eventos_plan": [
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 12717,
+          "out": 3348,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3183,
+          "usd": 0.0726262,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 15196,
+          "out": 793,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3183,
+          "usd": 0.0512582,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "ff010188-a9db-48be-9e87-5a5a7c435a1e",
+      "dominio": "risk_management",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07804,
+      "costo_verificador": 0.05826,
+      "verificador": {
+        "propuestas": 9,
+        "aplicadas": 9,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Hoy apagas incendios cuando ya pasaron, y el golpe más fuerte que ves es depender de un solo proveedor.",
+          "accion": "quitar",
+          "motivo": "Presenta como hecho de la persona lo que solo contó una respuesta posterior sin respaldo en el contexto guardado; el proyecto no lo recoge."
+        },
+        {
+          "frase": "Escribe en una hoja la frase \"si mi proveedor de resina falla, entonces...\" y complétala con lo que pasaría con tus pedidos de esa semana.",
+          "accion": "pregunta",
+          "pregunta": "¿Dependes de un solo proveedor de resina? Si es así, escribe en una hoja la frase \"si mi proveedor de resina falla, entonces...\" y complétala con lo que pasaría con tus pedidos de esa semana.",
+          "motivo": "El contexto habla de cemento, moldes y pintura, no de resina; el material de resina no está confirmado en el proyecto."
+        },
+        {
+          "frase": "Ejemplo: si mi proveedor de resina deja de surtirme, no puedo entregar pedidos.",
+          "accion": "pregunta",
+          "pregunta": "¿Usas resina en tus macetas? Si es así, un ejemplo sería: si mi proveedor de resina deja de surtirme, no puedo entregar pedidos.",
+          "motivo": "El ejemplo da por hecho un material que el proyecto no menciona."
+        },
+        {
+          "frase": "Toma el riesgo del proveedor único y anota cuántas macetas dejarías de hacer en un mes sin él, multiplicadas por tu margen por pieza.",
+          "accion": "pregunta",
+          "pregunta": "¿Dependes de un solo proveedor? Si es así, anota cuántas macetas dejarías de hacer en un mes sin él, multiplicadas por tu margen por pieza.",
+          "motivo": "Da por hecho el proveedor único, que el contexto guardado no confirma."
+        },
+        {
+          "frase": "Escribe junto al riesgo del proveedor único cuál de los cuatro caminos eliges y qué harías primero para empezarlo.",
+          "accion": "pregunta",
+          "pregunta": "¿Dependes de un solo proveedor? Si es así, escribe junto a ese riesgo cuál de los cuatro caminos eliges y qué harías primero para empezarlo.",
+          "motivo": "Da por hecho el proveedor único, no confirmado en el proyecto."
+        },
+        {
+          "frase": "Ejemplo: si dependes de un solo proveedor, busca un segundo para tener alternativa.",
+          "accion": "pregunta",
+          "pregunta": "¿Dependes de un solo proveedor? Si es así, busca un segundo para tener alternativa.",
+          "motivo": "Condiciona un hecho del negocio que la persona no confirmó."
+        },
+        {
+          "frase": "Revisa que un éxito reciente, como el de subir el precio sin perder ventas, no te esté inflando ese apetito sin razón.",
+          "accion": "quitar",
+          "motivo": "Atribuye una causa o sesgo a la persona (que el éxito le infle el apetito de riesgo) que ella no dio."
+        },
+        {
+          "frase": "Si Instagram pesa mucho, eso confirma que conviene tener otra vía para llegar a tus clientes.",
+          "accion": "quitar",
+          "motivo": "Conclusión que el nodo no da y que ningún dato de la persona respalda."
+        },
+        {
+          "frase": "Si fallara el proveedor, calcula cuántas macetas dejas de entregar y cuánto margen pierdes por pieza.",
+          "accion": "pregunta",
+          "pregunta": "¿Dependes de un solo proveedor? Si es así, calcula cuántas macetas dejarías de entregar si fallara y cuánto margen pierdes por pieza.",
+          "motivo": "Da por hecho el proveedor único."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7971,
+          "out": 3870,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 5604,
+          "usd": 0.0780382,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11243,
+          "out": 1315,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 5604,
+          "usd": 0.0582562,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "ee6de956-f711-4146-9f15-9ca5ea99c0b2",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.04789,
+      "costo_verificador": 0.03121,
+      "verificador": {
+        "propuestas": 6,
+        "aplicadas": 6,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Hoy tu idea descansa en suposiciones, como que la gente quiere pagar por registrar sus gastos o que lo seguirá haciendo después del primer mes.",
+          "accion": "pregunta",
+          "pregunta": "¿Qué das hoy por cierto sobre tu app, por ejemplo que la gente quiere pagar por registrar sus gastos o que lo seguirá haciendo después del primer mes?",
+          "motivo": "Atribuye a la persona suposiciones concretas que no dio; solo dijo que tiene una app de suscripción."
+        },
+        {
+          "frase": "Tienes una app de suscripción mensual para llevar el registro de gastos personales y todavía ningún cliente ha pagado.",
+          "accion": "pregunta",
+          "pregunta": "Tienes una app de suscripción mensual para llevar el registro de gastos personales. ¿Ya hay clientes que hayan pagado?",
+          "motivo": "Que ningún cliente haya pagado no lo dijo la persona ni el estado del proyecto; es un hecho inventado."
+        },
+        {
+          "frase": "Todavía no tienes datos de clientes que paguen, así que lo más barato y rápido es observar y escuchar a personas reales antes de tocar el producto.",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes ya datos de clientes que paguen? Si todavía no, lo más barato y rápido es observar y escuchar a personas reales antes de tocar el producto.",
+          "motivo": "Da por hecho que no hay datos de clientes, cosa que la persona no dijo."
+        },
+        {
+          "frase": "Lleva la prueba a un grupo reducido de primeros usuarios y observa su comportamiento real.",
+          "accion": "quitar",
+          "motivo": "La etapa 3 no define una prueba ya hecha, y es una idea inconsistente con el flujo previo; es consejo presentado como continuidad de algo que no existe."
+        },
+        {
+          "frase": "Una suscripción mensual vive de que la gente se quede.",
+          "accion": "quitar",
+          "motivo": "Afirmación causal general sobre el modelo de negocio que ningún nodo da; no tiene respaldo."
+        },
+        {
+          "frase": "Si las métricas se acercan a lo esperado, sigue con la estrategia (perseveras).",
+          "accion": "quitar",
+          "motivo": "Duplica la lógica de decisión sin base en datos de la persona; no hay métricas ni expectativas previas dadas."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 9479,
+          "out": 2792,
+          "cache_read": 10160,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.047894,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11307,
+          "out": 836,
+          "cache_read": 2400,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.031214,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "b4a01dea-63e5-4b44-bab5-2b1f14b2574c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.05864,
+      "costo_verificador": 0.03189,
+      "verificador": {
+        "propuestas": 3,
+        "aplicadas": 3,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Ofrece tu pieza a tus primeros compradores, gente que ya reconoce el problema y está dispuesta a pagar por una solución aunque sea sencilla.",
+          "accion": "pregunta",
+          "pregunta": "¿Ya hay gente que reconoce el problema que resuelve tu pieza y estaría dispuesta a pagar por ella? Si es así, ofrécesela a esos primeros compradores.",
+          "motivo": "Da por hecho que existen compradores que ya reconocen el problema, cosa que la persona no dijo."
+        },
+        {
+          "frase": "Si trabajas con alguien, discute el lienzo con esa persona hasta que encaje.",
+          "accion": "quitar",
+          "motivo": "La persona trabaja sola (equipo de 1); el paso supone un equipo que no tiene."
+        },
+        {
+          "frase": "Hacer una pieza a la vez es valioso, pero solo se sostiene si lo que cobras cubre lo que te cuesta y te deja algo para ti.",
+          "accion": "quitar",
+          "motivo": "Afirma como hecho que su forma de producir es valiosa, sin respaldo en nodos ni en lo que dijo."
+        }
+      ],
+      "eventos_plan": [
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11043,
+          "out": 3396,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 404,
+          "usd": 0.058642200000000005,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 12998,
+          "out": 407,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 404,
+          "usd": 0.0318862,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "fb027af0-ecdd-4b62-8284-7f3eb8e7db3a",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.05686,
+      "costo_verificador": 0.04567,
+      "verificador": {
+        "propuestas": 9,
+        "aplicadas": 8,
+        "ignoradas": 1,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Este plan parte de tus cifras: unos 68 de materiales por maceta, un par de horas de trabajo, tu hora valorada en unos 17 y un precio de 85.",
+          "accion": "quitar",
+          "motivo": "Presenta como vigentes cifras que la persona ya superó: dijo que subió el precio a 250 y que su costo real es 130 con su hora a 50."
+        },
+        {
+          "frase": "Llevas dos meses vendiendo, con unas 15 ventas por Instagram y una tienda de plantas que te revende.",
+          "accion": "quitar",
+          "motivo": "Describe una situación antigua; ya vende unas 12 al mes y subió el precio, así que el encuadre del plan no coincide con su situación actual."
+        },
+        {
+          "frase": "Hoy sabes que cobras 85 y que gastas unos 68 en materiales, pero eso no cuenta tu tiempo ni el canal por el que vendes.",
+          "accion": "quitar",
+          "motivo": "Contradice lo que contó después: ya cobra 250 y ya calculó un costo real de 130 incluyendo su hora."
+        },
+        {
+          "frase": "Con tu hora valorada en unos 17 y un par de horas por maceta, el costo real es bastante más alto que 68, y por eso conviene calcularlo con tus datos exactos.",
+          "accion": "quitar",
+          "motivo": "Ignora que ella ya calculó su costo real (130, con su hora a 50) y usa un valor de hora que ella corrigió."
+        },
+        {
+          "frase": "Con el costo de la etapa 1 en mano, resta ese costo de tu precio de 85 y anota si el resultado es positivo o negativo para cada tamaño.",
+          "accion": "quitar",
+          "motivo": "Usa un precio de 85 que la persona ya cambió a 250."
+        },
+        {
+          "frase": "Toma tus 15 ventas, anota por cada una el precio al que salió y el canal, y calcula cuánto te quedó restando el costo por maceta de la etapa anterior.",
+          "accion": "quitar",
+          "motivo": "Se basa en las 15 ventas a precio antiguo, cuando la persona ya subió el precio y vende unas 12 al mes."
+        },
+        {
+          "frase": "Tus 15 ventas dicen que hay demanda, pero no dicen si tu precio ajustado se sostiene.",
+          "accion": "quitar",
+          "motivo": "Contradice lo que contó: ya subió el precio a 250 y las ventas se mantuvieron."
+        },
+        {
+          "frase": "Hoy cobras por pieza, pero no tienes por escrito cuánto te cuesta hacerla.",
+          "accion": "quitar",
+          "motivo": "Ella ya dijo que sabe su costo real por pieza (130)."
+        },
+        {
+          "frase": "Si la tienda de plantas se queda un porcentaje o te pide un precio menor, réstalo antes de calcular.",
+          "accion": "pregunta",
+          "pregunta": "¿La tienda de plantas se queda un porcentaje o te pide un precio menor? Si es así, réstalo antes de calcular.",
+          "motivo": "Da por hecho cómo funciona la tienda de plantas, algo que ella no contó; es un hecho comprobable con ella."
+        }
+      ],
+      "eventos_plan": [
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 13420,
+          "out": 2616,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 720,
+          "usd": 0.0568602,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 15849,
+          "out": 1089,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 720,
+          "usd": 0.045672199999999996,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "f14f36e7-d5ed-42d9-818d-eef3096353e9",
+      "dominio": "seguridad_digital",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07494,
+      "costo_verificador": 0.05225,
+      "verificador": {
+        "propuestas": 5,
+        "aplicadas": 4,
+        "ignoradas": 1,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Hoy, con tus macetas y tus ventas por Instagram y la tienda, ¿tienes alguna forma de medir qué tan bien sale cada parte del negocio?",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "No aparece en el plan; no hay nada que corregir."
+        },
+        {
+          "frase": "Como trabajas solo y no tienes a nadie más que responda por esto, el plan va en este orden: primero cierra la puerta que más pesa (tus cuentas), luego asegura lo que guardas (clientes y pedidos) y al final deja escrito qué hacer si algo falla.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "No marcar: respaldada por la persona."
+        },
+        {
+          "frase": "Anota cuántas macetas vendes por cada canal (Instagram y tienda), de modo que en tu copia tengas también ese dato.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Paso ajeno a los nodos y a lo que pidió la persona (seguridad de datos); no tiene respaldo en el material del plan."
+        },
+        {
+          "frase": "Instala y mantén un antivirus en los dispositivos donde manejas datos de clientes.",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes un antivirus instalado en tu celular y en el equipo donde guardas los datos de tus clientes? Si no, instala y mantén uno en los dispositivos donde manejas datos de clientes.",
+          "motivo": "Da por hecho un equipo con computadora; la persona solo mencionó el celular y un Excel, y no confirmó qué dispositivos usa."
+        },
+        {
+          "frase": "Anota tus dispositivos: el celular y el equipo donde tienes el Excel.",
+          "accion": "pregunta",
+          "pregunta": "¿En qué dispositivos guardas tu Excel de clientes: solo el celular o también una computadora? Anota tus dispositivos y qué datos hay en cada uno.",
+          "motivo": "Afirma un equipo distinto al celular que la persona no mencionó."
+        }
+      ],
+      "eventos_plan": [
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 13132,
+          "out": 3196,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3934,
+          "usd": 0.0749402,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14672,
+          "out": 697,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3934,
+          "usd": 0.0522542,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "aad2749d-a69c-43b6-8a5b-6f73a7df7374",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.06709,
+      "costo_verificador": 0.04742,
+      "verificador": {
+        "propuestas": 10,
+        "aplicadas": 10,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Además, un proveedor te ofrece el cemento un 20 por ciento más barato y hay una feria local en agosto.",
+          "accion": "pregunta",
+          "pregunta": "¿Hay alguna feria local en agosto a la que puedas ir? Si es así, anótala como una opción para probar tu precio.",
+          "motivo": "La feria local en agosto no la dio la persona ni ningún nodo; solo dijo que el proveedor nuevo le baja el cemento un 20%."
+        },
+        {
+          "frase": "Mira si la feria local de agosto te sirve para probar el precio con compradores nuevos, cambiando solo eso.",
+          "accion": "pregunta",
+          "pregunta": "¿Hay alguna feria local en agosto? Si es así, mira si te sirve para probar el precio con compradores nuevos, cambiando solo eso.",
+          "motivo": "La feria no la dijo la persona; no se puede dar por hecha."
+        },
+        {
+          "frase": "Como llevas apenas 1 acción hecha de 27, el ciclo arranca con pasos pequeños.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Cifra de acciones hechas que nadie dio y que no sale de lo contado."
+        },
+        {
+          "frase": "Además, un proveedor te ofrece el cemento un 20 por ciento más barato y hay una feria local en agosto.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Afirma una feria local en agosto que la persona nunca mencionó."
+        },
+        {
+          "frase": "Desde el último plan ya armaste la tabla de costos por pieza, subiste el precio a 250 sin que las ventas bajaran y calculaste tu costo real en 130 con tu hora a 50.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Da por hecho que armó la tabla de costos por pieza, algo que la persona no dijo (solo contó los números); el estado del proyecto dice esa hoja pendiente."
+        },
+        {
+          "frase": "Además, un proveedor te ofrece el cemento un 20 por ciento más barato y hay una feria local en agosto.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Frase combinada con un dato inventado (feria en agosto) y otro de plan anterior no confirmado."
+        },
+        {
+          "frase": "Este plan parte de ahí: no repite lo ya hecho, descarta lo del tiempo por hora que retiraste y se centra en el precio y el margen.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "Afirma que la persona 'retiró' lo del tiempo por hora, cosa que nunca dijo; ella calculó su hora a 50."
+        },
+        {
+          "frase": "Toma la última tanda que hiciste, anota cuánto gastaste en materiales y cuántas macetas salieron, y divide para obtener tu costo de materiales por pieza.",
+          "accion": "pregunta",
+          "pregunta": "¿Haces tus macetas por tandas? Si es así, toma la última tanda que hiciste, anota cuánto gastaste en materiales y cuántas macetas salieron, y divide para obtener tu costo de materiales por pieza.",
+          "motivo": "Da por hecho que trabaja por tandas; ella habló de lotes de 10 o por pedido, sin confirmar tandas previas."
+        },
+        {
+          "frase": "Anota cuánto gastaste en materiales en tu última tanda y cuántas macetas salieron, y divide para ver tu costo de materiales por pieza.",
+          "accion": "pregunta",
+          "pregunta": "¿Has hecho ya alguna tanda de varias piezas juntas? Si es así, anota cuánto gastaste en materiales en tu última tanda y cuántas macetas salieron, y divide para ver tu costo de materiales por pieza.",
+          "motivo": "Da por hecho que ya hizo una tanda; ella dijo que produce por pedido."
+        },
+        {
+          "frase": "Compara ese número con tus 12 macetas al mes por Instagram y con las que puedes hacer como máximo con tus horas reales.",
+          "accion": "quitar",
+          "pregunta": "",
+          "motivo": "No corrección necesaria"
+        }
+      ],
+      "eventos_plan": [
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11805,
+          "out": 3119,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 2828,
+          "usd": 0.06709219999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11035,
+          "out": 1383,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 2828,
+          "usd": 0.04741619999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "deb138a3-9226-4334-a7d9-2dc36519ca0e",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.09645,
+      "costo_verificador": 0.07838,
+      "verificador": {
+        "propuestas": 4,
+        "aplicadas": 4,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Tus compradores llegan casi todos por Instagram y hoy no tienes una lista de contactos fuera de esa cuenta.",
+          "accion": "pregunta",
+          "pregunta": "¿Tus compradores llegan casi todos por Instagram, y tienes ya una lista de sus contactos fuera de esa cuenta?",
+          "motivo": "Lo de la lista fuera de Instagram nunca lo dijo; la IA lo preguntó y ella no respondió a eso."
+        },
+        {
+          "frase": "Si esa cuenta se pierde, no tienes cómo avisarles ni recuperar los pedidos.",
+          "accion": "pregunta",
+          "pregunta": "Si esa cuenta se pierde, ¿tienes cómo avisarles y recuperar los pedidos?",
+          "motivo": "Afirma como hecho lo que solo aparece en preguntas de la IA; ella contestó 'Con eso me basta por ahora'."
+        },
+        {
+          "frase": "Hoy no hay registro de lo que lleva cada kit, y sin eso no puedes saber por qué un sustrato sale distinto de otro.",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes algún registro de lo que lleva cada kit y de cómo preparas el sustrato? Sin eso no puedes saber por qué un sustrato sale distinto de otro.",
+          "motivo": "Da por hecho que no hay registro; ella solo dijo que no tiene procesos escritos."
+        },
+        {
+          "frase": "Hoy no tienes en el material cifras de costo ni de precio de tus kits, así que no se puede decir si cada venta te deja ganancia.",
+          "accion": "pregunta",
+          "pregunta": "¿Cuánto te cuesta y a cuánto vendes cada kit? Con esas cifras se puede decir si cada venta te deja ganancia.",
+          "motivo": "Los números que dio son de macetas y el estado vivo es de kits; afirmar que no hay cifras no tiene respaldo."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14155,
+          "out": 3033,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9208,
+          "usd": 0.09645219999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 17252,
+          "out": 684,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9208,
+          "usd": 0.0783802,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "8b7764c4-8e7c-4d0e-ab11-ed13ef3b968c",
+      "dominio": "primer_equipo",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.10049,
+      "costo_verificador": 0.08051,
+      "verificador": {
+        "propuestas": 6,
+        "aplicadas": 6,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Cuando vi que la entrega llegó tarde, me preocupó porque tal cosa. Quiero entender cómo lo ves tú y hablar de cómo resolverlo.",
+          "accion": "quitar",
+          "motivo": "El nodo da una plantilla con huecos (acción, conducta o resultado; «tal cosa»); aquí está a medio rellenar y como cita literal que el plan no adapta al caso, y la persona no dio esos detalles."
+        },
+        {
+          "frase": "Si el taller crece, vas a necesitar más manos.",
+          "accion": "pregunta",
+          "pregunta": "¿Piensas contratar a alguien más pronto, o por ahora con dos empleados te alcanza? Si el taller crece, vas a necesitar más manos.",
+          "motivo": "La persona no dijo que el taller vaya a crecer ni que quiera más personal; es un supuesto del plan."
+        },
+        {
+          "frase": "Pide a tus dos empleados que consulten sus redes y te recomienden gente.",
+          "accion": "quitar",
+          "motivo": "El nodo pide pedirle la captación a la gente que ya cumple; el plan se lo pide a un empleado que entrega tarde y a otro recién contratado sin que la persona haya dicho nada sobre ello, y es un paso que depende de un crecimiento que no mencionó."
+        },
+        {
+          "frase": "Ahora que hay gente en el taller, más personas pueden tocar tus pedidos, tus mensajes y tus datos.",
+          "accion": "pregunta",
+          "pregunta": "¿Tus dos empleados tienen hoy acceso a tus pedidos, tus mensajes de Instagram o tus datos de clientes?",
+          "motivo": "La persona nunca dijo que los empleados accedan a esas cuentas o datos; es un hecho sobre su operación que se da por supuesto."
+        },
+        {
+          "frase": "Decide por escrito quién de tu equipo, si alguien, puede entrar a tus pedidos y mensajes, y con qué límites.",
+          "accion": "quitar",
+          "motivo": "Es la consecuencia del supuesto de que el equipo toca la cuenta; no hay respaldo en lo que contó y el nodo de cultura no habla de accesos."
+        },
+        {
+          "frase": "Esa regla también es un asunto de cultura que decides tú.",
+          "accion": "quitar",
+          "motivo": "Une dos cosas que ningún nodo une: el acceso a las cuentas de Instagram y los asuntos de cultura."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 20599,
+          "out": 3158,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 6683,
+          "usd": 0.1004902,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 22652,
+          "out": 827,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 6683,
+          "usd": 0.0805102,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "85248377-b739-42a8-8f52-063d3748a4ec",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.09844,
+      "costo_verificador": 0.07327,
+      "verificador": {
+        "propuestas": 6,
+        "aplicadas": 5,
+        "ignoradas": 1,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Trabajas todos los días con cemento y polvo sin mascarilla ni guantes adecuados, nunca has anotado los riesgos del taller y ya elegiste empezar esta semana con una mascarilla de polvo o unos guantes.",
+          "accion": "pregunta",
+          "pregunta": "¿Cuál de las dos protecciones, mascarilla de polvo o guantes, vas a empezar a usar esta semana?",
+          "motivo": "La persona no dijo que ya eligiera empezar esta semana con mascarilla o guantes; ese compromiso no aparece en sus respuestas."
+        },
+        {
+          "frase": "Ahora tienes además a dos empleados que respiran el mismo polvo, y la conversación con ellos sobre protección la has ido postergando.",
+          "accion": "pregunta",
+          "pregunta": "¿Tus dos empleados trabajan también con el cemento y el polvo, y ya has hablado con ellos sobre protección o lo has ido postergando?",
+          "motivo": "Que los empleados respiren el mismo polvo y que haya postergado esa conversación no lo dijo la persona."
+        },
+        {
+          "frase": "Empieza por ti: cuéntales que tú empezaste esta semana a usar mascarilla o guantes y por qué, antes de pedirles nada.",
+          "accion": "quitar",
+          "motivo": "Da por hecho que ya empezó a usar protección esta semana, algo que la persona no confirmó."
+        },
+        {
+          "frase": "Escribe en tu celular la primera frase con la que abrirás la conversación, algo como \"yo empecé a usar mascarilla esta semana y quiero que lo veamos juntos\", y agenda diez minutos con el primer empleado.",
+          "accion": "quitar",
+          "motivo": "El ejemplo supone que ya empezó a usar mascarilla, no confirmado por la persona."
+        },
+        {
+          "frase": "Hoy los riesgos están en tu cabeza y en lo que te pasa a ti.",
+          "accion": "quitar",
+          "motivo": "Afirma cómo tiene la persona sus riesgos hoy; no lo dijo así."
+        },
+        {
+          "frase": "Tus dos empleados quedan expuestos",
+          "accion": "quitar",
+          "motivo": "Hecho sobre la exposición de los empleados que la persona no dio."
+        }
+      ],
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14495,
+          "out": 3527,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8301,
+          "usd": 0.09844420000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 16014,
+          "out": 783,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8301,
+          "usd": 0.0732662,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "31ebf0ea-a5a2-44dc-afe7-d31c7d90db1c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.08616,
+      "costo_verificador": 0.05431,
+      "verificador": {
+        "propuestas": 5,
+        "aplicadas": 5,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "La etapa 1 tomó más tiempo del previsto, así que este ciclo asume tu ritmo real: pocas acciones por etapa, que se pueden hacer con las manos ocupadas en el taller.",
+          "accion": "quitar",
+          "motivo": "La persona nunca dijo que una etapa le tomara más tiempo ni que haya un ciclo anterior; es un hecho inventado sobre su situación."
+        },
+        {
+          "frase": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce.",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes alguna feria local a la vista? Si es así, anota si te sirve para probar el precio con gente que no te conoce.",
+          "motivo": "La persona jamás mencionó una feria de agosto; es un hecho inventado."
+        },
+        {
+          "frase": "Anota otra forma de avisarle a tus clientes si la cuenta cae (por ejemplo, un grupo o una lista de contactos que no dependa de Instagram).",
+          "accion": "pregunta",
+          "pregunta": "¿Tienes otra forma de avisarle a tus clientes si la cuenta cae? Si no, anota una (por ejemplo, un grupo o una lista de contactos que no dependa de Instagram).",
+          "motivo": "No se sabe si ya existe otro medio; la persona respondió 'Con eso me basta por ahora' sin confirmarlo."
+        },
+        {
+          "frase": "Marca cada uno: cambia según cuántas piezas haces (cemento, pintura, tu tiempo) o se paga igual (herramientas, moldes que usas muchas veces, gastos de Instagram si los hay).",
+          "accion": "quitar",
+          "motivo": "Clasifica el tiempo como costo variable y los moldes como fijo, cuando la persona dijo que el molde se desgasta por pieza; no está respaldado por el material."
+        },
+        {
+          "frase": "Calcula tu margen de contribución por unidad: precio de venta menos costo variable por pieza (materiales y tu tiempo).",
+          "accion": "quitar",
+          "motivo": "Afirma que el tiempo es costo variable sin respaldo; el cálculo contradice la separación entre variables y fijos que da el material."
+        }
+      ],
+      "eventos_plan": [
+        "numero_huerfano",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7853,
+          "out": 3791,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 7891,
+          "usd": 0.0861602,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7520,
+          "out": 750,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 7891,
+          "usd": 0.0543082,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    },
+    {
+      "plan_id": "c73e86f8-2c5b-49f0-874c-a8253392c880",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09526,
+      "costo_verificador": 0.06228,
+      "verificador": {
+        "propuestas": 6,
+        "aplicadas": 6,
+        "ignoradas": 0,
+        "revision": false,
+        "fallo": null
+      },
+      "correcciones": [
+        {
+          "frase": "Tienes sin hacer todo el trabajo de números del plan anterior (costo por pieza, margen por canal, punto de equilibrio, prueba del precio de 250), así que sigue vigente y no se repite aquí como si fuera nuevo.",
+          "accion": "quitar",
+          "motivo": "Da por hecho que el plan anterior estaba hecho y vigente, pero el estado dice que los números están pendientes, no que haya un plan previo con ese contenido."
+        },
+        {
+          "frase": "Y como el cemento subió a mitad de camino, tu costo real puede haberse movido, así que lo conveniente es que los números pendientes los cierres con ese dato nuevo.",
+          "accion": "quitar",
+          "motivo": "Contradice lo que contó la persona: el proveedor nuevo le baja el cemento un 20%, no subió."
+        },
+        {
+          "frase": "Los números del plan anterior siguen pendientes, y con el cemento nuevo conviene hacerlos de una vez.",
+          "accion": "quitar",
+          "motivo": "Da por hecho un plan anterior con números que nadie había calculado."
+        },
+        {
+          "frase": "Un cliente que ya pagó 250 y volvió es el que más vale cuidar.",
+          "accion": "pregunta",
+          "pregunta": "¿Algún cliente ya te ha comprado a 250 y ha vuelto a comprar? Si es así, es el que más vale cuidar.",
+          "motivo": "La persona no dijo que algún cliente haya pagado 250 y vuelto a comprar."
+        },
+        {
+          "frase": "Revisa quién más puede entrar a tus cuentas, incluidos tus dos empleados del taller, y deja el acceso solo a quien lo necesite.",
+          "accion": "pregunta",
+          "pregunta": "¿Tus dos empleados del taller tienen acceso a alguna de tus cuentas? Si es así, deja el acceso solo a quien lo necesite.",
+          "motivo": "Supone que los empleados pueden entrar a sus cuentas, algo que la persona no dijo."
+        },
+        {
+          "frase": "Hoy todo tu contacto con compradores vive dentro de Instagram.",
+          "accion": "pregunta",
+          "pregunta": "¿Todo tu contacto con compradores vive dentro de Instagram, o tienes también otro medio con ellos?",
+          "motivo": "La persona dijo que guarda datos de clientes en un Excel y en el celular, y la pregunta sobre otro canal quedó sin responder."
+        }
+      ],
+      "eventos_plan": [
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11618,
+          "out": 3904,
+          "cache_read": 9802,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8002,
+          "usd": 0.0952642,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "verificador_plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 10925,
+          "out": 822,
+          "cache_read": 2042,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8002,
+          "usd": 0.0622822,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ]
+    }
+  ]
+}

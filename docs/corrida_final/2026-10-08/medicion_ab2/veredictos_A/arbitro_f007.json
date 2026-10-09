@@ -1,0 +1,21 @@
+{
+  "paquete": "f007",
+  "arbitrajes": [
+    {
+      "afirmacion": "Chicas y medianas llevan distinto material y distinto tiempo",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: la persona dio un solo costo ('Cada maceta me cuesta como 68 en materiales... y le dedico un par de horas') y dijo 'Las vendo en 85 cada una, mas o menos, dependiendo del tamano', que habla de precio y no de material ni tiempo. El plan anterior lo planteaba como condición ('Si una chica y una mediana gastan distinto material y distinto tiempo'). Ningún nodo trata costos por tamaño.",
+      "razon": "La salida vuelve hecho lo que antes era una hipótesis. Nadie dijo que los dos tamaños difieran en material y tiempo; que el precio cambie con el tamaño no sostiene esa causa. Es plausible, pero no está dado."
+    },
+    {
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "La feria no aparece en 'lo_que_conto', 'dijo_textual' ni 'estado_vivo'. Solo sale en el plan anterior (Etapa 5, paso 5) y en el mensaje_entrada, donde se repite como acción pendiente de ese plan. Ningún nodo la menciona.",
+      "razon": "La frase da por hecho que existe una feria local en agosto en el entorno de la persona, y ella nunca lo contó. El dato se arrastra de una salida anterior que no tenía respaldo, y que la persona repita la lista de acciones del plan no cuenta como testimonio suyo."
+    }
+  ]
+}

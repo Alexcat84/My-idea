@@ -266,6 +266,31 @@ Todo en `docs/corrida_final/2026-10-08/` (README = cada umbral contra su resulta
 3. *Endurecer el verificador* para corregir contrarios de cálculo u orden (hoy solo quita o pregunta) y volver a medir.
 Recomendación: 2 con regla de cierre fijada antes, porque la medición actual tiene un defecto conocido.
 
+### Estado al 9 oct 2026 (noche): la segunda medición A/B, hecha, y B NO PASA otra vez
+
+El fundador eligió "arreglar el contexto y medir" (ACTA filas 14, 14b y 15; informe `docs/corrida_final/2026-10-08/medicion_ab2/RESULTADO.md`).
+Todo en la rama `fidelidad-contexto` del clon `my-idea-main`, **sin push y sin fusionar** (decisión del fundador).
+- **Resultado:** A 14 sostenidos en 7 de 14 planes; B 15 en 9 (umbral 0); trampas 3/3 en las dos. Juez, relectura y
+  árbitro corrieron por la API (Opus 5.5, `web/scripts/corrida_final_juez_api.ts`, 9,29 USD estimados); redacción 1,8851.
+- **Lo buscado desapareció** de los borradores: premisas de preguntas de la IA, «siguen vigentes», la resta al revés, la
+  cuota de defectos.
+- **Lo que queda:** (1) una frase FIJA del motor, «Lo que este plan aún no cubre: validar con clientes reales (...)»
+  (`engine/plan_readiness.py:85`, `web/lib/i18n/mensajes/motor.ts:13`), en 11 de 14 planes y sostenida como contrario
+  en 3 (B) y 2 (A): no la escribe la IA y ninguna regla de redacción la quita; (2) causas y resultados prometidos en las
+  bisagras del texto («suele cuidar el ritmo», «quita el aire de reproche», «sin que te quite tiempo»), que el
+  verificador deja pasar; (3) ruido del juez, unos 3 por versión.
+- **Daño nuevo del verificador** (el juez no lo cuenta): vuelve pregunta lo que la persona dijo en la misma sesión
+  ("¿Usas resina en tus macetas?"), porque desconfía de lo que no está en la foto del contexto al abrir la sesión.
+
+**Decisión que espera al fundador** (nada se arregló: regla de cierre):
+1. *La frase fija de «aún no cubre»:* que salga solo cuando el plan de verdad no cubre la validación con clientes, o
+   quitarla. Es determinista, barata y con prueba en rojo; por sí sola baja A y B a 12.
+2. *El verificador:* que confíe en las respuestas de la sesión y que busque causas y resultados prometidos; o dejarlo
+   apagado, porque en dos mediciones no mejora a A de forma clara y añade un 69 % al coste del plan.
+3. *El umbral:* con unos 3 sostenidos de ruido del juez por versión, el 0 exige suerte; fijar antes una regla de
+   cierre como la de las neutrales (por ejemplo, 0 contrarios y como mucho N invenciones, con residuo declarado).
+Recomendación: 1 y 3, con el verificador apagado; medir otra vez solo después de fijar la regla.
+
 **Para retomar:** el clon de trabajo es `C:/Users/AlexDesk/Documents/my-idea-main` (rama `fidelidad-contexto`); el clon
 `I have an idea` solo se pone al día con fast-forward. Merge a main solo con autorización explícita del fundador. Antes
 de cualquier commit: `pnpm vitest run` (en `web/`) y `python engine/run_all_tests.py`.

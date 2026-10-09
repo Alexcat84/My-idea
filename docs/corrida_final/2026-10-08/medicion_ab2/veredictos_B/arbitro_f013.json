@@ -1,0 +1,21 @@
+{
+  "paquete": "f013",
+  "arbitrajes": [
+    {
+      "afirmacion": "Ahora el cuidado de cada pieza es lo que sostiene ese precio.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto, lo_que_conto: \"Subí el precio a 250 y las ventas se mantuvieron\". La persona no da ninguna causa de que el precio se sostenga. Ningún nodo (costo_de_calidad, cadena_reaccion_calidad_productividad, cero_defectos) liga el cuidado de la pieza con sostener un precio concreto.",
+      "razon": "La frase abre el plan como un hecho: dice por qué se sostiene el precio de 250. Esa causa no la dio la persona ni la dice ningún nodo. Además, la frase siguiente ya cuenta que los clientes se quejan, lo que debilita la idea de que el cuidado esté sosteniendo el precio."
+    },
+    {
+      "afirmacion": "Hoy las quejas llegan porque lo \"aceptable\" vive solo en tu cabeza.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "definiciones_operacionales: \"Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro\". Es una tendencia general, pensada para varios actores; la persona trabaja sola. En contexto solo dice: \"Mis clientes se quejan de piezas con burbujas y acabados irregulares entre lotes\" y \"Reviso cada pieza al final, pero no tengo un registro\".",
+      "razon": "El nodo habla de \"muchos\" problemas en general. La salida lo vuelve la causa cierta de las quejas de este negocio, que la persona nunca dio. La propia Etapa 3 de la salida admite que las burbujas pueden venir del cemento, la humedad o el molde. Que falte un criterio escrito no explica que haya burbujas."
+    }
+  ]
+}

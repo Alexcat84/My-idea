@@ -1,0 +1,21 @@
+{
+  "paquete": "f003",
+  "arbitrajes": [
+    {
+      "afirmacion": "Hoy las quejas llegan porque lo \"aceptable\" vive solo en tu cabeza.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: \"Mis clientes se quejan de piezas con burbujas y acabados irregulares entre lotes\" y \"Reviso cada pieza al final, pero no tengo un registro de que falla ni cuando\". El nodo definiciones_operacionales dice que \"muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro\". reporte_gerencial_diagnostico_calidad dice que la falta de definición de defecto \"puede aparecer\" entre los problemas.",
+      "razon": "Los nodos presentan la falta de criterio como una causa frecuente o posible, y en un contexto de varias personas (trabajadores frente a inspectores). La persona trabaja sola y atribuye las quejas a defectos físicos (burbujas, variación entre lotes). Presentar esa causa como la razón de sus quejas es una causa que nadie dio."
+    },
+    {
+      "afirmacion": "Ahora el cuidado de cada pieza es lo que sostiene ese precio.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: \"Subí el precio a 250 y las ventas se mantuvieron\" y, entre los pendientes, \"medir si el precio más alto se sostiene en el tiempo con más clientes\". Ningún nodo vincula el precio de esta persona con el cuidado de la pieza. cadena_reaccion_calidad_productividad habla de la posición competitiva en general, no de qué sostiene un precio concreto.",
+      "razon": "La frase afirma como hecho la causa por la que el precio de 250 se mantiene, pero la persona no dio ninguna razón. Además, que el precio se sostenga sigue pendiente de medir según el propio contexto."
+    }
+  ]
+}

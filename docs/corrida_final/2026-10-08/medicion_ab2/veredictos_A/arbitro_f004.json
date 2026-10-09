@@ -1,0 +1,21 @@
+{
+  "paquete": "f004",
+  "arbitrajes": [
+    {
+      "afirmacion": "_Plan inicial_",
+      "clase_juez": "contrario",
+      "veredicto": "DESCARTADO",
+      "clase_final": "operativa",
+      "evidencia": "contexto.mensaje_entrada: 'Ciclo 1; el plan vigente lleva 0 días.' El plan anterior lleva otro marcador de tipo, '_Plan completo_'. La propia salida dice en la oración siguiente al título: 'Desde el último plan ya armaste la tabla de costos…' y 'Este plan parte de ahí'.",
+      "razon": "Es un marcador de formato del sistema, que distingue el tipo de plan (inicial frente a completo), y no una afirmación sobre la persona ni sobre su negocio. Además la persona sigue en el ciclo 1. El texto deja explícito que hubo un plan anterior, así que no afirma lo opuesto a nada que ella contara."
+    },
+    {
+      "afirmacion": "validar con clientes reales (conversaciones, una primera versión sencilla de tu producto, pruebas con usuarios, una venta o preventa real)",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.ficha.dijo_textual: 'Llevo dos meses vendiendo, ya tengo unas 15 ventas reales, sobre todo por Instagram y una tienda de plantas que me las revende'. lo_que_conto: 'Vendo unas 12 macetas al mes por Instagram' y 'Subí el precio a 250 y las ventas se mantuvieron'. La Etapa 4 de la salida pide: 'Revisa si tus compradores por Instagram siguen comprando a 250 y registra… lo que dicen sobre el precio'.",
+      "razon": "Presenta como pendiente y fuera del plan tener una primera versión del producto y una venta real. La persona ya vende un producto terminado, con ventas recurrentes, y la Etapa 4 del mismo plan ya trabaja con compradores reales. Dice lo opuesto a lo que ella contó."
+    }
+  ]
+}

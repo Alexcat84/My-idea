@@ -1,0 +1,21 @@
+{
+  "paquete": "f009",
+  "arbitrajes": [
+    {
+      "afirmacion": "Tu producto hecho a mano, pieza a pieza",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto.idea / ficha.dijo_textual: \"Vendo un producto fisico que fabrico yo mismo, una pieza a la vez.\" Ningún nodo habla de fabricación manual.",
+      "razon": "La persona dijo que fabrica ella misma cada pieza, una a la vez, pero no dijo cómo: podría usar máquinas, una impresora 3D o un torno. El título afirma como hecho que es «hecho a mano», un dato de su negocio que nadie dio."
+    },
+    {
+      "afirmacion": "Traduce cada característica de tu pieza (material, acabado, tamaño, hecha a mano)",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "operativa",
+      "evidencia": "producto_unico_superior, paso: \"Define tu producto como un conjunto de beneficios para el cliente y no como una lista de características técnicas\".",
+      "razon": "El paso concreta lo que enseña el nodo: convertir características en beneficios. El paréntesis da ejemplos genéricos de características (material, acabado, tamaño), y «hecha a mano» funciona como uno más de esos ejemplos, no como una afirmación sobre el negocio de la persona. La suposición sin sustento ya queda contada en el hallazgo del título."
+    }
+  ]
+}
