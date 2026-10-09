@@ -242,6 +242,34 @@ que compara la app con el saldo.
 5. **Medición de saldo:** la consulta de `costo_usd` de `CORRIDA_FINAL.md` contra el saldo real de la consola de
    Anthropic, antes y después.
 
+### Estado al 9 oct 2026: la corrida final está HECHA y parada en una decisión del fundador
+
+Todo en `docs/corrida_final/2026-10-08/` (README = cada umbral contra su resultado; ACTA filas 1 a 13).
+- **Pasó:** caché de preguntas (por la regla de cierre, residuo declarado), coherencia (umbrales del fundador), vuelo
+  completo (intento 10 + fases 3 y 4), cierre de Vercel (rigen 5 arranques, 30 sesiones, 1 USD por sesión).
+- **NO pasó:** el juez de fidelidad, en los dos tramos (B: 1 invención; C: 11 sostenidos en 7 de 14 planes, 9
+  invenciones y 2 contrarios). Arreglos ya aplicados después: «Lo que este plan aún no cubre» (c0ab3a89a), la moneda y los
+  datos del negocio como pregunta (bfbd1fddc), el costo total con tiempo de la persona (c6e51feec).
+- **Medición barata A/B (54b189303 en main, ya en origin):** el verificador de planes (`VERIFICADOR_PLAN`, apagado, SIN
+  desplegar) no pasa: A 14 sostenidos en 7 planes, B 10 en 8 (umbral 0). Defecto del guion declarado (8036eaad0, rama
+  `fidelidad-contexto`, sin push): 3 sostenidos vienen del estado vivo de hoy, no del producto; sin ellos A 12 y B 9.
+- **Dos cosas abiertas:** (1) la cifra final de la consola de Anthropic (saldo inicial 19,67 USD a las 01:05 UTC del 8 oct)
+  para cerrar el paso 5 y el desglose de COSTES_MODELOS.md; (2) el `.env` raíz con la clave se queda hasta la decisión.
+- **Nada se arregló a propósito** tras el B NO PASA (regla del fundador: se para y se reporta).
+
+**Decisión que espera al fundador** (el verificador no se despliega mientras no la tome):
+1. *Aceptar el residuo y lanzar sin verificador:* los inventos que quedan son de negocio plausible (causas, hechos no
+   dados) y 2 a 3 contrarios de cálculo u orden; declarar el residuo en el acta como se hizo con las neutrales.
+2. *Repetir la medición sin el defecto del guion* (quitar la suma del estado vivo de hoy): coste aproximado 1,9 USD.
+   Ojo: el juez y el árbitro resuelven distinto frases idénticas entre versiones; con umbral 0 un solo caso límite decide,
+   así que conviene fijar de antemano un umbral distinto de 0 o una regla de cierre como la de las neutrales.
+3. *Endurecer el verificador* para corregir contrarios de cálculo u orden (hoy solo quita o pregunta) y volver a medir.
+Recomendación: 2 con regla de cierre fijada antes, porque la medición actual tiene un defecto conocido.
+
+**Para retomar:** el clon de trabajo es `C:/Users/AlexDesk/Documents/my-idea-main` (rama `fidelidad-contexto`); el clon
+`I have an idea` solo se pone al día con fast-forward. Merge a main solo con autorización explícita del fundador. Antes
+de cualquier commit: `pnpm vitest run` (en `web/`) y `python engine/run_all_tests.py`.
+
 La regla D1 vale también aquí: si una respuesta de la IA nombra un libro, un autor o "los estudios", o insinúa un
 origen, es un fallo que se anota con su sesión.
 

@@ -49,6 +49,10 @@ cálculo u orden que un verificador que solo quita o pregunta no corrige. El jue
 idénticas entre versiones: con umbral 0, un solo caso límite decide. Pendiente de decisión del fundador y de anotar la
 cifra final de la consola; el `.env` raíz se queda hasta entonces.
 
+**Defecto de la medición (declarado el 9 oct):** el guion de redacción sumó el estado vivo de hoy (el que siembra la fase 2M,
+«kits de huerto») a los planes de mundo; afecta a 3 sostenidos y no cambia el veredicto (sin ellos, A 12 y B 9). Detalle en
+[medicion_ab/RESULTADO.md](medicion_ab/RESULTADO.md). Las opciones de decisión están en `docs/PROXIMOS_PASOS.md` §5.
+
 ## Qué hay en esta carpeta
 
 | Archivo o carpeta | Qué es |
