@@ -13,6 +13,7 @@
  * Mantenerlo puro hace que toda esta logica se pueda probar sin mockear
  * streaming.
  */
+import { limpiarMonedaNoDicha, monedaDicha } from "./moneda";
 import type { PlanAnteriorIA } from "./replanteamiento";
 import type Anthropic from "@anthropic-ai/sdk";
 import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
@@ -512,6 +513,48 @@ export function corregirCoherenciaCobertura(
   return evaluacionCobertura;
 }
 
+/** "Lo que este plan aun no cubre" contra las ETAPAS REALES del plan (decision del fundador, corrida final, 8 oct
+ * 2026). El bloque lo arma el codigo con lo que la IA autodeclara (familias_tratadas); si la IA olvidaba declarar una
+ * familia, el bloque contradecia al plan (juez de fidelidad, plan ee6de956: "aun no cubre validar con clientes reales"
+ * con etapas que mandan hablar con clientes, lanzar una primera version y cobrar). Una familia esta cubierta si un nodo
+ * que la IA usa en sus etapas es de esa familia (solo ids que vinieron en el material: no se le cree un nodo inventado)
+ * o si los encabezados de las etapas la tratan. Nunca agrega faltantes: solo quita los que las etapas desmienten. */
+export function coberturaContraEtapas(
+  evaluacionCobertura: CoberturaPlan,
+  autodeclaracion: AutodeclaracionPlan | null,
+  material: Set<string>,
+  families: Record<string, Familia>,
+  cuerpo: string,
+  idioma: Locale = LOCALE_BASE,
+  registrarEvento?: (evento: Record<string, unknown>) => void
+): CoberturaPlan {
+  const enEtapas = new Set(
+    Object.values(autodeclaracion?.etapas ?? {})
+      .flat()
+      .filter((nid) => material.has(nid))
+      .map((nid) => families[nid] ?? "general")
+  );
+  const porEncabezados = familiasDesdeEncabezados(cuerpo, idioma);
+  const cubre = {
+    accion_clientes: evaluacionCobertura.tiene_accion_clientes || enEtapas.has("accion_clientes") || porEncabezados.tiene_accion_clientes,
+    viabilidad_economica:
+      evaluacionCobertura.tiene_viabilidad_economica || enEtapas.has("viabilidad_economica") || porEncabezados.tiene_viabilidad_economica,
+  };
+  const texto = textosFamiliaFaltante(idioma);
+  const corregidas = (["accion_clientes", "viabilidad_economica"] as const).filter(
+    (f) => cubre[f] && !(f === "accion_clientes" ? evaluacionCobertura.tiene_accion_clientes : evaluacionCobertura.tiene_viabilidad_economica)
+  );
+  if (corregidas.length === 0) return evaluacionCobertura;
+  for (const familia of corregidas) registrarEvento?.({ tipo: "coherencia_cobertura_corregida", familia, por: "etapas" });
+  const quitar = new Set(corregidas.map((f) => texto[f]));
+  return {
+    es_completa: cubre.accion_clientes && cubre.viabilidad_economica,
+    tiene_accion_clientes: cubre.accion_clientes,
+    tiene_viabilidad_economica: cubre.viabilidad_economica,
+    familias_faltantes: evaluacionCobertura.familias_faltantes.filter((f) => !quitar.has(f)),
+  };
+}
+
 /** Fase 3.1 (caja de vidrio): el redactor autodeclara, por etapa
  * numerada, que node_ids de materialPrincipal/materialDeApoyo uso
  * realmente (campo 'etapas' del contrato de FORMATO DE SALIDA). Verifica
@@ -647,7 +690,9 @@ export function finalizarPlan(
   textoOriginal: string,
   registrarEvento?: (evento: Record<string, unknown>) => void,
   numerosProyecto?: unknown,
-  idioma: Locale = LOCALE_BASE
+  idioma: Locale = LOCALE_BASE,
+  /** Las palabras de la persona (sus respuestas, de esta sesion y de las anteriores): de ahi sale la moneda. */
+  textosDeLaPersona: string[] = []
 ): ResultadoEnsamblado {
   const { cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico, payload } = preparacion;
 
@@ -658,6 +703,16 @@ export function finalizarPlan(
     // i18n F5: si la IA tradujo algún rótulo de estructura, vuelve al neutro.
     cuerpo = neutralizarRotulos(parsed.cuerpo);
     autodeclaracion = parsed.autodeclaracion;
+    // La moneda sale de lo que dijo la persona, nunca de la IA (decision del fundador, 8 oct 2026): su idea, la frase
+    // literal de cada numero que dio y sus respuestas. La que no dijo se quita (la cifra queda sola) o se cambia por la suya.
+    const frasesDeNumeros = Object.values((numerosProyecto ?? {}) as Record<string, { texto_original?: unknown }>)
+      .map((n) => (typeof n?.texto_original === "string" ? n.texto_original : null));
+    const moneda = monedaDicha([textoOriginal, ...frasesDeNumeros, ...textosDeLaPersona]);
+    const limpio = limpiarMonedaNoDicha(cuerpo, moneda);
+    if (limpio.cambios > 0) {
+      cuerpo = limpio.texto;
+      registrarEvento?.({ tipo: "moneda_no_dicha", cambios: limpio.cambios, moneda_de_la_persona: moneda });
+    }
   } else {
     cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);
   }
@@ -672,6 +727,7 @@ export function finalizarPlan(
     registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
   evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento, idioma);
+  evaluacionCobertura = coberturaContraEtapas(evaluacionCobertura, autodeclaracion, new Set([...ruta, ...cosechaIds]), families, cuerpo, idioma, registrarEvento);
   verificarProcedenciaEtapas(autodeclaracion, ruta, cosechaIds, registrarEvento);
 
   // Fase 3.1 (caja de vidrio): igual que en el reporte, pero acotado a la
