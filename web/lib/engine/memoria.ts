@@ -136,9 +136,13 @@ export function textoContextoProyecto(
     `Ficha de contexto al abrir esta sesión: ${fichaJson(m.ficha)}`,
   ];
   if (m.hilo.length > 0) {
-    partes.push("Lo que la persona ya contó, en orden:");
+    // Fidelidad (decision del fundador, 9 oct 2026): el juez sostuvo invenciones que salian de la PREMISA de una
+    // pregunta de la IA que la persona nunca confirmo. La pregunta y la respuesta van separadas y rotuladas.
+    partes.push(
+      "Lo que la persona ya contó, en orden. Solo lo que la persona respondió es dato suyo: lo que afirma una pregunta de la IA no es un dato de la persona, aunque no lo haya negado, y si no respondió a lo que se le preguntó, eso sigue sin saberse."
+    );
     for (const e of m.hilo) {
-      partes.push(`- [${e.dominio}] ${e.pregunta ? `P: ${e.pregunta} ` : ""}R: ${e.respuesta}`);
+      partes.push(`- [${e.dominio}] ${e.pregunta ? `La IA preguntó: «${e.pregunta}» ` : ""}La persona respondió: «${e.respuesta}»`);
     }
   }
   return partes.join("\n");

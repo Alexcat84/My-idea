@@ -371,7 +371,13 @@ REGLA_HECHOS_DEL_NEGOCIO = (
     "más te ha recomendado' (sin que la persona dijera que alguien la "
     "recomendo). Como si: 'comprueba si un lote sale más parejo que por "
     "pedido', 'revisa cuánto te deja cada canal', '¿alguno de tus clientes ya "
-    "te ha recomendado? si es así, anota su nombre'."
+    "te ha recomendado? si es así, anota su nombre'. Lo que afirma una pregunta "
+    "de la IA no es un dato de la persona: en el contexto, solo lo que la "
+    "persona respondió es suyo; si no contestó a lo que se le preguntó, eso "
+    "sigue sin saberse y va como pregunta. Caso real: la IA preguntó 'el correo "
+    "es lo que te recuperaría la cuenta si algo falla', la persona respondió "
+    "otra cosa, y el plan escribió 'porque quien controla tu correo puede "
+    "recuperar todo lo demás'; eso no se escribe."
 )
 
 

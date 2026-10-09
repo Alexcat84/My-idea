@@ -5,9 +5,10 @@
  *   B = A + el verificador (lib/engine/verificadorPlan.ts) sobre ese mismo borrador.
  * Escribe A/<plan_id>.md, B/<plan_id>.md y costes.json en la carpeta de salida. Tope duro de gasto: --tope (USD).
  *
- * Se arma igual que la ruta del plan (app/api/session/[id]/plan/route.ts) con lo guardado de cada sesion. Dos
- * diferencias, declaradas: el plan anterior de un seguimiento es el que existia ANTES de ese plan (no el vigente de
- * hoy) con sus tareas en su estado de hoy; y el estado vivo que se suma a un plan de mundo es el de hoy.
+ * Se arma igual que la ruta del plan (app/api/session/[id]/plan/route.ts) con lo guardado de cada sesion. Diferencia
+ * declarada: el plan anterior de un seguimiento es el que existia ANTES de ese plan (no el vigente de hoy) con sus
+ * tareas en su estado de hoy. El estado vivo NO se vuelve a sumar (el perfil guardado ya trae el de su momento), y el
+ * contexto guardado se pasa al formato de hoy (contextoAlFormatoNuevo).
  *
  * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_redactar_planes.ts --claves <claves.json> --salida <dir> [--tope 1.9]
  */
@@ -29,6 +30,26 @@ import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { obtenerTareasDePlan } from "../lib/db";
 
 cargarEnvRaiz();
+
+/** El contexto guardado antes del 9 oct ("Lo que la persona ya contó, en orden:" y lineas "- [espacio] P: ... R: ...")
+ * en el formato de hoy, con el mismo encabezado que textoContextoProyecto. */
+export function contextoAlFormatoNuevo(ctx: string): string {
+  const ENCABEZADO_VIEJO = "Lo que la persona ya contó, en orden:";
+  const ENCABEZADO_NUEVO =
+    "Lo que la persona ya contó, en orden. Solo lo que la persona respondió es dato suyo: lo que afirma una pregunta de la IA no es un dato de la persona, aunque no lo haya negado, y si no respondió a lo que se le preguntó, eso sigue sin saberse.";
+  return ctx
+    .split("\n")
+    .map((linea) => {
+      if (linea === ENCABEZADO_VIEJO) return ENCABEZADO_NUEVO;
+      const conPregunta = linea.match(/^- \[([^\]]+)\] P: (.*?) R: (.*)$/);
+      if (conPregunta) return `- [${conPregunta[1]}] La IA preguntó: «${conPregunta[2]}» La persona respondió: «${conPregunta[3]}»`;
+      const sinPregunta = linea.match(/^- \[([^\]]+)\] R: (.*)$/);
+      if (sinPregunta) return `- [${sinPregunta[1]}] La persona respondió: «${sinPregunta[2]}»`;
+      return linea;
+    })
+    .join("\n");
+}
+
 const arg = (n: string) => {
   const i = process.argv.indexOf(n);
   return i >= 0 ? process.argv[i + 1] ?? null : null;
@@ -67,12 +88,14 @@ async function main() {
     const dominio = (ses.dominio as string | null) ?? "core";
     const idiomaSalida = recorrido.idioma ?? null;
     const idiomaPlan = idiomaDePlantilla(recorrido.idioma ?? "es", "es");
+    // El contexto guardado con la sesion, pasado al formato de hoy (misma informacion, la pregunta de la IA y la
+    // respuesta de la persona separadas y rotuladas, como lo arma textoContextoProyecto desde el 9 oct 2026). No se
+    // rearma desde la memoria de hoy: traeria sesiones posteriores.
+    if (recorrido.contextoProyecto) recorrido.contextoProyecto = contextoAlFormatoNuevo(recorrido.contextoProyecto);
     const contexto = contextoDeSesion(recorrido);
 
-    const estadoVivoHoy = (proy?.estado_vivo as string | null) ?? null;
-    if (dominio !== "core" && !recorrido.esSeguimiento && estadoVivoHoy && !(recorrido.perfilSesion ?? "").includes(estadoVivoHoy)) {
-      recorrido.perfilSesion = `${recorrido.perfilSesion ?? ""}\nEstado actual del proyecto, más reciente que la exploración: ${estadoVivoHoy}`.trim();
-    }
+    // Sin sumar el estado vivo de HOY (defecto de la primera medicion, 9 oct 2026): el perfil guardado ya trae el estado
+    // vivo de su momento, y el de hoy lo siembra la fase 2M del vuelo ("kits de huerto").
     let planAnterior = null;
     if (recorrido.esSeguimiento) {
       const { data: sesProy } = await sb.from("sessions").select("id").eq("project_id", ref.project_id);

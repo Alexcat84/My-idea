@@ -12,7 +12,8 @@ import { mkdirSync, readFileSync, readdirSync, existsSync, writeFileSync } from 
 import path from "node:path";
 import { plantarTrampas, type ClavePaquete, type PaqueteFidelidad, type SalidaReal } from "../lib/coherencia/juezFidelidad";
 
-const SEMILLAS = { A: 20261012, B: 20261013 } as const;
+// Semillas por defecto de la primera medicion; --semilla-a/--semilla-b las cambian (escritas antes de leer las salidas).
+const SEMILLAS = { A: 20261012, B: 20261013 };
 
 const arg = (n: string) => {
   const i = process.argv.indexOf(n);
@@ -25,6 +26,8 @@ function main() {
   const medicion = arg("--medicion");
   const salida = arg("--salida");
   if (!dirC || !clavesC || !medicion || !salida) throw new Error("faltan argumentos");
+  if (arg("--semilla-a")) SEMILLAS.A = Number(arg("--semilla-a"));
+  if (arg("--semilla-b")) SEMILLAS.B = Number(arg("--semilla-b"));
   const claves = (JSON.parse(readFileSync(clavesC, "utf8")) as { claves: ClavePaquete[] }).claves.filter((c) => c.origen === "real");
   const paquetesC = new Map<string, PaqueteFidelidad>(
     readdirSync(dirC).filter((f) => f.endsWith(".json")).map((f) => {

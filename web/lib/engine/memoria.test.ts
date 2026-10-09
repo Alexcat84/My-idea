@@ -95,7 +95,23 @@ describe("aperturaDeSesion", () => {
     });
     expect(a.ficha.papel).toBe("dueno");
     expect(a.contextoProyecto).toContain("Quiero vender macetas");
-    expect(a.contextoProyecto).toContain("[core] P: ¿Que vendes? R: Macetas");
+    expect(a.contextoProyecto).toContain("[core] La IA preguntó: «¿Que vendes?» La persona respondió: «Macetas»");
+  });
+
+  // Fidelidad (decision del fundador, 9 oct 2026): el juez sostuvo invenciones que salian de la PREMISA de una pregunta
+  // de la IA que la persona nunca respondio ni confirmo («el correo es lo que te recuperaria la cuenta» -> el plan
+  // escribio «porque quien controla tu correo puede recuperar todo lo demas»). El contexto separa la pregunta de la
+  // respuesta y dice que solo la respuesta es dato de la persona.
+  it("separa la pregunta de la IA de la respuesta de la persona, y dice que la pregunta no es dato", () => {
+    const a = aperturaDeSesion({
+      entrada_original: "Vendo macetas",
+      estado_vivo: null,
+      memoria: { hilo: [{ sesion: "s0", dominio: "seguridad_digital", nodo: "n1", pregunta: "El correo es lo que te recuperaría la cuenta si algo falla: ¿tienes copias?", respuesta: "No tengo copias de seguridad", en: "t" }] },
+    });
+    expect(a.contextoProyecto).toContain("La IA preguntó: «El correo es lo que te recuperaría la cuenta si algo falla: ¿tienes copias?»");
+    expect(a.contextoProyecto).toContain("La persona respondió: «No tengo copias de seguridad»");
+    expect(a.contextoProyecto).toMatch(/solo lo que la persona respondi[oó] es dato suyo/i);
+    expect(a.contextoProyecto).toMatch(/lo que afirma una pregunta de la IA no es un dato de la persona/i);
   });
 });
 

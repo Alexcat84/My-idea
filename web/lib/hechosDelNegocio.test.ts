@@ -31,8 +31,18 @@ describe("ningun redactor da por hecho un dato del negocio que nadie dio", () =>
     expect(P[nombre]).toMatch(/moneda[^.]*solo la que la persona nombro/i);
   });
 
+  it.each(REDACTORES)("%s: la premisa de una pregunta de la IA no es un dato de la persona (caso real del correo)", (nombre) => {
+    expect(P[nombre]).toMatch(/lo que afirma una pregunta de la IA no es un dato de la persona/i);
+    expect(P[nombre]).toContain("porque quien controla tu correo puede recuperar todo lo demás");
+  });
+
   it("es UNA sola regla: el mismo texto en todos", () => {
-    const bloque = (t: string) => t.slice(t.indexOf("DATOS DEL NEGOCIO"), t.indexOf("DATOS DEL NEGOCIO") + 900);
+    // el bloque de la regla, hasta su final (la siguiente linea en blanco)
+    const bloque = (t: string) => {
+      const ini = t.indexOf("DATOS DEL NEGOCIO");
+      const fin = t.indexOf(String.fromCharCode(10, 10), ini);
+      return t.slice(ini, fin < 0 ? undefined : fin);
+    };
     expect(new Set(REDACTORES.map((n) => bloque(P[n]))).size).toBe(1);
   });
 });

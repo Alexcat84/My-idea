@@ -94,6 +94,23 @@ describe("aplicarCorrecciones: solo quita o convierte en pregunta, citando la fr
   });
 });
 
+describe("el verificador busca tambien lo que la medicion A/B le vio pasar (9 oct 2026)", () => {
+  it("marca la premisa de una pregunta de la IA que la persona no confirmo", async () => {
+    const { SYSTEM_VERIFICADOR_PLAN } = await import("../prompts");
+    expect(SYSTEM_VERIFICADOR_PLAN).toMatch(/lo que solo aparece en una pregunta de la IA/i);
+  });
+  it("quita el paso o el calculo que contradice al nodo (casos reales: la resta al reves, la cuota de defectos)", async () => {
+    const { SYSTEM_VERIFICADOR_PLAN } = await import("../prompts");
+    expect(SYSTEM_VERIFICADOR_PLAN).toMatch(/un paso o un c[aá]lculo que contradice al nodo/i);
+    expect(SYSTEM_VERIFICADOR_PLAN).toContain("Resta lo segundo de lo primero");
+    expect(SYSTEM_VERIFICADOR_PLAN).toContain("cuántas piezas con defecto aceptas por cada lote");
+  });
+  it("marca lo que da por hecho algo que el estado o el plan anterior dicen pendiente", async () => {
+    const { SYSTEM_VERIFICADOR_PLAN } = await import("../prompts");
+    expect(SYSTEM_VERIFICADOR_PLAN).toContain("siguen vigentes");
+  });
+});
+
 describe("verificarPlan: la llamada", () => {
   afterEach(() => {
     delete process.env.VERIFICADOR_PLAN;
