@@ -210,7 +210,24 @@ export interface EventoCierrePorPresupuesto {
   tope_usd: number;
 }
 
+/** Un costo con el tiempo de la persona dentro llego como costo de materiales y se descarto (8 oct 2026). */
+export interface EventoCostoConTiempo {
+  tipo: "costo_con_tiempo_descartado";
+  valor: number | string;
+  texto_original: string;
+}
+
+/** ¿La frase da un costo que INCLUYE el tiempo de la persona? ("130 incluyendo mi hora a 50", "200 contando mis horas",
+ * "90 con la mano de obra"). Un costo asi nunca es costo de materiales (decision del fundador, corrida final, 8 oct
+ * 2026): el juez de fidelidad sostuvo un contrario en un plan que le creyo a esa etiqueta. */
+export function esCostoQueIncluyeTiempo(texto: string | null | undefined): boolean {
+  if (!texto) return false;
+  const t = texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+  return /\b(incluy\w*|contando|sumando|con|mas|junto con)\s+(\w+\s+){0,2}(hora|horas|tiempo|mano de obra|trabajo)\b/.test(t);
+}
+
 export type EventoInterprete =
+  | EventoCostoConTiempo
   | EventoCierrePorPresupuesto
   | EventoConsultaSinTraducir
   | EventoFallback
@@ -559,6 +576,11 @@ export async function interpretarMultiSalto(
         if (!CAMPOS_NUMERICOS_PROYECTO.has(campo) || !entry || typeof entry !== "object") continue;
         const e = entry as Record<string, unknown>;
         if (e.valor === undefined || e.valor === null) continue;
+        // Un costo total que incluye el tiempo de la persona nunca se guarda como costo de materiales.
+        if (campo === "costo_materiales_unidad" && esCostoQueIncluyeTiempo(e.texto_original as string | null | undefined)) {
+          registrarEvento?.({ tipo: "costo_con_tiempo_descartado", valor: e.valor as number | string, texto_original: String(e.texto_original) });
+          continue;
+        }
         limpio[campo as CampoNumericoProyecto] = {
           valor: e.valor as number | string,
           unidad: (e.unidad as string | null | undefined) ?? null,
