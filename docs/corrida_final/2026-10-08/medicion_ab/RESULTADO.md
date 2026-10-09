@@ -44,6 +44,15 @@ Referencia: el tramo C del vuelo original (sin los arreglos de hoy) dio 11 soste
   (p. ej. «y ya decidiste empezar esta semana» y «el margen con el cemento nuevo aún no está recalculado»: SOSTENIDAS en
   A f002, DESCARTADAS en B f015). Con ese margen, el umbral 0 es muy sensible a un solo caso límite.
 
+## Defecto de la medicion, declarado (9 oct 2026)
+
+El guion de redaccion (`corrida_final_redactar_planes.ts`) sumo a los planes de mundo el estado vivo del proyecto **de
+hoy**, y ese estado vivo es el que la fase 2M del vuelo siembra a proposito ("Artesana sola que arma kits de huerto
+urbano", `vuelo.ts`). El plan de Calidad 265e4486 nacio antes de esa siembra, asi que los «kits de huerto» de su version
+redactada de nuevo vienen del guion, no del producto. Ademas el perfil guardado ya traia el estado vivo de su momento,
+asi que esa suma sobraba. Afecta a 3 sostenidos: A f015 (los dos de kits) y B f013 (el de kits). **No cambia el
+veredicto**: sin ellos, A queda en 12 y B en 9 sostenidos (umbral 0). Una nueva medicion debe quitar esa suma.
+
 ## Coste
 
 | Pieza | USD |
