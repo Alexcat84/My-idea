@@ -1,0 +1,48 @@
+# Corrida final, 8 de octubre de 2026
+
+La medición completa de My Idea con los modelos nuevos (Sonnet 5.5 y Haiku 5.5) antes de la beta: la caché de
+preguntas, la prueba de coherencia, el vuelo completo contra producción, el juez de fidelidad de lo que la persona lee
+y los costes reales. Las horas, las decisiones y cada intento están en [ACTA.md](ACTA.md).
+
+## Cada umbral contra su resultado
+
+| Paso | Umbral (fijado antes de medir) | Resultado | Veredicto |
+|---|---|---|---|
+| 1. Caché de preguntas: neutrales por niveles | 0 cambios de sentido y como mucho 10 de 200 en lo demás, en una muestra ciega con trampas y árbitro | Cuarta muestra (semilla 20261011): 0 cambios de sentido, 16 de 200 en lo demás, trampas 10/10. Regla de cierre del fundador: lo hallado se corrige y el residuo se declara | **PASA por la regla de cierre** (residuo declarado en el acta, fila 5o) |
+| 2. Prueba de coherencia (3 personas × 11 espacios) | papel 0, contexto, adaptadas fieles y trampas, según el fundador | Papel 0, 0, 0; contexto 1 de 112, 1 de 89, 0 de 86; adaptadas fieles 12/12, 18/18, 14/14; trampas 4/4 cada una | **PASA** (umbrales del fundador) |
+| 2b. Dictamen del arnés: ficha de memoria | la ficha guarda el papel y el jefe del retrato | papel 'desconocido' y jefe mal para la persona sola | **NO CUMPLE** en la medición; arreglado después (f79be60b9), sin volver a medir |
+| 3. Vuelo completo contra producción | todas las verificaciones del guion | Intento 10 (fases 0 a 2P, 91 verificaciones) + fases 3 y 4 sueltas, sobre el mismo código de producto (acta 7k y 7l) | **PASA** |
+| 4. Juez de fidelidad, tramo B (coherencia) | 0 contrarios, 0 invenciones, 0 procedencias | 1 invención sostenida por el árbitro en 3 planes; trampa cazada en relectura | **NO PASA** |
+| 4. Juez de fidelidad, tramo C (vuelo) | 0 contrarios, 0 invenciones, 0 procedencias | 11 sostenidos en 7 de 14 planes (9 invenciones, 2 contrarios, 0 procedencias); trampas 4/4; Claridades limpias | **NO PASA** |
+| 5. Costes | la cifra oficial es la consola del fundador | Saldo inicial 19,67 USD (01:05 UTC); saldo final pendiente. Desglose por pieza y modelo en COSTES_MODELOS.md | **PENDIENTE** de la cifra de la consola |
+| 6. Cierre de Vercel | devolver los límites a sus valores por defecto | Borradas LIMITE_ARRANQUES_DIA, FUSIBLE_SESIONES_DIA y PRESUPUESTO_SESION_USD; redespliegue; rigen 5 arranques, 30 sesiones y 1 USD por sesión | **HECHO** |
+
+## El juez de fidelidad (lo que no pasa)
+
+El informe completo, con cada frase, su evidencia y el veredicto del árbitro: [docs/coherencia/2026-10-08/fidelidad.md](../../coherencia/2026-10-08/fidelidad.md).
+
+Lo que se arregló después del tramo C, con pruebas en rojo primero (decisiones del fundador, 8 oct, noche):
+- **«Lo que este plan aún no cubre»** se calcula contra las etapas reales del plan y nunca las contradice (c0ab3a89a).
+- **La moneda** sale de lo que dijo la persona, nunca de la IA: se quita o se corrige en código antes de entregar el plan,
+  y el intérprete guarda la moneda tal como la dijo (bfbd1fddc).
+- **Datos del negocio** que la persona no dio y que no vienen de sus nodos se escriben como pregunta o comprobación, en
+  los cinco redactores, con las frases reales del informe (bfbd1fddc).
+
+Pendiente del visto del fundador: un verificador en producción antes de entregar cada plan, y la medición barata (volver
+a redactar los 14 planes del vuelo con los arreglos y pasarlos por el mismo juez).
+
+## Qué hay en esta carpeta
+
+| Archivo o carpeta | Qué es |
+|---|---|
+| [ACTA.md](ACTA.md) | cada paso con su hora, sus decisiones y cada intento del vuelo |
+| [COSTES_MODELOS.md](COSTES_MODELOS.md) | coste por corrida, por modelo, por pieza, por llamada y por espacio; la caché; el tope; la consulta SQL; contra el vuelo del 27 sep (Sonnet 4.6 + Haiku 4.5) |
+| [coherencia/](coherencia/) | la prueba de coherencia: por proyecto, cada sesión turno por turno y cada documento tal como lo lee la persona |
+| [vuelo/](vuelo/) | el vuelo final validado (intento 10 + fases 3 y 4): igual, por proyecto, sesión por sesión y cada plan completo |
+| [revision_guion_vuelo.md](revision_guion_vuelo.md) | el guion del vuelo revisado contra las reglas cambiadas hoy |
+| `vuelo_transcripcion_*.txt` | la salida de cada intento del vuelo |
+| `costes_*.json`, `base_vuelo_2026-09-27.json` | los volcados de coste (solo números, con el registro por llamada desde los modelos 5.5) |
+| [medicion_cache_anclaje.txt](medicion_cache_anclaje.txt) | el ahorro del arreglo de la caché del anclaje (77,6 % con la misma sesión) |
+| `verificacion_neutrales*.md`, `guarda_neutrales*.md`, `JUEZ_*.md` | las muestras ciegas de la caché de preguntas y sus instrucciones |
+
+Sin claves, contraseñas ni correos: todo lo exportado pasa por la limpieza del exportador.

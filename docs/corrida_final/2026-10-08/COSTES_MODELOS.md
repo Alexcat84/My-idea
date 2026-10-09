@@ -1,7 +1,5 @@
 # Costes por modelo: la corrida final contra el vuelo del 27 de septiembre
 
-> BORRADOR: falta el vuelo completo final; se regenera al terminarlo.
-
 ## La cifra oficial: la consola del fundador
 
 El coste oficial de la corrida es el que marca la consola de Anthropic del fundador, no la suma de `costo_usd`:
@@ -39,7 +37,8 @@ Precios por millón de tokens (entrada / salida), tal como están en `PRECIOS`:
 | Coherencia 8 oct (5.5, antes del arreglo del anclaje) | 33 | $2.7189 | $0.0824 | $0.0262 | $0.3479 | $0.6308 |
 | Vuelo 8 oct, intento 1 (paro en 2i) | 10 | $1.2858 | $0.1286 | $0.1096 | $0.4066 | $0.4066 |
 | Vuelo 8 oct, intento 2 (paro en 2j) | 12 | $1.7799 | $0.1483 | $0.1233 | $0.3898 | $0.3898 |
-| Vuelo 8 oct, intento 3 | 3 | $0.1484 | $0.0495 | $0.0009 | $0.1468 | $0.1468 |
+| Vuelo 8 oct, intento 3 (paro en 2f, sin creditos) | 3 | $0.1484 | $0.0495 | $0.0009 | $0.1468 | $0.1468 |
+| Vuelo FINAL validado (intento 10 + fases 3 y 4) | 22 | $2.4866 | $0.1130 | $0.1094 | $0.2570 | $0.3284 |
 
 Las corridas no tienen la misma mezcla de sesiones (cuántos seguimientos, qué mundos, cuántos turnos), así que el
 total no se compara a ciegas: la comparación más justa es por pieza (sección 3) y por llamada (sección 4).
@@ -74,27 +73,35 @@ total no se compara a ciegas: la comparación más justa es por pieza (sección 
 | claude-haiku-5-5 | 144 | 355.441 | 64.546 | 3.487.924 | 322.226 | 268.778 | $0.1967 | $0.00137 |
 | claude-sonnet-5-5 | 62 | 257.582 | 52.134 | 343.690 | 0 | 127.701 | $1.5817 | $0.02551 |
 
-### Vuelo 8 oct, intento 3
+### Vuelo 8 oct, intento 3 (paro en 2f, sin creditos)
 
 | Modelo | Llamadas | Entrada | Salida | Caché leída | Caché escrita 5 min | Caché escrita 1 h | Coste | Coste por llamada |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | claude-haiku-5-5 | 12 | 9845 | 6079 | 276.586 | 40.575 | 21.208 | $0.0161 | $0.00134 |
 | claude-sonnet-5-5 | 4 | 17.101 | 4878 | 4282 | 0 | 11.831 | $0.1307 | $0.03268 |
 
+### Vuelo FINAL validado (intento 10 + fases 3 y 4)
+
+| Modelo | Llamadas | Entrada | Salida | Caché leída | Caché escrita 5 min | Caché escrita 1 h | Coste | Coste por llamada |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| claude-haiku-5-5 | 148 | 277.788 | 64.673 | 2.732.716 | 343.544 | 336.521 | $0.1977 | $0.00134 |
+| claude-sonnet-5-5 | 83 | 334.533 | 82.144 | 433.865 | 0 | 178.438 | $2.2476 | $0.02708 |
+
 ## 3. Por pieza (componente)
 
-| Pieza | Vuelo 27 sep (Sonnet 4.6 + Haiku 4.5) | Coherencia 8 oct (5.5, antes del arreglo del anclaje) | Vuelo 8 oct, intento 1 (paro en 2i) | Vuelo 8 oct, intento 2 (paro en 2j) | Vuelo 8 oct, intento 3 |
-|---|---:|---:|---:|---:|---:|
-| adaptador |  | $0.1249 (30 ses.) | $0.0100 (7 ses.) | $0.0199 (6 ses.) |  |
-| anclaje_proteccion | $0.2258 (5 ses.) | $1.8301 (9 ses.) | $0.3132 (2 ses.) | $0.2349 (2 ses.) |  |
-| clasificacion | $0.0547 (8 ses.) | $0.0013 (3 ses.) | $0.0023 (2 ses.) | $0.0097 (4 ses.) | $0.0007 (1 ses.) |
-| enlace_proteccion | $0.2109 (5 ses.) |  | $0.1212 (2 ses.) | $0.0988 (2 ses.) |  |
-| estado_vivo | $0.0699 (17 ses.) | $0.0020 (3 ses.) | $0.0103 (6 ses.) | $0.0188 (8 ses.) | $0.0009 (1 ses.) |
-| estimacion_banda | $0.6994 (17 ses.) | $0.1074 (3 ses.) | $0.2772 (6 ses.) | $0.4790 (8 ses.) | $0.0377 (1 ses.) |
-| juez_sesion | $0.0617 (13 ses.) | $0.0018 (3 ses.) | $0.0106 (6 ses.) | $0.0195 (8 ses.) | $0.0012 (1 ses.) |
-| organizador | $0.0205 (4 ses.) |  | $0.0015 (2 ses.) | $0.0016 (2 ses.) | $0.0016 (2 ses.) |
-| plan | $1.3974 (17 ses.) | $0.1865 (3 ses.) | $0.4652 (6 ses.) | $0.7690 (8 ses.) | $0.0930 (1 ses.) |
-| turnos | $0.8438 (13 ses.) | $0.4649 (33 ses.) | $0.0743 (6 ses.) | $0.1288 (8 ses.) | $0.0134 (1 ses.) |
+| Pieza | Vuelo 27 sep (Sonnet 4.6 + Haiku 4.5) | Coherencia 8 oct (5.5, antes del arreglo del anclaje) | Vuelo 8 oct, intento 1 (paro en 2i) | Vuelo 8 oct, intento 2 (paro en 2j) | Vuelo 8 oct, intento 3 (paro en 2f, sin creditos) | Vuelo FINAL validado (intento 10 + fases 3 y 4) |
+|---|---:|---:|---:|---:|---:|---:|
+| adaptador |  | $0.1249 (30 ses.) | $0.0100 (7 ses.) | $0.0199 (6 ses.) |  | $0.0206 (9 ses.) |
+| anclaje_proteccion | $0.2258 (5 ses.) | $1.8301 (9 ses.) | $0.3132 (2 ses.) | $0.2349 (2 ses.) |  | $0.2290 (3 ses.) |
+| clasificacion | $0.0547 (8 ses.) | $0.0013 (3 ses.) | $0.0023 (2 ses.) | $0.0097 (4 ses.) | $0.0007 (1 ses.) | $0.0153 (9 ses.) |
+| enlace_proteccion | $0.2109 (5 ses.) |  | $0.1212 (2 ses.) | $0.0988 (2 ses.) |  | $0.2027 (4 ses.) |
+| estado_vivo | $0.0699 (17 ses.) | $0.0020 (3 ses.) | $0.0103 (6 ses.) | $0.0188 (8 ses.) | $0.0009 (1 ses.) | $0.0269 (14 ses.) |
+| estimacion_banda | $0.6994 (17 ses.) | $0.1074 (3 ses.) | $0.2772 (6 ses.) | $0.4790 (8 ses.) | $0.0377 (1 ses.) | $0.7374 (14 ses.) |
+| juez_sesion | $0.0617 (13 ses.) | $0.0018 (3 ses.) | $0.0106 (6 ses.) | $0.0195 (8 ses.) | $0.0012 (1 ses.) | $0.0221 (14 ses.) |
+| organizador | $0.0205 (4 ses.) |  | $0.0015 (2 ses.) | $0.0016 (2 ses.) | $0.0016 (2 ses.) | $0.0016 (2 ses.) |
+| plan | $1.3974 (17 ses.) | $0.1865 (3 ses.) | $0.4652 (6 ses.) | $0.7690 (8 ses.) | $0.0930 (1 ses.) | $1.0785 (14 ses.) |
+| reporte |  |  |  |  |  | $0.0398 (2 ses.) |
+| turnos | $0.8438 (13 ses.) | $0.4649 (33 ses.) | $0.0743 (6 ses.) | $0.1288 (8 ses.) | $0.0134 (1 ses.) | $0.1127 (15 ses.) |
 
 ## 4. Por llamada (pieza × modelo)
 
@@ -141,7 +148,7 @@ El registro llamada por llamada existe desde la corrida con los modelos 5.5. Med
 | estado_vivo · claude-haiku-5-5 | 13 | $0.00144 | 2487 | 763 | 4486 |
 | clasificacion · claude-haiku-5-5 | 4 | $0.00243 | 8872 | 250 | 668 |
 
-### Vuelo 8 oct, intento 3
+### Vuelo 8 oct, intento 3 (paro en 2f, sin creditos)
 
 | Pieza · modelo | Llamadas | Coste por llamada | Entrada media | Salida media | Caché leída media |
 |---|---:|---:|---:|---:|---:|
@@ -151,6 +158,20 @@ El registro llamada por llamada existe desde la corrida con los modelos 5.5. Med
 | juez_sesion · claude-haiku-5-5 | 1 | $0.00122 | 5717 | 230 | 0 |
 | estado_vivo · claude-haiku-5-5 | 1 | $0.00087 | 1219 | 610 | 0 |
 | clasificacion · claude-haiku-5-5 | 1 | $0.00066 | 2873 | 169 | 0 |
+
+### Vuelo FINAL validado (intento 10 + fases 3 y 4)
+
+| Pieza · modelo | Llamadas | Coste por llamada | Entrada media | Salida media | Caché leída media |
+|---|---:|---:|---:|---:|---:|
+| plan · claude-sonnet-5-5 | 14 | $0.07704 | 11.942 | 3191 | 8514 |
+| estimacion_banda · claude-sonnet-5-5 | 42 | $0.01756 | 2220 | 665 | 4197 |
+| anclaje_proteccion · claude-sonnet-5-5 | 23 | $0.00996 | 2626 | 132 | 5798 |
+| enlace_proteccion · claude-sonnet-5-5 | 4 | $0.05066 | 3428 | 1625 | 1267 |
+| turnos · claude-haiku-5-5 | 81 | $0.00139 | 1301 | 447 | 31.414 |
+| estado_vivo · claude-haiku-5-5 | 23 | $0.00117 | 1943 | 770 | 3805 |
+| juez_sesion · claude-haiku-5-5 | 17 | $0.00130 | 3545 | 327 | 2975 |
+| adaptador · claude-haiku-5-5 | 18 | $0.00115 | 165 | 185 | 2296 |
+| clasificacion · claude-haiku-5-5 | 9 | $0.00170 | 7162 | 203 | 979 |
 
 ## 5. Por sesión y por espacio
 
@@ -214,12 +235,29 @@ El registro llamada por llamada existe desde la corrida con los modelos 5.5. Med
 | inicial · seguridad_digital | 1 | $0.3031 | $0.3031 |
 | seguimiento · core | 3 | $0.1784 | $0.2115 |
 
-### Vuelo 8 oct, intento 3
+### Vuelo 8 oct, intento 3 (paro en 2f, sin creditos)
 
 | Tipo · espacio | Sesiones | Media | Máxima |
 |---|---:|---:|---:|
 | gratuito · core | 2 | $0.0008 | $0.0009 |
 | inicial · core | 1 | $0.1468 | $0.1468 |
+
+### Vuelo FINAL validado (intento 10 + fases 3 y 4)
+
+| Tipo · espacio | Sesiones | Media | Máxima |
+|---|---:|---:|---:|
+| gratuito · core | 2 | $0.0008 | $0.0009 |
+| inicial · core | 4 | $0.1132 | $0.1510 |
+| inicial · exportacion | 1 | $0.0008 | $0.0008 |
+| inicial · franquicias | 1 | $0.0001 | $0.0001 |
+| inicial · health_safety | 1 | $0.3284 | $0.3284 |
+| inicial · primer_equipo | 1 | $0.1730 | $0.1730 |
+| inicial · quality | 2 | $0.1626 | $0.2022 |
+| inicial · risk_management | 1 | $0.2413 | $0.2413 |
+| inicial · seguridad_digital | 1 | $0.2570 | $0.2570 |
+| reporte · core | 3 | $0.0132 | $0.0249 |
+| seguimiento · core | 4 | $0.1112 | $0.1587 |
+| seguimiento · health_safety | 1 | $0.2219 | $0.2219 |
 
 ## 6. Caché
 
@@ -235,8 +273,10 @@ Lo que costaría la caché leída si se pagara como entrada normal, contra lo qu
 | Vuelo 8 oct, intento 1 (paro en 2i) | claude-sonnet-5-5 | 177.490 | $0.0177 | $0.3550 | $0.3372 |
 | Vuelo 8 oct, intento 2 (paro en 2j) | claude-haiku-5-5 | 3.487.924 | $0.0349 | $0.3488 | $0.3139 |
 | Vuelo 8 oct, intento 2 (paro en 2j) | claude-sonnet-5-5 | 343.690 | $0.0344 | $0.6874 | $0.6530 |
-| Vuelo 8 oct, intento 3 | claude-haiku-5-5 | 276.586 | $0.0028 | $0.0277 | $0.0249 |
-| Vuelo 8 oct, intento 3 | claude-sonnet-5-5 | 4282 | $0.0004 | $0.0086 | $0.0081 |
+| Vuelo 8 oct, intento 3 (paro en 2f, sin creditos) | claude-haiku-5-5 | 276.586 | $0.0028 | $0.0277 | $0.0249 |
+| Vuelo 8 oct, intento 3 (paro en 2f, sin creditos) | claude-sonnet-5-5 | 4282 | $0.0004 | $0.0086 | $0.0081 |
+| Vuelo FINAL validado (intento 10 + fases 3 y 4) | claude-haiku-5-5 | 2.732.716 | $0.0273 | $0.2733 | $0.2459 |
+| Vuelo FINAL validado (intento 10 + fases 3 y 4) | claude-sonnet-5-5 | 433.865 | $0.0434 | $0.8677 | $0.8243 |
 
 ### El hallazgo del anclaje de protección
 
@@ -264,7 +304,8 @@ plan que arranca se termina entero (margen de USD 0,50). Sesiones que habrían t
 | Coherencia 8 oct (5.5, antes del arreglo del anclaje) | 33 | 1 | 0 | $0.6308 |
 | Vuelo 8 oct, intento 1 (paro en 2i) | 10 | 2 | 0 | $0.4066 |
 | Vuelo 8 oct, intento 2 (paro en 2j) | 12 | 1 | 0 | $0.3898 |
-| Vuelo 8 oct, intento 3 | 3 | 0 | 0 | $0.1468 |
+| Vuelo 8 oct, intento 3 (paro en 2f, sin creditos) | 3 | 0 | 0 | $0.1468 |
+| Vuelo FINAL validado (intento 10 + fases 3 y 4) | 22 | 0 | 0 | $0.3284 |
 
 ## 8. La consulta de costo_usd
 

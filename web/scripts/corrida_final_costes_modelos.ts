@@ -46,7 +46,8 @@ const CORRIDAS: Array<{ clave: string; titulo: string; archivo: string }> = [
   { clave: "coherencia", titulo: "Coherencia 8 oct (5.5, antes del arreglo del anclaje)", archivo: "costes_coherencia.json" },
   { clave: "vuelo1", titulo: "Vuelo 8 oct, intento 1 (paro en 2i)", archivo: "costes_vuelo.json" },
   { clave: "vuelo2", titulo: "Vuelo 8 oct, intento 2 (paro en 2j)", archivo: "costes_vuelo_intento2.json" },
-  { clave: "vuelo3", titulo: "Vuelo 8 oct, intento 3", archivo: "costes_vuelo_intento3.json" },
+  { clave: "vuelo3", titulo: "Vuelo 8 oct, intento 3 (paro en 2f, sin creditos)", archivo: "costes_vuelo_intento3.json" },
+  { clave: "vuelofinal", titulo: "Vuelo FINAL validado (intento 10 + fases 3 y 4)", archivo: "costes_vuelo_final.json" },
 ];
 
 const usd = (n: number, d = 4) => `$${n.toFixed(d)}`;

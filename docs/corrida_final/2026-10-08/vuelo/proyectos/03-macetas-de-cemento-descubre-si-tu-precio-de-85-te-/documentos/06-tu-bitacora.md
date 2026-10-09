@@ -1,0 +1,118 @@
+# La historia de Macetas de cemento: descubre si tu precio de 85 te deja ganancia real
+
+> Del 1 de junio de 2026 al 8 de octubre de 2026
+
+### 1 de junio de 2026
+
+- **[Tu viaje]** Ya lo habías hecho: «Toma la última tanda, anota cuánto gastaste en materiales y cuántas macetas salieron, y d…».
+
+### 8 de octubre de 2026
+
+- **22:58** · **[Tu viaje]** Encendiste la chispa y escribiste tu idea.
+- **22:58** · **[Tu viaje]** Empezaste a explorar tu idea, pregunta por pregunta.
+- **22:59** · **[Tu viaje]** Recibiste tu plan.
+- **22:59** · **[Tu viaje]** Marcaste hecha «Anota por separado lo que gastas en materiales por maceta: cemento, moldes, pintura.».
+- **22:59** · **[Tu viaje]** Anotaste algo en «Anota por separado lo que gastas en materiales por maceta: cemento, moldes, pintura.».
+- **22:59** · **[Tu viaje]** Pusiste «Toma la última tanda que hiciste, anota cuánto gastaste en materiales y cuántas macetas s…» en proceso.
+- **22:59** · **[Tu viaje]** Retiraste «Multiplica las horas que dedicas a cada maceta (mezclar, moldear, pulir) por el valor de…»: «mi negocio es 100% online, no aplica»
+- **22:59** · **[Tu viaje]** Reactivaste «Multiplica las horas que dedicas a cada maceta (mezclar, moldear, pulir) por el valor de…».
+- **22:59** · **[Tu viaje]** Retiraste «Multiplica las horas que dedicas a cada maceta (mezclar, moldear, pulir) por el valor de…»: «mi negocio es 100% online, no aplica»
+- **23:00** · **[Tu viaje]** Profundizaste tu plan. Contaste: «Conseguí un proveedor de cemento más barato y una feria local en agosto. el precio y el margen»
+- **23:00** · **[Calidad y Confianza]** Exploraste gratis el mundo Calidad y Confianza.
+- **23:01** · **[Calidad y Confianza]** Se generó tu plan de Calidad y Confianza.
+- **23:01** · **[Calidad y Confianza]** Sumaste el plan completo de Calidad y Confianza.
+- **23:01** · **[Vender al Mundo]** Exploraste gratis el mundo Vender al Mundo.
+- **23:01** · **[Multiplica tu Negocio]** Exploraste gratis el mundo Multiplica tu Negocio.
+- **23:01** · **[Seguridad Digital]** Exploraste gratis el mundo Seguridad Digital.
+- **23:03** · **[Seguridad Digital]** Se generó tu plan de Seguridad Digital.
+- **23:03** · **[Seguridad Digital]** Sumaste el plan completo de Seguridad Digital.
+- **23:03** · **[Riesgos Bajo Control]** Exploraste gratis el mundo Riesgos Bajo Control.
+- **23:04** · **[Tu viaje]** Marcaste hecha «Repite la cuenta por separado para las chicas y las medianas, porque el tamaño cambia tan…».
+- **23:04** · **[Tu viaje]** Marcaste hecha «Suma materiales y tiempo para obtener el costo real por unidad de cada tamaño.».
+- **23:04** · **[Tu viaje]** Marcaste hecha «Resta ese costo real al precio de venta de 250 y anota cuánto queda de ganancia por pieza…».
+- **23:04** · **[Riesgos Bajo Control]** Se generó tu plan de Riesgos Bajo Control.
+- **23:04** · **[Riesgos Bajo Control]** Sumaste el plan completo de Riesgos Bajo Control.
+- **23:04** · **[Primer Equipo]** Exploraste gratis el mundo Primer Equipo.
+- **23:05** · **[Primer Equipo]** Se generó tu plan de Primer Equipo.
+- **23:06** · **[Primer Equipo]** Sumaste el plan completo de Primer Equipo.
+- **23:06** · **[Tu viaje]** Elegiste llevar tu camino a tu ritmo.
+- **23:06** · **[Tu viaje]** Cambiaste tu forma de avanzar: con fechas.
+- **23:06** · **[Tu viaje]** Aceptaste tus fechas: tu línea base quedó sellada.
+- **23:06** · **[Tu viaje]** Marcaste tu idea como realizada.
+- **23:06** · **[Tu viaje]** Reabriste tu idea para seguir trabajándola.
+- **23:06** · **[Tu viaje]** Devolviste «Toma la última tanda, anota cuánto gastaste en materiales y cuántas macetas salieron, y d…» a pendiente.
+- **23:06** · **[Tu viaje]** Devolviste «Repite la cuenta por separado para las chicas y las medianas, porque el tamaño cambia tan…» a pendiente.
+- **23:07** · **[Tu viaje]** Profundizaste tu plan. Contaste: «El proveedor de cemento subio precios a mitad de camino. Quiero cerrar el costo real por pieza.»
+- **23:07** · **[Tu viaje]** Cambiaste tu forma de avanzar: a tu ritmo.
+- **23:08** · **[Tu viaje]** Profundizaste tu plan. Contaste: «El proveedor de cemento subio precios a mitad de camino.»
+- **23:08** · **[Tu viaje]** Marcaste hecha «Abre tus pedidos del último mes y marca a los compradores que repitieron, los que compran…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Elige a ese grupo pequeño de clientes más comprometidos y anota qué los une: tamaño que p…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Anota para cada uno otra vía para contactarlo fuera de Instagram (correo o teléfono) y pí…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Pasa esos datos del Excel sin clave a un solo archivo protegido con contraseña y guarda u…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Abre tus mensajes de Instagram y anota los nombres de las personas que ya te compraron má…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Ponle un nombre a ese grupo o una forma de identificarlo que tenga que ver con tus maceta…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Diseña una ventaja solo para ellos: avisarles primero cuando sale un tamaño o acabado nue…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Haz que esa ventaja se repita, por ejemplo con cada tanda nueva, para que el trato se vue…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Escribe cómo vas a avisarles, usando el segundo medio de contacto que juntaste en la etap…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Escribe en una línea qué ventaja le darías al comprador que más veces te ha comprado y qu…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Elige 2 o 3 clientes clave: los que más compran, los que más te recomiendan o la tienda d…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Mira en sus publicaciones o conversaciones qué les gusta (tipo de plantas, estilo de deco…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «No pongas tu logo ni mensajes de venta en el detalle, y acompáñalo de una nota escrita a…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Entrégalo cuando nadie lo espera, lejos de una fecha de compra o de festividades.».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Anota qué dijeron o hicieron después: si te escribieron, si recomendaron, si volvieron a…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Anota el nombre del cliente que más te ha recomendado y escribe un detalle pequeño que le…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Piensa qué necesita saber alguien que recibe una maceta de cemento: cómo cuidarla, cómo p…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Prepara una tarjeta o nota corta de agradecimiento con esa información dentro del empaque…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Incluye un detalle pequeño e inesperado que aporte valor sin costar mucho, como una semil…».
+- **23:08** · **[Tu viaje]** Marcaste hecha «Cuando ya hayan pasado unos días de la entrega, escríbele al comprador y pregúntale cómo…».
+- **23:08** · **[Tu viaje]** Marcaste tu idea como realizada: «La cierro aqui porque ya valide el precio y el canal; el resto lo decide el mercado.»
+- **23:08** · **[Tu viaje]** Reabriste tu idea para seguir trabajándola.
+- **23:08** · **[Tu viaje]** Cambiaste tu forma de avanzar: con fechas.
+- **23:08** · **[Seguridad y Personas]** Exploraste gratis el mundo Seguridad y Personas.
+- **23:10** · **[Seguridad y Personas]** Se generó tu plan de Seguridad y Personas.
+- **23:10** · **[Seguridad y Personas]** Marcaste hecha «Recorre el taller con una libreta o con el celular, fotografía cada zona (mezcla, moldead…».
+- **23:10** · **[Seguridad y Personas]** Marcaste hecha «Revisa las etiquetas y las hojas de seguridad del cemento y de cualquier químico que uses…».
+- **23:10** · **[Seguridad y Personas]** Marcaste hecha «Pregunta a tus dos empleados qué peligros ven ellos en su puesto y qué les ha incomodado…».
+- **23:10** · **[Seguridad y Personas]** Marcaste hecha «Para cada peligro, anota qué tan grave sería, qué tan probable es que pase y cuántas pers…».
+- **23:10** · **[Seguridad y Personas]** Marcaste hecha «Fotografía la zona donde mezclas y pules el cemento y escribe debajo de cada foto qué te…».
+- **23:10** · **[Seguridad y Personas]** Sumaste el plan completo de Seguridad y Personas.
+- **23:10** · **[Tu viaje]** Aceptaste tus fechas: tu línea base quedó sellada.
+- **23:10** · **[Tu viaje]** Elegiste llevar tu camino con fechas.
+- **23:10** · **[Seguridad y Personas]** Aceptaste tus fechas: tu línea base quedó sellada.
+- **23:10** · **[Riesgos Bajo Control]** Marcaste hecha «Fija un tiempo corto y dedícalo solo a nombrar lo que puede salir mal en tu negocio.».
+- **23:10** · **[Riesgos Bajo Control]** Marcaste hecha «Incluye lo que te da pudor admitir: que todo dependa de ti, que un cliente de la tienda s…».
+- **23:10** · **[Riesgos Bajo Control]** Marcaste hecha «Incluye tu cuenta de Instagram, tu proveedor de resina y de cemento, tus moldes y tu prop…».
+- **23:11** · **[Seguridad y Personas]** Profundizaste tu plan de Seguridad y Personas. Contaste: «Compre las mascarillas pero el polvo sigue igual de bravo.»
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Toma la zona de mezcla y pulido que ya fotografiaste y marca dónde se levanta más polvo:…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Prueba reducirlo en origen: humedece la superficie al pulir, mezcla en un punto separado…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Si un solo cambio no alcanza, combínalo con la mascarilla que ya compraste y con ropa que…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Escribe un plan corto: qué peligro, qué control, quién se encarga y para qué fecha.».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Después de una semana, revisa si el control se usa de verdad y si te frena el ritmo, y aj…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «En tu próximo pulido, humedece la pieza antes de lijar y anota si cambió la cantidad de p…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Antes de hablar, escribe en dos o tres frases qué quieres que quede claro: que tú usarás…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Que te vean usando la protección antes de pedírselo a ellos.».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Cita a cada uno por separado, en un momento tranquilo, no a las carreras ni en medio de u…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Acuerden juntos qué usará cada quien y desde cuándo.».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Enséñales a identificar los peligros de su propio puesto y a reportar lo que vean, inclui…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Aprovecha esa misma reunión para decirle al que va muy bien que lo estás notando; así la…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Escribe las tres frases con las que le explicarías a un empleado por qué estrenas mascari…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Piensa qué emergencias son posibles en tu taller (un corte, cemento en los ojos, una caíd…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Reúne el equipo básico que haga falta, como un botiquín y agua limpia a mano para lavarse…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Pon esas instrucciones por escrito y a la vista en el taller, y repásalas con tus dos emp…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Anota también las tareas que no haces seguido, como el mantenimiento o cambiar moldes o e…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Anota en una hoja los tres percances más probables en tu taller y, para cada uno, quién l…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Revisa que lo que escribiste sobre el taller refleje cómo se trabaja de verdad y no cómo…».
+- **23:11** · **[Seguridad y Personas]** Marcaste hecha «Evita premiar o presumir los días sin incidentes: eso incentiva a callar.».
+- **23:11** · **[Seguridad y Personas]** Completaste el mundo Seguridad y Personas: «Ya tengo el equipo y el protocolo escrito; el resto lo hare cuando contrate a alguien.»
+- **23:11** · **[Calidad y Confianza]** Completaste el mundo Calidad y Confianza.
+- **23:11** · **[Seguridad Digital]** Completaste el mundo Seguridad Digital.
+- **23:11** · **[Riesgos Bajo Control]** Completaste el mundo Riesgos Bajo Control.
+- **23:11** · **[Tu viaje]** Marcaste tu idea como realizada.
+- **23:11** · **[Tu viaje]** Reabriste tu idea para seguir trabajándola.
+- **23:11** · **[Seguridad y Personas]** Reabriste el mundo Seguridad y Personas.
+- **23:11** · **[Tu viaje]** Elegiste llevar tu camino con fechas.
+- **23:11** · **[Riesgos Bajo Control]** Aceptaste tus fechas: tu línea base quedó sellada.
+- **23:12** · **[Tu viaje]** Elegiste llevar tu camino a tu ritmo.
+- **23:12** · **[Calidad y Confianza]** Reabriste el mundo Calidad y Confianza.
+- **23:13** · **[Calidad y Confianza]** Se generó tu plan de Calidad y Confianza.
+- **23:13** · **[Calidad y Confianza]** Sumaste el plan completo de Calidad y Confianza.
