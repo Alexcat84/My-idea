@@ -19,6 +19,7 @@
  * sin IA (el ensamblado offline) NO se cobra: se entrega gratis, marcado como
  * version basica y con un aviso honesto que la pantalla muestra.
  */
+import { memoriaDe } from "@/lib/engine/memoria";
 import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
@@ -316,7 +317,12 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           recorrido.textoOriginal,
           (e) => eventosPlan.push(e),
           numerosParaPlan,
-          idiomaPlan
+          idiomaPlan,
+          // las palabras de la persona (para la moneda): sus respuestas de esta sesion y las de su memoria
+          [
+            ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
+            ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),
+          ]
         );
 
         const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);

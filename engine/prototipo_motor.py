@@ -351,6 +351,29 @@ REGLA_SIN_CAUSAS_INVENTADAS = (
     "no la dijo nadie: es inventada aunque suene razonable."
 )
 
+# Juez de fidelidad del vuelo (decision del fundador, 8 oct 2026): 9 invenciones
+# sostenidas por el arbitro, casi todas hechos sobre el negocio de la persona
+# que la IA dio por sabidos (docs/coherencia/2026-10-08/fidelidad.md, tramo C).
+# Una sola regla, sumada a los mismos cinco redactores que la anterior.
+REGLA_HECHOS_DEL_NEGOCIO = (
+    "\n\nDATOS DEL NEGOCIO: todo dato sobre el negocio de la persona (sus "
+    "precios, costos, monedas, canales, clientes, como funciona su operacion, "
+    "que le pasa y por que) que ella no dio y que no viene de sus nodos se "
+    "escribe como PREGUNTA o como COMPROBACION, nunca como hecho: 'comprueba "
+    "si...', 'revisa cuanto...', '¿alguien ya te recomendo?'. La moneda: solo "
+    "la que la persona nombro, tal cual la dijo; si no nombro ninguna, escribe "
+    "las cifras sin moneda. Casos reales de lo que NO se escribe (la persona no "
+    "dio esos datos): 'un lote hecho con el mismo proceso suele salir más "
+    "parejo'; 'porque ahí un defecto te cuesta más'; 'para ver en pesos cuánto "
+    "te cuesta un mes sin ese canal'; 'El correo es la llave maestra: quien "
+    "entra ahí puede recuperar tu Instagram'; 'porque no te dejan lo mismo' "
+    "(de dos canales cuyo margen nadie dio); 'Anota el nombre del cliente que "
+    "más te ha recomendado' (sin que la persona dijera que alguien la "
+    "recomendo). Como si: 'comprueba si un lote sale más parejo que por "
+    "pedido', 'revisa cuánto te deja cada canal', '¿alguno de tus clientes ya "
+    "te ha recomendado? si es así, anota su nombre'."
+)
+
 
 SYSTEM_CLASIFICACION = (
     "Eres el clasificador de entrada de una app de guia de emprendimiento. El "
@@ -839,13 +862,13 @@ SYSTEM_INTERPRETE_MULTI = (
     "precio_tentativo, capacidad_semanal, costos_fijos_mensuales, "
     "unidades_vendidas, precio_pagado_real. Cada campo detectado es "
     "{\"valor\": numero, o {\"min\": numero, \"max\": numero} si el "
-    "usuario dio un rango, \"unidad\": str|null (ej. 'USD', 'horas', "
+    "usuario dio un rango, \"unidad\": str|null (la moneda tal como la dijo la persona: '$', 'pesos', 'dolares'; nunca traduzcas '$' a USD ni pongas una moneda que no dijo; o 'horas', "
     "'piezas por semana'), \"texto_original\": la frase exacta donde lo "
     "dijo}. Si no se revelo ningun numero nuevo este turno, "
     "'numeros_detectados' debe ser null. Ejemplo: el usuario responde 'me "
     "cuesta como $8 en materiales y me toma unas 4 horas por pieza' -> "
     "\"numeros_detectados\": {\"costo_materiales_unidad\": {\"valor\": 8, "
-    "\"unidad\": \"USD\", \"texto_original\": \"me cuesta como $8 en "
+    "\"unidad\": \"$\", \"texto_original\": \"me cuesta como $8 en "
     "materiales\"}, \"horas_por_unidad\": {\"valor\": 4, \"unidad\": "
     "\"horas\", \"texto_original\": \"me toma unas 4 horas por pieza\"}}.\n\n"
     "TIPO DE OFERTA (motor v2.2): en cualquier turno donde el usuario "
@@ -1235,8 +1258,10 @@ SYSTEM_CAMINOS = (
     '{"caminos": [{"titulo": "...", "descripcion": "...", "nodos": ["id1", "id2", "id3"]}]}'
 )
 SYSTEM_CAMINOS += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
+SYSTEM_CAMINOS += REGLA_HECHOS_DEL_NEGOCIO  # juez de fidelidad del vuelo, 8 oct 2026
 
 SYSTEM_PLAN += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
+SYSTEM_PLAN += REGLA_HECHOS_DEL_NEGOCIO  # juez de fidelidad del vuelo, 8 oct 2026
 SYSTEM_PLAN += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_ESTADO_VIVO = (
@@ -1319,6 +1344,7 @@ SYSTEM_ORGANIZADOR = (
     "afirmaciones de mercado, normas o cifras."
 )
 SYSTEM_ORGANIZADOR += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
+SYSTEM_ORGANIZADOR += REGLA_HECHOS_DEL_NEGOCIO  # juez de fidelidad del vuelo, 8 oct 2026
 SYSTEM_ORGANIZADOR += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_REPORTE = (
@@ -1383,6 +1409,7 @@ SYSTEM_REPORTE = (
     "'tu idea' o 'tu proyecto'."
 )
 SYSTEM_REPORTE += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
+SYSTEM_REPORTE += REGLA_HECHOS_DEL_NEGOCIO  # juez de fidelidad del vuelo, 8 oct 2026
 SYSTEM_REPORTE += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 # Fase 4.5 (docs/PREVIEW_MUNDOS_PLAN.md): el redactor del DIAGNOSTICO del
@@ -1427,6 +1454,7 @@ SYSTEM_DIAGNOSTICO_MUNDO = (
     "pone el boton despues de tu texto."
 )
 SYSTEM_DIAGNOSTICO_MUNDO += REGLA_SIN_CAUSAS_INVENTADAS  # juez de fidelidad, 8 oct 2026
+SYSTEM_DIAGNOSTICO_MUNDO += REGLA_HECHOS_DEL_NEGOCIO  # juez de fidelidad del vuelo, 8 oct 2026
 SYSTEM_DIAGNOSTICO_MUNDO += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 
