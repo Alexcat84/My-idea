@@ -28,8 +28,26 @@ Lo que se arregló después del tramo C, con pruebas en rojo primero (decisiones
 - **Datos del negocio** que la persona no dio y que no vienen de sus nodos se escriben como pregunta o comprobación, en
   los cinco redactores, con las frases reales del informe (bfbd1fddc).
 
-Pendiente del visto del fundador: un verificador en producción antes de entregar cada plan, y la medición barata (volver
-a redactar los 14 planes del vuelo con los arreglos y pasarlos por el mismo juez).
+El verificador en producción y la medición barata se resolvieron después: ver la sección siguiente (B NO PASA).
+
+## La medición barata: A (solo reglas) contra B (reglas + verificador)
+
+Los 14 planes del vuelo, redactados de nuevo desde sus entrevistas guardadas (sin guardar nada), pasados por el mismo
+juez con trampas sin marca y árbitro, umbral 0. A y B comparten borrador; B es A con el verificador (Sonnet 5.5, sin
+desplegar). Informe completo, con cada hallazgo sostenido: [medicion_ab/RESULTADO.md](medicion_ab/RESULTADO.md).
+
+| | A (solo reglas) | B (reglas + verificador) | Umbral |
+|---|---:|---:|---:|
+| Sostenidos por el árbitro | 14 (11 invenciones, 3 contrarios) | 10 (7 invenciones, 3 contrarios) | 0 |
+| Planes con algún sostenido | 7 de 14 | 8 de 14 | 0 |
+| Trampas cazadas | 3 de 3 | 3 de 3 (una en la relectura) | todas |
+| Coste de API | 1,1161 USD (redactor, compartido) | + 0,7502 USD (verificador) = 1,8664 | tope 2,00 |
+
+**Veredicto: B NO PASA.** Regla de cierre del fundador: se para y se reporta, sin arreglar. El verificador **no se
+desplegó** (`VERIFICADOR_PLAN` apagado por defecto). Lo que deja pasar son inventos de negocio plausibles y contrarios de
+cálculo u orden que un verificador que solo quita o pregunta no corrige. El juez y el árbitro resolvieron distinto frases
+idénticas entre versiones: con umbral 0, un solo caso límite decide. Pendiente de decisión del fundador y de anotar la
+cifra final de la consola; el `.env` raíz se queda hasta entonces.
 
 ## Qué hay en esta carpeta
 
@@ -38,6 +56,7 @@ a redactar los 14 planes del vuelo con los arreglos y pasarlos por el mismo juez
 | [ACTA.md](ACTA.md) | cada paso con su hora, sus decisiones y cada intento del vuelo |
 | [COSTES_MODELOS.md](COSTES_MODELOS.md) | coste por corrida, por modelo, por pieza, por llamada y por espacio; la caché; el tope; la consulta SQL; contra el vuelo del 27 sep (Sonnet 4.6 + Haiku 4.5) |
 | [coherencia/](coherencia/) | la prueba de coherencia: por proyecto, cada sesión turno por turno y cada documento tal como lo lee la persona |
+| [medicion_ab/](medicion_ab/) | la medición barata: los 14 planes redactados de nuevo en A y en B, los veredictos del juez y del árbitro y el informe |
 | [vuelo/](vuelo/) | el vuelo final validado (intento 10 + fases 3 y 4): igual, por proyecto, sesión por sesión y cada plan completo |
 | [revision_guion_vuelo.md](revision_guion_vuelo.md) | el guion del vuelo revisado contra las reglas cambiadas hoy |
 | `vuelo_transcripcion_*.txt` | la salida de cada intento del vuelo |

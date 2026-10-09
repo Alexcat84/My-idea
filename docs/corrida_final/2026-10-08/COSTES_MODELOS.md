@@ -321,3 +321,21 @@ group by tipo, dominio
 order by tipo, dominio;
 ```
 
+
+## 9. La medición barata A/B (9 oct 2026)
+
+Redactar de nuevo los 14 planes del vuelo desde sus entrevistas guardadas (sin guardar nada) y pasar cada uno por el
+verificador de planes (Sonnet 5.5, sin desplegar). Cifras de `medicion_ab/costes.json`; jueces y árbitros corrieron
+fuera de la API del producto.
+
+| Pieza | USD | Por plan (media) |
+|---|---:|---:|
+| Redactor (un borrador por plan, compartido por A y B) | 1,1161 | 0,0797 |
+| Verificador (Sonnet 5.5) | 0,7502 | 0,0536 |
+| **Total** | **1,8664** | 0,1333 |
+
+El verificador sube el coste del plan en torno a un 67 % sobre el redactor (0,0536 contra 0,0797 USD por plan; mínimo
+0,0308, máximo 0,0893 en el plan de Primer Equipo). Propuso 88 correcciones y aplicó 85 (3 ignoradas), ninguna a
+revisión. **Resultado de fidelidad: B NO PASA** (10 sostenidos en 8 de 14 planes contra 14 en 7 de A), así que el
+coste no se despliega: ver [medicion_ab/RESULTADO.md](medicion_ab/RESULTADO.md). Esta sección es manual: si se vuelve a
+generar el archivo con `corrida_final_costes_modelos.ts`, hay que volver a añadirla.

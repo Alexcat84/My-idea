@@ -1,0 +1,11 @@
+{"paquete": "f002", "arbitrajes": [
+  {"afirmacion": "y ya decidiste empezar esta semana", "clase_juez": "invencion", "veredicto": "SOSTENIDO", "clase_final": "invencion",
+   "evidencia": "contexto.lo_que_conto (health_safety): a '¿Con qué te sentirías más cómodo para empezar esta semana...?' respondió 'Con eso me basta por ahora.'; lo único dicho es 'Quiero proteger mi salud sin frenar la produccion.' La frase 'Ya elegiste por dónde empezar' es de una pregunta de la IA, no de la persona.",
+   "razon": "Atribuye a la persona una decisión (empezar esta semana) que ella nunca declaró; su respuesta es una evasiva, no una elección."},
+  {"afirmacion": "El proveedor nuevo baja el cemento un veinte por ciento y todavía no lo metes en la cuenta.", "clase_juez": "invencion", "veredicto": "SOSTENIDO", "clase_final": "invencion",
+   "evidencia": "contexto.lo_que_conto (core): la persona dijo solo 'el proveedor nuevo me baja el cemento un 20%'; la IA preguntó '¿ya recalculaste... o todavía no lo has metido en la cuenta?' y ella respondió otra cosa (lotes de 10 vs por pedido). Ningún nodo ni dato lo afirma.",
+   "razon": "Que no haya recalculado es un hecho que nadie dio (la pregunta quedó sin contestar); es plausible, pero se presenta como dato de la persona (y se repite en la intro)."},
+  {"afirmacion": "Para el proveedor de resina, busca al menos otro y pregúntale precio y plazos, aunque no le compres todavía.", "clase_juez": "contrario", "veredicto": "DESCARTADO", "clase_final": "operativa",
+   "evidencia": "contexto.lo_que_conto (risk_management): 'dependo de un solo proveedor de resina; si sube el precio o desaparece, no puedo producir... No tengo un colchon de dinero ni un proveedor alterno'. Nodo mejora_continua_del_proceso solo habla de reducir a un proveedor único por artículo mediante colaboración sostenida, en clave de calidad.",
+   "razon": "El nodo no prohíbe tener alternativa ni lo contradice frontalmente; el consejo concreta cómo atender el riesgo que la propia persona declaró (cotizar un segundo proveedor sin comprar), es consejo operativo y no una afirmación opuesta a un nodo."}
+]}
