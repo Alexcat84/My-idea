@@ -319,7 +319,33 @@ procedencias en 10 de 14 planes (regla: 0, 2, 0); trampas 3/3; 9,29 USD.
   datos (las 12 macetas otra vez; «tus cinco anotaciones» cuando fueron tres).
 - Rama `fidelidad-contexto` empujada y SIN fundir. El `.env` raíz sigue puesto hasta la decisión.
 
-**Decisión que espera al fundador.**
+**Decisión del fundador (9 oct, noche): REDACTOR CON RESPALDO** (`docs/producto/REDACTOR_CON_RESPALDO.md`), en este
+orden y UN PUNTO POR SESIÓN, cada uno con prueba en rojo primero y suites, tsc y Gate 0 en verde. La programación va con
+la suscripción, en la sesión principal y sin subagentes; lectores, jueces y árbitros SIEMPRE como guion por la API
+(`web/scripts/corrida_final_juez_api.ts`). Si se acerca el límite: terminar el paso, commit, push y anotar aquí.
+
+| Orden | Punto | Estado |
+|---|---|---|
+| 1 | 1. «Material» y 5. Plan anterior | **HECHO y EN PRODUCCIÓN** (main fec45eebb, despliegue de producción correcto; también fundido en `fidelidad-contexto`, a938102e7) |
+| 2 | 4. Menos prosa | **SIGUIENTE.** Introducción corta que solo repite lo que la persona dijo, con sus palabras, sin causas ni promesas; salen las frases de enlace entre etapas. Revisar la pantalla, el Expediente y el PDF y decir qué necesita Design. Se queda en `fidelidad-contexto` |
+| 3 | 2. Números por código | pendiente: cifras calculadas y etiquetadas (qué son y qué no son). En `fidelidad-contexto` |
+| 4 | 3. Citar o callar | pendiente: las marcas se quitan en el servidor y nunca llegan a la pantalla, tampoco en el streaming en vivo, con su prueba. En `fidelidad-contexto` |
+| 5 | Medición | cuando estén los cinco: decir el coste estimado de UNA medición con la regla de la fila 17 y esperar el visto |
+
+Lo hecho en el punto 1: payload `temas_del_recorrido` / `temas_vecinos`; ningún prompt que llega a la IA dice
+«material»; `REGLA_SIN_FUENTES` prohíbe citar los temas como fuente; filtro `web/lib/engine/citasDeFuente.ts` en los once
+idiomas (motor en español). En el punto 5: de cada tarea viaja su estado y la nota de la persona, nunca su texto.
+Riesgo anotado del punto 5: la regla 8-ter («no repetir lo hecho») ya no ve el texto de lo hecho; lo cubren las notas de
+la persona, la exclusión de los temas ya cubiertos y las tareas heredadas por código. Vigilarlo en la medición.
+
+**Lo que ninguno de los cinco puntos cubre (para después):** tres contrarios de un tema aplicado al revés dentro de un
+paso. La cita al tema existe y es la correcta, así que citar o callar no lo ve:
+- «busca un segundo proveedor» presentado como evitar el riesgo, cuando el tema lo llama reducir (M2A-f006-2);
+- «llama a las referencias que ella misma te facilite», cuando el tema dice que las eliges tú (M2A-f012-2 y M2B-f004-2).
+Idea anotada, sin decidir: que los pasos salgan de los pasos del tema adaptados (no reescritos) y que el código compare
+cada paso con su origen.
+
+**Decisión anterior que espera al fundador** (superada por la de arriba).
 
 **Para retomar:** el clon de trabajo es `C:/Users/AlexDesk/Documents/my-idea-main` (rama `fidelidad-contexto`); el clon
 `I have an idea` solo se pone al día con fast-forward. Merge a main solo con autorización explícita del fundador. Antes
