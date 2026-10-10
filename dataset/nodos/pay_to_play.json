@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Definir qué constituye una ronda de financiamiento calificada que gatilla la cláusula.",
     "Establecer el porcentaje pro rata mínimo requerido para mantener la condición preferente.",
-    "Negociar si la conversión a común es total o parcial según el nivel de participación, y evitar versiones que permitan al inversionista forzar una recapitalización de la empresa si otros inversionistas no participan.",
+    "Negocia si, según cuánto participe cada inversionista, sus acciones pasan a comunes en todo o solo en parte, y rechaza cualquier redacción que le dé al inversionista la facultad de imponer una recapitalización de la empresa cuando sus coinversionistas no entran en la ronda.",
     "Permitir la asignación de derechos a fondos afiliados del inversionista."
   ],
   "entregable_esperado": "Cláusula de participación obligatoria definida en la hoja de términos con mecánica de conversión clara.",
@@ -146,6 +146,23 @@
       "decision": "condiciones del resto de nodos (saneamiento continuo, ola c19): matiz; modo devolver; lectura ciega contra el libro, arbitro y verificador ciego",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.13"
+    },
+    {
+      "id": "copia-k31b-pay_to_play-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Negociar si la conversión a común es total o parcial según el nivel de participación, y evitar versiones que permitan al inversionista forzar una recapitalización de la empresa si otros inversionistas no participan.",
+      "texto_nuevo": "Negocia si, según cuánto participe cada inversionista, sus acciones pasan a comunes en todo o solo en parte, y rechaza cualquier redacción que le dé al inversionista la facultad de imponer una recapitalización de la empresa cuando sus coinversionistas no entran en la ronda.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1148",
+        "frase": "What you want to avoid is a pay-to-play scenario where your VC"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]
 }

@@ -8,13 +8,13 @@
   "notas_extraccion": "Es la primera de las lecciones de contratar a escala y la que convierte el embudo en trabajo repartido. Su inventario propio es aritmetico y completo: el libro da las cuatro etapas con sus numeros, el total anual, el reparto por directivo, el reparto por semana y el objetivo de entrevistas semanales, todo en el mismo parrafo. Por eso los pasos 2, 4 y 5 son transcripcion y no calculo mio: los numeros son los del libro. Se separa del calculo del embudo propio porque aquel produce una ecuacion y este produce un reparto y un programa de formacion, que son entregables distintos y de ejecutores distintos. Lo que el libro NO dice, y por eso no esta escrito aqui, es que contiene el programa de formacion de entrevistadores, ni quien lo imparte, ni como se mide que un entrevistador es consistente.",
   "pasos_accionables": [
     "Ten en cuenta que, cuando contratas a gran escala, los promedios empiezan a compensar la imprevisibilidad de cada caso, aunque cubrir un puesto concreto te pueda llevar dos semanas o dos meses según la suerte que tengas.",
-    "Saca la cifra total a partir de tu propio embudo. Haz la cuenta así: si en tu equipo cada aceptación requiere cuarenta correos, veinte primeras reuniones, ocho entrevistas y dos ofertas, para sumar veinte contrataciones tendrás que enviar alrededor de ochocientos correos en el año. Es mucho, pero tener esa certeza tranquiliza.",
-    "Márcate como objetivo montar un mecanismo bien aceitado donde cada etapa del embudo de reclutamiento avance sin tropiezos y con eficiencia.",
+    "Calcula el total desde tu propio embudo, con una cuenta como esta: cada aceptación en tu equipo exige cuarenta correos, veinte primeras reuniones, ocho entrevistas y dos ofertas, así que cerrar veinte contrataciones en el año te obliga a mandar unos ochocientos correos. Es una cifra alta, pero tenerla clara da calma.",
+    "Ponte como meta que tu embudo de reclutamiento funcione como una maquinaria engrasada, en la que cada fase avance con fluidez y eficiencia.",
     "Distribuye ese total por personas y por semanas. Continúa con la cuenta: con ocho directivos en tu equipo, a cada uno le tocan unos doscientos correos al año, más o menos cuatro por semana, algo nada descabellado.",
-    "Distribuye también las entrevistas: para llegar a ciento sesenta, procura que vengan tres candidatos por semana.",
+    "Haz lo mismo con las entrevistas: apunta a tres candidatos semanales para alcanzar las ciento sesenta.",
     "Crea un programa de formación para entrevistadores, porque te hará falta suficiente gente capaz de valorar candidatos con objetividad y coherencia.",
-    "Busca también maneras de que tu embudo rinda más, con preguntas como estas: ¿puedes ajustar tu primer correo para hacerlo más atractivo y conseguir más respuestas? ¿Puedes organizar eventos que hagan más probable que los candidatos potenciales quieran venir a la entrevista? ¿Puedes pensar preguntas mejores que te den más información sobre cada candidato?",
-    "Parte el problema en trozos cada vez más pequeños y pide a toda tu plantilla que contribuya a que el equipo crezca y prospere."
+    "Busca además cómo sacar más rendimiento a tu embudo, preguntándote cosas como estas: ¿podrías retocar el primer correo para que resulte más atractivo y te respondan más? ¿Te serviría organizar eventos que animen a los posibles candidatos a querer entrevistarse? ¿Se te ocurren preguntas mejores que te revelen más de cada candidato?",
+    "Trocea el problema en partes cada vez menores e involucra a toda tu plantilla en ayudar a que el equipo crezca y prospere."
   ],
   "entregable_esperado": "Una máquina bien engrasada donde cada paso del embudo ocurre con suavidad, con la cuota de correos y de entrevistas repartida por directivo y por semana, y con entrevistadores formados.",
   "nodos_previos": [
@@ -482,6 +482,91 @@
       },
       "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-ejecutar_embudo_reclutamiento_escala-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Saca la cifra total a partir de tu propio embudo. Haz la cuenta así: si en tu equipo cada aceptación requiere cuarenta correos, veinte primeras reuniones, ocho entrevistas y dos ofertas, para sumar veinte contrataciones tendrás que enviar alrededor de ochocientos correos en el año. Es mucho, pero tener esa certeza tranquiliza.",
+      "texto_nuevo": "Calcula el total desde tu propio embudo, con una cuenta como esta: cada aceptación en tu equipo exige cuarenta correos, veinte primeras reuniones, ocho entrevistas y dos ofertas, así que cerrar veinte contrataciones en el año te obliga a mandar unos ochocientos correos. Es una cifra alta, pero tenerla clara da calma.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "239",
+        "frase": "If, for your team, one accept comes from two offers, eight interviews,"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-ejecutar_embudo_reclutamiento_escala-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Márcate como objetivo montar un mecanismo bien aceitado donde cada etapa del embudo de reclutamiento avance sin tropiezos y con eficiencia.",
+      "texto_nuevo": "Ponte como meta que tu embudo de reclutamiento funcione como una maquinaria engrasada, en la que cada fase avance con fluidez y eficiencia.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "241",
+        "frase": "Your task then becomes to create a well-oiled machine in which all"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-ejecutar_embudo_reclutamiento_escala-pasos_accionables-4",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Distribuye también las entrevistas: para llegar a ciento sesenta, procura que vengan tres candidatos por semana.",
+      "texto_nuevo": "Haz lo mismo con las entrevistas: apunta a tres candidatos semanales para alcanzar las ciento sesenta.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "241",
+        "frase": "If you want to achieve 160 interviews, you should aim to have"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-ejecutar_embudo_reclutamiento_escala-pasos_accionables-6",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Busca también maneras de que tu embudo rinda más, con preguntas como estas: ¿puedes ajustar tu primer correo para hacerlo más atractivo y conseguir más respuestas? ¿Puedes organizar eventos que hagan más probable que los candidatos potenciales quieran venir a la entrevista? ¿Puedes pensar preguntas mejores que te den más información sobre cada candidato?",
+      "texto_nuevo": "Busca además cómo sacar más rendimiento a tu embudo, preguntándote cosas como estas: ¿podrías retocar el primer correo para que resulte más atractivo y te respondan más? ¿Te serviría organizar eventos que animen a los posibles candidatos a querer entrevistarse? ¿Se te ocurren preguntas mejores que te revelen más de cada candidato?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "243",
+        "frase": "Look also for opportunities to make your funnel more efficient. Can you"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-ejecutar_embudo_reclutamiento_escala-pasos_accionables-7",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Parte el problema en trozos cada vez más pequeños y pide a toda tu plantilla que contribuya a que el equipo crezca y prospere.",
+      "texto_nuevo": "Trocea el problema en partes cada vez menores e involucra a toda tu plantilla en ayudar a que el equipo crezca y prospere.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "245",
+        "frase": "Break the problem down into smaller and smaller pieces, and ask your"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

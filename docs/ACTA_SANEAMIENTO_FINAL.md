@@ -2125,3 +2125,51 @@ guion: 3,84 USD (tope 10).
 **Parte 2b, ola k32:** 253 propuestas en 13 paquetes, verificadas a ciegas con 26 de 26 trampas cazadas (gasto del
 guion 1,85 USD, tope 4). **Tanda `copia-k32`:** 200 correcciones en 70 nodos; Gate 0 y las dos suites en verde.
 No sostienen 53, que van a la reescritura r3.
+
+### 15.21 Copia fiel por la API: cierre de la vecindad de los pasos y residuo declarado (10 oct 2026)
+
+**Topes.** Desde esta parte, cada llamada reserva su peor caso antes de lanzarse, y el tope se cumple aunque haya
+llamadas en paralelo (decisión del fundador; prueba en rojo primero). En la verificación de k31b y r3 se paró una
+llamada que no cabía y se lanzó después sola.
+
+**k31b, paquetes 67 a 76:** verificados con todas sus trampas cazadas (152 de 152 en toda la ola).
+- **Tanda `copia-k31b-2`:** 157 correcciones en 57 nodos. Va aparte de `copia-k31b` para que los ids no choquen con lo
+  ya aplicado.
+- **No sostienen: 38.** Quedan como residuo, sin otra vuelta (decisión del fundador).
+
+**Reescritura r3** (lo retenido de k29, k30, k31, k31b y k32: 456 elementos; el reescritor dio forma nueva a todos):
+- verificada a ciegas con 46 de 46 trampas cazadas;
+- **tanda `copia-r3`:** 273 correcciones en 149 nodos;
+- **no sostienen: 183,** que quedan como **residuo declarado** sin otra vuelta (decisión del fundador).
+
+Gate 0 y las dos suites en verde con todas las tandas.
+
+**Lo aplicado en esta campaña por la API** (todo en `pasos_accionables`; ningún título, resumen ni condición):
+
+| Tanda | Correcciones | Nodos |
+|---|---:|---:|
+| copia-k31b | 1.086 | 169 |
+| copia-k31b-2 | 157 | 57 |
+| copia-k32 | 200 | 70 |
+| copia-r3 | 273 | 149 |
+
+**Residuo de copia en pasos que queda declarado:**
+- 183 de r3;
+- 38 de k31b;
+- los 6 retenidos de h7;
+- los 49 pasos y 30 resúmenes o condiciones de r1 y r2 (15.16).
+
+La vecindad de los resúmenes sigue pendiente de la decisión del fundador.
+
+**La copia fiel sigue sin certificar** hasta una medida nueva con semilla nueva (15.15).
+
+**Gasto de los guiones** (Sonnet 5.5; la cifra oficial es la consola):
+
+| Pieza | USD |
+|---|---:|
+| Pilotos | 1,59 |
+| Parte 1 (k31b) | 8,76 + 1,34 |
+| Parte 2a | 3,84 |
+| Parte 2b | 1,85 |
+| Parte 3 (reescritura + verificación r3) | 4,77 + 3,92 |
+| **Total** | **26,07** (tope aprobado 33,4) |
