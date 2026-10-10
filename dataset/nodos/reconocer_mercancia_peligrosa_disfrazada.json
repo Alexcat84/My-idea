@@ -7,7 +7,7 @@
   "resumen_teorico": "Muchos productos comunes se clasifican como mercancía peligrosa aunque no lo parezcan a simple vista: perfumes, pinturas con base de aceite, baterías, aerosoles y solventes entran en esta categoría porque, en algunas circunstancias, pueden dañar a personas, bienes o el ambiente durante el transporte. Vender algo así sin identificarlo correctamente puede provocar que el courier rechace el envío o, peor, que provoque un incidente en tránsito. Cada tipo de mercancía peligrosa tiene un número y nombre de clasificación oficial que debe usarse para empacarlo, marcarlo y declararlo. Además, quien despacha estos envíos sin la capacitación adecuada puede enfrentar sanciones, así que identificar el producto y preparar bien cada envío, desde el primero, es un paso que no se puede saltar.",
   "pasos_accionables": [
     "Revisa si tu producto contiene líquidos inflamables, baterías, aerosoles, químicos, gas o combustible, o si es pirotecnia, fósforos, encendedores, munición o material radiactivo.",
-    "Consulta las normas de IATA y OACI para saber cómo se clasifica oficialmente tu producto: su número ONU, su nombre de envío y su clase de peligro, más el riesgo secundario y el grupo de embalaje cuando correspondan.",
+    "Recurre a las normas de IATA y OACI para obtener la identificación y la clasificación correctas de tu producto: número ONU, nombre de envío y clase de peligro, y también el riesgo secundario y el grupo de embalaje, si corresponden.",
     "Pregunta a tu empresa de mensajería si acepta ese producto y bajo qué condiciones de empaque.",
     "Capacítate y certifícate antes de despachar el primer envío de este tipo.",
     "Guarda la documentación exigida junto con cada envío de mercancía peligrosa."
@@ -342,6 +342,23 @@
         "frase": "Refer to the International Air Transport Association (IATA) and International Civil Aviation Organization (ICAO)"
       },
       "decision": "copia fiel (regla D2, ola k05): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-reconocer_mercancia_peligrosa_disfrazada-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Consulta las normas de IATA y OACI para saber cómo se clasifica oficialmente tu producto: su número ONU, su nombre de envío y su clase de peligro, más el riesgo secundario y el grupo de embalaje cuando correspondan.",
+      "texto_nuevo": "Recurre a las normas de IATA y OACI para obtener la identificación y la clasificación correctas de tu producto: número ONU, nombre de envío y clase de peligro, y también el riesgo secundario y el grupo de embalaje, si corresponden.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "1745",
+        "frase": "Refer to the International Air Transport Association (IATA) and International Civil Aviation Organization (ICAO)"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 1,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }

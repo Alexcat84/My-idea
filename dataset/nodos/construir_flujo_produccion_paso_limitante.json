@@ -8,11 +8,11 @@
   "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_02.md, unidad Cap. 1, titulo textual The Basics of Production: Delivering a Breakfast (or a College Graduate, or a Compiler, or a Convicted Criminal...). Sale de la PIEZA P2 de la frontera publicada en la vuelta 1 del frente, L15 a L27, 602 palabras. FRONTERA DENTRO DEL NODO, declarada porque EXTRACTOR.md 10 la pide aunque la fuente sea una sola: pasos 1 y 2 de L19, pasos 3 y 4 de L21 (su ultima frase es We start by looking at our production flow), pasos 5 y 6 de L23, pasos 7 y 8 de L25, y pasos 9 y 10 de L27. POR QUE ES PROCEDIMIENTO: el inventario es del libro y es de ETAPAS, nombradas una a una en imperativo suyo (The first thing we must do is to pin down the step...; To work back from the time of delivery, you will need to calculate...; First you must allow time to assemble...; Next you must get the toast...; Using the egg time as your base, you must allow yourself time...). Escribir los pasos es transcribir ese inventario. LOS TRES CASOS DEL LIBRO VIVEN AQUI Y NO EN CASA PROPIA (manual 3.5, el caso no es la casa): el desayuno de tres minutos (L17 a L27), el reclutamiento universitario de Intel (L31 a L35, donde el paso limitante es el viaje del candidato a la planta y la salida es cribar por telefono antes de invitar) y la justicia penal (L77 a L79, que es el MISMO principio al reves: la casa dice que el paso limitante deberia ser conseguir la condena y en cambio lo limita la disponibilidad de celdas, y eso es permitir que el paso equivocado limite el proceso entero). Ninguno de los tres es nodo aparte, y la frontera de la vuelta 1 lo declara tramo a tramo. LAS CIFRAS DEL CASO PENAL NO SE EXTRAEN: el texto dice even today only some $80,000 sin decir que anio es hoy, y una cifra del autor sin fecha de corte es media cifra (manual principio 5). Por eso atribuciones va vacia y no aparece ningun dolar en ningun paso. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo quien dibuja el flujo ni en que soporte, porque el libro lo ensena en una figura (What must happen is illustrated opposite) y no encarga dibujarla; NO escribo cada cuanto se revisa el flujo, que seria puente de la especie periodo; NO escribo quien responde de cada paso, que seria puente de la especie responsable. Las tres especies son las que el lote 1 pago. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: este nodo y el de la cola del tostador (rehacer_flujo_paso_limitante_capacidad) son el par mas proximo de la unidad, porque los dos hablan del paso limitante. Los separo porque este CONSTRUYE el flujo la primera vez y el otro lo REHACE cuando una capacidad limitada mueve el paso que manda, y porque sus condiciones de activacion son distintas: una es la del que todavia no tiene flujo y otra es la del que ya lo tiene y se le ha metido una cola dentro. DOMINIO NUEVO, declarado en el reporte: produccion no existia en el catalogo, y este libro lo abre. config/umbrales.json tiene solo_dominio_y_nucleo en false, asi que no estrecha ningun barrido. CORRECCION DE FIDELIDAD EN EL MISMO ACTO, ANTES DE QUE ESTE CANDIDATO CUENTE COMO ESCRITO (D.30, EXTRACTOR.md 15.4): el paso 6 decia Planea el trabajo entero alrededor del tiempo que ese paso necesita, y mira si ademas es el componente que mas le importa al cliente, como pasa con el huevo del desayuno. y hoy dice Planea el trabajo entero alrededor del tiempo que ese paso necesita, y cuenta con lo que el libro anade de ese paso en el caso del desayuno: no solo es el que mas tarda en prepararse, es tambien el componente mas importante del desayuno para la mayoria de los clientes.. LA ESPECIE ERA LA DEL ACTO, que es la cuarta y no esta en la tabla de las tres de D.30: el libro NO encarga mirar si ese paso es ademas el mas importante, lo AFIRMA del huevo, y convertir una afirmacion del libro en una comprobacion del lector es escribir un paso que el libro no dice. La linea, reabierta con su sed y no de memoria, sed -n 23p fuentes/grove_high_output/cap_02.md, dice: Not only does that component take the longest to prepare, the egg is also for most customers the most important feature of the breakfast. La correccion se hace con el candidato todavia en la bandeja y se vuelve a pasar la aduana despues de ella, asi que el informe que este reporte publica de este candidato es el de DESPUES de la correccion. CORRECCION DECLARADA de la vuelta 44 de la linea serial (deuda d004, cita grove PARA_ALEXIS 5.3.4, resuelta por D.53 del 17 sep 2026), y se escribe aqui para que la vuelta que inserte este candidato no dependa de que alguien se acuerde, que es la perdida que D.29 vino a cerrar. LA ACTA 32 seccion 3.3 del frente grove adjudico CONTINUA este par por la lectura vieja de que un par con arista declarada no puede ser SANO. D.53 decide lo contrario con su prueba por reduccion: UN SANO PUEDE LLEVAR ARISTA DECLARADA, Y DECLARARLA NO LO CONVIERTE EN CONTINUA, porque si lo hiciera D.37 seria imposible y toda cabeza de serie devoraria sus partes. RE ADJUDICADO: el veredicto de construir_flujo_produccion_paso_limitante con rehacer_flujo_paso_limitante_capacidad vuelve a SANO, que es lo que esta ficha publico, y la caida que dependia de la lectura vieja se retira citando D.53. LA ARISTA SIGUE EN PIE Y SE CABLEA AL INSERTAR: madre construir_flujo_produccion_paso_limitante paso 9, hijo rehacer_flujo_paso_limitante_capacidad. No se borra nada: la clase CONTINUA de la ACTA 32 queda escrita donde esta.",
   "pasos_accionables": [
     "Repasa uno por uno lo básico que te exige producir: que lo que fabriques y entregues responda a lo que pide el cliente, que llegue a la hora pactada de antemano, que su calidad sea aceptable y que cueste lo menos posible.",
-    "Antes de planear, renuncia a la idea de dar al cliente cualquier cosa en el momento exacto en que la pida: lograrlo exigiría una capacidad de producción sin límite o, lo que viene a ser lo mismo, enormes existencias listas para salir.",
-    "En cambio, asume el compromiso de entregar a una hora concreta y con un coste que te deje ofrecer un precio competitivo sin renunciar a un beneficio aceptable.",
+    "Antes de planear, abandona la meta de darle al cliente lo que quiera justo cuando lo quiera: sería posible únicamente con una capacidad de fabricación sin tope o con su equivalente, que son inventarios enormes de producto terminado a la espera de salir.",
+    "Responde en su lugar por la entrega a la hora que hayas prometido, y mantén un coste de producción que te permita cobrar un precio competitivo sin dejar de obtener un margen aceptable.",
     "Empieza por mirar tu flujo de producción.",
     "Localiza el paso limitante preguntándote qué componente tarda más en prepararse; ese paso es el que da forma a todo el flujo.",
-    "Organiza todo el trabajo según el tiempo que exige ese paso. Por ejemplo, en un desayuno con huevo cocido de tres minutos, pan tostado con mantequilla y café, el huevo es lo que más tarda y, además, lo que la mayoría de los clientes considera más importante.",
+    "Toma como eje la duración de ese paso y haz que todo el trabajo gire en torno a ella. Un ejemplo es un desayuno de café, tostada con mantequilla y un huevo cocido de tres minutos: el huevo es el componente que más tiempo requiere y, para la mayoría de los clientes, también el más importante.",
     "Arranca en la hora de entrega y ve restando lo que pide cada componente para que todos coincidan listos en el mismo momento: cuenta antes el rato de reunirlos y luego el de sacar cada uno de donde se estaba haciendo.",
     "Calcula la duración del proceso completo, el llamado tiempo total de paso, sumando ese rato a lo que lleva conseguir y cocinar el componente limitante.",
     "Escalona los demás pasos tomando como base el tiempo del anterior, como el huevo sirve de base para el pan y el pan de base para el café, y eso es el desfase.",
@@ -548,6 +548,57 @@
       },
       "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-construir_flujo_produccion_paso_limitante-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Antes de planear, renuncia a la idea de dar al cliente cualquier cosa en el momento exacto en que la pida: lograrlo exigiría una capacidad de producción sin límite o, lo que viene a ser lo mismo, enormes existencias listas para salir.",
+      "texto_nuevo": "Antes de planear, abandona la meta de darle al cliente lo que quiera justo cuando lo quiera: sería posible únicamente con una capacidad de fabricación sin tope o con su equivalente, que son inventarios enormes de producto terminado a la espera de salir.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "19",
+        "frase": "Production's charter cannot be to deliver whatever the customer wants whenever he wants it"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-construir_flujo_produccion_paso_limitante-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En cambio, asume el compromiso de entregar a una hora concreta y con un coste que te deje ofrecer un precio competitivo sin renunciar a un beneficio aceptable.",
+      "texto_nuevo": "Responde en su lugar por la entrega a la hora que hayas prometido, y mantén un coste de producción que te permita cobrar un precio competitivo sin dejar de obtener un margen aceptable.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "21",
+        "frase": "Instead, a manufacturer should accept the responsibility of delivering a product"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-construir_flujo_produccion_paso_limitante-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Organiza todo el trabajo según el tiempo que exige ese paso. Por ejemplo, en un desayuno con huevo cocido de tres minutos, pan tostado con mantequilla y café, el huevo es lo que más tarda y, además, lo que la mayoría de los clientes considera más importante.",
+      "texto_nuevo": "Toma como eje la duración de ese paso y haz que todo el trabajo gire en torno a ella. Un ejemplo es un desayuno de café, tostada con mantequilla y un huevo cocido de tres minutos: el huevo es el componente que más tiempo requiere y, para la mayoría de los clientes, también el más importante.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_02.md",
+        "lineas": "23",
+        "frase": "so we should plan the entire job around the time needed"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

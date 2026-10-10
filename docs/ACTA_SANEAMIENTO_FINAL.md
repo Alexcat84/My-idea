@@ -2062,3 +2062,114 @@ Quedan para después:
 
 El orden y el aviso sobre los ids de la segunda tanda de k31 están en `docs/PROXIMOS_PASOS.md`, sección 8. La copia
 fiel sigue sin certificar.
+
+### 15.19 Copia fiel: se retoma por guiones de la API (decisión del fundador, 10 oct 2026), escrito antes de lanzar
+
+**Cambio de método.** Lo que queda (15.18) ya no lo hacen subagentes del entorno de desarrollo, sino guiones que
+llaman a la API de Anthropic con la clave del `.env` (crédito promocional), con **Sonnet 5.5**:
+`auditoria-final-claves/copia/api_copia.py`.
+- **Las instrucciones son las mismas:** `INSTRUCCIONES_LECTOR.md` (con la vara de 15.16 en el encargo),
+  `INSTRUCCIONES_VERIFICADOR.md` e `INSTRUCCIONES_REESCRITOR.md`, con los mismos ficheros de entrada y de salida que
+  lee `copia.py`.
+- **Las trampas son las mismas:** la de cada lote V y las dos de cada paquete del verificador.
+- **El árbitro es Opus 5.5,** solo si hace falta: segunda lectura de un lote cuya trampa no cazó el primer lector, o
+  relectura de una trampa del verificador que no se cazó.
+- **Diferencia declarada:** el modelo no abre los libros con sus herramientas del entorno. El guion le da dos
+  herramientas equivalentes que ejecuta él mismo sobre los ficheros de libro del elemento: buscar (como Grep, sin
+  distinguir mayúsculas) y leer un tramo de líneas. Al verificador y al reescritor, además, les pone en el mensaje el
+  pasaje que cita la evidencia del lector.
+
+**Piloto, antes de lanzar (condición del fundador).** El guion verifica tres paquetes que ya verificaron los
+subagentes (k31: 03, 09 y 15) y se comparan los veredictos. Se lanza solo si coinciden en lo esencial: las trampas
+cazadas y el mismo veredicto en la gran mayoría de las propuestas. Si no, se para y se reporta.
+
+**Orden y topes (visto del fundador):**
+
+| Parte | Qué | Tope (USD) |
+|---|---|---:|
+| 1 | Paquetes 21 a 96 de k31, como ola **k31b** (los ids de tanda llevan `k31b` y no chocan con los de k31) | 8 |
+| 2a | Lectura de los 12 lotes V sin leer | 10 |
+| 2b | Verificación de lo que propongan (ola **k32**) | 4 |
+| 3 | Reescritura **r3** de lo que no sostuvo desde k29, y su verificación | 7 |
+| — | Árbitro, solo si hace falta | 2 |
+
+Se deja una reserva de al menos 12 USD del crédito para la medición final del redactor.
+
+**Cómo entra:** lo que sostiene el verificador entra por tandas declaradas (`docs/saneamiento/tandas/copia-<ola>.json`),
+con Gate 0 y las suites en verde; lo que no, va a la reescritura r3. La copia fiel sigue sin certificar hasta la
+medida nueva.
+
+### 15.20 Copia fiel por la API: piloto y parte 1 (10 oct 2026)
+
+**Piloto del verificador** sobre los paquetes 03, 09 y 15 de k31, que ya habían verificado los subagentes:
+- primera pasada: trampas 6 de 6 y el mismo veredicto en 54 de 60 propuestas (90 %); tres veces el guion sostuvo un
+  cambio de matiz que el subagente no sostuvo («puede ayudar» por «puedes», «con más tiempo» por «con más calma»);
+- se añadió al encargo, una sola vez y para todo lo que sigue, la lista de matices que manda la propia instrucción
+  («ante la duda sobre el sentido, no_sostiene»);
+- segunda pasada: trampas 6 de 6 y 55 de 60 (92 %), con las cinco diferencias del lado estricto. Se lanzó.
+
+**Piloto del lector** sobre el lote V050, que ya había leído un subagente: trampa cazada; el mismo veredicto en 106 de
+118 elementos (90 %); 69 copias contra 73 del subagente (8 solo del subagente, 4 solo del guion).
+
+**Parte 1, ola k31b** (paquetes 21 a 96 de k31): verificados 66 de 76 paquetes, con 132 de 132 trampas cazadas, antes
+de llegar al tope (8 USD; gasto del guion 8,76, porque seis llamadas en curso terminaron después del tope). Quedan los
+paquetes 67 a 76.
+- **Tanda `copia-k31b` (parcial):** 1.086 correcciones en 169 nodos; Gate 0 y las dos suites en verde.
+- **No sostienen: 234,** que van a la reescritura r3. Una de ellas la quitó la guarda de voz de cliente: la reescritura
+  metía «el libro» en un paso (V046-027).
+
+**Parte 2a, lectura de los 12 lotes V** (V063, V067, V075, V076, V078, V079 y V081 a V086): leídos por el guion con
+Sonnet 5.5; cada lector cazó su trampa (814 de 814 lotes del plan leídos, sin segunda lectura ni árbitro). Gasto del
+guion: 3,84 USD (tope 10).
+
+**Parte 2b, ola k32:** 253 propuestas en 13 paquetes, verificadas a ciegas con 26 de 26 trampas cazadas (gasto del
+guion 1,85 USD, tope 4). **Tanda `copia-k32`:** 200 correcciones en 70 nodos; Gate 0 y las dos suites en verde.
+No sostienen 53, que van a la reescritura r3.
+
+### 15.21 Copia fiel por la API: cierre de la vecindad de los pasos y residuo declarado (10 oct 2026)
+
+**Topes.** Desde esta parte, cada llamada reserva su peor caso antes de lanzarse, y el tope se cumple aunque haya
+llamadas en paralelo (decisión del fundador; prueba en rojo primero). En la verificación de k31b y r3 se paró una
+llamada que no cabía y se lanzó después sola.
+
+**k31b, paquetes 67 a 76:** verificados con todas sus trampas cazadas (152 de 152 en toda la ola).
+- **Tanda `copia-k31b-2`:** 157 correcciones en 57 nodos. Va aparte de `copia-k31b` para que los ids no choquen con lo
+  ya aplicado.
+- **No sostienen: 38.** Quedan como residuo, sin otra vuelta (decisión del fundador).
+
+**Reescritura r3** (lo retenido de k29, k30, k31, k31b y k32: 456 elementos; el reescritor dio forma nueva a todos):
+- verificada a ciegas con 46 de 46 trampas cazadas;
+- **tanda `copia-r3`:** 273 correcciones en 149 nodos;
+- **no sostienen: 183,** que quedan como **residuo declarado** sin otra vuelta (decisión del fundador).
+
+Gate 0 y las dos suites en verde con todas las tandas.
+
+**Lo aplicado en esta campaña por la API** (todo en `pasos_accionables`; ningún título, resumen ni condición):
+
+| Tanda | Correcciones | Nodos |
+|---|---:|---:|
+| copia-k31b | 1.086 | 169 |
+| copia-k31b-2 | 157 | 57 |
+| copia-k32 | 200 | 70 |
+| copia-r3 | 273 | 149 |
+
+**Residuo de copia en pasos que queda declarado:**
+- 183 de r3;
+- 38 de k31b;
+- los 6 retenidos de h7;
+- los 49 pasos y 30 resúmenes o condiciones de r1 y r2 (15.16).
+
+La vecindad de los resúmenes sigue pendiente de la decisión del fundador.
+
+**La copia fiel sigue sin certificar** hasta una medida nueva con semilla nueva (15.15).
+
+**Gasto de los guiones** (Sonnet 5.5; la cifra oficial es la consola):
+
+| Pieza | USD |
+|---|---:|
+| Pilotos | 1,59 |
+| Parte 1 (k31b) | 8,76 + 1,34 |
+| Parte 2a | 3,84 |
+| Parte 2b | 1,85 |
+| Parte 3 (reescritura + verificación r3) | 4,77 + 3,92 |
+| **Total** | **26,07** (tope aprobado 33,4) |

@@ -9,7 +9,7 @@
     "Identifica qué partes de la hoja de términos son vinculantes desde que la firmas (honorarios legales, exclusividad o no-shop, ley aplicable).",
     "Pregunta directamente al inversor si el trato ya fue aprobado por los socios de su fondo.",
     "Negocia los términos de tu contrato como fundador ANTES de firmar la hoja de términos y de aceptar la exclusividad.",
-    "No aceptes cubrir los honorarios de los abogados del inversor si el trato no llega a cerrarse; la única excepción que quizá tenga sentido es que la cancelación venga de ti."
+    "No pagues los honorarios del abogado del inversor salvo que el trato llegue a cerrarse; como mucho, admite una excepción si quien cancela eres tú."
   ],
   "entregable_esperado": "Lista clara de condiciones previas revisadas, con la aprobación de los socios del fondo confirmada antes de aceptar exclusividad.",
   "nodos_previos": [
@@ -111,6 +111,23 @@
         "frase": "At a minimum, do not agree to pay for the VC's legal fees"
       },
       "decision": "copia fiel (regla D2, ola k13): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k32-conditions_precedent_financing-pasos_accionables-3",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "No aceptes cubrir los honorarios de los abogados del inversor si el trato no llega a cerrarse; la única excepción que quizá tenga sentido es que la cancelación venga de ti.",
+      "texto_nuevo": "No pagues los honorarios del abogado del inversor salvo que el trato llegue a cerrarse; como mucho, admite una excepción si quien cancela eres tú.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "1745-1745",
+        "frase": "do not agree to pay for the VC’s legal fees unless the deal is completed"
+      },
+      "decision": "copia fiel (regla D2, ola k32): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 3,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }

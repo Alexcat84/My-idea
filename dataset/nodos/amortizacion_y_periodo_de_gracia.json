@@ -6,9 +6,9 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Para que la deuda encaje con la estrategia de capital de la empresa, pesan más los términos de amortización que el precio. Dentro de esos términos están el 'draw period', durante el cual puedes pedir desembolsos, y el 'interest-only (I/O) period', en el que pagas solo intereses y no amortizas principal, lo que afecta de forma directa al cash burn y al runway. Negociar ambos periodos, que típicamente duran de 6 a 12 meses, es esencial para estirar al máximo el tiempo que pasa antes de que empieces a pagar principal.",
   "pasos_accionables": [
-    "Solicita poder disponer del préstamo de forma diferida durante 6 a 12 meses tras su cierre, siempre antes de que te toque levantar más capital; ten en cuenta que no todos los préstamos lo admiten y que algunos cobran una comisión por el monto comprometido que no uses.",
+    "Pide poder retirar el dinero del préstamo más adelante, entre los 6 y los 12 meses siguientes a la firma y antes de tu próxima ronda de capital. Comprueba antes que tu préstamo lo permita, porque no todos aceptan este esquema y algunos cobran un cargo por el dinero reservado que no llegues a usar.",
     "Negociar el período de solo intereses (I/O) más largo posible, ya que impacta directamente los meses de efectivo que te quedan, teniendo en cuenta que suele ir ligado al costo del préstamo y al precio del warrant.",
-    "Explorar extensiones condicionales del período de solo intereses ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+    "Averigua si el prestamista te permite alargar el período de solo intereses cuando alcances metas de desempeño (performance milestones) acordadas de antemano. Sopesa que esto complica el trato y lo hace menos predecible: si no llegas a la meta, tendrás que empezar a devolver principal y esa salida de efectivo puede pesar mucho.",
     "Calcular el impacto de la amortización lineal (straight-line) sobre el flujo de caja mensual proyectado."
   ],
   "entregable_esperado": "Cronograma de amortización del préstamo con período de disposición, período de solo intereses y pagos mensuales de principal calculados.",
@@ -211,6 +211,40 @@
         "frase": "amortization terms are actually more critical to ensure that the debt aligns"
       },
       "decision": "copia fiel (regla D2, ola r2): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k32-amortizacion_y_periodo_de_gracia-pasos_accionables-0",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Solicita poder disponer del préstamo de forma diferida durante 6 a 12 meses tras su cierre, siempre antes de que te toque levantar más capital; ten en cuenta que no todos los préstamos lo admiten y que algunos cobran una comisión por el monto comprometido que no uses.",
+      "texto_nuevo": "Pide poder retirar el dinero del préstamo más adelante, entre los 6 y los 12 meses siguientes a la firma y antes de tu próxima ronda de capital. Comprueba antes que tu préstamo lo permita, porque no todos aceptan este esquema y algunos cobran un cargo por el dinero reservado que no llegues a usar.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2885",
+        "frase": "willing to negotiate a delayed draw option of between 6 and 12 months after the"
+      },
+      "decision": "copia fiel (regla D2, ola k32): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k32-amortizacion_y_periodo_de_gracia-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Explorar extensiones condicionales del período de solo intereses ligadas a hitos de desempeño (performance milestones), considerando que añaden complejidad e incertidumbre y que, si no se cumple el hito, empieza el pago de principal y el golpe a la caja puede ser grande.",
+      "texto_nuevo": "Averigua si el prestamista te permite alargar el período de solo intereses cuando alcances metas de desempeño (performance milestones) acordadas de antemano. Sopesa que esto complica el trato y lo hace menos predecible: si no llegas a la meta, tendrás que empezar a devolver principal y esa salida de efectivo puede pesar mucho.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "txt/Venture Deals - Brad Feld.txt",
+        "lineas": "2889",
+        "frase": "some lenders may offer conditional I/O extensions for an additional three, six, or nine months"
+      },
+      "decision": "copia fiel (regla D2, ola k32): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ]

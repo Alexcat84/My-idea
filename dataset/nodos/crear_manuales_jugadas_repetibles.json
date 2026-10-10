@@ -8,16 +8,16 @@
   "notas_extraccion": "Cierra el capitulo y es la unica pieza cuyo objeto es el propio procedimiento. Lo que la hace procedimentable son dos inventarios propios: los ejemplos de manual que el libro nombra, reunion de equipo, cierre de contratacion, proyecto a tiempo y presupuesto, y la senal de que hay un manual por escribir, que es hacer lo mismo una y otra vez. El caso del correo semanal va dentro y no a nodo propio (manual seccion 3.5), y va entero porque cada fase trae el sintoma que la provoca y el remedio que la sigue, que es lo que convierte la historia en procedimiento: el cuello de botella se reparte, el reparto se normaliza, y la norma se escribe cuando te oyes repitiendo la misma indicacion. Lo que el libro NO dice, y por eso no esta escrito aqui, es en que formato vive el manual, ni quien lo mantiene, ni cada cuanto se revisa.",
   "pasos_accionables": [
     "Asume que nada queda terminado, ni un producto ni un proceso: lanzas una versión, aprendes de ella, iteras y la mejoras, y tu manera de avanzar debería quedar igual de abierta a mejoras.",
-    "Ten claro por qué no conviene improvisar: la mayor parte del trabajo que exige hoy sacar algo adelante es de una complejidad asombrosa. Basta pensar en lo que pide que despegue un avión: limpiar la cabina tras el vuelo anterior, repostar, registrar a los pasajeros, subir el equipaje y hacer los controles de seguridad. Retener de memoria cada uno de esos pasos es casi imposible, y mucho más inventarlos sobre la marcha.",
-    "Asume que toda tarea compleja necesita un manual de procedimientos: uno que deje claro cada paso correcto según las variables del momento.",
-    "Incluye entre tus tareas la de ir construyendo esos manuales; por ejemplo, para dirigir una reunión de equipo, para cerrar la contratación de alguien nuevo o para sacar un proyecto en plazo y sin salirte del presupuesto.",
+    "Ten claro por qué no conviene improvisar: hoy la mayoría de lo que hace falta para sacar algo adelante encierra una complejidad enorme. Piensa en todo lo que ocurre antes de que un avión despegue: dejar lista la cabina del vuelo anterior, cargar combustible, hacer el registro de pasajeros, meter el equipaje y pasar los controles de seguridad. Acordarte de todos esos pasos sin apuntarlos es casi imposible; improvisarlos en el momento, todavía más.",
+    "Asume que cualquier labor compleja pide un manual de procedimientos, que fije con claridad cuál es el paso correcto en cada caso según cómo estén hoy las cosas.",
+    "Hazte cargo también de ir construyendo esos manuales. Te pueden servir, por ejemplo, para cerrar la contratación de alguien, para llevar una reunión del equipo o para terminar un proyecto a tiempo y dentro del presupuesto.",
     "Detecta los manuales pendientes: cuando repites una y otra vez algo parecido, es bastante probable que puedas convertirlo en unas instrucciones o en una lista de comprobación que te faciliten la tarea las próximas veces.",
-    "Suma otra ventaja: el manual ya escrito lo puedes entregar a otras personas para que lo aprendan y lo apliquen.",
-    "Prepárate para que tu propio proceso falle al crecer y corrígelo por etapas, como ocurrió con un correo semanal que resumía los avances de un equipo. Al principio, la responsable lo redactaba solo con lo que recordaba, y así funcionó durante cerca de un año; pero cuando los proyectos pasaron a ser el doble y luego el triple, dejó de acordarse de en qué andaba cada persona, y los lunes le llegaban preguntas de por qué no había mencionado tal o cual proyecto.",
-    "Si te vuelves el cuello de botella, reparte la tarea: en una segunda etapa, ella pidió a cada miembro del equipo que le enviara lo que quería resaltar, y dejó de cargar con la obligación de acordarse de todo.",
+    "Aprovecha un beneficio más: cuando el manual ya está escrito, otras personas pueden aprenderlo y ponerlo en práctica a partir de lo que tú les pases.",
+    "Prepárate para que tu propio proceso falle al crecer y corrígelo por etapas. Mira el caso de una responsable que mandaba cada semana un correo con los avances de su equipo: durante casi un año le bastó con escribirlo de memoria, pero al duplicarse y luego triplicarse los proyectos ya no recordaba qué hacía cada quien, y cada lunes alguien le preguntaba por qué había dejado fuera su proyecto.",
+    "Si te vuelves el cuello de botella, reparte la tarea: en la segunda etapa, esa responsable dejó de cargar con tener que recordarlo todo, porque cada persona del equipo le mandaba lo que quería destacar.",
     "Prevé que repartir trae su propio problema: como cada aporte lo escribe una persona distinta, llegan con estilos y niveles de detalle muy dispares, así que te toca hacer de editor; y a veces, si uno viene escaso de detalle, tienes que escribir a su autor y cruzar varios mensajes hasta mejorarlo. El tiempo que exige sigue siendo enorme.",
-    "Si notas que repites la misma indicación una y otra vez, ponla por escrito: en la tercera etapa, ella redactó un documento titulado «Cómo enviar un aporte para el resumen semanal» con los objetivos del resumen, lo que distingue un buen aporte y consejos para escribirlo, y lo compartió con su equipo y con cada persona nueva al llegar.",
-    "Asume que no hay fase final: la tercera funciona de momento, pero lo esperable es que incluso un proceso pequeño como ese siga cambiando a medida que cambien las circunstancias."
+    "Si notas que repites la misma indicación una y otra vez, ponla por escrito: en la tercera etapa, ella preparó una guía, «Cómo enviar un aporte para el resumen semanal», que explicaba para qué sirve el resumen, qué hace bueno un aporte y qué tener en cuenta al redactarlo; se la pasó a su equipo y también a cada persona que se incorporaba.",
+    "Asume que no hay fase final: esa tercera versión sirve por ahora, pero cuenta con que hasta un proceso tan pequeño seguirá transformándose conforme cambie el contexto."
   ],
   "entregable_esperado": "Un manual de instrucciones o una lista de comprobación que hace la tarea más fluida la próxima vez, y que se puede pasar a otros para que aprendan y ejecuten.",
   "nodos_previos": [
@@ -755,6 +755,142 @@
         "frase": "Most of the work needed to make something happen in today's world"
       },
       "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ten claro por qué no conviene improvisar: la mayor parte del trabajo que exige hoy sacar algo adelante es de una complejidad asombrosa. Basta pensar en lo que pide que despegue un avión: limpiar la cabina tras el vuelo anterior, repostar, registrar a los pasajeros, subir el equipaje y hacer los controles de seguridad. Retener de memoria cada uno de esos pasos es casi imposible, y mucho más inventarlos sobre la marcha.",
+      "texto_nuevo": "Ten claro por qué no conviene improvisar: hoy la mayoría de lo que hace falta para sacar algo adelante encierra una complejidad enorme. Piensa en todo lo que ocurre antes de que un avión despegue: dejar lista la cabina del vuelo anterior, cargar combustible, hacer el registro de pasajeros, meter el equipaje y pasar los controles de seguridad. Acordarte de todos esos pasos sin apuntarlos es casi imposible; improvisarlos en el momento, todavía más.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "265",
+        "frase": "Most of the work needed to make something happen in today's world"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asume que toda tarea compleja necesita un manual de procedimientos: uno que deje claro cada paso correcto según las variables del momento.",
+      "texto_nuevo": "Asume que cualquier labor compleja pide un manual de procedimientos, que fije con claridad cuál es el paso correcto en cada caso según cómo estén hoy las cosas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "267",
+        "frase": "any feat of complexity"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-3",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Incluye entre tus tareas la de ir construyendo esos manuales; por ejemplo, para dirigir una reunión de equipo, para cerrar la contratación de alguien nuevo o para sacar un proyecto en plazo y sin salirte del presupuesto.",
+      "texto_nuevo": "Hazte cargo también de ir construyendo esos manuales. Te pueden servir, por ejemplo, para cerrar la contratación de alguien, para llevar una reunión del equipo o para terminar un proyecto a tiempo y dentro del presupuesto.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "269",
+        "frase": "As a manager, part of your job will be the cultivation of such playbooks"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Suma otra ventaja: el manual ya escrito lo puedes entregar a otras personas para que lo aprendan y lo apliquen.",
+      "texto_nuevo": "Aprovecha un beneficio más: cuando el manual ya está escrito, otras personas pueden aprenderlo y ponerlo en práctica a partir de lo que tú les pases.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "269",
+        "frase": "Another bonus of doing this: you can then pass the playbook"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-6",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Prepárate para que tu propio proceso falle al crecer y corrígelo por etapas, como ocurrió con un correo semanal que resumía los avances de un equipo. Al principio, la responsable lo redactaba solo con lo que recordaba, y así funcionó durante cerca de un año; pero cuando los proyectos pasaron a ser el doble y luego el triple, dejó de acordarse de en qué andaba cada persona, y los lunes le llegaban preguntas de por qué no había mencionado tal o cual proyecto.",
+      "texto_nuevo": "Prepárate para que tu propio proceso falle al crecer y corrígelo por etapas. Mira el caso de una responsable que mandaba cada semana un correo con los avances de su equipo: durante casi un año le bastó con escribirlo de memoria, pero al duplicarse y luego triplicarse los proyectos ya no recordaba qué hacía cada quien, y cada lunes alguien le preguntaba por qué había dejado fuera su proyecto.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "271-273",
+        "frase": "This worked well for a year or so, but as the number"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-7",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si te vuelves el cuello de botella, reparte la tarea: en una segunda etapa, ella pidió a cada miembro del equipo que le enviara lo que quería resaltar, y dejó de cargar con la obligación de acordarse de todo.",
+      "texto_nuevo": "Si te vuelves el cuello de botella, reparte la tarea: en la segunda etapa, esa responsable dejó de cargar con tener que recordarlo todo, porque cada persona del equipo le mandaba lo que quería destacar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "275",
+        "frase": "ask my team to send me what they wanted to highlight"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-9",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Si notas que repites la misma indicación una y otra vez, ponla por escrito: en la tercera etapa, ella redactó un documento titulado «Cómo enviar un aporte para el resumen semanal» con los objetivos del resumen, lo que distingue un buen aporte y consejos para escribirlo, y lo compartió con su equipo y con cada persona nueva al llegar.",
+      "texto_nuevo": "Si notas que repites la misma indicación una y otra vez, ponla por escrito: en la tercera etapa, ella preparó una guía, «Cómo enviar un aporte para el resumen semanal», que explicaba para qué sirve el resumen, qué hace bueno un aporte y qué tener en cuenta al redactarlo; se la pasó a su equipo y también a cada persona que se incorporaba.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "279",
+        "frase": "I created a document called How to Submit a Highlight"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 9,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-crear_manuales_jugadas_repetibles-pasos_accionables-10",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asume que no hay fase final: la tercera funciona de momento, pero lo esperable es que incluso un proceso pequeño como ese siga cambiando a medida que cambien las circunstancias.",
+      "texto_nuevo": "Asume que no hay fase final: esa tercera versión sirve por ahora, pero cuenta con que hasta un proceso tan pequeño seguirá transformándose conforme cambie el contexto.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "281",
+        "frase": "Phase three seems to be working for now, but I expect"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 10,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

@@ -7,12 +7,12 @@
   "resumen_teorico": "Si en tus reuniones suelen llevarse la palabra unas pocas voces, puedes repartir tú el tiempo que habla cada persona, con una frase pensada para cada situación: defender a quien cortan a media idea, abrir espacio a quien busca entrar, preguntarle de frente a quien no ha dicho nada y pedir con claridad y cortesía a quien se extiende demasiado que deje turno a otros. Interrumpir no siempre resulta cómodo, pero con ello dejas claro que para ti los mejores resultados nacen de escuchar puntos de vista variados. Y salir en defensa de quien interrumpen también suma credibilidad a quien lo hace.",
   "notas_extraccion": "Es la tercera tactica del capitulo para hacer seguro contribuir, y la unica que se ejecuta en tiempo real dentro de la reunion en vez de en su diseno. Lo que la hace procedimentable son las frases: el libro no dice modera con tacto, sino que pone entre comillas la intervencion concreta para cada uno de los cuatro casos, el interrumpido, el que busca hueco, el que calla y el que habla de mas. Los nombres propios de los ejemplos estan castellanizados porque son ejemplos y no personas reales del libro. El paso 6 esta escrito porque el libro cierra la seccion reconociendo la incomodidad en vez de negarla, y eso es parte del procedimiento y no un adorno. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer si el que habla de mas es tu propio jefe, ni cuantas veces se puede intervenir antes de que la mediacion sea peor que el problema.",
   "pasos_accionables": [
-    "Intenta regular cuánto tiempo de palabra le toca a cada persona cuando notes que unas pocas suelen acaparar tus reuniones.",
-    "Vigila que nadie quede cortado: cuando una persona empieza a explicar algo y una voz más fuerte se le echa encima, protégela con algo como «Un momento, deja que Ana termine». Además, hacerlo suma credibilidad a quien lo hace.",
-    "Ayuda a abrir espacio a quien busca meter baza, con algo como «Me parece que Juan quiere añadir algo». Aunque sea en una revisión de veinte personas, ese gesto puede generar un agradecimiento intenso que se recuerda durante mucho tiempo.",
-    "Intenta dirigir la pregunta a alguien concreto, por su nombre: «Susana, pareces dudar, ¿qué propones que hagamos?», o bien «Ricardo, aún no has dicho nada, ¿qué opinas?».",
-    "Avisa a quien habla de más, con claridad y sin perder la cortesía, de que ahora le toca a otra persona: «Iván, sé que te queda más por contar, pero primero quiero que el resto pueda dar su opinión», o «Laura, entiendo que estás muy convencida de que conviene hacer X; antes de terminar, ¿alguien lo ve distinto? Me importa escuchar todas las posturas».",
-    "Asume que interrumpir a otros para conducir la conversación no siempre te resultará cómodo, y hazlo de todos modos: transmite con fuerza tu convicción de que escuchar perspectivas variadas da mejores resultados."
+    "Prueba a repartir el turno de palabra entre todos cuando tus reuniones tiendan a estar dominadas por unas pocas personas.",
+    "Vigila que nadie quede cortado: si alguien empieza a exponer una idea y otra voz más alta lo pisa, sal en su defensa con una frase como «Espera, Ana todavía no había terminado». De paso, quien hace esto gana credibilidad.",
+    "Ayuda a abrir espacio a quien busca meter baza, por ejemplo con «Parece que Juan quiere decir algo». Ese gesto, incluso en una revisión con veinte asistentes, puede despertar una gratitud intensa que dura en la memoria mucho tiempo.",
+    "Prueba a lanzar preguntas a personas concretas, llamándolas por su nombre: «Susana, te veo con dudas, ¿qué crees que deberíamos hacer?» o «Ricardo, todavía no te hemos oído, ¿cuál es tu opinión?».",
+    "Avisa a quien acapara la palabra, con claridad pero con amabilidad, de que es el turno de otra persona: «Iván, veo que tienes más que decir, pero antes quiero asegurarme de que los demás puedan opinar», o «Laura, te noto muy convencida de que lo mejor es hacer X; antes de cerrar, ¿alguien piensa diferente? Quiero oír todos los puntos de vista».",
+    "Asume que cortar a otros para encauzar la conversación no siempre te resultará cómodo, y hazlo igual: dejas muy claro que, para ti, oír puntos de vista diversos lleva a mejores resultados."
   ],
   "entregable_esperado": "Una reunión en la que quien fue interrumpido termina su frase, quien buscaba hueco lo recibe, quien callaba es preguntado, y quien habla de más cede el turno.",
   "nodos_previos": [
@@ -429,6 +429,108 @@
         "frase": "If your meetings tend to be dominated by a few individuals, try mediating"
       },
       "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-mediar_tiempo_palabra_reunion-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Vigila que nadie quede cortado: cuando una persona empieza a explicar algo y una voz más fuerte se le echa encima, protégela con algo como «Un momento, deja que Ana termine». Además, hacerlo suma credibilidad a quien lo hace.",
+      "texto_nuevo": "Vigila que nadie quede cortado: si alguien empieza a exponer una idea y otra voz más alta lo pisa, sal en su defensa con una frase como «Espera, Ana todavía no había terminado». De paso, quien hace esto gana credibilidad.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "247",
+        "frase": "Be on the lookout for interruptions. If someone starts making a point"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-mediar_tiempo_palabra_reunion-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Ayuda a abrir espacio a quien busca meter baza, con algo como «Me parece que Juan quiere añadir algo». Aunque sea en una revisión de veinte personas, ese gesto puede generar un agradecimiento intenso que se recuerda durante mucho tiempo.",
+      "texto_nuevo": "Ayuda a abrir espacio a quien busca meter baza, por ejemplo con «Parece que Juan quiere decir algo». Ese gesto, incluso en una revisión con veinte asistentes, puede despertar una gratitud intensa que dura en la memoria mucho tiempo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "249",
+        "frase": "if you see someone seeking to get a word in"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-mediar_tiempo_palabra_reunion-pasos_accionables-3",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Intenta dirigir la pregunta a alguien concreto, por su nombre: «Susana, pareces dudar, ¿qué propones que hagamos?», o bien «Ricardo, aún no has dicho nada, ¿qué opinas?».",
+      "texto_nuevo": "Prueba a lanzar preguntas a personas concretas, llamándolas por su nombre: «Susana, te veo con dudas, ¿qué crees que deberíamos hacer?» o «Ricardo, todavía no te hemos oído, ¿cuál es tu opinión?».",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "251",
+        "frase": "Particularly perceptive managers might even try directed questions"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-mediar_tiempo_palabra_reunion-pasos_accionables-4",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Avisa a quien habla de más, con claridad y sin perder la cortesía, de que ahora le toca a otra persona: «Iván, sé que te queda más por contar, pero primero quiero que el resto pueda dar su opinión», o «Laura, entiendo que estás muy convencida de que conviene hacer X; antes de terminar, ¿alguien lo ve distinto? Me importa escuchar todas las posturas».",
+      "texto_nuevo": "Avisa a quien acapara la palabra, con claridad pero con amabilidad, de que es el turno de otra persona: «Iván, veo que tienes más que decir, pero antes quiero asegurarme de que los demás puedan opinar», o «Laura, te noto muy convencida de que lo mejor es hacer X; antes de cerrar, ¿alguien piensa diferente? Quiero oír todos los puntos de vista».",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "253",
+        "frase": "For the overtalkers, be clear but polite in letting them know"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-mediar_tiempo_palabra_reunion-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Asume que interrumpir a otros para conducir la conversación no siempre te resultará cómodo, y hazlo de todos modos: transmite con fuerza tu convicción de que escuchar perspectivas variadas da mejores resultados.",
+      "texto_nuevo": "Asume que cortar a otros para encauzar la conversación no siempre te resultará cómodo, y hazlo igual: dejas muy claro que, para ti, oír puntos de vista diversos lleva a mejores resultados.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "255",
+        "frase": "It's not always comfortable to interrupt others and manage the flow"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-mediar_tiempo_palabra_reunion-pasos_accionables-0",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Intenta regular cuánto tiempo de palabra le toca a cada persona cuando notes que unas pocas suelen acaparar tus reuniones.",
+      "texto_nuevo": "Prueba a repartir el turno de palabra entre todos cuando tus reuniones tiendan a estar dominadas por unas pocas personas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_07.md",
+        "lineas": "245",
+        "frase": "If your meetings tend to be dominated by a few individuals"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 0,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

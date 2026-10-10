@@ -12,9 +12,9 @@
     "Compara ese coste con el de detener la fábrica entera hasta que el proveedor te envíe material mejor, porque el primero quizá te salga más barato.",
     "Lleva esa decisión a un grupo equilibrado de mandos en vez de tomarla tú solo, pues solo ahí puede tomarse como corresponde.",
     "Forma ese grupo con la composición de costumbre: representantes de aseguramiento de la calidad, de fabricación y de ingeniería de diseño.",
-    "Encárgale a ese grupo sopesar cada consecuencia de aceptar la materia prima que no cumple la especificación, y cada consecuencia de rechazarla.",
-    "En la mayoría de los casos, decide con criterio económico; la excepción es el material defectuoso cuyo defecto pueda provocarle a tu cliente un fallo completo, es decir, un problema de fiabilidad: ese no lo dejes pasar jamás.",
-    "En fiabilidad no transijas nunca, porque las consecuencias de un producto poco fiable jamás se pueden medir. Piensa en una pieza de un marcapasos: si no funciona cuando la recibes, puedes cambiarla en fábrica, y eso probablemente encarece; si falla ya implantada, el coste del fallo va mucho más allá del dinero."
+    "Haz que ese grupo analice todo lo que implicaría usar la materia prima que no llega a la especificación y todo lo que implicaría rechazarla.",
+    "Resuelve aceptar o rechazar el material según lo que cueste, que es lo que corresponde en la mayoría de los casos. Pero si su defecto pudiera hacer que tu cliente sufra una falla total, o sea, un problema de fiabilidad, no permitas nunca que avance.",
+    "No hagas concesiones en fiabilidad, porque jamás podrás evaluar lo que acarrea un producto poco fiable. Imagina un componente de un marcapasos: si alguno no funciona al recibirlo, puedes sustituirlo mientras la unidad aún está en la fábrica, aunque probablemente eso suba el coste; si falla después de implantado, lo que cuesta el fallo excede con mucho lo económico."
   ],
   "entregable_esperado": "La decisión tomada por un grupo con las tres áreas representadas, con las consecuencias de las dos salidas pesadas por ese grupo, y la excepción de fiabilidad comprobada antes de aceptar nada.",
   "nodos_previos": [
@@ -511,6 +511,57 @@
       },
       "decision": "copia fiel (regla D2, ola k30): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
       "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Encárgale a ese grupo sopesar cada consecuencia de aceptar la materia prima que no cumple la especificación, y cada consecuencia de rechazarla.",
+      "texto_nuevo": "Haz que ese grupo analice todo lo que implicaría usar la materia prima que no llega a la especificación y todo lo que implicaría rechazarla.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "135-135",
+        "frase": "This group can weigh all the consequences of rejecting or accepting substandard"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-6",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En la mayoría de los casos, decide con criterio económico; la excepción es el material defectuoso cuyo defecto pueda provocarle a tu cliente un fallo completo, es decir, un problema de fiabilidad: ese no lo dejes pasar jamás.",
+      "texto_nuevo": "Resuelve aceptar o rechazar el material según lo que cueste, que es lo que corresponde en la mayoría de los casos. Pero si su defecto pudiera hacer que tu cliente sufra una falla total, o sea, un problema de fiabilidad, no permitas nunca que avance.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "137-137",
+        "frase": "While in most instances the decision to accept or reject defective material"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-r3-decidir_aceptar_rechazar_material_defectuoso-pasos_accionables-7",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "En fiabilidad no transijas nunca, porque las consecuencias de un producto poco fiable jamás se pueden medir. Piensa en una pieza de un marcapasos: si no funciona cuando la recibes, puedes cambiarla en fábrica, y eso probablemente encarece; si falla ya implantada, el coste del fallo va mucho más allá del dinero.",
+      "texto_nuevo": "No hagas concesiones en fiabilidad, porque jamás podrás evaluar lo que acarrea un producto poco fiable. Imagina un componente de un marcapasos: si alguno no funciona al recibirlo, puedes sustituirlo mientras la unidad aún está en la fábrica, aunque probablemente eso suba el coste; si falla después de implantado, lo que cuesta el fallo excede con mucho lo económico.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "fichero": "fuentes/grove_high_output/cap_03.md",
+        "lineas": "137-137",
+        "frase": "Simply put, because we can never assess the consequences of an unreliable"
+      },
+      "decision": "copia fiel (regla D2, ola r3): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 7,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],

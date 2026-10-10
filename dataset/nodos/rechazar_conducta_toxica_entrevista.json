@@ -10,9 +10,9 @@
     "Parte de esta regla: los indeseables son lo único que no deberías tolerar en tu equipo.",
     "Mantén la vigilancia sobre las señales de aviso en las entrevistas.",
     "Vigila si habla mal de empleadores anteriores, con frases como «mi último jefe era terrible».",
-    "Fíjate si atribuye a otros los fracasos en los que participó, con comentarios del tipo «mi último proyecto fracasó por culpa de la política interna».",
+    "Fíjate si echa a otros la culpa de los fracasos en los que estuvo metido, con frases como «aquel proyecto no salió por las intrigas de la empresa».",
     "Vigila si insulta a otros grupos de personas, con frases como «los de ventas eran unos payasos».",
-    "Fíjate si se interesa por lo que la empresa le dará en lugar de por lo que él aportará, con comentarios del tipo «este puesto sería un ascenso en mi carrera».",
+    "Fíjate si le importa más lo que va a recibir de la empresa que lo que puede aportarle, con frases como «para mí este puesto es subir un escalón profesional».",
     "Fíjate si da muestras de mucha arrogancia o de escasa conciencia de sí, con comentarios del tipo «este puesto me interesó porque aquí parece faltar alguien con verdadera veteranía».",
     "Rechaza a quien exhiba esa conducta."
   ],
@@ -403,6 +403,40 @@
         "frase": "Be on the lookout for warning signs in interviews: bad-mouthing past employers"
       },
       "decision": "copia fiel (regla D2, ola k25): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-rechazar_conducta_toxica_entrevista-pasos_accionables-3",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Fíjate si atribuye a otros los fracasos en los que participó, con comentarios del tipo «mi último proyecto fracasó por culpa de la política interna».",
+      "texto_nuevo": "Fíjate si echa a otros la culpa de los fracasos en los que estuvo metido, con frases como «aquel proyecto no salió por las intrigas de la empresa».",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "179",
+        "frase": "blaming failures they were associated with on others"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-rechazar_conducta_toxica_entrevista-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Fíjate si se interesa por lo que la empresa le dará en lugar de por lo que él aportará, con comentarios del tipo «este puesto sería un ascenso en mi carrera».",
+      "texto_nuevo": "Fíjate si le importa más lo que va a recibir de la empresa que lo que puede aportarle, con frases como «para mí este puesto es subir un escalón profesional».",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_08.md",
+        "lineas": "179",
+        "frase": "asking what the company can do for them instead of the reverse"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
