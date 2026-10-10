@@ -15,6 +15,9 @@
  * arma hoy.
  *
  * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_redactar_planes.ts --claves <claves.json> --salida <dir> [--tope 1.9] [--sin-verificador]
+ *   [--comprobador] el comprobador paso contra nodo (punto 3, 10 oct 2026) despues de finalizarPlan; A lleva el plan
+ *                   comprobado y A_previo el de antes, para comparar.
+ *   [--solo id1,id2] solo los planes cuyo id empieza por esos prefijos.
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { createClient } from "@supabase/supabase-js";
@@ -34,6 +37,8 @@ import { planAnteriorParaIA, tituloDeNodoPara } from "../lib/engine/replanteamie
 import { mensajeAlFormatoSinTexto } from "../lib/engine/seguimientoComposer";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
+import { comprobarPasos } from "../lib/engine/comprobadorPasos";
+import { SYSTEM_COMPROBADOR_PASOS } from "../lib/prompts";
 import { obtenerTareasDePlan } from "../lib/db";
 import type { TipoOferta } from "../lib/calculadora";
 import { Presupuesto, TopeAlcanzado, reservaDeLlamada } from "../lib/presupuestoGuion";
@@ -70,13 +75,17 @@ async function main() {
   const salida = arg("--salida");
   const tope = Number(arg("--tope") ?? 1.9);
   const sinVerificador = process.argv.includes("--sin-verificador");
+  const conComprobador = process.argv.includes("--comprobador");
+  const solo = (arg("--solo") ?? "").split(",").map((x) => x.trim()).filter(Boolean);
   if (!rutaClaves || !salida) throw new Error("uso: --claves <claves.json> --salida <dir> [--tope 1.9] [--sin-verificador]");
   const claves = JSON.parse(readFileSync(rutaClaves, "utf8")) as {
     claves: Array<{ origen: string; ref: { plan_id: string; session_id: string; project_id: string; dominio: string; tipo_salida: string; creado: string } }>;
   };
-  const refs = claves.claves.filter((c) => c.origen === "real" && (c.ref.tipo_salida === "plan_nucleo" || c.ref.tipo_salida === "plan_mundo")).map((c) => c.ref);
+  const refs = claves.claves.filter((c) => c.origen === "real" && (c.ref.tipo_salida === "plan_nucleo" || c.ref.tipo_salida === "plan_mundo")).map((c) => c.ref)
+    .filter((r) => solo.length === 0 || solo.some((p) => r.plan_id.startsWith(p)));
   console.log(`planes a redactar: ${refs.length}`);
   mkdirSync(path.join(salida, "A"), { recursive: true });
+  if (conComprobador) mkdirSync(path.join(salida, "A_previo"), { recursive: true });
   mkdirSync(path.join(salida, "B"), { recursive: true });
 
   const sb = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });
@@ -205,13 +214,36 @@ async function main() {
     if (rawTexto === null) throw new Error(`el redactor no devolvio texto para ${ref.plan_id}`);
     const eventos: Array<Record<string, unknown>> = [];
     const a = finalizarPlan(rawTexto, preparacion, recorrido.ruta, families, recorrido.textoOriginal, (e) => eventos.push(e), numeros, idiomaPlan, respuestas);
+    presupuesto.cerrar(reserva, costoAcumuladoUsd(acc));
+    let comprobador: Record<string, unknown> | null = null;
+    if (conComprobador) {
+      writeFileSync(path.join(salida, "A_previo", `${ref.plan_id}.md`), a.markdown, "utf8");
+      const nodos = [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo];
+      // El peor caso del comprobador: los temas, el plan y el prompt de entrada; dos intentos de salida (2.000 + 4.000).
+      let reservaC: number;
+      try {
+        reservaC = presupuesto.reservar(reservaDeLlamada(JSON.stringify(nodos).length + a.markdown.length + SYSTEM_COMPROBADOR_PASOS.length, 6000, [2, 10]));
+      } catch (e) {
+        if (!(e instanceof TopeAlcanzado)) throw e;
+        console.log(`TOPE: ${e.message}; ${ref.plan_id} sale sin comprobar`);
+        reservaC = -1;
+      }
+      if (reservaC >= 0) {
+        const antes = costoAcumuladoUsd(acc);
+        const c = await comprobarPasos(client, { markdown: a.markdown, pasosCitados: a.pasosCitados, nodos }, acc, { presupuestoUsd: 5, idiomaSalida });
+        acc = c.acumulado;
+        presupuesto.cerrar(reservaC, costoAcumuladoUsd(acc) - antes);
+        a.markdown = c.markdown;
+        comprobador = { pasos_con_tema: a.pasosCitados.length, juzgados: c.juzgados, quitados: c.quitados, ignorados: c.ignorados, revision: c.revision, fallo: c.fallo, propuestas: c.propuestas, costo: Number((costoAcumuladoUsd(acc) - antes).toFixed(5)) };
+        console.log(`  comprobador: ${c.juzgados} pasos juzgados, quitados ${c.quitados.join(", ") || "ninguno"}, ignorados ${c.ignorados}${c.revision ? ", REVISION" : ""}${c.fallo ? `, FALLO ${c.fallo}` : ""}`);
+      }
+    }
     const costoA = costoAcumuladoUsd(acc);
     writeFileSync(path.join(salida, "A", `${ref.plan_id}.md`), a.markdown, "utf8");
 
-    presupuesto.cerrar(reserva, costoA);
     if (sinVerificador) {
       gastado += costoA;
-      costes.push({ plan_id: ref.plan_id, dominio, tipo: ref.tipo_salida, costo_redactor: Number(costoA.toFixed(5)), eventos_plan: eventos.map((e) => e.tipo), llamadas: acc.llamadas, estado_vivo_del_momento: estadoVivoDelMomento !== null });
+      costes.push({ plan_id: ref.plan_id, dominio, tipo: ref.tipo_salida, costo_redactor: Number(costoA.toFixed(5)), eventos_plan: eventos.map((e) => e.tipo), llamadas: acc.llamadas, estado_vivo_del_momento: estadoVivoDelMomento !== null, ...(comprobador ? { comprobador } : {}) });
       console.log(`${ref.plan_id} ${dominio}: redactor $${costoA.toFixed(4)} | acumulado $${gastado.toFixed(4)}`);
       continue;
     }

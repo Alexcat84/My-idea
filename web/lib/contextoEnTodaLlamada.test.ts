@@ -52,6 +52,14 @@ const LISTA_BLANCA: Array<{ archivo: string; llamada: string; porque: string }> 
       "Llama al SDK directo porque necesita el stream para encender las secciones del arbol en vivo; limpia los " +
       "guiones el mismo y cobra con registrarUso.",
   },
+  {
+    archivo: "lib/engine/comprobadorPasos.ts",
+    llamada: "llamarClaude",
+    porque:
+      "El comprobador paso contra nodo (decision del fundador, 10 oct 2026, punto 3): cada paso se compara SOLO con el " +
+      "tema que cita, por diseno. El contexto de la persona no entra: la pregunta no es si el paso le sirve, sino si " +
+      "contradice lo que enseña su tema.",
+  },
 ];
 
 // ---------------------------------------------------------------------------------------------------------------

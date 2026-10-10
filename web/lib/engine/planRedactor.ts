@@ -35,7 +35,7 @@ import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFam
 import { validaConClientes } from "./validacionClientes";
 import { quitarCitasDeFuente } from "./citasDeFuente";
 import { podarProsa } from "./menosProsa";
-import { validarCitas, type Respaldo } from "./citarOCallar";
+import { validarCitas, type PasoCitado, type Respaldo } from "./citarOCallar";
 import { calculosDelPlan, numerosDeLaPersona, type Calculo, type FilaNumero } from "./numerosDeLaPersona";
 import type { TipoOferta } from "../calculadora";
 import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
@@ -747,6 +747,8 @@ export interface ResultadoEnsamblado {
    * autodeclaro. Los ids alucinados NO viajan aqui: el sensor no puede
    * guardar procedencia falsa. */
   nodosPorEtapa: Record<string, string[]> | null;
+  /** El tema que cita cada paso (validarCitas), para el comprobador paso contra nodo (comprobadorPasos.ts). */
+  pasosCitados: PasoCitado[];
 }
 
 /**
@@ -772,6 +774,7 @@ export function finalizarPlan(
 
   let cuerpo: string;
   let autodeclaracion: AutodeclaracionPlan | null = null;
+  let pasosCitados: PasoCitado[] = [];
   if (rawTextoModelo !== null) {
     const parsed = parsearAutodeclaracion(rawTextoModelo);
     // i18n F5: si la IA tradujo algún rótulo de estructura, vuelve al neutro.
@@ -781,6 +784,7 @@ export function finalizarPlan(
     // temas recibidos y las cifras del payload; lo que no vale se cambia por su pregunta o se quita. Sin marcas despues.
     const citas = validarCitas(cuerpo, respaldoDelPlan(preparacion));
     cuerpo = citas.texto;
+    pasosCitados = citas.pasosCitados;
     if (citas.quitadas + citas.preguntas + citas.colas + citas.sinMarca > 0) {
       registrarEvento?.({ tipo: "cita_sin_respaldo", quitadas: citas.quitadas, preguntas: citas.preguntas, colas: citas.colas, sin_marca: citas.sinMarca });
     }
@@ -884,6 +888,7 @@ export function finalizarPlan(
     cosechaIds,
     evaluacionCobertura,
     nodosPorEtapa: nodosPorEtapaValidados(autodeclaracion, ruta, cosechaIds),
+    pasosCitados,
   };
 }
 

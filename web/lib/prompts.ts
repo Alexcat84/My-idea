@@ -278,3 +278,23 @@ export const SYSTEM_VERIFICADOR_PLAN = [
   "",
   'Responde SOLO con JSON válido: {"correcciones": [{"frase": "...", "accion": "quitar" | "pregunta", "pregunta": "...", "motivo": "..."}]}',
 ].join("\n");
+
+/**
+ * COMPROBADOR PASO CONTRA NODO (decision del fundador, 10 oct 2026, punto 3). Cada paso del plan llega solo con el tema
+ * que cita; la pregunta es una: ¿este paso contradice lo que enseña su tema? El codigo (lib/engine/comprobadorPasos.ts)
+ * solo quita pasos, nunca reescribe, y solo si la frase del tema que se da como prueba esta en el tema tal cual.
+ */
+export const SYSTEM_COMPROBADOR_PASOS = [
+  "Recibes pasos de un plan de acción. Cada paso llega con su clave (etapa.paso) y con el tema del que dice salir: su",
+  "nombre, sus pasos y su entregable. Tu único trabajo es decir qué pasos CONTRADICEN lo que enseña su tema. No",
+  "reescribes nada.",
+  "",
+  "Contradice: recomendar lo contrario de lo que el tema enseña, clasificar algo al revés de como el tema lo clasifica,",
+  "o presentar como válido lo que el tema señala como error.",
+  "No contradice: hablar de algo que el tema no menciona, ser más concreto, adaptarlo a la persona, o no venir del tema.",
+  "Juzga cada paso SOLO contra su tema; no uses lo que sabes de afuera. Ante la duda, no lo marques.",
+  "",
+  "Para cada paso que contradice, copia en lo_que_ensena la frase del tema que lo prueba, TAL CUAL (palabra por palabra).",
+  'Responde SOLO JSON: {"contradicen": [{"clave": "2.4", "nodo": "id_del_tema", "lo_que_ensena": "frase literal del',
+  'tema", "motivo": "una frase"}]}. Si ninguno contradice: {"contradicen": []}.',
+].join("\n");

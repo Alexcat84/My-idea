@@ -12,6 +12,11 @@
  *    reserva o lo quita, quita de la introduccion la frase sin marca, corta en los pasos y rotulos la cola causal sin
  *    respaldo ("…, porque …") y deja el texto sin ninguna marca.
  * Limite declarado: el codigo comprueba que el respaldo exista y comparta palabras, no que respalde de verdad.
+ *
+ * EL TEMA DE CADA PASO (decision del fundador, 10 oct 2026, punto 3): la marca ⟦N:id⟧ con que termina un paso es el tema
+ * del que sale. Se valida solo que el tema exista (un paso es una orden: no comparte palabras con su tema por fuerza), se
+ * quita del texto y se devuelve el par (etapa, numero de paso, temas) en pasosCitados, para el comprobador paso contra nodo
+ * (comprobadorPasos.ts). Un tema que no vino en el material es una cita inventada: se juzga como siempre (el paso sale).
  */
 export interface Respaldo {
   respuestas: Array<{ id: string; texto: string }>;
@@ -66,10 +71,20 @@ const COLA_CAUSAL = /,?\s+(?:porque|ya que|así que|asi que|por eso|eso confirma
 const PREFIJO = /^(\s*(?:#+\s*|\d+[.)]\s+|[-*•]\s+|\*\*[^*]+\*\*\s*)?)(.*)$/u;
 const ETAPA = /^##\s+Etapa\s+\d+/i;
 
+export interface PasoCitado {
+  etapa: number;
+  numero: number;
+  nodos: string[];
+}
+
+/** Las marcas con que termina una linea (con su puntuacion entre medias): ahi va el tema de un paso. */
+const MARCAS_FINALES = /(?:\s*[.!?]?\s*⟦[^⟦⟧]*⟧)+\s*[.!?]?\s*$/u;
+const SOLO_TEMAS = /^\s*N:[^,|]+(?:,\s*N:[^,|]+)*\s*$/i;
+
 export function validarCitas(
   texto: string,
   r: Respaldo
-): { texto: string; quitadas: number; preguntas: number; colas: number; sinMarca: number } {
+): { texto: string; quitadas: number; preguntas: number; colas: number; sinMarca: number; pasosCitados: PasoCitado[] } {
   const respuestas = new Map(r.respuestas.map((x) => [x.id.toUpperCase(), x.texto]));
   const nodos = new Map(r.nodos.map((x) => [x.id, x.textos.join(" ")]));
   const cifrasPayload = new Set(r.cifras.flatMap(cifrasDe));
@@ -78,6 +93,8 @@ export function validarCitas(
   let colas = 0;
   let sinMarca = 0;
   let zona: "intro" | "etapa" | "otra" = "intro";
+  let etapaActual = 0;
+  const pasosCitados: PasoCitado[] = [];
 
   const vale = (frase: string, contenido: string): { ok: boolean; reserva: string | null } => {
     const [refsTxt, ...resto] = contenido.split("|");
@@ -104,7 +121,10 @@ export function validarCitas(
 
   const salida: string[] = [];
   for (const linea of texto.split("\n")) {
-    if (/^##\s/.test(linea)) zona = ETAPA.test(linea) ? "etapa" : "otra";
+    if (/^##\s/.test(linea)) {
+      zona = ETAPA.test(linea) ? "etapa" : "otra";
+      etapaActual = Number(linea.match(/^##\s+Etapa\s+(\d+)/i)?.[1] ?? 0);
+    }
     if (/^#/.test(linea.trim())) {
       salida.push(linea.replace(MARCA_COMPLETA, "").replace(/[⟦⟧]/g, ""));
       continue;
@@ -113,8 +133,30 @@ export function validarCitas(
       salida.push(linea);
       continue;
     }
-    const [, prefijo, cuerpo] = linea.match(PREFIJO) ?? ["", "", linea];
+    const [, prefijo, cuerpo0] = linea.match(PREFIJO) ?? ["", "", linea];
     const esAccion = prefijo.trim() !== "";
+    let cuerpo = cuerpo0;
+    const numeroPaso = zona === "etapa" ? prefijo.match(/^\s*(\d+)[.)]\s+$/)?.[1] : undefined;
+    if (numeroPaso) {
+      const cola = cuerpo.match(MARCAS_FINALES)?.[0];
+      if (cola) {
+        const temas: string[] = [];
+        const colaSinTemas = cola.replace(/\s*⟦([^⟦⟧]*)⟧/g, (m, c: string) => {
+          if (!SOLO_TEMAS.test(c)) return m;
+          const ids = c.split(",").map((ref) => ref.trim().replace(/^N:/i, "").trim());
+          // Un tema que no vino en el material es una cita inventada: la marca se queda y la juzga la regla de siempre.
+          if (!ids.every((id) => nodos.has(id))) return m;
+          for (const id of ids) if (!temas.includes(id)) temas.push(id);
+          return "";
+        });
+        cuerpo = cuerpo.slice(0, cuerpo.length - cola.length) + colaSinTemas;
+        if (temas.length > 0) pasosCitados.push({ etapa: etapaActual, numero: Number(numeroPaso), nodos: temas });
+        if (!/[⟦⟧]/.test(cuerpo) && !COLA_CAUSAL.test(cuerpo)) {
+          salida.push(prefijo + cuerpo.trim());
+          continue;
+        }
+      }
+    }
     // Las marcas se guardan aparte (su contenido puede llevar ? o .) y la que sigue a la puntuacion se pega a su frase.
     const marcas: string[] = [];
     const cuerpoP = cuerpo
@@ -162,5 +204,5 @@ export function validarCitas(
     .replace(/[⟦⟧]/g, "")
     .replace(/\n{3,}/g, "\n\n")
     .replace(/\s+$/, "");
-  return { texto: limpio, quitadas, preguntas, colas, sinMarca };
+  return { texto: limpio, quitadas, preguntas, colas, sinMarca, pasosCitados };
 }

@@ -20,6 +20,7 @@
  * version basica y con un aviso honesto que la pantalla muestra.
  */
 import { verificadorActivo, verificarPlan } from "@/lib/engine/verificadorPlan";
+import { comprobadorPasosActivo, comprobarPasos } from "@/lib/engine/comprobadorPasos";
 import { memoriaDe } from "@/lib/engine/memoria";
 import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
@@ -337,6 +338,31 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // vuelve pregunta, citadas tal cual. Si falla, el plan sale igual (el cobro no cambia); si propone quitar mas del
         // 20 %, no se aplica y queda marcado para revision.
         let acumuladoPlan = acumuladoTrasRedactor;
+        // COMPROBADOR PASO CONTRA NODO (decision del fundador, 10 oct 2026; APAGADO salvo COMPROBADOR_PASOS=1): cada paso
+        // se compara solo con el tema que cita; si lo contradice, el paso se quita (nunca se reescribe). Si falla, el plan
+        // sale igual.
+        if (!versionBasica && comprobadorPasosActivo()) {
+          const c = await comprobarPasos(
+            client,
+            {
+              markdown: resultado.markdown,
+              pasosCitados: resultado.pasosCitados,
+              nodos: [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo],
+            },
+            acumuladoPlan,
+            { presupuestoUsd: presupuestoPlan, idiomaSalida }
+          );
+          acumuladoPlan = c.acumulado;
+          resultado.markdown = c.markdown;
+          eventosPlan.push({
+            tipo: c.fallo ? "comprobador_pasos_fallido" : c.revision ? "comprobador_pasos_revision" : "comprobador_pasos",
+            juzgados: c.juzgados,
+            quitados: c.quitados,
+            ignorados: c.ignorados,
+            ...(c.fallo ? { motivo: c.fallo } : {}),
+            propuestas: c.propuestas.slice(0, 20),
+          });
+        }
         if (!versionBasica && verificadorActivo()) {
           const v = await verificarPlan(
             client,
