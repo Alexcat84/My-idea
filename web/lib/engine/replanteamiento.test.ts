@@ -11,6 +11,7 @@ import {
   validarCaminos,
   type TareaCiclo,
 } from "./replanteamiento";
+import prompts from "../assets/prompts.json";
 
 const conserva: TareaCiclo[] = [
   { id: "t1", texto: "Hablar con 5 panaderías", nota: "dos dijeron que sí", completed_at: "2026-09-10T15:00:00.000Z", etapa: 1 },
@@ -95,19 +96,37 @@ describe("planAnteriorParaIA: las etapas del plan anterior con sus tareas y su e
       { etapa: 1, texto: "Hablar con 5", estado: "hecho", nota: "dos sí" },
       { etapa: 1, texto: "Anotar objeciones", estado: "no_aplica", nota: null },
     ]);
+    // REDACTOR_CON_RESPALDO punto 5 (visto del fundador, 9 oct 2026): de cada tarea viaja su estado y la nota de la
+    // persona, nunca el texto de la tarea (era una frase del plan anterior, no un dato de la persona).
     expect(plan).toEqual({
       etapas: [
         {
           numero: 1,
           titulo: "Valida",
-          tareas: [
-            { texto: "Hablar con 5", estado: "hecho", nota: "dos sí" },
-            { texto: "Anotar objeciones", estado: "no_aplica" },
-          ],
+          tareas: [{ estado: "hecho", nota: "dos sí" }, { estado: "no_aplica" }],
         },
-        { numero: 2, titulo: "Cuenta", tareas: [{ texto: "Costo por pieza", estado: "pendiente" }] },
+        { numero: 2, titulo: "Cuenta", tareas: [{ estado: "pendiente" }] },
       ],
     });
+  });
+
+  it("caso real (M2A-f007-2, M3A-f003-4): el texto de una tarea inventada no viaja al plan nuevo", () => {
+    const plan = planAnteriorParaIA(md, [
+      { etapa: 1, texto: "Anota si la feria local de agosto te sirve para probar el precio", estado: "pendiente", nota: null },
+      { etapa: 1, texto: "Pregunta a tres compradores", estado: "hecho", nota: "Dos dijeron que lo pagarían" },
+    ]);
+    const enviado = JSON.stringify(plan);
+    expect(enviado).not.toContain("feria");
+    expect(enviado).not.toContain("Pregunta a tres compradores");
+    expect(enviado).toContain("Dos dijeron que lo pagarían");
+  });
+
+  it("las reglas que leen el plan anterior lo describen así (el plan y los caminos del replanteo)", () => {
+    for (const nombre of ["SYSTEM_PLAN", "SYSTEM_CAMINOS"] as const) {
+      const p = (prompts as Record<string, string>)[nombre];
+      expect(p).toMatch(/sin el texto de las tareas/);
+      expect(p).toMatch(/nota de la persona/);
+    }
   });
 
   it("sin plan anterior, null", () => {
