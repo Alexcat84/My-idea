@@ -2173,3 +2173,26 @@ La vecindad de los resúmenes sigue pendiente de la decisión del fundador.
 | Parte 2b | 1,85 |
 | Parte 3 (reescritura + verificación r3) | 4,77 + 3,92 |
 | **Total** | **26,07** (tope aprobado 33,4) |
+
+### 15.22 Copia fiel: medida 8, escrita antes de sortear (decisión del fundador, 10 oct 2026, noche)
+
+Para intentar certificar la copia fiel (15.15: no certifica hasta una medida nueva con semilla nueva).
+- **Muestra:** 200 nodos vivos con la **semilla 20261029**, con el mismo sorteo estratificado de siempre
+  (`scripts/auditoria_final/muestra.py`, 10 por espacio como mínimo). Mide SOLO la copia y, de control, contrarios e
+  invenciones, con las mismas definiciones y la misma vara de la medida 7.
+- **Lectores:** Sonnet 5.5 por la API, uno por lote, con las herramientas `buscar` y `leer` sobre los ficheros de libro
+  de cada nodo (`api_copia.py`).
+  - 20 lotes de 10 nodos. Cada lote lleva un nodo trampa ajeno a la muestra con un paso que traduce su libro palabra
+    por palabra.
+  - Si el lector no caza su trampa, un segundo lector relee el lote. Si tampoco la caza, la medida no vale y se
+    reporta.
+- **Árbitro:** Opus 5.5 por la API, con las mismas herramientas y el pasaje que cita cada lector. Solo cuentan las
+  marcas que confirma.
+- **Regla de 15.15, sin cambios.** Certifica si:
+  - la copia da como mucho 10 de 200 nodos;
+  - contrarios e invenciones dan 0.
+
+  Se declara el residuo con su intervalo de Wilson al 95 %. Si no certifica, se reporta sin corregir: la corrección la
+  decide el fundador.
+- **Tope:** 10 USD, con reserva antes de cada llamada. Va primero un piloto de un lote para medir el coste real. Si la
+  proyección no cabe en el tope con el árbitro, se para y se reporta antes de gastar más.
