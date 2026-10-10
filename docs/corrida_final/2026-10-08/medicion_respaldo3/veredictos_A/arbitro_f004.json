@@ -1,0 +1,13 @@
+{
+  "paquete": "f004",
+  "arbitrajes": [
+    {
+      "afirmacion": "Hay un número que aún no sabes y es el que decide cuántas macetas necesitas vender cada mes.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "punto_equilibrio_unidades: 'Calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad' y 'Dividir los costos fijos mensuales entre el margen de contribución por unidad'. Ese nodo cuenta el tiempo de producción como costo variable. Con los datos de la persona (68 de materiales + 2 h × 17 = 102 frente a un precio de 85), el margen es -17. margen_bruto: 'si tu precio no queda lo bastante por encima de tu costo de producir, difícilmente tu negocio llegará a ganar dinero'.",
+      "razon": "La oración anterior de la propia salida reconoce que el costo por maceta es mayor que el precio. Con margen negativo, la fórmula del nodo no da ninguna cantidad de macetas: vender más solo agranda la pérdida. Decir que el número que falta (los costos fijos) decide cuántas macetas vender contradice el nodo aplicado a lo que contó la persona, porque lo que decide primero es el precio o el costo por unidad."
+    }
+  ]
+}

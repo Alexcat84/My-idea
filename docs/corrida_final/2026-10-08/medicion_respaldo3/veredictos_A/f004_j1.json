@@ -1,0 +1,18 @@
+{
+  "paquete": "f004",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Anota lo que gastas en un mes en cosas que no cambian con cada maceta (herramientas, moldes, publicidad)",
+      "por_que": "La persona contó que los moldes ya entran en sus 68 de materiales por maceta; presentarlos como algo que no cambia con cada maceta contradice lo que dijo y los cuenta dos veces.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Hay un número que aún no sabes y es el que decide cuántas macetas necesitas vender cada mes.",
+      "por_que": "Con el margen por unidad negativo (85 frente a 102), dividir los costos fijos entre ese margen no da ninguna cantidad de macetas; el punto de equilibrio no depende solo de conocer los costos fijos, y no basta con saberlos para calcularlo.",
+      "nodo": "punto_equilibrio_unidades"
+    }
+  ],
+  "afirmaciones_leidas": 41
+}

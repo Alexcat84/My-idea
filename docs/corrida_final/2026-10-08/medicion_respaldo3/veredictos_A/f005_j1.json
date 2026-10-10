@@ -1,0 +1,18 @@
+{
+  "paquete": "f005",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que te queda por pieza es 120, el 48 % del precio",
+      "por_que": "El margen de 120 y el 48 % no los dio la persona ni salen de una calculadora, que en este paquete viene vacía. Además se presentan como cifra general, cuando el contexto deja pendiente comparar el margen entre la tienda que revende e Instagram.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "**Margen por unidad:** 120, el 48 % del precio de 250.",
+      "por_que": "Repite como resultado un margen derivado que ni la persona ni la calculadora aportaron, y no distingue el canal de venta.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 46
+}

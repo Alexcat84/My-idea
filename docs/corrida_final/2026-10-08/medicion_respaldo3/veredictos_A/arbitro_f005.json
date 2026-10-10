@@ -1,0 +1,21 @@
+{
+  "paquete": "f005",
+  "arbitrajes": [
+    {
+      "afirmacion": "lo que te queda por pieza es 120, el 48 % del precio",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "sostenida",
+      "evidencia": "contexto.lo_que_conto (core): \"Subí el precio a 250 y las ventas se mantuvieron; ya sé mi costo real por pieza: 130 incluyendo mi hora a 50.\" También numeros_que_dio.precio_tentativo = 250 y costo_materiales_unidad = 130. La oración anterior de la salida cita esos mismos datos: \"Dijiste que subiste el precio a 250... tu costo real por pieza es de 130\".",
+      "razon": "La cifra no es nueva. 250 − 130 = 120 y 120/250 = 48 %, una aritmética directa y correcta sobre dos números que dio la persona, y la salida lo presenta explícitamente como resultado de esos datos. No es una cifra plausible inventada. Tampoco la vuelve invención o contrario que siga pendiente comparar canales: la persona dio 250 como su precio sin distinguir canal, y la salida no afirma nada sobre la tienda."
+    },
+    {
+      "afirmacion": "**Margen por unidad:** 120, el 48 % del precio de 250.",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "sostenida",
+      "evidencia": "Mismos datos de la persona: precio 250 y costo real 130 por pieza (contexto.lo_que_conto y numeros_que_dio). La viñeta anterior de la salida dice \"Costo por unidad: 130, incluyendo tu hora valorada en 50\".",
+      "razon": "Repite el mismo resultado aritmético, derivado sin margen de error de cifras que dio la persona. No introduce ningún dato que ella no haya contado."
+    }
+  ]
+}

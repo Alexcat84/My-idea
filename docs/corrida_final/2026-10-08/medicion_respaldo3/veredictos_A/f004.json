@@ -1,0 +1,16 @@
+{
+  "paquete": "f004",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Hay un número que aún no sabes y es el que decide cuántas macetas necesitas vender cada mes.",
+      "por_que": "Con el margen por unidad negativo (85 frente a 102), dividir los costos fijos entre ese margen no da ninguna cantidad de macetas; el punto de equilibrio no depende solo de conocer los costos fijos, y no basta con saberlos para calcularlo.",
+      "nodo": "punto_equilibrio_unidades",
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "Hay un número que aún no sabes y es el que decide cuántas macetas necesitas vender cada mes.",
+      "por_que_juez2": "Afirma que los costos fijos decidirán cuántas macetas vender, pero con un margen por unidad negativo vender más aumenta la pérdida; lo que decide primero es el precio o el costo por unidad."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 4
+}

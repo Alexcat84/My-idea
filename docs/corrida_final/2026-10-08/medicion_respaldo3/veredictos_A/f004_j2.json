@@ -1,0 +1,30 @@
+{
+  "paquete": "f004",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Escribe en una hoja tus 68 de materiales, tus dos horas de trabajo y tus 17 por hora, y suma las tres partes",
+      "por_que": "Sumar materiales, horas y valor de la hora da una cifra sin sentido; el nodo y el paso 2 de la misma etapa piden multiplicar las horas por el valor de la hora y sumarlo a los materiales (68 + 2×17 = 102).",
+      "nodo": "punto_equilibrio_unidades"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Anota qué costos fijos tienes en un mes (herramientas, moldes, publicidad, lo que sea)",
+      "por_que": "La persona contó que los moldes ya están dentro de sus 68 de materiales por maceta. Ponerlos también como costo fijo los cuenta dos veces y choca con el paso 3 de la etapa 2, que los trata como costo por maceta.",
+      "nodo": "punto_equilibrio_unidades"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Todavía no se puede calcular, falta saber tus costos fijos del mes.",
+      "por_que": "Con los números de la persona el margen por unidad es negativo (85 - 102 = -17). Según el nodo, el punto de equilibrio sale de dividir los costos fijos entre ese margen, así que ninguna cantidad de ventas cubre los costos fijos; no es solo un dato que falta.",
+      "nodo": "punto_equilibrio_unidades"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Hay un número que aún no sabes y es el que decide cuántas macetas necesitas vender cada mes.",
+      "por_que": "Afirma que los costos fijos decidirán cuántas macetas vender, pero con un margen por unidad negativo vender más aumenta la pérdida; lo que decide primero es el precio o el costo por unidad.",
+      "nodo": "punto_equilibrio_unidades"
+    }
+  ],
+  "afirmaciones_leidas": 41
+}

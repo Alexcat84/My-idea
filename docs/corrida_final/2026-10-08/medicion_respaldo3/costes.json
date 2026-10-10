@@ -1,0 +1,726 @@
+{
+  "gastado_usd": 1.1436,
+  "avisos": [
+    "9909f451-a7e1-482a-b21f-ded87c7a070f: cifras del proyecto posteriores al plan (fuera): precio_tentativo, unidades_vendidas, costos_fijos_mensuales, costo_materiales_unidad; sin fecha: ninguna",
+    "ee6de956-f711-4146-9f15-9ca5ea99c0b2: cifras del proyecto posteriores al plan (fuera): precio_tentativo, unidades_vendidas, costo_materiales_unidad; sin fecha: ninguna",
+    "b4a01dea-63e5-4b44-bab5-2b1f14b2574c: cifras del proyecto posteriores al plan (fuera): valor_hora, horas_por_unidad, precio_tentativo, capacidad_semanal, costos_fijos_mensuales, costo_materiales_unidad; sin fecha: ninguna",
+    "fb027af0-ecdd-4b62-8284-7f3eb8e7db3a: cifras del proyecto posteriores al plan (fuera): valor_hora, horas_por_unidad, precio_tentativo, capacidad_semanal, unidades_vendidas, costo_materiales_unidad; sin fecha: ninguna"
+  ],
+  "planes": [
+    {
+      "plan_id": "9909f451-a7e1-482a-b21f-ded87c7a070f",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.07104,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "cita_de_fuente_interna",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11077,
+          "out": 3244,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 358,
+          "usd": 0.05713889999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 6819,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.013900400000000002,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": false,
+      "comprobador": {
+        "pasos_con_tema": 25,
+        "juzgados": 25,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.0139
+      }
+    },
+    {
+      "plan_id": "0e481ad8-ec8f-4cb1-a1af-2bb5d3ee86f9",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.08876,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7212,
+          "out": 2666,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9945,
+          "usd": 0.0819769,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 3259,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0067804,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 20,
+        "juzgados": 20,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00678
+      }
+    },
+    {
+      "plan_id": "265e4486-ae89-44ad-b449-6f6a0234acfb",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07983,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14286,
+          "out": 2795,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3183,
+          "usd": 0.07036690000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 4600,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.009462400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 21,
+        "juzgados": 21,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00946
+      }
+    },
+    {
+      "plan_id": "ff010188-a9db-48be-9e87-5a5a7c435a1e",
+      "dominio": "risk_management",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.08783,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "titulo_sin_respaldo",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 10032,
+          "out": 3075,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 5604,
+          "usd": 0.07434289999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 5424,
+          "out": 249,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0134904,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 23,
+        "juzgados": 23,
+        "quitados": [
+          "2.4"
+        ],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [
+          {
+            "clave": "2.4",
+            "nodo": "cuan_probable_y_cuanto_doleria",
+            "el_tema_dice": "Marca qué riesgos improbables pero capaces de hundirte necesitan tu atención, aunque su probabilidad sea baja.",
+            "el_paso_dice": "Marca los riesgos improbables pero capaces de hundirte, como perder el acceso a Instagram, y no los sueltes aunque su probabilidad sea baja.",
+            "motivo": "El tema dice que estos riesgos necesitan atención, pero el paso, al decir que no los sueltes aunque su probabilidad sea baja, no los trata como riesgos con probabilidad baja por cuantificar."
+          }
+        ],
+        "costo": 0.01349
+      }
+    },
+    {
+      "plan_id": "ee6de956-f711-4146-9f15-9ca5ea99c0b2",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.05849,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 9483,
+          "out": 2546,
+          "cache_read": 11487,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.045574699999999996,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 5340,
+          "out": 208,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.012912400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": false,
+      "comprobador": {
+        "pasos_con_tema": 23,
+        "juzgados": 23,
+        "quitados": [
+          "3.4"
+        ],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [
+          {
+            "clave": "3.4",
+            "nodo": "establecer_linea_base_mvp",
+            "el_tema_dice": "Considera hacer antes una prueba rápida de interés (smoke test) para validar si al cliente le importa, antes de invertir más recursos",
+            "el_paso_dice": "Antes de invertir más, haz una prueba rápida de interés para ver si a la persona le importa lo suficiente como para dar el paso.",
+            "motivo": "El tema pone la prueba de interés como opcional ('considera'), mientras que el paso la vuelve un requisito previo obligatorio."
+          }
+        ],
+        "costo": 0.01291
+      }
+    },
+    {
+      "plan_id": "b4a01dea-63e5-4b44-bab5-2b1f14b2574c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.06451,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "titulo_sin_respaldo",
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11099,
+          "out": 2825,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 404,
+          "usd": 0.0531769,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 5534,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.011330400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": false,
+      "comprobador": {
+        "pasos_con_tema": 24,
+        "juzgados": 24,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.01133
+      }
+    },
+    {
+      "plan_id": "fb027af0-ecdd-4b62-8284-7f3eb8e7db3a",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.06091,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14545,
+          "out": 2148,
+          "cache_read": 11849,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.051754900000000006,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 4444,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.009150400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": false,
+      "comprobador": {
+        "pasos_con_tema": 15,
+        "juzgados": 15,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00915
+      }
+    },
+    {
+      "plan_id": "f14f36e7-d5ed-42d9-818d-eef3096353e9",
+      "dominio": "seguridad_digital",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07243,
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14917,
+          "out": 1783,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3934,
+          "usd": 0.0645129,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 3825,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0079124,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 15,
+        "juzgados": 15,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00791
+      }
+    },
+    {
+      "plan_id": "aad2749d-a69c-43b6-8a5b-6f73a7df7374",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.07541,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "titulo_sin_respaldo",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11236,
+          "out": 3029,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 2828,
+          "usd": 0.06518689999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 4981,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.010224400000000002,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 19,
+        "juzgados": 19,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.01022
+      }
+    },
+    {
+      "plan_id": "deb138a3-9226-4334-a7d9-2dc36519ca0e",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.06985,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 16849,
+          "out": 2659,
+          "cache_read": 20337,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.062321699999999994,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 3635,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.007532400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 17,
+        "juzgados": 16,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00753
+      }
+    },
+    {
+      "plan_id": "8b7764c4-8e7c-4d0e-ab11-ed13ef3b968c",
+      "dominio": "primer_equipo",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.11671,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 22884,
+          "out": 4182,
+          "cache_read": 17812,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0893692,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 12395,
+          "out": 240,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0273424,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 25,
+        "juzgados": 25,
+        "quitados": [
+          "5.4"
+        ],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [
+          {
+            "clave": "5.4",
+            "nodo": "detectar_metodos_vudu_contratacion",
+            "el_tema_dice": "Revisa si eres el crítico de arte, el que juzga por instinto en pocos minutos: quien cree tener un don natural para «leer» a la gente al vuelo se expone a que lo engañen por completo",
+            "el_paso_dice": "no uses el instinto de pocos minutos ni preguntas hipotéticas del tipo «¿qué harías?»",
+            "motivo": "El paso solo nombra métodos que el tema señala como error y no contradice nada; solo lo incluyo si se lee como contrario, pero en realidad coincide con el tema."
+          }
+        ],
+        "costo": 0.02734
+      }
+    },
+    {
+      "plan_id": "85248377-b739-42a8-8f52-063d3748a4ec",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.10795,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 16969,
+          "out": 2455,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8301,
+          "usd": 0.09280490000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 6834,
+          "out": 132,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0151404,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 19,
+        "juzgados": 19,
+        "quitados": [
+          "2.4"
+        ],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [
+          {
+            "clave": "2.4",
+            "nodo": "implementacion_controles",
+            "el_tema_dice": "Controlar sin demora los peligros serios reconocidos",
+            "el_paso_dice": "deja los menores para después",
+            "motivo": "El tema exige controlar sin demora todos los peligros serios, mientras que el paso aplaza todos salvo el peor."
+          }
+        ],
+        "costo": 0.01514
+      }
+    },
+    {
+      "plan_id": "31ebf0ea-a5a2-44dc-afe7-d31c7d90db1c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09578,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 7418,
+          "out": 4054,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 7891,
+          "usd": 0.08805290000000002,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 3730,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0077224,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 28,
+        "juzgados": 28,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.00772
+      }
+    },
+    {
+      "plan_id": "c73e86f8-2c5b-49f0-874c-a8253392c880",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09412,
+      "eventos_plan": [
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11138,
+          "out": 2782,
+          "cache_read": 11129,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8002,
+          "usd": 0.0832169,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        },
+        {
+          "componente": "comprobador_pasos",
+          "modelo": "claude-sonnet-5-5",
+          "in": 5320,
+          "out": 11,
+          "cache_read": 1524,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.010902400000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": false
+        }
+      ],
+      "estado_vivo_del_momento": true,
+      "comprobador": {
+        "pasos_con_tema": 27,
+        "juzgados": 27,
+        "quitados": [],
+        "ignorados": 0,
+        "revision": false,
+        "fallo": null,
+        "propuestas": [],
+        "costo": 0.0109
+      }
+    }
+  ]
+}

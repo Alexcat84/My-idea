@@ -1,0 +1,18 @@
+{
+  "paquete": "f005",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que te queda por pieza es 120, el 48 % del precio",
+      "por_que": "La persona dio el precio (250) y el costo (130), pero no dio este margen ni este porcentaje, y no hay calculadora en el paquete que los respalde; son cifras de resultado que nadie calculó en el material.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Margen por unidad: 120, el 48 % del precio de 250",
+      "por_que": "Repite como resultado un margen y un porcentaje que no vienen de la calculadora (nula) ni los dio la persona.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 41
+}

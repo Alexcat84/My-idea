@@ -1,0 +1,25 @@
+{
+  "paquete": "f005",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que te queda por pieza es 120, el 48 % del precio",
+      "por_que": "El margen de 120 y el 48 % no los dio la persona ni salen de una calculadora, que en este paquete viene vacía. Además se presentan como cifra general, cuando el contexto deja pendiente comparar el margen entre la tienda que revende e Instagram.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "lo que te queda por pieza es 120, el 48 % del precio",
+      "por_que_juez2": "La persona dio el precio (250) y el costo (130), pero no dio este margen ni este porcentaje, y no hay calculadora en el paquete que los respalde; son cifras de resultado que nadie calculó en el material."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "**Margen por unidad:** 120, el 48 % del precio de 250.",
+      "por_que": "Repite como resultado un margen derivado que ni la persona ni la calculadora aportaron, y no distingue el canal de venta.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Margen por unidad: 120, el 48 % del precio de 250",
+      "por_que_juez2": "Repite como resultado un margen y un porcentaje que no vienen de la calculadora (nula) ni los dio la persona."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

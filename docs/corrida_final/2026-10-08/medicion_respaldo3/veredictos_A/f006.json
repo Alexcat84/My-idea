@@ -1,0 +1,16 @@
+{
+  "paquete": "f006",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Este paso puedes saltártelo: «Encuentra tu Precio Óptimo» no hace falta en tu caso.",
+      "por_que": "Ningún nodo ni dato de la persona dice que el precio óptimo sobre en su caso. La persona pidió profundizar justo en el precio y el margen, y la Etapa 4 del mismo plan se arma con los pasos de ese nodo. Además, el paso que declara prescindible es la división que da el punto de equilibrio, que es el entregable de la propia etapa.",
+      "nodo": "demand_curve_pricing",
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "Este paso puedes saltártelo: «Encuentra tu Precio Óptimo» no hace falta en tu caso.",
+      "por_que_juez2": "Declara innecesario el nodo de precio óptimo, aunque la persona dijo que lo que más le interesa ahora es el precio y el margen, y la Etapa 4 del mismo plan se arma con los pasos de ese nodo. Además, lo pega al paso de dividir los costos fijos entre el margen, que es justo lo que pide el entregable de la etapa."
+    }
+  ],
+  "juez1": 1,
+  "juez2": 1
+}
