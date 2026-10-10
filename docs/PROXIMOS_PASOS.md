@@ -318,9 +318,18 @@ coste del plan.
   - Lo abierto: premisas sobre la persona en pasos («tanda», «tu pieza más vendida»); actividades del núcleo ya hechas
     que un plan de mundo da por pendientes; los moldes como gasto fijo; un tema al revés en un paso.
   - La variación entre corridas es grande (M6 dio 2 y M7 dio 7 con casi el mismo código).
-- **Copia fiel, medida 8** (acta 15.22, semilla 20261029): la ejecuta `auditoria-final-claves/medida8/medida8.py`.
-- **Prueba de modelos del I Ching:** guion e informe en
-  `C:/Users/AlexDesk/Documents/iching-app/docs/informes/2026-10-10-sonnet-4-6-vs-5-5/`.
+- **Copia fiel, medida 8 (acta 15.22 y 15.23): NO CERTIFICA.**
+  - Copia en 65 de 200 nodos, 0 contrarios y 0 invenciones; trampas 20 de 20; 8,64 USD.
+  - Primer Equipo tiene copia en 21 de sus 22 nodos de la muestra. Sin él, la copia sigue en el 24,7 %.
+  - No se corrigió nada: la corrección la decide el fundador.
+  - Guion reanudable: `auditoria-final-claves/medida8/medida8.py`.
+- **Prueba de modelos del I Ching:** Sonnet 5.5 escribe mejor (el juez la prefiere en 21 de 30), pero se cortan 7 de 30
+  lecturas por el tope de salida (el razonamiento gasta el presupuesto) y cuesta un 21 % más por lectura.
+  - Recomendación: no cambiar el modelo hasta medir con el razonamiento apagado.
+  - Informe en `iching-app`, rama `informe-modelos-2026-10-10`, `docs/informes/2026-10-10-sonnet-4-6-vs-5-5/INFORME.md`.
+  - Coste: 4,59 USD.
+- **Gasto de la ronda del 10 oct (noche), estimado:** medición 7,96; medida 8, 8,64; I Ching, 4,59. Total 21,19 USD,
+  sobre un crédito de unos 128. Quedan unos 107 USD, que vencen el 12 de octubre (la cifra oficial es la consola).
 
 ### Estado al 10 oct 2026 (noche): fusión hecha, arreglos 2a, 2b y 3, y tercera medición NO PASA
 
