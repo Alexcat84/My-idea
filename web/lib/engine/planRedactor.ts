@@ -34,6 +34,7 @@ import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
 import { validaConClientes } from "./validacionClientes";
 import { quitarCitasDeFuente } from "./citasDeFuente";
+import { podarProsa } from "./menosProsa";
 import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
@@ -734,6 +735,12 @@ export function finalizarPlan(
     if (sinFuente.cambios > 0) {
       cuerpo = sinFuente.texto;
       registrarEvento?.({ tipo: "cita_de_fuente_interna", cambios: sinFuente.cambios });
+    }
+    // Menos prosa (REDACTOR_CON_RESPALDO punto 4, 9 oct 2026): introduccion corta y etapas solo accionables.
+    const podado = podarProsa(cuerpo);
+    if (podado.quitadas > 0 || podado.introRecortada) {
+      cuerpo = podado.texto;
+      registrarEvento?.({ tipo: "prosa_de_enlace_quitada", bloques: podado.quitadas, intro_recortada: podado.introRecortada });
     }
   } else {
     cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);

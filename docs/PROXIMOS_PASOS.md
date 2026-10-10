@@ -327,10 +327,10 @@ la suscripción, en la sesión principal y sin subagentes; lectores, jueces y á
 | Orden | Punto | Estado |
 |---|---|---|
 | 1 | 1. «Material» y 5. Plan anterior | **HECHO y EN PRODUCCIÓN** (main fec45eebb, despliegue de producción correcto; también fundido en `fidelidad-contexto`, a938102e7) |
-| 2 | 4. Menos prosa | **SIGUIENTE.** Introducción corta que solo repite lo que la persona dijo, con sus palabras, sin causas ni promesas; salen las frases de enlace entre etapas. Revisar la pantalla, el Expediente y el PDF y decir qué necesita Design. Se queda en `fidelidad-contexto` |
-| 3 | 2. Números por código | pendiente: cifras calculadas y etiquetadas (qué son y qué no son). En `fidelidad-contexto` |
+| 2 | 4. Menos prosa | **HECHO en `fidelidad-contexto`** (sin fundir): introducción corta (primer párrafo, dos frases como mucho) y etapas solo accionables (pasos, entregable como señal de hecho, primera acción), en el prompt y garantizado por código (`web/lib/engine/menosProsa.ts`, port al motor). Un solo prompt (`SYSTEM_PLAN`) y una sola ruta escriben el plan del núcleo, de mundo, el seguimiento y el replanteo, así que vale para los cuatro. Revisado en pantalla, Expediente y PDF, planes viejos incluidos |
+| 3 | 2. Números por código | **SIGUIENTE:** cifras calculadas y etiquetadas (qué son y qué no son). En `fidelidad-contexto` |
 | 4 | 3. Citar o callar | pendiente: las marcas se quitan en el servidor y nunca llegan a la pantalla, tampoco en el streaming en vivo, con su prueba. En `fidelidad-contexto` |
-| 5 | Medición | cuando estén los cinco: decir el coste estimado de UNA medición con la regla de la fila 17 y esperar el visto |
+| 5 | Medición | cuando estén los cinco: decir el coste estimado de UNA medición con la regla de la fila 17 y esperar el visto. Revisar también el riesgo del punto 5 (ACTA fila 19): si un seguimiento repite una tarea hecha, la candidata es pasar el título del nodo de cada tarea hecha, no su texto |
 
 Lo hecho en el punto 1: payload `temas_del_recorrido` / `temas_vecinos`; ningún prompt que llega a la IA dice
 «material»; `REGLA_SIN_FUENTES` prohíbe citar los temas como fuente; filtro `web/lib/engine/citasDeFuente.ts` en los once

@@ -994,15 +994,13 @@ SYSTEM_PLAN = (
     "fecha, jamas suelta dentro de la prosa.\n"
     "5. Prohibido cerrar el plan con preguntas para el usuario. El plan "
     "cierra con una primera accion concreta, no con una pregunta.\n"
-    "6. Titulo breve especifico al proyecto (no generico), un parrafo de "
-    "contexto que conecte entrada_original y perfil_sesion.\n"
+    "6. Titulo breve especifico al proyecto (no generico) y una INTRODUCCION CORTA: una o dos frases que solo repiten lo que la persona dijo (en entrada_original, perfil_sesion o lo que conto), con sus palabras; en un seguimiento, tambien lo que mide el sistema (estado_vivo_previo, el bloque de realidad) con esas palabras. Sin causas, sin promesas de resultado y sin anunciar lo que hara el plan. Despues de la introduccion no hay mas prosa: PROHIBIDO un parrafo narrativo entre etapas o dentro de una etapa (nada de explicar por que importa la etapa, que logra, como se conecta con la siguiente o como se sentira la persona). Cada etapa es solo accionable: su encabezado, '**Pasos:**' con la lista numerada, '**Entregable:**' escrito como la senal de que la etapa esta hecha (que queda anotado, contado o decidido) y '**Primera acción:**'.\n"
     "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
     "'negocio' unicamente si el analisis economico forma parte de los temas recibidos, o si el propio usuario ya la uso en su entrada o "
     "perfil_sesion. Ejemplo correcto: 'define el precio de tu idea' en vez "
     "de 'define el precio de tu negocio', salvo que el usuario mismo ya "
     "haya escrito 'mi negocio' en su entrada_original.\n"
-    "8. Si recibes es_seguimiento=true, abre el plan con UNA linea (justo "
-    "despues del titulo) que reconozca el avance del proyecto desde la "
+    "8. Si recibes es_seguimiento=true, abre la introduccion (regla 6) con UNA linea que reconozca el avance del proyecto desde la "
     "ultima sesion, basada en estado_vivo_previo. Ejemplo: 'Desde la ultima "
     "vez ya validaste el interes de dos instituciones y conoces tu costo "
     "real por unidad; este plan parte de ahi.' Usa solo avances que "
@@ -1068,7 +1066,7 @@ SYSTEM_PLAN = (
     "etapa mas densa, no en dos separadas) en vez de mantenerlas como "
     "etapas distintas. Prohibido crear una etapa cuya funcion ya cumple "
     "otra etapa del plan. Prioriza densidad (mas accion util por etapa) "
-    "sobre extension (mas etapas o mas parrafos por etapa).\n"
+    "sobre extension (mas etapas).\n"
     "11. Autodeclaracion de cobertura (Fase 2.8, coherencia por "
     "construccion): DESPUES de escribir el plan completo, declara "
     "honestamente que familias de contenido el plan REALMENTE trata. "
@@ -1168,9 +1166,7 @@ SYSTEM_PLAN = (
     "temas_vecinos enriqueciendo la Etapa 1 porque 'canales de venta' "
     "es relevante ahi):\n"
     "'## Etapa 1: Confirma que hay demanda mas alla de tu circulo cercano"
-    "\\n\\nVender a amigas te dice que el producto gusta, pero no confirma "
-    "que alguien fuera de tu circulo lo compraria con dinero propio, sin "
-    "el gesto de apoyarte por cercania.\\n\\n**Pasos:**\\n1. Identifica "
+    "\\n\\n**Pasos:**\\n1. Identifica "
     "personas que no te conozcan directamente (conocidos de conocidos, "
     "grupos locales, redes sociales) y ofreceles una vela a precio real, "
     "no de regalo.\\n2. Prueba venderlas primero en un mercado local o "
@@ -2477,6 +2473,102 @@ def _mayuscula(s):
     return s[:1].upper() + s[1:]
 
 
+_RE_ETAPA_PROSA = re.compile(r"^##\s+Etapa\s+\d+", re.IGNORECASE)
+_RE_ROTULO_PROSA = re.compile(r"^\*\*[^*]+\*\*")
+_RE_ROTULO_VACIO = re.compile(r"^\*\*[^*]+:\s*\*\*\s*$|^\*\*[^*]+\*\*\s*:?\s*$")
+_RE_PASO_PROSA = re.compile(r"^\s*(?:\d+[.)]|[-*•])\s+")
+_RE_FRASES_PROSA = re.compile(r"[^.!?]+[.!?]+[\"»”)]*\s*|[^.!?]+$")
+
+
+def _accionable(linea):
+    t = linea.strip()
+    return bool(_RE_ROTULO_PROSA.match(t) or _RE_PASO_PROSA.match(linea) or t.startswith("#"))
+
+
+def _bloques_prosa(lineas):
+    out, actual = [], []
+    for linea in lineas:
+        if linea.strip() == "":
+            if actual:
+                out.append(actual)
+            actual = []
+        else:
+            actual.append(linea)
+    if actual:
+        out.append(actual)
+    return out
+
+
+def _podar_etapa(cuerpo):
+    salida, quitadas, contenido = [], 0, False
+    for b in _bloques_prosa(cuerpo):
+        if contenido:
+            salida.append(b)
+            contenido = False
+            continue
+        primera = next((i for i, linea in enumerate(b) if _accionable(linea)), -1)
+        if primera < 0:
+            quitadas += 1
+            continue
+        if primera > 0:
+            quitadas += 1
+        queda = b[primera:]
+        salida.append(queda)
+        contenido = bool(_RE_ROTULO_VACIO.match(queda[-1].strip()))
+    if not any(_RE_PASO_PROSA.match(linea) or _RE_ROTULO_PROSA.match(linea.strip()) for b in salida for linea in b):
+        return None
+    lineas = []
+    for i, b in enumerate(salida):
+        if i:
+            lineas.append("")
+        lineas.extend(b)
+    return lineas, quitadas
+
+
+def _podar_prosa(cuerpo):
+    """MENOS PROSA (decision del fundador, 9 oct 2026, REDACTOR_CON_RESPALDO punto 4; port de podarProsa,
+    web/lib/engine/menosProsa.ts): la introduccion se queda en su primer parrafo con dos frases como mucho; en cada
+    '## Etapa N' sobreviven solo los bloques que empiezan con un rotulo o un paso (y el contenido de un rotulo vacio);
+    una etapa sin nada accionable se deja como vino; las demas secciones no se tocan. Devuelve
+    (texto, bloques_quitados, intro_recortada)."""
+    secciones = [[None, []]]
+    for linea in cuerpo.split("\n"):
+        if re.match(r"^##\s", linea):
+            secciones.append([linea, []])
+        else:
+            secciones[-1][1].append(linea)
+    quitadas, intro_recortada, salida = 0, False, []
+    for cabeza, lineas in secciones:
+        if cabeza is None:
+            i_titulo = next((i for i, linea in enumerate(lineas) if re.match(r"^#\s", linea)), -1)
+            antes = lineas[:i_titulo + 1] if i_titulo >= 0 else []
+            resto = lineas[i_titulo + 1:] if i_titulo >= 0 else lineas
+            bs = _bloques_prosa(resto)
+            salida.extend(antes)
+            if bs:
+                intro = " ".join(bs[0]).strip()
+                frases = [f.strip() for f in _RE_FRASES_PROSA.findall(intro) if f.strip()] or [intro]
+                if len(frases) > 2 or len(bs) > 1:
+                    intro_recortada = True
+                quitadas += len(bs) - 1
+                if antes:
+                    salida.append("")
+                salida.append(" ".join(frases[:2]))
+            salida.append("")
+            continue
+        salida.append(cabeza)
+        if _RE_ETAPA_PROSA.match(cabeza):
+            podada = _podar_etapa(lineas)
+            if podada:
+                quitadas += podada[1]
+                salida.extend([""] + podada[0] + [""])
+                continue
+        salida.extend(lineas)
+    texto = re.sub(r"\n{3,}", "\n\n", "\n".join(salida))
+    texto = re.sub(r"^\n+", "", texto).rstrip()
+    return texto, quitadas, intro_recortada
+
+
 def _quitar_citas_de_fuente(texto):
     """Los temas citados como fuente (decision del fundador, 9 oct 2026, REDACTOR_CON_RESPALDO punto 1; port de
     quitarCitasDeFuente, web/lib/engine/citasDeFuente.ts, con la lista del espanol: el motor solo escribe en espanol).
@@ -2757,6 +2849,11 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             cuerpo, citas = _quitar_citas_de_fuente(cuerpo)
             if citas and registrar_evento:
                 registrar_evento({"tipo": "cita_de_fuente_interna", "cambios": citas})
+            # Menos prosa (REDACTOR_CON_RESPALDO punto 4, 9 oct 2026): introduccion corta y etapas solo accionables.
+            cuerpo, bloques_quitados, intro_recortada = _podar_prosa(cuerpo)
+            if (bloques_quitados or intro_recortada) and registrar_evento:
+                registrar_evento({"tipo": "prosa_de_enlace_quitada", "bloques": bloques_quitados,
+                                  "intro_recortada": intro_recortada})
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
             cuerpo = _ensamblar_offline(temas_del_recorrido, perfil_sesion, texto_original)
