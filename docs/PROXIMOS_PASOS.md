@@ -306,6 +306,27 @@ pregunta de la IA y la respuesta de la persona) y decirle que vale igual que el 
 convierta en pregunta lo que la persona ya dijo. En dos mediciones no mejoró a A de forma clara y suma un 69 % al
 coste del plan.
 
+### Estado al 10 oct 2026 (noche): fusión hecha, arreglos 2a, 2b y 3, y tercera medición NO PASA
+
+Decisiones del fundador del 10 oct (crédito promocional de unos 137 USD, vence el 12 oct):
+- **1. Fusión:** `fidelidad-contexto` fundida en main y desplegada aunque no pase el umbral (ACTA 24).
+- **2a, el mensaje del seguimiento:** lleva el estado de cada tarea, la nota y el título de su tema, nunca su texto
+  (4fd154c37).
+- **2b, el título:** solo con palabras de la persona o de los nombres de los temas; si no, el neutro del idioma
+  (feb8bb6f9).
+- **3, el comprobador paso contra nodo:** apagado salvo `COMPROBADOR_PASOS=1` (b2d463d75 y 2b8221159).
+- **4, tercera medición (ACTA 25 y 26):** **NO PASA**, de 6 a 2: 1 contrario en la sección fija de números (margen
+  negativo) y 1 invención en la cola de un paso; trampas 3/3; 7,73 USD.
+  - El comprobador quitó 4 de 300 pasos, y al menos 3 eran falsos positivos.
+  - **No se despliega.** Se paró sin arreglar.
+  - Informe: `docs/corrida_final/2026-10-08/medicion_respaldo3/RESULTADO.md`.
+- **Estado de las ramas:** 2a, 2b, 3 y las filas 25 y 26 están en `fidelidad-contexto` (765e46298), empujada y SIN
+  fundir. main sigue en la fusión del punto 1.
+- **Pendiente del fundador:**
+  - si 2a y 2b (y la marca de tema en los pasos, inofensiva con el comprobador apagado) van a main;
+  - el punto 5 (copia fiel con semilla nueva; prueba de modelos del I Ching, cuyo repo está en
+    `C:/Users/AlexDesk/Documents/iching-app`), que espera su visto al coste.
+
 ### Estado al 9 oct 2026 (cierre): la última medición, hecha, y NO PASA
 
 ACTA fila 18; informe `docs/corrida_final/2026-10-08/medicion_final/RESULTADO.md`. Camino de producción, versión A sin
