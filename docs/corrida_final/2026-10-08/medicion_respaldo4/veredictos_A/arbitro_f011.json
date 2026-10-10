@@ -1,0 +1,13 @@
+{
+  "paquete": "f011",
+  "arbitrajes": [
+    {
+      "afirmacion": "Anota qué resultado te bastaría para dar un lote por parejo, y compáralo con lo que sale.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "zero_defects_concepto: paso 'Eliminar el uso de niveles de calidad aceptables como estándar de desempeño'; resumen: 'no existe una economía de la calidad que justifique niveles aceptables de defectos; el único estándar válido es cero defectos'. Ningún otro nodo (mejora_continua_del_proceso, accion_correctiva_sistematica) pide fijar un umbral de suficiencia, y la persona tampoco lo contó.",
+      "razon": "La frase está en la Etapa 4, entre 'compara cada lote con el anterior' y 'cambia una sola cosa por lote', y su primera acción la repite ('Escribe qué resultado te bastaría…'). Pide fijar un nivel 'suficiente' para aceptar un lote, que es justo el nivel de calidad aceptable que el nodo manda eliminar. No es un requisito verificable de conformidad, porque 'bastaría' marca un umbral de tolerancia."
+    }
+  ]
+}

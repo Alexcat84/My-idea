@@ -1,0 +1,135 @@
+{
+  "version": "A",
+  "modelo": "claude-opus-5-5",
+  "dos_jueces": true,
+  "hallazgos_brutos": 8,
+  "sostenidos": 7,
+  "por_clase": {
+    "contrario": 5,
+    "invencion": 2,
+    "procedencia": 0
+  },
+  "planes_con_sostenidos": 4,
+  "planes": 14,
+  "trampas": {
+    "f002": {
+      "tipo": "invencion",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f010": {
+      "tipo": "contrario",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f016": {
+      "tipo": "procedencia",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    }
+  },
+  "por_plan": [
+    {
+      "paquete": "f001",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Elige tu pieza más vendida"
+        },
+        {
+          "clase": "contrario",
+          "afirmacion": "cuántas piezas salieron de tu última tanda"
+        }
+      ]
+    },
+    {
+      "paquete": "f003",
+      "hallazgos": 3,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Guarda los contactos y los pedidos fuera del celular, porque hoy no tienes copias de seguridad."
+        },
+        {
+          "clase": "contrario",
+          "afirmacion": "Pon clave al Excel de clientes"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Compra la mascarilla de polvo y los guantes que ya elegiste"
+        }
+      ]
+    },
+    {
+      "paquete": "f004",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f005",
+      "hallazgos": 1,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f006",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f007",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "lo que pagas aunque no hagas ninguna (herramientas, moldes, otros gastos fijos)"
+        }
+      ]
+    },
+    {
+      "paquete": "f008",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f009",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f011",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Anota qué resultado te bastaría para dar un lote por parejo, y compáralo con lo que sale."
+        }
+      ]
+    },
+    {
+      "paquete": "f012",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f013",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f014",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f015",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f017",
+      "hallazgos": 0,
+      "sostenidos": []
+    }
+  ]
+}

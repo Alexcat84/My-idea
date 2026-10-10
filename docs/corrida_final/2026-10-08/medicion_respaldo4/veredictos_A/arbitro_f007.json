@@ -1,0 +1,13 @@
+{
+  "paquete": "f007",
+  "arbitrajes": [
+    {
+      "afirmacion": "lo que pagas aunque no hagas ninguna (herramientas, moldes, otros gastos fijos)",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "Contexto, lo_que_conto: «Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura». El nodo punto_equilibrio_unidades pone como fijos «renta, herramientas, salarios administrativos», pero no los moldes. El paso anterior de la misma salida pone los materiales en la columna de lo que gastas cada vez que haces una maceta.",
+      "razon": "La persona contó los moldes como parte del costo de materiales de cada maceta. La salida los pasa a gasto fijo, lo que contradice su dato y haría que se contaran dos veces. Ningún nodo clasifica los moldes como fijos."
+    }
+  ]
+}

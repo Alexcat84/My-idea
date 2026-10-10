@@ -1,0 +1,29 @@
+{
+  "paquete": "f003",
+  "arbitrajes": [
+    {
+      "afirmacion": "Guarda los contactos y los pedidos fuera del celular, porque hoy no tienes copias de seguridad.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "actividades_del_nucleo #4 · hecha: \"Pasa esos datos del Excel sin clave a un solo archivo protegido con contraseña y guarda una copia fuera del celular.\" La persona dijo antes: \"No tengo copias de seguridad; si pierdo el celular pierdo los pedidos y los contactos.\"",
+      "razon": "Guardar fuera del celular es un consejo válido, porque los pedidos quizá no estén respaldados. Pero la causa \"hoy no tienes copias de seguridad\" se presenta como estado actual y contradice la actividad #4, que ya está hecha y dejó una copia de los datos de clientes fuera del celular."
+    },
+    {
+      "afirmacion": "Pon clave al Excel de clientes",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "actividades_del_nucleo #4 · hecha: pasó los datos del Excel sin clave a \"un solo archivo protegido con contraseña\".",
+      "razon": "La salida da como pendiente proteger con clave los datos de clientes, y eso contradice el estado del plan: la persona ya los pasó a un archivo con contraseña."
+    },
+    {
+      "afirmacion": "Compra la mascarilla de polvo y los guantes que ya elegiste",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "perfil_sesion: \"Eligió empezar con una mascarilla de polvo o unos guantes esta semana\"; \"Tiene claro qué usará esta semana\", sin decir cuál. Ningún nodo lo trata.",
+      "razon": "La persona eligió una de las dos opciones y no dijo cuál. Afirmar que ya eligió ambas es un hecho que nadie dio."
+    }
+  ]
+}

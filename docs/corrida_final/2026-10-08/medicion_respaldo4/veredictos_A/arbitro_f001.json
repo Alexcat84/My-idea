@@ -1,0 +1,21 @@
+{
+  "paquete": "f001",
+  "arbitrajes": [
+    {
+      "afirmacion": "Elige tu pieza más vendida",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: lo único que contó es 'Vendo un producto fisico que fabrico yo mismo, una pieza a la vez.' (ficha.dijo_textual). Lo_que_conto, numeros_que_dio y estado_vivo están vacíos. Ningún nodo habla de modelos ni de ventas de la persona. La frase cierra la Etapa 3, justo después de 'Un documento corto con tu propuesta de valor…', como primera acción.",
+      "razon": "La acción da por hecho que la persona tiene varios modelos y un historial de ventas para saber cuál vende más. Dijo 'un producto' y no dio ningún dato de ventas, así que ese supuesto sobre su situación no lo sostiene nadie. Mostrar beneficios sin describir cómo está hecho sí es operativo (producto_unico_superior). El problema es la premisa."
+    },
+    {
+      "afirmacion": "cuántas piezas salieron de tu última tanda",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "Contexto: 'fabrico yo mismo, una pieza a la vez' (dijo_textual). La frase completa es 'Anota lo que gastaste en materiales y cuántas piezas salieron de tu última tanda, para empezar a ver tu costo por pieza.' Ningún nodo menciona producción por tandas.",
+      "razon": "'Tanda' supone producción por lotes de varias piezas, y la persona contó que fabrica una pieza a la vez. El consejo de calcular el costo por pieza es operativo, pero la premisa choca con lo que ella dijo."
+    }
+  ]
+}

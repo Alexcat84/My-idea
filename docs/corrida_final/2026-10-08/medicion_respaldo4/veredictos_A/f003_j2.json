@@ -1,0 +1,24 @@
+{
+  "paquete": "f003",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Compra la mascarilla de polvo y los guantes que ya elegiste",
+      "por_que": "La persona eligió empezar con una mascarilla de polvo o unos guantes, sin decir cuál. La salida afirma que ya eligió las dos cosas.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Guarda los contactos y los pedidos fuera del celular, porque hoy no tienes copias de seguridad.",
+      "por_que": "La actividad #4 del plan está hecha: pasó los datos a un archivo protegido y guardó una copia fuera del celular. Decir que hoy no tiene copias contradice ese estado.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Pon clave al Excel de clientes",
+      "por_que": "La actividad #4, ya hecha, pasó los datos del Excel sin clave a un archivo protegido con contraseña. La salida presenta el Excel como si siguiera sin clave.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 52
+}
