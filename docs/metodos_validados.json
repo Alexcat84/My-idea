@@ -1,10 +1,10 @@
 {
  "_nota": "Registro sellado de los metodos validados (REGLAS M1). Solo se resella con el visto del fundador: python scripts/metodos_validados.py --visto \"...\"; el commit lleva VISTO DEL FUNDADOR.",
  "huellas": {
-  "engine/calculadora.py": "f678c7a209a0a9cc330f654f33d0a5f0cd2df0f1e631e9d1325ae15b09f0f0a9",
-  "engine/test_calculadora.py": "601d976835cb634e01d20add45e20eefbfb0ad8b22c97922dd108243b3b63a3b",
-  "web/lib/calculadora.ts": "c96ad685418a693385da1588f158d3eec572e67730729039deb5347947d00fc9",
-  "web/lib/calculadora.test.ts": "36ba564bb2c124443229f82432fe8e52e07dd2f8b71a872d1577bdd49ef8efba",
+  "engine/calculadora.py": "f2e077c8b44b4ea60c417aea9b9be332989966e3670870e9c867414934a617d0",
+  "engine/test_calculadora.py": "10193e6d780f10e33239698ed6c0b5d3dd554483c5e863b494518dd8df4e1c89",
+  "web/lib/calculadora.ts": "e81a89bd6058e62cd4f1d7ed76811ae2ad129fbbd3787c1bc4d367ea500c4ca0",
+  "web/lib/calculadora.test.ts": "55c7d102a9515c24f451967b30f7f93e1287bfc6dc2a3ee1b67a39a3a013a62d",
   "web/lib/engine/estimacion.ts": "7d65edf70d75521c4d9f67f2558637d20635b2006c03daa965aab5b7beb7fec5",
   "web/lib/engine/estimacion.test.ts": "4532d72d7bc64522ace2617f0b3431102c82337ecad9d6bfc93771564deac948",
   "web/lib/engine/rangoBanda.ts": "421d11c485b7b6c10dc12046e46893167b3e21d19a64902bfb9bc24404b48344",
@@ -18,6 +18,10 @@
   {
    "fecha": "2026-10-07",
    "nota": "2026-10-08: VISTO DEL FUNDADOR, el estimador de bandas (SYSTEM_ESTIMACION_BANDA) pasa de Sonnet 4.6 a Sonnet 5.5 (MODEL_ESTIMACION). Motivo: constancia del 100 % en los dos modelos en la revalidacion con los casos del estudio original; la comparacion con Sonnet 4.6 no prueba exactitud (la referencia del estudio tambien salio de un modelo). Calibracion real contra duraciones registradas en PROXIMOS_PASOS 3-ter. Prompt, formulas y rangos sin cambios."
+  },
+  {
+   "fecha": "2026-10-10",
+   "nota": "10 oct 2026: la calculadora no suma horas a un costo que ya incluye el tiempo de la persona (medicion final del redactor con respaldo: 130 + 2 x 50 = 230); paridad TS y Python con prueba a mano"
   }
  ]
 }

@@ -90,8 +90,22 @@ export interface ResultadoValor {
  * insumos faltantes (serian datos que no aplican a este tipo de oferta,
  * no datos que el usuario olvido dar).
  */
+/** ¿La frase da un costo que INCLUYE el tiempo de la persona? ("130 incluyendo mi hora a 50", "200 contando mis
+ * horas", "90 con la mano de obra"). Decision del fundador (8 oct 2026) para el interprete y visto del fundador (10 oct
+ * 2026) para esta calculadora: un costo asi no recibe otra vez las horas. */
+export function costoIncluyeTiempo(texto: string | null | undefined): boolean {
+  if (!texto) return false;
+  const t = texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+  return /\b(incluy\w*|contando|sumando|con|mas|junto con)\s+(\w+\s+){0,2}(hora|horas|tiempo|mano de obra|trabajo)\b/.test(t);
+}
+
 export function costoUnitarioTotal(numeros: NumerosProyecto, tipoOferta?: TipoOferta): ResultadoValor {
   const materiales = _valor(numeros, "costo_materiales_unidad");
+  // Visto del fundador (10 oct 2026): si la persona dio ese costo con su tiempo incluido, ya es el costo por unidad; no
+  // se le suman otra vez las horas (medicion final: 130 + 2 x 50 = 230 con un margen de 20 en vez de 120).
+  if (materiales !== null && tipoOferta !== "digital" && costoIncluyeTiempo(numeros?.costo_materiales_unidad?.texto_original)) {
+    return { valor: materiales, insumos_usados: ["costo_materiales_unidad"], insumos_faltantes: [] };
+  }
   if (tipoOferta === "digital") {
     if (materiales === null) {
       return { valor: null, insumos_usados: [], insumos_faltantes: ["costo_materiales_unidad"] };

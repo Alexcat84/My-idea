@@ -17,6 +17,7 @@
 import type Anthropic from "@anthropic-ai/sdk";
 import { MAX_SALTOS_POSIBLES_OFRECIDOS, MIN_SCORE_SALTO, buscarAfines } from "../compass";
 import { consultaAlEspanol } from "./consultaAlEspanol";
+import { costoIncluyeTiempo } from "../calculadora";
 import {
   llamarClaude,
   llamarClaudeConversacion,
@@ -221,9 +222,8 @@ export interface EventoCostoConTiempo {
  * "90 con la mano de obra"). Un costo asi nunca es costo de materiales (decision del fundador, corrida final, 8 oct
  * 2026): el juez de fidelidad sostuvo un contrario en un plan que le creyo a esa etiqueta. */
 export function esCostoQueIncluyeTiempo(texto: string | null | undefined): boolean {
-  if (!texto) return false;
-  const t = texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
-  return /\b(incluy\w*|contando|sumando|con|mas|junto con)\s+(\w+\s+){0,2}(hora|horas|tiempo|mano de obra|trabajo)\b/.test(t);
+  // Una sola regla para el interprete y la calculadora: vive en lib/calculadora.ts (visto del fundador, 10 oct 2026).
+  return costoIncluyeTiempo(texto);
 }
 
 export type EventoInterprete =

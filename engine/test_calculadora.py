@@ -365,6 +365,31 @@ def test_palancas_inversas():
           "precio/costo/margen/volumen inversos con paridad TS)")
 
 
+def test_costo_que_ya_incluye_el_tiempo():
+    """Visto del fundador (10 oct 2026): un costo que la persona dio con su tiempo incluido ("130 incluyendo mi hora a
+    50") no recibe otra vez las horas. Caso real de la medicion final (planes 265e4486 y deb138a3): la calculadora
+    sumaba 130 + 2 x 50 = 230 y daba un margen de 20.
+    Calculo a mano: costo = 130 (ya incluye su hora; no se suma 2 x 50 = 100); margen = 250 - 130 = 120;
+    porcentaje = 120 / 250 = 0,48 = 48 %."""
+    numeros = {
+        "costo_materiales_unidad": {"valor": 130, "unidad": None, "texto_original": "ya se mi costo real por pieza: 130 incluyendo mi hora a 50"},
+        "horas_por_unidad": {"valor": 2, "unidad": "horas", "texto_original": "me lleva un par de horas"},
+        "valor_hora": {"valor": 50, "unidad": None, "texto_original": "mi hora a 50"},
+        "precio_tentativo": {"valor": 250, "unidad": None, "texto_original": "las vendo a 250"},
+    }
+    costo = c.costo_unitario_total(numeros)
+    assert costo["valor"] == 130, costo
+    assert costo["insumos_usados"] == ["costo_materiales_unidad"], costo
+    margen = c.margen_unitario(numeros)
+    assert margen["valor"] == 120 and margen["porcentaje"] == 48, margen
+    # sin el tiempo en la frase, la formula de siempre: 68 + 2 x 31 = 130
+    sin = {"costo_materiales_unidad": {"valor": 68, "unidad": None, "texto_original": "68 en materiales"},
+           "horas_por_unidad": {"valor": 2, "unidad": None, "texto_original": ""},
+           "valor_hora": {"valor": 31, "unidad": None, "texto_original": ""}}
+    assert c.costo_unitario_total(sin)["valor"] == 130
+    print("OK test_costo_que_ya_incluye_el_tiempo")
+
+
 def main():
     test_escenario_macetas()
     test_costo_con_rango()
@@ -374,6 +399,7 @@ def main():
     test_digital_saas_sintetico()
     test_gigo_detecta_unidad_equivocada()
     test_palancas_inversas()
+    test_costo_que_ya_incluye_el_tiempo()
     print("\nTODOS LOS TESTS DE calculadora.py PASARON.")
 
 

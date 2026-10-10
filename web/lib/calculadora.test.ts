@@ -280,3 +280,25 @@ describe("palancas inversas (canon 14) -- paridad con test_palancas_inversas de 
     expect(m.insumos_faltantes).toContain("costo_materiales_unidad");
   });
 });
+
+// Visto del fundador (10 oct 2026): un costo que ya incluye el tiempo de la persona no recibe otra vez las horas.
+// Caso real de la medicion final (planes 265e4486 y deb138a3): 130 + 2 x 50 = 230 y margen 20. Paridad con
+// test_costo_que_ya_incluye_el_tiempo de Python. Calculo a mano: costo = 130 (no se suman 2 x 50); margen =
+// 250 - 130 = 120; porcentaje = 120 / 250 = 48 %. Sin el tiempo en la frase: 68 + 2 x 31 = 130.
+describe("un costo que ya incluye el tiempo de la persona", () => {
+  const n: NumerosProyecto = {
+    costo_materiales_unidad: { valor: 130, unidad: null, texto_original: "ya sé mi costo real por pieza: 130 incluyendo mi hora a 50" },
+    horas_por_unidad: { valor: 2, unidad: "horas", texto_original: "me lleva un par de horas" },
+    valor_hora: { valor: 50, unidad: null, texto_original: "mi hora a 50" },
+    precio_tentativo: { valor: 250, unidad: null, texto_original: "las vendo a 250" },
+  };
+  it("no le suma otra vez las horas: costo 130, margen 120 (48 %)", () => {
+    expect(costoUnitarioTotal(n)).toEqual({ valor: 130, insumos_usados: ["costo_materiales_unidad"], insumos_faltantes: [] });
+    const m = margenUnitario(n);
+    expect(m.valor).toBe(120);
+    expect(m.porcentaje).toBe(48);
+  });
+  it("sin el tiempo en la frase, la fórmula de siempre: 68 + 2 x 31 = 130", () => {
+    expect(costoUnitarioTotal(numeros({ costo_materiales_unidad: 68, horas_por_unidad: 2, valor_hora: 31 })).valor).toBe(130);
+  });
+});

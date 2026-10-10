@@ -28,6 +28,19 @@ originales sin cambios (retrocompatible con proyectos pre-v2.2).
 """
 
 import math
+import re
+import unicodedata
+
+
+def costo_incluye_tiempo(texto):
+    """La frase da un costo que INCLUYE el tiempo de la persona ("130 incluyendo mi hora a 50", "200 contando mis
+    horas"). Visto del fundador (10 oct 2026): un costo asi no recibe otra vez las horas. Paridad con
+    costoIncluyeTiempo de web/lib/calculadora.ts."""
+    if not texto:
+        return False
+    t = "".join(ch for ch in unicodedata.normalize("NFD", texto) if unicodedata.category(ch) != "Mn").lower()
+    return re.search(r"\b(incluy\w*|contando|sumando|con|mas|junto con)\s+(\w+\s+){0,2}"
+                     r"(hora|horas|tiempo|mano de obra|trabajo)\b", t) is not None
 
 SEMANAS_POR_MES = 4  # aproximacion deliberada (no 4.33) para numeros redondos y verificables
 
@@ -71,6 +84,10 @@ def costo_unitario_total(numeros, tipo_oferta=None):
     if tipo_oferta == "digital":
         if materiales is None:
             return {"valor": None, "insumos_usados": [], "insumos_faltantes": ["costo_materiales_unidad"]}
+        return {"valor": materiales, "insumos_usados": ["costo_materiales_unidad"], "insumos_faltantes": []}
+    # Visto del fundador (10 oct 2026): si la persona dio ese costo con su tiempo incluido, ya es el costo por unidad;
+    # no se le suman otra vez las horas (medicion final: 130 + 2 x 50 = 230 con un margen de 20 en vez de 120).
+    if materiales is not None and costo_incluye_tiempo(((numeros or {}).get("costo_materiales_unidad") or {}).get("texto_original")):
         return {"valor": materiales, "insumos_usados": ["costo_materiales_unidad"], "insumos_faltantes": []}
     horas = _valor(numeros, "horas_por_unidad")
     valor_hora = _valor(numeros, "valor_hora")
