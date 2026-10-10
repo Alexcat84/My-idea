@@ -282,19 +282,25 @@ export const SYSTEM_VERIFICADOR_PLAN = [
 /**
  * COMPROBADOR PASO CONTRA NODO (decision del fundador, 10 oct 2026, punto 3). Cada paso del plan llega solo con el tema
  * que cita; la pregunta es una: ¿este paso contradice lo que enseña su tema? El codigo (lib/engine/comprobadorPasos.ts)
- * solo quita pasos, nunca reescribe, y solo si la frase del tema que se da como prueba esta en el tema tal cual.
+ * solo quita pasos, nunca reescribe, y solo si las dos frases que chocan estan tal cual (la del tema y la del paso).
  */
 export const SYSTEM_COMPROBADOR_PASOS = [
   "Recibes pasos de un plan de acción. Cada paso llega con su clave (etapa.paso) y con el tema del que dice salir: su",
-  "nombre, sus pasos y su entregable. Tu único trabajo es decir qué pasos CONTRADICEN lo que enseña su tema. No",
-  "reescribes nada.",
+  "nombre, sus pasos y su entregable. Tu único trabajo es encontrar los pasos que dicen LO CONTRARIO de lo que enseña",
+  "su tema. No reescribes nada.",
   "",
-  "Contradice: recomendar lo contrario de lo que el tema enseña, clasificar algo al revés de como el tema lo clasifica,",
-  "o presentar como válido lo que el tema señala como error.",
-  "No contradice: hablar de algo que el tema no menciona, ser más concreto, adaptarlo a la persona, o no venir del tema.",
-  "Juzga cada paso SOLO contra su tema; no uses lo que sabes de afuera. Ante la duda, no lo marques.",
+  "Es lo contrario SOLO si quien sigue el paso hace justo lo opuesto de lo que el tema enseña: el tema dice A y el paso",
+  "dice no A. Ejemplos inventados: el tema enseña pedir el pago por adelantado y el paso dice cobrar al terminar; el",
+  "tema clasifica el alquiler como costo fijo y el paso lo pone entre los variables; el tema señala como error decidir",
+  "sin datos y el paso dice decidir ya sin medir.",
+  "NO es lo contrario: un matiz, un orden distinto, una condición que falta, otra forma de hacer lo mismo, ser más",
+  "concreto, adaptarlo a la persona, o hablar de algo que el tema no menciona. Ejemplo inventado: el tema dice revisar",
+  "cada semana y el paso dice revisar cada semana los pendientes; eso no es lo contrario.",
+  "Juzga cada paso SOLO contra su tema; no uses lo que sabes de afuera. Si dudas, o si al explicarlo ves que no es lo",
+  "contrario, no lo incluyas: quitar un paso bueno daña el plan.",
   "",
-  "Para cada paso que contradice, copia en lo_que_ensena la frase del tema que lo prueba, TAL CUAL (palabra por palabra).",
-  'Responde SOLO JSON: {"contradicen": [{"clave": "2.4", "nodo": "id_del_tema", "lo_que_ensena": "frase literal del',
-  'tema", "motivo": "una frase"}]}. Si ninguno contradice: {"contradicen": []}.',
+  "Para cada paso que dice lo contrario, copia TAL CUAL (palabra por palabra) la frase del tema (el_tema_dice) y la del",
+  "paso (el_paso_dice) que chocan.",
+  'Responde SOLO JSON: {"contradicen": [{"clave": "2.4", "nodo": "id_del_tema", "el_tema_dice": "frase literal del tema",',
+  '"el_paso_dice": "frase literal del paso", "motivo": "una frase"}]}. Si ninguno dice lo contrario: {"contradicen": []}.',
 ].join("\n");

@@ -219,6 +219,8 @@ async function main() {
     if (conComprobador) {
       writeFileSync(path.join(salida, "A_previo", `${ref.plan_id}.md`), a.markdown, "utf8");
       const nodos = [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo];
+      // La entrada del comprobador, para poder repetirlo sin volver a redactar.
+      writeFileSync(path.join(salida, "A_previo", `${ref.plan_id}.json`), JSON.stringify({ pasosCitados: a.pasosCitados, nodos }), "utf8");
       // El peor caso del comprobador: los temas, el plan y el prompt de entrada; dos intentos de salida (2.000 + 4.000).
       let reservaC: number;
       try {

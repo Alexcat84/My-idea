@@ -5,7 +5,7 @@
  * (etapa, paso, temas). Antes de entregar el plan, una llamada a Sonnet 5.5 recibe cada paso SOLO con su tema (nombre,
  * pasos, entregable: lo mismo que recibio el redactor) y dice cuales lo contradicen (SYSTEM_COMPROBADOR_PASOS). El codigo:
  *  - solo quita pasos, nunca reescribe: la linea del paso sale y la lista se renumera;
- *  - solo quita si la frase del tema que se da como prueba esta en el tema tal cual (el tema de ese paso);
+ *  - solo quita si las dos frases que chocan estan tal cual: la del tema en su tema y la del paso en el paso;
  *  - si se propone quitar mas del 30 % de los pasos juzgados (y mas de uno), no aplica nada y queda para revision;
  *  - si la llamada falla, el plan sale igual y el fallo queda registrado.
  * Los pasos sin tema valido no se juzgan.
@@ -72,7 +72,7 @@ export interface ResultadoComprobador {
   markdown: string;
   acumulado: UsoAcumulado;
   juzgados: number;
-  propuestas: Array<{ clave: string; nodo: string; lo_que_ensena: string; motivo?: string }>;
+  propuestas: Array<{ clave: string; nodo: string; el_tema_dice: string; el_paso_dice: string; motivo?: string }>;
   quitados: string[];
   ignorados: number;
   revision: boolean;
@@ -112,15 +112,18 @@ export async function comprobarPasos(
     base.acumulado = r.acumulado;
     const data = parsearJson<{ contradicen?: ResultadoComprobador["propuestas"] }>(r.texto);
     base.propuestas = (Array.isArray(data?.contradicen) ? data.contradicen : []).filter(
-      (c) => c && typeof c.clave === "string" && typeof c.nodo === "string" && typeof c.lo_que_ensena === "string"
+      (c) => c && typeof c.clave === "string" && typeof c.nodo === "string" && typeof c.el_tema_dice === "string" && typeof c.el_paso_dice === "string"
     );
     const validas: string[] = [];
     for (const c of base.propuestas) {
       const par = pares.find((p) => p.clave === c.clave);
       const tema = par && par.temas.includes(c.nodo) ? temas.get(c.nodo) : undefined;
-      const prueba = normal(c.lo_que_ensena);
+      const delTema = normal(c.el_tema_dice);
+      const delPaso = normal(c.el_paso_dice);
       const textoTema = tema ? normal([tema.etiqueta, ...tema.pasos, tema.entregable].join(" ")) : "";
-      if (!tema || prueba.length < 8 || !textoTema.includes(prueba) || validas.includes(c.clave)) {
+      const textoPaso = par ? normal(par.paso) : "";
+      const citadas = delTema.length >= 8 && delPaso.length >= 8 && textoTema.includes(delTema) && textoPaso.includes(delPaso);
+      if (!tema || !citadas || validas.includes(c.clave)) {
         base.ignorados += 1;
         continue;
       }

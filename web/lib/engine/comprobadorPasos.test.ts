@@ -5,7 +5,7 @@
  * como costos fijos cuando el tema clasifica los materiales como variables). Cada paso termina con la marca del tema del
  * que sale (⟦N:id⟧); el codigo la valida (solo que exista: un paso es una orden, no comparte palabras por fuerza) y la
  * guarda. Despues, una llamada compara cada paso solo con su tema: si lo contradice, el paso se quita, nunca se reescribe.
- * El codigo solo quita si la frase del tema que se cita como prueba esta en el tema tal cual. Si la llamada falla, el plan
+ * El codigo solo quita si las dos frases que chocan estan tal cual, la del tema en su tema y la del paso en el paso. Si la llamada falla, el plan
  * sale igual. Apagado salvo COMPROBADOR_PASOS=1.
  */
 import { describe, expect, it } from "vitest";
@@ -99,7 +99,7 @@ describe("comprobarPasos", () => {
   it("caso real f002: el paso que contradice a su tema se quita, sin reescribir nada más", async () => {
     const llamadas: unknown[] = [];
     const cliente = clienteQueResponde(
-      JSON.stringify({ contradicen: [{ clave: "2.2", nodo: "mejora_continua_del_proceso", lo_que_ensena: "Reducir progresivamente a un proveedor único por artículo", motivo: "El tema enseña ir a un proveedor único." }] }),
+      JSON.stringify({ contradicen: [{ clave: "2.2", nodo: "mejora_continua_del_proceso", el_tema_dice: "Reducir progresivamente a un proveedor único por artículo", el_paso_dice: "Busca un proveedor alterno de resina", motivo: "El tema enseña ir a un proveedor único." }] }),
       llamadas
     );
     const r = await comprobarPasos(cliente, entrada(), usoVacio(), { presupuestoUsd: 5 });
@@ -115,12 +115,21 @@ describe("comprobarPasos", () => {
 
   it("si la frase del tema que se da como prueba no está en el tema tal cual, no se quita nada", async () => {
     const cliente = clienteQueResponde(
-      JSON.stringify({ contradicen: [{ clave: "2.2", nodo: "mejora_continua_del_proceso", lo_que_ensena: "Nunca tengas dos proveedores", motivo: "x" }] })
+      JSON.stringify({ contradicen: [{ clave: "2.2", nodo: "mejora_continua_del_proceso", el_tema_dice: "Nunca tengas dos proveedores", el_paso_dice: "Busca un proveedor alterno de resina", motivo: "x" }] })
     );
     const r = await comprobarPasos(cliente, entrada(), usoVacio(), { presupuestoUsd: 5 });
     expect(r.quitados).toEqual([]);
     expect(r.ignorados).toBe(1);
     expect(r.markdown).toContain("proveedor alterno");
+  });
+
+  it("si la frase del paso que se da como prueba no está en el paso tal cual, tampoco se quita", async () => {
+    const cliente = clienteQueResponde(
+      JSON.stringify({ contradicen: [{ clave: "2.2", nodo: "mejora_continua_del_proceso", el_tema_dice: "Reducir progresivamente a un proveedor único por artículo", el_paso_dice: "Ten siempre tres proveedores", motivo: "x" }] })
+    );
+    const r = await comprobarPasos(cliente, entrada(), usoVacio(), { presupuestoUsd: 5 });
+    expect(r.quitados).toEqual([]);
+    expect(r.ignorados).toBe(1);
   });
 
   it("si la llamada falla, el plan sale igual y el fallo queda registrado", async () => {
@@ -135,8 +144,8 @@ describe("comprobarPasos", () => {
     const cliente = clienteQueResponde(
       JSON.stringify({
         contradicen: [
-          { clave: "2.1", nodo: "lista_riesgos", lo_que_ensena: "Lista los riesgos", motivo: "x" },
-          { clave: "2.2", nodo: "mejora_continua_del_proceso", lo_que_ensena: "Reducir progresivamente a un proveedor único por artículo", motivo: "x" },
+          { clave: "2.1", nodo: "lista_riesgos", el_tema_dice: "Lista los riesgos", el_paso_dice: "Haz una lista de lo que podría salir mal", motivo: "x" },
+          { clave: "2.2", nodo: "mejora_continua_del_proceso", el_tema_dice: "Reducir progresivamente a un proveedor único por artículo", el_paso_dice: "Busca un proveedor alterno de resina", motivo: "x" },
         ],
       })
     );
