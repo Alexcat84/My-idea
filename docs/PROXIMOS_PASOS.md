@@ -322,10 +322,16 @@ Decisiones del fundador del 10 oct (crédito promocional de unos 137 USD, vence 
   - Informe: `docs/corrida_final/2026-10-08/medicion_respaldo3/RESULTADO.md`.
 - **Estado de las ramas:** 2a, 2b, 3 y las filas 25 y 26 están en `fidelidad-contexto` (765e46298), empujada y SIN
   fundir. main sigue en la fusión del punto 1.
-- **Pendiente del fundador:**
-  - si 2a y 2b (y la marca de tema en los pasos, inofensiva con el comprobador apagado) van a main;
-  - el punto 5 (copia fiel con semilla nueva; prueba de modelos del I Ching, cuyo repo está en
-    `C:/Users/AlexDesk/Documents/iching-app`), que espera su visto al coste.
+- **Decisión del fundador (10 oct, noche):** 2a, 2b y la marca de tema en los pasos van a main con el comprobador
+  **APAGADO** (`COMPROBADOR_PASOS` sin definir en producción).
+- **Por qué el comprobador sigue apagado:** en la tercera medición quitó 4 pasos, y 3 eran buenos.
+  - ff010188 2.4: decía lo mismo que su tema.
+  - ee6de956 3.4: el tema dice «considera» una prueba de interés y el paso la pide antes; es un matiz.
+  - 8b7764c4 5.4: el propio motivo del modelo dice que coincide con el tema.
+  - El cuarto (85248377 2.4) es discutible.
+  - La guarda de copiar tal cual las dos frases que chocan no basta.
+  - Antes de encenderlo hace falta otra forma de juzgar con menos falsos positivos (idea sin decidir: razonamiento
+    encendido, o dos llamadas que coincidan).
 
 ### Estado al 9 oct 2026 (cierre): la última medición, hecha, y NO PASA
 
