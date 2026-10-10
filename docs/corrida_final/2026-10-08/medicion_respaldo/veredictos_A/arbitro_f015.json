@@ -1,0 +1,13 @@
+{
+  "paquete": "f015",
+  "arbitrajes": [
+    {
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Ningún nodo menciona ferias. La persona no habla de ninguna feria en `lo_que_conto`, `ficha.dijo_textual` ni `estado_vivo`. La feria solo aparece en `plan_anterior` (Etapa 5, paso 5) y en `mensaje_entrada`, dentro de la lista 'SIN EMPEZAR'. Esa lista la arma el sistema con las acciones del plan previo, no es algo que la persona contara.",
+      "razon": "La salida trata como hecho del negocio que existe una feria local en agosto a la que la persona puede ir. Ese dato no lo dio ella ni lo sostiene ningún nodo: es una invención del plan anterior que pasó a este plan sin respaldo."
+    }
+  ]
+}

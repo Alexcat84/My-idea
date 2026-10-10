@@ -1,0 +1,13 @@
+{
+  "paquete": "f002",
+  "arbitrajes": [
+    {
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "La feria no aparece en lo_que_conto, ficha.dijo_textual, perfil_sesion ni estado_vivo. Solo aparece en plan_anterior (Etapa 5, paso 5) y en mensaje_entrada, que repite la lista de acciones de ese plan como 'SIN EMPEZAR'. Ningún nodo menciona ferias ni agosto: enfoque_en_superfans, customer_appreciation_pr, advocacy_customer_journey y los demás no hablan de eventos con fecha.",
+      "razon": "Es un hecho concreto del negocio, un evento con lugar y mes, que la persona nunca contó. Arrastrarlo desde el plan anterior, que ya lo había inventado, no lo sostiene. Que aparezca en la lista de avance es eco del plan generado, no información que dio la persona."
+    }
+  ]
+}

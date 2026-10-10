@@ -1,0 +1,21 @@
+{
+  "paquete": "f006",
+  "arbitrajes": [
+    {
+      "afirmacion": "El sistema calcula un costo de 230 por pieza (materiales más tus 2 horas a 50) y un margen de apenas 20 por pieza",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.lo_que_conto: \"ya sé mi costo real por pieza: 130 incluyendo mi hora a 50\"; calculadora: null",
+      "razon": "La persona dijo que los 130 ya incluyen su hora a 50. Sumarle otra vez 2 horas a 50 para llegar a 230 y a un margen de 20 contradice ese dato. La salida, además, atribuye ese cálculo a un 'sistema' que no existe en el paquete. La frase siguiente avisa que conviene revisar el costo, pero no retira la cifra, y el resto del bloque se apoya en ella."
+    },
+    {
+      "afirmacion": "Cada pieza defectuosa que repites o desechas se come justo esa ganancia",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "costo_de_calidad y costo_de_mala_calidad_copq dicen que los defectos cuestan dinero, pero ninguno iguala el costo de una pieza fallida al margen por pieza; la persona no contó cuánto le cuesta una pieza mala (respondió \"Con eso me basta por ahora\")",
+      "razon": "Que los defectos cuesten dinero está sostenido por los nodos. Que una pieza defectuosa cueste 'justo' el margen de 20 es una equivalencia cuantitativa que nadie dio y que descansa en una cifra que contradice a la persona."
+    }
+  ]
+}

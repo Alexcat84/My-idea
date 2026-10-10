@@ -1,0 +1,13 @@
+{
+  "paquete": "f011",
+  "arbitrajes": [
+    {
+      "afirmacion": "lo que el sistema calcula con tus otros datos da un costo mucho mayor",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "calculadora: null. En contexto.lo_que_conto la persona dio 68 de materiales y 'un par de horas', una hora a 17 ('Valoro mi hora de trabajo en unos 17') y después 'costo real por pieza: 130 incluyendo mi hora a 50'. Ningún nodo trata costos.",
+      "razon": "La salida presenta como resultado de un cálculo del sistema algo que no existe en el paquete, porque no hay calculadora. Con los datos de la persona el resultado ni siquiera es único: con la hora a 50 sale 168, mayor que 130; con la hora a 17 sale 102, menor que 130. Afirmar que da un costo 'mucho mayor' es un resultado y una magnitud que nadie dio. La duda sobre si los 130 incluyen la hora sí está sostenida por el contexto, pero la frase marcada no lo está."
+    }
+  ]
+}

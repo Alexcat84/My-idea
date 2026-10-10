@@ -1,0 +1,54 @@
+{
+  "paquete": "f010",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Escribe lado a lado las cifras que diste: 200 de materiales por pieza, 4 horas de trabajo por pieza, 50 por hora de tu tiempo y 13 de precio tentativo.",
+      "por_que": "La persona solo contó su idea y no dio ninguna cifra; numeros_que_dio y calculadora están vacíos, así que las cuatro cifras se le atribuyen sin que las haya dicho.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Comprueba si el 13 es de verdad el precio que quieres cobrar o si hay un error de captura (por ejemplo, un cero faltante).",
+      "por_que": "Supone un precio de 13 y un posible error de captura que nadie mencionó.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Decide qué cuenta como costo de tu tiempo: tu hora a 50, otro valor, o nada por ahora.",
+      "por_que": "Atribuye a la persona una tarifa de 50 por hora que no dio.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Si el precio es de verdad 13, anota qué tendría que cambiar (materiales, horas o precio) para que el margen deje de ser negativo.",
+      "por_que": "Afirma un margen negativo calculado con cifras que nadie aportó.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "se calcula dividiendo tus costos fijos del mes entre el margen por pieza.",
+      "por_que": "Da una fórmula de punto de equilibrio que ningún nodo enseña, y la persona no habló de costos fijos.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota cuántas horas te tomó tu última pieza y cuánto gastaste en materiales para esa misma pieza, y compáralas con 4 horas y 200.",
+      "por_que": "Pide comparar con 4 horas y 200, cifras que la persona no dio.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Es lo que podrías hacer, no lo que vendes, y te sirve para comparar con lo que de verdad se vende.",
+      "por_que": "Habla de una cifra de capacidad que no aparece en la salida ni en la calculadora, y nadie la dio.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Calcula cuánto tendría que valer tu pieza para que el margen salga positivo con tu costo de 400",
+      "por_que": "Atribuye a la persona un costo de 400 que nadie dio (deriva de 200 + 4×50, cifras también inventadas).",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 52
+}

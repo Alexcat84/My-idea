@@ -1,0 +1,13 @@
+{
+  "paquete": "f003",
+  "arbitrajes": [
+    {
+      "afirmacion": "Vuelve a calcular el costo por pieza con el cemento nuevo: materiales más tus horas por maceta por el valor de tu hora.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.mensaje_entrada: «RETIRADA (no aplica) (1). Decidí que no corren para esta idea; NO las vuelvas a proponer: - Multiplica las horas que dedicas a cada maceta (mezclar, moldear, pulir) por el valor de tu hora de 17. (porque: mi negocio es 100% online, no aplica)». La salida repite la misma operación aquí y en «Costo por maceta: materiales más tus horas por el valor de tu hora». Ningún nodo obliga a reintroducirla.",
+      "razon": "La persona retiró de forma explícita la tarea de multiplicar sus horas por maceta por el valor de su hora y pidió no volver a proponerla. El paso 3 la vuelve a proponer como acción. Es cierto que la persona dio un costo de 130 que incluye su hora a 50, y la salida lo respeta en la frase siguiente («no la mezcles con otra»), lo que atenúa el choque. Aun así, la instrucción del paso contradice lo que la persona pidió expresamente, porque cambiar el valor de la hora de 17 a 50 no altera la tarea retirada."
+    }
+  ]
+}

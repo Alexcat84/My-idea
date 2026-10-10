@@ -1,0 +1,18 @@
+{
+  "paquete": "f011",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que el sistema calcula con tus otros datos da un costo mucho mayor",
+      "por_que": "Atribuye un cálculo al sistema y afirma que da un costo 'mucho mayor', pero no hay calculadora en el paquete (calculadora: null) y ninguna cifra respalda esa conclusión.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "una intoxicación por polvo",
+      "por_que": "Presenta la intoxicación por polvo de cemento como una emergencia previsible del taller. Ningún nodo describe ese efecto y la persona no lo contó: habló de polvo y de lesiones en general.",
+      "nodo": "peligros_emergencias_no_rutinarias"
+    }
+  ],
+  "afirmaciones_leidas": 56
+}

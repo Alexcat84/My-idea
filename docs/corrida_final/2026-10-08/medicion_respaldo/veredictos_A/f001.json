@@ -1,0 +1,25 @@
+{
+  "paquete": "f001",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)",
+      "por_que": "Pone comisiones y empaque entre los gastos que no dependen del volumen. El nodo dice que las comisiones son en parte variables, y el empaque se trató como costo por maceta. Además, la persona contó los moldes dentro de los 68 de materiales por maceta.",
+      "nodo": "distincion_cogs_gastos_operativos",
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)",
+      "por_que_juez2": "Las comisiones y el empaque cambian con cada maceta vendida, y los moldes la persona los contó como material por pieza. Los nodos marcan las comisiones como en parte variables y definen como variable lo que cambia con las unidades."
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)",
+      "por_que": "Clasifica como fijo lo que pagues por vender, aunque el nodo dice que las comisiones son en parte variables. También pasa los moldes a fijos, cuando la persona los incluyó en su costo de materiales por maceta y la Etapa 1 los cuenta así.",
+      "nodo": "punto_equilibrio_unidades",
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)",
+      "por_que_juez2": "La persona contó los moldes dentro de los 68 de materiales por maceta, es decir, como costo por unidad, y la propia Etapa 1 los suma así. Además, nadie dijo que ya los hubiera comprado. Por otro lado, el nodo dice que las comisiones de venta son en parte variables, y aquí 'lo que pagues por vender' aparece como fijo."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

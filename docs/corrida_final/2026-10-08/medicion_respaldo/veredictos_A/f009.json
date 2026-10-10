@@ -1,0 +1,34 @@
+{
+  "paquete": "f009",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Con esas cifras, cada suscripción te deja −200, o sea, pierdes dinero con cada una.",
+      "por_que": "La persona no dio números y la calculadora es nula. El margen negativo y la conclusión de que pierde dinero con cada suscripción no tienen respaldo.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Con esas cifras, cada suscripción te deja −200, o sea, pierdes dinero con cada una.",
+      "por_que_juez2": "Presenta como resultado un margen negativo y una pérdida por suscripción, pero no hay calculadora y la persona no dio números (numeros_que_dio es null)."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que te cuesta atender una suscripción al mes, que hoy tienes en 200.",
+      "por_que": "Atribuye a la persona un costo por unidad de 200 que nunca dio y que tampoco viene de la calculadora.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "lo que te cuesta atender una suscripción al mes, que hoy tienes en 200",
+      "por_que_juez2": "Atribuye a la persona un costo por unidad de 200 que ella nunca dio y que ninguna calculadora produjo."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "el precio menos ese costo; con tus números actuales sale −200.",
+      "por_que": "Supone un precio y un costo que la persona no contó. No hay «números actuales» en el contexto.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "el precio menos ese costo; con tus números actuales sale −200",
+      "por_que_juez2": "Da un margen de −200 calculado con 'tus números actuales', pero la persona no dio precio ni costo y no hay cálculo que lo respalde."
+    }
+  ],
+  "juez1": 3,
+  "juez2": 3
+}

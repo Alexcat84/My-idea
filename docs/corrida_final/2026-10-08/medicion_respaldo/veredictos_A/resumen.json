@@ -1,0 +1,235 @@
+{
+  "version": "A",
+  "modelo": "claude-opus-5-5",
+  "dos_jueces": true,
+  "hallazgos_brutos": 31,
+  "sostenidos": 30,
+  "por_clase": {
+    "contrario": 9,
+    "invencion": 21,
+    "procedencia": 0
+  },
+  "planes_con_sostenidos": 12,
+  "planes": 14,
+  "trampas": {
+    "f012": {
+      "tipo": "invencion",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f016": {
+      "tipo": "contrario",
+      "cazada_juez": false,
+      "cazada_relectura": true
+    },
+    "f017": {
+      "tipo": "procedencia",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    }
+  },
+  "por_plan": [
+    {
+      "paquete": "f001",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)"
+        },
+        {
+          "clase": "contrario",
+          "afirmacion": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)"
+        }
+      ]
+    },
+    {
+      "paquete": "f002",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce"
+        }
+      ]
+    },
+    {
+      "paquete": "f003",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Vuelve a calcular el costo por pieza con el cemento nuevo: materiales más tus horas por maceta por el valor de tu hora."
+        }
+      ]
+    },
+    {
+      "paquete": "f004",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Comprueba referencias con llamadas a personas que él te indique."
+        }
+      ]
+    },
+    {
+      "paquete": "f005",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Escribe cuántas de tus 12 macetas al mes se venden por Instagram"
+        }
+      ]
+    },
+    {
+      "paquete": "f006",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "El sistema calcula un costo de 230 por pieza (materiales más tus 2 horas a 50) y un margen de apenas 20 por pieza"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Cada pieza defectuosa que repites o desechas se come justo esa ganancia"
+        }
+      ]
+    },
+    {
+      "paquete": "f007",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f008",
+      "hallazgos": 9,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota cuántos de tus primeros usuarios dijeron que pagarían 13 por suscripción"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "compara ese número con las 16 que necesitas para cubrir tus costos fijos"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Con las cifras que diste, la cuenta es sencilla de leer"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "cada suscripción te deja lo que cobras"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Con lo que diste es 0, sin contar tu tiempo."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Aquí son 13 de los 13 que cobras."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Tú dijiste 200 por mes."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Comprueba si esas 20 suscripciones son pagos reales y recurrentes"
+        }
+      ]
+    },
+    {
+      "paquete": "f009",
+      "hallazgos": 3,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Con esas cifras, cada suscripción te deja −200, o sea, pierdes dinero con cada una."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "lo que te cuesta atender una suscripción al mes, que hoy tienes en 200."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "el precio menos ese costo; con tus números actuales sale −200."
+        }
+      ]
+    },
+    {
+      "paquete": "f010",
+      "hallazgos": 6,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Escribe lado a lado las cifras que diste: 200 de materiales por pieza, 4 horas de trabajo por pieza, 50 por hora de tu tiempo y 13 de precio tentativo."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Comprueba si el 13 es de verdad el precio que quieres cobrar o si hay un error de captura (por ejemplo, un cero faltante)."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Decide qué cuenta como costo de tu tiempo: tu hora a 50, otro valor, o nada por ahora."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Si el precio es de verdad 13, anota qué tendría que cambiar (materiales, horas o precio) para que el margen deje de ser negativo."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota cuántas horas te tomó tu última pieza y cuánto gastaste en materiales para esa misma pieza, y compáralas con 4 horas y 200."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Calcula cuánto tendría que valer tu pieza para que el margen salga positivo con tu costo de 400"
+        }
+      ]
+    },
+    {
+      "paquete": "f011",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "lo que el sistema calcula con tus otros datos da un costo mucho mayor"
+        }
+      ]
+    },
+    {
+      "paquete": "f013",
+      "hallazgos": 3,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Con eso, tu costo sale en 230 por pieza."
+        },
+        {
+          "clase": "contrario",
+          "afirmacion": "Con 250, te quedan 20 por maceta, el 8% del precio."
+        },
+        {
+          "clase": "contrario",
+          "afirmacion": "Con los números que diste, hoy te queda un margen pequeño por maceta"
+        }
+      ]
+    },
+    {
+      "paquete": "f014",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f015",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce."
+        }
+      ]
+    }
+  ]
+}

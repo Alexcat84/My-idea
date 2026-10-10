@@ -1,0 +1,25 @@
+{
+  "paquete": "f006",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "El sistema calcula un costo de 230 por pieza (materiales más tus 2 horas a 50) y un margen de apenas 20 por pieza",
+      "por_que": "La calculadora viene vacía, así que ninguna parte determinista dio esas cifras. Además la persona dijo que su costo real de 130 ya incluye su hora a 50; con sus datos el margen sería 120, no 20.",
+      "nodo": null,
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "El sistema calcula un costo de 230 por pieza (materiales más tus 2 horas a 50) y un margen de apenas 20 por pieza",
+      "por_que_juez2": "La persona dijo que su costo real de 130 ya incluye su hora a 50. Sumarle otra vez 2 horas a 50 contradice ese dato, y no hay calculadora que respalde ese cálculo del 'sistema'."
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Cada pieza defectuosa que repites o desechas se come justo esa ganancia",
+      "por_que": "Da por hecho el margen de 20 por pieza, que contradice el costo de 130 con la hora incluida que contó la persona. Ningún nodo ni dato sostiene que una pieza fallida equivalga exactamente a la ganancia.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Cada pieza defectuosa que repites o desechas se come justo esa ganancia.",
+      "por_que_juez2": "Afirma que el costo de una pieza defectuosa equivale a la ganancia por pieza. Ese dato sale de un margen de 20 que nadie dio, y la persona no contó cuánto le cuesta una pieza mala."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

@@ -1,0 +1,18 @@
+{
+  "paquete": "f001",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)",
+      "por_que": "La persona contó los moldes dentro de los 68 de materiales por maceta, es decir, como costo por unidad, y la propia Etapa 1 los suma así. Además, nadie dijo que ya los hubiera comprado. Por otro lado, el nodo dice que las comisiones de venta son en parte variables, y aquí 'lo que pagues por vender' aparece como fijo.",
+      "nodo": "punto_equilibrio_unidades"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)",
+      "por_que": "Las comisiones y el empaque cambian con cada maceta vendida, y los moldes la persona los contó como material por pieza. Los nodos marcan las comisiones como en parte variables y definen como variable lo que cambia con las unidades.",
+      "nodo": "distincion_cogs_gastos_operativos"
+    }
+  ],
+  "afirmaciones_leidas": 56
+}

@@ -1,0 +1,18 @@
+{
+  "paquete": "f001",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)",
+      "por_que": "Pone comisiones y empaque entre los gastos que no dependen del volumen. El nodo dice que las comisiones son en parte variables, y el empaque se trató como costo por maceta. Además, la persona contó los moldes dentro de los 68 de materiales por maceta.",
+      "nodo": "distincion_cogs_gastos_operativos"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)",
+      "por_que": "Clasifica como fijo lo que pagues por vender, aunque el nodo dice que las comisiones son en parte variables. También pasa los moldes a fijos, cuando la persona los incluyó en su costo de materiales por maceta y la Etapa 1 los cuenta así.",
+      "nodo": "punto_equilibrio_unidades"
+    }
+  ],
+  "afirmaciones_leidas": 52
+}

@@ -1,0 +1,24 @@
+{
+  "paquete": "f013",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Con eso, tu costo sale en 230 por pieza.",
+      "por_que": "La persona dijo que su costo real por pieza es 130 con su hora a 50. Con 68 de materiales y dos horas a 50 tampoco salen 230, y no hay cifra de calculadora que lo respalde. Parece que se sumó dos veces su tiempo.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Con 250, te quedan 20 por maceta, el 8% del precio.",
+      "por_que": "Sale del costo erróneo de 230. Con el costo de 130 que dio la persona y su precio de 250, el margen es de 120 por maceta, no de 20.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Con los números que diste, hoy te queda un margen pequeño por maceta",
+      "por_que": "Los números que dio la persona (costo 130 con su hora incluida, precio 250) dejan un margen amplio. La misma salida, en la etapa 6, toma 130 como su costo real.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 62
+}

@@ -1,0 +1,18 @@
+{
+  "paquete": "f006",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "El sistema calcula un costo de 230 por pieza (materiales más tus 2 horas a 50) y un margen de apenas 20 por pieza",
+      "por_que": "La calculadora viene vacía, así que ninguna parte determinista dio esas cifras. Además la persona dijo que su costo real de 130 ya incluye su hora a 50; con sus datos el margen sería 120, no 20.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Cada pieza defectuosa que repites o desechas se come justo esa ganancia",
+      "por_que": "Da por hecho el margen de 20 por pieza, que contradice el costo de 130 con la hora incluida que contó la persona. Ningún nodo ni dato sostiene que una pieza fallida equivalga exactamente a la ganancia.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 46
+}

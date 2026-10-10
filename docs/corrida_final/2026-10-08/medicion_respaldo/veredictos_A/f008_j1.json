@@ -1,0 +1,60 @@
+{
+  "paquete": "f008",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota cuántos de tus primeros usuarios dijeron que pagarían 13 por suscripción",
+      "por_que": "Atribuye un precio de 13 por suscripción que la persona no dio y que no aparece en la calculadora, que es null.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "compara ese número con las 16 que necesitas para cubrir tus costos fijos",
+      "por_que": "Da un punto de equilibrio de 16 suscripciones que nadie calculó ni dio; no hay calculadora ni números de la persona.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Con las cifras que diste, la cuenta es sencilla de leer",
+      "por_que": "La persona no dio ninguna cifra: numeros_que_dio y lo_que_conto están vacíos.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "cada suscripción te deja lo que cobras",
+      "por_que": "Afirma que el costo por suscripción es nulo, un hecho del negocio que nadie dio.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Con lo que diste es 0, sin contar tu tiempo.",
+      "por_que": "Costo por unidad de 0 atribuido a la persona, que no dio ningún costo.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Aquí son 13 de los 13 que cobras.",
+      "por_que": "Margen y precio de 13 que no vienen de la persona ni de la calculadora.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Tú dijiste 200 por mes.",
+      "por_que": "Atribuye a la persona unos costos fijos de 200 al mes que nunca contó.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Comprueba si esas 20 suscripciones son pagos reales y recurrentes",
+      "por_que": "Cita 20 suscripciones que nadie dio; además no cuadran con las 16 que la propia salida da como punto de equilibrio.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota si esa cifra sigue siendo realista.",
+      "por_que": "Supone una cifra de ingresos ya fijada por la persona, que no existe en el contexto.",
+      "nodo": "actualizar_business_model_canvas_tuneup"
+    }
+  ],
+  "afirmaciones_leidas": 52
+}

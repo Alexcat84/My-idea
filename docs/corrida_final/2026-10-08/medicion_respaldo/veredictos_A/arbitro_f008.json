@@ -1,0 +1,77 @@
+{
+  "paquete": "f008",
+  "arbitrajes": [
+    {
+      "afirmacion": "Anota cuántos de tus primeros usuarios dijeron que pagarían 13 por suscripción",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto.numeros_que_dio = null; calculadora = null; lo_que_conto = []; ningún nodo menciona un precio de 13",
+      "razon": "La salida usa un precio de 13 por suscripción, pero la persona no lo dio, no hay calculadora y ningún nodo lo sostiene."
+    },
+    {
+      "afirmacion": "compara ese número con las 16 que necesitas para cubrir tus costos fijos",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "calculadora = null; numeros_que_dio = null; ningún nodo da un punto de equilibrio",
+      "razon": "Es un punto de equilibrio concreto de 16 suscripciones que nadie calculó ni dio."
+    },
+    {
+      "afirmacion": "Con las cifras que diste, la cuenta es sencilla de leer",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto: numeros_que_dio = null, lo_que_conto = [], dijo_textual = []; la idea solo dice 'app de suscripcion mensual para llevar el registro de gastos personales'",
+      "razon": "La salida atribuye a la persona unas cifras que nunca dio. Como la persona no contó nada sobre números, la frase no contradice algo dicho: lo inventa. Por eso queda como invención y no como contrario."
+    },
+    {
+      "afirmacion": "cada suscripción te deja lo que cobras",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Ni el contexto ni los nodos hablan del costo por unidad; calculadora = null",
+      "razon": "Da por hecho que el costo por suscripción es nulo, un dato del negocio que nadie aportó."
+    },
+    {
+      "afirmacion": "Con lo que diste es 0, sin contar tu tiempo.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "numeros_que_dio = null; calculadora = null",
+      "razon": "Atribuye a la persona un costo por unidad de 0 que no dio."
+    },
+    {
+      "afirmacion": "Aquí son 13 de los 13 que cobras.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "numeros_que_dio = null; calculadora = null; ningún nodo da un precio",
+      "razon": "El precio y el margen de 13 no vienen de la persona, de la calculadora ni de ningún nodo."
+    },
+    {
+      "afirmacion": "Tú dijiste 200 por mes.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "lo_que_conto = []; dijo_textual = []; numeros_que_dio = null",
+      "razon": "Pone en boca de la persona unos costos fijos de 200 al mes que no aparecen en el contexto."
+    },
+    {
+      "afirmacion": "Comprueba si esas 20 suscripciones son pagos reales y recurrentes",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "calculadora = null; numeros_que_dio = null; la propia salida habla antes de 16, no de 20",
+      "razon": "Nadie dio ni calculó la cifra de 20 suscripciones, que además no cuadra con el resto de la salida."
+    },
+    {
+      "afirmacion": "Anota si esa cifra sigue siendo realista.",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "operativa",
+      "evidencia": "actualizar_business_model_canvas_tuneup: 'Ajusta tus hipótesis de ingresos según los segmentos que mostraron entusiasmo real'. El paso anterior de la salida dice 'Revisa tus hipótesis de ingresos con los usuarios que mostraron interés real.'",
+      "razon": "La frase no afirma ninguna cifra, plazo, causa ni resultado. Solo concreta el cómo de revisar la hipótesis de ingresos que enseña el nodo, así que es un consejo operativo."
+    }
+  ]
+}

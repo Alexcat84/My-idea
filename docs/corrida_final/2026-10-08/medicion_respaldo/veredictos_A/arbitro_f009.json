@@ -1,0 +1,29 @@
+{
+  "paquete": "f009",
+  "arbitrajes": [
+    {
+      "afirmacion": "Con esas cifras, cada suscripción te deja −200, o sea, pierdes dinero con cada una.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto.numeros_que_dio = null; calculadora = null; lo_que_conto = []; la idea y el perfil_sesion solo dicen que es una app de suscripción mensual sin clientes que paguen, sin precio ni costo. Ningún nodo da cifras de margen.",
+      "razon": "La frase da como resultado un margen de −200 y una pérdida por suscripción. No hay cálculo ni dato de la persona que lo respalde, así que es una cifra y un resultado inventados."
+    },
+    {
+      "afirmacion": "lo que te cuesta atender una suscripción al mes, que hoy tienes en 200.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Ni el contexto (numeros_que_dio null, ficha vacía, dijo_textual []) ni la calculadora (null) mencionan un costo de 200. Ningún nodo lo dice.",
+      "razon": "Atribuye a la persona un costo por unidad que nunca dio («que hoy tienes en 200»). Es una cifra inventada y presentada como dato suyo."
+    },
+    {
+      "afirmacion": "el precio menos ese costo; con tus números actuales sale −200.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "No hay «números actuales» en el contexto: falta el precio y falta el costo, y calculadora = null. La propia salida pide después «Anota qué precio mensual cobrarías», lo que confirma que no hay precio.",
+      "razon": "Da como calculado un margen que depende de un precio y un costo que no existen en el material. Es un resultado numérico inventado."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "paquete": "f009",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Con esas cifras, cada suscripción te deja −200, o sea, pierdes dinero con cada una.",
+      "por_que": "La persona no dio números y la calculadora es nula. El margen negativo y la conclusión de que pierde dinero con cada suscripción no tienen respaldo.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que te cuesta atender una suscripción al mes, que hoy tienes en 200.",
+      "por_que": "Atribuye a la persona un costo por unidad de 200 que nunca dio y que tampoco viene de la calculadora.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "el precio menos ese costo; con tus números actuales sale −200.",
+      "por_que": "Supone un precio y un costo que la persona no contó. No hay «números actuales» en el contexto.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 46
+}

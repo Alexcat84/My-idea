@@ -1,0 +1,16 @@
+{
+  "paquete": "f011",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "lo que el sistema calcula con tus otros datos da un costo mucho mayor",
+      "por_que": "Atribuye un resultado a un cálculo del sistema que no existe, porque la calculadora es null; además, 'mucho mayor' es una magnitud que nadie dio (con 68 de materiales y 2 horas a 50 saldría 168, no algo que esté en el paquete).",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "lo que el sistema calcula con tus otros datos da un costo mucho mayor",
+      "por_que_juez2": "Atribuye un cálculo al sistema y afirma que da un costo 'mucho mayor', pero no hay calculadora en el paquete (calculadora: null) y ninguna cifra respalda esa conclusión."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

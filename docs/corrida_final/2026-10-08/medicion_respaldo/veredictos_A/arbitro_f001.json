@@ -1,0 +1,21 @@
+{
+  "paquete": "f001",
+  "arbitrajes": [
+    {
+      "afirmacion": "Escribe todo lo que pagas en un mes que no depende de cuántas macetas hagas (moldes, herramientas, comisiones, empaque)",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "distincion_cogs_gastos_operativos: 'comisiones de ventas son en parte variables'. punto_equilibrio_unidades: variable es lo que 'cambia con las unidades producidas: materiales', y fijo es 'renta, herramientas, salarios administrativos'. Contexto: 'Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura --'.",
+      "razon": "La frase pone comisiones y empaque entre lo que no depende de cuántas macetas se hagan. El nodo dice que las comisiones son en parte variables, y el empaque cambia con cada pieza. Además, la persona contó los moldes dentro de su costo por maceta, y la propia Etapa 1 los suma así. Esto contradice al nodo y a lo que contó la persona."
+    },
+    {
+      "afirmacion": "fijo (no cambia con las unidades: moldes que ya compraste, herramientas, lo que pagues por vender)",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "distincion_cogs_gastos_operativos: 'comisiones de ventas son en parte variables pero suelen clasificarse en SG&A'. punto_equilibrio_unidades: los fijos son 'renta, herramientas, salarios administrativos'. Contexto: moldes incluidos en los 68 de materiales por maceta. La Etapa 4 de la misma salida resta 'lo que te cuesta vender en ese canal' por maceta.",
+      "razon": "El criterio que fija la propia frase es 'no cambia con las unidades', y bajo ese criterio clasifica como fijo lo que se paga por vender. El nodo dice que esas comisiones son en parte variables. También pasa a fijos los moldes, que la persona contó como costo por maceta, y nadie dijo que ya los hubiera comprado. Las herramientas sí están sostenidas por el nodo, pero eso no salva el resto de la frase."
+    }
+  ]
+}

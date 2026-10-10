@@ -1,0 +1,53 @@
+{
+  "paquete": "f010",
+  "arbitrajes": [
+    {
+      "afirmacion": "Escribe lado a lado las cifras que diste: 200 de materiales por pieza, 4 horas de trabajo por pieza, 50 por hora de tu tiempo y 13 de precio tentativo.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto: numeros_que_dio = null, lo_que_conto = [], calculadora = null; lo único que dijo la persona fue 'Vendo un producto fisico que fabrico yo mismo, una pieza a la vez.'",
+      "razon": "Le atribuye a la persona cuatro cifras («las cifras que diste») que no dio. Ningún nodo ni la calculadora las aporta."
+    },
+    {
+      "afirmacion": "Comprueba si el 13 es de verdad el precio que quieres cobrar o si hay un error de captura (por ejemplo, un cero faltante).",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto sin cifras (numeros_que_dio = null, calculadora = null)",
+      "razon": "Da por existente un precio de 13 capturado por la persona y especula sobre un error de captura de un dato que nunca existió."
+    },
+    {
+      "afirmacion": "Decide qué cuenta como costo de tu tiempo: tu hora a 50, otro valor, o nada por ahora.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto: ficha y lo_que_conto no mencionan tarifa horaria; calculadora = null",
+      "razon": "La decisión sobre cómo contar el tiempo sería operativa, pero la frase presenta «tu hora a 50» como dato de la persona, y ella no lo dio."
+    },
+    {
+      "afirmacion": "Si el precio es de verdad 13, anota qué tendría que cambiar (materiales, horas o precio) para que el margen deje de ser negativo.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "calculadora = null; ningún nodo da un margen",
+      "razon": "Afirma como resultado un margen negativo calculado con cifras que nadie aportó."
+    },
+    {
+      "afirmacion": "Anota cuántas horas te tomó tu última pieza y cuánto gastaste en materiales para esa misma pieza, y compáralas con 4 horas y 200.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "contexto: numeros_que_dio = null",
+      "razon": "Anotar las horas y los materiales reales sería operativo, pero pide compararlos con 4 horas y 200, cifras que la persona no dio."
+    },
+    {
+      "afirmacion": "Calcula cuánto tendría que valer tu pieza para que el margen salga positivo con tu costo de 400",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "calculadora = null; contexto sin costos; 400 = 200 + 4×50, cifras también inventadas",
+      "razon": "Le atribuye a la persona un costo de 400 («tu costo») que sale de cifras inventadas y vuelve a dar por hecho un margen negativo."
+    }
+  ]
+}

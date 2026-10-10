@@ -1,0 +1,29 @@
+{
+  "paquete": "f013",
+  "arbitrajes": [
+    {
+      "afirmacion": "Con eso, tu costo sale en 230 por pieza.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.lo_que_conto: \"ya sé mi costo real por pieza: 130 incluyendo mi hora a 50\"; numeros_que_dio.costo_materiales_unidad = 130; materiales \"como 68\" y \"un par de horas\" (68 + 2×50 = 168). calculadora: null. La propia salida, en la Etapa 6, cita \"dijiste que son 130 con tu hora a 50\".",
+      "razon": "La persona dio 130 como costo con su hora incluida, y ningún cálculo con sus datos llega a 230. El 230 sale de sumar su tiempo dos veces (130 + 100), así que contradice la cifra que ella dio."
+    },
+    {
+      "afirmacion": "Con 250, te quedan 20 por maceta, el 8% del precio.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto: precio 250 (\"Subí el precio a 250\") y costo 130 (\"130 incluyendo mi hora a 50\"). Con esos datos el margen es 120 por maceta, el 48% del precio. calculadora: null.",
+      "razon": "El margen de 20 se apoya en el costo erróneo de 230. Con las cifras que dio la persona, el margen es 120, así que la afirmación contradice sus datos."
+    },
+    {
+      "afirmacion": "Con los números que diste, hoy te queda un margen pequeño por maceta",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto: sus números vigentes son costo 130 con la hora incluida y precio 250, que dejan un margen de 120 por pieza. Además contó \"Subí el precio a 250 y las ventas se mantuvieron\".",
+      "razon": "La frase atribuye a \"los números que diste\" una conclusión opuesta a lo que esos números muestran. Es consecuencia del costo duplicado, no de sus datos."
+    }
+  ]
+}
