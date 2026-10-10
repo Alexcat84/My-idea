@@ -2196,3 +2196,56 @@ Para intentar certificar la copia fiel (15.15: no certifica hasta una medida nue
   decide el fundador.
 - **Tope:** 10 USD, con reserva antes de cada llamada. Va primero un piloto de un lote para medir el coste real. Si la
   proyección no cabe en el tope con el árbitro, se para y se reporta antes de gastar más.
+
+### 15.23 Copia fiel: resultado de la medida 8 (10 oct 2026, noche): NO CERTIFICADO
+
+Muestra de 200 nodos con la semilla 20261029, fijada en 15.22 antes de sortear.
+- **Lectura:** 20 lotes leídos por la API (Sonnet 5.5). Cada lector cazó su trampa (20 de 20), así que no hizo falta
+  ninguna relectura y la medida vale.
+- **Arbitraje:** de 135 marcas, el árbitro (Opus 5.5) confirmó 126 y rechazó 9.
+
+| tipo | nodos con al menos un defecto confirmado | proporción | Wilson 95 % |
+|---|---:|---:|---|
+| copia | 65 de 200 | 32,5 % | 26,4 a 39,3 % |
+| contrario | 0 de 200 | 0 % | 0,0 a 1,9 % |
+| invención | 0 de 200 | 0 % | 0,0 a 1,9 % |
+
+**Contrarios e invenciones en cero.** La regla pedía, además, como mucho 10 de 200 en copia, y esa parte no se cumple:
+**la copia fiel NO queda certificada.** La medida 7 había dado 57 de 200: dentro del margen, no mejora.
+
+**Dónde está la copia.**
+- Hay 126 elementos confirmados: 88 pasos, 37 resúmenes y 1 condición.
+- **Primer Equipo concentra la mayor parte:** 21 de sus 22 nodos de la muestra y 78 de los 126 elementos. La mitad de
+  ellos (48) viene de un solo libro, aunque las pasadas de 15.20 y 15.21 trabajaron justo esos libros.
+- El resto se reparte por espacio (nodos con copia de la muestra de cada uno):
+
+| Espacio | Nodos con copia |
+|---|---|
+| núcleo | 13 de 45 |
+| calidad | 9 de 27 |
+| ambiental | 4 de 17 |
+| salud y seguridad | 4 de 16 |
+| entrega | 4 de 12 |
+| seguridad digital | 3 de 11 |
+| exportación | 3 de 13 |
+| franquicias | 2 de 14 |
+| compras | 1 de 11 |
+| riesgos | 1 de 12 |
+
+- Sin Primer Equipo, la copia sigue en 44 de 178 nodos (24,7 %).
+- Los elementos y nodos confirmados están en `auditoria-final-claves/medida8/medida_8.json`. Las lecturas y los fallos
+  del árbitro están en `auditoria-final/medida8/`.
+
+**Lo que se hace:** nada (15.22: si no certifica, se reporta sin corregir y la corrección la decide el fundador).
+Lectura para esa decisión: la vara de la medida (una frase de más de unas 15 palabras, o dos frases seguidas, que
+siguen al original término a término, traducido o no) encuentra copia en una tercera parte de los nodos aun después de
+la pasada completa y de su vecindad.
+
+**Gasto (Sonnet 5.5 y Opus 5.5 por la API; la cifra oficial es la consola):**
+
+| Pieza | USD |
+|---|---:|
+| Piloto (lote 1) | 0,37 |
+| Lectores (lotes 2 a 20) | 5,89 |
+| Árbitro (9 paquetes) | 2,38 |
+| **Total** | **8,64** (tope aprobado 10) |
