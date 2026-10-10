@@ -50,6 +50,7 @@ import {
 } from "../verificadorHuerfanos";
 import { detectarFaltaDeAcentos } from "../detectorAcentos";
 import { tituloConRespaldo } from "./tituloConRespaldo";
+import type { ActividadNucleoIA } from "./nucleoParaMundo";
 
 
 /** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
@@ -219,6 +220,9 @@ export interface PayloadPlan {
   /** Citar o callar (REDACTOR_CON_RESPALDO punto 3, 9 oct 2026): lo que dijo la persona, numerado, para citarlo con
    * ⟦R1⟧. El codigo valida cada cita al guardar. */
   respuestas_de_la_persona?: Array<{ id: string; texto: string }>;
+  /** Plan de mundo (decision del fundador, 10 oct 2026, punto 2b): de cada tarea del nucleo vigente que no esta
+   * pendiente, el titulo de su tema y su estado (nucleoParaMundo.ts); nunca el texto de la tarea. */
+  actividades_del_nucleo?: ActividadNucleoIA[];
 }
 
 export interface BloqueReplanteamiento {
@@ -239,6 +243,8 @@ export interface ExtrasPlan {
   tipoOferta?: TipoOferta;
   /** Las respuestas de la persona hasta este plan (las de la sesion y las del hilo de la memoria), para citarlas. */
   respuestas?: string[];
+  /** Plan de mundo: lo hecho, en proceso o retirado en el nucleo vigente (titulo del tema y estado). */
+  nucleo?: ActividadNucleoIA[] | null;
 }
 
 export interface PreparacionPlan {
@@ -292,6 +298,7 @@ export function prepararPlan(
     payload.estado_vivo_previo = estadoVivoPrevio;
   }
   if (extras.planAnterior) payload.plan_anterior = extras.planAnterior;
+  if (extras.nucleo && extras.nucleo.length > 0) payload.actividades_del_nucleo = extras.nucleo;
   if (extras.replanteamiento) payload.replanteamiento = extras.replanteamiento;
   const respuestas = [...new Set((extras.respuestas ?? []).map((x) => (typeof x === "string" ? x.trim() : "")).filter(Boolean))];
   if (respuestas.length > 0) payload.respuestas_de_la_persona = respuestas.map((texto, i) => ({ id: `R${i + 1}`, texto }));

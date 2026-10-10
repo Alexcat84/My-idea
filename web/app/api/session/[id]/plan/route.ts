@@ -83,6 +83,7 @@ import {
   prepararPlan,
 } from "@/lib/engine/planRedactor";
 import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, tituloDeNodoPara, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
+import { nucleoParaMundo, type ActividadNucleoIA } from "@/lib/engine/nucleoParaMundo";
 import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -248,6 +249,13 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           const previo = await obtenerPlanVigenteDe(supabase, projectId, dominioCobro, sessionId);
           if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id), tituloDeNodoPara(graph));
         }
+        // Plan de mundo (decision del fundador, 10 oct 2026, punto 2b): lo hecho, en proceso o retirado en el nucleo
+        // vigente (titulo del tema y estado, nunca el texto), para no darlo por pendiente.
+        let nucleo: ActividadNucleoIA[] | null = null;
+        if (dominioCobro !== "core") {
+          const planCore = await obtenerPlanCoreVigente(supabase, projectId);
+          if (planCore) nucleo = nucleoParaMundo(await obtenerTareasDePlan(supabase, projectId, planCore), tituloDeNodoPara(graph));
+        }
         const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
         // Las cifras de la persona: las del proyecto y las de esta sesion (REDACTOR_CON_RESPALDO punto 2: le llegan al
         // redactor etiquetadas por codigo; tambien sirven para la moneda y los numeros huerfanos al finalizar).
@@ -275,6 +283,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           {
             excluir: recorrido.nodosCubiertosPrevios ?? [],
             planAnterior,
+            nucleo,
             numeros: numerosParaPlan,
             respuestas: respuestasDeLaPersona,
             tipoOferta: (recorrido.tipoOfertaSesion ?? (proyectoParaPlan?.tipo_oferta as string | null) ?? null) as TipoOferta,

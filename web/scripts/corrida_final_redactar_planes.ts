@@ -38,6 +38,7 @@ import { mensajeAlFormatoSinTexto } from "../lib/engine/seguimientoComposer";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { comprobarPasos } from "../lib/engine/comprobadorPasos";
+import { nucleoParaMundo } from "../lib/engine/nucleoParaMundo";
 import { SYSTEM_COMPROBADOR_PASOS } from "../lib/prompts";
 import { obtenerTareasDePlan } from "../lib/db";
 import type { TipoOferta } from "../lib/calculadora";
@@ -153,6 +154,22 @@ async function main() {
         }
       }
     }
+    // Plan de mundo (punto 2b, 10 oct 2026): el nucleo vigente EN EL MOMENTO del plan (el ultimo plan de nucleo anterior
+    // a el) y lo hecho hasta esa fecha, como lo recibe hoy la ruta del plan (titulo del tema y estado).
+    let nucleo = null;
+    if (dominio !== "core") {
+      const { data: sesProy } = await sb.from("sessions").select("id").eq("project_id", ref.project_id);
+      const { data: cores } = await sb
+        .from("plans")
+        .select("id, created_at")
+        .in("session_id", ((sesProy ?? []) as Array<{ id: string }>).map((x) => x.id))
+        .eq("dominio", "core")
+        .lt("created_at", ref.creado)
+        .order("created_at", { ascending: false })
+        .limit(1);
+      const core = ((cores ?? []) as Array<{ id: string }>)[0];
+      if (core) nucleo = nucleoParaMundo(await obtenerTareasDePlan(sb, ref.project_id, core.id), tituloDeNodoPara(graph), ref.creado);
+    }
     const ciclo = recorrido.ciclo;
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
     // Las cifras de la persona EN EL MOMENTO del plan, como las tenia la ruta del plan entonces (decision del fundador,
@@ -184,6 +201,7 @@ async function main() {
       {
         excluir: recorrido.nodosCubiertosPrevios ?? [],
         planAnterior,
+        nucleo,
         numeros,
         respuestas,
         tipoOferta: (recorrido.tipoOfertaSesion ?? (proy?.tipo_oferta as string | null) ?? null) as TipoOferta,
