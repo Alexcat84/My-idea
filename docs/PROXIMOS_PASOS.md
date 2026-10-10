@@ -338,6 +338,14 @@ idiomas (motor en español). En el punto 5: de cada tarea viaja su estado y la n
 Riesgo anotado del punto 5: la regla 8-ter («no repetir lo hecho») ya no ve el texto de lo hecho; lo cubren las notas de
 la persona, la exclusión de los temas ya cubiertos y las tareas heredadas por código. Vigilarlo en la medición.
 
+**Encargo para Design (sin prisa, decisión del fundador del 10 oct 2026),** tras revisar el formato nuevo del plan
+(menos prosa) en pantalla, Expediente y PDF:
+- quitar el rótulo «Pasos:» de cada etapa (ahora va pegado al título, porque toda etapa empieza con pasos);
+- la introducción del plan como cita (son las palabras de la persona y es la única prosa que queda);
+- texto alineado a la izquierda en móvil (el justificado abre huecos grandes entre palabras; ya pasaba antes);
+- el rótulo del entregable como «Sabrás que está hecha cuando…», en los once idiomas (copy: catálogo de rótulos del
+  plan y su pintado en pantalla, Expediente y PDF).
+
 **Lo que ninguno de los cinco puntos cubre (para después):** tres contrarios de un tema aplicado al revés dentro de un
 paso. La cita al tema existe y es la correcta, así que citar o callar no lo ve:
 - «busca un segundo proveedor» presentado como evitar el riesgo, cuando el tema lo llama reducir (M2A-f006-2);
