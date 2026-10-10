@@ -33,6 +33,7 @@ import { planAnteriorParaIA } from "../lib/engine/replanteamiento";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { obtenerTareasDePlan } from "../lib/db";
+import type { TipoOferta } from "../lib/calculadora";
 
 cargarEnvRaiz();
 
@@ -135,6 +136,8 @@ async function main() {
     }
     const ciclo = recorrido.ciclo;
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
+    // Las cifras de la persona, como las arma la ruta del plan (REDACTOR_CON_RESPALDO punto 2).
+    const numeros = { ...((proy?.numeros_proyecto as Record<string, unknown>) ?? {}), ...(recorrido.numerosDetectadosSesion ?? {}) };
     const preparacion = prepararPlan(
       recorrido.ruta,
       graph,
@@ -148,6 +151,8 @@ async function main() {
       {
         excluir: recorrido.nodosCubiertosPrevios ?? [],
         planAnterior,
+        numeros,
+        tipoOferta: (recorrido.tipoOfertaSesion ?? (proy?.tipo_oferta as string | null) ?? null) as TipoOferta,
         replanteamiento:
           ciclo?.tipo === "replantear"
             ? {
@@ -169,7 +174,6 @@ async function main() {
       // las palabras de la persona HASTA este plan (produccion las lee de la memoria en ese momento)
       ...memoriaDe(proy?.memoria).hilo.filter((e) => !e.en || Date.parse(e.en) <= Date.parse(ref.creado)).map((e) => e.respuesta),
     ];
-    const numeros = { ...((proy?.numeros_proyecto as Record<string, unknown>) ?? {}), ...(recorrido.numerosDetectadosSesion ?? {}) };
     const eventos: Array<Record<string, unknown>> = [];
     const a = finalizarPlan(rawTexto, preparacion, recorrido.ruta, families, recorrido.textoOriginal, (e) => eventos.push(e), numeros, idiomaPlan, respuestas);
     const costoA = costoAcumuladoUsd(acc);

@@ -87,6 +87,7 @@ import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 import { generarTextoPlan } from "@/lib/engine/redactorPlan";
 import { perfilConEstadoVivoActual } from "@/lib/engine/perfilDelPlan";
+import type { TipoOferta } from "@/lib/calculadora";
 
 const INTERVALO_HEARTBEAT_MS = 15_000;
 
@@ -247,6 +248,12 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id));
         }
         const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
+        // Las cifras de la persona: las del proyecto y las de esta sesion (REDACTOR_CON_RESPALDO punto 2: le llegan al
+        // redactor etiquetadas por codigo; tambien sirven para la moneda y los numeros huerfanos al finalizar).
+        const numerosParaPlan = {
+          ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
+          ...recorrido.numerosDetectadosSesion,
+        };
         const preparacion = prepararPlan(
           recorrido.ruta,
           graph,
@@ -261,6 +268,8 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           {
             excluir: recorrido.nodosCubiertosPrevios ?? [],
             planAnterior,
+            numeros: numerosParaPlan,
+            tipoOferta: (recorrido.tipoOfertaSesion ?? (proyectoParaPlan?.tipo_oferta as string | null) ?? null) as TipoOferta,
             replanteamiento:
               ciclo?.tipo === "replantear"
                 ? {
@@ -303,10 +312,6 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (versionBasica) {
           eventosPlan.push({ tipo: "plan_version_basica", motivo: avisoFallback });
         }
-        const numerosParaPlan = {
-          ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
-          ...recorrido.numerosDetectadosSesion,
-        };
         const respuestasDeLaPersona = [
           ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
           ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),

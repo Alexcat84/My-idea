@@ -35,6 +35,8 @@ import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFam
 import { validaConClientes } from "./validacionClientes";
 import { quitarCitasDeFuente } from "./citasDeFuente";
 import { podarProsa } from "./menosProsa";
+import { calculosDelPlan, numerosDeLaPersona, type Calculo, type FilaNumero } from "./numerosDeLaPersona";
+import type { TipoOferta } from "../calculadora";
 import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
@@ -208,6 +210,10 @@ export interface PayloadPlan {
   /** "Replantear mi camino": la historia, lo que se conserva, lo que se suelta y
    * el camino elegido (regla 8-quater). */
   replanteamiento?: BloqueReplanteamiento;
+  /** Numeros por codigo (REDACTOR_CON_RESPALDO punto 2, 9 oct 2026): las cifras de la persona etiquetadas (lo que dijo,
+   * su alcance y lo que no son) y lo que la calculadora ya hizo o le falta. Las unicas cifras del negocio que usa. */
+  numeros_de_la_persona?: FilaNumero[];
+  calculos?: Calculo[];
 }
 
 export interface BloqueReplanteamiento {
@@ -223,6 +229,9 @@ export interface ExtrasPlan {
   excluir?: string[];
   planAnterior?: PlanAnteriorIA | null;
   replanteamiento?: BloqueReplanteamiento | null;
+  /** Las cifras de la persona (numeros_proyecto + las de la sesion) y su tipo de oferta, para los bloques de numeros. */
+  numeros?: unknown;
+  tipoOferta?: TipoOferta;
 }
 
 export interface PreparacionPlan {
@@ -277,6 +286,11 @@ export function prepararPlan(
   }
   if (extras.planAnterior) payload.plan_anterior = extras.planAnterior;
   if (extras.replanteamiento) payload.replanteamiento = extras.replanteamiento;
+  const filas = numerosDeLaPersona(extras.numeros);
+  if (filas.length > 0) {
+    payload.numeros_de_la_persona = filas;
+    payload.calculos = calculosDelPlan(extras.numeros, extras.tipoOferta);
+  }
 
   return { payload, cosechaIds, materialPrincipal, materialDeApoyo, tieneMaterialEconomico };
 }
