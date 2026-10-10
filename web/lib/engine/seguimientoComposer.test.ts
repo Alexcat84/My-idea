@@ -24,7 +24,8 @@ describe("componerMensajeSeguimiento", () => {
     expect(lineas).toHaveLength(9);
     expect(lineas[0]).toBe("Desde el último plan, este es mi avance real:");
     expect(lineas[1]).toBe("HECHO (1):");
-    expect(lineas[2]).toBe("- Escribe la lista (nota: me tomó 2 días)");
+    // Sin tema conocido, la tarea se nombra por su etapa, nunca por su texto (decision del fundador, 10 oct 2026).
+    expect(lineas[2]).toBe("- una tarea de la etapa 1 (nota: me tomó 2 días)");
     expect(lineas[3]).toBe("EN PROCESO (1):");
     expect(lineas[5]).toBe("SIN EMPEZAR (1):");
     expect(lineas[7]).toBe("Además: Conseguí un local prestado");
@@ -43,7 +44,8 @@ describe("componerMensajeSeguimiento", () => {
     // Sí aparece marcada como retirada, con su motivo y la instrucción de no reproponerla.
     expect(msg).toContain("RETIRADA (no aplica) (1)");
     expect(msg).toContain("NO las vuelvas a proponer");
-    expect(msg).toContain("- Contrata un local (porque: mi negocio es 100% online)");
+    expect(msg).toContain("- una tarea de la etapa 2 (porque: mi negocio es 100% online)");
+    expect(msg).not.toContain("Contrata un local");
   });
 
   it("sin items ni enfoque: aviso de checklist vacío + guía abierta", () => {
@@ -123,7 +125,7 @@ describe("itemsDelUltimoPlanDe (Fase 4.1 V4 + Fase 4.2)", () => {
 
   it("conserva estado, nota, destacado y el orden etapa->orden", () => {
     const items = itemsDelUltimoPlanDe(filas, "core");
-    expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista", noAplicaMotivo: null });
+    expect(items[0]).toEqual({ etapa: 1, texto: "Cierra tu costo", destacado: false, estado: "hecho", nota: "la tabla quedo lista", noAplicaMotivo: null, temas: [] });
     expect(items[1].destacado).toBe(true);
   });
 

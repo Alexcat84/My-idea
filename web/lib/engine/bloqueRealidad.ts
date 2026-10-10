@@ -30,6 +30,8 @@ const PLURAL = (n: number, sing: string, plur: string) => `${n} ${n === 1 ? sing
 // del mensaje de seguimiento), y la regla 8-bis de SYSTEM_PLAN lo nombra por su
 // rótulo en español ("Mi realidad medida"). Se queda en español en cualquier
 // idioma; la IA escribe el plan en el de la idea (lib/i18n/idiomaSalida).
+// Sin el texto de las tareas (decision del fundador, 10 oct 2026): las atrasadas, movidas y retiradas se nombran por su
+// etapa (y el motivo de la persona), porque el texto era del plan y volvia como dato en el plan siguiente.
 export function construirBloqueRealidad(a: Analytics): string | null {
   const u = a.universal;
   if (!u.planVigenteAt && u.accionesHechas === 0) return null;
@@ -53,7 +55,7 @@ export function construirBloqueRealidad(a: Analytics): string | null {
   // Gestor de estados: las retiradas se reportan APARTE del ritmo (no son
   // pendientes ni fracasos), para que el motor no las replanifique.
   if (u.retiradas.length > 0) {
-    const cuales = u.retiradas.map((r) => `"${corto(r.texto)}"${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
+    const cuales = u.retiradas.map((r) => `una tarea de la etapa ${r.etapa}${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
     L.push(`- Retiré ${PLURAL(u.retiradas.length, "tarea", "tareas")} por no aplicar: ${cuales.join("; ")}.`);
   }
 
@@ -73,11 +75,11 @@ export function construirBloqueRealidad(a: Analytics): string | null {
         `${c.desviacionMediaDias > 0 ? "+" : ""}${c.desviacionMediaDias} días.`
     );
     if (c.tardiasTop.length > 0) {
-      const donde = c.tardiasTop.map((t) => `"${corto(t.texto)}" (etapa ${t.etapa}, ${PLURAL(t.diasRetraso, "día", "días")} tarde)`);
+      const donde = c.tardiasTop.map((t) => `una acción de la etapa ${t.etapa} (${PLURAL(t.diasRetraso, "día", "días")} tarde)`);
       L.push(`- Donde se me atoró el tiempo: ${donde.join("; ")}.`);
     }
     if (c.replanificados.length > 0) {
-      const cuales = c.replanificados.map((r) => `"${corto(r.texto)}" (etapa ${r.etapa})`);
+      const cuales = c.replanificados.map((r) => `una acción de la etapa ${r.etapa}`);
       L.push(`- Moví la fecha de ${PLURAL(c.replanificados.length, "acción", "acciones")}: ${cuales.join("; ")}.`);
       // Capa de honestidad como CONTEXTO para el motor: replanificar es control
       // de cambios, no fracaso. El plan vigente ya asume el ritmo real; frente al
@@ -134,7 +136,7 @@ export function construirBloqueRealidadMundo(
   L.push(`- Ritmo en este mundo: ${ritmo.join("; ")}.`);
 
   if (u.retiradas.length > 0) {
-    const cuales = u.retiradas.map((r) => `"${corto(r.texto)}"${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
+    const cuales = u.retiradas.map((r) => `una tarea de la etapa ${r.etapa}${r.motivo ? ` (${corto(r.motivo)})` : ""}`);
     L.push(`- Retiré ${PLURAL(u.retiradas.length, "tarea", "tareas")} de este mundo por no aplicar: ${cuales.join("; ")}.`);
   }
 
@@ -154,12 +156,12 @@ export function construirBloqueRealidadMundo(
     );
     if (c.tardiasTop.length > 0) {
       const donde = c.tardiasTop.map(
-        (t) => `"${corto(t.texto)}" (etapa ${t.etapa}, ${PLURAL(t.diasRetraso, "día", "días")} tarde)`
+        (t) => `una acción de la etapa ${t.etapa} (${PLURAL(t.diasRetraso, "día", "días")} tarde)`
       );
       L.push(`- Donde se me atoró el tiempo en este mundo: ${donde.join("; ")}.`);
     }
     if (c.replanificados.length > 0) {
-      const cuales = c.replanificados.map((r) => `"${corto(r.texto)}" (etapa ${r.etapa})`);
+      const cuales = c.replanificados.map((r) => `una acción de la etapa ${r.etapa}`);
       L.push(
         `- Moví la fecha de ${PLURAL(c.replanificados.length, "acción", "acciones")} de este mundo: ${cuales.join("; ")}.`
       );

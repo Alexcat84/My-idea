@@ -93,13 +93,15 @@ describe("construirBloqueRealidad — modo fechas", () => {
   });
 
   it("dice DONDE se atora, con la etapa y los dias", () => {
-    expect(b).toContain('"Prueba 10 entregas con dos empaques" (etapa 2, 12 días tarde)');
-    expect(b).toContain('"Fija tu precio con costo real" (etapa 3, 5 días tarde)');
+    expect(b).toContain("una acción de la etapa 2 (12 días tarde)");
+    expect(b).not.toContain("Prueba 10 entregas");
+    expect(b).toContain("una acción de la etapa 3 (5 días tarde)");
   });
 
   it("dice CUALES movieron su fecha", () => {
     expect(b).toContain("Moví la fecha de 1 acción");
-    expect(b).toContain('"Habla con 5 cafeterías" (etapa 1)');
+    expect(b).toContain("una acción de la etapa 1");
+    expect(b).not.toContain("Habla con 5 cafeterías");
   });
 });
 
@@ -223,13 +225,15 @@ describe("construirBloqueRealidadMundo — habla del MUNDO, no del proyecto", ()
   });
 
   it("dice dónde se atora EN EL MUNDO, nunca las tardías del core", () => {
-    expect(b).toContain('"Escribe tu protocolo de curado" (etapa 1, 9 días tarde)');
+    expect(b).toContain("una acción de la etapa 1 (9 días tarde)");
+    expect(b).not.toContain("Escribe tu protocolo de curado");
     expect(b).not.toContain("Prueba 10 entregas");
     expect(b).not.toContain("Fija tu precio");
   });
 
   it("dice cuáles movieron su fecha EN EL MUNDO", () => {
-    expect(b).toContain('Moví la fecha de 1 acción de este mundo: "Compra el termómetro"');
+    expect(b).toMatch(/Moví la fecha de 1 acción de este mundo: una acción de la etapa [0-9]/);
+    expect(b).not.toContain("Compra el termómetro");
     expect(b).not.toContain("Habla con 5 cafeterías");
   });
 
@@ -294,7 +298,9 @@ describe("el bloque lleva las tareas enteras", () => {
     const b = construirBloqueRealidad(
       base({ universal: { ...UNIVERSAL, retiradas: [{ texto: LARGA, motivo: "no vendo por pieza sino por lote cerrado de veinte", etapa: 1 }] } })
     );
-    expect(b).toContain(`"${LARGA}"`);
+    // Desde el 10 oct 2026 la tarea ya no viaja: se nombra por su etapa; el motivo de la persona, entero.
+    expect(b).not.toContain(LARGA);
+    expect(b).toContain("una tarea de la etapa 1");
     expect(b).toContain("no vendo por pieza sino por lote cerrado de veinte");
   });
 });

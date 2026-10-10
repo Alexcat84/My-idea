@@ -44,6 +44,7 @@ import { usoVacio } from "@/lib/costmeter";
 import { crearSesion, dominiosDesbloqueados, nodosCubiertos } from "@/lib/db";
 import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
+import { tituloDeNodoPara } from "@/lib/engine/replanteamiento";
 import { avisosNodo } from "@/lib/engine/avisos";
 import { LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { candidatosSeguimiento, seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
@@ -132,13 +133,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       .order("created_at", { ascending: false })
       .order("etapa", { ascending: true })
       .order("orden", { ascending: true });
-  let { data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo`);
+  // nodos_origen (037): el mensaje nombra cada tarea por su tema, nunca por su texto (decision del fundador, 10 oct 2026).
+  let { data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo, nodos_origen`);
+  if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(`${COLS_FOLLOW}, no_aplica_motivo`));
   if (errorItems) ({ data: filas, error: errorItems } = await leerFollow(COLS_FOLLOW));
   if (errorItems) {
     await soltarReserva();
     return NextResponse.json({ error: r.noPudimosLeerChecklist }, { status: 500 });
   }
-  const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio);
+  const items = itemsDelUltimoPlanDe((filas ?? []) as unknown as FilaChecklist[], dominio, tituloDeNodoPara(cargarGrafo()));
   // Un mundo sin checklist propio no tiene nada que seguir: primero se explora.
   if (dominio !== "core" && items.length === 0) {
     await soltarReserva();

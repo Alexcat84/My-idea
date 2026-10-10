@@ -15,6 +15,9 @@ export interface ItemParaComponer {
   nota?: string | null;
   /** gestor de estados: el porqué de una tarea retirada (estado no_aplica) */
   noAplicaMotivo?: string | null;
+  /** Los titulos de los temas de los que salio la tarea (decision del fundador, 10 oct 2026: el mensaje del seguimiento
+   * nombra la tarea por su tema, nunca por su texto). */
+  temas?: string[];
 }
 
 /** Una fila cruda de checklist_items, como la devuelve la consulta del follow. */
@@ -30,6 +33,8 @@ export interface FilaChecklist {
   nota?: string | null;
   no_aplica_motivo?: string | null;
   created_at: string;
+  /** Los nodos de los que salio la tarea (migracion 037). */
+  nodos_origen?: string[] | null;
 }
 
 /**
@@ -46,7 +51,12 @@ export interface FilaChecklist {
  * Ordena por su cuenta a propósito: no depende de que quien la llama haya
  * ordenado la consulta, y así el test la puede ejercitar de verdad.
  */
-export function itemsDelUltimoPlanDe(filas: FilaChecklist[], dominio: string): ItemParaComponer[] {
+export function itemsDelUltimoPlanDe(
+  filas: FilaChecklist[],
+  dominio: string,
+  /** El titulo de un nodo para la IA (su etiqueta de arbol), o null si no se conoce. */
+  tituloDeNodo: (nodeId: string) => string | null = () => null
+): ItemParaComponer[] {
   const delDominio = filas.filter((f) =>
     dominio === "core" ? !f.dominio || f.dominio === "core" : f.dominio === dominio
   );
@@ -62,6 +72,7 @@ export function itemsDelUltimoPlanDe(filas: FilaChecklist[], dominio: string): I
       estado: f.estado,
       nota: f.nota ?? null,
       noAplicaMotivo: f.no_aplica_motivo ?? null,
+      temas: [...new Set((f.nodos_origen ?? []).map(tituloDeNodo).filter((x): x is string => Boolean(x)))],
     }));
 }
 
@@ -82,10 +93,16 @@ const ETIQUETA: Record<ChecklistEstado, string> = {
   no_aplica: "RETIRADA (no aplica)",
 };
 
+/** La tarea nombrada por su tema, nunca por su texto (decision del fundador, 10 oct 2026: la feria de agosto, inventada
+ * en un plan, volvia en el siguiente por el texto de su tarea en este mensaje). Sin tema, solo su etapa. */
+function nombre(i: ItemParaComponer): string {
+  return i.temas && i.temas.length > 0 ? i.temas.join(" / ") : `una tarea de la etapa ${i.etapa}`;
+}
+
 function lista(items: ItemParaComponer[], estado: ChecklistEstado): string[] {
   return items
     .filter((i) => i.estado === estado)
-    .map((i) => `- ${i.texto}${i.nota ? ` (nota: ${i.nota.trim()})` : ""}`);
+    .map((i) => `- ${nombre(i)}${i.nota ? ` (nota: ${i.nota.trim()})` : ""}`);
 }
 
 /** Mensaje compacto en el orden que mejor lee el intérprete: logros primero,
@@ -109,7 +126,7 @@ export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
   }
   const retiradas = e.items
     .filter((i) => i.estado === "no_aplica")
-    .map((i) => `- ${i.texto}${i.noAplicaMotivo ? ` (porque: ${i.noAplicaMotivo.trim()})` : ""}`);
+    .map((i) => `- ${nombre(i)}${i.noAplicaMotivo ? ` (porque: ${i.noAplicaMotivo.trim()})` : ""}`);
   if (retiradas.length) {
     partes.push(
       `${ETIQUETA.no_aplica} (${retiradas.length}). Decidí que no corren para esta idea; NO las vuelvas a proponer:`,
@@ -135,4 +152,41 @@ export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
       : "No estoy seguro de hacia dónde profundizar; guíame según mi avance."
   );
   return partes.join("\n");
+}
+
+/**
+ * Para el guion de medicion (decision del fundador, 10 oct 2026): un mensaje de seguimiento GUARDADO antes de que el
+ * mensaje dejara de llevar el texto de las tareas, pasado al formato de hoy. Cada linea de tarea se cambia por su tema
+ * (por sus nodos de origen) o por su etapa; en el bloque de realidad, el texto entre comillas de una tarea atrasada,
+ * movida o retirada se cambia por su etapa. Lo demas (las notas, "Ademas", lo medido y el enfoque) queda igual.
+ */
+export function mensajeAlFormatoSinTexto(
+  guardado: string,
+  filas: Array<{ texto: string; etapa: number; nodos_origen?: string[] | null }>,
+  tituloDeNodo: (nodeId: string) => string | null = () => null
+): string {
+  const porTexto = new Map(filas.map((f) => [f.texto.trim(), f]));
+  let enAvance = true;
+  return guardado
+    .split("\n")
+    .map((linea) => {
+      if (/^(Además:|Mi realidad medida|Lo que más me interesa|No estoy seguro de hacia)/.test(linea)) enAvance = false;
+      if (enAvance && linea.startsWith("- ")) {
+        const m = linea.slice(2).match(/^(.*?)((?: \((?:nota|porque): .*\))?)$/);
+        const texto = (m?.[1] ?? linea.slice(2)).trim();
+        const cola = m?.[2] ?? "";
+        const f = porTexto.get(texto);
+        const temas = f ? [...new Set((f.nodos_origen ?? []).map(tituloDeNodo).filter((x): x is string => Boolean(x)))] : [];
+        const nombre = temas.length > 0 ? temas.join(" / ") : f ? `una tarea de la etapa ${f.etapa}` : "una tarea";
+        return `- ${nombre}${cola}`;
+      }
+      if (!enAvance && linea.startsWith("- ")) {
+        return linea
+          .replace(/"[^"]+" \(etapa (\d+), ([^)]*?) tarde\)/g, "una acción de la etapa $1 ($2 tarde)")
+          .replace(/"[^"]+" \(etapa (\d+)\)/g, "una acción de la etapa $1")
+          .replace(/"[^"]+"( \([^)]*\))?/g, "una tarea$1");
+      }
+      return linea;
+    })
+    .join("\n");
 }

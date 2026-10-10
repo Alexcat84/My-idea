@@ -31,6 +31,7 @@ import { contextoDeSesion, estadoVivoDeLaFoto, memoriaDe } from "../lib/engine/m
 import { perfilConEstadoVivoActual } from "../lib/engine/perfilDelPlan";
 import { numerosDelMomento } from "../lib/engine/numerosDelMomento";
 import { planAnteriorParaIA, tituloDeNodoPara } from "../lib/engine/replanteamiento";
+import { mensajeAlFormatoSinTexto } from "../lib/engine/seguimientoComposer";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { obtenerTareasDePlan } from "../lib/db";
@@ -133,7 +134,15 @@ async function main() {
         .lt("created_at", ref.creado)
         .order("created_at", { ascending: false });
       const previo = ((previos ?? []) as Array<{ id: string; contenido_md: string; dominio: string | null }>).find((p) => (p.dominio ?? "core") === dominio);
-      if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(sb, ref.project_id, previo.id), tituloDeNodoPara(graph));
+      if (previo) {
+        const tareas = await obtenerTareasDePlan(sb, ref.project_id, previo.id);
+        planAnterior = planAnteriorParaIA(previo.contenido_md, tareas, tituloDeNodoPara(graph));
+        // El mensaje del seguimiento guardado, al formato de hoy (decision del fundador, 10 oct 2026): sin el texto de
+        // ninguna tarea, como lo compone hoy la app (lib/engine/seguimientoComposer.ts).
+        if (recorrido.textoOriginal?.startsWith("Desde el último plan")) {
+          recorrido.textoOriginal = mensajeAlFormatoSinTexto(recorrido.textoOriginal, tareas, tituloDeNodoPara(graph));
+        }
+      }
     }
     const ciclo = recorrido.ciclo;
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
