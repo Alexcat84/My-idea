@@ -93,6 +93,29 @@ dos. Regla de cierre del acta, fila 17. Informe: [medicion_final/RESULTADO.md](m
 una procedencia nueva («El material enseña…»), hechos del negocio que nadie dio, causas y resultados prometidos en las
 bisagras y dos contrarios de lectura de datos. La frase fija de «aún no cubre» ya no se sostiene en ningún plan.
 
+## El redactor con respaldo: dos mediciones finales (10 oct)
+
+Los cinco puntos de `docs/producto/REDACTOR_CON_RESPALDO.md` en `fidelidad-contexto`; regla de la fila 17 (dos jueces
+Opus 5.5 por la API, árbitro en las coincidencias; 0 contrarios, como mucho 2 invenciones, 0 procedencias).
+
+| | Primera (fila 21) | Segunda (fila 23) | Regla |
+|---|---:|---:|---:|
+| Contrarios | 9 | **3** | 0 |
+| Invenciones | 21 | **3** | como mucho 2 |
+| Procedencias | 0 | **0** | 0 |
+| Planes con algún sostenido | 12 de 14 | 6 de 14 | n/a |
+| Coste | 9,63 USD | 8,22 USD | n/a |
+
+**La primera** la estropearon un defecto del guion (las cifras de hoy) y uno de producto (la hora duplicada en la
+calculadora). Se arreglaron con el visto del fundador, junto con la candidata del punto 5. **La segunda NO PASA, pero
+con 6:**
+- la feria de agosto, que llega por el mensaje de entrada del seguimiento (el texto de cada tarea del plan anterior);
+- tres temas aplicados al revés dentro de un paso;
+- «hecha a mano» en un título.
+
+Informes: [medicion_respaldo/RESULTADO.md](medicion_respaldo/RESULTADO.md) y
+[medicion_respaldo2/RESULTADO.md](medicion_respaldo2/RESULTADO.md).
+
 ## Qué hay en esta carpeta
 
 | Archivo o carpeta | Qué es |
@@ -101,6 +124,8 @@ bisagras y dos contrarios de lectura de datos. La frase fija de «aún no cubre�
 | [COSTES_MODELOS.md](COSTES_MODELOS.md) | coste por corrida, por modelo, por pieza, por llamada y por espacio; la caché; el tope; la consulta SQL; contra el vuelo del 27 sep (Sonnet 4.6 + Haiku 4.5) |
 | [coherencia/](coherencia/) | la prueba de coherencia: por proyecto, cada sesión turno por turno y cada documento tal como lo lee la persona |
 | [medicion_ab/](medicion_ab/) | la medición barata: los 14 planes redactados de nuevo en A y en B, los veredictos del juez y del árbitro y el informe |
+| [medicion_respaldo/](medicion_respaldo/) | primera medición final del redactor con respaldo (NO PASA, 30; defecto del guion y de producto) |
+| [medicion_respaldo2/](medicion_respaldo2/) | segunda medición final del redactor con respaldo (NO PASA, 6) |
 | [medicion_final/](medicion_final/) | la última medición (camino de producción, dos jueces): planes, cada juez, las coincidencias, cada árbitro y el informe |
 | [medicion_ab2/](medicion_ab2/) | la segunda medición A/B (contexto arreglado): planes, veredictos del juez por la API y el informe |
 | [vuelo/](vuelo/) | el vuelo final validado (intento 10 + fases 3 y 4): igual, por proyecto, sesión por sesión y cada plan completo |

@@ -1,0 +1,133 @@
+{
+  "version": "A",
+  "modelo": "claude-opus-5-5",
+  "dos_jueces": true,
+  "hallazgos_brutos": 6,
+  "sostenidos": 6,
+  "por_clase": {
+    "contrario": 3,
+    "invencion": 3,
+    "procedencia": 0
+  },
+  "planes_con_sostenidos": 6,
+  "planes": 14,
+  "trampas": {
+    "f006": {
+      "tipo": "contrario",
+      "cazada_juez": false,
+      "cazada_relectura": true
+    },
+    "f010": {
+      "tipo": "invencion",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f015": {
+      "tipo": "procedencia",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    }
+  },
+  "por_plan": [
+    {
+      "paquete": "f001",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Si no lo decides tú ni se lo encargas a alguien, se queda sin decidir."
+        }
+      ]
+    },
+    {
+      "paquete": "f002",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Busca un proveedor alterno de resina, porque hoy dependes de uno solo"
+        }
+      ]
+    },
+    {
+      "paquete": "f003",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce."
+        }
+      ]
+    },
+    {
+      "paquete": "f004",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f005",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f007",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f008",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f009",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce"
+        }
+      ]
+    },
+    {
+      "paquete": "f011",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f012",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Plan para tu pieza hecha a mano"
+        }
+      ]
+    },
+    {
+      "paquete": "f013",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f014",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f016",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "Anota tus costos fijos del mes: lo que pagas aunque no vendas, como herramientas, moldes que se desgastan, empaques o publicidad."
+        }
+      ]
+    },
+    {
+      "paquete": "f017",
+      "hallazgos": 0,
+      "sostenidos": []
+    }
+  ]
+}

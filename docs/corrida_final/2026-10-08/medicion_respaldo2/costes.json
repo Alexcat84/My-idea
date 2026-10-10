@@ -1,0 +1,382 @@
+{
+  "gastado_usd": 1.06007,
+  "avisos": [
+    "9909f451-a7e1-482a-b21f-ded87c7a070f: cifras del proyecto posteriores al plan (fuera): precio_tentativo, unidades_vendidas, costos_fijos_mensuales, costo_materiales_unidad; sin fecha: ninguna",
+    "ee6de956-f711-4146-9f15-9ca5ea99c0b2: cifras del proyecto posteriores al plan (fuera): precio_tentativo, unidades_vendidas, costo_materiales_unidad; sin fecha: ninguna",
+    "b4a01dea-63e5-4b44-bab5-2b1f14b2574c: cifras del proyecto posteriores al plan (fuera): valor_hora, horas_por_unidad, precio_tentativo, capacidad_semanal, costos_fijos_mensuales, costo_materiales_unidad; sin fecha: ninguna",
+    "fb027af0-ecdd-4b62-8284-7f3eb8e7db3a: cifras del proyecto posteriores al plan (fuera): valor_hora, horas_por_unidad, precio_tentativo, capacidad_semanal, unidades_vendidas, costo_materiales_unidad; sin fecha: ninguna"
+  ],
+  "planes": [
+    {
+      "plan_id": "9909f451-a7e1-482a-b21f-ded87c7a070f",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09042,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11077,
+          "out": 2301,
+          "cache_read": 0,
+          "cache_write_5m": 0,
+          "cache_write_1h": 11314,
+          "usd": 0.09042,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": false
+    },
+    {
+      "plan_id": "0e481ad8-ec8f-4cb1-a1af-2bb5d3ee86f9",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07664,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 8695,
+          "out": 1837,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9945,
+          "usd": 0.0766356,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "265e4486-ae89-44ad-b449-6f6a0234acfb",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07241,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14286,
+          "out": 3001,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3183,
+          "usd": 0.07240959999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "ff010188-a9db-48be-9e87-5a5a7c435a1e",
+      "dominio": "risk_management",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.07241,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 10032,
+          "out": 2883,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 5604,
+          "usd": 0.07240559999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "ee6de956-f711-4146-9f15-9ca5ea99c0b2",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.04616,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 9483,
+          "out": 2606,
+          "cache_read": 11314,
+          "cache_write_5m": 0,
+          "cache_write_1h": 0,
+          "usd": 0.0461574,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": false
+    },
+    {
+      "plan_id": "b4a01dea-63e5-4b44-bab5-2b1f14b2574c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.04191,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11099,
+          "out": 1700,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 404,
+          "usd": 0.04190959999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": false
+    },
+    {
+      "plan_id": "fb027af0-ecdd-4b62-8284-7f3eb8e7db3a",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.05708,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "autodeclaracion_fallida",
+        "coherencia_cobertura_corregida",
+        "numero_huerfano",
+        "numero_huerfano",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14545,
+          "out": 2401,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 720,
+          "usd": 0.057075600000000004,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": false
+    },
+    {
+      "plan_id": "f14f36e7-d5ed-42d9-818d-eef3096353e9",
+      "dominio": "seguridad_digital",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.06662,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 14917,
+          "out": 1995,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 3934,
+          "usd": 0.0666156,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "aad2749d-a69c-43b6-8a5b-6f73a7df7374",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.06566,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 11853,
+          "out": 2955,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 2828,
+          "usd": 0.06566359999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "deb138a3-9226-4334-a7d9-2dc36519ca0e",
+      "dominio": "quality",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.09889,
+      "eventos_plan": [
+        "prosa_de_enlace_quitada",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 16849,
+          "out": 2726,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 9208,
+          "usd": 0.09888559999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "8b7764c4-8e7c-4d0e-ab11-ed13ef3b968c",
+      "dominio": "primer_equipo",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.10073,
+      "eventos_plan": [
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 22884,
+          "out": 2713,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 6683,
+          "usd": 0.10072560000000001,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "85248377-b739-42a8-8f52-063d3748a4ec",
+      "dominio": "health_safety",
+      "tipo": "plan_mundo",
+      "costo_redactor": 0.09653,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "autodeclaracion_fallida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 16969,
+          "out": 2829,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8301,
+          "usd": 0.0965276,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "31ebf0ea-a5a2-44dc-afe7-d31c7d90db1c",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.08319,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "coherencia_cobertura_corregida",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 8557,
+          "out": 3342,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 7891,
+          "usd": 0.0831936,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    },
+    {
+      "plan_id": "c73e86f8-2c5b-49f0-874c-a8253392c880",
+      "dominio": "core",
+      "tipo": "plan_nucleo",
+      "costo_redactor": 0.09145,
+      "eventos_plan": [
+        "cita_sin_respaldo",
+        "prosa_de_enlace_quitada",
+        "cobertura_conceptos"
+      ],
+      "llamadas": [
+        {
+          "componente": "plan",
+          "modelo": "claude-sonnet-5-5",
+          "in": 12281,
+          "out": 3378,
+          "cache_read": 10956,
+          "cache_write_5m": 0,
+          "cache_write_1h": 8002,
+          "usd": 0.09144559999999999,
+          "stop_reason": "end_turn",
+          "con_contexto": true
+        }
+      ],
+      "estado_vivo_del_momento": true
+    }
+  ]
+}

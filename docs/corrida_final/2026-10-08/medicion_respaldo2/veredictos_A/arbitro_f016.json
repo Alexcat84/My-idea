@@ -1,0 +1,13 @@
+{
+  "paquete": "f016",
+  "arbitrajes": [
+    {
+      "afirmacion": "Anota tus costos fijos del mes: lo que pagas aunque no vendas, como herramientas, moldes que se desgastan, empaques o publicidad.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "contrario",
+      "evidencia": "contexto.lo_que_conto: \"Cada maceta me cuesta como 68 en materiales -- cemento, moldes, pintura\"; punto_equilibrio_unidades, paso 1: variable = \"cambia con las unidades producidas: materiales, tiempo de producción\"; fijo = \"no cambia: renta, herramientas, salarios administrativos\"",
+      "razon": "La persona metió los moldes dentro de su costo de materiales por maceta. El nodo clasifica los materiales como costo variable, y el empaque también cambia con cada pieza. Poner moldes y empaques entre los costos fijos contradice lo que ella contó y la clasificación del nodo, y cuenta los moldes dos veces en el punto de equilibrio. Herramientas y publicidad sí caben como fijos, pero la frase en conjunto queda contraria."
+    }
+  ]
+}

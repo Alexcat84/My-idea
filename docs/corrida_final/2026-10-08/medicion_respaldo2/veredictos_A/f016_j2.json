@@ -1,0 +1,18 @@
+{
+  "paquete": "f016",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Anota tus costos fijos del mes: lo que pagas aunque no vendas, como herramientas, moldes que se desgastan, empaques",
+      "por_que": "La persona ya metió los moldes dentro de sus 68 de materiales por maceta, así que contarlos aquí como costo fijo contradice su dato y los cuenta dos veces.",
+      "nodo": "punto_equilibrio_unidades"
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Anota tus costos fijos del mes: lo que pagas aunque no vendas, como herramientas, moldes que se desgastan, empaques o publicidad.",
+      "por_que": "El empaque se gasta por cada maceta, así que cambia con las unidades, y el nodo llama a eso costo variable, no fijo.",
+      "nodo": "punto_equilibrio_unidades"
+    }
+  ],
+  "afirmaciones_leidas": 56
+}

@@ -1,0 +1,25 @@
+{
+  "paquete": "f015",
+  "hallazgos": [
+    {
+      "clase": "procedencia",
+      "afirmacion": "Lo respaldan décadas de estudios sobre pequeños negocios",
+      "por_que": "Atribuye el consejo a 'estudios' externos, lo que insinúa de dónde sale y no es un método que se nombra y se explica.",
+      "nodo": "metricas_accionables",
+      "clase_juez2": "procedencia",
+      "afirmacion_juez2": "Lo respaldan décadas de estudios sobre pequeños negocios",
+      "por_que_juez2": "Atribuye el consejo a «estudios» como fuente de autoridad, cosa que las instrucciones prohíben, y ningún nodo menciona estudios."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "quien anota cada venta decide mejor",
+      "por_que": "Ningún nodo afirma que anotar cada venta mejore las decisiones. metricas_accionables habla de métricas causales y cohortes, no de registrar ventas, y la persona no contó nada parecido.",
+      "nodo": "metricas_accionables",
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "quien anota cada venta decide mejor",
+      "por_que_juez2": "Ningún nodo dice este resultado causal general sobre anotar ventas. Además no encaja con una app de suscripción, que no registra ventas sueltas."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

@@ -368,3 +368,23 @@ Los 14 planes por el camino de producción, sin verificador. Cifras de `medicion
 
 Jueces y árbitro estimados a 5/25 USD por millón de tokens; la cifra oficial es la consola. **Resultado: NO PASA**
 (ver [medicion_final/RESULTADO.md](medicion_final/RESULTADO.md)). Sección manual, como la 9 y la 10.
+
+## 12. El cierre del 10 oct 2026: copia fiel y redactor con respaldo
+
+Gasto estimado por los guiones de la API (la cifra oficial es la consola del fundador).
+
+| Pieza | Modelo | USD |
+|---|---|---:|
+| Copia fiel, pilotos | Sonnet 5.5 | 1,59 |
+| Copia fiel, parte 1 (k31b, 76 paquetes) | Sonnet 5.5 | 10,10 |
+| Copia fiel, parte 2a (12 lotes V) | Sonnet 5.5 | 3,84 |
+| Copia fiel, parte 2b (k32) | Sonnet 5.5 | 1,85 |
+| Copia fiel, parte 3 (reescritura y verificación r3) | Sonnet 5.5 | 8,69 |
+| **Copia fiel, total** | | **26,07** |
+| Primera medición final del redactor | Sonnet 5.5 + Opus 5.5 | 9,63 |
+| Segunda medición final del redactor | Sonnet 5.5 + Opus 5.5 | 8,22 |
+| **Total del 10 oct** | | **43,92** |
+
+Coste real frente a lo estimado: entre 1,6 y 1,9 veces, porque Sonnet 5.5 razona por defecto y esos tokens se cobran.
+Desde la verificación de k31b, los guiones reservan el peor caso de cada llamada antes de lanzarla y el tope se
+cumple con llamadas en paralelo. Sección manual, como la 9, la 10 y la 11.
