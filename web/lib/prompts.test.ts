@@ -68,16 +68,17 @@ describe("prompts.ts re-exporta byte a byte desde assets/prompts.json", () => {
 describe("auditoria de prompts (7 oct 2026): ninguna instruccion empuja a inventar", () => {
   it("B2: la seccion de numeros del plan solo lleva los que nombran los conceptos de viabilidad", () => {
     expect(prompts.SYSTEM_PLAN).toContain("Un item por cada numero que nombran los conceptos con es_viabilidad_economica");
-    expect(prompts.SYSTEM_PLAN).toContain("no añadas metricas que el material no nombre");
+    // 9 oct 2026 (REDACTOR_CON_RESPALDO punto 1): lo que recibe la IA se llama "temas", no "material".
+    expect(prompts.SYSTEM_PLAN).toContain("no añadas metricas que los temas no nombren");
     expect(prompts.SYSTEM_PLAN).not.toContain("cada numero que la persona debe calcular o conseguir");
   });
 
   it("B4: el cierre del plan prohibe inventar leyes, normas, tramites, plazos, precios, porcentajes, tasas de exito, resultados y nombres de herramientas o empresas", () => {
     const cierre = prompts.SYSTEM_PLAN.match(/Tampoco inventes [^.]*\./)?.[0] ?? "";
     for (const t of ["leyes", "normas", "tramites", "plazos", "precios", "porcentajes de referencia", "tasas de exito",
-      "resultados prometidos", "nombres de herramientas o empresas", "que no esten en el material o en lo que dijo la persona"])
+      "resultados prometidos", "nombres de herramientas o empresas", "que no esten en los temas o en lo que dijo la persona"])
       expect(cierre, t).toContain(t);
-    expect(prompts.SYSTEM_PLAN.indexOf("Todo debe salir del material recibido")).toBeLessThan(prompts.SYSTEM_PLAN.indexOf("Tampoco inventes"));
+    expect(prompts.SYSTEM_PLAN.indexOf("Todo debe salir de los temas recibidos")).toBeLessThan(prompts.SYSTEM_PLAN.indexOf("Tampoco inventes"));
   });
 
   it("B5: el perfil se anota con las palabras de la persona, sin deducir", () => {

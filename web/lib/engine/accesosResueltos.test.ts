@@ -90,8 +90,8 @@ describe("OP-C-01 - aMaterial: el material del plan se arma tras resolver", () =
   it("la RUTA con un id historico produce un plan con TODOS sus conceptos", () => {
     const ruta = ["absorbido", "vecino"];
     const { payload } = prepararPlan(ruta, GRAFO, {}, "una idea cualquiera", null, null, false, null);
-    expect(payload.material_principal).toHaveLength(ruta.length);
-    const conceptos = payload.material_principal.map((m) => m.concepto);
+    expect(payload.temas_del_recorrido).toHaveLength(ruta.length);
+    const conceptos = payload.temas_del_recorrido.map((m) => m.concepto);
     expect(conceptos).toContain("El concepto que hoy representa esa historia");
     expect(conceptos, "el plan cita el texto que la fusion declaro peor").not.toContain(
       "El concepto viejo que se fundio dentro"

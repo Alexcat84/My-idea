@@ -120,8 +120,10 @@ export function validarCaminos(data: unknown, candidatos: string[]): Camino[] {
   return caminos;
 }
 
+/** De cada tarea del plan anterior viaja su estado y la nota de la persona; nunca su texto, que era una frase del plan
+ * y no un dato de la persona (REDACTOR_CON_RESPALDO punto 5, visto del fundador, 9 oct 2026: la feria de agosto
+ * inventada en un plan volvia como cierta en el siguiente por el texto de su tarea). */
 export interface TareaPlanAnterior {
-  texto: string;
   estado: ChecklistEstado;
   nota?: string;
 }
@@ -134,8 +136,9 @@ const RE_ETAPA = /^##\s+Etapa\s+(\d+)\s*:\s*(.+)$/gm;
 
 /**
  * El plan anterior como lo recibe el redactor (payload.plan_anterior, regla
- * 8-ter de SYSTEM_PLAN): sus etapas, con el título del markdown, y las tareas
- * de cada una con su estado (y la nota si la hay). null si no hay plan anterior.
+ * 8-ter de SYSTEM_PLAN): sus etapas, con el título del markdown, y de cada
+ * tarea su estado y la nota de la persona si la hay, sin el texto de la tarea.
+ * null si no hay plan anterior.
  */
 export function planAnteriorParaIA(
   md: string | null,
@@ -151,7 +154,7 @@ export function planAnteriorParaIA(
       titulo: titulos.get(numero) ?? "",
       tareas: items
         .filter((i) => i.etapa === numero)
-        .map((i) => ({ texto: i.texto, estado: i.estado, ...(i.nota?.trim() ? { nota: i.nota.trim() } : {}) })),
+        .map((i) => ({ estado: i.estado, ...(i.nota?.trim() ? { nota: i.nota.trim() } : {}) })),
     })),
   };
 }

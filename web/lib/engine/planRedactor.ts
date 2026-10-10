@@ -32,6 +32,7 @@ import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
 import { interpolar } from "../i18n/interpolar";
 import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
+import { quitarCitasDeFuente } from "./citasDeFuente";
 import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
 import type { PrioridadDeclarada } from "./interprete";
 import { tokensCosecha } from "./tokens";
@@ -194,8 +195,8 @@ export function cosecharVecindario(
 export interface PayloadPlan {
   entrada_original: string;
   perfil_sesion: string | null;
-  material_principal: MaterialNodo[];
-  material_de_apoyo: MaterialNodo[];
+  temas_del_recorrido: MaterialNodo[];
+  temas_vecinos: MaterialNodo[];
   bloqueo_declarado: string | null;
   es_seguimiento?: true;
   estado_vivo_previo?: string | null;
@@ -264,8 +265,8 @@ export function prepararPlan(
   const payload: PayloadPlan = {
     entrada_original: textoOriginal,
     perfil_sesion: perfilSesion,
-    material_principal: materialPrincipal,
-    material_de_apoyo: materialDeApoyo,
+    temas_del_recorrido: materialPrincipal,
+    temas_vecinos: materialDeApoyo,
     bloqueo_declarado: prioridadDeclarada?.texto ?? null,
   };
   if (esSeguimiento) {
@@ -292,8 +293,8 @@ export const MARCADOR_AUTODECLARACION = "===JSON===";
  * solo familias_tratadas -- se elimino "secciones" (nunca se leia, era
  * puro peso extra en la cola que se cortaba primero al agotar max_tokens). */
 /** Fase 3.1: 'etapas' mapea el numero de Etapa (tal como aparece en el
- * markdown, "1", "2", ...) a los node_ids de material_principal/
- * material_de_apoyo cuyo contenido real el redactor uso en esa etapa --
+ * markdown, "1", "2", ...) a los node_ids de temas_del_recorrido/
+ * temas_vecinos cuyo contenido real el redactor uso en esa etapa --
  * ver verificarProcedenciaEtapas. */
 export interface AutodeclaracionPlan {
   familias_tratadas?: string[];
@@ -712,6 +713,12 @@ export function finalizarPlan(
     if (limpio.cambios > 0) {
       cuerpo = limpio.texto;
       registrarEvento?.({ tipo: "moneda_no_dicha", cambios: limpio.cambios, moneda_de_la_persona: moneda });
+    }
+    // Los temas que recibe la IA nunca se citan como fuente (REDACTOR_CON_RESPALDO punto 1, 9 oct 2026).
+    const sinFuente = quitarCitasDeFuente(cuerpo, [LOCALE_BASE, idioma]);
+    if (sinFuente.cambios > 0) {
+      cuerpo = sinFuente.texto;
+      registrarEvento?.({ tipo: "cita_de_fuente_interna", cambios: sinFuente.cambios });
     }
   } else {
     cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);

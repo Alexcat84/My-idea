@@ -7,7 +7,7 @@
 //    bitácora.
 //  - Profundizar: el plan sale 'seguimiento' y lo que la persona contó queda en
 //    la bitácora.
-//  - Los dos: la IA recibe el plan anterior (etapas y tareas con su estado).
+//  - Los dos: la IA recibe el plan anterior (etapas y, de cada tarea, su estado y la nota de la persona).
 // Mismo arnés que route.test.ts: grafo real, Anthropic y Supabase falsos.
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { cargarGrafo } from "@/lib/engine/graph";
@@ -156,7 +156,7 @@ describe("la entrega de un replanteamiento", () => {
     expect(cobrar).toHaveBeenCalledWith(expect.any(String), "replanteamiento", 5, "plan:s1");
 
     const payload = JSON.parse(messagesStreamFalso.mock.calls[0][0].messages[0].content);
-    expect(payload.material_principal.map((m: { id: string }) => m.id)).toEqual([N1, N2]);
+    expect(payload.temas_del_recorrido.map((m: { id: string }) => m.id)).toEqual([N1, N2]);
     expect(payload.replanteamiento).toEqual({
       historia: "Se cayó el local.",
       se_conserva: ["Hablar con 5 panaderías"],
@@ -168,10 +168,8 @@ describe("la entrega de un replanteamiento", () => {
         {
           numero: 1,
           titulo: "Valida",
-          tareas: [
-            { texto: "Hablar con 5 panaderías", estado: "hecho", nota: "dos sí" },
-            { texto: "Pintar el local", estado: "pendiente" },
-          ],
+          // REDACTOR_CON_RESPALDO punto 5 (9 oct 2026): el estado y la nota de la persona, sin el texto de la tarea.
+          tareas: [{ estado: "hecho", nota: "dos sí" }, { estado: "pendiente" }],
         },
       ],
     });

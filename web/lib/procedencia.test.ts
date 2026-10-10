@@ -212,8 +212,9 @@ describe("procedencia: la IA no menciona ni insinua el origen", () => {
   // prompts) la regla ya no pone ejemplos de metodos con nombre: viajaba en toda llamada y le ofrecia a la IA metodos
   // que el material de esa llamada no traia. Lo que se verifica es lo mismo de antes, sin los ejemplos: un metodo se
   // nombra solo si viene en el material, se explica sin atribuirlo a nadie y con su nombre neutro si lo tiene.
-  it("D5: un metodo se nombra solo si viene en el material, se explica sin atribuirlo a nadie y con su nombre neutro si lo tiene", () => {
-    expect(REGLA_SIN_FUENTES).toMatch(/Un método se nombra solo si viene en el material que recibes/);
+  it("D5: un metodo se nombra solo si viene en los temas que recibe la IA, se explica sin atribuirlo a nadie y con su nombre neutro si lo tiene", () => {
+    // 9 oct 2026 (REDACTOR_CON_RESPALDO punto 1): lo que la IA recibe se llama "temas", no "material".
+    expect(REGLA_SIN_FUENTES).toMatch(/Un método se nombra solo si viene en los temas que recibes/);
     expect(REGLA_SIN_FUENTES).toMatch(/se explica sin atribuirlo a nadie/);
     expect(REGLA_SIN_FUENTES).toMatch(/si tiene un nombre neutro, usa ese/);
     expect(REGLA_SIN_FUENTES).toMatch(/no el que lleva el apellido de una persona/);

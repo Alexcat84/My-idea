@@ -147,8 +147,8 @@ Cosecha de vecindario (Fase 2.4): antes de redactar, se expande en silencio
     desde la ruta (conversada + silenciosa) hacia sus nodos_siguientes y
     nodos_previos adyacentes (hasta 25, priorizados por familia faltante,
     fase mayoritaria y afinidad con el perfil_sesion). El redactor recibe
-    material_principal (la ruta, manda estructura y cronologia) y
-    material_de_apoyo (la cosecha, enriquece etapas existentes sin crear
+    temas_del_recorrido (la ruta, manda estructura y cronologia) y
+    temas_vecinos (la cosecha, enriquece etapas existentes sin crear
     etapas propias). El plan reporta cuantos conceptos lo alimentaron. La
     etiqueta inicial/completo y la seccion "no cubre" se calculan sobre
     ruta+cosecha (lo que el plan realmente contiene), no solo la ruta.
@@ -338,8 +338,7 @@ REGLA_IDIOMA_SALIDA = (
 # (docs/coherencia/2026-10-08/fidelidad.md).
 REGLA_SIN_CAUSAS_INVENTADAS = (
     "\n\nNINGUNA CAUSA INVENTADA: no afirmes CAUSAS de la situacion de la "
-    "persona (por que le pasa algo) que ella no haya dicho ni den los nodos o "
-    "el material que recibes. Si la causa no esta dicha, describe lo que pasa "
+    "persona (por que le pasa algo) que ella no haya dicho ni den los temas que recibes. Si la causa no esta dicha, describe lo que pasa "
     "sin explicar por que. Tampoco le pongas una causa con 'suele pasar "
     "cuando', 'es comun que' o 'casi siempre es porque'. El consejo practico "
     "de la casa (como hacer algo) sigue permitido. Caso real de lo que NO se "
@@ -576,10 +575,9 @@ SYSTEM_INTERPRETE_MULTI = (
     "mas cercano a ella.\n"
     "CONFESION DE DOMINIO (Fase 3.9.1): distinta del caso anterior. Aquella "
     "regla asume que la prioridad esta DENTRO de tu dominio (un frente de "
-    "negocio que si puedes atacar). Pero si la prioridad declarada cae FUERA de "
-    "tu material -- tu conocimiento es de emprendimiento, validacion y modelo "
+    "negocio que si puedes atacar). Pero si la prioridad declarada cae FUERA de tus temas -- tu conocimiento es de emprendimiento, validacion y modelo "
     "de negocio; NO de construir software, ingenieria, ni el detalle tecnico de "
-    "un oficio -- y NINGUN concepto de tu material la aborda directamente (lo "
+    "un oficio -- y NINGUN concepto de tus temas la aborda directamente (lo "
     "notas porque la afinidad de todos los candidatos a esa prioridad es baja), "
     "PROHIBIDO fingir que un nodo de validacion la resuelve o desviarla en "
     "silencio. Tu pregunta_adaptada DEBE confesarlo en una frase honesta "
@@ -942,9 +940,9 @@ SYSTEM_PLAN = (
     "entrada_original (el texto libre con el que la persona empezo o el "
     "mensaje nuevo de esta sesion si es un seguimiento), "
     "perfil_sesion (lo que revelo sobre su idea a lo largo del recorrido), "
-    "material_principal: la ruta conversada (lista ordenada de conceptos, "
+    "temas_del_recorrido: la ruta conversada (lista ordenada de conceptos, "
     "cada uno con titulo, pasos, entregable esperado, y "
-    "es_viabilidad_economica), material_de_apoyo: conceptos vecinos del "
+    "es_viabilidad_economica), temas_vecinos: conceptos vecinos del "
     "grafo (mismo formato) que NO fueron conversados con el usuario pero son "
     "relevantes a su perfil, bloqueo_declarado (str|null: lo que el usuario "
     "mismo repitio como su freno o urgencia principal durante la "
@@ -952,16 +950,14 @@ SYSTEM_PLAN = (
     "es_seguimiento + estado_vivo_previo si esta sesion continua un "
     "proyecto ya en marcha.\n\n"
     "Reglas obligatorias:\n"
-    "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
-    "material en una tarea con verbo, sujeto y que debe quedar anotado al "
-    "terminar. Pon cantidades o umbrales SOLO si vienen en el material o los "
-    "dijo la persona. Ejemplo: el material dice '¿has validado con clientes "
+    "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta de los temas en una tarea con verbo, sujeto y que debe quedar anotado al "
+    "terminar. Pon cantidades o umbrales SOLO si vienen en los temas o los dijo la persona. Ejemplo: un tema dice '¿has validado con clientes "
     "reales?' y tu escribes 'Entrevista a personas de tu publico objetivo y "
     "anota como resuelven el problema hoy'.\n"
-    "2. material_principal manda la estructura y la cronologia del plan: "
-    "sus conceptos, en su orden, definen las etapas. material_de_apoyo NUNCA "
+    "2. temas_del_recorrido manda la estructura y la cronologia del plan: "
+    "sus conceptos, en su orden, definen las etapas. temas_vecinos NUNCA "
     "crea etapas propias; solo enriquece las etapas ya definidas por "
-    "material_principal con acciones y consideraciones adicionales, donde el "
+    "temas_del_recorrido con acciones y consideraciones adicionales, donde el "
     "concepto de apoyo sea relevante a esa etapa. Si un concepto de apoyo no "
     "encaja con claridad en ninguna etapa existente, omitelo — no fuerces su "
     "inclusion.\n"
@@ -975,11 +971,10 @@ SYSTEM_PLAN = (
     "'**Primera acción:** anota cuanto gastas en materiales para una tanda y "
     "divide entre las piezas que salieron para saber tu costo real por "
     "unidad'.\n"
-    "4. Si al menos un concepto (de material_principal o material_de_apoyo) "
+    "4. Si al menos un concepto (de temas_del_recorrido o temas_vecinos) "
     "tiene es_viabilidad_economica=true, agrega al final una seccion "
     "'## ¿Puede sostenerse tu idea? Los numeros en simple' que sintetice "
-    "esos conceptos en palabras comunes, usando solo lo que esta en el "
-    "material. Si NINGUNO lo tiene, NO agregues esa seccion ni inventes "
+    "esos conceptos en palabras comunes, usando solo lo que esta en los temas. Si NINGUNO lo tiene, NO agregues esa seccion ni inventes "
     "cifras.\n"
     "4-bis. FORMATO OBLIGATORIO de esa seccion (Fase 3.9.2): PROHIBIDO un "
     "parrafo denso con las etiquetas en negrita metidas en linea; se lee como "
@@ -988,7 +983,7 @@ SYSTEM_PLAN = (
     "item, cada uno con su etiqueta en negrita al inicio, asi: '- **Costo por "
     "unidad:** que es y como lo calculas, en una o dos frases.' Un item por "
     "cada numero que nombran los conceptos con es_viabilidad_economica; no "
-    "añadas metricas que el material no nombre; (c) al final, la "
+    "añadas metricas que los temas no nombren; (c) al final, la "
     "accion concreta en su propio bloque etiquetado '**Primera acción:**', sin "
     "fecha, jamas suelta dentro de la prosa.\n"
     "5. Prohibido cerrar el plan con preguntas para el usuario. El plan "
@@ -996,8 +991,7 @@ SYSTEM_PLAN = (
     "6. Titulo breve especifico al proyecto (no generico), un parrafo de "
     "contexto que conecte entrada_original y perfil_sesion.\n"
     "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
-    "'negocio' unicamente si el analisis economico forma parte del "
-    "material recibido, o si el propio usuario ya la uso en su entrada o "
+    "'negocio' unicamente si el analisis economico forma parte de los temas recibidos, o si el propio usuario ya la uso en su entrada o "
     "perfil_sesion. Ejemplo correcto: 'define el precio de tu idea' en vez "
     "de 'define el precio de tu negocio', salvo que el usuario mismo ya "
     "haya escrito 'mi negocio' en su entrada_original.\n"
@@ -1007,7 +1001,7 @@ SYSTEM_PLAN = (
     "vez ya validaste el interes de dos instituciones y conoces tu costo "
     "real por unidad; este plan parte de ahi.' Usa solo avances que "
     "estado_vivo_previo diga con esas palabras. No repitas acciones ya "
-    "cubiertas antes: el material que recibes ya excluye lo cubierto en "
+    "cubiertas antes: los temas que recibes ya excluyen lo cubierto en "
     "sesiones previas, asi que basta con no asumir que el usuario empieza "
     "de cero.\n"
     "8-bis. EL BLOQUE DE REALIDAD Y SU TONO (Fase 4.0): en un seguimiento, "
@@ -1029,10 +1023,7 @@ SYSTEM_PLAN = (
     "cumplimiento o calendario: no se juzga contra fechas que decidio no "
     "tener.\n"
     "8-ter. EL PLAN ANTERIOR (ciclo de replanteamiento, Fase 2): si recibes "
-    "plan_anterior (las etapas del plan previo, cada tarea con su estado: hecho, "
-    "en_proceso, empezado, pendiente o no_aplica), el plan nuevo CONSTRUYE "
-    "ENCIMA de el. Prohibido proponer como tarea nueva algo que ya esta hecho, "
-    "aunque sea con otras palabras. Lo que esta en_proceso o empezado continua si "
+    "plan_anterior (las etapas del plan previo con su titulo y, de cada tarea, su estado: hecho, en_proceso, empezado, pendiente o no_aplica, y la nota de la persona si dejo una; sin el texto de las tareas, que era del plan y no de la persona: no lo supongas ni lo reconstruyas), el plan nuevo CONSTRUYE ENCIMA de el. Lo que la persona escribio en sus notas es dato suyo. Prohibido proponer como tarea nueva algo que la persona ya hizo segun sus notas o segun lo que cuenta ahora, aunque sea con otras palabras. Lo que esta en_proceso o empezado continua si "
     "sigue teniendo sentido, escrito como continuacion y no como si arrancara de "
     "cero. Lo no_aplica jamas vuelve. Lo pendiente sigue, cambia o cae segun lo "
     "que la persona cuenta ahora. El plan nuevo no es el anterior con otras "
@@ -1048,9 +1039,9 @@ SYSTEM_PLAN = (
     "9. Cobertura del bloqueo declarado (Fase 2.7): si recibes "
     "bloqueo_declarado no nulo, el plan DEBE darle tratamiento explicito "
     "— una etapa propia o integrada en una existente, con pasos que salgan "
-    "de material_principal y material_de_apoyo (la cosecha ya prioriza "
-    "conceptos afines a ese bloqueo). Si el material no trae como atacarlo, "
-    "aplica la regla 16: dilo y ofrece solo lo que el material si cubre; "
+    "de temas_del_recorrido y temas_vecinos (la cosecha ya prioriza "
+    "conceptos afines a ese bloqueo). Si los temas no traen como atacarlo, "
+    "aplica la regla 16: dilo y ofrece solo lo que los temas si cubren; "
     "jamas inventes tecnicas, parametros ni umbrales. Si dentro de perfil_sesion o entrada_original el "
     "usuario ya propuso su propio metodo para atacarlo (por ejemplo, "
     "'probar variando una sola cosa a la vez'), reconocelo explicitamente "
@@ -1062,11 +1053,10 @@ SYSTEM_PLAN = (
     "puede pedir como insumo algo que el plan no ayudo a producir en una "
     "etapa anterior (por ejemplo, si una etapa pide 'vende unidades sin "
     "defectos' o 'produce en volumen', una etapa anterior debe haber dado "
-    "los pasos concretos para lograr esa calidad o cantidad; si el material "
-    "no lo cubre con suficiente detalle, ajusta la etapa para pedir algo "
+    "los pasos concretos para lograr esa calidad o cantidad; si los temas no lo cubren con suficiente detalle, ajusta la etapa para pedir algo "
     "que SI es alcanzable con lo que hay disponible).\n"
     "10. Limite editorial (Fase 2.7): maximo 5 a 7 etapas en todo el plan, "
-    "nunca mas de 7. Si el material sugeriria mas, FUSIONA las etapas que "
+    "nunca mas de 7. Si los temas sugeririan mas, FUSIONA las etapas que "
     "midan o persigan la misma funcion (por ejemplo, dos etapas que ambas "
     "miden intencion de compra o comportamiento del cliente van en una sola "
     "etapa mas densa, no en dos separadas) en vez de mantenerlas como "
@@ -1081,8 +1071,8 @@ SYSTEM_PLAN = (
     "o probar pago (no basta con mencionar clientes de pasada). "
     "'viabilidad_economica' significa que el plan calcula o pide calcular "
     "costos, precios, margen o punto de equilibrio con numeros (no basta "
-    "con decir 'piensa en tus costos' sin estructura). Se honesto: si el "
-    "material no da para tratar una familia con sustancia real, NO la "
+    "con decir 'piensa en tus costos' sin estructura). Se honesto: si los "
+    "temas no dan para tratar una familia con sustancia real, NO la "
     "declares solo porque la mencionaste una vez. Esta autodeclaracion es "
     "la UNICA fuente para la etiqueta del plan y la seccion de lo que aun "
     "no cubre — si declaras una familia que el plan no sustenta, el "
@@ -1110,8 +1100,7 @@ SYSTEM_PLAN = (
     "todas su tilde. Un plan sin tildes se lee como un borrador descuidado y "
     "rompe la confianza; las preguntas de la entrevista si llevan acentos y el "
     "plan no puede ser la excepcion.\n"
-    "14. ESPANOL LLANO, CERO JERGA VERBATIM (Fase 3.9): los conceptos del "
-    "material traen titulos academicos, muchos en ingles o con jerga "
+    "14. ESPANOL LLANO, CERO JERGA VERBATIM (Fase 3.9): los temas traen titulos academicos, muchos en ingles o con jerga "
     "('Build-Measure-Learn', 'Customer Development', 'earlyvangelists', 'Leap "
     "of Faith Assumptions', 'Pivote'). PROHIBIDO copiarlos verbatim en el plan "
     "visible como nombre de una etapa, un paso o un concepto. Traduce SIEMPRE "
@@ -1124,7 +1113,7 @@ SYSTEM_PLAN = (
     "inventes cifras de tamano de mercado, poblacion, numero de competidores o "
     "estadisticas externas, NI SIQUIERA como ejemplo hipotetico envuelto en un "
     "condicional (prohibido 'si en el pais hay 500 auditores certificados "
-    "activos...'). Esas cifras no estan en el material: no existen y no puedes "
+    "activos...'). Esas cifras no estan en los temas: no existen y no puedes "
     "saberlas. La forma correcta es mandar al usuario a buscarlas en la fuente "
     "real: 'busca cuantos auditores certificados hay en tu zona; ese numero te "
     "dira si hay espacio'. Y NUNCA infieras el pais o "
@@ -1134,32 +1123,30 @@ SYSTEM_PLAN = (
     "es su mercado, di 'en tu zona' o 'en tu pais' en generico, jamas un lugar "
     "concreto inferido.\n"
     "16. CONFESION DE DOMINIO (Fase 3.9.1): si bloqueo_declarado o el perfil "
-    "dejan claro que el frente principal del usuario cae FUERA de tu material "
+    "dejan claro que el frente principal del usuario cae FUERA de tus temas "
     "-- tu conocimiento es de emprendimiento, validacion y modelo de negocio, "
     "NO de construir software, ingenieria, ni el detalle tecnico de un oficio "
-    "-- y el material no trae conceptos que lo aborden, DILO explicitamente en "
+    "-- y los temas no traen conceptos que lo aborden, DILO explicitamente en "
     "el plan en vez de reencuadrarlo en silencio como una tarea de validacion. "
     "Una linea honesta ('construir el motor de analisis en si se sale de lo que "
-    "este plan cubre: mi material es de negocio y validacion, no de ingenieria "
-    "de software') y luego pivota a lo que SI ofreces alrededor de esa "
+    "este plan cubre, que es negocio y validacion, no ingenieria de software') y luego pivota a lo que SI ofreces alrededor de esa "
     "prioridad (como probar que el motor sirve, sin construirlo entero). Nunca finjas que el plan resuelve algo "
-    "que su material no contiene: esa confesion honesta es lo que el producto "
+    "que sus temas no contienen: esa confesion honesta es lo que el producto "
     "promete.\n\n"
     "Espanol comun, sin jerga sin explicar, sin autores, sin relleno "
-    "motivacional. Todo debe salir del material recibido; no inventes "
-    "tecnicas, cifras ni fuentes nuevas que no esten en el material. Tampoco "
+    "motivacional. Todo debe salir de los temas recibidos; no inventes "
+    "tecnicas, cifras ni fuentes nuevas que no esten en los temas. Tampoco "
     "inventes leyes, normas, tramites, plazos, precios o porcentajes de "
     "referencia, tasas de exito, resultados prometidos ni nombres de "
-    "herramientas o empresas que no esten en el material o en lo que dijo la "
+    "herramientas o empresas que no esten en los temas o en lo que dijo la "
     "persona.\n\n"
-    "EJEMPLO COMPLETO DE TRANSFORMACION (formato de referencia; el "
-    "material real de cada sesion trae mas conceptos y mas detalle que "
+    "EJEMPLO COMPLETO DE TRANSFORMACION (formato de referencia; los temas reales de cada sesion traen mas conceptos y mas detalle que "
     "este ejemplo reducido):\n"
     "Entrada recibida: entrada_original='hago velas de soya aromaticas, "
     "las vendo a amigas pero quiero saber si esto puede ser algo mas "
     "serio'. perfil_sesion='Trabaja sola, ya vendio algunas velas a "
     "conocidas y quiere validar si hay mercado mas alla de su circulo "
-    "cercano. No ha calculado costos.' material_principal=[{concepto: "
+    "cercano. No ha calculado costos.' temas_del_recorrido=[{concepto: "
     "'Validacion con Clientes Reales', pasos: ['¿Le has preguntado a "
     "alguien fuera de tu circulo si compraria esto?', '¿Sabes cuanto "
     "pagarian?'], entregable: 'Lista de personas fuera de tu circulo "
@@ -1167,12 +1154,12 @@ SYSTEM_PLAN = (
     "{concepto: 'Costeo Basico de Producto', pasos: ['¿Has sumado el "
     "costo de cera, mecha, fragancia y envase por vela?'], entregable: "
     "'Costo real por unidad', es_viabilidad_economica: true}]. "
-    "material_de_apoyo=[{concepto: 'Canales de Venta Directa', pasos: "
+    "temas_vecinos=[{concepto: 'Canales de Venta Directa', pasos: "
     "['Considera vender en mercados locales o redes sociales antes de "
     "una tienda propia'], entregable: '', es_viabilidad_economica: "
     "false}].\n"
-    "Salida esperada (fragmento, mismo orden que material_principal, con "
-    "material_de_apoyo enriqueciendo la Etapa 1 porque 'canales de venta' "
+    "Salida esperada (fragmento, mismo orden que temas_del_recorrido, con "
+    "temas_vecinos enriqueciendo la Etapa 1 porque 'canales de venta' "
     "es relevante ahi):\n"
     "'## Etapa 1: Confirma que hay demanda mas alla de tu circulo cercano"
     "\\n\\nVender a amigas te dice que el producto gusta, pero no confirma "
@@ -1188,23 +1175,21 @@ SYSTEM_PLAN = (
     "pagaron.\\n\\n**Primera acción:** Publica tu vela con precio y foto en "
     "un grupo local de redes sociales y anota cuantos mensajes de interes "
     "real recibes.'\n"
-    "Nota como el paso 2 vino de material_de_apoyo (canales de venta) "
-    "insertado DENTRO de la Etapa 1 que ya definia material_principal, sin "
+    "Nota como el paso 2 vino de temas_vecinos (canales de venta) "
+    "insertado DENTRO de la Etapa 1 que ya definia temas_del_recorrido, sin "
     "crear una etapa nueva solo para canales. La Etapa 2 (Costeo Basico) "
     "seguiria despues, y como tiene es_viabilidad_economica=true, el plan "
     "cerraria con la seccion '## ¿Puede sostenerse tu idea?' sintetizando "
     "el costeo en palabras simples, tal como pide la regla 4. Como en este "
-    "caso la persona aun no ha calculado costos y el material no trae "
-    "ninguna cifra, esa seccion final NO pone numeros: 'Todavia no sabes "
+    "caso la persona aun no ha calculado costos y los temas no traen ninguna cifra, esa seccion final NO pone numeros: 'Todavia no sabes "
     "cuanto te cuesta cada vela, y sin eso no se puede saber si el precio "
     "te deja ganancia. **Costo por unidad:** suma lo que gastas en cera, "
     "mecha, fragancia y envase para una tanda y divide entre las velas que "
     "salen. **Primera acción:** anota lo que gastaste en tu ultima tanda y "
-    "cuantas velas salieron.' Una cifra solo aparece en el plan si viene "
-    "en el material o la dijo la persona; si no la hay, se pide como primer "
+    "cuantas velas salieron.' Una cifra solo aparece en el plan si viene en los temas o la dijo la persona; si no la hay, se pide como primer "
     "paso: la honestidad sobre lo que aun no se sabe vale mas que un "
     "numero inventado que parezca completo.\n\n"
-    "Cada elemento de material_principal y material_de_apoyo trae un campo "
+    "Cada elemento de temas_del_recorrido y temas_vecinos trae un campo "
     "'id' (Fase 3.1): es SOLO para tu autodeclaracion de procedencia al "
     "final (regla de FORMATO DE SALIDA mas abajo) -- jamas escribas un id "
     "crudo dentro del markdown visible, ahi siempre usas el titulo del "
@@ -1221,9 +1206,9 @@ SYSTEM_PLAN = (
     "(subconjunto de [\"accion_clientes\", \"viabilidad_economica\"], "
     "puede ser lista vacia), \"etapas\": {\"1\": [id, ...], \"2\": [id, ...], "
     "...} (Fase 3.1, procedencia: para cada Etapa numerada que escribiste "
-    "en el markdown, la lista de 'id' -- de material_principal y/o "
-    "material_de_apoyo -- cuyo contenido real usaste en esa etapa; nunca "
-    "inventes un id que no viniera en el material recibido)}. No agregues "
+    "en el markdown, la lista de 'id' -- de temas_del_recorrido y/o "
+    "temas_vecinos -- cuyo contenido real usaste en esa etapa; nunca "
+    "inventes un id que no viniera en los temas recibidos)}. No agregues "
     "nada despues de esa linea."
 )
 
@@ -1238,8 +1223,7 @@ SYSTEM_CAMINOS = (
     "en marcha quiere replantear su camino porque algo cambio. Recibes un JSON "
     "con historia (lo que paso, en sus palabras), se_conserva (lo que ya "
     "construyo y le sigue sirviendo), se_suelta (lo que ya construyo y ya no "
-    "aplica), plan_anterior (las etapas del plan previo con cada tarea y su "
-    "estado, o null), realidad (su avance medido y su ritmo real, o null), "
+    "aplica), plan_anterior (las etapas del plan previo con su titulo y, de cada tarea, su estado y la nota de la persona si dejo una, sin el texto de las tareas; o null), realidad (su avance medido y su ritmo real, o null), "
     "estado_vivo (lo que el sistema sabe de su proyecto, o null) y candidatos: "
     "conceptos de metodo que el proyecto AUN NO ha trabajado, cada uno con id, "
     "titulo, fase y resumen.\n\n"
@@ -2462,6 +2446,61 @@ def _corregir_coherencia_cobertura(evaluacion_cobertura, cuerpo, tiene_material_
     return evaluacion_cobertura
 
 
+_FUENTE_SUJETOS = sorted([
+    "el material", "este material", "ese material", "nuestro material", "mi material", "el contenido de este plan",
+    "los temas de este plan", "los temas", "estos temas", "el método base", "el temario", "la base de este plan",
+], key=len, reverse=True)
+_FUENTE_VERBOS = sorted([
+    "enseña", "enseñan", "dice", "dicen", "indica", "indican", "explica", "explican", "recomienda", "recomiendan",
+    "sugiere", "sugieren", "propone", "proponen", "plantea", "plantean", "señala", "señalan", "advierte", "advierten",
+    "no cubre", "no cubren", "solo cubre", "solo cubren", "no trae", "no traen", "no incluye", "no incluyen",
+    "no aborda", "no abordan",
+], key=len, reverse=True)
+_FUENTE_PREFIJOS = sorted(["según", "de acuerdo con", "como enseña", "como enseñan", "como dice", "como dicen",
+                           "como indica", "como explica"], key=len, reverse=True)
+_S = "|".join(map(re.escape, _FUENTE_SUJETOS))
+_V = "|".join(map(re.escape, _FUENTE_VERBOS))
+_P = "|".join(map(re.escape, _FUENTE_PREFIJOS))
+_RE_FUENTE_PREFIJO = re.compile(rf"^\s*(?:{_P})\s+(?:{_S})(?:\s+(?:{_V}))?\s*,\s*(.+)$", re.IGNORECASE)
+_RE_FUENTE_NEXO = re.compile(rf"^\s*(?:{_S})\s+(?:{_V})\s*,?\s+que\s+(.+)$", re.IGNORECASE)
+_RE_FUENTE = re.compile(rf"(?<![^\W\d_])(?:{_S})(?:\s+[^\W\d_]+){{0,4}}\s+(?:{_V})(?![^\W\d_])", re.IGNORECASE)
+
+
+def _mayuscula(s):
+    s = s.lstrip()
+    return s[:1].upper() + s[1:]
+
+
+def _quitar_citas_de_fuente(texto):
+    """Los temas citados como fuente (decision del fundador, 9 oct 2026, REDACTOR_CON_RESPALDO punto 1; port de
+    quitarCitasDeFuente, web/lib/engine/citasDeFuente.ts, con la lista del espanol: el motor solo escribe en espanol).
+    'Segun el material, X' y 'El material ensena que X' quedan como 'X'; otra frase con un sujeto de fuente y un verbo
+    de fuente se quita. El material fisico no se toca (hace falta el verbo de fuente). Devuelve (texto, cambios)."""
+    cambios = 0
+    lineas = []
+    for linea in texto.split("\n"):
+        m = re.match(r"^\s*(?:#+\s*|\d+\.\s+|[-*]\s+)?", linea)
+        prefijo = m.group(0) if m else ""
+        cuerpo = linea[len(prefijo):]
+        frases = re.findall(r"[^.!?]+[.!?]+[\"»”)]*\s*|[^.!?]+$", cuerpo)
+        if not frases:
+            lineas.append(linea)
+            continue
+        salida = []
+        for f in frases:
+            f = f.strip()
+            m1 = _RE_FUENTE_PREFIJO.match(f) or _RE_FUENTE_NEXO.match(f)
+            if m1:
+                cambios += 1
+                salida.append(_mayuscula(m1.group(1)))
+            elif _RE_FUENTE.search(f):
+                cambios += 1
+            else:
+                salida.append(f)
+        lineas.append(prefijo + " ".join(salida))
+    return "\n".join(lineas), cambios
+
+
 def _parsear_autodeclaracion(raw):
     """Separa el markdown del plan del bloque final ===JSON=== (Fase 2.8,
     autodeclaracion de cobertura). Si el delimitador falta, devuelve (raw
@@ -2508,7 +2547,7 @@ def _familias_desde_encabezados(cuerpo):
     por max_tokens en una sesion en vivo). A diferencia del respaldo
     anterior (plan_readiness.evaluar_ruta sobre ruta+cosecha_ids), este NO
     mira los tags de node_families del material de ENTRADA -- el redactor
-    puede omitir parte de material_de_apoyo si "no encaja con claridad en
+    puede omitir parte de temas_vecinos si "no encaja con claridad en
     ninguna etapa" (regla 2), asi que un tag de entrada no garantiza que la
     familia realmente quedo cubierta en la SALIDA. En vez de eso, escanea
     los encabezados REALES del markdown ya generado con las mismas
@@ -2537,7 +2576,7 @@ def _familias_desde_encabezados(cuerpo):
 
 def _verificar_procedencia_etapas(autodeclaracion, ruta, cosecha_ids, registrar_evento=None):
     """Fase 3.1 (caja de vidrio): el redactor autodeclara, por etapa
-    numerada, que node_ids de material_principal/material_de_apoyo uso
+    numerada, que node_ids de temas_del_recorrido/temas_vecinos uso
     realmente (regla de FORMATO DE SALIDA, campo 'etapas'). Verifica
     deterministicamente que cada id declarado pertenezca al material que
     de verdad se le entrego (ruta + cosecha) -- si el modelo inventa un id
@@ -2603,19 +2642,19 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             "es_viabilidad_economica": families.get(nid) == "viabilidad_economica",
         }
 
-    material_principal = [a_material(nid) for nid in ruta]
+    temas_del_recorrido = [a_material(nid) for nid in ruta]
     cosecha_ids = cosechar_vecindario(ruta, graph, families, evaluacion, perfil_sesion, prioridad_declarada,
                                       excluir=excluir)
-    material_de_apoyo = [a_material(nid) for nid in cosecha_ids]
-    tiene_material_economico = any(m["es_viabilidad_economica"] for m in material_principal + material_de_apoyo)
+    temas_vecinos = [a_material(nid) for nid in cosecha_ids]
+    tiene_material_economico = any(m["es_viabilidad_economica"] for m in temas_del_recorrido + temas_vecinos)
 
     autodeclaracion = None
     if API_KEY:
         payload = {
             "entrada_original": texto_original,
             "perfil_sesion": perfil_sesion,
-            "material_principal": material_principal,
-            "material_de_apoyo": material_de_apoyo,
+            "temas_del_recorrido": temas_del_recorrido,
+            "temas_vecinos": temas_vecinos,
             "bloqueo_declarado": (prioridad_declarada or {}).get("texto") if prioridad_declarada else None,
         }
         if es_seguimiento:
@@ -2625,11 +2664,15 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             raw = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL,
                                 max_tokens=5000, componente="plan")
             cuerpo, autodeclaracion = _parsear_autodeclaracion(raw)
+            # Los temas que recibe la IA nunca se citan como fuente (REDACTOR_CON_RESPALDO punto 1, 9 oct 2026).
+            cuerpo, citas = _quitar_citas_de_fuente(cuerpo)
+            if citas and registrar_evento:
+                registrar_evento({"tipo": "cita_de_fuente_interna", "cambios": citas})
         except Exception as e:
             print(f"  (fallo el redactor con IA, ensamblo offline: {e})")
-            cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
+            cuerpo = _ensamblar_offline(temas_del_recorrido, perfil_sesion, texto_original)
     else:
-        cuerpo = _ensamblar_offline(material_principal, perfil_sesion, texto_original)
+        cuerpo = _ensamblar_offline(temas_del_recorrido, perfil_sesion, texto_original)
 
     if autodeclaracion is not None:
         evaluacion_cobertura = _evaluacion_desde_autodeclaracion(autodeclaracion)
@@ -2656,7 +2699,7 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
     seccion_economica = _extraer_seccion_economica(cuerpo)
     if seccion_economica:
         textos_material = [
-            t for m in (material_principal + material_de_apoyo)
+            t for m in (temas_del_recorrido + temas_vecinos)
             for t in (m.get("pasos", []) + [m.get("entregable", "")])
         ]
         numeros_permitidos_plan = verificador_huerfanos.cerradura_aritmetica(
