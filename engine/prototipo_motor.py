@@ -2564,7 +2564,9 @@ def _valida_con_clientes_en_etapas(cuerpo):
     """Las ETAPAS del plan validan con clientes (decision del fundador, 9 oct 2026): alguna accion de una etapa (su
     encabezado o sus pasos; nunca la introduccion, la seccion economica ni 'lo que aun no cubre') habla, entrevista,
     pregunta, entrega, lanza, prueba, vende o cobra a clientes, compradores o usuarios. Port de
-    validaConClientesEnEtapas (web/lib/engine/planRedactor.ts)."""
+    validaConClientesEnEtapas (web/lib/engine/planRedactor.ts) con la lista del espanol: el motor solo escribe planes
+    en espanol (no manda el bloque de IDIOMA DE SALIDA); las listas de los once idiomas viven en la web
+    (web/lib/engine/validacionClientes.ts)."""
     frases = []
     en_etapa = False
     for linea in cuerpo.splitlines():
