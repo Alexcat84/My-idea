@@ -2117,3 +2117,11 @@ paquetes 67 a 76.
 - **Tanda `copia-k31b` (parcial):** 1.086 correcciones en 169 nodos; Gate 0 y las dos suites en verde.
 - **No sostienen: 234,** que van a la reescritura r3. Una de ellas la quitó la guarda de voz de cliente: la reescritura
   metía «el libro» en un paso (V046-027).
+
+**Parte 2a, lectura de los 12 lotes V** (V063, V067, V075, V076, V078, V079 y V081 a V086): leídos por el guion con
+Sonnet 5.5; cada lector cazó su trampa (814 de 814 lotes del plan leídos, sin segunda lectura ni árbitro). Gasto del
+guion: 3,84 USD (tope 10).
+
+**Parte 2b, ola k32:** 253 propuestas en 13 paquetes, verificadas a ciegas con 26 de 26 trampas cazadas (gasto del
+guion 1,85 USD, tope 4). **Tanda `copia-k32`:** 200 correcciones en 70 nodos; Gate 0 y las dos suites en verde.
+No sostienen 53, que van a la reescritura r3.
