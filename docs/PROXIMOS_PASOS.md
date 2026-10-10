@@ -306,6 +306,21 @@ pregunta de la IA y la respuesta de la persona) y decirle que vale igual que el 
 convierta en pregunta lo que la persona ya dijo. En dos mediciones no mejoró a A de forma clara y suma un 69 % al
 coste del plan.
 
+### Estado al 9 oct 2026 (cierre): la última medición, hecha, y NO PASA
+
+ACTA fila 18; informe `docs/corrida_final/2026-10-08/medicion_final/RESULTADO.md`. Camino de producción, versión A sin
+verificador, dos jueces Opus 5.5 por la API y árbitro en las coincidencias: 2 contrarios, 13 invenciones y 2
+procedencias en 10 de 14 planes (regla: 0, 2, 0); trampas 3/3; 9,29 USD.
+- Arreglado y medido: la frase fija de «aún no cubre» (de 11 planes a 5, ninguno sostenido; ahora en los once
+  idiomas), las premisas de las preguntas de la IA, los contrarios de cálculo del primer vuelo.
+- Lo que queda lo escribe el redactor: una procedencia nueva («El material enseña…», «El material de este plan…»: la
+  palabra con que el payload le nombra los nodos), hechos del negocio no dados (canales que «no pagan lo mismo»,
+  tamaños que «no cuestan lo mismo»), causas y resultados prometidos en las bisagras, y dos contrarios de lectura de
+  datos (las 12 macetas otra vez; «tus cinco anotaciones» cuando fueron tres).
+- Rama `fidelidad-contexto` empujada y SIN fundir. El `.env` raíz sigue puesto hasta la decisión.
+
+**Decisión que espera al fundador.**
+
 **Para retomar:** el clon de trabajo es `C:/Users/AlexDesk/Documents/my-idea-main` (rama `fidelidad-contexto`); el clon
 `I have an idea` solo se pone al día con fast-forward. Merge a main solo con autorización explícita del fundador. Antes
 de cualquier commit: `pnpm vitest run` (en `web/`) y `python engine/run_all_tests.py`.

@@ -1,0 +1,30 @@
+{
+  "paquete": "f008",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "por_que": "Atribuye una causa que nadie dio: compara materiales por pieza con un costo total de 130 que incluye su hora a 50, así que la diferencia es su tiempo y no un gasto oculto. Él mismo dijo que los materiales son unos 68.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo",
+      "por_que": "Afirma como hecho que los precios por canal son distintos; la persona nunca dio el precio de la tienda ni dijo que difiera.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "por_que": "Da por existente una feria local en agosto que la persona nunca mencionó en lo que contó y que ningún nodo menciona.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Este paso puedes saltártelo: «Conecta en Redes Sociales» no hace falta en tu caso.",
+      "por_que": "Declara innecesarias las redes sociales cuando casi todas sus ventas pasan por Instagram, y además marca como saltable el paso de decidir, que es el entregable de la etapa.",
+      "nodo": "estrategia_redes_sociales_franquicias"
+    }
+  ],
+  "afirmaciones_leidas": 78
+}

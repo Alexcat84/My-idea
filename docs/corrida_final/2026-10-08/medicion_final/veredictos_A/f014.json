@@ -1,0 +1,25 @@
+{
+  "paquete": "f014",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "anota cuántas macetas de tus 12 al mes pasan por ese canal",
+      "por_que": "Trata las 12 macetas como su venta total, pero la persona dijo que vende unas 12 al mes por Instagram, además de lo que vende a la tienda de plantas.",
+      "nodo": null,
+      "clase_juez2": "contrario",
+      "afirmacion_juez2": "anota cuántas macetas de tus 12 al mes pasan por ese canal",
+      "por_que_juez2": "La persona dijo que vende unas 12 macetas al mes por Instagram, no 12 en total. La frase supone que solo una parte de esas 12 pasa por Instagram, y el mismo plan antes dice 'vendes unas 12 al mes por Instagram'."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "el lote te da descuento en materiales, pero puede dejarte piezas paradas",
+      "por_que": "La persona solo dijo que por pedido no se atrasa y pierde el descuento. Que el lote deje piezas paradas es una consecuencia de su negocio que ni ella ni ningún nodo mencionan.",
+      "nodo": "riesgo_contra_valor_vale_la_pena",
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "el lote te da descuento en materiales, pero puede dejarte piezas paradas",
+      "por_que_juez2": "La persona solo dijo que por pedido no se atrasa pero pierde el descuento. Ni ella ni ningún nodo mencionan que producir por lote deje piezas sin vender o paradas."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

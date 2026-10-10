@@ -1,0 +1,36 @@
+{
+  "paquete": "f003",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "por_que": "La persona dijo que el 130 incluye su hora a 50; el costo de materiales de una tanda no tiene por qué igualar ese total, y nada respalda que la diferencia sea un gasto oculto.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Anota el resultado al lado de tu costo de 130 y revisa si coinciden.",
+      "por_que": "Compara el costo de solo materiales con un costo total que, según la persona, incluye su tiempo a 50 la hora, así que no deberían coincidir.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo",
+      "por_que": "Da por hecho que los precios por canal son distintos; la persona nunca dio el precio de la tienda ni dijo que fuera diferente.",
+      "nodo": null
+    },
+    {
+      "clase": "procedencia",
+      "afirmacion": "El material de este plan no cubre seguridad informática en detalle",
+      "por_que": "Alude a un material de fondo del que saldría el consejo, lo que insinúa su procedencia.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "por_que": "Ningún nodo y nada de lo que contó la persona menciona una feria local en agosto; es un hecho del negocio que nadie dio y que se arrastra del plan anterior.",
+      "nodo": null
+    }
+  ],
+  "afirmaciones_leidas": 78
+}

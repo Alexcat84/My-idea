@@ -1,0 +1,13 @@
+{
+  "paquete": "f011",
+  "arbitrajes": [
+    {
+      "afirmacion": "así que tu tiempo es el recurso más escaso",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Frase completa: 'Fabricas tú mismo cada pieza y trabajas solo, así que tu tiempo es el recurso más escaso.' Que trabaja solo sí está respaldado: contexto.ficha.equipo = {personas: 1, descripcion: 'fabrica él mismo'} y la persona dijo 'Vendo un producto fisico que fabrico yo mismo, una pieza a la vez.' La conclusión no aparece en ningún lado: ningún nodo habla de la escasez del tiempo del fundador ni de cuál es su recurso más escaso (los más cercanos, reduccion_tiempo_de_mercado_velocidad y producto_minimo_viable, tratan de velocidad al mercado y de menor esfuerzo, no de esto), y la persona tampoco lo contó.",
+      "razon": "Las premisas están respaldadas, pero la frase saca de ellas una conclusión causal sobre el negocio de la persona y la presenta como hecho, sin que ella ni ningún nodo la digan. Es una causa y un diagnóstico plausibles pero no dados, que es lo que la rúbrica llama invención, y no un consejo operativo."
+    }
+  ]
+}

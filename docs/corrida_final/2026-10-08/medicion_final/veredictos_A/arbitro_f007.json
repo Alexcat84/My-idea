@@ -1,0 +1,21 @@
+{
+  "paquete": "f007",
+  "arbitrajes": [
+    {
+      "afirmacion": "porque la tienda y Instagram no te pagan lo mismo",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: la persona solo dijo que la tienda de plantas 'me las revende'. Nunca dio el precio que le paga la tienda. El plan_anterior y el paso 4 de esta misma etapa lo dejan en 'probablemente no son el mismo'. Los nodos verificar_clientes_y_canales y verificar_modelo_ingresos piden mapear y calcular el costo de canal, pero no afirman cuánto paga cada canal en su caso.",
+      "razon": "Convierte en hecho del negocio de la persona una diferencia de pago que nadie dio y que el propio plan presenta como probable dos líneas después. Los nodos enseñan a medirla, no la dan por cierta."
+    },
+    {
+      "afirmacion": "lo que te queda de cada maceta después de ese costo, distinto en la tienda, en Instagram y en la feria",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: no hay cifras por canal y la feria es en agosto, todavía no ocurre. La Etapa 2 (paso 5) pide calcular cuánto costaría la feria. verificar_clientes_y_canales pide medir el costo de cada eslabón, sin presuponer el resultado. El plan_anterior definía el margen por canal sin afirmar que fuera distinto.",
+      "razon": "Afirma como resultado que el margen difiere en los tres canales, incluida una feria aún no calculada ni vivida. Lo que los nodos respaldan es comparar los márgenes, no adelantar que salen distintos."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "paquete": "f016",
+  "arbitrajes": [
+    {
+      "afirmacion": "Sin un criterio claro, \"burbujas\" o \"acabado irregular\" significan algo distinto cada día, y por eso tus lotes no salen parejos.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "definiciones_operacionales: \"Muchos problemas de calidad surgen porque trabajadores e inspectores no comparten un criterio claro\". La persona solo dijo: \"Mis clientes se quejan de piezas con burbujas y acabados irregulares entre lotes\". La propia salida, en la etapa 2, dice: \"Sin registro no puedes saber si las burbujas aparecen siempre, con cierta mezcla o con cierto molde\".",
+      "razon": "El nodo dice que muchos problemas pueden venir de la falta de criterio. No dice que esa sea la causa de que las burbujas varíen entre lotes, y la persona tampoco lo dijo. La salida da esa causa como cierta («por eso») cuando la causa es desconocida, y la propia salida lo admite en la etapa siguiente."
+    },
+    {
+      "afirmacion": "anota cuántas piezas desechaste o rehiciste y multiplica por tu costo real de 130 para ver cuánto dejaste ir",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "operativa",
+      "evidencia": "contexto: \"ya sé mi costo real por pieza: 130 incluyendo mi hora a 50\". costo_de_mala_calidad_copq: \"Calcula el costo total de la mala calidad (COPQ) con tus propios registros\". costo_de_calidad_3: \"material desechado, retrabajo\".",
+      "razon": "La cifra de 130 la dio la persona. Contar las piezas desechadas o rehechas desde cero y multiplicarlas por su costo completo concreta cómo calcular el costo de las fallas con sus propios registros, como enseñan los nodos, sin afirmar nada nuevo. Que no coincida del todo con otra parte del plan no la vuelve invención ni contrario, porque no contradice ningún nodo ni lo que contó la persona."
+    }
+  ]
+}

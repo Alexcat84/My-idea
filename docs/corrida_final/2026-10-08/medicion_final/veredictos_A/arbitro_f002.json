@@ -1,0 +1,21 @@
+{
+  "paquete": "f002",
+  "arbitrajes": [
+    {
+      "afirmacion": "La tienda que te revende suele pedir descuento sobre tu precio, y eso cambia tu ingreso neto por pieza.",
+      "clase_juez": "invencion",
+      "veredicto": "DESCARTADO",
+      "clase_final": "sostenida",
+      "evidencia": "metrics_that_matter_framework: «Resta los descuentos y costos de canal a las ventas brutas para obtener el ingreso neto»; validacion_hipotesis_ingresos: «Toma en cuenta cómo el canal por el que vendes (descuentos, devoluciones) afecta el ingreso que realmente te queda»; revenue_pricing_hypothesis: «Restar costos de canal para obtener ingreso neto real». Contexto: «una tienda de plantas que me las revende».",
+      "razon": "La frase anterior dice «es probable que no te dejen lo mismo», y esta usa «suele». Así presenta el descuento del canal como tendencia general, que es justo lo que enseñan los nodos, y no como un dato de su negocio. El paso 1 de la Etapa 3 le pide anotar a qué precio le compra la tienda, así que no da ninguna cifra por sabida."
+    },
+    {
+      "afirmacion": "Haz el cálculo por separado para el tamaño chico y para el mediano, porque no cuestan lo mismo.",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Contexto: «Cada maceta me cuesta como 68 en materiales» (un solo costo) y «Las vendo en 85 cada una, mas o menos, dependiendo del tamano» (solo el precio varía). Ningún nodo habla de costos por tamaño.",
+      "razon": "Separar el cálculo por tamaño es un consejo operativo válido. La causa que lo justifica («porque no cuestan lo mismo») afirma como hecho algo de su negocio que la persona no dijo: ella dio un costo único. Una causa plausible que nadie dio cuenta como invención."
+    }
+  ]
+}

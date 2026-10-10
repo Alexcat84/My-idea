@@ -1,0 +1,36 @@
+{
+  "paquete": "f008",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "por_que": "Atribuye una causa que ni un nodo ni la persona dieron. Además, el costo de materiales por pieza no puede coincidir con un costo total que incluye la hora, así que la conclusión no se sostiene.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo",
+      "por_que": "Afirma como hecho que los precios por canal difieren. La persona nunca dio el precio de la tienda, y el plan anterior solo lo planteaba como probable.",
+      "nodo": null
+    },
+    {
+      "clase": "procedencia",
+      "afirmacion": "El material de este plan no cubre seguridad informática en detalle",
+      "por_que": "Insinúa que el consejo sale de un material de fondo, es decir, revela de dónde viene.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio",
+      "por_que": "Da por existente una feria local en agosto que la persona nunca mencionó y que ningún nodo nombra.",
+      "nodo": null
+    },
+    {
+      "clase": "contrario",
+      "afirmacion": "Este paso puedes saltártelo: «Conecta en Redes Sociales» no hace falta en tu caso.",
+      "por_que": "Dice que la decisión central de la etapa es opcional y que conectar en redes no hace falta, cuando la persona vende casi todo por Instagram y su prioridad declarada es proteger esa cuenta.",
+      "nodo": "estrategia_redes_sociales_franquicias"
+    }
+  ],
+  "afirmaciones_leidas": 72
+}

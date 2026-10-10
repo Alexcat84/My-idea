@@ -1,0 +1,30 @@
+{
+  "paquete": "f016",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "Sin un criterio claro, \"burbujas\" o \"acabado irregular\" significan algo distinto cada día, y por eso tus lotes no salen parejos.",
+      "por_que": "Atribuye la variación física entre lotes (burbujas, acabados) a la falta de un criterio escrito. La persona no dio esa causa, y el nodo solo dice que la falta de criterio genera problemas de calidad en general, no que explique sus lotes.",
+      "nodo": "definiciones_operacionales"
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Tu margen ya no depende solo del precio de 250 y del costo de 130: cada pieza que desechas o rehaces es costo que no vuelve.",
+      "por_que": "Da por hecho que la persona desecha o rehace piezas. Ella solo contó quejas de clientes y una revisión al final, nunca habló de desecho ni de retrabajo.",
+      "nodo": null
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Con eso sabrás si el proveedor nuevo de cemento, que baja ese insumo un 20 por ciento, mejora tu margen o si lo que realmente pesa es lo que pierdes por defectos.",
+      "por_que": "Promete que el cálculo del costo de calidad resuelve la decisión sobre el proveedor. Ningún nodo dice que ese cálculo evalúe el ahorro de un insumo.",
+      "nodo": "costo_de_calidad"
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "anota cuántas piezas desechaste o rehiciste y multiplica por tu costo real de 130 para ver cuánto dejaste ir",
+      "por_que": "Inventa un método de cálculo que nadie dio: los 130 son el costo completo de una pieza con su hora incluida, y no valen para una pieza rehecha. Además contradice el propio plan, que valora el retrabajo en horas a 50.",
+      "nodo": "costo_de_mala_calidad_copq"
+    }
+  ],
+  "afirmaciones_leidas": 74
+}

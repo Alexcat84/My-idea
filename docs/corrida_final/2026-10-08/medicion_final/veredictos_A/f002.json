@@ -1,0 +1,25 @@
+{
+  "paquete": "f002",
+  "hallazgos": [
+    {
+      "clase": "invencion",
+      "afirmacion": "La tienda que te revende suele pedir descuento sobre tu precio, y eso cambia tu ingreso neto por pieza.",
+      "por_que": "La persona nunca dijo que la tienda le compre con descuento ni a qué precio le compra. Los nodos solo dicen en general que el canal puede restar descuentos, y la salida lo presenta como un hecho de su negocio y arma el paso 1 de la Etapa 3 sobre ese supuesto («después de ese descuento»).",
+      "nodo": "validacion_hipotesis_ingresos",
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "La tienda que te revende suele pedir descuento sobre tu precio, y eso cambia tu ingreso neto por pieza.",
+      "por_que_juez2": "Da por hecho que la tienda le compra con descuento. La persona nunca dijo a qué precio le paga la tienda. El nodo solo dice que el canal puede afectar el ingreso, no que esta tienda le pida descuento."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Haz el cálculo por separado para el tamaño chico y para el mediano, porque no cuestan lo mismo.",
+      "por_que": "La persona dio un solo costo de 68 en materiales «cada maceta» y solo dijo que el precio varía según el tamaño. Que el costo de la chica y de la mediana sea distinto es un hecho de su negocio que nadie dio.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Haz el cálculo por separado para el tamaño chico y para el mediano, porque no cuestan lo mismo.",
+      "por_que_juez2": "Afirma que el costo cambia según el tamaño. La persona dio un costo único de 68 por maceta y solo dijo que el precio varía con el tamaño. Ningún nodo lo sostiene."
+    }
+  ],
+  "juez1": 2,
+  "juez2": 2
+}

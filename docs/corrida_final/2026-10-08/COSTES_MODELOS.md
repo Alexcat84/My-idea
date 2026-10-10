@@ -354,3 +354,17 @@ Los mismos 14 planes con el contexto arreglado. Cifras de `medicion_ab2/costes.j
 El verificador sube el coste del plan en torno a un 69 % sobre el redactor (mínimo 0,0312, máximo 0,0805). Propuso 87
 ediciones y aplicó 83, ninguna a revisión. **Resultado de fidelidad: B NO PASA** (15 sostenidos en 9 de 14 planes
 contra 14 en 7 de A): ver [medicion_ab2/RESULTADO.md](medicion_ab2/RESULTADO.md). Sección manual, como la 9.
+
+## 11. La última medición (9 oct 2026)
+
+Los 14 planes por el camino de producción, sin verificador. Cifras de `medicion_final/costes.json` y `juez.log`.
+
+| Pieza | Modelo | Llamadas | USD | Por plan (media) |
+|---|---|---:|---:|---:|
+| Redactor | Sonnet 5.5 | 14 | 1,1103 | 0,0793 |
+| Dos jueces por paquete (17 paquetes) | Opus 5.5 | 34 | 6,44 | n/a |
+| Árbitro en las coincidencias | Opus 5.5 | 10 | 1,74 | n/a |
+| **Total** | | **58** | **9,29** | n/a |
+
+Jueces y árbitro estimados a 5/25 USD por millón de tokens; la cifra oficial es la consola. **Resultado: NO PASA**
+(ver [medicion_final/RESULTADO.md](medicion_final/RESULTADO.md)). Sección manual, como la 9 y la 10.

@@ -1,0 +1,181 @@
+{
+  "version": "A",
+  "modelo": "claude-opus-5-5",
+  "dos_jueces": true,
+  "hallazgos_brutos": 19,
+  "sostenidos": 17,
+  "por_clase": {
+    "contrario": 2,
+    "invencion": 13,
+    "procedencia": 2
+  },
+  "planes_con_sostenidos": 10,
+  "planes": 14,
+  "trampas": {
+    "f008": {
+      "tipo": "contrario",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f009": {
+      "tipo": "invencion",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    },
+    "f013": {
+      "tipo": "procedencia",
+      "cazada_juez": true,
+      "cazada_relectura": null
+    }
+  },
+  "por_plan": [
+    {
+      "paquete": "f001",
+      "hallazgos": 3,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Este es el paso que más te ayuda a dejar de apagar incendios."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Quien va bien y nunca lo oye queda sin referencia de qué repetir."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Con dos empleados ya sabes lo que cuesta acertar o fallar. Contratar con método evita repetir lo que hoy te cuesta"
+        }
+      ]
+    },
+    {
+      "paquete": "f002",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Haz el cálculo por separado para el tamaño chico y para el mediano, porque no cuestan lo mismo."
+        }
+      ]
+    },
+    {
+      "paquete": "f003",
+      "hallazgos": 4,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo."
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo"
+        },
+        {
+          "clase": "procedencia",
+          "afirmacion": "El material de este plan no cubre seguridad informática en detalle"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce"
+        }
+      ]
+    },
+    {
+      "paquete": "f004",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f005",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f006",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f007",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "porque la tienda y Instagram no te pagan lo mismo"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "lo que te queda de cada maceta después de ese costo, distinto en la tienda, en Instagram y en la feria"
+        }
+      ]
+    },
+    {
+      "paquete": "f010",
+      "hallazgos": 0,
+      "sostenidos": []
+    },
+    {
+      "paquete": "f011",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "así que tu tiempo es el recurso más escaso"
+        }
+      ]
+    },
+    {
+      "paquete": "f012",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "tus cinco anotaciones tomaron más de lo previsto"
+        }
+      ]
+    },
+    {
+      "paquete": "f014",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "contrario",
+          "afirmacion": "anota cuántas macetas de tus 12 al mes pasan por ese canal"
+        },
+        {
+          "clase": "invencion",
+          "afirmacion": "el lote te da descuento en materiales, pero puede dejarte piezas paradas"
+        }
+      ]
+    },
+    {
+      "paquete": "f015",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "procedencia",
+          "afirmacion": "El material enseña que la seguridad funciona cuando la gente participa, no cuando se le impone."
+        }
+      ]
+    },
+    {
+      "paquete": "f016",
+      "hallazgos": 2,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Sin un criterio claro, \"burbujas\" o \"acabado irregular\" significan algo distinto cada día, y por eso tus lotes no salen parejos."
+        }
+      ]
+    },
+    {
+      "paquete": "f017",
+      "hallazgos": 1,
+      "sostenidos": [
+        {
+          "clase": "invencion",
+          "afirmacion": "Que no hayan bajado las ventas con gente que ya te conocía no prueba que el precio aguante con desconocidos."
+        }
+      ]
+    }
+  ]
+}

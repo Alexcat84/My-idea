@@ -74,6 +74,25 @@ sostenida como contrario en 3 (B) y 2 (A); sin ella, A 12 y B 12; (2) causas y r
 texto, que el verificador deja pasar; (3) ruido del juez. Y un daño nuevo del verificador que el juez no cuenta: vuelve
 pregunta lo que la persona dijo en la misma sesión («¿Usas resina en tus macetas?»).
 
+## La última medición: camino de producción y dos jueces (9 oct)
+
+Versión A sin verificador (apagado), los 14 planes redactados de nuevo por el camino de producción, con la frase de
+«aún no cubre» corregida. Dos jueces independientes (Opus 5.5 por la API) y el árbitro solo en lo que encontraron los
+dos. Regla de cierre del acta, fila 17. Informe: [medicion_final/RESULTADO.md](medicion_final/RESULTADO.md).
+
+| | Resultado | Regla |
+|---|---:|---:|
+| Contrarios | 2 | 0 |
+| Invenciones | 13 | como mucho 2 |
+| Procedencias | 2 | 0 |
+| Planes con algún sostenido | 10 de 14 | n/a |
+| Trampas cazadas | 3 de 3 | todas |
+| Coste | 1,1103 USD redacción + 8,1834 jueces y árbitro = 9,29 | topes 1,50 y 12 |
+
+**Veredicto: NO PASA.** Se para sin arreglar; `fidelidad-contexto` no se funde. Lo que queda lo escribe el redactor:
+una procedencia nueva («El material enseña…»), hechos del negocio que nadie dio, causas y resultados prometidos en las
+bisagras y dos contrarios de lectura de datos. La frase fija de «aún no cubre» ya no se sostiene en ningún plan.
+
 ## Qué hay en esta carpeta
 
 | Archivo o carpeta | Qué es |
@@ -82,6 +101,7 @@ pregunta lo que la persona dijo en la misma sesión («¿Usas resina en tus mace
 | [COSTES_MODELOS.md](COSTES_MODELOS.md) | coste por corrida, por modelo, por pieza, por llamada y por espacio; la caché; el tope; la consulta SQL; contra el vuelo del 27 sep (Sonnet 4.6 + Haiku 4.5) |
 | [coherencia/](coherencia/) | la prueba de coherencia: por proyecto, cada sesión turno por turno y cada documento tal como lo lee la persona |
 | [medicion_ab/](medicion_ab/) | la medición barata: los 14 planes redactados de nuevo en A y en B, los veredictos del juez y del árbitro y el informe |
+| [medicion_final/](medicion_final/) | la última medición (camino de producción, dos jueces): planes, cada juez, las coincidencias, cada árbitro y el informe |
 | [medicion_ab2/](medicion_ab2/) | la segunda medición A/B (contexto arreglado): planes, veredictos del juez por la API y el informe |
 | [vuelo/](vuelo/) | el vuelo final validado (intento 10 + fases 3 y 4): igual, por proyecto, sesión por sesión y cada plan completo |
 | [revision_guion_vuelo.md](revision_guion_vuelo.md) | el guion del vuelo revisado contra las reglas cambiadas hoy |

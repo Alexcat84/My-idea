@@ -1,0 +1,37 @@
+{
+  "paquete": "f003",
+  "arbitrajes": [
+    {
+      "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "clase_juez": "contrario",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "La persona dijo: \"Cada maceta me cuesta como 68 en materiales\" y \"130 incluyendo mi hora a 50\". Ningún nodo habla de gastos ocultos. El plan anterior solo pedía anotarlo \"para ver si coincide\".",
+      "razon": "La frase afirma una causa (un gasto oculto) que ningún nodo ni la persona respaldan. Con lo que ella contó, el costo de materiales no tiene por qué igualar un 130 que incluye su hora, así que esa causa es inventada."
+    },
+    {
+      "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "La persona solo dijo \"una tienda de plantas que me las revende\" y nunca dio el precio por canal. El plan anterior lo planteaba con cautela (\"probablemente... no sean el mismo\"), y el paso 1 de la misma etapa pide averiguarlo.",
+      "razon": "Presenta como hecho una diferencia de precio entre canales que nadie dio. Es plausible, pero no está sostenida."
+    },
+    {
+      "afirmacion": "El material de este plan no cubre seguridad informática en detalle",
+      "clase_juez": "procedencia",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "procedencia",
+      "evidencia": "Ninguna parte del contexto ni de los nodos lo justifica. La frase alude a un \"material\" subyacente del que saldría el plan.",
+      "razon": "Insinúa que el consejo sale de un material o fuente de fondo, y eso es justo lo que la rúbrica marca como procedencia, aunque no nombre libro ni autor."
+    },
+    {
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "clase_juez": "invencion",
+      "veredicto": "SOSTENIDO",
+      "clase_final": "invencion",
+      "evidencia": "Ni lo_que_conto, ni la ficha, ni estado_vivo, ni ningún nodo mencionan una feria en agosto. Solo aparece en el plan anterior y en la lista de acciones que ese plan generó.",
+      "razon": "Es un hecho del negocio (un evento con fecha) que la persona nunca contó. Que se arrastre de un plan anterior no lo vuelve sostenido."
+    }
+  ]
+}

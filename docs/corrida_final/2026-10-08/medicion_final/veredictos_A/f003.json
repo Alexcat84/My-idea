@@ -1,0 +1,43 @@
+{
+  "paquete": "f003",
+  "hallazgos": [
+    {
+      "clase": "contrario",
+      "afirmacion": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "por_que": "La persona dijo que el 130 incluye su hora a 50; el costo de materiales de una tanda no tiene por qué igualar ese total, y nada respalda que la diferencia sea un gasto oculto.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Si la cuenta de una tanda no coincide con ese 130, ahí se esconde un gasto que aún no estás viendo.",
+      "por_que_juez2": "Afirma una causa que ningún nodo ni la persona respaldan. Además, el 130 incluye la hora a 50 y los materiales rondaban 68, así que un costo de materiales por pieza no tiene por qué coincidir con 130."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "la tienda de plantas y Instagram no pagan lo mismo",
+      "por_que": "Da por hecho que los precios por canal son distintos; la persona nunca dio el precio de la tienda ni dijo que fuera diferente.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "la tienda de plantas y Instagram no pagan lo mismo",
+      "por_que_juez2": "Da como hecho que los dos canales pagan precios distintos. La persona nunca dio el precio de cada canal, y el propio plan pide averiguarlo en el paso 1 de esa etapa."
+    },
+    {
+      "clase": "procedencia",
+      "afirmacion": "El material de este plan no cubre seguridad informática en detalle",
+      "por_que": "Alude a un material de fondo del que saldría el consejo, lo que insinúa su procedencia.",
+      "nodo": null,
+      "clase_juez2": "procedencia",
+      "afirmacion_juez2": "El material de este plan no cubre seguridad informática en detalle",
+      "por_que_juez2": "Insinúa que el consejo sale de un material o fuente subyacente."
+    },
+    {
+      "clase": "invencion",
+      "afirmacion": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "por_que": "Ningún nodo y nada de lo que contó la persona menciona una feria local en agosto; es un hecho del negocio que nadie dio y que se arrastra del plan anterior.",
+      "nodo": null,
+      "clase_juez2": "invencion",
+      "afirmacion_juez2": "Anota si la feria local de agosto te sirve para probar el precio con gente que no te conoce",
+      "por_que_juez2": "La persona nunca mencionó una feria local en agosto en lo que contó, y ningún nodo la menciona. Es un hecho del negocio que nadie dio y solo arrastra del plan anterior."
+    }
+  ],
+  "juez1": 5,
+  "juez2": 4
+}
