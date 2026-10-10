@@ -18,6 +18,22 @@ import {
 } from "../calculadora";
 import { esCostoQueIncluyeTiempo } from "./interprete";
 
+/** INVERSION INICIAL Y GASTO FIJO MENSUAL, SEPARADOS (decision del fundador, 10 oct 2026, noche, punto 2c; caso real
+ * fb027af0: los moldes que la persona conto dentro de sus materiales por maceta acabaron como gasto fijo, contados dos
+ * veces). Lo que se compra una vez para empezar es inversion inicial: va aparte y no entra en el punto de equilibrio. */
+const INVERSION_NO_ES_FIJO =
+  "no es la inversión inicial (moldes, herramientas, equipo que compras una vez): esa va aparte y no entra en el punto de equilibrio del mes";
+/** Lo que suele ser inversion inicial y la persona puede nombrar dentro de su costo por unidad. */
+const COSAS_DE_INVERSION =
+  /\b(moldes?|herramientas?|equipos?|máquinas?|maquinas?|hornos?)\b/giu;
+const cosasDeInversionEn = (texto: string | null | undefined) => [
+  ...new Set(
+    [...(texto ?? "").matchAll(COSAS_DE_INVERSION)].map((m) =>
+      m[1].toLowerCase(),
+    ),
+  ),
+];
+
 /** Que es cada campo, en palabras llanas, y lo que nunca es por si mismo. */
 const CAMPOS: Record<string, { que: string; noEs: string[] }> = {
   unidades_vendidas: { que: "unidades que dijo que vende", noEs: [] },
@@ -41,7 +57,7 @@ const CAMPOS: Record<string, { que: string; noEs: string[] }> = {
   },
   costos_fijos_mensuales: {
     que: "costos fijos del mes (los paga aunque no venda)",
-    noEs: [],
+    noEs: [INVERSION_NO_ES_FIJO],
   },
 };
 
@@ -137,6 +153,12 @@ export function numerosDeLaPersona(numeros: unknown): FilaNumero[] {
       noEs.splice(noEs.indexOf("no incluye su tiempo de trabajo"), 1);
       noEs.push("no es solo materiales: según lo que dijo, incluye su tiempo");
     }
+    const dentro =
+      campo === "costo_materiales_unidad" ? cosasDeInversionEn(dijo) : [];
+    if (dentro.length > 0)
+      noEs.push(
+        `lo que nombró dentro (${dentro.join(", ")}) ya va en este costo por unidad: no lo cuentes otra vez como gasto fijo ni como inversión`,
+      );
     const unidad =
       typeof c.unidad === "string" && c.unidad.trim()
         ? ` ${c.unidad.trim()}`
@@ -200,6 +222,11 @@ function equilibrioSinMargen(margen: ValorNumerico): Calculo | null {
   };
 }
 
+const listaY = (xs: string[]) =>
+  xs.length <= 1
+    ? xs.join("")
+    : `${xs.slice(0, -1).join(", ")} o ${xs[xs.length - 1]}`;
+
 /** Lo que la calculadora ya hizo con sus cifras, y lo que falta para lo demás. */
 export function calculosDelPlan(
   numeros: unknown,
@@ -224,6 +251,25 @@ export function calculosDelPlan(
       : "materiales + horas por unidad × valor de su hora";
   const sinMargen =
     margen.valor !== null ? equilibrioSinMargen(margen.valor) : null;
+  // Si solo faltan los costos fijos, la frase ya resuelta separa la inversion inicial del gasto fijo mensual (2c).
+  const soloFaltanFijos =
+    equilibrio.valor === null &&
+    equilibrio.insumos_faltantes.length === 1 &&
+    equilibrio.insumos_faltantes[0] === "costos_fijos_mensuales";
+  const enSuCosto = cosasDeInversionEn(
+    (n as Record<string, { texto_original?: unknown } | undefined>)
+      .costo_materiales_unidad?.texto_original as string | undefined,
+  );
+  const ejemplosInversion = ["moldes", "herramientas", "equipo"].filter(
+    (x) => !enSuCosto.some((y) => y.startsWith(x.slice(0, 5))),
+  );
+  const fraseFijos = soloFaltanFijos
+    ? `Para el punto de equilibrio falta saber tus gastos fijos del mes: lo que pagas cada mes aunque no vendas, como renta, servicios o suscripciones. Lo que compras una vez para empezar, como ${listaY(ejemplosInversion)}, es inversión inicial: va aparte y no entra en esa cuenta.${
+        enSuCosto.length > 0
+          ? ` Tus ${enSuCosto.join(" y ")} ya van dentro de tu costo por unidad: no los sumes otra vez.`
+          : ""
+      }`
+    : undefined;
   return [
     costo.valor !== null
       ? {
@@ -265,6 +311,7 @@ export function calculosDelPlan(
             estado: "pendiente",
             como: "costos fijos del mes / margen por unidad",
             falta: falta(equilibrio.insumos_faltantes),
+            ...(fraseFijos ? { frase: fraseFijos } : {}),
           },
   ];
 }

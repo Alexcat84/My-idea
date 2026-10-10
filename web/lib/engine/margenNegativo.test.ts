@@ -105,7 +105,10 @@ describe("calculosDelPlan con margen negativo", () => {
       estado: "pendiente",
       falta: ["costos fijos del mes"],
     });
-    expect(c[2].frase).toBeUndefined();
+    // Desde el punto 2c (10 oct 2026, noche) viaja la frase que separa la inversion inicial del gasto fijo mensual, nunca
+    // la del margen negativo (inversionInicial.test.ts).
+    expect(c[2].frase).toMatch(/^Para el punto de equilibrio falta saber tus gastos fijos del mes/);
+    expect(c[2].frase).not.toMatch(/subir el precio o bajar el costo/);
   });
 
   it("SYSTEM_PLAN 4-ter: un cálculo con frase se escribe tal cual, y si el equilibrio no aplica nunca deciden los costos fijos", () => {
