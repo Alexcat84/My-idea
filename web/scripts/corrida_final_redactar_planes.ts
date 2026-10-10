@@ -29,6 +29,7 @@ import { generarTextoPlan } from "../lib/engine/redactorPlan";
 import { dominiosDelRecorrido, type EstadoRecorrido } from "../lib/engine/recorrido";
 import { contextoDeSesion, estadoVivoDeLaFoto, memoriaDe } from "../lib/engine/memoria";
 import { perfilConEstadoVivoActual } from "../lib/engine/perfilDelPlan";
+import { numerosDelMomento } from "../lib/engine/numerosDelMomento";
 import { planAnteriorParaIA } from "../lib/engine/replanteamiento";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
@@ -136,8 +137,16 @@ async function main() {
     }
     const ciclo = recorrido.ciclo;
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
-    // Las cifras de la persona, como las arma la ruta del plan (REDACTOR_CON_RESPALDO punto 2).
-    const numeros = { ...((proy?.numeros_proyecto as Record<string, unknown>) ?? {}), ...(recorrido.numerosDetectadosSesion ?? {}) };
+    // Las cifras de la persona EN EL MOMENTO del plan, como las tenia la ruta del plan entonces (decision del fundador,
+    // 10 oct 2026): las del proyecto anteriores al plan y las de la sesion. Antes se usaban las de hoy (medicion final:
+    // las cifras GIGO del vuelo, guardadas despues, llegaron a planes que nacieron antes).
+    const momento = numerosDelMomento(proy?.numeros_proyecto, recorrido.numerosDetectadosSesion, ref.creado);
+    const numeros = momento.numeros;
+    if (momento.fuera.length || momento.sinFecha.length) {
+      const aviso = `${ref.plan_id}: cifras del proyecto posteriores al plan (fuera): ${momento.fuera.join(", ") || "ninguna"}; sin fecha: ${momento.sinFecha.join(", ") || "ninguna"}`;
+      avisos.push(aviso);
+      console.log(`AVISO ${aviso}`);
+    }
     // Las palabras de la persona HASTA este plan (produccion las lee de la memoria en ese momento): la moneda y, numeradas,
     // las citas del plan (REDACTOR_CON_RESPALDO punto 3).
     const respuestas = [
