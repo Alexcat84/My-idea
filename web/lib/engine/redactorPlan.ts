@@ -29,6 +29,7 @@ import { bloquesDeSistema } from "../i18n/idiomaSalida";
 import { SYSTEM_PLAN } from "../prompts";
 import { ROTULOS_PLAN } from "./constants";
 import { filtrarDeltaAntesDeAutodeclaracion, type PreparacionPlan } from "./planRedactor";
+import { filtroDeMarcas } from "./citarOCallar";
 
 export const BACKOFFS_PLAN_MS = [0, 1000, 3000];
 const MAX_TOKENS_PLAN = 5000;
@@ -78,10 +79,13 @@ export async function generarTextoPlan(
       // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
       // autodeclaracion de cobertura interna (regla 11 de SYSTEM_PLAN), no
       // contenido para mostrar en vivo. Filtro NUEVO por intento: es con estado.
-      const filtro = filtrarDeltaAntesDeAutodeclaracion(onDelta);
+      // Citar o callar (REDACTOR_CON_RESPALDO punto 3): las marcas de respaldo tampoco llegan a la pantalla en vivo.
+      const marcas = filtroDeMarcas(onDelta);
+      const filtro = filtrarDeltaAntesDeAutodeclaracion(marcas.onChunk);
       stream.on("text", filtro.onChunk);
       const mensajeFinal = await stream.finalMessage();
       filtro.finalizar();
+      marcas.finalizar();
       acumuladoVivo = registrarUso(acumuladoVivo, MODEL_SONNET, mensajeFinal.usage, "plan", mensajeFinal.stop_reason ?? null, Boolean(opts.contexto));
       if (mensajeFinal.stop_reason === "max_tokens") {
         ultimoError = new RespuestaCortadaError("plan", maxTokens);

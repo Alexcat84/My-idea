@@ -254,6 +254,12 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
           ...((proyectoParaPlan?.numeros_proyecto as Record<string, unknown>) ?? {}),
           ...recorrido.numerosDetectadosSesion,
         };
+        // Lo que dijo la persona (las respuestas de esta sesion y las de su memoria): de ahi salen la moneda y, numeradas,
+        // las citas del plan (REDACTOR_CON_RESPALDO punto 3).
+        const respuestasDeLaPersona = [
+          ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
+          ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),
+        ];
         const preparacion = prepararPlan(
           recorrido.ruta,
           graph,
@@ -269,6 +275,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
             excluir: recorrido.nodosCubiertosPrevios ?? [],
             planAnterior,
             numeros: numerosParaPlan,
+            respuestas: respuestasDeLaPersona,
             tipoOferta: (recorrido.tipoOfertaSesion ?? (proyectoParaPlan?.tipo_oferta as string | null) ?? null) as TipoOferta,
             replanteamiento:
               ciclo?.tipo === "replantear"
@@ -312,10 +319,6 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         if (versionBasica) {
           eventosPlan.push({ tipo: "plan_version_basica", motivo: avisoFallback });
         }
-        const respuestasDeLaPersona = [
-          ...(estadoPersistido.turnos ?? []).map((t) => t.respuesta),
-          ...memoriaDe(proyectoParaPlan?.memoria).hilo.map((e) => e.respuesta),
-        ];
         const resultado = finalizarPlan(
           rawTexto,
           preparacion,

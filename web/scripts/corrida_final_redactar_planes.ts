@@ -138,6 +138,12 @@ async function main() {
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
     // Las cifras de la persona, como las arma la ruta del plan (REDACTOR_CON_RESPALDO punto 2).
     const numeros = { ...((proy?.numeros_proyecto as Record<string, unknown>) ?? {}), ...(recorrido.numerosDetectadosSesion ?? {}) };
+    // Las palabras de la persona HASTA este plan (produccion las lee de la memoria en ese momento): la moneda y, numeradas,
+    // las citas del plan (REDACTOR_CON_RESPALDO punto 3).
+    const respuestas = [
+      ...(estado.turnos ?? []).map((t) => t.respuesta),
+      ...memoriaDe(proy?.memoria).hilo.filter((e) => !e.en || Date.parse(e.en) <= Date.parse(ref.creado)).map((e) => e.respuesta),
+    ];
     const preparacion = prepararPlan(
       recorrido.ruta,
       graph,
@@ -152,6 +158,7 @@ async function main() {
         excluir: recorrido.nodosCubiertosPrevios ?? [],
         planAnterior,
         numeros,
+        respuestas,
         tipoOferta: (recorrido.tipoOfertaSesion ?? (proy?.tipo_oferta as string | null) ?? null) as TipoOferta,
         replanteamiento:
           ciclo?.tipo === "replantear"
@@ -169,11 +176,6 @@ async function main() {
     const { rawTexto, acumulado } = await generarTextoPlan(client, preparacion, acc, () => undefined, () => undefined, idiomaSalida, { contexto });
     acc = acumulado;
     if (rawTexto === null) throw new Error(`el redactor no devolvio texto para ${ref.plan_id}`);
-    const respuestas = [
-      ...(estado.turnos ?? []).map((t) => t.respuesta),
-      // las palabras de la persona HASTA este plan (produccion las lee de la memoria en ese momento)
-      ...memoriaDe(proy?.memoria).hilo.filter((e) => !e.en || Date.parse(e.en) <= Date.parse(ref.creado)).map((e) => e.respuesta),
-    ];
     const eventos: Array<Record<string, unknown>> = [];
     const a = finalizarPlan(rawTexto, preparacion, recorrido.ruta, families, recorrido.textoOriginal, (e) => eventos.push(e), numeros, idiomaPlan, respuestas);
     const costoA = costoAcumuladoUsd(acc);

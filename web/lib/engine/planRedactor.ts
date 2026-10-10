@@ -35,6 +35,7 @@ import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFam
 import { validaConClientes } from "./validacionClientes";
 import { quitarCitasDeFuente } from "./citasDeFuente";
 import { podarProsa } from "./menosProsa";
+import { validarCitas, type Respaldo } from "./citarOCallar";
 import { calculosDelPlan, numerosDeLaPersona, type Calculo, type FilaNumero } from "./numerosDeLaPersona";
 import type { TipoOferta } from "../calculadora";
 import { esOfrecible, etiquetaArbol, resolverId, type Grafo } from "./graph";
@@ -214,6 +215,9 @@ export interface PayloadPlan {
    * su alcance y lo que no son) y lo que la calculadora ya hizo o le falta. Las unicas cifras del negocio que usa. */
   numeros_de_la_persona?: FilaNumero[];
   calculos?: Calculo[];
+  /** Citar o callar (REDACTOR_CON_RESPALDO punto 3, 9 oct 2026): lo que dijo la persona, numerado, para citarlo con
+   * ⟦R1⟧. El codigo valida cada cita al guardar. */
+  respuestas_de_la_persona?: Array<{ id: string; texto: string }>;
 }
 
 export interface BloqueReplanteamiento {
@@ -232,6 +236,8 @@ export interface ExtrasPlan {
   /** Las cifras de la persona (numeros_proyecto + las de la sesion) y su tipo de oferta, para los bloques de numeros. */
   numeros?: unknown;
   tipoOferta?: TipoOferta;
+  /** Las respuestas de la persona hasta este plan (las de la sesion y las del hilo de la memoria), para citarlas. */
+  respuestas?: string[];
 }
 
 export interface PreparacionPlan {
@@ -286,6 +292,8 @@ export function prepararPlan(
   }
   if (extras.planAnterior) payload.plan_anterior = extras.planAnterior;
   if (extras.replanteamiento) payload.replanteamiento = extras.replanteamiento;
+  const respuestas = [...new Set((extras.respuestas ?? []).map((x) => (typeof x === "string" ? x.trim() : "")).filter(Boolean))];
+  if (respuestas.length > 0) payload.respuestas_de_la_persona = respuestas.map((texto, i) => ({ id: `R${i + 1}`, texto }));
   const filas = numerosDeLaPersona(extras.numeros);
   if (filas.length > 0) {
     payload.numeros_de_la_persona = filas;
@@ -362,6 +370,18 @@ export interface FiltroDeltaAutodeclaracion {
   /** Llamar despues de que el stream termine (stream.finalMessage()) para
    * liberar cualquier resto en buffer si el marcador nunca aparecio. */
   finalizar: () => void;
+}
+
+/** El respaldo que el plan puede citar: las respuestas numeradas, los temas recibidos y las cifras del payload. */
+export function respaldoDelPlan(preparacion: PreparacionPlan): Respaldo {
+  const p = preparacion.payload;
+  const textosDe = (m: MaterialNodo) =>
+    Object.values(m as unknown as Record<string, unknown>).flatMap((v) => (typeof v === "string" ? [v] : Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : []));
+  return {
+    respuestas: p.respuestas_de_la_persona ?? [],
+    nodos: [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo].map((m) => ({ id: m.id, textos: textosDe(m) })),
+    cifras: [...(p.numeros_de_la_persona ?? []).map((f) => f.valor), ...(p.calculos ?? []).flatMap((c) => (c.valor ? [c.valor] : []))],
+  };
 }
 
 export function filtrarDeltaAntesDeAutodeclaracion(onDeltaSeguro: (texto: string) => void): FiltroDeltaAutodeclaracion {
@@ -734,6 +754,13 @@ export function finalizarPlan(
     // i18n F5: si la IA tradujo algún rótulo de estructura, vuelve al neutro.
     cuerpo = neutralizarRotulos(parsed.cuerpo);
     autodeclaracion = parsed.autodeclaracion;
+    // Citar o callar (REDACTOR_CON_RESPALDO punto 3, 9 oct 2026): cada cita se valida contra lo que la persona dijo, los
+    // temas recibidos y las cifras del payload; lo que no vale se cambia por su pregunta o se quita. Sin marcas despues.
+    const citas = validarCitas(cuerpo, respaldoDelPlan(preparacion));
+    cuerpo = citas.texto;
+    if (citas.quitadas + citas.preguntas + citas.colas + citas.sinMarca > 0) {
+      registrarEvento?.({ tipo: "cita_sin_respaldo", quitadas: citas.quitadas, preguntas: citas.preguntas, colas: citas.colas, sin_marca: citas.sinMarca });
+    }
     // La moneda sale de lo que dijo la persona, nunca de la IA (decision del fundador, 8 oct 2026): su idea, la frase
     // literal de cada numero que dio y sus respuestas. La que no dijo se quita (la cifra queda sola) o se cambia por la suya.
     const frasesDeNumeros = Object.values((numerosProyecto ?? {}) as Record<string, { texto_original?: unknown }>)

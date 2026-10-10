@@ -1001,6 +1001,14 @@ SYSTEM_PLAN = (
     "5. Prohibido cerrar el plan con preguntas para el usuario. El plan "
     "cierra con una primera accion concreta, no con una pregunta.\n"
     "6. Titulo breve especifico al proyecto (no generico) y una INTRODUCCION CORTA: una o dos frases que solo repiten lo que la persona dijo (en entrada_original, perfil_sesion o lo que conto), con sus palabras; en un seguimiento, tambien lo que mide el sistema (estado_vivo_previo, el bloque de realidad) con esas palabras. Sin causas, sin promesas de resultado y sin anunciar lo que hara el plan. Despues de la introduccion no hay mas prosa: PROHIBIDO un parrafo narrativo entre etapas o dentro de una etapa (nada de explicar por que importa la etapa, que logra, como se conecta con la siguiente o como se sentira la persona). Cada etapa es solo accionable: su encabezado, '**Pasos:**' con la lista numerada, '**Entregable:**' escrito como la senal de que la etapa esta hecha (que queda anotado, contado o decidido) y '**Primera acción:**'.\n"
+    "6-bis. CITAR O CALLAR: toda frase que afirme algo del negocio o de la situacion de la persona (lo que hace, lo que "
+    "vende, lo que tiene, lo que le pasa, por que le pasa) termina con la marca de su respaldo entre corchetes blancos: "
+    "⟦R3⟧ si lo dijo la persona (el id de respuestas_de_la_persona; ⟦R2,R5⟧ si son varias) o ⟦N:id⟧ si lo ensena un tema "
+    "que recibiste (su id). Si no tienes respaldo, no lo afirmes: escribelo como pregunta y terminala con ⟦?⟧. Puedes "
+    "dejar una pregunta de reserva por si la cita no vale: ⟦R3|¿la pregunta?⟧. Las acciones en imperativo (los pasos, la "
+    "primera accion) no llevan marca, pero si un paso explica una causa o un hecho de la persona ('porque...', 'ya "
+    "que...'), esa parte lleva su marca o no se escribe. La introduccion son frases de la persona: cada una con su ⟦R⟧. "
+    "Las marcas nunca las ve la persona: el codigo las comprueba y las quita.\n"
     "7. Habla siempre de la IDEA o el PROYECTO del usuario. Usa la palabra "
     "'negocio' unicamente si el analisis economico forma parte de los temas recibidos, o si el propio usuario ya la uso en su entrada o "
     "perfil_sesion. Ejemplo correcto: 'define el precio de tu idea' en vez "
@@ -2575,6 +2583,18 @@ def _podar_prosa(cuerpo):
     return texto, quitadas, intro_recortada
 
 
+_MARCA_COMPLETA = re.compile("\\s*\u27e6[^\u27e6\u27e7]*\u27e7")
+_MARCA_ABIERTA = re.compile("\\s*\u27e6[^\u27e7\\n]*")
+
+
+def _quitar_marcas(texto):
+    """CITAR O CALLAR (decision del fundador, 9 oct 2026, REDACTOR_CON_RESPALDO punto 3): quita las marcas de respaldo
+    del redactor (completas o mal cerradas). La validacion de cada cita vive en la web (citarOCallar.ts)."""
+    texto = _MARCA_COMPLETA.sub("", texto)
+    texto = _MARCA_ABIERTA.sub("", texto)
+    return texto.replace("\u27e6", "").replace("\u27e7", "")
+
+
 def _quitar_citas_de_fuente(texto):
     """Los temas citados como fuente (decision del fundador, 9 oct 2026, REDACTOR_CON_RESPALDO punto 1; port de
     quitarCitasDeFuente, web/lib/engine/citasDeFuente.ts, con la lista del espanol: el motor solo escribe en espanol).
@@ -2851,6 +2871,9 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
             raw = llamar_claude(SYSTEM_PLAN, json.dumps(payload, ensure_ascii=False), MODEL,
                                 max_tokens=5000, componente="plan")
             cuerpo, autodeclaracion = _parsear_autodeclaracion(raw)
+            # Citar o callar (REDACTOR_CON_RESPALDO punto 3): el motor no valida las citas (no tiene las respuestas
+            # numeradas; eso lo hace la web), pero nunca deja una marca en el plan.
+            cuerpo = _quitar_marcas(cuerpo)
             # Los temas que recibe la IA nunca se citan como fuente (REDACTOR_CON_RESPALDO punto 1, 9 oct 2026).
             cuerpo, citas = _quitar_citas_de_fuente(cuerpo)
             if citas and registrar_evento:
