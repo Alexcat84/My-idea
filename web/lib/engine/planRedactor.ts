@@ -513,6 +513,35 @@ export function corregirCoherenciaCobertura(
   return evaluacionCobertura;
 }
 
+const ENCABEZADO_ETAPA = /^#{2,4}\s*etapa\s+\d+\s*[:.-]?\s*/i;
+// Una accion de las etapas valida con clientes si en la misma frase hay un verbo de contacto o de prueba y un cliente
+// (normalizado: sin acentos y en minusculas). "Preguntate" (a uno mismo) no es contacto; los empleados no son clientes.
+const VERBO_CON_CLIENTES =
+  /\b(habla|hablar|hablale|hablales|conversa|conversar|conversacion|conversaciones|entrevista|entrevistar|entrevistas|preguntale|preguntales|preguntarle|preguntarles|pregunta a|escucha|escuchar|observa|observar|entrega|entregala|entregalo|entregar|lanza|lanzar|lanzala|prueba|probar|pruebala|atiende|atender|muestra|mostrar|muestrale|muestrales|vende|vender|venderle|venderles|cobra|cobrar|cobrale|cobrales|preventa|ofrece|ofrecer|ofrecele|ofreceles)\b/;
+const CLIENTE =
+  /\b(cliente|clientes|comprador|compradores|compradora|compradoras|usuario|usuarios|usuaria|usuarias|consumidor|consumidores|personas reales|personas que (podrian|llevan|intentan|usan|compran|tienen|sufren))\b/;
+
+/** Las ETAPAS del plan validan con clientes (decision del fundador, 9 oct 2026): alguna accion de una etapa (su
+ * encabezado o sus pasos; nunca la introduccion, la seccion economica ni "lo que aun no cubre") habla, entrevista,
+ * pregunta, entrega, lanza, prueba, vende o cobra a clientes, compradores o usuarios. Segunda medicion A/B: la frase
+ * fija "aun no cubre: validar con clientes reales" salio en planes cuyas etapas mandan hablar con clientes, entregar la
+ * primera version a los primeros usuarios o probar el precio con compradores, y el arbitro la sostuvo como contrario. */
+export function validaConClientesEnEtapas(cuerpo: string): boolean {
+  const frases: string[] = [];
+  let enEtapa = false;
+  for (const linea of cuerpo.split("\n")) {
+    const t = linea.trim();
+    if (t.startsWith("#")) {
+      enEtapa = ENCABEZADO_ETAPA.test(t);
+      if (enEtapa) frases.push(t.replace(ENCABEZADO_ETAPA, ""));
+      continue;
+    }
+    if (enEtapa && t) frases.push(t);
+  }
+  const normal = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  return frases.flatMap((f) => normal(f).split(/[.!?;]+/)).some((f) => VERBO_CON_CLIENTES.test(f) && CLIENTE.test(f));
+}
+
 /** "Lo que este plan aun no cubre" contra las ETAPAS REALES del plan (decision del fundador, corrida final, 8 oct
  * 2026). El bloque lo arma el codigo con lo que la IA autodeclara (familias_tratadas); si la IA olvidaba declarar una
  * familia, el bloque contradecia al plan (juez de fidelidad, plan ee6de956: "aun no cubre validar con clientes reales"
@@ -536,7 +565,11 @@ export function coberturaContraEtapas(
   );
   const porEncabezados = familiasDesdeEncabezados(cuerpo, idioma);
   const cubre = {
-    accion_clientes: evaluacionCobertura.tiene_accion_clientes || enEtapas.has("accion_clientes") || porEncabezados.tiene_accion_clientes,
+    accion_clientes:
+      evaluacionCobertura.tiene_accion_clientes ||
+      enEtapas.has("accion_clientes") ||
+      porEncabezados.tiene_accion_clientes ||
+      validaConClientesEnEtapas(cuerpo),
     viabilidad_economica:
       evaluacionCobertura.tiene_viabilidad_economica || enEtapas.has("viabilidad_economica") || porEncabezados.tiene_viabilidad_economica,
   };

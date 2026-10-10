@@ -291,6 +291,21 @@ Todo en la rama `fidelidad-contexto` del clon `my-idea-main`, **sin push y sin f
    cierre como la de las neutrales (por ejemplo, 0 contrarios y como mucho N invenciones, con residuo declarado).
 Recomendación: 1 y 3, con el verificador apagado; medir otra vez solo después de fijar la regla.
 
+**Decisiones del fundador (9 oct, noche):** frase de «aún no cubre» solo si las etapas de verdad no validan con clientes
+(producción y motor, hecho); el verificador queda APAGADO; regla de cierre de dos jueces (ACTA fila 17); última
+medición por el camino de producción (ACTA fila 16).
+
+**Verificador de planes, APAGADO (`VERIFICADOR_PLAN` sin definir). Su defecto, por si se retoma:** no trata como dato
+lo que la persona dijo en la sesión en curso. Esas respuestas sí le llegan (cada turno entra al hilo de la memoria,
+`web/lib/db.ts`, y de ahí a `respuestas_de_la_persona`), pero como una lista suelta, sin la pregunta y sin rótulo,
+mientras que lo único rotulado como dato de la persona es la foto del contexto tomada al ABRIR la sesión. En la
+segunda medición vio «Mi mayor riesgo es que dependo de un solo proveedor de resina» y aun así quitó una frase y volvió
+pregunta otras seis («¿Usas resina en tus macetas?»), con el motivo «lo que solo contó una respuesta posterior sin
+respaldo en el contexto guardado». Para retomarlo: pasarle lo dicho en la sesión rotulado como en el contexto (la
+pregunta de la IA y la respuesta de la persona) y decirle que vale igual que el contexto guardado; y medir que no
+convierta en pregunta lo que la persona ya dijo. En dos mediciones no mejoró a A de forma clara y suma un 69 % al
+coste del plan.
+
 **Para retomar:** el clon de trabajo es `C:/Users/AlexDesk/Documents/my-idea-main` (rama `fidelidad-contexto`); el clon
 `I have an idea` solo se pone al día con fast-forward. Merge a main solo con autorización explícita del fundador. Antes
 de cualquier commit: `pnpm vitest run` (en `web/`) y `python engine/run_all_tests.py`.

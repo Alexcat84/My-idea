@@ -11,7 +11,13 @@
  * Reanudable: lo que ya esta escrito no se vuelve a pedir. Tope duro de gasto: --tope (USD, estimado con el precio
  * declarado abajo; la cifra oficial es la consola del fundador).
  *
- * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_juez_api.ts --dir <juez_ab2> [--versiones A,B] [--tope 25] [--paralelo 6]
+ * DOS JUECES (--dos-jueces, regla de cierre del fundador, 9 oct 2026): dos jueces independientes por paquete (la misma
+ * instruccion, dos llamadas que no se ven entre si). Un hallazgo solo pasa al arbitro si lo encuentran los dos:
+ * coinciden si, normalizadas (sin acentos, minusculas, solo letras y cifras), una afirmacion contiene a la otra o
+ * comparten un tramo seguido de al menos 20 caracteres que cubre al menos la mitad de la mas corta. La trampa esta
+ * cazada si la caza cualquiera de los dos (o la relectura).
+ *
+ * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_juez_api.ts --dir <juez_ab2> [--versiones A,B] [--tope 25] [--paralelo 6] [--dos-jueces]
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
@@ -87,7 +93,34 @@ function cazada(frase: string, hallazgos: Hallazgo[]): boolean {
   });
 }
 
-async function version(client: Anthropic, dir: string, v: string, paralelo: number) {
+/** El tramo seguido mas largo que comparten dos textos (en caracteres). */
+function tramoComun(a: string, b: string): number {
+  let mejor = 0;
+  let previa = new Array<number>(b.length + 1).fill(0);
+  for (let i = 1; i <= a.length; i++) {
+    const fila = new Array<number>(b.length + 1).fill(0);
+    for (let j = 1; j <= b.length; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        fila[j] = previa[j - 1] + 1;
+        if (fila[j] > mejor) mejor = fila[j];
+      }
+    }
+    previa = fila;
+  }
+  return mejor;
+}
+
+/** Dos hallazgos de jueces distintos son el mismo (regla escrita antes de medir). */
+function coinciden(x: string, y: string): boolean {
+  const a = normal(x);
+  const b = normal(y);
+  if (!a || !b) return false;
+  if (a.includes(b) || b.includes(a)) return true;
+  const tramo = tramoComun(a, b);
+  return tramo >= 20 && tramo >= Math.min(a.length, b.length) / 2;
+}
+
+async function version(client: Anthropic, dir: string, v: string, paralelo: number, dosJueces: boolean) {
   const dirP = path.join(dir, `paquetes_${v}`);
   const dirV = path.join(dir, `veredictos_${v}`);
   mkdirSync(dirV, { recursive: true });
@@ -97,25 +130,40 @@ async function version(client: Anthropic, dir: string, v: string, paralelo: numb
   const leer = (f: string) => readFileSync(path.join(dirP, `${f}.json`), "utf8");
   const veredicto = (f: string, sufijo = "") => JSON.parse(readFileSync(path.join(dirV, `${f}${sufijo}.json`), "utf8")) as Veredicto;
 
-  // 1. Un juez por paquete.
+  // 1. Un juez por paquete (dos, independientes, con --dos-jueces).
+  const sufijos = dosJueces ? ["_j1", "_j2"] : [""];
   await enParalelo(
-    paquetes.map((f) => async () => {
-      const salida = path.join(dirV, `${f}.json`);
-      if (existsSync(salida)) return;
-      const r = (await pedir(client, ENCARGO_JUEZ, `Tu paquete (${f}):\n${leer(f)}`)) as Veredicto;
-      r.paquete = f;
-      writeFileSync(salida, JSON.stringify(r, null, 2), "utf8");
-      console.log(`${v} juez ${f}: ${r.hallazgos?.length ?? 0} hallazgos | $${gastado.toFixed(3)}`);
-    }),
+    paquetes.flatMap((f) =>
+      sufijos.map((s) => async () => {
+        const salida = path.join(dirV, `${f}${s}.json`);
+        if (existsSync(salida)) return;
+        const r = (await pedir(client, ENCARGO_JUEZ, `Tu paquete (${f}):\n${leer(f)}`)) as Veredicto;
+        r.paquete = f;
+        writeFileSync(salida, JSON.stringify(r, null, 2), "utf8");
+        console.log(`${v} juez${s} ${f}: ${r.hallazgos?.length ?? 0} hallazgos | $${gastado.toFixed(3)}`);
+      })
+    ),
     paralelo
   );
+  // Con dos jueces, lo que llega al arbitro es solo lo que encontraron los dos (fNNN.json = las coincidencias).
+  if (dosJueces) {
+    for (const f of paquetes) {
+      const j1 = veredicto(f, "_j1").hallazgos ?? [];
+      const j2 = veredicto(f, "_j2").hallazgos ?? [];
+      const comunes = j1.flatMap((h) => {
+        const otro = j2.find((g) => coinciden(h.afirmacion ?? "", g.afirmacion ?? ""));
+        return otro ? [{ ...h, clase_juez2: otro.clase, afirmacion_juez2: otro.afirmacion, por_que_juez2: otro.por_que }] : [];
+      });
+      writeFileSync(path.join(dirV, `${f}.json`), JSON.stringify({ paquete: f, hallazgos: comunes, juez1: j1.length, juez2: j2.length }, null, 2), "utf8");
+    }
+  }
 
   // 2. Relectura de las trampas no cazadas.
   const trampas: Record<string, { tipo: string; cazada_juez: boolean; cazada_relectura: boolean | null }> = {};
   for (const f of paquetes) {
     const c = porPaquete.get(f);
     if (c?.origen !== "trampa" || !c.trampa) continue;
-    const enJuez = cazada(c.trampa.frase, veredicto(f).hallazgos ?? []);
+    const enJuez = sufijos.some((s) => cazada(c.trampa!.frase, veredicto(f, s).hallazgos ?? []));
     let enRelectura: boolean | null = null;
     if (!enJuez) {
       const salida = path.join(dirV, `${f}_relectura.json`);
@@ -162,6 +210,7 @@ async function version(client: Anthropic, dir: string, v: string, paralelo: numb
   const resumen = {
     version: v,
     modelo: MODELO,
+    dos_jueces: dosJueces,
     hallazgos_brutos: porPlan.reduce((s, p) => s + p.hallazgos, 0),
     sostenidos: sost.length,
     por_clase: { contrario: sost.filter((s) => s.clase === "contrario").length, invencion: sost.filter((s) => s.clase === "invencion").length, procedencia: sost.filter((s) => s.clase === "procedencia").length },
@@ -180,7 +229,8 @@ async function main() {
   tope = Number(arg("--tope") ?? 25);
   const paralelo = Number(arg("--paralelo") ?? 6);
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY, maxRetries: 4 });
-  for (const v of (arg("--versiones") ?? "A,B").split(",")) await version(client, dir, v, paralelo);
+  const dosJueces = process.argv.includes("--dos-jueces");
+  for (const v of (arg("--versiones") ?? "A,B").split(",")) await version(client, dir, v, paralelo, dosJueces);
   console.log(`LISTO: gastado estimado $${gastado.toFixed(4)} (${MODELO}, ${PRECIO.join("/")} por millon)`);
 }
 

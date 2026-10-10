@@ -86,6 +86,7 @@ import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 import { generarTextoPlan } from "@/lib/engine/redactorPlan";
+import { perfilConEstadoVivoActual } from "@/lib/engine/perfilDelPlan";
 
 const INTERVALO_HEARTBEAT_MS = 15_000;
 
@@ -229,15 +230,11 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         // de ciclo desde entonces, el redactor debe ver la realidad de hoy.
         const proyectoParaPlan = await obtenerProyecto(supabase, projectId);
         const estadoVivoActual = (proyectoParaPlan?.estado_vivo as string | null) ?? null;
-        if (
-          dominioCobro !== "core" &&
-          !recorrido.esSeguimiento &&
-          estadoVivoActual &&
-          !(recorrido.perfilSesion ?? "").includes(estadoVivoActual)
-        ) {
-          recorrido.perfilSesion = `${recorrido.perfilSesion ?? ""}
-Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActual}`.trim();
-        }
+        recorrido.perfilSesion = perfilConEstadoVivoActual(recorrido.perfilSesion, {
+          dominio: dominioCobro,
+          esSeguimiento: recorrido.esSeguimiento,
+          estadoVivoActual,
+        });
 
         // Ciclo de replanteamiento, Fase 2: en un ciclo posterior la IA recibe el
         // plan anterior del espacio (etapas y tareas con su estado, regla 8-ter)

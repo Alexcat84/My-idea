@@ -5,12 +5,16 @@
  *   B = A + el verificador (lib/engine/verificadorPlan.ts) sobre ese mismo borrador.
  * Escribe A/<plan_id>.md, B/<plan_id>.md y costes.json en la carpeta de salida. Tope duro de gasto: --tope (USD).
  *
- * Se arma igual que la ruta del plan (app/api/session/[id]/plan/route.ts) con lo guardado de cada sesion. Diferencia
- * declarada: el plan anterior de un seguimiento es el que existia ANTES de ese plan (no el vigente de hoy) con sus
- * tareas en su estado de hoy. El estado vivo NO se vuelve a sumar (el perfil guardado ya trae el de su momento), y el
- * contexto guardado se pasa al formato de hoy (contextoAlFormatoNuevo).
+ * CAMINO DE PRODUCCION (decision del fundador, 9 oct 2026): las mismas funciones de la ruta del plan
+ * (app/api/session/[id]/plan/route.ts), con lo guardado de cada sesion: perfilConEstadoVivoActual con el estado vivo
+ * que tenia el proyecto en ese momento (leido de la foto del contexto al abrir la sesion; si otro plan del proyecto
+ * nacio entre la apertura y este plan, se avisa: ese valor puede haber cambiado), prepararPlan, generarTextoPlan con el
+ * contexto de la sesion, y finalizarPlan con las palabras de la persona hasta ese momento (el hilo filtrado por fecha).
+ * Diferencias declaradas: el plan anterior de un seguimiento es el que existia ANTES de ese plan, con sus tareas en su
+ * estado de hoy; el contexto guardado se pasa al formato de hoy (contextoAlFormatoNuevo), que es lo que produccion
+ * arma hoy.
  *
- * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_redactar_planes.ts --claves <claves.json> --salida <dir> [--tope 1.9]
+ * Uso (desde web/, con el .env raiz): npx tsx scripts/corrida_final_redactar_planes.ts --claves <claves.json> --salida <dir> [--tope 1.9] [--sin-verificador]
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { createClient } from "@supabase/supabase-js";
@@ -23,7 +27,8 @@ import { cargarGrafo } from "../lib/engine/graph";
 import { finalizarPlan, prepararPlan } from "../lib/engine/planRedactor";
 import { generarTextoPlan } from "../lib/engine/redactorPlan";
 import { dominiosDelRecorrido, type EstadoRecorrido } from "../lib/engine/recorrido";
-import { contextoDeSesion, memoriaDe } from "../lib/engine/memoria";
+import { contextoDeSesion, estadoVivoDeLaFoto, memoriaDe } from "../lib/engine/memoria";
+import { perfilConEstadoVivoActual } from "../lib/engine/perfilDelPlan";
 import { planAnteriorParaIA } from "../lib/engine/replanteamiento";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
@@ -59,7 +64,8 @@ async function main() {
   const rutaClaves = arg("--claves");
   const salida = arg("--salida");
   const tope = Number(arg("--tope") ?? 1.9);
-  if (!rutaClaves || !salida) throw new Error("uso: --claves <claves.json> --salida <dir> [--tope 1.9]");
+  const sinVerificador = process.argv.includes("--sin-verificador");
+  if (!rutaClaves || !salida) throw new Error("uso: --claves <claves.json> --salida <dir> [--tope 1.9] [--sin-verificador]");
   const claves = JSON.parse(readFileSync(rutaClaves, "utf8")) as {
     claves: Array<{ origen: string; ref: { plan_id: string; session_id: string; project_id: string; dominio: string; tipo_salida: string; creado: string } }>;
   };
@@ -74,13 +80,14 @@ async function main() {
   const families = cargarFamilies();
   let gastado = 0;
   const costes: Array<Record<string, unknown>> = [];
+  const avisos: string[] = [];
 
   for (const ref of refs) {
     if (gastado + 0.15 > tope) {
       console.log(`TOPE: gastado $${gastado.toFixed(4)}; no se redacta ${ref.plan_id} (quedaria por encima de $${tope})`);
       break;
     }
-    const { data: ses, error: e1 } = await sb.from("sessions").select("estado_recorrido, dominio").eq("id", ref.session_id).single();
+    const { data: ses, error: e1 } = await sb.from("sessions").select("estado_recorrido, dominio, created_at").eq("id", ref.session_id).single();
     if (e1 || !ses) throw new Error(`sesion ${ref.session_id}: ${e1?.message}`);
     const { data: proy } = await sb.from("projects").select("*").eq("id", ref.project_id).single();
     const estado = ses.estado_recorrido as { recorrido: EstadoRecorrido; turnos?: Array<{ respuesta: string }> };
@@ -91,11 +98,28 @@ async function main() {
     // El contexto guardado con la sesion, pasado al formato de hoy (misma informacion, la pregunta de la IA y la
     // respuesta de la persona separadas y rotuladas, como lo arma textoContextoProyecto desde el 9 oct 2026). No se
     // rearma desde la memoria de hoy: traeria sesiones posteriores.
+    // El estado vivo que leeria produccion en el momento del plan: el de la foto al abrir la sesion, si ningun otro plan
+    // del proyecto nacio entre la apertura y este plan (si nacio, se avisa).
+    const estadoVivoDelMomento = estadoVivoDeLaFoto(recorrido.contextoProyecto);
+    const { data: entre } = await sb
+      .from("plans")
+      .select("id, created_at, session_id")
+      .in("session_id", (((await sb.from("sessions").select("id").eq("project_id", ref.project_id)).data ?? []) as Array<{ id: string }>).map((x) => x.id))
+      .gt("created_at", ses.created_at as string)
+      .lt("created_at", ref.creado);
+    if ((entre ?? []).length > 0) {
+      const aviso = `${ref.plan_id}: ${(entre ?? []).length} plan(es) del proyecto nacieron entre la apertura de la sesion y este plan; el estado vivo del momento puede no ser el de la foto`;
+      avisos.push(aviso);
+      console.log(`AVISO ${aviso}`);
+    }
+    recorrido.perfilSesion = perfilConEstadoVivoActual(recorrido.perfilSesion, {
+      dominio,
+      esSeguimiento: recorrido.esSeguimiento,
+      estadoVivoActual: estadoVivoDelMomento,
+    });
     if (recorrido.contextoProyecto) recorrido.contextoProyecto = contextoAlFormatoNuevo(recorrido.contextoProyecto);
     const contexto = contextoDeSesion(recorrido);
 
-    // Sin sumar el estado vivo de HOY (defecto de la primera medicion, 9 oct 2026): el perfil guardado ya trae el estado
-    // vivo de su momento, y el de hoy lo siembra la fase 2M del vuelo ("kits de huerto").
     let planAnterior = null;
     if (recorrido.esSeguimiento) {
       const { data: sesProy } = await sb.from("sessions").select("id").eq("project_id", ref.project_id);
@@ -142,7 +166,8 @@ async function main() {
     if (rawTexto === null) throw new Error(`el redactor no devolvio texto para ${ref.plan_id}`);
     const respuestas = [
       ...(estado.turnos ?? []).map((t) => t.respuesta),
-      ...memoriaDe(proy?.memoria).hilo.map((e) => e.respuesta),
+      // las palabras de la persona HASTA este plan (produccion las lee de la memoria en ese momento)
+      ...memoriaDe(proy?.memoria).hilo.filter((e) => !e.en || Date.parse(e.en) <= Date.parse(ref.creado)).map((e) => e.respuesta),
     ];
     const numeros = { ...((proy?.numeros_proyecto as Record<string, unknown>) ?? {}), ...(recorrido.numerosDetectadosSesion ?? {}) };
     const eventos: Array<Record<string, unknown>> = [];
@@ -150,6 +175,12 @@ async function main() {
     const costoA = costoAcumuladoUsd(acc);
     writeFileSync(path.join(salida, "A", `${ref.plan_id}.md`), a.markdown, "utf8");
 
+    if (sinVerificador) {
+      gastado += costoA;
+      costes.push({ plan_id: ref.plan_id, dominio, tipo: ref.tipo_salida, costo_redactor: Number(costoA.toFixed(5)), eventos_plan: eventos.map((e) => e.tipo), llamadas: acc.llamadas, estado_vivo_del_momento: estadoVivoDelMomento !== null });
+      console.log(`${ref.plan_id} ${dominio}: redactor $${costoA.toFixed(4)} | acumulado $${gastado.toFixed(4)}`);
+      continue;
+    }
     const v = await verificarPlan(
       client,
       {
@@ -171,7 +202,7 @@ async function main() {
     });
     console.log(`${ref.plan_id} ${dominio}: redactor $${costoA.toFixed(4)} + verificador $${(costoTotal - costoA).toFixed(4)} | propuestas ${v.correcciones.length}, aplicadas ${v.aplicadas}, revision ${v.revision}${v.fallo ? `, FALLO ${v.fallo}` : ""} | acumulado $${gastado.toFixed(4)}`);
   }
-  writeFileSync(path.join(salida, "costes.json"), JSON.stringify({ gastado_usd: Number(gastado.toFixed(5)), planes: costes }, null, 2), "utf8");
+  writeFileSync(path.join(salida, "costes.json"), JSON.stringify({ gastado_usd: Number(gastado.toFixed(5)), avisos, planes: costes }, null, 2), "utf8");
   console.log(`LISTO: ${costes.length} planes, gastado $${gastado.toFixed(4)}`);
 }
 

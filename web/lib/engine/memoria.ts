@@ -148,6 +148,14 @@ export function textoContextoProyecto(
   return partes.join("\n");
 }
 
+/** El estado vivo que tenía el proyecto al abrir la sesión, leído de su foto (textoContextoProyecto). null si no había.
+ * Lo usa el guion de medición para darle al plan el estado vivo de su momento (no el de hoy), 9 oct 2026. */
+export function estadoVivoDeLaFoto(foto: string | null | undefined): string | null {
+  const m = (foto ?? "").match(/^Estado vivo del proyecto: (.*)$/m);
+  const v = m?.[1]?.trim() ?? null;
+  return !v || v === "(aún no hay)" ? null : v;
+}
+
 /** La ficha de este momento: viaja en cada turno, fuera del cache, y manda sobre la de la foto. */
 export function textoFichaActual(f: FichaContexto): string {
   return `FICHA DE CONTEXTO ACTUAL (manda sobre la del contexto guardado): ${fichaJson(f)}`;

@@ -2541,6 +2541,87 @@ def _familias_desde_encabezados(cuerpo):
     }
 
 
+_ENCABEZADO_ETAPA = re.compile(r"^#{2,4}\s*etapa\s+\d+\s*[:.-]?\s*", re.IGNORECASE)
+# Una accion de las etapas valida con clientes si en la misma frase hay un verbo de contacto o de prueba y un cliente
+# (normalizado: sin acentos y en minusculas). "Preguntate" (a uno mismo) no es contacto; los empleados no son clientes.
+# Paridad exacta con VERBO_CON_CLIENTES y CLIENTE de web/lib/engine/planRedactor.ts.
+_VERBO_CON_CLIENTES = re.compile(
+    r"\b(habla|hablar|hablale|hablales|conversa|conversar|conversacion|conversaciones|entrevista|entrevistar|"
+    r"entrevistas|preguntale|preguntales|preguntarle|preguntarles|pregunta a|escucha|escuchar|observa|observar|"
+    r"entrega|entregala|entregalo|entregar|lanza|lanzar|lanzala|prueba|probar|pruebala|atiende|atender|muestra|"
+    r"mostrar|muestrale|muestrales|vende|vender|venderle|venderles|cobra|cobrar|cobrale|cobrales|preventa|ofrece|"
+    r"ofrecer|ofrecele|ofreceles)\b")
+_CLIENTE = re.compile(
+    r"\b(cliente|clientes|comprador|compradores|compradora|compradoras|usuario|usuarios|usuaria|usuarias|consumidor|"
+    r"consumidores|personas reales|personas que (podrian|llevan|intentan|usan|compran|tienen|sufren))\b")
+
+
+def _sin_acentos(texto):
+    return "".join(c for c in unicodedata.normalize("NFD", texto) if unicodedata.category(c) != "Mn").lower()
+
+
+def _valida_con_clientes_en_etapas(cuerpo):
+    """Las ETAPAS del plan validan con clientes (decision del fundador, 9 oct 2026): alguna accion de una etapa (su
+    encabezado o sus pasos; nunca la introduccion, la seccion economica ni 'lo que aun no cubre') habla, entrevista,
+    pregunta, entrega, lanza, prueba, vende o cobra a clientes, compradores o usuarios. Port de
+    validaConClientesEnEtapas (web/lib/engine/planRedactor.ts)."""
+    frases = []
+    en_etapa = False
+    for linea in cuerpo.splitlines():
+        t = linea.strip()
+        if t.startswith("#"):
+            en_etapa = bool(_ENCABEZADO_ETAPA.match(t))
+            if en_etapa:
+                frases.append(_ENCABEZADO_ETAPA.sub("", t))
+            continue
+        if en_etapa and t:
+            frases.append(t)
+    for frase in frases:
+        for parte in re.split(r"[.!?;]+", _sin_acentos(frase)):
+            if _VERBO_CON_CLIENTES.search(parte) and _CLIENTE.search(parte):
+                return True
+    return False
+
+
+def _cobertura_contra_etapas(evaluacion_cobertura, autodeclaracion, material, families, cuerpo, registrar_evento=None):
+    """'Lo que este plan aun no cubre' contra las ETAPAS REALES del plan (decision del fundador, 8 y 9 oct 2026; port
+    de coberturaContraEtapas, web/lib/engine/planRedactor.ts). Una familia esta cubierta si un nodo que la IA usa en sus
+    etapas es de esa familia (solo ids que vinieron en el material), si los encabezados la tratan o, para validar con
+    clientes, si las acciones de las etapas validan con clientes. Nunca agrega faltantes: solo quita los que las etapas
+    desmienten."""
+    en_etapas = {
+        families.get(nid, "general")
+        for ids in ((autodeclaracion or {}).get("etapas") or {}).values()
+        if isinstance(ids, list)
+        for nid in ids
+        if nid in material
+    }
+    por_encabezados = _familias_desde_encabezados(cuerpo)
+    cubre = {
+        "accion_clientes": (evaluacion_cobertura["tiene_accion_clientes"] or "accion_clientes" in en_etapas
+                            or por_encabezados["tiene_accion_clientes"] or _valida_con_clientes_en_etapas(cuerpo)),
+        "viabilidad_economica": (evaluacion_cobertura["tiene_viabilidad_economica"] or "viabilidad_economica" in en_etapas
+                                 or por_encabezados["tiene_viabilidad_economica"]),
+    }
+    previas = {
+        "accion_clientes": evaluacion_cobertura["tiene_accion_clientes"],
+        "viabilidad_economica": evaluacion_cobertura["tiene_viabilidad_economica"],
+    }
+    corregidas = [f for f in ("accion_clientes", "viabilidad_economica") if cubre[f] and not previas[f]]
+    if not corregidas:
+        return evaluacion_cobertura
+    for familia in corregidas:
+        if registrar_evento:
+            registrar_evento({"tipo": "coherencia_cobertura_corregida", "familia": familia, "por": "etapas"})
+    quitar = {_TEXTO_FAMILIA_FALTANTE[f] for f in corregidas}
+    return {
+        "es_completa": cubre["accion_clientes"] and cubre["viabilidad_economica"],
+        "tiene_accion_clientes": cubre["accion_clientes"],
+        "tiene_viabilidad_economica": cubre["viabilidad_economica"],
+        "familias_faltantes": [f for f in evaluacion_cobertura["familias_faltantes"] if f not in quitar],
+    }
+
+
 def _verificar_procedencia_etapas(autodeclaracion, ruta, cosecha_ids, registrar_evento=None):
     """Fase 3.1 (caja de vidrio): el redactor autodeclara, por etapa
     numerada, que node_ids de material_principal/material_de_apoyo uso
@@ -2674,6 +2755,9 @@ def ensamblar_plan(ruta, graph, perfil_sesion, texto_original, families, evaluac
 
     evaluacion_cobertura = _corregir_coherencia_cobertura(
         evaluacion_cobertura, cuerpo, tiene_material_economico, registrar_evento=registrar_evento)
+    evaluacion_cobertura = _cobertura_contra_etapas(
+        evaluacion_cobertura, autodeclaracion, set(ruta) | set(cosecha_ids), families, cuerpo,
+        registrar_evento=registrar_evento)
 
     etiqueta = "Plan completo" if evaluacion_cobertura["es_completa"] else "Plan inicial"
     total_conceptos = len(ruta) + len(cosecha_ids)
