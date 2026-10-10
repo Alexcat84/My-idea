@@ -49,6 +49,7 @@ import {
   verificarNumerosHuerfanos,
 } from "../verificadorHuerfanos";
 import { detectarFaltaDeAcentos } from "../detectorAcentos";
+import { tituloConRespaldo } from "./tituloConRespaldo";
 
 
 /** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
@@ -382,6 +383,28 @@ export function respaldoDelPlan(preparacion: PreparacionPlan): Respaldo {
     nodos: [...preparacion.materialPrincipal, ...preparacion.materialDeApoyo].map((m) => ({ id: m.id, textos: textosDe(m) })),
     cifras: [...(p.numeros_de_la_persona ?? []).map((f) => f.valor), ...(p.calculos ?? []).flatMap((c) => (c.valor ? [c.valor] : []))],
   };
+}
+
+/** El apoyo del titulo: lo que dijo la persona (su idea, su perfil, sus respuestas, sus cifras, su historia y sus notas)
+ * y los NOMBRES de los temas. El cuerpo de los temas no cuenta: trae vocabulario de sobra (en b4a01dea, «conversaciones
+ * hechas» respaldaba «hecha a mano»). Los titulos de las etapas del plan anterior tampoco: son palabras del redactor. */
+export function apoyoDelTitulo(preparacion: PreparacionPlan, textoOriginal: string, textosDeLaPersona: string[], numerosProyecto?: unknown): string[] {
+  const p = preparacion.payload;
+  const r = p.replanteamiento;
+  return [
+    textoOriginal,
+    p.entrada_original,
+    p.perfil_sesion ?? "",
+    p.bloqueo_declarado ?? "",
+    p.estado_vivo_previo ?? "",
+    ...textosDeLaPersona,
+    ...(p.respuestas_de_la_persona ?? []).map((x) => x.texto),
+    JSON.stringify(p.numeros_de_la_persona ?? []),
+    JSON.stringify(numerosProyecto ?? {}),
+    ...(r ? [r.historia, ...r.se_conserva, ...r.se_suelta, r.camino_elegido?.titulo ?? "", r.camino_elegido?.descripcion ?? ""] : []),
+    ...(p.plan_anterior?.etapas ?? []).flatMap((e) => e.tareas.flatMap((t) => [t.nota ?? "", ...(t.temas ?? [])])),
+    ...[...preparacion.materialPrincipal, ...preparacion.materialDeApoyo].map((m) => m.etiqueta),
+  ];
 }
 
 export function filtrarDeltaAntesDeAutodeclaracion(onDeltaSeguro: (texto: string) => void): FiltroDeltaAutodeclaracion {
@@ -782,6 +805,13 @@ export function finalizarPlan(
     if (podado.quitadas > 0 || podado.introRecortada) {
       cuerpo = podado.texto;
       registrarEvento?.({ tipo: "prosa_de_enlace_quitada", bloques: podado.quitadas, intro_recortada: podado.introRecortada });
+    }
+    // El titulo no afirma nada del negocio que la persona no dijo (decision del fundador, 10 oct 2026; caso real «hecha
+    // a mano»): cada palabra con contenido viene de lo que dijo la persona o del nombre de un tema; si no, el neutro.
+    const titulo = tituloConRespaldo(cuerpo, apoyoDelTitulo(preparacion, textoOriginal, textosDeLaPersona, numerosProyecto), elegir(MOTOR_PLAN, idioma).offline.titulo, idioma);
+    if (titulo.cambiado) {
+      cuerpo = titulo.texto;
+      registrarEvento?.({ tipo: "titulo_sin_respaldo", palabras: titulo.sinRespaldo });
     }
   } else {
     cuerpo = ensamblarOffline(materialPrincipal, payload.perfil_sesion, textoOriginal, idioma);
