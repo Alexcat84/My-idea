@@ -2062,3 +2062,39 @@ Quedan para después:
 
 El orden y el aviso sobre los ids de la segunda tanda de k31 están en `docs/PROXIMOS_PASOS.md`, sección 8. La copia
 fiel sigue sin certificar.
+
+### 15.19 Copia fiel: se retoma por guiones de la API (decisión del fundador, 10 oct 2026), escrito antes de lanzar
+
+**Cambio de método.** Lo que queda (15.18) ya no lo hacen subagentes del entorno de desarrollo, sino guiones que
+llaman a la API de Anthropic con la clave del `.env` (crédito promocional), con **Sonnet 5.5**:
+`auditoria-final-claves/copia/api_copia.py`.
+- **Las instrucciones son las mismas:** `INSTRUCCIONES_LECTOR.md` (con la vara de 15.16 en el encargo),
+  `INSTRUCCIONES_VERIFICADOR.md` e `INSTRUCCIONES_REESCRITOR.md`, con los mismos ficheros de entrada y de salida que
+  lee `copia.py`.
+- **Las trampas son las mismas:** la de cada lote V y las dos de cada paquete del verificador.
+- **El árbitro es Opus 5.5,** solo si hace falta: segunda lectura de un lote cuya trampa no cazó el primer lector, o
+  relectura de una trampa del verificador que no se cazó.
+- **Diferencia declarada:** el modelo no abre los libros con sus herramientas del entorno. El guion le da dos
+  herramientas equivalentes que ejecuta él mismo sobre los ficheros de libro del elemento: buscar (como Grep, sin
+  distinguir mayúsculas) y leer un tramo de líneas. Al verificador y al reescritor, además, les pone en el mensaje el
+  pasaje que cita la evidencia del lector.
+
+**Piloto, antes de lanzar (condición del fundador).** El guion verifica tres paquetes que ya verificaron los
+subagentes (k31: 03, 09 y 15) y se comparan los veredictos. Se lanza solo si coinciden en lo esencial: las trampas
+cazadas y el mismo veredicto en la gran mayoría de las propuestas. Si no, se para y se reporta.
+
+**Orden y topes (visto del fundador):**
+
+| Parte | Qué | Tope (USD) |
+|---|---|---:|
+| 1 | Paquetes 21 a 96 de k31, como ola **k31b** (los ids de tanda llevan `k31b` y no chocan con los de k31) | 8 |
+| 2a | Lectura de los 12 lotes V sin leer | 10 |
+| 2b | Verificación de lo que propongan (ola **k32**) | 4 |
+| 3 | Reescritura **r3** de lo que no sostuvo desde k29, y su verificación | 7 |
+| — | Árbitro, solo si hace falta | 2 |
+
+Se deja una reserva de al menos 12 USD del crédito para la medición final del redactor.
+
+**Cómo entra:** lo que sostiene el verificador entra por tandas declaradas (`docs/saneamiento/tandas/copia-<ola>.json`),
+con Gate 0 y las suites en verde; lo que no, va a la reescritura r3. La copia fiel sigue sin certificar hasta la
+medida nueva.
