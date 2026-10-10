@@ -306,6 +306,22 @@ pregunta de la IA y la respuesta de la persona) y decirle que vale igual que el 
 convierta en pregunta lo que la persona ya dijo. En dos mediciones no mejoró a A de forma clara y suma un 69 % al
 coste del plan.
 
+### Estado al 10 oct 2026 (cierre): 2a y 2b en producción; margen negativo y cuarta medición NO PASA
+
+- **En producción** (main d29e0ac0f, despliegue correcto): 2a, 2b y la marca de tema en los pasos. El comprobador está
+  APAGADO.
+- **Margen negativo** (`fidelidad-contexto` 646cccb0f, SIN fundir): con margen por unidad cero o negativo, el
+  redactor recibe el punto de equilibrio como «no aplica» con la frase resuelta. Funcionó en la medición.
+- **Cuarta medición (ACTA 27 y 28): NO PASA.**
+  - 5 contrarios y 2 invenciones en 4 de 14 planes; trampas 3/3; 7,96 USD.
+  - Informe: `docs/corrida_final/2026-10-08/medicion_respaldo4/RESULTADO.md`.
+  - Lo abierto: premisas sobre la persona en pasos («tanda», «tu pieza más vendida»); actividades del núcleo ya hechas
+    que un plan de mundo da por pendientes; los moldes como gasto fijo; un tema al revés en un paso.
+  - La variación entre corridas es grande (M6 dio 2 y M7 dio 7 con casi el mismo código).
+- **Copia fiel, medida 8** (acta 15.22, semilla 20261029): la ejecuta `auditoria-final-claves/medida8/medida8.py`.
+- **Prueba de modelos del I Ching:** guion e informe en
+  `C:/Users/AlexDesk/Documents/iching-app/docs/informes/2026-10-10-sonnet-4-6-vs-5-5/`.
+
 ### Estado al 10 oct 2026 (noche): fusión hecha, arreglos 2a, 2b y 3, y tercera medición NO PASA
 
 Decisiones del fundador del 10 oct (crédito promocional de unos 137 USD, vence el 12 oct):
