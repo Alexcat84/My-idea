@@ -2098,3 +2098,22 @@ Se deja una reserva de al menos 12 USD del crédito para la medición final del 
 **Cómo entra:** lo que sostiene el verificador entra por tandas declaradas (`docs/saneamiento/tandas/copia-<ola>.json`),
 con Gate 0 y las suites en verde; lo que no, va a la reescritura r3. La copia fiel sigue sin certificar hasta la
 medida nueva.
+
+### 15.20 Copia fiel por la API: piloto y parte 1 (10 oct 2026)
+
+**Piloto del verificador** sobre los paquetes 03, 09 y 15 de k31, que ya habían verificado los subagentes:
+- primera pasada: trampas 6 de 6 y el mismo veredicto en 54 de 60 propuestas (90 %); tres veces el guion sostuvo un
+  cambio de matiz que el subagente no sostuvo («puede ayudar» por «puedes», «con más tiempo» por «con más calma»);
+- se añadió al encargo, una sola vez y para todo lo que sigue, la lista de matices que manda la propia instrucción
+  («ante la duda sobre el sentido, no_sostiene»);
+- segunda pasada: trampas 6 de 6 y 55 de 60 (92 %), con las cinco diferencias del lado estricto. Se lanzó.
+
+**Piloto del lector** sobre el lote V050, que ya había leído un subagente: trampa cazada; el mismo veredicto en 106 de
+118 elementos (90 %); 69 copias contra 73 del subagente (8 solo del subagente, 4 solo del guion).
+
+**Parte 1, ola k31b** (paquetes 21 a 96 de k31): verificados 66 de 76 paquetes, con 132 de 132 trampas cazadas, antes
+de llegar al tope (8 USD; gasto del guion 8,76, porque seis llamadas en curso terminaron después del tope). Quedan los
+paquetes 67 a 76.
+- **Tanda `copia-k31b` (parcial):** 1.086 correcciones en 169 nodos; Gate 0 y las dos suites en verde.
+- **No sostienen: 234,** que van a la reescritura r3. Una de ellas la quitó la guarda de voz de cliente: la reescritura
+  metía «el libro» en un paso (V046-027).

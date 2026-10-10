@@ -8,12 +8,12 @@
   "notas_extraccion": "Es una lista de comprobacion y no una tactica, y entra como nodo porque cada senal es observable y se puede contestar con un si o un no sobre un equipo concreto. El inventario es entero del libro, nombrado senal a senal, que es la condicion de D.27. El nodo se queda con las senales y no ensancha a que hacer cuando una falla, porque el libro no lo dice ahi. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas senales hay que cumplir, ni quien hace la comprobacion, ni cada cuanto.",
   "pasos_accionables": [
     "Revisa si las listas de proyectos o tareas están ordenadas por importancia, de mayor a menor, y si lo primero de la lista se lleva más tiempo y atención.",
-    "Revisa si existe una forma ágil de decidir que todos comprenden y en la que todos confían.",
-    "Comprueba si el equipo se mueve rápido, sobre todo con las decisiones reversibles.",
-    "Revisa si, una vez tomada una decisión, todos la asumen, también quienes no estaban de acuerdo, y se ponen en marcha con rapidez para llevarla a cabo, sin volver a discutirla, sin bloquearla por lo bajo y sin retrasarla, salvo que surjan datos nuevos.",
-    "Revisa si, ante datos nuevos relevantes, existe una vía ágil para analizar si conviene cambiar los planes en curso y de qué manera.",
-    "Revisa si toda tarea tiene responsable y fecha, y si quienes la asumen se comprometen y cumplen con fiabilidad.",
-    "Revisa si el equipo se recupera de los golpes y está siempre dispuesto a aprender, de modo que cada fracaso lo fortalece porque no repite el mismo error."
+    "Comprueba que tu equipo cuenta con un método eficiente para decidir, claro para todos y que a todos les inspira confianza.",
+    "Observa si el equipo actúa con rapidez, en especial ante decisiones que admiten vuelta atrás.",
+    "Verifica que, cuando ya hay una decisión, todo el mundo se compromete con ella, incluso quien estaba en desacuerdo, y se mueve rápido para ejecutarla; sin datos nuevos, nadie la cuestiona de nuevo, nadie la frena a escondidas y nadie le da largas.",
+    "Comprueba que, cuando aparece información nueva e importante, hay un camino rápido para valorar si los planes actuales tienen que cambiar y cómo.",
+    "Asegúrate de que cada tarea tiene dueño y plazo, y de que quien la toma asume el compromiso y lo cumple de forma fiable.",
+    "Observa si tu equipo aguanta los tropiezos y busca aprender de manera constante, de forma que cada fallo lo hace más fuerte al no cometer dos veces el mismo error."
   ],
   "entregable_esperado": "Una lectura de cuáles de las señales cumple tu equipo y cuáles no.",
   "nodos_previos": [
@@ -364,6 +364,108 @@
         "frase": "Executing well means that you pick a reasonable direction, move quickly to learn"
       },
       "decision": "copia fiel (regla D2, ola k26): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-1",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa si existe una forma ágil de decidir que todos comprenden y en la que todos confían.",
+      "texto_nuevo": "Comprueba que tu equipo cuenta con un método eficiente para decidir, claro para todos y que a todos les inspira confianza.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "163",
+        "frase": "There is an efficient process for decision-making that everyone understands and trusts."
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 1,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-2",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Comprueba si el equipo se mueve rápido, sobre todo con las decisiones reversibles.",
+      "texto_nuevo": "Observa si el equipo actúa con rapidez, en especial ante decisiones que admiten vuelta atrás.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "165",
+        "frase": "The team moves quickly, especially with reversible decisions."
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 2,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-3",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa si, una vez tomada una decisión, todos la asumen, también quienes no estaban de acuerdo, y se ponen en marcha con rapidez para llevarla a cabo, sin volver a discutirla, sin bloquearla por lo bajo y sin retrasarla, salvo que surjan datos nuevos.",
+      "texto_nuevo": "Verifica que, cuando ya hay una decisión, todo el mundo se compromete con ella, incluso quien estaba en desacuerdo, y se mueve rápido para ejecutarla; sin datos nuevos, nadie la cuestiona de nuevo, nadie la frena a escondidas y nadie le da largas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "167",
+        "frase": "After a decision is made, everyone commits (even those who disagree)"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 3,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-4",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa si, ante datos nuevos relevantes, existe una vía ágil para analizar si conviene cambiar los planes en curso y de qué manera.",
+      "texto_nuevo": "Comprueba que, cuando aparece información nueva e importante, hay un camino rápido para valorar si los planes actuales tienen que cambiar y cómo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "169",
+        "frase": "When important new information surfaces, there is an expedient process"
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 4,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-5",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa si toda tarea tiene responsable y fecha, y si quienes la asumen se comprometen y cumplen con fiabilidad.",
+      "texto_nuevo": "Asegúrate de que cada tarea tiene dueño y plazo, y de que quien la toma asume el compromiso y lo cumple de forma fiable.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "171",
+        "frase": "Every task has a who and a by when."
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 5,
+      "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
+    },
+    {
+      "id": "copia-k31b-comprobar_equipo_ejecuta_bien-pasos_accionables-6",
+      "fecha": "2026-10-10",
+      "campo": "pasos_accionables",
+      "veredicto": "COPIA",
+      "texto_anterior": "Revisa si el equipo se recupera de los golpes y está siempre dispuesto a aprender, de modo que cada fracaso lo fortalece porque no repite el mismo error.",
+      "texto_nuevo": "Observa si tu equipo aguanta los tropiezos y busca aprender de manera constante, de forma que cada fallo lo hace más fuerte al no cometer dos veces el mismo error.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "fichero": "fuentes/zhuo_manager/cap_09.md",
+        "lineas": "173",
+        "frase": "The team is resilient and constantly seeking to learn."
+      },
+      "decision": "copia fiel (regla D2, ola k31b): se cambia la forma, no el contenido; lector ciego contra el libro y verificador ciego con dos trampas",
+      "indice": 6,
       "auditoria": "docs/ACTA_SANEAMIENTO_FINAL.md seccion 15.15"
     }
   ],
