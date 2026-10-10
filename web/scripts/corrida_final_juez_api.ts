@@ -23,6 +23,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { cargarEnvRaiz } from "./_shared/http";
+import { Presupuesto, reservaDeLlamada } from "../lib/presupuestoGuion";
 
 cargarEnvRaiz();
 
@@ -41,7 +42,9 @@ type Veredicto = { paquete: string; hallazgos: Hallazgo[]; afirmaciones_leidas?:
 type Clave = { paquete: string; origen: string; trampa?: { tipo: string; frase: string; nodo: string | null } };
 
 let gastado = 0;
-let tope = 25;
+let presupuesto = new Presupuesto(25);
+// Tope de salida de cada llamada: es tambien lo que reserva el presupuesto, asi que no se pone por lo alto sin motivo.
+const MAX_SALIDA = 20000;
 
 const ENCARGO_JUEZ =
   "Eres un juez ciego de fidelidad. Tienes SOLO las instrucciones (sistema) y tu paquete (abajo); no hay nada más. Sigue las instrucciones al pie de la letra: lee la salida ENTERA, frase por frase, divide en afirmaciones, coteja cada una contra los nodos y el contexto, y marca solo contrario, invencion y procedencia (afirmación exacta, porqué, nodo). Fíjate también en causas y hechos del negocio de la persona que nadie dio. Sé exigente en las dos direcciones. Devuelve SOLO el JSON pedido, sin texto alrededor.";
@@ -58,17 +61,27 @@ function jsonDe(texto: string): unknown {
 }
 
 async function pedir(client: Anthropic, encargo: string, cuerpo: string): Promise<unknown> {
-  if (gastado >= tope) throw new Error(`TOPE: gastado $${gastado.toFixed(4)} de $${tope}`);
   for (let intento = 1; ; intento++) {
+    // Topes (decision del fundador, 10 oct 2026): la llamada reserva su peor caso ANTES de lanzarse; el tope se cumple
+    // aunque haya llamadas en paralelo (lib/presupuestoGuion.ts).
+    const reserva = presupuesto.reservar(reservaDeLlamada(RUBRICA.length + encargo.length + cuerpo.length + 2, MAX_SALIDA, PRECIO));
+    let msg;
     try {
-      const msg = await client.messages
-        .stream({ model: MODELO, max_tokens: 32000, system: RUBRICA, messages: [{ role: "user", content: `${encargo}\n\n${cuerpo}` }] })
+      msg = await client.messages
+        .stream({ model: MODELO, max_tokens: MAX_SALIDA, system: RUBRICA, messages: [{ role: "user", content: `${encargo}\n\n${cuerpo}` }] })
         .finalMessage();
-      gastado += (msg.usage.input_tokens * PRECIO[0] + msg.usage.output_tokens * PRECIO[1]) / 1e6;
-      const texto = msg.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join("");
-      return jsonDe(texto);
     } catch (e) {
-      if (intento >= 3 || String(e).includes("TOPE")) throw e;
+      presupuesto.liberar(reserva);
+      if (intento >= 3) throw e;
+      console.log(`  reintento ${intento}: ${String(e).slice(0, 160)}`);
+      continue;
+    }
+    presupuesto.cerrar(reserva, (msg.usage.input_tokens * PRECIO[0] + msg.usage.output_tokens * PRECIO[1]) / 1e6);
+    gastado = presupuesto.gastado;
+    try {
+      return jsonDe(msg.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join(""));
+    } catch (e) {
+      if (intento >= 3) throw e;
       console.log(`  reintento ${intento}: ${String(e).slice(0, 160)}`);
     }
   }
@@ -226,7 +239,7 @@ async function version(client: Anthropic, dir: string, v: string, paralelo: numb
 async function main() {
   const dir = arg("--dir");
   if (!dir) throw new Error("uso: --dir <juez_ab2> [--versiones A,B] [--tope 25] [--paralelo 6]");
-  tope = Number(arg("--tope") ?? 25);
+  presupuesto = new Presupuesto(Number(arg("--tope") ?? 25));
   const paralelo = Number(arg("--paralelo") ?? 6);
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY, maxRetries: 4 });
   const dosJueces = process.argv.includes("--dos-jueces");

@@ -34,6 +34,8 @@ import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { obtenerTareasDePlan } from "../lib/db";
 import type { TipoOferta } from "../lib/calculadora";
+import { Presupuesto, TopeAlcanzado, reservaDeLlamada } from "../lib/presupuestoGuion";
+import { SYSTEM_PLAN } from "../lib/prompts";
 
 cargarEnvRaiz();
 
@@ -80,14 +82,12 @@ async function main() {
   const graph = cargarGrafo();
   const families = cargarFamilies();
   let gastado = 0;
+  // Topes (decision del fundador, 10 oct 2026): cada plan reserva su peor caso ANTES de redactarse (lib/presupuestoGuion.ts).
+  const presupuesto = new Presupuesto(tope);
   const costes: Array<Record<string, unknown>> = [];
   const avisos: string[] = [];
 
   for (const ref of refs) {
-    if (gastado + 0.15 > tope) {
-      console.log(`TOPE: gastado $${gastado.toFixed(4)}; no se redacta ${ref.plan_id} (quedaria por encima de $${tope})`);
-      break;
-    }
     const { data: ses, error: e1 } = await sb.from("sessions").select("estado_recorrido, dominio, created_at").eq("id", ref.session_id).single();
     if (e1 || !ses) throw new Error(`sesion ${ref.session_id}: ${e1?.message}`);
     const { data: proy } = await sb.from("projects").select("*").eq("id", ref.project_id).single();
@@ -172,6 +172,15 @@ async function main() {
       }
     );
 
+    // El peor caso: la entrada (payload, contexto y el prompt) y dos intentos de salida (5.000 + 10.000 tokens).
+    let reserva: number;
+    try {
+      reserva = presupuesto.reservar(reservaDeLlamada(JSON.stringify(preparacion.payload).length + (contexto?.length ?? 0) + SYSTEM_PLAN.length, 15000, [2, 10]));
+    } catch (e) {
+      if (!(e instanceof TopeAlcanzado)) throw e;
+      console.log(`TOPE: ${e.message}; no se redacta ${ref.plan_id}`);
+      break;
+    }
     let acc: UsoAcumulado = usoVacio();
     const { rawTexto, acumulado } = await generarTextoPlan(client, preparacion, acc, () => undefined, () => undefined, idiomaSalida, { contexto });
     acc = acumulado;
@@ -181,6 +190,7 @@ async function main() {
     const costoA = costoAcumuladoUsd(acc);
     writeFileSync(path.join(salida, "A", `${ref.plan_id}.md`), a.markdown, "utf8");
 
+    presupuesto.cerrar(reserva, costoA);
     if (sinVerificador) {
       gastado += costoA;
       costes.push({ plan_id: ref.plan_id, dominio, tipo: ref.tipo_salida, costo_redactor: Number(costoA.toFixed(5)), eventos_plan: eventos.map((e) => e.tipo), llamadas: acc.llamadas, estado_vivo_del_momento: estadoVivoDelMomento !== null });
