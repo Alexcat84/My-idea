@@ -30,7 +30,7 @@ import { dominiosDelRecorrido, type EstadoRecorrido } from "../lib/engine/recorr
 import { contextoDeSesion, estadoVivoDeLaFoto, memoriaDe } from "../lib/engine/memoria";
 import { perfilConEstadoVivoActual } from "../lib/engine/perfilDelPlan";
 import { numerosDelMomento } from "../lib/engine/numerosDelMomento";
-import { planAnteriorParaIA } from "../lib/engine/replanteamiento";
+import { planAnteriorParaIA, tituloDeNodoPara } from "../lib/engine/replanteamiento";
 import { idiomaDePlantilla } from "../lib/i18n/detectarIdioma";
 import { verificarPlan } from "../lib/engine/verificadorPlan";
 import { obtenerTareasDePlan } from "../lib/db";
@@ -133,7 +133,7 @@ async function main() {
         .lt("created_at", ref.creado)
         .order("created_at", { ascending: false });
       const previo = ((previos ?? []) as Array<{ id: string; contenido_md: string; dominio: string | null }>).find((p) => (p.dominio ?? "core") === dominio);
-      if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(sb, ref.project_id, previo.id));
+      if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(sb, ref.project_id, previo.id), tituloDeNodoPara(graph));
     }
     const ciclo = recorrido.ciclo;
     const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;

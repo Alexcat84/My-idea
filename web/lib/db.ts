@@ -859,12 +859,14 @@ export interface TareaDePlan {
   nota: string | null;
   completed_at: string | null;
   no_aplica_motivo?: string | null;
+  /** Los nodos de los que salio la tarea (migracion 037). */
+  nodos_origen?: string[] | null;
 }
 
 /** Ciclo de replanteamiento, Fase 2: las tareas de un plan, en su orden, para
  * el plan anterior que recibe la IA y para las hechas que se conservan. */
 export async function obtenerTareasDePlan(supabase: SupabaseClient, projectId: string, planId: string): Promise<TareaDePlan[]> {
-  const columnas = "id, etapa, orden, texto, destacado, estado, nota, completed_at";
+  const columnas = "id, etapa, orden, texto, destacado, estado, nota, completed_at, nodos_origen";
   const leer = (cols: string) =>
     supabase
       .from("checklist_items")
@@ -876,6 +878,8 @@ export async function obtenerTareasDePlan(supabase: SupabaseClient, projectId: s
   // no_aplica_motivo llega con la 030: se reintenta sin ella si aún no está.
   let { data, error } = await leer(`${columnas}, no_aplica_motivo`);
   if (error) ({ data, error } = await leer(columnas));
+  // nodos_origen llega con la 037 (punto 5 del redactor con respaldo, 10 oct 2026): sin ella, se lee sin temas.
+  if (error) ({ data, error } = await leer(columnas.replace(", nodos_origen", "")));
   if (error) throw error;
   return (data ?? []) as unknown as TareaDePlan[];
 }

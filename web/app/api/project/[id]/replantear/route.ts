@@ -45,6 +45,7 @@ import { estadoInicial } from "@/lib/engine/recorrido";
 import {
   componerMensajeReplanteamiento,
   planAnteriorParaIA,
+  tituloDeNodoPara,
   TOPE_GENERACIONES_CAMINOS,
   validarCaminos,
   type TareaCiclo,
@@ -159,7 +160,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     const pendientes = tareas
       .filter((f) => f.estado === "pendiente" || f.estado === "empezado" || f.estado === "en_proceso")
       .map((f) => ({ etapa: f.etapa, texto: f.texto, destacado: f.destacado, estado: f.estado }));
-    const planAnterior = plan ? planAnteriorParaIA(plan.contenido_md, tareas) : null;
+    const planAnterior = plan ? planAnteriorParaIA(plan.contenido_md, tareas, tituloDeNodoPara(cargarGrafo())) : null;
 
     let bloqueRealidad: string | null;
     try {

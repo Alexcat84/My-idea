@@ -121,6 +121,30 @@ describe("planAnteriorParaIA: las etapas del plan anterior con sus tareas y su e
     expect(enviado).toContain("Dos dijeron que lo pagarían");
   });
 
+  it("caso real (medición final, f003): de cada tarea hecha o retirada viaja el título del tema del que salió, nunca su texto", () => {
+    // La persona retiró "multiplica tus horas por el valor de tu hora" y el seguimiento la volvió a proponer: sin el
+    // texto, el redactor no sabía qué tema ya estaba hecho o retirado. Ahora recibe el título del nodo (decisión del
+    // fundador, 10 oct 2026), resuelto con su etiqueta de árbol.
+    const titulos: Record<string, string> = { hoja_estimacion_costos: "Calcula tu Costo Real", margen_bruto: "Mide tu Margen" };
+    const plan = planAnteriorParaIA(
+      md,
+      [
+        { etapa: 1, texto: "Multiplica tus horas por el valor de tu hora", estado: "no_aplica", nota: "ya lo tengo", nodos_origen: ["hoja_estimacion_costos"] },
+        { etapa: 1, texto: "Calcula tu margen", estado: "hecho", nota: null, nodos_origen: ["margen_bruto"] },
+        { etapa: 2, texto: "Anota la feria de agosto", estado: "pendiente", nota: null, nodos_origen: ["margen_bruto"] },
+      ],
+      (id) => titulos[id] ?? null
+    );
+    expect(plan!.etapas[0].tareas).toEqual([
+      { estado: "no_aplica", nota: "ya lo tengo", temas: ["Calcula tu Costo Real"] },
+      { estado: "hecho", temas: ["Mide tu Margen"] },
+    ]);
+    expect(plan!.etapas[1].tareas).toEqual([{ estado: "pendiente" }]);
+    const enviado = JSON.stringify(plan);
+    expect(enviado).not.toContain("Multiplica tus horas");
+    expect(enviado).not.toContain("feria");
+  });
+
   it("las reglas que leen el plan anterior lo describen así (el plan y los caminos del replanteo)", () => {
     for (const nombre of ["SYSTEM_PLAN", "SYSTEM_CAMINOS"] as const) {
       const p = (prompts as Record<string, string>)[nombre];

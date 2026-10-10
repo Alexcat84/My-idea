@@ -81,7 +81,7 @@ import {
   finalizarPlan,
   prepararPlan,
 } from "@/lib/engine/planRedactor";
-import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
+import { filasHeredadas, planAnteriorParaIA, relatoDeCiclo, tituloDeNodoPara, type PlanAnteriorIA } from "@/lib/engine/replanteamiento";
 import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
@@ -245,7 +245,7 @@ Antes de armar el plan, pidio tomar en cuenta: ${contextoFinal}`.trim();
         let planAnterior: PlanAnteriorIA | null = null;
         if (recorrido.esSeguimiento) {
           const previo = await obtenerPlanVigenteDe(supabase, projectId, dominioCobro, sessionId);
-          if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id));
+          if (previo) planAnterior = planAnteriorParaIA(previo.contenido_md, await obtenerTareasDePlan(supabase, projectId, previo.id), tituloDeNodoPara(graph));
         }
         const caminoElegido = ciclo?.tipo === "replantear" ? ciclo.caminos.find((c) => c.id === ciclo.caminoElegido) : undefined;
         // Las cifras de la persona: las del proyecto y las de esta sesion (REDACTOR_CON_RESPALDO punto 2: le llegan al

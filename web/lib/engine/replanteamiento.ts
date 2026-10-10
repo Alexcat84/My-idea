@@ -15,6 +15,7 @@
  */
 import type { ChecklistEstado } from "../dbContract";
 import type { ItemParaComponer } from "./seguimientoComposer";
+import { etiquetaArbol, resolverId, type Grafo } from "./graph";
 
 /** Una tarea hecha del plan vigente, como la eligió la persona en el paso 2. */
 export interface TareaCiclo {
@@ -126,6 +127,9 @@ export function validarCaminos(data: unknown, candidatos: string[]): Camino[] {
 export interface TareaPlanAnterior {
   estado: ChecklistEstado;
   nota?: string;
+  /** De una tarea hecha o retirada (no_aplica): el titulo del tema del que salio (decision del fundador, 10 oct 2026),
+   * para no volver a proponerlo; nunca su texto. */
+  temas?: string[];
 }
 
 export interface PlanAnteriorIA {
@@ -133,6 +137,11 @@ export interface PlanAnteriorIA {
 }
 
 const RE_ETAPA = /^##\s+Etapa\s+(\d+)\s*:\s*(.+)$/gm;
+
+/** El titulo de un nodo para el plan anterior: su etiqueta de arbol (sin fuente), o null si el nodo no existe. */
+export function tituloDeNodoPara(graph: Grafo): (nodeId: string) => string | null {
+  return (nodeId) => (resolverId(nodeId, graph) ? etiquetaArbol(nodeId, graph) : null);
+}
 
 /**
  * El plan anterior como lo recibe el redactor (payload.plan_anterior, regla
@@ -142,7 +151,9 @@ const RE_ETAPA = /^##\s+Etapa\s+(\d+)\s*:\s*(.+)$/gm;
  */
 export function planAnteriorParaIA(
   md: string | null,
-  items: Array<{ etapa: number; texto: string; estado: ChecklistEstado; nota?: string | null }>
+  items: Array<{ etapa: number; texto: string; estado: ChecklistEstado; nota?: string | null; nodos_origen?: string[] | null }>,
+  /** El titulo de un nodo para la IA (su etiqueta de arbol), o null si no se conoce. */
+  tituloDeNodo: (nodeId: string) => string | null = () => null
 ): PlanAnteriorIA | null {
   if (!md || !md.trim()) return null;
   const titulos = new Map<number, string>();
@@ -154,7 +165,13 @@ export function planAnteriorParaIA(
       titulo: titulos.get(numero) ?? "",
       tareas: items
         .filter((i) => i.etapa === numero)
-        .map((i) => ({ estado: i.estado, ...(i.nota?.trim() ? { nota: i.nota.trim() } : {}) })),
+        .map((i) => {
+          const temas =
+            i.estado === "hecho" || i.estado === "no_aplica"
+              ? [...new Set((i.nodos_origen ?? []).map(tituloDeNodo).filter((x): x is string => Boolean(x)))]
+              : [];
+          return { estado: i.estado, ...(i.nota?.trim() ? { nota: i.nota.trim() } : {}), ...(temas.length ? { temas } : {}) };
+        }),
     })),
   };
 }

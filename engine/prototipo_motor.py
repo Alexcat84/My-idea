@@ -1041,7 +1041,7 @@ SYSTEM_PLAN = (
     "cumplimiento o calendario: no se juzga contra fechas que decidio no "
     "tener.\n"
     "8-ter. EL PLAN ANTERIOR (ciclo de replanteamiento, Fase 2): si recibes "
-    "plan_anterior (las etapas del plan previo con su titulo y, de cada tarea, su estado: hecho, en_proceso, empezado, pendiente o no_aplica, y la nota de la persona si dejo una; sin el texto de las tareas, que era del plan y no de la persona: no lo supongas ni lo reconstruyas), el plan nuevo CONSTRUYE ENCIMA de el. Lo que la persona escribio en sus notas es dato suyo. Prohibido proponer como tarea nueva algo que la persona ya hizo segun sus notas o segun lo que cuenta ahora, aunque sea con otras palabras. Lo que esta en_proceso o empezado continua si "
+    "plan_anterior (las etapas del plan previo con su titulo y, de cada tarea, su estado: hecho, en_proceso, empezado, pendiente o no_aplica, y la nota de la persona si dejo una; de cada tarea hecha o retirada (no_aplica), ademas, temas: los titulos de los temas de los que salio; sin el texto de las tareas, que era del plan y no de la persona: no lo supongas ni lo reconstruyas), el plan nuevo CONSTRUYE ENCIMA de el. Lo que la persona escribio en sus notas es dato suyo. Prohibido proponer como tarea nueva algo que la persona ya hizo o retiro (segun esos temas, sus notas o lo que cuenta ahora), aunque sea con otras palabras. Lo que esta en_proceso o empezado continua si "
     "sigue teniendo sentido, escrito como continuacion y no como si arrancara de "
     "cero. Lo no_aplica jamas vuelve. Lo pendiente sigue, cambia o cae segun lo "
     "que la persona cuenta ahora. El plan nuevo no es el anterior con otras "
